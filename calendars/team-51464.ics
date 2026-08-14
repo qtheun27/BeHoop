@@ -1,0 +1,229 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D CEP Fleurus B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485203@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T143000
+DTEND;TZID=Europe/Brussels:20260809T163000
+SUMMARY:🤝 ✈️ P1D CEP Fleurus B vs P1D Fémina Docherie A
+LOCATION:Hall Omnisports Docherie\, Marchienne-au-Pont
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 29 - 65
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454117@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T130000
+DTEND;TZID=Europe/Brussels:20260816T150000
+SUMMARY:🏆 ✈️ P1D CEP Fleurus B vs P3D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454116@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260821T210000
+DTEND;TZID=Europe/Brussels:20260821T230000
+SUMMARY:🏆 ✈️ P1D CEP Fleurus B vs P2D Basket Entité Courcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454113@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🏆 🏠 P1D CEP Fleurus B vs P1D ABC B Péronnes A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463650@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463695@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Tremplin Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463705@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T130000
+DTEND;TZID=Europe/Brussels:20260920T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D ABC B Péronnes A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463718@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463706@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T130000
+DTEND;TZID=Europe/Brussels:20261018T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Tournai E.F. Kain B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463707@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T130000
+DTEND;TZID=Europe/Brussels:20261115T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Groupe Gobert Basket Club Colfon
+ taine A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463598@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D BC Féminin Quaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463709@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Jeunesse Sportive Soignies A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463633@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Royal Essor BC Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463622@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463710@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Fémina Docherie A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463663@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Soleil Levant Ellignies Ste An
+ ne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463711@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Tremplin Mouscron A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463613@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463647@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463690@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 ✈️ P1D CEP Fleurus B vs P1D Groupe Gobert Basket Club Colf
+ ontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463712@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Soleil Levant Ellignies Ste Anne
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463713@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T130000
+DTEND;TZID=Europe/Brussels:20270404T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D BC Mons Capitale B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463714@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D BC Féminin Quaregnon A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463715@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 🏠 P1D CEP Fleurus B vs P1D Royal Essor BC Templeuve A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,244 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1H Aste Kain B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487024@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260810T190000
+DTEND;TZID=Europe/Brussels:20260810T210000
+SUMMARY:🤝 🏠 P1H Aste Kain B vs None
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 47 - 64
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454097@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T160000
+DTEND;TZID=Europe/Brussels:20260816T180000
+SUMMARY:🏆 ✈️ P1H Aste Kain B vs P4H FanincHr BC Blaton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487025@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🤝 🏠 P1H Aste Kain B vs None
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454094@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T190000
+DTEND;TZID=Europe/Brussels:20260829T210000
+SUMMARY:🏆 🏠 P1H Aste Kain B vs P2H JS Dottignies A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462379@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T201500
+DTEND;TZID=Europe/Brussels:20260905T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H UBC Binche A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462413@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260911T203000
+DTEND;TZID=Europe/Brussels:20260911T223000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462467@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T130000
+DTEND;TZID=Europe/Brussels:20260920T150000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H Olympic Mont Sur Marchienne B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462380@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T201500
+DTEND;TZID=Europe/Brussels:20261003T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H RCBE 2000 A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462458@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H JS Stambruges A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462404@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H Boussu Saint-Ghislain United A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462447@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H RBC Montagnard A
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462381@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H JSE Enghien A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462382@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T201500
+DTEND;TZID=Europe/Brussels:20261205T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H Royal Eclairs Pont-De-Loup A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462383@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T201500
+DTEND;TZID=Europe/Brussels:20261212T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H BC JS Estaimpuis B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462483@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T180000
+DTEND;TZID=Europe/Brussels:20261220T200000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H B.C. L'9 Flénu-Frameries B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462384@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T201500
+DTEND;TZID=Europe/Brussels:20270109T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H Olympic Mont Sur Marchienne B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462362@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H UBC Binche A
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462385@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T201500
+DTEND;TZID=Europe/Brussels:20270130T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H Fémina Docherie A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462397@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H BC JS Estaimpuis B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462441@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T203000
+DTEND;TZID=Europe/Brussels:20270213T223000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H RCBE 2000 A
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462377@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H JSE Enghien A
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462386@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H RBC Montagnard A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462387@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T201500
+DTEND;TZID=Europe/Brussels:20270403T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H JS Stambruges A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462388@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T201500
+DTEND;TZID=Europe/Brussels:20270410T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H Boussu Saint-Ghislain United A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462433@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:🏀 ✈️ P1H Aste Kain B vs P1H Royal Eclairs Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462389@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T201500
+DTEND;TZID=Europe/Brussels:20270424T221500
+SUMMARY:🏀 🏠 P1H Aste Kain B vs P1H B.C. L'9 Flénu-Frameries B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Hommes
+END:VEVENT
+END:VCALENDAR

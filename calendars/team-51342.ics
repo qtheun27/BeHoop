@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU16H Boussu Saint-Ghislain United
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482537@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260811T173000
+DTEND;TZID=Europe/Brussels:20260811T193000
+SUMMARY:🤝 ✈️ RU16H Boussu Saint-Ghislain United vs RU16H Union Mons-
+ Hainaut
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 95 - 49
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482509@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T160000
+DTEND;TZID=Europe/Brussels:20260816T180000
+SUMMARY:🤝 ✈️ RU16H Boussu Saint-Ghislain United vs RU16H Spirou Bask
+ et B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485954@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T140000
+DTEND;TZID=Europe/Brussels:20260822T160000
+SUMMARY:🏆 ✈️ RU16H Boussu Saint-Ghislain United vs RU16H Royal Galli
+ a BC Beez
+LOCATION:Complexe Sportif de Beez\, Beez
+DESCRIPTION:Compétition : Coupe AWBB U16 Hommes
+END:VEVENT
+END:VCALENDAR

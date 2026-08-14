@@ -1,0 +1,211 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H Royal Essor BC Templeuve
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465706@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T090000
+DTEND;TZID=Europe/Brussels:20260905T110000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H CB Royale-Frate
+ rnité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465728@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T150000
+DTEND;TZID=Europe/Brussels:20260912T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H JS Dottignies
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479020@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:🏆 ✈️ PU14H Royal Essor BC Templeuve vs PU14H BC Ransart Char
+ leroi
+LOCATION:Complexe Sportif COS I-II\, Charleroi
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465730@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H Warriors Basket C
+ lub
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465729@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H JS Fermoba Péruw
+ elz
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465697@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H Union BC Quareg
+ non B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465732@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H Aste Kain B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465776@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465721@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H Boussu Saint-Gh
+ islain United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465733@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T150000
+DTEND;TZID=Europe/Brussels:20261219T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H BC Mons Capitale
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T100000
+DTEND;TZID=Europe/Brussels:20270110T120000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H JS Fermoba Pér
+ uwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465734@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H CB Royale-Fratern
+ ité B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465731@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T100000
+DTEND;TZID=Europe/Brussels:20270123T120000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H JS Stambruges
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465745@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T100000
+DTEND;TZID=Europe/Brussels:20270130T120000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465735@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H Boussu Saint-Ghis
+ lain United
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465737@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H Union BC Quaregno
+ n B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465803@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T140000
+DTEND;TZID=Europe/Brussels:20270313T160000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H JS Stambruges
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465791@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T130000
+DTEND;TZID=Europe/Brussels:20270403T150000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H Warriors Basket
+  Club
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465759@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T153000
+DTEND;TZID=Europe/Brussels:20270410T173000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H Aste Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465738@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 🏠 PU14H Royal Essor BC Templeuve vs PU14H JS Cuesmes
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465815@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T130000
+DTEND;TZID=Europe/Brussels:20270424T150000
+SUMMARY:🏀 ✈️ PU14H Royal Essor BC Templeuve vs PU14H BC Mons Capital
+ e
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+END:VCALENDAR

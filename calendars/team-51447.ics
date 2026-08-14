@@ -1,0 +1,220 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Royal BC Marcinelle
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467334@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T160000
+DTEND;TZID=Europe/Brussels:20260905T180000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM Charleroi Basket Clu
+ b B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467335@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T120000
+DTEND;TZID=Europe/Brussels:20260912T140000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM BC AMLL B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467279@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T163000
+DTEND;TZID=Europe/Brussels:20260920T183000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM Charleroi Basket C
+ lub A
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467336@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM Olympic Mont Sur Mar
+ chienne C
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467358@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM RCBE 2000
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467293@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM BC Ransart Charler
+ oi B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467337@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM CEP Fleurus
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467316@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM DPK Carnières Mor
+ lanwelz B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467338@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T140000
+DTEND;TZID=Europe/Brussels:20261205T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM AC Gilly
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467339@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T140000
+DTEND;TZID=Europe/Brussels:20261212T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM Royal Eclairs Pont-D
+ e-Loup C
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467340@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T140000
+DTEND;TZID=Europe/Brussels:20270109T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM Charleroi Basket Clu
+ b A
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467394@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM Charleroi Basket C
+ lub B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467307@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T090000
+DTEND;TZID=Europe/Brussels:20270130T110000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467330@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM Royal Eclairs Pont
+ -De-Loup C
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T090000
+DTEND;TZID=Europe/Brussels:20270214T110000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM Olympic Mont Sur M
+ archienne C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467353@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM CEP Fleurus
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467383@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T150000
+DTEND;TZID=Europe/Brussels:20270228T170000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM Spirou Basket H
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467341@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T140000
+DTEND;TZID=Europe/Brussels:20270313T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM BC Ransart Charleroi
+  B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467342@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T140000
+DTEND;TZID=Europe/Brussels:20270403T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM RCBE 2000
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467343@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T140000
+DTEND;TZID=Europe/Brussels:20270410T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM DPK Carnières Morla
+ nwelz B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467376@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T123000
+DTEND;TZID=Europe/Brussels:20270417T143000
+SUMMARY:🏀 ✈️ PU12HM Royal BC Marcinelle vs PU12HM AC Gilly
+LOCATION:Centre Sportif Fourcault\, Dampremy
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467344@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T140000
+DTEND;TZID=Europe/Brussels:20270424T160000
+SUMMARY:🏀 🏠 PU12HM Royal BC Marcinelle vs PU12HM Spirou Basket H
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+END:VCALENDAR

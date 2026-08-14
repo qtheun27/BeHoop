@@ -1,0 +1,176 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12D Jeunesse Sportive Soignies A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-484904@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T123000
+DTEND;TZID=Europe/Brussels:20260829T143000
+SUMMARY:🤝 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Anderlecht Ba
+ sketball
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Amicaux U12
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468621@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D Jeunesse Sp
+ ortive Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468677@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T140000
+DTEND;TZID=Europe/Brussels:20260912T160000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D Royal BC Ma
+ rcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468599@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T130000
+DTEND;TZID=Europe/Brussels:20260919T150000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D ABC B Péronn
+ es
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468645@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D CEP Fleurus
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468601@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Royal Eclairs
+  Pont-De-Loup
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468690@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T133000
+DTEND;TZID=Europe/Brussels:20261121T153000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468602@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T130000
+DTEND;TZID=Europe/Brussels:20261205T150000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Charleroi Bas
+ ket Club B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468669@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D Charleroi B
+ asket Club A
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468660@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D ABC B Péro
+ nnes
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468604@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Jeunesse Spor
+ tive Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468605@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Royal BC Marc
+ inelle
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468641@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T154500
+DTEND;TZID=Europe/Brussels:20270220T174500
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D Royal Eclai
+ rs Pont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468606@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D CEP Fleurus
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468608@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D BCJ Ressaix
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468718@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T163000
+DTEND;TZID=Europe/Brussels:20270418T183000
+SUMMARY:🏀 ✈️ PU12D Jeunesse Sportive Soignies A vs PU12D Charleroi B
+ asket Club B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468609@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T170000
+DTEND;TZID=Europe/Brussels:20270424T190000
+SUMMARY:🏀 🏠 PU12D Jeunesse Sportive Soignies A vs PU12D Charleroi Bas
+ ket Club A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U12 Dames A
+END:VEVENT
+END:VCALENDAR

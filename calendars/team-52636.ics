@@ -1,0 +1,227 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D BC Féminin Quaregnon A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454138@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T200000
+DTEND;TZID=Europe/Brussels:20260822T220000
+SUMMARY:🏆 🏠 P1D BC Féminin Quaregnon A vs P3D CB Royale-Fraternité
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454139@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260825T201500
+DTEND;TZID=Europe/Brussels:20260825T221500
+SUMMARY:🏆 ✈️ P1D BC Féminin Quaregnon A vs P2D Boussu Saint-Ghislai
+ n United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454137@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T170000
+DTEND;TZID=Europe/Brussels:20260829T190000
+SUMMARY:🏆 ✈️ P1D BC Féminin Quaregnon A vs P1D Groupe Gobert Basket
+  Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463617@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463595@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T200000
+DTEND;TZID=Europe/Brussels:20260919T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Fémina Docherie A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463596@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Tremplin Mouscron A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463608@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Jeunesse Sportive So
+ ignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463641@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463597@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Royal Essor BC Templeu
+ ve A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463686@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Groupe Gobert Basket
+  Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463598@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D CEP Fleurus B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463599@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D BC Mons Capitale B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463665@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Soleil Levant Ellign
+ ies Ste Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463656@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270108T200000
+DTEND;TZID=Europe/Brussels:20270108T220000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463600@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D ABC B Péronnes A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463723@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463702@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T200000
+DTEND;TZID=Europe/Brussels:20270213T220000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Tremplin Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463637@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D Royal Essor BC Templ
+ euve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463602@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Tournai E.F. Kain B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463603@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Jeunesse Sportive Soig
+ nies A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463604@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Groupe Gobert Basket C
+ lub Colfontaine A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463714@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 ✈️ P1D BC Féminin Quaregnon A vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463605@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 🏠 P1D BC Féminin Quaregnon A vs P1D Soleil Levant Ellignie
+ s Ste Anne
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

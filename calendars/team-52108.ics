@@ -1,0 +1,248 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H Blue and Gold Basket Club Celles B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463556@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Union Bas
+ ket Lessines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463517@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Cuesmes 
+ B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463518@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BC JS Estai
+ mpuis D
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463454@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Royal Ess
+ or BC Templeuve C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463519@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H CB Royale-F
+ raternité B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463467@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Royal BBC
+  Brainois D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463520@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Tremplin Mo
+ uscron
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463546@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T204500
+DTEND;TZID=Europe/Brussels:20261114T224500
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H FanincHr 
+ BC Blaton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463443@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T184500
+DTEND;TZID=Europe/Brussels:20261205T204500
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BC Silly
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463484@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Dottig
+ nies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BBC Tournai
+  B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463511@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Cuesme
+ s B
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463523@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Union Baske
+ t Lessines Flobecq
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463521@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Fermoba 
+ Péruwelz
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463499@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H CB Royale
+ -Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463435@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BC JS Est
+ aimpuis D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H FanincHr BC
+  Blaton
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463540@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T140000
+DTEND;TZID=Europe/Brussels:20270228T160000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Fermob
+ a Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463578@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T111500
+DTEND;TZID=Europe/Brussels:20270314T131500
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Tremplin 
+ Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463526@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T190000
+DTEND;TZID=Europe/Brussels:20270320T210000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BC Silly
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463527@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Royal Essor
+  BC Templeuve C
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463424@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BBC Tourn
+ ai B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463528@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270416T210000
+DTEND;TZID=Europe/Brussels:20270416T230000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Dottigni
+ es C
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463529@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270423T210000
+DTEND;TZID=Europe/Brussels:20270423T230000
+SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Royal BBC B
+ rainois D
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+END:VCALENDAR

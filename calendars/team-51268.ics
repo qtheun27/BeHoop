@@ -1,0 +1,262 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Basket Entité Courcelles A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486783@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T203000
+DTEND;TZID=Europe/Brussels:20260808T223000
+SUMMARY:🤝 ✈️ P2H Basket Entité Courcelles A vs P1H B.C. L'9 Flénu-
+ Frameries B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 85 - 68
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485204@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T163000
+DTEND;TZID=Europe/Brussels:20260809T183000
+SUMMARY:🤝 ✈️ P2H Basket Entité Courcelles A vs P1H Fémina Docherie
+  A
+LOCATION:Hall Omnisports Docherie\, Marchienne-au-Pont
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 97 - 45
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454056@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260821T203000
+DTEND;TZID=Europe/Brussels:20260821T223000
+SUMMARY:🏆 🏠 P2H Basket Entité Courcelles A vs P3H BCJ Ressaix A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454054@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:🏆 ✈️ P2H Basket Entité Courcelles A vs P2H Royal BBC Braino
+ is A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462610@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H BC Écaussinnes 
+ A
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H DPK Carnières M
+ orlanwelz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462533@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H JS Luttre A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462600@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H Olympic Mont Sur
+  Marchienne C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462534@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H Royal Eclairs Pont
+ -De-Loup B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462535@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H Jeunesse Sportive 
+ Soignies A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462569@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H Royal BBC Braino
+ is A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462536@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H BC Ransart Charler
+ oi A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462592@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H CEP Fleurus C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462549@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T210000
+DTEND;TZID=Europe/Brussels:20261212T230000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462537@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H BC Feluy-Obaix Sen
+ effe A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462506@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T150000
+DTEND;TZID=Europe/Brussels:20270110T170000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462538@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H BC Écaussinnes A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H DPK Carnières Mor
+ lanwelz A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462540@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H BC AMLL A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462542@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H Royal BBC Brainois
+  A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462496@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H Jeunesse Sportiv
+ e Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462541@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T190000
+DTEND;TZID=Europe/Brussels:20270320T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H Olympic Mont Sur M
+ archienne C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462564@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H Royal Eclairs Po
+ nt-De-Loup B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462520@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H BC Ransart Charl
+ eroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:🏀 🏠 P2H Basket Entité Courcelles A vs P2H CEP Fleurus C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462587@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 ✈️ P2H Basket Entité Courcelles A vs P2H BC Feluy-Obaix S
+ eneffe A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+END:VCALENDAR

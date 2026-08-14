@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16D Union Basket Lessines Flobecq
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466344@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D BC JS Estaim
+ puis
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466345@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D Royal Blareg
+ nies BC
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466257@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Tournai E.
+ F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483502@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:🏆 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Royal Esso
+ r BC Templeuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466347@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D JS Cuesmes
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466325@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Tremplin M
+ ouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466292@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Royal Esso
+ r BC Templeuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466348@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D BC Mons Capi
+ tale
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466227@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D BC Fémini
+ n Quaregnon
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466350@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270110T150000
+DTEND;TZID=Europe/Brussels:20270110T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D Tournai E.F.
+  Kain
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466272@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270117T090000
+DTEND;TZID=Europe/Brussels:20270117T110000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D BC JS Esta
+ impuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466346@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270124T150000
+DTEND;TZID=Europe/Brussels:20270124T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D Blue and Gol
+ d Basket Club Celles
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466317@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Royal Blar
+ egnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466351@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D BC Féminin 
+ Quaregnon
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466352@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D JS Dottignie
+ s
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466353@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D Tremplin Mou
+ scron
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466308@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466280@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270320T110000
+DTEND;TZID=Europe/Brussels:20270320T130000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D JS Dottign
+ ies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466341@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D Blue and G
+ old Basket Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466354@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 🏠 PU16D Union Basket Lessines Flobecq vs PU16D Royal Essor 
+ BC Templeuve
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466244@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 ✈️ PU16D Union Basket Lessines Flobecq vs PU16D BC Mons Ca
+ pitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+END:VCALENDAR

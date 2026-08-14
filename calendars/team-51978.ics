@@ -1,0 +1,245 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H BBC Tournai A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486863@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T170000
+DTEND;TZID=Europe/Brussels:20260808T190000
+SUMMARY:🤝 🏠 P3H BBC Tournai A vs P4H BC AMLL C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 87 - 69
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486864@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:🤝 🏠 P3H BBC Tournai A vs P2H Royal Essor BC Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454112@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T173000
+DTEND;TZID=Europe/Brussels:20260823T193000
+SUMMARY:🏆 🏠 P3H BBC Tournai A vs P1H JS Stambruges A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule P
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454111@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🏆 ✈️ P3H BBC Tournai A vs P1H JS Stambruges A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule P
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463072@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H JSE Enghien C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463073@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H Aste Kain D
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463017@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T140000
+DTEND;TZID=Europe/Brussels:20260920T160000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H Union BC Quaregnon C
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463074@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261002T193000
+DTEND;TZID=Europe/Brussels:20261002T213000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H Boussu Saint-Ghislain United C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463096@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H CB Royale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463076@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261025T150000
+DTEND;TZID=Europe/Brussels:20261025T170000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H Soleil Levant Ellignies Ste Anne
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463075@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H JS Dottignies B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463054@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H Royal Essor BC Templeuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463077@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H BC JS Estaimpuis C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463121@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H JS Stambruges C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463078@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270108T193000
+DTEND;TZID=Europe/Brussels:20270108T213000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H Union BC Quaregnon C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463132@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463045@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H Aste Kain D
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463068@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H BC JS Estaimpuis C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463146@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H Boussu Saint-Ghislain United C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463091@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463079@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H BCJHP Quiévrain
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463031@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270321T110000
+DTEND;TZID=Europe/Brussels:20270321T130000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H BCJHP Quiévrain
+LOCATION:Centre d'animation de Quievrain\, Quiévrain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463080@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H CB Royale-Fraternité A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463081@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H Royal Essor BC Templeuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463114@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:🏀 ✈️ P3H BBC Tournai A vs P3H Soleil Levant Ellignies Ste An
+ ne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463082@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:🏀 🏠 P3H BBC Tournai A vs P3H JS Stambruges C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+END:VCALENDAR

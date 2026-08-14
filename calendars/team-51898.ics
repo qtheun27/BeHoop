@@ -1,0 +1,206 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM BCPC Bracquegnies
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468456@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM Jeunesse Sportive So
+ ignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468368@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T150000
+DTEND;TZID=Europe/Brussels:20260912T170000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM DPK Carnières Morla
+ nwelz B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468352@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM DPK Carnières Morla
+ nwelz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468446@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468410@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM Royal Blaregnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468381@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM Union BC Quaregnon B
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468415@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T114500
+DTEND;TZID=Europe/Brussels:20261114T134500
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM RCBE 2000
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468382@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM BC Mons Capitale C
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468395@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468383@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM BC Écaussinnes
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468379@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM DPK Carnières Morlanw
+ elz A
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468384@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM Jeunesse Sportive Soig
+ nies B
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468387@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM BC Mons Capitale B
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468385@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM DPK Carnières Morlanw
+ elz B
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468386@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM BC AMLL B
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468388@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM RCBE 2000
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468342@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T150000
+DTEND;TZID=Europe/Brussels:20270313T170000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM Union BC Quaregnon B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468380@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 🏠 PU10HM BCPC Bracquegnies vs PU10HM Royal Blaregnies BC
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468366@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T090000
+DTEND;TZID=Europe/Brussels:20270411T110000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM BC Mons Capitale C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468433@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T163000
+DTEND;TZID=Europe/Brussels:20270424T183000
+SUMMARY:🏀 ✈️ PU10HM BCPC Bracquegnies vs PU10HM BC Écaussinnes
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+END:VCALENDAR

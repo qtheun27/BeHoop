@@ -1,0 +1,235 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H Royal Eclairs Pont-De-Loup C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486840@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T170000
+DTEND;TZID=Europe/Brussels:20260808T190000
+SUMMARY:🤝 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 70 - 69
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482532@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T203000
+DTEND;TZID=Europe/Brussels:20260829T223000
+SUMMARY:🤝 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H Spirou Basket C
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462852@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H RBC Montagnard B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462853@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T180000
+DTEND;TZID=Europe/Brussels:20260912T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H CEP Fleurus D
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462819@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H BC Feluy-Obaix 
+ Seneffe B
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462754@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H UBC Binche B
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462854@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H Fémina Docherie 
+ B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462789@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H BC Ransart Char
+ leroi B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462855@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H BCJ Ressaix B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462768@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H JS Luttre B
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462856@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H Royal BC Marcinel
+ le A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462835@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H RCBE 2000 B
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462857@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H Spirou Basket C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462858@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H BC Feluy-Obaix Se
+ neffe B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462846@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H RBC Montagnard 
+ B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462869@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H CEP Fleurus D
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462859@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H RCBE 2000 B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462860@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H UBC Binche B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462883@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H BCJ Ressaix B
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462861@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H BC Ransart Charle
+ roi B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462783@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H Fémina Docheri
+ e B
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462862@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:🏀 🏠 P3H Royal Eclairs Pont-De-Loup C vs P3H JS Luttre B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462807@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H Royal BC Marcin
+ elle A
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462818@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:🏀 ✈️ P3H Royal Eclairs Pont-De-Loup C vs P3H Spirou Basket C
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : P3 Hommes A
+END:VEVENT
+END:VCALENDAR

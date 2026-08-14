@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D BC Mons Capitale B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454123@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T170000
+DTEND;TZID=Europe/Brussels:20260816T190000
+SUMMARY:🏆 ✈️ P1D BC Mons Capitale B vs P3D Union Basket Lessines Flo
+ becq
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454122@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T193000
+DTEND;TZID=Europe/Brussels:20260822T213000
+SUMMARY:🏆 ✈️ P1D BC Mons Capitale B vs P3D Basket Club Maccabi Charl
+ eroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454119@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T183000
+DTEND;TZID=Europe/Brussels:20260829T203000
+SUMMARY:🏆 🏠 P1D BC Mons Capitale B vs P2D Royal BBC Brainois A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463716@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Tournai E.F. Kain B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463629@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Royal Essor BC Templeuve 
+ A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463652@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T153000
+DTEND;TZID=Europe/Brussels:20261004T173000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463718@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D CEP Fleurus B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463717@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Groupe Gobert Basket Club C
+ olfontaine A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463697@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Tremplin Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463664@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Soleil Levant Ellignies S
+ te Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463720@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T193000
+DTEND;TZID=Europe/Brussels:20261205T213000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Jeunesse Sportive Soignies 
+ A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463599@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D BC Féminin Quaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463721@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T193000
+DTEND;TZID=Europe/Brussels:20261219T213000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463722@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463644@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463689@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Groupe Gobert Basket Club
+  Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463723@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D BC Féminin Quaregnon A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463724@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T203000
+DTEND;TZID=Europe/Brussels:20270213T223000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463725@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T173000
+DTEND;TZID=Europe/Brussels:20270220T193000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Tremplin Mouscron A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463713@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T130000
+DTEND;TZID=Europe/Brussels:20270404T150000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463726@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:🏀 🏠 P1D BC Mons Capitale B vs P1D Soleil Levant Ellignies Ste
+  Anne
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463616@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T193000
+DTEND;TZID=Europe/Brussels:20270417T213000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D Jeunesse Sportive Soignie
+ s A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463627@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 ✈️ P1D BC Mons Capitale B vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

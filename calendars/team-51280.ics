@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Olympic Mont Sur Marchienne C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468324@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal Ecla
+ irs Pont-De-Loup C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468325@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM RBC Montag
+ nard
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468237@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T140000
+DTEND;TZID=Europe/Brussels:20260919T160000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal BC
+  Marcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468260@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T143000
+DTEND;TZID=Europe/Brussels:20261003T163000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Rapido B
+ .C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468326@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Spirou Bas
+ ket G
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468305@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Spirou B
+ asket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468272@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal Ec
+ lairs Pont-De-Loup E
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468328@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM BC Ransart
+  Charleroi B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468207@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T133000
+DTEND;TZID=Europe/Brussels:20261213T153000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Charlero
+ i Basket Club A
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468329@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T110000
+DTEND;TZID=Europe/Brussels:20261219T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Charleroi 
+ Basket Club B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468330@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T110000
+DTEND;TZID=Europe/Brussels:20270109T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal BC M
+ arcinelle
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468252@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T130000
+DTEND;TZID=Europe/Brussels:20270116T150000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal Ec
+ lairs Pont-De-Loup C
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468297@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T123000
+DTEND;TZID=Europe/Brussels:20270130T143000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM RBC Mont
+ agnard
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468331@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Charleroi 
+ Basket Club A
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468332@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Rapido B.C
+ .T.L.
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468333@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Spirou Bas
+ ket F
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468288@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T120000
+DTEND;TZID=Europe/Brussels:20270313T140000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Fémina 
+ Docherie
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468327@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270328T090000
+DTEND;TZID=Europe/Brussels:20270328T110000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Fémina Do
+ cherie
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468321@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T090000
+DTEND;TZID=Europe/Brussels:20270404T110000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Spirou B
+ asket G
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468334@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T110000
+DTEND;TZID=Europe/Brussels:20270410T130000
+SUMMARY:🏀 🏠 PU10HM Olympic Mont Sur Marchienne C vs PU10HM Royal Ecla
+ irs Pont-De-Loup E
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468224@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T090000
+DTEND;TZID=Europe/Brussels:20270418T110000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM BC Ransa
+ rt Charleroi B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468235@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T133000
+DTEND;TZID=Europe/Brussels:20270425T153000
+SUMMARY:🏀 ✈️ PU10HM Olympic Mont Sur Marchienne C vs PU10HM Charlero
+ i Basket Club B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U10 Hommes F
+END:VEVENT
+END:VCALENDAR

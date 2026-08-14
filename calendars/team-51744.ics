@@ -1,0 +1,207 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM DPK Carnières Morlanwelz B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468346@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T100000
+DTEND;TZID=Europe/Brussels:20260906T120000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM DPK Carni
+ ères Morlanwelz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468368@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T150000
+DTEND;TZID=Europe/Brussels:20260912T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM BCPC Bracque
+ gnies
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468369@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM Jeunesse Spo
+ rtive Soignies B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468402@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T093000
+DTEND;TZID=Europe/Brussels:20261003T113000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM Royal Blar
+ egnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468337@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM Union BC Q
+ uaregnon B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468372@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM BC AMLL B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468370@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T150000
+DTEND;TZID=Europe/Brussels:20261128T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Écaussin
+ nes
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468416@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T114500
+DTEND;TZID=Europe/Brussels:20261205T134500
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM RCBE 2000
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468361@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Mons Ca
+ pitale C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468373@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T150000
+DTEND;TZID=Europe/Brussels:20261219T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Mons Capi
+ tale B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468462@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM Jeunesse S
+ portive Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468374@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM DPK Carnièr
+ es Morlanwelz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468385@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM BCPC Bracq
+ uegnies
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468375@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T100000
+DTEND;TZID=Europe/Brussels:20270207T120000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Mons Capi
+ tale C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468376@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM Royal Blareg
+ nies BC
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468377@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM Union BC Qua
+ regnon B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468431@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T163000
+DTEND;TZID=Europe/Brussels:20270403T183000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Écauss
+ innes
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468399@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468378@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:🏀 🏠 PU10HM DPK Carnières Morlanwelz B vs PU10HM RCBE 2000
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468455@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:🏀 ✈️ PU10HM DPK Carnières Morlanwelz B vs PU10HM BC Mons Ca
+ pitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+END:VCALENDAR

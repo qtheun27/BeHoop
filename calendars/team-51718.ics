@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H DPK Carnières Morlanwelz B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482503@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T183000
+DTEND;TZID=Europe/Brussels:20260808T203000
+SUMMARY:🤝 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Spirou Basket C
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 58 - 54
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462918@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Royal BBC Brainois
+  B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462919@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Spirou Basket D
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462896@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Espoirs BHC Wasm
+ uel
+LOCATION:Hall Polyvalent de Wasmuel\, Wasmuel
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462952@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H BCPC Bracquegnie
+ s
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462921@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Royal Eclairs Pont
+ -De-Loup D
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462887@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T120000
+DTEND;TZID=Europe/Brussels:20261115T140000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Union BC Quaregn
+ on D
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462922@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H BC AMLL B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462920@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H BCJ Ressaix A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462966@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Royal Blaregnies
+  BC B
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462911@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H BC Mons Capitale
+  B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462923@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H JSB Maffle C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463012@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Spirou Basket D
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462924@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Espoirs BHC Wasmue
+ l
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462935@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Royal BBC Braino
+ is B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462925@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T140000
+DTEND;TZID=Europe/Brussels:20270207T160000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H BC Mons Capitale B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462926@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H BCPC Bracquegnies
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462927@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Union BC Quaregnon
+  D
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462993@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H Royal Eclairs Po
+ nt-De-Loup D
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462981@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270402T210000
+DTEND;TZID=Europe/Brussels:20270402T230000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H BCJ Ressaix A
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462949@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462928@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 🏠 P3H DPK Carnières Morlanwelz B vs P3H Royal Blaregnies B
+ C B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463005@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:🏀 ✈️ P3H DPK Carnières Morlanwelz B vs P3H JSB Maffle C
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+END:VCALENDAR

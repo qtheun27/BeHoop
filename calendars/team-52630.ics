@@ -1,0 +1,224 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM B.C. L'9 Flénu-Frameries C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468588@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T133000
+DTEND;TZID=Europe/Brussels:20260905T153000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Royal Essor 
+ BC Templeuve
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468589@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T113000
+DTEND;TZID=Europe/Brussels:20260912T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JSB Maffle B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468592@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T113000
+DTEND;TZID=Europe/Brussels:20260926T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Union Basket
+  Lessines Flobecq
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468501@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T133000
+DTEND;TZID=Europe/Brussels:20260927T153000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Tremplin M
+ ouscron B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468524@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Dottign
+ ies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468590@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T113000
+DTEND;TZID=Europe/Brussels:20261010T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BC Silly A
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468536@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Boussu Sai
+ nt-Ghislain United B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468591@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T093000
+DTEND;TZID=Europe/Brussels:20261107T113000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Stambruge
+ s
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468569@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T100000
+DTEND;TZID=Europe/Brussels:20261115T120000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Fermoba
+  Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468471@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T093000
+DTEND;TZID=Europe/Brussels:20261212T113000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BBC Tourna
+ i
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468593@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T113000
+DTEND;TZID=Europe/Brussels:20261219T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BC Silly B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468594@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T113000
+DTEND;TZID=Europe/Brussels:20270109T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Tremplin Mou
+ scron B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468516@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Royal Esso
+ r BC Templeuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468561@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T160000
+DTEND;TZID=Europe/Brussels:20270130T180000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JSB Maffle
+  B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468595@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T113000
+DTEND;TZID=Europe/Brussels:20270206T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BBC Tournai
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468596@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T113000
+DTEND;TZID=Europe/Brussels:20270213T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Dottignie
+ s C
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468597@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T133000
+DTEND;TZID=Europe/Brussels:20270220T153000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Fermoba P
+ éruwelz
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468552@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T100000
+DTEND;TZID=Europe/Brussels:20270314T120000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM JS Stambru
+ ges
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468585@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T090000
+DTEND;TZID=Europe/Brussels:20270404T110000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BC Silly A
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468598@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T113000
+DTEND;TZID=Europe/Brussels:20270410T133000
+SUMMARY:🏀 🏠 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Boussu Saint
+ -Ghislain United B
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468488@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Union Bask
+ et Lessines Flobecq
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468499@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T110000
+DTEND;TZID=Europe/Brussels:20270425T130000
+SUMMARY:🏀 ✈️ PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM BC Silly B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+END:VCALENDAR

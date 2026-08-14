@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU19D Royal Eclairs Pont-De-Loup B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465904@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T111500
+DTEND;TZID=Europe/Brussels:20260905T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Royal BC Marc
+ inelle
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465905@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T111500
+DTEND;TZID=Europe/Brussels:20260912T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D BCJ Ressaix
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465915@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T140000
+DTEND;TZID=Europe/Brussels:20260919T160000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Spirou Bask
+ et A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465850@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T163000
+DTEND;TZID=Europe/Brussels:20261003T183000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Rapido B.C.
+ T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465906@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T111500
+DTEND;TZID=Europe/Brussels:20261010T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Royal Eclairs
+  Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465951@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Basket Club
+  Maccabi Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465907@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T111500
+DTEND;TZID=Europe/Brussels:20261114T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Basket Entit
+ é Courcelles
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465940@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D CEP Fleurus
+  A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465908@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D DPK Carnière
+ s Morlanwelz
+LOCATION:Hall Sportif de Farciennes\, Farciennes
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465909@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T111500
+DTEND;TZID=Europe/Brussels:20261212T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Spirou Basket
+  B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465843@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T110000
+DTEND;TZID=Europe/Brussels:20261219T130000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D CEP Fleurus
+  B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465910@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T111500
+DTEND;TZID=Europe/Brussels:20270109T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Spirou Basket
+  A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465898@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T120000
+DTEND;TZID=Europe/Brussels:20270116T140000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Royal BC Ma
+ rcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465833@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T133000
+DTEND;TZID=Europe/Brussels:20270130T153000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465933@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Spirou Bask
+ et B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465911@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T111500
+DTEND;TZID=Europe/Brussels:20270213T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Rapido B.C.T.
+ L.
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465880@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Basket Enti
+ té Courcelles
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465912@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T111500
+DTEND;TZID=Europe/Brussels:20270313T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D Basket Club M
+ accabi Charleroi
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465890@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T110000
+DTEND;TZID=Europe/Brussels:20270404T130000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D Royal Eclai
+ rs Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465913@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T111500
+DTEND;TZID=Europe/Brussels:20270410T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D CEP Fleurus A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465870@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T093000
+DTEND;TZID=Europe/Brussels:20270418T113000
+SUMMARY:🏀 ✈️ PU19D Royal Eclairs Pont-De-Loup B vs PU19D DPK Carniè
+ res Morlanwelz
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465914@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T111500
+DTEND;TZID=Europe/Brussels:20270424T131500
+SUMMARY:🏀 🏠 PU19D Royal Eclairs Pont-De-Loup B vs PU19D CEP Fleurus B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,190 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Groupe Gobert Basket Club Colfontaine A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467687@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T170000
+DTEND;TZID=Europe/Brussels:20260912T190000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M JSE Enghien A
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467742@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ Boussu Saint-Ghislain United A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467720@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T104500
+DTEND;TZID=Europe/Brussels:20261010T124500
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M Union Mons-Hainaut A
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467743@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ JSB Maffle A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467733@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T090000
+DTEND;TZID=Europe/Brussels:20261114T110000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M JS Dottignies A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467744@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ B.C. L'9 Flénu-Frameries A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467700@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T093000
+DTEND;TZID=Europe/Brussels:20261205T113000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M Aste Kain A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467767@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M Blue and Gold Basket Club Celles A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467745@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ Union BC Quaregnon A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467747@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T090000
+DTEND;TZID=Europe/Brussels:20270130T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ JSE Enghien A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467748@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ Blue and Gold Basket Club Celles A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467716@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M Boussu Saint-Ghislain United A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467749@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ JS Dottignies A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467792@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T140000
+DTEND;TZID=Europe/Brussels:20270313T160000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M JSB Maffle A
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467750@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T090000
+DTEND;TZID=Europe/Brussels:20270403T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ Union Mons-Hainaut A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467806@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T093000
+DTEND;TZID=Europe/Brussels:20270410T113000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M B.C. L'9 Flénu-Frameries A
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467751@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10HM 
+ Aste Kain A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467685@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T140000
+DTEND;TZID=Europe/Brussels:20270425T160000
+SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine A vs PU10H
+ M Union BC Quaregnon A
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U10 Hommes B
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H CEP Fleurus E
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486769@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T190000
+DTEND;TZID=Europe/Brussels:20260815T210000
+SUMMARY:🤝 ✈️ P4H CEP Fleurus E vs P4H Royal BBC Brainois C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485738@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T180000
+DTEND;TZID=Europe/Brussels:20260822T200000
+SUMMARY:🤝 ✈️ P4H CEP Fleurus E vs P4H Royal Eclairs Pont-De-Loup E
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463226@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Royal Eclairs Pont-De-Loup E
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463161@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H JS Luttre C
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463215@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463194@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261009T204500
+DTEND;TZID=Europe/Brussels:20261009T224500
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Basket Entité Courcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463216@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H BC Ransart Charleroi C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463217@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463207@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T113000
+DTEND;TZID=Europe/Brussels:20261115T133000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Royal BC Marcinelle B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463218@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Ballers
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463174@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Fémina Docherie C
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463241@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463219@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Charleroi Basket Club
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463254@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463220@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Royal Eclairs Pont-De-Loup E
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463221@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H JS Luttre C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463222@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H RBC Montagnard C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463190@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H BC Ransart Charleroi C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463223@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Royal BC Marcinelle B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463280@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T193000
+DTEND;TZID=Europe/Brussels:20270306T213000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463266@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463224@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T210000
+DTEND;TZID=Europe/Brussels:20270403T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Basket Entité Courcelles B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463225@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:🏀 🏠 P4H CEP Fleurus E vs P4H Fémina Docherie C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463159@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T210000
+DTEND;TZID=Europe/Brussels:20270424T230000
+SUMMARY:🏀 ✈️ P4H CEP Fleurus E vs P4H Charleroi Basket Club
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+END:VCALENDAR

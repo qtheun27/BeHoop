@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU21H BC Ransart Charleroi
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485498@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T150000
+DTEND;TZID=Europe/Brussels:20260809T170000
+SUMMARY:🤝 ✈️ RU21H BC Ransart Charleroi vs RU21H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 57 - 61
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485405@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T110000
+DTEND;TZID=Europe/Brussels:20260815T130000
+SUMMARY:🤝 ✈️ RU21H BC Ransart Charleroi vs RU21H Olympic Mont Sur Ma
+ rchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486147@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T110000
+DTEND;TZID=Europe/Brussels:20260830T130000
+SUMMARY:🏆 🏠 RU21H BC Ransart Charleroi vs RU21H Royal Canter Schaerbe
+ ek A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+END:VCALENDAR

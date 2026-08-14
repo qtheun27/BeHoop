@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16H Boussu Saint-Ghislain United
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485804@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:🤝 ✈️ PU16H Boussu Saint-Ghislain United vs RU16H Royal Eclai
+ rs Pont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465223@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465277@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T130000
+DTEND;TZID=Europe/Brussels:20260919T150000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H BC Mons Cap
+ itale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478950@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T110000
+DTEND;TZID=Europe/Brussels:20260926T130000
+SUMMARY:🏆 🏠 PU16H Boussu Saint-Ghislain United vs PU16H Basketball Br
+ unehaut
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465190@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H CB Royale-Fra
+ ternité B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465268@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T160000
+DTEND;TZID=Europe/Brussels:20261011T180000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H JS Fermoba 
+ Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465193@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T150000
+DTEND;TZID=Europe/Brussels:20261024T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H BC AMLL B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465189@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H Union BC Quar
+ egnon B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465257@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H Tremplin Mo
+ uscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465172@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T110000
+DTEND;TZID=Europe/Brussels:20261128T130000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H Union BC Qu
+ aregnon B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465192@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H JS Cuesmes
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465194@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H BC Mons Capit
+ ale
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465293@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H Union Baske
+ t Lessines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465195@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H BBC Tournai
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465207@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465251@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H CB Royale-F
+ raternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465196@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T150000
+DTEND;TZID=Europe/Brussels:20270313T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H Tremplin Mous
+ cron
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465197@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T150000
+DTEND;TZID=Europe/Brussels:20270403T170000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H JS Fermoba P
+ éruwelz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465243@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 ✈️ PU16H Boussu Saint-Ghislain United vs PU16H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465199@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T110000
+DTEND;TZID=Europe/Brussels:20270424T130000
+SUMMARY:🏀 🏠 PU16H Boussu Saint-Ghislain United vs PU16H Union Basket 
+ Lessines Flobecq
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+END:VCALENDAR

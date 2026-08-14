@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU19D Basket Entité Courcelles
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465948@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T160000
+DTEND;TZID=Europe/Brussels:20260905T180000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Basket Club Ma
+ ccabi Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465871@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D CEP Fleurus B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465872@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Royal BC Marcine
+ lle
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465938@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D CEP Fleurus A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465860@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T123000
+DTEND;TZID=Europe/Brussels:20261018T143000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D DPK Carnières
+  Morlanwelz
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465873@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D BCJ Ressaix
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483473@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:🏆 🏠 PU19D Basket Entité Courcelles vs PU19D Rapido B.C.T.L.
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut U19 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465907@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T111500
+DTEND;TZID=Europe/Brussels:20261114T131500
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Royal Eclairs 
+ Pont-De-Loup B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465874@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Rapido B.C.T.L.
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465930@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T133000
+DTEND;TZID=Europe/Brussels:20261205T153000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Spirou Basket 
+ B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465887@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Royal Eclairs 
+ Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465875@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T150000
+DTEND;TZID=Europe/Brussels:20261219T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Spirou Basket A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465844@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465876@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Basket Club Macc
+ abi Charleroi
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465877@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D DPK Carnières M
+ orlanwelz
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465878@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T150000
+DTEND;TZID=Europe/Brussels:20270206T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Royal Eclairs Po
+ nt-De-Loup A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465879@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D CEP Fleurus A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465880@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Royal Eclairs Po
+ nt-De-Loup B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465834@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T151500
+DTEND;TZID=Europe/Brussels:20270313T171500
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465902@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T100000
+DTEND;TZID=Europe/Brussels:20270403T120000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Royal BC Marci
+ nelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465858@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Rapido B.C.T.L
+ .
+LOCATION:Hall Polyvalent de Thuin\, Thuin
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465881@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:🏀 🏠 PU19D Basket Entité Courcelles vs PU19D Spirou Basket B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465925@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T133000
+DTEND;TZID=Europe/Brussels:20270424T153000
+SUMMARY:🏀 ✈️ PU19D Basket Entité Courcelles vs PU19D Spirou Basket 
+ A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+END:VCALENDAR

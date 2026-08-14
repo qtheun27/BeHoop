@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Boussu Saint-Ghislain United B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467235@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM CB Roya
+ le-Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467226@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T153000
+DTEND;TZID=Europe/Brussels:20261010T173000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Aste Kain
+  B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467228@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T160000
+DTEND;TZID=Europe/Brussels:20261017T180000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Tournai E
+ .F. Kain
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467224@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T110000
+DTEND;TZID=Europe/Brussels:20261024T130000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Royal Bla
+ regnies BC
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467271@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Union B
+ asket Lessines Flobecq A
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467227@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T124500
+DTEND;TZID=Europe/Brussels:20261114T144500
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM BC JS Est
+ aimpuis
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467260@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T131500
+DTEND;TZID=Europe/Brussels:20261122T151500
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Trempli
+ n Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467170@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261129T090000
+DTEND;TZID=Europe/Brussels:20261129T110000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM BC Sill
+ y A
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467229@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM JS Stambr
+ uges B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467163@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T140000
+DTEND;TZID=Europe/Brussels:20261219T160000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM JSB Maf
+ fle A
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467230@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T143000
+DTEND;TZID=Europe/Brussels:20270110T163000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM CB Royale
+ -Fraternité B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467218@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T110000
+DTEND;TZID=Europe/Brussels:20270123T130000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Royal B
+ laregnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467153@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T110000
+DTEND;TZID=Europe/Brussels:20270130T130000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Union B
+ C Quaregnon
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467253@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T100000
+DTEND;TZID=Europe/Brussels:20270206T120000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM JS Stam
+ bruges B
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467231@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM BC Silly 
+ A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467200@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T103000
+DTEND;TZID=Europe/Brussels:20270220T123000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM BC JS E
+ staimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467232@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Union Bas
+ ket Lessines Flobecq A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467225@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270327T100000
+DTEND;TZID=Europe/Brussels:20270327T120000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Union BC 
+ Quaregnon
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467210@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T093000
+DTEND;TZID=Europe/Brussels:20270403T113000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Aste Ka
+ in B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467233@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T110000
+DTEND;TZID=Europe/Brussels:20270410T130000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM Tremplin 
+ Mouscron A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467190@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 ✈️ PU12HM Boussu Saint-Ghislain United B vs PU12HM Tournai
+  E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467234@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T130000
+DTEND;TZID=Europe/Brussels:20270424T150000
+SUMMARY:🏀 🏠 PU12HM Boussu Saint-Ghislain United B vs PU12HM JSB Maffl
+ e A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes E
+END:VEVENT
+END:VCALENDAR

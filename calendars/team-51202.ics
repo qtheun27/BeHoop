@@ -1,0 +1,50 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU18H Olympic Mont Sur Marchienne
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486781@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T140000
+DTEND;TZID=Europe/Brussels:20260808T160000
+SUMMARY:🤝 ✈️ RU18H Olympic Mont Sur Marchienne vs RU18H Spirou Baske
+ t B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 83 - 66
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485702@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T154500
+DTEND;TZID=Europe/Brussels:20260815T174500
+SUMMARY:🤝 ✈️ RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclair
+ s Pont-De-Loup
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486096@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T140000
+DTEND;TZID=Europe/Brussels:20260822T160000
+SUMMARY:🏆 🏠 RU18H Olympic Mont Sur Marchienne vs PU18H Royal IV Bruss
+ els A
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T110000
+DTEND;TZID=Europe/Brussels:20260829T130000
+SUMMARY:🤝 🏠 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs 
+ Pont-De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR

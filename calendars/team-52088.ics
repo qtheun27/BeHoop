@@ -1,0 +1,225 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D Tremplin Mouscron A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454145@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🏆 ✈️ P1D Tremplin Mouscron A vs P3D BC JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454144@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T200000
+DTEND;TZID=Europe/Brussels:20260822T220000
+SUMMARY:🏆 🏠 P1D Tremplin Mouscron A vs P3D FanincHr BC Blaton
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454143@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T183000
+DTEND;TZID=Europe/Brussels:20260829T203000
+SUMMARY:🏆 ✈️ P1D Tremplin Mouscron A vs P1D Soleil Levant Ellignies 
+ Ste Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463694@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Groupe Gobert Basket Club 
+ Colfontaine A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463695@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D CEP Fleurus B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463661@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Soleil Levant Ellignies 
+ Ste Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463596@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D BC Féminin Quaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463696@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T200000
+DTEND;TZID=Europe/Brussels:20261010T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D ABC B Péronnes A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463631@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Royal Essor BC Templeuve
+  A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463697@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D BC Mons Capitale B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463610@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Jeunesse Sportive Soigni
+ es A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463698@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Tournai E.F. Kain B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463699@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T200000
+DTEND;TZID=Europe/Brussels:20261219T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Fémina Docherie A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463700@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Soleil Levant Ellignies St
+ e Anne
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463688@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Groupe Gobert Basket Clu
+ b Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463711@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463702@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T200000
+DTEND;TZID=Europe/Brussels:20270213T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D BC Féminin Quaregnon A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463725@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T173000
+DTEND;TZID=Europe/Brussels:20270220T193000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463703@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Royal Essor BC Templeuve A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463625@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463704@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 🏠 P1D Tremplin Mouscron A vs P1D Jeunesse Sportive Soignies
+  A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463649@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463660@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 ✈️ P1D Tremplin Mouscron A vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

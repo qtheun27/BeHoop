@@ -1,0 +1,253 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2D Boussu Saint-Ghislain United
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454140@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T203000
+DTEND;TZID=Europe/Brussels:20260822T223000
+SUMMARY:🏆 🏠 P2D Boussu Saint-Ghislain United vs P1D Groupe Gobert Bas
+ ket Club Colfontaine A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454139@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260825T201500
+DTEND;TZID=Europe/Brussels:20260825T221500
+SUMMARY:🏆 🏠 P2D Boussu Saint-Ghislain United vs P1D BC Féminin Quare
+ gnon A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454142@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T190000
+DTEND;TZID=Europe/Brussels:20260829T210000
+SUMMARY:🏆 ✈️ P2D Boussu Saint-Ghislain United vs P3D CB Royale-Frate
+ rnité
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463782@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D ABC B Péronnes
+  B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463827@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Royal BBC Brain
+ ois A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463837@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Rapido B.C.T.L.
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463840@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Fémina Docherie 
+ B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463795@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T200000
+DTEND;TZID=Europe/Brussels:20261107T220000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Groupe Gobert B
+ asket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463839@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D BCJ Ressaix
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463730@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463841@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Jeunesse Sportive
+  Soignies B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463765@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Royal Essor BC 
+ Templeuve B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463754@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T183000
+DTEND;TZID=Europe/Brussels:20270109T203000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463842@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D ABC B Péronnes B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463843@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Royal BBC Brainoi
+ s A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463745@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Jeunesse Sporti
+ ve Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270219T190000
+DTEND;TZID=Europe/Brussels:20270219T210000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463850@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T160000
+DTEND;TZID=Europe/Brussels:20270228T180000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D JS Fermoba Pér
+ uwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463838@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Basket Entité Co
+ urcelles B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463844@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Groupe Gobert Bas
+ ket Club Colfontaine B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463779@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270319T204500
+DTEND;TZID=Europe/Brussels:20270319T224500
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Basket Entité 
+ Courcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463845@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T203000
+DTEND;TZID=Europe/Brussels:20270403T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D JS Fermoba Péruw
+ elz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463813@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T153000
+DTEND;TZID=Europe/Brussels:20270411T173000
+SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Fémina Docheri
+ e B
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463846@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D BBC Tournai
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463847@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Royal Essor BC Te
+ mpleuve B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+END:VCALENDAR

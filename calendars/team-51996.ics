@@ -1,0 +1,229 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16H Basket Entité Courcelles A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487053@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:🤝 🏠 PU16H Basket Entité Courcelles A vs PU16H JS Cuesmes
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486762@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T090000
+DTEND;TZID=Europe/Brussels:20260822T110000
+SUMMARY:🤝 ✈️ PU16H Basket Entité Courcelles A vs PU16H Jeunesse Spo
+ rtive Soignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486810@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T090000
+DTEND;TZID=Europe/Brussels:20260823T110000
+SUMMARY:🤝 ✈️ PU16H Basket Entité Courcelles A vs PU16H Olympic Mont
+  Sur Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487056@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T130000
+DTEND;TZID=Europe/Brussels:20260829T150000
+SUMMARY:🤝 🏠 PU16H Basket Entité Courcelles A vs PU16H RBC Montagnard
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464892@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464804@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H BC Ransart C
+ harleroi
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464815@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H UBC Binche
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478945@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T090000
+DTEND;TZID=Europe/Brussels:20261004T110000
+SUMMARY:🏆 ✈️ PU16H Basket Entité Courcelles A vs PU16H BC Feluy-Oba
+ ix Seneffe
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464816@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H BC Feluy-Obaix
+  Seneffe
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464851@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H CEP Fleurus 
+ A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464818@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T100000
+DTEND;TZID=Europe/Brussels:20261122T120000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H BC AMLL A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464874@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H Olympic Mont
+  Sur Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464831@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H Spirou Baske
+ t A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464819@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T110000
+DTEND;TZID=Europe/Brussels:20261219T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H AC Gilly
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464788@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T090000
+DTEND;TZID=Europe/Brussels:20270109T110000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464820@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T110000
+DTEND;TZID=Europe/Brussels:20270116T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H BCJ Ressaix
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H Spirou Basket 
+ A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464824@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H CEP Fleurus A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464821@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T110000
+DTEND;TZID=Europe/Brussels:20270320T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H BC Ransart Cha
+ rleroi
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464846@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T120000
+DTEND;TZID=Europe/Brussels:20270403T140000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H BC Feluy-Oba
+ ix Seneffe
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464802@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T090000
+DTEND;TZID=Europe/Brussels:20270410T110000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464825@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T110000
+DTEND;TZID=Europe/Brussels:20270417T130000
+SUMMARY:🏀 🏠 PU16H Basket Entité Courcelles A vs PU16H Olympic Mont S
+ ur Marchienne
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464869@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T143000
+DTEND;TZID=Europe/Brussels:20270424T163000
+SUMMARY:🏀 ✈️ PU16H Basket Entité Courcelles A vs PU16H AC Gilly
+LOCATION:Centre Sportif Fourcault\, Dampremy
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

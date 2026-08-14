@@ -1,0 +1,251 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D ABC B Péronnes A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-457708@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T200000
+DTEND;TZID=Europe/Brussels:20260815T220000
+SUMMARY:🏆 🏠 P1D ABC B Péronnes A vs R1D Ganshoren Dames Basket A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454115@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🏆 ✈️ P1D ABC B Péronnes A vs P2D Basket Entité Courcelles 
+ B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454114@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T180000
+DTEND;TZID=Europe/Brussels:20260822T200000
+SUMMARY:🏆 🏠 P1D ABC B Péronnes A vs P3D JS Cuesmes
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457705@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 ✈️ P1D ABC B Péronnes A vs R2D Royal Murprotec Nivelles B
+ asketball A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Nivelles
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457709@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T180000
+DTEND;TZID=Europe/Brussels:20260829T200000
+SUMMARY:🏆 🏠 P1D ABC B Péronnes A vs R2D Royal Eclairs Pont-De-Loup B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454113@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🏆 ✈️ P1D ABC B Péronnes A vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463617@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D BC Féminin Quaregnon A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463651@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463705@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T130000
+DTEND;TZID=Europe/Brussels:20260920T150000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463696@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T200000
+DTEND;TZID=Europe/Brussels:20261010T220000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Tremplin Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463685@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Groupe Gobert Basket Club 
+ Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463619@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463642@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463620@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Soleil Levant Ellignies Ste 
+ Anne
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463721@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T193000
+DTEND;TZID=Europe/Brussels:20261219T213000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463622@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D CEP Fleurus B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463600@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D BC Féminin Quaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463621@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463623@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463635@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Royal Essor BC Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463615@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T193000
+DTEND;TZID=Europe/Brussels:20270220T213000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Jeunesse Sportive Soignies
+  A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463624@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T180000
+DTEND;TZID=Europe/Brussels:20270306T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Groupe Gobert Basket Club Co
+ lfontaine A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463625@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Tremplin Mouscron A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463626@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D Tournai E.F. Kain B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463671@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T183000
+DTEND;TZID=Europe/Brussels:20270417T203000
+SUMMARY:🏀 ✈️ P1D ABC B Péronnes A vs P1D Soleil Levant Ellignies St
+ e Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463627@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 🏠 P1D ABC B Péronnes A vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

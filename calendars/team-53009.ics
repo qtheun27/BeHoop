@@ -1,0 +1,216 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Tremplin Mouscron C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468170@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260906T131500
+DTEND;TZID=Europe/Brussels:20260906T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM JS Dottignies B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468171@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260913T131500
+DTEND;TZID=Europe/Brussels:20260913T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM CB Royale-Fraternit
+ é B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468137@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260919T090000
+DTEND;TZID=Europe/Brussels:20260919T110000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM BC JS Estaimpuis B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468072@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261003T113000
+DTEND;TZID=Europe/Brussels:20261003T133000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM Aste Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468172@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261011T131500
+DTEND;TZID=Europe/Brussels:20261011T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM B.B.C.Leuze
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468107@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM BC JS Estaimpuis A
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468173@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM Tremplin Mouscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468086@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261122T120000
+DTEND;TZID=Europe/Brussels:20261122T140000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM Basketball Bruneha
+ ut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468174@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261206T131500
+DTEND;TZID=Europe/Brussels:20261206T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM Tournai E.F. Kain
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468153@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM Blue and Gold Bask
+ et Club Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468175@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM CB Royale-Fraternit
+ é A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468176@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270110T131500
+DTEND;TZID=Europe/Brussels:20270110T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM BC JS Estaimpuis B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468164@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270116T100000
+DTEND;TZID=Europe/Brussels:20270116T120000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468187@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM CB Royale-Fraterni
+ té B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468177@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270207T131500
+DTEND;TZID=Europe/Brussels:20270207T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM Blue and Gold Basket
+  Club Celles B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468178@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270214T131500
+DTEND;TZID=Europe/Brussels:20270214T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM Aste Kain B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468201@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270221T131500
+DTEND;TZID=Europe/Brussels:20270221T151500
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM Tremplin Mouscron 
+ A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468179@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270314T131500
+DTEND;TZID=Europe/Brussels:20270314T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM BC JS Estaimpuis A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468101@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T130000
+DTEND;TZID=Europe/Brussels:20270403T150000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM B.B.C.Leuze
+LOCATION:Leuzarena\, Leuze-en-Hainaut
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468180@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270411T131500
+DTEND;TZID=Europe/Brussels:20270411T151500
+SUMMARY:🏀 🏠 PU10HM Tremplin Mouscron C vs PU10HM Basketball Brunehaut
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468125@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270417T093000
+DTEND;TZID=Europe/Brussels:20270417T113000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468136@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270424T130000
+DTEND;TZID=Europe/Brussels:20270424T150000
+SUMMARY:🏀 ✈️ PU10HM Tremplin Mouscron C vs PU10HM CB Royale-Fraterni
+ té A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+END:VCALENDAR

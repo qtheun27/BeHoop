@@ -1,0 +1,239 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D Soleil Levant Ellignies Ste Anne
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454147@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T140000
+DTEND;TZID=Europe/Brussels:20260816T160000
+SUMMARY:🏆 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P3D FanincHr BC
+  Blaton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454146@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🏆 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P3D BC JS Estai
+ mpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454143@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T183000
+DTEND;TZID=Europe/Brussels:20260829T203000
+SUMMARY:🏆 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Tremplin Mous
+ cron A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463607@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T193000
+DTEND;TZID=Europe/Brussels:20260912T213000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Jeunesse Sp
+ ortive Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463661@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Tremplin Mous
+ cron A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463640@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Tournai E.F
+ . Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463653@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Fémina Doc
+ herie A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463664@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D BC Mons Capit
+ ale B
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463662@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Royal Essor B
+ C Templeuve A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463620@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D ABC B Péro
+ nnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463687@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261211T203000
+DTEND;TZID=Europe/Brussels:20261211T223000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Groupe Gobe
+ rt Basket Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463665@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D BC Féminin Q
+ uaregnon A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463700@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Tremplin Mo
+ uscron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463663@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D CEP Fleurus B
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463667@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Jeunesse Spor
+ tive Soignies A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463668@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T183000
+DTEND;TZID=Europe/Brussels:20270206T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Groupe Gobert
+  Basket Club Colfontaine A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463636@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T110000
+DTEND;TZID=Europe/Brussels:20270214T130000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D Royal Essor
+  BC Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463669@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T183000
+DTEND;TZID=Europe/Brussels:20270220T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Fémina Doche
+ rie A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463712@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D CEP Fleurus
+  B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463670@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T183000
+DTEND;TZID=Europe/Brussels:20270403T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D Tournai E.F. 
+ Kain B
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463726@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D BC Mons Cap
+ itale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463671@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T183000
+DTEND;TZID=Europe/Brussels:20270417T203000
+SUMMARY:🏀 🏠 P1D Soleil Levant Ellignies Ste Anne vs P1D ABC B Péronn
+ es A
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463605@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 ✈️ P1D Soleil Levant Ellignies Ste Anne vs P1D BC Féminin
+  Quaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,250 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H Blue and Gold Basket Club Celles A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485005@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T090000
+DTEND;TZID=Europe/Brussels:20260816T110000
+SUMMARY:🤝 ✈️ PU14H Blue and Gold Basket Club Celles A vs RU14H Group
+ e Gobert Basket Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465398@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Royal
+  BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465421@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T143000
+DTEND;TZID=Europe/Brussels:20260912T163000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Spiro
+ u Basket C
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465387@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T130000
+DTEND;TZID=Europe/Brussels:20260920T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Spirou 
+ Basket A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479009@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Royal
+  Eclairs Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465388@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T130000
+DTEND;TZID=Europe/Brussels:20261003T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Basketb
+ all Brunehaut
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465334@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H BC Ra
+ nsart Charleroi
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465389@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Jeuness
+ e Sportive Soignies A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465411@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T093000
+DTEND;TZID=Europe/Brussels:20261115T113000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H BCJ R
+ essaix A
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465390@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Union B
+ C Quaregnon A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465358@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T133000
+DTEND;TZID=Europe/Brussels:20261205T153000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Aste 
+ Kain A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465391@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T130000
+DTEND;TZID=Europe/Brussels:20261212T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H CB Roya
+ le-Fraternité A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465347@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T110000
+DTEND;TZID=Europe/Brussels:20261220T130000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Royal
+  Eclairs Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465382@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Spiro
+ u Basket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465392@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T130000
+DTEND;TZID=Europe/Brussels:20270116T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Royal B
+ BC Brainois
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465395@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H BC Rans
+ art Charleroi
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465393@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Spirou 
+ Basket C
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465372@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T130000
+DTEND;TZID=Europe/Brussels:20270206T150000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H CB Ro
+ yale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465318@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T100000
+DTEND;TZID=Europe/Brussels:20270214T120000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Baske
+ tball Brunehaut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465394@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H BCJ Res
+ saix A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465328@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Jeune
+ sse Sportive Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465308@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 ✈️ PU14H Blue and Gold Basket Club Celles A vs PU14H Union
+  BC Quaregnon A
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465396@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T130000
+DTEND;TZID=Europe/Brussels:20270417T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Aste Ka
+ in A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465397@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T130000
+DTEND;TZID=Europe/Brussels:20270424T150000
+SUMMARY:🏀 🏠 PU14H Blue and Gold Basket Club Celles A vs PU14H Royal E
+ clairs Pont-De-Loup A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

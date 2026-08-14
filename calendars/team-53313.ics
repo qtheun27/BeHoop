@@ -1,0 +1,238 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU21H Royal Essor BC Templeuve
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487307@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T130000
+DTEND;TZID=Europe/Brussels:20260816T150000
+SUMMARY:🤝 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464244@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T153000
+DTEND;TZID=Europe/Brussels:20260906T173000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H B.C. L'9 Flénu
+ -Frameries
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464156@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T140000
+DTEND;TZID=Europe/Brussels:20260912T160000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BC JS Estaimpui
+ s
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464167@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T090000
+DTEND;TZID=Europe/Brussels:20260919T110000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H UBC Binche
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464234@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H JSB Maffle
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464168@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Basket Entité Co
+ urcelles
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478700@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:🏆 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs P
+ ont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Coupe du Hainaut U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464169@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H BC AMLL
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464203@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal BBC Brain
+ ois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464170@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H JS Dottignies
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464226@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Olympic Mont Su
+ r Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464183@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Spirou Basket
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464171@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs Pon
+ t-De-Loup
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464140@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T110000
+DTEND;TZID=Europe/Brussels:20270109T130000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464172@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T110000
+DTEND;TZID=Europe/Brussels:20270116T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H B.C. L'9 Flénu-F
+ rameries
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464173@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T090000
+DTEND;TZID=Europe/Brussels:20270131T110000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H BC JS Estaimpuis
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464174@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Spirou Basket
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464175@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H JSB Maffle
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464176@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Royal BBC Brainoi
+ s
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464130@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T090000
+DTEND;TZID=Europe/Brussels:20270313T110000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BC AMLL
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464198@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T150000
+DTEND;TZID=Europe/Brussels:20270403T170000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Basket Entité 
+ Courcelles
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464154@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T130000
+DTEND;TZID=Europe/Brussels:20270410T150000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464177@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T110000
+DTEND;TZID=Europe/Brussels:20270417T130000
+SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Olympic Mont Sur 
+ Marchienne
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464221@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T133000
+DTEND;TZID=Europe/Brussels:20270424T153000
+SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs P
+ ont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

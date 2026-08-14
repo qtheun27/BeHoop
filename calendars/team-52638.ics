@@ -1,0 +1,199 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3D BC Féminin Quaregnon C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463914@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Royal Eclairs Pont-D
+ e-Loup C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463959@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Basket Club Maccabi 
+ Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463969@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Royal BBC Brainois B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463945@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463970@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Basket Entité Courcel
+ les C
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463982@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T173000
+DTEND;TZID=Europe/Brussels:20261010T193000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463971@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D UBC Binche
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463972@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T090000
+DTEND;TZID=Europe/Brussels:20261122T110000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D JS Cuesmes
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463862@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Charleroi Basket Clu
+ b
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463973@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D CEP Fleurus C
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463897@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T184000
+DTEND;TZID=Europe/Brussels:20261219T204000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Wolves Les Bons Vill
+ ers
+LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463886@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Royal BBC Brainois B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463974@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Royal Eclairs Pont-De-
+ Loup C
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463954@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463975@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Basket Club Maccabi Ch
+ arleroi
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463877@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D CEP Fleurus C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463911@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Basket Entité Courc
+ elles C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463977@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Ballers
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463978@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Charleroi Basket Club
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463979@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Wolves Les Bons Viller
+ s
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+END:VCALENDAR

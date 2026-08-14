@@ -1,0 +1,216 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16H Royal BBC Brainois B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465156@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T160000
+DTEND;TZID=Europe/Brussels:20260905T180000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Basket Club Maccabi
+  Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465079@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H JS Luttre
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465080@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Royal Eclairs Pont-De
+ -Loup
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465081@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Jeunesse Sportive Soi
+ gnies
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465115@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T134500
+DTEND;TZID=Europe/Brussels:20261114T154500
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H RCBE 2000
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465082@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Rapido B.C.T.L.
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465138@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Spirou Basket B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465095@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T120000
+DTEND;TZID=Europe/Brussels:20261212T140000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Royal BC Marcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H RBC Montagnard
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465052@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H JS Luttre
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465084@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Basket Club Maccabi C
+ harleroi
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465085@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T110000
+DTEND;TZID=Europe/Brussels:20270130T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Basket Entité Cource
+ lles B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465086@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T130000
+DTEND;TZID=Europe/Brussels:20270206T150000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Royal BC Marcinelle
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465087@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H CEP Fleurus B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465088@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H RCBE 2000
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465068@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T110000
+DTEND;TZID=Europe/Brussels:20270306T130000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Basket Entité Cour
+ celles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465042@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Jeunesse Sportive S
+ oignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465146@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T150000
+DTEND;TZID=Europe/Brussels:20270320T170000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465089@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270327T130000
+DTEND;TZID=Europe/Brussels:20270327T150000
+SUMMARY:🏀 🏠 PU16H Royal BBC Brainois B vs PU16H Spirou Basket B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465110@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T130000
+DTEND;TZID=Europe/Brussels:20270404T150000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465066@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H Rapido B.C.T.L.
+LOCATION:Hall Polyvalent de Thuin\, Thuin
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465133@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T090000
+DTEND;TZID=Europe/Brussels:20270425T110000
+SUMMARY:🏀 ✈️ PU16H Royal BBC Brainois B vs PU16H RBC Montagnard
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U16 Hommes C
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU14D Royal Eclairs Pont-De-Loup A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483301@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T110000
+DTEND;TZID=Europe/Brussels:20260808T130000
+SUMMARY:🤝 ✈️ RU14D Royal Eclairs Pont-De-Loup A vs RU14D Tournai Wap
+ iti Basketball
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 28 - 88
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483544@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T140000
+DTEND;TZID=Europe/Brussels:20260816T160000
+SUMMARY:🤝 🏠 RU14D Royal Eclairs Pont-De-Loup A vs RU14D Royal Murprot
+ ec Nivelles Basketball A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T140000
+DTEND;TZID=Europe/Brussels:20260829T160000
+SUMMARY:🤝 🏠 RU14D Royal Eclairs Pont-De-Loup A vs None
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484976@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 ✈️ RU14D Royal Eclairs Pont-De-Loup A vs RU14D BC Malonne
+LOCATION:Centre Sportif Malonne\, Malonne
+DESCRIPTION:Compétition : Coupe AWBB U14 Dames
+END:VEVENT
+END:VCALENDAR

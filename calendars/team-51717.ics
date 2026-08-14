@@ -1,0 +1,241 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H DPK Carnières Morlanwelz A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454068@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T170000
+DTEND;TZID=Europe/Brussels:20260816T190000
+SUMMARY:🏆 🏠 P2H DPK Carnières Morlanwelz A vs P4H JS Cuesmes A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454066@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260825T203000
+DTEND;TZID=Europe/Brussels:20260825T223000
+SUMMARY:🏆 ✈️ P2H DPK Carnières Morlanwelz A vs P1H RCBE 2000 A
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462500@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H Basket Entité Cou
+ rcelles A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462523@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H BC Écaussinnes A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462556@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H Royal Eclairs Po
+ nt-De-Loup B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H CEP Fleurus C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462491@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H Jeunesse Sportiv
+ e Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462526@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H BC AMLL A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462524@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H BC Feluy-Obaix Sen
+ effe A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462570@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H Royal BBC Braino
+ is A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462515@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H BC Ransart Charl
+ eroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462527@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H Olympic Mont Sur M
+ archienne C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462616@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H BC Écaussinnes 
+ A
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462528@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H JS Luttre A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H Basket Entité C
+ ourcelles A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462529@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H BC Ransart Charler
+ oi A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H Royal Eclairs Pont
+ -De-Loup B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462531@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H Jeunesse Sportive 
+ Soignies A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462597@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H CEP Fleurus C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462585@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H BC Feluy-Obaix S
+ eneffe A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462553@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462532@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:🏀 🏠 P2H DPK Carnières Morlanwelz A vs P2H Royal BBC Brainois
+  A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462609@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T110000
+DTEND;TZID=Europe/Brussels:20270425T130000
+SUMMARY:🏀 ✈️ P2H DPK Carnières Morlanwelz A vs P2H Olympic Mont Sur
+  Marchienne C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+END:VCALENDAR

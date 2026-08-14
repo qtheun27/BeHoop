@@ -1,0 +1,267 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H FanincHr BC Blaton
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487119@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260811T203000
+DTEND;TZID=Europe/Brussels:20260811T223000
+SUMMARY:🤝 🏠 P4H FanincHr BC Blaton vs P2H JSB Maffle B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 75 - 67
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454097@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T160000
+DTEND;TZID=Europe/Brussels:20260816T180000
+SUMMARY:🏆 🏠 P4H FanincHr BC Blaton vs P1H Aste Kain B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454096@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T180000
+DTEND;TZID=Europe/Brussels:20260822T200000
+SUMMARY:🏆 ✈️ P4H FanincHr BC Blaton vs P2H JS Dottignies A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486988@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260828T210000
+DTEND;TZID=Europe/Brussels:20260828T230000
+SUMMARY:🤝 ✈️ P4H FanincHr BC Blaton vs P3H JS Stambruges C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463504@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T190000
+DTEND;TZID=Europe/Brussels:20260905T210000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H JS Cuesmes B
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463557@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H Union Basket Lessines Flo
+ becq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T204500
+DTEND;TZID=Europe/Brussels:20260919T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H JS Fermoba Péruwelz
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463544@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T204500
+DTEND;TZID=Europe/Brussels:20261003T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H Royal BBC Brainois D
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463428@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H BC JS Estaimpuis D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463545@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T204500
+DTEND;TZID=Europe/Brussels:20261017T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H Royal Essor BC Templeuve C
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463493@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H CB Royale-Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463546@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T204500
+DTEND;TZID=Europe/Brussels:20261114T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H Blue and Gold Basket Club C
+ elles B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463547@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T204500
+DTEND;TZID=Europe/Brussels:20261121T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H BBC Tournai B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463573@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463444@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H BC Silly
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463548@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T204500
+DTEND;TZID=Europe/Brussels:20261219T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H JS Dottignies C
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463537@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T140000
+DTEND;TZID=Europe/Brussels:20270110T160000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H JS Fermoba Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463549@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T160000
+DTEND;TZID=Europe/Brussels:20270117T180000
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H JS Cuesmes B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463551@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T210000
+DTEND;TZID=Europe/Brussels:20270123T230000
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H Tremplin Mouscron
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463550@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T160000
+DTEND;TZID=Europe/Brussels:20270131T180000
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H Union Basket Lessines Flobe
+ cq
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463460@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H Royal Essor BC Templeuve 
+ C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463474@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H Royal BBC Brainois D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H Blue and Gold Basket Club
+  Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463421@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270328T150000
+DTEND;TZID=Europe/Brussels:20270328T170000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H BBC Tournai B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463553@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T204500
+DTEND;TZID=Europe/Brussels:20270403T224500
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H BC JS Estaimpuis D
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463489@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:🏀 ✈️ P4H FanincHr BC Blaton vs P4H JS Dottignies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463554@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T160000
+DTEND;TZID=Europe/Brussels:20270418T180000
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H BC Silly
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463555@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T160000
+DTEND;TZID=Europe/Brussels:20270425T180000
+SUMMARY:🏀 🏠 P4H FanincHr BC Blaton vs P4H CB Royale-Fraternité B
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+END:VCALENDAR

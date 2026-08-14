@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM BC Feluy-Obaix Seneffe
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466938@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM BC Ransart Char
+ leroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466983@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T133000
+DTEND;TZID=Europe/Brussels:20260912T153000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Spirou Basket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466993@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T160000
+DTEND;TZID=Europe/Brussels:20260919T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Rapido B.C.T.L.
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483450@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T103000
+DTEND;TZID=Europe/Brussels:20260926T123000
+SUMMARY:🏆 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466994@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Royal Eclairs Pon
+ t-De-Loup B
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467006@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Olympic Mont Su
+ r Marchienne B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466951@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Royal Eclairs P
+ ont-De-Loup E
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466995@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM RBC Montagnard
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466996@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T160000
+DTEND;TZID=Europe/Brussels:20261121T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Fémina Docherie
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466886@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T140000
+DTEND;TZID=Europe/Brussels:20261205T160000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Spirou Basket G
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466997@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM JS Luttre A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466921@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T120000
+DTEND;TZID=Europe/Brussels:20261220T140000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Basket Entité 
+ Courcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466910@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T163000
+DTEND;TZID=Europe/Brussels:20270109T183000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466998@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM BC Ransart Charle
+ roi A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466999@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T160000
+DTEND;TZID=Europe/Brussels:20270130T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Spirou Basket F
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466901@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T130000
+DTEND;TZID=Europe/Brussels:20270206T150000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466935@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Royal Eclairs P
+ ont-De-Loup B
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466978@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T130000
+DTEND;TZID=Europe/Brussels:20270221T150000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM RBC Montagnard
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467000@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Royal Eclairs Pon
+ t-De-Loup E
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467001@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T160000
+DTEND;TZID=Europe/Brussels:20270403T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Olympic Mont Sur 
+ Marchienne B
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466969@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T140000
+DTEND;TZID=Europe/Brussels:20270410T160000
+SUMMARY:🏀 ✈️ PU12HM BC Feluy-Obaix Seneffe vs PU12HM Fémina Docheri
+ e
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467002@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Spirou Basket G
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467003@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T160000
+DTEND;TZID=Europe/Brussels:20270424T180000
+SUMMARY:🏀 🏠 PU12HM BC Feluy-Obaix Seneffe vs PU12HM Basket Entité Co
+ urcelles B
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H BC JS Estaimpuis C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-484903@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T203000
+DTEND;TZID=Europe/Brussels:20260829T223000
+SUMMARY:🤝 ✈️ P3H BC JS Estaimpuis C vs P3H JSB Maffle C
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463138@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T190000
+DTEND;TZID=Europe/Brussels:20260905T210000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H Boussu Saint-Ghislain Uni
+ ted C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463050@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T170000
+DTEND;TZID=Europe/Brussels:20260912T190000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H Royal Essor BC Templeuve 
+ B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463061@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H BCJHP Quiévrain
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463128@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463062@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H JS Dottignies B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463063@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H Union BC Quaregnon C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463097@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H CB Royale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463064@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H Aste Kain D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463120@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T100000
+DTEND;TZID=Europe/Brussels:20261206T120000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H JS Stambruges C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463077@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H BBC Tournai A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463065@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H Soleil Levant Ellignies Ste
+  Anne
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463034@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H BCJHP Quiévrain
+LOCATION:Centre d'animation de Quievrain\, Quiévrain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463066@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H Boussu Saint-Ghislain Unite
+ d C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463067@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H Royal Essor BC Templeuve B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463068@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H BBC Tournai A
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463069@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H JSE Enghien C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463070@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T130000
+DTEND;TZID=Europe/Brussels:20270221T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H CB Royale-Fraternité A
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463024@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T100000
+DTEND;TZID=Europe/Brussels:20270314T120000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H Union BC Quaregnon C
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463092@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T210000
+DTEND;TZID=Europe/Brussels:20270403T230000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463048@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T170000
+DTEND;TZID=Europe/Brussels:20270411T190000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H Aste Kain D
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463071@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 🏠 P3H BC JS Estaimpuis C vs P3H JS Stambruges C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463115@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:🏀 ✈️ P3H BC JS Estaimpuis C vs P3H Soleil Levant Ellignies S
+ te Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+END:VCALENDAR

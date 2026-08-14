@@ -1,0 +1,232 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H Boussu Saint-Ghislain United C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486902@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260826T204500
+DTEND;TZID=Europe/Brussels:20260826T224500
+SUMMARY:🤝 ✈️ P3H Boussu Saint-Ghislain United C vs P2H JS Stambruges
+  B
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463138@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T190000
+DTEND;TZID=Europe/Brussels:20260905T210000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H BC JS Estaimpui
+ s C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463139@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H Soleil Levant E
+ llignies Ste Anne
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463051@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H Royal Essor B
+ C Templeuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463074@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261002T193000
+DTEND;TZID=Europe/Brussels:20261002T213000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H BBC Tournai A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463140@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T191500
+DTEND;TZID=Europe/Brussels:20261010T211500
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H JSE Enghien C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463086@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H JS Dottignies
+  B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463148@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H JS Dottignies B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463141@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H CB Royale-Frate
+ rnité A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463119@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H JS Stambruges
+  C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463142@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H BCJHP Quiévrai
+ n
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463021@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T140000
+DTEND;TZID=Europe/Brussels:20261213T160000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H Union BC Quar
+ egnon C
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463143@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H Aste Kain D
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463144@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H Royal Essor BC 
+ Templeuve B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463066@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H BC JS Estaimp
+ uis C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463111@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H Soleil Levant
+  Ellignies Ste Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463145@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H Union BC Quareg
+ non C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463146@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H BBC Tournai A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463147@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:🏀 🏠 P3H Boussu Saint-Ghislain United C vs P3H JS Stambruges C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463102@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T100000
+DTEND;TZID=Europe/Brussels:20270314T120000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H CB Royale-Fra
+ ternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463135@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463038@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H BCJHP Quiévr
+ ain
+LOCATION:Centre d'animation de Quievrain\, Quiévrain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463049@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:🏀 ✈️ P3H Boussu Saint-Ghislain United C vs P3H Aste Kain D
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+END:VCALENDAR

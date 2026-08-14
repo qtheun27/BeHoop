@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H BBC Tournai B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463439@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T184500
+DTEND;TZID=Europe/Brussels:20260905T204500
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H BC Silly
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463413@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H JS Dottignies C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463505@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H JS Cuesmes B
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463558@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H Union Basket Lessines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463415@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H BC JS Estaimpuis D
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463455@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T200000
+DTEND;TZID=Europe/Brussels:20261024T220000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H Royal Essor BC Templeuve C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463468@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H Royal BBC Brainois D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463414@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H JS Fermoba Péruwelz
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463547@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T204500
+DTEND;TZID=Europe/Brussels:20261121T224500
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H FanincHr BC Blaton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463417@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H CB Royale-Fraternité B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463418@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H Tremplin Mouscron
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H Blue and Gold Basket Club Cell
+ es B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463485@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H JS Dottignies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463419@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T160000
+DTEND;TZID=Europe/Brussels:20270124T180000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H BC Silly
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463420@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H JS Cuesmes B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463434@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H BC JS Estaimpuis D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T140000
+DTEND;TZID=Europe/Brussels:20270214T160000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H JS Fermoba Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463501@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T190000
+DTEND;TZID=Europe/Brussels:20270306T210000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H CB Royale-Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463422@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H Royal BBC Brainois D
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463421@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270328T150000
+DTEND;TZID=Europe/Brussels:20270328T170000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H FanincHr BC Blaton
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463423@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H Union Basket Lessines Flobecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463424@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H Blue and Gold Basket Club Celles
+  B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463580@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:🏀 ✈️ P4H BBC Tournai B vs P4H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463425@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:🏀 🏠 P4H BBC Tournai B vs P4H Royal Essor BC Templeuve C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+END:VCALENDAR

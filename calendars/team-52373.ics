@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU19D Rapido B.C.T.L.
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465883@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Royal Eclairs Pont-De-Lo
+ up A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465937@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D CEP Fleurus A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465849@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T103000
+DTEND;TZID=Europe/Brussels:20260926T123000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D BCJ Ressaix
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465850@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T163000
+DTEND;TZID=Europe/Brussels:20261003T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Royal Eclairs Pont-De-Loup
+  B
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465928@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T153000
+DTEND;TZID=Europe/Brussels:20261010T173000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Spirou Basket B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483473@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:🏆 ✈️ PU19D Rapido B.C.T.L. vs PU19D Basket Entité Courcelle
+ s
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut U19 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465917@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Spirou Basket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465851@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T163000
+DTEND;TZID=Europe/Brussels:20261114T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D CEP Fleurus B
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465874@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Basket Entité Courcelle
+ s
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465852@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T163000
+DTEND;TZID=Europe/Brussels:20261205T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Royal BC Marcinelle
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465853@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T163000
+DTEND;TZID=Europe/Brussels:20261212T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D DPK Carnières Morlanwelz
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465953@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T160000
+DTEND;TZID=Europe/Brussels:20261219T180000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Basket Club Maccabi Char
+ leroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465854@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T143000
+DTEND;TZID=Europe/Brussels:20270109T163000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D CEP Fleurus A
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465832@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T153000
+DTEND;TZID=Europe/Brussels:20270116T173000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465855@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Royal Eclairs Pont-De-Loup
+  A
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465867@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T153000
+DTEND;TZID=Europe/Brussels:20270206T173000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D DPK Carnières Morlanwel
+ z
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465911@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T111500
+DTEND;TZID=Europe/Brussels:20270213T131500
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Royal Eclairs Pont-De-Lo
+ up B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465847@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T090000
+DTEND;TZID=Europe/Brussels:20270221T110000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465856@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T163000
+DTEND;TZID=Europe/Brussels:20270313T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Spirou Basket A
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465857@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T163000
+DTEND;TZID=Europe/Brussels:20270403T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Spirou Basket B
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465858@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Basket Entité Courcelles
+LOCATION:Hall Polyvalent de Thuin\, Thuin
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465903@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T100000
+DTEND;TZID=Europe/Brussels:20270417T120000
+SUMMARY:🏀 ✈️ PU19D Rapido B.C.T.L. vs PU19D Royal BC Marcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465859@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T163000
+DTEND;TZID=Europe/Brussels:20270424T183000
+SUMMARY:🏀 🏠 PU19D Rapido B.C.T.L. vs PU19D Basket Club Maccabi Charle
+ roi
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U19 Dames A
+END:VEVENT
+END:VCALENDAR

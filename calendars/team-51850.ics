@@ -1,0 +1,263 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H Union Basket Lessines Flobecq
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454089@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260816T190000
+DTEND;TZID=Europe/Brussels:20260816T210000
+SUMMARY:🏆 🏠 P4H Union Basket Lessines Flobecq vs P2H Union BC Quaregn
+ on B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454088@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260822T170000
+DTEND;TZID=Europe/Brussels:20260822T190000
+SUMMARY:🏆 ✈️ P4H Union Basket Lessines Flobecq vs P2H Groupe Gobert 
+ Basket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463556@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Blue and Gold Ba
+ sket Club Celles B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463557@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H FanincHr BC Blat
+ on
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463491@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H CB Royale-Frat
+ ernité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463570@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Tremplin Mousc
+ ron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463558@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BBC Tournai B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463481@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Dottignies 
+ C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463560@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Cuesmes B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463534@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261115T140000
+DTEND;TZID=Europe/Brussels:20261115T160000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Fermoba Pé
+ ruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463559@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BC Silly
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463561@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BC JS Estaimpuis
+  D
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463562@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC T
+ empleuve C
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463470@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Royal BBC Brai
+ nois D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463563@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H CB Royale-Frater
+ nité B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463523@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Blue and Gold 
+ Basket Club Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463550@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270131T160000
+DTEND;TZID=Europe/Brussels:20270131T180000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H FanincHr BC Bl
+ aton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463564@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Dottignies C
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463565@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270214T170000
+DTEND;TZID=Europe/Brussels:20270214T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Tremplin Mouscro
+ n
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463566@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Fermoba Péru
+ welz
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463437@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270307T150000
+DTEND;TZID=Europe/Brussels:20270307T170000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BC JS Estaimpu
+ is D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463514@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Cuesmes B
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463423@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BBC Tournai B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463568@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270411T170000
+DTEND;TZID=Europe/Brussels:20270411T190000
+SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Royal BBC Braino
+ is D
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463464@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC
+  Templeuve C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463451@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270424T184500
+DTEND;TZID=Europe/Brussels:20270424T204500
+SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BC Silly
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+END:VCALENDAR

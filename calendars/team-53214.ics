@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Boussu Saint-Ghislain United B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468544@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T100000
+DTEND;TZID=Europe/Brussels:20260906T120000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Stam
+ bruges
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468533@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Fermob
+ a Péruwelz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468534@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Tremplin 
+ Mouscron B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468512@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T133000
+DTEND;TZID=Europe/Brussels:20261010T153000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Royal E
+ ssor BC Templeuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468536@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM B.C. L'9 
+ Flénu-Frameries C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468535@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly 
+ A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T110000
+DTEND;TZID=Europe/Brussels:20261114T130000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Dott
+ ignies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468492@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Sill
+ y B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468559@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JSB Maf
+ fle B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468537@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BBC Tourn
+ ai
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468572@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T100000
+DTEND;TZID=Europe/Brussels:20270110T120000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Ferm
+ oba Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468538@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Stambr
+ uges
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468479@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Union B
+ asket Lessines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Union Bas
+ ket Lessines Flobecq
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468540@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JSB Maffl
+ e B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468508@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Trempli
+ n Mouscron B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468541@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Dottig
+ nies C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468584@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T090000
+DTEND;TZID=Europe/Brussels:20270314T110000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Sill
+ y A
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468542@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Royal Ess
+ or BC Templeuve
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468598@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T113000
+DTEND;TZID=Europe/Brussels:20270410T133000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM B.C. L'
+ 9 Flénu-Frameries C
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly 
+ B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468477@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T133000
+DTEND;TZID=Europe/Brussels:20270424T153000
+SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BBC Tou
+ rnai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+END:VCALENDAR

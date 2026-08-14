@@ -1,0 +1,169 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14D CB Royale-Fraternité
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466565@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T150000
+DTEND;TZID=Europe/Brussels:20260912T170000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D BC Féminin Quaregno
+ n
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466510@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D Jeunesse Sportive 
+ Soignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483516@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T150000
+DTEND;TZID=Europe/Brussels:20261024T170000
+SUMMARY:🏆 🏠 PU14D CB Royale-Fraternité vs PU14D Rapido B.C.T.L.
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466611@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D BC Mons Capitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466567@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D JS Dottignies
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466600@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466568@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D Tournai E.F. Kain
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466564@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T100000
+DTEND;TZID=Europe/Brussels:20261213T120000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D Royal BBC Brainois
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466503@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T133000
+DTEND;TZID=Europe/Brussels:20261219T153000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D Royal Essor BC Tem
+ pleuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466558@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T130000
+DTEND;TZID=Europe/Brussels:20270116T150000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466493@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D BC Féminin Quareg
+ non
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466571@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D Jeunesse Sportive So
+ ignies
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466540@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T140000
+DTEND;TZID=Europe/Brussels:20270220T160000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466572@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D BC Mons Capitale
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466573@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D Tremplin Mouscron
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T133000
+DTEND;TZID=Europe/Brussels:20270417T153000
+SUMMARY:🏀 ✈️ PU14D CB Royale-Fraternité vs PU14D Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466574@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T150000
+DTEND;TZID=Europe/Brussels:20270424T170000
+SUMMARY:🏀 🏠 PU14D CB Royale-Fraternité vs PU14D Royal Essor BC Templ
+ euve
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+END:VCALENDAR

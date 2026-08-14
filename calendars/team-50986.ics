@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU16H Royal Eclairs Pont-De-Loup
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486838@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T150000
+DTEND;TZID=Europe/Brussels:20260808T170000
+SUMMARY:🤝 ✈️ RU16H Royal Eclairs Pont-De-Loup vs RU16H JSE Enghien
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 68 - 47
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485735@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:🤝 🏠 RU16H Royal Eclairs Pont-De-Loup vs PU16H AS Mazy-Spy
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485944@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 🏠 RU16H Royal Eclairs Pont-De-Loup vs RU16H Fresh Air A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Coupe AWBB U16 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485804@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:🤝 🏠 RU16H Royal Eclairs Pont-De-Loup vs PU16H Boussu Saint-Gh
+ islain United
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR

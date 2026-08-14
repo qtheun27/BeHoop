@@ -1,0 +1,185 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16H Union Basket Lessines Flobecq
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465290@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H BC Mons Capi
+ tale
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465201@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261017T110000
+DTEND;TZID=Europe/Brussels:20261017T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465291@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H CB Royale-Fr
+ aternité B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465269@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261115T160000
+DTEND;TZID=Europe/Brussels:20261115T180000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H JS Fermoba
+  Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465236@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465289@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261129T150000
+DTEND;TZID=Europe/Brussels:20261129T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H Tremplin Mou
+ scron
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465171@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261213T100000
+DTEND;TZID=Europe/Brussels:20261213T120000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H Union BC Q
+ uaregnon B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465293@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H Boussu Saint
+ -Ghislain United
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465294@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270110T150000
+DTEND;TZID=Europe/Brussels:20270110T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H BC AMLL B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465261@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270131T110000
+DTEND;TZID=Europe/Brussels:20270131T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H Tremplin M
+ ouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465295@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H Union BC Qua
+ regnon B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465296@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H BBC Tournai
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465297@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H JS Fermoba P
+ éruwelz
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465252@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270313T110000
+DTEND;TZID=Europe/Brussels:20270313T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H CB Royale-
+ Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465224@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270328T170000
+DTEND;TZID=Europe/Brussels:20270328T190000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H BBC Tourna
+ i
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465285@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T110000
+DTEND;TZID=Europe/Brussels:20270403T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H BC Mons Ca
+ pitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465298@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 🏠 PU16H Union Basket Lessines Flobecq vs PU16H JS Cuesmes
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465199@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270424T110000
+DTEND;TZID=Europe/Brussels:20270424T130000
+SUMMARY:🏀 ✈️ PU16H Union Basket Lessines Flobecq vs PU16H Boussu Sai
+ nt-Ghislain United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U16 Hommes D
+END:VEVENT
+END:VCALENDAR

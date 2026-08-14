@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM BC Ransart Charleroi A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466938@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM BC Feluy-Obaix Se
+ neffe
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466939@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Rapido B.C.T.L.
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466883@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Spirou Basket G
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483440@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:🏆 🏠 PU12HM BC Ransart Charleroi A vs Vainqueur HA254010
+LOCATION:Complexe Sportif COS I-II\, Charleroi
+DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466940@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Olympic Mont Sur 
+ Marchienne B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466962@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261007T170000
+DTEND;TZID=Europe/Brussels:20261007T190000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Fémina Docheri
+ e
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466987@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T140000
+DTEND;TZID=Europe/Brussels:20261017T160000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Spirou Basket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466897@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466941@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Royal Eclairs Pon
+ t-De-Loup E
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466920@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Basket Entité 
+ Courcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466942@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM RBC Montagnard
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466943@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T090000
+DTEND;TZID=Europe/Brussels:20261213T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Royal Eclairs Pon
+ t-De-Loup B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466944@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Spirou Basket G
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466998@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM BC Feluy-Obaix 
+ Seneffe
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466911@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466934@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Royal Eclairs P
+ ont-De-Loup B
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467012@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Olympic Mont Su
+ r Marchienne B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466957@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T130000
+DTEND;TZID=Europe/Brussels:20270220T150000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM Royal Eclairs P
+ ont-De-Loup E
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466945@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T090000
+DTEND;TZID=Europe/Brussels:20270314T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM JS Luttre A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466946@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T090000
+DTEND;TZID=Europe/Brussels:20270404T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Fémina Docherie
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466947@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T090000
+DTEND;TZID=Europe/Brussels:20270411T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Basket Entité Co
+ urcelles B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466980@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 ✈️ PU12HM BC Ransart Charleroi A vs PU12HM RBC Montagnard
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466948@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T090000
+DTEND;TZID=Europe/Brussels:20270425T110000
+SUMMARY:🏀 🏠 PU12HM BC Ransart Charleroi A vs PU12HM Spirou Basket F
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+END:VCALENDAR

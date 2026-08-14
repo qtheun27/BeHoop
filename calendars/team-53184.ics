@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Blue and Gold Basket Club Celles
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466828@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T130000
+DTEND;TZID=Europe/Brussels:20260905T150000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Roya
+ le-Fraternité A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466829@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Aste Ka
+ in A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466839@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Group
+ e Gobert Basket Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483448@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:🏆 🏠 PU12HM Blue and Gold Basket Club Celles vs Vainqueur HA25
+ 4026
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466774@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T104500
+DTEND;TZID=Europe/Brussels:20261003T124500
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Union
+  Mons-Hainaut B
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466830@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Royal B
+ BC Brainois A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466767@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T091500
+DTEND;TZID=Europe/Brussels:20261031T111500
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Bouss
+ u Saint-Ghislain United A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466875@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T093000
+DTEND;TZID=Europe/Brussels:20261108T113000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM B.C. 
+ L'9 Flénu-Frameries A
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466831@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Dott
+ ignies A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466864@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JSE E
+ nghien B
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466832@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union M
+ ons-Hainaut A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466834@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T150000
+DTEND;TZID=Europe/Brussels:20270109T170000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Groupe 
+ Gobert Basket Club Colfontaine A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T090000
+DTEND;TZID=Europe/Brussels:20270116T110000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Ro
+ yale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466757@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T113000
+DTEND;TZID=Europe/Brussels:20270130T133000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Aste 
+ Kain A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466857@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T120000
+DTEND;TZID=Europe/Brussels:20270206T140000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JS St
+ ambruges A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466835@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union M
+ ons-Hainaut B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466804@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Do
+ ttignies A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466836@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM B.C. L'
+ 9 Flénu-Frameries A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466833@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T170000
+DTEND;TZID=Europe/Brussels:20270320T190000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Stam
+ bruges A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466814@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T150000
+DTEND;TZID=Europe/Brussels:20270403T170000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Royal
+  BBC Brainois A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466837@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JSE Eng
+ hien B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466794@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Union
+  Mons-Hainaut A
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466838@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T170000
+DTEND;TZID=Europe/Brussels:20270424T190000
+SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Boussu 
+ Saint-Ghislain United A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+END:VCALENDAR

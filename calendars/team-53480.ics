@@ -1,0 +1,237 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H CB Royale-Fraternité
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486103@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T170000
+DTEND;TZID=Europe/Brussels:20260829T190000
+SUMMARY:🏆 🏠 PU18H CB Royale-Fraternité vs RU18H BC Fraire-Philippevi
+ lle A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464570@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T133000
+DTEND;TZID=Europe/Brussels:20260906T153000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H B.C. L'9 Flénu-Fr
+ ameries
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464593@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T100000
+DTEND;TZID=Europe/Brussels:20260912T120000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H JSB Maffle
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464559@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Royal BBC Brainois
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478922@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:🏆 ✈️ PU18H CB Royale-Fraternité vs PU18H Royal BC Marcinell
+ e
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : Coupe du Hainaut U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464560@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Basketball Brunehaut
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464506@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H BC JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464561@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Jeunesse Sportive So
+ ignies
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464583@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Blue and Gold Bask
+ et Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464562@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Tremplin Mouscron
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464563@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H JS Cuesmes
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464519@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Royal Essor BC Tem
+ pleuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464554@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T110000
+DTEND;TZID=Europe/Brussels:20270109T130000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464564@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T120000
+DTEND;TZID=Europe/Brussels:20270117T140000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H B.C. L'9 Flénu-Fram
+ eries
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464565@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H JSB Maffle
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464544@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464490@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T100000
+DTEND;TZID=Europe/Brussels:20270213T120000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Basketball Bruneha
+ ut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464566@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Blue and Gold Basket
+  Club Celles
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464500@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T130000
+DTEND;TZID=Europe/Brussels:20270313T150000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Jeunesse Sportive 
+ Soignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464567@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H BC JS Estaimpuis
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464480@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T133000
+DTEND;TZID=Europe/Brussels:20270410T153000
+SUMMARY:🏀 ✈️ PU18H CB Royale-Fraternité vs PU18H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464568@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H JS Dottignies
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464569@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T170000
+DTEND;TZID=Europe/Brussels:20270424T190000
+SUMMARY:🏀 🏠 PU18H CB Royale-Fraternité vs PU18H Royal Essor BC Templ
+ euve
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+END:VCALENDAR

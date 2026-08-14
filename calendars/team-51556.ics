@@ -1,0 +1,208 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H JS Fermoba Péruwelz
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465816@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T100000
+DTEND;TZID=Europe/Brussels:20260906T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H JS Dottignies
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465817@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T100000
+DTEND;TZID=Europe/Brussels:20260913T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H Warriors Basket Club
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479018@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:🏆 🏠 PU14H JS Fermoba Péruwelz vs PU14H CB Royale-Fraternité
+  A
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465752@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T153000
+DTEND;TZID=Europe/Brussels:20261003T173000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H Aste Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465818@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T100000
+DTEND;TZID=Europe/Brussels:20261011T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H BC Mons Capitale
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465729@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H Royal Essor BC Temp
+ leuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465819@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T100000
+DTEND;TZID=Europe/Brussels:20261108T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H JS Cuesmes
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465797@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T140000
+DTEND;TZID=Europe/Brussels:20261114T160000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H JS Stambruges
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465820@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T120000
+DTEND;TZID=Europe/Brussels:20261206T140000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H CB Royale-Fraternité
+  B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465699@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T130000
+DTEND;TZID=Europe/Brussels:20261212T150000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H Union BC Quaregnon 
+ B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465821@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T140000
+DTEND;TZID=Europe/Brussels:20261220T160000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H Boussu Saint-Ghislain
+  United
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T100000
+DTEND;TZID=Europe/Brussels:20270110T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H Royal Essor BC Temple
+ uve
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465744@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T100000
+DTEND;TZID=Europe/Brussels:20270116T120000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465789@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H Warriors Basket Clu
+ b
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465824@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T100000
+DTEND;TZID=Europe/Brussels:20270214T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H Aste Kain B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465825@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T100000
+DTEND;TZID=Europe/Brussels:20270221T120000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H JS Stambruges
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465823@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T120000
+DTEND;TZID=Europe/Brussels:20270228T140000
+SUMMARY:🏀 🏠 PU14H JS Fermoba Péruwelz vs PU14H Union BC Quaregnon B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465780@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465813@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T130000
+DTEND;TZID=Europe/Brussels:20270403T150000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H BC Mons Capitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465716@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H CB Royale-Fraternit
+ é B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465727@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T090000
+DTEND;TZID=Europe/Brussels:20270424T110000
+SUMMARY:🏀 ✈️ PU14H JS Fermoba Péruwelz vs PU14H Boussu Saint-Ghisla
+ in United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U14 Hommes D
+END:VEVENT
+END:VCALENDAR

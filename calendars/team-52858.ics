@@ -1,0 +1,227 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H Basketball Brunehaut
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-464483@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H JS Cuesmes
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464515@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H Royal Essor BC Temp
+ leuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478920@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:🏆 🏠 PU18H Basketball Brunehaut vs PU18H Royal Eclairs Pont-De
+ -Loup
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : Coupe du Hainaut U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464560@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H CB Royale-Fraternit
+ é
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464484@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H Tremplin Mouscron
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464485@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H JS Dottignies
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464495@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H Jeunesse Sportive S
+ oignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464486@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T140000
+DTEND;TZID=Europe/Brussels:20261121T160000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H B.C. L'9 Flénu-Frame
+ ries
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464482@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261129T100000
+DTEND;TZID=Europe/Brussels:20261129T120000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H BC JS Estaimpuis
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464596@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T120000
+DTEND;TZID=Europe/Brussels:20261205T140000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H JSB Maffle
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464585@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H Blue and Gold Baske
+ t Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464487@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T160000
+DTEND;TZID=Europe/Brussels:20261219T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H Royal BBC Brainois
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464488@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H Royal Essor BC Temple
+ uve
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464510@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H BC JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464489@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T100000
+DTEND;TZID=Europe/Brussels:20270207T120000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H Blue and Gold Basket 
+ Club Celles
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464490@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T100000
+DTEND;TZID=Europe/Brussels:20270213T120000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H CB Royale-Fraternité
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464491@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H Jeunesse Sportive Soi
+ gnies
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464533@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464479@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T090000
+DTEND;TZID=Europe/Brussels:20270404T110000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464580@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T133000
+DTEND;TZID=Europe/Brussels:20270410T153000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H B.C. L'9 Flénu-Fra
+ meries
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464492@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:🏀 🏠 PU18H Basketball Brunehaut vs PU18H JSB Maffle
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464558@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T110000
+DTEND;TZID=Europe/Brussels:20270424T130000
+SUMMARY:🏀 ✈️ PU18H Basketball Brunehaut vs PU18H Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U18 Hommes B Elite
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,220 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H Basket Entité Courcelles B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463182@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H BC Ransart Charl
+ eroi C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463193@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T120000
+DTEND;TZID=Europe/Brussels:20260920T140000
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H JS Luttre C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463260@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Red Sox Marcinel
+ le
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463194@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261009T204500
+DTEND;TZID=Europe/Brussels:20261009T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H CEP Fleurus E
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463195@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261106T204500
+DTEND;TZID=Europe/Brussels:20261106T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Charleroi Basket C
+ lub
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463229@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Royal Eclairs Po
+ nt-De-Loup E
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463196@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261120T204500
+DTEND;TZID=Europe/Brussels:20261120T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Fémina Docherie C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463252@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Basket Club Macc
+ abi Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463209@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T093000
+DTEND;TZID=Europe/Brussels:20261213T113000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Royal BC Marcine
+ lle B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463197@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261218T204500
+DTEND;TZID=Europe/Brussels:20261218T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463166@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H JS Luttre C
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463198@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T140000
+DTEND;TZID=Europe/Brussels:20270117T160000
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Ballers
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463270@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T193000
+DTEND;TZID=Europe/Brussels:20270123T213000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463199@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T120000
+DTEND;TZID=Europe/Brussels:20270131T140000
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H BC Ransart Charler
+ oi C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463200@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270205T204500
+DTEND;TZID=Europe/Brussels:20270205T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Royal BC Marcinell
+ e B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463202@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270219T204500
+DTEND;TZID=Europe/Brussels:20270219T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Royal Eclairs Pont
+ -De-Loup E
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463156@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Charleroi Basket
+  Club
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463201@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270319T204500
+DTEND;TZID=Europe/Brussels:20270319T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Red Sox Marcinelle
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463224@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T210000
+DTEND;TZID=Europe/Brussels:20270403T230000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H CEP Fleurus E
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463180@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H Fémina Docherie
+  C
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463203@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270416T204500
+DTEND;TZID=Europe/Brussels:20270416T224500
+SUMMARY:🏀 🏠 P4H Basket Entité Courcelles B vs P4H Basket Club Maccab
+ i Charleroi
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463247@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:🏀 ✈️ P4H Basket Entité Courcelles B vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+END:VCALENDAR

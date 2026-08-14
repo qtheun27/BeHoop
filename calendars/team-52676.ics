@@ -1,0 +1,214 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H Spirou Basket C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465420@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Royal Eclairs Pont-De-Loup
+  A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465421@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T143000
+DTEND;TZID=Europe/Brussels:20260912T163000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Blue and Gold Basket Club 
+ Celles A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465333@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T090000
+DTEND;TZID=Europe/Brussels:20260920T110000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H BC Ransart Charleroi
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465356@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Aste Kain A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465422@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H BCJ Ressaix A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465423@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Spirou Basket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465368@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T100000
+DTEND;TZID=Europe/Brussels:20261122T120000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H CB Royale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465424@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Basketball Brunehaut
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465303@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Union BC Quaregnon A
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465426@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T143000
+DTEND;TZID=Europe/Brussels:20270109T163000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H BC Ransart Charleroi
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465348@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T090000
+DTEND;TZID=Europe/Brussels:20270117T110000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Royal Eclairs Pont-De-Lo
+ up A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465393@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Blue and Gold Basket Clu
+ b Celles A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465427@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T143000
+DTEND;TZID=Europe/Brussels:20270206T163000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Union BC Quaregnon A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465428@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T143000
+DTEND;TZID=Europe/Brussels:20270213T163000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Aste Kain A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465429@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T143000
+DTEND;TZID=Europe/Brussels:20270220T163000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Royal BBC Brainois
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465425@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270227T133000
+DTEND;TZID=Europe/Brussels:20270227T153000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H Jeunesse Sportive Soignies
+  A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465401@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T150000
+DTEND;TZID=Europe/Brussels:20270306T170000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465384@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Spirou Basket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465417@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T093000
+DTEND;TZID=Europe/Brussels:20270404T113000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H BCJ Ressaix A
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465430@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T153000
+DTEND;TZID=Europe/Brussels:20270410T173000
+SUMMARY:🏀 🏠 PU14H Spirou Basket C vs PU14H CB Royale-Fraternité A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465320@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T100000
+DTEND;TZID=Europe/Brussels:20270417T120000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Basketball Brunehaut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465331@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T090000
+DTEND;TZID=Europe/Brussels:20270425T110000
+SUMMARY:🏀 ✈️ PU14H Spirou Basket C vs PU14H Jeunesse Sportive Soigni
+ es A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

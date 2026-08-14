@@ -1,0 +1,48 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU18H Royal Eclairs Pont-De-Loup
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486835@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T130000
+DTEND;TZID=Europe/Brussels:20260808T150000
+SUMMARY:🤝 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H JSE Enghien
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 74 - 66
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485702@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T154500
+DTEND;TZID=Europe/Brussels:20260815T174500
+SUMMARY:🤝 🏠 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Su
+ r Marchienne
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486095@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260821T200000
+DTEND;TZID=Europe/Brussels:20260821T220000
+SUMMARY:🏆 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H Esneux St-Lou
+ is United
+LOCATION:Collège Saint-Louis\, Liège
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T110000
+DTEND;TZID=Europe/Brussels:20260829T130000
+SUMMARY:🤝 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont 
+ Sur Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR

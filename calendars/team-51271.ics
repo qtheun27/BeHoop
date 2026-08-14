@@ -1,0 +1,226 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Olympic Mont Sur Marchienne C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467400@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM Royal Ecla
+ irs Pont-De-Loup C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467401@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM AC Gilly
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467313@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM DPK Carn
+ ières Morlanwelz B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467336@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T160000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM Royal BC
+  Marcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467402@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM Charleroi 
+ Basket Club B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467403@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T120000
+DTEND;TZID=Europe/Brussels:20261017T140000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM RCBE 2000
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467381@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM Spirou B
+ asket H
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467348@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T090000
+DTEND;TZID=Europe/Brussels:20261122T110000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM CEP Fleu
+ rus
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467404@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM BC Ransart
+  Charleroi B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467283@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T163000
+DTEND;TZID=Europe/Brussels:20261213T183000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM Charlero
+ i Basket Club A
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467405@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T090000
+DTEND;TZID=Europe/Brussels:20261220T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM BC AMLL B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467406@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM DPK Carni
+ ères Morlanwelz B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467328@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM Royal Ec
+ lairs Pont-De-Loup C
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467373@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T123000
+DTEND;TZID=Europe/Brussels:20270130T143000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM AC Gilly
+LOCATION:Centre Sportif Fourcault\, Dampremy
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467407@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T090000
+DTEND;TZID=Europe/Brussels:20270207T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM Charleroi 
+ Basket Club A
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T090000
+DTEND;TZID=Europe/Brussels:20270214T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM Royal BC M
+ arcinelle
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467409@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM Spirou Bas
+ ket H
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467364@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM RCBE 200
+ 0
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467397@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM Charlero
+ i Basket Club B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467410@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T090000
+DTEND;TZID=Europe/Brussels:20270411T110000
+SUMMARY:🏀 🏠 PU12HM Olympic Mont Sur Marchienne C vs PU12HM CEP Fleuru
+ s
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467300@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T090000
+DTEND;TZID=Europe/Brussels:20270418T110000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM BC Ransa
+ rt Charleroi B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467311@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:🏀 ✈️ PU12HM Olympic Mont Sur Marchienne C vs PU12HM BC AMLL 
+ B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U12 Hommes F
+END:VEVENT
+END:VCALENDAR

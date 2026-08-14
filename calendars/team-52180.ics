@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2D Royal Essor BC Templeuve B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487018@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T110000
+DTEND;TZID=Europe/Brussels:20260823T130000
+SUMMARY:🤝 🏠 P2D Royal Essor BC Templeuve B vs None
+LOCATION:RumXcube\, Rumes
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487019@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🤝 🏠 P2D Royal Essor BC Templeuve B vs P3D Basketball Brunehau
+ t
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463738@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Jeunesse Sportive
+  Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463760@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Basket Entité Cour
+ celles B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463761@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D JS Fermoba Péruwel
+ z
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463794@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Groupe Gobert Bas
+ ket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463762@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D BCJ Ressaix
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463763@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Royal BBC Brainois 
+ A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463729@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463764@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D ABC B Péronnes B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463808@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T153000
+DTEND;TZID=Europe/Brussels:20261206T173000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Fémina Docherie 
+ B
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463753@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463765@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Boussu Saint-Ghisla
+ in United
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463854@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T160000
+DTEND;TZID=Europe/Brussels:20270110T180000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D JS Fermoba Péruw
+ elz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463766@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Jeunesse Sportive S
+ oignies B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463777@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T100000
+DTEND;TZID=Europe/Brussels:20270131T120000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Basket Entité Co
+ urcelles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463767@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Rapido B.C.T.L.
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463768@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Groupe Gobert Baske
+ t Club Colfontaine B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463769@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T130000
+DTEND;TZID=Europe/Brussels:20270221T150000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463835@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Royal BBC Brainoi
+ s A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463823@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463791@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D ABC B Péronnes B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463770@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:🏀 🏠 P2D Royal Essor BC Templeuve B vs P2D Fémina Docherie B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463847@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 ✈️ P2D Royal Essor BC Templeuve B vs P2D Boussu Saint-Ghis
+ lain United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+END:VCALENDAR

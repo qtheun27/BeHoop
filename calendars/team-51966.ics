@@ -1,0 +1,229 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H JS Dottignies B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486903@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T173000
+DTEND;TZID=Europe/Brussels:20260808T193000
+SUMMARY:🤝 ✈️ P3H JS Dottignies B vs P3H RCBE 2000 B
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 59 - 92
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486772@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:🤝 ✈️ P3H JS Dottignies B vs P4H JS Cuesmes A
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463029@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H BCJHP Quiévrain
+LOCATION:Centre d'animation de Quievrain\, Quiévrain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H JS Stambruges C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463062@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H BC JS Estaimpuis C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463086@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H Boussu Saint-Ghislain United C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463084@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T200000
+DTEND;TZID=Europe/Brussels:20261024T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H Royal Essor BC Templeuve B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463148@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H Boussu Saint-Ghislain United
+  C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463085@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H JSE Enghien C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463075@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H BBC Tournai A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463042@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H Aste Kain D
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463122@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H JS Stambruges C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463088@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H CB Royale-Fraternité A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463089@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T200000
+DTEND;TZID=Europe/Brussels:20270130T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H BCJHP Quiévrain
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463090@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H Soleil Levant Ellignies Ste An
+ ne
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463058@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H Royal Essor BC Templeuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463091@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H BBC Tournai A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463087@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H Union BC Quaregnon C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463094@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T170000
+DTEND;TZID=Europe/Brussels:20270306T190000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H CB Royale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463134@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463109@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270327T203000
+DTEND;TZID=Europe/Brussels:20270327T223000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H Soleil Levant Ellignies Ste 
+ Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463092@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T210000
+DTEND;TZID=Europe/Brussels:20270403T230000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H BC JS Estaimpuis C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463093@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:🏀 🏠 P3H JS Dottignies B vs P3H Aste Kain D
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463027@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:🏀 ✈️ P3H JS Dottignies B vs P3H Union BC Quaregnon C
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+END:VCALENDAR

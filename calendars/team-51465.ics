@@ -1,0 +1,208 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3D CEP Fleurus C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485091@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T130000
+DTEND;TZID=Europe/Brussels:20260809T150000
+SUMMARY:🤝 🏠 P3D CEP Fleurus C vs P2D Basket Club Genappe Lothier
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 49 - 42
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463870@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T130000
+DTEND;TZID=Europe/Brussels:20260906T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Wolves Les Bons Villers
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486920@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🤝 🏠 P3D CEP Fleurus C vs P2D J.S.La Plante B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463903@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Basket Entité Courcelles C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463948@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463872@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Charleroi Basket Club
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463873@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Royal Eclairs Pont-De-Loup C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463883@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Royal BBC Brainois B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463874@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463984@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T173000
+DTEND;TZID=Europe/Brussels:20261205T193000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463973@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D BC Féminin Quaregnon C
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463875@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D JS Cuesmes
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463876@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Basket Entité Courcelles C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463898@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T184000
+DTEND;TZID=Europe/Brussels:20270116T204000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Wolves Les Bons Villers
+LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463877@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D BC Féminin Quaregnon C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463878@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D UBC Binche
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463879@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T130000
+DTEND;TZID=Europe/Brussels:20270221T150000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Royal BBC Brainois B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463921@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Royal Eclairs Pont-De-Loup C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463867@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Charleroi Basket Club
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463968@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463880@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:🏀 🏠 P3D CEP Fleurus C vs P3D Ballers
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463946@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:🏀 ✈️ P3D CEP Fleurus C vs P3D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+END:VCALENDAR

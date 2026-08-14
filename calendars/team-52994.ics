@@ -1,0 +1,166 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14D Tremplin Mouscron
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466597@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D Jeunesse Sportive Soigni
+ es
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466598@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D JS Dottignies
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466610@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D BC Mons Capitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483518@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T133000
+DTEND;TZID=Europe/Brussels:20261031T153000
+SUMMARY:🏆 ✈️ PU14D Tremplin Mouscron vs PU14D Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466555@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466600@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D CB Royale-Fraternité
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466490@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D BC Féminin Quaregnon
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466601@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D Royal Essor BC Templeuve
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T133000
+DTEND;TZID=Europe/Brussels:20261219T153000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D Jeunesse Sportive Soig
+ nies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466505@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T090000
+DTEND;TZID=Europe/Brussels:20270207T110000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D Royal Essor BC Templeu
+ ve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T160000
+DTEND;TZID=Europe/Brussels:20270213T180000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466604@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T130000
+DTEND;TZID=Europe/Brussels:20270313T150000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D Royal BBC Brainois
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466605@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T150000
+DTEND;TZID=Europe/Brussels:20270403T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D BC Mons Capitale
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466573@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 ✈️ PU14D Tremplin Mouscron vs PU14D CB Royale-Fraternité
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466606@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D BC Féminin Quaregnon
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466607@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T150000
+DTEND;TZID=Europe/Brussels:20270424T170000
+SUMMARY:🏀 🏠 PU14D Tremplin Mouscron vs PU14D Tournai E.F. Kain
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+END:VCALENDAR

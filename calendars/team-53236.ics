@@ -1,0 +1,235 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM RBC Montagnard
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487055@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T110000
+DTEND;TZID=Europe/Brussels:20260829T130000
+SUMMARY:🤝 ✈️ PU12HM RBC Montagnard vs PU12HM Basket Entité Courcell
+ es A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Amicaux U12
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466982@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T130000
+DTEND;TZID=Europe/Brussels:20260906T150000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Spirou Basket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467005@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Olympic Mont Sur Marchi
+ enne B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466971@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Fémina Docherie
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483447@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:🏆 🏠 PU12HM RBC Montagnard vs PU12HM Aste Kain A
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466972@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM JS Luttre A
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466918@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T120000
+DTEND;TZID=Europe/Brussels:20261011T140000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Basket Entité Courcell
+ es B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466973@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Rapido B.C.T.L.
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466995@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM BC Feluy-Obaix Seneffe
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466974@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Spirou Basket G
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466942@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466975@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Royal Eclairs Pont-De-Lou
+ p E
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466931@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Royal Eclairs Pont-De-L
+ oup B
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466966@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T140000
+DTEND;TZID=Europe/Brussels:20270109T160000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Fémina Docherie
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466976@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Spirou Basket F
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466977@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Olympic Mont Sur Marchien
+ ne B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466956@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Royal Eclairs Pont-De-L
+ oup E
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466902@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466978@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T130000
+DTEND;TZID=Europe/Brussels:20270221T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM BC Feluy-Obaix Seneffe
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466912@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T163000
+DTEND;TZID=Europe/Brussels:20270313T183000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466979@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T130000
+DTEND;TZID=Europe/Brussels:20270404T150000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Basket Entité Courcelles
+  B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466892@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T153000
+DTEND;TZID=Europe/Brussels:20270410T173000
+SUMMARY:🏀 ✈️ PU12HM RBC Montagnard vs PU12HM Spirou Basket G
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466980@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM BC Ransart Charleroi A
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466981@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T123000
+DTEND;TZID=Europe/Brussels:20270424T143000
+SUMMARY:🏀 🏠 PU12HM RBC Montagnard vs PU12HM Royal Eclairs Pont-De-Lou
+ p B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+END:VCALENDAR

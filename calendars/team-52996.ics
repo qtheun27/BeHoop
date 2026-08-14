@@ -1,0 +1,187 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H BC Feluy-Obaix Seneffe
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-465553@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T153000
+DTEND;TZID=Europe/Brussels:20260912T173000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H B.C. L'9 Flénu-F
+ rameries
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465519@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T100000
+DTEND;TZID=Europe/Brussels:20260919T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Royal Blaregnies BC
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479015@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Royal BBC Brainois
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465520@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T100000
+DTEND;TZID=Europe/Brussels:20261003T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Tremplin Mouscron
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465466@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H JS Luttre
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H Olympic Mont Sur 
+ Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T100000
+DTEND;TZID=Europe/Brussels:20261121T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H UBC Binche
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465490@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T153000
+DTEND;TZID=Europe/Brussels:20261205T173000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H Spirou Basket B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465523@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T100000
+DTEND;TZID=Europe/Brussels:20261212T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Union Mons-Hainaut
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T093000
+DTEND;TZID=Europe/Brussels:20270109T113000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H Royal Blaregnies 
+ BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465479@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T090000
+DTEND;TZID=Europe/Brussels:20270123T110000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465525@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T100000
+DTEND;TZID=Europe/Brussels:20270130T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H B.C. L'9 Flénu-Fra
+ meries
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465504@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T123000
+DTEND;TZID=Europe/Brussels:20270206T143000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H Union Mons-Hainau
+ t
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465450@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465526@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T100000
+DTEND;TZID=Europe/Brussels:20270220T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Olympic Mont Sur Ma
+ rchienne
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465527@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T100000
+DTEND;TZID=Europe/Brussels:20270403T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H JS Luttre
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465440@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 ✈️ PU14H BC Feluy-Obaix Seneffe vs PU14H UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465528@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T100000
+DTEND;TZID=Europe/Brussels:20270417T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H Spirou Basket B
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465529@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T100000
+DTEND;TZID=Europe/Brussels:20270424T120000
+SUMMARY:🏀 🏠 PU14H BC Feluy-Obaix Seneffe vs PU14H BC AMLL A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U14 Hommes B
+END:VEVENT
+END:VCALENDAR

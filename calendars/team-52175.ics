@@ -1,0 +1,257 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Royal Essor BC Templeuve A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486916@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260813T193000
+DTEND;TZID=Europe/Brussels:20260813T213000
+SUMMARY:🤝 ✈️ P2H Royal Essor BC Templeuve A vs P3H CB Royale-Fratern
+ ité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 48 - 65
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486864@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:🤝 ✈️ P2H Royal Essor BC Templeuve A vs P3H BBC Tournai A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454102@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T200000
+DTEND;TZID=Europe/Brussels:20260822T220000
+SUMMARY:🏆 🏠 P2H Royal Essor BC Templeuve A vs P4H Tremplin Mouscron
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule N
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454100@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:🏆 ✈️ P2H Royal Essor BC Templeuve A vs P1H BC JS Estaimpuis 
+ B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule N
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462632@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T190000
+DTEND;TZID=Europe/Brussels:20260905T210000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JSE Enghien B
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462654@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JS Dottignies A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462655@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JSB Maffle B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462688@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Groupe Gobert Bas
+ ket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462656@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Blue and Gold Baske
+ t Club Celles A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462685@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Boussu Saint-Ghis
+ lain United B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462657@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JS Stambruges B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462623@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Union BC Quaregno
+ n B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462658@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Boussu Saint-Ghisla
+ in United B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462702@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T191500
+DTEND;TZID=Europe/Brussels:20261128T211500
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Royal Blaregnies 
+ BC A
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462647@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Aste Kain C
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462659@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H BC Mons Capitale A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462748@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T183000
+DTEND;TZID=Europe/Brussels:20270109T203000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JSB Maffle B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462660@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JSE Enghien B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462671@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JS Dottignies A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462661@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Aste Kain C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462662@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Groupe Gobert Baske
+ t Club Colfontaine B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462663@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Union BC Quaregnon 
+ B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462729@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JS Stambruges B
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462717@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Blue and Gold Bas
+ ket Club Celles A
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462664@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Royal Blaregnies BC
+  A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462741@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H BC Mons Capitale 
+ A
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P2 Hommes B
+END:VEVENT
+END:VCALENDAR

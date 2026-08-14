@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Basketball Brunehaut
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468082@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T100000
+DTEND;TZID=Europe/Brussels:20260905T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM BC JS Estaimpuis A
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T100000
+DTEND;TZID=Europe/Brussels:20260912T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM BC JS Estaimpuis B
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468115@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T133000
+DTEND;TZID=Europe/Brussels:20260919T153000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468160@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T130000
+DTEND;TZID=Europe/Brussels:20261003T150000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468084@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T100000
+DTEND;TZID=Europe/Brussels:20261010T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM Aste Kain B
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468085@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM CB Royale-Fraternit
+ é A
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468095@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM B.B.C.Leuze
+LOCATION:Leuzarena\, Leuze-en-Hainaut
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468086@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T120000
+DTEND;TZID=Europe/Brussels:20261122T140000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM Tremplin Mouscron C
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468196@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM Tremplin Mouscron
+  A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468185@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T130000
+DTEND;TZID=Europe/Brussels:20261212T150000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM CB Royale-Fratern
+ ité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468087@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T160000
+DTEND;TZID=Europe/Brussels:20261220T180000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM Blue and Gold Baske
+ t Club Celles B
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468088@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T100000
+DTEND;TZID=Europe/Brussels:20270109T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM Tournai E.F. Kain
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468110@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T090000
+DTEND;TZID=Europe/Brussels:20270116T110000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM BC JS Estaimpuis 
+ A
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468143@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T140000
+DTEND;TZID=Europe/Brussels:20270130T160000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM BC JS Estaimpuis 
+ B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468089@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T100000
+DTEND;TZID=Europe/Brussels:20270206T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM CB Royale-Fraternit
+ é B
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468090@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T100000
+DTEND;TZID=Europe/Brussels:20270213T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM JS Dottignies B
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468091@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T100000
+DTEND;TZID=Europe/Brussels:20270220T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM B.B.C.Leuze
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468133@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T130000
+DTEND;TZID=Europe/Brussels:20270313T150000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM CB Royale-Fratern
+ ité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468079@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T113000
+DTEND;TZID=Europe/Brussels:20270403T133000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM Aste Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468180@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T131500
+DTEND;TZID=Europe/Brussels:20270411T151500
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM Tremplin Mouscron
+  C
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468092@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T100000
+DTEND;TZID=Europe/Brussels:20270417T120000
+SUMMARY:🏀 🏠 PU10HM Basketball Brunehaut vs PU10HM Tremplin Mouscron A
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468158@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:🏀 ✈️ PU10HM Basketball Brunehaut vs PU10HM Blue and Gold Bas
+ ket Club Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+END:VCALENDAR

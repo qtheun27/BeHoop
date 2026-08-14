@@ -1,0 +1,225 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1D Jeunesse Sportive Soignies A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454135@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T170000
+DTEND;TZID=Europe/Brussels:20260815T190000
+SUMMARY:🏆 ✈️ P1D Jeunesse Sportive Soignies A vs P3D UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454132@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T200000
+DTEND;TZID=Europe/Brussels:20260829T220000
+SUMMARY:🏆 🏠 P1D Jeunesse Sportive Soignies A vs P2D Rapido B.C.T.L.
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463606@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T193000
+DTEND;TZID=Europe/Brussels:20260905T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Royal Essor BC Te
+ mpleuve A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463607@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T193000
+DTEND;TZID=Europe/Brussels:20260912T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Soleil Levant Ell
+ ignies Ste Anne
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463639@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Tournai E.F. Ka
+ in B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463684@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Groupe Gobert B
+ asket Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463608@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D BC Féminin Quare
+ gnon A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463609@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Fémina Docherie 
+ A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463619@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D ABC B Péronnes
+  A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463610@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Tremplin Mouscron
+  A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463720@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T193000
+DTEND;TZID=Europe/Brussels:20261205T213000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D BC Mons Capital
+ e B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463709@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463612@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Tournai E.F. Kain
+  B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463634@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Royal Essor BC 
+ Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463667@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Soleil Levant E
+ llignies Ste Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463613@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D CEP Fleurus B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463614@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T193000
+DTEND;TZID=Europe/Brussels:20270213T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Groupe Gobert Bas
+ ket Club Colfontaine A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463615@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T193000
+DTEND;TZID=Europe/Brussels:20270220T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D ABC B Péronnes A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463657@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Fémina Docheri
+ e A
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463603@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D BC Féminin Qua
+ regnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463704@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Tremplin Mouscr
+ on A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463616@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T193000
+DTEND;TZID=Europe/Brussels:20270417T213000
+SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D BC Mons Capitale 
+ B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P1 Dames
+END:VEVENT
+END:VCALENDAR

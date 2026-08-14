@@ -1,0 +1,241 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Royal Eclairs Pont-De-Loup B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486882@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T180000
+DTEND;TZID=Europe/Brussels:20260808T200000
+SUMMARY:🤝 🏠 P2H Royal Eclairs Pont-De-Loup B vs P1H RBC Erpent B
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 29 - 93
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487319@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T190000
+DTEND;TZID=Europe/Brussels:20260829T210000
+SUMMARY:🤝 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H JSE Enghien B
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462566@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T190000
+DTEND;TZID=Europe/Brussels:20260905T210000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H Royal BBC Brain
+ ois A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462501@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462555@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H CEP Fleurus C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462556@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H DPK Carnières Mo
+ rlanwelz A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462534@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H Basket Entité 
+ Courcelles A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462557@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H Olympic Mont Sur 
+ Marchienne C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462547@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462558@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H BC Écaussinnes A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H BC Ransart Char
+ leroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462581@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H BC Feluy-Obaix 
+ Seneffe A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462559@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H Jeunesse Sportive
+  Soignies A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462594@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H CEP Fleurus C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462560@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H Royal BBC Brainoi
+ s A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462561@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H JS Luttre A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462562@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H BC Feluy-Obaix Se
+ neffe A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H DPK Carnières 
+ Morlanwelz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462563@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H BC AMLL A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462606@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H Olympic Mont Su
+ r Marchienne C
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462564@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T180000
+DTEND;TZID=Europe/Brussels:20270403T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H Basket Entité Co
+ urcelles A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462620@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H BC Écaussinnes
+  A
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462565@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:🏀 🏠 P2H Royal Eclairs Pont-De-Loup B vs P2H BC Ransart Charle
+ roi A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462499@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 ✈️ P2H Royal Eclairs Pont-De-Loup B vs P2H Jeunesse Sporti
+ ve Soignies A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,236 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H Royal BBC Brainois C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486769@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T190000
+DTEND;TZID=Europe/Brussels:20260815T210000
+SUMMARY:🤝 🏠 P4H Royal BBC Brainois C vs P4H CEP Fleurus E
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486879@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T210000
+DTEND;TZID=Europe/Brussels:20260822T230000
+SUMMARY:🤝 🏠 P4H Royal BBC Brainois C vs P3H BC Fernelmont C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463380@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T183000
+DTEND;TZID=Europe/Brussels:20260905T203000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H BC Écaussinnes B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463403@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260911T210000
+DTEND;TZID=Europe/Brussels:20260911T230000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H B.C. L'9 Flénu-Frameri
+ es C
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463372@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H Jeunesse Sportive Soignie
+ s B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463370@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H Wolves Les Bons Villers
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463369@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H JS Cuesmes A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463371@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H BC AMLL C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463393@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T113000
+DTEND;TZID=Europe/Brussels:20261115T133000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H BCJ Ressaix C
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463316@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H DPK Carnières Morlanwe
+ lz C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463340@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H RCBE 2000 C
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463373@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261211T210000
+DTEND;TZID=Europe/Brussels:20261211T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H Groupe Gobert Basket Club
+  Colfontaine C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463329@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H Basket Entité Courcell
+ es C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463364@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H JS Cuesmes A
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463374@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H BC Écaussinnes B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463375@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270129T210000
+DTEND;TZID=Europe/Brussels:20270129T230000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H B.C. L'9 Flénu-Frameries
+  C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463354@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H Groupe Gobert Basket Cl
+ ub Colfontaine C
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463300@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T204000
+DTEND;TZID=Europe/Brussels:20270213T224000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H Wolves Les Bons Villers
+LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463376@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H BCJ Ressaix C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463310@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H BC AMLL C
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463377@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T100000
+DTEND;TZID=Europe/Brussels:20270404T120000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H DPK Carnières Morlanwelz
+  C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463290@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:🏀 ✈️ P4H Royal BBC Brainois C vs P4H Jeunesse Sportive Soign
+ ies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463378@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H RCBE 2000 C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463379@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 🏠 P4H Royal BBC Brainois C vs P4H Basket Entité Courcelles
+  C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+END:VCALENDAR

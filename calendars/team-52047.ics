@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU19D Jeunesse Sportive Soignies
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482446@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T140000
+DTEND;TZID=Europe/Brussels:20260816T160000
+SUMMARY:🤝 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D DPK Carnière
+ s Morlanwelz
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466081@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D Tremplin Mouscr
+ on
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465993@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T090000
+DTEND;TZID=Europe/Brussels:20260920T110000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D Royal Essor B
+ C Templeuve B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466016@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D ABC B Péronn
+ es B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466082@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D BC Féminin Qua
+ regnon A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483472@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:🏆 🏠 PU19D Jeunesse Sportive Soignies vs PU19D Royal Eclairs P
+ ont-De-Loup A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Coupe du Hainaut U19 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D CB Royale-Frate
+ rnité
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466080@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D BC AMLL
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466028@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D Royal BBC Bra
+ inois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466084@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D Royal Essor BC 
+ Templeuve A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465963@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T133000
+DTEND;TZID=Europe/Brussels:20261212T153000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D BC Féminin Q
+ uaregnon B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466085@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D ABC B Péronnes
+  A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466086@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T110000
+DTEND;TZID=Europe/Brussels:20270109T130000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D Royal Essor BC 
+ Templeuve B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466053@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D Tremplin Mous
+ cron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466087@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D BC Féminin Qua
+ regnon B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466088@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D ABC B Péronnes
+  B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466044@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T090000
+DTEND;TZID=Europe/Brussels:20270313T110000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D CB Royale-Fra
+ ternité
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466008@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T123000
+DTEND;TZID=Europe/Brussels:20270320T143000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D BC AMLL
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466077@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T153000
+DTEND;TZID=Europe/Brussels:20270403T173000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D BC Féminin Q
+ uaregnon A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466090@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T130000
+DTEND;TZID=Europe/Brussels:20270411T150000
+SUMMARY:🏀 🏠 PU19D Jeunesse Sportive Soignies vs PU19D Royal BBC Brain
+ ois
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465980@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D Royal Essor B
+ C Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465991@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:🏀 ✈️ PU19D Jeunesse Sportive Soignies vs PU19D ABC B Péronn
+ es A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+END:VCALENDAR

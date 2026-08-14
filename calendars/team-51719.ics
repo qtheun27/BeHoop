@@ -1,0 +1,221 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H DPK Carnières Morlanwelz C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463292@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T204000
+DTEND;TZID=Europe/Brussels:20260905T224000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Wolves Les Bons 
+ Villers
+LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463314@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T170000
+DTEND;TZID=Europe/Brussels:20260912T190000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Basket Entité Cou
+ rcelles C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463315@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T133000
+DTEND;TZID=Europe/Brussels:20260920T153000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H B.C. L'9 Flénu-Fr
+ ameries C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463348@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Groupe Gobert Ba
+ sket Club Colfontaine C
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463317@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BC Écaussinnes B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463283@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Jeunesse Sportiv
+ e Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463318@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H RCBE 2000 C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463316@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Royal BBC Brainois
+  C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463362@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H JS Cuesmes A
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463307@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BC AMLL C
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463319@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BCJ Ressaix C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270108T210000
+DTEND;TZID=Europe/Brussels:20270108T230000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H B.C. L'9 Flénu-
+ Frameries C
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463320@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Wolves Les Bons Vi
+ llers
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463331@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Basket Entité C
+ ourcelles C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463321@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BC AMLL C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463322@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T113000
+DTEND;TZID=Europe/Brussels:20270214T133000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Groupe Gobert Bask
+ et Club Colfontaine C
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463323@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Jeunesse Sportive 
+ Soignies B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463389@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T183000
+DTEND;TZID=Europe/Brussels:20270313T203000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BC Écaussinnes 
+ B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463377@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T100000
+DTEND;TZID=Europe/Brussels:20270404T120000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Royal BBC Braino
+ is C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463345@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H RCBE 2000 C
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463324@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T113000
+DTEND;TZID=Europe/Brussels:20270418T133000
+SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H JS Cuesmes A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463401@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BCJ Ressaix C
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P4 Hommes B
+END:VEVENT
+END:VCALENDAR

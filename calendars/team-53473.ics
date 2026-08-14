@@ -1,0 +1,224 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM CB Royale-Fraternité A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466828@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T130000
+DTEND;TZID=Europe/Brussels:20260905T150000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold 
+ Basket Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466763@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T150000
+DTEND;TZID=Europe/Brussels:20260912T170000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Boussu Saint-G
+ hislain United A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466817@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T090000
+DTEND;TZID=Europe/Brussels:20260919T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JS Stambruges A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466818@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Haina
+ ut A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466796@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T140000
+DTEND;TZID=Europe/Brussels:20261010T160000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JS Dottignies 
+ A
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466819@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JSE Enghien B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466809@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Royal BBC Brai
+ nois A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466820@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM B.C. L'9 Flénu-
+ Frameries A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466776@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T100000
+DTEND;TZID=Europe/Brussels:20261205T120000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hai
+ naut B
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466843@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T100000
+DTEND;TZID=Europe/Brussels:20261212T120000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert 
+ Basket Club Colfontaine A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466821@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Aste Kain A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466856@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T120000
+DTEND;TZID=Europe/Brussels:20270109T140000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JS Stambruges 
+ A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466822@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T090000
+DTEND;TZID=Europe/Brussels:20270116T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold Ba
+ sket Club Celles
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466823@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T090000
+DTEND;TZID=Europe/Brussels:20270130T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Boussu Saint-Ghi
+ slain United A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466824@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert Ba
+ sket Club Colfontaine A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466792@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T090000
+DTEND;TZID=Europe/Brussels:20270213T110000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hai
+ naut A
+LOCATION:Mons Arena\, Jemappes
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466825@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T130000
+DTEND;TZID=Europe/Brussels:20270220T150000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Royal BBC Braino
+ is A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466868@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JSE Enghien B
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466826@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T090000
+DTEND;TZID=Europe/Brussels:20270403T110000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JS Dottignies A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466882@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T093000
+DTEND;TZID=Europe/Brussels:20270411T113000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM B.C. L'9 Flén
+ u-Frameries A
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466827@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T120000
+DTEND;TZID=Europe/Brussels:20270418T140000
+SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Haina
+ ut B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466761@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T113000
+DTEND;TZID=Europe/Brussels:20270424T133000
+SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Aste Kain A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes B
+END:VEVENT
+END:VCALENDAR

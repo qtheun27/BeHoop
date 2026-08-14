@@ -1,0 +1,228 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM Union Basket Lessines Flobecq
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468511@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Royal Es
+ sor BC Templeuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468592@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260926T113000
+DTEND;TZID=Europe/Brussels:20260926T133000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM B.C. L'9
+  Flénu-Frameries C
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468556@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JSB Maff
+ le B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468480@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BBC Tourna
+ i
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468481@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Dottign
+ ies C
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468491@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly
+  B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468482@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Fermoba
+  Péruwelz
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468478@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261129T130000
+DTEND;TZID=Europe/Brussels:20261129T150000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Tremplin M
+ ouscron B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468581@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261213T090000
+DTEND;TZID=Europe/Brussels:20261213T110000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly
+  A
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468483@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Stambru
+ ges
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468484@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270109T090000
+DTEND;TZID=Europe/Brussels:20270109T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Royal Esso
+ r BC Templeuve
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468506@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Tremplin
+  Mouscron B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468479@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu Sai
+ nt-Ghislain United B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468539@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu S
+ aint-Ghislain United B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468485@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly A
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468486@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270213T090000
+DTEND;TZID=Europe/Brussels:20270213T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JSB Maffle
+  B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468487@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468529@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270313T110000
+DTEND;TZID=Europe/Brussels:20270313T130000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Dotti
+ gnies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468475@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T133000
+DTEND;TZID=Europe/Brussels:20270403T153000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BBC Tour
+ nai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468576@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270411T100000
+DTEND;TZID=Europe/Brussels:20270411T120000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Fermo
+ ba Péruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468488@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270417T090000
+DTEND;TZID=Europe/Brussels:20270417T110000
+SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM B.C. L'9 F
+ lénu-Frameries C
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468554@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270425T100000
+DTEND;TZID=Europe/Brussels:20270425T120000
+SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Stamb
+ ruges
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : U10 Hommes H
+END:VEVENT
+END:VCALENDAR

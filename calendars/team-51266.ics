@@ -1,0 +1,249 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2D Basket Entité Courcelles B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454115@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🏆 🏠 P2D Basket Entité Courcelles B vs P1D ABC B Péronnes A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454116@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260821T210000
+DTEND;TZID=Europe/Brussels:20260821T230000
+SUMMARY:🏆 🏠 P2D Basket Entité Courcelles B vs P1D CEP Fleurus B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454118@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🏆 ✈️ P2D Basket Entité Courcelles B vs P3D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463848@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T120000
+DTEND;TZID=Europe/Brussels:20260906T140000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D JS Fermoba Péru
+ welz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463760@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Royal Essor BC T
+ empleuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463771@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Jeunesse Sportive 
+ Soignies B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463772@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261009T204500
+DTEND;TZID=Europe/Brussels:20261009T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Groupe Gobert Bask
+ et Club Colfontaine B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463773@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261106T204500
+DTEND;TZID=Europe/Brussels:20261106T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D BBC Tournai
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463807@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T153000
+DTEND;TZID=Europe/Brussels:20261115T173000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Fémina Docherie
+  B
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463774@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261120T204500
+DTEND;TZID=Europe/Brussels:20261120T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Rapido B.C.T.L.
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463830@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261204T210000
+DTEND;TZID=Europe/Brussels:20261204T230000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Royal BBC Braino
+ is A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463775@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261218T204500
+DTEND;TZID=Europe/Brussels:20261218T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D BCJ Ressaix
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463744@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Jeunesse Sportiv
+ e Soignies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463776@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D JS Fermoba Péruwe
+ lz
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463787@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T110000
+DTEND;TZID=Europe/Brussels:20270123T130000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D ABC B Péronnes 
+ B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463777@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T100000
+DTEND;TZID=Europe/Brussels:20270131T120000
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Royal Essor BC Tem
+ pleuve B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463778@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270205T204500
+DTEND;TZID=Europe/Brussels:20270205T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D ABC B Péronnes B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463780@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270219T204500
+DTEND;TZID=Europe/Brussels:20270219T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Fémina Docherie B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463838@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Boussu Saint-Ghi
+ slain United
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463734@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463779@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270319T204500
+DTEND;TZID=Europe/Brussels:20270319T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Boussu Saint-Ghisl
+ ain United
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463802@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Groupe Gobert Ba
+ sket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463758@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D Rapido B.C.T.L.
+LOCATION:Hall Polyvalent de Thuin\, Thuin
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463781@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270416T204500
+DTEND;TZID=Europe/Brussels:20270416T224500
+SUMMARY:🏀 🏠 P2D Basket Entité Courcelles B vs P2D Royal BBC Brainois
+  A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463825@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:🏀 ✈️ P2D Basket Entité Courcelles B vs P2D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+END:VCALENDAR

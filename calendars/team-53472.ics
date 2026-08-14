@@ -1,0 +1,225 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM CB Royale-Fraternité B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468126@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T130000
+DTEND;TZID=Europe/Brussels:20260905T150000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM CB Royale-Frat
+ ernité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468171@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T131500
+DTEND;TZID=Europe/Brussels:20260913T151500
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Tremplin Mousc
+ ron C
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468181@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T130000
+DTEND;TZID=Europe/Brussels:20260919T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM B.B.C.Leuze
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468182@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Tournai E.F. Kai
+ n
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468194@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Tremplin Mousc
+ ron A
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468139@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM BC JS Estaimpu
+ is B
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468183@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM JS Dottignies B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468184@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Blue and Gold Ba
+ sket Club Celles B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468074@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T113000
+DTEND;TZID=Europe/Brussels:20261205T133000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Aste Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468185@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T130000
+DTEND;TZID=Europe/Brussels:20261212T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Basketball Brune
+ haut
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468109@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM BC JS Estaimpu
+ is A
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468098@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T130000
+DTEND;TZID=Europe/Brussels:20270109T150000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM B.B.C.Leuze
+LOCATION:Leuzarena\, Leuze-en-Hainaut
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468186@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T130000
+DTEND;TZID=Europe/Brussels:20270116T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM CB Royale-Frater
+ nité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468187@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Tremplin Mouscro
+ n C
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468089@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T100000
+DTEND;TZID=Europe/Brussels:20270206T120000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Basketball Bru
+ nehaut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468123@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T093000
+DTEND;TZID=Europe/Brussels:20270213T113000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Tournai E.F. K
+ ain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468166@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T100000
+DTEND;TZID=Europe/Brussels:20270220T120000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM JS Dottignies 
+ B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468188@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T150000
+DTEND;TZID=Europe/Brussels:20270313T170000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM BC JS Estaimpuis
+  B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468189@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T130000
+DTEND;TZID=Europe/Brussels:20270403T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Tremplin Mouscro
+ n A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468157@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T130000
+DTEND;TZID=Europe/Brussels:20270410T150000
+SUMMARY:🏀 ✈️ PU10HM CB Royale-Fraternité B vs PU10HM Blue and Gold 
+ Basket Club Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468190@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T130000
+DTEND;TZID=Europe/Brussels:20270417T150000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM Aste Kain B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468191@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T100000
+DTEND;TZID=Europe/Brussels:20270425T120000
+SUMMARY:🏀 🏠 PU10HM CB Royale-Fraternité B vs PU10HM BC JS Estaimpuis
+  A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U10 Hommes E
+END:VEVENT
+END:VCALENDAR

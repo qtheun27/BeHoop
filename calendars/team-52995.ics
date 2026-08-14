@@ -1,0 +1,188 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16H BC Feluy-Obaix Seneffe
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-464848@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H CEP Fleurus A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464783@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T090000
+DTEND;TZID=Europe/Brussels:20260912T110000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464837@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T120000
+DTEND;TZID=Europe/Brussels:20260919T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H Olympic Mont Sur Ma
+ rchienne
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464838@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H BC Ransart Charlero
+ i
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478945@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T090000
+DTEND;TZID=Europe/Brussels:20261004T110000
+SUMMARY:🏆 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H Basket Entité Cour
+ celles A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464816@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H Basket Entité Co
+ urcelles A
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464863@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T143000
+DTEND;TZID=Europe/Brussels:20261024T163000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H AC Gilly
+LOCATION:Centre Sportif Fourcault\, Dampremy
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464829@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T153000
+DTEND;TZID=Europe/Brussels:20261114T173000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H Spirou Basket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464840@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T100000
+DTEND;TZID=Europe/Brussels:20261122T120000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H BCJ Ressaix
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464796@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H BC AMLL A
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464876@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H Olympic Mont Sur 
+ Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464842@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T120000
+DTEND;TZID=Europe/Brussels:20270116T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H CEP Fleurus A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464843@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T120000
+DTEND;TZID=Europe/Brussels:20270130T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H UBC Binche
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464844@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T120000
+DTEND;TZID=Europe/Brussels:20270206T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H AC Gilly
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464812@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T090000
+DTEND;TZID=Europe/Brussels:20270214T110000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H BC Ransart Charle
+ roi
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464845@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T120000
+DTEND;TZID=Europe/Brussels:20270220T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H Spirou Basket A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464846@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T120000
+DTEND;TZID=Europe/Brussels:20270403T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H Basket Entité Cour
+ celles A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464902@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T090000
+DTEND;TZID=Europe/Brussels:20270410T110000
+SUMMARY:🏀 ✈️ PU16H BC Feluy-Obaix Seneffe vs PU16H BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464847@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T120000
+DTEND;TZID=Europe/Brussels:20270417T140000
+SUMMARY:🏀 🏠 PU16H BC Feluy-Obaix Seneffe vs PU16H BC AMLL A
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U16 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

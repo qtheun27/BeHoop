@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:R2D CEP Fleurus A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-457670@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🏆 ✈️ R2D CEP Fleurus A vs R2D Royal Rebond Ottignies-LLN C
+LOCATION:Centre Sportif des Coquerées\, Ottignies
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457669@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 🏠 R2D CEP Fleurus A vs P1D Lg. Atlas Ath. Jupille A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457668@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T170000
+DTEND;TZID=Europe/Brussels:20260829T190000
+SUMMARY:🏆 ✈️ R2D CEP Fleurus A vs TDW2 Royal Castors Braine B
+LOCATION:Salle Omnisports Gaston Reiff\, Braine-l'Alleud
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
+END:VEVENT
+END:VCALENDAR

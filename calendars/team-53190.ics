@@ -1,0 +1,220 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16D Blue and Gold Basket Club Celles
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466278@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D JS Dott
+ ignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483485@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:🏆 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Royal E
+ clairs Pont-De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466334@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D BC JS Est
+ aimpuis
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466323@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Trempli
+ n Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466336@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D JS Cuesme
+ s
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466291@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Royal E
+ ssor BC Templeuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466335@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D Royal Bla
+ regnies BC
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466226@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D BC Fém
+ inin Quaregnon
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466337@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D BC Mons C
+ apitale
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466261@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T153000
+DTEND;TZID=Europe/Brussels:20261219T173000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Tournai
+  E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466338@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T153000
+DTEND;TZID=Europe/Brussels:20270116T173000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D JS Dottig
+ nies
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466346@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T150000
+DTEND;TZID=Europe/Brussels:20270124T170000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Union B
+ asket Lessines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466339@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D Tremplin 
+ Mouscron
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466241@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T130000
+DTEND;TZID=Europe/Brussels:20270206T150000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D BC Mons
+  Capitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466275@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T090000
+DTEND;TZID=Europe/Brussels:20270214T110000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D BC JS E
+ staimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466318@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D Royal B
+ laregnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466340@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T140000
+DTEND;TZID=Europe/Brussels:20270314T160000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D Royal Ess
+ or BC Templeuve
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466341@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D Union Bas
+ ket Lessines Flobecq
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466309@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 ✈️ PU16D Blue and Gold Basket Club Celles vs PU16D JS Cues
+ mes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466342@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D BC Fémin
+ in Quaregnon
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466343@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:🏀 🏠 PU16D Blue and Gold Basket Club Celles vs PU16D Tournai E
+ .F. Kain
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+END:VCALENDAR

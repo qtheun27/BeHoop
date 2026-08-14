@@ -1,0 +1,235 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU21H Spirou Basket
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486809@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260815T163000
+DTEND;TZID=Europe/Brussels:20260815T183000
+SUMMARY:🤝 🏠 PU21H Spirou Basket vs PU21H RBC Erpent A
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486148@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T153000
+DTEND;TZID=Europe/Brussels:20260822T173000
+SUMMARY:🏆 ✈️ PU21H Spirou Basket vs RU21H Uccle Europe
+LOCATION:HE2B Campus DeFré\, Uccle
+DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464178@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T160000
+DTEND;TZID=Europe/Brussels:20260906T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H JSB Maffle
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464179@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T160000
+DTEND;TZID=Europe/Brussels:20260913T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H JS Dottignies
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464123@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H BC AMLL
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464180@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T160000
+DTEND;TZID=Europe/Brussels:20261004T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H B.C. L'9 Flénu-Frameries
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464202@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478703@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:🏆 ✈️ PU21H Spirou Basket vs PU21H BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464137@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464181@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T160000
+DTEND;TZID=Europe/Brussels:20261115T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H Basket Entité Courcelles
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464160@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T140000
+DTEND;TZID=Europe/Brussels:20261121T160000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H BC JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464182@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T160000
+DTEND;TZID=Europe/Brussels:20261206T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H Royal Eclairs Pont-De-Loup
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464183@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H Royal Essor BC Templeuve
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464227@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H Olympic Mont Sur Marchienn
+ e
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464184@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T160000
+DTEND;TZID=Europe/Brussels:20270110T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H BC AMLL
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464151@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T120000
+DTEND;TZID=Europe/Brussels:20270130T140000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464174@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H Royal Essor BC Templeuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464252@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T153000
+DTEND;TZID=Europe/Brussels:20270214T173000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H B.C. L'9 Flénu-Frameries
+LOCATION:Centre Omnisports Max Audain\, Frameries
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464197@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H Basket Entité Courcelles
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464185@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T160000
+DTEND;TZID=Europe/Brussels:20270314T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H UBC Binche
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464238@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270320T100000
+DTEND;TZID=Europe/Brussels:20270320T120000
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H JSB Maffle
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464186@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H Royal BBC Brainois
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464187@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T160000
+DTEND;TZID=Europe/Brussels:20270411T180000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H BC JS Estaimpuis
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464220@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T111500
+DTEND;TZID=Europe/Brussels:20270417T131500
+SUMMARY:🏀 ✈️ PU21H Spirou Basket vs PU21H Royal Eclairs Pont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-464188@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:🏀 🏠 PU21H Spirou Basket vs PU21H Olympic Mont Sur Marchienne
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U21 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

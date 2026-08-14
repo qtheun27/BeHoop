@@ -1,0 +1,212 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16D Royal Essor BC Templeuve
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466235@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T130000
+DTEND;TZID=Europe/Brussels:20260912T150000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D BC Mons Capital
+ e
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466289@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T130000
+DTEND;TZID=Europe/Brussels:20260919T150000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D Tremplin Mouscron
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466300@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466268@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D BC JS Estaimpui
+ s
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466290@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T160000
+DTEND;TZID=Europe/Brussels:20261024T180000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D Tournai E.F. Kain
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483502@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:🏆 🏠 PU16D Royal Essor BC Templeuve vs PU16D Union Basket Less
+ ines Flobecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466291@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D Blue and Gold Bas
+ ket Club Celles
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466281@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T110000
+DTEND;TZID=Europe/Brussels:20261114T130000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466292@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D Union Basket Less
+ ines Flobecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466315@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T150000
+DTEND;TZID=Europe/Brussels:20261128T170000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D Royal Blaregnie
+ s BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466293@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T153000
+DTEND;TZID=Europe/Brussels:20261219T173000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D BC Féminin Quare
+ gnon
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466328@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D Tremplin Mouscr
+ on
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466294@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T090000
+DTEND;TZID=Europe/Brussels:20270116T110000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D JS Cuesmes
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466295@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D BC Mons Capitale
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466296@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D Royal Blaregnies 
+ BC
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466264@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T153000
+DTEND;TZID=Europe/Brussels:20270213T173000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D Tournai E.F. Ka
+ in
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466297@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D JS Dottignies
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466340@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T140000
+DTEND;TZID=Europe/Brussels:20270314T160000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D Blue and Gold B
+ asket Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466298@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T170000
+DTEND;TZID=Europe/Brussels:20270404T190000
+SUMMARY:🏀 🏠 PU16D Royal Essor BC Templeuve vs PU16D BC JS Estaimpuis
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466354@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D Union Basket Le
+ ssines Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466233@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:🏀 ✈️ PU16D Royal Essor BC Templeuve vs PU16D BC Féminin Qua
+ regnon
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+END:VCALENDAR

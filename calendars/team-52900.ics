@@ -1,0 +1,207 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU16D Royal Blaregnies BC
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466322@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466345@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D Union Basket Lessine
+ s Flobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466312@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D BC Mons Capitale
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466258@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D Tournai E.F. Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466311@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T100000
+DTEND;TZID=Europe/Brussels:20261024T120000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D JS Cuesmes
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483504@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:🏆 ✈️ PU16D Royal Blaregnies BC vs PU16D BC Féminin Quaregno
+ n
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466335@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D Blue and Gold Basket
+  Club Celles
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466314@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D BC Féminin Quaregnon
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466315@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T150000
+DTEND;TZID=Europe/Brussels:20261128T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D Royal Essor BC Templeu
+ ve
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466282@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466271@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T090000
+DTEND;TZID=Europe/Brussels:20261220T110000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D BC JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466306@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T150000
+DTEND;TZID=Europe/Brussels:20270110T170000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466316@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T150000
+DTEND;TZID=Europe/Brussels:20270123T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D Tremplin Mouscron
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466317@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T150000
+DTEND;TZID=Europe/Brussels:20270130T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D Union Basket Lessines 
+ Flobecq
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466296@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D Royal Essor BC Templ
+ euve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466242@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D BC Mons Capitale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466318@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D Blue and Gold Basket C
+ lub Celles
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466321@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270227T150000
+DTEND;TZID=Europe/Brussels:20270227T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D BC JS Estaimpuis
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466319@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T150000
+DTEND;TZID=Europe/Brussels:20270403T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D Tournai E.F. Kain
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466232@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T130000
+DTEND;TZID=Europe/Brussels:20270411T150000
+SUMMARY:🏀 ✈️ PU16D Royal Blaregnies BC vs PU16D BC Féminin Quaregno
+ n
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466320@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:🏀 🏠 PU16D Royal Blaregnies BC vs PU16D JS Dottignies
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U16 Dames B
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:R2D Royal Eclairs Pont-De-Loup B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482502@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T180000
+DTEND;TZID=Europe/Brussels:20260808T200000
+SUMMARY:🤝 🏠 R2D Royal Eclairs Pont-De-Loup B vs R2D Basket Namur Capi
+ tale C
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 41 - 65
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457706@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T170000
+DTEND;TZID=Europe/Brussels:20260816T190000
+SUMMARY:🏆 🏠 R2D Royal Eclairs Pont-De-Loup B vs R2D Royal Murprotec N
+ ivelles Basketball A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457707@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T201500
+DTEND;TZID=Europe/Brussels:20260822T221500
+SUMMARY:🏆 🏠 R2D Royal Eclairs Pont-De-Loup B vs R1D Ganshoren Dames B
+ asket A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T180000
+DTEND;TZID=Europe/Brussels:20260829T200000
+SUMMARY:🤝 🏠 R2D Royal Eclairs Pont-De-Loup B vs None
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457709@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T180000
+DTEND;TZID=Europe/Brussels:20260829T200000
+SUMMARY:🏆 ✈️ R2D Royal Eclairs Pont-De-Loup B vs P1D ABC B Péronnes
+  A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+END:VCALENDAR

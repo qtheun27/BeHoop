@@ -1,0 +1,232 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H JS Fermoba Péruwelz
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463530@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T140000
+DTEND;TZID=Europe/Brussels:20260906T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H CB Royale-Fraternité B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463531@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T140000
+DTEND;TZID=Europe/Brussels:20260913T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H Tremplin Mouscron
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463543@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T204500
+DTEND;TZID=Europe/Brussels:20260919T224500
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H FanincHr BC Blaton
+LOCATION:Centre Omnisports du Préau\, Bernissart
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463532@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T140000
+DTEND;TZID=Europe/Brussels:20261011T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H BC Silly
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463507@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T130000
+DTEND;TZID=Europe/Brussels:20261018T150000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H JS Cuesmes B
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463533@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261025T140000
+DTEND;TZID=Europe/Brussels:20261025T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H JS Dottignies C
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463456@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H Royal Essor BC Templeuv
+ e C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463534@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T140000
+DTEND;TZID=Europe/Brussels:20261115T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H Union Basket Lessines Flo
+ becq
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463414@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H BBC Tournai B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463536@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T140000
+DTEND;TZID=Europe/Brussels:20261213T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H Royal BBC Brainois D
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463432@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H BC JS Estaimpuis D
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463537@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T140000
+DTEND;TZID=Europe/Brussels:20270110T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H FanincHr BC Blaton
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463497@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H CB Royale-Fraternité B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463521@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H Blue and Gold Basket Cl
+ ub Celles B
+LOCATION:Hall Sportif de Celles\, Celles
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463576@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T200000
+DTEND;TZID=Europe/Brussels:20270130T220000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463538@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T140000
+DTEND;TZID=Europe/Brussels:20270207T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H JS Cuesmes B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463539@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T140000
+DTEND;TZID=Europe/Brussels:20270214T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H BBC Tournai B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463566@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H Union Basket Lessines F
+ lobecq
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463540@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T140000
+DTEND;TZID=Europe/Brussels:20270228T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H Blue and Gold Basket Club
+  Celles B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463541@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T140000
+DTEND;TZID=Europe/Brussels:20270314T160000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H Royal Essor BC Templeuve 
+ C
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463449@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T184500
+DTEND;TZID=Europe/Brussels:20270403T204500
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H BC Silly
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463542@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T120000
+DTEND;TZID=Europe/Brussels:20270411T140000
+SUMMARY:🏀 🏠 P4H JS Fermoba Péruwelz vs P4H BC JS Estaimpuis D
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463477@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H Royal BBC Brainois D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463490@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:🏀 ✈️ P4H JS Fermoba Péruwelz vs P4H JS Dottignies C
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P4 Hommes C
+END:VEVENT
+END:VCALENDAR

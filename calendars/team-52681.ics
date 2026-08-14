@@ -1,0 +1,216 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Spirou Basket G
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466905@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Rapido B.C.T.L.
+LOCATION:Hall Polyvalent de Thuin\, Thuin
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466961@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T120000
+DTEND;TZID=Europe/Brussels:20260912T140000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Fémina Docherie
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466883@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM BC Ransart Charleroi A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466884@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Spirou Basket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466896@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM JS Luttre A
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466929@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Royal Eclairs Pont-De-
+ Loup B
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466885@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Basket Entité Courcelle
+ s B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466974@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM RBC Montagnard
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466886@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T140000
+DTEND;TZID=Europe/Brussels:20261205T160000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM BC Feluy-Obaix Seneffe
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466887@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Olympic Mont Sur Marchie
+ nne B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466953@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Royal Eclairs Pont-De-
+ Loup E
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466944@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466888@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Rapido B.C.T.L.
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466889@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T133000
+DTEND;TZID=Europe/Brussels:20270130T153000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Fémina Docherie
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467011@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T130000
+DTEND;TZID=Europe/Brussels:20270206T150000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Olympic Mont Sur March
+ ienne B
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466990@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Spirou Basket F
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466925@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T120000
+DTEND;TZID=Europe/Brussels:20270221T140000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM Basket Entité Courcel
+ les B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466891@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T140000
+DTEND;TZID=Europe/Brussels:20270306T160000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM JS Luttre A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466890@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T153000
+DTEND;TZID=Europe/Brussels:20270313T173000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Royal Eclairs Pont-De-Lo
+ up B
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466892@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T153000
+DTEND;TZID=Europe/Brussels:20270410T173000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM RBC Montagnard
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467002@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:🏀 ✈️ PU12HM Spirou Basket G vs PU12HM BC Feluy-Obaix Seneffe
+LOCATION:Centre Sportif D'Arquennes\, Arquennes
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466893@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:🏀 🏠 PU12HM Spirou Basket G vs PU12HM Royal Eclairs Pont-De-Lo
+ up E
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U12 Hommes C
+END:VEVENT
+END:VCALENDAR

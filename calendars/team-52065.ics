@@ -1,0 +1,231 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H Royal BBC Brainois B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486785@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🤝 ✈️ P3H Royal BBC Brainois B vs P3H RBC Montagnard B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486776@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T190000
+DTEND;TZID=Europe/Brussels:20260829T210000
+SUMMARY:🤝 ✈️ P3H Royal BBC Brainois B vs P4H JS Cuesmes A
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463006@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H Spirou Basket D
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462918@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H DPK Carnières Morlanwe
+ lz B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462929@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T100000
+DTEND;TZID=Europe/Brussels:20260920T120000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H Espoirs BHC Wasmuel
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462996@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H JSB Maffle C
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462930@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H BCPC Bracquegnies
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462931@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H Union BC Quaregnon D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462965@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H Royal Blaregnies BC B
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462932@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T100000
+DTEND;TZID=Europe/Brussels:20261122T120000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H BC Mons Capitale B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462988@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H Royal Eclairs Pont-De-L
+ oup D
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462945@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462933@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H BCJ Ressaix A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462902@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H Espoirs BHC Wasmuel
+LOCATION:Hall Polyvalent de Wasmuel\, Wasmuel
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462934@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H Spirou Basket D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462935@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H DPK Carnières Morlanwelz
+  B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462936@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H BC AMLL B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462937@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H JSB Maffle C
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462938@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H Royal Blaregnies BC B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462892@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T100000
+DTEND;TZID=Europe/Brussels:20270314T120000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H Union BC Quaregnon D
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462960@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H BCPC Bracquegnies
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462916@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T183000
+DTEND;TZID=Europe/Brussels:20270410T203000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462939@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:🏀 🏠 P3H Royal BBC Brainois B vs P3H Royal Eclairs Pont-De-Lou
+ p D
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-462983@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270423T210000
+DTEND;TZID=Europe/Brussels:20270423T230000
+SUMMARY:🏀 ✈️ P3H Royal BBC Brainois B vs P3H BCJ Ressaix A
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P3 Hommes B
+END:VEVENT
+END:VCALENDAR

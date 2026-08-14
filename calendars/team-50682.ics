@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU16H Groupe Gobert Basket Club Colfontaine
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485955@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 ✈️ RU16H Groupe Gobert Basket Club Colfontaine vs RU16H BC
+  JS Estaimpuis
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : Coupe AWBB U16 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483299@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260828T183000
+DTEND;TZID=Europe/Brussels:20260828T203000
+SUMMARY:🤝 ✈️ RU16H Groupe Gobert Basket Club Colfontaine vs PU16H JS
+ B Maffle
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR

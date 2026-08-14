@@ -1,0 +1,229 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H JS Stambruges C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486986@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260814T210000
+DTEND;TZID=Europe/Brussels:20260814T230000
+SUMMARY:🤝 🏠 P3H JS Stambruges C vs P3H JSB Maffle C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486988@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260828T210000
+DTEND;TZID=Europe/Brussels:20260828T230000
+SUMMARY:🤝 🏠 P3H JS Stambruges C vs P4H FanincHr BC Blaton
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463116@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H Soleil Levant Ellignies Ste An
+ ne
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463117@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H JSE Enghien C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463018@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T140000
+DTEND;TZID=Europe/Brussels:20261004T160000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H Union BC Quaregnon C
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463118@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H Aste Kain D
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463053@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H Royal Essor BC Templeuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463119@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H Boussu Saint-Ghislain United C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463032@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261129T110000
+DTEND;TZID=Europe/Brussels:20261129T130000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H BCJHP Quiévrain
+LOCATION:Centre d'animation de Quievrain\, Quiévrain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463120@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T100000
+DTEND;TZID=Europe/Brussels:20261206T120000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H BC JS Estaimpuis C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463099@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T140000
+DTEND;TZID=Europe/Brussels:20261213T160000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H CB Royale-Fraternité A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463121@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H BBC Tournai A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463122@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H JS Dottignies B
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463110@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H Soleil Levant Ellignies Ste 
+ Anne
+LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463133@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H JSE Enghien C
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463123@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H CB Royale-Fraternité A
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463124@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T170000
+DTEND;TZID=Europe/Brussels:20270214T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H Union BC Quaregnon C
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463147@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H Boussu Saint-Ghislain United
+  C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463125@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H Royal Essor BC Templeuve B
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463047@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T170000
+DTEND;TZID=Europe/Brussels:20270404T190000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H Aste Kain D
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463126@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T170000
+DTEND;TZID=Europe/Brussels:20270411T190000
+SUMMARY:🏀 🏠 P3H JS Stambruges C vs P3H BCJHP Quiévrain
+LOCATION:Gymnase Communal\, Stambruges
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463071@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H BC JS Estaimpuis C
+LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463082@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:🏀 ✈️ P3H JS Stambruges C vs P3H BBC Tournai A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P3 Hommes C
+END:VEVENT
+END:VCALENDAR

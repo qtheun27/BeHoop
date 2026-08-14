@@ -1,0 +1,214 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H Charleroi Basket Club
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463171@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Fémina Docherie C
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463227@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Royal Eclairs Pont-De-
+ Loup E
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463149@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Royal BC Marcinelle B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463150@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Basket Club Maccabi Char
+ leroi
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463162@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H JS Luttre C
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463195@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261106T204500
+DTEND;TZID=Europe/Brussels:20261106T224500
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Basket Entité Courcel
+ les B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463151@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H BC Ransart Charleroi C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463240@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463152@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Red Sox Marcinelle
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463153@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T210000
+DTEND;TZID=Europe/Brussels:20261212T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Ballers
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463219@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H CEP Fleurus E
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463210@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Royal BC Marcinelle B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463154@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Fémina Docherie C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463155@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Royal Eclairs Pont-De-Lo
+ up E
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463277@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463256@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Basket Club Maccabi Ch
+ arleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463191@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H BC Ransart Charleroi C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463156@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H Basket Entité Courcelle
+ s B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463157@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T210000
+DTEND;TZID=Europe/Brussels:20270403T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H JS Luttre C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463158@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463268@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T193000
+DTEND;TZID=Europe/Brussels:20270417T213000
+SUMMARY:🏀 ✈️ P4H Charleroi Basket Club vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463159@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T210000
+DTEND;TZID=Europe/Brussels:20270424T230000
+SUMMARY:🏀 🏠 P4H Charleroi Basket Club vs P4H CEP Fleurus E
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+END:VCALENDAR

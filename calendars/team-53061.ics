@@ -1,0 +1,191 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14D CEP Fleurus
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485406@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🤝 ✈️ PU14D CEP Fleurus vs PU14D Olympic Mont Sur Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466389@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D BC AMLL
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466412@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T160000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D ABC B Péronnes
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466478@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Olympic Mont Sur Marchienne
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466476@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T110000
+DTEND;TZID=Europe/Brussels:20261017T130000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Royal BC Marcinelle
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T120000
+DTEND;TZID=Europe/Brussels:20261024T140000
+SUMMARY:🏆 ✈️ PU14D CEP Fleurus vs PU14D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466479@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Royal Eclairs Pont-De-Loup
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466457@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T123000
+DTEND;TZID=Europe/Brussels:20261114T143000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Basket Club Maccabi Charlero
+ i
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466424@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T160000
+DTEND;TZID=Europe/Brussels:20261121T180000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Spirou Basket
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466359@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Charleroi Basket Club
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466481@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Rapido B.C.T.L.
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466482@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T150000
+DTEND;TZID=Europe/Brussels:20270109T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D BC AMLL
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466404@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Royal BC Marcinelle
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466483@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T150000
+DTEND;TZID=Europe/Brussels:20270206T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Charleroi Basket Club
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466484@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D ABC B Péronnes
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466485@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T150000
+DTEND;TZID=Europe/Brussels:20270220T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466440@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T154500
+DTEND;TZID=Europe/Brussels:20270313T174500
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Royal Eclairs Pont-De-Loup
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466473@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T090000
+DTEND;TZID=Europe/Brussels:20270403T110000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Olympic Mont Sur Marchienne
+LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466486@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 🏠 PU14D CEP Fleurus vs PU14D Spirou Basket
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466387@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T123000
+DTEND;TZID=Europe/Brussels:20270424T143000
+SUMMARY:🏀 ✈️ PU14D CEP Fleurus vs PU14D Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,188 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14D Jeunesse Sportive Soignies
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-484905@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T144500
+DTEND;TZID=Europe/Brussels:20260829T164500
+SUMMARY:🤝 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Anderlecht Bask
+ etball A
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466509@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T170000
+DTEND;TZID=Europe/Brussels:20260905T190000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D BC Féminin Qua
+ regnon
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466597@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D Tremplin Mous
+ cron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466510@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D CB Royale-Frate
+ rnité
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466613@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T160000
+DTEND;TZID=Europe/Brussels:20261017T180000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D BC Mons Capit
+ ale
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483515@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:🏆 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Royal Eclairs P
+ ont-De-Loup
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : Coupe du Hainaut U14 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466511@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Royal Essor BC 
+ Templeuve
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466534@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T140000
+DTEND;TZID=Europe/Brussels:20261121T160000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D JS Dottignies
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466512@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Royal BBC Brain
+ ois
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466513@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Tournai E.F. Ka
+ in
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466492@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D BC Féminin Q
+ uaregnon
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D Tremplin Mouscr
+ on
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466527@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T133000
+DTEND;TZID=Europe/Brussels:20270206T153000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D Tournai E.F. 
+ Kain
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466571@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D CB Royale-Fra
+ ternité
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466507@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D Royal Essor B
+ C Templeuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466518@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D JS Dottignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466563@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T100000
+DTEND;TZID=Europe/Brussels:20270418T120000
+SUMMARY:🏀 ✈️ PU14D Jeunesse Sportive Soignies vs PU14D Royal BBC Bra
+ inois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466519@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T150000
+DTEND;TZID=Europe/Brussels:20270424T170000
+SUMMARY:🏀 🏠 PU14D Jeunesse Sportive Soignies vs PU14D BC Mons Capital
+ e
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U14 Dames B
+END:VEVENT
+END:VCALENDAR

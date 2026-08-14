@@ -1,0 +1,232 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Royal Essor BC Templeuve
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467532@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T130000
+DTEND;TZID=Europe/Brussels:20260906T150000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM Union Basket 
+ Lessines Flobecq B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467455@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM JSB Maffle B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483436@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM BC Écaussinnes
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467463@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T093000
+DTEND;TZID=Europe/Brussels:20261003T113000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM BC Mons Capital
+ e C
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467456@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM Tremplin Mouscr
+ on B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467444@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261017T120000
+DTEND;TZID=Europe/Brussels:20261017T140000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM Basketball Br
+ unehaut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467457@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467491@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM JS Dottignies
+  B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467458@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T113000
+DTEND;TZID=Europe/Brussels:20261121T133000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM BC Silly B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467514@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T100000
+DTEND;TZID=Europe/Brussels:20261206T120000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM JS Fermoba P
+ éruwelz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467471@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM Boussu Saint-
+ Ghislain United C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467459@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM Warriors Basket
+  Club
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467428@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T100000
+DTEND;TZID=Europe/Brussels:20270109T120000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM JSB Maffle B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467460@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T170000
+DTEND;TZID=Europe/Brussels:20270117T190000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM Union Basket Le
+ ssines Flobecq B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467461@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T110000
+DTEND;TZID=Europe/Brussels:20270131T130000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM Basketball Brun
+ ehaut
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467462@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM Boussu Saint-Gh
+ islain United C
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467522@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM BC Mons Capit
+ ale C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467464@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM JS Dottignies B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467418@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T153000
+DTEND;TZID=Europe/Brussels:20270313T173000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467486@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM Tremplin Mous
+ cron B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467442@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T110000
+DTEND;TZID=Europe/Brussels:20270411T130000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM BC Silly B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467465@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:🏀 🏠 PU12HM Royal Essor BC Templeuve vs PU12HM JS Fermoba Pér
+ uwelz
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467509@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T110000
+DTEND;TZID=Europe/Brussels:20270424T130000
+SUMMARY:🏀 ✈️ PU12HM Royal Essor BC Templeuve vs PU12HM Warriors Bask
+ et Club
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+END:VCALENDAR

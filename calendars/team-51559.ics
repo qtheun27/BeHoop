@@ -1,0 +1,236 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2D JS Fermoba Péruwelz
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-454152@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T160000
+DTEND;TZID=Europe/Brussels:20260823T180000
+SUMMARY:🏆 🏠 P2D JS Fermoba Péruwelz vs P3D Basketball Brunehaut
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-454150@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:🏆 ✈️ P2D JS Fermoba Péruwelz vs P1D Tournai E.F. Kain B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463848@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T120000
+DTEND;TZID=Europe/Brussels:20260906T140000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Basket Entité Courcelles
+  B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463849@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T160000
+DTEND;TZID=Europe/Brussels:20260913T180000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D BCJ Ressaix
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463761@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Royal Essor BC Templeuv
+ e B
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463784@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D ABC B Péronnes B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463851@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Fémina Docherie B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463829@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Royal BBC Brainois A
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463796@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Groupe Gobert Basket Cl
+ ub Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463852@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T140000
+DTEND;TZID=Europe/Brussels:20261206T160000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Jeunesse Sportive Soignie
+ s B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463731@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463853@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T160000
+DTEND;TZID=Europe/Brussels:20261220T180000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Rapido B.C.T.L.
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463854@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T160000
+DTEND;TZID=Europe/Brussels:20270110T180000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Royal Essor BC Templeuve 
+ B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463776@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Basket Entité Courcell
+ es B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463821@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D BCJ Ressaix
+LOCATION:Salle des Sports du Trieux\, Ressaix
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463855@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T120000
+DTEND;TZID=Europe/Brussels:20270207T140000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D BBC Tournai
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463856@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T160000
+DTEND;TZID=Europe/Brussels:20270214T180000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D ABC B Péronnes B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463857@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T120000
+DTEND;TZID=Europe/Brussels:20270221T140000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Royal BBC Brainois A
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463850@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270228T160000
+DTEND;TZID=Europe/Brussels:20270228T180000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Boussu Saint-Ghislain Uni
+ ted
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463812@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T153000
+DTEND;TZID=Europe/Brussels:20270314T173000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Fémina Docherie B
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463845@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T203000
+DTEND;TZID=Europe/Brussels:20270403T223000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Boussu Saint-Ghislain U
+ nited
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463858@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T140000
+DTEND;TZID=Europe/Brussels:20270411T160000
+SUMMARY:🏀 🏠 P2D JS Fermoba Péruwelz vs P2D Groupe Gobert Basket Club
+  Colfontaine B
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463748@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Jeunesse Sportive Soign
+ ies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463759@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:🏀 ✈️ P2D JS Fermoba Péruwelz vs P2D Rapido B.C.T.L.
+LOCATION:Centre Sportif de Beaumont\, Beaumont
+DESCRIPTION:Compétition : P2 Dames
+END:VEVENT
+END:VCALENDAR

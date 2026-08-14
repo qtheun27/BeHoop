@@ -1,0 +1,217 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Tremplin Mouscron B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467488@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260905T130000
+DTEND;TZID=Europe/Brussels:20260905T150000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467423@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM JSB Maffle B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467477@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM JS Fermoba Péruwelz
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467478@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261004T131500
+DTEND;TZID=Europe/Brussels:20261004T151500
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM Basketball Brunehaut
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467456@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM Royal Essor BC Tem
+ pleuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467479@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM BC Mons Capitale C
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467469@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T124500
+DTEND;TZID=Europe/Brussels:20261114T144500
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM Boussu Saint-Ghisl
+ ain United C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467480@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM Union Basket Lessine
+ s Flobecq B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467436@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM BC Silly B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467503@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM Warriors Basket Cl
+ ub
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467481@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM BBC Tournai
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467516@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T120000
+DTEND;TZID=Europe/Brussels:20270110T140000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM JS Fermoba Péruwe
+ lz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467482@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM JS Dottignies B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467483@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM JSB Maffle B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467484@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T103000
+DTEND;TZID=Europe/Brussels:20270207T123000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM Warriors Basket Club
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467452@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T120000
+DTEND;TZID=Europe/Brussels:20270213T140000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM Basketball Bruneha
+ ut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467485@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM Boussu Saint-Ghislai
+ n United C
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467528@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T090000
+DTEND;TZID=Europe/Brussels:20270314T110000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM BC Mons Capitale C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467486@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM Royal Essor BC Templ
+ euve
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467542@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T130000
+DTEND;TZID=Europe/Brussels:20270411T150000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM Union Basket Lessi
+ nes Flobecq B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467487@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 🏠 PU12HM Tremplin Mouscron B vs PU12HM BC Silly B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467421@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T153000
+DTEND;TZID=Europe/Brussels:20270424T173000
+SUMMARY:🏀 ✈️ PU12HM Tremplin Mouscron B vs PU12HM BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+END:VCALENDAR

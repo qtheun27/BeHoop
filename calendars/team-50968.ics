@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU21H Royal Eclairs Pont-De-Loup
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486834@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T110000
+DTEND;TZID=Europe/Brussels:20260808T130000
+SUMMARY:🤝 ✈️ RU21H Royal Eclairs Pont-De-Loup vs RU21H JSE Enghien
+LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 93 - 57
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485498@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T150000
+DTEND;TZID=Europe/Brussels:20260809T170000
+SUMMARY:🤝 🏠 RU21H Royal Eclairs Pont-De-Loup vs RU21H BC Ransart Char
+ leroi
+LOCATION:Sambrexpo\, Aiseau-Presles
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 57 - 61
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486155@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260823T110000
+DTEND;TZID=Europe/Brussels:20260823T130000
+SUMMARY:🏆 ✈️ RU21H Royal Eclairs Pont-De-Loup vs RU21H Royal Excelsi
+ or Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Neder-Over-Heembeek
+DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+END:VCALENDAR

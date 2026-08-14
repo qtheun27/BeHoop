@@ -1,0 +1,220 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12HM Warriors Basket Club
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-467510@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260906T160000
+DTEND;TZID=Europe/Brussels:20260906T180000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM JS Fermoba Péruw
+ elz
+LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467533@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM Union Basket Less
+ ines Flobecq B
+LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467499@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM JS Dottignies B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467500@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM JSB Maffle B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467446@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261010T120000
+DTEND;TZID=Europe/Brussels:20261010T140000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM Basketball Bruneh
+ aut
+LOCATION:Complexe sportif Brunehall\, BLEHARIES
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467501@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM BC Silly B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467523@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261114T090000
+DTEND;TZID=Europe/Brussels:20261114T110000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM BC Mons Capitale 
+ C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467502@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM BBC Tournai
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467470@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM Boussu Saint-Ghis
+ lain United C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467503@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM Tremplin Mouscron B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467459@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM Royal Essor BC Te
+ mpleuve
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467494@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270109T130000
+DTEND;TZID=Europe/Brussels:20270109T150000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM JS Dottignies B
+LOCATION:Hall De l'Europe\, Dottignies
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467504@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270116T110000
+DTEND;TZID=Europe/Brussels:20270116T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM JS Fermoba Péruwel
+ z
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467505@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270130T110000
+DTEND;TZID=Europe/Brussels:20270130T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM Union Basket Lessin
+ es Flobecq B
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467484@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270207T103000
+DTEND;TZID=Europe/Brussels:20270207T123000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM Tremplin Mouscron
+  B
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467430@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270213T100000
+DTEND;TZID=Europe/Brussels:20270213T120000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM JSB Maffle B
+LOCATION:Hall Omnisports Marcel Denis\, Maffle
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467506@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM BC Mons Capitale C
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467440@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM BC Silly B
+LOCATION:Hall Silly Sports\, Bassily
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467507@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270403T110000
+DTEND;TZID=Europe/Brussels:20270403T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM Basketball Brunehau
+ t
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467420@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270410T160000
+DTEND;TZID=Europe/Brussels:20270410T180000
+SUMMARY:🏀 ✈️ PU12HM Warriors Basket Club vs PU12HM BBC Tournai
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467508@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270417T110000
+DTEND;TZID=Europe/Brussels:20270417T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM Boussu Saint-Ghisla
+ in United C
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-467509@basket-awbb
+DTSTAMP:20260814T151702Z
+DTSTART;TZID=Europe/Brussels:20270424T110000
+DTEND;TZID=Europe/Brussels:20270424T130000
+SUMMARY:🏀 🏠 PU12HM Warriors Basket Club vs PU12HM Royal Essor BC Temp
+ leuve
+LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+DESCRIPTION:Compétition : U12 Hommes G
+END:VEVENT
+END:VCALENDAR

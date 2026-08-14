@@ -1,0 +1,223 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P4H BC Ransart Charleroi C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486075@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260809T110000
+DTEND;TZID=Europe/Brussels:20260809T130000
+SUMMARY:🤝 ✈️ P4H BC Ransart Charleroi C vs P3H RBC Montagnard B
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 62 - 46
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463160@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H JS Luttre C
+LOCATION:Hall Omnisports de Luttre\, Luttre
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463182@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Basket Entité Courcell
+ es B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463183@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Ballers
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463184@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H RBC Montagnard C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463216@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H CEP Fleurus E
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463185@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Basket Club Maccabi Cha
+ rleroi
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463151@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Charleroi Basket Club
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463186@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Royal BC Marcinelle B
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463230@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Royal Eclairs Pont-De
+ -Loup E
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463175@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Fémina Docherie C
+LOCATION:Salle Omnisports\, Marchienne-Docherie
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463187@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463276@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463188@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270117T170000
+DTEND;TZID=Europe/Brussels:20270117T190000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H JS Luttre C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463199@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270131T120000
+DTEND;TZID=Europe/Brussels:20270131T140000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Basket Entité Cource
+ lles B
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463189@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Fémina Docherie C
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463190@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H CEP Fleurus E
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463191@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Charleroi Basket Club
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463257@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Basket Club Maccabi C
+ harleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463245@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T183000
+DTEND;TZID=Europe/Brussels:20270403T203000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H RBC Montagnard C
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463213@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270411T113000
+DTEND;TZID=Europe/Brussels:20270411T133000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Royal BC Marcinelle B
+LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463192@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:🏀 🏠 P4H BC Ransart Charleroi C vs P4H Royal Eclairs Pont-De-L
+ oup E
+LOCATION:Complexe Sportif de Ransart\, Ransart
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463269@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T193000
+DTEND;TZID=Europe/Brussels:20270424T213000
+SUMMARY:🏀 ✈️ P4H BC Ransart Charleroi C vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P4 Hommes A
+END:VEVENT
+END:VCALENDAR

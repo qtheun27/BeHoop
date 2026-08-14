@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU14D Tournai Wapiti Basketball
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483301@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260808T110000
+DTEND;TZID=Europe/Brussels:20260808T130000
+SUMMARY:🤝 🏠 RU14D Tournai Wapiti Basketball vs RU14D Royal Eclairs Po
+ nt-De-Loup A
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 28 - 88
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483304@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T113000
+DTEND;TZID=Europe/Brussels:20260829T133000
+SUMMARY:🤝 🏠 RU14D Tournai Wapiti Basketball vs RU14D B.B.C.Leuze
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484984@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:🏆 🏠 RU14D Tournai Wapiti Basketball vs PU14D Royal BC Marcine
+ lle
+LOCATION:Hall des Sports de Kain\, Kain
+DESCRIPTION:Compétition : Coupe AWBB U14 Dames
+END:VEVENT
+END:VCALENDAR

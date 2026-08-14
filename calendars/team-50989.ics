@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU16D Royal Eclairs Pont-De-Loup B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482511@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup B vs RU16D Royal Castors
+  Braine A
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485019@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T170000
+DTEND;TZID=Europe/Brussels:20260822T190000
+SUMMARY:🏆 ✈️ RU16D Royal Eclairs Pont-De-Loup B vs RU16D La Villerso
+ ise B
+LOCATION:Hall des Sports Emile Collignon\, Villers-le-Bouillet
+DESCRIPTION:Compétition : Coupe AWBB U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482528@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T160000
+DTEND;TZID=Europe/Brussels:20260829T180000
+SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup B vs None
+LOCATION:Salle Pierre de Coubertin\, Jumet
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR

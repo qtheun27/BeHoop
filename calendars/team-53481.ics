@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU19D CB Royale-Fraternité
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-466037@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260912T170000
+DTEND;TZID=Europe/Brussels:20260912T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D BC Féminin Quaregno
+ n B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466047@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T130000
+DTEND;TZID=Europe/Brussels:20260919T150000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485542@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 ✈️ PU19D CB Royale-Fraternité vs PU19D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : Coupe AWBB U19 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465982@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D ABC B Péronnes A
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466038@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D ABC B Péronnes B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466039@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D BC AMLL
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483471@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:🏆 ✈️ PU19D CB Royale-Fraternité vs PU19D Tremplin Mouscron
+LOCATION:Institut Le Tremplin\, Mouscron
+DESCRIPTION:Compétition : Coupe du Hainaut U19 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466083@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D Jeunesse Sportive 
+ Soignies
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466072@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D BC Féminin Quareg
+ non A
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466040@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D Royal Essor BC Templ
+ euve B
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465975@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D Royal Essor BC Tem
+ pleuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466042@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D Tremplin Mouscron
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466036@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T100000
+DTEND;TZID=Europe/Brussels:20270110T120000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D Royal BBC Brainois
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466030@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T110000
+DTEND;TZID=Europe/Brussels:20270116T130000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D Royal BBC Brainois
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-465965@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T133000
+DTEND;TZID=Europe/Brussels:20270130T153000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D BC Féminin Quareg
+ non B
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466043@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D ABC B Péronnes A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466012@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D BC AMLL
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466044@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T090000
+DTEND;TZID=Europe/Brussels:20270313T110000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D Jeunesse Sportive So
+ ignies
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466022@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T100000
+DTEND;TZID=Europe/Brussels:20270403T120000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D ABC B Péronnes B
+LOCATION:Salle Omnisports Saint-Albert\, Perrones
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466045@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D BC Féminin Quaregno
+ n A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466002@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270418T090000
+DTEND;TZID=Europe/Brussels:20270418T110000
+SUMMARY:🏀 ✈️ PU19D CB Royale-Fraternité vs PU19D Royal Essor BC Tem
+ pleuve B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-466046@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T090000
+DTEND;TZID=Europe/Brussels:20270424T110000
+SUMMARY:🏀 🏠 PU19D CB Royale-Fraternité vs PU19D Royal Essor BC Templ
+ euve A
+LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+DESCRIPTION:Compétition : U19 Dames B
+END:VEVENT
+END:VCALENDAR

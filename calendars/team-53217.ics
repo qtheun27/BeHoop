@@ -1,0 +1,197 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU10HM BC Écaussinnes
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-468457@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM Jeunesse Sportive Soig
+ nies B
+LOCATION:Salle JS Soignies\, Soignies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468423@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T163000
+DTEND;TZID=Europe/Brussels:20260919T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM RCBE 2000
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468425@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T163000
+DTEND;TZID=Europe/Brussels:20261107T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM BC Mons Capitale C
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468447@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM BC Mons Capitale B
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468426@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T163000
+DTEND;TZID=Europe/Brussels:20261121T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM Union BC Quaregnon B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468370@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261128T150000
+DTEND;TZID=Europe/Brussels:20261128T170000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM DPK Carnières Morlanw
+ elz B
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468394@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM BC AMLL B
+LOCATION:Salle Omnisports de Bouvy\, La Louvière
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468427@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T163000
+DTEND;TZID=Europe/Brussels:20261212T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM Royal Blaregnies BC
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468383@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM BCPC Bracquegnies
+LOCATION:Centre Culturel et Sportif de Strépy Bracquegnies\, Strépy-Bracq
+ uegnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468424@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270123T163000
+DTEND;TZID=Europe/Brussels:20270123T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM DPK Carnières Morlanwel
+ z A
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468429@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T163000
+DTEND;TZID=Europe/Brussels:20270130T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM Jeunesse Sportive Soigni
+ es B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468408@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T093000
+DTEND;TZID=Europe/Brussels:20270206T113000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM Royal Blaregnies BC
+LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468354@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM DPK Carnières Morlanw
+ elz A
+LOCATION:Hall Lucien Walravens\, Morlanwelz
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468430@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T100000
+DTEND;TZID=Europe/Brussels:20270220T120000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM BC Mons Capitale B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468418@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270306T114500
+DTEND;TZID=Europe/Brussels:20270306T134500
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM RCBE 2000
+LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468364@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM BC Mons Capitale C
+LOCATION:Salle Omnisports d'Havré\, Havré
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468431@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T163000
+DTEND;TZID=Europe/Brussels:20270403T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM DPK Carnières Morlanwel
+ z B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468344@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:🏀 ✈️ PU10HM BC Écaussinnes vs PU10HM Union BC Quaregnon B
+LOCATION:Salle  Edgard Hismans\, Quaregnon
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468432@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T163000
+DTEND;TZID=Europe/Brussels:20270417T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM BC AMLL B
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468433@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270424T163000
+DTEND;TZID=Europe/Brussels:20270424T183000
+SUMMARY:🏀 🏠 PU10HM BC Écaussinnes vs PU10HM BCPC Bracquegnies
+LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+DESCRIPTION:Compétition : U10 Hommes G
+END:VEVENT
+END:VCALENDAR

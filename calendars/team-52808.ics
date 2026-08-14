@@ -1,0 +1,198 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3D Charleroi Basket Club
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-463881@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260906T090000
+DTEND;TZID=Europe/Brussels:20260906T110000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Royal BBC Brainois B
+LOCATION:Salle Balad’Arena\, Braine-le-Comte
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463937@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260913T130000
+DTEND;TZID=Europe/Brussels:20260913T150000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D JS Cuesmes
+LOCATION:CPESM - Ghlin\, Ghlin
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463859@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Royal Eclairs Pont-De-Lo
+ up C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463860@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Basket Club Maccabi Char
+ leroi
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463872@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D CEP Fleurus C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463905@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Basket Entité Courcel
+ les C
+LOCATION:Hall Omnisports\, Trazegnies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463861@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Wolves Les Bons Villers
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463950@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D UBC Binche
+LOCATION: Salle DBM\, Binche
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463862@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D BC Féminin Quaregnon C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463863@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Ballers
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463920@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270110T150000
+DTEND;TZID=Europe/Brussels:20270110T170000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Royal Eclairs Pont-De-
+ Loup C
+LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463864@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Royal BBC Brainois B
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463865@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D JS Cuesmes
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463987@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270206T173000
+DTEND;TZID=Europe/Brussels:20270206T193000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Ballers
+LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463966@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270213T200000
+DTEND;TZID=Europe/Brussels:20270213T220000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Basket Club Maccabi Ch
+ arleroi
+LOCATION:Complexe Sportif de Roux \, Roux
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463901@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270220T184000
+DTEND;TZID=Europe/Brussels:20270220T204000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D Wolves Les Bons Viller
+ s
+LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463866@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D Basket Entité Courcelle
+ s C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463867@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D CEP Fleurus C
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463868@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:🏀 🏠 P3D Charleroi Basket Club vs P3D UBC Binche
+LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-463978@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:🏀 ✈️ P3D Charleroi Basket Club vs P3D BC Féminin Quaregnon 
+ C
+LOCATION:Espace Léon Delvallée\, Quaregnon
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU14H Groupe Gobert Basket Club Colfontaine A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485005@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260816T090000
+DTEND;TZID=Europe/Brussels:20260816T110000
+SUMMARY:🤝 🏠 RU14H Groupe Gobert Basket Club Colfontaine A vs PU14H Bl
+ ue and Gold Basket Club Celles A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485881@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260822T130000
+DTEND;TZID=Europe/Brussels:20260822T150000
+SUMMARY:🏆 🏠 RU14H Groupe Gobert Basket Club Colfontaine A vs RU14H Ro
+ yal CS Natoye A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Coupe AWBB U14 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485006@basket-awbb
+DTSTAMP:20260814T151701Z
+DTSTART;TZID=Europe/Brussels:20260829T150000
+DTEND;TZID=Europe/Brussels:20260829T170000
+SUMMARY:🤝 🏠 RU14H Groupe Gobert Basket Club Colfontaine A vs PU14H Un
+ ion BC Quaregnon A
+LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+END:VCALENDAR
