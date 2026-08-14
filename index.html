@@ -6,11 +6,13 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f4f4f9; max-width: 1000px; margin: auto; }
         .box { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        input[type="text"] { padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
-        button { padding: 10px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        input[type="text"] { padding: 10px; width: 320px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
+        button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
         th { background-color: #f2f2f2; }
+        hr { border: 0; height: 1px; background: #ddd; margin: 25px 0; }
     </style>
 </head>
 <body>
@@ -21,7 +23,7 @@
         <h2>🔍 Rechercher un club</h2>
         <p id="statut">⏳ Chargement des données en cours...</p>
         
-        <input type="text" id="recherche-club" list="liste-clubs" placeholder="Ex: Spirou, Braine..." disabled>
+        <input type="text" id="recherche-club" list="liste-clubs" placeholder="Ex: Mons, Braine, Spirou..." disabled>
         <datalist id="liste-clubs"></datalist>
         
         <button id="btn-charger" onclick="afficherDonnees()" disabled>Voir les résultats</button>
@@ -34,46 +36,72 @@
     <script>
         let donneesGlobales = null;
 
-        // On charge directement le fichier data.json généré par notre robot Python
         window.onload = async function() {
             const statut = document.getElementById('statut');
             try {
-                const reponse = await fetch('./data.json');
+                // Chargement du fichier data.json
+                const reponse = await fetch('./data.json?t=' + new Date().getTime());
                 donneesGlobales = await reponse.json();
 
                 const list = document.getElementById('liste-clubs');
-                for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
+                let count = 0;
+                for (const nom of Object.keys(donneesGlobales.clubs || {})) {
                     const opt = document.createElement('option');
                     opt.value = nom;
                     list.appendChild(opt);
+                    count++;
                 }
 
-                statut.innerHTML = "✅ Données prêtes ! Vous pouvez faire votre recherche.";
-                statut.style.color = "green";
-                document.getElementById('recherche-club').disabled = false;
-                document.getElementById('btn-charger').disabled = false;
+                if (count > 0) {
+                    statut.innerHTML = "✅ Données prêtes ! (" + count + " clubs chargés)";
+                    statut.style.color = "green";
+                    document.getElementById('recherche-club').disabled = false;
+                    document.getElementById('btn-charger').disabled = false;
+                } else {
+                    statut.innerHTML = "⚠️ Fichier de données vide. Le robot va se relancer.";
+                    statut.style.color = "orange";
+                }
 
             } catch (err) {
-                statut.innerHTML = "⏳ Les données sont en cours d'initialisation par le robot. Réessayez dans 2 minutes.";
+                statut.innerHTML = "⏳ Données en cours d'initialisation par le robot. Réessayez dans 2 minutes.";
                 statut.style.color = "orange";
             }
         };
 
+        // Fonction de recherche flexible (exacte ou partielle)
+        function trouverClub(saisie) {
+            if (!donneesGlobales || !donneesGlobales.clubs) return null;
+            const text = saisie.trim().toLowerCase();
+            if (!text) return null;
+
+            // 1. Recherche exacte
+            for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
+                if (nom.toLowerCase() === text) return { nom, id };
+            }
+            // 2. Recherche partielle (ex: "Mons" trouvera "CityX Mons")
+            for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
+                if (nom.toLowerCase().includes(text)) return { nom, id };
+            }
+            return null;
+        }
+
         function afficherDonnees() {
-            const nomSaisi = document.getElementById('recherche-club').value;
-            const clubId = donneesGlobales.clubs[nomSaisi];
+            const saisie = document.getElementById('recherche-club').value;
+            const clubTrouve = trouverClub(saisie);
             const zoneAffichage = document.getElementById('contenu-awbb');
 
-            if (!clubId || !donneesGlobales.donnees_clubs[clubId]) {
-                zoneAffichage.innerHTML = "<p style='color:red;'>⚠️ Club introuvable ou aucune donnée disponible.</p>";
+            if (!clubTrouve) {
+                zoneAffichage.innerHTML = "<p style='color:red;'>⚠️ Club introuvable. Essayez un autre mot-clé (ex: Mons, Braine, Spirou...)</p>";
                 return;
             }
 
-            const tableaux = donneesGlobales.donnees_clubs[clubId];
-            if (tableaux.length > 0) {
-                zoneAffichage.innerHTML = tableaux.join('<hr>');
+            const clubId = clubTrouve.id;
+            const tableaux = donneesGlobales.donnees_clubs ? donneesGlobales.donnees_clubs[clubId] : null;
+
+            if (tableaux && tableaux.length > 0) {
+                zoneAffichage.innerHTML = "<h3>Résultats pour : " + clubTrouve.nom + "</h3>" + tableaux.join('<hr>');
             } else {
-                zoneAffichage.innerHTML = "<p>⚠️ Aucun tableau disponible pour ce club actuellement.</p>";
+                zoneAffichage.innerHTML = "<h3>" + clubTrouve.nom + "</h3><p>⚠️ Aucun tableau de résultats disponible actuellement pour ce club.</p>";
             }
         }
     </script>
