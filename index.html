@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Suivi Basket AWBB</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f4f4f9; max-width: 1000px; margin: auto; }
+        .box { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        input[type="text"] { padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
+        button { padding: 10px 15px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+    <h1>🏀 Suivi de mon équipe - AWBB</h1>
+    
+    <div class="box">
+        <h2>🔍 Rechercher un club</h2>
+        <p id="statut">⏳ Chargement des données en cours...</p>
+        
+        <input type="text" id="recherche-club" list="liste-clubs" placeholder="Ex: Spirou, Braine..." disabled>
+        <datalist id="liste-clubs"></datalist>
+        
+        <button id="btn-charger" onclick="afficherDonnees()" disabled>Voir les résultats</button>
+    </div>
+
+    <div class="box" id="contenu-awbb">
+        <p>Sélectionnez un club pour afficher les calendriers et classements.</p>
+    </div>
+
+    <script>
+        let donneesGlobales = null;
+
+        // On charge directement le fichier data.json généré par notre robot Python
+        window.onload = async function() {
+            const statut = document.getElementById('statut');
+            try {
+                const reponse = await fetch('./data.json');
+                donneesGlobales = await reponse.json();
+
+                const list = document.getElementById('liste-clubs');
+                for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
+                    const opt = document.createElement('option');
+                    opt.value = nom;
+                    list.appendChild(opt);
+                }
+
+                statut.innerHTML = "✅ Données prêtes ! Vous pouvez faire votre recherche.";
+                statut.style.color = "green";
+                document.getElementById('recherche-club').disabled = false;
+                document.getElementById('btn-charger').disabled = false;
+
+            } catch (err) {
+                statut.innerHTML = "⏳ Les données sont en cours d'initialisation par le robot. Réessayez dans 2 minutes.";
+                statut.style.color = "orange";
+            }
+        };
+
+        function afficherDonnees() {
+            const nomSaisi = document.getElementById('recherche-club').value;
+            const clubId = donneesGlobales.clubs[nomSaisi];
+            const zoneAffichage = document.getElementById('contenu-awbb');
+
+            if (!clubId || !donneesGlobales.donnees_clubs[clubId]) {
+                zoneAffichage.innerHTML = "<p style='color:red;'>⚠️ Club introuvable ou aucune donnée disponible.</p>";
+                return;
+            }
+
+            const tableaux = donneesGlobales.donnees_clubs[clubId];
+            if (tableaux.length > 0) {
+                zoneAffichage.innerHTML = tableaux.join('<hr>');
+            } else {
+                zoneAffichage.innerHTML = "<p>⚠️ Aucun tableau disponible pour ce club actuellement.</p>";
+            }
+        }
+    </script>
+
+</body>
+</html>
