@@ -1,382 +1,332 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basket Club Hub</title>
-    <style>
-        :root {
-            --primary: #1e293b;
-            --accent: #d32f2f;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suivi Basket Hainaut</title>
+<style>
+  :root {
+    --primary: #0b5cab;
+    --accent: #d32f2f;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: auto; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
-            transition: all 0.4s ease;
-        }
+  .search-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    border-top: 5px solid var(--primary);
+  }
+  .search-box { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  input[type="text"] { flex: 1; min-width: 250px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; }
+  button.btn-main {
+    padding: 12px 24px; background: var(--primary); color: white; border: none;
+    border-radius: 8px; font-weight: bold; cursor: pointer;
+  }
+  button.btn-main:disabled { background: #b7c3d6; cursor: not-allowed; }
 
-        .container { max-width: 1000px; margin: auto; }
+  .club-banner {
+    background: var(--primary);
+    color: white;
+    padding: 22px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  .club-banner-logo {
+    height: 72px; width: 72px; object-fit: contain; background: white;
+    padding: 6px; border-radius: 10px; flex-shrink: 0;
+  }
+  .club-banner h1 { margin: 0; font-size: 22px; }
+  .club-banner .adresse { font-size: 13px; opacity: 0.9; margin-top: 4px; }
 
-        .search-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            border-top: 5px solid var(--accent);
-            transition: border-color 0.4s ease;
-        }
+  .team-selector { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 18px; }
+  .team-chip {
+    padding: 9px 16px; background: white; border: 1px solid #cbd5e1; border-radius: 20px;
+    cursor: pointer; white-space: nowrap; font-size: 13px; font-weight: 600;
+  }
+  .team-chip.active { background: var(--primary); color: white; border-color: var(--primary); }
 
-        .search-box { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-        input[type="text"] { flex: 1; min-width: 250px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; }
-        button.btn-main { padding: 12px 24px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+  .tabs { display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 18px; }
+  .tab-btn {
+    padding: 10px 20px; background: none; border: none; font-size: 15px; font-weight: bold;
+    color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+  }
+  .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+  .tab-content { display: none; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .tab-content.active { display: block; }
 
-        .club-banner {
-            background: var(--primary);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            transition: background 0.4s ease;
-        }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
+  tr.ligne-equipe { background: #eaf1fc; font-weight: 700; }
 
-        .club-banner-logo {
-            height: 80px;
-            width: 80px;
-            object-fit: contain;
-            background: white;
-            padding: 8px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            flex-shrink: 0;
-        }
+  .game-card {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 4px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; gap: 10px;
+  }
+  .game-card:last-child { border-bottom: none; }
+  .game-date { font-size: 12px; color: var(--muted); min-width: 100px; }
+  .game-score { font-weight: 700; min-width: 60px; text-align: right; }
+  .victoire { color: #1f9d55; }
+  .defaite { color: var(--accent); }
 
-        .team-selector { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px; }
-
-        .team-chip {
-            padding: 10px 18px;
-            background: white;
-            border: 1px solid #cbd5e1;
-            border-radius: 20px;
-            cursor: pointer;
-            white-space: nowrap;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .team-chip.active {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        .tabs { display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 20px; }
-        .tab-btn {
-            padding: 12px 24px;
-            background: none;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            color: #64748b;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            margin-bottom: -2px;
-            transition: 0.2s;
-        }
-        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
-
-        .tab-content { display: none; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .tab-content.active { display: block; }
-
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
-        th { background: #f8fafc; color: #475569; }
-
-        .game-card {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .game-date { font-size: 12px; color: #64748b; font-weight: bold; }
-        .game-score { font-size: 18px; font-weight: bold; color: var(--accent); }
-
-        .info-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
-        .info-logo { height: 90px; width: 90px; object-fit: contain; background: white; padding: 8px; border-radius: 12px; border: 1px solid #e2e8f0; }
-    </style>
+  .vide { color: var(--muted); font-size: 0.9rem; }
+  #status { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+</style>
 </head>
 <body>
 
 <div class="container">
+  <div class="search-card">
+    <h2 style="margin-top:0;">🏀 Suivi Basket Hainaut</h2>
+    <div id="status">Chargement des données...</div>
+    <div class="search-box">
+      <input type="text" id="club-input" list="clubs-list" placeholder="Ex : Mons, Braine, Spirou, Blaregnies..." disabled>
+      <datalist id="clubs-list"></datalist>
+      <button class="btn-main" id="btn-search" disabled>Rechercher</button>
+    </div>
+  </div>
 
-    <div class="search-card">
-        <h2 style="margin-top:0;">🔍 Choisir un club (Saison en cours)</h2>
-        <div id="status" style="font-size: 13px; color: #64748b; margin-bottom: 8px;">Chargement des données...</div>
-        <div class="search-box">
-            <input type="text" id="club-input" list="clubs-list" placeholder="Ex: Mons, Charleroi, Tournai..." disabled>
-            <datalist id="clubs-list"></datalist>
-            <button class="btn-main" id="btn-search" onclick="chargerClub()" disabled>Sélectionner le club</button>
-        </div>
+  <div id="club-view" style="display:none;">
+    <div class="club-banner">
+      <img class="club-banner-logo" id="club-logo" src="" alt="" style="display:none;" onerror="this.style.display='none'">
+      <div>
+        <h1 id="club-name"></h1>
+        <div class="adresse" id="club-adresse"></div>
+      </div>
     </div>
 
-    <div id="club-view" style="display:none;">
+    <h3 style="margin-bottom:8px;">Équipes engagées cette saison</h3>
+    <div class="team-selector" id="team-selector"></div>
 
-        <div class="club-banner" id="club-banner">
-            <img class="club-banner-logo" id="club-logo" src="" alt="Logo Club" style="display:none;" onerror="this.style.display='none'">
-            <div>
-                <h1 id="club-name" style="margin:0; font-size:26px;"></h1>
-                <span id="club-teams-count" style="font-size:14px; opacity: 0.9; margin-top: 4px; display: block;"></span>
-            </div>
-        </div>
-
-        <h3>Équipes engagées cette saison :</h3>
-        <div class="team-selector" id="team-selector"></div>
-
-        <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('tab-info', this)">ℹ️ Infos Club</button>
-            <button class="tab-btn" onclick="switchTab('tab-classement', this)">📊 Classement</button>
-            <button class="tab-btn" onclick="switchTab('tab-calendrier', this)">📅 Calendrier & Résultats</button>
-        </div>
-
-        <div id="tab-info" class="tab-content active">
-            <div id="info-content"></div>
-        </div>
-
-        <div id="tab-classement" class="tab-content">
-            <h3>Classement de la série</h3>
-            <div id="ranking-content"></div>
-        </div>
-
-        <div id="tab-calendrier" class="tab-content">
-            <h3>Matchs de la saison</h3>
-            <div id="calendar-content"></div>
-        </div>
-
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="tab-classement">📊 Classement</button>
+      <button class="tab-btn" data-tab="tab-calendrier">📅 Calendrier</button>
     </div>
 
+    <div id="tab-classement" class="tab-content active"></div>
+    <div id="tab-calendrier" class="tab-content"></div>
+  </div>
 </div>
 
+<footer id="pied" style="text-align:center; color:#94a3b8; font-size:12px; padding:20px;"></footer>
+
 <script>
-    let appData = null;
-    let currentClubId = null;
-    let currentLogoUrl = null;
+let donnees = null;
+let clubCourant = null;
+let equipeCourante = null;
 
-    window.onload = async function() {
-        try {
-            const res = await fetch('./data.json?t=' + new Date().getTime());
-            appData = await res.json();
+const $status = document.getElementById('status');
+const $input = document.getElementById('club-input');
+const $btn = document.getElementById('btn-search');
+const $liste = document.getElementById('clubs-list');
+const $vue = document.getElementById('club-view');
 
-            const datalist = document.getElementById('clubs-list');
-            const clubNames = Object.keys(appData.clubs || {});
+function formatAdresse(club) {
+  const v = club.venue;
+  if (v && (v.street || v.city)) {
+    return `📍 ${v.name || 'Salle'} — ${v.street || ''}${v.street2 ? ', ' + v.street2 : ''}, ${v.zip || ''} ${v.city || ''}`;
+  }
+  if (club.street || club.city) {
+    return `📍 ${club.street || ''}, ${club.zip || ''} ${club.city || ''}`;
+  }
+  return '';
+}
 
-            clubNames.sort().forEach(nom => {
-                const opt = document.createElement('option');
-                opt.value = nom;
-                datalist.appendChild(opt);
-            });
+function formatDate(dateStr, timeStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr + 'T' + (timeStr || '00:00:00'));
+  const jour = d.toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
+  const heure = timeStr ? d.toLocaleTimeString('fr-BE', { hour: '2-digit', minute: '2-digit' }) : '';
+  return heure ? `${jour} ${heure}` : jour;
+}
 
-            document.getElementById('status').textContent = `✅ Données prêtes (${clubNames.length} clubs actifs cette saison).`;
-            document.getElementById('club-input').disabled = false;
-            document.getElementById('btn-search').disabled = false;
-        } catch (err) {
-            document.getElementById('status').textContent = "⚠️ Veuillez exécuter l'action GitHub au moins une fois.";
-        }
-    };
+function serieDeEquipe(teamId) {
+  for (const [serieId, lignes] of Object.entries(donnees.classements || {})) {
+    if (lignes.some(l => l.team_id === teamId)) return parseInt(serieId, 10);
+  }
+  for (const g of donnees.games || []) {
+    if (g.home_team_id === teamId) return g.serie_id;
+    if (g.away_team_id === teamId) return g.serie_id;
+  }
+  return null;
+}
 
-    function ObtenirUrlLogoAbsolue(path) {
-        if (!path) return null;
-        if (path.startsWith('http')) return path;
-        return 'https://baskethainaut.be/' + path.replace(/^\//, '');
+function rendreClassement(equipe) {
+  const serieId = serieDeEquipe(equipe.id);
+  const lignes = serieId ? (donnees.classements[String(serieId)] || []) : [];
+  const serie = (donnees.series || []).find(s => s.id === serieId);
+
+  if (lignes.length === 0) {
+    document.getElementById('tab-classement').innerHTML =
+      `<p class="vide">Classement pas encore disponible pour ${equipe.name}${serie ? ' (' + (serie.name || serie.short_name) + ')' : ''} — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    return;
+  }
+
+  const tri = [...lignes].sort((a, b) => (a.position || 999) - (b.position || 999));
+  const rangees = tri.map(l => `
+    <tr class="${l.team_id === equipe.id ? 'ligne-equipe' : ''}">
+      <td>${l.position ?? '-'}</td>
+      <td>${l.team_short_name || l.team_name}</td>
+      <td>${l.played ?? 0}</td>
+      <td>${l.wins ?? 0}</td>
+      <td>${l.losses ?? 0}</td>
+      <td><strong>${l.points ?? 0}</strong></td>
+    </tr>
+  `).join('');
+
+  document.getElementById('tab-classement').innerHTML = `
+    <h3 style="margin-top:0;">${serie ? (serie.name || serie.short_name) : ''}</h3>
+    <table>
+      <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
+      <tbody>${rangees}</tbody>
+    </table>
+  `;
+}
+
+function rendreCalendrier(equipe) {
+  const matchs = (donnees.games || [])
+    .filter(g => g.home_team_id === equipe.id || g.away_team_id === equipe.id)
+    .sort((a, b) => (a.date + (a.time || '')).localeCompare(b.date + (b.time || '')));
+
+  if (matchs.length === 0) {
+    document.getElementById('tab-calendrier').innerHTML =
+      `<p class="vide">Aucun match programmé dans les prochaines semaines pour ${equipe.name}.</p>`;
+    return;
+  }
+
+  const lignes = matchs.map(g => {
+    const domicile = g.home_team_id === equipe.id;
+    const adversaire = domicile ? (g.away_team_short_name || g.away_team_name) : (g.home_team_short_name || g.home_team_name);
+    const joue = g.game_status_id === 2 && g.home_score !== null && g.home_score !== undefined;
+    let score = '—', classe = '';
+    if (joue) {
+      score = `${g.home_score} - ${g.away_score}`;
+      const gagne = domicile ? g.home_score > g.away_score : g.away_score > g.home_score;
+      classe = gagne ? 'victoire' : 'defaite';
     }
+    return `
+      <div class="game-card">
+        <div class="game-date">${formatDate(g.date, g.time)}</div>
+        <div>${domicile ? '🏠' : '✈️'} vs ${adversaire}${g.venue_name ? ' — ' + g.venue_name : ''}</div>
+        <div class="game-score ${classe}">${score}</div>
+      </div>
+    `;
+  }).join('');
 
-    function chargerClub() {
-        const query = document.getElementById('club-input').value.trim().toLowerCase();
-        if (!query || !appData) return;
+  document.getElementById('tab-calendrier').innerHTML = `<h3 style="margin-top:0;">${matchs.length} match(s)</h3>${lignes}`;
+}
 
-        let foundName = null, foundId = null;
-        for (const [nom, id] of Object.entries(appData.clubs)) {
-            if (nom.toLowerCase().includes(query)) {
-                foundName = nom;
-                foundId = id;
-                break;
-            }
-        }
+function selectionnerEquipe(equipe, chipEl) {
+  equipeCourante = equipe;
+  document.querySelectorAll('.team-chip').forEach(c => c.classList.remove('active'));
+  if (chipEl) chipEl.classList.add('active');
+  rendreClassement(equipe);
+  rendreCalendrier(equipe);
+}
 
-        if (!foundId) {
-            alert("Club introuvable.");
-            return;
-        }
+function afficherClub(club) {
+  clubCourant = club;
+  $vue.style.display = 'block';
 
-        currentClubId = foundId;
-        const extraInfo = appData.donnees_clubs[foundId] || {};
+  const logo = document.getElementById('club-logo');
+  if (club.logo_url) {
+    logo.src = club.logo_url;
+    logo.style.display = 'block';
+  } else {
+    logo.style.display = 'none';
+  }
 
-        // Thème de couleurs du logo
-        const primary = extraInfo.primary_color || '#1e293b';
-        const accent = extraInfo.accent_color || '#d32f2f';
+  document.getElementById('club-name').textContent = club.name;
+  document.getElementById('club-adresse').textContent = formatAdresse(club);
 
-        document.documentElement.style.setProperty('--primary', primary);
-        document.documentElement.style.setProperty('--accent', accent);
+  const selecteur = document.getElementById('team-selector');
+  selecteur.innerHTML = '';
 
-        document.getElementById('club-view').style.display = 'block';
-        document.getElementById('club-name').textContent = foundName;
+  if (!club.teams || club.teams.length === 0) {
+    selecteur.innerHTML = '<p class="vide">Aucune équipe active trouvée pour ce club cette saison.</p>';
+    document.getElementById('tab-classement').innerHTML = '';
+    document.getElementById('tab-calendrier').innerHTML = '';
+    return;
+  }
 
-        const rawRankings = Array.isArray(appData.classements) ? appData.classements : (appData.classements.elements || []);
-        const clubTeams = rawRankings.filter(item => String(item.club_id) === String(foundId));
+  club.teams.forEach((equipe, i) => {
+    const chip = document.createElement('div');
+    chip.className = 'team-chip' + (i === 0 ? ' active' : '');
+    chip.textContent = equipe.short_name || equipe.name;
+    chip.onclick = () => selectionnerEquipe(equipe, chip);
+    selecteur.appendChild(chip);
+  });
 
-        document.getElementById('club-teams-count').textContent = `${clubTeams.length} équipes en compétition cette saison`;
+  selectionnerEquipe(club.teams[0], selecteur.firstChild);
+}
 
-        // URL du logo
-        let logoRaw = extraInfo.logo_full_url || extraInfo.logo_img_url || extraInfo.logo;
-        if (!logoRaw && clubTeams.length > 0) {
-            logoRaw = clubTeams[0].club_logo_img_url;
-        }
+function rechercher() {
+  const texte = $input.value.trim().toLowerCase();
+  if (!texte) return;
+  const club = (donnees.clubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short_name || '').toLowerCase().includes(texte));
+  if (!club) {
+    $vue.style.display = 'none';
+    alert('Club introuvable. Essayez un autre mot-clé.');
+    return;
+  }
+  afficherClub(club);
+}
 
-        currentLogoUrl = ObtenirUrlLogoAbsolue(logoRaw);
-        const logoImg = document.getElementById('club-logo');
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
 
-        if (currentLogoUrl) {
-            logoImg.src = currentLogoUrl;
-            logoImg.style.display = 'block';
-        } else {
-            logoImg.style.display = 'none';
-        }
+$btn.addEventListener('click', rechercher);
+$input.addEventListener('keydown', e => { if (e.key === 'Enter') rechercher(); });
 
-        // Puces d'équipes
-        const selector = document.getElementById('team-selector');
-        selector.innerHTML = '';
+window.onload = async function () {
+  try {
+    const res = await fetch('./data.json?t=' + Date.now());
+    if (!res.ok) throw new Error('data.json introuvable');
+    donnees = await res.json();
 
-        clubTeams.forEach((team, index) => {
-            const chip = document.createElement('div');
-            chip.className = `team-chip ${index === 0 ? 'active' : ''}`;
-            chip.textContent = team.team_name || team.team_short_name;
-            chip.onclick = () => selectTeam(team, chip);
-            selector.appendChild(chip);
-        });
+    const noms = (donnees.clubs || []).map(c => c.short_name || c.name).sort();
+    noms.forEach(nom => {
+      const opt = document.createElement('option');
+      opt.value = nom;
+      $liste.appendChild(opt);
+    });
 
-        if (clubTeams.length > 0) {
-            selectTeam(clubTeams[0]);
-        }
-    }
+    const totalEquipes = (donnees.clubs || []).reduce((s, c) => s + (c.teams || []).length, 0);
+    $status.textContent = `✅ ${(donnees.clubs || []).length} clubs, ${totalEquipes} équipes — saison ${(donnees.season || {}).name || ''}`;
+    $input.disabled = false;
+    $btn.disabled = false;
 
-    function selectTeam(team, chipElement) {
-        if (chipElement) {
-            document.querySelectorAll('.team-chip').forEach(c => c.classList.remove('active'));
-            chipElement.classList.add('active');
-        }
-
-        renderClubInfo(team);
-        renderRanking(team);
-        renderCalendar(team);
-    }
-
-    function renderClubInfo(team) {
-        const infoDiv = document.getElementById('info-content');
-        const extraInfo = appData.donnees_clubs[currentClubId] || {};
-
-        let html = `<div class="info-header">`;
-        if (currentLogoUrl) {
-            html += `<img class="info-logo" src="${currentLogoUrl}" alt="Logo" onerror="this.style.display='none'">`;
-        }
-        html += `<div>
-            <h3 style="margin:0;">${document.getElementById('club-name').textContent}</h3>
-            <p style="margin:5px 0 0 0; color:#64748b;">Club affilié Basket Hainaut</p>
-        </div></div>`;
-
-        html += `<p><strong>📍 Adresse Salle / Siège :</strong> ${extraInfo.address || 'Non renseignée'}, ${extraInfo.locality || ''}</p>`;
-        if (extraInfo.mail) html += `<p><strong>📧 Contact :</strong> <a href="mailto:${extraInfo.mail}">${extraInfo.mail}</a></p>`;
-        if (team) html += `<hr><p><strong>Équipe sélectionnée :</strong> ${team.team_name}</p>`;
-
-        infoDiv.innerHTML = html;
-    }
-
-    function renderRanking(team) {
-        const rankingDiv = document.getElementById('ranking-content');
-        if (!team) return;
-
-        const rawRankings = Array.isArray(appData.classements) ? appData.classements : (appData.classements.elements || []);
-        const serieRankings = rawRankings.filter(item => item.serie_id === team.serie_id);
-
-        if (serieRankings.length === 0) {
-            rankingDiv.innerHTML = `<p>Classement non disponible pour cette série.</p>`;
-            return;
-        }
-
-        serieRankings.sort((a,b) => (a.position || 0) - (b.position || 0));
-
-        let html = `<table>
-            <thead>
-                <tr><th>Pos</th><th>Équipe</th><th>J</th><th>V</th><th>D</th><th>Pts</th></tr>
-            </thead>
-            <tbody>`;
-
-        serieRankings.forEach(r => {
-            const isCurrent = String(r.team_id) === String(team.team_id);
-            html += `<tr style="${isCurrent ? 'background:rgba(0,0,0,0.05); font-weight:bold;' : ''}">
-                <td>#${r.position || '-'}</td>
-                <td>${r.team_name}</td>
-                <td>${r.played}</td>
-                <td><span style="color:green;">${r.wins}</span></td>
-                <td><span style="color:red;">${r.losses}</span></td>
-                <td><strong>${r.points}</strong></td>
-            </tr>`;
-        });
-
-        html += `</tbody></table>`;
-        rankingDiv.innerHTML = html;
-    }
-
-    function renderCalendar(team) {
-        const calDiv = document.getElementById('calendar-content');
-        const rawGames = Array.isArray(appData.matchs) ? appData.matchs : (appData.matchs.elements || []);
-        
-        if (!team || rawGames.length === 0) {
-            calDiv.innerHTML = "<p>Aucun match répertorié actuellement.</p>";
-            return;
-        }
-
-        const teamGames = rawGames.filter(g => String(g.home_team_id) === String(team.team_id) || String(g.away_team_id) === String(team.team_id));
-
-        if (teamGames.length === 0) {
-            calDiv.innerHTML = "<p>Aucun match trouvé pour cette équipe cette saison.</p>";
-            return;
-        }
-
-        let html = "";
-        teamGames.forEach(g => {
-            html += `<div class="game-card">
-                <div>
-                    <div class="game-date">📅 ${g.date || 'Date à venir'} - 📍 ${g.location || 'Salle locale'}</div>
-                    <div style="font-weight:bold; margin-top:4px;">${g.home_team_name || 'Domicile'} vs ${g.away_team_name || 'Extérieur'}</div>
-                </div>
-                <div class="game-score">${g.home_score !== undefined ? `${g.home_score} - ${g.away_score}` : 'À venir'}</div>
-            </div>`;
-        });
-
-        calDiv.innerHTML = html;
-    }
-
-    function switchTab(tabId, btn) {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
-        btn.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-    }
+    const genere = donnees.generated_at ? new Date(donnees.generated_at).toLocaleString('fr-BE') : '';
+    document.getElementById('pied').textContent = genere ? `Dernière mise à jour : ${genere}` : '';
+  } catch (err) {
+    $status.textContent = "⏳ Données en cours d'initialisation par le robot. Réessayez dans quelques minutes.";
+  }
+};
 </script>
 
 </body>
