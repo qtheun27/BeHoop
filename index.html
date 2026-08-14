@@ -2,109 +2,111 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Suivi Basket AWBB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi Basket Hainaut</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 20px; background-color: #f4f4f9; max-width: 1000px; margin: auto; }
-        .box { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        input[type="text"] { padding: 10px; width: 320px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; }
-        button { padding: 10px 18px; background-color: #0056b3; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f8; padding: 20px; max-width: 900px; margin: auto; color: #333; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        h1 { color: #d32f2f; display: flex; align-items: center; gap: 10px; }
+        input[type="text"] { width: 100%; max-width: 400px; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; margin-right: 10px; box-sizing: border-box; }
+        button { padding: 12px 20px; background: #d32f2f; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 16px; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        .status { font-size: 14px; font-weight: 500; margin-bottom: 15px; }
+        .status.success { color: #2e7d32; }
+        .status.warning { color: #ed6c02; }
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; }
-        th { background-color: #f2f2f2; }
-        hr { border: 0; height: 1px; background: #ddd; margin: 25px 0; }
+        th, td { border: 1px solid #eee; padding: 10px; text-align: left; font-size: 14px; }
+        th { background: #f8f9fa; }
     </style>
 </head>
 <body>
 
-    <h1>🏀 Suivi de mon équipe - AWBB</h1>
-    
-    <div class="box">
-        <h2>🔍 Rechercher un club</h2>
-        <p id="statut">⏳ Chargement des données en cours...</p>
+    <h1>🏀 Suivi Basket Hainaut</h1>
+
+    <div class="card">
+        <h2>Rechercher un club</h2>
+        <div id="status-msg" class="status warning">⏳ Chargement des données...</div>
         
-        <input type="text" id="recherche-club" list="liste-clubs" placeholder="Ex: Mons, Braine, Spirou..." disabled>
-        <datalist id="liste-clubs"></datalist>
-        
-        <button id="btn-charger" onclick="afficherDonnees()" disabled>Voir les résultats</button>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="club-input" list="clubs-list" placeholder="Ex: Mons, Charleroi, Tournai..." disabled>
+            <datalist id="clubs-list"></datalist>
+            <button id="search-btn" onclick="afficherClub()" disabled>Voir les données</button>
+        </div>
     </div>
 
-    <div class="box" id="contenu-awbb">
-        <p>Sélectionnez un club pour afficher les calendriers et classements.</p>
+    <div class="card" id="results-card" style="display: none;">
+        <h3 id="club-title"></h3>
+        <div id="club-content"></div>
     </div>
 
     <script>
-        let donneesGlobales = null;
+        let appData = null;
 
         window.onload = async function() {
-            const statut = document.getElementById('statut');
+            const statusMsg = document.getElementById('status-msg');
             try {
-                // Chargement du fichier data.json
-                const reponse = await fetch('./data.json?t=' + new Date().getTime());
-                donneesGlobales = await reponse.json();
+                const res = await fetch('./data.json?t=' + new Date().getTime());
+                appData = await res.json();
 
-                const list = document.getElementById('liste-clubs');
-                let count = 0;
-                for (const nom of Object.keys(donneesGlobales.clubs || {})) {
+                const datalist = document.getElementById('clubs-list');
+                const clubNames = Object.keys(appData.clubs || {});
+
+                clubNames.forEach(nom => {
                     const opt = document.createElement('option');
                     opt.value = nom;
-                    list.appendChild(opt);
-                    count++;
-                }
+                    datalist.appendChild(opt);
+                });
 
-                if (count > 0) {
-                    statut.innerHTML = "✅ Données prêtes ! (" + count + " clubs chargés)";
-                    statut.style.color = "green";
-                    document.getElementById('recherche-club').disabled = false;
-                    document.getElementById('btn-charger').disabled = false;
+                if (clubNames.length > 0) {
+                    statusMsg.className = "status success";
+                    statusMsg.textContent = `✅ Données prêtes (${clubNames.length} clubs chargés)`;
+                    document.getElementById('club-input').disabled = false;
+                    document.getElementById('search-btn').disabled = false;
                 } else {
-                    statut.innerHTML = "⚠️ Fichier de données vide. Le robot va se relancer.";
-                    statut.style.color = "orange";
+                    statusMsg.textContent = "⚠️ Le fichier de données est vide. Relancez l'action GitHub.";
                 }
-
             } catch (err) {
-                statut.innerHTML = "⏳ Données en cours d'initialisation par le robot. Réessayez dans 2 minutes.";
-                statut.style.color = "orange";
+                statusMsg.textContent = "⚠️ Impossible de charger data.json. L'action GitHub doit tourner au moins une fois.";
             }
         };
 
-        // Fonction de recherche flexible (exacte ou partielle)
-        function trouverClub(saisie) {
-            if (!donneesGlobales || !donneesGlobales.clubs) return null;
-            const text = saisie.trim().toLowerCase();
-            if (!text) return null;
+        function afficherClub() {
+            const query = document.getElementById('club-input').value.trim().toLowerCase();
+            const resultsCard = document.getElementById('results-card');
+            const clubTitle = document.getElementById('club-title');
+            const clubContent = document.getElementById('club-content');
 
-            // 1. Recherche exacte
-            for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
-                if (nom.toLowerCase() === text) return { nom, id };
+            if (!query || !appData) return;
+
+            let targetId = null;
+            let targetName = null;
+
+            for (const [nom, id] of Object.entries(appData.clubs)) {
+                if (nom.toLowerCase().includes(query)) {
+                    targetId = id;
+                    targetName = nom;
+                    break;
+                }
             }
-            // 2. Recherche partielle (ex: "Mons" trouvera "CityX Mons")
-            for (const [nom, id] of Object.entries(donneesGlobales.clubs)) {
-                if (nom.toLowerCase().includes(text)) return { nom, id };
-            }
-            return null;
-        }
 
-        function afficherDonnees() {
-            const saisie = document.getElementById('recherche-club').value;
-            const clubTrouve = trouverClub(saisie);
-            const zoneAffichage = document.getElementById('contenu-awbb');
+            resultsCard.style.display = "block";
 
-            if (!clubTrouve) {
-                zoneAffichage.innerHTML = "<p style='color:red;'>⚠️ Club introuvable. Essayez un autre mot-clé (ex: Mons, Braine, Spirou...)</p>";
+            if (!targetId) {
+                clubTitle.textContent = "Aucun résultat";
+                clubContent.innerHTML = "<p style='color:red;'>Club introuvable. Essayez un autre nom.</p>";
                 return;
             }
 
-            const clubId = clubTrouve.id;
-            const tableaux = donneesGlobales.donnees_clubs ? donneesGlobales.donnees_clubs[clubId] : null;
+            clubTitle.textContent = targetName;
+            const info = appData.donnees_clubs[targetId] || {};
 
-            if (tableaux && tableaux.length > 0) {
-                zoneAffichage.innerHTML = "<h3>Résultats pour : " + clubTrouve.nom + "</h3>" + tableaux.join('<hr>');
-            } else {
-                zoneAffichage.innerHTML = "<h3>" + clubTrouve.nom + "</h3><p>⚠️ Aucun tableau de résultats disponible actuellement pour ce club.</p>";
-            }
+            let html = `<p><strong>Matricule / ID :</strong> ${targetId}</p>`;
+            if (info.address) html += `<p><strong>Adresse :</strong> ${info.address}</p>`;
+            if (info.locality) html += `<p><strong>Localité :</strong> ${info.locality}</p>`;
+            if (info.mail) html += `<p><strong>Email :</strong> <a href="mailto:${info.mail}">${info.mail}</a></p>`;
+
+            clubContent.innerHTML = html;
         }
     </script>
-
 </body>
 </html>
