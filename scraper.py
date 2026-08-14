@@ -1,29 +1,36 @@
 """
-Scraper Basket Hainaut — v6
+Scraper Basket Hainaut — v8
 
-Nouveautés par rapport à la v5 :
-- Chaque match est classé "championnat" / "coupe" / "amical" (déduit du nom
-  de la compétition de sa série) pour que l'interface puisse afficher un
-  émoji différent selon le type de match.
-- Génère un fichier .ics (agenda) par équipe dans le dossier calendars/.
-  Comme ce fichier est régénéré à CHAQUE passage du robot (2x/jour) et
-  hébergé à une URL stable sur GitHub Pages, un utilisateur qui s'abonne
-  à cette URL depuis Apple Calendrier ou Google Agenda (et non un simple
-  import ponctuel) verra ses matchs se mettre à jour automatiquement,
-  exactement comme un agenda public.
+Nouveauté par rapport à la v7 :
+- L'appel API réessaie automatiquement (jusqu'à 4 fois, délai croissant)
+  en cas d'incident réseau transitoire ('Connection aborted' /
+  RemoteDisconnected constaté en usage réel) au lieu de faire planter
+  tout le run pour un simple hoquet de connexion.
+- Un logo de club anormalement énorme (170 mégapixels observé) ne
+  provoque plus d'avertissement bruyant ni de ralentissement inutile.
 
-Nouveautés héritées des versions précédentes : voir les scrapers v3/v4/v5.
+Nouveautés héritées des versions précédentes : voir les scrapers v3 à v7.
 """
 
 import io
 import json
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 
 import requests
 from PIL import Image
+
+# Certains logos de clubs sont des images énormes (un cas observé : 170
+# mégapixels) — ce ne sont pas des fichiers malveillants, juste des photos
+# non redimensionnées par leur club. On désactive la protection
+# "decompression bomb" de Pillow (bruyante, sans intérêt ici puisqu'on
+# redimensionne systématiquement en 40x40 juste après) et on ignore les
+# fichiers vraiment trop volumineux pour rester rapide.
+Image.MAX_IMAGE_PIXELS = None
+TAILLE_MAX_LOGO_OCTETS = 15_000_000
 
 BASE_SITE = "https://baskethainaut.be"
 NONCE_SOURCE_PAGE = f"{BASE_SITE}/clubs/"
@@ -39,7 +46,7 @@ TAILLE_TRANCHE_JOURS = 55
 SITE_URL = "https://qtheun27.github.io/basket-awbb"
 
 HEADERS_BROWSER = {
-    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/6.0; +https://github.com/)"
+    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/8.0; +https://github.com/)"
 }
 
 
@@ -55,7 +62,15 @@ def get_nonce(session: requests.Session) -> str:
     return match.group(1)
 
 
-def call_api(session: requests.Session, nonce: str, path: str, params: dict | None = None) -> dict:
+def call_api(session: requests.Session, nonce: str, path: str, params: dict | None = None,
+             tentatives: int = 4) -> dict:
+    """Appelle un endpoint de l'API bpleagues, avec réessais automatiques.
+
+    Le site fait parfois tomber la connexion en cours de route (constaté :
+    'Connection aborted / RemoteDisconnected') sans lien avec les données
+    demandées — un simple incident réseau transitoire. On réessaie avec un
+    délai croissant plutôt que de faire planter tout le run pour ça.
+    """
     query = {"_path": path}
     for key, value in (params or {}).items():
         if isinstance(value, (list, tuple)):
@@ -64,16 +79,30 @@ def call_api(session: requests.Session, nonce: str, path: str, params: dict | No
         else:
             query[key] = value
 
-    resp = session.get(
-        API_BASE, params=query,
-        headers={**HEADERS_BROWSER, "X-WP-Nonce": nonce},
-        timeout=30,
-    )
-    resp.raise_for_status()
-    data = resp.json()
-    if isinstance(data, dict) and data.get("code") == "rest_forbidden":
-        raise RuntimeError(f"Accès refusé par l'API pour {path} — le nonce a peut-être expiré.")
-    return data
+    derniere_erreur = None
+    for tentative in range(1, tentatives + 1):
+        try:
+            resp = session.get(
+                API_BASE, params=query,
+                headers={**HEADERS_BROWSER, "X-WP-Nonce": nonce},
+                timeout=30,
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            if isinstance(data, dict) and data.get("code") == "rest_forbidden":
+                raise RuntimeError(f"Accès refusé par l'API pour {path} — le nonce a peut-être expiré.")
+            return data
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout,
+                requests.exceptions.ChunkedEncodingError) as e:
+            derniere_erreur = e
+            if tentative < tentatives:
+                attente = 2 * tentative
+                print(f"   ⚠️ Incident réseau sur {path} (tentative {tentative}/{tentatives}) : "
+                      f"{e} — nouvel essai dans {attente}s...")
+                time.sleep(attente)
+            else:
+                raise
+    raise derniere_erreur
 
 
 def logo_complet(logo_img_url: str | None) -> str | None:
@@ -131,7 +160,7 @@ def recuperer_couleurs_logo(session: requests.Session, logo_url: str | None) -> 
         return "#0b5cab", "#d32f2f"
     try:
         resp = session.get(logo_url, headers=HEADERS_BROWSER, timeout=8)
-        if resp.status_code == 200:
+        if resp.status_code == 200 and len(resp.content) <= TAILLE_MAX_LOGO_OCTETS:
             return extraire_couleurs(resp.content)
     except Exception:
         pass
