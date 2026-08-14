@@ -1,0 +1,38 @@
+name: Mise à jour automatique AWBB
+
+on:
+  schedule:
+    # Exécution automatique à 6h00 et 18h00 chaque jour
+    - cron: '0 6,18 * * *'
+  workflow_dispatch: # Permet de lancer le robot manuellement si besoin
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    # Autorise le bot à enregistrer le fichier data.json sur le dépôt
+    permissions:
+      contents: write
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Installer les dépendances
+        run: pip install requests beautifulsoup4
+
+      - name: Lancer le robot de scraping
+        run: python scraper.py
+
+      - name: Enregistrer les changements dans GitHub
+        run: |
+          git config --global user.name "AWBB Auto-Bot"
+          git config --global user.email "bot@github.com"
+          git add data.json
+          git commit -m "🤖 Mise à jour automatique des données AWBB" || exit 0
+          git push
