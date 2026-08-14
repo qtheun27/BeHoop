@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suivi Basket Hainaut</title>
+    <title>Suivi Basket</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f8; padding: 20px; max-width: 900px; margin: auto; color: #333; }
         .card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        h1 { color: #d32f2f; display: flex; align-items: center; gap: 10px; }
+        h1 { color: #d32f2f; margin-bottom: 20px; }
         input[type="text"] { width: 100%; max-width: 400px; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; margin-right: 10px; box-sizing: border-box; }
         button { padding: 12px 20px; background: #d32f2f; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 16px; }
         button:disabled { background: #ccc; cursor: not-allowed; }
@@ -17,30 +17,36 @@
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         th, td { border: 1px solid #eee; padding: 10px; text-align: left; font-size: 14px; }
         th { background: #f8f9fa; }
+        .team-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .team-header img { max-height: 50px; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <h1>🏀 Suivi Basket Hainaut</h1>
+    <h1>🏀 Suivi des Équipes & Classements</h1>
 
     <div class="card">
-        <h2>Rechercher un club</h2>
+        <h2>Rechercher une équipe</h2>
         <div id="status-msg" class="status warning">⏳ Chargement des données...</div>
         
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <input type="text" id="club-input" list="clubs-list" placeholder="Ex: Mons, Charleroi, Tournai..." disabled>
+            <input type="text" id="club-input" list="clubs-list" placeholder="Ex: Spirou, Ottignies, Castors Braine..." disabled>
             <datalist id="clubs-list"></datalist>
             <button id="search-btn" onclick="afficherClub()" disabled>Voir les données</button>
         </div>
     </div>
 
     <div class="card" id="results-card" style="display: none;">
-        <h3 id="club-title"></h3>
+        <div class="team-header">
+            <img id="club-logo" src="" alt="" style="display:none;">
+            <h3 id="club-title" style="margin:0;"></h3>
+        </div>
         <div id="club-content"></div>
     </div>
 
     <script>
         let appData = null;
+        let rawElements = [];
 
         window.onload = async function() {
             const statusMsg = document.getElementById('status-msg');
@@ -48,25 +54,36 @@
                 const res = await fetch('./data.json?t=' + new Date().getTime());
                 appData = await res.json();
 
-                const datalist = document.getElementById('clubs-list');
-                const clubNames = Object.keys(appData.clubs || {});
+                // Extraction depuis classements.elements
+                if (appData.classements && appData.classements.elements) {
+                    rawElements = appData.classements.elements;
+                } else if (Array.isArray(appData.classements)) {
+                    rawElements = appData.classements;
+                }
 
-                clubNames.forEach(nom => {
-                    const opt = document.createElement('option');
-                    opt.value = nom;
-                    datalist.appendChild(opt);
+                const datalist = document.getElementById('clubs-list');
+                const seen = new Set();
+
+                rawElements.forEach(item => {
+                    const name = item.team_name || item.team_short_name;
+                    if (name && !seen.has(name)) {
+                        seen.add(name);
+                        const opt = document.createElement('option');
+                        opt.value = name;
+                        datalist.appendChild(opt);
+                    }
                 });
 
-                if (clubNames.length > 0) {
+                if (seen.size > 0) {
                     statusMsg.className = "status success";
-                    statusMsg.textContent = `✅ Données prêtes (${clubNames.length} clubs chargés)`;
+                    statusMsg.textContent = `✅ Données prêtes (${seen.size} équipes chargées)`;
                     document.getElementById('club-input').disabled = false;
                     document.getElementById('search-btn').disabled = false;
                 } else {
-                    statusMsg.textContent = "⚠️ Le fichier de données est vide. Relancez l'action GitHub.";
+                    statusMsg.textContent = "⚠️ Aucune équipe trouvée dans le fichier JSON.";
                 }
             } catch (err) {
-                statusMsg.textContent = "⚠️ Impossible de charger data.json. L'action GitHub doit tourner au moins une fois.";
+                statusMsg.textContent = "⚠️ Impossible de charger data.json. Vérifiez la présence du fichier.";
             }
         };
 
@@ -75,36 +92,66 @@
             const resultsCard = document.getElementById('results-card');
             const clubTitle = document.getElementById('club-title');
             const clubContent = document.getElementById('club-content');
+            const clubLogo = document.getElementById('club-logo');
 
-            if (!query || !appData) return;
-
-            let targetId = null;
-            let targetName = null;
-
-            for (const [nom, id] of Object.entries(appData.clubs)) {
-                if (nom.toLowerCase().includes(query)) {
-                    targetId = id;
-                    targetName = nom;
-                    break;
-                }
-            }
+            if (!query || !rawElements.length) return;
 
             resultsCard.style.display = "block";
 
-            if (!targetId) {
+            // Filtrer les équipes correspondant à la recherche
+            const matches = rawElements.filter(item => {
+                const name = (item.team_name || item.team_short_name || '').toLowerCase();
+                return name.includes(query);
+            });
+
+            if (matches.length === 0) {
                 clubTitle.textContent = "Aucun résultat";
-                clubContent.innerHTML = "<p style='color:red;'>Club introuvable. Essayez un autre nom.</p>";
+                clubLogo.style.display = "none";
+                clubContent.innerHTML = "<p style='color:red;'>Équipe introuvable. Essayez un autre mot-clé.</p>";
                 return;
             }
 
-            clubTitle.textContent = targetName;
-            const info = appData.donnees_clubs[targetId] || {};
+            const firstMatch = matches[0];
+            clubTitle.textContent = firstMatch.team_name || firstMatch.team_short_name;
 
-            let html = `<p><strong>Matricule / ID :</strong> ${targetId}</p>`;
-            if (info.address) html += `<p><strong>Adresse :</strong> ${info.address}</p>`;
-            if (info.locality) html += `<p><strong>Localité :</strong> ${info.locality}</p>`;
-            if (info.mail) html += `<p><strong>Email :</strong> <a href="mailto:${info.mail}">${info.mail}</a></p>`;
+            // Afficher le logo si disponible
+            if (firstMatch.club_logo_img_url) {
+                let logoUrl = firstMatch.club_logo_img_url;
+                if (!logoUrl.startsWith('http')) {
+                    logoUrl = 'https://baskethainaut.be/' + logoUrl.replace(/^\//, '');
+                }
+                clubLogo.src = logoUrl;
+                clubLogo.style.display = "block";
+            } else {
+                clubLogo.style.display = "none";
+            }
 
+            // Génération du tableau des résultats
+            let html = `<table>
+                <thead>
+                    <tr>
+                        <th>Équipe</th>
+                        <th>Pos.</th>
+                        <th>Joués</th>
+                        <th>Victoires</th>
+                        <th>Défaites</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            matches.forEach(m => {
+                html += `<tr>
+                    <td><strong>${m.team_name}</strong></td>
+                    <td>#${m.position || '-'}</td>
+                    <td>${m.played}</td>
+                    <td><span style="color:green;font-weight:bold;">${m.wins}</span></td>
+                    <td><span style="color:red;font-weight:bold;">${m.losses}</span></td>
+                    <td><strong>${m.points} pts</strong></td>
+                </tr>`;
+            });
+
+            html += `</tbody></table>`;
             clubContent.innerHTML = html;
         }
     </script>
