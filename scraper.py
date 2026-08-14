@@ -1,14 +1,20 @@
 import json
 import time
-import requests
+import cloudscraper
 from bs4 import BeautifulSoup
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-}
-
 def charger_awbb():
-    print("⏳ Connexion à l'AWBB...")
+    print("⏳ Connexion sécurisée à l'AWBB...")
+    
+    # Création d'un navigateur virtuel anti-blocage
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
+    
     url_base = "https://resultats.awbb.be/"
     
     donnees_finales = {
@@ -17,7 +23,7 @@ def charger_awbb():
     }
 
     try:
-        res = requests.get(url_base, headers=HEADERS, timeout=15)
+        res = scraper.get(url_base)
         soup = BeautifulSoup(res.content, 'html.parser')
         
         options = soup.find_all('option')
@@ -27,30 +33,32 @@ def charger_awbb():
             if club_id and club_id.isdigit() and nom and nom != "Tous":
                 donnees_finales["clubs"][nom] = club_id
 
-        print(f"✅ {len(donnees_finales['clubs'])} clubs trouvés.")
+        print(f"✅ {len(donnees_finales['clubs'])} clubs identifiés.")
 
         count = 0
         for nom, club_id in donnees_finales["clubs"].items():
             try:
                 url_club = f"https://resultats.awbb.be/equipe/{club_id}"
-                res_club = requests.get(url_club, headers=HEADERS, timeout=10)
+                res_club = scraper.get(url_club)
                 if res_club.status_code == 200:
                     soup_club = BeautifulSoup(res_club.content, 'html.parser')
                     tableaux = [str(t) for t in soup_club.find_all('table')]
                     donnees_finales["donnees_clubs"][club_id] = tableaux
+                
                 count += 1
                 print(f"[{count}/{len(donnees_finales['clubs'])}] Récupéré : {nom}")
-                time.sleep(0.2)
+                time.sleep(0.3)
             except Exception as e:
-                print(f"⚠️ Erreur pour {nom}: {e}")
-    except Exception as e:
-        print(f"❌ Erreur principale : {e}")
+                print(f"⚠️ Erreur sur {nom}: {e}")
 
-    # Toujours écrire le fichier pour éviter que Git plante
+    except Exception as e:
+        print(f"❌ Erreur globale : {e}")
+
+    # Sauvegarde du fichier
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(donnees_finales, f, ensure_ascii=False, indent=2)
 
-    print("🎉 Sauvegarde terminée dans data.json !")
+    print("🎉 Opération terminée avec succès !")
 
 if __name__ == "__main__":
     charger_awbb()
