@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T15:44:41.649312Z",
+  "generated_at": "2026-08-14T18:42:52.091577Z",
   "organization": {
     "metadata": [],
     "reference": "HA",
@@ -13791,7 +13791,9 @@
       "away_team_name": "RU14H JS Dottignies",
       "home_team_short_name": "JSB Maffle",
       "away_team_short_name": "JS Dottignies",
-      "game_status_id": 1,
+      "home_score": 48,
+      "away_score": 102,
+      "game_status_id": 2,
       "venue_name": "Hall Omnisports Marcel Denis",
       "venue_city": "Maffle",
       "venue_street": "Place de Maffle , 10",
@@ -15416,28 +15418,6 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
-    },
-    {
-      "id": 487161,
-      "date": "2026-08-16",
-      "time": "18:00:00",
-      "serie_id": 6486,
-      "serie_name": "Amicaux Jeunes",
-      "serie_short_name": "Amicaux Jeunes",
-      "home_team_id": 53026,
-      "away_team_id": 53232,
-      "home_team_name": "PU21H UBC Binche",
-      "away_team_name": "PU21H RBC Montagnard",
-      "home_team_short_name": "UBC Binche",
-      "away_team_short_name": "RBC Montagnard",
-      "game_status_id": 1,
-      "venue_name": " Salle DBM",
-      "venue_city": "Binche",
-      "venue_street": "Rue Du Moulin Blanc ",
-      "venue_zip": "7130",
-      "venue_lat": "50.41707510000000000000",
-      "venue_lng": "4.16636460000000000000",
       "match_type": "amical"
     },
     {
