@@ -1,205 +1,263 @@
+"""
+Scraper Basket Hainaut — v3
+
+Corrige les bugs de la v2-Gemini :
+- Chaque appel à l'API est désormais filtré par organization_id + season_id
+  (et competition_id / dates selon l'endpoint). La v2-Gemini appelait
+  ranking/byMyLeague et game/byMyLeague SANS AUCUN FILTRE : ça renvoie
+  l'historique complet de TOUTE la Wallonie/Belgique, toutes saisons
+  confondues (d'où un data.json de 70 Mo et des dizaines d'équipes
+  fantômes d'anciennes saisons dans l'interface).
+- Les équipes "en cours" d'un club viennent directement du champ
+  teams_array renvoyé par club/byMyLeague (déjà filtré sur la saison
+  demandée) — pas d'une reconstruction fragile à partir des classements.
+- L'adresse de la salle vient de venues_array (rue, ville, code postal,
+  coordonnées) — pas du siège social administratif du club.
+- Les logos utilisent la bonne base d'URL : gestion.awbb.be, pas
+  baskethainaut.be (vérifié en inspectant les <img> réellement chargées
+  sur le site).
+"""
+
 import json
 import re
+import sys
+from datetime import datetime, timedelta
+
 import requests
-import io
-from PIL import Image
-from concurrent.futures import ThreadPoolExecutor
 
-BASE_URL = "https://baskethainaut.be/clubs/"
-API_URL = "https://baskethainaut.be/wp-json/bpleagues/v1/proxy"
+BASE_SITE = "https://baskethainaut.be"
+NONCE_SOURCE_PAGE = f"{BASE_SITE}/clubs/"
+API_BASE = f"{BASE_SITE}/wp-json/bpleagues/v1/proxy"
+ORGANIZATION_ID = 2  # = Hainaut (fixe pour ce site provincial)
+LOGO_BASE_URL = "https://gestion.awbb.be/lms_league_ws/public/img/"
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+# Fenêtre de calendrier récupérée : le passé récent (résultats) + l'avenir
+# proche (prochains matchs). Interroger la saison entière en une fois fait
+# planter l'API du site (erreur 502).
+JOURS_PASSES = 21
+JOURS_FUTURS = 60
+
+HEADERS_BROWSER = {
+    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/3.0; +https://github.com/)"
 }
 
-logo_cache = {}
 
-def extraire_couleurs_d_image(content):
-    """Analyse les pixels pour extraire les 2 couleurs principales du logo."""
-    try:
-        img = Image.open(io.BytesIO(content)).convert('RGB')
-        img = img.resize((30, 30))
-        colors = img.getcolors(30 * 30)
-        if colors:
-            colors.sort(key=lambda x: x[0], reverse=True)
-            valid_colors = []
-            for count, (r, g, b) in colors:
-                # Ignorer le fond blanc ou noir
-                if (r > 220 and g > 220 and b > 220) or (r < 35 and g < 35 and b < 35):
-                    continue
-                hex_color = f"#{r:02x}{g:02x}{b:02x}"
-                if hex_color not in valid_colors:
-                    valid_colors.append(hex_color)
-                if len(valid_colors) >= 2:
-                    break
-            if len(valid_colors) >= 2:
-                return valid_colors[0], valid_colors[1]
-            elif len(valid_colors) == 1:
-                return valid_colors[0], valid_colors[0]
-    except Exception:
-        pass
-    return "#1e293b", "#d32f2f"
+def get_nonce(session: requests.Session) -> str:
+    resp = session.get(NONCE_SOURCE_PAGE, headers=HEADERS_BROWSER, timeout=30)
+    resp.raise_for_status()
+    match = re.search(r'"rest_nonce":"([a-f0-9]+)"', resp.text)
+    if not match:
+        raise RuntimeError(
+            "Impossible de trouver le rest_nonce dans la page. "
+            "Le site a peut-être changé de structure (plugin mis à jour ?)."
+        )
+    return match.group(1)
 
-def traiter_logo(club_tuple):
-    """Télécharge et extrait les couleurs de façon isolée pour le multi-threading."""
-    club, logo_url = club_tuple
-    if not logo_url:
-        club['primary_color'] = "#1e293b"
-        club['accent_color'] = "#d32f2f"
-        return club
 
-    full_url = logo_url if logo_url.startswith('http') else 'https://baskethainaut.be/' + logo_url.lstrip('/')
-    club['logo_full_url'] = full_url
+def call_api(session: requests.Session, nonce: str, path: str, params: dict | None = None) -> dict:
+    query = {"_path": path}
+    for key, value in (params or {}).items():
+        if isinstance(value, (list, tuple)):
+            for i, v in enumerate(value):
+                query[f"{key}[{i}]"] = v
+        else:
+            query[key] = value
 
-    if full_url in logo_cache:
-        p, a = logo_cache[full_url]
-        club['primary_color'], club['accent_color'] = p, a
-        return club
+    resp = session.get(
+        API_BASE, params=query,
+        headers={**HEADERS_BROWSER, "X-WP-Nonce": nonce},
+        timeout=30,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    if isinstance(data, dict) and data.get("code") == "rest_forbidden":
+        raise RuntimeError(f"Accès refusé par l'API pour {path} — le nonce a peut-être expiré.")
+    return data
 
-    try:
-        resp = requests.get(full_url, headers=HEADERS, timeout=2.5)
-        if resp.status_code == 200:
-            p, a = extraire_couleurs_d_image(resp.content)
-            logo_cache[full_url] = (p, a)
-            club['primary_color'], club['accent_color'] = p, a
-            return club
-    except Exception:
-        pass
 
-    club['primary_color'] = "#1e293b"
-    club['accent_color'] = "#d32f2f"
-    return club
+def logo_complet(logo_img_url: str | None) -> str | None:
+    if not logo_img_url:
+        return None
+    if logo_img_url.startswith("http"):
+        return logo_img_url
+    return LOGO_BASE_URL + logo_img_url.lstrip("/")
 
-def mettre_a_jour_donnees():
-    session = requests.Session()
-    session.headers.update(HEADERS)
 
-    print("1. 🔑 Récupération du jeton...")
-    try:
-        res = session.get(BASE_URL, timeout=10)
-        match = re.search(r'"rest_nonce"\s*:\s*"([^"]+)"', res.text)
-        if not match:
-            print("❌ Nonce introuvable.")
-            return
-        nonce = match.group(1)
-        print(f"   --> Nonce: {nonce}")
-    except Exception as e:
-        print(f"❌ Erreur connexion: {e}")
-        return
-
-    api_headers = {'X-WP-Nonce': nonce}
-
-    # A. Détection de la SAISON EN COURS
-    print("2. 🗓️ Détection de la saison active...")
-    current_season_id = None
-    try:
-        res_seasons = session.get(API_URL, headers=api_headers, params={'_path': 'season/byMyLeague'}, timeout=10)
-        if res_seasons.status_code == 200:
-            seasons = res_seasons.json()
-            seasons_list = seasons.get('elements', seasons) if isinstance(seasons, dict) else seasons
-            for s in seasons_list:
-                if s.get('default') or s.get('is_default') or s.get('current'):
-                    current_season_id = s.get('id')
-                    break
-            if not current_season_id and len(seasons_list) > 0:
-                seasons_list.sort(key=lambda x: x.get('id', 0), reverse=True)
-                current_season_id = seasons_list[0].get('id')
-            print(f"   --> Saison active ID : {current_season_id}")
-    except Exception as e:
-        print(f"⚠️ Erreur saisons: {e}")
-
-    # B. Récupération des SÉRIES de la saison en cours
-    print("3. 🏆 Récupération des séries actives...")
-    active_serie_ids = set()
-    try:
-        res_series = session.get(API_URL, headers=api_headers, params={'_path': 'serie/byMyLeague'}, timeout=10)
-        if res_series.status_code == 200:
-            series_data = res_series.json()
-            series_list = series_data.get('elements', series_data) if isinstance(series_data, dict) else series_data
-            for sr in series_list:
-                if not current_season_id or sr.get('season_id') == current_season_id:
-                    active_serie_ids.add(sr.get('id'))
-            print(f"   --> {len(active_serie_ids)} séries actives retenues.")
-    except Exception as e:
-        print(f"⚠️ Erreur séries: {e}")
-
-    # C. CLASSEMENTS (filtrés sur la saison active)
-    print("4. 📊 Récupération des classements actuels...")
-    classements_filtres = []
-    try:
-        res_rank = session.get(API_URL, headers=api_headers, params={'_path': 'ranking/byMyLeague'}, timeout=10)
-        if res_rank.status_code == 200:
-            raw_rank = res_rank.json()
-            all_rankings = raw_rank.get('elements', raw_rank) if isinstance(raw_rank, dict) else raw_rank
-            
-            if active_serie_ids:
-                classements_filtres = [r for r in all_rankings if r.get('serie_id') in active_serie_ids]
-            else:
-                classements_filtres = all_rankings
-            
-            print(f"   --> {len(classements_filtres)} classements conservés pour cette saison.")
-    except Exception as e:
-        print(f"⚠️ Erreur classements: {e}")
-
-    # D. MATCHS (filtrés sur la saison active)
-    print("5. 📅 Récupération du calendrier des matchs...")
-    matchs_filtres = []
-    try:
-        res_games = session.get(API_URL, headers=api_headers, params={'_path': 'game/byMyLeague'}, timeout=10)
-        if res_games.status_code == 200:
-            raw_g = res_games.json()
-            all_games = raw_g.get('elements', raw_g) if isinstance(raw_g, dict) else raw_g
-            if active_serie_ids:
-                matchs_filtres = [g for g in all_games if g.get('serie_id') in active_serie_ids]
-            else:
-                matchs_filtres = all_games
-            print(f"   --> {len(matchs_filtres)} matchs conservés pour cette saison.")
-    except Exception as e:
-        print(f"⚠️ Erreur matchs: {e}")
-
-    # E. CLUBS ACTIFS
-    print("6. 🏀 Traitement parallèle des logos...")
-    active_club_ids = {str(r['club_id']) for r in classements_filtres if r.get('club_id')}
-    
-    donnees_finales = {
-        "clubs": {},
-        "donnees_clubs": {},
-        "classements": classements_filtres,
-        "matchs": matchs_filtres
+def nettoyer_venue(venue: dict | None) -> dict | None:
+    if not venue:
+        return None
+    return {
+        "name": venue.get("name"),
+        "street": venue.get("street"),
+        "street2": venue.get("street2"),
+        "zip": venue.get("zip"),
+        "city": venue.get("city"),
+        "lat": venue.get("lat"),
+        "lng": venue.get("lng"),
     }
 
-    try:
-        res_clubs = session.get(API_URL, headers=api_headers, params={'_path': 'club/byMyLeague'}, timeout=10)
-        if res_clubs.status_code == 200:
-            raw_clubs = res_clubs.json()
-            all_clubs = raw_clubs.get('elements', raw_clubs) if isinstance(raw_clubs, dict) else raw_clubs
-            
-            clubs_to_process = []
-            for c in all_clubs:
-                cid = str(c.get('id', ''))
-                nom = (c.get('name') or c.get('title') or c.get('shortName') or '').strip()
-                if cid in active_club_ids and nom:
-                    logo_url = c.get('logo_img_url') or c.get('logo') or ''
-                    clubs_to_process.append((c, logo_url))
 
-            with ThreadPoolExecutor(max_workers=10) as executor:
-                processed_clubs = list(executor.map(traiter_logo, clubs_to_process))
+def nettoyer_club(club: dict) -> dict:
+    """Ne garde que les champs publics d'un club.
 
-            for c in processed_clubs:
-                cid = str(c.get('id'))
-                nom = (c.get('name') or c.get('title') or c.get('shortName')).strip()
-                donnees_finales["clubs"][nom] = cid
-                donnees_finales["donnees_clubs"][cid] = c
+    L'API renvoie aussi des données administratives (IBAN, n° TVA, n° BCE,
+    GSM du dirigeant...) qu'il est hors de question de publier telles
+    quelles dans un data.json hébergé sur un dépôt GitHub public.
+    """
+    venues = club.get("venues_array") or []
+    equipes = [
+        {"id": t.get("id"), "name": t.get("name"), "short_name": t.get("short_name")}
+        for t in (club.get("teams_array") or [])
+        if t.get("team_status_id") == 1
+    ]
+    return {
+        "id": club.get("id"),
+        "name": club.get("name"),
+        "short_name": club.get("short_name"),
+        "logo_url": logo_complet(club.get("logo_img_url")),
+        "street": club.get("street"),
+        "street2": club.get("street2"),
+        "zip": club.get("zip"),
+        "city": club.get("city"),
+        "email": club.get("email"),
+        "venue": nettoyer_venue(venues[0] if venues else None),
+        "teams": equipes,
+    }
 
-            print(f"   --> {len(donnees_finales['clubs'])} clubs actifs configurés !")
-    except Exception as e:
-        print(f"⚠️ Erreur clubs: {e}")
 
-    # Enregistrement
-    with open('data.json', 'w', encoding='utf-8') as f:
+def nettoyer_match(match: dict) -> dict:
+    champs_publics = (
+        "id", "date", "time", "serie_id", "serie_name", "serie_short_name",
+        "home_team_id", "away_team_id", "home_team_name", "away_team_name",
+        "home_team_short_name", "away_team_short_name",
+        "home_score", "away_score", "game_status_id",
+        "venue_name", "venue_city", "venue_street",
+    )
+    return {k: match.get(k) for k in champs_publics if k in match}
+
+
+def charger_basket_hainaut():
+    session = requests.Session()
+
+    print("🔑 Récupération du jeton de sécurité (nonce)...")
+    nonce = get_nonce(session)
+    print("✅ Nonce obtenu.")
+
+    print("📅 Détection de la saison en cours...")
+    seasons = call_api(session, nonce, "season/byMyLeague", {"organization_id": ORGANIZATION_ID})
+    season_list = seasons.get("elements", [])
+    saison_courante = next((s for s in season_list if s.get("default") == 1), None)
+    if not saison_courante:
+        saison_courante = max(season_list, key=lambda s: s.get("end_date", ""))
+    season_id = saison_courante["id"]
+    print(f"✅ Saison : {saison_courante.get('name')} (id={season_id})")
+
+    print("🏢 Récupération des infos de la province...")
+    organisation = call_api(session, nonce, f"organization/{ORGANIZATION_ID}")
+
+    print("🏆 Récupération des compétitions...")
+    competitions_resp = call_api(
+        session, nonce, "competition/byMyLeague",
+        {"organization_id": ORGANIZATION_ID, "season_id": season_id},
+    )
+    competitions = competitions_resp.get("elements", [])
+    competition_ids = [c["id"] for c in competitions]
+    print(f"✅ {len(competitions)} compétition(s) trouvée(s).")
+
+    if not competition_ids:
+        print("❌ Aucune compétition trouvée, arrêt.")
+        return
+
+    print("🏀 Récupération des clubs (avec équipes et salles de la saison)...")
+    clubs_resp = call_api(
+        session, nonce, "club/byMyLeague",
+        {
+            "organization_id": ORGANIZATION_ID,
+            "season_id": season_id,
+            "competition_id": competition_ids,
+            "sort": ["short_name", "reference", "order"],
+            "club_status_id": 1,
+        },
+    )
+    clubs = [nettoyer_club(c) for c in clubs_resp.get("elements", [])]
+    total_equipes = sum(len(c["teams"]) for c in clubs)
+    print(f"✅ {len(clubs)} club(s), {total_equipes} équipe(s) actives cette saison.")
+
+    print("📊 Récupération des séries (divisions)...")
+    series_resp = call_api(
+        session, nonce, "serie/byMyLeague",
+        {
+            "organization_id": ORGANIZATION_ID,
+            "season_id": season_id,
+            "competition_id": competition_ids,
+            "sort": ["competition", "division", "order"],
+            "serie_status_id": [0, 1],
+        },
+    )
+    series = series_resp.get("elements", [])
+    print(f"✅ {len(series)} série(s)/division(s) trouvée(s).")
+
+    print("🏆 Récupération des classements par série...")
+    classements = {}
+    for i, serie in enumerate(series, start=1):
+        serie_id = serie["id"]
+        try:
+            ranking_resp = call_api(
+                session, nonce, "ranking/byMyLeague",
+                {"serie_id": serie_id, "organization_id": ORGANIZATION_ID, "season_id": season_id},
+            )
+            classements[str(serie_id)] = ranking_resp.get("elements", [])
+        except Exception as e:
+            print(f"⚠️ Classement indisponible pour la série {serie.get('name', serie_id)}: {e}")
+            classements[str(serie_id)] = []
+        if i % 10 == 0:
+            print(f"   ... {i}/{len(series)} classements récupérés")
+
+    aujourdhui = datetime.utcnow().date()
+    date_debut = (aujourdhui - timedelta(days=JOURS_PASSES)).isoformat()
+    date_fin = (aujourdhui + timedelta(days=JOURS_FUTURS)).isoformat()
+
+    print(f"🗓️ Récupération du calendrier des matchs ({date_debut} → {date_fin})...")
+    games_resp = call_api(
+        session, nonce, "game/byMyLeague",
+        {
+            "organization_id": ORGANIZATION_ID,
+            "season_id": season_id,
+            "competition_id": competition_ids,
+            "start_date": date_debut,
+            "end_date": date_fin,
+            "sort": ["date", "time"],
+            "with_referees": "false",
+            "no_forfeit": "true",
+            "without_in_preparation": "true",
+        },
+    )
+    games = [nettoyer_match(g) for g in games_resp.get("elements", [])]
+    print(f"✅ {len(games)} match(s) trouvé(s) sur la période.")
+
+    donnees_finales = {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "organization": organisation.get("data", organisation),
+        "season": saison_courante,
+        "competitions": competitions,
+        "clubs": clubs,
+        "series": series,
+        "classements": classements,
+        "games": games,
+    }
+
+    with open("data.json", "w", encoding="utf-8") as f:
         json.dump(donnees_finales, f, ensure_ascii=False, indent=2)
 
-    print("🎉 data.json mis à jour avec succès !")
+    taille_ko = len(json.dumps(donnees_finales)) // 1024
+    print("\n💾 Le fichier data.json a été généré avec succès !")
+    print(f"   → {len(clubs)} clubs, {total_equipes} équipes, {len(series)} séries, "
+          f"{len(games)} matchs — {taille_ko} Ko")
+
 
 if __name__ == "__main__":
-    mettre_a_jour_donnees()
+    try:
+        charger_basket_hainaut()
+    except Exception as exc:
+        print(f"❌ Erreur fatale : {exc}", file=sys.stderr)
+        sys.exit(1)
