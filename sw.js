@@ -1,20 +1,20 @@
-// Service worker minimal : met en cache la "coquille" de l'appli (HTML/icônes)
-// pour un chargement instantané et pour satisfaire les critères d'installabilité
-// PWA. IMPORTANT : data.json n'est JAMAIS mis en cache ici — on veut toujours
-// les données les plus fraîches, jamais une version figée.
+// Service worker : met en cache les icônes (statiques, ne changent jamais)
+// pour un chargement instantané, mais va TOUJOURS chercher index.html et
+// manifest.json sur le réseau en priorité (avec le cache seulement en
+// secours hors-ligne). Sans ça, une fois le service worker installé, le
+// navigateur resservirait indéfiniment l'ancienne version de l'appli même
+// après une mise à jour du code — le fichier data.json n'est lui jamais
+// mis en cache, il doit toujours être frais.
 
-const CACHE_NAME = 'basket-hainaut-shell-v1';
-const FICHIERS_COQUILLE = [
-  './',
-  './index.html',
-  './manifest.json',
+const CACHE_NAME = 'basket-hainaut-shell-v2';
+const FICHIERS_STATIQUES = [
   './icons/icon-192.png',
   './icons/icon-512.png',
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(FICHIERS_COQUILLE))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(FICHIERS_STATIQUES))
   );
   self.skipWaiting();
 });
@@ -37,7 +37,22 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Pour le reste (coquille de l'appli) : cache d'abord, réseau en secours
+  // Pour la page et les fichiers texte : réseau d'abord (toujours la
+  // dernière version), cache seulement si le réseau est indisponible
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('.html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((reponse) => {
+          const copie = reponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copie));
+          return reponse;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Pour le reste (icônes statiques) : cache d'abord, réseau en secours
   event.respondWith(
     caches.match(event.request).then((reponse) => reponse || fetch(event.request))
   );
