@@ -9,40 +9,46 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486835@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T130000
 DTEND;TZID=Europe/Brussels:20260808T150000
-SUMMARY:🤝 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H JSE Enghien
+SUMMARY:🤝 RU18H JSE Enghien vs RU18H Royal Eclairs Pont-De-Loup
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 74 - 66
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485702@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T154500
 DTEND;TZID=Europe/Brussels:20260815T174500
-SUMMARY:🤝 🏠 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Su
- r Marchienne
-LOCATION:Sambrexpo\, Aiseau-Presles
+SUMMARY:🤝 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Sur Mar
+ chienne
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250\, Aiseau-Presles
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486095@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260821T200000
 DTEND;TZID=Europe/Brussels:20260821T220000
-SUMMARY:🏆 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H Esneux St-Lou
- is United
+SUMMARY:🏆 RU18H Esneux St-Louis United vs RU18H Royal Eclairs Pont-De-Lo
+ up
 LOCATION:Collège Saint-Louis\, Liège
 DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485408@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T110000
 DTEND;TZID=Europe/Brussels:20260829T130000
-SUMMARY:🤝 ✈️ RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont 
- Sur Marchienne
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

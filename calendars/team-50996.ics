@@ -9,21 +9,30 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-482524@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T140000
 DTEND;TZID=Europe/Brussels:20260829T160000
-SUMMARY:🤝 🏠 RU14D Royal Eclairs Pont-De-Loup B vs RU14D BC Malonne
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 RU14D Royal Eclairs Pont-De-Loup B vs RU14D BC Malonne
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-484974@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260921T180000
 DTEND;TZID=Europe/Brussels:20260921T200000
-SUMMARY:🏆 🏠 RU14D Royal Eclairs Pont-De-Loup B vs RU14D Royal Basket 
- Junior Arlonais 1
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏆 RU14D Royal Eclairs Pont-De-Loup B vs RU14D Royal Basket Junio
+ r Arlonais 1
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : Coupe AWBB U14 Dames
 END:VEVENT
 END:VCALENDAR

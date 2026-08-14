@@ -9,232 +9,328 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-466828@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260905T130000
 DTEND;TZID=Europe/Brussels:20260905T150000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Roya
- le-Fraternité A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Royale-Fr
+ aternité A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466829@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260913T130000
 DTEND;TZID=Europe/Brussels:20260913T150000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Aste Ka
- in A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Aste Kain A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466839@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T150000
 DTEND;TZID=Europe/Brussels:20260919T170000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Group
- e Gobert Basket Club Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Blue 
+ and Gold Basket Club Celles
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483448@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260927T130000
 DTEND;TZID=Europe/Brussels:20260927T150000
-SUMMARY:🏆 🏠 PU12HM Blue and Gold Basket Club Celles vs Vainqueur HA25
- 4026
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏆 PU12HM Blue and Gold Basket Club Celles vs Vainqueur HA254026
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466774@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261003T104500
 DTEND;TZID=Europe/Brussels:20261003T124500
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Union
-  Mons-Hainaut B
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut B vs PU12HM Blue and Gold Basket Clu
+ b Celles
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466830@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261011T130000
 DTEND;TZID=Europe/Brussels:20261011T150000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Royal B
- BC Brainois A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Royal BBC Br
+ ainois A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466767@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261031T091500
 DTEND;TZID=Europe/Brussels:20261031T111500
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Bouss
- u Saint-Ghislain United A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU12HM Boussu Saint-Ghislain United A vs PU12HM Blue and Gold 
+ Basket Club Celles
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466875@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261108T093000
 DTEND;TZID=Europe/Brussels:20261108T113000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM B.C. 
- L'9 Flénu-Frameries A
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU12HM B.C. L'9 Flénu-Frameries A vs PU12HM Blue and Gold Bas
+ ket Club Celles
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466831@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T170000
 DTEND;TZID=Europe/Brussels:20261114T190000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Dott
- ignies A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Dottignie
+ s A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466864@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261121T150000
 DTEND;TZID=Europe/Brussels:20261121T170000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JSE E
- nghien B
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 PU12HM JSE Enghien B vs PU12HM Blue and Gold Basket Club Celle
+ s
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466832@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union M
- ons-Hainaut A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union Mons-H
+ ainaut A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466834@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T150000
 DTEND;TZID=Europe/Brussels:20270109T170000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Groupe 
- Gobert Basket Club Colfontaine A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Groupe Gober
+ t Basket Club Colfontaine A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466822@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T090000
 DTEND;TZID=Europe/Brussels:20270116T110000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Ro
- yale-Fraternité A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold Basket 
+ Club Celles
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466757@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T113000
 DTEND;TZID=Europe/Brussels:20270130T133000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Aste 
- Kain A
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU12HM Aste Kain A vs PU12HM Blue and Gold Basket Club Celles
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466857@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270206T120000
 DTEND;TZID=Europe/Brussels:20270206T140000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JS St
- ambruges A
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU12HM JS Stambruges A vs PU12HM Blue and Gold Basket Club Cel
+ les
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466835@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270214T130000
 DTEND;TZID=Europe/Brussels:20270214T150000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union M
- ons-Hainaut B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Union Mons-H
+ ainaut B
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466804@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T160000
 DTEND;TZID=Europe/Brussels:20270220T180000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Do
- ttignies A
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU12HM JS Dottignies A vs PU12HM Blue and Gold Basket Club Cel
+ les
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466836@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270313T170000
 DTEND;TZID=Europe/Brussels:20270313T190000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM B.C. L'
- 9 Flénu-Frameries A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM B.C. L'9 Fl
+ énu-Frameries A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466833@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270320T170000
 DTEND;TZID=Europe/Brussels:20270320T190000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Stam
- bruges A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM JS Stambruge
+ s A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466814@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T150000
 DTEND;TZID=Europe/Brussels:20270403T170000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Royal
-  BBC Brainois A
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 PU12HM Royal BBC Brainois A vs PU12HM Blue and Gold Basket Clu
+ b Celles
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466837@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270410T150000
 DTEND;TZID=Europe/Brussels:20270410T170000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM JSE Eng
- hien B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM JSE Enghien 
+ B
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466794@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270417T090000
 DTEND;TZID=Europe/Brussels:20270417T110000
-SUMMARY:🏀 ✈️ PU12HM Blue and Gold Basket Club Celles vs PU12HM Union
-  Mons-Hainaut A
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut A vs PU12HM Blue and Gold Basket Clu
+ b Celles
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466838@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T170000
 DTEND;TZID=Europe/Brussels:20270424T190000
-SUMMARY:🏀 🏠 PU12HM Blue and Gold Basket Club Celles vs PU12HM Boussu 
- Saint-Ghislain United A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Boussu Saint
+ -Ghislain United A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 END:VCALENDAR

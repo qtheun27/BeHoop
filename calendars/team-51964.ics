@@ -9,213 +9,324 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-487120@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260818T201500
 DTEND;TZID=Europe/Brussels:20260818T221500
-SUMMARY:🤝 🏠 P3H BCJHP Quiévrain vs P3H BC Mons Capitale B
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🤝 P3H BCJHP Quiévrain vs P3H BC Mons Capitale B
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463028@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260906T110000
 DTEND;TZID=Europe/Brussels:20260906T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H Royal Essor BC Templeuve B
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H Royal Essor BC Templeuve B
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463029@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260913T110000
 DTEND;TZID=Europe/Brussels:20260913T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H JS Dottignies B
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H JS Dottignies B
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463061@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T203000
 DTEND;TZID=Europe/Brussels:20260919T223000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H BC JS Estaimpuis C
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P3H BC JS Estaimpuis C vs P3H BCJHP Quiévrain
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463036@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261004T110000
 DTEND;TZID=Europe/Brussels:20261004T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H Soleil Levant Ellignies Ste A
- nne
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H Soleil Levant Ellignies Ste Anne
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463030@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261011T100000
 DTEND;TZID=Europe/Brussels:20261011T120000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H Union BC Quaregnon C
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H Union BC Quaregnon C
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463041@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261115T170000
 DTEND;TZID=Europe/Brussels:20261115T190000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H Aste Kain D
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P3H Aste Kain D vs P3H BCJHP Quiévrain
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463032@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261129T110000
 DTEND;TZID=Europe/Brussels:20261129T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H JS Stambruges C
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H JS Stambruges C
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463142@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261205T190000
 DTEND;TZID=Europe/Brussels:20261205T210000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H Boussu Saint-Ghislain Unite
- d C
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P3H Boussu Saint-Ghislain United C vs P3H BCJHP Quiévrain
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463131@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T190000
 DTEND;TZID=Europe/Brussels:20261212T210000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H JSE Enghien C
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 P3H JSE Enghien C vs P3H BCJHP Quiévrain
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463104@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261220T140000
 DTEND;TZID=Europe/Brussels:20261220T160000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H CB Royale-Fraternité A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 P3H CB Royale-Fraternité A vs P3H BCJHP Quiévrain
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463034@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270110T110000
 DTEND;TZID=Europe/Brussels:20270110T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H BC JS Estaimpuis C
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H BC JS Estaimpuis C
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463056@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T170000
 DTEND;TZID=Europe/Brussels:20270116T190000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H Royal Essor BC Templeuve B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3H Royal Essor BC Templeuve B vs P3H BCJHP Quiévrain
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463089@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T200000
 DTEND;TZID=Europe/Brussels:20270130T220000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H JS Dottignies B
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 P3H JS Dottignies B vs P3H BCJHP Quiévrain
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463035@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270207T110000
 DTEND;TZID=Europe/Brussels:20270207T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H JSE Enghien C
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H JSE Enghien C
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463106@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270213T203000
 DTEND;TZID=Europe/Brussels:20270213T223000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H Soleil Levant Ellignies Ste
-  Anne
-LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+SUMMARY:🏀 P3H Soleil Levant Ellignies Ste Anne vs P3H BCJHP Quiévrain
+LOCATION:Centre La Pommeraie\, Rue du Culot \, 7972\, Ellignies- Sainte-Ann
+ e
+GEO:50.56302050000000000000;3.67260290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre La Pommeraie, Rue d
+ u Culot , 7972, Ellignies- Sainte-Anne";X-APPLE-RADIUS=70;X-TITLE="Centre L
+ a Pommeraie":geo:50.56302050000000000000,3.67260290000000000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463037@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270221T110000
 DTEND;TZID=Europe/Brussels:20270221T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H Aste Kain D
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H Aste Kain D
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463079@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270313T180000
 DTEND;TZID=Europe/Brussels:20270313T200000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H BBC Tournai A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3H BBC Tournai A vs P3H BCJHP Quiévrain
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463031@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270321T110000
 DTEND;TZID=Europe/Brussels:20270321T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H BBC Tournai A
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H BBC Tournai A
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463025@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270404T140000
 DTEND;TZID=Europe/Brussels:20270404T160000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H Union BC Quaregnon C
-LOCATION:Salle  Edgard Hismans\, Quaregnon
+SUMMARY:🏀 P3H Union BC Quaregnon C vs P3H BCJHP Quiévrain
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390\, Quaregnon
+GEO:50.44051090000000000000;3.86126880000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle  Edgard Hismans, Rue
+  De l'Egalité 91, 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Salle  Edgar
+ d Hismans":geo:50.44051090000000000000,3.86126880000000000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463126@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270411T170000
 DTEND;TZID=Europe/Brussels:20270411T190000
-SUMMARY:🏀 ✈️ P3H BCJHP Quiévrain vs P3H JS Stambruges C
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 P3H JS Stambruges C vs P3H BCJHP Quiévrain
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463038@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270418T110000
 DTEND;TZID=Europe/Brussels:20270418T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H Boussu Saint-Ghislain United 
- C
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H Boussu Saint-Ghislain United C
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463033@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270425T110000
 DTEND;TZID=Europe/Brussels:20270425T130000
-SUMMARY:🏀 🏠 P3H BCJHP Quiévrain vs P3H CB Royale-Fraternité A
-LOCATION:Centre d'animation de Quievrain\, Quiévrain
+SUMMARY:🏀 P3H BCJHP Quiévrain vs P3H CB Royale-Fraternité A
+LOCATION:Centre d'animation de Quievrain\, Rue de L'Abattoir  2\, 7380\, Qu
+ iévrain
+GEO:50.4435504;3.8590958
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre d'animation de Quie
+ vrain, Rue de L'Abattoir  2, 7380, Quiévrain";X-APPLE-RADIUS=70;X-TITLE="C
+ entre d'animation de Quievrain":geo:50.4435504,3.8590958
 DESCRIPTION:Compétition : P3 Hommes C
 END:VEVENT
 END:VCALENDAR

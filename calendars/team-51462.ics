@@ -9,200 +9,305 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-462808@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T183000
 DTEND;TZID=Europe/Brussels:20260905T203000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H Spirou Basket C
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 P3H Spirou Basket C vs P3H CEP Fleurus D
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462853@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T180000
 DTEND;TZID=Europe/Brussels:20260912T200000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H Royal Eclairs Pont-De-Loup C
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 P3H Royal Eclairs Pont-De-Loup C vs P3H CEP Fleurus D
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462863@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260920T110000
 DTEND;TZID=Europe/Brussels:20260920T130000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H Fémina Docherie B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H Fémina Docherie B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462864@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T190000
 DTEND;TZID=Europe/Brussels:20260926T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H Royal BC Marcinelle A
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H Royal BC Marcinelle A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462876@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261031T200000
 DTEND;TZID=Europe/Brussels:20261031T220000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H BCJ Ressaix B
-LOCATION:Salle des Sports du Trieux\, Ressaix
+SUMMARY:🏀 P3H BCJ Ressaix B vs P3H CEP Fleurus D
+LOCATION:Salle des Sports du Trieux\, Rue des Grands Bureaux\, 24\, 7134\, 
+ Ressaix
+GEO:50.41360700000000000000;4.19533870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle des Sports du Trieux
+ , Rue des Grands Bureaux, 24, 7134, Ressaix";X-APPLE-RADIUS=70;X-TITLE="Sal
+ le des Sports du Trieux":geo:50.41360700000000000000,4.19533870000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462821@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261108T100000
 DTEND;TZID=Europe/Brussels:20261108T120000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H BC Feluy-Obaix Seneffe B
-LOCATION:Centre Sportif D'Arquennes\, Arquennes
+SUMMARY:🏀 P3H BC Feluy-Obaix Seneffe B vs P3H CEP Fleurus D
+LOCATION:Centre Sportif D'Arquennes\, Place Alcantara 5\, 7181\, Arquennes
+GEO:50.56926340000000000000;4.27520770000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif D'Arquennes
+ , Place Alcantara 5, 7181, Arquennes";X-APPLE-RADIUS=70;X-TITLE="Centre Spo
+ rtif D'Arquennes":geo:50.56926340000000000000,4.27520770000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462865@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T190000
 DTEND;TZID=Europe/Brussels:20261114T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H RBC Montagnard B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H RBC Montagnard B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462866@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T190000
 DTEND;TZID=Europe/Brussels:20261121T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H RCBE 2000 B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H RCBE 2000 B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462756@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T170000
 DTEND;TZID=Europe/Brussels:20261205T190000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H UBC Binche B
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏀 P3H UBC Binche B vs P3H CEP Fleurus D
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462867@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T130000
 DTEND;TZID=Europe/Brussels:20261213T150000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H JS Luttre B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H JS Luttre B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462791@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261220T170000
 DTEND;TZID=Europe/Brussels:20261220T190000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H BC Ransart Charleroi B
-LOCATION:Complexe Sportif de Ransart\, Ransart
+SUMMARY:🏀 P3H BC Ransart Charleroi B vs P3H CEP Fleurus D
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462780@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270110T133000
 DTEND;TZID=Europe/Brussels:20270110T153000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H Fémina Docherie B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P3H Fémina Docherie B vs P3H CEP Fleurus D
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462868@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T150000
 DTEND;TZID=Europe/Brussels:20270117T170000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H Spirou Basket C
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H Spirou Basket C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462869@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T190000
 DTEND;TZID=Europe/Brussels:20270130T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H Royal Eclairs Pont-De-Loup C
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H Royal Eclairs Pont-De-Loup C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462771@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T130000
 DTEND;TZID=Europe/Brussels:20270207T150000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H JS Luttre B
-LOCATION:Hall Omnisports de Luttre\, Luttre
+SUMMARY:🏀 P3H JS Luttre B vs P3H CEP Fleurus D
+LOCATION:Hall Omnisports de Luttre\, Avenue de la Gare 12\, 6238\, Luttre
+GEO:50.50675680000000000000;4.38255870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Luttre,
+  Avenue de la Gare 12, 6238, Luttre";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisp
+ orts de Luttre":geo:50.50675680000000000000,4.38255870000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462805@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T180000
 DTEND;TZID=Europe/Brussels:20270213T200000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H Royal BC Marcinelle A
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 P3H Royal BC Marcinelle A vs P3H CEP Fleurus D
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462848@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270221T110000
 DTEND;TZID=Europe/Brussels:20270221T130000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H RBC Montagnard B
-LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+SUMMARY:🏀 P3H RBC Montagnard B vs P3H CEP Fleurus D
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Rue du Bois Frion 107\, 6
+ 110\, Montigny-le-Tilleul
+GEO:50.37841120000000000000;4.36807890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Montign
+ y-le-Tilleul, Rue du Bois Frion 107, 6110, Montigny-le-Tilleul";X-APPLE-RAD
+ IUS=70;X-TITLE="Hall Omnisports de Montigny-le-Tilleul":geo:50.378411200000
+ 00000000,4.36807890000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462870@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T190000
 DTEND;TZID=Europe/Brussels:20270313T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H BC Feluy-Obaix Seneffe B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H BC Feluy-Obaix Seneffe B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462871@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T190000
 DTEND;TZID=Europe/Brussels:20270403T210000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H BCJ Ressaix B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H BCJ Ressaix B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462839@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T180000
 DTEND;TZID=Europe/Brussels:20270410T200000
-SUMMARY:🏀 ✈️ P3H CEP Fleurus D vs P3H RCBE 2000 B
-LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+SUMMARY:🏀 P3H RCBE 2000 B vs P3H CEP Fleurus D
+LOCATION:Hall Sportif d'Erquelinnes\, Rue Libotte-Mozin\, 1\, 6560\, Erquel
+ innes
+GEO:50.30616560000000000000;4.11760660000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif d'Erquelinnes
+ , Rue Libotte-Mozin, 1, 6560, Erquelinnes";X-APPLE-RADIUS=70;X-TITLE="Hall 
+ Sportif d'Erquelinnes":geo:50.30616560000000000000,4.11760660000000000000
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462872@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T150000
 DTEND;TZID=Europe/Brussels:20270418T170000
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H UBC Binche B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H UBC Binche B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462873@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270423T204500
 DTEND;TZID=Europe/Brussels:20270423T224500
-SUMMARY:🏀 🏠 P3H CEP Fleurus D vs P3H BC Ransart Charleroi B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3H CEP Fleurus D vs P3H BC Ransart Charleroi B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Hommes A
 END:VEVENT
 END:VCALENDAR

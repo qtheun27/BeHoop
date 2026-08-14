@@ -9,191 +9,271 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-463914@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260905T180000
 DTEND;TZID=Europe/Brussels:20260905T200000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Royal Eclairs Pont-D
- e-Loup C
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 P3D Royal Eclairs Pont-De-Loup C vs P3D BC Féminin Quaregnon 
+ C
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463959@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260912T200000
 DTEND;TZID=Europe/Brussels:20260912T220000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Basket Club Maccabi 
- Charleroi
-LOCATION:Complexe Sportif de Roux \, Roux
+SUMMARY:🏀 P3D Basket Club Maccabi Charleroi vs P3D BC Féminin Quaregnon
+  C
+LOCATION:Complexe Sportif de Roux \, Rue des Couterelles\, 2A\, 6044\, Roux
+GEO:50.44653660000000000000;4.38918900000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Roux ,
+  Rue des Couterelles, 2A, 6044, Roux";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Roux ":geo:50.44653660000000000000,4.38918900000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463969@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T170000
 DTEND;TZID=Europe/Brussels:20260919T190000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Royal BBC Brainois B
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Royal BBC Brainois B
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463945@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260927T130000
 DTEND;TZID=Europe/Brussels:20260927T150000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D JS Cuesmes
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 P3D JS Cuesmes vs P3D BC Féminin Quaregnon C
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463970@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261003T180000
 DTEND;TZID=Europe/Brussels:20261003T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Basket Entité Courcel
- les C
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Basket Entité Courcelles C
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463982@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T173000
 DTEND;TZID=Europe/Brussels:20261010T193000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Ballers
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P3D Ballers vs P3D BC Féminin Quaregnon C
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463971@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T180000
 DTEND;TZID=Europe/Brussels:20261114T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D UBC Binche
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D UBC Binche
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463972@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261122T090000
 DTEND;TZID=Europe/Brussels:20261122T110000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D JS Cuesmes
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D JS Cuesmes
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463862@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261205T190000
 DTEND;TZID=Europe/Brussels:20261205T210000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Charleroi Basket Clu
- b
-LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+SUMMARY:🏀 P3D Charleroi Basket Club vs P3D BC Féminin Quaregnon C
+LOCATION:Hall Omnisports MSM\, avenue Paul Pastur 1\, 6032\, Mont-sur-March
+ ienne
+GEO:50.387999317569935;4.404802839527631
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports MSM, avenu
+ e Paul Pastur 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;X-TITLE="Hall
+  Omnisports MSM":geo:50.387999317569935,4.404802839527631
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463973@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T180000
 DTEND;TZID=Europe/Brussels:20261212T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D CEP Fleurus C
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D CEP Fleurus C
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463897@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T184000
 DTEND;TZID=Europe/Brussels:20261219T204000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Wolves Les Bons Vill
- ers
-LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+SUMMARY:🏀 P3D Wolves Les Bons Villers vs P3D BC Féminin Quaregnon C
+LOCATION:Complexe Sportif Les Bons Villers\, Rue Jean Baptiste Loriaux 3/A\
+ , 6210\, Frasnes-lez-Gosselies
+GEO:50.53083370447749;4.452072159243619
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Les Bons 
+ Villers, Rue Jean Baptiste Loriaux 3/A, 6210, Frasnes-lez-Gosselies";X-APPL
+ E-RADIUS=70;X-TITLE="Complexe Sportif Les Bons Villers":geo:50.530833704477
+ 49,4.452072159243619
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463886@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T170000
 DTEND;TZID=Europe/Brussels:20270109T190000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Royal BBC Brainois B
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P3D Royal BBC Brainois B vs P3D BC Féminin Quaregnon C
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463974@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T180000
 DTEND;TZID=Europe/Brussels:20270116T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Royal Eclairs Pont-De-
- Loup C
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Royal Eclairs Pont-De-Loup 
+ C
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463954@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270123T170000
 DTEND;TZID=Europe/Brussels:20270123T190000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D UBC Binche
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏀 P3D UBC Binche vs P3D BC Féminin Quaregnon C
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463975@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T180000
 DTEND;TZID=Europe/Brussels:20270130T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Basket Club Maccabi Ch
- arleroi
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Basket Club Maccabi Charler
+ oi
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463877@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270207T130000
 DTEND;TZID=Europe/Brussels:20270207T150000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D CEP Fleurus C
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P3D CEP Fleurus C vs P3D BC Féminin Quaregnon C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463911@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270213T170000
 DTEND;TZID=Europe/Brussels:20270213T190000
-SUMMARY:🏀 ✈️ P3D BC Féminin Quaregnon C vs P3D Basket Entité Courc
- elles C
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 P3D Basket Entité Courcelles C vs P3D BC Féminin Quaregnon C
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463977@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T180000
 DTEND;TZID=Europe/Brussels:20270403T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Ballers
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Ballers
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463978@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270417T180000
 DTEND;TZID=Europe/Brussels:20270417T200000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Charleroi Basket Club
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Charleroi Basket Club
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463979@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270425T150000
 DTEND;TZID=Europe/Brussels:20270425T170000
-SUMMARY:🏀 🏠 P3D BC Féminin Quaregnon C vs P3D Wolves Les Bons Viller
- s
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon C vs P3D Wolves Les Bons Villers
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames A
 END:VEVENT
 END:VCALENDAR

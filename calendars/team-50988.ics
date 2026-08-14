@@ -9,58 +9,73 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-483303@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T130000
 DTEND;TZID=Europe/Brussels:20260808T150000
-SUMMARY:🤝 ✈️ RU16D Royal Eclairs Pont-De-Loup A vs RU16D Tournai Wap
- iti Basketball
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🤝 RU16D Tournai Wapiti Basketball vs RU16D Royal Eclairs Pont-De
+ -Loup A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 67 - 32
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482500@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T160000
 DTEND;TZID=Europe/Brussels:20260808T180000
-SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Basket Namur 
- Capitale A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Basket Namur Capit
+ ale A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 80 - 40
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482508@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T130000
 DTEND;TZID=Europe/Brussels:20260816T150000
-SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Royal Murprot
- ec Nivelles Basketball A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Royal Murprotec Ni
+ velles Basketball A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482534@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T143000
 DTEND;TZID=Europe/Brussels:20260822T163000
-SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup A vs RU16D BC Boninne A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs RU16D BC Boninne A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-484902@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T160000
 DTEND;TZID=Europe/Brussels:20260829T180000
-SUMMARY:🤝 🏠 RU16D Royal Eclairs Pont-De-Loup A vs None
+SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs None
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485052@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260927T123000
 DTEND;TZID=Europe/Brussels:20260927T143000
-SUMMARY:🏆 ✈️ RU16D Royal Eclairs Pont-De-Loup A vs RU16D RB Alliance
-  Arlon
+SUMMARY:🏆 RU16D RB Alliance Arlon vs RU16D Royal Eclairs Pont-De-Loup A
 LOCATION:Centre Sportif de la Spetz\, Arlon
 DESCRIPTION:Compétition : Coupe AWBB U16 Dames
 END:VEVENT

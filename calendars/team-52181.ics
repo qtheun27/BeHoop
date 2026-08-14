@@ -9,212 +9,310 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-464068@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T150000
 DTEND;TZID=Europe/Brussels:20260906T170000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D JS Stambruges
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 P3D JS Stambruges vs P3D Royal Essor BC Templeuve C
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464003@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T183000
 DTEND;TZID=Europe/Brussels:20260912T203000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D Basketball Bruneh
- aut
-LOCATION:Complexe sportif Brunehall\, BLEHARIES
+SUMMARY:🏀 P3D Basketball Brunehaut vs P3D Royal Essor BC Templeuve C
+LOCATION:Complexe sportif Brunehall\, Rue Wilbault Bouchart\, 1\, 7620\, BL
+ EHARIES
+GEO:50.51464300000000000000;3.41876590000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif Brunehall
+ , Rue Wilbault Bouchart, 1, 7620, BLEHARIES";X-APPLE-RADIUS=70;X-TITLE="Com
+ plexe sportif Brunehall":geo:50.51464300000000000000,3.41876590000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464057@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T180000
 DTEND;TZID=Europe/Brussels:20260919T200000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D Tremplin Mouscron B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D Tremplin Mouscron B
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464036@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T170000
 DTEND;TZID=Europe/Brussels:20261011T190000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D BC JS Estaimpuis
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P3D BC JS Estaimpuis vs P3D Royal Essor BC Templeuve C
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464058@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261024T180000
 DTEND;TZID=Europe/Brussels:20261024T200000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D Tournai E.F. Kain C
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D Tournai E.F. Kain C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464059@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261108T150000
 DTEND;TZID=Europe/Brussels:20261108T170000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D FanincHr BC Blaton
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D FanincHr BC Blaton
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464049@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T190000
 DTEND;TZID=Europe/Brussels:20261114T210000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D CB Royale-Fratern
- ité
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 P3D CB Royale-Fraternité vs P3D Royal Essor BC Templeuve C
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464060@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T210000
 DTEND;TZID=Europe/Brussels:20261121T230000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D Union Basket Lessin
- es Flobecq
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D Union Basket Lessines Fl
+ obecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464083@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261128T171500
 DTEND;TZID=Europe/Brussels:20261128T191500
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D Royal Blaregnies 
- BC
-LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+SUMMARY:🏀 P3D Royal Blaregnies BC vs P3D Royal Essor BC Templeuve C
+LOCATION:Salle Omnisports E. Severyns\, Rue de Sars\, 5\, 7040\, Blaregnies
+GEO:50.36023000000000000000;3.88781000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports E. Severy
+ ns, Rue de Sars, 5, 7040, Blaregnies";X-APPLE-RADIUS=70;X-TITLE="Salle Omni
+ sports E. Severyns":geo:50.36023000000000000000,3.88781000000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464016@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D B.B.C.Leuze
-LOCATION:Leuzarena\, Leuze-en-Hainaut
+SUMMARY:🏀 P3D B.B.C.Leuze vs P3D Royal Essor BC Templeuve C
+LOCATION:Leuzarena\, rue de Tournai 103\, 7900\, Leuze-en-Hainaut
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464061@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T180000
 DTEND;TZID=Europe/Brussels:20261219T200000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D BC Féminin Quaregn
- on B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D BC Féminin Quaregnon B
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464096@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T180000
 DTEND;TZID=Europe/Brussels:20270109T200000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D Tremplin Mouscron
-  B
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P3D Tremplin Mouscron B vs P3D Royal Essor BC Templeuve C
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464062@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T110000
 DTEND;TZID=Europe/Brussels:20270117T130000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D JS Stambruges
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D JS Stambruges
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464108@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270123T191500
 DTEND;TZID=Europe/Brussels:20270123T211500
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D FanincHr BC Blato
- n
-LOCATION:Centre Omnisports du Préau\, Bernissart
+SUMMARY:🏀 P3D FanincHr BC Blaton vs P3D Royal Essor BC Templeuve C
+LOCATION:Centre Omnisports du Préau\, Chemin du Préau\, 7320\, Bernissart
+GEO:50.47638269999999000000;3.67024230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports du Préa
+ u, Chemin du Préau, 7320, Bernissart";X-APPLE-RADIUS=70;X-TITLE="Centre Om
+ nisports du Préau":geo:50.47638269999999000000,3.67024230000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464063@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270131T150000
 DTEND;TZID=Europe/Brussels:20270131T170000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D Basketball Brunehau
- t
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D Basketball Brunehaut
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464064@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T150000
 DTEND;TZID=Europe/Brussels:20270207T170000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D Royal Blaregnies BC
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D Royal Blaregnies BC
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464032@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270214T110000
 DTEND;TZID=Europe/Brussels:20270214T130000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D Tournai E.F. Kain
-  C
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P3D Tournai E.F. Kain C vs P3D Royal Essor BC Templeuve C
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464065@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270221T170000
 DTEND;TZID=Europe/Brussels:20270221T190000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D CB Royale-Fraternit
- é
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D CB Royale-Fraternité
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464066@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270404T150000
 DTEND;TZID=Europe/Brussels:20270404T170000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D BC JS Estaimpuis
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D BC JS Estaimpuis
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464122@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T170000
 DTEND;TZID=Europe/Brussels:20270411T190000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D Union Basket Less
- ines Flobecq
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P3D Union Basket Lessines Flobecq vs P3D Royal Essor BC Temple
+ uve C
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464067@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T170000
 DTEND;TZID=Europe/Brussels:20270417T190000
-SUMMARY:🏀 🏠 P3D Royal Essor BC Templeuve C vs P3D B.B.C.Leuze
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P3D Royal Essor BC Templeuve C vs P3D B.B.C.Leuze
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464001@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T180000
 DTEND;TZID=Europe/Brussels:20270424T200000
-SUMMARY:🏀 ✈️ P3D Royal Essor BC Templeuve C vs P3D BC Féminin Quare
- gnon B
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P3D BC Féminin Quaregnon B vs P3D Royal Essor BC Templeuve C
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P3 Dames B
 END:VEVENT
 END:VCALENDAR

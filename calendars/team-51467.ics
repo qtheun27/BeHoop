@@ -9,11 +9,16 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-484987@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260921T180000
 DTEND;TZID=Europe/Brussels:20260921T200000
-SUMMARY:🏆 🏠 RU14D CEP Fleurus vs RU14D BC Centre Gaume A
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏆 RU14D CEP Fleurus vs RU14D BC Centre Gaume A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : Coupe AWBB U14 Dames
 END:VEVENT
 END:VCALENDAR

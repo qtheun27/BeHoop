@@ -9,202 +9,307 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-468016@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T090000
 DTEND;TZID=Europe/Brussels:20260906T110000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M JS Cuesmes
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 PU10HM JS Cuesmes vs PU10HM Groupe Gobert Basket Club Colfonta
+ ine B
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-467951@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T150000
 DTEND;TZID=Europe/Brussels:20260912T170000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M Jeunesse Sportive Soignies C
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 PU10HM Jeunesse Sportive Soignies C vs PU10HM Groupe Gobert Ba
+ sket Club Colfontaine B
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468005@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T110000
 DTEND;TZID=Europe/Brussels:20260919T130000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- Spirou Basket H
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM Spiro
+ u Basket H
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468031@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T140000
 DTEND;TZID=Europe/Brussels:20260926T160000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M Spirou Basket E
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU10HM Spirou Basket E vs PU10HM Groupe Gobert Basket Club Col
+ fontaine B
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-467984@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T120000
 DTEND;TZID=Europe/Brussels:20261011T140000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M Groupe Gobert Basket Club Colfontaine C
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine C vs PU10HM Group
+ e Gobert Basket Club Colfontaine B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468007@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261108T090000
 DTEND;TZID=Europe/Brussels:20261108T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- BC Mons Capitale A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM BC Mo
+ ns Capitale A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-467997@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T100000
 DTEND;TZID=Europe/Brussels:20261114T120000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M Union Mons-Hainaut B
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU10HM Union Mons-Hainaut B vs PU10HM Groupe Gobert Basket Clu
+ b Colfontaine B
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468008@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261122T090000
 DTEND;TZID=Europe/Brussels:20261122T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- B.C. L'9 Flénu-Frameries B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM B.C. 
+ L'9 Flénu-Frameries B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-467964@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M BC AMLL A
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 PU10HM BC AMLL A vs PU10HM Groupe Gobert Basket Club Colfontai
+ ne B
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468009@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T110000
 DTEND;TZID=Europe/Brussels:20261219T130000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- JSE Enghien B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM JSE E
+ nghien B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468044@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270110T090000
 DTEND;TZID=Europe/Brussels:20270110T110000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M Spirou Basket H
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU10HM Spirou Basket H vs PU10HM Groupe Gobert Basket Club Col
+ fontaine B
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468010@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T090000
 DTEND;TZID=Europe/Brussels:20270117T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- JS Cuesmes
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM JS Cu
+ esmes
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468011@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T150000
 DTEND;TZID=Europe/Brussels:20270130T170000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- Jeunesse Sportive Soignies C
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM Jeune
+ sse Sportive Soignies C
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468012@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T090000
 DTEND;TZID=Europe/Brussels:20270207T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- Spirou Basket E
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM Spiro
+ u Basket E
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468013@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270221T090000
 DTEND;TZID=Europe/Brussels:20270221T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- Union Mons-Hainaut B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM Union
+  Mons-Hainaut B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468056@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270314T130000
 DTEND;TZID=Europe/Brussels:20270314T150000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M BC Mons Capitale A
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 PU10HM BC Mons Capitale A vs PU10HM Groupe Gobert Basket Club 
+ Colfontaine B
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468014@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270404T090000
 DTEND;TZID=Europe/Brussels:20270404T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- Groupe Gobert Basket Club Colfontaine C
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM Group
+ e Gobert Basket Club Colfontaine C
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468070@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T113000
 DTEND;TZID=Europe/Brussels:20270410T133000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M B.C. L'9 Flénu-Frameries B
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU10HM B.C. L'9 Flénu-Frameries B vs PU10HM Groupe Gobert Bas
+ ket Club Colfontaine B
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468015@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T090000
 DTEND;TZID=Europe/Brussels:20270418T110000
-SUMMARY:🏀 🏠 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM 
- BC AMLL A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10HM BC AM
+ LL A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-467949@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T170000
 DTEND;TZID=Europe/Brussels:20270424T190000
-SUMMARY:🏀 ✈️ PU10HM Groupe Gobert Basket Club Colfontaine B vs PU10H
- M JSE Enghien B
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 PU10HM JSE Enghien B vs PU10HM Groupe Gobert Basket Club Colfo
+ ntaine B
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : U10 Hommes D
 END:VEVENT
 END:VCALENDAR

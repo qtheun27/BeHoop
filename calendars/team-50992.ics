@@ -9,31 +9,46 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486833@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T090000
 DTEND;TZID=Europe/Brussels:20260808T110000
-SUMMARY:🤝 ✈️ RU14H Royal Eclairs Pont-De-Loup vs RU14H JSE Enghien
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🤝 RU14H JSE Enghien vs RU14H Royal Eclairs Pont-De-Loup
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 70 - 56
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485889@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260823T170000
 DTEND;TZID=Europe/Brussels:20260823T190000
-SUMMARY:🏆 🏠 RU14H Royal Eclairs Pont-De-Loup vs RU14H Union Mons-Hain
- aut
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏆 RU14H Royal Eclairs Pont-De-Loup vs RU14H Union Mons-Hainaut
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : Coupe AWBB U14 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485407@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T090000
 DTEND;TZID=Europe/Brussels:20260829T110000
-SUMMARY:🤝 ✈️ RU14H Royal Eclairs Pont-De-Loup vs RU14H Olympic Mont 
- Sur Marchienne
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 RU14H Olympic Mont Sur Marchienne vs RU14H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

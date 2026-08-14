@@ -9,32 +9,40 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485498@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260809T150000
 DTEND;TZID=Europe/Brussels:20260809T170000
-SUMMARY:🤝 ✈️ RU21H BC Ransart Charleroi vs RU21H Royal Eclairs Pont-
- De-Loup
-LOCATION:Sambrexpo\, Aiseau-Presles
+SUMMARY:🤝 RU21H Royal Eclairs Pont-De-Loup vs RU21H BC Ransart Charleroi
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250\, Aiseau-Presles
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 57 - 61
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485405@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260815T110000
 DTEND;TZID=Europe/Brussels:20260815T130000
-SUMMARY:🤝 ✈️ RU21H BC Ransart Charleroi vs RU21H Olympic Mont Sur Ma
- rchienne
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 RU21H Olympic Mont Sur Marchienne vs RU21H BC Ransart Charlero
+ i
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486147@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260830T110000
 DTEND;TZID=Europe/Brussels:20260830T130000
-SUMMARY:🏆 🏠 RU21H BC Ransart Charleroi vs RU21H Royal Canter Schaerbe
- ek A
-LOCATION:Complexe Sportif de Ransart\, Ransart
+SUMMARY:🏆 RU21H BC Ransart Charleroi vs RU21H Royal Canter Schaerbeek A
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
 DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
 END:VEVENT
 END:VCALENDAR

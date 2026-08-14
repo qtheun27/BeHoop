@@ -9,52 +9,74 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-479036@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T190000
 DTEND;TZID=Europe/Brussels:20260808T210000
-SUMMARY:🤝 🏠 R2H Groupe Gobert Basket Club Colfontaine A vs R1H BC JS 
- Estaimpuis A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🤝 R2H Groupe Gobert Basket Club Colfontaine A vs R1H BC JS Estai
+ mpuis A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 52 - 47
 END:VEVENT
 BEGIN:VEVENT
 UID:match-479037@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T190000
 DTEND;TZID=Europe/Brussels:20260815T210000
-SUMMARY:🤝 🏠 R2H Groupe Gobert Basket Club Colfontaine A vs R1H Olympi
- c Mont Sur Marchienne A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🤝 R2H Groupe Gobert Basket Club Colfontaine A vs R1H Olympic Mon
+ t Sur Marchienne A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482539@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260820T200000
 DTEND;TZID=Europe/Brussels:20260820T220000
-SUMMARY:🤝 ✈️ R2H Groupe Gobert Basket Club Colfontaine A vs R1H Unio
- n Mons-Hainaut B
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🤝 R1H Union Mons-Hainaut B vs R2H Groupe Gobert Basket Club Colf
+ ontaine A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457636@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260823T150000
 DTEND;TZID=Europe/Brussels:20260823T170000
-SUMMARY:🏆 ✈️ R2H Groupe Gobert Basket Club Colfontaine A vs P1H Prof
- ondeville Sharks A
+SUMMARY:🏆 P1H Profondeville Sharks A vs R2H Groupe Gobert Basket Club Co
+ lfontaine A
 LOCATION:Complexe sportif de la Hulle\, Profondeville
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule O
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457633@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260830T130000
 DTEND;TZID=Europe/Brussels:20260830T150000
-SUMMARY:🏆 🏠 R2H Groupe Gobert Basket Club Colfontaine A vs P1H BC Cen
- tre Gaume Tintigny
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏆 R2H Groupe Gobert Basket Club Colfontaine A vs P1H BC Centre G
+ aume Tintigny
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule O
 END:VEVENT
 END:VCALENDAR

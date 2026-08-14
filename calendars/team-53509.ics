@@ -9,183 +9,265 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-464958@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T090000
 DTEND;TZID=Europe/Brussels:20260905T110000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H JS Dottignies
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU16H JS Dottignies vs PU16H Warriors Basket Club
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465003@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T120000
 DTEND;TZID=Europe/Brussels:20260912T140000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H JSB Maffle
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🏀 PU16H JSB Maffle vs PU16H Warriors Basket Club
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465013@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T130000
 DTEND;TZID=Europe/Brussels:20260919T150000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H Aste Kain
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H Aste Kain
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-478954@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T150000
 DTEND;TZID=Europe/Brussels:20260926T170000
-SUMMARY:🏆 ✈️ PU16H Warriors Basket Club vs PU16H CB Royale-Fraternit
- é A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏆 PU16H CB Royale-Fraternité A vs PU16H Warriors Basket Club
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : Coupe du Hainaut U16 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465020@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T150000
 DTEND;TZID=Europe/Brussels:20261003T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H CB Royale-Fraternité
-  A
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H CB Royale-Fraternité A
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465026@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T133000
 DTEND;TZID=Europe/Brussels:20261011T153000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H B.C. L'9 Flénu-Fra
- meries
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU16H B.C. L'9 Flénu-Frameries vs PU16H Warriors Basket Club
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464971@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H CB Royale-Fraternit
- é A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU16H CB Royale-Fraternité A vs PU16H Warriors Basket Club
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465016@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T150000
 DTEND;TZID=Europe/Brussels:20261121T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H Royal BBC Brainois A
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H Royal BBC Brainois A
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464906@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T110000
 DTEND;TZID=Europe/Brussels:20261205T130000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H Union BC Quaregnon 
- A
-LOCATION:Salle  Edgard Hismans\, Quaregnon
+SUMMARY:🏀 PU16H Union BC Quaregnon A vs PU16H Warriors Basket Club
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390\, Quaregnon
+GEO:50.44051090000000000000;3.86126880000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle  Edgard Hismans, Rue
+  De l'Egalité 91, 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Salle  Edgar
+ d Hismans":geo:50.44051090000000000000,3.86126880000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465017@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T150000
 DTEND;TZID=Europe/Brussels:20261212T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H Basketball Brunehaut
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H Basketball Brunehaut
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464930@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270110T130000
 DTEND;TZID=Europe/Brussels:20270110T150000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H Aste Kain
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU16H Aste Kain vs PU16H Warriors Basket Club
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465018@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T130000
 DTEND;TZID=Europe/Brussels:20270116T150000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H JS Dottignies
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H JS Dottignies
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465019@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T150000
 DTEND;TZID=Europe/Brussels:20270130T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H JSB Maffle
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H JSB Maffle
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464921@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T140000
 DTEND;TZID=Europe/Brussels:20270206T160000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H Basketball Brunehau
- t
-LOCATION:Complexe sportif Brunehall\, BLEHARIES
+SUMMARY:🏀 PU16H Basketball Brunehaut vs PU16H Warriors Basket Club
+LOCATION:Complexe sportif Brunehall\, Rue Wilbault Bouchart\, 1\, 7620\, BL
+ EHARIES
+GEO:50.51464300000000000000;3.41876590000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif Brunehall
+ , Rue Wilbault Bouchart, 1, 7620, BLEHARIES";X-APPLE-RADIUS=70;X-TITLE="Com
+ plexe sportif Brunehall":geo:50.51464300000000000000,3.41876590000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464998@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T173000
 DTEND;TZID=Europe/Brussels:20270220T193000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H Blue and Gold Baske
- t Club Celles
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU16H Blue and Gold Basket Club Celles vs PU16H Warriors Baske
+ t Club
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465021@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T150000
 DTEND;TZID=Europe/Brussels:20270403T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H B.C. L'9 Flénu-Frame
- ries
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H B.C. L'9 Flénu-Frameries
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464989@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T130000
 DTEND;TZID=Europe/Brussels:20270410T150000
-SUMMARY:🏀 ✈️ PU16H Warriors Basket Club vs PU16H Royal BBC Brainois 
- A
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 PU16H Royal BBC Brainois A vs PU16H Warriors Basket Club
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465022@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T150000
 DTEND;TZID=Europe/Brussels:20270417T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H Union BC Quaregnon A
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H Union BC Quaregnon A
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465015@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T150000
 DTEND;TZID=Europe/Brussels:20270424T170000
-SUMMARY:🏀 🏠 PU16H Warriors Basket Club vs PU16H Blue and Gold Basket 
- Club Celles
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU16H Warriors Basket Club vs PU16H Blue and Gold Basket Club 
+ Celles
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U16 Hommes B Elite
 END:VEVENT
 END:VCALENDAR

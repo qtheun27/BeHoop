@@ -9,190 +9,279 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-465794@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T140000
 DTEND;TZID=Europe/Brussels:20260905T160000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H JS Stambruges
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU14H JS Stambruges vs PU14H Warriors Basket Club
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465817@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260913T100000
 DTEND;TZID=Europe/Brussels:20260913T120000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H JS Fermoba Péruwel
- z
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 PU14H JS Fermoba Péruwelz vs PU14H Warriors Basket Club
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465784@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T130000
 DTEND;TZID=Europe/Brussels:20261003T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H CB Royale-Fraternité
-  B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H CB Royale-Fraternité B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465730@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T150000
 DTEND;TZID=Europe/Brussels:20261010T170000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H Royal Essor BC Temp
- leuve
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU14H Royal Essor BC Templeuve vs PU14H Warriors Basket Club
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465785@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H Boussu Saint-Ghislain
-  United
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H Boussu Saint-Ghislain Unit
+ ed
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465807@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261115T130000
 DTEND;TZID=Europe/Brussels:20261115T150000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H BC Mons Capitale
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 PU14H BC Mons Capitale vs PU14H Warriors Basket Club
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465786@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T130000
 DTEND;TZID=Europe/Brussels:20261121T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H Union BC Quaregnon B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H Union BC Quaregnon B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465754@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T153000
 DTEND;TZID=Europe/Brussels:20261205T173000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H Aste Kain B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU14H Aste Kain B vs PU14H Warriors Basket Club
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465783@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T130000
 DTEND;TZID=Europe/Brussels:20261212T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H JS Cuesmes
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H JS Cuesmes
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465743@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T100000
 DTEND;TZID=Europe/Brussels:20261219T120000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H JS Dottignies
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU14H JS Dottignies vs PU14H Warriors Basket Club
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465778@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270110T170000
 DTEND;TZID=Europe/Brussels:20270110T190000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H JS Cuesmes
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 PU14H JS Cuesmes vs PU14H Warriors Basket Club
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465788@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T150000
 DTEND;TZID=Europe/Brussels:20270116T170000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H JS Stambruges
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H JS Stambruges
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465789@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T130000
 DTEND;TZID=Europe/Brussels:20270130T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H JS Fermoba Péruwelz
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H JS Fermoba Péruwelz
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465714@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T090000
 DTEND;TZID=Europe/Brussels:20270213T110000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H CB Royale-Fraternit
- é B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU14H CB Royale-Fraternité B vs PU14H Warriors Basket Club
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465790@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T130000
 DTEND;TZID=Europe/Brussels:20270220T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H BC Mons Capitale
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H BC Mons Capitale
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465724@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T130000
 DTEND;TZID=Europe/Brussels:20270313T150000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H Boussu Saint-Ghisla
- in United
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H Warriors Basket Cl
+ ub
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465791@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T130000
 DTEND;TZID=Europe/Brussels:20270403T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H Royal Essor BC Temple
- uve
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H Royal Essor BC Templeuve
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465704@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T130000
 DTEND;TZID=Europe/Brussels:20270410T150000
-SUMMARY:🏀 ✈️ PU14H Warriors Basket Club vs PU14H Union BC Quaregnon 
- B
-LOCATION:Salle  Edgard Hismans\, Quaregnon
+SUMMARY:🏀 PU14H Union BC Quaregnon B vs PU14H Warriors Basket Club
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390\, Quaregnon
+GEO:50.44051090000000000000;3.86126880000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle  Edgard Hismans, Rue
+  De l'Egalité 91, 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Salle  Edgar
+ d Hismans":geo:50.44051090000000000000,3.86126880000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465792@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T130000
 DTEND;TZID=Europe/Brussels:20270417T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H Aste Kain B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H Aste Kain B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465793@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T130000
 DTEND;TZID=Europe/Brussels:20270424T150000
-SUMMARY:🏀 🏠 PU14H Warriors Basket Club vs PU14H JS Dottignies
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H JS Dottignies
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 END:VCALENDAR

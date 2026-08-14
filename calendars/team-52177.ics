@@ -9,230 +9,347 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-463426@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T170000
 DTEND;TZID=Europe/Brussels:20260905T190000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H BC JS Estaimpuis 
- D
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P4H BC JS Estaimpuis D vs P4H Royal Essor BC Templeuve C
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463452@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T210000
 DTEND;TZID=Europe/Brussels:20260912T230000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H Royal BBC Brainois 
- D
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Royal BBC Brainois D
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463492@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T190000
 DTEND;TZID=Europe/Brussels:20261003T210000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H CB Royale-Fratern
- ité B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 P4H CB Royale-Fraternité B vs P4H Royal Essor BC Templeuve C
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463454@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T210000
 DTEND;TZID=Europe/Brussels:20261010T230000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H Blue and Gold Baske
- t Club Celles B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Blue and Gold Basket Clu
+ b Celles B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463545@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261017T204500
 DTEND;TZID=Europe/Brussels:20261017T224500
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H FanincHr BC Blato
- n
-LOCATION:Centre Omnisports du Préau\, Bernissart
+SUMMARY:🏀 P4H FanincHr BC Blaton vs P4H Royal Essor BC Templeuve C
+LOCATION:Centre Omnisports du Préau\, Chemin du Préau\, 7320\, Bernissart
+GEO:50.47638269999999000000;3.67024230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports du Préa
+ u, Chemin du Préau, 7320, Bernissart";X-APPLE-RADIUS=70;X-TITLE="Centre Om
+ nisports du Préau":geo:50.47638269999999000000,3.67024230000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463455@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261024T200000
 DTEND;TZID=Europe/Brussels:20261024T220000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H BBC Tournai B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H BBC Tournai B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463456@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H JS Fermoba Péruwel
- z
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H JS Fermoba Péruwelz
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463482@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T210000
 DTEND;TZID=Europe/Brussels:20261114T230000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H JS Dottignies C
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 P4H JS Dottignies C vs P4H Royal Essor BC Templeuve C
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463457@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261122T130000
 DTEND;TZID=Europe/Brussels:20261122T150000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H Tremplin Mouscron
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Tremplin Mouscron
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463509@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T190000
 DTEND;TZID=Europe/Brussels:20261205T210000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H JS Cuesmes B
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 P4H JS Cuesmes B vs P4H Royal Essor BC Templeuve C
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463562@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T170000
 DTEND;TZID=Europe/Brussels:20261213T190000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H Union Basket Less
- ines Flobecq
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC Temple
+ uve C
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463458@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261220T110000
 DTEND;TZID=Europe/Brussels:20261220T130000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H BC Silly
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H BC Silly
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463459@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T210000
 DTEND;TZID=Europe/Brussels:20270116T230000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H BC JS Estaimpuis D
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H BC JS Estaimpuis D
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463472@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H Royal BBC Brainoi
- s D
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P4H Royal BBC Brainois D vs P4H Royal Essor BC Templeuve C
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463460@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T110000
 DTEND;TZID=Europe/Brussels:20270207T130000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H FanincHr BC Blaton
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H FanincHr BC Blaton
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463461@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T170000
 DTEND;TZID=Europe/Brussels:20270213T190000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H CB Royale-Fraternit
- é B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H CB Royale-Fraternité B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463462@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T210000
 DTEND;TZID=Europe/Brussels:20270220T230000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H JS Dottignies C
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H JS Dottignies C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463577@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270227T200000
 DTEND;TZID=Europe/Brussels:20270227T220000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H Tremplin Mouscron
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P4H Tremplin Mouscron vs P4H Royal Essor BC Templeuve C
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463463@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270307T150000
 DTEND;TZID=Europe/Brussels:20270307T170000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H JS Cuesmes B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H JS Cuesmes B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463541@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270314T140000
 DTEND;TZID=Europe/Brussels:20270314T160000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H JS Fermoba Péruw
- elz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 P4H JS Fermoba Péruwelz vs P4H Royal Essor BC Templeuve C
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463527@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T190000
 DTEND;TZID=Europe/Brussels:20270403T210000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H Blue and Gold Bas
- ket Club Celles B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Royal Essor BC T
+ empleuve C
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463450@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T150000
 DTEND;TZID=Europe/Brussels:20270411T170000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H BC Silly
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 P4H BC Silly vs P4H Royal Essor BC Templeuve C
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463464@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T210000
 DTEND;TZID=Europe/Brussels:20270417T230000
-SUMMARY:🏀 🏠 P4H Royal Essor BC Templeuve C vs P4H Union Basket Lessin
- es Flobecq
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Union Basket Lessines Fl
+ obecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463425@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270425T130000
 DTEND;TZID=Europe/Brussels:20270425T150000
-SUMMARY:🏀 ✈️ P4H Royal Essor BC Templeuve C vs P4H BBC Tournai B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H BBC Tournai B vs P4H Royal Essor BC Templeuve C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 END:VCALENDAR

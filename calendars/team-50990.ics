@@ -9,167 +9,244 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-466168@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T133000
 DTEND;TZID=Europe/Brussels:20260905T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D DPK Carnière
- s Morlanwelz
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D DPK Carnières Mor
+ lanwelz
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466179@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260920T150000
 DTEND;TZID=Europe/Brussels:20260920T170000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D Spirou Bask
- et
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU16D Spirou Basket vs PU16D Royal Eclairs Pont-De-Loup A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483485@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T133000
 DTEND;TZID=Europe/Brussels:20260926T153000
-SUMMARY:🏆 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Blue and Gold
-  Basket Club Celles
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏆 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Blue and Gold Bask
+ et Club Celles
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466170@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T133000
 DTEND;TZID=Europe/Brussels:20261010T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal BC Marc
- inelle
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal BC Marcinell
+ e
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466171@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T133000
 DTEND;TZID=Europe/Brussels:20261114T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Basket Entit
- é Courcelles
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Basket Entité Cou
+ rcelles
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466204@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T110000
 DTEND;TZID=Europe/Brussels:20261121T130000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D CEP Fleurus
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 PU16D CEP Fleurus vs PU16D Royal Eclairs Pont-De-Loup A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466172@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D BC AMLL
-LOCATION:Hall Sportif de Farciennes\, Farciennes
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D BC AMLL
+LOCATION:Hall Sportif de Farciennes\, rue du Puits Communal 103\, 6240\, Fa
+ rciennes
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466173@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T133000
 DTEND;TZID=Europe/Brussels:20261212T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal Eclairs
-  Pont-De-Loup B
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal Eclairs Pont
+ -De-Loup B
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466107@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T150000
 DTEND;TZID=Europe/Brussels:20261219T170000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D Jeunesse Sp
- ortive Soignies
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 PU16D Jeunesse Sportive Soignies vs PU16D Royal Eclairs Pont-D
+ e-Loup A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466174@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T133000
 DTEND;TZID=Europe/Brussels:20270109T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Spirou Basket
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Spirou Basket
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466162@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T090000
 DTEND;TZID=Europe/Brussels:20270116T110000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D DPK Carniè
- res Morlanwelz
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 PU16D DPK Carnières Morlanwelz vs PU16D Royal Eclairs Pont-De
+ -Loup A
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466197@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T133000
 DTEND;TZID=Europe/Brussels:20270206T153000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal Eclai
- rs Pont-De-Loup B
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup B vs PU16D Royal Eclairs Pont
+ -De-Loup A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466144@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T130000
 DTEND;TZID=Europe/Brussels:20270220T150000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D Basket Enti
- té Courcelles
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Royal Eclairs Pont-De
+ -Loup A
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466154@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270404T113000
 DTEND;TZID=Europe/Brussels:20270404T133000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D Royal BC Ma
- rcinelle
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU16D Royal BC Marcinelle vs PU16D Royal Eclairs Pont-De-Loup 
+ A
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466177@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T133000
 DTEND;TZID=Europe/Brussels:20270410T153000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D CEP Fleurus
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D CEP Fleurus
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466134@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T173000
 DTEND;TZID=Europe/Brussels:20270418T193000
-SUMMARY:🏀 ✈️ PU16D Royal Eclairs Pont-De-Loup A vs PU16D BC AMLL
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 PU16D BC AMLL vs PU16D Royal Eclairs Pont-De-Loup A
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466178@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T090000
 DTEND;TZID=Europe/Brussels:20270424T110000
-SUMMARY:🏀 🏠 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Jeunesse Spor
- tive Soignies
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Jeunesse Sportive 
+ Soignies
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 END:VCALENDAR

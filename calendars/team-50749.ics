@@ -9,31 +9,39 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486922@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T130000
 DTEND;TZID=Europe/Brussels:20260815T150000
-SUMMARY:🤝 ✈️ RU18H Union Mons-Hainaut vs RU18H JSE Enghien
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🤝 RU18H JSE Enghien vs RU18H Union Mons-Hainaut
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486087@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T160000
 DTEND;TZID=Europe/Brussels:20260822T180000
-SUMMARY:🏆 ✈️ RU18H Union Mons-Hainaut vs PU18H Royal Gallia BC Beez 
- A
+SUMMARY:🏆 PU18H Royal Gallia BC Beez A vs RU18H Union Mons-Hainaut
 LOCATION:Complexe Sportif de Beez\, Beez
 DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486900@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T103000
 DTEND;TZID=Europe/Brussels:20260829T123000
-SUMMARY:🤝 ✈️ RU18H Union Mons-Hainaut vs RU18H DPK Carnières Morlan
- welz
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🤝 RU18H DPK Carnières Morlanwelz vs RU18H Union Mons-Hainaut
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

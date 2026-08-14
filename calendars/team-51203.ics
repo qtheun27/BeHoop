@@ -9,32 +9,47 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485870@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T120000
 DTEND;TZID=Europe/Brussels:20260822T140000
-SUMMARY:🏆 🏠 RU14H Olympic Mont Sur Marchienne vs PU14H Henri Chapelle
-  A
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🏆 RU14H Olympic Mont Sur Marchienne vs PU14H Henri Chapelle A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Coupe AWBB U14 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485407@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T090000
 DTEND;TZID=Europe/Brussels:20260829T110000
-SUMMARY:🤝 🏠 RU14H Olympic Mont Sur Marchienne vs RU14H Royal Eclairs 
- Pont-De-Loup
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 RU14H Olympic Mont Sur Marchienne vs RU14H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486925@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260830T090000
 DTEND;TZID=Europe/Brussels:20260830T110000
-SUMMARY:🤝 ✈️ RU14H Olympic Mont Sur Marchienne vs RU14H BC Ransart C
- harleroi
-LOCATION:Complexe Sportif de Ransart\, Ransart
+SUMMARY:🤝 RU14H BC Ransart Charleroi vs RU14H Olympic Mont Sur Marchienn
+ e
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

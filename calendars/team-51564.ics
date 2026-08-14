@@ -9,38 +9,53 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486838@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T150000
 DTEND;TZID=Europe/Brussels:20260808T170000
-SUMMARY:🤝 🏠 RU16H JSE Enghien vs RU16H Royal Eclairs Pont-De-Loup
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🤝 RU16H JSE Enghien vs RU16H Royal Eclairs Pont-De-Loup
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 68 - 47
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482414@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T100000
 DTEND;TZID=Europe/Brussels:20260816T120000
-SUMMARY:🤝 ✈️ RU16H JSE Enghien vs RU16H DPK Carnières Morlanwelz A
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🤝 RU16H DPK Carnières Morlanwelz A vs RU16H JSE Enghien
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485962@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T100000
 DTEND;TZID=Europe/Brussels:20260822T120000
-SUMMARY:🏆 ✈️ RU16H JSE Enghien vs RU16H Fresh Air B
+SUMMARY:🏆 RU16H Fresh Air B vs RU16H JSE Enghien
 LOCATION:Centre Omnisports de Jette\, Jette
 DESCRIPTION:Compétition : Coupe AWBB U16 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-487317@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T130000
 DTEND;TZID=Europe/Brussels:20260829T150000
-SUMMARY:🤝 🏠 RU16H JSE Enghien vs RU16H Royal Castors Braine A
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🤝 RU16H JSE Enghien vs RU16H Royal Castors Braine A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

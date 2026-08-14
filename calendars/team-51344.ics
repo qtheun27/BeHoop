@@ -9,12 +9,17 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486168@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260830T110000
 DTEND;TZID=Europe/Brussels:20260830T130000
-SUMMARY:🏆 🏠 RU21H Boussu Saint-Ghislain United vs PU21H Royal BC Loye
- rs
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏆 RU21H Boussu Saint-Ghislain United vs PU21H Royal BC Loyers
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
 END:VEVENT
 END:VCALENDAR

@@ -9,217 +9,304 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-454135@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T170000
 DTEND;TZID=Europe/Brussels:20260815T190000
-SUMMARY:🏆 ✈️ P1D Jeunesse Sportive Soignies A vs P3D UBC Binche
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏆 P3D UBC Binche vs P1D Jeunesse Sportive Soignies A
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454132@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T200000
 DTEND;TZID=Europe/Brussels:20260829T220000
-SUMMARY:🏆 🏠 P1D Jeunesse Sportive Soignies A vs P2D Rapido B.C.T.L.
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏆 P1D Jeunesse Sportive Soignies A vs P2D Rapido B.C.T.L.
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463606@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T193000
 DTEND;TZID=Europe/Brussels:20260905T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Royal Essor BC Te
- mpleuve A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Royal Essor BC Templeu
+ ve A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463607@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T193000
 DTEND;TZID=Europe/Brussels:20260912T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Soleil Levant Ell
- ignies Ste Anne
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Soleil Levant Ellignie
+ s Ste Anne
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463639@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260920T150000
 DTEND;TZID=Europe/Brussels:20260920T170000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Tournai E.F. Ka
- in B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P1D Tournai E.F. Kain B vs P1D Jeunesse Sportive Soignies A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463684@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T190000
 DTEND;TZID=Europe/Brussels:20261003T210000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Groupe Gobert B
- asket Club Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 P1D Groupe Gobert Basket Club Colfontaine A vs P1D Jeunesse Sp
+ ortive Soignies A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463608@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T193000
 DTEND;TZID=Europe/Brussels:20261010T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D BC Féminin Quare
- gnon A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D BC Féminin Quaregnon 
+ A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463609@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T190000
 DTEND;TZID=Europe/Brussels:20261107T210000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Fémina Docherie 
- A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Fémina Docherie A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463619@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T180000
 DTEND;TZID=Europe/Brussels:20261114T200000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D ABC B Péronnes
-  A
-LOCATION:Salle Omnisports Saint-Albert\, Perrones
+SUMMARY:🏀 P1D ABC B Péronnes A vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle Omnisports Saint-Albert\, Chaussée Brunehault 266\, 7134\, 
+ Perrones
+GEO:50.42880320000000000000;4.18528360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Saint-Alb
+ ert, Chaussée Brunehault 266, 7134, Perrones";X-APPLE-RADIUS=70;X-TITLE="S
+ alle Omnisports Saint-Albert":geo:50.42880320000000000000,4.185283600000000
+ 00000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463610@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T193000
 DTEND;TZID=Europe/Brussels:20261121T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Tremplin Mouscron
-  A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Tremplin Mouscron A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463720@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T193000
 DTEND;TZID=Europe/Brussels:20261205T213000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D BC Mons Capital
- e B
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 P1D BC Mons Capitale B vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463709@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T150000
 DTEND;TZID=Europe/Brussels:20261213T170000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D CEP Fleurus B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P1D CEP Fleurus B vs P1D Jeunesse Sportive Soignies A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463612@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T193000
 DTEND;TZID=Europe/Brussels:20270109T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Tournai E.F. Kain
-  B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Tournai E.F. Kain B
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463634@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T190000
 DTEND;TZID=Europe/Brussels:20270116T210000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Royal Essor BC 
- Templeuve A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P1D Royal Essor BC Templeuve A vs P1D Jeunesse Sportive Soigni
+ es A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463667@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T183000
 DTEND;TZID=Europe/Brussels:20270130T203000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Soleil Levant E
- llignies Ste Anne
-LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+SUMMARY:🏀 P1D Soleil Levant Ellignies Ste Anne vs P1D Jeunesse Sportive 
+ Soignies A
+LOCATION:Centre La Pommeraie\, Rue du Culot \, 7972\, Ellignies- Sainte-Ann
+ e
+GEO:50.56302050000000000000;3.67260290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre La Pommeraie, Rue d
+ u Culot , 7972, Ellignies- Sainte-Anne";X-APPLE-RADIUS=70;X-TITLE="Centre L
+ a Pommeraie":geo:50.56302050000000000000,3.67260290000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463613@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T193000
 DTEND;TZID=Europe/Brussels:20270206T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D CEP Fleurus B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D CEP Fleurus B
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463614@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T193000
 DTEND;TZID=Europe/Brussels:20270213T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D Groupe Gobert Bas
- ket Club Colfontaine A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Groupe Gobert Basket C
+ lub Colfontaine A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463615@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T193000
 DTEND;TZID=Europe/Brussels:20270220T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D ABC B Péronnes A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D ABC B Péronnes A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463657@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T200000
 DTEND;TZID=Europe/Brussels:20270313T220000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Fémina Docheri
- e A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463603@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T200000
 DTEND;TZID=Europe/Brussels:20270403T220000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D BC Féminin Qua
- regnon A
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P1D BC Féminin Quaregnon A vs P1D Jeunesse Sportive Soignies 
+ A
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463704@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T200000
 DTEND;TZID=Europe/Brussels:20270410T220000
-SUMMARY:🏀 ✈️ P1D Jeunesse Sportive Soignies A vs P1D Tremplin Mouscr
- on A
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P1D Tremplin Mouscron A vs P1D Jeunesse Sportive Soignies A
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463616@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T193000
 DTEND;TZID=Europe/Brussels:20270417T213000
-SUMMARY:🏀 🏠 P1D Jeunesse Sportive Soignies A vs P1D BC Mons Capitale 
- B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D BC Mons Capitale B
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 END:VCALENDAR

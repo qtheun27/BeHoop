@@ -9,247 +9,347 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485203@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260809T143000
 DTEND;TZID=Europe/Brussels:20260809T163000
-SUMMARY:🤝 🏠 P1D Fémina Docherie A vs P1D CEP Fleurus B
-LOCATION:Hall Omnisports Docherie\, Marchienne-au-Pont
+SUMMARY:🤝 P1D Fémina Docherie A vs P1D CEP Fleurus B
+LOCATION:Hall Omnisports Docherie\, Rue de Jumet\, 324\, 6030\, Marchienne-
+ au-Pont
+GEO:50.42674470000000000000;4.41490690000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Docherie, 
+ Rue de Jumet, 324, 6030, Marchienne-au-Pont";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports Docherie":geo:50.42674470000000000000,4.41490690000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 29 - 65
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454129@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T180000
 DTEND;TZID=Europe/Brussels:20260815T200000
-SUMMARY:🏆 ✈️ P1D Fémina Docherie A vs P3D Royal Eclairs Pont-De-Lou
- p C
-LOCATION:Sambrexpo\, Aiseau-Presles
+SUMMARY:🏆 P3D Royal Eclairs Pont-De-Loup C vs P1D Fémina Docherie A
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250\, Aiseau-Presles
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457648@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260820T200000
 DTEND;TZID=Europe/Brussels:20260820T220000
-SUMMARY:🏆 🏠 P1D Fémina Docherie A vs TDW2 Royal Rebond Ottignies-LLN
-  A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1D Fémina Docherie A vs TDW2 Royal Rebond Ottignies-LLN A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457645@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T180000
 DTEND;TZID=Europe/Brussels:20260822T200000
-SUMMARY:🏆 ✈️ P1D Fémina Docherie A vs R1D Royal Eclairs Pont-De-Lou
- p A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏆 R1D Royal Eclairs Pont-De-Loup A vs P1D Fémina Docherie A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454126@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T183000
 DTEND;TZID=Europe/Brussels:20260829T203000
-SUMMARY:🏆 🏠 P1D Fémina Docherie A vs P2D BCJ Ressaix
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1D Fémina Docherie A vs P2D BCJ Ressaix
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457649@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260830T153000
 DTEND;TZID=Europe/Brussels:20260830T173000
-SUMMARY:🏆 🏠 P1D Fémina Docherie A vs R2D Royal Basket Club Libramont
-  A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1D Fémina Docherie A vs R2D Royal Basket Club Libramont A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463650@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T200000
 DTEND;TZID=Europe/Brussels:20260905T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D CEP Fleurus B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D CEP Fleurus B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463651@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T200000
 DTEND;TZID=Europe/Brussels:20260912T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D ABC B Péronnes A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D ABC B Péronnes A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463595@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T200000
 DTEND;TZID=Europe/Brussels:20260919T220000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D BC Féminin Quaregnon A
-LOCATION:Espace Léon Delvallée\, Quaregnon
+SUMMARY:🏀 P1D BC Féminin Quaregnon A vs P1D Fémina Docherie A
+LOCATION:Espace Léon Delvallée\, Rue Modeste Derbaix \, 7390\, Quaregnon
+GEO:50.44267240000000000000;3.86193930000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Espace Léon Delvallée, R
+ ue Modeste Derbaix , 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Espace Lé
+ on Delvallée":geo:50.44267240000000000000,3.86193930000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463652@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261004T153000
 DTEND;TZID=Europe/Brussels:20261004T173000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D BC Mons Capitale B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D BC Mons Capitale B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463609@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T190000
 DTEND;TZID=Europe/Brussels:20261107T210000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Jeunesse Sportive Soignie
- s A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P1D Jeunesse Sportive Soignies A vs P1D Fémina Docherie A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463653@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T200000
 DTEND;TZID=Europe/Brussels:20261114T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Soleil Levant Ellignies Ste
-  Anne
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Soleil Levant Ellignies Ste Anne
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463632@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261122T110000
 DTEND;TZID=Europe/Brussels:20261122T130000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Royal Essor BC Templeuve 
- A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P1D Royal Essor BC Templeuve A vs P1D Fémina Docherie A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463654@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T200000
 DTEND;TZID=Europe/Brussels:20261205T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Groupe Gobert Basket Club C
- olfontaine A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Groupe Gobert Basket Club Colfon
+ taine A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463655@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T200000
 DTEND;TZID=Europe/Brussels:20261212T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Tournai E.F. Kain B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Tournai E.F. Kain B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463699@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T200000
 DTEND;TZID=Europe/Brussels:20261219T220000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Tremplin Mouscron A
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P1D Tremplin Mouscron A vs P1D Fémina Docherie A
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463656@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270108T200000
 DTEND;TZID=Europe/Brussels:20270108T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D BC Féminin Quaregnon A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D BC Féminin Quaregnon A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463710@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T130000
 DTEND;TZID=Europe/Brussels:20270117T150000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D CEP Fleurus B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P1D CEP Fleurus B vs P1D Fémina Docherie A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463623@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D ABC B Péronnes A
-LOCATION:Salle Omnisports Saint-Albert\, Perrones
+SUMMARY:🏀 P1D ABC B Péronnes A vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports Saint-Albert\, Chaussée Brunehault 266\, 7134\, 
+ Perrones
+GEO:50.42880320000000000000;4.18528360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Saint-Alb
+ ert, Chaussée Brunehault 266, 7134, Perrones";X-APPLE-RADIUS=70;X-TITLE="S
+ alle Omnisports Saint-Albert":geo:50.42880320000000000000,4.185283600000000
+ 00000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463646@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T150000
 DTEND;TZID=Europe/Brussels:20270207T170000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Tournai E.F. Kain B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P1D Tournai E.F. Kain B vs P1D Fémina Docherie A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463724@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T203000
 DTEND;TZID=Europe/Brussels:20270213T223000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D BC Mons Capitale B
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 P1D BC Mons Capitale B vs P1D Fémina Docherie A
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463669@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T183000
 DTEND;TZID=Europe/Brussels:20270220T203000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Soleil Levant Ellignies S
- te Anne
-LOCATION:Centre La Pommeraie\, Ellignies- Sainte-Anne
+SUMMARY:🏀 P1D Soleil Levant Ellignies Ste Anne vs P1D Fémina Docherie A
+LOCATION:Centre La Pommeraie\, Rue du Culot \, 7972\, Ellignies- Sainte-Ann
+ e
+GEO:50.56302050000000000000;3.67260290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre La Pommeraie, Rue d
+ u Culot , 7972, Ellignies- Sainte-Anne";X-APPLE-RADIUS=70;X-TITLE="Centre L
+ a Pommeraie":geo:50.56302050000000000000,3.67260290000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463657@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T200000
 DTEND;TZID=Europe/Brussels:20270313T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Jeunesse Sportive Soignies 
- A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Jeunesse Sportive Soignies A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463659@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T200000
 DTEND;TZID=Europe/Brussels:20270410T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Royal Essor BC Templeuve A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463692@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270416T203000
 DTEND;TZID=Europe/Brussels:20270416T223000
-SUMMARY:🏀 ✈️ P1D Fémina Docherie A vs P1D Groupe Gobert Basket Club
-  Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 P1D Groupe Gobert Basket Club Colfontaine A vs P1D Fémina Doc
+ herie A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463660@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T200000
 DTEND;TZID=Europe/Brussels:20270424T220000
-SUMMARY:🏀 🏠 P1D Fémina Docherie A vs P1D Tremplin Mouscron A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1D Fémina Docherie A vs P1D Tremplin Mouscron A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Dames
 END:VEVENT
 END:VCALENDAR

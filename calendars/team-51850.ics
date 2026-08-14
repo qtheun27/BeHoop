@@ -9,255 +9,381 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-454089@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T190000
 DTEND;TZID=Europe/Brussels:20260816T210000
-SUMMARY:🏆 🏠 P4H Union Basket Lessines Flobecq vs P2H Union BC Quaregn
- on B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏆 P4H Union Basket Lessines Flobecq vs P2H Union BC Quaregnon B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule K
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454088@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T170000
 DTEND;TZID=Europe/Brussels:20260822T190000
-SUMMARY:🏆 ✈️ P4H Union Basket Lessines Flobecq vs P2H Groupe Gobert 
- Basket Club Colfontaine B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏆 P2H Groupe Gobert Basket Club Colfontaine B vs P4H Union Baske
+ t Lessines Flobecq
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule K
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463556@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T170000
 DTEND;TZID=Europe/Brussels:20260906T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Blue and Gold Ba
- sket Club Celles B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Blue and Gold Basket 
+ Club Celles B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463557@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260913T170000
 DTEND;TZID=Europe/Brussels:20260913T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H FanincHr BC Blat
- on
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H FanincHr BC Blaton
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463491@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T190000
 DTEND;TZID=Europe/Brussels:20260919T210000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H CB Royale-Frat
- ernité B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 P4H CB Royale-Fraternité B vs P4H Union Basket Lessines Flobe
+ cq
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463570@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T200000
 DTEND;TZID=Europe/Brussels:20261003T220000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Tremplin Mousc
- ron
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P4H Tremplin Mouscron vs P4H Union Basket Lessines Flobecq
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463558@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T170000
 DTEND;TZID=Europe/Brussels:20261011T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BBC Tournai B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H BBC Tournai B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463481@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261017T180000
 DTEND;TZID=Europe/Brussels:20261017T200000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Dottignies 
- C
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 P4H JS Dottignies C vs P4H Union Basket Lessines Flobecq
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463560@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261108T170000
 DTEND;TZID=Europe/Brussels:20261108T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Cuesmes B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H JS Cuesmes B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463534@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261115T140000
 DTEND;TZID=Europe/Brussels:20261115T160000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Fermoba Pé
- ruwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 P4H JS Fermoba Péruwelz vs P4H Union Basket Lessines Flobecq
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463559@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261129T170000
 DTEND;TZID=Europe/Brussels:20261129T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BC Silly
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H BC Silly
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463561@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T170000
 DTEND;TZID=Europe/Brussels:20261206T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H BC JS Estaimpuis
-  D
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H BC JS Estaimpuis D
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463562@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T170000
 DTEND;TZID=Europe/Brussels:20261213T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC T
- empleuve C
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC Temple
+ uve C
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463470@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T210000
 DTEND;TZID=Europe/Brussels:20261219T230000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Royal BBC Brai
- nois D
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P4H Royal BBC Brainois D vs P4H Union Basket Lessines Flobecq
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463563@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270110T170000
 DTEND;TZID=Europe/Brussels:20270110T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H CB Royale-Frater
- nité B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H CB Royale-Fraternité
+  B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463523@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T183000
 DTEND;TZID=Europe/Brussels:20270116T203000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Blue and Gold 
- Basket Club Celles B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Union Basket Les
+ sines Flobecq
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463550@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270131T160000
 DTEND;TZID=Europe/Brussels:20270131T180000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H FanincHr BC Bl
- aton
-LOCATION:Centre Omnisports du Préau\, Bernissart
+SUMMARY:🏀 P4H FanincHr BC Blaton vs P4H Union Basket Lessines Flobecq
+LOCATION:Centre Omnisports du Préau\, Chemin du Préau\, 7320\, Bernissart
+GEO:50.47638269999999000000;3.67024230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports du Préa
+ u, Chemin du Préau, 7320, Bernissart";X-APPLE-RADIUS=70;X-TITLE="Centre Om
+ nisports du Préau":geo:50.47638269999999000000,3.67024230000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463564@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270207T170000
 DTEND;TZID=Europe/Brussels:20270207T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Dottignies C
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H JS Dottignies C
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463565@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270214T170000
 DTEND;TZID=Europe/Brussels:20270214T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Tremplin Mouscro
- n
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Tremplin Mouscron
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463566@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270221T170000
 DTEND;TZID=Europe/Brussels:20270221T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H JS Fermoba Péru
- welz
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H JS Fermoba Péruwelz
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463437@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270307T150000
 DTEND;TZID=Europe/Brussels:20270307T170000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BC JS Estaimpu
- is D
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P4H BC JS Estaimpuis D vs P4H Union Basket Lessines Flobecq
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463514@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T190000
 DTEND;TZID=Europe/Brussels:20270313T210000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H JS Cuesmes B
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 P4H JS Cuesmes B vs P4H Union Basket Lessines Flobecq
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463423@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T180000
 DTEND;TZID=Europe/Brussels:20270403T200000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BBC Tournai B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H BBC Tournai B vs P4H Union Basket Lessines Flobecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463568@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T170000
 DTEND;TZID=Europe/Brussels:20270411T190000
-SUMMARY:🏀 🏠 P4H Union Basket Lessines Flobecq vs P4H Royal BBC Braino
- is D
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Royal BBC Brainois D
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463464@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T210000
 DTEND;TZID=Europe/Brussels:20270417T230000
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H Royal Essor BC
-  Templeuve C
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Union Basket Lessines Fl
+ obecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463451@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T184500
 DTEND;TZID=Europe/Brussels:20270424T204500
-SUMMARY:🏀 ✈️ P4H Union Basket Lessines Flobecq vs P4H BC Silly
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 P4H BC Silly vs P4H Union Basket Lessines Flobecq
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 END:VCALENDAR

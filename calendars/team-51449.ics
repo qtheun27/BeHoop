@@ -9,156 +9,229 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-468676@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T140000
 DTEND;TZID=Europe/Brussels:20260905T160000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Club 
- A
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Club A
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468677@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T140000
 DTEND;TZID=Europe/Brussels:20260912T160000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive Soig
- nies A
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive Soignies 
+ A
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468687@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T113000
 DTEND;TZID=Europe/Brussels:20260919T133000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D BCJ Ressaix
-LOCATION:Salle des Sports du Trieux\, Ressaix
+SUMMARY:🏀 PU12D BCJ Ressaix vs PU12D Royal BC Marcinelle
+LOCATION:Salle des Sports du Trieux\, Rue des Grands Bureaux\, 24\, 7134\, 
+ Ressaix
+GEO:50.41360700000000000000;4.19533870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle des Sports du Trieux
+ , Rue des Grands Bureaux, 24, 7134, Ressaix";X-APPLE-RADIUS=70;X-TITLE="Sal
+ le des Sports du Trieux":geo:50.41360700000000000000,4.19533870000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468678@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T160000
 DTEND;TZID=Europe/Brussels:20260926T180000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D ABC B Péronnes
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D ABC B Péronnes
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468622@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T150000
 DTEND;TZID=Europe/Brussels:20261003T170000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive So
- ignies B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 PU12D Jeunesse Sportive Soignies B vs PU12D Royal BC Marcinell
+ e
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468679@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T140000
 DTEND;TZID=Europe/Brussels:20261114T160000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D CEP Fleurus
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D CEP Fleurus
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468712@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261122T163000
 DTEND;TZID=Europe/Brussels:20261122T183000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Clu
- b B
-LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+SUMMARY:🏀 PU12D Charleroi Basket Club B vs PU12D Royal BC Marcinelle
+LOCATION:Hall Omnisports MSM\, avenue Paul Pastur 1\, 6032\, Mont-sur-March
+ ienne
+GEO:50.387999317569935;4.404802839527631
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports MSM, avenu
+ e Paul Pastur 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;X-TITLE="Hall
+  Omnisports MSM":geo:50.387999317569935,4.404802839527631
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468680@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T160000
 DTEND;TZID=Europe/Brussels:20261205T180000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D Royal Eclairs Pont-De-
- Loup
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D Royal Eclairs Pont-De-Loup
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468682@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T160000
 DTEND;TZID=Europe/Brussels:20270109T180000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D BCJ Ressaix
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D BCJ Ressaix
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468670@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T150000
 DTEND;TZID=Europe/Brussels:20270117T170000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Clu
- b A
-LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+SUMMARY:🏀 PU12D Charleroi Basket Club A vs PU12D Royal BC Marcinelle
+LOCATION:Hall Omnisports MSM\, avenue Paul Pastur 1\, 6032\, Mont-sur-March
+ ienne
+GEO:50.387999317569935;4.404802839527631
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports MSM, avenu
+ e Paul Pastur 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;X-TITLE="Hall
+  Omnisports MSM":geo:50.387999317569935,4.404802839527631
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468605@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive So
- ignies A
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 PU12D Jeunesse Sportive Soignies A vs PU12D Royal BC Marcinell
+ e
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468683@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T120000
 DTEND;TZID=Europe/Brussels:20270213T140000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive Soig
- nies B
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D Jeunesse Sportive Soignies 
+ B
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468652@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T170000
 DTEND;TZID=Europe/Brussels:20270220T190000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D CEP Fleurus
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 PU12D CEP Fleurus vs PU12D Royal BC Marcinelle
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468662@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T160000
 DTEND;TZID=Europe/Brussels:20270403T180000
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D ABC B Péronnes
-LOCATION:Salle Omnisports Saint-Albert\, Perrones
+SUMMARY:🏀 PU12D ABC B Péronnes vs PU12D Royal BC Marcinelle
+LOCATION:Salle Omnisports Saint-Albert\, Chaussée Brunehault 266\, 7134\, 
+ Perrones
+GEO:50.42880320000000000000;4.18528360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Saint-Alb
+ ert, Chaussée Brunehault 266, 7134, Perrones";X-APPLE-RADIUS=70;X-TITLE="S
+ alle Omnisports Saint-Albert":geo:50.42880320000000000000,4.185283600000000
+ 00000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468685@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T160000
 DTEND;TZID=Europe/Brussels:20270410T180000
-SUMMARY:🏀 🏠 PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Club 
- B
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU12D Royal BC Marcinelle vs PU12D Charleroi Basket Club B
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468642@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T154500
 DTEND;TZID=Europe/Brussels:20270417T174500
-SUMMARY:🏀 ✈️ PU12D Royal BC Marcinelle vs PU12D Royal Eclairs Pont-D
- e-Loup
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU12D Royal Eclairs Pont-De-Loup vs PU12D Royal BC Marcinelle
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U12 Dames A
 END:VEVENT
 END:VCALENDAR

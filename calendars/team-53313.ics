@@ -9,230 +9,356 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-487307@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T130000
 DTEND;TZID=Europe/Brussels:20260816T150000
-SUMMARY:🤝 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BBC Tournai
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🤝 PU21H BBC Tournai vs PU21H Royal Essor BC Templeuve
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464244@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T153000
 DTEND;TZID=Europe/Brussels:20260906T173000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H B.C. L'9 Flénu
- -Frameries
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU21H B.C. L'9 Flénu-Frameries vs PU21H Royal Essor BC Temple
+ uve
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464156@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T140000
 DTEND;TZID=Europe/Brussels:20260912T160000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BC JS Estaimpui
- s
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 PU21H BC JS Estaimpuis vs PU21H Royal Essor BC Templeuve
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464167@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T090000
 DTEND;TZID=Europe/Brussels:20260919T110000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H UBC Binche
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H UBC Binche
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464234@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T120000
 DTEND;TZID=Europe/Brussels:20261003T140000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H JSB Maffle
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🏀 PU21H JSB Maffle vs PU21H Royal Essor BC Templeuve
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464168@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T110000
 DTEND;TZID=Europe/Brussels:20261010T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Basket Entité Co
- urcelles
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H Basket Entité Courcel
+ les
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-478700@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261026T180000
 DTEND;TZID=Europe/Brussels:20261026T200000
-SUMMARY:🏆 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs P
- ont-De-Loup
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏆 PU21H Royal Eclairs Pont-De-Loup vs PU21H Royal Essor BC Templ
+ euve
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : Coupe du Hainaut U21 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464169@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H BC AMLL
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H BC AMLL
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464203@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T130000
 DTEND;TZID=Europe/Brussels:20261114T150000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal BBC Brain
- ois
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 PU21H Royal BBC Brainois vs PU21H Royal Essor BC Templeuve
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464170@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T110000
 DTEND;TZID=Europe/Brussels:20261121T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H JS Dottignies
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H JS Dottignies
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464226@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T130000
 DTEND;TZID=Europe/Brussels:20261206T150000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Olympic Mont Su
- r Marchienne
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🏀 PU21H Olympic Mont Sur Marchienne vs PU21H Royal Essor BC Temp
+ leuve
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464183@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T160000
 DTEND;TZID=Europe/Brussels:20261212T180000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Spirou Basket
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU21H Spirou Basket vs PU21H Royal Essor BC Templeuve
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464171@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T130000
 DTEND;TZID=Europe/Brussels:20261219T150000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs Pon
- t-De-Loup
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs Pont-De-
+ Loup
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464140@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T110000
 DTEND;TZID=Europe/Brussels:20270109T130000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H UBC Binche
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏀 PU21H UBC Binche vs PU21H Royal Essor BC Templeuve
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464172@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T110000
 DTEND;TZID=Europe/Brussels:20270116T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H B.C. L'9 Flénu-F
- rameries
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H B.C. L'9 Flénu-Framer
+ ies
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464173@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270131T090000
 DTEND;TZID=Europe/Brussels:20270131T110000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H BC JS Estaimpuis
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H BC JS Estaimpuis
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464174@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T110000
 DTEND;TZID=Europe/Brussels:20270206T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Spirou Basket
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H Spirou Basket
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464175@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T130000
 DTEND;TZID=Europe/Brussels:20270213T150000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H JSB Maffle
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H JSB Maffle
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464176@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T110000
 DTEND;TZID=Europe/Brussels:20270220T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Royal BBC Brainoi
- s
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H Royal BBC Brainois
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464130@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T090000
 DTEND;TZID=Europe/Brussels:20270313T110000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H BC AMLL
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 PU21H BC AMLL vs PU21H Royal Essor BC Templeuve
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464198@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T150000
 DTEND;TZID=Europe/Brussels:20270403T170000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Basket Entité 
- Courcelles
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU21H Basket Entité Courcelles vs PU21H Royal Essor BC Temple
+ uve
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464154@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T130000
 DTEND;TZID=Europe/Brussels:20270410T150000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H JS Dottignies
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU21H JS Dottignies vs PU21H Royal Essor BC Templeuve
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464177@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T110000
 DTEND;TZID=Europe/Brussels:20270417T130000
-SUMMARY:🏀 🏠 PU21H Royal Essor BC Templeuve vs PU21H Olympic Mont Sur 
- Marchienne
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU21H Royal Essor BC Templeuve vs PU21H Olympic Mont Sur March
+ ienne
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464221@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T133000
 DTEND;TZID=Europe/Brussels:20270424T153000
-SUMMARY:🏀 ✈️ PU21H Royal Essor BC Templeuve vs PU21H Royal Eclairs P
- ont-De-Loup
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU21H Royal Eclairs Pont-De-Loup vs PU21H Royal Essor BC Templ
+ euve
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U21 Hommes A Elite
 END:VEVENT
 END:VCALENDAR

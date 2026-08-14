@@ -9,205 +9,309 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-465751@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260913T150000
 DTEND;TZID=Europe/Brussels:20260913T170000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H Aste Kain B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU14H Aste Kain B vs PU14H Boussu Saint-Ghislain United
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-479019@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260926T130000
 DTEND;TZID=Europe/Brussels:20260926T150000
-SUMMARY:🏆 🏠 PU14H Boussu Saint-Ghislain United vs Vainqueur HA253030
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏆 PU14H Boussu Saint-Ghislain United vs Vainqueur HA253030
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut U14 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465796@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T100000
 DTEND;TZID=Europe/Brussels:20261010T120000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H JS Stambrug
- es
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU14H JS Stambruges vs PU14H Boussu Saint-Ghislain United
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465717@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261017T143000
 DTEND;TZID=Europe/Brussels:20261017T163000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H Union BC Quar
- egnon B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H Union BC Quaregnon
+  B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465718@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261031T150000
 DTEND;TZID=Europe/Brussels:20261031T170000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H JS Cuesmes
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H JS Cuesmes
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465785@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H Warriors Ba
- sket Club
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU14H Warriors Basket Club vs PU14H Boussu Saint-Ghislain Unit
+ ed
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465719@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T090000
 DTEND;TZID=Europe/Brussels:20261114T110000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H CB Royale-Fra
- ternité B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H CB Royale-Fraterni
+ té B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465742@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261121T160000
 DTEND;TZID=Europe/Brussels:20261121T180000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H JS Dottigni
- es
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU14H JS Dottignies vs PU14H Boussu Saint-Ghislain United
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465721@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T090000
 DTEND;TZID=Europe/Brussels:20261212T110000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H Royal Essor B
- C Templeuve
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H Royal Essor BC Tem
+ pleuve
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465821@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261220T140000
 DTEND;TZID=Europe/Brussels:20261220T160000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H JS Fermoba 
- Péruwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 PU14H JS Fermoba Péruwelz vs PU14H Boussu Saint-Ghislain Unit
+ ed
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465722@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270110T110000
 DTEND;TZID=Europe/Brussels:20270110T130000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H BC Mons Capit
- ale
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H BC Mons Capitale
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465700@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T130000
 DTEND;TZID=Europe/Brussels:20270116T150000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H Union BC Qu
- aregnon B
-LOCATION:Salle  Edgard Hismans\, Quaregnon
+SUMMARY:🏀 PU14H Union BC Quaregnon B vs PU14H Boussu Saint-Ghislain Unit
+ ed
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390\, Quaregnon
+GEO:50.44051090000000000000;3.86126880000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle  Edgard Hismans, Rue
+  De l'Egalité 91, 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Salle  Edgar
+ d Hismans":geo:50.44051090000000000000,3.86126880000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465723@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T130000
 DTEND;TZID=Europe/Brussels:20270130T150000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H Aste Kain B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H Aste Kain B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465735@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270207T110000
 DTEND;TZID=Europe/Brussels:20270207T130000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H Royal Essor
-  BC Templeuve
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU14H Royal Essor BC Templeuve vs PU14H Boussu Saint-Ghislain 
+ United
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465779@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270214T170000
 DTEND;TZID=Europe/Brussels:20270214T190000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H JS Cuesmes
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 PU14H JS Cuesmes vs PU14H Boussu Saint-Ghislain United
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465715@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T090000
 DTEND;TZID=Europe/Brussels:20270220T110000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H CB Royale-F
- raternité B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU14H CB Royale-Fraternité B vs PU14H Boussu Saint-Ghislain U
+ nited
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465724@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270313T130000
 DTEND;TZID=Europe/Brussels:20270313T150000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H Warriors Bask
- et Club
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H Warriors Basket Cl
+ ub
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465805@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270320T090000
 DTEND;TZID=Europe/Brussels:20270320T110000
-SUMMARY:🏀 ✈️ PU14H Boussu Saint-Ghislain United vs PU14H BC Mons Cap
- itale
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 PU14H BC Mons Capitale vs PU14H Boussu Saint-Ghislain United
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465725@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T130000
 DTEND;TZID=Europe/Brussels:20270403T150000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H JS Stambruges
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H JS Stambruges
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465726@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270410T090000
 DTEND;TZID=Europe/Brussels:20270410T110000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H JS Dottignies
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H JS Dottignies
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-465727@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T090000
 DTEND;TZID=Europe/Brussels:20270424T110000
-SUMMARY:🏀 🏠 PU14H Boussu Saint-Ghislain United vs PU14H JS Fermoba P
- éruwelz
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU14H Boussu Saint-Ghislain United vs PU14H JS Fermoba Péruwe
+ lz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U14 Hommes D
 END:VEVENT
 END:VCALENDAR

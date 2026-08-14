@@ -9,223 +9,330 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-464416@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T130000
 DTEND;TZID=Europe/Brussels:20260906T150000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H Olympic Mont 
- Sur Marchienne
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🏀 PU18H Olympic Mont Sur Marchienne vs PU18H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464351@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T110000
 DTEND;TZID=Europe/Brussels:20260912T130000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H BC AMLL
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 PU18H BC AMLL vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464405@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T090000
 DTEND;TZID=Europe/Brussels:20260919T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Écaussinnes
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Écaussinnes
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-478920@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T160000
 DTEND;TZID=Europe/Brussels:20260926T180000
-SUMMARY:🏆 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H Basketball Br
- unehaut
-LOCATION:Complexe sportif Brunehall\, BLEHARIES
+SUMMARY:🏆 PU18H Basketball Brunehaut vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Complexe sportif Brunehall\, Rue Wilbault Bouchart\, 1\, 7620\, BL
+ EHARIES
+GEO:50.51464300000000000000;3.41876590000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif Brunehall
+ , Rue Wilbault Bouchart, 1, 7620, BLEHARIES";X-APPLE-RADIUS=70;X-TITLE="Com
+ plexe sportif Brunehall":geo:50.51464300000000000000,3.41876590000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464406@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T090000
 DTEND;TZID=Europe/Brussels:20261003T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnières 
- Morlanwelz A
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnières Morla
+ nwelz A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464384@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T130000
 DTEND;TZID=Europe/Brussels:20261010T150000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H Basket Entit
- é Courcelles
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU18H Basket Entité Courcelles vs PU18H Royal Eclairs Pont-De
+ -Loup
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464407@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H Spirou Basket A
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H Spirou Basket A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464397@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261115T170000
 DTEND;TZID=Europe/Brussels:20261115T190000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Ransart Ch
- arleroi
-LOCATION:Complexe Sportif de Ransart\, Ransart
+SUMMARY:🏀 PU18H BC Ransart Charleroi vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464408@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T111500
 DTEND;TZID=Europe/Brussels:20261121T131500
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnières 
- Morlanwelz B
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnières Morla
+ nwelz B
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464364@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T130000
 DTEND;TZID=Europe/Brussels:20261205T150000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H UBC Binche
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏀 PU18H UBC Binche vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464431@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T143000
 DTEND;TZID=Europe/Brussels:20261212T163000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H RBC Montagnar
- d
-LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+SUMMARY:🏀 PU18H RBC Montagnard vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Rue du Bois Frion 107\, 6
+ 110\, Montigny-le-Tilleul
+GEO:50.37841120000000000000;4.36807890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Montign
+ y-le-Tilleul, Rue du Bois Frion 107, 6110, Montigny-le-Tilleul";X-APPLE-RAD
+ IUS=70;X-TITLE="Hall Omnisports de Montigny-le-Tilleul":geo:50.378411200000
+ 00000000,4.36807890000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464409@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T090000
 DTEND;TZID=Europe/Brussels:20261219T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H CEP Fleurus A
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H CEP Fleurus A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464444@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T100000
 DTEND;TZID=Europe/Brussels:20270109T120000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Écaussinn
+SUMMARY:🏀 PU18H BC Écaussinnes vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Hall Polyvalent d'Ecaussines\, Rue de Sacueni 1\, 7190\, Ecaussinn
  es
-LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+GEO:50.56864900000000000000;4.17177370000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent d'Ecaussin
+ es, Rue de Sacueni 1, 7190, Ecaussinnes";X-APPLE-RADIUS=70;X-TITLE="Hall Po
+ lyvalent d'Ecaussines":geo:50.56864900000000000000,4.17177370000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464410@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T090000
 DTEND;TZID=Europe/Brussels:20270116T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H Olympic Mont Su
- r Marchienne
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H Olympic Mont Sur Mar
+ chienne
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464411@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T090000
 DTEND;TZID=Europe/Brussels:20270130T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC AMLL
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC AMLL
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464412@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T090000
 DTEND;TZID=Europe/Brussels:20270206T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H RBC Montagnard
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H RBC Montagnard
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464380@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270214T113000
 DTEND;TZID=Europe/Brussels:20270214T133000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnière
- s Morlanwelz A
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 PU18H DPK Carnières Morlanwelz A vs PU18H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464413@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T090000
 DTEND;TZID=Europe/Brussels:20270220T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Ransart Char
- leroi
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H BC Ransart Charleroi
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464456@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270314T130000
 DTEND;TZID=Europe/Brussels:20270314T150000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H Spirou Basket
-  A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU18H Spirou Basket A vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464414@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T090000
 DTEND;TZID=Europe/Brussels:20270403T110000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H Basket Entité 
- Courcelles
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H Basket Entité Courc
+ elles
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464470@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T133000
 DTEND;TZID=Europe/Brussels:20270411T153000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H DPK Carnière
- s Morlanwelz B
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 PU18H DPK Carnières Morlanwelz B vs PU18H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464415@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T150000
 DTEND;TZID=Europe/Brussels:20270418T170000
-SUMMARY:🏀 🏠 PU18H Royal Eclairs Pont-De-Loup vs PU18H UBC Binche
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU18H Royal Eclairs Pont-De-Loup vs PU18H UBC Binche
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 BEGIN:VEVENT
 UID:match-464349@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270425T130000
 DTEND;TZID=Europe/Brussels:20270425T150000
-SUMMARY:🏀 ✈️ PU18H Royal Eclairs Pont-De-Loup vs PU18H CEP Fleurus A
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 PU18H CEP Fleurus A vs PU18H Royal Eclairs Pont-De-Loup
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : U18 Hommes A Elite
 END:VEVENT
 END:VCALENDAR

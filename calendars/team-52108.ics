@@ -9,240 +9,339 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-463556@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260906T170000
 DTEND;TZID=Europe/Brussels:20260906T190000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Union Bas
- ket Lessines Flobecq
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 P4H Union Basket Lessines Flobecq vs P4H Blue and Gold Basket 
+ Club Celles B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463517@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T190000
 DTEND;TZID=Europe/Brussels:20260919T210000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Cuesmes 
- B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H JS Cuesmes B
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463518@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261003T190000
 DTEND;TZID=Europe/Brussels:20261003T210000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BC JS Estai
- mpuis D
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H BC JS Estaimpuis
+  D
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463454@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T210000
 DTEND;TZID=Europe/Brussels:20261010T230000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Royal Ess
- or BC Templeuve C
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H Royal Essor BC Templeuve C vs P4H Blue and Gold Basket Clu
+ b Celles B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463519@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261017T190000
 DTEND;TZID=Europe/Brussels:20261017T210000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H CB Royale-F
- raternité B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H CB Royale-Frater
+ nité B
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463467@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261024T170000
 DTEND;TZID=Europe/Brussels:20261024T190000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Royal BBC
-  Brainois D
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P4H Royal BBC Brainois D vs P4H Blue and Gold Basket Club Cell
+ es B
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463520@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Tremplin Mo
- uscron
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Tremplin Mouscro
+ n
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463546@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T204500
 DTEND;TZID=Europe/Brussels:20261114T224500
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H FanincHr 
- BC Blaton
-LOCATION:Centre Omnisports du Préau\, Bernissart
+SUMMARY:🏀 P4H FanincHr BC Blaton vs P4H Blue and Gold Basket Club Celles
+  B
+LOCATION:Centre Omnisports du Préau\, Chemin du Préau\, 7320\, Bernissart
+GEO:50.47638269999999000000;3.67024230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports du Préa
+ u, Chemin du Préau, 7320, Bernissart";X-APPLE-RADIUS=70;X-TITLE="Centre Om
+ nisports du Préau":geo:50.47638269999999000000,3.67024230000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463443@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261205T184500
 DTEND;TZID=Europe/Brussels:20261205T204500
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BC Silly
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 P4H BC Silly vs P4H Blue and Gold Basket Club Celles B
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463484@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T190000
 DTEND;TZID=Europe/Brussels:20261212T210000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Dottig
- nies C
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 P4H JS Dottignies C vs P4H Blue and Gold Basket Club Celles B
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463522@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T183000
 DTEND;TZID=Europe/Brussels:20261219T203000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BBC Tournai
-  B
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H BBC Tournai B
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463511@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T190000
 DTEND;TZID=Europe/Brussels:20270109T210000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Cuesme
- s B
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 P4H JS Cuesmes B vs P4H Blue and Gold Basket Club Celles B
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463523@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T183000
 DTEND;TZID=Europe/Brussels:20270116T203000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Union Baske
- t Lessines Flobecq
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Union Basket Les
+ sines Flobecq
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463521@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270124T170000
 DTEND;TZID=Europe/Brussels:20270124T190000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Fermoba 
- Péruwelz
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H JS Fermoba Péru
+ welz
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463499@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270206T190000
 DTEND;TZID=Europe/Brussels:20270206T210000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H CB Royale
- -Fraternité B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 P4H CB Royale-Fraternité B vs P4H Blue and Gold Basket Club C
+ elles B
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463435@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270214T150000
 DTEND;TZID=Europe/Brussels:20270214T170000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BC JS Est
- aimpuis D
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P4H BC JS Estaimpuis D vs P4H Blue and Gold Basket Club Celles
+  B
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463525@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T203000
 DTEND;TZID=Europe/Brussels:20270220T223000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H FanincHr BC
-  Blaton
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H FanincHr BC Blat
+ on
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463540@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270228T140000
 DTEND;TZID=Europe/Brussels:20270228T160000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H JS Fermob
- a Péruwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 P4H JS Fermoba Péruwelz vs P4H Blue and Gold Basket Club Cell
+ es B
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463578@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270314T111500
 DTEND;TZID=Europe/Brussels:20270314T131500
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H Tremplin 
- Mouscron
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 P4H Tremplin Mouscron vs P4H Blue and Gold Basket Club Celles 
+ B
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463526@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270320T190000
 DTEND;TZID=Europe/Brussels:20270320T210000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H BC Silly
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H BC Silly
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463527@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T190000
 DTEND;TZID=Europe/Brussels:20270403T210000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Royal Essor
-  BC Templeuve C
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Royal Essor BC T
+ empleuve C
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463424@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270410T200000
 DTEND;TZID=Europe/Brussels:20270410T220000
-SUMMARY:🏀 ✈️ P4H Blue and Gold Basket Club Celles B vs P4H BBC Tourn
- ai B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P4H BBC Tournai B vs P4H Blue and Gold Basket Club Celles B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463528@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270416T210000
 DTEND;TZID=Europe/Brussels:20270416T230000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H JS Dottigni
- es C
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H JS Dottignies C
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463529@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270423T210000
 DTEND;TZID=Europe/Brussels:20270423T230000
-SUMMARY:🏀 🏠 P4H Blue and Gold Basket Club Celles B vs P4H Royal BBC B
- rainois D
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P4H Blue and Gold Basket Club Celles B vs P4H Royal BBC Braino
+ is D
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P4 Hommes C
 END:VEVENT
 END:VCALENDAR

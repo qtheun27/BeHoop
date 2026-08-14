@@ -9,213 +9,316 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-463292@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T204000
 DTEND;TZID=Europe/Brussels:20260905T224000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Wolves Les Bons 
- Villers
-LOCATION:Complexe Sportif Les Bons Villers\, Frasnes-lez-Gosselies
+SUMMARY:🏀 P4H Wolves Les Bons Villers vs P4H DPK Carnières Morlanwelz C
+LOCATION:Complexe Sportif Les Bons Villers\, Rue Jean Baptiste Loriaux 3/A\
+ , 6210\, Frasnes-lez-Gosselies
+GEO:50.53083370447749;4.452072159243619
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Les Bons 
+ Villers, Rue Jean Baptiste Loriaux 3/A, 6210, Frasnes-lez-Gosselies";X-APPL
+ E-RADIUS=70;X-TITLE="Complexe Sportif Les Bons Villers":geo:50.530833704477
+ 49,4.452072159243619
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463314@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T170000
 DTEND;TZID=Europe/Brussels:20260912T190000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Basket Entité Cou
- rcelles C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H Basket Entité Courcell
+ es C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463315@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260920T133000
 DTEND;TZID=Europe/Brussels:20260920T153000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H B.C. L'9 Flénu-Fr
- ameries C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H B.C. L'9 Flénu-Frameri
+ es C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463348@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261004T150000
 DTEND;TZID=Europe/Brussels:20261004T170000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Groupe Gobert Ba
- sket Club Colfontaine C
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 P4H Groupe Gobert Basket Club Colfontaine C vs P4H DPK Carniè
+ res Morlanwelz C
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463317@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T190000
 DTEND;TZID=Europe/Brussels:20261107T210000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BC Écaussinnes B
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H BC Écaussinnes B
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463283@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T210000
 DTEND;TZID=Europe/Brussels:20261114T230000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Jeunesse Sportiv
- e Soignies B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P4H Jeunesse Sportive Soignies B vs P4H DPK Carnières Morlanw
+ elz C
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463318@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T193000
 DTEND;TZID=Europe/Brussels:20261121T213000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H RCBE 2000 C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H RCBE 2000 C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463316@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261128T190000
 DTEND;TZID=Europe/Brussels:20261128T210000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Royal BBC Brainois
-  C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H Royal BBC Brainois C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463362@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261206T110000
 DTEND;TZID=Europe/Brussels:20261206T130000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H JS Cuesmes A
-LOCATION:CPESM - Ghlin\, Ghlin
+SUMMARY:🏀 P4H JS Cuesmes A vs P4H DPK Carnières Morlanwelz C
+LOCATION:CPESM - Ghlin\, rue de la Culture 2\, 7011\, Ghlin
+GEO:50.47500773554463;3.9073560818455673
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="CPESM - Ghlin, rue de la C
+ ulture 2, 7011, Ghlin";X-APPLE-RADIUS=70;X-TITLE="CPESM - Ghlin":geo:50.475
+ 00773554463,3.9073560818455673
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463307@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T190000
 DTEND;TZID=Europe/Brussels:20261212T210000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BC AMLL C
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 P4H BC AMLL C vs P4H DPK Carnières Morlanwelz C
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463319@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T190000
 DTEND;TZID=Europe/Brussels:20261219T210000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BCJ Ressaix C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H BCJ Ressaix C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463408@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270108T210000
 DTEND;TZID=Europe/Brussels:20270108T230000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H B.C. L'9 Flénu-
- Frameries C
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 P4H B.C. L'9 Flénu-Frameries C vs P4H DPK Carnières Morlanwe
+ lz C
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463320@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T190000
 DTEND;TZID=Europe/Brussels:20270116T210000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Wolves Les Bons Vi
- llers
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H Wolves Les Bons Villers
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463331@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Basket Entité C
- ourcelles C
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 P4H Basket Entité Courcelles C vs P4H DPK Carnières Morlanwe
+ lz C
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463321@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T193000
 DTEND;TZID=Europe/Brussels:20270206T213000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H BC AMLL C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H BC AMLL C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463322@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270214T113000
 DTEND;TZID=Europe/Brussels:20270214T133000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Groupe Gobert Bask
- et Club Colfontaine C
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H Groupe Gobert Basket Cl
+ ub Colfontaine C
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463323@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T190000
 DTEND;TZID=Europe/Brussels:20270220T210000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H Jeunesse Sportive 
- Soignies B
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H Jeunesse Sportive Soign
+ ies B
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463389@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T183000
 DTEND;TZID=Europe/Brussels:20270313T203000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BC Écaussinnes 
- B
-LOCATION:Hall Polyvalent d'Ecaussines\, Ecaussinnes
+SUMMARY:🏀 P4H BC Écaussinnes B vs P4H DPK Carnières Morlanwelz C
+LOCATION:Hall Polyvalent d'Ecaussines\, Rue de Sacueni 1\, 7190\, Ecaussinn
+ es
+GEO:50.56864900000000000000;4.17177370000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent d'Ecaussin
+ es, Rue de Sacueni 1, 7190, Ecaussinnes";X-APPLE-RADIUS=70;X-TITLE="Hall Po
+ lyvalent d'Ecaussines":geo:50.56864900000000000000,4.17177370000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463377@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270404T100000
 DTEND;TZID=Europe/Brussels:20270404T120000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H Royal BBC Braino
- is C
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P4H Royal BBC Brainois C vs P4H DPK Carnières Morlanwelz C
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463345@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T180000
 DTEND;TZID=Europe/Brussels:20270410T200000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H RCBE 2000 C
-LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+SUMMARY:🏀 P4H RCBE 2000 C vs P4H DPK Carnières Morlanwelz C
+LOCATION:Hall Sportif d'Erquelinnes\, Rue Libotte-Mozin\, 1\, 6560\, Erquel
+ innes
+GEO:50.30616560000000000000;4.11760660000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif d'Erquelinnes
+ , Rue Libotte-Mozin, 1, 6560, Erquelinnes";X-APPLE-RADIUS=70;X-TITLE="Hall 
+ Sportif d'Erquelinnes":geo:50.30616560000000000000,4.11760660000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463324@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T113000
 DTEND;TZID=Europe/Brussels:20270418T133000
-SUMMARY:🏀 🏠 P4H DPK Carnières Morlanwelz C vs P4H JS Cuesmes A
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 P4H DPK Carnières Morlanwelz C vs P4H JS Cuesmes A
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463401@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T200000
 DTEND;TZID=Europe/Brussels:20270424T220000
-SUMMARY:🏀 ✈️ P4H DPK Carnières Morlanwelz C vs P4H BCJ Ressaix C
-LOCATION:Salle des Sports du Trieux\, Ressaix
+SUMMARY:🏀 P4H BCJ Ressaix C vs P4H DPK Carnières Morlanwelz C
+LOCATION:Salle des Sports du Trieux\, Rue des Grands Bureaux\, 24\, 7134\, 
+ Ressaix
+GEO:50.41360700000000000000;4.19533870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle des Sports du Trieux
+ , Rue des Grands Bureaux, 24, 7134, Ressaix";X-APPLE-RADIUS=70;X-TITLE="Sal
+ le des Sports du Trieux":geo:50.41360700000000000000,4.19533870000000000000
 DESCRIPTION:Compétition : P4 Hommes B
 END:VEVENT
 END:VCALENDAR

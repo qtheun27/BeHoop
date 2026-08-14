@@ -9,42 +9,56 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486781@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T140000
 DTEND;TZID=Europe/Brussels:20260808T160000
-SUMMARY:🤝 ✈️ RU18H Olympic Mont Sur Marchienne vs RU18H Spirou Baske
- t B
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 RU18H Spirou Basket B vs RU18H Olympic Mont Sur Marchienne
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 83 - 66
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485702@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T154500
 DTEND;TZID=Europe/Brussels:20260815T174500
-SUMMARY:🤝 ✈️ RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclair
- s Pont-De-Loup
-LOCATION:Sambrexpo\, Aiseau-Presles
+SUMMARY:🤝 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Sur Mar
+ chienne
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250\, Aiseau-Presles
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486096@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T140000
 DTEND;TZID=Europe/Brussels:20260822T160000
-SUMMARY:🏆 🏠 RU18H Olympic Mont Sur Marchienne vs PU18H Royal IV Bruss
- els A
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🏆 RU18H Olympic Mont Sur Marchienne vs PU18H Royal IV Brussels A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485408@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T110000
 DTEND;TZID=Europe/Brussels:20260829T130000
-SUMMARY:🤝 🏠 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs 
- Pont-De-Loup
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs Pont-
+ De-Loup
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

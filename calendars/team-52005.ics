@@ -9,166 +9,234 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-466135@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260829T150000
 DTEND;TZID=Europe/Brussels:20260829T170000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D Jeunesse Sportiv
- e Soignies
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Jeunesse Sportive Soi
+ gnies
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466124@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260920T150000
 DTEND;TZID=Europe/Brussels:20260920T170000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D BC AMLL
-LOCATION:Salle Omnisports de Bouvy\, La Louvière
+SUMMARY:🏀 PU16D BC AMLL vs PU16D Basket Entité Courcelles
+LOCATION:Salle Omnisports de Bouvy\, Rue de Bouvy\, 123\, 7100\, La Louviè
+ re
+GEO:50.47123310000000000000;4.18245710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Bouvy,
+  Rue de Bouvy, 123, 7100, La Louvière";X-APPLE-RADIUS=70;X-TITLE="Salle Om
+ nisports de Bouvy":geo:50.47123310000000000000,4.18245710000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466136@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T130000
 DTEND;TZID=Europe/Brussels:20261010T150000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D DPK Carnières M
- orlanwelz
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D DPK Carnières Morlan
+ welz
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483493@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261011T160000
 DTEND;TZID=Europe/Brussels:20261011T180000
-SUMMARY:🏆 🏠 PU16D Basket Entité Courcelles vs PU16D Jeunesse Sportiv
- e Soignies
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏆 PU16D Basket Entité Courcelles vs PU16D Jeunesse Sportive Soi
+ gnies
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : Coupe du Hainaut U16 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466202@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261017T150000
 DTEND;TZID=Europe/Brussels:20261017T170000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D CEP Fleurus
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 PU16D CEP Fleurus vs PU16D Basket Entité Courcelles
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466171@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T133000
 DTEND;TZID=Europe/Brussels:20261114T153000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D Royal Eclairs 
- Pont-De-Loup A
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup A vs PU16D Basket Entité Cou
+ rcelles
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466194@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261206T130000
 DTEND;TZID=Europe/Brussels:20261206T150000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D Royal Eclairs 
- Pont-De-Loup B
-LOCATION:Hall Sportif de Farciennes\, Farciennes
+SUMMARY:🏀 PU16D Royal Eclairs Pont-De-Loup B vs PU16D Basket Entité Cou
+ rcelles
+LOCATION:Hall Sportif de Farciennes\, rue du Puits Communal 103\, 6240\, Fa
+ rciennes
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466151@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261213T113000
 DTEND;TZID=Europe/Brussels:20261213T133000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D Royal BC Marci
- nelle
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 PU16D Royal BC Marcinelle vs PU16D Basket Entité Courcelles
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466139@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T130000
 DTEND;TZID=Europe/Brussels:20261219T150000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D Spirou Basket
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Spirou Basket
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466108@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T150000
 DTEND;TZID=Europe/Brussels:20270109T170000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D Jeunesse Sport
- ive Soignies
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 PU16D Jeunesse Sportive Soignies vs PU16D Basket Entité Courc
+ elles
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466141@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T090000
 DTEND;TZID=Europe/Brussels:20270130T110000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D BC AMLL
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D BC AMLL
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466142@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270206T130000
 DTEND;TZID=Europe/Brussels:20270206T150000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D Royal BC Marcine
- lle
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Royal BC Marcinelle
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466143@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270213T110000
 DTEND;TZID=Europe/Brussels:20270213T130000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D CEP Fleurus
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D CEP Fleurus
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466144@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T130000
 DTEND;TZID=Europe/Brussels:20270220T150000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D Royal Eclairs Po
- nt-De-Loup A
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Royal Eclairs Pont-De
+ -Loup A
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466166@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T090000
 DTEND;TZID=Europe/Brussels:20270403T110000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D DPK Carnières
-  Morlanwelz
-LOCATION:Hall Lucien Walravens\, Morlanwelz
+SUMMARY:🏀 PU16D DPK Carnières Morlanwelz vs PU16D Basket Entité Cource
+ lles
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466145@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270417T130000
 DTEND;TZID=Europe/Brussels:20270417T150000
-SUMMARY:🏀 🏠 PU16D Basket Entité Courcelles vs PU16D Royal Eclairs Po
- nt-De-Loup B
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 PU16D Basket Entité Courcelles vs PU16D Royal Eclairs Pont-De
+ -Loup B
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466189@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T163000
 DTEND;TZID=Europe/Brussels:20270424T183000
-SUMMARY:🏀 ✈️ PU16D Basket Entité Courcelles vs PU16D Spirou Basket
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏀 PU16D Spirou Basket vs PU16D Basket Entité Courcelles
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : U16 Dames A
 END:VEVENT
 END:VCALENDAR

@@ -9,216 +9,313 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-466828@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T130000
 DTEND;TZID=Europe/Brussels:20260905T150000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold 
- Basket Club Celles
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM CB Royale-Fr
+ aternité A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466763@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T150000
 DTEND;TZID=Europe/Brussels:20260912T170000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Boussu Saint-G
- hislain United A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU12HM Boussu Saint-Ghislain United A vs PU12HM CB Royale-Frat
+ ernité A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466817@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T090000
 DTEND;TZID=Europe/Brussels:20260919T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JS Stambruges A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM JS Stambruges A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466818@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T090000
 DTEND;TZID=Europe/Brussels:20261003T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Haina
- ut A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hainaut A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466796@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T140000
 DTEND;TZID=Europe/Brussels:20261010T160000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JS Dottignies 
- A
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU12HM JS Dottignies A vs PU12HM CB Royale-Fraternité A
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466819@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JSE Enghien B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM JSE Enghien B
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466809@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T150000
 DTEND;TZID=Europe/Brussels:20261114T170000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Royal BBC Brai
- nois A
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 PU12HM Royal BBC Brainois A vs PU12HM CB Royale-Fraternité A
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466820@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T090000
 DTEND;TZID=Europe/Brussels:20261121T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM B.C. L'9 Flénu-
- Frameries A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM B.C. L'9 Flénu-Frame
+ ries A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466776@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T100000
 DTEND;TZID=Europe/Brussels:20261205T120000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hai
- naut B
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut B vs PU12HM CB Royale-Fraternité A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466843@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T100000
 DTEND;TZID=Europe/Brussels:20261212T120000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert 
- Basket Club Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM CB Ro
+ yale-Fraternité A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466821@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T130000
 DTEND;TZID=Europe/Brussels:20261219T150000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Aste Kain A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Aste Kain A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466856@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T120000
 DTEND;TZID=Europe/Brussels:20270109T140000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JS Stambruges 
- A
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU12HM JS Stambruges A vs PU12HM CB Royale-Fraternité A
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466822@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T090000
 DTEND;TZID=Europe/Brussels:20270116T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold Ba
- sket Club Celles
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Blue and Gold Basket 
+ Club Celles
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466823@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T090000
 DTEND;TZID=Europe/Brussels:20270130T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Boussu Saint-Ghi
- slain United A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Boussu Saint-Ghislain
+  United A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466824@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T110000
 DTEND;TZID=Europe/Brussels:20270206T130000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert Ba
- sket Club Colfontaine A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert Basket 
+ Club Colfontaine A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466792@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T090000
 DTEND;TZID=Europe/Brussels:20270213T110000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hai
- naut A
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut A vs PU12HM CB Royale-Fraternité A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466825@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T130000
 DTEND;TZID=Europe/Brussels:20270220T150000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Royal BBC Braino
- is A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Royal BBC Brainois A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466868@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T170000
 DTEND;TZID=Europe/Brussels:20270313T190000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM JSE Enghien B
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 PU12HM JSE Enghien B vs PU12HM CB Royale-Fraternité A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466826@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T090000
 DTEND;TZID=Europe/Brussels:20270403T110000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM JS Dottignies A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM JS Dottignies A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466882@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T093000
 DTEND;TZID=Europe/Brussels:20270411T113000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM B.C. L'9 Flén
- u-Frameries A
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU12HM B.C. L'9 Flénu-Frameries A vs PU12HM CB Royale-Fratern
+ ité A
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466827@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T120000
 DTEND;TZID=Europe/Brussels:20270418T140000
-SUMMARY:🏀 🏠 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Haina
- ut B
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Union Mons-Hainaut B
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466761@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T113000
 DTEND;TZID=Europe/Brussels:20270424T133000
-SUMMARY:🏀 ✈️ PU12HM CB Royale-Fraternité A vs PU12HM Aste Kain A
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU12HM Aste Kain A vs PU12HM CB Royale-Fraternité A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 END:VCALENDAR

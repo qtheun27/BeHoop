@@ -9,264 +9,377 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-454052@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260808T190000
 DTEND;TZID=Europe/Brussels:20260808T210000
-SUMMARY:🏆 ✈️ P1H Fémina Docherie A vs P2H CEP Fleurus C
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏆 P2H CEP Fleurus C vs P1H Fémina Docherie A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule D\nScore : 59 - 
  89
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485204@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260809T163000
 DTEND;TZID=Europe/Brussels:20260809T183000
-SUMMARY:🤝 🏠 P1H Fémina Docherie A vs P2H Basket Entité Courcelles A
-LOCATION:Hall Omnisports Docherie\, Marchienne-au-Pont
+SUMMARY:🤝 P1H Fémina Docherie A vs P2H Basket Entité Courcelles A
+LOCATION:Hall Omnisports Docherie\, Rue de Jumet\, 324\, 6030\, Marchienne-
+ au-Pont
+GEO:50.42674470000000000000;4.41490690000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Docherie, 
+ Rue de Jumet, 324, 6030, Marchienne-au-Pont";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports Docherie":geo:50.42674470000000000000,4.41490690000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 97 - 45
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457600@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T133000
 DTEND;TZID=Europe/Brussels:20260816T153000
-SUMMARY:🏆 🏠 P1H Fémina Docherie A vs R2H RBC Centre Gaume La Rulles 
- A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1H Fémina Docherie A vs R2H RBC Centre Gaume La Rulles A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule I
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457597@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260823T153000
 DTEND;TZID=Europe/Brussels:20260823T173000
-SUMMARY:🏆 ✈️ P1H Fémina Docherie A vs P1H Royal Excelsior Brussels 
- B
+SUMMARY:🏆 P1H Royal Excelsior Brussels B vs P1H Fémina Docherie A
 LOCATION:Complexe sportif de Neder-Over-Heembeek\, Neder-Over-Heembeek
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule I
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457601@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260828T203000
 DTEND;TZID=Europe/Brussels:20260828T223000
-SUMMARY:🏆 🏠 P1H Fémina Docherie A vs P1H BC Malonne A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1H Fémina Docherie A vs P1H BC Malonne A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule I
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454051@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T203000
 DTEND;TZID=Europe/Brussels:20260829T223000
-SUMMARY:🏆 🏠 P1H Fémina Docherie A vs P2H CEP Fleurus C
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏆 P1H Fémina Docherie A vs P2H CEP Fleurus C
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule D
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462412@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260904T203000
 DTEND;TZID=Europe/Brussels:20260904T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H Olympic Mont Sur Marchienne
-  B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H Olympic Mont Sur Marchienne B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462413@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260911T203000
 DTEND;TZID=Europe/Brussels:20260911T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H Aste Kain B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H Aste Kain B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462418@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260918T203000
 DTEND;TZID=Europe/Brussels:20260918T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H UBC Binche A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H UBC Binche A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462414@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261002T203000
 DTEND;TZID=Europe/Brussels:20261002T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H B.C. L'9 Flénu-Frameries B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H B.C. L'9 Flénu-Frameries B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462436@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T203000
 DTEND;TZID=Europe/Brussels:20261010T223000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H RCBE 2000 A
-LOCATION:Hall Sportif d'Erquelinnes\, Erquelinnes
+SUMMARY:🏀 P1H RCBE 2000 A vs P1H Fémina Docherie A
+LOCATION:Hall Sportif d'Erquelinnes\, Rue Libotte-Mozin\, 1\, 6560\, Erquel
+ innes
+GEO:50.30616560000000000000;4.11760660000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif d'Erquelinnes
+ , Rue Libotte-Mozin, 1, 6560, Erquelinnes";X-APPLE-RADIUS=70;X-TITLE="Hall 
+ Sportif d'Erquelinnes":geo:50.30616560000000000000,4.11760660000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462371@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T210000
 DTEND;TZID=Europe/Brussels:20261107T230000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H JSE Enghien A
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 P1H JSE Enghien A vs P1H Fémina Docherie A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462415@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261113T203000
 DTEND;TZID=Europe/Brussels:20261113T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H Royal Eclairs Pont-De-Loup 
- A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H Royal Eclairs Pont-De-Loup A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462394@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T180000
 DTEND;TZID=Europe/Brussels:20261121T200000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H BC JS Estaimpuis B
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏀 P1H BC JS Estaimpuis B vs P1H Fémina Docherie A
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462416@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261204T203000
 DTEND;TZID=Europe/Brussels:20261204T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H RBC Montagnard A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H RBC Montagnard A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462417@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261211T203000
 DTEND;TZID=Europe/Brussels:20261211T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H Boussu Saint-Ghislain Unite
- d A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H Boussu Saint-Ghislain United A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462461@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T203000
 DTEND;TZID=Europe/Brussels:20261219T223000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H JS Stambruges A
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 P1H JS Stambruges A vs P1H Fémina Docherie A
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462357@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T190000
 DTEND;TZID=Europe/Brussels:20270109T210000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H UBC Binche A
-LOCATION: Salle DBM\, Binche
+SUMMARY:🏀 P1H UBC Binche A vs P1H Fémina Docherie A
+LOCATION: Salle DBM\, Rue Du Moulin Blanc \, 7130\, Binche
+GEO:50.41707510000000000000;4.16636460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Salle DBM, Rue Du Moulin 
+ Blanc , 7130, Binche";X-APPLE-RADIUS=70;X-TITLE=" Salle DBM":geo:50.4170751
+ 0000000000000,4.16636460000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462472@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T130000
 DTEND;TZID=Europe/Brussels:20270117T150000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H Olympic Mont Sur Marchien
- ne B
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🏀 P1H Olympic Mont Sur Marchienne B vs P1H Fémina Docherie A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462385@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T201500
 DTEND;TZID=Europe/Brussels:20270130T221500
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H Aste Kain B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P1H Aste Kain B vs P1H Fémina Docherie A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462408@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T210000
 DTEND;TZID=Europe/Brussels:20270206T230000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H Boussu Saint-Ghislain Uni
- ted A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P1H Boussu Saint-Ghislain United A vs P1H Fémina Docherie A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462486@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T180000
 DTEND;TZID=Europe/Brussels:20270213T200000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H B.C. L'9 Flénu-Frameries
-  B
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 P1H B.C. L'9 Flénu-Frameries B vs P1H Fémina Docherie A
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462431@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T200000
 DTEND;TZID=Europe/Brussels:20270220T220000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H Royal Eclairs Pont-De-Lou
- p A
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 P1H Royal Eclairs Pont-De-Loup A vs P1H Fémina Docherie A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462419@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270312T203000
 DTEND;TZID=Europe/Brussels:20270312T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H JSE Enghien A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H JSE Enghien A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462420@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270402T203000
 DTEND;TZID=Europe/Brussels:20270402T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H RCBE 2000 A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H RCBE 2000 A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462421@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270409T203000
 DTEND;TZID=Europe/Brussels:20270409T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H BC JS Estaimpuis B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H BC JS Estaimpuis B
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462454@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T203000
 DTEND;TZID=Europe/Brussels:20270417T223000
-SUMMARY:🏀 ✈️ P1H Fémina Docherie A vs P1H RBC Montagnard A
-LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+SUMMARY:🏀 P1H RBC Montagnard A vs P1H Fémina Docherie A
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Rue du Bois Frion 107\, 6
+ 110\, Montigny-le-Tilleul
+GEO:50.37841120000000000000;4.36807890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Montign
+ y-le-Tilleul, Rue du Bois Frion 107, 6110, Montigny-le-Tilleul";X-APPLE-RAD
+ IUS=70;X-TITLE="Hall Omnisports de Montigny-le-Tilleul":geo:50.378411200000
+ 00000000,4.36807890000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462422@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270423T203000
 DTEND;TZID=Europe/Brussels:20270423T223000
-SUMMARY:🏀 🏠 P1H Fémina Docherie A vs P1H JS Stambruges A
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P1H Fémina Docherie A vs P1H JS Stambruges A
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P1 Hommes
 END:VEVENT
 END:VCALENDAR

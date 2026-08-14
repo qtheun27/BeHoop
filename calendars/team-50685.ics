@@ -9,12 +9,18 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485545@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260927T110000
 DTEND;TZID=Europe/Brussels:20260927T130000
-SUMMARY:🏆 🏠 RU19D Groupe Gobert Basket Club Colfontaine A vs RU19D RB
- C Ciney A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏆 RU19D Groupe Gobert Basket Club Colfontaine A vs RU19D RBC Cin
+ ey A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Coupe AWBB U19 Dames
 END:VEVENT
 END:VCALENDAR

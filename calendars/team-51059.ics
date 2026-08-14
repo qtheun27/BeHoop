@@ -9,29 +9,40 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-457670@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T150000
 DTEND;TZID=Europe/Brussels:20260816T170000
-SUMMARY:🏆 ✈️ R2D CEP Fleurus A vs R2D Royal Rebond Ottignies-LLN C
+SUMMARY:🏆 R2D Royal Rebond Ottignies-LLN C vs R2D CEP Fleurus A
 LOCATION:Centre Sportif des Coquerées\, Ottignies
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457669@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260823T130000
 DTEND;TZID=Europe/Brussels:20260823T150000
-SUMMARY:🏆 🏠 R2D CEP Fleurus A vs P1D Lg. Atlas Ath. Jupille A
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏆 R2D CEP Fleurus A vs P1D Lg. Atlas Ath. Jupille A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457668@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T170000
 DTEND;TZID=Europe/Brussels:20260829T190000
-SUMMARY:🏆 ✈️ R2D CEP Fleurus A vs TDW2 Royal Castors Braine B
-LOCATION:Salle Omnisports Gaston Reiff\, Braine-l'Alleud
+SUMMARY:🏆 TDW2 Royal Castors Braine B vs R2D CEP Fleurus A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule E
 END:VEVENT
 END:VCALENDAR

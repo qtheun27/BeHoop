@@ -9,220 +9,318 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-468511@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260920T110000
 DTEND;TZID=Europe/Brussels:20260920T130000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Royal Es
- sor BC Templeuve
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU10HM Royal Essor BC Templeuve vs PU10HM Union Basket Lessine
+ s Flobecq
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468592@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T113000
 DTEND;TZID=Europe/Brussels:20260926T133000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM B.C. L'9
-  Flénu-Frameries C
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Union Basket Less
+ ines Flobecq
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468556@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261003T160000
 DTEND;TZID=Europe/Brussels:20261003T180000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JSB Maff
- le B
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🏀 PU10HM JSB Maffle B vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468480@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T150000
 DTEND;TZID=Europe/Brussels:20261011T170000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BBC Tourna
- i
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM BBC Tournai
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468481@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Dottign
- ies C
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Dottignies C
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468491@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261115T110000
 DTEND;TZID=Europe/Brussels:20261115T130000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly
-  B
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 PU10HM BC Silly B vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468482@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T090000
 DTEND;TZID=Europe/Brussels:20261121T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Fermoba
-  Péruwelz
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Fermoba Pér
+ uwelz
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468478@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261129T130000
 DTEND;TZID=Europe/Brussels:20261129T150000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Tremplin M
- ouscron B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM Tremplin Mouscr
+ on B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468581@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T090000
 DTEND;TZID=Europe/Brussels:20261213T110000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly
-  A
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 PU10HM BC Silly A vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468483@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T090000
 DTEND;TZID=Europe/Brussels:20261219T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Stambru
- ges
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM JS Stambruges
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468484@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T090000
 DTEND;TZID=Europe/Brussels:20270109T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Royal Esso
- r BC Templeuve
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM Royal Essor BC 
+ Templeuve
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468506@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T150000
 DTEND;TZID=Europe/Brussels:20270116T170000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Tremplin
-  Mouscron B
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 PU10HM Tremplin Mouscron B vs PU10HM Union Basket Lessines Flo
+ becq
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468479@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270124T130000
 DTEND;TZID=Europe/Brussels:20270124T150000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu Sai
- nt-Ghislain United B
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu Saint-Gh
+ islain United B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468539@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu S
- aint-Ghislain United B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM Union Basket L
+ essines Flobecq
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468485@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T090000
 DTEND;TZID=Europe/Brussels:20270206T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly A
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly A
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468486@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T090000
 DTEND;TZID=Europe/Brussels:20270213T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM JSB Maffle
-  B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM JSB Maffle B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468487@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T090000
 DTEND;TZID=Europe/Brussels:20270220T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly B
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM BC Silly B
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468529@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T110000
 DTEND;TZID=Europe/Brussels:20270313T130000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Dotti
- gnies C
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU10HM JS Dottignies C vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468475@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T133000
 DTEND;TZID=Europe/Brussels:20270403T153000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM BBC Tour
- nai
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU10HM BBC Tournai vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468576@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270411T100000
 DTEND;TZID=Europe/Brussels:20270411T120000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Fermo
- ba Péruwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 PU10HM JS Fermoba Péruwelz vs PU10HM Union Basket Lessines Fl
+ obecq
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468488@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T090000
 DTEND;TZID=Europe/Brussels:20270417T110000
-SUMMARY:🏀 🏠 PU10HM Union Basket Lessines Flobecq vs PU10HM B.C. L'9 F
- lénu-Frameries C
-LOCATION:Centre Sportif Jacky Leroy\, Flobecq
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM B.C. L'9 Flénu
+ -Frameries C
+LOCATION:Centre Sportif Jacky Leroy\, Esplanade du Fair-Play 1\, 7880\, Flo
+ becq
+GEO:50.7333224419021;3.7364253969479493
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Jacky Leroy
+ , Esplanade du Fair-Play 1, 7880, Flobecq";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Sportif Jacky Leroy":geo:50.7333224419021,3.7364253969479493
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468554@basket-awbb
-DTSTAMP:20260814T151702Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270425T100000
 DTEND;TZID=Europe/Brussels:20270425T120000
-SUMMARY:🏀 ✈️ PU10HM Union Basket Lessines Flobecq vs PU10HM JS Stamb
- ruges
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU10HM JS Stambruges vs PU10HM Union Basket Lessines Flobecq
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 END:VCALENDAR

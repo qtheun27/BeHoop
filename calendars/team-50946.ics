@@ -9,31 +9,48 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485403@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260809T150000
 DTEND;TZID=Europe/Brussels:20260809T170000
-SUMMARY:🤝 🏠 R1H Olympic Mont Sur Marchienne A vs R2H BC Fraire-Philip
- peville A
-LOCATION:Hall Polyvalent Marcel Flandre\, Mont-sur-Marchienne
+SUMMARY:🤝 R1H Olympic Mont Sur Marchienne A vs R2H BC Fraire-Philippevil
+ le A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 64 - 59
 END:VEVENT
 BEGIN:VEVENT
 UID:match-479037@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T190000
 DTEND;TZID=Europe/Brussels:20260815T210000
-SUMMARY:🤝 ✈️ R1H Olympic Mont Sur Marchienne A vs R2H Groupe Gobert 
- Basket Club Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🤝 R2H Groupe Gobert Basket Club Colfontaine A vs R1H Olympic Mon
+ t Sur Marchienne A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486787@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260820T211500
 DTEND;TZID=Europe/Brussels:20260820T231500
-SUMMARY:🤝 ✈️ R1H Olympic Mont Sur Marchienne A vs R2H CEP Fleurus B
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🤝 R2H CEP Fleurus B vs R1H Olympic Mont Sur Marchienne A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 END:VCALENDAR

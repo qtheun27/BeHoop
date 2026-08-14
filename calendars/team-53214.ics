@@ -9,222 +9,328 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-468544@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260906T100000
 DTEND;TZID=Europe/Brussels:20260906T120000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Stam
- bruges
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU10HM JS Stambruges vs PU10HM Boussu Saint-Ghislain United B
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468533@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T170000
 DTEND;TZID=Europe/Brussels:20260919T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Fermob
- a Péruwelz
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Fermoba Pé
+ ruwelz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468534@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261003T090000
 DTEND;TZID=Europe/Brussels:20261003T110000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Tremplin 
- Mouscron B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM Tremplin Mousc
+ ron B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468512@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T133000
 DTEND;TZID=Europe/Brussels:20261010T153000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Royal E
- ssor BC Templeuve
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU10HM Royal Essor BC Templeuve vs PU10HM Boussu Saint-Ghislai
+ n United B
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468536@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261017T130000
 DTEND;TZID=Europe/Brussels:20261017T150000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM B.C. L'9 
- Flénu-Frameries C
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM B.C. L'9 Flén
+ u-Frameries C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468535@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly 
- A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468525@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T110000
 DTEND;TZID=Europe/Brussels:20261114T130000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Dott
- ignies C
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU10HM JS Dottignies C vs PU10HM Boussu Saint-Ghislain United 
+ B
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468492@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261206T110000
 DTEND;TZID=Europe/Brussels:20261206T130000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Sill
- y B
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 PU10HM BC Silly B vs PU10HM Boussu Saint-Ghislain United B
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468559@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T160000
 DTEND;TZID=Europe/Brussels:20261212T180000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JSB Maf
- fle B
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🏀 PU10HM JSB Maffle B vs PU10HM Boussu Saint-Ghislain United B
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468537@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T170000
 DTEND;TZID=Europe/Brussels:20261219T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BBC Tourn
- ai
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM BBC Tournai
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468572@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270110T100000
 DTEND;TZID=Europe/Brussels:20270110T120000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Ferm
- oba Péruwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 PU10HM JS Fermoba Péruwelz vs PU10HM Boussu Saint-Ghislain Un
+ ited B
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468538@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T150000
 DTEND;TZID=Europe/Brussels:20270116T170000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Stambr
- uges
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Stambruges
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468479@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270124T130000
 DTEND;TZID=Europe/Brussels:20270124T150000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Union B
- asket Lessines Flobecq
-LOCATION:Salle Omnisports Claudy Criquielion\, Lessines
+SUMMARY:🏀 PU10HM Union Basket Lessines Flobecq vs PU10HM Boussu Saint-Gh
+ islain United B
+LOCATION:Salle Omnisports Claudy Criquielion\, Boulevard Emile Schevenels 2
+ 4B\, 7860\, Lessines
+GEO:50.71410980000000000000;3.82585290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Claudy Cr
+ iquielion, Boulevard Emile Schevenels 24B, 7860, Lessines";X-APPLE-RADIUS=7
+ 0;X-TITLE="Salle Omnisports Claudy Criquielion":geo:50.71410980000000000000
+ ,3.82585290000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468539@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T170000
 DTEND;TZID=Europe/Brussels:20270130T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Union Bas
- ket Lessines Flobecq
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM Union Basket L
+ essines Flobecq
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468540@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270206T170000
 DTEND;TZID=Europe/Brussels:20270206T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JSB Maffl
- e B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM JSB Maffle B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468508@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270213T150000
 DTEND;TZID=Europe/Brussels:20270213T170000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM Trempli
- n Mouscron B
-LOCATION:Institut Le Tremplin\, Mouscron
+SUMMARY:🏀 PU10HM Tremplin Mouscron B vs PU10HM Boussu Saint-Ghislain Uni
+ ted B
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700\, Mouscron
+GEO:50.74170180000000000000;3.22561430000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Le Tremplin, Rue 
+ du Phenix, 7700, Mouscron";X-APPLE-RADIUS=70;X-TITLE="Institut Le Tremplin"
+ :geo:50.74170180000000000000,3.22561430000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468541@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T170000
 DTEND;TZID=Europe/Brussels:20270220T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Dottig
- nies C
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM JS Dottignies 
+ C
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468584@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270314T090000
 DTEND;TZID=Europe/Brussels:20270314T110000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Sill
- y A
-LOCATION:Hall Silly Sports\, Bassily
+SUMMARY:🏀 PU10HM BC Silly A vs PU10HM Boussu Saint-Ghislain United B
+LOCATION:Hall Silly Sports\, Square Camille Theys\, 7830\, Bassily
+GEO:50.67511050000000000000;3.93601970000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Silly Sports, Square 
+ Camille Theys, 7830, Bassily";X-APPLE-RADIUS=70;X-TITLE="Hall Silly Sports"
+ :geo:50.67511050000000000000,3.93601970000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468542@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T170000
 DTEND;TZID=Europe/Brussels:20270403T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM Royal Ess
- or BC Templeuve
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM Royal Essor BC
+  Templeuve
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468598@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270410T113000
 DTEND;TZID=Europe/Brussels:20270410T133000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM B.C. L'
- 9 Flénu-Frameries C
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU10HM B.C. L'9 Flénu-Frameries C vs PU10HM Boussu Saint-Ghis
+ lain United B
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468543@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270417T170000
 DTEND;TZID=Europe/Brussels:20270417T190000
-SUMMARY:🏀 🏠 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly 
- B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU10HM Boussu Saint-Ghislain United B vs PU10HM BC Silly B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 BEGIN:VEVENT
 UID:match-468477@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T133000
 DTEND;TZID=Europe/Brussels:20270424T153000
-SUMMARY:🏀 ✈️ PU10HM Boussu Saint-Ghislain United B vs PU10HM BBC Tou
- rnai
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 PU10HM BBC Tournai vs PU10HM Boussu Saint-Ghislain United B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : U10 Hommes H
 END:VEVENT
 END:VCALENDAR

@@ -9,249 +9,381 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486916@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260813T193000
 DTEND;TZID=Europe/Brussels:20260813T213000
-SUMMARY:🤝 ✈️ P2H Royal Essor BC Templeuve A vs P3H CB Royale-Fratern
- ité A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🤝 P3H CB Royale-Fraternité A vs P2H Royal Essor BC Templeuve A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 48 - 65
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486864@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260816T110000
 DTEND;TZID=Europe/Brussels:20260816T130000
-SUMMARY:🤝 ✈️ P2H Royal Essor BC Templeuve A vs P3H BBC Tournai A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🤝 P3H BBC Tournai A vs P2H Royal Essor BC Templeuve A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454102@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T200000
 DTEND;TZID=Europe/Brussels:20260822T220000
-SUMMARY:🏆 🏠 P2H Royal Essor BC Templeuve A vs P4H Tremplin Mouscron
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏆 P2H Royal Essor BC Templeuve A vs P4H Tremplin Mouscron
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule N
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454100@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260830T170000
 DTEND;TZID=Europe/Brussels:20260830T190000
-SUMMARY:🏆 ✈️ P2H Royal Essor BC Templeuve A vs P1H BC JS Estaimpuis 
- B
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏆 P1H BC JS Estaimpuis B vs P2H Royal Essor BC Templeuve A
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : Coupe du Hainaut Hommes - Poule N
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462632@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260905T190000
 DTEND;TZID=Europe/Brussels:20260905T210000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JSE Enghien B
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 P2H JSE Enghien B vs P2H Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462654@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260912T190000
 DTEND;TZID=Europe/Brussels:20260912T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JS Dottignies A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H JS Dottignies A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462655@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T190000
 DTEND;TZID=Europe/Brussels:20260919T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JSB Maffle B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H JSB Maffle B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462688@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261004T110000
 DTEND;TZID=Europe/Brussels:20261004T130000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Groupe Gobert Bas
- ket Club Colfontaine B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 P2H Groupe Gobert Basket Club Colfontaine B vs P2H Royal Essor
+  BC Templeuve A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462656@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261011T150000
 DTEND;TZID=Europe/Brussels:20261011T170000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Blue and Gold Baske
- t Club Celles A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Blue and Gold Basket Clu
+ b Celles A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462685@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261024T170000
 DTEND;TZID=Europe/Brussels:20261024T190000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Boussu Saint-Ghis
- lain United B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2H Boussu Saint-Ghislain United B vs P2H Royal Essor BC Templ
+ euve A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462657@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T190000
 DTEND;TZID=Europe/Brussels:20261107T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JS Stambruges B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H JS Stambruges B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462623@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T180000
 DTEND;TZID=Europe/Brussels:20261114T200000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Union BC Quaregno
- n B
-LOCATION:Salle  Edgard Hismans\, Quaregnon
+SUMMARY:🏀 P2H Union BC Quaregnon B vs P2H Royal Essor BC Templeuve A
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390\, Quaregnon
+GEO:50.44051090000000000000;3.86126880000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle  Edgard Hismans, Rue
+  De l'Egalité 91, 7390, Quaregnon";X-APPLE-RADIUS=70;X-TITLE="Salle  Edgar
+ d Hismans":geo:50.44051090000000000000,3.86126880000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462658@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261122T150000
 DTEND;TZID=Europe/Brussels:20261122T170000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Boussu Saint-Ghisla
- in United B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Boussu Saint-Ghislain Un
+ ited B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462702@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261128T191500
 DTEND;TZID=Europe/Brussels:20261128T211500
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Royal Blaregnies 
- BC A
-LOCATION:Salle Omnisports E. Severyns\, Blaregnies
+SUMMARY:🏀 P2H Royal Blaregnies BC A vs P2H Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports E. Severyns\, Rue de Sars\, 5\, 7040\, Blaregnies
+GEO:50.36023000000000000000;3.88781000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports E. Severy
+ ns, Rue de Sars, 5, 7040, Blaregnies";X-APPLE-RADIUS=70;X-TITLE="Salle Omni
+ sports E. Severyns":geo:50.36023000000000000000,3.88781000000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462647@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261213T150000
 DTEND;TZID=Europe/Brussels:20261213T170000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Aste Kain C
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P2H Aste Kain C vs P2H Royal Essor BC Templeuve A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462659@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T170000
 DTEND;TZID=Europe/Brussels:20261219T190000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H BC Mons Capitale A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H BC Mons Capitale A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462748@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T183000
 DTEND;TZID=Europe/Brussels:20270109T203000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JSB Maffle B
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🏀 P2H JSB Maffle B vs P2H Royal Essor BC Templeuve A
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462660@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270117T150000
 DTEND;TZID=Europe/Brussels:20270117T170000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H JSE Enghien B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H JSE Enghien B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462671@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T180000
 DTEND;TZID=Europe/Brussels:20270130T200000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JS Dottignies A
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 P2H JS Dottignies A vs P2H Royal Essor BC Templeuve A
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462661@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T190000
 DTEND;TZID=Europe/Brussels:20270206T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Aste Kain C
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Aste Kain C
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462662@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T190000
 DTEND;TZID=Europe/Brussels:20270213T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Groupe Gobert Baske
- t Club Colfontaine B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Groupe Gobert Basket Clu
+ b Colfontaine B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462663@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T190000
 DTEND;TZID=Europe/Brussels:20270220T210000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Union BC Quaregnon 
- B
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Union BC Quaregnon B
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462729@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T180000
 DTEND;TZID=Europe/Brussels:20270313T200000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H JS Stambruges B
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 P2H JS Stambruges B vs P2H Royal Essor BC Templeuve A
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462717@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270404T150000
 DTEND;TZID=Europe/Brussels:20270404T170000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H Blue and Gold Bas
- ket Club Celles A
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 P2H Blue and Gold Basket Club Celles A vs P2H Royal Essor BC T
+ empleuve A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462664@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270418T110000
 DTEND;TZID=Europe/Brussels:20270418T130000
-SUMMARY:🏀 🏠 P2H Royal Essor BC Templeuve A vs P2H Royal Blaregnies BC
-  A
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2H Royal Essor BC Templeuve A vs P2H Royal Blaregnies BC A
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-462741@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T203000
 DTEND;TZID=Europe/Brussels:20270424T223000
-SUMMARY:🏀 ✈️ P2H Royal Essor BC Templeuve A vs P2H BC Mons Capitale 
- A
-LOCATION:Salle Omnisports d'Havré\, Havré
+SUMMARY:🏀 P2H BC Mons Capitale A vs P2H Royal Essor BC Templeuve A
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021\, Havré
+GEO:50.46324410000000000000;4.05123340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Havré,
+  Rue Irma Fievez 126, 7021, Havré";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts d'Havré":geo:50.46324410000000000000,4.05123340000000000000
 DESCRIPTION:Compétition : P2 Hommes B
 END:VEVENT
 END:VCALENDAR

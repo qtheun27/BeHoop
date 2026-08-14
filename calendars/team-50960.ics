@@ -9,200 +9,294 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-463271@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260912T193000
 DTEND;TZID=Europe/Brussels:20260912T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H RBC Montagnard C
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H RBC Montagnard C
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463183@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260920T150000
 DTEND;TZID=Europe/Brussels:20260920T170000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H BC Ransart Charleroi C
-LOCATION:Complexe Sportif de Ransart\, Ransart
+SUMMARY:🏀 P4H BC Ransart Charleroi C vs P4H Ballers
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463206@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261003T180000
 DTEND;TZID=Europe/Brussels:20261003T200000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Royal BC Marcinelle B
-LOCATION:Hall Omnisports de Belle-Vue\, Marcinelle
+SUMMARY:🏀 P4H Royal BC Marcinelle B vs P4H Ballers
+LOCATION:Hall Omnisports de Belle-Vue\, Rue des Monts 68\, 6001\, Marcinell
+ e
+GEO:50.39896240000000000000;4.43593130000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Belle-V
+ ue, Rue des Monts 68, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports de Belle-Vue":geo:50.39896240000000000000,4.43593130000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463272@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261010T193000
 DTEND;TZID=Europe/Brussels:20261010T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Red Sox Marcinelle
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Red Sox Marcinelle
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463273@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261107T193000
 DTEND;TZID=Europe/Brussels:20261107T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Royal Eclairs Pont-De-Loup E
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Royal Eclairs Pont-De-Loup E
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463251@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T180000
 DTEND;TZID=Europe/Brussels:20261114T200000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Basket Club Maccabi Charleroi
-LOCATION:Complexe Sportif de Roux \, Roux
+SUMMARY:🏀 P4H Basket Club Maccabi Charleroi vs P4H Ballers
+LOCATION:Complexe Sportif de Roux \, Rue des Couterelles\, 2A\, 6044\, Roux
+GEO:50.44653660000000000000;4.38918900000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Roux ,
+  Rue des Couterelles, 2A, 6044, Roux";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Roux ":geo:50.44653660000000000000,4.38918900000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463218@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261121T210000
 DTEND;TZID=Europe/Brussels:20261121T230000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H CEP Fleurus E
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Wanfercée-Baulet
+SUMMARY:🏀 P4H CEP Fleurus E vs P4H Ballers
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463267@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261128T193000
 DTEND;TZID=Europe/Brussels:20261128T213000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Red Sox Marcinelle
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Red Sox Marcinelle vs P4H Ballers
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463274@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261205T193000
 DTEND;TZID=Europe/Brussels:20261205T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H JS Luttre C
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H JS Luttre C
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463153@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T210000
 DTEND;TZID=Europe/Brussels:20261212T230000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Charleroi Basket Club
-LOCATION:Hall Omnisports MSM\, Mont-sur-Marchienne
+SUMMARY:🏀 P4H Charleroi Basket Club vs P4H Ballers
+LOCATION:Hall Omnisports MSM\, avenue Paul Pastur 1\, 6032\, Mont-sur-March
+ ienne
+GEO:50.387999317569935;4.404802839527631
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports MSM, avenu
+ e Paul Pastur 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;X-TITLE="Hall
+  Omnisports MSM":geo:50.387999317569935,4.404802839527631
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463275@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T193000
 DTEND;TZID=Europe/Brussels:20261219T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Fémina Docherie C
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Fémina Docherie C
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463276@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T193000
 DTEND;TZID=Europe/Brussels:20270109T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H BC Ransart Charleroi C
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H BC Ransart Charleroi C
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463198@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270117T140000
 DTEND;TZID=Europe/Brussels:20270117T160000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Basket Entité Courcelles B
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 P4H Basket Entité Courcelles B vs P4H Ballers
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463270@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270123T193000
 DTEND;TZID=Europe/Brussels:20270123T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Basket Entité Courcelles B
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Basket Entité Courcelles B
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463243@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T183000
 DTEND;TZID=Europe/Brussels:20270130T203000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H RBC Montagnard C
-LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Montigny-le-Tilleul
+SUMMARY:🏀 P4H RBC Montagnard C vs P4H Ballers
+LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Rue du Bois Frion 107\, 6
+ 110\, Montigny-le-Tilleul
+GEO:50.37841120000000000000;4.36807890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Montign
+ y-le-Tilleul, Rue du Bois Frion 107, 6110, Montigny-le-Tilleul";X-APPLE-RAD
+ IUS=70;X-TITLE="Hall Omnisports de Montigny-le-Tilleul":geo:50.378411200000
+ 00000000,4.36807890000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463277@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270206T193000
 DTEND;TZID=Europe/Brussels:20270206T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Charleroi Basket Club
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Charleroi Basket Club
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463279@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270220T193000
 DTEND;TZID=Europe/Brussels:20270220T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Basket Club Maccabi Charleroi
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Basket Club Maccabi Charleroi
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463280@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270306T193000
 DTEND;TZID=Europe/Brussels:20270306T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H CEP Fleurus E
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H CEP Fleurus E
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463234@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270314T110000
 DTEND;TZID=Europe/Brussels:20270314T130000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Royal Eclairs Pont-De-Loup E
-LOCATION:Complexe Sportif Hortent Moraux\, Aiseau-Presles
+SUMMARY:🏀 P4H Royal Eclairs Pont-De-Loup E vs P4H Ballers
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463278@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270320T193000
 DTEND;TZID=Europe/Brussels:20270320T213000
-SUMMARY:🏀 🏠 P4H Ballers vs P4H Royal BC Marcinelle B
-LOCATION:Complexe Sportif de l'Asie\, Marcinelle
+SUMMARY:🏀 P4H Ballers vs P4H Royal BC Marcinelle B
+LOCATION:Complexe Sportif de l'Asie\, Rue de l'Asie 4\, 6001\, Marcinelle
+GEO:50.37907999999999;4.43758
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de l'Asie
+ , Rue de l'Asie 4, 6001, Marcinelle";X-APPLE-RADIUS=70;X-TITLE="Complexe Sp
+ ortif de l'Asie":geo:50.37907999999999,4.43758
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463170@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270418T110000
 DTEND;TZID=Europe/Brussels:20270418T130000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H JS Luttre C
-LOCATION:Hall Omnisports de Luttre\, Luttre
+SUMMARY:🏀 P4H JS Luttre C vs P4H Ballers
+LOCATION:Hall Omnisports de Luttre\, Avenue de la Gare 12\, 6238\, Luttre
+GEO:50.50675680000000000000;4.38255870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Luttre,
+  Avenue de la Gare 12, 6238, Luttre";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisp
+ orts de Luttre":geo:50.50675680000000000000,4.38255870000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463181@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T180000
 DTEND;TZID=Europe/Brussels:20270424T200000
-SUMMARY:🏀 ✈️ P4H Ballers vs P4H Fémina Docherie C
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P4H Fémina Docherie C vs P4H Ballers
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P4 Hommes A
 END:VEVENT
 END:VCALENDAR

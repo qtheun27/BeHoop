@@ -9,245 +9,371 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-454140@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260822T203000
 DTEND;TZID=Europe/Brussels:20260822T223000
-SUMMARY:🏆 🏠 P2D Boussu Saint-Ghislain United vs P1D Groupe Gobert Bas
- ket Club Colfontaine A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏆 P2D Boussu Saint-Ghislain United vs P1D Groupe Gobert Basket C
+ lub Colfontaine A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454139@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260825T201500
 DTEND;TZID=Europe/Brussels:20260825T221500
-SUMMARY:🏆 🏠 P2D Boussu Saint-Ghislain United vs P1D BC Féminin Quare
- gnon A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏆 P2D Boussu Saint-Ghislain United vs P1D BC Féminin Quaregnon 
+ A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
 END:VEVENT
 BEGIN:VEVENT
 UID:match-454142@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260829T190000
 DTEND;TZID=Europe/Brussels:20260829T210000
-SUMMARY:🏆 ✈️ P2D Boussu Saint-Ghislain United vs P3D CB Royale-Frate
- rnité
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏆 P3D CB Royale-Fraternité vs P2D Boussu Saint-Ghislain United
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : Coupe du Hainaut Dames - Poule E
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463782@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260905T200000
 DTEND;TZID=Europe/Brussels:20260905T220000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D ABC B Péronnes
-  B
-LOCATION:Salle Omnisports Saint-Albert\, Perrones
+SUMMARY:🏀 P2D ABC B Péronnes B vs P2D Boussu Saint-Ghislain United
+LOCATION:Salle Omnisports Saint-Albert\, Chaussée Brunehault 266\, 7134\, 
+ Perrones
+GEO:50.42880320000000000000;4.18528360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Saint-Alb
+ ert, Chaussée Brunehault 266, 7134, Perrones";X-APPLE-RADIUS=70;X-TITLE="S
+ alle Omnisports Saint-Albert":geo:50.42880320000000000000,4.185283600000000
+ 00000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463827@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260912T190000
 DTEND;TZID=Europe/Brussels:20260912T210000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Royal BBC Brain
- ois A
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 P2D Royal BBC Brainois A vs P2D Boussu Saint-Ghislain United
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463837@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260919T203000
 DTEND;TZID=Europe/Brussels:20260919T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Rapido B.C.T.L.
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Rapido B.C.T.L.
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463840@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261017T200000
 DTEND;TZID=Europe/Brussels:20261017T220000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Fémina Docherie 
- B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Fémina Docherie B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463795@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261107T200000
 DTEND;TZID=Europe/Brussels:20261107T220000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Groupe Gobert B
- asket Club Colfontaine B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 P2D Groupe Gobert Basket Club Colfontaine B vs P2D Boussu Sain
+ t-Ghislain United
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463839@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261114T190000
 DTEND;TZID=Europe/Brussels:20261114T210000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D BCJ Ressaix
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D BCJ Ressaix
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463730@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261206T110000
 DTEND;TZID=Europe/Brussels:20261206T130000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D BBC Tournai
-LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Vaulx
+SUMMARY:🏀 P2D BBC Tournai vs P2D Boussu Saint-Ghislain United
+LOCATION:Centre Sportif de Vaulx-Pas du Roc\, Rue de la Dondaine 6\, 7536\,
+  Vaulx
+GEO:50.59270580000000000000;3.42778630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Vaulx-Pa
+ s du Roc, Rue de la Dondaine 6, 7536, Vaulx";X-APPLE-RADIUS=70;X-TITLE="Cen
+ tre Sportif de Vaulx-Pas du Roc":geo:50.59270580000000000000,3.427786300000
+ 00000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463841@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261212T203000
 DTEND;TZID=Europe/Brussels:20261212T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Jeunesse Sportive
-  Soignies B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Jeunesse Sportive Soig
+ nies B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463765@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20261219T180000
 DTEND;TZID=Europe/Brussels:20261219T200000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Royal Essor BC 
- Templeuve B
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 P2D Royal Essor BC Templeuve B vs P2D Boussu Saint-Ghislain Un
+ ited
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463754@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270109T183000
 DTEND;TZID=Europe/Brussels:20270109T203000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Rapido B.C.T.L.
-LOCATION:Centre Sportif de Beaumont\, Beaumont
+SUMMARY:🏀 P2D Rapido B.C.T.L. vs P2D Boussu Saint-Ghislain United
+LOCATION:Centre Sportif de Beaumont\, rue du Vivier 4\, 6500\, Beaumont
+GEO:50.23974609375;4.241844177246094
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Beaumont
+ , rue du Vivier 4, 6500, Beaumont";X-APPLE-RADIUS=70;X-TITLE="Centre Sporti
+ f de Beaumont":geo:50.23974609375,4.241844177246094
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463842@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270116T190000
 DTEND;TZID=Europe/Brussels:20270116T210000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D ABC B Péronnes B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D ABC B Péronnes B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463843@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270130T203000
 DTEND;TZID=Europe/Brussels:20270130T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Royal BBC Brainoi
- s A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Royal BBC Brainois A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463745@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270207T110000
 DTEND;TZID=Europe/Brussels:20270207T130000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Jeunesse Sporti
- ve Soignies B
-LOCATION:Salle JS Soignies\, Soignies
+SUMMARY:🏀 P2D Jeunesse Sportive Soignies B vs P2D Boussu Saint-Ghislain 
+ United
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060\, Soignies
+GEO:50.57199360000000000000;4.08525270000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle JS Soignies, Chemin 
+ Tour Lette, 7060, Soignies";X-APPLE-RADIUS=70;X-TITLE="Salle JS Soignies":g
+ eo:50.57199360000000000000,4.08525270000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463822@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270219T190000
 DTEND;TZID=Europe/Brussels:20270219T210000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D BCJ Ressaix
-LOCATION:Salle des Sports du Trieux\, Ressaix
+SUMMARY:🏀 P2D BCJ Ressaix vs P2D Boussu Saint-Ghislain United
+LOCATION:Salle des Sports du Trieux\, Rue des Grands Bureaux\, 24\, 7134\, 
+ Ressaix
+GEO:50.41360700000000000000;4.19533870000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle des Sports du Trieux
+ , Rue des Grands Bureaux, 24, 7134, Ressaix";X-APPLE-RADIUS=70;X-TITLE="Sal
+ le des Sports du Trieux":geo:50.41360700000000000000,4.19533870000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463850@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270228T160000
 DTEND;TZID=Europe/Brussels:20270228T180000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D JS Fermoba Pér
- uwelz
-LOCATION:Salle 'Roi Baudouin'\, Péruwelz
+SUMMARY:🏀 P2D JS Fermoba Péruwelz vs P2D Boussu Saint-Ghislain United
+LOCATION:Salle 'Roi Baudouin'\, Rue Simon \,1\, 7600\, Péruwelz
+GEO:50.51315810000000000000;3.59526560000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle 'Roi Baudouin', Rue 
+ Simon ,1, 7600, Péruwelz";X-APPLE-RADIUS=70;X-TITLE="Salle 'Roi Baudouin'"
+ :geo:50.51315810000000000000,3.59526560000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463838@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270306T203000
 DTEND;TZID=Europe/Brussels:20270306T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Basket Entité Co
- urcelles B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Basket Entité Courcel
+ les B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463844@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270313T203000
 DTEND;TZID=Europe/Brussels:20270313T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Groupe Gobert Bas
- ket Club Colfontaine B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Groupe Gobert Basket C
+ lub Colfontaine B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463779@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270319T204500
 DTEND;TZID=Europe/Brussels:20270319T224500
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Basket Entité 
- Courcelles B
-LOCATION:Hall Omnisports\, Trazegnies
+SUMMARY:🏀 P2D Basket Entité Courcelles B vs P2D Boussu Saint-Ghislain U
+ nited
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183\, Trazegnies
+GEO:50.4643406;4.3383702
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, Avenue de
+  l'Europe 1, 6183, Trazegnies";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":
+ geo:50.4643406,4.3383702
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463845@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270403T203000
 DTEND;TZID=Europe/Brussels:20270403T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D JS Fermoba Péruw
- elz
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D JS Fermoba Péruwelz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463813@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270411T153000
 DTEND;TZID=Europe/Brussels:20270411T173000
-SUMMARY:🏀 ✈️ P2D Boussu Saint-Ghislain United vs P2D Fémina Docheri
- e B
-LOCATION:Salle Omnisports\, Marchienne-Docherie
+SUMMARY:🏀 P2D Fémina Docherie B vs P2D Boussu Saint-Ghislain United
+LOCATION:Salle Omnisports\, rue de Jumet 324\, 6030\, Marchienne-Docherie
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports, rue de J
+ umet 324, 6030, Marchienne-Docherie";X-APPLE-RADIUS=70;X-TITLE="Salle Omnis
+ ports":geo:0.00000000000000000000,0.00000000000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463846@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270417T203000
 DTEND;TZID=Europe/Brussels:20270417T223000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D BBC Tournai
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D BBC Tournai
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 BEGIN:VEVENT
 UID:match-463847@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20270424T190000
 DTEND;TZID=Europe/Brussels:20270424T210000
-SUMMARY:🏀 🏠 P2D Boussu Saint-Ghislain United vs P2D Royal Essor BC Te
- mpleuve B
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 P2D Boussu Saint-Ghislain United vs P2D Royal Essor BC Templeu
+ ve B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : P2 Dames
 END:VEVENT
 END:VCALENDAR

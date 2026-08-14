@@ -9,242 +9,369 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-466850@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260906T120000
 DTEND;TZID=Europe/Brussels:20260906T140000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M JS Stambruges A
-LOCATION:Gymnase Communal\, Stambruges
+SUMMARY:🏀 PU12HM JS Stambruges A vs PU12HM Groupe Gobert Basket Club Col
+ fontaine A
+LOCATION:Gymnase Communal\, Rue Hecquet 73\, 7973\, Stambruges
+GEO:50.50718700000000000000;3.71880230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Gymnase Communal, Rue Hecq
+ uet 73, 7973, Stambruges";X-APPLE-RADIUS=70;X-TITLE="Gymnase Communal":geo:
+ 50.50718700000000000000,3.71880230000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466873@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260913T093000
 DTEND;TZID=Europe/Brussels:20260913T113000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M B.C. L'9 Flénu-Frameries A
-LOCATION:Centre Omnisports Max Audain\, Frameries
+SUMMARY:🏀 PU12HM B.C. L'9 Flénu-Frameries A vs PU12HM Groupe Gobert Bas
+ ket Club Colfontaine A
+LOCATION:Centre Omnisports Max Audain\, Rue du Chapitre 3\, 7080\, Framerie
+ s
+GEO:50.4138426;3.894334699999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports Max Auda
+ in, Rue du Chapitre 3, 7080, Frameries";X-APPLE-RADIUS=70;X-TITLE="Centre O
+ mnisports Max Audain":geo:50.4138426,3.894334699999999
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466839@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260919T150000
 DTEND;TZID=Europe/Brussels:20260919T170000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Blue and Gold Basket Club Celles
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Blue 
+ and Gold Basket Club Celles
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483437@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260926T100000
 DTEND;TZID=Europe/Brussels:20260926T120000
-SUMMARY:🏆 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- BC Mons Capitale A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏆 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM BC Mo
+ ns Capitale A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Coupe du Hainaut U12 Hommes + Mixtes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486441@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260927T130000
 DTEND;TZID=Europe/Brussels:20260927T150000
-SUMMARY:🏆 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Royal Gallia BC Beez A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏆 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Royal
+  Gallia BC Beez A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Coupe AWBB U12 Hommes + Mixtes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466840@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261004T090000
 DTEND;TZID=Europe/Brussels:20261004T110000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Boussu Saint-Ghislain United A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Bouss
+ u Saint-Ghislain United A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466786@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261010T090000
 DTEND;TZID=Europe/Brussels:20261010T110000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Union Mons-Hainaut A
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut A vs PU12HM Groupe Gobert Basket Clu
+ b Colfontaine A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466841@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Union Mons-Hainaut B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Union
+  Mons-Hainaut B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466863@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261114T170000
 DTEND;TZID=Europe/Brussels:20261114T190000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M JSE Enghien B
-LOCATION:Salle Omnisports de Petit-Enghien\, Petit-Enghien
+SUMMARY:🏀 PU12HM JSE Enghien B vs PU12HM Groupe Gobert Basket Club Colfo
+ ntaine A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466842@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261121T110000
 DTEND;TZID=Europe/Brussels:20261121T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Aste Kain A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Aste 
+ Kain A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466810@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261205T150000
 DTEND;TZID=Europe/Brussels:20261205T170000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Royal BBC Brainois A
-LOCATION:Salle Balad’Arena\, Braine-le-Comte
+SUMMARY:🏀 PU12HM Royal BBC Brainois A vs PU12HM Groupe Gobert Basket Clu
+ b Colfontaine A
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090\, Braine-le-Comte
+GEO:50.60872100000000000000;4.12957460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Balad’Arena, Rue d
+ es Postes 101, 7090, Braine-le-Comte";X-APPLE-RADIUS=70;X-TITLE="Salle Bala
+ d’Arena":geo:50.60872100000000000000,4.12957460000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466843@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261212T100000
 DTEND;TZID=Europe/Brussels:20261212T120000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- CB Royale-Fraternité A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM CB Ro
+ yale-Fraternité A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466799@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20261219T120000
 DTEND;TZID=Europe/Brussels:20261219T140000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M JS Dottignies A
-LOCATION:Hall De l'Europe\, Dottignies
+SUMMARY:🏀 PU12HM JS Dottignies A vs PU12HM Groupe Gobert Basket Club Col
+ fontaine A
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711\, Dottignies
+GEO:50.7301142;3.3005857
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall De l'Europe, Rue De l
+ 'Arsenal 2, 7711, Dottignies";X-APPLE-RADIUS=70;X-TITLE="Hall De l'Europe":
+ geo:50.7301142,3.3005857
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466834@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270109T150000
 DTEND;TZID=Europe/Brussels:20270109T170000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Blue and Gold Basket Club Celles
-LOCATION:Hall Sportif de Celles\, Celles
+SUMMARY:🏀 PU12HM Blue and Gold Basket Club Celles vs PU12HM Groupe Gober
+ t Basket Club Colfontaine A
+LOCATION:Hall Sportif de Celles\, Rue Parfait 14\, 7760\, Celles
+GEO:50.71000610000000000000;3.46029390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Celles, Ru
+ e Parfait 14, 7760, Celles";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif de Cell
+ es":geo:50.71000610000000000000,3.46029390000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466844@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270116T110000
 DTEND;TZID=Europe/Brussels:20270116T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- JS Stambruges A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM JS St
+ ambruges A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466845@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270130T110000
 DTEND;TZID=Europe/Brussels:20270130T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- B.C. L'9 Flénu-Frameries A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM B.C. 
+ L'9 Flénu-Frameries A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466824@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270206T110000
 DTEND;TZID=Europe/Brussels:20270206T130000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M CB Royale-Fraternité A
-LOCATION:Hall Omnisports d'Herseaux\, Herseaux
+SUMMARY:🏀 PU12HM CB Royale-Fraternité A vs PU12HM Groupe Gobert Basket 
+ Club Colfontaine A
+LOCATION:Hall Omnisports d'Herseaux\, Boulevard du Champ d'Aviation\, 12\, 
+ 7712\, Herseaux
+GEO:50.72138595581055;3.237605333328247
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Herseaux
+ , Boulevard du Champ d'Aviation, 12, 7712, Herseaux";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Omnisports d'Herseaux":geo:50.72138595581055,3.237605333328247
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466770@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270213T150000
 DTEND;TZID=Europe/Brussels:20270213T170000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Boussu Saint-Ghislain United A
-LOCATION:Hall Omnisports de Saint-Ghislain\, Saint-Ghislain
+SUMMARY:🏀 PU12HM Boussu Saint-Ghislain United A vs PU12HM Groupe Gobert 
+ Basket Club Colfontaine A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466846@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270220T110000
 DTEND;TZID=Europe/Brussels:20270220T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- JSE Enghien B
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM JSE E
+ nghien B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466780@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270313T100000
 DTEND;TZID=Europe/Brussels:20270313T120000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Union Mons-Hainaut B
-LOCATION:Mons Arena\, Jemappes
+SUMMARY:🏀 PU12HM Union Mons-Hainaut B vs PU12HM Groupe Gobert Basket Clu
+ b Colfontaine A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466847@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270403T110000
 DTEND;TZID=Europe/Brussels:20270403T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Union Mons-Hainaut A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Union
+  Mons-Hainaut A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466760@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270410T113000
 DTEND;TZID=Europe/Brussels:20270410T133000
-SUMMARY:🏀 ✈️ PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12H
- M Aste Kain A
-LOCATION:Hall des Sports de Kain\, Kain
+SUMMARY:🏀 PU12HM Aste Kain A vs PU12HM Groupe Gobert Basket Club Colfont
+ aine A
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540\, Kain
+GEO:50.63256000000000000000;3.38644340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Kain, R
+ ue du Vert Lion, 40, 7540, Kain";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports
+  de Kain":geo:50.63256000000000000000,3.38644340000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466848@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270417T110000
 DTEND;TZID=Europe/Brussels:20270417T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- Royal BBC Brainois A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM Royal
+  BBC Brainois A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-466849@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20270424T110000
 DTEND;TZID=Europe/Brussels:20270424T130000
-SUMMARY:🏀 🏠 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM 
- JS Dottignies A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🏀 PU12HM Groupe Gobert Basket Club Colfontaine A vs PU12HM JS Do
+ ttignies A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : U12 Hommes B
 END:VEVENT
 END:VCALENDAR

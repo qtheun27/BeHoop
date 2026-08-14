@@ -9,22 +9,33 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485955@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260823T130000
 DTEND;TZID=Europe/Brussels:20260823T150000
-SUMMARY:🏆 ✈️ RU16H Groupe Gobert Basket Club Colfontaine vs RU16H BC
-  JS Estaimpuis
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🏆 RU16H BC JS Estaimpuis vs RU16H Groupe Gobert Basket Club Colf
+ ontaine
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : Coupe AWBB U16 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483299@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260828T183000
 DTEND;TZID=Europe/Brussels:20260828T203000
-SUMMARY:🤝 ✈️ RU16H Groupe Gobert Basket Club Colfontaine vs PU16H JS
- B Maffle
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🤝 PU16H JSB Maffle vs RU16H Groupe Gobert Basket Club Colfontain
+ e
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : Amicaux Jeunes
 END:VEVENT
 END:VCALENDAR

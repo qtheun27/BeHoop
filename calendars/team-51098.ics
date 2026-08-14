@@ -9,30 +9,47 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-479036@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260808T190000
 DTEND;TZID=Europe/Brussels:20260808T210000
-SUMMARY:🤝 ✈️ R1H BC JS Estaimpuis A vs R2H Groupe Gobert Basket Club
-  Colfontaine A
-LOCATION:Complexe Sportif Achille Delattre \, Colfontaine
+SUMMARY:🤝 R2H Groupe Gobert Basket Club Colfontaine A vs R1H BC JS Estai
+ mpuis A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 52 - 47
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483297@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260819T210000
 DTEND;TZID=Europe/Brussels:20260819T230000
-SUMMARY:🤝 ✈️ R1H BC JS Estaimpuis A vs R2H JSB Maffle A
-LOCATION:Hall Omnisports Marcel Denis\, Maffle
+SUMMARY:🤝 R2H JSB Maffle A vs R1H BC JS Estaimpuis A
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483547@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154440Z
 DTSTART;TZID=Europe/Brussels:20260830T150000
 DTEND;TZID=Europe/Brussels:20260830T170000
-SUMMARY:🤝 🏠 R1H BC JS Estaimpuis A vs None
-LOCATION:Salle Jean-Pierre Froehlich\, Estaimbourg
+SUMMARY:🤝 R1H BC JS Estaimpuis A vs None
+LOCATION:Salle Jean-Pierre Froehlich\, Place de Bourgogne\, 12\, 7730\, Est
+ aimbourg
+GEO:50.68353740000000000000;3.31782440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Jean-Pierre Froehlic
+ h, Place de Bourgogne, 12, 7730, Estaimbourg";X-APPLE-RADIUS=70;X-TITLE="Sa
+ lle Jean-Pierre Froehlich":geo:50.68353740000000000000,3.317824400000000000
+ 00
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 END:VCALENDAR

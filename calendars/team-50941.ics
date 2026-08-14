@@ -9,49 +9,60 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486961@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260806T201500
 DTEND;TZID=Europe/Brussels:20260806T221500
-SUMMARY:🤝 🏠 R1D Royal Eclairs Pont-De-Loup A vs R2D Royal CS Natoye C
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 R1D Royal Eclairs Pont-De-Loup A vs R2D Royal CS Natoye C
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Seniors\nScore : 57 - 72
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457646@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260815T200000
 DTEND;TZID=Europe/Brussels:20260815T220000
-SUMMARY:🏆 ✈️ R1D Royal Eclairs Pont-De-Loup A vs R2D Royal Basket Cl
- ub Libramont A
+SUMMARY:🏆 R2D Royal Basket Club Libramont A vs R1D Royal Eclairs Pont-De
+ -Loup A
 LOCATION:Hall des Sports\, Libramont
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457645@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260822T180000
 DTEND;TZID=Europe/Brussels:20260822T200000
-SUMMARY:🏆 🏠 R1D Royal Eclairs Pont-De-Loup A vs P1D Fémina Docherie 
- A
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🏆 R1D Royal Eclairs Pont-De-Loup A vs P1D Fémina Docherie A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482531@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260829T180000
 DTEND;TZID=Europe/Brussels:20260829T200000
-SUMMARY:🤝 🏠 R1D Royal Eclairs Pont-De-Loup A vs None
-LOCATION:Salle Pierre de Coubertin\, Jumet
+SUMMARY:🤝 R1D Royal Eclairs Pont-De-Loup A vs None
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457644@basket-awbb
-DTSTAMP:20260814T151701Z
+DTSTAMP:20260814T154441Z
 DTSTART;TZID=Europe/Brussels:20260901T203000
 DTEND;TZID=Europe/Brussels:20260901T223000
-SUMMARY:🏆 ✈️ R1D Royal Eclairs Pont-De-Loup A vs TDW2 Royal Rebond O
- ttignies-LLN A
+SUMMARY:🏆 TDW2 Royal Rebond Ottignies-LLN A vs R1D Royal Eclairs Pont-De
+ -Loup A
 LOCATION:Centre Sportif des Coquerées\, Ottignies
 DESCRIPTION:Compétition : Coupe AWBB Dames - Poule A
 END:VEVENT
