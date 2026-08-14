@@ -193,19 +193,27 @@ def preparer_club(session: requests.Session, club: dict) -> dict:
     }
 
 
-def nettoyer_match(match: dict) -> dict:
+def nettoyer_match(match: dict, lieux: dict) -> dict:
     champs_publics = (
         "id", "date", "time", "serie_id", "serie_name", "serie_short_name",
         "home_team_id", "away_team_id", "home_team_name", "away_team_name",
         "home_team_short_name", "away_team_short_name",
         "home_score", "away_score", "game_status_id",
-        "venue_name", "venue_city", "venue_street",
+        "venue_name", "venue_city",
     )
-    return {k: match.get(k) for k in champs_publics if k in match}
+    m = {k: match.get(k) for k in champs_publics if k in match}
+
+    lieu = lieux.get(match.get("venue_id"))
+    if lieu:
+        m["venue_street"] = lieu.get("street")
+        m["venue_zip"] = lieu.get("zip")
+        m["venue_lat"] = lieu.get("lat")
+        m["venue_lng"] = lieu.get("lng")
+    return m
 
 
 def recuperer_calendrier_saison(session, nonce, competition_ids, organization_id, season_id,
-                                 date_debut_saison, date_fin_saison) -> list[dict]:
+                                 date_debut_saison, date_fin_saison, lieux: dict) -> list[dict]:
     """Récupère tous les matchs de la saison en la découpant en tranches.
 
     Interroger la saison entière en une seule requête fait planter l'API
@@ -235,7 +243,7 @@ def recuperer_calendrier_saison(session, nonce, competition_ids, organization_id
         for g in resp.get("elements", []):
             if g.get("id") not in vus:
                 vus.add(g.get("id"))
-                tous_les_matchs.append(nettoyer_match(g))
+                tous_les_matchs.append(nettoyer_match(g, lieux))
         print(f"   ... {debut.isoformat()} → {fin_tranche.isoformat()} : "
               f"{len(resp.get('elements', []))} match(s)")
         debut = fin_tranche + timedelta(days=1)
@@ -243,7 +251,7 @@ def recuperer_calendrier_saison(session, nonce, competition_ids, organization_id
     return tous_les_matchs
 
 
-def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_debut_saison, date_fin_saison):
+def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_debut_saison, date_fin_saison, lieux: dict):
     """Récupère les séries/classements/matchs de la Coupe AWBB (équipes 'R...').
 
     Organisée au niveau national (organization_id=6), pas par la province.
@@ -283,7 +291,7 @@ def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_de
     print("   Récupération du calendrier Coupe AWBB — saison complète, par tranches...")
     tous_les_matchs = recuperer_calendrier_saison(
         session, nonce, competition_ids, ORGANIZATION_ID_AWBB, season_id,
-        date_debut_saison, date_fin_saison,
+        date_debut_saison, date_fin_saison, lieux,
     )
 
     # On ne garde que les matchs impliquant une équipe du Hainaut déjà connue
@@ -383,9 +391,15 @@ def construire_evenement_ics(match: dict, id_equipe: int) -> str:
     fin = debut + _td(hours=2)
     dtend = fin.strftime("%Y%m%dT%H%M%S")
 
-    lieu = ", ".join(filter(None, [match.get("venue_name"), match.get("venue_street"), match.get("venue_city")]))
+    lieu = ", ".join(filter(None, [
+        match.get("venue_name"), match.get("venue_street"),
+        match.get("venue_zip"), match.get("venue_city"),
+    ]))
 
-    resume = f"{emoji} {'🏠' if domicile else '✈️'} {nom_nous} vs {nom_adversaire}"
+    if domicile:
+        resume = f"{emoji} {nom_nous} vs {nom_adversaire}"
+    else:
+        resume = f"{emoji} {nom_adversaire} vs {nom_nous}"
     description_lignes = [f"Compétition : {match.get('serie_name') or ''}"]
     if match.get("home_score") is not None and match.get("game_status_id") == 2:
         description_lignes.append(f"Score : {match.get('home_score')} - {match.get('away_score')}")
@@ -403,6 +417,21 @@ def construire_evenement_ics(match: dict, id_equipe: int) -> str:
     ]
     if lieu:
         lignes.append(f"LOCATION:{echapper_ics(lieu)}")
+
+    lat, lng = match.get("venue_lat"), match.get("venue_lng")
+    if lat and lng:
+        # GEO (standard RFC 5545) : sépare lat/lng par un point-virgule
+        lignes.append(f"GEO:{lat};{lng}")
+        # X-APPLE-STRUCTURED-LOCATION : propriété non-standard mais reconnue par
+        # Apple Calendrier pour afficher la carte cliquable et calculer le temps
+        # de trajet — sans elle, LOCATION reste du texte simple non cliquable.
+        titre = (match.get("venue_name") or "Salle").replace('"', "'")
+        adresse = lieu.replace('"', "'")
+        lignes.append(
+            f'X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="{adresse}";'
+            f'X-APPLE-RADIUS=70;X-TITLE="{titre}":geo:{lat},{lng}'
+        )
+
     lignes.append(f"DESCRIPTION:{echapper_ics(description)}")
     lignes.append("END:VEVENT")
     return "\r\n".join(plier_ligne_ics(l) for l in lignes)
@@ -503,6 +532,18 @@ def charger_basket_hainaut():
         },
     )
     clubs_bruts = clubs_resp.get("elements", [])
+
+    lieux = {}
+    for c in clubs_bruts:
+        for v in (c.get("venues_array") or []):
+            if v.get("id") is not None:
+                lieux[v["id"]] = {
+                    "street": v.get("street"),
+                    "zip": v.get("zip"),
+                    "lat": v.get("lat"),
+                    "lng": v.get("lng"),
+                }
+
     with ThreadPoolExecutor(max_workers=10) as executor:
         clubs = list(executor.map(lambda c: preparer_club(session, c), clubs_bruts))
     total_equipes = sum(len(c["teams"]) for c in clubs)
@@ -542,14 +583,14 @@ def charger_basket_hainaut():
     print("🗓️ Récupération du calendrier — saison complète, par tranches...")
     games = recuperer_calendrier_saison(
         session, nonce, competition_ids, ORGANIZATION_ID, season_id,
-        saison_courante.get("start_date"), saison_courante.get("end_date"),
+        saison_courante.get("start_date"), saison_courante.get("end_date"), lieux,
     )
     print(f"✅ {len(games)} match(s) trouvé(s) sur la saison complète (Hainaut).")
 
     ids_equipes_hainaut = {t["id"] for c in clubs for t in c["teams"]}
     series_coupe, classements_coupe, matchs_coupe = recuperer_coupe_awbb(
         session, nonce, season_id, ids_equipes_hainaut,
-        saison_courante.get("start_date"), saison_courante.get("end_date"),
+        saison_courante.get("start_date"), saison_courante.get("end_date"), lieux,
     )
     series += series_coupe
     classements.update(classements_coupe)

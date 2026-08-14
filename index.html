@@ -12,9 +12,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Basket Hainaut">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 
 <style>
   :root {
@@ -176,25 +176,35 @@
 
   /* ---- Carte match ---- */
   .game-card {
-    background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 14px;
+    background: var(--card-bg); border: 1px solid var(--border-soft);
+    border-left: 3px solid var(--border); border-radius: 12px;
     padding: 12px 14px; margin-bottom: 8px;
   }
-  .game-top { display: flex; align-items: center; gap: 10px; }
-  .game-emoji { font-size: 15px; flex-shrink: 0; }
-  .game-date { font-size: 11.5px; color: var(--muted); min-width: 78px; flex-shrink: 0; line-height: 1.3; }
-  .game-teams { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13.5px; }
-  .game-teams .club-nom { color: var(--muted); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .game-teams .club-nom.notre-equipe { color: var(--text); font-weight: 800; }
-  .game-teams .vs { color: var(--border); font-size: 11px; flex-shrink: 0; }
-  .game-score { font-weight: 800; min-width: 50px; text-align: right; flex-shrink: 0; font-size: 13.5px; }
-  .victoire { color: #1f9d55; }
-  .defaite { color: var(--accent); }
+  .game-card.victoire { border-left-color: #1f9d55; }
+  .game-card.defaite { border-left-color: var(--accent); }
+  .game-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .game-type { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; }
+  .game-type.championnat { color: var(--primary); }
+  .game-type.coupe { color: #b45309; }
+  .game-type.amical { color: var(--muted); }
+  .game-date { font-size: 12px; color: var(--muted); }
+  .game-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0; }
+  .game-row .club-nom { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .game-row .club-nom.notre-equipe { color: var(--text); font-weight: 700; }
+  .game-row .pts { font-size: 14px; color: var(--muted); flex-shrink: 0; }
+  .game-row.notre-ligne .pts { color: var(--text); font-weight: 700; }
+  .game-card.victoire .game-row.notre-ligne .pts { color: #1f9d55; }
+  .game-card.defaite .game-row.notre-ligne .pts { color: var(--accent); }
 
-  .game-venue { margin-top: 6px; margin-left: 25px; position: relative; }
-  .venue-btn {
-    font-size: 11.5px; color: var(--muted); background: none; border: none; padding: 0;
-    cursor: pointer; text-decoration: underline dotted; font-family: inherit;
+  .game-venue {
+    display: flex; align-items: center; gap: 6px; margin-top: 8px; padding-top: 8px;
+    border-top: 1px solid var(--border-soft); position: relative;
   }
+  .venue-btn {
+    flex: 1; text-align: left; font-size: 12px; color: var(--muted); background: none; border: none;
+    padding: 0; cursor: pointer; font-family: inherit;
+  }
+  .venue-chevron { color: var(--muted); font-size: 11px; flex-shrink: 0; }
   .venue-menu, .agenda-menu {
     display: none; position: absolute; z-index: 30; top: 20px; left: 0;
     background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
@@ -283,6 +293,7 @@ const $vue = document.getElementById('club-view');
 const $etatVide = document.getElementById('etat-vide');
 
 const EMOJI_TYPE = { coupe: '🏆', amical: '🤝', championnat: '🏀' };
+const LABEL_TYPE = { coupe: 'Coupe', amical: 'Amical', championnat: 'Championnat' };
 
 function formatAdresse(club) {
   const v = club.venue;
@@ -351,7 +362,7 @@ function rendreClassement(equipe) {
 }
 
 function adresseComplete(g) {
-  return [g.venue_name, g.venue_street, g.venue_city].filter(Boolean).join(', ');
+  return [g.venue_name, g.venue_street, g.venue_zip, g.venue_city].filter(Boolean).join(', ');
 }
 
 function toggleMenu(id) {
@@ -370,33 +381,41 @@ document.addEventListener('click', e => {
 function carteMatch(g, equipe, venueId) {
   const domicile = g.home_team_id === equipe.id;
   const joue = g.game_status_id === 2 && g.home_score !== null && g.home_score !== undefined;
-  let score = '—', classe = '';
+  let classeCarte = '';
   if (joue) {
-    score = `${g.home_score} - ${g.away_score}`;
     const gagne = domicile ? g.home_score > g.away_score : g.away_score > g.home_score;
-    classe = gagne ? 'victoire' : 'defaite';
+    classeCarte = gagne ? 'victoire' : 'defaite';
   }
   const nomDomicile = g.home_team_short_name || g.home_team_name;
   const nomExterieur = g.away_team_short_name || g.away_team_name;
   const adresse = adresseComplete(g);
   const q = encodeURIComponent(adresse);
-  const [jour, heure] = formatDate(g.date, g.time).split('\n');
+  const type = g.match_type || 'championnat';
+
+  const ligne = (nom, estNous, pts) => `
+    <div class="game-row ${estNous ? 'notre-ligne' : ''}">
+      <span class="club-nom ${estNous ? 'notre-equipe' : ''}">${nom}</span>
+      <span class="pts">${pts}</span>
+    </div>
+  `;
+  const ptsDomicile = joue ? g.home_score : '—';
+  const ptsExterieur = joue ? g.away_score : '—';
 
   return `
-    <div class="game-card">
-      <div class="game-top">
-        <span class="game-emoji">${EMOJI_TYPE[g.match_type] || '🏀'}</span>
-        <div class="game-date">${jour}${heure ? '<br>' + heure : ''}</div>
-        <div class="game-teams">
-          <span class="club-nom ${domicile ? 'notre-equipe' : ''}">${nomDomicile}</span>
-          <span class="vs">–</span>
-          <span class="club-nom ${!domicile ? 'notre-equipe' : ''}">${nomExterieur}</span>
+    <div class="game-card ${classeCarte}">
+      <div class="game-head">
+        <div class="game-type ${type}">
+          <span>${EMOJI_TYPE[type] || '🏀'}</span>
+          <span>${LABEL_TYPE[type] || 'Championnat'}</span>
         </div>
-        <div class="game-score ${classe}">${score}</div>
+        <div class="game-date">${formatDate(g.date, g.time).replace('\n', ' · ')}</div>
       </div>
+      ${ligne(nomDomicile, domicile, ptsDomicile)}
+      ${ligne(nomExterieur, !domicile, ptsExterieur)}
       ${g.venue_name ? `
       <div class="game-venue">
         <button class="venue-btn" onclick="toggleMenu('venue-menu-${venueId}')">📍 ${g.venue_name}</button>
+        <span class="venue-chevron">›</span>
         <div class="venue-menu" id="venue-menu-${venueId}">
           <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
           <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener">Waze</a>
