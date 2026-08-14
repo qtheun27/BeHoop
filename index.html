@@ -2,147 +2,244 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Suivi Basket Hainaut</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Basket Hainaut">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+
 <style>
   :root {
     --primary: #0b5cab;
     --accent: #d32f2f;
-    --bg: #f8fafc;
+    --bg: #f2f4f8;
     --card-bg: #ffffff;
-    --text: #1e293b;
+    --text: #16202e;
     --muted: #64748b;
+    --border: #e6e9ef;
+    --border-soft: #f1f3f7;
+    --radius: 16px;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
   }
-  * { box-sizing: border-box; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text: #e6edf3;
+      --muted: #8b96a5;
+      --border: #2a313c;
+      --border-soft: #1f242d;
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
     margin: 0;
-    padding: 20px;
-    transition: background-color 0.3s ease;
+    padding-bottom: calc(24px + var(--safe-bottom));
+    -webkit-font-smoothing: antialiased;
   }
-  .club-banner, .btn-main, .team-chip.active, .tab-btn.active, tr.ligne-equipe {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-  }
-  .container { max-width: 900px; margin: auto; }
+  a { color: inherit; }
+  .container { max-width: 720px; margin: auto; padding: 0 14px; }
 
-  .search-card {
-    background: var(--card-bg);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    margin-bottom: 25px;
-    border-top: 5px solid var(--primary);
+  /* ---- En-tête sticky ---- */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: calc(12px + var(--safe-top)) 14px 12px;
   }
-  .search-box { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-  input[type="text"] { flex: 1; min-width: 250px; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; }
+  header .titre-app {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 800; font-size: 17px; margin-bottom: 10px;
+  }
+  .search-box { display: flex; gap: 8px; }
+  input[type="text"] {
+    flex: 1; min-width: 0; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid var(--border); font-size: 16px;
+    background: var(--bg); color: var(--text);
+  }
+  input[type="text"]:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
   button.btn-main {
-    padding: 12px 24px; background: var(--primary); color: white; border: none;
-    border-radius: 8px; font-weight: bold; cursor: pointer;
+    padding: 12px 18px; background: var(--primary); color: white; border: none;
+    border-radius: 12px; font-weight: 700; cursor: pointer; font-size: 15px;
+    white-space: nowrap;
   }
   button.btn-main:disabled { background: #b7c3d6; cursor: not-allowed; }
+  button.btn-main:active { transform: scale(0.97); }
+  #status { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
 
+  main { padding-top: 14px; }
+
+  /* ---- Bannière club ---- */
   .club-banner {
     background: var(--primary);
     color: white;
-    padding: 22px;
-    border-radius: 12px;
+    padding: 18px;
+    border-radius: var(--radius);
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    gap: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 24px -8px color-mix(in srgb, var(--primary) 60%, transparent);
   }
   .club-banner-logo {
-    height: 72px; width: 72px; object-fit: contain; background: white;
-    padding: 6px; border-radius: 10px; flex-shrink: 0;
+    height: 58px; width: 58px; object-fit: contain; background: white;
+    padding: 6px; border-radius: 12px; flex-shrink: 0;
   }
-  .club-banner h1 { margin: 0; font-size: 22px; }
-  .club-banner .adresse { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+  .club-banner h1 { margin: 0; font-size: 19px; line-height: 1.25; }
+  .club-banner .adresse { font-size: 12.5px; opacity: 0.9; margin-top: 3px; }
+  .agenda-btn {
+    margin-left: auto; flex-shrink: 0; background: rgba(255,255,255,0.18);
+    border: none; color: white; width: 40px; height: 40px; border-radius: 50%;
+    font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .agenda-btn:active { background: rgba(255,255,255,0.3); }
 
-  .team-selector { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 18px; }
+  /* ---- Puces équipes ---- */
+  .team-selector {
+    display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 10px;
+    margin-bottom: 4px; scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  .team-selector::-webkit-scrollbar { display: none; }
   .team-chip {
-    padding: 9px 16px; background: white; border: 1px solid #cbd5e1; border-radius: 20px;
-    cursor: pointer; white-space: nowrap; font-size: 13px; font-weight: 600;
+    padding: 10px 16px; background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 20px; cursor: pointer; white-space: nowrap; font-size: 13.5px;
+    font-weight: 700; scroll-snap-align: start; flex-shrink: 0;
   }
   .team-chip.active { background: var(--primary); color: white; border-color: var(--primary); }
 
-  .tabs { display: flex; border-bottom: 2px solid #e2e8f0; margin-bottom: 18px; }
-  .tab-btn {
-    padding: 10px 20px; background: none; border: none; font-size: 15px; font-weight: bold;
-    color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+  /* ---- Onglets ---- */
+  .tabs {
+    display: flex; gap: 4px; background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 4px; margin: 10px 0 14px;
   }
-  .tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
-  .tab-content { display: none; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .tab-btn {
+    flex: 1; padding: 10px; background: none; border: none; border-radius: 9px;
+    font-size: 14px; font-weight: 700; color: var(--muted); cursor: pointer;
+  }
+  .tab-btn.active { background: var(--primary); color: white; }
+  .tab-content { display: none; }
   .tab-content.active { display: block; }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-  th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid #f1f5f9; }
-  th { color: var(--muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; }
-  tr.ligne-equipe { background: #eaf1fc; font-weight: 700; }
-
-  .game-card {
-    padding: 12px 4px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem;
+  .carte {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px; margin-bottom: 14px;
   }
-  .game-card:last-child { border-bottom: none; }
+
+  /* ---- Classement ---- */
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { padding: 9px 5px; text-align: left; border-bottom: 1px solid var(--border-soft); }
+  th { color: var(--muted); font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.03em; }
+  td:first-child, th:first-child { padding-left: 2px; }
+  tr.ligne-equipe { background: color-mix(in srgb, var(--primary) 10%, transparent); }
+  tr.ligne-equipe td { font-weight: 800; }
+
+  /* ---- Filtres calendrier ---- */
+  .filtres { display: flex; gap: 6px; margin-bottom: 12px; }
+  .filtre-chip {
+    padding: 7px 14px; border-radius: 20px; border: 1px solid var(--border);
+    background: var(--card-bg); color: var(--muted); font-size: 12.5px; font-weight: 700;
+    cursor: pointer;
+  }
+  .filtre-chip.active { background: var(--text); color: var(--card-bg); border-color: var(--text); }
+
+  .mois-titre {
+    font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.04em; margin: 18px 2px 8px;
+  }
+  .mois-titre:first-child { margin-top: 2px; }
+
+  .prochain-match {
+    border: 1.5px solid var(--primary); border-radius: var(--radius);
+    padding: 14px 16px; margin-bottom: 16px;
+    background: color-mix(in srgb, var(--primary) 6%, var(--card-bg));
+  }
+  .prochain-label {
+    font-size: 11px; font-weight: 800; color: var(--primary); text-transform: uppercase;
+    letter-spacing: 0.04em; margin-bottom: 6px;
+  }
+
+  /* ---- Carte match ---- */
+  .game-card {
+    background: var(--card-bg); border: 1px solid var(--border-soft); border-radius: 14px;
+    padding: 12px 14px; margin-bottom: 8px;
+  }
   .game-top { display: flex; align-items: center; gap: 10px; }
-  .game-date { font-size: 12px; color: var(--muted); min-width: 95px; flex-shrink: 0; }
-  .game-teams { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.95rem; }
-  .game-teams .club-nom { color: var(--muted); font-weight: 500; }
+  .game-emoji { font-size: 15px; flex-shrink: 0; }
+  .game-date { font-size: 11.5px; color: var(--muted); min-width: 78px; flex-shrink: 0; line-height: 1.3; }
+  .game-teams { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13.5px; }
+  .game-teams .club-nom { color: var(--muted); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .game-teams .club-nom.notre-equipe { color: var(--text); font-weight: 800; }
-  .game-teams .vs { color: #cbd5e1; font-size: 0.8rem; }
-  .game-score { font-weight: 700; min-width: 56px; text-align: right; flex-shrink: 0; }
+  .game-teams .vs { color: var(--border); font-size: 11px; flex-shrink: 0; }
+  .game-score { font-weight: 800; min-width: 50px; text-align: right; flex-shrink: 0; font-size: 13.5px; }
   .victoire { color: #1f9d55; }
   .defaite { color: var(--accent); }
 
-  .game-venue {
-    margin-top: 4px; margin-left: 105px; position: relative;
-  }
+  .game-venue { margin-top: 6px; margin-left: 25px; position: relative; }
   .venue-btn {
     font-size: 11.5px; color: var(--muted); background: none; border: none; padding: 0;
     cursor: pointer; text-decoration: underline dotted; font-family: inherit;
   }
-  .venue-btn:hover { color: var(--primary); }
-  .venue-menu {
-    display: none; position: absolute; z-index: 10; top: 18px; left: 0;
-    background: white; border: 1px solid #e2e8f0; border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); overflow: hidden; min-width: 160px;
+  .venue-menu, .agenda-menu {
+    display: none; position: absolute; z-index: 30; top: 20px; left: 0;
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.18); overflow: hidden; min-width: 180px;
   }
-  .venue-menu.ouvert { display: block; }
-  .venue-menu a {
-    display: block; padding: 8px 14px; font-size: 13px; color: var(--text);
-    text-decoration: none;
+  .agenda-menu { top: 46px; left: auto; right: 0; min-width: 240px; }
+  .venue-menu.ouvert, .agenda-menu.ouvert { display: block; }
+  .venue-menu a, .agenda-menu a {
+    display: block; padding: 10px 14px; font-size: 13px; color: var(--text); text-decoration: none;
   }
-  .venue-menu a:hover { background: #f1f5f9; }
+  .agenda-menu a { font-size: 13px; }
+  .agenda-menu .sous-texte { display: block; font-size: 10.5px; color: var(--muted); margin-top: 1px; font-weight: 400; }
+  .venue-menu a:hover, .agenda-menu a:hover { background: var(--border-soft); }
+  .agenda-menu-wrap { position: relative; }
 
-  .vide { color: var(--muted); font-size: 0.9rem; }
-  #status { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+  .vide { color: var(--muted); font-size: 13.5px; padding: 6px 2px; line-height: 1.5; }
+  footer { text-align: center; color: var(--muted); font-size: 11.5px; padding: 18px 14px; }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="search-card">
-    <h2 style="margin-top:0;">🏀 Suivi Basket Hainaut</h2>
-    <div id="status">Chargement des données...</div>
-    <div class="search-box">
-      <input type="text" id="club-input" list="clubs-list" placeholder="Ex : Mons, Braine, Spirou, Blaregnies..." disabled>
-      <datalist id="clubs-list"></datalist>
-      <button class="btn-main" id="btn-search" disabled>Rechercher</button>
-    </div>
+<header>
+  <div class="titre-app">🏀 Suivi Basket Hainaut</div>
+  <div class="search-box">
+    <input type="text" id="club-input" list="clubs-list" placeholder="Rechercher un club..." disabled>
+    <datalist id="clubs-list"></datalist>
+    <button class="btn-main" id="btn-search" disabled>OK</button>
   </div>
+  <div id="status">Chargement des données...</div>
+</header>
 
+<main class="container">
   <div id="club-view" style="display:none;">
     <div class="club-banner">
       <img class="club-banner-logo" id="club-logo" src="" alt="" style="display:none;" onerror="this.style.display='none'">
-      <div>
+      <div style="min-width:0;">
         <h1 id="club-name"></h1>
         <div class="adresse" id="club-adresse"></div>
       </div>
+      <div class="agenda-menu-wrap">
+        <button class="agenda-btn" id="btn-agenda" title="S'abonner à l'agenda de l'équipe">📆</button>
+        <div class="agenda-menu" id="agenda-menu"></div>
+      </div>
     </div>
 
-    <h3 style="margin-bottom:8px;">Équipes engagées cette saison</h3>
     <div class="team-selector" id="team-selector"></div>
 
     <div class="tabs">
@@ -150,32 +247,49 @@
       <button class="tab-btn" data-tab="tab-calendrier">📅 Calendrier</button>
     </div>
 
-    <div id="tab-classement" class="tab-content active"></div>
-    <div id="tab-calendrier" class="tab-content"></div>
+    <div id="tab-classement" class="tab-content active"><div class="carte" id="classement-carte"></div></div>
+    <div id="tab-calendrier" class="tab-content">
+      <div class="filtres" id="filtres-calendrier">
+        <button class="filtre-chip active" data-filtre="avenir">À venir</button>
+        <button class="filtre-chip" data-filtre="termines">Terminés</button>
+        <button class="filtre-chip" data-filtre="tous">Tous</button>
+      </div>
+      <div id="calendrier-contenu"></div>
+    </div>
   </div>
-</div>
 
-<footer id="pied" style="text-align:center; color:#94a3b8; font-size:12px; padding:20px;"></footer>
+  <div id="etat-vide" class="carte vide" style="text-align:center; padding:30px 16px;">
+    👋 Cherche un club ci-dessus pour voir ses équipes, classements et calendriers.
+  </div>
+</main>
+
+<footer id="pied"></footer>
 
 <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+}
+
 let donnees = null;
 let clubCourant = null;
 let equipeCourante = null;
+let filtreCalendrier = 'avenir';
 
 const $status = document.getElementById('status');
 const $input = document.getElementById('club-input');
 const $btn = document.getElementById('btn-search');
 const $liste = document.getElementById('clubs-list');
 const $vue = document.getElementById('club-view');
+const $etatVide = document.getElementById('etat-vide');
+
+const EMOJI_TYPE = { coupe: '🏆', amical: '🤝', championnat: '🏀' };
 
 function formatAdresse(club) {
   const v = club.venue;
   if (v && (v.street || v.city)) {
     return `📍 ${v.name || 'Salle'} — ${v.street || ''}${v.street2 ? ', ' + v.street2 : ''}, ${v.zip || ''} ${v.city || ''}`;
   }
-  if (club.street || club.city) {
-    return `📍 ${club.street || ''}, ${club.zip || ''} ${club.city || ''}`;
-  }
+  if (club.street || club.city) return `📍 ${club.street || ''}, ${club.zip || ''} ${club.city || ''}`;
   return '';
 }
 
@@ -184,7 +298,13 @@ function formatDate(dateStr, timeStr) {
   const d = new Date(dateStr + 'T' + (timeStr || '00:00:00'));
   const jour = d.toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
   const heure = timeStr ? d.toLocaleTimeString('fr-BE', { hour: '2-digit', minute: '2-digit' }) : '';
-  return heure ? `${jour} ${heure}` : jour;
+  return heure ? `${jour}\n${heure}` : jour;
+}
+
+function nomMois(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00');
+  const s = d.toLocaleDateString('fr-BE', { month: 'long', year: 'numeric' });
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 function serieDeEquipe(teamId) {
@@ -202,10 +322,10 @@ function rendreClassement(equipe) {
   const serieId = serieDeEquipe(equipe.id);
   const lignes = serieId ? (donnees.classements[String(serieId)] || []) : [];
   const serie = (donnees.series || []).find(s => s.id === serieId);
+  const cible = document.getElementById('classement-carte');
 
   if (lignes.length === 0) {
-    document.getElementById('tab-classement').innerHTML =
-      `<p class="vide">Classement pas encore disponible pour ${equipe.name}${serie ? ' (' + (serie.name || serie.short_name) + ')' : ''} — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    cible.innerHTML = `<p class="vide">Classement pas encore disponible${serie ? ' pour ' + (serie.name || serie.short_name) : ''} — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
     return;
   }
 
@@ -217,12 +337,12 @@ function rendreClassement(equipe) {
       <td>${l.played ?? 0}</td>
       <td>${l.wins ?? 0}</td>
       <td>${l.losses ?? 0}</td>
-      <td><strong>${l.points ?? 0}</strong></td>
+      <td>${l.points ?? 0}</td>
     </tr>
   `).join('');
 
-  document.getElementById('tab-classement').innerHTML = `
-    <h3 style="margin-top:0;">${serie ? (serie.name || serie.short_name) : ''}</h3>
+  cible.innerHTML = `
+    <h3 style="margin:0 0 10px;font-size:14px;">${serie ? (serie.name || serie.short_name) : ''}</h3>
     <table>
       <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
       <tbody>${rangees}</tbody>
@@ -234,72 +354,106 @@ function adresseComplete(g) {
   return [g.venue_name, g.venue_street, g.venue_city].filter(Boolean).join(', ');
 }
 
-function toggleVenueMenu(id) {
-  document.querySelectorAll('.venue-menu.ouvert').forEach(m => {
-    if (m.id !== 'venue-menu-' + id) m.classList.remove('ouvert');
+function toggleMenu(id) {
+  document.querySelectorAll('.venue-menu.ouvert, .agenda-menu.ouvert').forEach(m => {
+    if (m.id !== id) m.classList.remove('ouvert');
   });
-  const menu = document.getElementById('venue-menu-' + id);
+  const menu = document.getElementById(id);
   if (menu) menu.classList.toggle('ouvert');
 }
 document.addEventListener('click', e => {
-  if (!e.target.closest('.game-venue')) {
-    document.querySelectorAll('.venue-menu.ouvert').forEach(m => m.classList.remove('ouvert'));
+  if (!e.target.closest('.game-venue') && !e.target.closest('.agenda-menu-wrap')) {
+    document.querySelectorAll('.venue-menu.ouvert, .agenda-menu.ouvert').forEach(m => m.classList.remove('ouvert'));
   }
 });
 
+function carteMatch(g, equipe, venueId) {
+  const domicile = g.home_team_id === equipe.id;
+  const joue = g.game_status_id === 2 && g.home_score !== null && g.home_score !== undefined;
+  let score = '—', classe = '';
+  if (joue) {
+    score = `${g.home_score} - ${g.away_score}`;
+    const gagne = domicile ? g.home_score > g.away_score : g.away_score > g.home_score;
+    classe = gagne ? 'victoire' : 'defaite';
+  }
+  const nomDomicile = g.home_team_short_name || g.home_team_name;
+  const nomExterieur = g.away_team_short_name || g.away_team_name;
+  const adresse = adresseComplete(g);
+  const q = encodeURIComponent(adresse);
+  const [jour, heure] = formatDate(g.date, g.time).split('\n');
+
+  return `
+    <div class="game-card">
+      <div class="game-top">
+        <span class="game-emoji">${EMOJI_TYPE[g.match_type] || '🏀'}</span>
+        <div class="game-date">${jour}${heure ? '<br>' + heure : ''}</div>
+        <div class="game-teams">
+          <span class="club-nom ${domicile ? 'notre-equipe' : ''}">${nomDomicile}</span>
+          <span class="vs">–</span>
+          <span class="club-nom ${!domicile ? 'notre-equipe' : ''}">${nomExterieur}</span>
+        </div>
+        <div class="game-score ${classe}">${score}</div>
+      </div>
+      ${g.venue_name ? `
+      <div class="game-venue">
+        <button class="venue-btn" onclick="toggleMenu('venue-menu-${venueId}')">📍 ${g.venue_name}</button>
+        <div class="venue-menu" id="venue-menu-${venueId}">
+          <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener">Waze</a>
+          <a href="https://maps.apple.com/?q=${q}" target="_blank" rel="noopener">Plans (Apple)</a>
+        </div>
+      </div>` : ''}
+    </div>
+  `;
+}
+
 function rendreCalendrier(equipe) {
-  const matchs = (donnees.games || [])
+  const cible = document.getElementById('calendrier-contenu');
+  const aujourdhui = new Date().toISOString().slice(0, 10);
+
+  let matchs = (donnees.games || [])
     .filter(g => g.home_team_id === equipe.id || g.away_team_id === equipe.id)
     .sort((a, b) => (a.date + (a.time || '')).localeCompare(b.date + (b.time || '')));
 
   if (matchs.length === 0) {
-    document.getElementById('tab-calendrier').innerHTML =
-      `<p class="vide">Aucun match trouvé pour ${equipe.name} cette saison.</p>`;
+    cible.innerHTML = `<p class="vide">Aucun match trouvé pour cette équipe cette saison.</p>`;
     return;
   }
 
-  const lignes = matchs.map((g, i) => {
-    const domicile = g.home_team_id === equipe.id;
-    const joue = g.game_status_id === 2 && g.home_score !== null && g.home_score !== undefined;
-    let score = '—', classe = '';
-    if (joue) {
-      score = `${g.home_score} - ${g.away_score}`;
-      const gagne = domicile ? g.home_score > g.away_score : g.away_score > g.home_score;
-      classe = gagne ? 'victoire' : 'defaite';
-    }
-
-    const nomDomicile = g.home_team_short_name || g.home_team_name;
-    const nomExterieur = g.away_team_short_name || g.away_team_name;
-
-    const adresse = adresseComplete(g);
-    const q = encodeURIComponent(adresse);
-    const venueId = 'v' + i;
-
-    return `
-      <div class="game-card">
-        <div class="game-top">
-          <div class="game-date">${formatDate(g.date, g.time)}</div>
-          <div class="game-teams">
-            <span class="club-nom ${domicile ? 'notre-equipe' : ''}">${nomDomicile}</span>
-            <span class="vs">—</span>
-            <span class="club-nom ${!domicile ? 'notre-equipe' : ''}">${nomExterieur}</span>
-          </div>
-          <div class="game-score ${classe}">${score}</div>
+  let prochainHtml = '';
+  if (filtreCalendrier === 'avenir') {
+    const prochain = matchs.find(g => g.date >= aujourdhui);
+    if (prochain) {
+      prochainHtml = `
+        <div class="prochain-match">
+          <div class="prochain-label">⏭️ Prochain match</div>
+          ${carteMatch(prochain, equipe, 'next')}
         </div>
-        ${g.venue_name ? `
-        <div class="game-venue">
-          <button class="venue-btn" onclick="toggleVenueMenu('${venueId}')">📍 ${g.venue_name}</button>
-          <div class="venue-menu" id="venue-menu-${venueId}">
-            <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
-            <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener">Waze</a>
-            <a href="https://maps.apple.com/?q=${q}" target="_blank" rel="noopener">Plans (Apple)</a>
-          </div>
-        </div>` : ''}
-      </div>
-    `;
-  }).join('');
+      `;
+    }
+    matchs = matchs.filter(g => g.date >= aujourdhui && g !== prochain);
+  } else if (filtreCalendrier === 'termines') {
+    matchs = matchs.filter(g => g.date < aujourdhui || (g.game_status_id === 2 && g.home_score !== null));
+  }
 
-  document.getElementById('tab-calendrier').innerHTML = `<h3 style="margin-top:0;">${matchs.length} match(s)</h3>${lignes}`;
+  if (matchs.length === 0 && !prochainHtml) {
+    cible.innerHTML = `<p class="vide">Aucun match dans cette catégorie.</p>`;
+    return;
+  }
+
+  const groupes = {};
+  matchs.forEach(g => {
+    const cle = (g.date || '').slice(0, 7);
+    (groupes[cle] = groupes[cle] || []).push(g);
+  });
+
+  let html = prochainHtml;
+  Object.keys(groupes).sort().forEach(cle => {
+    html += `<div class="mois-titre">${nomMois(cle + '-01')}</div>`;
+    html += groupes[cle].map((g, i) => carteMatch(g, equipe, cle + '-' + i)).join('');
+  });
+
+  cible.innerHTML = html || `<p class="vide">Aucun match dans cette catégorie.</p>`;
 }
 
 function selectionnerEquipe(equipe, chipEl) {
@@ -308,28 +462,41 @@ function selectionnerEquipe(equipe, chipEl) {
   if (chipEl) chipEl.classList.add('active');
   rendreClassement(equipe);
   rendreCalendrier(equipe);
+  rendreMenuAgenda(equipe);
 }
 
+function rendreMenuAgenda(equipe) {
+  const menu = document.getElementById('agenda-menu');
+  const btn = document.getElementById('btn-agenda');
+  if (!equipe.ics_url) {
+    btn.style.display = 'none';
+    return;
+  }
+  btn.style.display = 'flex';
+  const webcal = equipe.ics_url.replace(/^https?:\/\//, 'webcal://');
+  const google = 'https://calendar.google.com/calendar/render?cid=' + encodeURIComponent(webcal);
+  menu.innerHTML = `
+    <a href="${webcal}">📱 S'abonner (Apple / iOS / macOS)<span class="sous-texte">Se met à jour automatiquement</span></a>
+    <a href="${google}" target="_blank" rel="noopener">🗓️ S'abonner (Google Agenda)<span class="sous-texte">Se met à jour automatiquement</span></a>
+    <a href="${equipe.ics_url}" target="_blank" rel="noopener">⬇️ Télécharger (.ics)<span class="sous-texte">Import ponctuel, pas de mise à jour</span></a>
+  `;
+}
+document.getElementById('btn-agenda').addEventListener('click', () => toggleMenu('agenda-menu'));
+
 function appliquerTheme(club) {
-  const primaire = club.primary_color || '#0b5cab';
-  const accent = club.accent_color || '#d32f2f';
-  document.documentElement.style.setProperty('--primary', primaire);
-  document.documentElement.style.setProperty('--accent', accent);
+  document.documentElement.style.setProperty('--primary', club.primary_color || '#0b5cab');
+  document.documentElement.style.setProperty('--accent', club.accent_color || '#d32f2f');
 }
 
 function afficherClub(club) {
   clubCourant = club;
   $vue.style.display = 'block';
-
+  $etatVide.style.display = 'none';
   appliquerTheme(club);
 
   const logo = document.getElementById('club-logo');
-  if (club.logo_url) {
-    logo.src = club.logo_url;
-    logo.style.display = 'block';
-  } else {
-    logo.style.display = 'none';
-  }
+  if (club.logo_url) { logo.src = club.logo_url; logo.style.display = 'block'; }
+  else { logo.style.display = 'none'; }
 
   document.getElementById('club-name').textContent = club.name;
   document.getElementById('club-adresse').textContent = formatAdresse(club);
@@ -339,8 +506,9 @@ function afficherClub(club) {
 
   if (!club.teams || club.teams.length === 0) {
     selecteur.innerHTML = '<p class="vide">Aucune équipe active trouvée pour ce club cette saison.</p>';
-    document.getElementById('tab-classement').innerHTML = '';
-    document.getElementById('tab-calendrier').innerHTML = '';
+    document.getElementById('classement-carte').innerHTML = '';
+    document.getElementById('calendrier-contenu').innerHTML = '';
+    document.getElementById('btn-agenda').style.display = 'none';
     return;
   }
 
@@ -360,11 +528,7 @@ function rechercher() {
   const texte = $input.value.trim().toLowerCase();
   if (!texte) return;
   const club = (donnees.clubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short_name || '').toLowerCase().includes(texte));
-  if (!club) {
-    $vue.style.display = 'none';
-    alert('Club introuvable. Essayez un autre mot-clé.');
-    return;
-  }
+  if (!club) { alert('Club introuvable. Essayez un autre mot-clé.'); return; }
   afficherClub(club);
 }
 
@@ -374,6 +538,15 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.filtre-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filtre-chip').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filtreCalendrier = btn.dataset.filtre;
+    if (equipeCourante) rendreCalendrier(equipeCourante);
   });
 });
 

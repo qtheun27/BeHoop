@@ -1,35 +1,18 @@
 """
-Scraper Basket Hainaut — v5
+Scraper Basket Hainaut — v6
 
-Nouveauté par rapport à la v4 :
-- Ajoute les matchs de Coupe AWBB (équipes "R...", ex. RU14), qui ne sont
-  PAS organisés par la province de Hainaut (organization_id=2) mais au
-  niveau national par l'AWBB (organization_id=6). La Coupe du Hainaut
-  (équipes "P...", ex. PU14) était déjà incluse depuis la v3 puisqu'elle
-  fait partie des compétitions provinciales du Hainaut.
-  Les équipes elles-mêmes (teams_array de chaque club) contiennent déjà
-  les deux (P et R) quel que soit l'organisme interrogé — seuls les
-  matchs et classements de la Coupe AWBB étaient absents. On récupère
-  donc les séries/classements/matchs de la Coupe AWBB séparément (org=6),
-  puis on ne garde que les matchs impliquant une équipe du Hainaut déjà
-  connue (le reste concerne les autres provinces).
+Nouveautés par rapport à la v5 :
+- Chaque match est classé "championnat" / "coupe" / "amical" (déduit du nom
+  de la compétition de sa série) pour que l'interface puisse afficher un
+  émoji différent selon le type de match.
+- Génère un fichier .ics (agenda) par équipe dans le dossier calendars/.
+  Comme ce fichier est régénéré à CHAQUE passage du robot (2x/jour) et
+  hébergé à une URL stable sur GitHub Pages, un utilisateur qui s'abonne
+  à cette URL depuis Apple Calendrier ou Google Agenda (et non un simple
+  import ponctuel) verra ses matchs se mettre à jour automatiquement,
+  exactement comme un agenda public.
 
-Nouveautés héritées de la v4 :
-- Calendrier de la SAISON COMPLÈTE (plus une fenêtre de 81 jours) : la saison
-  est découpée en tranches de ~55 jours pour rester sous la limite qui fait
-  planter l'API en une seule requête (testé : une requête sur toute la
-  saison renvoie une erreur 502 ou plusieurs Mo de JSON).
-- Catégorie visible par équipe (ex. "P1D A", "U14H B") : extraite du champ
-  `name` de l'équipe en retirant le nom du club, pour distinguer les
-  équipes d'un même club dans l'interface (avant, tout s'appelait juste
-  "Nom du club").
-- Couleurs dominantes du logo de chaque club (2 couleurs), extraites
-  côté serveur avec Pillow, pour thémer dynamiquement l'interface. Fait
-  côté serveur car gestion.awbb.be ne renvoie pas d'en-têtes CORS : le
-  navigateur ne peut pas lire les pixels d'une image chargée depuis un
-  autre domaine (canvas "tainted"). Comme les clubs sont maintenant
-  correctement filtrés sur le Hainaut (~60, pas des milliers), ça prend
-  quelques secondes, pas plusieurs minutes.
+Nouveautés héritées des versions précédentes : voir les scrapers v3/v4/v5.
 """
 
 import io
@@ -53,8 +36,10 @@ LOGO_BASE_URL = "https://gestion.awbb.be/lms_league_ws/public/img/"
 # l'API (une requête sur toute la saison en une fois renvoie une 502).
 TAILLE_TRANCHE_JOURS = 55
 
+SITE_URL = "https://qtheun27.github.io/basket-awbb"
+
 HEADERS_BROWSER = {
-    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/4.0; +https://github.com/)"
+    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/6.0; +https://github.com/)"
 }
 
 
@@ -331,6 +316,148 @@ def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_de
     return series_utiles, classements_coupe, matchs_hainaut
 
 
+def type_de_match(competition_name: str | None) -> str:
+    """Classe un match en 'championnat' / 'coupe' / 'amical' selon sa compétition."""
+    nom = (competition_name or "").lower()
+    if "coupe" in nom:
+        return "coupe"
+    if "amical" in nom or "tournoi" in nom:
+        return "amical"
+    return "championnat"
+
+
+def enrichir_matchs_avec_type(games: list[dict], series: list[dict]) -> None:
+    """Ajoute le champ 'match_type' à chaque match, en place."""
+    competition_par_serie = {s["id"]: s.get("competition_name") for s in series}
+    for g in games:
+        g["match_type"] = type_de_match(competition_par_serie.get(g.get("serie_id")))
+
+
+# --- Génération des agendas .ics (un par équipe) -----------------------
+
+EMOJI_PAR_TYPE = {"coupe": "🏆", "amical": "🤝", "championnat": "🏀"}
+
+
+def echapper_ics(texte: str) -> str:
+    return (
+        (texte or "")
+        .replace("\\", "\\\\")
+        .replace(";", "\\;")
+        .replace(",", "\\,")
+        .replace("\n", "\\n")
+    )
+
+
+def plier_ligne_ics(ligne: str) -> str:
+    """Plie une ligne ICS à 75 octets, comme l'exige la RFC 5545."""
+    donnees = ligne.encode("utf-8")
+    if len(donnees) <= 75:
+        return ligne
+    morceaux = []
+    reste = ligne
+    limite = 75
+    while len(reste.encode("utf-8")) > limite:
+        coupe = reste[:limite]
+        while len(coupe.encode("utf-8")) > limite:
+            coupe = coupe[:-1]
+        morceaux.append(coupe)
+        reste = reste[len(coupe):]
+    morceaux.append(reste)
+    return ("\r\n ".join(morceaux))
+
+
+def construire_evenement_ics(match: dict, id_equipe: int) -> str:
+    domicile = match.get("home_team_id") == id_equipe
+    nom_nous = match.get("home_team_name") if domicile else match.get("away_team_name")
+    nom_adversaire = match.get("away_team_name") if domicile else match.get("home_team_name")
+    emoji = EMOJI_PAR_TYPE.get(match.get("match_type"), "🏀")
+
+    date_str = match.get("date")
+    heure_str = match.get("time") or "00:00:00"
+    if not date_str:
+        return ""
+    dtstart = f"{date_str.replace('-', '')}T{heure_str.replace(':', '')}"
+
+    from datetime import datetime as _dt, timedelta as _td
+    debut = _dt.strptime(f"{date_str} {heure_str}", "%Y-%m-%d %H:%M:%S")
+    fin = debut + _td(hours=2)
+    dtend = fin.strftime("%Y%m%dT%H%M%S")
+
+    lieu = ", ".join(filter(None, [match.get("venue_name"), match.get("venue_street"), match.get("venue_city")]))
+
+    resume = f"{emoji} {'🏠' if domicile else '✈️'} {nom_nous} vs {nom_adversaire}"
+    description_lignes = [f"Compétition : {match.get('serie_name') or ''}"]
+    if match.get("home_score") is not None and match.get("game_status_id") == 2:
+        description_lignes.append(f"Score : {match.get('home_score')} - {match.get('away_score')}")
+    description = "\n".join(description_lignes)
+
+    dtstamp = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+
+    lignes = [
+        "BEGIN:VEVENT",
+        f"UID:match-{match.get('id')}@basket-awbb",
+        f"DTSTAMP:{dtstamp}",
+        f"DTSTART;TZID=Europe/Brussels:{dtstart}",
+        f"DTEND;TZID=Europe/Brussels:{dtend}",
+        f"SUMMARY:{echapper_ics(resume)}",
+    ]
+    if lieu:
+        lignes.append(f"LOCATION:{echapper_ics(lieu)}")
+    lignes.append(f"DESCRIPTION:{echapper_ics(description)}")
+    lignes.append("END:VEVENT")
+    return "\r\n".join(plier_ligne_ics(l) for l in lignes)
+
+
+def generer_ics_equipe(nom_equipe: str, matchs: list[dict], id_equipe: int) -> str:
+    entete = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Suivi Basket Hainaut//FR",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        f"X-WR-CALNAME:{echapper_ics(nom_equipe)}",
+        "X-WR-TIMEZONE:Europe/Brussels",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
+        "X-PUBLISHED-TTL:PT12H",
+    ]
+    evenements = [construire_evenement_ics(m, id_equipe) for m in matchs if m.get("date")]
+    return "\r\n".join(entete) + "\r\n" + "\r\n".join(e for e in evenements if e) + "\r\nEND:VCALENDAR\r\n"
+
+
+def generer_tous_les_agendas(clubs: list[dict], games: list[dict]) -> int:
+    """Écrit un fichier calendars/team-<id>.ics par équipe ayant au moins un match.
+
+    Régénéré à chaque passage du robot : un utilisateur ABONNÉ (pas juste
+    importé une fois) depuis Apple Calendrier ou Google Agenda verra donc
+    les changements du site source apparaître automatiquement.
+    """
+    import os
+    import shutil
+
+    dossier = "calendars"
+    if os.path.isdir(dossier):
+        shutil.rmtree(dossier)
+    os.makedirs(dossier, exist_ok=True)
+
+    compte = 0
+    for club in clubs:
+        for equipe in club["teams"]:
+            id_equipe = equipe["id"]
+            matchs_equipe = [
+                g for g in games
+                if g.get("home_team_id") == id_equipe or g.get("away_team_id") == id_equipe
+            ]
+            if not matchs_equipe:
+                continue
+            matchs_equipe.sort(key=lambda g: (g.get("date") or "", g.get("time") or ""))
+            contenu = generer_ics_equipe(equipe["name"], matchs_equipe, id_equipe)
+            with open(f"{dossier}/team-{id_equipe}.ics", "w", encoding="utf-8", newline="") as f:
+                f.write(contenu)
+            equipe["ics_url"] = f"{SITE_URL}/calendars/team-{id_equipe}.ics"
+            compte += 1
+    return compte
+
+
 def charger_basket_hainaut():
     session = requests.Session()
 
@@ -429,6 +556,13 @@ def charger_basket_hainaut():
     ids_deja_vus = {g["id"] for g in games}
     games += [g for g in matchs_coupe if g["id"] not in ids_deja_vus]
     print(f"✅ {len(matchs_coupe)} match(s) Coupe AWBB ajouté(s) — total {len(games)} matchs.")
+
+    print("🏷️ Classification des matchs (championnat / coupe / amical)...")
+    enrichir_matchs_avec_type(games, series)
+
+    print("📆 Génération des agendas .ics par équipe...")
+    nb_agendas = generer_tous_les_agendas(clubs, games)
+    print(f"✅ {nb_agendas} agenda(s) .ics généré(s) dans calendars/.")
 
     donnees_finales = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
