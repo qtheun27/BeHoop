@@ -1,7 +1,20 @@
 """
-Scraper Basket Hainaut — v4
+Scraper Basket Hainaut — v5
 
-Nouveautés par rapport à la v3 :
+Nouveauté par rapport à la v4 :
+- Ajoute les matchs de Coupe AWBB (équipes "R...", ex. RU14), qui ne sont
+  PAS organisés par la province de Hainaut (organization_id=2) mais au
+  niveau national par l'AWBB (organization_id=6). La Coupe du Hainaut
+  (équipes "P...", ex. PU14) était déjà incluse depuis la v3 puisqu'elle
+  fait partie des compétitions provinciales du Hainaut.
+  Les équipes elles-mêmes (teams_array de chaque club) contiennent déjà
+  les deux (P et R) quel que soit l'organisme interrogé — seuls les
+  matchs et classements de la Coupe AWBB étaient absents. On récupère
+  donc les séries/classements/matchs de la Coupe AWBB séparément (org=6),
+  puis on ne garde que les matchs impliquant une équipe du Hainaut déjà
+  connue (le reste concerne les autres provinces).
+
+Nouveautés héritées de la v4 :
 - Calendrier de la SAISON COMPLÈTE (plus une fenêtre de 81 jours) : la saison
   est découpée en tranches de ~55 jours pour rester sous la limite qui fait
   planter l'API en une seule requête (testé : une requête sur toute la
@@ -33,6 +46,7 @@ BASE_SITE = "https://baskethainaut.be"
 NONCE_SOURCE_PAGE = f"{BASE_SITE}/clubs/"
 API_BASE = f"{BASE_SITE}/wp-json/bpleagues/v1/proxy"
 ORGANIZATION_ID = 2  # = Hainaut (fixe pour ce site provincial)
+ORGANIZATION_ID_AWBB = 6  # = AWBB national (pour la Coupe AWBB, équipes "R...")
 LOGO_BASE_URL = "https://gestion.awbb.be/lms_league_ws/public/img/"
 
 # Taille des tranches pour parcourir la saison complète sans faire planter
@@ -244,6 +258,79 @@ def recuperer_calendrier_saison(session, nonce, competition_ids, organization_id
     return tous_les_matchs
 
 
+def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_debut_saison, date_fin_saison):
+    """Récupère les séries/classements/matchs de la Coupe AWBB (équipes 'R...').
+
+    Organisée au niveau national (organization_id=6), pas par la province.
+    On filtre ensuite pour ne garder que ce qui concerne une équipe du
+    Hainaut déjà connue — le reste, ce sont des clubs d'autres provinces.
+    """
+    print("🏆 Récupération des compétitions Coupe AWBB (national)...")
+    competitions_resp = call_api(
+        session, nonce, "competition/byMyLeague",
+        {"organization_id": ORGANIZATION_ID_AWBB, "season_id": season_id},
+    )
+    competitions_coupe = [
+        c for c in competitions_resp.get("elements", [])
+        if "coupe" in (c.get("name") or "").lower()
+    ]
+    competition_ids = [c["id"] for c in competitions_coupe]
+    if not competition_ids:
+        print("⚠️ Aucune compétition Coupe AWBB trouvée.")
+        return [], {}, []
+
+    print(f"✅ {len(competitions_coupe)} compétition(s) Coupe AWBB : "
+          + ", ".join(c.get("short_name", "?") for c in competitions_coupe))
+
+    series_resp = call_api(
+        session, nonce, "serie/byMyLeague",
+        {
+            "organization_id": ORGANIZATION_ID_AWBB,
+            "season_id": season_id,
+            "competition_id": competition_ids,
+            "sort": ["competition", "division", "order"],
+            "serie_status_id": [0, 1],
+        },
+    )
+    toutes_series = series_resp.get("elements", [])
+    print(f"   {len(toutes_series)} série(s) Coupe AWBB au total (toutes provinces).")
+
+    print("   Récupération du calendrier Coupe AWBB — saison complète, par tranches...")
+    tous_les_matchs = recuperer_calendrier_saison(
+        session, nonce, competition_ids, ORGANIZATION_ID_AWBB, season_id,
+        date_debut_saison, date_fin_saison,
+    )
+
+    # On ne garde que les matchs impliquant une équipe du Hainaut déjà connue
+    matchs_hainaut = [
+        g for g in tous_les_matchs
+        if g.get("home_team_id") in ids_equipes_hainaut or g.get("away_team_id") in ids_equipes_hainaut
+    ]
+    print(f"   ✅ {len(matchs_hainaut)}/{len(tous_les_matchs)} match(s) Coupe AWBB concernent le Hainaut.")
+
+    # On ne garde que les séries qui contiennent au moins un de ces matchs
+    series_ids_utiles = {g["serie_id"] for g in matchs_hainaut if g.get("serie_id")}
+    series_utiles = [s for s in toutes_series if s["id"] in series_ids_utiles]
+
+    print(f"   Récupération des classements pour {len(series_utiles)} série(s) Coupe AWBB utile(s)...")
+    classements_coupe = {}
+    for serie in series_utiles:
+        serie_id = serie["id"]
+        try:
+            ranking_resp = call_api(
+                session, nonce, "ranking/byMyLeague",
+                {"serie_id": serie_id, "organization_id": ORGANIZATION_ID_AWBB, "season_id": season_id},
+            )
+            # Le classement reste complet (pas filtré) pour situer l'équipe
+            # du Hainaut parmi tous ses adversaires de poule.
+            classements_coupe[str(serie_id)] = ranking_resp.get("elements", [])
+        except Exception as e:
+            print(f"   ⚠️ Classement Coupe AWBB indisponible pour {serie.get('name', serie_id)}: {e}")
+            classements_coupe[str(serie_id)] = []
+
+    return series_utiles, classements_coupe, matchs_hainaut
+
+
 def charger_basket_hainaut():
     session = requests.Session()
 
@@ -330,7 +417,18 @@ def charger_basket_hainaut():
         session, nonce, competition_ids, ORGANIZATION_ID, season_id,
         saison_courante.get("start_date"), saison_courante.get("end_date"),
     )
-    print(f"✅ {len(games)} match(s) trouvé(s) sur la saison complète.")
+    print(f"✅ {len(games)} match(s) trouvé(s) sur la saison complète (Hainaut).")
+
+    ids_equipes_hainaut = {t["id"] for c in clubs for t in c["teams"]}
+    series_coupe, classements_coupe, matchs_coupe = recuperer_coupe_awbb(
+        session, nonce, season_id, ids_equipes_hainaut,
+        saison_courante.get("start_date"), saison_courante.get("end_date"),
+    )
+    series += series_coupe
+    classements.update(classements_coupe)
+    ids_deja_vus = {g["id"] for g in games}
+    games += [g for g in matchs_coupe if g["id"] not in ids_deja_vus]
+    print(f"✅ {len(matchs_coupe)} match(s) Coupe AWBB ajouté(s) — total {len(games)} matchs.")
 
     donnees_finales = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
