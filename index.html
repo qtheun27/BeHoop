@@ -20,6 +20,10 @@
     color: var(--text);
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  .club-banner, .btn-main, .team-chip.active, .tab-btn.active, tr.ligne-equipe {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
   .container { max-width: 900px; margin: auto; }
 
@@ -243,9 +247,18 @@ function selectionnerEquipe(equipe, chipEl) {
   rendreCalendrier(equipe);
 }
 
+function appliquerTheme(club) {
+  const primaire = club.primary_color || '#0b5cab';
+  const accent = club.accent_color || '#d32f2f';
+  document.documentElement.style.setProperty('--primary', primaire);
+  document.documentElement.style.setProperty('--accent', accent);
+}
+
 function afficherClub(club) {
   clubCourant = club;
   $vue.style.display = 'block';
+
+  appliquerTheme(club);
 
   const logo = document.getElementById('club-logo');
   if (club.logo_url) {
@@ -271,7 +284,8 @@ function afficherClub(club) {
   club.teams.forEach((equipe, i) => {
     const chip = document.createElement('div');
     chip.className = 'team-chip' + (i === 0 ? ' active' : '');
-    chip.textContent = equipe.short_name || equipe.name;
+    chip.textContent = equipe.category || equipe.name;
+    chip.title = equipe.name;
     chip.onclick = () => selectionnerEquipe(equipe, chip);
     selecteur.appendChild(chip);
   });
