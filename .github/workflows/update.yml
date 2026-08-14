@@ -1,4 +1,4 @@
-name: Mise à jour automatique AWBB
+name: Mise à jour automatique Basket Hainaut
 
 on:
   schedule:
@@ -21,12 +21,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Installer Playwright et Chrome
-        run: |
-          pip install playwright beautifulsoup4
-          playwright install chromium --with-deps
+      - name: Installer les dépendances
+        run: pip install requests
 
-      - name: Lancer le robot de scraping
+      - name: Interroger l'API Basket Hainaut
         run: python scraper.py
 
       - name: Enregistrer les changements dans GitHub
@@ -35,5 +33,5 @@ jobs:
           git config --global user.email "bot@github.com"
           touch data.json
           git add data.json
-          git commit -m "🤖 Mise à jour automatique des données AWBB" || echo "Rien à commiter"
+          git commit -m "🤖 Mise à jour automatique via API" || echo "Rien à commiter"
           git push
