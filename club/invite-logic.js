@@ -26,7 +26,7 @@ export async function reclamerInvitation(db, user) {
   if (invite.club_name) profil.club_name = invite.club_name;
   if (invite.role === 'coach') profil.team_ids = invite.team_id ? [invite.team_id] : [];
   if (invite.role === 'player') profil.team_id = invite.team_id || null;
-  if (invite.role === 'parent') profil.children_uids = [];
+  if (invite.role === 'parent') profil.children_uids = invite.child_uid ? [invite.child_uid] : [];
 
   await setDoc(doc(db, 'users', user.uid), profil);
   await updateDoc(inviteRef, {
