@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord — Espace Club</title>
+<style>
+  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px 16px; }
+  .wrap { max-width: 480px; margin: auto; }
+  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 14px; }
+  .role-badge { display: inline-block; background: var(--primary); color: white; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-top: 6px; }
+  button { padding: 10px 16px; border-radius: 9px; border: 1px solid var(--border); background: white; font-weight: 600; cursor: pointer; }
+  .muted { color: var(--muted); font-size: 13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="carte" id="carte-profil">Chargement…</div>
+  <div class="carte">
+    <p class="muted">Le reste de l'interface (gestion des coachs/équipes/joueurs/parents pour les admins, calendrier d'entraînements, statistiques...) arrive dans les prochaines étapes, propre à chaque rôle.</p>
+    <button id="btn-deconnexion">Se déconnecter</button>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const LABEL_ROLE = {
+  super_admin: 'Super administrateur',
+  club_admin: 'Administrateur de club',
+  coach: 'Coach',
+  player: 'Joueur',
+  parent: 'Parent',
+};
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    window.location.href = './index.html';
+    return;
+  }
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists()) {
+    window.location.href = './index.html';
+    return;
+  }
+  const profil = snap.data();
+  document.getElementById('carte-profil').innerHTML = `
+    <div>Connecté en tant que</div>
+    <strong>${profil.display_name || user.email}</strong>
+    <div><span class="role-badge">${LABEL_ROLE[profil.role] || profil.role}</span></div>
+    <p class="muted" style="margin-top:12px;">${user.email}${profil.club_id ? ' · club ' + profil.club_id : ''}</p>
+  `;
+});
+
+document.getElementById('btn-deconnexion').addEventListener('click', async () => {
+  await signOut(auth);
+  window.location.href = './index.html';
+});
+</script>
+</body>
+</html>

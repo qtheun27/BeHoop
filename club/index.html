@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace Club — Basket Hainaut</title>
+<style>
+  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 24px 16px; }
+  .wrap { max-width: 380px; margin: 40px auto 0; }
+  h1 { font-size: 20px; text-align: center; margin-bottom: 4px; }
+  .sous-titre { text-align: center; color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+  .onglets { display: flex; gap: 4px; background: var(--bg); border-radius: 10px; padding: 4px; margin-bottom: 18px; }
+  .onglet { flex: 1; padding: 9px; text-align: center; border: none; background: none; border-radius: 7px; font-weight: 700; font-size: 13.5px; color: var(--muted); cursor: pointer; }
+  .onglet.actif { background: var(--primary); color: white; }
+  .panneau { display: none; }
+  .panneau.actif { display: block; }
+  label { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); margin: 12px 0 5px; }
+  input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%; padding: 11px 12px; border-radius: 9px; border: 1px solid var(--border); font-size: 15px;
+  }
+  button.principal {
+    width: 100%; margin-top: 16px; padding: 12px; background: var(--primary); color: white; border: none;
+    border-radius: 9px; font-weight: 700; font-size: 15px; cursor: pointer;
+  }
+  button.google {
+    width: 100%; margin-top: 10px; padding: 11px; background: white; color: var(--text); border: 1px solid var(--border);
+    border-radius: 9px; font-weight: 600; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .separateur { text-align: center; color: var(--muted); font-size: 12px; margin: 16px 0 4px; }
+  .note { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+  .erreur { background: #fdecea; color: #b3261e; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin-top: 14px; display: none; }
+  .info { background: #e8f1fd; color: #0b5cab; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin-top: 14px; display: none; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1>🏀 Espace Club</h1>
+  <div class="sous-titre">Basket Hainaut — accès réservé</div>
+
+  <div class="carte">
+    <div class="onglets">
+      <button class="onglet actif" data-panneau="connexion">Se connecter</button>
+      <button class="onglet" data-panneau="inscription">Première connexion</button>
+    </div>
+
+    <div id="panneau-connexion" class="panneau actif">
+      <label for="c-email">Email</label>
+      <input type="email" id="c-email" autocomplete="email">
+      <label for="c-mdp">Mot de passe</label>
+      <input type="password" id="c-mdp" autocomplete="current-password">
+      <button class="principal" id="btn-connexion">Se connecter</button>
+      <div class="separateur">ou</div>
+      <button class="google" id="btn-google-connexion">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.2-3.9 6.6-9.6 6.6-16.6z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.3 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.5 2 24s.8 6.9 2.3 9.8z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.1 30 2 24 2 15.3 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.2 12.4-9.2z"/></svg>
+        Continuer avec Google
+      </button>
+      <div class="note">Pas encore de compte ? Utilise l'onglet "Première connexion" si tu as reçu une invitation.</div>
+    </div>
+
+    <div id="panneau-inscription" class="panneau">
+      <label for="i-email">Email (celui de ton invitation)</label>
+      <input type="email" id="i-email" autocomplete="email">
+      <label for="i-mdp">Choisis un mot de passe</label>
+      <input type="password" id="i-mdp" autocomplete="new-password">
+      <button class="principal" id="btn-inscription">Créer mon compte</button>
+      <div class="separateur">ou</div>
+      <button class="google" id="btn-google-inscription">
+        <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h11.8c-.5 2.7-2.1 5-4.4 6.6v5.5h7.1c4.2-3.9 6.6-9.6 6.6-16.6z"/><path fill="#34A853" d="M24 46c6 0 11-2 14.6-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.6-3.9-12.4-9.1H4.3v5.7C7.9 41 15.3 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.1c-.5-1.3-.7-2.7-.7-4.1s.3-2.8.7-4.1v-5.7H4.3C2.8 17.1 2 20.5 2 24s.8 6.9 2.3 9.8z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.3l6.3-6.3C35 4.1 30 2 24 2 15.3 2 7.9 7 4.3 14.2l7.3 5.7c1.8-5.2 6.6-9.2 12.4-9.2z"/></svg>
+        Continuer avec Google
+      </button>
+      <div class="note">Utilise exactement l'adresse email sur laquelle tu as reçu ton invitation d'un administrateur de club.</div>
+    </div>
+
+    <div class="erreur" id="msg-erreur"></div>
+    <div class="info" id="msg-info"></div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
+  GoogleAuthProvider, signInWithPopup, signOut,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
+
+const $erreur = document.getElementById('msg-erreur');
+const $info = document.getElementById('msg-info');
+
+function afficherErreur(texte) {
+  $info.style.display = 'none';
+  $erreur.textContent = texte;
+  $erreur.style.display = 'block';
+}
+function afficherInfo(texte) {
+  $erreur.style.display = 'none';
+  $info.textContent = texte;
+  $info.style.display = 'block';
+}
+
+// --- Onglets ---
+document.querySelectorAll('.onglet').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.onglet').forEach(b => b.classList.remove('actif'));
+    document.querySelectorAll('.panneau').forEach(p => p.classList.remove('actif'));
+    btn.classList.add('actif');
+    document.getElementById('panneau-' + btn.dataset.panneau).classList.add('actif');
+    $erreur.style.display = 'none';
+    $info.style.display = 'none';
+  });
+});
+
+// --- Réclamation d'invitation : crée le profil users/{uid} à partir de
+// l'invitation en attente correspondant à l'email de connexion. ---
+async function reclamerInvitation(user) {
+  const email = user.email.toLowerCase();
+  const inviteRef = doc(db, 'invitations', email);
+  const inviteSnap = await getDoc(inviteRef);
+
+  if (!inviteSnap.exists() || inviteSnap.data().status !== 'pending') {
+    throw new Error(
+      "Aucune invitation en attente n'a été trouvée pour cet email. " +
+      "Contacte l'administrateur de ton club pour en recevoir une."
+    );
+  }
+
+  const invite = inviteSnap.data();
+  const profil = {
+    role: invite.role,
+    club_id: invite.club_id,
+    email,
+    display_name: user.displayName || email.split('@')[0],
+    created_at: serverTimestamp(),
+  };
+  if (invite.role === 'coach') profil.team_ids = invite.team_id ? [invite.team_id] : [];
+  if (invite.role === 'player') profil.team_id = invite.team_id || null;
+  if (invite.role === 'parent') profil.children_uids = [];
+
+  await setDoc(doc(db, 'users', user.uid), profil);
+  await updateDoc(inviteRef, {
+    status: 'used', role: invite.role, club_id: invite.club_id, team_id: invite.team_id ?? null,
+  });
+}
+
+async function apresConnexion(user, estPremiereConnexion) {
+  const profilRef = doc(db, 'users', user.uid);
+  const profilSnap = await getDoc(profilRef);
+
+  if (profilSnap.exists()) {
+    window.location.href = './dashboard.html';
+    return;
+  }
+
+  if (!estPremiereConnexion) {
+    afficherErreur("Aucun compte trouvé. Si c'est ta première connexion, utilise cet onglet.");
+    await signOut(auth);
+    return;
+  }
+
+  try {
+    await reclamerInvitation(user);
+    window.location.href = './dashboard.html';
+  } catch (e) {
+    afficherErreur(e.message);
+    await signOut(auth);
+  }
+}
+
+// --- Connexion (compte existant) ---
+document.getElementById('btn-connexion').addEventListener('click', async () => {
+  const email = document.getElementById('c-email').value.trim();
+  const mdp = document.getElementById('c-mdp').value;
+  try {
+    const { user } = await signInWithEmailAndPassword(auth, email, mdp);
+    await apresConnexion(user, false);
+  } catch (e) {
+    afficherErreur("Connexion impossible : email ou mot de passe incorrect.");
+  }
+});
+
+document.getElementById('btn-google-connexion').addEventListener('click', async () => {
+  try {
+    const { user } = await signInWithPopup(auth, googleProvider);
+    await apresConnexion(user, true); // Google : on tente aussi la réclamation si 1ère fois
+  } catch (e) {
+    afficherErreur("Connexion Google impossible : " + e.message);
+  }
+});
+
+// --- Première connexion (nouveau compte, via invitation) ---
+document.getElementById('btn-inscription').addEventListener('click', async () => {
+  const email = document.getElementById('i-email').value.trim();
+  const mdp = document.getElementById('i-mdp').value;
+  if (mdp.length < 6) {
+    afficherErreur('Le mot de passe doit faire au moins 6 caractères.');
+    return;
+  }
+  try {
+    const { user } = await createUserWithEmailAndPassword(auth, email, mdp);
+    await apresConnexion(user, true);
+  } catch (e) {
+    if (e.code === 'auth/email-already-in-use') {
+      afficherErreur('Un compte existe déjà avec cet email — utilise plutôt "Se connecter".');
+    } else {
+      afficherErreur("Inscription impossible : " + e.message);
+    }
+  }
+});
+
+document.getElementById('btn-google-inscription').addEventListener('click', async () => {
+  try {
+    const { user } = await signInWithPopup(auth, googleProvider);
+    await apresConnexion(user, true);
+  } catch (e) {
+    afficherErreur("Inscription Google impossible : " + e.message);
+  }
+});
+</script>
+
+</body>
+</html>
