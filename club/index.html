@@ -86,10 +86,9 @@ import {
   getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
   GoogleAuthProvider, signInWithPopup, signOut,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-import {
-  getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp,
-} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { reclamerInvitation } from "./invite-logic.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -122,37 +121,8 @@ document.querySelectorAll('.onglet').forEach(btn => {
   });
 });
 
-// --- Réclamation d'invitation : crée le profil users/{uid} à partir de
-// l'invitation en attente correspondant à l'email de connexion. ---
-async function reclamerInvitation(user) {
-  const email = user.email.toLowerCase();
-  const inviteRef = doc(db, 'invitations', email);
-  const inviteSnap = await getDoc(inviteRef);
-
-  if (!inviteSnap.exists() || inviteSnap.data().status !== 'pending') {
-    throw new Error(
-      "Aucune invitation en attente n'a été trouvée pour cet email. " +
-      "Contacte l'administrateur de ton club pour en recevoir une."
-    );
-  }
-
-  const invite = inviteSnap.data();
-  const profil = {
-    role: invite.role,
-    club_id: invite.club_id,
-    email,
-    display_name: user.displayName || email.split('@')[0],
-    created_at: serverTimestamp(),
-  };
-  if (invite.role === 'coach') profil.team_ids = invite.team_id ? [invite.team_id] : [];
-  if (invite.role === 'player') profil.team_id = invite.team_id || null;
-  if (invite.role === 'parent') profil.children_uids = [];
-
-  await setDoc(doc(db, 'users', user.uid), profil);
-  await updateDoc(inviteRef, {
-    status: 'used', role: invite.role, club_id: invite.club_id, team_id: invite.team_id ?? null,
-  });
-}
+// --- Réclamation d'invitation : voir invite-logic.js (partagé avec
+// finaliser-connexion.html) ---
 
 async function apresConnexion(user, estPremiereConnexion) {
   const profilRef = doc(db, 'users', user.uid);
@@ -170,7 +140,7 @@ async function apresConnexion(user, estPremiereConnexion) {
   }
 
   try {
-    await reclamerInvitation(user);
+    await reclamerInvitation(db, user);
     window.location.href = './dashboard.html';
   } catch (e) {
     afficherErreur(e.message);
