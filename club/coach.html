@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon équipe — Espace Club</title>
+<style>
+  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 16px; }
+  .wrap { max-width: 640px; margin: auto; }
+  a.retour { color: var(--muted); font-size: 13px; text-decoration: none; }
+  h1 { font-size: 19px; margin: 10px 0 14px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 14px; overflow-x: auto; }
+  .tab-equipe { padding: 8px 14px; border-radius: 20px; border: 1px solid var(--border); background: var(--card); font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap; }
+  .tab-equipe.actif { background: var(--primary); color: white; border-color: var(--primary); }
+  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+  .carte > strong { display: block; margin-bottom: 10px; }
+  label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin: 8px 0 4px; }
+  input, select, textarea {
+    width: 100%; padding: 9px 11px; border-radius: 8px; border: 1px solid var(--border); font-size: 14px; font-family: inherit;
+  }
+  .grille2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  button.principal {
+    margin-top: 12px; padding: 10px 16px; background: var(--primary); color: white; border: none;
+    border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer;
+  }
+  button.discret { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; text-decoration: underline; }
+  .entrainement { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin-bottom: 6px; font-size: 13.5px; display: flex; justify-content: space-between; align-items: center; }
+  .entrainement .infos { cursor: pointer; }
+  .entrainement .lieu { color: var(--muted); font-size: 12px; }
+  .msg { font-size: 12.5px; margin-top: 8px; padding: 8px 10px; border-radius: 8px; display: none; }
+  .msg.ok { background: #e8f6ee; color: #1f9d55; display: block; }
+  .msg.err { background: #fdecea; color: #b3261e; display: block; }
+  .joueur-stat { border-bottom: 1px solid var(--border); padding: 10px 0; }
+  .joueur-stat:last-child { border-bottom: none; }
+  .joueur-nom { font-weight: 700; font-size: 13.5px; margin-bottom: 6px; }
+  table.historique { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
+  table.historique th, table.historique td { padding: 4px; text-align: center; border-bottom: 1px solid var(--border); }
+  table.historique td:first-child, table.historique th:first-child { text-align: left; }
+  .vide { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="retour" href="./dashboard.html">← Retour au tableau de bord</a>
+  <h1>🏀 Mon équipe</h1>
+
+  <div class="tabs" id="tabs-equipes"></div>
+
+  <div class="carte">
+    <strong id="titre-form-entrainement">Ajouter un entraînement</strong>
+    <div class="grille2">
+      <div><label>Date</label><input type="date" id="ent-date"></div>
+      <div><label>Heure</label><input type="time" id="ent-heure" value="18:00"></div>
+    </div>
+    <label>Lieu</label>
+    <input type="text" id="ent-lieu" placeholder="Salle, adresse...">
+    <label>Notes (optionnel)</label>
+    <textarea id="ent-notes" rows="2"></textarea>
+    <button class="principal" id="btn-save-ent">Ajouter l'entraînement</button>
+    <button class="discret" id="btn-annuler-edit" style="display:none;margin-left:10px;">Annuler la modification</button>
+    <div class="msg" id="msg-ent"></div>
+  </div>
+
+  <div class="carte">
+    <strong>Entraînements programmés</strong>
+    <div id="liste-entrainements"><p class="vide">Sélectionne une équipe ci-dessus.</p></div>
+  </div>
+
+  <div class="carte">
+    <strong>Statistiques des joueurs</strong>
+    <div id="liste-joueurs"><p class="vide">Sélectionne une équipe ci-dessus.</p></div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, getDoc, setDoc, addDoc, deleteDoc, collection, getDocs, query, where, orderBy, serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+let monProfil = null;
+let mesEquipes = [];
+let equipeActive = null;
+let entrainementEnEdition = null;
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
+  monProfil = snap.data();
+
+  const res = await fetch('../data.json?t=' + Date.now());
+  const donnees = await res.json();
+  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
+  const toutesEquipes = club ? (club.teams || []) : [];
+  mesEquipes = toutesEquipes.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
+
+  if (mesEquipes.length === 0) {
+    document.getElementById('tabs-equipes').innerHTML = '<p class="vide">Aucune équipe ne t\'a encore été assignée.</p>';
+    return;
+  }
+
+  document.getElementById('tabs-equipes').innerHTML = mesEquipes.map((eq, i) => `
+    <button class="tab-equipe ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.category || eq.name}</button>
+  `).join('');
+  document.querySelectorAll('.tab-equipe').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-equipe').forEach(b => b.classList.remove('actif'));
+      btn.classList.add('actif');
+      selectionnerEquipe(btn.dataset.id);
+    });
+  });
+  selectionnerEquipe(mesEquipes[0].id);
+});
+
+async function selectionnerEquipe(teamId) {
+  equipeActive = String(teamId);
+  annulerEdition();
+  await chargerEntrainements();
+  await chargerJoueurs();
+}
+
+function formatDate(d) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
+}
+
+async function chargerEntrainements() {
+  const $liste = document.getElementById('liste-entrainements');
+  $liste.innerHTML = 'Chargement…';
+  const q = query(collection(db, 'trainings'), where('team_id', '==', equipeActive));
+  const snap = await getDocs(q);
+  if (snap.empty) {
+    $liste.innerHTML = '<p class="vide">Aucun entraînement programmé.</p>';
+    return;
+  }
+  const items = snap.docs
+    .map(d => ({ id: d.id, ...d.data() }))
+    .sort((a, b) => (a.date + (a.start_time || '')).localeCompare(b.date + (b.start_time || '')));
+  $liste.innerHTML = items.map(t => `
+    <div class="entrainement">
+      <div class="infos" onclick="window.__editerEnt('${t.id}')">
+        <div>${formatDate(t.date)} · ${t.start_time || ''}</div>
+        <div class="lieu">${t.location || ''}</div>
+      </div>
+      <button class="discret" onclick="window.__supprimerEnt('${t.id}')">Supprimer</button>
+    </div>
+  `).join('');
+
+  window.__editerEnt = (id) => {
+    const t = items.find(x => x.id === id);
+    entrainementEnEdition = id;
+    document.getElementById('ent-date').value = t.date || '';
+    document.getElementById('ent-heure').value = t.start_time || '';
+    document.getElementById('ent-lieu').value = t.location || '';
+    document.getElementById('ent-notes').value = t.notes || '';
+    document.getElementById('titre-form-entrainement').textContent = 'Modifier l\'entraînement';
+    document.getElementById('btn-save-ent').textContent = 'Enregistrer';
+    document.getElementById('btn-annuler-edit').style.display = 'inline';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  window.__supprimerEnt = async (id) => {
+    if (!confirm('Supprimer cet entraînement ?')) return;
+    await deleteDoc(doc(db, 'trainings', id));
+    await chargerEntrainements();
+  };
+}
+
+function annulerEdition() {
+  entrainementEnEdition = null;
+  document.getElementById('ent-date').value = '';
+  document.getElementById('ent-heure').value = '18:00';
+  document.getElementById('ent-lieu').value = '';
+  document.getElementById('ent-notes').value = '';
+  document.getElementById('titre-form-entrainement').textContent = 'Ajouter un entraînement';
+  document.getElementById('btn-save-ent').textContent = "Ajouter l'entraînement";
+  document.getElementById('btn-annuler-edit').style.display = 'none';
+}
+document.getElementById('btn-annuler-edit').addEventListener('click', annulerEdition);
+
+document.getElementById('btn-save-ent').addEventListener('click', async () => {
+  const $msg = document.getElementById('msg-ent');
+  const date = document.getElementById('ent-date').value;
+  const heure = document.getElementById('ent-heure').value;
+  const lieu = document.getElementById('ent-lieu').value.trim();
+  const notes = document.getElementById('ent-notes').value.trim();
+  if (!date || !equipeActive) {
+    $msg.className = 'msg err'; $msg.textContent = 'Choisis au moins une date.'; return;
+  }
+  try {
+    const donnee = { team_id: equipeActive, date, start_time: heure, location: lieu, notes, updated_at: serverTimestamp() };
+    if (entrainementEnEdition) {
+      await setDoc(doc(db, 'trainings', entrainementEnEdition), donnee, { merge: true });
+    } else {
+      donnee.created_by = auth.currentUser.uid;
+      donnee.created_at = serverTimestamp();
+      await addDoc(collection(db, 'trainings'), donnee);
+    }
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Enregistré.';
+    annulerEdition();
+    await chargerEntrainements();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+
+async function chargerJoueurs() {
+  const $liste = document.getElementById('liste-joueurs');
+  $liste.innerHTML = 'Chargement…';
+  const q = query(collection(db, 'users'), where('team_id', '==', equipeActive), where('role', '==', 'player'));
+  const snap = await getDocs(q);
+  if (snap.empty) {
+    $liste.innerHTML = '<p class="vide">Aucun joueur inscrit dans cette équipe.</p>';
+    return;
+  }
+  const joueurs = snap.docs.map(d => ({ uid: d.id, ...d.data() }));
+  $liste.innerHTML = joueurs.map(j => `
+    <div class="joueur-stat">
+      <div class="joueur-nom">${j.display_name || j.email}</div>
+      <div class="grille2">
+        <input type="date" id="stat-date-${j.uid}">
+        <select id="stat-type-${j.uid}">
+          <option value="match">Match</option>
+          <option value="entrainement">Entraînement</option>
+        </select>
+      </div>
+      <div class="grille2" style="margin-top:6px;">
+        <input type="number" id="stat-points-${j.uid}" placeholder="Points" min="0">
+        <input type="number" id="stat-rebonds-${j.uid}" placeholder="Rebonds" min="0">
+      </div>
+      <div class="grille2" style="margin-top:6px;">
+        <input type="number" id="stat-passes-${j.uid}" placeholder="Passes" min="0">
+        <input type="number" id="stat-minutes-${j.uid}" placeholder="Minutes" min="0">
+      </div>
+      <button class="principal" style="margin-top:8px;" onclick="window.__ajouterStat('${j.uid}')">Ajouter la statistique</button>
+      <div class="msg" id="msg-stat-${j.uid}"></div>
+      <div id="historique-${j.uid}"></div>
+    </div>
+  `).join('');
+
+  window.__ajouterStat = async (uid) => {
+    const $msg = document.getElementById('msg-stat-' + uid);
+    const date = document.getElementById('stat-date-' + uid).value;
+    if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une date.'; return; }
+    try {
+      await addDoc(collection(db, 'player_stats'), {
+        player_uid: uid,
+        team_id: equipeActive,
+        date,
+        type: document.getElementById('stat-type-' + uid).value,
+        points: Number(document.getElementById('stat-points-' + uid).value || 0),
+        rebonds: Number(document.getElementById('stat-rebonds-' + uid).value || 0),
+        passes: Number(document.getElementById('stat-passes-' + uid).value || 0),
+        minutes: Number(document.getElementById('stat-minutes-' + uid).value || 0),
+        created_by: auth.currentUser.uid,
+        created_at: serverTimestamp(),
+      });
+      $msg.className = 'msg ok'; $msg.textContent = '✅ Ajoutée.';
+      await chargerHistoriqueStat(uid);
+    } catch (e) {
+      $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+    }
+  };
+
+  joueurs.forEach(j => chargerHistoriqueStat(j.uid));
+}
+
+async function chargerHistoriqueStat(uid) {
+  const q = query(collection(db, 'player_stats'), where('player_uid', '==', uid));
+  const snap = await getDocs(q);
+  const $cible = document.getElementById('historique-' + uid);
+  if (!$cible) return;
+  if (snap.empty) { $cible.innerHTML = ''; return; }
+  const lignes = snap.docs.map(d => d.data()).sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 5);
+  $cible.innerHTML = `
+    <table class="historique">
+      <thead><tr><th>Date</th><th>Pts</th><th>Reb</th><th>Pas</th><th>Min</th></tr></thead>
+      <tbody>${lignes.map(l => `<tr><td>${l.date}</td><td>${l.points ?? 0}</td><td>${l.rebonds ?? 0}</td><td>${l.passes ?? 0}</td><td>${l.minutes ?? 0}</td></tr>`).join('')}</tbody>
+    </table>
+  `;
+}
+</script>
+</body>
+</html>
