@@ -23,6 +23,7 @@ export async function reclamerInvitation(db, user) {
     display_name: user.displayName || email.split('@')[0],
     created_at: serverTimestamp(),
   };
+  if (invite.club_name) profil.club_name = invite.club_name;
   if (invite.role === 'coach') profil.team_ids = invite.team_id ? [invite.team_id] : [];
   if (invite.role === 'player') profil.team_id = invite.team_id || null;
   if (invite.role === 'parent') profil.children_uids = [];
