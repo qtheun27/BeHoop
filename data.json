@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-15T06:21:43.581180Z",
+  "generated_at": "2026-08-15T18:16:08.834625Z",
   "organization": {
     "metadata": [],
     "reference": "HA",
@@ -7964,121 +7964,6 @@
       "organization_reference": "HA"
     },
     {
-      "reference": "301",
-      "name": "Amicaux Seniors",
-      "short_name": "Amicaux Seniors",
-      "division_id": 1982,
-      "rule_id": 197,
-      "type_competition": 3,
-      "serie_status_id": 1,
-      "id": 6485,
-      "division_name": "Amicaux Seniors",
-      "competition_id": 396,
-      "competition_name": "Matches Amicaux / Tournois Hainaut",
-      "created_at": "2026-06-27 12:55:37",
-      "updated_at": "2026-06-27 12:57:27",
-      "rule_with_rankings": 1,
-      "order": 2,
-      "division_order": 1,
-      "competition_order": 7,
-      "organization_id": 2,
-      "organization_name": "Hainaut",
-      "organization_short_name": "Hainaut",
-      "organization_reference": "HA"
-    },
-    {
-      "reference": "302",
-      "name": "Amicaux Jeunes",
-      "short_name": "Amicaux Jeunes",
-      "division_id": 1983,
-      "rule_id": 197,
-      "type_competition": 3,
-      "serie_status_id": 1,
-      "id": 6486,
-      "division_name": "Amicaux Jeunes",
-      "competition_id": 396,
-      "competition_name": "Matches Amicaux / Tournois Hainaut",
-      "created_at": "2026-06-27 12:57:53",
-      "updated_at": "2026-06-27 12:57:53",
-      "rule_with_rankings": 1,
-      "order": 1,
-      "division_order": 2,
-      "competition_order": 7,
-      "organization_id": 2,
-      "organization_name": "Hainaut",
-      "organization_short_name": "Hainaut",
-      "organization_reference": "HA"
-    },
-    {
-      "reference": "303",
-      "name": "Amicaux U12",
-      "short_name": "Amicaux U12",
-      "division_id": 1984,
-      "rule_id": 198,
-      "type_competition": 3,
-      "serie_status_id": 1,
-      "id": 6487,
-      "division_name": "Amicaux U12",
-      "competition_id": 396,
-      "competition_name": "Matches Amicaux / Tournois Hainaut",
-      "created_at": "2026-06-27 12:58:11",
-      "updated_at": "2026-06-27 12:58:11",
-      "rule_with_rankings": 0,
-      "order": 1,
-      "division_order": 3,
-      "competition_order": 7,
-      "organization_id": 2,
-      "organization_name": "Hainaut",
-      "organization_short_name": "Hainaut",
-      "organization_reference": "HA"
-    },
-    {
-      "reference": "304",
-      "name": "Amicaux U10",
-      "short_name": "Amicaux U10",
-      "division_id": 1985,
-      "rule_id": 198,
-      "type_competition": 3,
-      "serie_status_id": 1,
-      "id": 6488,
-      "division_name": "Amicaux U10",
-      "competition_id": 396,
-      "competition_name": "Matches Amicaux / Tournois Hainaut",
-      "created_at": "2026-06-27 12:58:24",
-      "updated_at": "2026-06-27 12:58:24",
-      "rule_with_rankings": 0,
-      "order": 1,
-      "division_order": 4,
-      "competition_order": 7,
-      "organization_id": 2,
-      "organization_name": "Hainaut",
-      "organization_short_name": "Hainaut",
-      "organization_reference": "HA"
-    },
-    {
-      "reference": "305",
-      "name": "Amicaux U8 / U6",
-      "short_name": "Amicaux U8 / U6",
-      "division_id": 1986,
-      "rule_id": 198,
-      "type_competition": 3,
-      "serie_status_id": 1,
-      "id": 6489,
-      "division_name": "Amicaux U8 / U6",
-      "competition_id": 396,
-      "competition_name": "Matches Amicaux / Tournois Hainaut",
-      "created_at": "2026-06-27 12:58:40",
-      "updated_at": "2026-06-27 12:58:40",
-      "rule_with_rankings": 0,
-      "order": 1,
-      "division_order": 5,
-      "competition_order": 7,
-      "organization_id": 2,
-      "organization_name": "Hainaut",
-      "organization_short_name": "Hainaut",
-      "organization_reference": "HA"
-    },
-    {
       "reference": "202",
       "name": "Coupe AWBB Hommes - Poule B",
       "short_name": "CA Hommes - Poule B",
@@ -8847,9 +8732,9 @@
     "6191": [],
     "6192": [
       {
-        "id": 2545604,
-        "created_at": "2026-08-08 20:42:37",
-        "updated_at": "2026-08-08 20:42:37",
+        "id": 2546088,
+        "created_at": "2026-08-15 12:09:09",
+        "updated_at": "2026-08-15 12:09:09",
         "serie_id": 6192,
         "team_id": 52332,
         "played": 1,
@@ -8892,9 +8777,9 @@
         "club_logo_img_url": "uploads/club1381/logo-femina.png"
       },
       {
-        "id": 2545605,
-        "created_at": "2026-08-08 20:42:37",
-        "updated_at": "2026-08-08 20:42:37",
+        "id": 2546089,
+        "created_at": "2026-08-15 12:09:09",
+        "updated_at": "2026-08-15 12:09:09",
         "serie_id": 6192,
         "team_id": 51461,
         "played": 1,
@@ -9224,7 +9109,143 @@
     "6205": [],
     "6206": [],
     "6207": [],
-    "6208": [],
+    "6208": [
+      {
+        "id": 2546145,
+        "created_at": "2026-08-15 19:02:32",
+        "updated_at": "2026-08-15 19:02:32",
+        "serie_id": 6208,
+        "team_id": 52034,
+        "played": 1,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 82,
+        "score_against": 40,
+        "points": 3,
+        "result_sequence": "[\"W\"]",
+        "last_consecutive": "{\"result\":\"W\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 1,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 82,
+        "score_against_home": 0,
+        "score_against_away": 40,
+        "result_sequence_home": "0",
+        "result_sequence_away": "[\"W\"]",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "{\"result\":\"W\",\"amount\":1}",
+        "best_long_wins": "1",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "1",
+        "best_long_losses": "1",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "1",
+        "position": 1,
+        "team_reference": "939P1DA",
+        "team_name": "P1D Jeunesse Sportive Soignies A",
+        "team_short_name": "JS Soignies A",
+        "club_id": 1299,
+        "club_logo_img_url": "uploads/club1299/logo-js-soignies1.png"
+      },
+      {
+        "id": 2546146,
+        "created_at": "2026-08-15 19:02:32",
+        "updated_at": "2026-08-15 19:02:32",
+        "serie_id": 6208,
+        "team_id": 51194,
+        "played": 1,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 40,
+        "score_against": 82,
+        "points": 1,
+        "result_sequence": "[\"L\"]",
+        "last_consecutive": "{\"result\":\"L\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 1,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 40,
+        "score_for_away": 0,
+        "score_against_home": 82,
+        "score_against_away": 0,
+        "result_sequence_home": "[\"L\"]",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "{\"result\":\"L\",\"amount\":1}",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 2,
+        "team_reference": "2535P3D",
+        "team_name": "P3D UBC Binche",
+        "team_short_name": "UBC Binche",
+        "club_id": 1459,
+        "club_logo_img_url": "uploads/club1459/logoubc-2018-def.jpg"
+      },
+      {
+        "id": 2546147,
+        "created_at": "2026-08-15 19:02:32",
+        "updated_at": "2026-08-15 19:02:32",
+        "serie_id": 6208,
+        "team_id": 51920,
+        "played": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 0,
+        "score_against": 0,
+        "points": 0,
+        "result_sequence": "0",
+        "last_consecutive": "0",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 0,
+        "score_against_home": 0,
+        "score_against_away": 0,
+        "result_sequence_home": "0",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 3,
+        "team_reference": "1620P2D",
+        "team_name": "P2D Rapido B.C.T.L.",
+        "team_short_name": "Rapido B.C.T.L.",
+        "club_id": 1379,
+        "club_logo_img_url": "uploads/club1379/rapido-tuin-lobbes.png"
+      }
+    ],
     "6209": [],
     "6210": [],
     "6211": [],
@@ -10139,17 +10160,12 @@
     ],
     "6483": [],
     "6484": [],
-    "6485": [],
-    "6486": [],
-    "6487": [],
-    "6488": [],
-    "6489": [],
     "6229": [],
     "6231": [
       {
-        "id": 2545909,
-        "created_at": "2026-08-13 19:12:37",
-        "updated_at": "2026-08-13 19:12:37",
+        "id": 2546068,
+        "created_at": "2026-08-15 10:50:57",
+        "updated_at": "2026-08-15 10:50:57",
         "serie_id": 6231,
         "team_id": 50617,
         "played": 1,
@@ -10192,9 +10208,9 @@
         "club_logo_img_url": "uploads/club1370/logo-rbcl-1.png"
       },
       {
-        "id": 2545910,
-        "created_at": "2026-08-13 19:12:37",
-        "updated_at": "2026-08-13 19:12:37",
+        "id": 2546069,
+        "created_at": "2026-08-15 10:50:57",
+        "updated_at": "2026-08-15 10:50:57",
         "serie_id": 6231,
         "team_id": 51422,
         "played": 1,
@@ -10237,9 +10253,9 @@
         "club_logo_img_url": "uploads2/logo-royal-bce-fond-transparent.png"
       },
       {
-        "id": 2545911,
-        "created_at": "2026-08-13 19:12:37",
-        "updated_at": "2026-08-13 19:12:37",
+        "id": 2546070,
+        "created_at": "2026-08-15 10:50:57",
+        "updated_at": "2026-08-15 10:50:57",
         "serie_id": 6231,
         "team_id": 51032,
         "played": 0,
@@ -10282,9 +10298,9 @@
         "club_logo_img_url": "/uploads/club1252/club_ref_205.png"
       },
       {
-        "id": 2545912,
-        "created_at": "2026-08-13 19:12:37",
-        "updated_at": "2026-08-13 19:12:37",
+        "id": 2546071,
+        "created_at": "2026-08-15 10:50:57",
+        "updated_at": "2026-08-15 10:50:57",
         "serie_id": 6231,
         "team_id": 51386,
         "played": 0,
@@ -10329,9 +10345,9 @@
     ],
     "6232": [
       {
-        "id": 2545972,
-        "created_at": "2026-08-14 22:31:59",
-        "updated_at": "2026-08-14 22:31:59",
+        "id": 2546072,
+        "created_at": "2026-08-15 10:51:26",
+        "updated_at": "2026-08-15 10:51:26",
         "serie_id": 6232,
         "team_id": 52130,
         "played": 1,
@@ -10374,9 +10390,9 @@
         "club_logo_img_url": "/uploads/club1431/club_ref_2309.png"
       },
       {
-        "id": 2545973,
-        "created_at": "2026-08-14 22:31:59",
-        "updated_at": "2026-08-14 22:31:59",
+        "id": 2546073,
+        "created_at": "2026-08-15 10:51:26",
+        "updated_at": "2026-08-15 10:51:26",
         "serie_id": 6232,
         "team_id": 51102,
         "played": 1,
@@ -10419,9 +10435,9 @@
         "club_logo_img_url": "uploads/club1229/0046-rbc-pepinster-eb.png"
       },
       {
-        "id": 2545974,
-        "created_at": "2026-08-14 22:31:59",
-        "updated_at": "2026-08-14 22:31:59",
+        "id": 2546074,
+        "created_at": "2026-08-15 10:51:26",
+        "updated_at": "2026-08-15 10:51:26",
         "serie_id": 6232,
         "team_id": 50948,
         "played": 0,
@@ -10464,9 +10480,9 @@
         "club_logo_img_url": "/uploads/club1390/club_ref_1724.png"
       },
       {
-        "id": 2545975,
-        "created_at": "2026-08-14 22:31:59",
-        "updated_at": "2026-08-14 22:31:59",
+        "id": 2546075,
+        "created_at": "2026-08-15 10:51:26",
+        "updated_at": "2026-08-15 10:51:26",
         "serie_id": 6232,
         "team_id": 51504,
         "played": 0,
@@ -10515,10 +10531,327 @@
     "6239": [],
     "6240": [],
     "6241": [],
-    "6242": [],
+    "6242": [
+      {
+        "id": 2546114,
+        "created_at": "2026-08-15 18:44:15",
+        "updated_at": "2026-08-15 18:44:15",
+        "serie_id": 6242,
+        "team_id": 52260,
+        "played": 1,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 76,
+        "score_against": 41,
+        "points": 3,
+        "result_sequence": "[\"W\"]",
+        "last_consecutive": "{\"result\":\"W\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 1,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 76,
+        "score_against_home": 0,
+        "score_against_away": 41,
+        "result_sequence_home": "0",
+        "result_sequence_away": "[\"W\"]",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "{\"result\":\"W\",\"amount\":1}",
+        "best_long_wins": "1",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "1",
+        "best_long_losses": "1",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "1",
+        "position": 1,
+        "team_reference": "2624P1HA",
+        "team_name": "P1H Profondeville Sharks A",
+        "team_short_name": "Profondeville Sharks A",
+        "club_id": 1474,
+        "club_logo_img_url": "uploads/club1474/2624-profondeville-sharks.jpg"
+      },
+      {
+        "id": 2546115,
+        "created_at": "2026-08-15 18:44:15",
+        "updated_at": "2026-08-15 18:44:15",
+        "serie_id": 6242,
+        "team_id": 51854,
+        "played": 1,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 41,
+        "score_against": 76,
+        "points": 1,
+        "result_sequence": "[\"L\"]",
+        "last_consecutive": "{\"result\":\"L\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 1,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 41,
+        "score_for_away": 0,
+        "score_against_home": 76,
+        "score_against_away": 0,
+        "result_sequence_home": "[\"L\"]",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "{\"result\":\"L\",\"amount\":1}",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 2,
+        "team_reference": "1589P1H",
+        "team_name": "P1H BC Centre Gaume Tintigny",
+        "team_short_name": "BC Centre Gaume Tintigny",
+        "club_id": 1373,
+        "club_logo_img_url": "/uploads/club1373/club_ref_1589.png"
+      },
+      {
+        "id": 2546116,
+        "created_at": "2026-08-15 18:44:15",
+        "updated_at": "2026-08-15 18:44:15",
+        "serie_id": 6242,
+        "team_id": 50701,
+        "played": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 0,
+        "score_against": 0,
+        "points": 0,
+        "result_sequence": "0",
+        "last_consecutive": "0",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 0,
+        "score_against_home": 0,
+        "score_against_away": 0,
+        "result_sequence_home": "0",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 3,
+        "team_reference": "2653R2HA",
+        "team_name": "R2H Groupe Gobert Basket Club Colfontaine A",
+        "team_short_name": "GGBC Colfontaine A",
+        "club_id": 1484,
+        "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
+      }
+    ],
     "6265": [],
     "6269": [],
-    "6270": [],
+    "6270": [
+      {
+        "id": 2546166,
+        "created_at": "2026-08-15 20:13:16",
+        "updated_at": "2026-08-15 20:13:16",
+        "serie_id": 6270,
+        "team_id": 51286,
+        "played": 1,
+        "wins": 1,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 104,
+        "score_against": 44,
+        "points": 3,
+        "result_sequence": "[\"W\"]",
+        "last_consecutive": "{\"result\":\"W\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 1,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 104,
+        "score_against_home": 0,
+        "score_against_away": 44,
+        "result_sequence_home": "0",
+        "result_sequence_away": "[\"W\"]",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "{\"result\":\"W\",\"amount\":1}",
+        "best_long_wins": "1",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "1",
+        "best_long_losses": "1",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "1",
+        "position": 1,
+        "team_reference": "466TDW2A",
+        "team_name": "TDW2 Royal CS Natoye A",
+        "team_short_name": "Royal CS Natoye A",
+        "club_id": 1271,
+        "club_logo_img_url": "/uploads/club1271/club_ref_466.png"
+      },
+      {
+        "id": 2546167,
+        "created_at": "2026-08-15 20:13:16",
+        "updated_at": "2026-08-15 20:13:16",
+        "serie_id": 6270,
+        "team_id": 50651,
+        "played": 1,
+        "wins": 0,
+        "losses": 1,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 44,
+        "score_against": 104,
+        "points": 1,
+        "result_sequence": "[\"L\"]",
+        "last_consecutive": "{\"result\":\"L\",\"amount\":1}",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 1,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 44,
+        "score_for_away": 0,
+        "score_against_home": 104,
+        "score_against_away": 0,
+        "result_sequence_home": "[\"L\"]",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "{\"result\":\"L\",\"amount\":1}",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 2,
+        "team_reference": "1090P1D",
+        "team_name": "P1D RCS Faulx Les Tombes",
+        "team_short_name": "RCS Faulx Les Tombes",
+        "club_id": 1320,
+        "club_logo_img_url": "/uploads/club1320/club_ref_1090.png"
+      },
+      {
+        "id": 2546168,
+        "created_at": "2026-08-15 20:13:16",
+        "updated_at": "2026-08-15 20:13:16",
+        "serie_id": 6270,
+        "team_id": 50859,
+        "played": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 0,
+        "score_against": 0,
+        "points": 0,
+        "result_sequence": "0",
+        "last_consecutive": "0",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 0,
+        "score_against_home": 0,
+        "score_against_away": 0,
+        "result_sequence_home": "0",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 3,
+        "team_reference": "1969R2DC",
+        "team_name": "R2D Basket Namur Capitale C",
+        "team_short_name": "Basket Namur Capitale C",
+        "club_id": 1415,
+        "club_logo_img_url": "uploads/club1415/basket-namur-capital-nouveau.png"
+      },
+      {
+        "id": 2546169,
+        "created_at": "2026-08-15 20:13:16",
+        "updated_at": "2026-08-15 20:13:16",
+        "serie_id": 6270,
+        "team_id": 51265,
+        "played": 0,
+        "wins": 0,
+        "losses": 0,
+        "draws": 0,
+        "forfeits": 0,
+        "score_for": 0,
+        "score_against": 0,
+        "points": 0,
+        "result_sequence": "0",
+        "last_consecutive": "0",
+        "wins_home": 0,
+        "wins_away": 0,
+        "losses_home": 0,
+        "losses_away": 0,
+        "draws_home": 0,
+        "draws_away": 0,
+        "forfeits_home": 0,
+        "forfeits_away": 0,
+        "score_for_home": 0,
+        "score_for_away": 0,
+        "score_against_home": 0,
+        "score_against_away": 0,
+        "result_sequence_home": "0",
+        "result_sequence_away": "0",
+        "last_consecutive_home": "0",
+        "last_consecutive_away": "0",
+        "best_long_wins": "0",
+        "best_long_wins_home": "0",
+        "best_long_wins_away": "0",
+        "best_long_losses": "0",
+        "best_long_losses_home": "0",
+        "best_long_losses_away": "0",
+        "position": 3,
+        "team_reference": "1052R2DA",
+        "team_name": "R2D Basket Entité Courcelles A",
+        "team_short_name": "Basket Entité Courcelles A",
+        "club_id": 1314,
+        "club_logo_img_url": "/uploads/club1314/club_ref_1052.png"
+      }
+    ],
     "6274": [],
     "6275": [],
     "6278": [],
@@ -10527,9 +10860,9 @@
     "6545": [],
     "6546": [
       {
-        "id": 2545790,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2545999,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50564,
         "played": 0,
@@ -10572,9 +10905,9 @@
         "club_logo_img_url": "uploads2/0959-royal-excelsior-brussels.jpg"
       },
       {
-        "id": 2545791,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546000,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50594,
         "played": 0,
@@ -10617,9 +10950,9 @@
         "club_logo_img_url": "uploads/club1242/castors-braine.jpg"
       },
       {
-        "id": 2545792,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546001,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50635,
         "played": 0,
@@ -10662,9 +10995,9 @@
         "club_logo_img_url": "/uploads/club1266/club_ref_400.png"
       },
       {
-        "id": 2545793,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546002,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50654,
         "played": 0,
@@ -10707,9 +11040,9 @@
         "club_logo_img_url": "/uploads/club1347/club_ref_1353.png"
       },
       {
-        "id": 2545794,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546003,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50677,
         "played": 0,
@@ -10752,9 +11085,9 @@
         "club_logo_img_url": "uploads/club1435/freshairlogo.jpg"
       },
       {
-        "id": 2545795,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546004,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50678,
         "played": 0,
@@ -10797,9 +11130,9 @@
         "club_logo_img_url": "uploads/club1435/freshairlogo.jpg"
       },
       {
-        "id": 2545796,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546005,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50683,
         "played": 0,
@@ -10842,9 +11175,9 @@
         "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
       },
       {
-        "id": 2545797,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546006,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50686,
         "played": 0,
@@ -10887,9 +11220,9 @@
         "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
       },
       {
-        "id": 2545798,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546007,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50739,
         "played": 0,
@@ -10932,9 +11265,9 @@
         "club_logo_img_url": "uploads/club1289/0854-bc-sprimont-25-02-04.jpg"
       },
       {
-        "id": 2545799,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546008,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50753,
         "played": 0,
@@ -10977,9 +11310,9 @@
         "club_logo_img_url": "uploads/club1312/1036-union-mons-hainaut.jpg"
       },
       {
-        "id": 2545800,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546009,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50772,
         "played": 0,
@@ -11022,9 +11355,9 @@
         "club_logo_img_url": "/uploads/club1234/club_ref_69.png"
       },
       {
-        "id": 2545801,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546010,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50776,
         "played": 1,
@@ -11067,9 +11400,9 @@
         "club_logo_img_url": "uploads/club1315/logo-ransart-1054.png"
       },
       {
-        "id": 2545802,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546011,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50815,
         "played": 0,
@@ -11112,9 +11445,9 @@
         "club_logo_img_url": "/uploads/club1259/club_ref_266.png"
       },
       {
-        "id": 2545803,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546012,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50880,
         "played": 0,
@@ -11157,9 +11490,9 @@
         "club_logo_img_url": "/uploads/club1407/club_ref_1861.png"
       },
       {
-        "id": 2545804,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546013,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50921,
         "played": 0,
@@ -11202,9 +11535,9 @@
         "club_logo_img_url": "uploads2/0284-val-dieu-spirou.png"
       },
       {
-        "id": 2545805,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546014,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50922,
         "played": 0,
@@ -11247,9 +11580,9 @@
         "club_logo_img_url": "uploads2/0284-val-dieu-spirou.png"
       },
       {
-        "id": 2545806,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546015,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50933,
         "played": 0,
@@ -11292,9 +11625,9 @@
         "club_logo_img_url": "uploads/club1302/rsw-li-ge.png"
       },
       {
-        "id": 2545807,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546016,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50967,
         "played": 0,
@@ -11337,9 +11670,9 @@
         "club_logo_img_url": "/uploads/club1452/club_ref_2502.png"
       },
       {
-        "id": 2545808,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546017,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50992,
         "played": 0,
@@ -11382,9 +11715,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2545809,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546018,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 50999,
         "played": 0,
@@ -11427,9 +11760,9 @@
         "club_logo_img_url": "uploads/club1311/1034-rbc-haneffe.jpeg"
       },
       {
-        "id": 2545810,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546019,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51025,
         "played": 0,
@@ -11472,9 +11805,9 @@
         "club_logo_img_url": "uploads/club1364/logo-junior-arlonais-2020-icone.png"
       },
       {
-        "id": 2545811,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546020,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51060,
         "played": 1,
@@ -11517,9 +11850,9 @@
         "club_logo_img_url": "uploads/club1316/bc-belleflamme.jpg"
       },
       {
-        "id": 2545812,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546021,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51110,
         "played": 0,
@@ -11562,9 +11895,9 @@
         "club_logo_img_url": "uploads/club1476/logo-bc-js-estaimpuis.jpg"
       },
       {
-        "id": 2545813,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546022,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51134,
         "played": 0,
@@ -11607,9 +11940,9 @@
         "club_logo_img_url": "uploads/club1388/1702-rbc-belgrade.jpg"
       },
       {
-        "id": 2545814,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546023,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51138,
         "played": 0,
@@ -11652,9 +11985,9 @@
         "club_logo_img_url": "uploads/club1388/1702-rbc-belgrade.jpg"
       },
       {
-        "id": 2545815,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546024,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51184,
         "played": 0,
@@ -11697,9 +12030,9 @@
         "club_logo_img_url": "/uploads/club1436/club_ref_2352.png"
       },
       {
-        "id": 2545816,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546025,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51203,
         "played": 0,
@@ -11742,9 +12075,9 @@
         "club_logo_img_url": "/uploads/club1390/club_ref_1724.png"
       },
       {
-        "id": 2545817,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546026,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51341,
         "played": 0,
@@ -11787,9 +12120,9 @@
         "club_logo_img_url": "uploads/club1286/0822-boussu-saint-ghislain-united.jpg"
       },
       {
-        "id": 2545818,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546027,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51406,
         "played": 0,
@@ -11832,9 +12165,9 @@
         "club_logo_img_url": "/uploads/club1333/club_ref_1246.png"
       },
       {
-        "id": 2545819,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546028,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51420,
         "played": 0,
@@ -11877,9 +12210,9 @@
         "club_logo_img_url": "uploads/club1481/jse-enghien.jpg"
       },
       {
-        "id": 2545820,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546029,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51457,
         "played": 0,
@@ -11922,9 +12255,9 @@
         "club_logo_img_url": "uploads2/1479-bc-genappe-lothier.png"
       },
       {
-        "id": 2545821,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546030,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51458,
         "played": 0,
@@ -11967,9 +12300,9 @@
         "club_logo_img_url": "uploads2/1479-bc-genappe-lothier.png"
       },
       {
-        "id": 2545822,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546031,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51598,
         "played": 0,
@@ -12012,9 +12345,9 @@
         "club_logo_img_url": "uploads/club1351/logo-henri-chapelle.png"
       },
       {
-        "id": 2545823,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546032,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51599,
         "played": 0,
@@ -12057,9 +12390,9 @@
         "club_logo_img_url": "uploads/club1351/logo-henri-chapelle.png"
       },
       {
-        "id": 2545824,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546033,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51617,
         "played": 0,
@@ -12102,9 +12435,9 @@
         "club_logo_img_url": "uploads/club1374/1592-bc-amll.png"
       },
       {
-        "id": 2545825,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546034,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51660,
         "played": 0,
@@ -12147,9 +12480,9 @@
         "club_logo_img_url": "uploads/club1285/0781-alliance-arlon.png"
       },
       {
-        "id": 2545826,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546035,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51730,
         "played": 0,
@@ -12192,9 +12525,9 @@
         "club_logo_img_url": "uploads/club1354/1408-carni-res.jpeg"
       },
       {
-        "id": 2545827,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546036,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51803,
         "played": 0,
@@ -12237,9 +12570,9 @@
         "club_logo_img_url": "uploads/club256022/logo-bca-bleu.jpg"
       },
       {
-        "id": 2545828,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546037,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51819,
         "played": 0,
@@ -12282,9 +12615,9 @@
         "club_logo_img_url": "uploads/club256022/logo-bca-bleu.jpg"
       },
       {
-        "id": 2545829,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546038,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51919,
         "played": 0,
@@ -12327,9 +12660,9 @@
         "club_logo_img_url": "uploads/club263097/logo-basket-modave-def-1-page-0001.jpg"
       },
       {
-        "id": 2545830,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546039,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 51968,
         "played": 0,
@@ -12372,9 +12705,9 @@
         "club_logo_img_url": "uploads/club1496/2678-js-dottignies.jpg"
       },
       {
-        "id": 2545831,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546040,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52002,
         "played": 0,
@@ -12417,9 +12750,9 @@
         "club_logo_img_url": "uploads/club262789/bc-centre-gaume_1.jpg"
       },
       {
-        "id": 2545832,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546041,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52015,
         "played": 0,
@@ -12462,9 +12795,9 @@
         "club_logo_img_url": "uploads/club1337/bcmalonne-1279.JPG"
       },
       {
-        "id": 2545833,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546042,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52218,
         "played": 0,
@@ -12507,9 +12840,9 @@
         "club_logo_img_url": "uploads/club1376/bcca.png"
       },
       {
-        "id": 2545834,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546043,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52293,
         "played": 0,
@@ -12552,9 +12885,9 @@
         "club_logo_img_url": "uploads/club263121/esl-united.png"
       },
       {
-        "id": 2545835,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546044,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52316,
         "played": 0,
@@ -12597,9 +12930,9 @@
         "club_logo_img_url": "uploads/club1411/bc-marche.jpg"
       },
       {
-        "id": 2545836,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546045,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52344,
         "played": 0,
@@ -12642,9 +12975,9 @@
         "club_logo_img_url": "uploads/club1368/union-bc-quaregnon-1567.jpeg"
       },
       {
-        "id": 2545837,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546046,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52393,
         "played": 0,
@@ -12687,9 +13020,9 @@
         "club_logo_img_url": "/uploads/club1271/club_ref_466.png"
       },
       {
-        "id": 2545838,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546047,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52396,
         "played": 0,
@@ -12732,9 +13065,9 @@
         "club_logo_img_url": "/uploads/club1271/club_ref_466.png"
       },
       {
-        "id": 2545839,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546048,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52432,
         "played": 0,
@@ -12777,9 +13110,9 @@
         "club_logo_img_url": null
       },
       {
-        "id": 2545840,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546049,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52476,
         "played": 0,
@@ -12822,9 +13155,9 @@
         "club_logo_img_url": "/uploads/club1252/club_ref_205.png"
       },
       {
-        "id": 2545841,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546050,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52477,
         "played": 0,
@@ -12867,9 +13200,9 @@
         "club_logo_img_url": "/uploads/club1252/club_ref_205.png"
       },
       {
-        "id": 2545842,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546051,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52496,
         "played": 0,
@@ -12912,9 +13245,9 @@
         "club_logo_img_url": "uploads/club1389/1704-rebond-ottignies.png"
       },
       {
-        "id": 2545843,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546052,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52540,
         "played": 0,
@@ -12957,9 +13290,9 @@
         "club_logo_img_url": "/uploads/club1469/club_ref_2576.png"
       },
       {
-        "id": 2545844,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546053,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52548,
         "played": 0,
@@ -13002,9 +13335,9 @@
         "club_logo_img_url": "uploads/club1362/bc-alleur-16-01-20.jpg"
       },
       {
-        "id": 2545845,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546054,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52567,
         "played": 0,
@@ -13047,9 +13380,9 @@
         "club_logo_img_url": "/uploads/club1283/club_ref_709.png"
       },
       {
-        "id": 2545846,
-        "created_at": "2026-08-12 14:00:09",
-        "updated_at": "2026-08-12 14:00:09",
+        "id": 2546055,
+        "created_at": "2026-08-15 10:39:04",
+        "updated_at": "2026-08-15 10:39:04",
         "serie_id": 6546,
         "team_id": 52741,
         "played": 0,
@@ -13121,7 +13454,7 @@
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486961,
@@ -13145,7 +13478,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486833,
@@ -13169,7 +13502,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483301,
@@ -13193,7 +13526,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483302,
@@ -13217,7 +13550,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486834,
@@ -13241,7 +13574,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483303,
@@ -13265,7 +13598,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486835,
@@ -13283,7 +13616,7 @@
       "home_score": 74,
       "away_score": 66,
       "game_status_id": 2,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486881,
@@ -13307,7 +13640,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482451,
@@ -13331,7 +13664,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486781,
@@ -13355,7 +13688,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486838,
@@ -13379,7 +13712,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482496,
@@ -13400,7 +13733,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482498,
@@ -13424,7 +13757,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482500,
@@ -13448,7 +13781,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486840,
@@ -13472,7 +13805,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486863,
@@ -13496,7 +13829,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486903,
@@ -13520,7 +13853,7 @@
       "venue_zip": "6560",
       "venue_lat": "50.30616560000000000000",
       "venue_lng": "4.11760660000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482502,
@@ -13544,7 +13877,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486882,
@@ -13568,7 +13901,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482503,
@@ -13592,7 +13925,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454052,
@@ -13640,7 +13973,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454069,
@@ -13688,7 +14021,7 @@
       "venue_zip": "7181",
       "venue_lat": "50.56926340000000000000",
       "venue_lng": "4.27520770000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486783,
@@ -13712,7 +14045,7 @@
       "venue_zip": "7080",
       "venue_lat": "50.4138426",
       "venue_lng": "3.894334699999999",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486768,
@@ -13736,7 +14069,7 @@
       "venue_zip": "7021",
       "venue_lat": "50.46324410000000000000",
       "venue_lng": "4.05123340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485090,
@@ -13760,7 +14093,7 @@
       "venue_zip": "6043",
       "venue_lat": "50.44916640000000000000",
       "venue_lng": "4.47545650000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486075,
@@ -13784,7 +14117,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485091,
@@ -13808,7 +14141,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485497,
@@ -13832,7 +14165,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485203,
@@ -13856,7 +14189,7 @@
       "venue_zip": "6030",
       "venue_lat": "50.42674470000000000000",
       "venue_lng": "4.41490690000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485403,
@@ -13880,7 +14213,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485498,
@@ -13904,7 +14237,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485204,
@@ -13928,7 +14261,7 @@
       "venue_zip": "6030",
       "venue_lat": "50.42674470000000000000",
       "venue_lng": "4.41490690000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487024,
@@ -13949,7 +14282,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482537,
@@ -13973,7 +14306,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487119,
@@ -13997,7 +14330,7 @@
       "venue_zip": "7320",
       "venue_lat": "50.47638269999999000000",
       "venue_lng": "3.67024230000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486989,
@@ -14021,7 +14354,7 @@
       "venue_zip": "6238",
       "venue_lat": "50.50675680000000000000",
       "venue_lng": "4.38255870000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482538,
@@ -14045,7 +14378,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486916,
@@ -14069,7 +14402,7 @@
       "venue_zip": "7712",
       "venue_lat": "50.72138595581055",
       "venue_lng": "3.237605333328247",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484906,
@@ -14093,7 +14426,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483295,
@@ -14117,7 +14450,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454057,
@@ -14165,7 +14498,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486986,
@@ -14189,7 +14522,7 @@
       "venue_zip": "7973",
       "venue_lat": "50.50718700000000000000",
       "venue_lng": "3.71880230000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485404,
@@ -14204,14 +14537,16 @@
       "away_team_name": "PU14H Royal Eclairs Pont-De-Loup A",
       "home_team_short_name": "Olympic Mont Sur Marchienne",
       "away_team_short_name": "RE Pont-de-Loup A",
-      "game_status_id": 1,
+      "home_score": 0,
+      "away_score": 0,
+      "game_status_id": 2,
       "venue_name": "Hall Polyvalent Marcel Flandre",
       "venue_city": "Mont-sur-Marchienne",
       "venue_street": "Rue Napoléon Lejong 1",
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485405,
@@ -14226,14 +14561,16 @@
       "away_team_name": "RU21H BC Ransart Charleroi",
       "home_team_short_name": "Olympic Mont Sur Marchienne",
       "away_team_short_name": "BC Ransart Charleroi",
-      "game_status_id": 1,
+      "home_score": 61,
+      "away_score": 52,
+      "game_status_id": 2,
       "venue_name": "Hall Polyvalent Marcel Flandre",
       "venue_city": "Mont-sur-Marchienne",
       "venue_street": "Rue Napoléon Lejong 1",
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486921,
@@ -14248,14 +14585,16 @@
       "away_team_name": "RU21H Union Mons-Hainaut",
       "home_team_short_name": "JSE Enghien",
       "away_team_short_name": "Union Mons-Hainaut",
-      "game_status_id": 1,
+      "home_score": 77,
+      "away_score": 94,
+      "game_status_id": 2,
       "venue_name": "Salle Omnisports de Petit-Enghien",
       "venue_city": "Petit-Enghien",
       "venue_street": "Place, 10",
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487087,
@@ -14270,14 +14609,16 @@
       "away_team_name": "PU12HM JSE Enghien B",
       "home_team_short_name": "BC AMLL B",
       "away_team_short_name": "JSE Enghien B",
-      "game_status_id": 1,
+      "home_score": 0,
+      "away_score": 0,
+      "game_status_id": 2,
       "venue_name": "Salle Omnisports de Bouvy",
       "venue_city": "La Louvière",
       "venue_street": "Rue de Bouvy, 123",
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486922,
@@ -14292,14 +14633,16 @@
       "away_team_name": "RU18H Union Mons-Hainaut",
       "home_team_short_name": "JSE Enghien",
       "away_team_short_name": "Union Mons-Hainaut",
-      "game_status_id": 1,
+      "home_score": 0,
+      "away_score": 0,
+      "game_status_id": 2,
       "venue_name": "Salle Omnisports de Petit-Enghien",
       "venue_city": "Petit-Enghien",
       "venue_street": "Place, 10",
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487088,
@@ -14314,14 +14657,16 @@
       "away_team_name": "PU12HM JSE Enghien A",
       "home_team_short_name": "BC AMLL A",
       "away_team_short_name": "JSE Enghien A",
-      "game_status_id": 1,
+      "home_score": 0,
+      "away_score": 0,
+      "game_status_id": 2,
       "venue_name": "Salle Omnisports de Bouvy",
       "venue_city": "La Louvière",
       "venue_street": "Rue de Bouvy, 123",
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482512,
@@ -14336,14 +14681,16 @@
       "away_team_name": "RU14H JSE Enghien",
       "home_team_short_name": "Spirou Basket B",
       "away_team_short_name": "JSE Enghien",
-      "game_status_id": 1,
+      "home_score": 53,
+      "away_score": 101,
+      "game_status_id": 2,
       "venue_name": "Salle Pierre de Coubertin",
       "venue_city": "Jumet",
       "venue_street": "Sentier de l'Epée 35",
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486860,
@@ -14358,14 +14705,16 @@
       "away_team_name": "PU14H Alliance Flémalle A",
       "home_team_short_name": "Spirou Basket A",
       "away_team_short_name": "Alliance Flémalle A",
-      "game_status_id": 1,
+      "home_score": 62,
+      "away_score": 51,
+      "game_status_id": 2,
       "venue_name": "Salle Pierre de Coubertin",
       "venue_city": "Jumet",
       "venue_street": "Sentier de l'Epée 35",
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486901,
@@ -14380,14 +14729,40 @@
       "away_team_name": "PU14H BC Ransart Charleroi",
       "home_team_short_name": "Spirou Basket A",
       "away_team_short_name": "BC Ransart Charleroi",
-      "game_status_id": 1,
+      "home_score": 51,
+      "away_score": 44,
+      "game_status_id": 2,
       "venue_name": "Salle Pierre de Coubertin",
       "venue_city": "Jumet",
       "venue_street": "Sentier de l'Epée 35",
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487345,
+      "date": "2026-08-15",
+      "time": "14:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 50988,
+      "away_team_id": 50633,
+      "home_team_name": "RU16D Royal Eclairs Pont-De-Loup A",
+      "away_team_name": "RU16D Royal Murprotec Nivelles Basketball A",
+      "home_team_short_name": "RE Pont-de-Loup A",
+      "away_team_short_name": "Royal Nivelles Basketball A",
+      "home_score": 69,
+      "away_score": 71,
+      "game_status_id": 2,
+      "venue_name": "Salle Pierre de Coubertin",
+      "venue_city": "Jumet",
+      "venue_street": "Sentier de l'Epée 35",
+      "venue_zip": "6040",
+      "venue_lat": "50.44670440000000000000",
+      "venue_lng": "4.43886090000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 478715,
@@ -14402,14 +14777,16 @@
       "away_team_name": "RU18H BC Speedy Mont St Guibert",
       "home_team_short_name": "UBC Binche",
       "away_team_short_name": "Speedy MSG",
-      "game_status_id": 1,
+      "home_score": 62,
+      "away_score": 59,
+      "game_status_id": 2,
       "venue_name": " Salle DBM",
       "venue_city": "Binche",
       "venue_street": "Rue Du Moulin Blanc ",
       "venue_zip": "7130",
       "venue_lat": "50.41707510000000000000",
       "venue_lng": "4.16636460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487089,
@@ -14424,14 +14801,16 @@
       "away_team_name": "PU16H Basketball Brunehaut",
       "home_team_short_name": "BC AMLL A",
       "away_team_short_name": "Basketball Brunehaut",
-      "game_status_id": 1,
+      "home_score": 56,
+      "away_score": 44,
+      "game_status_id": 2,
       "venue_name": "Salle Omnisports de Bouvy",
       "venue_city": "La Louvière",
       "venue_street": "Rue de Bouvy, 123",
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485702,
@@ -14446,14 +14825,16 @@
       "away_team_name": "RU18H Olympic Mont Sur Marchienne",
       "home_team_short_name": "RE Pont-de-Loup",
       "away_team_short_name": "Olympic Mont Sur Marchienne",
-      "game_status_id": 1,
+      "home_score": 63,
+      "away_score": 68,
+      "game_status_id": 2,
       "venue_name": "Sambrexpo",
       "venue_city": "Aiseau-Presles",
       "venue_street": "rue JF Kennedy 150/1",
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486809,
@@ -14468,8 +14849,10 @@
       "away_team_name": "PU21H RBC Erpent A",
       "home_team_short_name": "Spirou Basket",
       "away_team_short_name": "RBC Erpent A",
-      "game_status_id": 1,
-      "match_type": "amical"
+      "home_score": 98,
+      "away_score": 50,
+      "game_status_id": 2,
+      "match_type": "championnat"
     },
     {
       "id": 454135,
@@ -14484,7 +14867,9 @@
       "away_team_name": "P1D Jeunesse Sportive Soignies A",
       "home_team_short_name": "UBC Binche",
       "away_team_short_name": "JS Soignies A",
-      "game_status_id": 1,
+      "home_score": 40,
+      "away_score": 82,
+      "game_status_id": 2,
       "venue_name": " Salle DBM",
       "venue_city": "Binche",
       "venue_street": "Rue Du Moulin Blanc ",
@@ -14506,14 +14891,16 @@
       "away_team_name": "PU19D Spirou Basket A",
       "home_team_short_name": "RBBC Brainois",
       "away_team_short_name": "Spirou Basket A",
-      "game_status_id": 1,
+      "home_score": 37,
+      "away_score": 57,
+      "game_status_id": 2,
       "venue_name": "Salle Balad’Arena",
       "venue_city": "Braine-le-Comte",
       "venue_street": "Rue des Postes 101",
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487090,
@@ -14535,7 +14922,7 @@
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454129,
@@ -14645,7 +15032,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 479038,
@@ -14667,7 +15054,7 @@
       "venue_zip": "7181",
       "venue_lat": "50.56926340000000000000",
       "venue_lng": "4.27520770000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486769,
@@ -14689,7 +15076,7 @@
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487091,
@@ -14711,7 +15098,7 @@
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454103,
@@ -14752,7 +15139,7 @@
       "venue_zip": "7972",
       "venue_lat": "50.56302050000000000000",
       "venue_lng": "3.67260290000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487092,
@@ -14774,7 +15161,7 @@
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485005,
@@ -14796,7 +15183,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485703,
@@ -14818,7 +15205,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487050,
@@ -14840,7 +15227,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487051,
@@ -14862,7 +15249,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482414,
@@ -14884,7 +15271,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482437,
@@ -14906,7 +15293,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482506,
@@ -14928,7 +15315,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483553,
@@ -14950,7 +15337,7 @@
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454043,
@@ -15062,7 +15449,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483546,
@@ -15084,7 +15471,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485735,
@@ -15106,7 +15493,7 @@
       "venue_zip": "6250",
       "venue_lat": null,
       "venue_lng": null,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486772,
@@ -15128,7 +15515,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486861,
@@ -15150,7 +15537,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486864,
@@ -15172,7 +15559,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486923,
@@ -15191,7 +15578,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486985,
@@ -15213,7 +15600,7 @@
       "venue_zip": "7973",
       "venue_lat": "50.50718700000000000000",
       "venue_lng": "3.71880230000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487053,
@@ -15235,7 +15622,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482445,
@@ -15257,7 +15644,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454117,
@@ -15282,28 +15669,6 @@
       "match_type": "coupe"
     },
     {
-      "id": 482508,
-      "date": "2026-08-16",
-      "time": "13:00:00",
-      "serie_id": 6486,
-      "serie_name": "Amicaux Jeunes",
-      "serie_short_name": "Amicaux Jeunes",
-      "home_team_id": 50988,
-      "away_team_id": 50633,
-      "home_team_name": "RU16D Royal Eclairs Pont-De-Loup A",
-      "away_team_name": "RU16D Royal Murprotec Nivelles Basketball A",
-      "home_team_short_name": "RE Pont-de-Loup A",
-      "away_team_short_name": "Royal Nivelles Basketball A",
-      "game_status_id": 1,
-      "venue_name": "Salle Pierre de Coubertin",
-      "venue_city": "Jumet",
-      "venue_street": "Sentier de l'Epée 35",
-      "venue_zip": "6040",
-      "venue_lat": "50.44670440000000000000",
-      "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
-    },
-    {
       "id": 486924,
       "date": "2026-08-16",
       "time": "13:00:00",
@@ -15323,7 +15688,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487307,
@@ -15345,7 +15710,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486782,
@@ -15367,7 +15732,7 @@
       "venue_zip": "7080",
       "venue_lat": "50.4138426",
       "venue_lng": "3.894334699999999",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454147,
@@ -15411,7 +15776,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482446,
@@ -15433,29 +15798,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
-    },
-    {
-      "id": 483544,
-      "date": "2026-08-16",
-      "time": "14:00:00",
-      "serie_id": 6486,
-      "serie_name": "Amicaux Jeunes",
-      "serie_short_name": "Amicaux Jeunes",
-      "home_team_id": 50995,
-      "away_team_id": 50632,
-      "home_team_name": "RU14D Royal Eclairs Pont-De-Loup A",
-      "away_team_name": "RU14D Royal Murprotec Nivelles Basketball A",
-      "home_team_short_name": "RE Pont-de-Loup A",
-      "away_team_short_name": "Royal Nivelles Basketball A",
-      "game_status_id": 1,
-      "venue_name": "Salle Pierre de Coubertin",
-      "venue_city": "Jumet",
-      "venue_street": "Sentier de l'Epée 35",
-      "venue_zip": "6040",
-      "venue_lat": "50.44670440000000000000",
-      "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454115,
@@ -15543,7 +15886,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482535,
@@ -15565,7 +15908,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487093,
@@ -15587,7 +15930,7 @@
       "venue_zip": "7100",
       "venue_lat": "50.47123310000000000000",
       "venue_lng": "4.18245710000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454097,
@@ -15631,7 +15974,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482448,
@@ -15653,7 +15996,7 @@
       "venue_zip": "7130",
       "venue_lat": "50.41707510000000000000",
       "venue_lng": "4.16636460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482509,
@@ -15675,7 +16018,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454068,
@@ -15741,7 +16084,7 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454089,
@@ -15785,7 +16128,29 @@
       "venue_zip": "7380",
       "venue_lat": "50.4435504",
       "venue_lng": "3.8590958",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487336,
+      "date": "2026-08-19",
+      "time": "19:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 52341,
+      "away_team_id": 52969,
+      "home_team_name": "PU18H Union BC Quaregnon",
+      "away_team_name": "PU18H Aste Kain",
+      "home_team_short_name": "Union BC Quaregnon",
+      "away_team_short_name": "Aste Kain",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 486917,
@@ -15807,7 +16172,7 @@
       "venue_zip": "7712",
       "venue_lat": "50.72138595581055",
       "venue_lng": "3.237605333328247",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487122,
@@ -15829,7 +16194,7 @@
       "venue_zip": "6560",
       "venue_lat": "50.30616560000000000000",
       "venue_lng": "4.11760660000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486942,
@@ -15851,7 +16216,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483297,
@@ -15873,7 +16238,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482539,
@@ -15895,7 +16260,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486787,
@@ -15917,7 +16282,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454056,
@@ -16005,7 +16370,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485401,
@@ -16024,7 +16389,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485402,
@@ -16046,7 +16411,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486991,
@@ -16068,7 +16433,7 @@
       "venue_zip": "7134",
       "venue_lat": "50.41360700000000000000",
       "venue_lng": "4.19533870000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487054,
@@ -16090,7 +16455,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486763,
@@ -16112,7 +16477,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485736,
@@ -16134,7 +16499,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486992,
@@ -16156,7 +16521,7 @@
       "venue_zip": "7134",
       "venue_lat": "50.41360700000000000000",
       "venue_lng": "4.19533870000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486764,
@@ -16178,7 +16543,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485092,
@@ -16200,7 +16565,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485737,
@@ -16222,7 +16587,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482513,
@@ -16244,7 +16609,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486993,
@@ -16266,7 +16631,7 @@
       "venue_zip": "7134",
       "venue_lat": "50.41360700000000000000",
       "venue_lng": "4.19533870000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482534,
@@ -16288,7 +16653,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484908,
@@ -16310,7 +16675,7 @@
       "venue_zip": "7021",
       "venue_lat": "50.46324410000000000000",
       "venue_lng": "4.05123340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486765,
@@ -16332,7 +16697,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486943,
@@ -16354,7 +16719,29 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487337,
+      "date": "2026-08-22",
+      "time": "15:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 52345,
+      "away_team_id": 52860,
+      "home_team_name": "PU14H Union BC Quaregnon B",
+      "away_team_name": "PU14H Royal Blaregnies BC",
+      "home_team_short_name": "Union BC Quaregnon B",
+      "away_team_short_name": "Royal Blaregnies BC",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 482514,
@@ -16376,7 +16763,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487022,
@@ -16398,7 +16785,7 @@
       "venue_zip": "7330",
       "venue_lat": "50.44559450000000000000",
       "venue_lng": "3.81842850000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454088,
@@ -16442,7 +16829,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486880,
@@ -16464,7 +16851,7 @@
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486944,
@@ -16486,7 +16873,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486945,
@@ -16508,7 +16895,29 @@
       "venue_zip": "7021",
       "venue_lat": "50.46324410000000000000",
       "venue_lng": "4.05123340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487338,
+      "date": "2026-08-22",
+      "time": "17:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 52343,
+      "away_team_id": 52623,
+      "home_team_name": "PU16H Union BC Quaregnon B",
+      "away_team_name": "PU16H B.C. L'9 Flénu-Frameries",
+      "home_team_short_name": "Union BC Quaregnon B",
+      "away_team_short_name": "B.C. L'9 Flénu-Frameries",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 454096,
@@ -16596,7 +17005,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454134,
@@ -16659,7 +17068,7 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454082,
@@ -16859,7 +17268,7 @@
       "venue_zip": "7134",
       "venue_lat": "50.41360700000000000000",
       "venue_lng": "4.19533870000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454140,
@@ -16925,7 +17334,7 @@
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486767,
@@ -16947,7 +17356,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486810,
@@ -16969,7 +17378,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486848,
@@ -16991,7 +17400,29 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487339,
+      "date": "2026-08-23",
+      "time": "10:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 51624,
+      "away_team_id": 52621,
+      "home_team_name": "RU21H Union BC Quaregnon",
+      "away_team_name": "PU21H B.C. L'9 Flénu-Frameries",
+      "home_team_short_name": "Union BC Quaregnon",
+      "away_team_short_name": "B.C. L'9 Flénu-Frameries",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 482515,
@@ -17013,7 +17444,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485739,
@@ -17035,7 +17466,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486773,
@@ -17057,7 +17488,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486784,
@@ -17079,7 +17510,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486811,
@@ -17101,7 +17532,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487018,
@@ -17120,7 +17551,7 @@
       "venue_zip": "7610",
       "venue_lat": "50.55298835559081",
       "venue_lng": "3.3060749260399573",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482516,
@@ -17142,7 +17573,29 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487340,
+      "date": "2026-08-23",
+      "time": "12:00:00",
+      "serie_id": 6485,
+      "serie_name": "Amicaux Seniors",
+      "serie_short_name": "Amicaux Seniors",
+      "home_team_id": 51918,
+      "away_team_id": 51978,
+      "home_team_name": "P3H Union BC Quaregnon D",
+      "away_team_name": "P3H BBC Tournai A",
+      "home_team_short_name": "Union BC Quaregnon D",
+      "away_team_short_name": "BBC Tournai A",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 486774,
@@ -17164,7 +17617,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486785,
@@ -17186,7 +17639,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487057,
@@ -17208,7 +17661,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482519,
@@ -17230,7 +17683,29 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487341,
+      "date": "2026-08-23",
+      "time": "14:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 52341,
+      "away_team_id": 52051,
+      "home_team_name": "PU18H Union BC Quaregnon",
+      "away_team_name": "PU18H Jeunesse Sportive Soignies",
+      "home_team_short_name": "Union BC Quaregnon",
+      "away_team_short_name": "JS Soignies",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 454048,
@@ -17318,7 +17793,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487025,
@@ -17337,7 +17812,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487094,
@@ -17359,7 +17834,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487121,
@@ -17381,7 +17856,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454158,
@@ -17447,7 +17922,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454112,
@@ -17470,6 +17945,28 @@
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
       "match_type": "coupe"
+    },
+    {
+      "id": 487342,
+      "date": "2026-08-23",
+      "time": "19:00:00",
+      "serie_id": 6485,
+      "serie_name": "Amicaux Seniors",
+      "serie_short_name": "Amicaux Seniors",
+      "home_team_id": 51628,
+      "away_team_id": 51543,
+      "home_team_name": "P2H Union BC Quaregnon B",
+      "away_team_name": "P3H Bxl360basketball A",
+      "home_team_short_name": "Union BC Quaregnon B",
+      "away_team_short_name": "Bxl360 A",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 454139,
@@ -17535,7 +18032,7 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454049,
@@ -17576,7 +18073,7 @@
       "venue_zip": "7012",
       "venue_lat": "50.45063010000000000000",
       "venue_lng": "3.87543890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483549,
@@ -17598,7 +18095,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454074,
@@ -17664,7 +18161,7 @@
       "venue_zip": "7973",
       "venue_lat": "50.50718700000000000000",
       "venue_lng": "3.71880230000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454060,
@@ -17730,7 +18227,7 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483299,
@@ -17752,7 +18249,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454076,
@@ -17796,7 +18293,7 @@
       "venue_zip": "7973",
       "venue_lat": "50.50718700000000000000",
       "venue_lng": "3.71880230000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485407,
@@ -17818,7 +18315,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487315,
@@ -17840,7 +18337,29 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487348,
+      "date": "2026-08-29",
+      "time": "09:00:00",
+      "serie_id": 6487,
+      "serie_name": "Amicaux U12",
+      "serie_short_name": "Amicaux U12",
+      "home_team_id": 50694,
+      "away_team_id": 50692,
+      "home_team_name": "PU12HM Groupe Gobert Basket Club Colfontaine A",
+      "away_team_name": "PU12HM Groupe Gobert Basket Club Colfontaine B",
+      "home_team_short_name": "GGBC Colfontaine A",
+      "away_team_short_name": "GGBC Colfontaine B",
+      "game_status_id": 1,
+      "venue_name": "Complexe Sportif Achille Delattre ",
+      "venue_city": "Colfontaine",
+      "venue_street": "Sentier de Liernes, 100",
+      "venue_zip": "7340",
+      "venue_lat": "50.40433710000000000000",
+      "venue_lng": "3.85954860000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 486941,
@@ -17862,7 +18381,7 @@
       "venue_zip": "7711",
       "venue_lat": "50.7301142",
       "venue_lng": "3.3005857",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486900,
@@ -17884,7 +18403,7 @@
       "venue_zip": "7140",
       "venue_lat": "50.45907790000000000000",
       "venue_lng": "4.24595260000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483551,
@@ -17906,7 +18425,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485408,
@@ -17928,7 +18447,7 @@
       "venue_zip": "6032",
       "venue_lat": "50.39350960000000000000",
       "venue_lng": "4.41219240000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487055,
@@ -17950,7 +18469,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487316,
@@ -17972,7 +18491,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483304,
@@ -17994,7 +18513,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483305,
@@ -18013,7 +18532,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484904,
@@ -18035,7 +18554,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 465607,
@@ -18101,7 +18620,7 @@
       "venue_zip": "7090",
       "venue_lat": "50.60872100000000000000",
       "venue_lng": "4.12957460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487056,
@@ -18123,7 +18642,7 @@
       "venue_zip": "6183",
       "venue_lat": "50.4643406",
       "venue_lng": "4.3383702",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487317,
@@ -18145,7 +18664,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482523,
@@ -18167,7 +18686,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483306,
@@ -18186,7 +18705,7 @@
       "venue_zip": "7540",
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482524,
@@ -18208,7 +18727,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482525,
@@ -18227,7 +18746,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482526,
@@ -18246,7 +18765,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486862,
@@ -18268,7 +18787,7 @@
       "venue_zip": "7021",
       "venue_lat": "50.46324410000000000000",
       "venue_lng": "4.05123340000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486878,
@@ -18290,7 +18809,7 @@
       "venue_zip": "7620",
       "venue_lat": "50.51464300000000000000",
       "venue_lng": "3.41876590000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484905,
@@ -18312,7 +18831,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 464189,
@@ -18378,7 +18897,7 @@
       "venue_zip": "7130",
       "venue_lat": "50.41707510000000000000",
       "venue_lng": "4.16636460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485006,
@@ -18400,7 +18919,7 @@
       "venue_zip": "7340",
       "venue_lat": "50.40433710000000000000",
       "venue_lng": "3.85954860000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486918,
@@ -18422,7 +18941,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487318,
@@ -18444,7 +18963,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482527,
@@ -18466,7 +18985,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482528,
@@ -18485,7 +19004,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483298,
@@ -18507,7 +19026,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484902,
@@ -18520,7 +19039,7 @@
       "home_team_name": "RU16D Royal Eclairs Pont-De-Loup A",
       "home_team_short_name": "RE Pont-de-Loup A",
       "game_status_id": 1,
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485937,
@@ -18542,7 +19061,7 @@
       "venue_zip": "7190",
       "venue_lat": "50.56864900000000000000",
       "venue_lng": "4.17177370000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454137,
@@ -18586,7 +19105,7 @@
       "venue_zip": "7130",
       "venue_lat": "50.41707510000000000000",
       "venue_lng": "4.16636460000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483413,
@@ -18630,7 +19149,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486775,
@@ -18652,7 +19171,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482530,
@@ -18671,7 +19190,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 482531,
@@ -18690,7 +19209,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 483300,
@@ -18712,7 +19231,7 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454119,
@@ -18888,7 +19407,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487319,
@@ -18910,7 +19429,7 @@
       "venue_zip": "7850",
       "venue_lat": "50.68816270000001",
       "venue_lng": "4.0818891",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454132,
@@ -18998,7 +19517,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 484903,
@@ -19020,7 +19539,29 @@
       "venue_zip": "7810",
       "venue_lat": "50.61594520000000000000",
       "venue_lng": "3.80441350000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
+    },
+    {
+      "id": 487349,
+      "date": "2026-08-29",
+      "time": "20:30:00",
+      "serie_id": 6485,
+      "serie_name": "Amicaux Seniors",
+      "serie_short_name": "Amicaux Seniors",
+      "home_team_id": 51226,
+      "away_team_id": 50950,
+      "home_team_name": "P3H Spirou Basket C",
+      "away_team_name": "P4H Royal Eclairs Pont-De-Loup E",
+      "home_team_short_name": "Spirou Basket C",
+      "away_team_short_name": "RE Pont-de-Loup E",
+      "game_status_id": 1,
+      "venue_name": "Salle Pierre de Coubertin",
+      "venue_city": "Jumet",
+      "venue_street": "Sentier de l'Epée 35",
+      "venue_zip": "6040",
+      "venue_lat": "50.44670440000000000000",
+      "venue_lng": "4.43886090000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 454071,
@@ -19064,7 +19605,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486883,
@@ -19086,7 +19627,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486925,
@@ -19108,7 +19649,7 @@
       "venue_zip": "6043",
       "venue_lat": "50.44916640000000000000",
       "venue_lng": "4.47545650000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486754,
@@ -19130,7 +19671,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454148,
@@ -19196,7 +19737,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485740,
@@ -19218,7 +19759,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486778,
@@ -19240,7 +19781,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486877,
@@ -19262,7 +19803,7 @@
       "venue_zip": "7390",
       "venue_lat": "50.44251200000000000000",
       "venue_lng": "3.84081170000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486919,
@@ -19284,7 +19825,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487308,
@@ -19306,7 +19847,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486755,
@@ -19328,7 +19869,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454086,
@@ -19372,7 +19913,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454111,
@@ -19457,7 +19998,7 @@
       "venue_zip": "7730",
       "venue_lat": "50.68353740000000000000",
       "venue_lng": "3.31782440000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486076,
@@ -19479,7 +20020,7 @@
       "venue_zip": "6110",
       "venue_lat": "50.37841120000000000000",
       "venue_lng": "4.36807890000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486757,
@@ -19501,7 +20042,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487019,
@@ -19523,7 +20064,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486758,
@@ -19545,7 +20086,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485399,
@@ -19567,7 +20108,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486759,
@@ -19589,7 +20130,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454046,
@@ -19718,7 +20259,7 @@
       "venue_zip": "7730",
       "venue_lat": "50.68353740000000000000",
       "venue_lng": "3.31782440000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 485804,
@@ -19740,7 +20281,7 @@
       "venue_zip": "6250",
       "venue_lat": "50.412353515625",
       "venue_lng": "4.5533342361450195",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486779,
@@ -19762,7 +20303,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487020,
@@ -19781,7 +20322,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486760,
@@ -19803,7 +20344,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 486761,
@@ -19825,7 +20366,7 @@
       "venue_zip": "7060",
       "venue_lat": "50.57199360000000000000",
       "venue_lng": "4.08525270000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 454040,
@@ -19913,7 +20454,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 487021,
@@ -19932,7 +20473,7 @@
       "venue_zip": "7536",
       "venue_lat": "50.59270580000000000000",
       "venue_lng": "3.42778630000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 462984,
@@ -29700,7 +30241,7 @@
       "venue_zip": "6224",
       "venue_lat": "50.4814",
       "venue_lng": "4.5488",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 468171,
@@ -30140,7 +30681,7 @@
       "venue_zip": "6040",
       "venue_lat": "50.44670440000000000000",
       "venue_lng": "4.43886090000000000000",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 463805,
@@ -37892,7 +38433,7 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
-      "match_type": "amical"
+      "match_type": "championnat"
     },
     {
       "id": 463074,

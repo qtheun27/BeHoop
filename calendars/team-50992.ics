@@ -9,10 +9,10 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486833@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260808T090000
 DTEND;TZID=Europe/Brussels:20260808T110000
-SUMMARY:🤝 RU14H JSE Enghien vs RU14H Royal Eclairs Pont-De-Loup
+SUMMARY:🏀 RU14H JSE Enghien vs RU14H Royal Eclairs Pont-De-Loup
 LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
  ien
 GEO:50.68816270000001;4.0818891
@@ -23,7 +23,7 @@ DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 70 - 56
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485889@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260823T170000
 DTEND;TZID=Europe/Brussels:20260823T190000
 SUMMARY:🏆 RU14H Royal Eclairs Pont-De-Loup vs RU14H Union Mons-Hainaut
@@ -37,10 +37,10 @@ DESCRIPTION:Compétition : Coupe AWBB U14 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485407@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260829T090000
 DTEND;TZID=Europe/Brussels:20260829T110000
-SUMMARY:🤝 RU14H Olympic Mont Sur Marchienne vs RU14H Royal Eclairs Pont-
+SUMMARY:🏀 RU14H Olympic Mont Sur Marchienne vs RU14H Royal Eclairs Pont-
  De-Loup
 LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
  ont-sur-Marchienne

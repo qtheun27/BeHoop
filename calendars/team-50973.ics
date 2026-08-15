@@ -9,25 +9,25 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486835@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260808T130000
 DTEND;TZID=Europe/Brussels:20260808T150000
-SUMMARY:🤝 RU18H JSE Enghien vs RU18H Royal Eclairs Pont-De-Loup
+SUMMARY:🏀 RU18H JSE Enghien vs RU18H Royal Eclairs Pont-De-Loup
 DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 74 - 66
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485702@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260815T154500
 DTEND;TZID=Europe/Brussels:20260815T174500
-SUMMARY:🤝 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Sur Mar
+SUMMARY:🏀 RU18H Royal Eclairs Pont-De-Loup vs RU18H Olympic Mont Sur Mar
  chienne
 LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250\, Aiseau-Presles
-DESCRIPTION:Compétition : Amicaux Jeunes
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 63 - 68
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486095@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260821T200000
 DTEND;TZID=Europe/Brussels:20260821T220000
 SUMMARY:🏆 RU18H Esneux St-Louis United vs RU18H Royal Eclairs Pont-De-Lo
@@ -37,10 +37,10 @@ DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485408@basket-awbb
-DTSTAMP:20260815T062143Z
+DTSTAMP:20260815T181608Z
 DTSTART;TZID=Europe/Brussels:20260829T110000
 DTEND;TZID=Europe/Brussels:20260829T130000
-SUMMARY:🤝 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs Pont-
+SUMMARY:🏀 RU18H Olympic Mont Sur Marchienne vs RU18H Royal Eclairs Pont-
  De-Loup
 LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
  ont-sur-Marchienne
