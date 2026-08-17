@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486108@basket-awbb
-DTSTAMP:20260817T063403Z
+DTSTAMP:20260817T182447Z
 DTSTART;TZID=Europe/Brussels:20260822T160000
 DTEND;TZID=Europe/Brussels:20260822T180000
 SUMMARY:🏆 RU18H BC Speedy Mont St Guibert vs RU18H Groupe Gobert Basket 
@@ -19,10 +19,10 @@ DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-483551@basket-awbb
-DTSTAMP:20260817T063403Z
+DTSTAMP:20260817T182447Z
 DTSTART;TZID=Europe/Brussels:20260829T110000
 DTEND;TZID=Europe/Brussels:20260829T130000
-SUMMARY:🏀 RU18H Groupe Gobert Basket Club Colfontaine A vs RU18H Boussu 
+SUMMARY:🤝 RU18H Groupe Gobert Basket Club Colfontaine A vs RU18H Boussu 
  Saint-Ghislain United
 LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
  40\, Colfontaine
