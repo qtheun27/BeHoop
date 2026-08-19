@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T18:23:55.889428Z",
+  "generated_at": "2026-08-19T06:26:47.833242Z",
   "organization": {
     "metadata": [],
     "reference": "HA",
@@ -20566,7 +20566,9 @@
       "away_team_name": "P3H BC Mons Capitale B",
       "home_team_short_name": "BCJHP Quiévrain",
       "away_team_short_name": "BC Mons Capitale B",
-      "game_status_id": 1,
+      "home_score": 51,
+      "away_score": 62,
+      "game_status_id": 2,
       "venue_name": "Centre d'animation de Quievrain",
       "venue_city": "Quiévrain",
       "venue_street": "Rue de L'Abattoir  2",
