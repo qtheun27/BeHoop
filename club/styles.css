@@ -1,0 +1,161 @@
+/* ============================================================
+   Système de design — Espace Club Basket Hainaut
+   Mobile & tablette d'abord. Une seule source de vérité pour
+   les couleurs, espacements, composants — importé par toutes
+   les pages de club/.
+   ============================================================ */
+
+:root {
+  --primary: #0b5cab;
+  --primary-600: #084a8a;
+  --primary-tint: #eaf2fc;
+  --accent: #d32f2f;
+  --success: #1f9d55;
+  --success-tint: #e8f6ee;
+  --warning: #b45309;
+  --warning-tint: #fff4e5;
+
+  --bg: #f2f4f8;
+  --surface: #ffffff;
+  --surface-2: #f6f8fb;
+  --text: #14181f;
+  --text-muted: #667085;
+  --border: #e5e8ee;
+  --border-soft: #eef1f5;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 10px 30px -10px rgba(16, 24, 40, 0.22);
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-tint: #12233a;
+    --success-tint: #103822;
+    --warning-tint: #3a2a0d;
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface-2: #1c222b;
+    --text: #e6edf3;
+    --text-muted: #8b96a5;
+    --border: #2a313c;
+    --border-soft: #1f242d;
+    --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+  }
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding-bottom: calc(28px + var(--safe-bottom));
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.container { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+.container-sm { max-width: 420px; margin: 0 auto; padding: 0 16px; }
+
+/* ---- Barre supérieure ---- */
+.app-bar {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; gap: 12px;
+  padding: calc(12px + var(--safe-top)) 16px 12px;
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.app-bar .retour {
+  width: 34px; height: 34px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--surface-2); color: var(--text); text-decoration: none; font-size: 16px;
+}
+.app-bar .titre { font-weight: 800; font-size: 17px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-bar .titre small { display: block; font-weight: 500; font-size: 11.5px; color: var(--text-muted); }
+
+/* ---- Avatar ---- */
+.avatar {
+  border-radius: 50%; object-fit: cover; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 800; color: white; overflow: hidden;
+}
+
+/* ---- Cartes ---- */
+.carte {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 18px; margin-bottom: 14px;
+}
+.carte-titre { font-weight: 800; font-size: 15px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+.carte-desc { color: var(--text-muted); font-size: 13px; margin: 0 0 12px; line-height: 1.5; }
+
+/* ---- Formulaires ---- */
+label.champ-label { display: block; font-size: 12px; font-weight: 700; color: var(--text-muted); margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.02em; }
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"],
+input[type="number"], select, textarea {
+  width: 100%; padding: 11px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border);
+  font-size: 15px; font-family: inherit; background: var(--surface); color: var(--text);
+}
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+.grille-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* ---- Boutons ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 18px; border-radius: var(--radius-sm); border: none;
+  font-weight: 700; font-size: 14.5px; cursor: pointer; font-family: inherit;
+  transition: transform 0.08s ease;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:disabled { background: #b7c3d6; }
+.btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+.btn-ghost { background: none; color: var(--text-muted); font-weight: 600; text-decoration: underline; padding: 6px 4px; }
+.btn-danger-ghost { background: none; color: var(--accent); font-weight: 600; padding: 6px 4px; }
+.btn-block { width: 100%; }
+.btn-sm { padding: 8px 14px; font-size: 13px; }
+
+/* ---- Badges ---- */
+.badge { display: inline-flex; align-items: center; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
+.badge-primary { background: var(--primary-tint); color: var(--primary); }
+.badge-success { background: var(--success-tint); color: var(--success); }
+.badge-warning { background: var(--warning-tint); color: var(--warning); }
+.badge-muted { background: var(--surface-2); color: var(--text-muted); }
+
+/* ---- Rangées de liste (membres, invitations...) ---- */
+.rangee {
+  display: flex; align-items: center; gap: 12px; padding: 11px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.rangee:last-child { border-bottom: none; }
+.rangee .nom { font-weight: 700; font-size: 14px; }
+.rangee .sous-texte { font-size: 12px; color: var(--text-muted); }
+.rangee .action { margin-left: auto; flex-shrink: 0; }
+
+/* ---- Messages ---- */
+.msg { font-size: 13px; margin-top: 10px; padding: 10px 13px; border-radius: var(--radius-sm); display: none; line-height: 1.4; }
+.msg.ok { background: var(--success-tint); color: var(--success); display: block; }
+.msg.err { background: #fdecea; color: #b3261e; display: block; }
+
+/* ---- États vides / chargement ---- */
+.vide { color: var(--text-muted); font-size: 13.5px; padding: 4px 0; line-height: 1.6; }
+.skel { background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 37%, var(--surface-2) 63%); background-size: 400% 100%; animation: skel-pulse 1.4s ease infinite; border-radius: var(--radius-sm); }
+@keyframes skel-pulse { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* ---- Onglets segmentés ---- */
+.segmente { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 4px; margin-bottom: 14px; }
+.segmente button { flex: 1; padding: 9px; background: none; border: none; border-radius: 8px; font-size: 13.5px; font-weight: 700; color: var(--text-muted); cursor: pointer; font-family: inherit; }
+.segmente button.actif { background: var(--primary); color: white; }
+
+/* ---- Puces horizontales scrollables ---- */
+.puces { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+.puces::-webkit-scrollbar { display: none; }
+.puce { padding: 9px 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; scroll-snap-align: start; }
+.puce.actif { background: var(--primary); color: white; border-color: var(--primary); }
+
+footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; padding: 20px 14px; }

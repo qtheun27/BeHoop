@@ -2,56 +2,64 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Tableau de bord — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px 16px; }
-  .wrap { max-width: 480px; margin: auto; }
-  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-bottom: 14px; }
-  .role-badge { display: inline-block; background: var(--primary); color: white; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-top: 6px; }
-  button { padding: 10px 16px; border-radius: 9px; border: 1px solid var(--border); background: white; font-weight: 600; cursor: pointer; }
-  .muted { color: var(--muted); font-size: 13.5px; }
+  .profil-hero { text-align: center; padding: 8px 0 4px; }
+  .profil-hero .avatar { margin: 0 auto 12px; box-shadow: var(--shadow-md); }
+  .profil-hero h1 { font-size: 19px; margin: 0 0 6px; }
+  .profil-hero .email { color: var(--text-muted); font-size: 13px; }
+  .lien-action {
+    display: flex; align-items: center; gap: 12px; padding: 14px; margin-top: 10px;
+    background: var(--surface-2); border-radius: var(--radius-md); text-decoration: none; color: var(--text);
+  }
+  .lien-action .icone { font-size: 20px; }
+  .lien-action .texte { flex: 1; font-weight: 700; font-size: 14px; }
+  .lien-action .fleche { color: var(--text-muted); }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="carte" id="carte-profil">Chargement…</div>
+<div class="app-bar">
+  <span class="titre">🏀 Espace Club</span>
+</div>
+<div class="container" style="padding-top:18px;">
+  <div class="carte profil-hero" id="carte-profil">
+    <div class="skel" style="width:76px;height:76px;border-radius:50%;margin:0 auto 12px;"></div>
+    <div class="skel" style="width:140px;height:16px;margin:0 auto 8px;"></div>
+    <div class="skel" style="width:100px;height:12px;margin:0 auto;"></div>
+  </div>
+
+  <div class="carte" id="carte-liens" style="display:none;">
+    <div class="carte-titre">Mon espace</div>
+  </div>
+
   <div class="carte">
-    <p class="muted">Le reste de l'interface (gestion des coachs/équipes/joueurs/parents pour les admins, calendrier d'entraînements, statistiques...) arrive dans les prochaines étapes, propre à chaque rôle.</p>
-    <button id="btn-deconnexion">Se déconnecter</button>
+    <button class="btn btn-secondary btn-block" id="btn-deconnexion">Se déconnecter</button>
   </div>
 </div>
+<footer class="pied">Basket Hainaut — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const LABEL_ROLE = {
-  super_admin: 'Super administrateur',
-  club_admin: 'Administrateur de club',
-  coach: 'Coach',
-  player: 'Joueur',
-  parent: 'Parent',
-};
+const LABEL_ROLE = { super_admin: 'Super administrateur', club_admin: 'Administrateur de club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
+const ROUTE_ROLE = { super_admin: './admin.html', club_admin: './mon-club.html', coach: './coach.html', player: './joueur.html', parent: './parent.html' };
+const LABEL_LIEN = { super_admin: 'Console super admin', club_admin: 'Gérer mon club', coach: 'Mon équipe (entraînements, stats)', player: 'Mon équipe', parent: 'Mes enfants' };
+const ICONE_LIEN = { super_admin: '🛠️', club_admin: '🏀', coach: '🏀', player: '🏀', parent: '👨‍👩‍👧' };
 
 onAuthStateChanged(auth, async (user) => {
-  if (!user) {
-    window.location.href = './index.html';
-    return;
-  }
+  if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
-  if (!snap.exists()) {
-    window.location.href = './index.html';
-    return;
-  }
+  if (!snap.exists()) { window.location.href = './index.html'; return; }
   const profil = snap.data();
 
   let nomClub = profil.club_name || null;
@@ -61,23 +69,37 @@ onAuthStateChanged(auth, async (user) => {
       const donnees = await res.json();
       const club = (donnees.clubs || []).find(c => String(c.id) === String(profil.club_id));
       nomClub = club ? club.name : null;
-    } catch (e) { /* pas grave, on retombe sur l'id */ }
+    } catch (e) { /* pas grave */ }
   }
-  const ligneClub = profil.club_id ? ' · ' + (nomClub || 'club ' + profil.club_id) : '';
+  const ligneClub = profil.club_id ? (nomClub || 'club ' + profil.club_id) : '';
 
-  const ROUTE_ROLE = { super_admin: './admin.html', club_admin: './mon-club.html', coach: './coach.html', player: './joueur.html', parent: './parent.html' };
-  const LABEL_LIEN = { super_admin: '🛠️ Ouvrir la console super admin', club_admin: '🏀 Gérer mon club', coach: '🏀 Mon équipe (entraînements, stats)', player: '🏀 Mon équipe', parent: '👨‍👩‍👧 Mes enfants' };
-  const lienConsole = ROUTE_ROLE[profil.role]
-    ? `<a href="${ROUTE_ROLE[profil.role]}" style="display:inline-block;margin-top:12px;color:var(--primary);font-weight:700;font-size:13.5px;text-decoration:none;">${LABEL_LIEN[profil.role]} →</a>`
-    : '';
   document.getElementById('carte-profil').innerHTML = `
-    <div>Connecté en tant que</div>
-    <strong>${profil.display_name || user.email}</strong>
-    <div><span class="role-badge">${LABEL_ROLE[profil.role] || profil.role}</span></div>
-    <p class="muted" style="margin-top:12px;">${user.email}${ligneClub}</p>
-    ${lienConsole}
-    <div><a href="./compte.html" style="display:inline-block;margin-top:8px;color:var(--muted);font-size:12.5px;text-decoration:none;">⚙️ Mon compte (mot de passe)</a></div>
+    ${avatarHtml(profil.photo_url, profil.display_name || user.email, 76)}
+    <h1>${profil.display_name || user.email}</h1>
+    <span class="badge badge-primary">${LABEL_ROLE[profil.role] || profil.role}</span>
+    <div class="email" style="margin-top:8px;">${user.email}${ligneClub ? ' · ' + ligneClub : ''}</div>
   `;
+
+  const $liens = document.getElementById('carte-liens');
+  let html = '<div class="carte-titre">Mon espace</div>';
+  if (ROUTE_ROLE[profil.role]) {
+    html += `
+      <a class="lien-action" href="${ROUTE_ROLE[profil.role]}">
+        <span class="icone">${ICONE_LIEN[profil.role]}</span>
+        <span class="texte">${LABEL_LIEN[profil.role]}</span>
+        <span class="fleche">→</span>
+      </a>
+    `;
+  }
+  html += `
+    <a class="lien-action" href="./compte.html">
+      <span class="icone">⚙️</span>
+      <span class="texte">Mon compte (photo, mot de passe)</span>
+      <span class="fleche">→</span>
+    </a>
+  `;
+  $liens.innerHTML = html;
+  $liens.style.display = 'block';
 });
 
 document.getElementById('btn-deconnexion').addEventListener('click', async () => {
