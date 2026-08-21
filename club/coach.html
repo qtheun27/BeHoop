@@ -216,65 +216,65 @@ const POSITIONS = {
 async function chargerJoueurs() {
   const $liste = document.getElementById('liste-joueurs');
   $liste.innerHTML = 'Chargement…';
-  const q = query(collection(db, 'users'), where('team_id', '==', equipeActive), where('role', '==', 'player'));
+  const q = query(collection(db, 'players'), where('team_id', '==', equipeActive));
   const snap = await getDocs(q);
   if (snap.empty) {
     $liste.innerHTML = '<p class="vide">Aucun joueur inscrit dans cette équipe.</p>';
+    joueursEquipe = [];
     return;
   }
-  const joueurs = snap.docs.map(d => ({ uid: d.id, ...d.data() }));
+  const joueurs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
   joueursEquipe = joueurs;
   $liste.innerHTML = joueurs.map(j => `
     <div class="joueur-stat">
       <div class="joueur-entete">
         ${avatarHtml(j.photo_url, nomAffichage(j), 36)}
         <div>
-          <div class="joueur-nom">${nomAffichage(j)}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</div>
-          <div class="joueur-sous">${j.email}</div>
+          <div class="joueur-nom">${nomAffichage(j)}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}${!j.account_uid ? ' <span class="badge-position">géré par parent</span>' : ''}</div>
         </div>
       </div>
       <div class="ligne-position">
-        <select id="position-${j.uid}">
+        <select id="position-${j.id}">
           <option value="">Position sur le terrain...</option>
           ${Object.entries(POSITIONS).map(([val, label]) => `<option value="${val}" ${j.position === val ? 'selected' : ''}>${label}</option>`).join('')}
         </select>
-        <button class="btn-ghost" onclick="window.__enregistrerPosition('${j.uid}')">Enregistrer</button>
+        <button class="btn-ghost" onclick="window.__enregistrerPosition('${j.id}')">Enregistrer</button>
       </div>
       <div class="grille-3" style="margin-top:8px;">
-        <input type="date" id="stat-date-${j.uid}">
-        <select id="stat-type-${j.uid}">
+        <input type="date" id="stat-date-${j.id}">
+        <select id="stat-type-${j.id}">
           <option value="match">Match</option>
           <option value="entrainement">Entraînement</option>
         </select>
       </div>
       <div class="grille-3" style="margin-top:6px;">
-        <input type="number" id="stat-points-${j.uid}" placeholder="Points" min="0">
-        <input type="number" id="stat-rebonds-${j.uid}" placeholder="Rebonds" min="0">
+        <input type="number" id="stat-points-${j.id}" placeholder="Points" min="0">
+        <input type="number" id="stat-rebonds-${j.id}" placeholder="Rebonds" min="0">
       </div>
       <div class="grille-3" style="margin-top:6px;">
-        <input type="number" id="stat-passes-${j.uid}" placeholder="Passes" min="0">
-        <input type="number" id="stat-minutes-${j.uid}" placeholder="Minutes" min="0">
+        <input type="number" id="stat-passes-${j.id}" placeholder="Passes" min="0">
+        <input type="number" id="stat-minutes-${j.id}" placeholder="Minutes" min="0">
       </div>
-      <button class="btn btn-primary btn-sm" style="margin-top:10px;" onclick="window.__ajouterStat('${j.uid}')">Ajouter la statistique</button>
-      <div class="msg" id="msg-stat-${j.uid}"></div>
-      <div id="historique-${j.uid}"></div>
+      <button class="btn btn-primary btn-sm" style="margin-top:10px;" onclick="window.__ajouterStat('${j.id}')">Ajouter la statistique</button>
+      <div class="msg" id="msg-stat-${j.id}"></div>
+      <div id="historique-${j.id}"></div>
     </div>
   `).join('');
 
-  window.__ajouterStat = async (uid) => {
-    const $msg = document.getElementById('msg-stat-' + uid);
-    const date = document.getElementById('stat-date-' + uid).value;
+  window.__ajouterStat = async (playerId) => {
+    const $msg = document.getElementById('msg-stat-' + playerId);
+    const date = document.getElementById('stat-date-' + playerId).value;
     if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une date.'; return; }
     try {
       await addDoc(collection(db, 'player_stats'), {
-        player_uid: uid,
+        player_id: playerId,
         team_id: equipeActive,
         date,
-        type: document.getElementById('stat-type-' + uid).value,
-        points: Number(document.getElementById('stat-points-' + uid).value || 0),
-        rebonds: Number(document.getElementById('stat-rebonds-' + uid).value || 0),
-        passes: Number(document.getElementById('stat-passes-' + uid).value || 0),
-        minutes: Number(document.getElementById('stat-minutes-' + uid).value || 0),
+        type: document.getElementById('stat-type-' + playerId).value,
+        points: Number(document.getElementById('stat-points-' + playerId).value || 0),
+        rebonds: Number(document.getElementById('stat-rebonds-' + playerId).value || 0),
+        passes: Number(document.getElementById('stat-passes-' + playerId).value || 0),
+        minutes: Number(document.getElementById('stat-minutes-' + playerId).value || 0),
         created_by: auth.currentUser.uid,
         created_at: serverTimestamp(),
       });
@@ -284,17 +284,17 @@ async function chargerJoueurs() {
       return;
     }
     try {
-      await chargerHistoriqueStat(uid);
+      await chargerHistoriqueStat(playerId);
       await chargerResumeEquipe();
     } catch (e) { /* l'ajout a réussi, tant pis pour le rafraîchissement visuel */ }
   };
 
-  joueurs.forEach(j => chargerHistoriqueStat(j.uid));
+  joueurs.forEach(j => chargerHistoriqueStat(j.id));
 
-  window.__enregistrerPosition = async (uid) => {
-    const position = document.getElementById('position-' + uid).value;
+  window.__enregistrerPosition = async (playerId) => {
+    const position = document.getElementById('position-' + playerId).value;
     try {
-      await setDoc(doc(db, 'users', uid), { position }, { merge: true });
+      await setDoc(doc(db, 'players', playerId), { position }, { merge: true });
       await chargerJoueurs();
     } catch (e) {
       alert("Impossible d'enregistrer la position : " + e.message);
@@ -311,13 +311,13 @@ async function chargerResumeEquipe() {
   const parJoueur = {};
   snap.forEach(d => {
     const s = d.data();
-    parJoueur[s.player_uid] = parJoueur[s.player_uid] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
-    const c = parJoueur[s.player_uid];
+    parJoueur[s.player_id] = parJoueur[s.player_id] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
+    const c = parJoueur[s.player_id];
     c.matchs++; c.points += s.points || 0; c.rebonds += s.rebonds || 0; c.passes += s.passes || 0;
   });
 
   const lignes = joueursEquipe.map(j => {
-    const c = parJoueur[j.uid] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
+    const c = parJoueur[j.id] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
     const moy = (v) => c.matchs ? (v / c.matchs).toFixed(1) : '—';
     return `
       <tr>
@@ -338,14 +338,14 @@ async function chargerResumeEquipe() {
   `;
 }
 
-async function chargerHistoriqueStat(uid) {
+async function chargerHistoriqueStat(playerId) {
   const q = query(
     collection(db, 'player_stats'),
-    where('player_uid', '==', uid),
+    where('player_id', '==', playerId),
     where('team_id', '==', equipeActive)
   );
   const snap = await getDocs(q);
-  const $cible = document.getElementById('historique-' + uid);
+  const $cible = document.getElementById('historique-' + playerId);
   if (!$cible) return;
   if (snap.empty) { $cible.innerHTML = ''; return; }
   const lignes = snap.docs.map(d => d.data()).sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 5);

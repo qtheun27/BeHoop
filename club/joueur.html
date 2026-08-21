@@ -21,14 +21,11 @@
   <span class="titre" id="titre">🏀 Mon équipe</span>
 </div>
 <div class="container" style="padding-top:16px;">
-
   <div class="carte" id="carte-entete" style="display:none;"></div>
-
   <div class="carte">
     <div class="carte-titre">Prochains entraînements</div>
     <div id="liste-entrainements"><p class="vide">Chargement…</p></div>
   </div>
-
   <div class="carte">
     <div class="carte-titre">Mes statistiques</div>
     <div id="mes-stats"><p class="vide">Chargement…</p></div>
@@ -39,70 +36,26 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { avatarHtml, nomAffichage } from "./avatar.js";
+import { afficherVueJoueur } from "./joueur-vue.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const POSITIONS = {
-  meneur: 'Meneur (1)', arriere: 'Arrière (2)', ailier: 'Ailier (3)',
-  ailier_fort: 'Ailier fort (4)', pivot: 'Pivot (5)',
-};
-
-function formatDate(d) {
-  return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
-}
-
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
   if (!snap.exists() || snap.data().role !== 'player') { window.location.href = './dashboard.html'; return; }
-  const profil = snap.data();
 
-  if (!profil.team_id) {
-    document.getElementById('liste-entrainements').innerHTML = '<p class="vide">Aucune équipe assignée pour le moment.</p>';
-    document.getElementById('mes-stats').innerHTML = '';
-    return;
-  }
-
-  const res = await fetch('../data.json?t=' + Date.now());
-  const donnees = await res.json();
-  const club = (donnees.clubs || []).find(c => String(c.id) === String(profil.club_id));
-  const equipe = club ? (club.teams || []).find(e => String(e.id) === String(profil.team_id)) : null;
-  const nomEquipe = equipe ? (equipe.category || equipe.name) : 'Mon équipe';
-  document.getElementById('titre').textContent = '🏀 ' + nomEquipe;
-
-  document.getElementById('carte-entete').style.display = 'block';
-  document.getElementById('carte-entete').innerHTML = `
-    <div class="entete-joueur">
-      ${avatarHtml(profil.photo_url, nomAffichage(profil), 52)}
-      <div>
-        <strong>${nomAffichage(profil)}</strong>
-        <div class="vide" style="margin-top:2px;">${nomEquipe}${profil.position ? ' · ' + (POSITIONS[profil.position] || profil.position) : ''}</div>
-      </div>
-    </div>
-  `;
-
-  const qEnt = query(collection(db, 'trainings'), where('team_id', '==', String(profil.team_id)));
-  const snapEnt = await getDocs(qEnt);
-  const aujourdhui = new Date().toISOString().slice(0, 10);
-  const items = snapEnt.docs.map(d => d.data()).filter(t => t.date >= aujourdhui).sort((a, b) => a.date.localeCompare(b.date));
-  document.getElementById('liste-entrainements').innerHTML = items.length
-    ? items.map(t => `<div class="entrainement">${formatDate(t.date)} · ${t.start_time || ''}<div class="lieu">${t.location || ''}</div></div>`).join('')
-    : '<p class="vide">Aucun entraînement à venir.</p>';
-
-  const qStats = query(collection(db, 'player_stats'), where('player_uid', '==', user.uid));
-  const snapStats = await getDocs(qStats);
-  const lignes = snapStats.docs.map(d => d.data()).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-  document.getElementById('mes-stats').innerHTML = lignes.length ? `
-    <table class="historique">
-      <thead><tr><th>Date</th><th>Pts</th><th>Reb</th><th>Pas</th><th>Min</th></tr></thead>
-      <tbody>${lignes.map(l => `<tr><td>${l.date}</td><td>${l.points ?? 0}</td><td>${l.rebonds ?? 0}</td><td>${l.passes ?? 0}</td><td>${l.minutes ?? 0}</td></tr>`).join('')}</tbody>
-    </table>
-  ` : '<p class="vide">Aucune statistique enregistrée.</p>';
+  // Pour un joueur auto-géré, l'id de sa fiche players/{id} est son propre uid.
+  await afficherVueJoueur(db, user.uid, {
+    entete: document.getElementById('carte-entete'),
+    entrainements: document.getElementById('liste-entrainements'),
+    stats: document.getElementById('mes-stats'),
+    titre: document.getElementById('titre'),
+  });
 });
 </script>
 </body>

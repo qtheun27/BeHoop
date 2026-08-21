@@ -23,7 +23,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { reclamerInvitation } from "./invite-logic.js";
+import { reclamerInvitation, lireInvitationEnAttente } from "./invite-logic.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -39,6 +39,11 @@ async function finaliser(email) {
     const profilRef = doc(db, 'users', user.uid);
     const profilSnap = await getDoc(profilRef);
     if (!profilSnap.exists()) {
+      const invitation = await lireInvitationEnAttente(db, user);
+      if (invitation && invitation.role === 'player') {
+        window.location.href = './choix-role.html';
+        return;
+      }
       await reclamerInvitation(db, user);
     }
     window.location.href = './dashboard.html';

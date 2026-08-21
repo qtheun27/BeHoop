@@ -72,7 +72,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { reclamerInvitation } from "./invite-logic.js";
+import { reclamerInvitation, lireInvitationEnAttente } from "./invite-logic.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -104,6 +104,15 @@ async function apresConnexion(user, estPremiereConnexion) {
     return;
   }
   try {
+    const invitation = await lireInvitationEnAttente(db, user);
+    if (!invitation) throw new Error(
+      "Aucune invitation en attente n'a été trouvée pour cet email. " +
+      "Contacte l'administrateur de ton club pour en recevoir une."
+    );
+    if (invitation.role === 'player') {
+      window.location.href = './choix-role.html';
+      return;
+    }
     await reclamerInvitation(db, user);
     window.location.href = './dashboard.html';
   } catch (e) {

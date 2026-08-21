@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Qui es-tu ? — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  body { display: flex; align-items: center; min-height: 100vh; padding: 24px 16px; }
+  .choix { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+  .option {
+    display: flex; align-items: center; gap: 14px; padding: 16px; border: 1.5px solid var(--border);
+    border-radius: var(--radius-md); background: var(--surface); cursor: pointer; text-align: left;
+  }
+  .option:active { background: var(--surface-2); }
+  .option .emoji { font-size: 26px; }
+  .option .titre-option { font-weight: 800; font-size: 15px; }
+  .option .desc-option { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+  .panneau { display: none; }
+  .panneau.actif { display: block; }
+</style>
+</head>
+<body>
+<div class="container-sm" style="width:100%;">
+  <div class="carte">
+    <div id="panneau-choix" class="panneau actif">
+      <div class="carte-titre" style="justify-content:center;text-align:center;">Bienvenue 👋</div>
+      <div class="carte-desc" style="text-align:center;">Une dernière question avant de commencer.</div>
+      <div class="choix">
+        <button class="option" id="opt-joueur">
+          <span class="emoji">🏀</span>
+          <span><span class="titre-option">Je suis le joueur</span><br><span class="desc-option">Je gère mon propre compte</span></span>
+        </button>
+        <button class="option" id="opt-parent">
+          <span class="emoji">👨‍👩‍👧</span>
+          <span><span class="titre-option">Je suis un parent</span><br><span class="desc-option">Je gère le compte de mon enfant</span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="panneau-parent" class="panneau">
+      <div class="carte-titre">Prénom et nom de ton enfant</div>
+      <div class="carte-desc">Ton enfant n'a pas besoin de sa propre adresse email — tu géreras son compte depuis le tien, et tu pourras basculer vers sa vue à tout moment.</div>
+      <label class="champ-label">Prénom</label>
+      <input type="text" id="enfant-prenom">
+      <label class="champ-label">Nom</label>
+      <input type="text" id="enfant-nom">
+      <button class="btn btn-primary btn-block" style="margin-top:16px;" id="btn-valider-parent">Continuer</button>
+      <div class="msg" id="msg-parent"></div>
+    </div>
+
+    <div class="msg" id="msg-erreur"></div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, getDoc, setDoc, updateDoc, addDoc, collection, arrayUnion, serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+let utilisateurActuel = null;
+let invitation = null;
+
+const $erreur = document.getElementById('msg-erreur');
+function afficherErreur(texte) { $erreur.className = 'msg err'; $erreur.textContent = texte; }
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  utilisateurActuel = user;
+
+  // Si le profil existe déjà, ce choix a déjà été fait — direction le tableau de bord.
+  const profilSnap = await getDoc(doc(db, 'users', user.uid));
+  if (profilSnap.exists()) { window.location.href = './dashboard.html'; return; }
+
+  const email = user.email.toLowerCase();
+  const inviteSnap = await getDoc(doc(db, 'invitations', email));
+  if (!inviteSnap.exists() || inviteSnap.data().status !== 'pending') {
+    afficherErreur("Aucune invitation en attente pour cet email. Contacte l'administrateur de ton club.");
+    await signOut(auth);
+    return;
+  }
+  invitation = inviteSnap.data();
+});
+
+document.getElementById('opt-joueur').addEventListener('click', async () => {
+  try {
+    await setDoc(doc(db, 'users', utilisateurActuel.uid), {
+      role: 'player',
+      club_id: invitation.club_id,
+      email: utilisateurActuel.email.toLowerCase(),
+      display_name: utilisateurActuel.displayName || utilisateurActuel.email.split('@')[0],
+      created_at: serverTimestamp(),
+    });
+    // Fiche joueur elle-même : id = uid du compte (joueur auto-géré).
+    await setDoc(doc(db, 'players', utilisateurActuel.uid), {
+      club_id: invitation.club_id,
+      team_id: invitation.team_id || null,
+      account_uid: utilisateurActuel.uid,
+      parent_uids: [],
+      prenom: utilisateurActuel.displayName || '',
+      nom: '',
+      created_at: serverTimestamp(),
+    });
+    await updateDoc(doc(db, 'invitations', utilisateurActuel.email.toLowerCase()), {
+      status: 'used', role: invitation.role, club_id: invitation.club_id, team_id: invitation.team_id ?? null,
+    });
+    window.location.href = './dashboard.html';
+  } catch (e) {
+    afficherErreur('Erreur : ' + e.message);
+  }
+});
+
+document.getElementById('opt-parent').addEventListener('click', () => {
+  document.getElementById('panneau-choix').classList.remove('actif');
+  document.getElementById('panneau-parent').classList.add('actif');
+});
+
+document.getElementById('btn-valider-parent').addEventListener('click', async () => {
+  const prenom = document.getElementById('enfant-prenom').value.trim();
+  const nom = document.getElementById('enfant-nom').value.trim();
+  const $msg = document.getElementById('msg-parent');
+  if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
+
+  try {
+    await setDoc(doc(db, 'users', utilisateurActuel.uid), {
+      role: 'parent',
+      club_id: invitation.club_id,
+      email: utilisateurActuel.email.toLowerCase(),
+      display_name: utilisateurActuel.displayName || utilisateurActuel.email.split('@')[0],
+      created_at: serverTimestamp(),
+    });
+
+    const nouvelEnfant = await addDoc(collection(db, 'players'), {
+      club_id: invitation.club_id,
+      team_id: invitation.team_id || null,
+      account_uid: '',
+      parent_uids: [utilisateurActuel.uid],
+      prenom,
+      nom,
+      created_at: serverTimestamp(),
+    });
+
+    await updateDoc(doc(db, 'users', utilisateurActuel.uid), {
+      children_player_ids: arrayUnion(nouvelEnfant.id),
+    });
+
+    await updateDoc(doc(db, 'invitations', utilisateurActuel.email.toLowerCase()), {
+      status: 'used', role: invitation.role, club_id: invitation.club_id, team_id: invitation.team_id ?? null,
+    });
+    window.location.href = './parent.html';
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+</script>
+</body>
+</html>
