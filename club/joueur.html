@@ -2,51 +2,55 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mon équipe — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 16px; }
-  .wrap { max-width: 560px; margin: auto; }
-  a.retour { color: var(--muted); font-size: 13px; text-decoration: none; }
-  h1 { font-size: 19px; margin: 10px 0 14px; }
-  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
-  .carte > strong { display: block; margin-bottom: 10px; }
-  .entrainement { border-bottom: 1px solid var(--border); padding: 8px 0; font-size: 13.5px; }
+  .entrainement { border-bottom: 1px solid var(--border-soft); padding: 10px 0; font-size: 13.5px; }
   .entrainement:last-child { border-bottom: none; }
-  .lieu { color: var(--muted); font-size: 12px; }
+  .lieu { color: var(--text-muted); font-size: 12px; }
   table.historique { width: 100%; border-collapse: collapse; font-size: 13px; }
-  table.historique th, table.historique td { padding: 6px 4px; text-align: center; border-bottom: 1px solid var(--border); }
+  table.historique th, table.historique td { padding: 7px 4px; text-align: center; border-bottom: 1px solid var(--border-soft); }
   table.historique td:first-child, table.historique th:first-child { text-align: left; }
-  .vide { color: var(--muted); font-size: 13px; }
+  .entete-joueur { display: flex; align-items: center; gap: 12px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="retour" href="./dashboard.html">← Retour au tableau de bord</a>
-  <h1 id="titre">Mon équipe</h1>
+<div class="app-bar">
+  <a class="retour" href="./dashboard.html">←</a>
+  <span class="titre" id="titre">🏀 Mon équipe</span>
+</div>
+<div class="container" style="padding-top:16px;">
+
+  <div class="carte" id="carte-entete" style="display:none;"></div>
 
   <div class="carte">
-    <strong>Prochains entraînements</strong>
-    <div id="liste-entrainements">Chargement…</div>
+    <div class="carte-titre">Prochains entraînements</div>
+    <div id="liste-entrainements"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
-    <strong>Mes statistiques</strong>
-    <div id="mes-stats">Chargement…</div>
+    <div class="carte-titre">Mes statistiques</div>
+    <div id="mes-stats"><p class="vide">Chargement…</p></div>
   </div>
 </div>
+<footer class="pied">Basket Hainaut — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+
+const POSITIONS = {
+  meneur: 'Meneur (1)', arriere: 'Arrière (2)', ailier: 'Ailier (3)',
+  ailier_fort: 'Ailier fort (4)', pivot: 'Pivot (5)',
+};
 
 function formatDate(d) {
   return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
@@ -68,7 +72,19 @@ onAuthStateChanged(auth, async (user) => {
   const donnees = await res.json();
   const club = (donnees.clubs || []).find(c => String(c.id) === String(profil.club_id));
   const equipe = club ? (club.teams || []).find(e => String(e.id) === String(profil.team_id)) : null;
-  document.getElementById('titre').textContent = equipe ? (equipe.category || equipe.name) : 'Mon équipe';
+  const nomEquipe = equipe ? (equipe.category || equipe.name) : 'Mon équipe';
+  document.getElementById('titre').textContent = '🏀 ' + nomEquipe;
+
+  document.getElementById('carte-entete').style.display = 'block';
+  document.getElementById('carte-entete').innerHTML = `
+    <div class="entete-joueur">
+      ${avatarHtml(profil.photo_url, nomAffichage(profil), 52)}
+      <div>
+        <strong>${nomAffichage(profil)}</strong>
+        <div class="vide" style="margin-top:2px;">${nomEquipe}${profil.position ? ' · ' + (POSITIONS[profil.position] || profil.position) : ''}</div>
+      </div>
+    </div>
+  `;
 
   const qEnt = query(collection(db, 'trainings'), where('team_id', '==', String(profil.team_id)));
   const snapEnt = await getDocs(qEnt);

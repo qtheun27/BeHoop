@@ -2,93 +2,56 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mon club — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 16px; }
-  .wrap { max-width: 640px; margin: auto; }
-  a.retour { color: var(--muted); font-size: 13px; text-decoration: none; }
-  h1 { font-size: 19px; margin: 10px 0 4px; }
-  .sous-titre { color: var(--muted); font-size: 13px; margin-bottom: 16px; }
-  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
-  .carte > strong { display: block; margin-bottom: 4px; }
-  .desc { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
-  input[type="text"], input[type="email"], select {
-    width: 100%; padding: 9px 11px; border-radius: 8px; border: 1px solid var(--border); font-size: 14px;
-  }
-  .equipe { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-bottom: 8px; }
+  .equipe { border: 1px solid var(--border); border-radius: var(--radius-md); padding: 13px 14px; margin-bottom: 8px; }
   .equipe-titre { display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
-  .equipe-titre strong { font-size: 14px; }
-  .compte { font-size: 11.5px; color: var(--muted); }
-  .equipe-form { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .equipe-titre strong { font-size: 14.5px; }
+  .equipe-form { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-soft); }
   .equipe-form.ouvert { display: block; }
   .ligne-invite { display: flex; gap: 8px; margin-bottom: 8px; }
   .ligne-invite input { flex: 1; }
-  button.petit {
-    padding: 9px 14px; background: var(--primary); color: white; border: none; border-radius: 8px;
-    font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap;
-  }
-  button.secondaire {
-    padding: 6px 12px; background: var(--bg); color: var(--text); border: 1px solid var(--border);
-    border-radius: 20px; font-weight: 600; font-size: 12px; cursor: pointer;
-  }
-  .msg { font-size: 12.5px; margin-top: 8px; padding: 8px 10px; border-radius: 8px; display: none; }
-  .msg.ok { background: #e8f6ee; color: #1f9d55; display: block; }
-  .msg.err { background: #fdecea; color: #b3261e; display: block; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
-  th, td { text-align: left; padding: 7px 4px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-size: 11px; text-transform: uppercase; }
-  .statut { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
-  .statut.pending { background: #fff4e5; color: #b45309; }
-  .statut.used { background: #e8f6ee; color: #1f9d55; }
-  .rangee { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
-  .rangee:last-child { border-bottom: none; }
-  .rangee .nom { font-weight: 700; font-size: 14px; }
-  .rangee .sous-texte { font-size: 12px; color: var(--muted); }
-  .rangee .action { margin-left: auto; flex-shrink: 0; }
-  .avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; overflow: hidden; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="retour" href="./dashboard.html">← Retour au tableau de bord</a>
-  <h1 id="titre-club">Mon club</h1>
-  <div class="sous-titre">Gère les équipes, coachs, joueurs et parents de ton club.</div>
+<div class="app-bar">
+  <a class="retour" href="./dashboard.html">←</a>
+  <span class="titre" id="titre-club">Mon club<small>Coachs, joueurs, parents</small></span>
+</div>
+<div class="container" style="padding-top:16px;">
 
   <div class="carte">
-    <strong>Équipes engagées cette saison</strong>
-    <div class="desc">Clique une équipe pour inviter son coach ou ses joueurs.</div>
-    <div id="liste-equipes">Chargement…</div>
+    <div class="carte-titre">Équipes engagées cette saison</div>
+    <div class="carte-desc">Touche une équipe pour inviter son coach ou ses joueurs.</div>
+    <div id="liste-equipes"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
-    <strong>Inviter un parent</strong>
-    <div class="desc">Le parent verra automatiquement l'équipe et les stats de l'enfant sélectionné.</div>
-    <label style="font-size:12px;color:var(--muted);font-weight:600;">Enfant (joueur déjà inscrit)</label>
-    <select id="select-enfant" style="margin-bottom:8px;"><option value="">Chargement des joueurs…</option></select>
-    <div class="ligne-invite">
+    <div class="carte-titre">Inviter un parent</div>
+    <div class="carte-desc">Le parent verra automatiquement l'équipe et les stats de l'enfant sélectionné.</div>
+    <label class="champ-label">Enfant (joueur déjà inscrit)</label>
+    <select id="select-enfant"><option value="">Chargement des joueurs…</option></select>
+    <div class="ligne-invite" style="margin-top:10px;">
       <input type="email" id="email-parent" placeholder="email du parent">
-      <button class="petit" id="btn-inviter-parent">Inviter</button>
+      <button class="btn btn-primary btn-sm" id="btn-inviter-parent">Inviter</button>
     </div>
     <div class="msg" id="msg-parent"></div>
   </div>
 
   <div class="carte">
-    <strong>Invitations de mon club</strong>
-    <table>
-      <thead><tr><th>Email</th><th>Rôle</th><th>Statut</th></tr></thead>
-      <tbody id="corps-invitations"><tr><td colspan="3" style="color:var(--muted);">Chargement…</td></tr></tbody>
-    </table>
+    <div class="carte-titre">Invitations de mon club</div>
+    <div id="corps-invitations"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
-    <strong>Membres du club</strong>
-    <div class="desc">Coachs, joueurs et parents ayant accès à l'espace de ton club.</div>
-    <div id="corps-membres">Chargement…</div>
+    <div class="carte-titre">Membres du club</div>
+    <div class="carte-desc">Coachs, joueurs et parents ayant accès à l'espace de ton club.</div>
+    <div id="corps-membres"><p class="vide">Chargement…</p></div>
   </div>
 </div>
+<footer class="pied">Basket Hainaut — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
@@ -132,27 +95,27 @@ async function chargerClub() {
   monClubNom = club ? club.name : monClubNom;
   equipesDuClub = club ? (club.teams || []) : [];
 
-  document.getElementById('titre-club').textContent = monClubNom || 'Mon club';
+  document.querySelector('#titre-club').innerHTML = `${monClubNom || 'Mon club'}<small>Coachs, joueurs, parents</small>`;
 
   const $liste = document.getElementById('liste-equipes');
   if (equipesDuClub.length === 0) {
-    $liste.innerHTML = '<p style="color:var(--muted);">Aucune équipe trouvée pour ce club cette saison.</p>';
+    $liste.innerHTML = '<p class="vide">Aucune équipe trouvée pour ce club cette saison.</p>';
     return;
   }
   $liste.innerHTML = equipesDuClub.map(eq => `
     <div class="equipe" data-team-id="${eq.id}">
       <div class="equipe-titre" onclick="document.getElementById('form-${eq.id}').classList.toggle('ouvert')">
         <strong>${eq.category || eq.name}</strong>
-        <span class="compte" id="compte-${eq.id}">…</span>
+        <span class="badge badge-muted" id="compte-${eq.id}">…</span>
       </div>
       <div class="equipe-form" id="form-${eq.id}">
         <div class="ligne-invite">
           <input type="email" id="email-coach-${eq.id}" placeholder="email du coach">
-          <button class="petit" data-action="coach" data-team="${eq.id}">Inviter coach</button>
+          <button class="btn btn-primary btn-sm" data-action="coach" data-team="${eq.id}">Inviter coach</button>
         </div>
         <div class="ligne-invite">
           <input type="email" id="email-joueur-${eq.id}" placeholder="email du joueur (ou parent en 1er)">
-          <button class="petit" data-action="player" data-team="${eq.id}">Inviter joueur</button>
+          <button class="btn btn-primary btn-sm" data-action="player" data-team="${eq.id}">Inviter joueur</button>
         </div>
         <div class="msg" id="msg-${eq.id}"></div>
       </div>
@@ -273,7 +236,7 @@ async function chargerMembres() {
     .filter(m => m.role !== 'club_admin');
 
   if (membres.length === 0) {
-    $corps.innerHTML = '<p style="color:var(--muted);">Aucun membre pour le moment.</p>';
+    $corps.innerHTML = '<p class="vide">Aucun membre pour le moment.</p>';
     return;
   }
 
@@ -284,7 +247,7 @@ async function chargerMembres() {
         <div class="nom">${nomAffichage(m)}</div>
         <div class="sous-texte">${m.email} · ${LABEL_ROLE[m.role] || m.role}</div>
       </div>
-      <div class="action"><button class="discret" data-uid="${m.uid}">Retirer l'accès</button></div>
+      <div class="action"><button class="btn-ghost" data-uid="${m.uid}">Retirer l'accès</button></div>
     </div>
   `).join('');
 
@@ -303,7 +266,7 @@ async function chargerInvitations() {
   const snap = await getDocs(q);
   const $corps = document.getElementById('corps-invitations');
   if (snap.empty) {
-    $corps.innerHTML = '<tr><td colspan="3" style="color:var(--muted);">Aucune invitation pour le moment.</td></tr>';
+    $corps.innerHTML = '<p class="vide">Aucune invitation pour le moment.</p>';
     return;
   }
   const LABEL_ROLE = { club_admin: 'Admin club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
@@ -312,11 +275,13 @@ async function chargerInvitations() {
     .map(d => {
       const inv = d.data();
       return `
-        <tr>
-          <td>${d.id}</td>
-          <td>${LABEL_ROLE[inv.role] || inv.role}</td>
-          <td><span class="statut ${inv.status}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span></td>
-        </tr>
+        <div class="rangee">
+          <div>
+            <div class="nom">${d.id}</div>
+            <div class="sous-texte">${LABEL_ROLE[inv.role] || inv.role}</div>
+          </div>
+          <div class="action"><span class="badge ${inv.status === 'used' ? 'badge-success' : 'badge-warning'}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span></div>
+        </div>
       `;
     }).join('');
 }

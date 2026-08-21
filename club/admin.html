@@ -2,80 +2,44 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Console Super Admin — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 16px; }
-  .wrap { max-width: 640px; margin: auto; }
-  a.retour { color: var(--muted); font-size: 13px; text-decoration: none; }
-  h1 { font-size: 19px; margin: 10px 0 16px; }
-  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
-  input[type="text"], input[type="email"] {
-    width: 100%; padding: 10px 12px; border-radius: 9px; border: 1px solid var(--border); font-size: 15px;
-  }
-  .liste-clubs { max-height: 260px; overflow-y: auto; margin-top: 8px; border: 1px solid var(--border); border-radius: 10px; }
-  .item-club { padding: 10px 12px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 14px; }
+  .item-club { display: flex; justify-content: space-between; align-items: center; padding: 11px 4px; border-bottom: 1px solid var(--border-soft); cursor: pointer; font-size: 14px; }
   .item-club:last-child { border-bottom: none; }
-  .item-club:hover { background: var(--bg); }
-  .badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
-  .badge.oui { background: #e8f6ee; color: #1f9d55; }
-  .badge.non { background: #f1f3f7; color: var(--muted); }
-  .club-selectionne { background: #eaf1fc; border: 1px solid var(--primary); border-radius: 10px; padding: 12px; margin-top: 12px; }
-  label { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); margin: 12px 0 5px; }
-  button.principal {
-    margin-top: 14px; padding: 11px 18px; background: var(--primary); color: white; border: none;
-    border-radius: 9px; font-weight: 700; font-size: 14.5px; cursor: pointer;
-  }
-  button.principal:disabled { background: #b7c3d6; }
-  .msg { font-size: 13px; margin-top: 10px; padding: 9px 12px; border-radius: 8px; display: none; }
-  .msg.ok { background: #e8f6ee; color: #1f9d55; display: block; }
-  .msg.err { background: #fdecea; color: #b3261e; display: block; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
-  th, td { text-align: left; padding: 7px 4px; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-size: 11px; text-transform: uppercase; }
-  .statut { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
-  .statut.pending { background: #fff4e5; color: #b45309; }
-  .statut.used { background: #e8f6ee; color: #1f9d55; }
-  .discret { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; text-decoration: underline; }
-  .desc { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
-  .rangee { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
-  .rangee:last-child { border-bottom: none; }
-  .rangee .nom { font-weight: 700; font-size: 14px; }
-  .rangee .sous-texte { font-size: 12px; color: var(--muted); }
-  .rangee .action { margin-left: auto; flex-shrink: 0; }
-  .avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; overflow: hidden; }
+  .item-club:active { background: var(--surface-2); }
+  .liste-clubs { max-height: 280px; overflow-y: auto; margin-top: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0 10px; }
+  .club-selectionne { background: var(--primary-tint); border: 1px solid var(--primary); border-radius: var(--radius-md); padding: 14px; margin-top: 14px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="retour" href="./dashboard.html">← Retour au tableau de bord</a>
-  <h1>🛠️ Console Super Admin</h1>
+<div class="app-bar">
+  <a class="retour" href="./dashboard.html">←</a>
+  <span class="titre">🛠️ Console Super Admin</span>
+</div>
+<div class="container" style="padding-top:16px;">
 
   <div class="carte">
-    <strong>Assigner un administrateur à un club</strong>
-    <p style="color:var(--muted); font-size:13px;">Recherche un club du Hainaut (données déjà connues du site) puis invite son administrateur.</p>
+    <div class="carte-titre">Assigner un administrateur</div>
+    <div class="carte-desc">Recherche un club du Hainaut (déjà connu du site) puis invite son administrateur.</div>
     <input type="text" id="recherche-club" placeholder="Rechercher un club...">
     <div class="liste-clubs" id="liste-clubs"></div>
-
     <div id="club-selectionne" style="display:none;"></div>
   </div>
 
   <div class="carte">
-    <strong>Invitations envoyées</strong>
-    <table id="table-invitations">
-      <thead><tr><th>Email</th><th>Rôle</th><th>Statut</th></tr></thead>
-      <tbody id="corps-invitations"><tr><td colspan="3" style="color:var(--muted);">Chargement…</td></tr></tbody>
-    </table>
+    <div class="carte-titre">Invitations envoyées</div>
+    <div id="corps-invitations"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
-    <strong>Tous les membres (tous clubs)</strong>
-    <div class="desc" style="color:var(--muted);font-size:13px;">Admins de club, coachs, joueurs, parents.</div>
-    <div id="corps-membres">Chargement…</div>
+    <div class="carte-titre">Tous les membres</div>
+    <div class="carte-desc">Admins de club, coachs, joueurs, parents — tous clubs confondus.</div>
+    <div id="corps-membres"><p class="vide">Chargement…</p></div>
   </div>
 </div>
+<footer class="pied">Basket Hainaut — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
@@ -130,10 +94,10 @@ function afficherListeClubs(clubs) {
     return `
       <div class="item-club" data-id="${c.id}" data-nom="${(c.name || '').replace(/"/g, '&quot;')}">
         <span>${c.name}</span>
-        <span class="badge ${aUnAdmin ? 'oui' : 'non'}">${aUnAdmin ? 'Admin ✓' : 'Sans admin'}</span>
+        <span class="badge ${aUnAdmin ? 'badge-success' : 'badge-muted'}">${aUnAdmin ? 'Admin ✓' : 'Sans admin'}</span>
       </div>
     `;
-  }).join('') || '<div style="padding:12px;color:var(--muted);">Aucun club trouvé.</div>';
+  }).join('') || '<p class="vide" style="padding:10px 0;">Aucun club trouvé.</p>';
 
   $liste.querySelectorAll('.item-club').forEach(el => {
     el.addEventListener('click', () => selectionnerClub(el.dataset.id, el.dataset.nom));
@@ -153,15 +117,14 @@ function selectionnerClub(clubId, nomClub) {
   const adminActuel = adminsParClub[String(clubId)];
   const $zone = document.getElementById('club-selectionne');
   $zone.style.display = 'block';
-  $zone.className = 'club-selectionne';
   $zone.innerHTML = `
     <strong>${nomClub}</strong>
     ${adminActuel
-      ? `<p style="font-size:13px;color:var(--muted);margin-top:6px;">Administrateur actuel : ${adminActuel}</p>`
+      ? `<p class="vide" style="margin-top:6px;">Administrateur actuel : ${adminActuel}</p>`
       : `
-        <label for="email-admin">Email du futur administrateur de ce club</label>
+        <label class="champ-label" for="email-admin">Email du futur administrateur</label>
         <input type="email" id="email-admin" placeholder="admin@club.be">
-        <button class="principal" id="btn-inviter">Envoyer l'invitation</button>
+        <button class="btn btn-primary" style="margin-top:12px;" id="btn-inviter">Envoyer l'invitation</button>
         <div class="msg" id="msg-invite"></div>
       `}
   `;
@@ -193,7 +156,7 @@ async function envoyerInvitationAdmin() {
     });
 
     $msg.className = 'msg ok';
-    $msg.textContent = `✅ Email d'invitation envoyé automatiquement à ${email}. Il n'a qu'à cliquer le lien reçu.`;
+    $msg.textContent = `✅ Email d'invitation envoyé automatiquement à ${email}.`;
     await chargerInvitations();
   } catch (e) {
     $msg.className = 'msg err';
@@ -208,10 +171,10 @@ async function chargerMembres() {
 
   const membres = snap.docs
     .map(d => ({ uid: d.id, ...d.data() }))
-    .filter(m => m.role !== 'super_admin'); // sécurité : jamais de suppression de super admin depuis l'UI
+    .filter(m => m.role !== 'super_admin');
 
   if (membres.length === 0) {
-    $corps.innerHTML = '<p style="color:var(--muted);">Aucun membre pour le moment.</p>';
+    $corps.innerHTML = '<p class="vide">Aucun membre pour le moment.</p>';
     return;
   }
 
@@ -222,7 +185,7 @@ async function chargerMembres() {
         <div class="nom">${nomAffichage(m)}</div>
         <div class="sous-texte">${m.email} · ${LABEL_ROLE[m.role] || m.role}${m.club_name ? ' · ' + m.club_name : ''}</div>
       </div>
-      <div class="action"><button class="discret" data-uid="${m.uid}">Retirer l'accès</button></div>
+      <div class="action"><button class="btn-ghost" data-uid="${m.uid}">Retirer l'accès</button></div>
     </div>
   `).join('');
 
@@ -240,7 +203,7 @@ async function chargerInvitations() {
   const snap = await getDocs(collection(db, 'invitations'));
   const $corps = document.getElementById('corps-invitations');
   if (snap.empty) {
-    $corps.innerHTML = '<tr><td colspan="3" style="color:var(--muted);">Aucune invitation pour le moment.</td></tr>';
+    $corps.innerHTML = '<p class="vide">Aucune invitation pour le moment.</p>';
     return;
   }
   const LABEL_ROLE = { super_admin: 'Super admin', club_admin: 'Admin club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
@@ -249,11 +212,13 @@ async function chargerInvitations() {
     .map(d => {
       const inv = d.data();
       return `
-        <tr>
-          <td>${d.id}</td>
-          <td>${LABEL_ROLE[inv.role] || inv.role}${inv.club_name ? ' · ' + inv.club_name : ''}</td>
-          <td><span class="statut ${inv.status}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span></td>
-        </tr>
+        <div class="rangee">
+          <div>
+            <div class="nom">${d.id}</div>
+            <div class="sous-texte">${LABEL_ROLE[inv.role] || inv.role}${inv.club_name ? ' · ' + inv.club_name : ''}</div>
+          </div>
+          <div class="action"><span class="badge ${inv.status === 'used' ? 'badge-success' : 'badge-warning'}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span></div>
+        </div>
       `;
     }).join('');
 }

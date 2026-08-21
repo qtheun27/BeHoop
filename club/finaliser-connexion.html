@@ -2,24 +2,17 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Connexion — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
-  * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 24px 16px; }
-  .wrap { max-width: 380px; margin: 60px auto 0; }
-  .carte { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; text-align: center; }
-  input[type="email"] { width: 100%; padding: 11px 12px; border-radius: 9px; border: 1px solid var(--border); font-size: 15px; margin-top: 12px; }
-  button { width: 100%; margin-top: 14px; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 9px; font-weight: 700; font-size: 15px; cursor: pointer; }
-  .erreur { background: #fdecea; color: #b3261e; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin-top: 14px; }
-  .muted { color: var(--muted); font-size: 13.5px; }
+  body { display: flex; align-items: center; min-height: 100vh; padding: 24px 16px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="carte" id="zone">
-    <p class="muted">Connexion en cours…</p>
+<div class="container-sm" style="width:100%;">
+  <div class="carte" id="zone" style="text-align:center;">
+    <p class="vide">Connexion en cours…</p>
   </div>
 </div>
 
@@ -38,7 +31,7 @@ const db = getFirestore(app);
 const $zone = document.getElementById('zone');
 
 async function finaliser(email) {
-  $zone.innerHTML = '<p class="muted">Connexion en cours…</p>';
+  $zone.innerHTML = '<p class="vide">Connexion en cours…</p>';
   try {
     const { user } = await signInWithEmailLink(auth, email, window.location.href);
     window.localStorage.removeItem('emailPourConnexion');
@@ -51,30 +44,28 @@ async function finaliser(email) {
     window.location.href = './dashboard.html';
   } catch (e) {
     $zone.innerHTML = `
-      <p class="muted">Impossible de finaliser la connexion.</p>
-      <div class="erreur">${e.message}</div>
-      <p class="muted" style="margin-top:14px;"><a href="./index.html">Retour à la page de connexion</a></p>
+      <p class="vide">Impossible de finaliser la connexion.</p>
+      <div class="msg err">${e.message}</div>
+      <p class="vide" style="margin-top:14px;"><a href="./index.html">Retour à la page de connexion</a></p>
     `;
   }
 }
 
 if (!isSignInWithEmailLink(auth, window.location.href)) {
   $zone.innerHTML = `
-    <p class="muted">Ce lien n'est plus valide ou a déjà été utilisé.</p>
-    <p class="muted" style="margin-top:10px;"><a href="./index.html">Retour à la page de connexion</a></p>
+    <p class="vide">Ce lien n'est plus valide ou a déjà été utilisé.</p>
+    <p class="vide" style="margin-top:10px;"><a href="./index.html">Retour à la page de connexion</a></p>
   `;
 } else {
   let email = window.localStorage.getItem('emailPourConnexion');
   if (email) {
     finaliser(email);
   } else {
-    // Cas normal : la personne ouvre le lien sur un autre appareil/navigateur
-    // que celui utilisé (par l'admin) pour l'envoyer — on lui redemande son email.
     $zone.innerHTML = `
       <p><strong>Confirme ton email</strong></p>
-      <p class="muted">Pour finaliser la connexion en toute sécurité.</p>
-      <input type="email" id="email-confirm" placeholder="ton@email.com">
-      <button id="btn-confirm">Continuer</button>
+      <p class="vide">Pour finaliser la connexion en toute sécurité.</p>
+      <input type="email" id="email-confirm" placeholder="ton@email.com" style="margin-top:12px;">
+      <button class="btn btn-primary btn-block" id="btn-confirm" style="margin-top:14px;">Continuer</button>
     `;
     document.getElementById('btn-confirm').addEventListener('click', () => {
       const val = document.getElementById('email-confirm').value.trim();
