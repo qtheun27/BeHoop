@@ -28,6 +28,17 @@
   </div>
 
   <div class="carte">
+    <div class="carte-titre">Identité</div>
+    <div class="carte-desc">Ton prénom (et l'initiale de ton nom) seront visibles par les autres membres de ton club, à la place de ton email.</div>
+    <div class="grille-2">
+      <div><label class="champ-label">Prénom</label><input type="text" id="mon-prenom"></div>
+      <div><label class="champ-label">Nom</label><input type="text" id="mon-nom"></div>
+    </div>
+    <button class="btn btn-primary" style="margin-top:14px;" id="btn-identite">Enregistrer</button>
+    <div class="msg" id="msg-identite"></div>
+  </div>
+
+  <div class="carte">
     <div class="carte-titre">Email</div>
     <p style="color:var(--text-muted);font-size:14px;margin:0;" id="mon-email"></p>
   </div>
@@ -69,6 +80,8 @@ onAuthStateChanged(auth, async (user) => {
   const profil = snap.exists() ? snap.data() : {};
   monNom = profil.display_name || user.email;
   document.getElementById('apercu-photo').innerHTML = avatarHtml(profil.photo_url, monNom, 88);
+  document.getElementById('mon-prenom').value = profil.prenom || '';
+  document.getElementById('mon-nom').value = profil.nom || '';
 
   aDejaUnMotDePasse = user.providerData.some(p => p.providerId === 'password');
   if (aDejaUnMotDePasse) {
@@ -92,6 +105,20 @@ document.getElementById('fichier-photo').addEventListener('change', async (e) =>
     $msg.className = 'msg ok'; $msg.textContent = '✅ Photo mise à jour.';
   } catch (err) {
     $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + err.message;
+  }
+});
+
+document.getElementById('btn-identite').addEventListener('click', async () => {
+  const prenom = document.getElementById('mon-prenom').value.trim();
+  const nom = document.getElementById('mon-nom').value.trim();
+  const $msg = document.getElementById('msg-identite');
+  if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
+  try {
+    await setDoc(doc(db, 'users', auth.currentUser.uid), { prenom, nom }, { merge: true });
+    monNom = nom ? `${prenom} ${nom}` : prenom;
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Enregistré.';
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
   }
 });
 

@@ -43,6 +43,12 @@
   .statut { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .statut.pending { background: #fff4e5; color: #b45309; }
   .statut.used { background: #e8f6ee; color: #1f9d55; }
+  .rangee { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .rangee:last-child { border-bottom: none; }
+  .rangee .nom { font-weight: 700; font-size: 14px; }
+  .rangee .sous-texte { font-size: 12px; color: var(--muted); }
+  .rangee .action { margin-left: auto; flex-shrink: 0; }
+  .avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; overflow: hidden; }
 </style>
 </head>
 <body>
@@ -80,10 +86,7 @@
   <div class="carte">
     <strong>Membres du club</strong>
     <div class="desc">Coachs, joueurs et parents ayant accès à l'espace de ton club.</div>
-    <table>
-      <thead><tr><th>Nom</th><th>Rôle</th><th></th></tr></thead>
-      <tbody id="corps-membres"><tr><td colspan="3" style="color:var(--muted);">Chargement…</td></tr></tbody>
-    </table>
+    <div id="corps-membres">Chargement…</div>
   </div>
 </div>
 
@@ -94,6 +97,7 @@ import {
   getFirestore, doc, getDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const SITE_URL_CONNEXION = "https://qtheun27.github.io/basket-awbb/club/finaliser-connexion.html";
 
@@ -236,7 +240,7 @@ async function chargerJoueursExistants() {
     return;
   }
   $select.innerHTML = '<option value="">— Choisir un joueur —</option>' +
-    snap.docs.map(d => `<option value="${d.id}">${d.data().display_name || d.data().email}</option>`).join('');
+    snap.docs.map(d => `<option value="${d.id}">${nomAffichage(d.data())}</option>`).join('');
 }
 
 document.getElementById('btn-inviter-parent').addEventListener('click', async () => {
@@ -266,19 +270,22 @@ async function chargerMembres() {
 
   const membres = snap.docs
     .map(d => ({ uid: d.id, ...d.data() }))
-    .filter(m => m.role !== 'club_admin'); // la gestion des admins de club reste au super admin
+    .filter(m => m.role !== 'club_admin');
 
   if (membres.length === 0) {
-    $corps.innerHTML = '<tr><td colspan="3" style="color:var(--muted);">Aucun membre pour le moment.</td></tr>';
+    $corps.innerHTML = '<p style="color:var(--muted);">Aucun membre pour le moment.</p>';
     return;
   }
 
   $corps.innerHTML = membres.map(m => `
-    <tr>
-      <td>${m.display_name || m.email}</td>
-      <td>${LABEL_ROLE[m.role] || m.role}</td>
-      <td><button class="discret" data-uid="${m.uid}">Retirer l'accès</button></td>
-    </tr>
+    <div class="rangee">
+      ${avatarHtml(m.photo_url, nomAffichage(m), 38)}
+      <div>
+        <div class="nom">${nomAffichage(m)}</div>
+        <div class="sous-texte">${m.email} · ${LABEL_ROLE[m.role] || m.role}</div>
+      </div>
+      <div class="action"><button class="discret" data-uid="${m.uid}">Retirer l'accès</button></div>
+    </div>
   `).join('');
 
   $corps.querySelectorAll('[data-uid]').forEach(btn => {

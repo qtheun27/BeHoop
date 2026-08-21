@@ -6,6 +6,8 @@
 <title>Mes enfants — Espace Club</title>
 <style>
   :root { --primary: #0b5cab; --bg: #f2f4f8; --card: #fff; --text: #16202e; --muted: #64748b; --border: #e6e9ef; }
+  .avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; overflow: hidden; }
+  .entete-enfant { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
   * { box-sizing: border-box; }
   body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 16px; }
   .wrap { max-width: 560px; margin: auto; }
@@ -36,6 +38,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -80,8 +83,13 @@ onAuthStateChanged(auth, async (user) => {
 
     html += `
       <div class="carte">
-        <strong>${enfant.display_name || enfant.email}</strong>
-        <div class="sous">${equipe ? (equipe.category || equipe.name) : 'Aucune équipe assignée'}</div>
+        <div class="entete-enfant">
+          ${avatarHtml(enfant.photo_url, nomAffichage(enfant), 40)}
+          <div>
+            <strong>${nomAffichage(enfant)}</strong>
+            <div class="sous">${equipe ? (equipe.category || equipe.name) : 'Aucune équipe assignée'}</div>
+          </div>
+        </div>
 
         <h3>Prochains entraînements</h3>
         ${trainings.length

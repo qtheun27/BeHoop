@@ -34,7 +34,10 @@
   .msg.err { background: #fdecea; color: #b3261e; display: block; }
   .joueur-stat { border-bottom: 1px solid var(--border); padding: 10px 0; }
   .joueur-stat:last-child { border-bottom: none; }
-  .joueur-nom { font-weight: 700; font-size: 13.5px; margin-bottom: 6px; }
+  .joueur-nom { font-weight: 700; font-size: 13.5px; }
+  .avatar { border-radius: 50%; object-fit: cover; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; overflow: hidden; }
+  .joueur-entete { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .joueur-sous { font-size: 11.5px; color: var(--muted); }
   table.historique { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
   table.historique th, table.historique td { padding: 4px; text-align: center; border-bottom: 1px solid var(--border); }
   table.historique td:first-child, table.historique th:first-child { text-align: left; }
@@ -92,6 +95,7 @@ import {
   getFirestore, doc, getDoc, setDoc, addDoc, deleteDoc, collection, getDocs, query, where, orderBy, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -242,7 +246,13 @@ async function chargerJoueurs() {
   joueursEquipe = joueurs;
   $liste.innerHTML = joueurs.map(j => `
     <div class="joueur-stat">
-      <div class="joueur-nom">${j.display_name || j.email}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</div>
+      <div class="joueur-entete">
+        ${avatarHtml(j.photo_url, nomAffichage(j), 34)}
+        <div>
+          <div class="joueur-nom">${nomAffichage(j)}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</div>
+          <div class="joueur-sous">${j.email}</div>
+        </div>
+      </div>
       <div class="ligne-position">
         <select id="position-${j.uid}">
           <option value="">Position sur le terrain...</option>
@@ -333,7 +343,7 @@ async function chargerResumeEquipe() {
     const moy = (v) => c.matchs ? (v / c.matchs).toFixed(1) : '—';
     return `
       <tr>
-        <td>${j.display_name || j.email}${j.position ? ` <span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</td>
+        <td style="display:flex;align-items:center;gap:8px;text-align:left;">${avatarHtml(j.photo_url, nomAffichage(j), 24)}${nomAffichage(j)}${j.position ? ` <span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</td>
         <td>${c.matchs}</td>
         <td>${moy(c.points)}</td>
         <td>${moy(c.rebonds)}</td>

@@ -11,6 +11,17 @@ function initialesDe(nom) {
   return ((mots[0]?.[0] || '') + (mots[1]?.[0] || '')).toUpperCase() || '?';
 }
 
+// Nom à afficher : "Prénom N." si prénom/nom renseignés, sinon repli sur
+// display_name (ancien champ, ex. déduit de l'email ou de Google), sinon
+// l'email lui-même en tout dernier recours.
+export function nomAffichage(profil) {
+  if (profil && profil.prenom) {
+    const initiale = profil.nom ? profil.nom.trim().charAt(0).toUpperCase() + '.' : '';
+    return [profil.prenom, initiale].filter(Boolean).join(' ');
+  }
+  return (profil && (profil.display_name || profil.email)) || '?';
+}
+
 // Renvoie le HTML d'un avatar : la photo si disponible, sinon un rond de
 // couleur avec les initiales du nom (couleur dérivée du nom, stable).
 export function avatarHtml(photoUrl, nom, taille = 40) {

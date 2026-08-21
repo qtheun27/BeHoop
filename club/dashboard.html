@@ -45,7 +45,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { avatarHtml } from "./avatar.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -74,8 +74,8 @@ onAuthStateChanged(auth, async (user) => {
   const ligneClub = profil.club_id ? (nomClub || 'club ' + profil.club_id) : '';
 
   document.getElementById('carte-profil').innerHTML = `
-    ${avatarHtml(profil.photo_url, profil.display_name || user.email, 76)}
-    <h1>${profil.display_name || user.email}</h1>
+    ${avatarHtml(profil.photo_url, nomAffichage(profil), 76)}
+    <h1>${nomAffichage(profil)}</h1>
     <span class="badge badge-primary">${LABEL_ROLE[profil.role] || profil.role}</span>
     <div class="email" style="margin-top:8px;">${user.email}${ligneClub ? ' · ' + ligneClub : ''}</div>
   `;
