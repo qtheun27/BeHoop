@@ -38,6 +38,8 @@
   .statut { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
   .statut.pending { background: #fff4e5; color: #b45309; }
   .statut.used { background: #e8f6ee; color: #1f9d55; }
+  .discret { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; text-decoration: underline; }
+  .desc { color: var(--muted); font-size: 13px; margin-bottom: 6px; }
 </style>
 </head>
 <body>
@@ -61,13 +63,22 @@
       <tbody id="corps-invitations"><tr><td colspan="3" style="color:var(--muted);">Chargement…</td></tr></tbody>
     </table>
   </div>
+
+  <div class="carte">
+    <strong>Tous les membres (tous clubs)</strong>
+    <div class="desc" style="color:var(--muted);font-size:13px;">Admins de club, coachs, joueurs, parents.</div>
+    <table>
+      <thead><tr><th>Nom</th><th>Rôle</th><th></th></tr></thead>
+      <tbody id="corps-membres"><tr><td colspan="3" style="color:var(--muted);">Chargement…</td></tr></tbody>
+    </table>
+  </div>
 </div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, collection, getDocs, query, where, serverTimestamp,
+  getFirestore, doc, getDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
@@ -91,6 +102,7 @@ onAuthStateChanged(auth, async (user) => {
   await chargerClubsAwbb();
   await chargerAdminsExistants();
   await chargerInvitations();
+  await chargerMembres();
 });
 
 async function chargerClubsAwbb() {
@@ -183,6 +195,38 @@ async function envoyerInvitationAdmin() {
     $msg.className = 'msg err';
     $msg.textContent = "Erreur : " + e.message;
   }
+}
+
+async function chargerMembres() {
+  const snap = await getDocs(collection(db, 'users'));
+  const $corps = document.getElementById('corps-membres');
+  const LABEL_ROLE = { super_admin: 'Super admin', club_admin: 'Admin club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
+
+  const membres = snap.docs
+    .map(d => ({ uid: d.id, ...d.data() }))
+    .filter(m => m.role !== 'super_admin'); // sécurité : jamais de suppression de super admin depuis l'UI
+
+  if (membres.length === 0) {
+    $corps.innerHTML = '<tr><td colspan="3" style="color:var(--muted);">Aucun membre pour le moment.</td></tr>';
+    return;
+  }
+
+  $corps.innerHTML = membres.map(m => `
+    <tr>
+      <td>${m.display_name || m.email}</td>
+      <td>${LABEL_ROLE[m.role] || m.role}${m.club_name ? ' · ' + m.club_name : ''}</td>
+      <td><button class="discret" data-uid="${m.uid}">Retirer l'accès</button></td>
+    </tr>
+  `).join('');
+
+  $corps.querySelectorAll('[data-uid]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!confirm("Retirer l'accès de ce membre ? (son compte de connexion reste actif, mais il perd tout accès à l'espace club)")) return;
+      await deleteDoc(doc(db, 'users', btn.dataset.uid));
+      await chargerMembres();
+      await chargerAdminsExistants();
+    });
+  });
 }
 
 async function chargerInvitations() {

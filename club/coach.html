@@ -39,6 +39,12 @@
   table.historique th, table.historique td { padding: 4px; text-align: center; border-bottom: 1px solid var(--border); }
   table.historique td:first-child, table.historique th:first-child { text-align: left; }
   .vide { color: var(--muted); font-size: 13px; }
+  table.resume { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.resume th, table.resume td { padding: 6px 4px; text-align: center; border-bottom: 1px solid var(--border); }
+  table.resume td:first-child, table.resume th:first-child { text-align: left; }
+  .ligne-position { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+  .ligne-position select { flex: 1; }
+  .badge-position { display: inline-block; background: var(--bg); color: var(--muted); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 6px; }
 </style>
 </head>
 <body>
@@ -69,6 +75,11 @@
   </div>
 
   <div class="carte">
+    <strong>Résumé de l'équipe</strong>
+    <div id="resume-equipe"><p class="vide">Sélectionne une équipe ci-dessus.</p></div>
+  </div>
+
+  <div class="carte">
     <strong>Statistiques des joueurs</strong>
     <div id="liste-joueurs"><p class="vide">Sélectionne une équipe ci-dessus.</p></div>
   </div>
@@ -88,6 +99,7 @@ const db = getFirestore(app);
 
 let monProfil = null;
 let mesEquipes = [];
+let joueursEquipe = [];
 let equipeActive = null;
 let entrainementEnEdition = null;
 
@@ -126,6 +138,7 @@ async function selectionnerEquipe(teamId) {
   annulerEdition();
   await chargerEntrainements();
   await chargerJoueurs();
+  await chargerResumeEquipe();
 }
 
 function formatDate(d) {
@@ -211,6 +224,11 @@ document.getElementById('btn-save-ent').addEventListener('click', async () => {
   }
 });
 
+const POSITIONS = {
+  meneur: 'Meneur (1)', arriere: 'Arrière (2)', ailier: 'Ailier (3)',
+  ailier_fort: 'Ailier fort (4)', pivot: 'Pivot (5)',
+};
+
 async function chargerJoueurs() {
   const $liste = document.getElementById('liste-joueurs');
   $liste.innerHTML = 'Chargement…';
@@ -221,9 +239,17 @@ async function chargerJoueurs() {
     return;
   }
   const joueurs = snap.docs.map(d => ({ uid: d.id, ...d.data() }));
+  joueursEquipe = joueurs;
   $liste.innerHTML = joueurs.map(j => `
     <div class="joueur-stat">
-      <div class="joueur-nom">${j.display_name || j.email}</div>
+      <div class="joueur-nom">${j.display_name || j.email}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</div>
+      <div class="ligne-position">
+        <select id="position-${j.uid}">
+          <option value="">Position sur le terrain...</option>
+          ${Object.entries(POSITIONS).map(([val, label]) => `<option value="${val}" ${j.position === val ? 'selected' : ''}>${label}</option>`).join('')}
+        </select>
+        <button class="discret" onclick="window.__enregistrerPosition('${j.uid}')">Enregistrer</button>
+      </div>
       <div class="grille2">
         <input type="date" id="stat-date-${j.uid}">
         <select id="stat-type-${j.uid}">
@@ -263,17 +289,78 @@ async function chargerJoueurs() {
         created_at: serverTimestamp(),
       });
       $msg.className = 'msg ok'; $msg.textContent = '✅ Ajoutée.';
-      await chargerHistoriqueStat(uid);
     } catch (e) {
       $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+      return;
     }
+    // Séparé du bloc précédent : un souci d'affichage de l'historique ne
+    // doit jamais faire croire que l'enregistrement a échoué.
+    try {
+      await chargerHistoriqueStat(uid);
+      await chargerResumeEquipe();
+    } catch (e) { /* l'ajout a réussi, tant pis pour le rafraîchissement visuel */ }
   };
 
   joueurs.forEach(j => chargerHistoriqueStat(j.uid));
+
+  window.__enregistrerPosition = async (uid) => {
+    const position = document.getElementById('position-' + uid).value;
+    try {
+      await setDoc(doc(db, 'users', uid), { position }, { merge: true });
+      await chargerJoueurs();
+    } catch (e) {
+      alert("Impossible d'enregistrer la position : " + e.message);
+    }
+  };
+}
+
+async function chargerResumeEquipe() {
+  const $cible = document.getElementById('resume-equipe');
+  if (joueursEquipe.length === 0) { $cible.innerHTML = '<p class="vide">Aucun joueur.</p>'; return; }
+
+  const q = query(collection(db, 'player_stats'), where('team_id', '==', equipeActive));
+  const snap = await getDocs(q);
+  const parJoueur = {};
+  snap.forEach(d => {
+    const s = d.data();
+    parJoueur[s.player_uid] = parJoueur[s.player_uid] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
+    const c = parJoueur[s.player_uid];
+    c.matchs++; c.points += s.points || 0; c.rebonds += s.rebonds || 0; c.passes += s.passes || 0;
+  });
+
+  const lignes = joueursEquipe.map(j => {
+    const c = parJoueur[j.uid] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
+    const moy = (v) => c.matchs ? (v / c.matchs).toFixed(1) : '—';
+    return `
+      <tr>
+        <td>${j.display_name || j.email}${j.position ? ` <span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</td>
+        <td>${c.matchs}</td>
+        <td>${moy(c.points)}</td>
+        <td>${moy(c.rebonds)}</td>
+        <td>${moy(c.passes)}</td>
+      </tr>
+    `;
+  }).join('');
+
+  $cible.innerHTML = `
+    <table class="resume">
+      <thead><tr><th>Joueur</th><th>Matchs</th><th>Pts/m</th><th>Reb/m</th><th>Pas/m</th></tr></thead>
+      <tbody>${lignes}</tbody>
+    </table>
+  `;
 }
 
 async function chargerHistoriqueStat(uid) {
-  const q = query(collection(db, 'player_stats'), where('player_uid', '==', uid));
+  // Filtre sur team_id en plus de player_uid : nécessaire pour que les
+  // règles de sécurité (qui vérifient team_id côté coach) valident la
+  // requête — sans ce filtre, Firestore refusait la lecture pour un coach
+  // (alors qu'elle passe pour le joueur qui lit ses propres stats, un cas
+  // plus simple à valider).
+  const q = query(
+    collection(db, 'player_stats'),
+    where('player_uid', '==', uid),
+    where('team_id', '==', equipeActive)
+  );
   const snap = await getDocs(q);
   const $cible = document.getElementById('historique-' + uid);
   if (!$cible) return;
