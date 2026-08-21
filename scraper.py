@@ -1,18 +1,20 @@
 """
-Scraper Basket Hainaut — v6
+Scraper Basket national — v10
 
-Nouveautés par rapport à la v5 :
-- Chaque match est classé "championnat" / "coupe" / "amical" (déduit du nom
-  de la compétition de sa série) pour que l'interface puisse afficher un
-  émoji différent selon le type de match.
-- Génère un fichier .ics (agenda) par équipe dans le dossier calendars/.
-  Comme ce fichier est régénéré à CHAQUE passage du robot (2x/jour) et
-  hébergé à une URL stable sur GitHub Pages, un utilisateur qui s'abonne
-  à cette URL depuis Apple Calendrier ou Google Agenda (et non un simple
-  import ponctuel) verra ses matchs se mettre à jour automatiquement,
-  exactement comme un agenda public.
+Nouveauté par rapport à la v9 :
+- Couvre maintenant les 5 provinces de l'AWBB (Bruxelles-Brabant Wallon,
+  Hainaut, Liège, Luxembourg, Namur), pas seulement le Hainaut. Le site
+  awbb.be utilise exactement la même infrastructure (plugin bpleagues,
+  backend gestion.awbb.be) que baskethainaut.be — seul l'organization_id
+  change d'une province à l'autre. On peut donc tout interroger via le
+  même point d'entrée (proxy de baskethainaut.be), juste en bouclant sur
+  les 5 identifiants de province.
+- Les classements (l'étape la plus lente, un appel par série) sont
+  récupérés avec un peu de parallélisme (5 en même temps) pour compenser
+  le volume ~5x plus important, tout en restant modéré : le site a déjà
+  montré une instabilité passagère (503) sous charge normale.
 
-Nouveautés héritées des versions précédentes : voir les scrapers v3/v4/v5.
+Nouveautés héritées des versions précédentes : voir les scrapers v3 à v9.
 """
 
 import io
@@ -38,7 +40,16 @@ TAILLE_MAX_LOGO_OCTETS = 15_000_000
 BASE_SITE = "https://baskethainaut.be"
 NONCE_SOURCE_PAGE = f"{BASE_SITE}/clubs/"
 API_BASE = f"{BASE_SITE}/wp-json/bpleagues/v1/proxy"
-ORGANIZATION_ID = 2  # = Hainaut (fixe pour ce site provincial)
+
+# Les 5 provinces couvertes (le Hainaut restait le point d'entrée du site,
+# mais l'API dessert toute la Belgique francophone via ce même proxy).
+PROVINCES = {
+    1: "Bruxelles - Brabant Wallon",
+    2: "Hainaut",
+    3: "Liège",
+    4: "Luxembourg",
+    5: "Namur",
+}
 ORGANIZATION_ID_AWBB = 6  # = AWBB national (pour la Coupe AWBB, équipes "R...")
 LOGO_BASE_URL = "https://gestion.awbb.be/lms_league_ws/public/img/"
 
@@ -194,7 +205,7 @@ def nettoyer_venue(venue: dict | None) -> dict | None:
     }
 
 
-def preparer_club(session: requests.Session, club: dict) -> dict:
+def preparer_club(session: requests.Session, club: dict, province: str) -> dict:
     """Ne garde que les champs publics d'un club.
 
     L'API renvoie aussi des données administratives (IBAN, n° TVA, n° BCE,
@@ -222,6 +233,7 @@ def preparer_club(session: requests.Session, club: dict) -> dict:
         "id": club.get("id"),
         "name": nom_club,
         "short_name": nom_court_club,
+        "province": province,
         "logo_url": logo_url,
         "primary_color": primary_color,
         "accent_color": accent_color,
@@ -529,44 +541,58 @@ def generer_tous_les_agendas(clubs: list[dict], games: list[dict]) -> int:
     return compte
 
 
-def charger_basket_hainaut():
-    session = requests.Session()
+def recuperer_classements(session, nonce, series, organization_id, season_id):
+    """Récupère le classement de chaque série, avec un peu de parallélisme.
 
-    print("🔑 Récupération du jeton de sécurité (nonce)...")
-    nonce = get_nonce(session)
-    print("✅ Nonce obtenu.")
+    C'est l'étape la plus lente (un appel par série) — un pool modéré (5 en
+    simultané) accélère sans trop solliciter le site, qui a déjà montré une
+    instabilité passagère (503) en usage normal ; les tentatives automatiques
+    de call_api restent la protection principale contre ça.
+    """
+    classements = {}
 
-    print("📅 Détection de la saison en cours...")
-    seasons = call_api(session, nonce, "season/byMyLeague", {"organization_id": ORGANIZATION_ID})
-    season_list = seasons.get("elements", [])
-    saison_courante = next((s for s in season_list if s.get("default") == 1), None)
-    if not saison_courante:
-        saison_courante = max(season_list, key=lambda s: s.get("end_date", ""))
-    season_id = saison_courante["id"]
-    print(f"✅ Saison : {saison_courante.get('name')} (id={season_id}, "
-          f"{saison_courante.get('start_date')} → {saison_courante.get('end_date')})")
+    def recuperer_une_serie(serie):
+        try:
+            resp = call_api(
+                session, nonce, "ranking/byMyLeague",
+                {"serie_id": serie["id"], "organization_id": organization_id, "season_id": season_id},
+            )
+            return serie["id"], resp.get("elements", [])
+        except Exception as e:
+            print(f"⚠️ Classement indisponible pour la série {serie.get('name', serie['id'])}: {e}")
+            return serie["id"], []
 
-    print("🏢 Récupération des infos de la province...")
-    organisation = call_api(session, nonce, f"organization/{ORGANIZATION_ID}")
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        for i, (serie_id, lignes) in enumerate(executor.map(recuperer_une_serie, series), start=1):
+            classements[str(serie_id)] = lignes
+            if i % 20 == 0:
+                print(f"   ... {i}/{len(series)} classements récupérés")
+
+    return classements
+
+
+def recuperer_province(session, nonce, organization_id, nom_province, season_id, saison_courante):
+    """Récupère clubs/séries/classements/matchs d'UNE province."""
+    print(f"\n=== {nom_province} (organization_id={organization_id}) ===")
 
     print("🏆 Récupération des compétitions...")
     competitions_resp = call_api(
         session, nonce, "competition/byMyLeague",
-        {"organization_id": ORGANIZATION_ID, "season_id": season_id},
+        {"organization_id": organization_id, "season_id": season_id},
     )
     competitions = competitions_resp.get("elements", [])
     competition_ids = [c["id"] for c in competitions]
     print(f"✅ {len(competitions)} compétition(s) trouvée(s).")
 
     if not competition_ids:
-        print("❌ Aucune compétition trouvée, arrêt.")
-        return
+        print("❌ Aucune compétition trouvée pour cette province, on passe à la suivante.")
+        return [], [], [], {}, [], {}
 
     print("🏀 Récupération des clubs (équipes, salles, couleurs de logo)...")
     clubs_resp = call_api(
         session, nonce, "club/byMyLeague",
         {
-            "organization_id": ORGANIZATION_ID,
+            "organization_id": organization_id,
             "season_id": season_id,
             "competition_id": competition_ids,
             "sort": ["short_name", "reference", "order"],
@@ -587,16 +613,15 @@ def charger_basket_hainaut():
                 }
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        clubs = list(executor.map(lambda c: preparer_club(session, c), clubs_bruts))
+        clubs = list(executor.map(lambda c: preparer_club(session, c, nom_province), clubs_bruts))
     total_equipes = sum(len(c["teams"]) for c in clubs)
-    print(f"✅ {len(clubs)} club(s), {total_equipes} équipe(s) actives cette saison "
-          f"(logos et couleurs traités).")
+    print(f"✅ {len(clubs)} club(s), {total_equipes} équipe(s) actives cette saison.")
 
     print("📊 Récupération des séries (divisions)...")
     series_resp = call_api(
         session, nonce, "serie/byMyLeague",
         {
-            "organization_id": ORGANIZATION_ID,
+            "organization_id": organization_id,
             "season_id": season_id,
             "competition_id": competition_ids,
             "sort": ["competition", "division", "order"],
@@ -607,69 +632,104 @@ def charger_basket_hainaut():
     print(f"✅ {len(series)} série(s)/division(s) trouvée(s).")
 
     print("🏆 Récupération des classements par série...")
-    classements = {}
-    for i, serie in enumerate(series, start=1):
-        serie_id = serie["id"]
-        try:
-            ranking_resp = call_api(
-                session, nonce, "ranking/byMyLeague",
-                {"serie_id": serie_id, "organization_id": ORGANIZATION_ID, "season_id": season_id},
-            )
-            classements[str(serie_id)] = ranking_resp.get("elements", [])
-        except Exception as e:
-            print(f"⚠️ Classement indisponible pour la série {serie.get('name', serie_id)}: {e}")
-            classements[str(serie_id)] = []
-        if i % 10 == 0:
-            print(f"   ... {i}/{len(series)} classements récupérés")
+    classements = recuperer_classements(session, nonce, series, organization_id, season_id)
 
     print("🗓️ Récupération du calendrier — saison complète, par tranches...")
     games = recuperer_calendrier_saison(
-        session, nonce, competition_ids, ORGANIZATION_ID, season_id,
+        session, nonce, competition_ids, organization_id, season_id,
         saison_courante.get("start_date"), saison_courante.get("end_date"), lieux,
     )
-    print(f"✅ {len(games)} match(s) trouvé(s) sur la saison complète (Hainaut).")
+    print(f"✅ {len(games)} match(s) trouvé(s) sur la saison complète.")
 
-    ids_equipes_hainaut = {t["id"] for c in clubs for t in c["teams"]}
+    return clubs, series, competitions, classements, games, lieux
+
+
+def charger_basket_national():
+    session = requests.Session()
+
+    print("🔑 Récupération du jeton de sécurité (nonce)...")
+    nonce = get_nonce(session)
+    print("✅ Nonce obtenu.")
+
+    print("📅 Détection de la saison en cours...")
+    seasons = call_api(session, nonce, "season/byMyLeague", {"organization_id": 2})
+    season_list = seasons.get("elements", [])
+    saison_courante = next((s for s in season_list if s.get("default") == 1), None)
+    if not saison_courante:
+        saison_courante = max(season_list, key=lambda s: s.get("end_date", ""))
+    season_id = saison_courante["id"]
+    print(f"✅ Saison : {saison_courante.get('name')} (id={season_id}, "
+          f"{saison_courante.get('start_date')} → {saison_courante.get('end_date')})")
+
+    tous_clubs, toutes_series, toutes_competitions, tous_classements, tous_games = [], [], [], {}, []
+    tous_lieux = {}
+    ids_matchs_vus = set()
+
+    for organization_id, nom_province in PROVINCES.items():
+        clubs, series, competitions, classements, games, lieux = recuperer_province(
+            session, nonce, organization_id, nom_province, season_id, saison_courante,
+        )
+        tous_clubs += clubs
+        toutes_series += series
+        toutes_competitions += competitions
+        tous_classements.update(classements)
+        tous_lieux.update(lieux)
+        for g in games:
+            if g["id"] not in ids_matchs_vus:
+                ids_matchs_vus.add(g["id"])
+                tous_games.append(g)
+
+    print(f"\n=== National : {len(tous_clubs)} clubs, {len(toutes_series)} séries, "
+          f"{len(tous_games)} matchs (avant Coupe AWBB) ===")
+
+    print("🏢 Récupération des infos AWBB (national)...")
+    organisation = call_api(session, nonce, f"organization/{ORGANIZATION_ID_AWBB}")
+
+    ids_equipes_connues = {t["id"] for c in tous_clubs for t in c["teams"]}
     series_coupe, classements_coupe, matchs_coupe = recuperer_coupe_awbb(
-        session, nonce, season_id, ids_equipes_hainaut,
-        saison_courante.get("start_date"), saison_courante.get("end_date"), lieux,
+        session, nonce, season_id, ids_equipes_connues,
+        saison_courante.get("start_date"), saison_courante.get("end_date"), tous_lieux,
     )
-    series += series_coupe
-    classements.update(classements_coupe)
-    ids_deja_vus = {g["id"] for g in games}
-    games += [g for g in matchs_coupe if g["id"] not in ids_deja_vus]
-    print(f"✅ {len(matchs_coupe)} match(s) Coupe AWBB ajouté(s) — total {len(games)} matchs.")
+    toutes_series += series_coupe
+    tous_classements.update(classements_coupe)
+    for g in matchs_coupe:
+        if g["id"] not in ids_matchs_vus:
+            ids_matchs_vus.add(g["id"])
+            tous_games.append(g)
+    print(f"✅ {len(matchs_coupe)} match(s) Coupe AWBB ajouté(s) — total {len(tous_games)} matchs.")
 
     print("🏷️ Classification des matchs (championnat / coupe / amical)...")
-    enrichir_matchs_avec_type(games, series)
+    enrichir_matchs_avec_type(tous_games, toutes_series)
 
     print("📆 Génération des agendas .ics par équipe...")
-    nb_agendas = generer_tous_les_agendas(clubs, games)
+    nb_agendas = generer_tous_les_agendas(tous_clubs, tous_games)
     print(f"✅ {nb_agendas} agenda(s) .ics généré(s) dans calendars/.")
 
     donnees_finales = {
         "generated_at": datetime.utcnow().isoformat() + "Z",
         "organization": organisation.get("data", organisation),
         "season": saison_courante,
-        "competitions": competitions,
-        "clubs": clubs,
-        "series": series,
-        "classements": classements,
-        "games": games,
+        "provinces": list(PROVINCES.values()),
+        "competitions": toutes_competitions,
+        "clubs": tous_clubs,
+        "series": toutes_series,
+        "classements": tous_classements,
+        "games": tous_games,
     }
 
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(donnees_finales, f, ensure_ascii=False, indent=2)
 
-    taille_ko = len(json.dumps(donnees_finales)) // 1024
+    total_equipes = sum(len(c["teams"]) for c in tous_clubs)
+    taille_mo = len(json.dumps(donnees_finales)) / 1_000_000
     print("\n💾 Le fichier data.json a été généré avec succès !")
-    print(f"   → {len(clubs)} clubs, {total_equipes} équipes, {len(series)} séries, "
-          f"{len(games)} matchs — {taille_ko} Ko")
+    print(f"   → {len(tous_clubs)} clubs, {total_equipes} équipes, {len(toutes_series)} séries, "
+          f"{len(tous_games)} matchs — {taille_mo:.1f} Mo")
 
 
 if __name__ == "__main__":
     try:
-        charger_basket_hainaut()
+        charger_basket_national()
     except Exception as exc:
         print(f"❌ Erreur fatale : {exc}", file=sys.stderr)
         sys.exit(1)
