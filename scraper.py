@@ -1,15 +1,18 @@
 """
-Scraper Basket Hainaut — v8
+Scraper Basket Hainaut — v6
 
-Nouveauté par rapport à la v7 :
-- L'appel API réessaie automatiquement (jusqu'à 4 fois, délai croissant)
-  en cas d'incident réseau transitoire ('Connection aborted' /
-  RemoteDisconnected constaté en usage réel) au lieu de faire planter
-  tout le run pour un simple hoquet de connexion.
-- Un logo de club anormalement énorme (170 mégapixels observé) ne
-  provoque plus d'avertissement bruyant ni de ralentissement inutile.
+Nouveautés par rapport à la v5 :
+- Chaque match est classé "championnat" / "coupe" / "amical" (déduit du nom
+  de la compétition de sa série) pour que l'interface puisse afficher un
+  émoji différent selon le type de match.
+- Génère un fichier .ics (agenda) par équipe dans le dossier calendars/.
+  Comme ce fichier est régénéré à CHAQUE passage du robot (2x/jour) et
+  hébergé à une URL stable sur GitHub Pages, un utilisateur qui s'abonne
+  à cette URL depuis Apple Calendrier ou Google Agenda (et non un simple
+  import ponctuel) verra ses matchs se mettre à jour automatiquement,
+  exactement comme un agenda public.
 
-Nouveautés héritées des versions précédentes : voir les scrapers v3 à v7.
+Nouveautés héritées des versions précédentes : voir les scrapers v3/v4/v5.
 """
 
 import io
@@ -46,7 +49,7 @@ TAILLE_TRANCHE_JOURS = 55
 SITE_URL = "https://qtheun27.github.io/basket-awbb"
 
 HEADERS_BROWSER = {
-    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/8.0; +https://github.com/)"
+    "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/6.0; +https://github.com/)"
 }
 
 
@@ -95,13 +98,23 @@ def call_api(session: requests.Session, nonce: str, path: str, params: dict | No
         except (requests.exceptions.ConnectionError, requests.exceptions.Timeout,
                 requests.exceptions.ChunkedEncodingError) as e:
             derniere_erreur = e
-            if tentative < tentatives:
-                attente = 2 * tentative
-                print(f"   ⚠️ Incident réseau sur {path} (tentative {tentative}/{tentatives}) : "
-                      f"{e} — nouvel essai dans {attente}s...")
-                time.sleep(attente)
-            else:
+        except requests.exceptions.HTTPError as e:
+            # On ne réessaie que les erreurs SERVEUR (502/503/504 : le site
+            # est temporairement indisponible, constaté en usage réel) —
+            # jamais les erreurs 4xx (client), qui ne se résoudront pas en
+            # réessayant et méritent d'échouer immédiatement.
+            code = e.response.status_code if e.response is not None else None
+            if code is None or code < 500:
                 raise
+            derniere_erreur = e
+
+        if tentative < tentatives:
+            attente = 2 * tentative
+            print(f"   ⚠️ Incident réseau sur {path} (tentative {tentative}/{tentatives}) : "
+                  f"{derniere_erreur} — nouvel essai dans {attente}s...")
+            time.sleep(attente)
+        else:
+            raise derniere_erreur
     raise derniere_erreur
 
 
