@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU16D Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487345@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260815T140000
+DTEND;TZID=Europe/Brussels:20260815T160000
+SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Royal Murprotec Ni
+ velles Basketball A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
+DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 69 - 71
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485439@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260822T120000
+DTEND;TZID=Europe/Brussels:20260822T140000
+SUMMARY:🏀 RU16D Royal CS Natoye vs RU16D Royal Murprotec Nivelles Basket
+ ball A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360\,
+  Natoye
+GEO:50.33973020000000000000;5.05367540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Natoye,
+  Rue du Château d'Eau, 31 31, 5360, Natoye";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports de Natoye":geo:50.33973020000000000000,5.05367540000000000000
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486271@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260830T110000
+DTEND;TZID=Europe/Brussels:20260830T130000
+SUMMARY:🤝 RU16D Royal Murprotec Nivelles Basketball A vs RU16D La Viller
+ soise B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485064@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:🏆 RU16D BC Boninne B vs RU16D Royal Murprotec Nivelles Basketbal
+ l A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
+GEO:50.46749650000000000000;4.92225170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
+ Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
+DESCRIPTION:Compétition : Coupe AWBB U16 Dames
+END:VEVENT
+END:VCALENDAR

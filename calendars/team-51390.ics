@@ -1,0 +1,367 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Fléron Basket-ball Club A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486279@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260815T190000
+DTEND;TZID=Europe/Brussels:20260815T210000
+SUMMARY:🤝 P2H RBC Haneffe A vs P2H Fléron Basket-ball Club A
+LOCATION:Hall Omnisports des Templiers\, Rue des Templiers 23\, 4357\, Hane
+ ffe
+GEO:50.64034420000000000000;5.31348490000000100000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports des Templi
+ ers, Rue des Templiers 23, 4357, Haneffe";X-APPLE-RADIUS=70;X-TITLE="Hall O
+ mnisports des Templiers":geo:50.64034420000000000000,5.31348490000000100000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 64 - 80
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487112@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260819T201500
+DTEND;TZID=Europe/Brussels:20260819T221500
+SUMMARY:🤝 P2H Royal Union Bellaire A vs P2H Fléron Basket-ball Club A
+LOCATION:Salle Communale\, Rue de l'Hôtel Communal 6\, 4610\, Bellaire
+GEO:50.64426860000000000000;5.66303910000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Communale, Rue de l'
+ Hôtel Communal 6, 4610, Bellaire";X-APPLE-RADIUS=70;X-TITLE="Salle Communa
+ le":geo:50.64426860000000000000,5.66303910000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 72 - 81
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478233@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260822T170000
+DTEND;TZID=Europe/Brussels:20260822T190000
+SUMMARY:🏆 P4H RBC Dison Andrimont C vs P2H Fléron Basket-ball Club A
+LOCATION:Salle Omnisports d'Andrimont\, Rue Pire Pierre 30B\, 4821\, Andrim
+ ont
+GEO:50.60228100000000000000;5.87009400000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports d'Andrimo
+ nt, Rue Pire Pierre 30B, 4821, Andrimont";X-APPLE-RADIUS=70;X-TITLE="Salle 
+ Omnisports d'Andrimont":geo:50.60228100000000000000,5.87009400000000000000
+DESCRIPTION:Compétition : Poule W
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478231@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260830T110000
+DTEND;TZID=Europe/Brussels:20260830T130000
+SUMMARY:🏆 P2H Fléron Basket-ball Club A vs P4H Stavelot RBC C
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : Poule W
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488725@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 P2H RBC Visé A vs P2H Fléron Basket-ball Club A
+LOCATION:Salle de l'Ecole Communale\, Rue de Visé 105\, 4602\, Cheratte
+GEO:50.68213140000000000000;5.66993500000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle de l'Ecole Communale
+ , Rue de Visé 105, 4602, Cheratte";X-APPLE-RADIUS=70;X-TITLE="Salle de l'E
+ cole Communale":geo:50.68213140000000000000,5.66993500000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489053@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:🏀 P2H La Villersoise A vs P2H Fléron Basket-ball Club A
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530\, Ville
+ rs-le-Bouillet
+GEO:50.56822960000000000000;5.26758340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports Emile Coll
+ ignon, rue du Centre, 5, 4530, Villers-le-Bouillet";X-APPLE-RADIUS=70;X-TIT
+ LE="Hall des Sports Emile Collignon":geo:50.56822960000000000000,5.26758340
+ 000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489384@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Royal BC Alleur C
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489712@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:🏀 P2H RBC Pepinster East Belgium C vs P2H Fléron Basket-ball Cl
+ ub A
+LOCATION:Salle Basket Pierre Raskin\, Rue Jean Simon 26\, 4860\, Pepinster
+GEO:50.56594467163086;5.801829814910889
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Basket Pierre Raskin
+ , Rue Jean Simon 26, 4860, Pepinster";X-APPLE-RADIUS=70;X-TITLE="Salle Bask
+ et Pierre Raskin":geo:50.56594467163086,5.801829814910889
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489845@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261105T210000
+DTEND;TZID=Europe/Brussels:20261105T230000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Vaillante Jupille A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489989@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Royal Spa Basket Club C
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490310@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:🏀 P2H BC Belleflamme C vs P2H Fléron Basket-ball Club A
+LOCATION:Salle de l'IESE \, Rue Nicolas Spiroux 62\, 4030\, Grivegnée
+GEO:50.62881060000000000000;5.61330300000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle de l'IESE , Rue Nico
+ las Spiroux 62, 4030, Grivegnée";X-APPLE-RADIUS=70;X-TITLE="Salle de l'IES
+ E ":geo:50.62881060000000000000,5.61330300000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490646@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Esneux St-Louis United E
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488450@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261129T110000
+DTEND;TZID=Europe/Brussels:20261129T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Royal Mosa Athletic Club
+  1941 A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490988@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:🏀 P2H Royal BC.Prayon A vs P2H Fléron Basket-ball Club A
+LOCATION:Hall Omnisports Communal Trooz\, Rue de L'Eglise\, 22\, 4870\, Tro
+ oz
+GEO:50.57712000000000000000;5.67597960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Communal T
+ rooz, Rue de L'Eglise, 22, 4870, Trooz";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Communal Trooz":geo:50.57712000000000000000,5.67597960000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491319@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Lg. Atlas Ath. Jupille B
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491645@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 P2H RABC Ensival A vs P2H Fléron Basket-ball Club A
+LOCATION:Centre Sportif Albert Moray\, Rue des Chapeliers 2\, 4800\, Ensiva
+ l
+GEO:50.58459910000000000000;5.83881710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Albert Mora
+ y, Rue des Chapeliers 2, 4800, Ensival";X-APPLE-RADIUS=70;X-TITLE="Centre S
+ portif Albert Moray":geo:50.58459910000000000000,5.83881710000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491975@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H RBC Visé A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492298@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:🏀 P2H BC Verviers B vs P2H Fléron Basket-ball Club A
+LOCATION:Bulle de Gerardchamps\, Quai de la Vesdre\, 20\, 4800\, Verviers
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492632@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H RBC Pepinster East Belgi
+ um C
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492959@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270131T113000
+DTEND;TZID=Europe/Brussels:20270131T133000
+SUMMARY:🏀 P2H Royal Mosa Athletic Club 1941 A vs P2H Fléron Basket-ball
+  Club A
+LOCATION:Hall Omnisports\, rue d'Ougrée 71\, 4031\, Angleur
+GEO:50.6104811;5.584463
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, rue d'Oug
+ rée 71, 4031, Angleur";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":geo:50.
+ 6104811,5.584463
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493490@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270214T110000
+DTEND;TZID=Europe/Brussels:20270214T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H La Villersoise A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493817@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H BC Belleflamme C
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488119@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270228T110000
+DTEND;TZID=Europe/Brussels:20270228T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H BC Verviers B
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493959@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H Royal BC.Prayon A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494085@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:🏀 P2H Esneux St-Louis United E vs P2H Fléron Basket-ball Club A
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020\, Liège
+GEO:50.636098964168276;5.581151511773976
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Collège Saint-Louis, Rue 
+ Vilette 28, 4020, Liège";X-APPLE-RADIUS=70;X-TITLE="Collège Saint-Louis":
+ geo:50.636098964168276,5.581151511773976
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494414@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:🏀 P2H Royal Spa Basket Club C vs P2H Fléron Basket-ball Club A
+LOCATION:Complexe Sportif de Warfaaz\, Avenue Amédée Hesse 27\, 4900\, Sp
+ a
+GEO:50.49786220000000000000;5.88073890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Warfaa
+ z, Avenue Amédée Hesse 27, 4900, Spa";X-APPLE-RADIUS=70;X-TITLE="Complexe
+  Sportif de Warfaaz":geo:50.49786220000000000000,5.88073890000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494743@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270328T110000
+DTEND;TZID=Europe/Brussels:20270328T130000
+SUMMARY:🏀 P2H Royal BC Alleur C vs P2H Fléron Basket-ball Club A
+LOCATION:Salle du BC Alleur\, Rue Monfort\, 108\, 4430\, Ans
+GEO:50.66348210000000000000;5.52420520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du BC Alleur, Rue Mo
+ nfort, 108, 4430, Ans";X-APPLE-RADIUS=70;X-TITLE="Salle du BC Alleur":geo:5
+ 0.66348210000000000000,5.52420520000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-495092@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270411T110000
+DTEND;TZID=Europe/Brussels:20270411T130000
+SUMMARY:🏀 P2H Fléron Basket-ball Club A vs P2H RABC Ensival A
+LOCATION:Centre Sportif Local de Fléron\, Avenue de l'Espace Sport\, 4\, 4
+ 620\, Fléron
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-495413@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:🏀 P2H Lg. Atlas Ath. Jupille B vs P2H Fléron Basket-ball Club A
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020\, Ju
+ pille
+GEO:50.64013210000000000000;5.62093230000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle de l'Athenée Royal 
+ de Jupille, Voie du Herdier, 4020, Jupille";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e de l'Athenée Royal de Jupille":geo:50.64013210000000000000,5.62093230000
+ 000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-495747@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270425T100000
+DTEND;TZID=Europe/Brussels:20270425T120000
+SUMMARY:🏀 P2H Vaillante Jupille A vs P2H Fléron Basket-ball Club A
+LOCATION:Salle Toussaint Lejear\, Rue des Argilères 77\, 4020\, Jupille
+GEO:50.64283010000000000000;5.63559790000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Toussaint Lejear, Ru
+ e des Argilères 77, 4020, Jupille";X-APPLE-RADIUS=70;X-TITLE="Salle Toussa
+ int Lejear":geo:50.64283010000000000000,5.63559790000000000000
+DESCRIPTION:Compétition : P2 Hommes A
+END:VEVENT
+END:VCALENDAR

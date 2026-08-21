@@ -1,0 +1,282 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14D Royal Excelsior Brussels A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-471619@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D ASA Saint-Hubert Boi
+ tsfort
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471567@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260919T123000
+DTEND;TZID=Europe/Brussels:20260919T143000
+SUMMARY:🏀 PU14D Royal IV Brussels A vs PU14D Royal Excelsior Brussels A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471620@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D Anderlecht Basketbal
+ l A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471610@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261010T100000
+DTEND;TZID=Europe/Brussels:20261010T120000
+SUMMARY:🏀 PU14D RBC Éclair C vs PU14D Royal Excelsior Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471581@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:🏀 PU14D RBC Auderghem vs PU14D Royal Excelsior Brussels A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160\, Aude
+ rghem
+GEO:50.81607970000000000000;4.42988440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif d'Auderghem
+ , Chaussée de Wavre 1690, 1160, Auderghem";X-APPLE-RADIUS=70;X-TITLE="Cent
+ re Sportif d'Auderghem":geo:50.81607970000000000000,4.42988440000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471622@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471603@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:🏀 PU14D CRBB The Runners vs PU14D Royal Excelsior Brussels A
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471624@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261205T130000
+DTEND;TZID=Europe/Brussels:20261205T150000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D RBC Auderghem
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471625@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D RBC Éclair C
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471626@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471635@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270116T111500
+DTEND;TZID=Europe/Brussels:20270116T131500
+SUMMARY:🏀 PU14D Anderlecht Basketball A vs PU14D Royal Excelsior Brussel
+ s A
+LOCATION:Ecole P18 Anderlecht\, Rue Pierre Longin 3\, 1070\, Anderlecht
+GEO:50.8286053;4.291128
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P18 Anderlecht, Rue 
+ Pierre Longin 3, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P18 And
+ erlecht":geo:50.8286053,4.291128
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471595@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270130T110000
+DTEND;TZID=Europe/Brussels:20270130T130000
+SUMMARY:🏀 PU14D ASA Saint-Hubert Boitsfort vs PU14D Royal Excelsior Brus
+ sels A
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170\, Watermael-
+ Boitsfort
+GEO:50.80161980000000000000;4.42955390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Collège Saint-Hubert, Ave
+ nue Charle Albert 9, 1170, Watermael-Boitsfort";X-APPLE-RADIUS=70;X-TITLE="
+ Collège Saint-Hubert":geo:50.80161980000000000000,4.42955390000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471606@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270206T150000
+DTEND;TZID=Europe/Brussels:20270206T170000
+SUMMARY:🏀 PU14D CRBB The Runners vs PU14D Royal Excelsior Brussels A
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471617@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270213T100000
+DTEND;TZID=Europe/Brussels:20270213T120000
+SUMMARY:🏀 PU14D RBC Éclair C vs PU14D Royal Excelsior Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471628@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D Anderlecht Basketbal
+ l A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471623@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270306T130000
+DTEND;TZID=Europe/Brussels:20270306T150000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D ASA Saint-Hubert Boi
+ tsfort
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471575@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270313T130000
+DTEND;TZID=Europe/Brussels:20270313T150000
+SUMMARY:🏀 PU14D Royal IV Brussels A vs PU14D Royal Excelsior Brussels A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-471629@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270327T130000
+DTEND;TZID=Europe/Brussels:20270327T150000
+SUMMARY:🏀 PU14D Royal Excelsior Brussels A vs PU14D RBC Auderghem
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Dames A
+END:VEVENT
+END:VCALENDAR

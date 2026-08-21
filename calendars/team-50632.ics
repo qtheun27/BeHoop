@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU14D Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483822@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260829T153000
+DTEND;TZID=Europe/Brussels:20260829T173000
+SUMMARY:🤝 RU14D Royal Murprotec Nivelles Basketball A vs RU14D BC Mons C
+ apitale
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484983@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:🏆 RU14D Royal Murprotec Nivelles Basketball A vs RU14D Royal BC.
+ Prayon A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Coupe AWBB U14 Dames
+END:VEVENT
+END:VCALENDAR

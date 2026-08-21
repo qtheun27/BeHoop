@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:TDM2 Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483819@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260811T210000
+DTEND;TZID=Europe/Brussels:20260811T230000
+SUMMARY:🤝 TDM2 Royal Murprotec Nivelles Basketball A vs None
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 75 - 61
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486872@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260819T203000
+DTEND;TZID=Europe/Brussels:20260819T223000
+SUMMARY:🤝 TDM2 Royal Castors Braine A vs TDM2 Royal Murprotec Nivelles B
+ asketball A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 58 - 63
+END:VEVENT
+END:VCALENDAR

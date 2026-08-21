@@ -1,0 +1,38 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:R1H Royal BC Loyers A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-482249@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260813T193000
+DTEND;TZID=Europe/Brussels:20260813T213000
+SUMMARY:🏀 R1H Royal BC Loyers A vs P1H BC Marche A
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101\, Loyer
+ s
+GEO:50.4549452;4.9569284
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Loyers,
+  Comognes de Loyers, 42, 5101, Loyers";X-APPLE-RADIUS=70;X-TITLE="Hall Omni
+ sports de Loyers":geo:50.4549452,4.9569284
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 69 - 76
+END:VEVENT
+BEGIN:VEVENT
+UID:match-482251@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260820T210000
+DTEND;TZID=Europe/Brussels:20260820T230000
+SUMMARY:🏀 R1H Royal BC Loyers A vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101\, Loyer
+ s
+GEO:50.4549452;4.9569284
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Loyers,
+  Comognes de Loyers, 42, 5101, Loyers";X-APPLE-RADIUS=70;X-TITLE="Hall Omni
+ sports de Loyers":geo:50.4549452,4.9569284
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 47 - 49
+END:VEVENT
+END:VCALENDAR

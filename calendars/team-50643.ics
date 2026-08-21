@@ -1,0 +1,319 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU12D Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-484756@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:🏀 PU12D BC École Européenne A vs PU12D Royal Murprotec Nivelle
+ s Basketball A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050\, Ixe
+ lles
+GEO:50.82146320000000000000;4.40088520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Européenne Ixelles,
+  Boulevard du Triomphe 135, 1050, Ixelles";X-APPLE-RADIUS=70;X-TITLE="Ecole
+  Européenne Ixelles":geo:50.82146320000000000000,4.40088520000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484690@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261017T150000
+DTEND;TZID=Europe/Brussels:20261017T170000
+SUMMARY:🏀 PU12D Royal Canter Schaerbeek vs PU12D Royal Murprotec Nivelle
+ s Basketball A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484925@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:🏆 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Royal Cas
+ tors Braine A
+DESCRIPTION:Compétition : Coupe AWBB U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484747@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Royal Cas
+ tors Braine A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484746@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Ganshoren
+  Dames Basket B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484715@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261205T140000
+DTEND;TZID=Europe/Brussels:20261205T160000
+SUMMARY:🏀 PU12D Women's Basket Club vs PU12D Royal Murprotec Nivelles Ba
+ sketball A
+LOCATION:Ecole P24\, allée des Coquelicots 10\, 1070\, Anderlecht
+GEO:50.81718959777273;4.261549748018649
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P24, allée des Coqu
+ elicots 10, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P24":geo:50.
+ 81718959777273,4.261549748018649
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484748@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Basket Cl
+ ub Genappe Lothier
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484704@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261219T090000
+DTEND;TZID=Europe/Brussels:20261219T110000
+SUMMARY:🏀 PU12D RBC Éclair B vs PU12D Royal Murprotec Nivelles Basketba
+ ll A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484739@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270110T151500
+DTEND;TZID=Europe/Brussels:20270110T171500
+SUMMARY:🏀 PU12D Anderlecht Basketball vs PU12D Royal Murprotec Nivelles 
+ Basketball A
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070\, Anderlecht
+GEO:50.84170420000000000000;4.29762920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P1 Anderlecht, Rue P
+ otaerdenberg 170, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P1 And
+ erlecht":geo:50.84170420000000000000,4.29762920000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484749@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D BC École
+  Européenne A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484768@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270123T130000
+DTEND;TZID=Europe/Brussels:20270123T150000
+SUMMARY:🏀 PU12D RBC Auderghem vs PU12D Royal Murprotec Nivelles Basketba
+ ll A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160\, Aude
+ rghem
+GEO:50.81607970000000000000;4.42988440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif d'Auderghem
+ , Chaussée de Wavre 1690, 1160, Auderghem";X-APPLE-RADIUS=70;X-TITLE="Cent
+ re Sportif d'Auderghem":geo:50.81607970000000000000,4.42988440000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484750@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270130T160000
+DTEND;TZID=Europe/Brussels:20270130T180000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Royal IV 
+ Brussels A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484729@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270207T090000
+DTEND;TZID=Europe/Brussels:20270207T110000
+SUMMARY:🏀 PU12D Basket Club Genappe Lothier vs PU12D Royal Murprotec Niv
+ elles Basketball A
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470\, Genappe
+GEO:50.61276910000000000000;4.45317510000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Genapp
+ e, Rue Couture Mathy 5, 1470, Genappe";X-APPLE-RADIUS=70;X-TITLE="Salle Omn
+ isports de Genappe":geo:50.61276910000000000000,4.45317510000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484751@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270220T140000
+DTEND;TZID=Europe/Brussels:20270220T160000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D RBC Auder
+ ghem
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484686@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270320T100000
+DTEND;TZID=Europe/Brussels:20270320T120000
+SUMMARY:🏀 PU12D Ganshoren Dames Basket B vs PU12D Royal Murprotec Nivell
+ es Basketball A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484752@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270403T133000
+DTEND;TZID=Europe/Brussels:20270403T153000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Royal Can
+ ter Schaerbeek
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484665@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270410T110000
+DTEND;TZID=Europe/Brussels:20270410T130000
+SUMMARY:🏀 PU12D Royal Castors Braine A vs PU12D Royal Murprotec Nivelles
+  Basketball A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484753@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270417T153000
+DTEND;TZID=Europe/Brussels:20270417T173000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Women's B
+ asket Club
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484754@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270424T160000
+DTEND;TZID=Europe/Brussels:20270424T180000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D RBC Écla
+ ir B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484788@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270515T100000
+DTEND;TZID=Europe/Brussels:20270515T120000
+SUMMARY:🏀 PU12D Royal IV Brussels A vs PU12D Royal Murprotec Nivelles Ba
+ sketball A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-484755@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270522T160000
+DTEND;TZID=Europe/Brussels:20270522T180000
+SUMMARY:🏀 PU12D Royal Murprotec Nivelles Basketball A vs PU12D Anderlech
+ t Basketball
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Provincial U12 Dames
+END:VEVENT
+END:VCALENDAR

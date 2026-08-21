@@ -1,0 +1,273 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3D Atlas Brussels Basketball Academy
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-470422@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20260904T190000
+DTEND;TZID=Europe/Brussels:20260904T210000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D RBC Éclair B
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470412@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20260919T193000
+DTEND;TZID=Europe/Brussels:20260919T213000
+SUMMARY:🏀 P3D Basket Club Genappe Lothier vs P3D Atlas Brussels Basketba
+ ll Academy
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472
+ \, Vieux-Genappe
+GEO:50.61027150000000000000;4.44466210000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Polyvalente de l'Esp
+ ace 2000, Rue Louis Taburiaux 25, 1472, Vieux-Genappe";X-APPLE-RADIUS=70;X-
+ TITLE="Salle Polyvalente de l'Espace 2000":geo:50.61027150000000000000,4.44
+ 466210000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470427@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D Basket Club Genap
+ pe Lothier
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470383@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261107T184500
+DTEND;TZID=Europe/Brussels:20261107T204500
+SUMMARY:🏀 P3D CRBB The Runners B vs P3D Atlas Brussels Basketball Academ
+ y
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470363@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261120T210000
+DTEND;TZID=Europe/Brussels:20261120T230000
+SUMMARY:🏀 P3D Royal Castors Braine vs P3D Atlas Brussels Basketball Acad
+ emy
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470425@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D Royal Castors Bra
+ ine
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470426@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D CRBB The Runners 
+ B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470423@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D RBC Auderghem
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470395@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:🏀 P3D RBC Éclair B vs P3D Atlas Brussels Basketball Academy
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 10
+ 20\, Bruxelles
+GEO:50.88421800000000000000;4.35800020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Neder-Ove
+ r-Hembeek, Rue de Lombarzyde, 120, 1020, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Neder-Over-Hembeek":geo:50.88421800000000000000,4.3580
+ 0020000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470428@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D Royal Canter Scha
+ erbeek C
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470355@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 P3D RBC Auderghem vs P3D Atlas Brussels Basketball Academy
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160\, Aude
+ rghem
+GEO:50.81607970000000000000;4.42988440000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif d'Auderghem
+ , Chaussée de Wavre 1690, 1160, Auderghem";X-APPLE-RADIUS=70;X-TITLE="Cent
+ re Sportif d'Auderghem":geo:50.81607970000000000000,4.42988440000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470366@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270205T210000
+DTEND;TZID=Europe/Brussels:20270205T230000
+SUMMARY:🏀 P3D Royal Castors Braine vs P3D Atlas Brussels Basketball Acad
+ emy
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470430@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D RBC Éclair B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470403@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:🏀 P3D Royal Canter Schaerbeek C vs P3D Atlas Brussels Basketball
+  Academy
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470431@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270320T170000
+DTEND;TZID=Europe/Brussels:20270320T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D CRBB The Runners 
+ B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470410@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270328T170000
+DTEND;TZID=Europe/Brussels:20270328T190000
+SUMMARY:🏀 P3D Royal Canter Schaerbeek C vs P3D Atlas Brussels Basketball
+  Academy
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470421@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:🏀 P3D Basket Club Genappe Lothier vs P3D Atlas Brussels Basketba
+ ll Academy
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472
+ \, Vieux-Genappe
+GEO:50.61027150000000000000;4.44466210000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Polyvalente de l'Esp
+ ace 2000, Rue Louis Taburiaux 25, 1472, Vieux-Genappe";X-APPLE-RADIUS=70;X-
+ TITLE="Salle Polyvalente de l'Espace 2000":geo:50.61027150000000000000,4.44
+ 466210000000000000
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470432@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:🏀 P3D Atlas Brussels Basketball Academy vs P3D RBC Auderghem
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000\, Bruxelles
+GEO:50.8459288;4.3461054
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Fontainas, Rue des S
+ ix Jetons 20, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TITLE="Salle Fontainas":
+ geo:50.8459288,4.3461054
+DESCRIPTION:Compétition : P3 Dames A
+END:VEVENT
+END:VCALENDAR

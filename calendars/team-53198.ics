@@ -1,0 +1,308 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU14H Royal Excelsior Brussels B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-470963@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Royal Linthout BC W.
+ S. A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470964@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260926T150000
+DTEND;TZID=Europe/Brussels:20260926T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Fresh Air A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470965@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H B55 Academy XL B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470913@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261018T123000
+DTEND;TZID=Europe/Brussels:20261018T143000
+SUMMARY:🏀 PU14H Royal IV Brussels A vs PU14H Royal Excelsior Brussels B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470926@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261107T121500
+DTEND;TZID=Europe/Brussels:20261107T141500
+SUMMARY:🏀 PU14H B55 Academy XL B vs PU14H Royal Excelsior Brussels B
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\,
+  1050\, Ixelles
+GEO:50.80656750000001;4.389351
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Ecoles 7 
+ et 8, Avenue du Bois de la Cambre 211, 1050, Ixelles";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Ecoles 7 et 8":geo:50.80656750000001,4.389351
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470966@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470956@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 PU14H Fresh Air A vs PU14H Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090\, J
+ ette
+GEO:50.88308130000000000000;4.33336540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports de Jette
+ , Avenue du Comte de Jette 3, 1090, Jette";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Omnisports de Jette":geo:50.88308130000000000000,4.33336540000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470945@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261128T140000
+DTEND;TZID=Europe/Brussels:20261128T160000
+SUMMARY:🏀 PU14H CRBB The Runners vs PU14H Royal Excelsior Brussels B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470968@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470938@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261212T140000
+DTEND;TZID=Europe/Brussels:20261212T160000
+SUMMARY:🏀 PU14H Royal Linthout BC W.S. A vs PU14H Royal Excelsior Brusse
+ ls B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470969@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270109T150000
+DTEND;TZID=Europe/Brussels:20270109T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Fresh Air A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470919@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270117T100000
+DTEND;TZID=Europe/Brussels:20270117T120000
+SUMMARY:🏀 PU14H Royal IV Brussels A vs PU14H Royal Excelsior Brussels B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470970@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270123T150000
+DTEND;TZID=Europe/Brussels:20270123T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470941@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270129T191500
+DTEND;TZID=Europe/Brussels:20270129T211500
+SUMMARY:🏀 PU14H Royal Linthout BC W.S. A vs PU14H Royal Excelsior Brusse
+ ls B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470949@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 PU14H CRBB The Runners vs PU14H Royal Excelsior Brussels B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470931@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270213T121500
+DTEND;TZID=Europe/Brussels:20270213T141500
+SUMMARY:🏀 PU14H B55 Academy XL B vs PU14H Royal Excelsior Brussels B
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\,
+  1050\, Ixelles
+GEO:50.80656750000001;4.389351
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Ecoles 7 
+ et 8, Avenue du Bois de la Cambre 211, 1050, Ixelles";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Ecoles 7 et 8":geo:50.80656750000001,4.389351
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470962@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:🏀 PU14H Fresh Air A vs PU14H Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090\, J
+ ette
+GEO:50.88308130000000000000;4.33336540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports de Jette
+ , Avenue du Comte de Jette 3, 1090, Jette";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Omnisports de Jette":geo:50.88308130000000000000,4.33336540000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470967@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270306T150000
+DTEND;TZID=Europe/Brussels:20270306T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470971@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270320T150000
+DTEND;TZID=Europe/Brussels:20270320T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H B55 Academy XL B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470972@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270327T150000
+DTEND;TZID=Europe/Brussels:20270327T170000
+SUMMARY:🏀 PU14H Royal Excelsior Brussels B vs PU14H Royal Linthout BC W.
+ S. A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U14 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

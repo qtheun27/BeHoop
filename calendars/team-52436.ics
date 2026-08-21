@@ -1,0 +1,399 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H Basket Club Sombreffe B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486714@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260829T210000
+DTEND;TZID=Europe/Brussels:20260829T230000
+SUMMARY:🏆 P2H RBC Erpent C vs P3H Basket Club Sombreffe B
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5
+ \, 5101\, Erpent
+GEO:50.45160250000000000000;4.90500110000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Collège N-D de l
+ a Paix, Place Notre-Dame de la Paix, 5, 5101, Erpent";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle du Collège N-D de la Paix":geo:50.45160250000000000000,4.90500
+ 110000000000000
+DESCRIPTION:Compétition : Coupe de Namur Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460383@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 P3H Royal BC Maillen D vs P3H Basket Club Sombreffe B
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330\, Maillen
+GEO:50.37546330000000000000;4.96690610000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Maillen,
+  Rue de Crupet 45, 5330, Maillen";X-APPLE-RADIUS=70;X-TITLE="Centre Sportif
+  de Maillen":geo:50.37546330000000000000,4.96690610000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460422@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Royal BC Éghezée B
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460436@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 P3H RBB Gembloux D vs P3H Basket Club Sombreffe B
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460423@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261018T163000
+DTEND;TZID=Europe/Brussels:20261018T183000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Profondeville Sharks D
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460281@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261025T133000
+DTEND;TZID=Europe/Brussels:20261025T153000
+SUMMARY:🏀 P3H AS Mazy-Spy C vs P3H Basket Club Sombreffe B
+LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190
+ \, Jemeppe-sur-Sambre
+GEO:50.46432876586914;4.657829284667969
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Jemeppe
+ -sur-Sambre, rue Saint-Martin 25, 5190, Jemeppe-sur-Sambre";X-APPLE-RADIUS=
+ 70;X-TITLE="Hall Omnisports de Jemeppe-sur-Sambre":geo:50.46432876586914,4.
+ 657829284667969
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460372@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:🏀 P3H BC Ohey B vs P3H Basket Club Sombreffe B
+LOCATION:Salle Communale\,  Voie de Rauyisse\, 2\, 5350\, Ohey
+GEO:50.43562380000000000000;5.11823490000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Communale,  Voie de 
+ Rauyisse, 2, 5350, Ohey";X-APPLE-RADIUS=70;X-TITLE="Salle Communale":geo:50
+ .43562380000000000000,5.11823490000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460424@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H BC Marche C
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460309@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261120T204500
+DTEND;TZID=Europe/Brussels:20261120T224500
+SUMMARY:🏀 P3H Black Star Gembloux vs P3H Basket Club Sombreffe B
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460421@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Royal Gallia BC Beez C
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460425@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261206T123000
+DTEND;TZID=Europe/Brussels:20261206T143000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H RBC Erpent D
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460270@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:🏀 P3H NBC La Bruyère A vs P3H Basket Club Sombreffe B
+LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
+GEO:50.5117391;4.8444755
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
+ e, rue de Rhisnes 3, 5081, Emines";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif 
+ de La Bruyère":geo:50.5117391,4.8444755
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460426@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Royal CS Natoye D
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460297@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:🏀 P3H Royal Gallia BC Beez C vs P3H Basket Club Sombreffe B
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
+GEO:50.46749650000000000000;4.92225170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
+ Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460427@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Jeunesse Basket Hotton B
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460364@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:🏀 P3H Royal CS Natoye D vs P3H Basket Club Sombreffe B
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360\,
+  Natoye
+GEO:50.33973020000000000000;5.05367540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Natoye,
+  Rue du Château d'Eau, 31 31, 5360, Natoye";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports de Natoye":geo:50.33973020000000000000,5.05367540000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460428@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Royal BC Maillen D
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460325@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 P3H Profondeville Sharks D vs P3H Basket Club Sombreffe B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460418@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:🏀 P3H Royal BC Éghezée B vs P3H Basket Club Sombreffe B
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310\, Eghezée
+GEO:50.58672500000000000000;4.90386890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Eghezée
+ , Rue de la Gare 5, 5310, Eghezée";X-APPLE-RADIUS=70;X-TITLE="Hall Omnispo
+ rts d'Eghezée":geo:50.58672500000000000000,4.90386890000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460352@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:🏀 P3H BC Marche C vs P3H Basket Club Sombreffe B
+LOCATION:Athénée Royal de Marche\, Rue Cornimont\, 6900\, Marche-en-Famen
+ ne
+GEO:50.22171800000000000000;5.33826010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Athénée Royal de Marche,
+  Rue Cornimont, 6900, Marche-en-Famenne";X-APPLE-RADIUS=70;X-TITLE="Athén
+ ée Royal de Marche":geo:50.22171800000000000000,5.33826010000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460429@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270227T203000
+DTEND;TZID=Europe/Brussels:20270227T223000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H Black Star Gembloux
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460403@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:🏀 P3H RBC Erpent D vs P3H Basket Club Sombreffe B
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5
+ \, 5101\, Erpent
+GEO:50.45160250000000000000;4.90500110000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Collège N-D de l
+ a Paix, Place Notre-Dame de la Paix, 5, 5101, Erpent";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle du Collège N-D de la Paix":geo:50.45160250000000000000,4.90500
+ 110000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460430@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H BC Ohey B
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460330@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270328T160000
+DTEND;TZID=Europe/Brussels:20270328T180000
+SUMMARY:🏀 P3H Jeunesse Basket Hotton B vs P3H Basket Club Sombreffe B
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990\, Hotton
+GEO:50.26889820000000000000;5.45120010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre des Sports d'Hotton
+ , Rue des Vergers 7, 6990, Hotton";X-APPLE-RADIUS=70;X-TITLE="Centre des Sp
+ orts d'Hotton":geo:50.26889820000000000000,5.45120010000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460431@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270403T183000
+DTEND;TZID=Europe/Brussels:20270403T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H RBB Gembloux D
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460432@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H NBC La Bruyère A
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-460433@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:🏀 P3H Basket Club Sombreffe B vs P3H AS Mazy-Spy C
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140
+ \, Sombreffe
+GEO:50.52240700000000000000;4.59722020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Sombre
+ ffe, Allée du Château Chinon 6, 5140, Sombreffe";X-APPLE-RADIUS=70;X-TITL
+ E="Complexe sportif de Sombreffe":geo:50.52240700000000000000,4.59722020000
+ 000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série A
+END:VEVENT
+END:VCALENDAR

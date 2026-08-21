@@ -1,0 +1,320 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H Royal Jodoigne Basket
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485148@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260912T133000
+DTEND;TZID=Europe/Brussels:20260912T153000
+SUMMARY:🏀 PU18H Royal Murprotec Nivelles Basketball A vs PU18H Royal Jod
+ oigne Basket
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485128@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 PU18H BCD Wavre B vs PU18H Royal Jodoigne Basket
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300
+ \, Wavre
+GEO:50.72240000000000000000;4.61868000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Justin Peet
+ ers, Avenue du Centre Sportif 22, 1300, Wavre";X-APPLE-RADIUS=70;X-TITLE="C
+ entre Sportif Justin Peeters":geo:50.72240000000000000000,4.618680000000000
+ 00000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485117@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H B.C.U.Ganshoren
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485118@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Waterloo Basket B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485171@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261010T142000
+DTEND;TZID=Europe/Brussels:20261010T162000
+SUMMARY:🏀 PU18H Berchem BBC vs PU18H Royal Jodoigne Basket
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082\, Berchem-Sain
+ te-Agathe
+GEO:50.86964330000000000000;4.28731260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Berchem, 
+ Rue des Chalets 1, 1082, Berchem-Sainte-Agathe";X-APPLE-RADIUS=70;X-TITLE="
+ Complexe Sportif Berchem":geo:50.86964330000000000000,4.2873126000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485135@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:🏀 PU18H BCD Wavre B vs PU18H Royal Jodoigne Basket
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300
+ \, Wavre
+GEO:50.72240000000000000000;4.61868000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Justin Peet
+ ers, Avenue du Centre Sportif 22, 1300, Wavre";X-APPLE-RADIUS=70;X-TITLE="C
+ entre Sportif Justin Peeters":geo:50.72240000000000000000,4.618680000000000
+ 00000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485161@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261107T151500
+DTEND;TZID=Europe/Brussels:20261107T171500
+SUMMARY:🏀 PU18H Anderlecht Basketball A vs PU18H Royal Jodoigne Basket
+LOCATION:Ecole P18 Anderlecht\, Rue Pierre Longin 3\, 1070\, Anderlecht
+GEO:50.8286053;4.291128
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P18 Anderlecht, Rue 
+ Pierre Longin 3, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P18 And
+ erlecht":geo:50.8286053,4.291128
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485119@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Canter Schaerbeek B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485141@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 PU18H Royal Canter Schaerbeek B vs PU18H Royal Jodoigne Basket
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485120@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261205T130000
+DTEND;TZID=Europe/Brussels:20261205T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Anderlecht Basketball A
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485122@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270109T130000
+DTEND;TZID=Europe/Brussels:20270109T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H BCD Wavre B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485101@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270117T103000
+DTEND;TZID=Europe/Brussels:20270117T123000
+SUMMARY:🏀 PU18H B.C.U.Ganshoren vs PU18H Royal Jodoigne Basket
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485121@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270123T130000
+DTEND;TZID=Europe/Brussels:20270123T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Berchem BBC
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485123@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Murprotec Nivelles 
+ Basketball A
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485144@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:🏀 PU18H Royal Canter Schaerbeek B vs PU18H Royal Jodoigne Basket
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485175@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270213T142000
+DTEND;TZID=Europe/Brussels:20270213T162000
+SUMMARY:🏀 PU18H Berchem BBC vs PU18H Royal Jodoigne Basket
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082\, Berchem-Sain
+ te-Agathe
+GEO:50.86964330000000000000;4.28731260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Berchem, 
+ Rue des Chalets 1, 1082, Berchem-Sainte-Agathe";X-APPLE-RADIUS=70;X-TITLE="
+ Complexe Sportif Berchem":geo:50.86964330000000000000,4.2873126000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485124@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270220T130000
+DTEND;TZID=Europe/Brussels:20270220T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H B.C.U.Ganshoren
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485125@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270320T130000
+DTEND;TZID=Europe/Brussels:20270320T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Anderlecht Basketball A
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485126@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270410T130000
+DTEND;TZID=Europe/Brussels:20270410T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Waterloo Basket B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485115@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270418T113000
+DTEND;TZID=Europe/Brussels:20270418T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Royal Jodoigne Basket
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485158@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270424T160000
+DTEND;TZID=Europe/Brussels:20270424T180000
+SUMMARY:🏀 PU18H Royal Murprotec Nivelles Basketball A vs PU18H Royal Jod
+ oigne Basket
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+END:VCALENDAR

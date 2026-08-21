@@ -1,0 +1,372 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P1H Profondeville Sharks A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-457634@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260815T170000
+DTEND;TZID=Europe/Brussels:20260815T190000
+SUMMARY:🏆 P1H BC Centre Gaume Tintigny vs P1H Profondeville Sharks A
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730\, Tintigny
+GEO:49.68045570000000000000;5.51218960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle asbl Loisirs, Rue du
+  Tilleul, 76, 6730, Tintigny";X-APPLE-RADIUS=70;X-TITLE="Salle asbl Loisirs
+ ":geo:49.68045570000000000000,5.51218960000000000000
+DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule O\nScore : 41 - 76
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457636@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🏆 P1H Profondeville Sharks A vs R2H Groupe Gobert Basket Club Co
+ lfontaine A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule O
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486709@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:🏆 P1H Profondeville Sharks A vs P2H BC Rochefort
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Coupe de Namur Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-469044@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:🏀 P1H RBB Gembloux B vs P1H Profondeville Sharks A
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5
+ \, 5101\, Erpent
+GEO:50.45160250000000000000;4.90500110000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Collège N-D de l
+ a Paix, Place Notre-Dame de la Paix, 5, 5101, Erpent";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle du Collège N-D de la Paix":geo:50.45160250000000000000,4.90500
+ 110000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468956@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260913T140000
+DTEND;TZID=Europe/Brussels:20260913T160000
+SUMMARY:🏀 P1H Jeunesse Basket Hotton A vs P1H Profondeville Sharks A
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990\, Hotton
+GEO:50.26889820000000000000;5.45120010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre des Sports d'Hotton
+ , Rue des Vergers 7, 6990, Hotton";X-APPLE-RADIUS=70;X-TITLE="Centre des Sp
+ orts d'Hotton":geo:50.26889820000000000000,5.45120010000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468967@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260919T190000
+DTEND;TZID=Europe/Brussels:20260919T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H AS Mazy-Spy B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-469034@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:🏀 P1H Royal BC Loyers B vs P1H Profondeville Sharks A
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101\, Loyer
+ s
+GEO:50.4549452;4.9569284
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Loyers,
+  Comognes de Loyers, 42, 5101, Loyers";X-APPLE-RADIUS=70;X-TITLE="Hall Omni
+ sports de Loyers":geo:50.4549452,4.9569284
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468968@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H BC Marche A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-469013@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:🏀 P1H BC Ohey A vs P1H Profondeville Sharks A
+LOCATION:Salle Communale\,  Voie de Rauyisse\, 2\, 5350\, Ohey
+GEO:50.43562380000000000000;5.11823490000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Communale,  Voie de 
+ Rauyisse, 2, 5350, Ohey";X-APPLE-RADIUS=70;X-TITLE="Salle Communale":geo:50
+ .43562380000000000000,5.11823490000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468969@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H Royal Basket Club Belgrade C
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-469004@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261115T160000
+DTEND;TZID=Europe/Brussels:20261115T180000
+SUMMARY:🏀 P1H Royal CS Natoye B vs P1H Profondeville Sharks A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360\,
+  Natoye
+GEO:50.33973020000000000000;5.05367540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Natoye,
+  Rue du Château d'Eau, 31 31, 5360, Natoye";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports de Natoye":geo:50.33973020000000000000,5.05367540000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468970@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H Royal Gallia BC Beez B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468977@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H BC Malonne A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468984@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 P1H RBC Erpent B vs P1H Profondeville Sharks A
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5
+ \, 5101\, Erpent
+GEO:50.45160250000000000000;4.90500110000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Collège N-D de l
+ a Paix, Place Notre-Dame de la Paix, 5, 5101, Erpent";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle du Collège N-D de la Paix":geo:50.45160250000000000000,4.90500
+ 110000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468971@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H BC Ohey A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468972@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270115T200000
+DTEND;TZID=Europe/Brussels:20270115T220000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H RBB Gembloux B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468973@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H Jeunesse Basket Hotton A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468940@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270203T203000
+DTEND;TZID=Europe/Brussels:20270203T223000
+SUMMARY:🏀 P1H AS Mazy-Spy B vs P1H Profondeville Sharks A
+LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190
+ \, Jemeppe-sur-Sambre
+GEO:50.46432876586914;4.657829284667969
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Jemeppe
+ -sur-Sambre, rue Saint-Martin 25, 5190, Jemeppe-sur-Sambre";X-APPLE-RADIUS=
+ 70;X-TITLE="Hall Omnisports de Jemeppe-sur-Sambre":geo:50.46432876586914,4.
+ 657829284667969
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468974@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H RBC Erpent B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468975@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H Royal BC Loyers B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468976@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270219T190000
+DTEND;TZID=Europe/Brussels:20270219T210000
+SUMMARY:🏀 P1H Profondeville Sharks A vs P1H Royal CS Natoye B
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468953@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:🏀 P1H Royal Gallia BC Beez B vs P1H Profondeville Sharks A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
+GEO:50.46749650000000000000;4.92225170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
+ Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468932@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:🏀 P1H Royal Basket Club Belgrade C vs P1H Profondeville Sharks A
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001\, Belgra
+ de
+GEO:50.47160270000000000000;4.82520410000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif José Tys
+ saen, Rue des Tautis 19, 5001, Belgrade";X-APPLE-RADIUS=70;X-TITLE="Complex
+ e Sportif José Tyssaen":geo:50.47160270000000000000,4.82520410000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-468998@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270327T200000
+DTEND;TZID=Europe/Brussels:20270327T220000
+SUMMARY:🏀 P1H BC Marche A vs P1H Profondeville Sharks A
+LOCATION:Athénée Royal de Marche\, Rue Cornimont\, 6900\, Marche-en-Famen
+ ne
+GEO:50.22171800000000000000;5.33826010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Athénée Royal de Marche,
+  Rue Cornimont, 6900, Marche-en-Famenne";X-APPLE-RADIUS=70;X-TITLE="Athén
+ ée Royal de Marche":geo:50.22171800000000000000,5.33826010000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-469026@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:🏀 P1H BC Malonne A vs P1H Profondeville Sharks A
+LOCATION:Centre Sportif Malonne\, Champ Ha 20\, 5020\, Malonne
+GEO:50.42211390000000000000;4.79901920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Malonne, Ch
+ amp Ha 20, 5020, Malonne";X-APPLE-RADIUS=70;X-TITLE="Centre Sportif Malonne
+ ":geo:50.42211390000000000000,4.79901920000000000000
+DESCRIPTION:Compétition : Provincial 1 Messieurs
+END:VEVENT
+END:VCALENDAR

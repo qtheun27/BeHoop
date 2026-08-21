@@ -1,0 +1,70 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU18H Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485007@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260808T160000
+DTEND;TZID=Europe/Brussels:20260808T180000
+SUMMARY:🤝 RU18H Royal Murprotec Nivelles Basketball A vs PU18H UBC Binch
+ e
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 101 - 44
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485008@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:🤝 RU18H Royal Murprotec Nivelles Basketball A vs RU18H Olympic M
+ ont Sur Marchienne
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 62 - 84
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486099@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260822T140000
+DTEND;TZID=Europe/Brussels:20260822T160000
+SUMMARY:🏆 RU18H Royal CS Natoye vs RU18H Royal Murprotec Nivelles Basket
+ ball A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360\,
+  Natoye
+GEO:50.33973020000000000000;5.05367540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Natoye,
+  Rue du Château d'Eau, 31 31, 5360, Natoye";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports de Natoye":geo:50.33973020000000000000,5.05367540000000000000
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485010@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260829T173000
+DTEND;TZID=Europe/Brussels:20260829T193000
+SUMMARY:🤝 RU18H Royal Murprotec Nivelles Basketball A vs RU18H Royal Can
+ ter Schaerbeek A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+END:VCALENDAR

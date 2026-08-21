@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:R1H Royal Murprotec Nivelles Basketball B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483824@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260809T150000
+DTEND;TZID=Europe/Brussels:20260809T170000
+SUMMARY:🤝 R2H Royal Canter Schaerbeek A vs R1H Royal Murprotec Nivelles 
+ Basketball B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 88 - 84
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483296@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260814T203000
+DTEND;TZID=Europe/Brussels:20260814T223000
+SUMMARY:🤝 R2H JSB Maffle A vs R1H Royal Murprotec Nivelles Basketball B
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 61 - 60
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483821@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🤝 R1H Royal Murprotec Nivelles Basketball B vs None
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-487314@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260825T204500
+DTEND;TZID=Europe/Brussels:20260825T224500
+SUMMARY:🤝 R2H Uccle Europe A vs R1H Royal Murprotec Nivelles Basketball 
+ B
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180\, Uccle
+GEO:50.80056300000000000000;4.33874840000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports du Globe,
+  Avenue Brugmann 524A, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="Salle Omnisp
+ orts du Globe":geo:50.80056300000000000000,4.33874840000000000000
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+END:VCALENDAR

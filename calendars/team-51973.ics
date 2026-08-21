@@ -1,0 +1,328 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Rus Centre Gaume Fratin B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487305@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20260812T210000
+DTEND;TZID=Europe/Brussels:20260812T230000
+SUMMARY:🤝 P2H Rus Centre Gaume Fratin B vs P2H Basket Club Eagles St-Lé
+ ger A
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : Amicaux Hommes\nScore : 70 - 46
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479426@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:🏀 P2H BC Centre Gaume Tintigny vs P2H Rus Centre Gaume Fratin B
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730\, Tintigny
+GEO:49.68045570000000000000;5.51218960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle asbl Loisirs, Rue du
+  Tilleul, 76, 6730, Tintigny";X-APPLE-RADIUS=70;X-TITLE="Salle asbl Loisirs
+ ":geo:49.68045570000000000000,5.51218960000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479338@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 P2H BC Sarrasins Chantemelle B vs P2H Rus Centre Gaume Fratin 
+ B
+LOCATION: Complexe Sportif de Chantemelle\, Rue de la Gravalle 50\, 6742\, 
+ Chantemelle
+GEO:49.65425450000000000000;5.65056520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Complexe Sportif de Chant
+ emelle, Rue de la Gravalle 50, 6742, Chantemelle";X-APPLE-RADIUS=70;X-TITLE
+ =" Complexe Sportif de Chantemelle":geo:49.65425450000000000000,5.650565200
+ 00000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479349@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Nuts Bastogne
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479416@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Rus Centre Gaume Fratin 
+ B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479350@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Basket Club Messancy A
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479363@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:🏀 P2H BC Habay B vs P2H Rus Centre Gaume Fratin B
+LOCATION:Centre Sportif et Culturel Le Pachis\, Place Pierre Nothomb\, 5\, 
+ 6720\, Habay-La-Neuve
+GEO:49.72777800000000000000;5.64549410000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif et Culturel
+  Le Pachis, Place Pierre Nothomb, 5, 6720, Habay-La-Neuve";X-APPLE-RADIUS=7
+ 0;X-TITLE="Centre Sportif et Culturel Le Pachis":geo:49.7277780000000000000
+ 0,5.64549410000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479351@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Royal Basket Club Libramo
+ nt B
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479352@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Floréal BCCA Neufchâtea
+ u D
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479386@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261115T130000
+DTEND;TZID=Europe/Brussels:20261115T150000
+SUMMARY:🏀 P2H BC Athus B vs P2H Rus Centre Gaume Fratin B
+LOCATION:Centre sportif du Joli Bois\, 1\, rue de la Piscine\, 6791\, Athus
+GEO:49.56571918234554;5.843389883651091
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif du Joli Boi
+ s, 1, rue de la Piscine, 6791, Athus";X-APPLE-RADIUS=70;X-TITLE="Centre spo
+ rtif du Joli Bois":geo:49.56571918234554,5.843389883651091
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479353@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Basket Club Eagles St-Lé
+ ger A
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479354@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H BC Athus B
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479409@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:🏀 P2H Royal BC Saint-Hubert C vs P2H Rus Centre Gaume Fratin B
+LOCATION:Hall des Sports Michaël Paquay\, Rue du Parc\, 6870\, Saint-Huber
+ t
+GEO:50.02756800000000000000;5.37907070000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports Michaël P
+ aquay, Rue du Parc, 6870, Saint-Hubert";X-APPLE-RADIUS=70;X-TITLE="Hall des
+  Sports Michaël Paquay":geo:50.02756800000000000000,5.37907070000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479323@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270110T113000
+DTEND;TZID=Europe/Brussels:20270110T133000
+SUMMARY:🏀 P2H Nuts Bastogne vs P2H Rus Centre Gaume Fratin B
+LOCATION:Centre Sportif Porte de Trèves\, Rue Gustave Delperdange 5\, 6600
+ \, Bastogne
+GEO:50.00721500000000000000;5.72639300000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Porte de Tr
+ èves, Rue Gustave Delperdange 5, 6600, Bastogne";X-APPLE-RADIUS=70;X-TITLE
+ ="Centre Sportif Porte de Trèves":geo:50.00721500000000000000,5.7263930000
+ 0000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479355@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H BC Centre Gaume Tintigny
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479356@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Basket Club Foxes Léglis
+ e
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479357@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H BC Sarrasins Chantemelle 
+ B
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479358@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H BC Habay B
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479312@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:🏀 P2H Floréal BCCA Neufchâteau D vs P2H Rus Centre Gaume Frati
+ n B
+LOCATION:Hall Sportif Communal\, rue des Tanneries\, 6840\, Neufchateau
+GEO:49.83995760000000000000;5.43191290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif Communal, rue
+  des Tanneries, 6840, Neufchateau";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif 
+ Communal":geo:49.83995760000000000000,5.43191290000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479380@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270227T200000
+DTEND;TZID=Europe/Brussels:20270227T220000
+SUMMARY:🏀 P2H Basket Club Messancy A vs P2H Rus Centre Gaume Fratin B
+LOCATION:Complexe Sportif du Lac de Messancy\, Rue d'Arlon\, 50\, 6780\, Me
+ ssancy
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479336@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:🏀 P2H Basket Club Eagles St-Léger A vs P2H Rus Centre Gaume Fra
+ tin B
+LOCATION:Complexe Sportif du Conchibois\, Rue du Stade\, 1\, 6747\, Saint-L
+ éger
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif du Conchi
+ bois, Rue du Stade, 1, 6747, Saint-Léger";X-APPLE-RADIUS=70;X-TITLE="Compl
+ exe Sportif du Conchibois":geo:0.00000000000000000000,0.0000000000000000000
+ 0
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479359@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Royal BC Saint-Hubert C
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479403@basket-awbb
+DTSTAMP:20260821T203435Z
+DTSTART;TZID=Europe/Brussels:20270327T180000
+DTEND;TZID=Europe/Brussels:20270327T200000
+SUMMARY:🏀 P2H Royal Basket Club Libramont B vs P2H Rus Centre Gaume Frat
+ in B
+LOCATION:Hall des Sports\, Place Communale\, 3\, 6800\, Libramont
+GEO:49.91500630000000000000;5.37534210000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports, Place Com
+ munale, 3, 6800, Libramont";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports":geo
+ :49.91500630000000000000,5.37534210000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+END:VCALENDAR

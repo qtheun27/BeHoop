@@ -1,0 +1,397 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H RBB Gembloux C
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486490@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260801T180000
+DTEND;TZID=Europe/Brussels:20260801T200000
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Royal BC Éghezée A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 68 - 47
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485492@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260806T200000
+DTEND;TZID=Europe/Brussels:20260806T220000
+SUMMARY:🏀 P3H Royal BC Éghezée D vs P2H RBB Gembloux C
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310\, Eghezée
+GEO:50.58672500000000000000;4.90386890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Eghezée
+ , Rue de la Gare 5, 5310, Eghezée";X-APPLE-RADIUS=70;X-TITLE="Hall Omnispo
+ rts d'Eghezée":geo:50.58672500000000000000,4.90386890000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 52 - 72
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486491@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260815T180000
+DTEND;TZID=Europe/Brussels:20260815T200000
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H RBC Auderghem A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 69 - 75
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486493@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260823T150000
+DTEND;TZID=Europe/Brussels:20260823T170000
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Basket Club Sombreffe A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486693@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260826T200000
+DTEND;TZID=Europe/Brussels:20260826T220000
+SUMMARY:🏆 P2H RBB Gembloux C vs P3H NBC La Bruyère B
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Coupe de Namur Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486494@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260829T180000
+DTEND;TZID=Europe/Brussels:20260829T200000
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H B.C.U.Ganshoren
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459020@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260905T174500
+DTEND;TZID=Europe/Brussels:20260905T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H RBC Ciney A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459021@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260912T174500
+DTEND;TZID=Europe/Brussels:20260912T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Royal BC Maillen B
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458933@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 P2H Profondeville Sharks C vs P2H RBB Gembloux C
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170\, Pr
+ ofondeville
+GEO:50.38368410000000000000;4.85431180000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de la Hul
+ le, Avenue de Roquebrune 32, 5170, Profondeville";X-APPLE-RADIUS=70;X-TITLE
+ ="Complexe sportif de la Hulle":geo:50.38368410000000000000,4.8543118000000
+ 0000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458956@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 P2H New Conti 21 vs P2H RBB Gembloux C
+LOCATION:Complexe sportif de Seilles\, Rue Hendschel 40\, 5300\, Selles
+GEO:50.50024140000000000000;5.09311620000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Seille
+ s, Rue Hendschel 40, 5300, Selles";X-APPLE-RADIUS=70;X-TITLE="Complexe spor
+ tif de Seilles":geo:50.50024140000000000000,5.09311620000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459022@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261024T174500
+DTEND;TZID=Europe/Brussels:20261024T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Royal BC Loyers D
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459001@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 P2H Royal BC Éghezée A vs P2H RBB Gembloux C
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310\, Eghezée
+GEO:50.58672500000000000000;4.90386890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Eghezée
+ , Rue de la Gare 5, 5310, Eghezée";X-APPLE-RADIUS=70;X-TITLE="Hall Omnispo
+ rts d'Eghezée":geo:50.58672500000000000000,4.90386890000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458968@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261120T210000
+DTEND;TZID=Europe/Brussels:20261120T230000
+SUMMARY:🏀 P2H BC Fernelmont A vs P2H RBB Gembloux C
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380\, N
+ oville-les-Bois
+GEO:50.55179650000000000000;4.97787650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Fernelmont
+ , Rue de la Rénovation, 8 , 5380, Noville-les-Bois";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Sportif de Fernelmont":geo:50.55179650000000000000,4.977876500000
+ 00000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458920@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:🏀 P2H Andenne Basket B vs P2H RBB Gembloux C
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300\, Andenne
+GEO:50.48894530000000000000;5.09098290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Andenne Arena, Rue Docteur
+  Mélin 14, 5300, Andenne";X-APPLE-RADIUS=70;X-TITLE="Andenne Arena":geo:50
+ .48894530000000000000,5.09098290000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458903@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:🏀 P2H Royal Herbuchenne Dinant vs P2H RBB Gembloux C
+LOCATION:Institut Technique Herbuchenne\, Chemin d'Herbuchenne\, 1\, 5500\,
+  Dinant
+GEO:50.26089270000000000000;4.92205640000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Institut Technique Herbuch
+ enne, Chemin d'Herbuchenne, 1, 5500, Dinant";X-APPLE-RADIUS=70;X-TITLE="Ins
+ titut Technique Herbuchenne":geo:50.26089270000000000000,4.9220564000000000
+ 0000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459025@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20261219T174500
+DTEND;TZID=Europe/Brussels:20261219T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H BC Fraire-Philippeville B
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459026@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270109T174500
+DTEND;TZID=Europe/Brussels:20270109T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Profondeville Sharks C
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458948@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270117T103000
+DTEND;TZID=Europe/Brussels:20270117T123000
+SUMMARY:🏀 P2H RBC Ciney A vs P2H RBB Gembloux C
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590\, Ciney
+GEO:50.29785460000000000000;5.09972330000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Joseph Laloux, Rue S
+ aint-Quentin 10b, 5590, Ciney";X-APPLE-RADIUS=70;X-TITLE="Salle Joseph Lalo
+ ux":geo:50.29785460000000000000,5.09972330000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459023@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270123T174500
+DTEND;TZID=Europe/Brussels:20270123T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H RUS Mariembourg A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458993@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:🏀 P2H Royal BC Maillen B vs P2H RBB Gembloux C
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330\, Maillen
+GEO:50.37546330000000000000;4.96690610000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Maillen,
+  Rue de Crupet 45, 5330, Maillen";X-APPLE-RADIUS=70;X-TITLE="Centre Sportif
+  de Maillen":geo:50.37546330000000000000,4.96690610000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459028@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270213T174500
+DTEND;TZID=Europe/Brussels:20270213T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H New Conti 21
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459029@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270220T174500
+DTEND;TZID=Europe/Brussels:20270220T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Royal BC Éghezée A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459030@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270227T174500
+DTEND;TZID=Europe/Brussels:20270227T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H BC Fernelmont A
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458985@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:🏀 P2H RUS Mariembourg A vs P2H RBB Gembloux C
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660\, Couvin
+GEO:50.04426690000000000000;4.49986460000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Couvidome Bernard Pignon,
+  Rue de la Foulerie 12, 5660, Couvin";X-APPLE-RADIUS=70;X-TITLE=" Couvidome
+  Bernard Pignon":geo:50.04426690000000000000,4.49986460000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459027@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270327T174500
+DTEND;TZID=Europe/Brussels:20270327T194500
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Royal Herbuchenne Dinant
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459017@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270403T170000
+DTEND;TZID=Europe/Brussels:20270403T190000
+SUMMARY:🏀 P2H Royal BC Loyers D vs P2H RBB Gembloux C
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101\, Loyer
+ s
+GEO:50.4549452;4.9569284
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Loyers,
+  Comognes de Loyers, 42, 5101, Loyers";X-APPLE-RADIUS=70;X-TITLE="Hall Omni
+ sports de Loyers":geo:50.4549452,4.9569284
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-459024@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:🏀 P2H RBB Gembloux C vs P2H Andenne Basket B
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
+ ux
+GEO:50.56692125748399;4.700883457669757
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de l'Orneau
+ , Chaussée de Namur 28, 5030, Gembloux";X-APPLE-RADIUS=70;X-TITLE="Centre 
+ sportif de l'Orneau":geo:50.56692125748399,4.700883457669757
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458931@basket-awbb
+DTSTAMP:20260821T203436Z
+DTSTART;TZID=Europe/Brussels:20270424T210000
+DTEND;TZID=Europe/Brussels:20270424T230000
+SUMMARY:🏀 P2H BC Fraire-Philippeville B vs P2H RBB Gembloux C
+LOCATION:Complexe sportif\, de la Gendarmerie 30B\, 5600\, Philippeville
+GEO:50.19900400000000000000;4.55462700000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif, de la Ge
+ ndarmerie 30B, 5600, Philippeville";X-APPLE-RADIUS=70;X-TITLE="Complexe spo
+ rtif":geo:50.19900400000000000000,4.55462700000000000000
+DESCRIPTION:Compétition : Provincial 2 Messieurs Série B
+END:VEVENT
+END:VCALENDAR

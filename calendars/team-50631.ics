@@ -1,0 +1,84 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:R2D Royal Murprotec Nivelles Basketball A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-483818@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260808T200000
+DTEND;TZID=Europe/Brussels:20260808T220000
+SUMMARY:🤝 R2D Royal Murprotec Nivelles Basketball A vs None
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 55 - 69
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457706@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260816T170000
+DTEND;TZID=Europe/Brussels:20260816T190000
+SUMMARY:🏆 R2D Royal Eclairs Pont-De-Loup B vs R2D Royal Murprotec Nivell
+ es Basketball A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040\, Jumet
+GEO:50.44670440000000000000;4.43886090000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Pierre de Coubertin,
+  Sentier de l'Epée 35, 6040, Jumet";X-APPLE-RADIUS=70;X-TITLE="Salle Pierr
+ e de Coubertin":geo:50.44670440000000000000,4.43886090000000000000
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K\nScore : 69 - 49
+END:VEVENT
+BEGIN:VEVENT
+UID:match-483820@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260819T210000
+DTEND;TZID=Europe/Brussels:20260819T230000
+SUMMARY:🤝 R2D Royal Murprotec Nivelles Basketball A vs R2D Royal Canter 
+ Schaerbeek A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 62 - 58
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457705@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 R2D Royal Murprotec Nivelles Basketball A vs P1D ABC B Péronn
+ es A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457704@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:🏆 R1D Ganshoren Dames Basket A vs R2D Royal Murprotec Nivelles B
+ asketball A
+LOCATION:Hall des Sports FSM Campus Erasme\, Route de Lennik 808\, 1070\, A
+ nderlecht
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports FSM Campus
+  Erasme, Route de Lennik 808, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="
+ Hall des Sports FSM Campus Erasme":geo:0.00000000000000000000,0.00000000000
+ 000000000
+DESCRIPTION:Compétition : Coupe AWBB Dames - Poule K
+END:VEVENT
+END:VCALENDAR

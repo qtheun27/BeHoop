@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU18H Royal Excelsior Brussels A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486799@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260816T130000
+DTEND;TZID=Europe/Brussels:20260816T150000
+SUMMARY:🤝 RU18H Royal Excelsior Brussels A vs RU18H Royal Castors Braine
+  A
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 10
+ 20\, Bruxelles
+GEO:50.88421800000000000000;4.35800020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Neder-Ove
+ r-Hembeek, Rue de Lombarzyde, 120, 1020, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Neder-Over-Hembeek":geo:50.88421800000000000000,4.3580
+ 0020000000000000
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 78 - 55
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486083@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:🏆 RU18H Royal Excelsior Brussels A vs RU18H BC Malonne
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486889@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260830T100000
+DTEND;TZID=Europe/Brussels:20260830T120000
+SUMMARY:🤝 RU18H Royal Excelsior Brussels A vs RU18H Aste Kain
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 10
+ 20\, Bruxelles
+GEO:50.88421800000000000000;4.35800020000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Neder-Ove
+ r-Hembeek, Rue de Lombarzyde, 120, 1020, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Neder-Over-Hembeek":geo:50.88421800000000000000,4.3580
+ 0020000000000000
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+END:VCALENDAR

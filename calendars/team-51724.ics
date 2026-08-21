@@ -1,0 +1,275 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3D B.B.C Braine-Le-Château
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-470485@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20260906T160000
+DTEND;TZID=Europe/Brussels:20260906T180000
+SUMMARY:🏀 P3D Royal Murprotec Nivelles Basketball C vs P3D B.B.C Braine-
+ Le-Château
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470496@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Women's Basket Club
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470435@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:🏀 P3D Ass.Sp.St.Augustin A vs P3D B.B.C Braine-Le-Château
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190\, Fores
+ t
+GEO:50.80756410000000000000;4.32685420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Petit Palais des Sports de
+  Forest, Rue Rosendael 2, 1190, Forest";X-APPLE-RADIUS=70;X-TITLE="Petit Pa
+ lais des Sports de Forest":geo:50.80756410000000000000,4.326854200000000000
+ 00
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470466@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:🏀 P3D BC Brainois vs P3D B.B.C Braine-Le-Château
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428\, Lillois
+GEO:50.64458210000000000000;4.36400690000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Willy Denuit, Rue
+  René Francq 7, 1428, Lillois";X-APPLE-RADIUS=70;X-TITLE="Complexe Willy D
+ enuit":geo:50.64458210000000000000,4.36400690000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470502@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Ganshoren Dames Basket C
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470498@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261107T183000
+DTEND;TZID=Europe/Brussels:20261107T203000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Royal La Chenaie Uccle Bas
+ ket Club
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470499@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261122T113000
+DTEND;TZID=Europe/Brussels:20261122T133000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Ass.Sp.St.Augustin A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470457@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20261205T171500
+DTEND;TZID=Europe/Brussels:20261205T191500
+SUMMARY:🏀 P3D Royal La Chenaie Uccle Basket Club vs P3D B.B.C Braine-Le-
+ Château
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180\, Ucc
+ le
+GEO:50.79457810000000000000;4.36730120000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Saint-
+ Job, Place de Saint-Job 20, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Saint-Job":geo:50.79457810000000000000,4.36730120000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470511@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:🏀 P3D Women's Basket Club vs P3D B.B.C Braine-Le-Château
+LOCATION:Ecole P24\, allée des Coquelicots 10\, 1070\, Anderlecht
+GEO:50.81718959777273;4.261549748018649
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P24, allée des Coqu
+ elicots 10, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P24":geo:50.
+ 81718959777273,4.261549748018649
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470501@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Royal Murprotec Nivelles B
+ asketball C
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470444@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:🏀 P3D Ganshoren Dames Basket C vs P3D B.B.C Braine-Le-Château
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470503@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270207T113000
+DTEND;TZID=Europe/Brussels:20270207T133000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Ass.Sp.St.Augustin A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470472@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270213T183000
+DTEND;TZID=Europe/Brussels:20270213T203000
+SUMMARY:🏀 P3D BC Brainois vs P3D B.B.C Braine-Le-Château
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428\, Lillois
+GEO:50.64458210000000000000;4.36400690000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Willy Denuit, Rue
+  René Francq 7, 1428, Lillois";X-APPLE-RADIUS=70;X-TITLE="Complexe Willy D
+ enuit":geo:50.64458210000000000000,4.36400690000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470492@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:🏀 P3D Royal Murprotec Nivelles Basketball C vs P3D B.B.C Braine-
+ Le-Château
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470462@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:🏀 P3D Royal La Chenaie Uccle Basket Club vs P3D B.B.C Braine-Le-
+ Château
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180\, Ucc
+ le
+GEO:50.79457810000000000000;4.36730120000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Saint-
+ Job, Place de Saint-Job 20, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Saint-Job":geo:50.79457810000000000000,4.36730120000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470500@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270403T183000
+DTEND;TZID=Europe/Brussels:20270403T203000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D BC Brainois
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470505@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270410T183000
+DTEND;TZID=Europe/Brussels:20270410T203000
+SUMMARY:🏀 P3D B.B.C Braine-Le-Château vs P3D Women's Basket Club
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-470453@basket-awbb
+DTSTAMP:20260821T203423Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:🏀 P3D Ganshoren Dames Basket C vs P3D B.B.C Braine-Le-Château
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : P3 Dames B
+END:VEVENT
+END:VCALENDAR

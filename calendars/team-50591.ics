@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:RU18H Royal Castors Braine B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486466@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260823T110000
+DTEND;TZID=Europe/Brussels:20260823T130000
+SUMMARY:🤝 PU21H B.B.C Braine-Le-Château vs RU18H Royal Castors Braine B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\,
+  1440\, Braine-le-Chateau
+GEO:50.68292470000000000000;4.27184920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
+ le-Château, Rue de la Libération 25, 1440, Braine-le-Chateau";X-APPLE-RAD
+ IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
+ 0000000,4.27184920000000000000
+DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486098@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260830T130000
+DTEND;TZID=Europe/Brussels:20260830T150000
+SUMMARY:🏆 RU18H Boussu Saint-Ghislain United vs RU18H Royal Castors Brai
+ ne B
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,418 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P3H Renouveau Basket Club De Mettet A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485093@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260812T203000
+DTEND;TZID=Europe/Brussels:20260812T223000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H AS Mazy-Spy C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 41 - 70
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485094@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260819T203000
+DTEND;TZID=Europe/Brussels:20260819T223000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P4H Ballers
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Amicaux Seniors\nScore : 47 - 68
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486717@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260830T153000
+DTEND;TZID=Europe/Brussels:20260830T173000
+SUMMARY:🏆 P3H Royal BC Maillen D vs P3H Renouveau Basket Club De Mettet 
+ A
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330\, Maillen
+GEO:50.37546330000000000000;4.96690610000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Maillen,
+  Rue de Crupet 45, 5330, Maillen";X-APPLE-RADIUS=70;X-TITLE="Centre Sportif
+  de Maillen":geo:50.37546330000000000000,4.96690610000000000000
+DESCRIPTION:Compétition : Coupe de Namur Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477792@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:🏀 P3H RBC Ciney B vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590\, Ciney
+GEO:50.29785460000000000000;5.09972330000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Joseph Laloux, Rue S
+ aint-Quentin 10b, 5590, Ciney";X-APPLE-RADIUS=70;X-TITLE="Salle Joseph Lalo
+ ux":geo:50.29785460000000000000,5.09972330000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477845@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:🏀 P3H NBC La Bruyère C vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
+GEO:50.5117391;4.8444755
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
+ e, rue de Rhisnes 3, 5081, Emines";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif 
+ de La Bruyère":geo:50.5117391,4.8444755
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477884@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261004T140000
+DTEND;TZID=Europe/Brussels:20261004T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H Royal BC Éghezé
+ e D
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477898@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261011T160000
+DTEND;TZID=Europe/Brussels:20261011T180000
+SUMMARY:🏀 P3H Andenne Basket C vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300\, Andenne
+GEO:50.48894530000000000000;5.09098290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Andenne Arena, Rue Docteur
+  Mélin 14, 5300, Andenne";X-APPLE-RADIUS=70;X-TITLE="Andenne Arena":geo:50
+ .48894530000000000000,5.09098290000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477885@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261018T140000
+DTEND;TZID=Europe/Brussels:20261018T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H BC Fernelmont C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477759@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:🏀 P3H Cerfontaine B.C. B vs P3H Renouveau Basket Club De Mettet 
+ A
+LOCATION:Hall Omnisports du Fouery\, Rue du Fouery\, 4\, 5630\, Cerfontaine
+GEO:50.17246270000000000000;4.40727150000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Fouery,
+  Rue du Fouery, 4, 5630, Cerfontaine";X-APPLE-RADIUS=70;X-TITLE="Hall Omnis
+ ports du Fouery":geo:50.17246270000000000000,4.40727150000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477834@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 P3H BC Malonne C vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Centre Sportif Malonne\, Champ Ha 20\, 5020\, Malonne
+GEO:50.42211390000000000000;4.79901920000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Malonne, Ch
+ amp Ha 20, 5020, Malonne";X-APPLE-RADIUS=70;X-TITLE="Centre Sportif Malonne
+ ":geo:50.42211390000000000000,4.79901920000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477886@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261115T140000
+DTEND;TZID=Europe/Brussels:20261115T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H BC Givet-Doische
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477771@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:🏀 P3H J.S.La Plante vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Centre Sportif de la Plante\, Chaussée de Dinant\, 220\, 5000\, N
+ amur
+GEO:50.44501170000000000000;4.85613240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de la Plant
+ e, Chaussée de Dinant, 220, 5000, Namur";X-APPLE-RADIUS=70;X-TITLE="Centre
+  Sportif de la Plante":geo:50.44501170000000000000,4.85613240000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477743@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261128T200000
+DTEND;TZID=Europe/Brussels:20261128T220000
+SUMMARY:🏀 P3H Ramillies Basket Club vs P3H Renouveau Basket Club De Mett
+ et A
+LOCATION:Hall Sportif de Ramillies\, avenue des Déportés 48\, 1367\, Rami
+ llies
+GEO:50.6483154296875;4.881128787994385
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Ramillies,
+  avenue des Déportés 48, 1367, Ramillies";X-APPLE-RADIUS=70;X-TITLE="Hall
+  Sportif de Ramillies":geo:50.6483154296875,4.881128787994385
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477887@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261206T140000
+DTEND;TZID=Europe/Brussels:20261206T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H RBC Erpent F
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477732@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261213T160000
+DTEND;TZID=Europe/Brussels:20261213T180000
+SUMMARY:🏀 P3H RUS Mariembourg C vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Complexe Sportif Chimay\, avenue du Chalon 1/B\, 6460\, Chimay
+GEO:50.04951739976304;4.32743835300725
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Chimay, a
+ venue du Chalon 1/B, 6460, Chimay";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif Chimay":geo:50.04951739976304,4.32743835300725
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477888@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20261220T140000
+DTEND;TZID=Europe/Brussels:20261220T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H Royal CS Natoye E
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477883@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270110T140000
+DTEND;TZID=Europe/Brussels:20270110T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H Cerfontaine B.C. 
+ B
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477826@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:🏀 P3H Royal CS Natoye E vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360\,
+  Natoye
+GEO:50.33973020000000000000;5.05367540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Natoye,
+  Rue du Château d'Eau, 31 31, 5360, Natoye";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l Omnisports de Natoye":geo:50.33973020000000000000,5.05367540000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477890@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270131T140000
+DTEND;TZID=Europe/Brussels:20270131T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H NBC La Bruyère C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477787@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:🏀 P3H BC Fernelmont C vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380\, N
+ oville-les-Bois
+GEO:50.55179650000000000000;4.97787650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de Fernelmont
+ , Rue de la Rénovation, 8 , 5380, Noville-les-Bois";X-APPLE-RADIUS=70;X-TI
+ TLE="Hall Sportif de Fernelmont":geo:50.55179650000000000000,4.977876500000
+ 00000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477880@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:🏀 P3H Royal BC Éghezée D vs P3H Renouveau Basket Club De Mette
+ t A
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310\, Eghezée
+GEO:50.58672500000000000000;4.90386890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports d'Eghezée
+ , Rue de la Gare 5, 5310, Eghezée";X-APPLE-RADIUS=70;X-TITLE="Hall Omnispo
+ rts d'Eghezée":geo:50.58672500000000000000,4.90386890000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477814@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:🏀 P3H BC Givet-Doische vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Complexe Spotif Gérard Tassin\, Rue Berthelot\, 12\, F - 08600\, 
+ Givet
+GEO:50.14309400000000000000;4.82640940000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Spotif Gérard Ta
+ ssin, Rue Berthelot, 12, F - 08600, Givet";X-APPLE-RADIUS=70;X-TITLE="Compl
+ exe Spotif Gérard Tassin":geo:50.14309400000000000000,4.826409400000000000
+ 00
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477891@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270228T140000
+DTEND;TZID=Europe/Brussels:20270228T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H J.S.La Plante
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477865@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270307T130000
+DTEND;TZID=Europe/Brussels:20270307T150000
+SUMMARY:🏀 P3H RBC Erpent F vs P3H Renouveau Basket Club De Mettet A
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5
+ \, 5101\, Erpent
+GEO:50.45160250000000000000;4.90500110000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Collège N-D de l
+ a Paix, Place Notre-Dame de la Paix, 5, 5101, Erpent";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle du Collège N-D de la Paix":geo:50.45160250000000000000,4.90500
+ 110000000000000
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477889@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270314T140000
+DTEND;TZID=Europe/Brussels:20270314T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H RBC Ciney B
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477892@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270321T140000
+DTEND;TZID=Europe/Brussels:20270321T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H BC Malonne C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477893@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270404T140000
+DTEND;TZID=Europe/Brussels:20270404T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H Andenne Basket C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477894@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270418T140000
+DTEND;TZID=Europe/Brussels:20270418T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H RUS Mariembourg C
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-477895@basket-awbb
+DTSTAMP:20260821T203437Z
+DTSTART;TZID=Europe/Brussels:20270425T140000
+DTEND;TZID=Europe/Brussels:20270425T160000
+SUMMARY:🏀 P3H Renouveau Basket Club De Mettet A vs P3H Ramillies Basket 
+ Club
+LOCATION:Complexe sportif du Docteur Rolin\, rue du Cheslé\, 5620\, Floren
+ nes
+GEO:50.24931716918945;4.594883441925049
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif du Docteu
+ r Rolin, rue du Cheslé, 5620, Florennes";X-APPLE-RADIUS=70;X-TITLE="Comple
+ xe sportif du Docteur Rolin":geo:50.24931716918945,4.594883441925049
+DESCRIPTION:Compétition : Provincial 3 Messieurs Série C
+END:VEVENT
+END:VCALENDAR

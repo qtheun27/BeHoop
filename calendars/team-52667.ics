@@ -1,0 +1,353 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H Ninane Chaudfontaine A
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-486474@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260822T150000
+DTEND;TZID=Europe/Brussels:20260822T170000
+SUMMARY:🤝 PU18H Alliance Flémalle A vs PU18H Ninane Chaudfontaine A
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400\, Fl
+ émalle
+GEO:50.60408750000000000000;5.48487280000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Louis Mel
+ in, Rue du Passage d'Eau 4, 4400, Flémalle";X-APPLE-RADIUS=70;X-TITLE="Com
+ plexe Sportif Louis Melin":geo:50.60408750000000000000,5.484872800000000000
+ 00
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478590@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260829T160000
+DTEND;TZID=Europe/Brussels:20260829T180000
+SUMMARY:🏆 PU18H Ninane Chaudfontaine A vs PU18H Royal Ans BBC A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : Coupe de Liège U18 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488230@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260905T160000
+DTEND;TZID=Europe/Brussels:20260905T180000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Royal BC.Prayon A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488560@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260913T100000
+DTEND;TZID=Europe/Brussels:20260913T120000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Harimalia
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-488838@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20260920T090000
+DTEND;TZID=Europe/Brussels:20260920T110000
+SUMMARY:🏀 PU18H BC Belleflamme A vs PU18H Ninane Chaudfontaine A
+LOCATION:Salle de l'IESE \, Rue Nicolas Spiroux 62\, 4030\, Grivegnée
+GEO:50.62881060000000000000;5.61330300000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle de l'IESE , Rue Nico
+ las Spiroux 62, 4030, Grivegnée";X-APPLE-RADIUS=70;X-TITLE="Salle de l'IES
+ E ":geo:50.62881060000000000000,5.61330300000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489167@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261004T140000
+DTEND;TZID=Europe/Brussels:20261004T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H RABC Ensival A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-489497@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:🏀 PU18H BC Verviers A vs PU18H Ninane Chaudfontaine A
+LOCATION:Bulle de Gerardchamps\, Quai de la Vesdre\, 20\, 4800\, Verviers
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490097@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 PU18H Royal BC Awans A vs PU18H Ninane Chaudfontaine A
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340\, Awans
+GEO:50.66526600000000000000;5.46210040000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif d'Awans, 
+ Rue de l'Eglise 21, 4340, Awans";X-APPLE-RADIUS=70;X-TITLE="Complexe Sporti
+ f d'Awans":geo:50.66526600000000000000,5.46210040000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490426@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261115T140000
+DTEND;TZID=Europe/Brussels:20261115T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Amicale Basket Club Ware
+ mme B
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-490756@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 PU18H RBC Pepinster East Belgium vs PU18H Ninane Chaudfontaine
+  A
+LOCATION:Salle Basket Pierre Raskin\, Rue Jean Simon 26\, 4860\, Pepinster
+GEO:50.56594467163086;5.801829814910889
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Basket Pierre Raskin
+ , Rue Jean Simon 26, 4860, Pepinster";X-APPLE-RADIUS=70;X-TITLE="Salle Bask
+ et Pierre Raskin":geo:50.56594467163086,5.801829814910889
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491100@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261206T140000
+DTEND;TZID=Europe/Brussels:20261206T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H RBC Esneux
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491430@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Collège St-Louis Basket
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-491760@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20261219T113000
+DTEND;TZID=Europe/Brussels:20261219T133000
+SUMMARY:🏀 PU18H Royal Mosa Athletic Club 1941 vs PU18H Ninane Chaudfonta
+ ine A
+LOCATION:Hall Omnisports\, rue d'Ougrée 71\, 4031\, Angleur
+GEO:50.6104811;5.584463
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports, rue d'Oug
+ rée 71, 4031, Angleur";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports":geo:50.
+ 6104811,5.584463
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492085@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270110T140000
+DTEND;TZID=Europe/Brussels:20270110T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H BC Belleflamme A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492415@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:🏀 PU18H Royal BC.Prayon A vs PU18H Ninane Chaudfontaine A
+LOCATION:Hall Omnisports Communal Trooz\, Rue de L'Eglise\, 22\, 4870\, Tro
+ oz
+GEO:50.57712000000000000000;5.67597960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Communal T
+ rooz, Rue de L'Eglise, 22, 4870, Trooz";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Communal Trooz":geo:50.57712000000000000000,5.67597960000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-492743@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270123T150000
+DTEND;TZID=Europe/Brussels:20270123T170000
+SUMMARY:🏀 PU18H Collège St-Louis Basket vs PU18H Ninane Chaudfontaine A
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020\, Liège
+GEO:50.636098964168276;5.581151511773976
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Collège Saint-Louis, Rue 
+ Vilette 28, 4020, Liège";X-APPLE-RADIUS=70;X-TITLE="Collège Saint-Louis":
+ geo:50.636098964168276,5.581151511773976
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493070@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:🏀 PU18H Harimalia vs PU18H Ninane Chaudfontaine A
+LOCATION:Salle Foyer du Quartier\,  rue Vallée\, 15\, 4681\, Hermalle-Sous
+ -Argenteau
+GEO:50.71398490000000000000;5.68192450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Foyer du Quartier,  
+ rue Vallée, 15, 4681, Hermalle-Sous-Argenteau";X-APPLE-RADIUS=70;X-TITLE="
+ Salle Foyer du Quartier":geo:50.71398490000000000000,5.68192450000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493290@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:🏀 PU18H Amicale Basket Club Waremme B vs PU18H Ninane Chaudfonta
+ ine A
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300\, Waremme
+GEO:50.68714720000000000000;5.25651600000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Pôle Ballon, Chaussée Ro
+ maine 71, 4300, Waremme";X-APPLE-RADIUS=70;X-TITLE="Pôle Ballon":geo:50.68
+ 714720000000000000,5.25651600000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-493603@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:🏀 PU18H RABC Ensival A vs PU18H Ninane Chaudfontaine A
+LOCATION:Centre Sportif Albert Moray\, Rue des Chapeliers 2\, 4800\, Ensiva
+ l
+GEO:50.58459910000000000000;5.83881710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Albert Mora
+ y, Rue des Chapeliers 2, 4800, Ensival";X-APPLE-RADIUS=70;X-TITLE="Centre S
+ portif Albert Moray":geo:50.58459910000000000000,5.83881710000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494198@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270314T160000
+DTEND;TZID=Europe/Brussels:20270314T180000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Royal Mosa Athletic Club
+  1941
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494525@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270321T140000
+DTEND;TZID=Europe/Brussels:20270321T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H Royal BC Awans A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-494855@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270328T140000
+DTEND;TZID=Europe/Brussels:20270328T160000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H BC Verviers A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-495533@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270403T143000
+DTEND;TZID=Europe/Brussels:20270403T163000
+SUMMARY:🏀 PU18H RBC Esneux vs PU18H Ninane Chaudfontaine A
+LOCATION:Alfarena\, Rue Simonis\, 5\, 4130\, Esneux
+GEO:50.53646690000000000000;5.57268770000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Alfarena, Rue Simonis, 5, 
+ 4130, Esneux";X-APPLE-RADIUS=70;X-TITLE="Alfarena":geo:50.53646690000000000
+ 000,5.57268770000000000000
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-495202@basket-awbb
+DTSTAMP:20260821T203431Z
+DTSTART;TZID=Europe/Brussels:20270410T163000
+DTEND;TZID=Europe/Brussels:20270410T183000
+SUMMARY:🏀 PU18H Ninane Chaudfontaine A vs PU18H RBC Pepinster East Belgi
+ um
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : U18 Hommes Elites B
+END:VEVENT
+END:VCALENDAR

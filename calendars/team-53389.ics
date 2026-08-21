@@ -1,0 +1,283 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H Royal Excelsior Brussels B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-475641@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260912T110000
+DTEND;TZID=Europe/Brussels:20260912T130000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Royal La Chenaie Ucc
+ le Basket Club
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475642@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475643@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261003T130000
+DTEND;TZID=Europe/Brussels:20261003T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475665@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261010T143000
+DTEND;TZID=Europe/Brussels:20261010T163000
+SUMMARY:🏀 PU18H Royal BC Wezembeek Oppem vs PU18H Royal Excelsior Brusse
+ ls B
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970\, W
+ ezembeek-Oppem
+GEO:50.83394840000000000000;4.49861170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports de Wezembe
+ ek-Oppem, Avenue Astrid, 85, 1970, Wezembeek-Oppem";X-APPLE-RADIUS=70;X-TIT
+ LE="Hall des Sports de Wezembeek-Oppem":geo:50.83394840000000000000,4.49861
+ 170000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475615@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261017T160000
+DTEND;TZID=Europe/Brussels:20261017T180000
+SUMMARY:🏀 PU18H Royal La Chenaie Uccle Basket Club vs PU18H Royal Excels
+ ior Brussels B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180\, Ucc
+ le
+GEO:50.79457810000000000000;4.36730120000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Saint-
+ Job, Place de Saint-Job 20, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Saint-Job":geo:50.79457810000000000000,4.36730120000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475600@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261106T191500
+DTEND;TZID=Europe/Brussels:20261106T211500
+SUMMARY:🏀 PU18H ASA Saint-Hubert Boitsfort vs PU18H Royal Excelsior Brus
+ sels B
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170\, Watermael-
+ Boitsfort
+GEO:50.80161980000000000000;4.42955390000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Collège Saint-Hubert, Ave
+ nue Charle Albert 9, 1170, Watermael-Boitsfort";X-APPLE-RADIUS=70;X-TITLE="
+ Collège Saint-Hubert":geo:50.80161980000000000000,4.42955390000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475644@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H BC École Européenn
+ e B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475623@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261121T160000
+DTEND;TZID=Europe/Brussels:20261121T180000
+SUMMARY:🏀 PU18H Royal Linthout BC W.S. A vs PU18H Royal Excelsior Brusse
+ ls B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475646@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Uccle Europe C
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475690@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261220T120000
+DTEND;TZID=Europe/Brussels:20261220T140000
+SUMMARY:🏀 PU18H Fresh Air A vs PU18H Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090\, J
+ ette
+GEO:50.88308130000000000000;4.33336540000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Omnisports de Jette
+ , Avenue du Comte de Jette 3, 1090, Jette";X-APPLE-RADIUS=70;X-TITLE="Centr
+ e Omnisports de Jette":geo:50.88308130000000000000,4.33336540000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475701@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 PU18H CRBB The Runners vs PU18H Royal Excelsior Brussels B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 
+ 1060\, Saint-Gilles
+GEO:50.82921300000000000000;4.35136420000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Lycée Intégral Roger Lal
+ lemand, Rue de la Croix de Pierre 73, 1060, Saint-Gilles";X-APPLE-RADIUS=70
+ ;X-TITLE="Lycée Intégral Roger Lallemand":geo:50.82921300000000000000,4.3
+ 5136420000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475648@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270123T130000
+DTEND;TZID=Europe/Brussels:20270123T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Royal Linthout BC W.
+ S. A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475637@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270206T163000
+DTEND;TZID=Europe/Brussels:20270206T183000
+SUMMARY:🏀 PU18H Uccle Europe C vs PU18H Royal Excelsior Brussels B
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180\, Uccle
+GEO:50.80506041662435;4.348641626051736
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="HE2B Campus DeFré, square
+  de Fré, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="HE2B Campus DeFré":geo:5
+ 0.80506041662435,4.348641626051736
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475716@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270213T093000
+DTEND;TZID=Europe/Brussels:20270213T113000
+SUMMARY:🏀 PU18H Royal IV Brussels A vs PU18H Royal Excelsior Brussels B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475660@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270221T153000
+DTEND;TZID=Europe/Brussels:20270221T173000
+SUMMARY:🏀 PU18H BC École Européenne B vs PU18H Royal Excelsior Brussel
+ s B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050\, Ixe
+ lles
+GEO:50.82146320000000000000;4.40088520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Européenne Ixelles,
+  Boulevard du Triomphe 135, 1050, Ixelles";X-APPLE-RADIUS=70;X-TITLE="Ecole
+  Européenne Ixelles":geo:50.82146320000000000000,4.40088520000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475649@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270310T193000
+DTEND;TZID=Europe/Brussels:20270310T213000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Fresh Air A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475650@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270313T130000
+DTEND;TZID=Europe/Brussels:20270313T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H Royal BC Wezembeek O
+ ppem
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:match-475651@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270320T130000
+DTEND;TZID=Europe/Brussels:20270320T150000
+SUMMARY:🏀 PU18H Royal Excelsior Brussels B vs PU18H ASA Saint-Hubert Boi
+ tsfort
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18 Hommes A Elite
+END:VEVENT
+END:VCALENDAR

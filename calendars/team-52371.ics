@@ -1,0 +1,377 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:P2H Basket Club Foxes Léglise
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-487301@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260825T203000
+DTEND;TZID=Europe/Brussels:20260825T223000
+SUMMARY:🤝 P2H BC Centre Gaume Tintigny vs P2H Basket Club Foxes Léglise
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730\, Tintigny
+GEO:49.68045570000000000000;5.51218960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle asbl Loisirs, Rue du
+  Tilleul, 76, 6730, Tintigny";X-APPLE-RADIUS=70;X-TITLE="Salle asbl Loisirs
+ ":geo:49.68045570000000000000,5.51218960000000000000
+DESCRIPTION:Compétition : Amicaux Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-486382@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260829T201500
+DTEND;TZID=Europe/Brussels:20260829T221500
+SUMMARY:🤝 P2H Royal BC Saint-Hubert C vs P2H Basket Club Foxes Léglise
+LOCATION:Hall des Sports Michaël Paquay\, Rue du Parc\, 6870\, Saint-Huber
+ t
+GEO:50.02756800000000000000;5.37907070000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports Michaël P
+ aquay, Rue du Parc, 6870, Saint-Hubert";X-APPLE-RADIUS=70;X-TITLE="Hall des
+  Sports Michaël Paquay":geo:50.02756800000000000000,5.37907070000000000000
+DESCRIPTION:Compétition : Amicaux Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479360@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260905T170000
+DTEND;TZID=Europe/Brussels:20260905T190000
+SUMMARY:🏀 P2H BC Habay B vs P2H Basket Club Foxes Léglise
+LOCATION:Centre Sportif et Culturel Le Pachis\, Place Pierre Nothomb\, 5\, 
+ 6720\, Habay-La-Neuve
+GEO:49.72777800000000000000;5.64549410000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif et Culturel
+  Le Pachis, Place Pierre Nothomb, 5, 6720, Habay-La-Neuve";X-APPLE-RADIUS=7
+ 0;X-TITLE="Centre Sportif et Culturel Le Pachis":geo:49.7277780000000000000
+ 0,5.64549410000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479405@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260912T180000
+DTEND;TZID=Europe/Brussels:20260912T200000
+SUMMARY:🏀 P2H Royal BC Saint-Hubert C vs P2H Basket Club Foxes Léglise
+LOCATION:Hall des Sports Michaël Paquay\, Rue du Parc\, 6870\, Saint-Huber
+ t
+GEO:50.02756800000000000000;5.37907070000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports Michaël P
+ aquay, Rue du Parc, 6870, Saint-Hubert";X-APPLE-RADIUS=70;X-TITLE="Hall des
+  Sports Michaël Paquay":geo:50.02756800000000000000,5.37907070000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479415@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260918T200000
+DTEND;TZID=Europe/Brussels:20260918T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Basket Club Eagles St-L
+ éger A
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-478738@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20260925T200000
+DTEND;TZID=Europe/Brussels:20260925T220000
+SUMMARY:🏆 P2H Basket Club Foxes Léglise vs P1H RBC Centre Gaume La Rull
+ es B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : Coupes Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479416@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Rus Centre Gaume Fratin 
+ B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479428@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:🏀 P2H BC Centre Gaume Tintigny vs P2H Basket Club Foxes Léglise
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730\, Tintigny
+GEO:49.68045570000000000000;5.51218960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle asbl Loisirs, Rue du
+  Tilleul, 76, 6730, Tintigny";X-APPLE-RADIUS=70;X-TITLE="Salle asbl Loisirs
+ ":geo:49.68045570000000000000,5.51218960000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479417@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Nuts Bastogne
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479341@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:🏀 P2H BC Sarrasins Chantemelle B vs P2H Basket Club Foxes Légli
+ se
+LOCATION: Complexe Sportif de Chantemelle\, Rue de la Gravalle 50\, 6742\, 
+ Chantemelle
+GEO:49.65425450000000000000;5.65056520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS=" Complexe Sportif de Chant
+ emelle, Rue de la Gravalle 50, 6742, Chantemelle";X-APPLE-RADIUS=70;X-TITLE
+ =" Complexe Sportif de Chantemelle":geo:49.65425450000000000000,5.650565200
+ 00000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479374@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261107T200000
+DTEND;TZID=Europe/Brussels:20261107T220000
+SUMMARY:🏀 P2H Basket Club Messancy A vs P2H Basket Club Foxes Léglise
+LOCATION:Complexe Sportif du Lac de Messancy\, Rue d'Arlon\, 50\, 6780\, Me
+ ssancy
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479418@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Royal Basket Club Libram
+ ont B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479419@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H BC Athus B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479398@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:🏀 P2H Royal Basket Club Libramont B vs P2H Basket Club Foxes Lé
+ glise
+LOCATION:Hall des Sports\, Place Communale\, 3\, 6800\, Libramont
+GEO:49.91500630000000000000;5.37534210000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports, Place Com
+ munale, 3, 6800, Libramont";X-APPLE-RADIUS=70;X-TITLE="Hall des Sports":geo
+ :49.91500630000000000000,5.37534210000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479309@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:🏀 P2H Floréal BCCA Neufchâteau D vs P2H Basket Club Foxes Lég
+ lise
+LOCATION:Hall Sportif Communal\, rue des Tanneries\, 6840\, Neufchateau
+GEO:49.83995760000000000000;5.43191290000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif Communal, rue
+  des Tanneries, 6840, Neufchateau";X-APPLE-RADIUS=70;X-TITLE="Hall Sportif 
+ Communal":geo:49.83995760000000000000,5.43191290000000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479332@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:🏀 P2H Basket Club Eagles St-Léger A vs P2H Basket Club Foxes L
+ église
+LOCATION:Complexe Sportif du Conchibois\, Rue du Stade\, 1\, 6747\, Saint-L
+ éger
+GEO:0.00000000000000000000;0.00000000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif du Conchi
+ bois, Rue du Stade, 1, 6747, Saint-Léger";X-APPLE-RADIUS=70;X-TITLE="Compl
+ exe Sportif du Conchibois":geo:0.00000000000000000000,0.0000000000000000000
+ 0
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479420@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270115T200000
+DTEND;TZID=Europe/Brussels:20270115T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H BC Habay B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479356@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:🏀 P2H Rus Centre Gaume Fratin B vs P2H Basket Club Foxes Léglis
+ e
+LOCATION:Complexe Sportif de Fratin\, Zoning du Magenot 38\, 6740\, Fratin
+GEO:49.6675107;5.570620799999999
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Fratin
+ , Zoning du Magenot 38, 6740, Fratin";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Fratin":geo:49.6675107,5.570620799999999
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479421@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270129T200000
+DTEND;TZID=Europe/Brussels:20270129T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Royal BC Saint-Hubert C
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479325@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:🏀 P2H Nuts Bastogne vs P2H Basket Club Foxes Léglise
+LOCATION:Centre Sportif Porte de Trèves\, Rue Gustave Delperdange 5\, 6600
+ \, Bastogne
+GEO:50.00721500000000000000;5.72639300000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Porte de Tr
+ èves, Rue Gustave Delperdange 5, 6600, Bastogne";X-APPLE-RADIUS=70;X-TITLE
+ ="Centre Sportif Porte de Trèves":geo:50.00721500000000000000,5.7263930000
+ 0000000000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479422@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270221T160000
+DTEND;TZID=Europe/Brussels:20270221T180000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Basket Club Messancy A
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479423@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270227T200000
+DTEND;TZID=Europe/Brussels:20270227T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H BC Centre Gaume Tintigny
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479391@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270307T130000
+DTEND;TZID=Europe/Brussels:20270307T150000
+SUMMARY:🏀 P2H BC Athus B vs P2H Basket Club Foxes Léglise
+LOCATION:Centre sportif du Joli Bois\, 1\, rue de la Piscine\, 6791\, Athus
+GEO:49.56571918234554;5.843389883651091
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif du Joli Boi
+ s, 1, rue de la Piscine, 6791, Athus";X-APPLE-RADIUS=70;X-TITLE="Centre spo
+ rtif du Joli Bois":geo:49.56571918234554,5.843389883651091
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479424@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270314T160000
+DTEND;TZID=Europe/Brussels:20270314T180000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H Floréal BCCA Neufchâte
+ au D
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+BEGIN:VEVENT
+UID:match-479425@basket-awbb
+DTSTAMP:20260821T203434Z
+DTSTART;TZID=Europe/Brussels:20270326T200000
+DTEND;TZID=Europe/Brussels:20270326T220000
+SUMMARY:🏀 P2H Basket Club Foxes Léglise vs P2H BC Sarrasins Chantemelle
+  B
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860
+ \, Léglise
+GEO:49.80126840000000000000;5.53495960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre sportif de Léglise
+ , Rue du Haut Des Bruyères, 26, 6860, Léglise";X-APPLE-RADIUS=70;X-TITLE=
+ "Centre sportif de Léglise":geo:49.80126840000000000000,5.5349596000000000
+ 0000
+DESCRIPTION:Compétition : P2 Messieurs
+END:VEVENT
+END:VCALENDAR

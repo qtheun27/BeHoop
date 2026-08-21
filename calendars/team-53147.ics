@@ -1,0 +1,318 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Suivi Basket Hainaut//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:PU18H Royal Waterloo Basket B
+X-WR-TIMEZONE:Europe/Brussels
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:match-485106@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260913T113000
+DTEND;TZID=Europe/Brussels:20260913T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Anderlecht Basketball A
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485138@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:🏀 PU18H Royal Canter Schaerbeek B vs PU18H Royal Waterloo Basket
+  B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485107@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20260927T114500
+DTEND;TZID=Europe/Brussels:20260927T134500
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H BCD Wavre B
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485118@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Waterloo Basket B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485108@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261011T121500
+DTEND;TZID=Europe/Brussels:20261011T141500
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H B.C.U.Ganshoren
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485109@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261108T113000
+DTEND;TZID=Europe/Brussels:20261108T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Royal Murprotec Nivelle
+ s Basketball A
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485172@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261114T142000
+DTEND;TZID=Europe/Brussels:20261114T162000
+SUMMARY:🏀 PU18H Berchem BBC vs PU18H Royal Waterloo Basket B
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082\, Berchem-Sain
+ te-Agathe
+GEO:50.86964330000000000000;4.28731260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Berchem, 
+ Rue des Chalets 1, 1082, Berchem-Sainte-Agathe";X-APPLE-RADIUS=70;X-TITLE="
+ Complexe Sportif Berchem":geo:50.86964330000000000000,4.2873126000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485110@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261122T113000
+DTEND;TZID=Europe/Brussels:20261122T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Berchem BBC
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485152@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261205T160000
+DTEND;TZID=Europe/Brussels:20261205T180000
+SUMMARY:🏀 PU18H Royal Murprotec Nivelles Basketball A vs PU18H Royal Wat
+ erloo Basket B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485100@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20261213T103000
+DTEND;TZID=Europe/Brussels:20261213T123000
+SUMMARY:🏀 PU18H B.C.U.Ganshoren vs PU18H Royal Waterloo Basket B
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485111@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270110T114500
+DTEND;TZID=Europe/Brussels:20270110T134500
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Royal Canter Schaerbeek
+  B
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485132@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:🏀 PU18H BCD Wavre B vs PU18H Royal Waterloo Basket B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300
+ \, Wavre
+GEO:50.72240000000000000000;4.61868000000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Justin Peet
+ ers, Avenue du Centre Sportif 22, 1300, Wavre";X-APPLE-RADIUS=70;X-TITLE="C
+ entre Sportif Justin Peeters":geo:50.72240000000000000000,4.618680000000000
+ 00000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485165@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270130T151500
+DTEND;TZID=Europe/Brussels:20270130T171500
+SUMMARY:🏀 PU18H Anderlecht Basketball A vs PU18H Royal Waterloo Basket B
+LOCATION:Ecole P18 Anderlecht\, Rue Pierre Longin 3\, 1070\, Anderlecht
+GEO:50.8286053;4.291128
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole P18 Anderlecht, Rue 
+ Pierre Longin 3, 1070, Anderlecht";X-APPLE-RADIUS=70;X-TITLE="Ecole P18 And
+ erlecht":geo:50.8286053,4.291128
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485112@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270207T114500
+DTEND;TZID=Europe/Brussels:20270207T134500
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Berchem BBC
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485113@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270214T114500
+DTEND;TZID=Europe/Brussels:20270214T134500
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H B.C.U.Ganshoren
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485114@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270221T113000
+DTEND;TZID=Europe/Brussels:20270221T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H BCD Wavre B
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485156@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270320T160000
+DTEND;TZID=Europe/Brussels:20270320T180000
+SUMMARY:🏀 PU18H Royal Murprotec Nivelles Basketball A vs PU18H Royal Wat
+ erloo Basket B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485146@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:🏀 PU18H Royal Canter Schaerbeek B vs PU18H Royal Waterloo Basket
+  B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030\, Schae
+ rbeek
+GEO:50.86992960000000000000;4.38497720000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Kinetix, 
+ Boulevard Lambermont 236, 1030, Schaerbeek";X-APPLE-RADIUS=70;X-TITLE="Sall
+ e Omnisports Kinetix":geo:50.86992960000000000000,4.38497720000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485126@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270410T130000
+DTEND;TZID=Europe/Brussels:20270410T150000
+SUMMARY:🏀 PU18H Royal Jodoigne Basket vs PU18H Royal Waterloo Basket B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la 
+ Gadale\, 1370\, Jodoigne
+GEO:50.72826;4.88050
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Jodoig
+ ne - Plaine de la Gadale, Plaine de la Gadale, 1370, Jodoigne";X-APPLE-RADI
+ US=70;X-TITLE="Complexe Sportif de Jodoigne - Plaine de la Gadale":geo:50.7
+ 2826,4.88050
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485115@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270418T113000
+DTEND;TZID=Europe/Brussels:20270418T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Royal Jodoigne Basket
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410\, Waterl
+ oo
+GEO:50.71035010000000000000;4.37131360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Chenois
+ , Chemin des Postes 156, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hall Om
+ nisports du Chenois":geo:50.71035010000000000000,4.37131360000000000000
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+BEGIN:VEVENT
+UID:match-485116@basket-awbb
+DTSTAMP:20260821T203425Z
+DTSTART;TZID=Europe/Brussels:20270425T113000
+DTEND;TZID=Europe/Brussels:20270425T133000
+SUMMARY:🏀 PU18H Royal Waterloo Basket B vs PU18H Anderlecht Basketball A
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410\, Wa
+ terloo
+GEO:50.71657050000000000000;4.39622780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall omnisports de Waterlo
+ o, Rue Théophile Delbar 33, 1410, Waterloo";X-APPLE-RADIUS=70;X-TITLE="Hal
+ l omnisports de Waterloo":geo:50.71657050000000000000,4.3962278000000000000
+ 0
+DESCRIPTION:Compétition : U18 Hommes C
+END:VEVENT
+END:VCALENDAR
