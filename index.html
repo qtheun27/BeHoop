@@ -228,7 +228,7 @@
 
 <header>
   <div class="titre-app">
-    🏀 BeHoop
+    <img src="icons/icon-192.png" alt="" style="width:24px;height:24px;border-radius:7px;vertical-align:-6px;margin-right:2px;"> BeHoop
     <a href="./club/" style="margin-left:auto;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:5px 10px;border-radius:20px;">🔐 Espace Club</a>
   </div>
   <div class="search-box">
@@ -260,7 +260,10 @@
       <button class="tab-btn" data-tab="tab-calendrier">📅 Calendrier</button>
     </div>
 
-    <div id="tab-classement" class="tab-content active"><div class="carte" id="classement-carte"></div></div>
+    <div id="tab-classement" class="tab-content active">
+      <div class="filtres" id="filtres-classement"></div>
+      <div class="carte" id="classement-carte"></div>
+    </div>
     <div id="tab-calendrier" class="tab-content">
       <div class="filtres" id="filtres-calendrier">
         <button class="filtre-chip active" data-filtre="avenir">À venir</button>
@@ -332,44 +335,74 @@ function seriesDeEquipe(teamId) {
   return [...ids].filter(id => id != null);
 }
 
+let serieClassementActive = null;
+
+function labelSerie(serie) {
+  if (!serie) return '';
+  const nom = serie.competition_name || '';
+  if (/coupe/i.test(nom)) return '🏆 ' + (serie.short_name || serie.name);
+  if (/national|régional|awbb/i.test(nom)) return '🌍 ' + (serie.short_name || serie.name);
+  return '🏀 ' + (serie.short_name || serie.name);
+}
+
 function rendreClassement(equipe) {
-  const cible = document.getElementById('classement-carte');
+  const $filtres = document.getElementById('filtres-classement');
+  const $cible = document.getElementById('classement-carte');
   const serieIds = seriesDeEquipe(equipe.id);
 
   if (serieIds.length === 0) {
-    cible.innerHTML = `<p class="vide">Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    $filtres.innerHTML = '';
+    $cible.innerHTML = `<p class="vide">Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
     return;
   }
 
-  cible.innerHTML = serieIds.map(serieId => {
-    const lignes = donnees.classements[String(serieId)] || [];
-    const serie = (donnees.series || []).find(s => s.id === serieId);
-    const titre = serie ? (serie.name || serie.short_name) : '';
+  if (!serieClassementActive || !serieIds.includes(serieClassementActive)) {
+    serieClassementActive = serieIds[0];
+  }
 
-    if (lignes.length === 0) {
-      return `<h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3><p class="vide" style="margin-bottom:16px;">Classement pas encore disponible pour cette compétition.</p>`;
-    }
+  if (serieIds.length > 1) {
+    $filtres.innerHTML = serieIds.map(id => {
+      const serie = (donnees.series || []).find(s => s.id === id);
+      return `<button class="filtre-chip ${id === serieClassementActive ? 'active' : ''}" data-serie="${id}">${labelSerie(serie)}</button>`;
+    }).join('');
+    $filtres.querySelectorAll('.filtre-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        serieClassementActive = parseInt(btn.dataset.serie, 10);
+        rendreClassement(equipe);
+      });
+    });
+  } else {
+    $filtres.innerHTML = '';
+  }
 
-    const tri = [...lignes].sort((a, b) => (a.position || 999) - (b.position || 999));
-    const rangees = tri.map(l => `
-      <tr class="${l.team_id === equipe.id ? 'ligne-equipe' : ''}">
-        <td>${l.position ?? '-'}</td>
-        <td>${l.team_short_name || l.team_name}</td>
-        <td>${l.played ?? 0}</td>
-        <td>${l.wins ?? 0}</td>
-        <td>${l.losses ?? 0}</td>
-        <td>${l.points ?? 0}</td>
-      </tr>
-    `).join('');
+  const lignes = donnees.classements[String(serieClassementActive)] || [];
+  const serieActive = (donnees.series || []).find(s => s.id === serieClassementActive);
+  const titre = serieActive ? (serieActive.name || serieActive.short_name) : '';
 
-    return `
-      <h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3>
-      <table style="margin-bottom:20px;">
-        <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
-        <tbody>${rangees}</tbody>
-      </table>
-    `;
-  }).join('');
+  if (lignes.length === 0) {
+    $cible.innerHTML = `<h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3><p class="vide">Classement pas encore disponible pour cette compétition — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    return;
+  }
+
+  const tri = [...lignes].sort((a, b) => (a.position || 999) - (b.position || 999));
+  const rangees = tri.map(l => `
+    <tr class="${l.team_id === equipe.id ? 'ligne-equipe' : ''}">
+      <td>${l.position ?? '-'}</td>
+      <td>${l.team_short_name || l.team_name}</td>
+      <td>${l.played ?? 0}</td>
+      <td>${l.wins ?? 0}</td>
+      <td>${l.losses ?? 0}</td>
+      <td>${l.points ?? 0}</td>
+    </tr>
+  `).join('');
+
+  $cible.innerHTML = `
+    <h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3>
+    <table>
+      <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
+      <tbody>${rangees}</tbody>
+    </table>
+  `;
 }
 
 function adresseComplete(g) {

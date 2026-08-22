@@ -6,7 +6,7 @@
 // après une mise à jour du code — le fichier data.json n'est lui jamais
 // mis en cache, il doit toujours être frais.
 
-const CACHE_NAME = 'basket-hainaut-shell-v2';
+const CACHE_NAME = 'behoop-shell-v3';
 const FICHIERS_STATIQUES = [
   './icons/icon-192.png',
   './icons/icon-512.png',
