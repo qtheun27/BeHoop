@@ -29,6 +29,14 @@
   <div id="vue-enfant"></div>
 
   <div class="carte">
+    <div class="carte-titre">Lier un enfant déjà inscrit</div>
+    <div class="carte-desc">Si l'admin de ton club a déjà créé la fiche de ton enfant (sans email), choisis-la ici plutôt que d'en créer une nouvelle.</div>
+    <select id="enfant-existant"><option value="">Chargement…</option></select>
+    <button class="btn btn-secondary" style="margin-top:12px;" id="btn-lier-enfant">Lier cet enfant à mon compte</button>
+    <div class="msg" id="msg-lien"></div>
+  </div>
+
+  <div class="carte">
     <div class="carte-titre">Ajouter un enfant</div>
     <div class="carte-desc">Ton enfant n'a pas besoin de sa propre adresse email — tu gères son compte depuis le tien.</div>
     <div class="grille-2">
@@ -47,7 +55,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, addDoc, updateDoc, collection, arrayUnion, serverTimestamp,
+  getFirestore, doc, getDoc, addDoc, updateDoc, collection, getDocs, query, where, arrayUnion, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
@@ -76,6 +84,7 @@ onAuthStateChanged(auth, async (user) => {
   }
 
   await chargerEnfants();
+  await chargerEnfantsDisponibles();
 });
 
 async function chargerEnfants() {
@@ -140,6 +149,37 @@ async function afficherEnfant(playerId) {
   });
   $vue.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+// Enfants sans email, sans parent lié, dans le même club — candidats à lier.
+async function chargerEnfantsDisponibles() {
+  const $select = document.getElementById('enfant-existant');
+  if (!monProfil.club_id) { $select.innerHTML = '<option value="">Aucun club associé</option>'; return; }
+  const q = query(collection(db, 'players'), where('club_id', '==', String(monProfil.club_id)));
+  const snap = await getDocs(q);
+  const disponibles = snap.docs
+    .map(d => ({ id: d.id, ...d.data() }))
+    .filter(j => !j.account_uid && (!j.parent_uids || j.parent_uids.length === 0));
+
+  $select.innerHTML = disponibles.length
+    ? '<option value="">— Choisir —</option>' + disponibles.map(j => `<option value="${j.id}">${nomAffichage(j)}</option>`).join('')
+    : '<option value="">Aucun enfant disponible pour le moment</option>';
+}
+
+document.getElementById('btn-lier-enfant').addEventListener('click', async () => {
+  const playerId = document.getElementById('enfant-existant').value;
+  const $msg = document.getElementById('msg-lien');
+  if (!playerId) { $msg.className = 'msg err'; $msg.textContent = 'Choisis un enfant dans la liste.'; return; }
+  try {
+    await updateDoc(doc(db, 'players', playerId), { parent_uids: arrayUnion(auth.currentUser.uid) });
+    await updateDoc(doc(db, 'users', auth.currentUser.uid), { children_player_ids: arrayUnion(playerId) });
+    monProfil.children_player_ids = [...(monProfil.children_player_ids || []), playerId];
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Enfant lié à ton compte.';
+    await chargerEnfants();
+    await chargerEnfantsDisponibles();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
 
 document.getElementById('btn-ajouter-enfant').addEventListener('click', async () => {
   const prenom = document.getElementById('enfant-prenom').value.trim();

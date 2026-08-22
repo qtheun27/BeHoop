@@ -13,11 +13,17 @@
   .equipe-form.ouvert { display: block; }
   .ligne-invite { display: flex; gap: 8px; margin-bottom: 8px; }
   .ligne-invite input { flex: 1; }
-  .ligne-joueur { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-soft); }
+  h4.sous-section { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; margin: 14px 0 6px; }
+  .ligne-joueur { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border-soft); flex-wrap: wrap; }
   .ligne-joueur:last-child { border-bottom: none; }
-  .ligne-joueur input[type="checkbox"] { width: 18px; height: 18px; flex-shrink: 0; }
-  .barre-action { display: flex; gap: 8px; align-items: center; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .ligne-joueur input[type="checkbox"] { width: 17px; height: 17px; flex-shrink: 0; }
+  .ligne-joueur .infos-joueur { flex: 1; min-width: 120px; }
+  .lien-parent { display: flex; gap: 6px; align-items: center; width: 100%; margin-top: 4px; margin-left: 27px; }
+  .lien-parent select { flex: 1; font-size: 12.5px; padding: 6px 8px; }
+  .barre-action { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
   .barre-action select { flex: 1; }
+  .ajout-rapide { display: flex; gap: 8px; margin-top: 12px; }
+  .ajout-rapide input { flex: 1; }
 </style>
 </head>
 <body>
@@ -29,35 +35,13 @@
 
   <div class="carte">
     <div class="carte-titre">Équipes engagées cette saison</div>
-    <div class="carte-desc">Touche une équipe pour inviter son coach ou un joueur par email.</div>
+    <div class="carte-desc">Touche une équipe pour voir/gérer son coach et ses joueurs.</div>
     <div id="liste-equipes"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
-    <div class="carte-titre">Joueurs du club</div>
-    <div class="carte-desc">Tous les joueurs (avec ou sans compte) — sélectionne-en plusieurs pour les déplacer d'équipe en une fois.</div>
-    <div id="liste-joueurs-club"><p class="vide">Chargement…</p></div>
-    <div class="barre-action">
-      <select id="equipe-cible-bulk"><option value="">— Déplacer vers —</option></select>
-      <button class="btn btn-secondary btn-sm" id="btn-deplacer">Déplacer</button>
-    </div>
-    <div class="msg" id="msg-bulk"></div>
-
-    <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border);">
-      <label class="champ-label">Ajouter un joueur sans email (l'admin ou un parent renseignera le reste plus tard)</label>
-      <div class="grille-2">
-        <input type="text" id="nouveau-prenom" placeholder="Prénom">
-        <input type="text" id="nouveau-nom" placeholder="Nom">
-      </div>
-      <select id="nouvelle-equipe" style="margin-top:8px;"><option value="">Choisir une équipe...</option></select>
-      <button class="btn btn-primary btn-sm" style="margin-top:10px;" id="btn-ajouter-joueur">Ajouter ce joueur</button>
-      <div class="msg" id="msg-nouveau-joueur"></div>
-    </div>
-  </div>
-
-  <div class="carte">
     <div class="carte-titre">Inviter un parent</div>
-    <div class="carte-desc">Le parent pourra ajouter son enfant lui-même dès sa première connexion.</div>
+    <div class="carte-desc">Le parent pourra ajouter son enfant lui-même dès sa première connexion — ou tu peux lui associer un joueur déjà créé depuis la fiche de son équipe.</div>
     <div class="ligne-invite">
       <input type="email" id="email-parent" placeholder="email du parent">
       <button class="btn btn-primary btn-sm" id="btn-inviter-parent">Inviter</button>
@@ -82,12 +66,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
+  getFirestore, doc, getDoc, setDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp, arrayUnion,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
-const SITE_URL_CONNEXION = "https://qtheun27.github.io/basket-awbb/club/finaliser-connexion.html";
+const SITE_URL_CONNEXION = "https://behoop.be/club/finaliser-connexion.html";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -96,6 +80,9 @@ const db = getFirestore(app);
 let monClubId = null;
 let monClubNom = null;
 let equipesDuClub = [];
+let tousLesCoachs = [];   // {uid, ..., team_ids}
+let tousLesJoueurs = [];  // {id, ..., team_id}
+let tousLesParents = [];  // {uid, ...}
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
@@ -108,9 +95,10 @@ onAuthStateChanged(auth, async (user) => {
   monClubNom = snap.data().club_name || null;
 
   await chargerClub();
-  await chargerJoueursClub();
+  await chargerDonneesMembres();
   await chargerInvitations();
   await chargerMembres();
+  afficherEquipes();
 });
 
 async function chargerClub() {
@@ -119,25 +107,39 @@ async function chargerClub() {
   const club = (donnees.clubs || []).find(c => String(c.id) === String(monClubId));
   monClubNom = club ? club.name : monClubNom;
   equipesDuClub = club ? (club.teams || []) : [];
-
   document.querySelector('#titre-club').innerHTML = `${monClubNom || 'Mon club'}<small>Coachs, joueurs, parents</small>`;
+}
 
+// Charge une seule fois coachs/joueurs/parents du club, réutilisé pour
+// chaque équipe (évite une requête Firestore par équipe dépliée).
+async function chargerDonneesMembres() {
+  const qCoachs = query(collection(db, 'users'), where('club_id', '==', String(monClubId)), where('role', '==', 'coach'));
+  const qJoueurs = query(collection(db, 'players'), where('club_id', '==', String(monClubId)));
+  const qParents = query(collection(db, 'users'), where('club_id', '==', String(monClubId)), where('role', '==', 'parent'));
+  const [snapCoachs, snapJoueurs, snapParents] = await Promise.all([getDocs(qCoachs), getDocs(qJoueurs), getDocs(qParents)]);
+  tousLesCoachs = snapCoachs.docs.map(d => ({ uid: d.id, ...d.data() }));
+  tousLesJoueurs = snapJoueurs.docs.map(d => ({ id: d.id, ...d.data() }));
+  tousLesParents = snapParents.docs.map(d => ({ uid: d.id, ...d.data() }));
+}
+
+function afficherEquipes() {
   const optionsEquipes = '<option value="">— Choisir —</option>' +
     equipesDuClub.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
-  document.getElementById('equipe-cible-bulk').innerHTML = '<option value="">— Déplacer vers —</option>' +
-    equipesDuClub.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
-  document.getElementById('nouvelle-equipe').innerHTML = optionsEquipes;
 
   const $liste = document.getElementById('liste-equipes');
   if (equipesDuClub.length === 0) {
     $liste.innerHTML = '<p class="vide">Aucune équipe trouvée pour ce club cette saison.</p>';
     return;
   }
-  $liste.innerHTML = equipesDuClub.map(eq => `
+
+  $liste.innerHTML = equipesDuClub.map(eq => {
+    const coachs = tousLesCoachs.filter(c => (c.team_ids || []).includes(String(eq.id)));
+    const joueurs = tousLesJoueurs.filter(j => String(j.team_id) === String(eq.id));
+    return `
     <div class="equipe" data-team-id="${eq.id}">
       <div class="equipe-titre" onclick="document.getElementById('form-${eq.id}').classList.toggle('ouvert')">
         <strong>${eq.category || eq.name}</strong>
-        <span class="badge badge-muted" id="compte-${eq.id}">…</span>
+        <span class="badge badge-muted">${coachs.length} coach · ${joueurs.length} joueur(s)</span>
       </div>
       <div class="equipe-form" id="form-${eq.id}">
         <div class="ligne-invite">
@@ -149,42 +151,68 @@ async function chargerClub() {
           <button class="btn btn-primary btn-sm" data-action="player" data-team="${eq.id}">Inviter joueur</button>
         </div>
         <div class="msg" id="msg-${eq.id}"></div>
+
+        <h4 class="sous-section">Coach(s)</h4>
+        ${coachs.length ? coachs.map(c => `
+          <div class="ligne-joueur">
+            ${avatarHtml(c.photo_url, nomAffichage(c), 30)}
+            <div class="infos-joueur"><div class="nom">${nomAffichage(c)}</div><div class="sous-texte">${c.email}</div></div>
+          </div>
+        `).join('') : '<p class="vide">Aucun coach pour le moment.</p>'}
+
+        <h4 class="sous-section">Joueurs</h4>
+        ${joueurs.length ? joueurs.map(j => `
+          <div class="ligne-joueur">
+            <input type="checkbox" class="case-joueur-${eq.id}" value="${j.id}">
+            ${avatarHtml(j.photo_url, nomAffichage(j), 30)}
+            <div class="infos-joueur">
+              <div class="nom">${nomAffichage(j)}${!j.account_uid ? ' <span class="badge badge-muted">géré par parent</span>' : ''}</div>
+            </div>
+            ${(!j.parent_uids || j.parent_uids.length === 0) ? `
+              <div class="lien-parent">
+                <select id="parent-select-${j.id}">
+                  <option value="">Associer à un parent...</option>
+                  ${tousLesParents.map(p => `<option value="${p.uid}">${nomAffichage(p)} (${p.email})</option>`).join('')}
+                </select>
+                <button class="btn-ghost" data-lier="${j.id}">Lier</button>
+              </div>
+            ` : `<span class="badge badge-success" style="flex-shrink:0;">Parent lié</span>`}
+          </div>
+        `).join('') : '<p class="vide">Aucun joueur pour le moment.</p>'}
+
+        <div class="ajout-rapide">
+          <input type="text" id="prenom-rapide-${eq.id}" placeholder="Prénom">
+          <input type="text" id="nom-rapide-${eq.id}" placeholder="Nom">
+          <button class="btn btn-secondary btn-sm" data-ajout="${eq.id}">+ Joueur sans email</button>
+        </div>
+
+        ${joueurs.length > 1 ? `
+          <div class="barre-action">
+            <select id="cible-bulk-${eq.id}">${optionsEquipes}</select>
+            <button class="btn btn-secondary btn-sm" data-bulk="${eq.id}">Déplacer la sélection</button>
+          </div>
+        ` : ''}
+        <div class="msg" id="msg-gestion-${eq.id}"></div>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   document.querySelectorAll('[data-action="coach"]').forEach(btn =>
     btn.addEventListener('click', () => inviter('coach', btn.dataset.team)));
   document.querySelectorAll('[data-action="player"]').forEach(btn =>
     btn.addEventListener('click', () => inviter('player', btn.dataset.team)));
-
-  chargerComptesParEquipe();
+  document.querySelectorAll('[data-lier]').forEach(btn =>
+    btn.addEventListener('click', () => lierAParent(btn.dataset.lier)));
+  document.querySelectorAll('[data-ajout]').forEach(btn =>
+    btn.addEventListener('click', () => ajouterJoueurRapide(btn.dataset.ajout)));
+  document.querySelectorAll('[data-bulk]').forEach(btn =>
+    btn.addEventListener('click', () => deplacerSelection(btn.dataset.bulk)));
 }
 
-async function chargerComptesParEquipe() {
-  const qCoachs = query(collection(db, 'users'), where('club_id', '==', String(monClubId)), where('role', '==', 'coach'));
-  const qJoueurs = query(collection(db, 'players'), where('club_id', '==', String(monClubId)));
-  const [snapCoachs, snapJoueurs] = await Promise.all([getDocs(qCoachs), getDocs(qJoueurs)]);
-
-  const comptesParTeam = {};
-  snapCoachs.forEach(d => {
-    (d.data().team_ids || []).forEach(tid => {
-      comptesParTeam[tid] = comptesParTeam[tid] || { coach: 0, player: 0 };
-      comptesParTeam[tid].coach++;
-    });
-  });
-  snapJoueurs.forEach(d => {
-    const tid = d.data().team_id;
-    if (!tid) return;
-    comptesParTeam[tid] = comptesParTeam[tid] || { coach: 0, player: 0 };
-    comptesParTeam[tid].player++;
-  });
-
-  equipesDuClub.forEach(eq => {
-    const c = comptesParTeam[eq.id] || { coach: 0, player: 0 };
-    const el = document.getElementById('compte-' + eq.id);
-    if (el) el.textContent = `${c.coach} coach · ${c.player} joueur(s)`;
-  });
+async function rafraichirEtReafficher() {
+  await chargerDonneesMembres();
+  afficherEquipes();
 }
 
 async function assurerEquipeExiste(teamId) {
@@ -226,84 +254,61 @@ async function inviter(role, teamId) {
       : `✅ Email envoyé à ${email}.`;
     document.getElementById(champId).value = '';
     await chargerInvitations();
-    await chargerComptesParEquipe();
   } catch (e) {
     $msg.className = 'msg err';
     $msg.textContent = 'Erreur : ' + e.message;
   }
 }
 
-// --- Joueurs du club : liste complète (avec ou sans compte), sélection multiple ---
-async function chargerJoueursClub() {
-  const q = query(collection(db, 'players'), where('club_id', '==', String(monClubId)));
-  const snap = await getDocs(q);
-  const $liste = document.getElementById('liste-joueurs-club');
-
-  if (snap.empty) {
-    $liste.innerHTML = '<p class="vide">Aucun joueur pour le moment.</p>';
-    return;
+async function lierAParent(playerId) {
+  const parentUid = document.getElementById('parent-select-' + playerId).value;
+  if (!parentUid) return;
+  try {
+    await updateDoc(doc(db, 'players', playerId), { parent_uids: arrayUnion(parentUid) });
+    await updateDoc(doc(db, 'users', parentUid), { children_player_ids: arrayUnion(playerId) });
+    await rafraichirEtReafficher();
+  } catch (e) {
+    alert("Erreur lors de l'association : " + e.message);
   }
-
-  const joueurs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-  const nomEquipe = (tid) => {
-    const eq = equipesDuClub.find(e => String(e.id) === String(tid));
-    return eq ? (eq.category || eq.name) : 'Sans équipe';
-  };
-
-  $liste.innerHTML = joueurs.map(j => `
-    <div class="ligne-joueur">
-      <input type="checkbox" class="case-joueur" value="${j.id}">
-      ${avatarHtml(j.photo_url, nomAffichage(j), 34)}
-      <div>
-        <div class="nom">${nomAffichage(j)}${!j.account_uid ? ' <span class="badge badge-muted">géré par parent</span>' : ''}</div>
-        <div class="sous-texte">${nomEquipe(j.team_id)}</div>
-      </div>
-    </div>
-  `).join('');
 }
 
-document.getElementById('btn-deplacer').addEventListener('click', async () => {
-  const cibles = [...document.querySelectorAll('.case-joueur:checked')].map(c => c.value);
-  const nouvelleEquipe = document.getElementById('equipe-cible-bulk').value;
-  const $msg = document.getElementById('msg-bulk');
-  if (cibles.length === 0) { $msg.className = 'msg err'; $msg.textContent = 'Sélectionne au moins un joueur.'; return; }
-  if (!nouvelleEquipe) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une équipe de destination.'; return; }
-  try {
-    await assurerEquipeExiste(nouvelleEquipe);
-    await Promise.all(cibles.map(id => updateDoc(doc(db, 'players', id), { team_id: String(nouvelleEquipe) })));
-    $msg.className = 'msg ok'; $msg.textContent = `✅ ${cibles.length} joueur(s) déplacé(s).`;
-    await chargerJoueursClub();
-    await chargerComptesParEquipe();
-  } catch (e) {
-    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-  }
-});
-
-document.getElementById('btn-ajouter-joueur').addEventListener('click', async () => {
-  const prenom = document.getElementById('nouveau-prenom').value.trim();
-  const nom = document.getElementById('nouveau-nom').value.trim();
-  const teamId = document.getElementById('nouvelle-equipe').value;
-  const $msg = document.getElementById('msg-nouveau-joueur');
+async function ajouterJoueurRapide(teamId) {
+  const prenom = document.getElementById('prenom-rapide-' + teamId).value.trim();
+  const nom = document.getElementById('nom-rapide-' + teamId).value.trim();
+  const $msg = document.getElementById('msg-gestion-' + teamId);
   if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
   try {
-    if (teamId) await assurerEquipeExiste(teamId);
+    await assurerEquipeExiste(teamId);
     await addDoc(collection(db, 'players'), {
       club_id: String(monClubId),
-      team_id: teamId ? String(teamId) : null,
+      team_id: String(teamId),
       account_uid: '',
       parent_uids: [],
       prenom, nom,
       created_at: serverTimestamp(),
     });
     $msg.className = 'msg ok'; $msg.textContent = '✅ Joueur ajouté.';
-    document.getElementById('nouveau-prenom').value = '';
-    document.getElementById('nouveau-nom').value = '';
-    await chargerJoueursClub();
-    await chargerComptesParEquipe();
+    await rafraichirEtReafficher();
   } catch (e) {
     $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
   }
-});
+}
+
+async function deplacerSelection(teamId) {
+  const cibles = [...document.querySelectorAll('.case-joueur-' + teamId + ':checked')].map(c => c.value);
+  const nouvelleEquipe = document.getElementById('cible-bulk-' + teamId).value;
+  const $msg = document.getElementById('msg-gestion-' + teamId);
+  if (cibles.length === 0) { $msg.className = 'msg err'; $msg.textContent = 'Sélectionne au moins un joueur.'; return; }
+  if (!nouvelleEquipe) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une équipe de destination.'; return; }
+  try {
+    await assurerEquipeExiste(nouvelleEquipe);
+    await Promise.all(cibles.map(id => updateDoc(doc(db, 'players', id), { team_id: String(nouvelleEquipe) })));
+    $msg.className = 'msg ok'; $msg.textContent = `✅ ${cibles.length} joueur(s) déplacé(s).`;
+    await rafraichirEtReafficher();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+}
 
 document.getElementById('btn-inviter-parent').addEventListener('click', async () => {
   const email = document.getElementById('email-parent').value.trim().toLowerCase();
@@ -354,7 +359,7 @@ async function chargerMembres() {
       if (!confirm("Retirer l'accès de ce membre à l'espace club ? (son compte de connexion reste actif, mais il perd tout accès aux données du club)")) return;
       await deleteDoc(doc(db, 'users', btn.dataset.uid));
       await chargerMembres();
-      await chargerComptesParEquipe();
+      await rafraichirEtReafficher();
     });
   });
 }
