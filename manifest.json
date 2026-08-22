@@ -1,12 +1,12 @@
 {
-  "name": "Suivi Basket Hainaut",
-  "short_name": "Basket Hainaut",
-  "description": "Clubs, calendriers, classements et coupes du basket en province de Hainaut",
+  "name": "BeHoop",
+  "short_name": "BeHoop",
+  "description": "Clubs, calendriers, classements et coupes du basket en Belgique francophone",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f8fafc",
+  "background_color": "#0b1f4d",
   "theme_color": "#0b5cab",
   "lang": "fr",
   "icons": [
