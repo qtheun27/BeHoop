@@ -60,7 +60,7 @@ LOGO_BASE_URL = "https://gestion.awbb.be/lms_league_ws/public/img/"
 # l'API (une requête sur toute la saison en une fois renvoie une 502).
 TAILLE_TRANCHE_JOURS = 55
 
-SITE_URL = "https://qtheun27.github.io/basket-awbb"
+SITE_URL = "https://behoop.be"
 
 HEADERS_BROWSER = {
     "User-Agent": "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/6.0; +https://github.com/)"
