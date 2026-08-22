@@ -3,98 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Tableau tactique — Espace Club</title>
+<title>Tableau Tactique & Exercices — BeHoop</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
-  .zone-terrain { touch-action: none; user-select: none; background: #e8dcc8; border-radius: var(--radius-md); overflow: hidden; }
-  .zone-terrain svg { display: block; width: 100%; height: auto; }
-  .pion { cursor: grab; }
-  .pion:active { cursor: grabbing; }
-  .pion-cercle { stroke: white; stroke-width: 0.6; }
-  .pion-cercle.selectionne { stroke: #ffd400; stroke-width: 1.4; }
-  .pion-texte { fill: white; font-size: 3.4px; font-weight: 800; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
-  .pion-poste { fill: #16202e; font-size: 2.6px; font-weight: 700; text-anchor: middle; pointer-events: none; }
-  .barre-outils { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-  .puce-etape { min-width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface); font-weight: 800; font-size: 13px; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-  .puce-etape.actif { background: var(--primary); color: white; border-color: var(--primary); }
-  .liste-etapes { display: flex; gap: 8px; overflow-x: auto; padding: 2px; }
-  .ligne-partie { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-soft); }
-  .ligne-partie:last-child { border-bottom: none; }
-  .ligne-partie .nom { font-weight: 700; font-size: 14px; flex: 1; }
+  :root {
+    --court-bg: #1a2332;
+    --offense: #ff6b00;
+    --defense: #0088ff;
+  }
+  * { box-sizing: border-box; touch-action: none; user-select: none; }
+  body {
+    margin: 0; padding-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text);
+  }
+
+  .toolbar-board {
+    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; justify-content: center;
+  }
+
+  #board-container {
+    width: 100%; max-width: 500px; aspect-ratio: 500 / 470; background: var(--court-bg);
+    border-radius: var(--radius-md); border: 2px solid var(--border); overflow: hidden; position: relative;
+    margin: 0 auto; box-shadow: var(--shadow-md);
+  }
+  svg { width: 100%; height: 100%; display: block; }
+  
+  .token { cursor: move; }
+  .token text { font-size: 13px; font-weight: 800; fill: #fff; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+
+  .player-bar {
+    width: 100%; max-width: 500px; margin: 10px auto 0; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 12px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .player-controls { display: flex; justify-content: space-between; align-items: center; }
+  .step-info { font-size: 13px; font-weight: 700; color: var(--text-muted); }
+  
+  .trajectory-line { stroke-dasharray: 4; animation: dash 1s linear infinite; }
+  @keyframes dash { to { stroke-dashoffset: -8; } }
+
+  .item-schema {
+    display: flex; justify-content: space-between; align-items: center; padding: 12px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 8px;
+    background: var(--surface); cursor: pointer; transition: background 0.2s;
+  }
+  .item-schema:hover { background: var(--surface-2); }
+  .item-schema .titre-schema { font-weight: 700; font-size: 14px; }
+  .item-schema .meta-schema { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
 </style>
 </head>
 <body>
+
 <div class="app-bar">
-  <a class="retour" href="./coach.html">←</a>
-  <span class="titre">📋 Tableau tactique</span>
+  <a class="retour" href="./dashboard.html">←</a>
+  <span class="titre">📋 Ardoise Tactique</span>
 </div>
-<div class="container" style="padding-top:16px;">
 
+<div class="container" style="padding-top:14px;">
+
+  <!-- Carte Sélecteur de schémas enregistrés -->
   <div class="carte">
-    <label class="champ-label">Équipe</label>
-    <select id="select-equipe"></select>
+    <div class="carte-titre">Bibliothèque de l'équipe</div>
+    <div class="puces" style="margin-bottom:10px;">
+      <button class="puce actif" id="flt-tous">Tous</button>
+      <button class="puce" id="flt-tactique">🏀 Tactiques</button>
+      <button class="puce" id="flt-exercice">🏋️ Exercices</button>
+    </div>
+    <div id="liste-schemas"><p class="vide">Chargement des schémas…</p></div>
   </div>
 
-  <div class="carte">
-    <div class="segmente">
-      <button class="actif" data-type="demi">Demi-terrain</button>
-      <button data-type="complet">Terrain complet</button>
+  <!-- Carte Terrain / Animation -->
+  <div class="carte" style="text-align:center;">
+    <div class="toolbar-board">
+      <button id="btn-half" class="btn btn-secondary btn-sm actif" onclick="setCourt('half')">Demi-terrain</button>
+      <button id="btn-full" class="btn btn-secondary btn-sm" onclick="setCourt('full')">Terrain complet</button>
+      <button id="btn-traj" class="btn btn-secondary btn-sm actif" onclick="toggleTrajectories()">🛣️ Trajectoires</button>
+      <button class="btn btn-secondary btn-sm" onclick="resetAll()">🔄 Réinit</button>
     </div>
 
-    <div class="zone-terrain" id="zone-terrain"></div>
-
-    <div class="barre-outils">
-      <button class="btn btn-secondary btn-sm" id="btn-ajout-attaque">+ Attaque</button>
-      <button class="btn btn-secondary btn-sm" id="btn-ajout-defense">+ Défense</button>
-      <button class="btn-ghost" id="btn-supprimer-pion" style="display:none;">Supprimer le pion sélectionné</button>
+    <div id="board-container">
+      <svg id="court" viewBox="0 0 500 470">
+        <defs>
+          <marker id="arrow-offense" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--offense)" />
+          </marker>
+          <marker id="arrow-defense" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--defense)" />
+          </marker>
+          <marker id="arrow-ball" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#fff" />
+          </marker>
+        </defs>
+        <g id="court-lines"></g>
+        <g id="trajectories"></g>
+        <g id="tokens"></g>
+      </svg>
     </div>
-    <div id="zone-poste" style="display:none;margin-top:10px;">
-      <label class="champ-label">Poste du pion sélectionné</label>
-      <select id="select-poste">
-        <option value="">Aucun</option>
-        <option value="meneur">Meneur (1)</option>
-        <option value="arriere">Arrière (2)</option>
-        <option value="ailier">Ailier (3)</option>
-        <option value="ailier_fort">Ailier fort (4)</option>
-        <option value="pivot">Pivot (5)</option>
-      </select>
-    </div>
-    <label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13.5px;">
-      <input type="checkbox" id="check-postes" checked style="width:17px;height:17px;">
-      Afficher les postes à côté des pions
-    </label>
-  </div>
 
-  <div class="carte">
-    <div class="carte-titre">Étapes de la phase de jeu</div>
-    <div class="carte-desc">Place tes pions, ajoute une étape, déplace-les, ajoute une nouvelle étape... puis lance la lecture pour voir l'animation complète.</div>
-    <div class="liste-etapes" id="liste-etapes"></div>
-    <div style="display:flex;gap:8px;margin-top:12px;">
-      <button class="btn btn-secondary btn-sm" id="btn-ajouter-etape">+ Étape</button>
-      <button class="btn btn-primary btn-sm" id="btn-lecture">▶ Lecture</button>
-      <button class="btn-ghost" id="btn-supprimer-etape">Supprimer l'étape actuelle</button>
+    <!-- Barre d'Animation / Étapes -->
+    <div class="player-bar">
+      <div class="player-controls">
+        <div style="display:flex; gap:6px;">
+          <button id="btn-play" class="btn btn-primary btn-sm" onclick="togglePlay()">▶️ Jouer</button>
+          <button class="btn btn-secondary btn-sm" onclick="prevStep()">⏮️ Préc.</button>
+          <button class="btn btn-secondary btn-sm" onclick="nextStep()">Suiv. ⏭️</button>
+        </div>
+        <span class="step-info" id="step-counter">Étape 1 / 1</span>
+      </div>
+
+      <div class="coach-only" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--border); padding-top: 8px;">
+        <div style="display:flex; gap:6px;">
+          <button class="btn btn-secondary btn-sm" onclick="addStep()">➕ Étape</button>
+          <button class="btn btn-ghost btn-sm" onclick="deleteStep()">🗑️ Suppr</button>
+        </div>
+        <select id="speed-select" onchange="window.speed = parseFloat(this.value)" style="background:var(--surface-2); color:var(--text); border:1px solid var(--border); padding:5px; border-radius:6px; font-size:12px;">
+          <option value="1000">Vitesse : Normale</option>
+          <option value="1500">Vitesse : Lente</option>
+          <option value="600">Vitesse : Rapide</option>
+        </select>
+      </div>
     </div>
   </div>
 
-  <div class="carte">
-    <div class="carte-titre">Enregistrer</div>
-    <input type="text" id="nom-tactique" placeholder="Nom (ex : Sortie de balle 1-3-1)">
-    <button class="btn btn-primary" style="margin-top:12px;" id="btn-enregistrer">Enregistrer cette tactique</button>
-    <div class="msg" id="msg-tactique"></div>
+  <!-- Formulaire d'enregistrement -->
+  <div class="carte coach-only" id="form-sauvegarde">
+    <div class="carte-titre" id="form-titre">Enregistrer ce schéma</div>
+    
+    <label class="champ-label">Titre du schéma</label>
+    <input type="text" id="schema-titre" placeholder="ex: Pick & Roll Tête de raquette / Exercice 3c3">
+
+    <label class="champ-label">Type de contenu</label>
+    <select id="schema-type">
+      <option value="tactique">🏀 Tactique / Phase de jeu</option>
+      <option value="exercice">🏋️ Exercice / Entraînement</option>
+    </select>
+
+    <label class="champ-label">Équipe concernée</label>
+    <select id="schema-equipe">
+      <option value="all">Toutes mes équipes</option>
+    </select>
+
+    <label class="champ-label">Consignes / Notes (optionnel)</label>
+    <textarea id="schema-notes" rows="3" placeholder="Explications sur les déplacements, timing..."></textarea>
+
+    <button class="btn btn-primary btn-block" style="margin-top:14px;" id="btn-save-schema">Enregistrer dans l'Espace Club</button>
+    <div class="msg" id="msg-schema"></div>
   </div>
 
-  <div class="carte">
-    <div class="carte-titre">Tactiques enregistrées</div>
-    <div id="liste-tactiques"><p class="vide">Choisis une équipe pour voir ses tactiques.</p></div>
-  </div>
 </div>
+
 <footer class="pied">BeHoop — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
+  getFirestore, doc, getDoc, addDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
@@ -102,348 +165,463 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const TERRAINS = {
-  demi: {
-    viewBox: '0 0 100 106',
-    lignes: `
-      <rect x="2" y="2" width="96" height="102" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <rect x="34" y="2" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="50" cy="42" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="50" cy="8" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <line x1="42" y1="6" x2="58" y2="6" stroke="#3d3d3a" stroke-width="0.6"/>
-      <path d="M 8 2 A 42 42 0 0 0 92 2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-    `,
-  },
-  complet: {
-    viewBox: '0 0 188 100',
-    lignes: `
-      <rect x="2" y="2" width="184" height="96" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <line x1="94" y1="2" x2="94" y2="98" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="94" cy="50" r="10" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <rect x="2" y="30" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="34" cy="50" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="8" cy="50" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <line x1="6" y1="42" x2="6" y2="58" stroke="#3d3d3a" stroke-width="0.6"/>
-      <path d="M 2 8 A 42 42 0 0 0 2 92" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <rect x="154" y="30" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="154" cy="50" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <circle cx="180" cy="50" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-      <line x1="182" y1="42" x2="182" y2="58" stroke="#3d3d3a" stroke-width="0.6"/>
-      <path d="M 186 8 A 42 42 0 0 1 186 92" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
-    `,
-  },
-};
-const POSTES = { meneur: '1', arriere: '2', ailier: '3', ailier_fort: '4', pivot: '5' };
-const COULEUR_ATTAQUE = '#0b5cab';
-const COULEUR_DEFENSE = '#d32f2f';
-
 let monProfil = null;
-let mesEquipes = [];
-let equipeActive = null;
-let courtType = 'demi';
-let pions = [];          // {id, type, x, y, numero, poste}
-let etapes = [];         // tableaux de pions
-let etapeActive = -1;
-let pionSelectionne = null;
-let compteurAttaque = 0, compteurDefense = 0;
-let enLecture = false;
+let estEditeur = false;
+let filtreActif = 'tous';
+let schemaEnEditionId = null;
+let mesSchemas = [];
+
+let currentMode = 'half';
+let activeToken = null;
+let offset = { x: 0, y: 0 };
+let showTrajectories = true;
+
+const initialData = [
+  { id: 'O1', type: 'offense', label: '1', x: 250, y: 380 },
+  { id: 'O2', type: 'offense', label: '2', x: 100, y: 300 },
+  { id: 'O3', type: 'offense', label: '3', x: 400, y: 300 },
+  { id: 'O4', type: 'offense', label: '4', x: 170, y: 160 },
+  { id: 'O5', type: 'offense', label: '5', x: 330, y: 160 },
+  { id: 'D1', type: 'defense', label: 'D1', x: 250, y: 330 },
+  { id: 'D2', type: 'defense', label: 'D2', x: 130, y: 270 },
+  { id: 'D3', type: 'defense', label: 'D3', x: 370, y: 270 },
+  { id: 'D4', type: 'defense', label: 'D4', x: 190, y: 170 },
+  { id: 'D5', type: 'defense', label: 'D5', x: 310, y: 170 },
+  { id: 'BALL', type: 'ball', label: '🏀', x: 250, y: 402 }
+];
+
+let steps = [ JSON.parse(JSON.stringify(initialData)) ];
+let currentStep = 0;
+let isPlaying = false;
+let animFrame = null;
+window.speed = 1000;
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
-  if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
+  if (!snap.exists()) { window.location.href = './index.html'; return; }
+  
   monProfil = snap.data();
+  estEditeur = ['coach', 'club_admin', 'super_admin'].includes(monProfil.role);
 
-  const res = await fetch('../data.json?t=' + Date.now());
-  const donnees = await res.json();
-  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
-  const toutesEquipes = club ? (club.teams || []) : [];
-  mesEquipes = toutesEquipes.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
-
-  const $select = document.getElementById('select-equipe');
-  if (mesEquipes.length === 0) {
-    $select.innerHTML = '<option value="">Aucune équipe assignée</option>';
-    return;
+  if (!estEditeur) {
+    document.querySelectorAll('.coach-only').forEach(el => el.style.display = 'none');
+  } else {
+    await chargerEquipesCoach();
   }
-  $select.innerHTML = mesEquipes.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
-  $select.addEventListener('change', () => {
-    equipeActive = $select.value;
-    chargerTactiques();
-  });
-  equipeActive = mesEquipes[0].id;
-  chargerTactiques();
 
-  dessinerTerrain();
+  await chargerSchemas();
 });
 
-// --- Terrain + pions -----------------------------------------------------
+async function chargerEquipesCoach() {
+  const $select = document.getElementById('schema-equipe');
+  if (!monProfil.club_id) return;
 
-function dessinerTerrain() {
-  const t = TERRAINS[courtType];
-  const $zone = document.getElementById('zone-terrain');
-  $zone.innerHTML = `<svg id="svg-terrain" viewBox="${t.viewBox}">${t.lignes}<g id="g-pions"></g></svg>`;
-  redessinerPions();
-  document.getElementById('svg-terrain').addEventListener('pointerdown', (e) => {
-    if (e.target.closest('.pion')) return;
-    selectionnerPion(null);
-  });
+  try {
+    const res = await fetch('../data.json?t=' + Date.now());
+    const donnees = await res.json();
+    const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
+    if (club && club.teams) {
+      const mesEqs = club.teams.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
+      mesEqs.forEach(eq => {
+        const opt = document.createElement('option');
+        opt.value = String(eq.id);
+        opt.textContent = eq.category || eq.name;
+        $select.appendChild(opt);
+      });
+    }
+  } catch (e) { console.error(e); }
 }
 
-function redessinerPions() {
-  const $g = document.getElementById('g-pions');
-  if (!$g) return;
-  const afficherPostes = document.getElementById('check-postes').checked;
-  $g.innerHTML = pions.map(p => {
-    const couleur = p.type === 'attaque' ? COULEUR_ATTAQUE : COULEUR_DEFENSE;
-    const posteTxt = p.poste ? POSTES[p.poste] : '';
-    return `
-      <g class="pion" data-id="${p.id}">
-        <circle class="pion-cercle ${p.id === pionSelectionne ? 'selectionne' : ''}" cx="${p.x}" cy="${p.y}" r="3.6" fill="${couleur}"></circle>
-        <text class="pion-texte" x="${p.x}" y="${p.y}">${p.numero}</text>
-        ${afficherPostes && posteTxt ? `<text class="pion-poste" x="${p.x}" y="${p.y - 5}">${posteTxt}</text>` : ''}
-      </g>
+async function chargerSchemas() {
+  const $liste = document.getElementById('liste-schemas');
+  $liste.innerHTML = 'Chargement…';
+
+  if (!monProfil.club_id) {
+    $liste.innerHTML = '<p class="vide">Aucun club associé à ton profil.</p>';
+    return;
+  }
+
+  try {
+    const q = query(collection(db, 'plays'), where('club_id', '==', String(monProfil.club_id)));
+    const snap = await getDocs(q);
+
+    if (snap.empty) {
+      $liste.innerHTML = '<p class="vide">Aucun schéma ou exercice enregistré pour le moment.</p>';
+      mesSchemas = [];
+      return;
+    }
+
+    mesSchemas = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    afficherListeSchemas();
+  } catch (e) {
+    $liste.innerHTML = `<p class="vide">Erreur de chargement : ${e.message}</p>`;
+  }
+}
+
+function afficherListeSchemas() {
+  const $liste = document.getElementById('liste-schemas');
+  let filtrés = mesSchemas;
+
+  if (filtreActif !== 'tous') {
+    filtrés = mesSchemas.filter(s => s.type === filtreActif);
+  }
+
+  if (filtrés.length === 0) {
+    $liste.innerHTML = '<p class="vide">Aucun schéma dans cette catégorie.</p>';
+    return;
+  }
+
+  $liste.innerHTML = filtrés.map(s => `
+    <div class="item-schema" onclick="window.__chargerUnSchema('${s.id}')">
+      <div>
+        <div class="titre-schema">${s.type === 'exercice' ? '🏋️' : '🏀'} ${s.title}</div>
+        <div class="meta-schema">${s.type === 'exercice' ? 'Exercice' : 'Tactique'} · ${s.steps ? s.steps.length : 1} étape(s) ${s.notes ? '· ' + s.notes.slice(0, 30) + '...' : ''}</div>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;">
+        <span class="badge badge-primary">${s.courtMode === 'full' ? 'Terrain complet' : 'Demi-terrain'}</span>
+        ${estEditeur ? `<button class="btn-ghost" style="padding:4px 8px;font-size:11px;" onclick="event.stopPropagation(); window.__supprimerSchema('${s.id}')">🗑️</button>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+window.__chargerUnSchema = (id) => {
+  const s = mesSchemas.find(x => x.id === id);
+  if (!s) return;
+
+  stopAnimation();
+  schemaEnEditionId = s.id;
+  currentMode = s.courtMode || 'half';
+  steps = JSON.parse(JSON.stringify(s.steps || [initialData]));
+  currentStep = 0;
+
+  setCourt(currentMode);
+  updateUI();
+
+  if (estEditeur) {
+    document.getElementById('schema-titre').value = s.title || '';
+    document.getElementById('schema-type').value = s.type || 'tactique';
+    document.getElementById('schema-equipe').value = s.team_id || 'all';
+    document.getElementById('schema-notes').value = s.notes || '';
+    document.getElementById('form-titre').textContent = 'Modifier le schéma';
+    document.getElementById('btn-save-schema').textContent = 'Mettre à jour le schéma';
+  }
+
+  window.scrollTo({ top: document.getElementById('board-container').offsetTop - 60, behavior: 'smooth' });
+};
+
+window.__supprimerSchema = async (id) => {
+  if (!confirm("Supprimer ce schéma définitivement ?")) return;
+  try {
+    await deleteDoc(doc(db, 'plays', id));
+    await chargerSchemas();
+  } catch (e) {
+    alert("Erreur lors de la suppression : " + e.message);
+  }
+};
+
+document.getElementById('flt-tous').addEventListener('click', (e) => activerFiltre(e.target, 'tous'));
+document.getElementById('flt-tactique').addEventListener('click', (e) => activerFiltre(e.target, 'tactique'));
+document.getElementById('flt-exercice').addEventListener('click', (e) => activerFiltre(e.target, 'exercice'));
+
+function activerFiltre(btn, cat) {
+  document.querySelectorAll('.puces .puce').forEach(b => b.classList.remove('actif'));
+  btn.classList.add('actif');
+  filtreActif = cat;
+  afficherListeSchemas();
+}
+
+document.getElementById('btn-save-schema').addEventListener('click', async () => {
+  const $msg = document.getElementById('msg-schema');
+  const title = document.getElementById('schema-titre').value.trim();
+  const type = document.getElementById('schema-type').value;
+  const team_id = document.getElementById('schema-equipe').value;
+  const notes = document.getElementById('schema-notes').value.trim();
+
+  if (!title) {
+    $msg.className = 'msg err'; $msg.textContent = 'Donne au moins un titre à ton schéma.'; return;
+  }
+
+  try {
+    const payload = {
+      title,
+      type,
+      team_id,
+      notes,
+      courtMode: currentMode,
+      steps: steps,
+      club_id: String(monProfil.club_id),
+      updated_at: serverTimestamp()
+    };
+
+    if (schemaEnEditionId) {
+      await setDoc(doc(db, 'plays', schemaEnEditionId), payload, { merge: true });
+    } else {
+      payload.created_by = auth.currentUser.uid;
+      payload.created_at = serverTimestamp();
+      await addDoc(collection(db, 'plays'), payload);
+    }
+
+    $msg.className = 'msg ok';
+    $msg.textContent = '✅ Schéma enregistré avec succès !';
+    
+    schemaEnEditionId = null;
+    document.getElementById('schema-titre').value = '';
+    document.getElementById('schema-notes').value = '';
+    document.getElementById('form-titre').textContent = 'Enregistrer ce schéma';
+    document.getElementById('btn-save-schema').textContent = "Enregistrer dans l'Espace Club";
+
+    await chargerSchemas();
+  } catch (e) {
+    $msg.className = 'msg err';
+    $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+
+function drawCourt() {
+  const lines = document.getElementById('court-lines');
+  const svg = document.getElementById('court');
+  
+  if (currentMode === 'half') {
+    svg.setAttribute('viewBox', '0 0 500 470');
+    document.getElementById('board-container').style.aspectRatio = '500 / 470';
+    lines.innerHTML = `
+      <rect x="0" y="0" width="500" height="470" fill="var(--court-bg)"/>
+      <rect x="25" y="25" width="450" height="420" fill="none" stroke="#fff" stroke-width="3"/>
+      <rect x="170" y="25" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle cx="250" cy="215" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      <path d="M 65 25 L 65 115 A 200 200 0 0 0 435 115 L 435 25" fill="none" stroke="#fff" stroke-width="3"/>
+      <line x1="210" y1="40" x2="290" y2="40" stroke="#fff" stroke-width="4"/>
+      <circle cx="250" cy="55" r="14" fill="none" stroke="var(--offense)" stroke-width="3"/>
     `;
-  }).join('');
+  } else {
+    svg.setAttribute('viewBox', '0 0 500 940');
+    document.getElementById('board-container').style.aspectRatio = '500 / 940';
+    lines.innerHTML = `
+      <rect x="0" y="0" width="500" height="940" fill="var(--court-bg)"/>
+      <rect x="25" y="25" width="450" height="890" fill="none" stroke="#fff" stroke-width="3"/>
+      <line x1="25" y1="470" x2="475" y2="470" stroke="#fff" stroke-width="3"/>
+      <circle cx="250" cy="470" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      <rect x="170" y="25" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle cx="250" cy="215" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      <rect x="170" y="725" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle cx="250" cy="725" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+    `;
+  }
+}
 
-  $g.querySelectorAll('.pion').forEach(el => {
-    el.addEventListener('pointerdown', (e) => demarrerGlisser(e, el.dataset.id));
+function renderTokens(data) {
+  const container = document.getElementById('tokens');
+  container.innerHTML = '';
+  
+  data.forEach(t => {
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('class', 'token');
+    g.setAttribute('transform', `translate(${t.x}, ${t.y})`);
+    g.setAttribute('data-id', t.id);
+
+    if (t.type === 'ball') {
+      g.innerHTML = `<circle r="12" fill="var(--offense)"/><text y="1">${t.label}</text>`;
+    } else {
+      const color = t.type === 'offense' ? 'var(--offense)' : 'var(--defense)';
+      g.innerHTML = `<circle r="17" fill="${color}" stroke="#fff" stroke-width="2"/><text y="1">${t.label}</text>`;
+    }
+    container.appendChild(g);
+  });
+  initDrag();
+}
+
+function renderTrajectories() {
+  const container = document.getElementById('trajectories');
+  container.innerHTML = '';
+
+  if (!showTrajectories || currentStep >= steps.length - 1 || isPlaying) return;
+
+  const currentData = steps[currentStep];
+  const nextData = steps[currentStep + 1];
+
+  currentData.forEach(t => {
+    const target = nextData.find(n => n.id === t.id);
+    if (target && (t.x !== target.x || t.y !== target.y)) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', t.x); line.setAttribute('y1', t.y);
+      line.setAttribute('x2', target.x); line.setAttribute('y2', target.y);
+      
+      const strokeColor = t.type === 'offense' ? 'var(--offense)' : (t.type === 'defense' ? 'var(--defense)' : '#fff');
+      const marker = t.type === 'offense' ? 'url(#arrow-offense)' : (t.type === 'defense' ? 'url(#arrow-defense)' : 'url(#arrow-ball)');
+      
+      line.setAttribute('stroke', strokeColor);
+      line.setAttribute('stroke-width', '2.5');
+      line.setAttribute('class', 'trajectory-line');
+      line.setAttribute('marker-end', marker);
+      
+      container.appendChild(line);
+    }
   });
 }
 
-function svgPoint(evt) {
-  const svg = document.getElementById('svg-terrain');
+function getSVGCoords(e) {
+  const svg = document.getElementById('court');
   const pt = svg.createSVGPoint();
-  pt.x = evt.clientX; pt.y = evt.clientY;
+  pt.x = e.touches ? e.touches[0].clientX : e.clientX;
+  pt.y = e.touches ? e.touches[0].clientY : e.clientY;
   return pt.matrixTransform(svg.getScreenCTM().inverse());
 }
 
-function demarrerGlisser(evt, id) {
-  evt.preventDefault();
-  let aBouge = false;
-  const svg = document.getElementById('svg-terrain');
-
-  function onMove(e) {
-    aBouge = true;
-    const pt = svgPoint(e);
-    const pion = pions.find(p => p.id === id);
-    if (!pion) return;
-    const t = TERRAINS[courtType];
-    const [, , maxX, maxY] = t.viewBox.split(' ').map(Number);
-    pion.x = Math.max(4, Math.min(maxX - 4, pt.x));
-    pion.y = Math.max(4, Math.min(maxY - 4, pt.y));
-    redessinerPions();
-  }
-  function onUp() {
-    svg.removeEventListener('pointermove', onMove);
-    svg.removeEventListener('pointerup', onUp);
-    if (!aBouge) selectionnerPion(id);
-  }
-  svg.addEventListener('pointermove', onMove);
-  svg.addEventListener('pointerup', onUp);
-}
-
-function selectionnerPion(id) {
-  pionSelectionne = id;
-  const $zonePoste = document.getElementById('zone-poste');
-  const $btnSupp = document.getElementById('btn-supprimer-pion');
-  if (id) {
-    const pion = pions.find(p => p.id === id);
-    $zonePoste.style.display = 'block';
-    $btnSupp.style.display = 'inline';
-    document.getElementById('select-poste').value = pion?.poste || '';
-  } else {
-    $zonePoste.style.display = 'none';
-    $btnSupp.style.display = 'none';
-  }
-  redessinerPions();
-}
-
-document.getElementById('select-poste').addEventListener('change', (e) => {
-  const pion = pions.find(p => p.id === pionSelectionne);
-  if (pion) pion.poste = e.target.value || null;
-  redessinerPions();
-});
-
-document.getElementById('btn-supprimer-pion').addEventListener('click', () => {
-  pions = pions.filter(p => p.id !== pionSelectionne);
-  selectionnerPion(null);
-});
-
-document.getElementById('check-postes').addEventListener('change', redessinerPions);
-
-document.getElementById('btn-ajout-attaque').addEventListener('click', () => ajouterPion('attaque'));
-document.getElementById('btn-ajout-defense').addEventListener('click', () => ajouterPion('defense'));
-
-function ajouterPion(type) {
-  const t = TERRAINS[courtType];
-  const [, , maxX, maxY] = t.viewBox.split(' ').map(Number);
-  const numero = type === 'attaque' ? ++compteurAttaque : ++compteurDefense;
-  pions.push({
-    id: 'p' + Date.now() + Math.random().toString(36).slice(2, 6),
-    type, numero, poste: null,
-    x: maxX / 2 + (Math.random() * 20 - 10),
-    y: maxY / 2 + (Math.random() * 20 - 10),
-  });
-  redessinerPions();
-}
-
-document.querySelectorAll('.segmente button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.dataset.type === courtType) return;
-    if (pions.length > 0 && !confirm('Changer de type de terrain réinitialise les pions et les étapes en cours. Continuer ?')) return;
-    document.querySelectorAll('.segmente button').forEach(b => b.classList.remove('actif'));
-    btn.classList.add('actif');
-    courtType = btn.dataset.type;
-    pions = []; etapes = []; etapeActive = -1; compteurAttaque = 0; compteurDefense = 0;
-    selectionnerPion(null);
-    dessinerTerrain();
-    afficherEtapes();
-  });
-});
-
-// --- Étapes ----------------------------------------------------------------
-
-function afficherEtapes() {
-  const $liste = document.getElementById('liste-etapes');
-  $liste.innerHTML = etapes.map((_, i) => `
-    <button class="puce-etape ${i === etapeActive ? 'actif' : ''}" data-i="${i}">${i + 1}</button>
-  `).join('') || '<p class="vide">Aucune étape enregistrée.</p>';
-  $liste.querySelectorAll('.puce-etape').forEach(btn => {
-    btn.addEventListener('click', () => chargerEtape(parseInt(btn.dataset.i, 10)));
+function initDrag() {
+  if (isPlaying || !estEditeur) return;
+  document.querySelectorAll('.token').forEach(el => {
+    const start = (e) => {
+      activeToken = el;
+      const coords = getSVGCoords(e);
+      const id = el.getAttribute('data-id');
+      const data = steps[currentStep].find(t => t.id === id);
+      offset.x = coords.x - data.x;
+      offset.y = coords.y - data.y;
+    };
+    el.onmousedown = start;
+    el.ontouchstart = start;
   });
 }
 
-function chargerEtape(i) {
-  etapeActive = i;
-  pions = JSON.parse(JSON.stringify(etapes[i]));
-  selectionnerPion(null);
-  redessinerPions();
-  afficherEtapes();
+const move = (e) => {
+  if (!activeToken || isPlaying || !estEditeur) return;
+  const coords = getSVGCoords(e);
+  const id = activeToken.getAttribute('data-id');
+  const data = steps[currentStep].find(t => t.id === id);
+  data.x = coords.x - offset.x;
+  data.y = coords.y - offset.y;
+  activeToken.setAttribute('transform', `translate(${data.x}, ${data.y})`);
+  renderTrajectories();
+};
+
+const end = () => { activeToken = null; };
+
+window.onmousemove = move;
+window.ontouchmove = move;
+window.onmouseup = end;
+window.ontouchend = end;
+
+function updateUI() {
+  document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} / ${steps.length}`;
+  renderTokens(steps[currentStep]);
+  renderTrajectories();
 }
 
-document.getElementById('btn-ajouter-etape').addEventListener('click', () => {
-  etapes.push(JSON.parse(JSON.stringify(pions)));
-  etapeActive = etapes.length - 1;
-  afficherEtapes();
-});
+window.addStep = () => {
+  const newStepData = JSON.parse(JSON.stringify(steps[currentStep]));
+  steps.splice(currentStep + 1, 0, newStepData);
+  currentStep++;
+  updateUI();
+};
 
-document.getElementById('btn-supprimer-etape').addEventListener('click', () => {
-  if (etapeActive < 0) { alert('Aucune étape sélectionnée.'); return; }
-  etapes.splice(etapeActive, 1);
-  etapeActive = -1;
-  afficherEtapes();
-});
+window.deleteStep = () => {
+  if (steps.length <= 1) return;
+  steps.splice(currentStep, 1);
+  if (currentStep >= steps.length) currentStep = steps.length - 1;
+  updateUI();
+};
 
-// --- Lecture / animation -----------------------------------------------
+window.nextStep = () => {
+  if (currentStep < steps.length - 1) { currentStep++; updateUI(); }
+};
 
-function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+window.prevStep = () => {
+  if (currentStep > 0) { currentStep--; updateUI(); }
+};
 
-function interpoler(depart, arrivee, t) {
-  const parId = {};
-  depart.forEach(p => parId[p.id] = p);
-  const parIdArrivee = {};
-  arrivee.forEach(p => parIdArrivee[p.id] = p);
-  const idsTous = new Set([...depart.map(p => p.id), ...arrivee.map(p => p.id)]);
-  const resultat = [];
-  idsTous.forEach(id => {
-    const a = parId[id], b = parIdArrivee[id];
-    if (a && b) resultat.push({ ...a, x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t });
-    else if (a && !b) resultat.push({ ...a });
-    else if (!a && b) resultat.push({ ...b });
-  });
-  return resultat;
-}
+window.togglePlay = () => {
+  if (isPlaying) stopAnimation();
+  else startAnimation();
+};
 
-async function animerTransition(depart, arrivee, duree) {
-  const debutTs = performance.now();
-  return new Promise(resolve => {
-    function frame(ts) {
-      const t = Math.min(1, (ts - debutTs) / duree);
-      pions = interpoler(depart, arrivee, t);
-      redessinerPions();
-      if (t < 1) requestAnimationFrame(frame);
-      else resolve();
-    }
-    requestAnimationFrame(frame);
-  });
-}
+function startAnimation() {
+  if (steps.length < 2) return;
+  isPlaying = true;
+  const $btn = document.getElementById('btn-play');
+  $btn.textContent = '⏸️ Pause';
+  $btn.className = 'btn btn-ghost btn-sm';
 
-document.getElementById('btn-lecture').addEventListener('click', async () => {
-  if (enLecture || etapes.length < 2) {
-    if (etapes.length < 2) alert('Il faut au moins 2 étapes pour lancer une animation.');
-    return;
-  }
-  enLecture = true;
-  chargerEtape(0);
-  for (let i = 0; i < etapes.length - 1; i++) {
-    await animerTransition(etapes[i], etapes[i + 1], 1300);
-    await delay(500);
-  }
-  enLecture = false;
-});
+  if (currentStep >= steps.length - 1) currentStep = 0;
+  
+  let startTime = null;
 
-// --- Sauvegarde / chargement -----------------------------------------------
+  function animateFrame(timestamp) {
+    if (!startTime) startTime = timestamp;
+    let elapsed = timestamp - startTime;
+    let progress = elapsed / window.speed;
 
-document.getElementById('btn-enregistrer').addEventListener('click', async () => {
-  const nom = document.getElementById('nom-tactique').value.trim();
-  const $msg = document.getElementById('msg-tactique');
-  if (!nom) { $msg.className = 'msg err'; $msg.textContent = 'Donne un nom à ta tactique.'; return; }
-  if (etapes.length === 0) { $msg.className = 'msg err'; $msg.textContent = 'Ajoute au moins une étape avant d\'enregistrer.'; return; }
-  try {
-    await addDoc(collection(db, 'plays'), {
-      team_id: String(equipeActive),
-      club_id: monProfil.club_id,
-      name: nom,
-      court_type: courtType,
-      steps: etapes,
-      created_by: auth.currentUser.uid,
-      created_at: serverTimestamp(),
-    });
-    $msg.className = 'msg ok'; $msg.textContent = '✅ Tactique enregistrée.';
-    document.getElementById('nom-tactique').value = '';
-    await chargerTactiques();
-  } catch (e) {
-    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-  }
-});
-
-async function chargerTactiques() {
-  const $liste = document.getElementById('liste-tactiques');
-  if (!equipeActive) { $liste.innerHTML = '<p class="vide">Choisis une équipe.</p>'; return; }
-  const q = query(collection(db, 'plays'), where('team_id', '==', String(equipeActive)));
-  const snap = await getDocs(q);
-  if (snap.empty) { $liste.innerHTML = '<p class="vide">Aucune tactique enregistrée pour cette équipe.</p>'; return; }
-
-  $liste.innerHTML = snap.docs.map(d => `
-    <div class="ligne-partie">
-      <span class="nom">${d.data().name}</span>
-      <button class="btn-ghost" data-charger="${d.id}">Charger</button>
-      <button class="btn-ghost" data-supprimer="${d.id}">Supprimer</button>
-    </div>
-  `).join('');
-
-  snap.docs.forEach(d => {
-    const data = d.data();
-    document.querySelector(`[data-charger="${d.id}"]`).addEventListener('click', () => {
-      if (data.court_type !== courtType) {
-        document.querySelector(`.segmente button[data-type="${data.court_type}"]`)?.click();
+    if (progress >= 1) {
+      currentStep++;
+      if (currentStep >= steps.length - 1) {
+        updateUI();
+        stopAnimation();
+        return;
       }
-      courtType = data.court_type;
-      etapes = JSON.parse(JSON.stringify(data.steps));
-      compteurAttaque = Math.max(0, ...etapes.flat().filter(p => p.type === 'attaque').map(p => p.numero), 0);
-      compteurDefense = Math.max(0, ...etapes.flat().filter(p => p.type === 'defense').map(p => p.numero), 0);
-      dessinerTerrain();
-      chargerEtape(0);
+      startTime = timestamp;
+      progress = 0;
+    }
+
+    const fromData = steps[currentStep];
+    const toData = steps[currentStep + 1];
+    const interpolated = fromData.map(t => {
+      const target = toData.find(n => n.id === t.id);
+      return {
+        ...t,
+        x: t.x + (target.x - t.x) * progress,
+        y: t.y + (target.y - t.y) * progress
+      };
     });
-    document.querySelector(`[data-supprimer="${d.id}"]`).addEventListener('click', async () => {
-      if (!confirm(`Supprimer la tactique "${data.name}" ?`)) return;
-      await deleteDoc(doc(db, 'plays', d.id));
-      await chargerTactiques();
-    });
-  });
+
+    renderTokens(interpolated);
+    document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} ➔ ${currentStep + 2}`;
+    animFrame = requestAnimationFrame(animateFrame);
+  }
+
+  renderTrajectories();
+  animFrame = requestAnimationFrame(animateFrame);
 }
 
-afficherEtapes();
+function stopAnimation() {
+  isPlaying = false;
+  cancelAnimationFrame(animFrame);
+  const $btn = document.getElementById('btn-play');
+  $btn.textContent = '▶️ Jouer';
+  $btn.className = 'btn btn-primary btn-sm';
+  updateUI();
+}
+
+window.setCourt = (mode) => {
+  currentMode = mode;
+  document.getElementById('btn-half').classList.toggle('actif', mode === 'half');
+  document.getElementById('btn-full').classList.toggle('actif', mode === 'full');
+  drawCourt();
+  renderTrajectories();
+};
+
+window.toggleTrajectories = () => {
+  showTrajectories = !showTrajectories;
+  document.getElementById('btn-traj').classList.toggle('actif', showTrajectories);
+  renderTrajectories();
+};
+
+window.resetAll = () => {
+  if (confirm("Réinitialiser le plateau et effacer les étapes non enregistrées ?")) {
+    stopAnimation();
+    steps = [ JSON.parse(JSON.stringify(initialData)) ];
+    currentStep = 0;
+    schemaEnEditionId = null;
+    document.getElementById('schema-titre').value = '';
+    document.getElementById('schema-notes').value = '';
+    document.getElementById('form-titre').textContent = 'Enregistrer ce schéma';
+    document.getElementById('btn-save-schema').textContent = "Enregistrer dans l'Espace Club";
+    updateUI();
+  }
+};
+
+drawCourt();
+updateUI();
 </script>
 </body>
 </html>
