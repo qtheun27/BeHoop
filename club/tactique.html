@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tableau tactique — Espace Club</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  .zone-terrain { touch-action: none; user-select: none; background: #e8dcc8; border-radius: var(--radius-md); overflow: hidden; }
+  .zone-terrain svg { display: block; width: 100%; height: auto; }
+  .pion { cursor: grab; }
+  .pion:active { cursor: grabbing; }
+  .pion-cercle { stroke: white; stroke-width: 0.6; }
+  .pion-cercle.selectionne { stroke: #ffd400; stroke-width: 1.4; }
+  .pion-texte { fill: white; font-size: 3.4px; font-weight: 800; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+  .pion-poste { fill: #16202e; font-size: 2.6px; font-weight: 700; text-anchor: middle; pointer-events: none; }
+  .barre-outils { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .puce-etape { min-width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--border); background: var(--surface); font-weight: 800; font-size: 13px; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .puce-etape.actif { background: var(--primary); color: white; border-color: var(--primary); }
+  .liste-etapes { display: flex; gap: 8px; overflow-x: auto; padding: 2px; }
+  .ligne-partie { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border-soft); }
+  .ligne-partie:last-child { border-bottom: none; }
+  .ligne-partie .nom { font-weight: 700; font-size: 14px; flex: 1; }
+</style>
+</head>
+<body>
+<div class="app-bar">
+  <a class="retour" href="./coach.html">←</a>
+  <span class="titre">📋 Tableau tactique</span>
+</div>
+<div class="container" style="padding-top:16px;">
+
+  <div class="carte">
+    <label class="champ-label">Équipe</label>
+    <select id="select-equipe"></select>
+  </div>
+
+  <div class="carte">
+    <div class="segmente">
+      <button class="actif" data-type="demi">Demi-terrain</button>
+      <button data-type="complet">Terrain complet</button>
+    </div>
+
+    <div class="zone-terrain" id="zone-terrain"></div>
+
+    <div class="barre-outils">
+      <button class="btn btn-secondary btn-sm" id="btn-ajout-attaque">+ Attaque</button>
+      <button class="btn btn-secondary btn-sm" id="btn-ajout-defense">+ Défense</button>
+      <button class="btn-ghost" id="btn-supprimer-pion" style="display:none;">Supprimer le pion sélectionné</button>
+    </div>
+    <div id="zone-poste" style="display:none;margin-top:10px;">
+      <label class="champ-label">Poste du pion sélectionné</label>
+      <select id="select-poste">
+        <option value="">Aucun</option>
+        <option value="meneur">Meneur (1)</option>
+        <option value="arriere">Arrière (2)</option>
+        <option value="ailier">Ailier (3)</option>
+        <option value="ailier_fort">Ailier fort (4)</option>
+        <option value="pivot">Pivot (5)</option>
+      </select>
+    </div>
+    <label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13.5px;">
+      <input type="checkbox" id="check-postes" checked style="width:17px;height:17px;">
+      Afficher les postes à côté des pions
+    </label>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">Étapes de la phase de jeu</div>
+    <div class="carte-desc">Place tes pions, ajoute une étape, déplace-les, ajoute une nouvelle étape... puis lance la lecture pour voir l'animation complète.</div>
+    <div class="liste-etapes" id="liste-etapes"></div>
+    <div style="display:flex;gap:8px;margin-top:12px;">
+      <button class="btn btn-secondary btn-sm" id="btn-ajouter-etape">+ Étape</button>
+      <button class="btn btn-primary btn-sm" id="btn-lecture">▶ Lecture</button>
+      <button class="btn-ghost" id="btn-supprimer-etape">Supprimer l'étape actuelle</button>
+    </div>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">Enregistrer</div>
+    <input type="text" id="nom-tactique" placeholder="Nom (ex : Sortie de balle 1-3-1)">
+    <button class="btn btn-primary" style="margin-top:12px;" id="btn-enregistrer">Enregistrer cette tactique</button>
+    <div class="msg" id="msg-tactique"></div>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">Tactiques enregistrées</div>
+    <div id="liste-tactiques"><p class="vide">Choisis une équipe pour voir ses tactiques.</p></div>
+  </div>
+</div>
+<footer class="pied">BeHoop — Espace Club</footer>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, getDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const TERRAINS = {
+  demi: {
+    viewBox: '0 0 100 106',
+    lignes: `
+      <rect x="2" y="2" width="96" height="102" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <rect x="34" y="2" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="50" cy="42" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="50" cy="8" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <line x1="42" y1="6" x2="58" y2="6" stroke="#3d3d3a" stroke-width="0.6"/>
+      <path d="M 8 2 A 42 42 0 0 0 92 2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+    `,
+  },
+  complet: {
+    viewBox: '0 0 188 100',
+    lignes: `
+      <rect x="2" y="2" width="184" height="96" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <line x1="94" y1="2" x2="94" y2="98" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="94" cy="50" r="10" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <rect x="2" y="30" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="34" cy="50" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="8" cy="50" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <line x1="6" y1="42" x2="6" y2="58" stroke="#3d3d3a" stroke-width="0.6"/>
+      <path d="M 2 8 A 42 42 0 0 0 2 92" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <rect x="154" y="30" width="32" height="40" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="154" cy="50" r="8" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <circle cx="180" cy="50" r="1.2" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+      <line x1="182" y1="42" x2="182" y2="58" stroke="#3d3d3a" stroke-width="0.6"/>
+      <path d="M 186 8 A 42 42 0 0 1 186 92" fill="none" stroke="#3d3d3a" stroke-width="0.6"/>
+    `,
+  },
+};
+const POSTES = { meneur: '1', arriere: '2', ailier: '3', ailier_fort: '4', pivot: '5' };
+const COULEUR_ATTAQUE = '#0b5cab';
+const COULEUR_DEFENSE = '#d32f2f';
+
+let monProfil = null;
+let mesEquipes = [];
+let equipeActive = null;
+let courtType = 'demi';
+let pions = [];          // {id, type, x, y, numero, poste}
+let etapes = [];         // tableaux de pions
+let etapeActive = -1;
+let pionSelectionne = null;
+let compteurAttaque = 0, compteurDefense = 0;
+let enLecture = false;
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
+  monProfil = snap.data();
+
+  const res = await fetch('../data.json?t=' + Date.now());
+  const donnees = await res.json();
+  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
+  const toutesEquipes = club ? (club.teams || []) : [];
+  mesEquipes = toutesEquipes.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
+
+  const $select = document.getElementById('select-equipe');
+  if (mesEquipes.length === 0) {
+    $select.innerHTML = '<option value="">Aucune équipe assignée</option>';
+    return;
+  }
+  $select.innerHTML = mesEquipes.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
+  $select.addEventListener('change', () => {
+    equipeActive = $select.value;
+    chargerTactiques();
+  });
+  equipeActive = mesEquipes[0].id;
+  chargerTactiques();
+
+  dessinerTerrain();
+});
+
+// --- Terrain + pions -----------------------------------------------------
+
+function dessinerTerrain() {
+  const t = TERRAINS[courtType];
+  const $zone = document.getElementById('zone-terrain');
+  $zone.innerHTML = `<svg id="svg-terrain" viewBox="${t.viewBox}">${t.lignes}<g id="g-pions"></g></svg>`;
+  redessinerPions();
+  document.getElementById('svg-terrain').addEventListener('pointerdown', (e) => {
+    if (e.target.closest('.pion')) return;
+    selectionnerPion(null);
+  });
+}
+
+function redessinerPions() {
+  const $g = document.getElementById('g-pions');
+  if (!$g) return;
+  const afficherPostes = document.getElementById('check-postes').checked;
+  $g.innerHTML = pions.map(p => {
+    const couleur = p.type === 'attaque' ? COULEUR_ATTAQUE : COULEUR_DEFENSE;
+    const posteTxt = p.poste ? POSTES[p.poste] : '';
+    return `
+      <g class="pion" data-id="${p.id}">
+        <circle class="pion-cercle ${p.id === pionSelectionne ? 'selectionne' : ''}" cx="${p.x}" cy="${p.y}" r="3.6" fill="${couleur}"></circle>
+        <text class="pion-texte" x="${p.x}" y="${p.y}">${p.numero}</text>
+        ${afficherPostes && posteTxt ? `<text class="pion-poste" x="${p.x}" y="${p.y - 5}">${posteTxt}</text>` : ''}
+      </g>
+    `;
+  }).join('');
+
+  $g.querySelectorAll('.pion').forEach(el => {
+    el.addEventListener('pointerdown', (e) => demarrerGlisser(e, el.dataset.id));
+  });
+}
+
+function svgPoint(evt) {
+  const svg = document.getElementById('svg-terrain');
+  const pt = svg.createSVGPoint();
+  pt.x = evt.clientX; pt.y = evt.clientY;
+  return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+
+function demarrerGlisser(evt, id) {
+  evt.preventDefault();
+  let aBouge = false;
+  const svg = document.getElementById('svg-terrain');
+
+  function onMove(e) {
+    aBouge = true;
+    const pt = svgPoint(e);
+    const pion = pions.find(p => p.id === id);
+    if (!pion) return;
+    const t = TERRAINS[courtType];
+    const [, , maxX, maxY] = t.viewBox.split(' ').map(Number);
+    pion.x = Math.max(4, Math.min(maxX - 4, pt.x));
+    pion.y = Math.max(4, Math.min(maxY - 4, pt.y));
+    redessinerPions();
+  }
+  function onUp() {
+    svg.removeEventListener('pointermove', onMove);
+    svg.removeEventListener('pointerup', onUp);
+    if (!aBouge) selectionnerPion(id);
+  }
+  svg.addEventListener('pointermove', onMove);
+  svg.addEventListener('pointerup', onUp);
+}
+
+function selectionnerPion(id) {
+  pionSelectionne = id;
+  const $zonePoste = document.getElementById('zone-poste');
+  const $btnSupp = document.getElementById('btn-supprimer-pion');
+  if (id) {
+    const pion = pions.find(p => p.id === id);
+    $zonePoste.style.display = 'block';
+    $btnSupp.style.display = 'inline';
+    document.getElementById('select-poste').value = pion?.poste || '';
+  } else {
+    $zonePoste.style.display = 'none';
+    $btnSupp.style.display = 'none';
+  }
+  redessinerPions();
+}
+
+document.getElementById('select-poste').addEventListener('change', (e) => {
+  const pion = pions.find(p => p.id === pionSelectionne);
+  if (pion) pion.poste = e.target.value || null;
+  redessinerPions();
+});
+
+document.getElementById('btn-supprimer-pion').addEventListener('click', () => {
+  pions = pions.filter(p => p.id !== pionSelectionne);
+  selectionnerPion(null);
+});
+
+document.getElementById('check-postes').addEventListener('change', redessinerPions);
+
+document.getElementById('btn-ajout-attaque').addEventListener('click', () => ajouterPion('attaque'));
+document.getElementById('btn-ajout-defense').addEventListener('click', () => ajouterPion('defense'));
+
+function ajouterPion(type) {
+  const t = TERRAINS[courtType];
+  const [, , maxX, maxY] = t.viewBox.split(' ').map(Number);
+  const numero = type === 'attaque' ? ++compteurAttaque : ++compteurDefense;
+  pions.push({
+    id: 'p' + Date.now() + Math.random().toString(36).slice(2, 6),
+    type, numero, poste: null,
+    x: maxX / 2 + (Math.random() * 20 - 10),
+    y: maxY / 2 + (Math.random() * 20 - 10),
+  });
+  redessinerPions();
+}
+
+document.querySelectorAll('.segmente button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.type === courtType) return;
+    if (pions.length > 0 && !confirm('Changer de type de terrain réinitialise les pions et les étapes en cours. Continuer ?')) return;
+    document.querySelectorAll('.segmente button').forEach(b => b.classList.remove('actif'));
+    btn.classList.add('actif');
+    courtType = btn.dataset.type;
+    pions = []; etapes = []; etapeActive = -1; compteurAttaque = 0; compteurDefense = 0;
+    selectionnerPion(null);
+    dessinerTerrain();
+    afficherEtapes();
+  });
+});
+
+// --- Étapes ----------------------------------------------------------------
+
+function afficherEtapes() {
+  const $liste = document.getElementById('liste-etapes');
+  $liste.innerHTML = etapes.map((_, i) => `
+    <button class="puce-etape ${i === etapeActive ? 'actif' : ''}" data-i="${i}">${i + 1}</button>
+  `).join('') || '<p class="vide">Aucune étape enregistrée.</p>';
+  $liste.querySelectorAll('.puce-etape').forEach(btn => {
+    btn.addEventListener('click', () => chargerEtape(parseInt(btn.dataset.i, 10)));
+  });
+}
+
+function chargerEtape(i) {
+  etapeActive = i;
+  pions = JSON.parse(JSON.stringify(etapes[i]));
+  selectionnerPion(null);
+  redessinerPions();
+  afficherEtapes();
+}
+
+document.getElementById('btn-ajouter-etape').addEventListener('click', () => {
+  etapes.push(JSON.parse(JSON.stringify(pions)));
+  etapeActive = etapes.length - 1;
+  afficherEtapes();
+});
+
+document.getElementById('btn-supprimer-etape').addEventListener('click', () => {
+  if (etapeActive < 0) { alert('Aucune étape sélectionnée.'); return; }
+  etapes.splice(etapeActive, 1);
+  etapeActive = -1;
+  afficherEtapes();
+});
+
+// --- Lecture / animation -----------------------------------------------
+
+function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function interpoler(depart, arrivee, t) {
+  const parId = {};
+  depart.forEach(p => parId[p.id] = p);
+  const parIdArrivee = {};
+  arrivee.forEach(p => parIdArrivee[p.id] = p);
+  const idsTous = new Set([...depart.map(p => p.id), ...arrivee.map(p => p.id)]);
+  const resultat = [];
+  idsTous.forEach(id => {
+    const a = parId[id], b = parIdArrivee[id];
+    if (a && b) resultat.push({ ...a, x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t });
+    else if (a && !b) resultat.push({ ...a });
+    else if (!a && b) resultat.push({ ...b });
+  });
+  return resultat;
+}
+
+async function animerTransition(depart, arrivee, duree) {
+  const debutTs = performance.now();
+  return new Promise(resolve => {
+    function frame(ts) {
+      const t = Math.min(1, (ts - debutTs) / duree);
+      pions = interpoler(depart, arrivee, t);
+      redessinerPions();
+      if (t < 1) requestAnimationFrame(frame);
+      else resolve();
+    }
+    requestAnimationFrame(frame);
+  });
+}
+
+document.getElementById('btn-lecture').addEventListener('click', async () => {
+  if (enLecture || etapes.length < 2) {
+    if (etapes.length < 2) alert('Il faut au moins 2 étapes pour lancer une animation.');
+    return;
+  }
+  enLecture = true;
+  chargerEtape(0);
+  for (let i = 0; i < etapes.length - 1; i++) {
+    await animerTransition(etapes[i], etapes[i + 1], 1300);
+    await delay(500);
+  }
+  enLecture = false;
+});
+
+// --- Sauvegarde / chargement -----------------------------------------------
+
+document.getElementById('btn-enregistrer').addEventListener('click', async () => {
+  const nom = document.getElementById('nom-tactique').value.trim();
+  const $msg = document.getElementById('msg-tactique');
+  if (!nom) { $msg.className = 'msg err'; $msg.textContent = 'Donne un nom à ta tactique.'; return; }
+  if (etapes.length === 0) { $msg.className = 'msg err'; $msg.textContent = 'Ajoute au moins une étape avant d\'enregistrer.'; return; }
+  try {
+    await addDoc(collection(db, 'plays'), {
+      team_id: String(equipeActive),
+      club_id: monProfil.club_id,
+      name: nom,
+      court_type: courtType,
+      steps: etapes,
+      created_by: auth.currentUser.uid,
+      created_at: serverTimestamp(),
+    });
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Tactique enregistrée.';
+    document.getElementById('nom-tactique').value = '';
+    await chargerTactiques();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+
+async function chargerTactiques() {
+  const $liste = document.getElementById('liste-tactiques');
+  if (!equipeActive) { $liste.innerHTML = '<p class="vide">Choisis une équipe.</p>'; return; }
+  const q = query(collection(db, 'plays'), where('team_id', '==', String(equipeActive)));
+  const snap = await getDocs(q);
+  if (snap.empty) { $liste.innerHTML = '<p class="vide">Aucune tactique enregistrée pour cette équipe.</p>'; return; }
+
+  $liste.innerHTML = snap.docs.map(d => `
+    <div class="ligne-partie">
+      <span class="nom">${d.data().name}</span>
+      <button class="btn-ghost" data-charger="${d.id}">Charger</button>
+      <button class="btn-ghost" data-supprimer="${d.id}">Supprimer</button>
+    </div>
+  `).join('');
+
+  snap.docs.forEach(d => {
+    const data = d.data();
+    document.querySelector(`[data-charger="${d.id}"]`).addEventListener('click', () => {
+      if (data.court_type !== courtType) {
+        document.querySelector(`.segmente button[data-type="${data.court_type}"]`)?.click();
+      }
+      courtType = data.court_type;
+      etapes = JSON.parse(JSON.stringify(data.steps));
+      compteurAttaque = Math.max(0, ...etapes.flat().filter(p => p.type === 'attaque').map(p => p.numero), 0);
+      compteurDefense = Math.max(0, ...etapes.flat().filter(p => p.type === 'defense').map(p => p.numero), 0);
+      dessinerTerrain();
+      chargerEtape(0);
+    });
+    document.querySelector(`[data-supprimer="${d.id}"]`).addEventListener('click', async () => {
+      if (!confirm(`Supprimer la tactique "${data.name}" ?`)) return;
+      await deleteDoc(doc(db, 'plays', d.id));
+      await chargerTactiques();
+    });
+  });
+}
+
+afficherEtapes();
+</script>
+</body>
+</html>
