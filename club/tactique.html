@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- Optimisations PWA iOS / Safari plein écran -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<meta name="theme-color" content="#0d1117">
+
 <title>Tableau Tactique & Exercices — BeHoop</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
@@ -11,16 +18,23 @@
     --offense: #ff6b00;
     --defense: #0088ff;
   }
-  * { box-sizing: border-box; touch-action: none; user-select: none; }
+  
+  * { box-sizing: border-box; }
+  
   body {
-    margin: 0; padding-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg); color: var(--text);
+    margin: 0; 
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); 
+    color: var(--text);
   }
 
   .toolbar-board {
     display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; justify-content: center;
   }
 
+  /* Style pour les boutons d'outils actifs */
   .toolbar-board .btn.actif, 
   .player-bar .btn.actif {
     background: #0b5cab !important;
@@ -30,11 +44,16 @@
     box-shadow: 0 0 0 2px rgba(11, 92, 171, 0.4);
   }
 
+  /* Seul le terrain bloque le scroll pour gérer le glisser-déposer */
   #board-container {
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
     width: 100%; max-width: 500px; aspect-ratio: 500 / 470; background: var(--court-bg);
     border-radius: var(--radius-md); border: 2px solid var(--border); overflow: hidden; position: relative;
     margin: 0 auto; box-shadow: var(--shadow-md);
   }
+  
   svg { width: 100%; height: 100%; display: block; }
   
   .token { cursor: move; }
@@ -63,7 +82,7 @@
 <body>
 
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour" href="./coach.html" onclick="if(window.history.length > 1){ window.history.back(); return false; }">←</a>
   <span class="titre">📋 Ardoise Tactique</span>
 </div>
 
@@ -85,7 +104,7 @@
     <div class="toolbar-board">
       <button id="btn-half" class="btn btn-secondary btn-sm actif" onclick="setCourt('half')">Demi-terrain</button>
       <button id="btn-full" class="btn btn-secondary btn-sm" onclick="setCourt('full')">Terrain complet</button>
-      <button id="btn-traj" class="btn btn-secondary btn-sm actif" onclick="toggleTrajectories()">🛣️ Trajectoires</button>
+      <button id="btn-traj" class="btn btn-secondary btn-sm actif" onclick="toggleTrajectories()">KM Trajectoires</button>
       <button class="btn btn-secondary btn-sm" onclick="resetAll()">🔄 Réinit</button>
     </div>
 
@@ -154,7 +173,10 @@
     <label class="champ-label">Consignes / Notes (optionnel)</label>
     <textarea id="schema-notes" rows="3" placeholder="Explications sur les déplacements, timing..."></textarea>
 
-    <button class="btn btn-primary btn-block" style="margin-top:14px;" id="btn-save-schema">Enregistrer dans l'Espace Club</button>
+    <div style="display:flex; gap:8px; margin-top:14px;">
+      <button class="btn btn-primary" style="flex:1;" id="btn-save-schema">Enregistrer dans l'Espace Club</button>
+      <button class="btn btn-secondary" id="btn-nouveau-schema" style="display:none;" onclick="reinitialiserFormulaireCreation()">➕ Nouveau</button>
+    </div>
     <div class="msg" id="msg-schema"></div>
   </div>
 
@@ -199,7 +221,6 @@ const initialData = [
   { id: 'BALL', type: 'ball', label: '🏀', x: 250, y: 402 }
 ];
 
-// Structure sous forme d'objet { step: 1, tokens: [...] } pour éviter les tableaux imbriqués dans Firestore
 let steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
 let currentStep = 0;
 let isPlaying = false;
@@ -323,16 +344,32 @@ window.__chargerUnSchema = (id) => {
     document.getElementById('schema-equipe').value = s.team_id || 'all';
     document.getElementById('schema-notes').value = s.notes || '';
     document.getElementById('form-titre').textContent = 'Modifier le schéma';
-    document.getElementById('btn-save-schema').textContent = 'Mettre à jour le schéma';
+    document.getElementById('btn-save-schema').textContent = 'Mettre à jour';
+    document.getElementById('btn-nouveau-schema').style.display = 'inline-block';
   }
 
   window.scrollTo({ top: document.getElementById('board-container').offsetTop - 60, behavior: 'smooth' });
+};
+
+window.reinitialiserFormulaireCreation = () => {
+  stopAnimation();
+  schemaEnEditionId = null;
+  steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
+  currentStep = 0;
+  document.getElementById('schema-titre').value = '';
+  document.getElementById('schema-notes').value = '';
+  document.getElementById('form-titre').textContent = 'Enregistrer ce schéma';
+  document.getElementById('btn-save-schema').textContent = "Enregistrer dans l'Espace Club";
+  document.getElementById('btn-nouveau-schema').style.display = 'none';
+  document.getElementById('msg-schema').className = 'msg';
+  updateUI();
 };
 
 window.__supprimerSchema = async (id) => {
   if (!confirm("Supprimer ce schéma définitivement ?")) return;
   try {
     await deleteDoc(doc(db, 'plays', id));
+    if (schemaEnEditionId === id) reinitialiserFormulaireCreation();
     await chargerSchemas();
   } catch (e) {
     alert("Erreur lors de la suppression : " + e.message);
@@ -384,12 +421,7 @@ document.getElementById('btn-save-schema').addEventListener('click', async () =>
     $msg.className = 'msg ok';
     $msg.textContent = '✅ Schéma enregistré avec succès !';
     
-    schemaEnEditionId = null;
-    document.getElementById('schema-titre').value = '';
-    document.getElementById('schema-notes').value = '';
-    document.getElementById('form-titre').textContent = 'Enregistrer ce schéma';
-    document.getElementById('btn-save-schema').textContent = "Enregistrer dans l'Espace Club";
-
+    reinitialiserFormulaireCreation();
     await chargerSchemas();
   } catch (e) {
     $msg.className = 'msg err';
@@ -626,15 +658,7 @@ window.toggleTrajectories = () => {
 
 window.resetAll = () => {
   if (confirm("Réinitialiser le plateau et effacer les étapes non enregistrées ?")) {
-    stopAnimation();
-    steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
-    currentStep = 0;
-    schemaEnEditionId = null;
-    document.getElementById('schema-titre').value = '';
-    document.getElementById('schema-notes').value = '';
-    document.getElementById('form-titre').textContent = 'Enregistrer ce schéma';
-    document.getElementById('btn-save-schema').textContent = "Enregistrer dans l'Espace Club";
-    updateUI();
+    reinitialiserFormulaireCreation();
   }
 };
 
