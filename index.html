@@ -321,47 +321,55 @@ function nomMois(dateStr) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-function serieDeEquipe(teamId) {
+function seriesDeEquipe(teamId) {
+  const ids = new Set();
   for (const [serieId, lignes] of Object.entries(donnees.classements || {})) {
-    if (lignes.some(l => l.team_id === teamId)) return parseInt(serieId, 10);
+    if (lignes.some(l => l.team_id === teamId)) ids.add(parseInt(serieId, 10));
   }
   for (const g of donnees.games || []) {
-    if (g.home_team_id === teamId) return g.serie_id;
-    if (g.away_team_id === teamId) return g.serie_id;
+    if (g.home_team_id === teamId || g.away_team_id === teamId) ids.add(g.serie_id);
   }
-  return null;
+  return [...ids].filter(id => id != null);
 }
 
 function rendreClassement(equipe) {
-  const serieId = serieDeEquipe(equipe.id);
-  const lignes = serieId ? (donnees.classements[String(serieId)] || []) : [];
-  const serie = (donnees.series || []).find(s => s.id === serieId);
   const cible = document.getElementById('classement-carte');
+  const serieIds = seriesDeEquipe(equipe.id);
 
-  if (lignes.length === 0) {
-    cible.innerHTML = `<p class="vide">Classement pas encore disponible${serie ? ' pour ' + (serie.name || serie.short_name) : ''} — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+  if (serieIds.length === 0) {
+    cible.innerHTML = `<p class="vide">Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
     return;
   }
 
-  const tri = [...lignes].sort((a, b) => (a.position || 999) - (b.position || 999));
-  const rangees = tri.map(l => `
-    <tr class="${l.team_id === equipe.id ? 'ligne-equipe' : ''}">
-      <td>${l.position ?? '-'}</td>
-      <td>${l.team_short_name || l.team_name}</td>
-      <td>${l.played ?? 0}</td>
-      <td>${l.wins ?? 0}</td>
-      <td>${l.losses ?? 0}</td>
-      <td>${l.points ?? 0}</td>
-    </tr>
-  `).join('');
+  cible.innerHTML = serieIds.map(serieId => {
+    const lignes = donnees.classements[String(serieId)] || [];
+    const serie = (donnees.series || []).find(s => s.id === serieId);
+    const titre = serie ? (serie.name || serie.short_name) : '';
 
-  cible.innerHTML = `
-    <h3 style="margin:0 0 10px;font-size:14px;">${serie ? (serie.name || serie.short_name) : ''}</h3>
-    <table>
-      <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
-      <tbody>${rangees}</tbody>
-    </table>
-  `;
+    if (lignes.length === 0) {
+      return `<h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3><p class="vide" style="margin-bottom:16px;">Classement pas encore disponible pour cette compétition.</p>`;
+    }
+
+    const tri = [...lignes].sort((a, b) => (a.position || 999) - (b.position || 999));
+    const rangees = tri.map(l => `
+      <tr class="${l.team_id === equipe.id ? 'ligne-equipe' : ''}">
+        <td>${l.position ?? '-'}</td>
+        <td>${l.team_short_name || l.team_name}</td>
+        <td>${l.played ?? 0}</td>
+        <td>${l.wins ?? 0}</td>
+        <td>${l.losses ?? 0}</td>
+        <td>${l.points ?? 0}</td>
+      </tr>
+    `).join('');
+
+    return `
+      <h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3>
+      <table style="margin-bottom:20px;">
+        <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
+        <tbody>${rangees}</tbody>
+      </table>
+    `;
+  }).join('');
 }
 
 function adresseComplete(g) {

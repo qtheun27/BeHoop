@@ -1,20 +1,24 @@
 """
-Scraper Basket national — v10
+Scraper Basket national — v12
 
-Nouveauté par rapport à la v9 :
-- Couvre maintenant les 5 provinces de l'AWBB (Bruxelles-Brabant Wallon,
-  Hainaut, Liège, Luxembourg, Namur), pas seulement le Hainaut. Le site
-  awbb.be utilise exactement la même infrastructure (plugin bpleagues,
-  backend gestion.awbb.be) que baskethainaut.be — seul l'organization_id
-  change d'une province à l'autre. On peut donc tout interroger via le
-  même point d'entrée (proxy de baskethainaut.be), juste en bouclant sur
-  les 5 identifiants de province.
-- Les classements (l'étape la plus lente, un appel par série) sont
-  récupérés avec un peu de parallélisme (5 en même temps) pour compenser
-  le volume ~5x plus important, tout en restant modéré : le site a déjà
-  montré une instabilité passagère (503) sous charge normale.
+Nouveautés par rapport à la v11 :
+- Point d'entrée basculé sur www.awbb.be (au lieu de baskethainaut.be) : le
+  scraper couvre maintenant les 5 provinces, ça n'a plus de sens de partir
+  du site d'une seule province — awbb.be est le site national, sur
+  exactement la même infrastructure technique (vérifié).
+- Bug corrigé : les compétitions AWBB nationales (organization_id=6) ne
+  gardaient que celles contenant "coupe" dans leur nom, excluant tout le
+  championnat régional AWBB (là où se jouent la majorité des matchs des
+  équipes "R..."). On récupère maintenant championnat ET coupe nationale.
+- Le calendrier (la partie volumineuse — plusieurs milliers de matchs à
+  l'échelle nationale) part dans un fichier games-<province>.json séparé
+  par province, au lieu d'un seul tableau "games" dans data.json. Le reste
+  (clubs, équipes, logos, classements) reste dans un seul data.json.
+  data.json référence ces fichiers via "games_files" (province → nom de
+  fichier) ; chaque club porte déjà son "province" pour savoir lequel
+  charger.
 
-Nouveautés héritées des versions précédentes : voir les scrapers v3 à v9.
+Nouveautés héritées des versions précédentes : voir les scrapers v3 à v11.
 """
 
 import io
@@ -37,12 +41,11 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 TAILLE_MAX_LOGO_OCTETS = 15_000_000
 
-BASE_SITE = "https://baskethainaut.be"
-NONCE_SOURCE_PAGE = f"{BASE_SITE}/clubs/"
+BASE_SITE = "https://www.awbb.be"
+NONCE_SOURCE_PAGE = f"{BASE_SITE}/"
 API_BASE = f"{BASE_SITE}/wp-json/bpleagues/v1/proxy"
 
-# Les 5 provinces couvertes (le Hainaut restait le point d'entrée du site,
-# mais l'API dessert toute la Belgique francophone via ce même proxy).
+# Les 5 provinces couvertes.
 PROVINCES = {
     1: "Bruxelles - Brabant Wallon",
     2: "Hainaut",
@@ -305,29 +308,31 @@ def recuperer_calendrier_saison(session, nonce, competition_ids, organization_id
     return tous_les_matchs
 
 
-def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_debut_saison, date_fin_saison, lieux: dict):
-    """Récupère les séries/classements/matchs de la Coupe AWBB (équipes 'R...').
+def recuperer_competitions_awbb_national(session, nonce, season_id, ids_equipes_connues, date_debut_saison, date_fin_saison, lieux: dict):
+    """Récupère séries/classements/matchs des compétitions AWBB nationales
+    (équipes "R...") : championnat régional ET coupe — pas seulement la
+    coupe (bug corrigé : le filtre précédent ne gardait que les
+    compétitions contenant "coupe" dans leur nom, excluant donc tout le
+    championnat régional où se jouent pourtant la plupart des matchs de
+    ces équipes).
 
-    Organisée au niveau national (organization_id=6), pas par la province.
-    On filtre ensuite pour ne garder que ce qui concerne une équipe du
-    Hainaut déjà connue — le reste, ce sont des clubs d'autres provinces.
+    Organisées au niveau national (organization_id=6), pas par la province.
+    On filtre ensuite pour ne garder que ce qui concerne une équipe déjà
+    connue dans une des 5 provinces — le reste ne nous concerne pas.
     """
-    print("🏆 Récupération des compétitions Coupe AWBB (national)...")
+    print("🏆 Récupération des compétitions AWBB nationales (championnat + coupe)...")
     competitions_resp = call_api(
         session, nonce, "competition/byMyLeague",
         {"organization_id": ORGANIZATION_ID_AWBB, "season_id": season_id},
     )
-    competitions_coupe = [
-        c for c in competitions_resp.get("elements", [])
-        if "coupe" in (c.get("name") or "").lower()
-    ]
-    competition_ids = [c["id"] for c in competitions_coupe]
+    competitions_nationales = competitions_resp.get("elements", [])
+    competition_ids = [c["id"] for c in competitions_nationales]
     if not competition_ids:
-        print("⚠️ Aucune compétition Coupe AWBB trouvée.")
+        print("⚠️ Aucune compétition AWBB nationale trouvée.")
         return [], {}, []
 
-    print(f"✅ {len(competitions_coupe)} compétition(s) Coupe AWBB : "
-          + ", ".join(c.get("short_name", "?") for c in competitions_coupe))
+    print(f"✅ {len(competitions_nationales)} compétition(s) AWBB nationale(s) : "
+          + ", ".join(c.get("short_name", "?") for c in competitions_nationales))
 
     series_resp = call_api(
         session, nonce, "serie/byMyLeague",
@@ -340,42 +345,46 @@ def recuperer_coupe_awbb(session, nonce, season_id, ids_equipes_hainaut, date_de
         },
     )
     toutes_series = series_resp.get("elements", [])
-    print(f"   {len(toutes_series)} série(s) Coupe AWBB au total (toutes provinces).")
+    print(f"   {len(toutes_series)} série(s) AWBB nationale(s) au total (toutes provinces).")
 
-    print("   Récupération du calendrier Coupe AWBB — saison complète, par tranches...")
+    print("   Récupération du calendrier AWBB national — saison complète, par tranches...")
     tous_les_matchs = recuperer_calendrier_saison(
         session, nonce, competition_ids, ORGANIZATION_ID_AWBB, season_id,
         date_debut_saison, date_fin_saison, lieux,
     )
 
-    # On ne garde que les matchs impliquant une équipe du Hainaut déjà connue
-    matchs_hainaut = [
+    # On ne garde que les matchs impliquant une équipe déjà connue
+    matchs_utiles = [
         g for g in tous_les_matchs
-        if g.get("home_team_id") in ids_equipes_hainaut or g.get("away_team_id") in ids_equipes_hainaut
+        if g.get("home_team_id") in ids_equipes_connues or g.get("away_team_id") in ids_equipes_connues
     ]
-    print(f"   ✅ {len(matchs_hainaut)}/{len(tous_les_matchs)} match(s) Coupe AWBB concernent le Hainaut.")
+    print(f"   ✅ {len(matchs_utiles)}/{len(tous_les_matchs)} match(s) AWBB national concernent nos clubs.")
 
     # On ne garde que les séries qui contiennent au moins un de ces matchs
-    series_ids_utiles = {g["serie_id"] for g in matchs_hainaut if g.get("serie_id")}
+    series_ids_utiles = {g["serie_id"] for g in matchs_utiles if g.get("serie_id")}
     series_utiles = [s for s in toutes_series if s["id"] in series_ids_utiles]
 
-    print(f"   Récupération des classements pour {len(series_utiles)} série(s) Coupe AWBB utile(s)...")
-    classements_coupe = {}
-    for serie in series_utiles:
-        serie_id = serie["id"]
+    print(f"   Récupération des classements pour {len(series_utiles)} série(s) AWBB nationale(s) utile(s)...")
+    classements_nationaux = {}
+
+    def recuperer_une_serie(serie):
         try:
-            ranking_resp = call_api(
+            resp = call_api(
                 session, nonce, "ranking/byMyLeague",
-                {"serie_id": serie_id, "organization_id": ORGANIZATION_ID_AWBB, "season_id": season_id},
+                {"serie_id": serie["id"], "organization_id": ORGANIZATION_ID_AWBB, "season_id": season_id},
             )
             # Le classement reste complet (pas filtré) pour situer l'équipe
-            # du Hainaut parmi tous ses adversaires de poule.
-            classements_coupe[str(serie_id)] = ranking_resp.get("elements", [])
+            # parmi tous ses adversaires de poule.
+            return serie["id"], resp.get("elements", [])
         except Exception as e:
-            print(f"   ⚠️ Classement Coupe AWBB indisponible pour {serie.get('name', serie_id)}: {e}")
-            classements_coupe[str(serie_id)] = []
+            print(f"   ⚠️ Classement AWBB indisponible pour {serie.get('name', serie['id'])}: {e}")
+            return serie["id"], []
 
-    return series_utiles, classements_coupe, matchs_hainaut
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        for serie_id, lignes in executor.map(recuperer_une_serie, series_utiles):
+            classements_nationaux[str(serie_id)] = lignes
+
+    return series_utiles, classements_nationaux, matchs_utiles
 
 
 def type_de_match(competition_name: str | None) -> str:
@@ -680,23 +689,23 @@ def charger_basket_national():
                 tous_games.append(g)
 
     print(f"\n=== National : {len(tous_clubs)} clubs, {len(toutes_series)} séries, "
-          f"{len(tous_games)} matchs (avant Coupe AWBB) ===")
+          f"{len(tous_games)} matchs (avant compétitions AWBB nationales) ===")
 
     print("🏢 Récupération des infos AWBB (national)...")
     organisation = call_api(session, nonce, f"organization/{ORGANIZATION_ID_AWBB}")
 
     ids_equipes_connues = {t["id"] for c in tous_clubs for t in c["teams"]}
-    series_coupe, classements_coupe, matchs_coupe = recuperer_coupe_awbb(
+    series_nat, classements_nat, matchs_nat = recuperer_competitions_awbb_national(
         session, nonce, season_id, ids_equipes_connues,
         saison_courante.get("start_date"), saison_courante.get("end_date"), tous_lieux,
     )
-    toutes_series += series_coupe
-    tous_classements.update(classements_coupe)
-    for g in matchs_coupe:
+    toutes_series += series_nat
+    tous_classements.update(classements_nat)
+    for g in matchs_nat:
         if g["id"] not in ids_matchs_vus:
             ids_matchs_vus.add(g["id"])
             tous_games.append(g)
-    print(f"✅ {len(matchs_coupe)} match(s) Coupe AWBB ajouté(s) — total {len(tous_games)} matchs.")
+    print(f"✅ {len(matchs_nat)} match(s) AWBB national ajouté(s) — total {len(tous_games)} matchs.")
 
     print("🏷️ Classification des matchs (championnat / coupe / amical)...")
     enrichir_matchs_avec_type(tous_games, toutes_series)
