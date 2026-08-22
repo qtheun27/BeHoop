@@ -21,6 +21,15 @@
     display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; justify-content: center;
   }
 
+  .toolbar-board .btn.actif, 
+  .player-bar .btn.actif {
+    background: #0b5cab !important;
+    color: #ffffff !important;
+    border-color: #0b5cab !important;
+    font-weight: 800;
+    box-shadow: 0 0 0 2px rgba(11, 92, 171, 0.4);
+  }
+
   #board-container {
     width: 100%; max-width: 500px; aspect-ratio: 500 / 470; background: var(--court-bg);
     border-radius: var(--radius-md); border: 2px solid var(--border); overflow: hidden; position: relative;
@@ -190,7 +199,8 @@ const initialData = [
   { id: 'BALL', type: 'ball', label: '🏀', x: 250, y: 402 }
 ];
 
-let steps = [ JSON.parse(JSON.stringify(initialData)) ];
+// Structure sous forme d'objet { step: 1, tokens: [...] } pour éviter les tableaux imbriqués dans Firestore
+let steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
 let currentStep = 0;
 let isPlaying = false;
 let animFrame = null;
@@ -293,9 +303,17 @@ window.__chargerUnSchema = (id) => {
   stopAnimation();
   schemaEnEditionId = s.id;
   currentMode = s.courtMode || 'half';
-  steps = JSON.parse(JSON.stringify(s.steps || [initialData]));
-  currentStep = 0;
+  
+  let loadedSteps = s.steps || [];
+  if (loadedSteps.length > 0 && Array.isArray(loadedSteps[0])) {
+    steps = loadedSteps.map((arr, idx) => ({ step: idx + 1, tokens: arr }));
+  } else if (loadedSteps.length > 0) {
+    steps = JSON.parse(JSON.stringify(loadedSteps));
+  } else {
+    steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
+  }
 
+  currentStep = 0;
   setCourt(currentMode);
   updateUI();
 
@@ -438,8 +456,8 @@ function renderTrajectories() {
 
   if (!showTrajectories || currentStep >= steps.length - 1 || isPlaying) return;
 
-  const currentData = steps[currentStep];
-  const nextData = steps[currentStep + 1];
+  const currentData = steps[currentStep].tokens;
+  const nextData = steps[currentStep + 1].tokens;
 
   currentData.forEach(t => {
     const target = nextData.find(n => n.id === t.id);
@@ -476,7 +494,7 @@ function initDrag() {
       activeToken = el;
       const coords = getSVGCoords(e);
       const id = el.getAttribute('data-id');
-      const data = steps[currentStep].find(t => t.id === id);
+      const data = steps[currentStep].tokens.find(t => t.id === id);
       offset.x = coords.x - data.x;
       offset.y = coords.y - data.y;
     };
@@ -489,7 +507,7 @@ const move = (e) => {
   if (!activeToken || isPlaying || !estEditeur) return;
   const coords = getSVGCoords(e);
   const id = activeToken.getAttribute('data-id');
-  const data = steps[currentStep].find(t => t.id === id);
+  const data = steps[currentStep].tokens.find(t => t.id === id);
   data.x = coords.x - offset.x;
   data.y = coords.y - offset.y;
   activeToken.setAttribute('transform', `translate(${data.x}, ${data.y})`);
@@ -505,13 +523,13 @@ window.ontouchend = end;
 
 function updateUI() {
   document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} / ${steps.length}`;
-  renderTokens(steps[currentStep]);
+  renderTokens(steps[currentStep].tokens);
   renderTrajectories();
 }
 
 window.addStep = () => {
-  const newStepData = JSON.parse(JSON.stringify(steps[currentStep]));
-  steps.splice(currentStep + 1, 0, newStepData);
+  const newTokens = JSON.parse(JSON.stringify(steps[currentStep].tokens));
+  steps.splice(currentStep + 1, 0, { step: steps.length + 1, tokens: newTokens });
   currentStep++;
   updateUI();
 };
@@ -563,8 +581,8 @@ function startAnimation() {
       progress = 0;
     }
 
-    const fromData = steps[currentStep];
-    const toData = steps[currentStep + 1];
+    const fromData = steps[currentStep].tokens;
+    const toData = steps[currentStep + 1].tokens;
     const interpolated = fromData.map(t => {
       const target = toData.find(n => n.id === t.id);
       return {
@@ -609,7 +627,7 @@ window.toggleTrajectories = () => {
 window.resetAll = () => {
   if (confirm("Réinitialiser le plateau et effacer les étapes non enregistrées ?")) {
     stopAnimation();
-    steps = [ JSON.parse(JSON.stringify(initialData)) ];
+    steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
     currentStep = 0;
     schemaEnEditionId = null;
     document.getElementById('schema-titre').value = '';
