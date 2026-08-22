@@ -383,10 +383,21 @@ async function chargerInvitations() {
             <div class="nom">${d.id}</div>
             <div class="sous-texte">${LABEL_ROLE[inv.role] || inv.role}</div>
           </div>
-          <div class="action"><span class="badge ${inv.status === 'used' ? 'badge-success' : 'badge-warning'}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span></div>
+          <div class="action" style="display:flex;gap:8px;align-items:center;">
+            <span class="badge ${inv.status === 'used' ? 'badge-success' : 'badge-warning'}">${inv.status === 'used' ? 'Utilisée' : 'En attente'}</span>
+            <button class="btn-ghost" data-inv="${d.id}">Supprimer</button>
+          </div>
         </div>
       `;
     }).join('');
+
+  $corps.querySelectorAll('[data-inv]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if (!confirm(`Supprimer l'invitation pour ${btn.dataset.inv} ? Si elle n'a jamais été utilisée, ça ne supprime aucun compte, juste l'entrée en attente.`)) return;
+      await deleteDoc(doc(db, 'invitations', btn.dataset.inv));
+      await chargerInvitations();
+    });
+  });
 }
 </script>
 </body>
