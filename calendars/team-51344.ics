@@ -8,8 +8,23 @@ X-WR-TIMEZONE:Europe/Brussels
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
+UID:match-495937@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260829T133000
+DTEND;TZID=Europe/Brussels:20260829T153000
+SUMMARY:🤝 RU21H Royal Eclairs Pont-De-Loup vs RU21H Boussu Saint-Ghislai
+ n United
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250\, A
+ iseau-Presles
+GEO:50.412353515625;4.5533342361450195
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Hortent M
+ oraux, rue Auguste Scohy 139, 6250, Aiseau-Presles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Hortent Moraux":geo:50.412353515625,4.5533342361450195
+DESCRIPTION:Compétition : Amicaux Jeunes
+END:VEVENT
+BEGIN:VEVENT
 UID:match-486168@basket-awbb
-DTSTAMP:20260822T062818Z
+DTSTAMP:20260822T082950Z
 DTSTART;TZID=Europe/Brussels:20260830T110000
 DTEND;TZID=Europe/Brussels:20260830T130000
 SUMMARY:🏆 RU21H Boussu Saint-Ghislain United vs PU21H Royal BC Loyers
@@ -21,5 +36,129 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
  =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
  ,3.81842850000000000000
 DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456873@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260912T130000
+DTEND;TZID=Europe/Brussels:20260912T150000
+SUMMARY:🏀 RU21H Boussu Saint-Ghislain United vs RU21H DPK Carnières Mor
+ lanwelz
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456874@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:🏀 RU21H Boussu Saint-Ghislain United vs RU21H Royal Gallia BC Be
+ ez
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456859@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261003T123000
+DTEND;TZID=Europe/Brussels:20261003T143000
+SUMMARY:🏀 RU21H Royal Rebond Ottignies-LLN vs RU21H Boussu Saint-Ghislai
+ n United
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340\, Ot
+ tignies
+GEO:50.66270690000000000000;4.55343860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif des Coquer
+ ées, Rue des Coquerées 50a, 1340, Ottignies";X-APPLE-RADIUS=70;X-TITLE="C
+ entre Sportif des Coquerées":geo:50.66270690000000000000,4.553438600000000
+ 00000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456875@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261010T140000
+DTEND;TZID=Europe/Brussels:20261010T160000
+SUMMARY:🏀 RU21H Boussu Saint-Ghislain United vs RU21H East Belgium Baske
+ t Clubs Association A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456882@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261018T120000
+DTEND;TZID=Europe/Brussels:20261018T140000
+SUMMARY:🏀 RU21H DPK Carnières Morlanwelz vs RU21H Boussu Saint-Ghislain
+  United
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140\, Morlanwel
+ z
+GEO:50.45907790000000000000;4.24595260000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Lucien Walravens, Rue
+  De L'Enseignement 1, 7140, Morlanwelz";X-APPLE-RADIUS=70;X-TITLE="Hall Luc
+ ien Walravens":geo:50.45907790000000000000,4.24595260000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456876@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:🏀 RU21H Boussu Saint-Ghislain United vs RU21H Royal Rebond Ottig
+ nies-LLN
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456886@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:🏀 RU21H East Belgium Basket Clubs Association A vs RU21H Boussu 
+ Saint-Ghislain United
+LOCATION:Centre Sportif Albert Moray\, Rue des Chapeliers 2\, 4800\, Ensiva
+ l
+GEO:50.58459910000000000000;5.83881710000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif Albert Mora
+ y, Rue des Chapeliers 2, 4800, Ensival";X-APPLE-RADIUS=70;X-TITLE="Centre S
+ portif Albert Moray":geo:50.58459910000000000000,5.83881710000000000000
+DESCRIPTION:Compétition : U21H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456871@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:🏀 RU21H Royal Gallia BC Beez vs RU21H Boussu Saint-Ghislain Unit
+ ed
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
+GEO:50.46749650000000000000;4.92225170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
+ Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
+DESCRIPTION:Compétition : U21H Silver D
 END:VEVENT
 END:VCALENDAR

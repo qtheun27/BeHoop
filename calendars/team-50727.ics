@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485011@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260802T140000
 DTEND;TZID=Europe/Brussels:20260802T160000
 SUMMARY:🤝 TDM2 Ninane Basket Promotion NEXT A vs R2H AS Mazy-Spy A
@@ -24,7 +24,7 @@ DESCRIPTION:Compétition : Amicaux Seniors\nScore : 92 - 76
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482252@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260809T170000
 DTEND;TZID=Europe/Brussels:20260809T190000
 SUMMARY:🏀 R2H AS Mazy-Spy A vs R1H Royal Basket Club Belgrade B
@@ -38,7 +38,7 @@ DESCRIPTION:Compétition : Amicaux Seniors\nScore : 91 - 83
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457582@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260816T160000
 DTEND;TZID=Europe/Brussels:20260816T180000
 SUMMARY:🏆 P1H BC Marche A vs R2H AS Mazy-Spy A
@@ -52,7 +52,7 @@ DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule F\nScore : 40 - 69
 END:VEVENT
 BEGIN:VEVENT
 UID:match-482251@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260820T210000
 DTEND;TZID=Europe/Brussels:20260820T230000
 SUMMARY:🏀 R1H Royal BC Loyers A vs R2H AS Mazy-Spy A
@@ -66,7 +66,7 @@ DESCRIPTION:Compétition : Amicaux Seniors\nScore : 47 - 49
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457581@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260822T200000
 DTEND;TZID=Europe/Brussels:20260822T220000
 SUMMARY:🏆 P1H BC Speedy Mont St Guibert A vs R2H AS Mazy-Spy A
@@ -81,7 +81,7 @@ DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule F
 END:VEVENT
 BEGIN:VEVENT
 UID:match-457578@basket-awbb
-DTSTAMP:20260822T062824Z
+DTSTAMP:20260822T082957Z
 DTSTART;TZID=Europe/Brussels:20260829T200000
 DTEND;TZID=Europe/Brussels:20260829T220000
 SUMMARY:🏆 R2H AS Mazy-Spy A vs P1H B.B.C Braine-Le-Château A
@@ -92,5 +92,338 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy
  le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
  =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
 DESCRIPTION:Compétition : Coupe AWBB Hommes - Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455927@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H Royal Linthout BC W.S. A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455928@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H Groupe Gobert Basket Club Colfontaine
+  A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455966@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:🏀 R2H Uccle Europe B vs R2H AS Mazy-Spy A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180\, Uccle
+GEO:50.80506041662435;4.348641626051736
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="HE2B Campus DeFré, square
+  de Fré, 1180, Uccle";X-APPLE-RADIUS=70;X-TITLE="HE2B Campus DeFré":geo:5
+ 0.80506041662435,4.348641626051736
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455929@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261010T200000
+DTEND;TZID=Europe/Brussels:20261010T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H B55 Academy XL
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455916@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:🏀 R2H RSW Liège Basket B vs R2H AS Mazy-Spy A
+LOCATION:Salle Bailly\, Place Sainte-Walburge 1\, 4000\, Liège
+GEO:50.65712970000000000000;5.56856790000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Bailly, Place Sainte
+ -Walburge 1, 4000, Liège";X-APPLE-RADIUS=70;X-TITLE="Salle Bailly":geo:50.
+ 65712970000000000000,5.56856790000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456019@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261030T204500
+DTEND;TZID=Europe/Brussels:20261030T224500
+SUMMARY:🏀 R2H CEP Fleurus B vs R2H AS Mazy-Spy A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455931@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261107T200000
+DTEND;TZID=Europe/Brussels:20261107T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H Royal BC Alleur A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456009@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261115T173000
+DTEND;TZID=Europe/Brussels:20261115T193000
+SUMMARY:🏀 R2H RBC Wanze A vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports Wanze\, Rue Géo Warzée 19\, 4520\, Wanze
+GEO:50.53626080000000000000;5.22307480000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Wanze, Rue
+  Géo Warzée 19, 4520, Wanze";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports W
+ anze":geo:50.53626080000000000000,5.22307480000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455932@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H Ninane Chaudfontaine B
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456062@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:🏀 R2H JSB Maffle A vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810\, Maff
+ le
+GEO:50.61594520000000000000;3.80441350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Marcel Den
+ is, Place de Maffle , 10, 7810, Maffle";X-APPLE-RADIUS=70;X-TITLE="Hall Omn
+ isports Marcel Denis":geo:50.61594520000000000000,3.80441350000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456089@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261213T140000
+DTEND;TZID=Europe/Brussels:20261213T160000
+SUMMARY:🏀 R2H BC Fraire-Philippeville A vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports de Laneffe\, Les Battis 17\, 5651\, Walcourt
+GEO:50.27791976928711;4.491695880889893
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Laneffe
+ , Les Battis 17, 5651, Walcourt";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports
+  de Laneffe":geo:50.27791976928711,4.491695880889893
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455933@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20261219T200000
+DTEND;TZID=Europe/Brussels:20261219T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H RB Tilff A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455934@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H Uccle Europe B
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455960@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:🏀 R2H Royal Linthout BC W.S. A vs R2H AS Mazy-Spy A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455999@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:🏀 R2H Groupe Gobert Basket Club Colfontaine A vs R2H AS Mazy-Spy
+  A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 73
+ 40\, Colfontaine
+GEO:50.40433710000000000000;3.85954860000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Achille D
+ elattre , Sentier de Liernes, 100, 7340, Colfontaine";X-APPLE-RADIUS=70;X-T
+ ITLE="Complexe Sportif Achille Delattre ":geo:50.40433710000000000000,3.859
+ 54860000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455935@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H RSW Liège Basket B
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455936@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270213T200000
+DTEND;TZID=Europe/Brussels:20270213T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H CEP Fleurus B
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455937@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H RBC Wanze A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455948@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270227T210000
+DTEND;TZID=Europe/Brussels:20270227T230000
+SUMMARY:🏀 R2H Ninane Chaudfontaine B vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051
+ \, Vaux Sous Chèvremont
+GEO:50.59839287347001;5.6340976069304265
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Vaux Sous 
+ Chèvremont, rue de la Vesdre 14, 4051, Vaux Sous Chèvremont";X-APPLE-RADI
+ US=70;X-TITLE="Hall Omnisports Vaux Sous Chèvremont":geo:50.59839287347001
+ ,5.6340976069304265
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455938@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H JSB Maffle A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455988@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:🏀 R2H Royal BC Alleur A vs R2H AS Mazy-Spy A
+LOCATION:Salle du BC Alleur\, Rue Monfort\, 108\, 4430\, Ans
+GEO:50.66348210000000000000;5.52420520000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du BC Alleur, Rue Mo
+ nfort, 108, 4430, Ans";X-APPLE-RADIUS=70;X-TITLE="Salle du BC Alleur":geo:5
+ 0.66348210000000000000,5.52420520000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456043@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270327T210000
+DTEND;TZID=Europe/Brussels:20270327T230000
+SUMMARY:🏀 R2H RB Tilff A vs R2H AS Mazy-Spy A
+LOCATION:Hall Omnisports Tilff\, Rue du Chera 9\, 4130\, Tilff
+GEO:50.56717740000000000000;5.58665650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports Tilff, Rue
+  du Chera 9, 4130, Tilff";X-APPLE-RADIUS=70;X-TITLE="Hall Omnisports Tilff"
+ :geo:50.56717740000000000000,5.58665650000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456054@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:🏀 R2H B55 Academy XL vs R2H AS Mazy-Spy A
+LOCATION:Salle omnisport Albert Demuyter\, Rue Volta 18\, 1050\, Ixelles
+GEO:50.81405660000000000000;4.39631220000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle omnisport Albert Dem
+ uyter, Rue Volta 18, 1050, Ixelles";X-APPLE-RADIUS=70;X-TITLE="Salle omnisp
+ ort Albert Demuyter":geo:50.81405660000000000000,4.39631220000000000000
+DESCRIPTION:Compétition : R2 Hommes B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-455939@basket-awbb
+DTSTAMP:20260822T082957Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:🏀 R2H AS Mazy-Spy A vs R2H BC Fraire-Philippeville A
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 50
+ 32\, Corroy-le-Chateau
+GEO:50.536001;4.659345
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Corroy 
+ le Chateau, rue Maison d'Orbais 25, 5032, Corroy-le-Chateau";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Corroy le Chateau":geo:50.536001,4.659345
+DESCRIPTION:Compétition : R2 Hommes B
 END:VEVENT
 END:VCALENDAR

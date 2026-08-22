@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486799@basket-awbb
-DTSTAMP:20260822T062816Z
+DTSTAMP:20260822T082948Z
 DTSTART;TZID=Europe/Brussels:20260816T130000
 DTEND;TZID=Europe/Brussels:20260816T150000
 SUMMARY:🤝 RU18H Royal Excelsior Brussels A vs RU18H Royal Castors Braine
@@ -25,7 +25,7 @@ DESCRIPTION:Compétition : Amicaux Seniors\nScore : 78 - 55
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486083@basket-awbb
-DTSTAMP:20260822T062816Z
+DTSTAMP:20260822T082948Z
 DTSTART;TZID=Europe/Brussels:20260823T130000
 DTEND;TZID=Europe/Brussels:20260823T150000
 SUMMARY:🏆 RU18H Royal Excelsior Brussels A vs RU18H BC Malonne
@@ -40,7 +40,7 @@ DESCRIPTION:Compétition : Coupe AWBB U18 Hommes
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486889@basket-awbb
-DTSTAMP:20260822T062816Z
+DTSTAMP:20260822T082948Z
 DTSTART;TZID=Europe/Brussels:20260830T100000
 DTEND;TZID=Europe/Brussels:20260830T120000
 SUMMARY:🤝 RU18H Royal Excelsior Brussels A vs RU18H Aste Kain
@@ -52,5 +52,157 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Neder-Ove
  LE="Salle Omnisports Neder-Over-Hembeek":geo:50.88421800000000000000,4.3580
  0020000000000000
 DESCRIPTION:Compétition : Amicaux Seniors
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457048@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:🏀 RU18H Royal Excelsior Brussels A vs RU18H East Belgium Basket 
+ Clubs Association A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457064@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20260912T110000
+DTEND;TZID=Europe/Brussels:20260912T130000
+SUMMARY:🏀 RU18H Union Mons-Hainaut vs RU18H Royal Excelsior Brussels A
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012\, Jemappes
+GEO:50.45063010000000000000;3.87543890000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Mons Arena, Rue des Lamino
+ irs 2a, 7012, Jemappes";X-APPLE-RADIUS=70;X-TITLE="Mons Arena":geo:50.45063
+ 010000000000000,3.87543890000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457049@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:🏀 RU18H Royal Excelsior Brussels A vs RU18H Royal Linthout BC W.
+ S.
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457045@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261011T123000
+DTEND;TZID=Europe/Brussels:20261011T143000
+SUMMARY:🏀 RU18H La Villersoise A vs RU18H Royal Excelsior Brussels A
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530\, Ville
+ rs-le-Bouillet
+GEO:50.56822960000000000000;5.26758340000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des Sports Emile Coll
+ ignon, rue du Centre, 5, 4530, Villers-le-Bouillet";X-APPLE-RADIUS=70;X-TIT
+ LE="Hall des Sports Emile Collignon":geo:50.56822960000000000000,5.26758340
+ 000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457054@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261024T130000
+DTEND;TZID=Europe/Brussels:20261024T150000
+SUMMARY:🏀 RU18H Boussu Saint-Ghislain United vs RU18H Royal Excelsior Br
+ ussels A
+LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\
+ , 7330\, Saint-Ghislain
+GEO:50.44559450000000000000;3.81842850000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Saint-G
+ hislain, Avenue de l'Enseignement, 16, 7330, Saint-Ghislain";X-APPLE-RADIUS
+ =70;X-TITLE="Hall Omnisports de Saint-Ghislain":geo:50.44559450000000000000
+ ,3.81842850000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457060@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261108T100000
+DTEND;TZID=Europe/Brussels:20261108T120000
+SUMMARY:🏀 RU18H Royal Linthout BC W.S. vs RU18H Royal Excelsior Brussels
+  A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457050@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261114T110000
+DTEND;TZID=Europe/Brussels:20261114T130000
+SUMMARY:🏀 RU18H Royal Excelsior Brussels A vs RU18H La Villersoise A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457041@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:🏀 RU18H East Belgium Basket Clubs Association A vs RU18H Royal E
+ xcelsior Brussels A
+LOCATION:Centre Sportif George Gramme\, Rue Forges-les Eaux 4\, 4651\, Batt
+ ice
+GEO:50.64885480000000000000;5.82007630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif George Gram
+ me, Rue Forges-les Eaux 4, 4651, Battice";X-APPLE-RADIUS=70;X-TITLE="Centre
+  Sportif George Gramme":geo:50.64885480000000000000,5.82007630000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457051@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:🏀 RU18H Royal Excelsior Brussels A vs RU18H Boussu Saint-Ghislai
+ n United
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18H Silver D
+END:VEVENT
+BEGIN:VEVENT
+UID:match-457052@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:🏀 RU18H Royal Excelsior Brussels A vs RU18H Union Mons-Hainaut
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U18H Silver D
 END:VEVENT
 END:VCALENDAR

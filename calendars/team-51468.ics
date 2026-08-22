@@ -8,8 +8,51 @@ X-WR-TIMEZONE:Europe/Brussels
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
+UID:match-456773@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260905T130000
+DTEND;TZID=Europe/Brussels:20260905T150000
+SUMMARY:🏀 RU21H CEP Fleurus vs RU21H BC Centre Gaume A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456774@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260912T130000
+DTEND;TZID=Europe/Brussels:20260912T150000
+SUMMARY:🏀 RU21H CEP Fleurus vs RU21H Royal Castors Braine
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456788@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20260919T153000
+DTEND;TZID=Europe/Brussels:20260919T173000
+SUMMARY:🏀 RU21H Royal Murprotec Nivelles Basketball A vs RU21H CEP Fleur
+ us
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
 UID:match-486184@basket-awbb
-DTSTAMP:20260822T062818Z
+DTSTAMP:20260822T082950Z
 DTSTART;TZID=Europe/Brussels:20260926T143000
 DTEND;TZID=Europe/Brussels:20260926T163000
 SUMMARY:🏆 PU21H B.B.C Braine-Le-Château vs RU21H CEP Fleurus
@@ -21,5 +64,102 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Ecole Fondamentale Braine-
  IUS=70;X-TITLE="Ecole Fondamentale Braine-le-Château":geo:50.6829247000000
  0000000,4.27184920000000000000
 DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456795@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:🏀 RU21H RBC Visé vs RU21H CEP Fleurus
+LOCATION:Salle de l'Ecole Communale\, Rue de Visé 105\, 4602\, Cheratte
+GEO:50.68213140000000000000;5.66993500000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle de l'Ecole Communale
+ , Rue de Visé 105, 4602, Cheratte";X-APPLE-RADIUS=70;X-TITLE="Salle de l'E
+ cole Communale":geo:50.68213140000000000000,5.66993500000000000000
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456775@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:🏀 RU21H CEP Fleurus vs RU21H BC Ransart Charleroi
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456787@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261017T110000
+DTEND;TZID=Europe/Brussels:20261017T130000
+SUMMARY:🏀 RU21H BC Centre Gaume A vs RU21H CEP Fleurus
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730\, Tintigny
+GEO:49.68045570000000000000;5.51218960000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle asbl Loisirs, Rue du
+  Tilleul, 76, 6730, Tintigny";X-APPLE-RADIUS=70;X-TITLE="Salle asbl Loisirs
+ ":geo:49.68045570000000000000,5.51218960000000000000
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456772@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:🏀 RU21H Royal Castors Braine vs RU21H CEP Fleurus
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420\,
+  Braine-l'Alleud
+GEO:50.67805750000000000000;4.38574010000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Gaston Re
+ iff, Rue Ernest Laurent,  215, 1420, Braine-l'Alleud";X-APPLE-RADIUS=70;X-T
+ ITLE="Salle Omnisports Gaston Reiff":geo:50.67805750000000000000,4.38574010
+ 000000000000
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456776@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 RU21H CEP Fleurus vs RU21H RBC Visé
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456780@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261115T130000
+DTEND;TZID=Europe/Brussels:20261115T150000
+SUMMARY:🏀 RU21H BC Ransart Charleroi vs RU21H CEP Fleurus
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043\, Ransart
+GEO:50.44916640000000000000;4.47545650000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Ransar
+ t, Rue Tantenne 20, 6043, Ransart";X-APPLE-RADIUS=70;X-TITLE="Complexe Spor
+ tif de Ransart":geo:50.44916640000000000000,4.47545650000000000000
+DESCRIPTION:Compétition : U21H Silver A
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456777@basket-awbb
+DTSTAMP:20260822T082950Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:🏀 RU21H CEP Fleurus vs RU21H Royal Murprotec Nivelles Basketball
+  A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224\,
+  Wanfercée-Baulet
+GEO:50.4814;4.5488
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Wanfer
+ cée-Baulet, Rue J. Wauters 24, 6224, Wanfercée-Baulet";X-APPLE-RADIUS=70;
+ X-TITLE="Complexe Sportif de Wanfercée-Baulet":geo:50.4814,4.5488
+DESCRIPTION:Compétition : U21H Silver A
 END:VEVENT
 END:VCALENDAR

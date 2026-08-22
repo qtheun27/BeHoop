@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-486155@basket-awbb
-DTSTAMP:20260822T062816Z
+DTSTAMP:20260822T082948Z
 DTSTART;TZID=Europe/Brussels:20260823T110000
 DTEND;TZID=Europe/Brussels:20260823T130000
 SUMMARY:🏆 RU21H Royal Excelsior Brussels A vs RU21H Royal Eclairs Pont-D
@@ -22,5 +22,157 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
  RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
  000000000000,4.37695350000000000000
 DESCRIPTION:Compétition : Coupe AWBB U21 Hommes
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456763@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20260905T090000
+DTEND;TZID=Europe/Brussels:20260905T110000
+SUMMARY:🏀 RU21H Royal Excelsior Brussels A vs RU21H Royal Linthout BC W.
+ S.
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456764@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:🏀 RU21H Royal Excelsior Brussels A vs RU21H JSE Enghien
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456738@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20260919T120000
+DTEND;TZID=Europe/Brussels:20260919T140000
+SUMMARY:🏀 RU21H Olympic Mont Sur Marchienne vs RU21H Royal Excelsior Bru
+ ssels A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032\, M
+ ont-sur-Marchienne
+GEO:50.39350960000000000000;4.41219240000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Polyvalent Marcel Fla
+ ndre, Rue Napoléon Lejong 1, 6032, Mont-sur-Marchienne";X-APPLE-RADIUS=70;
+ X-TITLE="Hall Polyvalent Marcel Flandre":geo:50.39350960000000000000,4.4121
+ 9240000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456765@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:🏀 RU21H Royal Excelsior Brussels A vs RU21H Esneux St-Louis Unit
+ ed
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456755@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261010T103000
+DTEND;TZID=Europe/Brussels:20261010T123000
+SUMMARY:🏀 RU21H RIVBEE A vs RU21H Royal Excelsior Brussels A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 100
+ 0\, Bruxelles
+GEO:50.84190360000000000000;4.34347980000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif Palais du
+  Midi, Rue Roger Van der Weyden 3, 1000, Bruxelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Complexe Sportif Palais du Midi":geo:50.84190360000000000000,4.34347980
+ 000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456746@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:🏀 RU21H Esneux St-Louis United vs RU21H Royal Excelsior Brussels
+  A
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020\, Liège
+GEO:50.636098964168276;5.581151511773976
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Collège Saint-Louis, Rue 
+ Vilette 28, 4020, Liège";X-APPLE-RADIUS=70;X-TITLE="Collège Saint-Louis":
+ geo:50.636098964168276,5.581151511773976
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456766@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261114T090000
+DTEND;TZID=Europe/Brussels:20261114T110000
+SUMMARY:🏀 RU21H Royal Excelsior Brussels A vs RU21H RIVBEE A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456761@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261122T160000
+DTEND;TZID=Europe/Brussels:20261122T180000
+SUMMARY:🏀 RU21H Royal Linthout BC W.S. vs RU21H Royal Excelsior Brussels
+  A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200\, Woluwe-Saint
+ -Lambert
+GEO:50.84411930000000000000;4.42913450000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Poseidon, Avenue 
+ Des Vaillants, 2, 1200, Woluwe-Saint-Lambert";X-APPLE-RADIUS=70;X-TITLE="Co
+ mplexe Poseidon":geo:50.84411930000000000000,4.42913450000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456767@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261205T090000
+DTEND;TZID=Europe/Brussels:20261205T110000
+SUMMARY:🏀 RU21H Royal Excelsior Brussels A vs RU21H Olympic Mont Sur Mar
+ chienne
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\
+ , 1120\, Neder-Over-Heembeek
+GEO:50.89287990000000000000;4.37695350000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe sportif de Neder-
+ Over-Heembeek, Rue De Lombardzijde 120, 1120, Neder-Over-Heembeek";X-APPLE-
+ RADIUS=70;X-TITLE="Complexe sportif de Neder-Over-Heembeek":geo:50.89287990
+ 000000000000,4.37695350000000000000
+DESCRIPTION:Compétition : U21H Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-456752@basket-awbb
+DTSTAMP:20260822T082948Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:🏀 RU21H JSE Enghien vs RU21H Royal Excelsior Brussels A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850\, Petit-Engh
+ ien
+GEO:50.68816270000001;4.0818891
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports de Petit-
+ Enghien, Place, 10, 7850, Petit-Enghien";X-APPLE-RADIUS=70;X-TITLE="Salle O
+ mnisports de Petit-Enghien":geo:50.68816270000001,4.0818891
+DESCRIPTION:Compétition : U21H Gold B
 END:VEVENT
 END:VCALENDAR

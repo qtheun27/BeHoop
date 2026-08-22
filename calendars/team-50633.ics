@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-487345@basket-awbb
-DTSTAMP:20260822T062817Z
+DTSTAMP:20260822T082949Z
 DTSTART;TZID=Europe/Brussels:20260815T140000
 DTEND;TZID=Europe/Brussels:20260815T160000
 SUMMARY:🤝 RU16D Royal Eclairs Pont-De-Loup A vs RU16D Royal Murprotec Ni
@@ -23,7 +23,7 @@ DESCRIPTION:Compétition : Amicaux Jeunes\nScore : 69 - 71
 END:VEVENT
 BEGIN:VEVENT
 UID:match-485439@basket-awbb
-DTSTAMP:20260822T062817Z
+DTSTAMP:20260822T082949Z
 DTSTART;TZID=Europe/Brussels:20260822T120000
 DTEND;TZID=Europe/Brussels:20260822T140000
 SUMMARY:🏀 RU16D Royal CS Natoye vs RU16D Royal Murprotec Nivelles Basket
@@ -38,7 +38,7 @@ DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
 UID:match-486271@basket-awbb
-DTSTAMP:20260822T062817Z
+DTSTAMP:20260822T082949Z
 DTSTART;TZID=Europe/Brussels:20260830T110000
 DTEND;TZID=Europe/Brussels:20260830T130000
 SUMMARY:🤝 RU16D Royal Murprotec Nivelles Basketball A vs RU16D La Viller
@@ -52,8 +52,52 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
 DESCRIPTION:Compétition : Amicaux Seniors
 END:VEVENT
 BEGIN:VEVENT
+UID:match-458147@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20260906T144500
+DTEND;TZID=Europe/Brussels:20260906T164500
+SUMMARY:🏀 RU16D RB Alliance Arlon vs RU16D Royal Murprotec Nivelles Bask
+ etball A
+LOCATION:Centre Sportif de la Spetz\, Carrefour de la Spetz 2\, 6700\, Arlo
+ n
+GEO:49.67528230000000000000;5.82416490000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de la Spetz
+ , Carrefour de la Spetz 2, 6700, Arlon";X-APPLE-RADIUS=70;X-TITLE="Centre S
+ portif de la Spetz":geo:49.67528230000000000000,5.82416490000000000000
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458137@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20260912T110000
+DTEND;TZID=Europe/Brussels:20260912T130000
+SUMMARY:🏀 RU16D BC Boninne A vs RU16D Royal Murprotec Nivelles Basketbal
+ l A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
+GEO:50.46749650000000000000;4.92225170000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
+ Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
+ portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458142@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20260919T133000
+DTEND;TZID=Europe/Brussels:20260919T153000
+SUMMARY:🏀 RU16D Royal Murprotec Nivelles Basketball A vs RU16D Ganshoren
+  Dames Basket A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
 UID:match-485064@basket-awbb
-DTSTAMP:20260822T062817Z
+DTSTAMP:20260822T082949Z
 DTSTART;TZID=Europe/Brussels:20260927T130000
 DTEND;TZID=Europe/Brussels:20260927T150000
 SUMMARY:🏆 RU16D BC Boninne B vs RU16D Royal Murprotec Nivelles Basketbal
@@ -64,5 +108,109 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez,
  Avenue Reine Elisabeth 2, 5000, Beez";X-APPLE-RADIUS=70;X-TITLE="Complexe S
  portif de Beez":geo:50.46749650000000000000,4.92225170000000000000
 DESCRIPTION:Compétition : Coupe AWBB U16 Dames
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458133@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:🏀 RU16D East Belgium Basket Clubs Association A vs RU16D Royal M
+ urprotec Nivelles Basketball A
+LOCATION:Centre Sportif George Gramme\, Rue Forges-les Eaux 4\, 4651\, Batt
+ ice
+GEO:50.64885480000000000000;5.82007630000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif George Gram
+ me, Rue Forges-les Eaux 4, 4651, Battice";X-APPLE-RADIUS=70;X-TITLE="Centre
+  Sportif George Gramme":geo:50.64885480000000000000,5.82007630000000000000
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458143@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261010T153000
+DTEND;TZID=Europe/Brussels:20261010T173000
+SUMMARY:🏀 RU16D Royal Murprotec Nivelles Basketball A vs RU16D Liège Pa
+ nthers A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458144@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261107T113000
+DTEND;TZID=Europe/Brussels:20261107T133000
+SUMMARY:🏀 RU16D Royal Murprotec Nivelles Basketball A vs RU16D East Belg
+ ium Basket Clubs Association A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458124@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:🏀 RU16D Liège Panthers A vs RU16D Royal Murprotec Nivelles Bask
+ etball A
+LOCATION:Salle du Bois Saint-Jean\, Allée du Bol d'Air 13\, 4031\, Liège
+GEO:50.57940110000000000000;5.55224780000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle du Bois Saint-Jean, 
+ Allée du Bol d'Air 13, 4031, Liège";X-APPLE-RADIUS=70;X-TITLE="Salle du B
+ ois Saint-Jean":geo:50.57940110000000000000,5.55224780000000000000
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458145@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:🏀 RU16D Royal Murprotec Nivelles Basketball A vs RU16D RB Allian
+ ce Arlon
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458131@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261205T120000
+DTEND;TZID=Europe/Brussels:20261205T140000
+SUMMARY:🏀 RU16D Ganshoren Dames Basket A vs RU16D Royal Murprotec Nivell
+ es Basketball A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083\, Gansho
+ ren
+GEO:50.87658980000000000000;4.30224360000000000000
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall des sports R. Beauthi
+ er, Rue Vanderveken 114, 1083, Ganshoren";X-APPLE-RADIUS=70;X-TITLE="Hall d
+ es sports R. Beauthier":geo:50.87658980000000000000,4.30224360000000000000
+DESCRIPTION:Compétition : U16 Dames Gold B
+END:VEVENT
+BEGIN:VEVENT
+UID:match-458146@basket-awbb
+DTSTAMP:20260822T082949Z
+DTSTART;TZID=Europe/Brussels:20261212T120000
+DTEND;TZID=Europe/Brussels:20261212T140000
+SUMMARY:🏀 RU16D Royal Murprotec Nivelles Basketball A vs RU16D BC Boninn
+ e A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1
+ 400\, Nivelles
+GEO:50.5922551;4.3234004
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Salle Omnisports Parc De L
+ a Dodaine, Avenue Jules Mathieu, 1, 1400, Nivelles";X-APPLE-RADIUS=70;X-TIT
+ LE="Salle Omnisports Parc De La Dodaine":geo:50.5922551,4.3234004
+DESCRIPTION:Compétition : U16 Dames Gold B
 END:VEVENT
 END:VCALENDAR
