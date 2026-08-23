@@ -27,7 +27,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { avatarHtml, nomAffichage } from "./avatar.js";
+import { avatarHtml } from "./avatar.js";
 import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
 rendreEntete('Mon équipe');
@@ -46,22 +46,27 @@ onAuthStateChanged(auth, async (user) => {
   rendreNav(userProfil.role, 'espace');
 
   const playerSnap = await getDoc(doc(db, 'players', user.uid));
-  const joueur = playerSnap.exists() ? playerSnap.data() : { prenom: userProfil.display_name };
+  const joueur = playerSnap.exists() ? playerSnap.data() : {};
 
   const res = await fetch('../data.json?t=' + Date.now());
   const donnees = await res.json();
   const club = (donnees.clubs || []).find(c => String(c.id) === String(userProfil.club_id));
 
+  // Récupération de l'équipe du joueur
+  const equipe = (club && club.teams) ? club.teams.find(t => String(t.id) === String(joueur.team_id)) : null;
+  const nomEquipe = equipe ? (equipe.category || equipe.name) : 'Équipe non définie';
+
   const clubLogo = (club && club.logo_url)
     ? `<img src="${club.logo_url}" alt="${club.name}" style="width:48px;height:48px;object-fit:contain;background:#fff;border-radius:10px;padding:4px;">`
     : avatarHtml(null, club ? club.name : 'Mon Club', 48);
 
+  // Nom du club en grand, nom de l'équipe en sous-titre
   document.getElementById('carte-joueur-profil').innerHTML = `
     <div class="entete-profil">
       ${clubLogo}
       <div>
-        <div class="nom" style="font-weight:800;font-size:16px;">${nomAffichage(joueur)}</div>
-        <div class="meta" style="font-size:12.5px;color:var(--text-muted);">${club ? club.name : ''}</div>
+        <div class="nom" style="font-weight:800;font-size:16px;">${club ? club.name : 'Mon Club'}</div>
+        <div class="meta" style="font-size:12.5px;color:var(--text-muted);">${nomEquipe}</div>
       </div>
     </div>
   `;
