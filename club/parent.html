@@ -28,7 +28,7 @@
 </head>
 <body>
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
   <span class="titre">👨‍👩‍👧 Mes enfants</span>
 </div>
 <div class="container" style="padding-top:16px;">
@@ -65,6 +65,7 @@ import {
   getFirestore, doc, getDoc, addDoc, updateDoc, collection, getDocs, query, where, arrayUnion, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
 import { afficherVueJoueur } from "./joueur-vue.js";
 
@@ -79,6 +80,8 @@ onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
   if (!snap.exists() || snap.data().role !== 'parent') { window.location.href = './dashboard.html'; return; }
+  rendreNav('parent', 'espace');
+
   monProfil = snap.data();
 
   if (monProfil.club_id) {
@@ -219,12 +222,5 @@ document.getElementById('btn-ajouter-enfant').addEventListener('click', async ()
 });
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <a href="./parent.html" class="actif"><span class="icone-nav">👨‍👩‍👧</span>Enfants</a>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

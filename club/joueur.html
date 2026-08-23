@@ -24,7 +24,7 @@
 </head>
 <body>
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
   <span class="titre" id="titre">🏀 Mon équipe</span>
 </div>
 <div class="container" style="padding-top:16px;">
@@ -45,6 +45,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 import { afficherVueJoueur } from "./joueur-vue.js";
 
 const app = initializeApp(firebaseConfig);
@@ -55,6 +56,8 @@ onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
   if (!snap.exists() || snap.data().role !== 'player') { window.location.href = './dashboard.html'; return; }
+  rendreNav('player', 'espace');
+
 
   // Pour un joueur auto-géré, l'id de sa fiche players/{id} est son propre uid.
   await afficherVueJoueur(db, user.uid, {
@@ -66,12 +69,5 @@ onAuthStateChanged(auth, async (user) => {
 });
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <a href="./joueur.html" class="actif"><span class="icone-nav">🏀</span>Équipe</a>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

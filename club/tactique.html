@@ -191,6 +191,7 @@ import {
   getFirestore, doc, getDoc, addDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -233,6 +234,7 @@ onAuthStateChanged(auth, async (user) => {
   if (!snap.exists()) { window.location.href = './index.html'; return; }
   
   monProfil = snap.data();
+  rendreNav(monProfil.role, 'tactique');
   estEditeur = ['coach', 'club_admin', 'super_admin'].includes(monProfil.role);
 
   if (!estEditeur) {
@@ -666,13 +668,5 @@ drawCourt();
 updateUI();
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <a href="./coach.html"><span class="icone-nav">🏀</span>Équipe</a>
-    <a href="./tactique.html" class="actif"><span class="icone-nav">📋</span>Tactique</a>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

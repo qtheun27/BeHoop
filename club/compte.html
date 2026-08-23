@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
   <span class="titre">⚙️ Mon compte</span>
 </div>
 <div class="container" style="padding-top:18px;">
@@ -70,6 +70,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 import { avatarHtml, comprimerPhoto } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
@@ -85,6 +86,7 @@ onAuthStateChanged(auth, async (user) => {
 
   const snap = await getDoc(doc(db, 'users', user.uid));
   const profil = snap.exists() ? snap.data() : {};
+  rendreNav(profil.role, 'compte');
   monNom = profil.display_name || user.email;
   document.getElementById('apercu-photo').innerHTML = avatarHtml(profil.photo_url, monNom, 88);
   document.getElementById('mon-prenom').value = profil.prenom || '';
@@ -99,11 +101,6 @@ onAuthStateChanged(auth, async (user) => {
     document.getElementById('desc-mdp').textContent = "Tu t'es connecté(e) via un lien reçu par email. Définis un mot de passe si tu préfères te connecter directement.";
   }
 
-  const ROUTE_ROLE = { super_admin: './admin.html', club_admin: './mon-club.html', coach: './coach.html', player: './joueur.html', parent: './parent.html' };
-  const ICONE_ROLE = { super_admin: '🛠️', club_admin: '🏀', coach: '🏀', player: '🏀', parent: '👨‍👩‍👧' };
-  document.getElementById('nav-espace').innerHTML = ROUTE_ROLE[profil.role]
-    ? `<a href="${ROUTE_ROLE[profil.role]}"><span class="icone-nav">${ICONE_ROLE[profil.role]}</span>Mon espace</a>`
-    : '';
 });
 
 document.getElementById('btn-choisir-photo').addEventListener('click', () => document.getElementById('fichier-photo').click());
@@ -164,12 +161,5 @@ document.getElementById('btn-mdp').addEventListener('click', async () => {
 });
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <span id="nav-espace" style="display:contents;"></span>
-    <a href="./compte.html" class="actif"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

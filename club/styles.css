@@ -182,3 +182,8 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
   .bottom-nav { display: block; }
   body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important; }
 }
+
+/* Masque un élément quand la barre de navigation basse le remplace */
+@media (max-width: 680px) {
+  .cache-si-nav-basse { display: none !important; }
+}

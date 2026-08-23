@@ -22,7 +22,7 @@
 </head>
 <body>
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
   <span class="titre">🛠️ Console Super Admin</span>
 </div>
 <div class="container" style="padding-top:16px;">
@@ -55,6 +55,7 @@ import {
   getFirestore, doc, getDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const SITE_URL_CONNEXION = "https://behoop.be/club/finaliser-connexion.html";
@@ -74,6 +75,8 @@ onAuthStateChanged(auth, async (user) => {
     window.location.href = './dashboard.html';
     return;
   }
+
+  rendreNav('super_admin', 'espace');
   await chargerClubsAwbb();
   await chargerAdminsExistants();
   await chargerInvitations();
@@ -231,12 +234,5 @@ async function chargerInvitations() {
 }
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <a href="./admin.html" class="actif"><span class="icone-nav">🛠️</span>Console</a>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

@@ -10,20 +10,22 @@
 <meta name="apple-mobile-web-app-title" content="BeHoop">
 <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
 <link rel="manifest" href="../manifest.json">
-<title>Tableau de bord — Espace Club</title>
+<title>Accueil — BeHoop</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
-  .profil-hero { text-align: center; padding: 8px 0 4px; }
-  .profil-hero .avatar { margin: 0 auto 12px; box-shadow: var(--shadow-md); }
-  .profil-hero h1 { font-size: 19px; margin: 0 0 6px; }
-  .profil-hero .email { color: var(--text-muted); font-size: 13px; }
-  .lien-action {
-    display: flex; align-items: center; gap: 12px; padding: 14px; margin-top: 10px;
-    background: var(--surface-2); border-radius: var(--radius-md); text-decoration: none; color: var(--text);
-  }
-  .lien-action .icone { font-size: 20px; }
-  .lien-action .texte { flex: 1; font-weight: 700; font-size: 14px; }
-  .lien-action .fleche { color: var(--text-muted); }
+  .entete-profil { display: flex; align-items: center; gap: 12px; }
+  .entete-profil .nom { font-weight: 800; font-size: 16px; }
+  .entete-profil .meta { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+  .bloc-info { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
+  .bloc-info:last-child { border-bottom: none; }
+  .bloc-info .ico { font-size: 20px; flex-shrink: 0; }
+  .bloc-info .contenu { flex: 1; min-width: 0; }
+  .bloc-info .quand { font-weight: 700; font-size: 14px; }
+  .bloc-info .ou { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+  .rang-grand { font-size: 30px; font-weight: 800; color: var(--primary); line-height: 1; }
+  .rang-ligne { display: flex; align-items: center; gap: 14px; }
+  .rang-detail { font-size: 12.5px; color: var(--text-muted); }
+  .puce-equipe { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 4px; }
 </style>
 </head>
 <body>
@@ -31,15 +33,28 @@
   <span class="titre"><img src="../icons/icon-192.png" alt="" style="width:22px;height:22px;border-radius:6px;vertical-align:-5px;margin-right:2px;"> BeHoop<small>Espace Club</small></span>
   <a href="../index.html" style="flex-shrink:0;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:20px;">🌐 Site public</a>
 </div>
-<div class="container" style="padding-top:18px;">
-  <div class="carte profil-hero" id="carte-profil">
-    <div class="skel" style="width:76px;height:76px;border-radius:50%;margin:0 auto 12px;"></div>
-    <div class="skel" style="width:140px;height:16px;margin:0 auto 8px;"></div>
-    <div class="skel" style="width:100px;height:12px;margin:0 auto;"></div>
+<div class="container" style="padding-top:16px;">
+
+  <div class="carte" id="carte-profil">
+    <div class="entete-profil">
+      <div class="skel" style="width:48px;height:48px;border-radius:50%;"></div>
+      <div style="flex:1;"><div class="skel" style="width:130px;height:14px;margin-bottom:6px;"></div><div class="skel" style="width:90px;height:11px;"></div></div>
+    </div>
   </div>
 
-  <div class="carte" id="carte-liens" style="display:none;">
-    <div class="carte-titre">Mon espace</div>
+  <div class="carte" id="carte-equipes" style="display:none;">
+    <div class="carte-titre">Mes équipes</div>
+    <div class="puce-equipe" id="puces-equipes"></div>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">⏭️ À venir</div>
+    <div id="zone-avenir"><p class="vide">Chargement…</p></div>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">📊 Au classement</div>
+    <div id="zone-classement"><p class="vide">Chargement…</p></div>
   </div>
 
   <div class="carte">
@@ -51,18 +66,26 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
+import { rendreNav } from "./nav.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 const LABEL_ROLE = { super_admin: 'Super administrateur', club_admin: 'Administrateur de club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
-const ROUTE_ROLE = { super_admin: './admin.html', club_admin: './mon-club.html', coach: './coach.html', player: './joueur.html', parent: './parent.html' };
-const LABEL_LIEN = { super_admin: 'Console super admin', club_admin: 'Gérer mon club', coach: 'Mon équipe (entraînements, stats)', player: 'Mon équipe', parent: 'Mes enfants' };
-const ICONE_LIEN = { super_admin: '🛠️', club_admin: '🏀', coach: '🏀', player: '🏀', parent: '👨‍👩‍👧' };
+
+let donneesPubliques = null;
+let equipesSuivies = [];   // [{id, nom}]
+let equipeActive = null;
+
+function formatDate(d, heure) {
+  const dt = new Date(d + 'T' + (heure || '00:00:00'));
+  const jour = dt.toLocaleDateString('fr-BE', { weekday: 'long', day: '2-digit', month: 'long' });
+  return heure ? `${jour} · ${heure.slice(0, 5)}` : jour;
+}
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
@@ -70,62 +93,166 @@ onAuthStateChanged(auth, async (user) => {
   if (!snap.exists()) { window.location.href = './index.html'; return; }
   const profil = snap.data();
 
-  let nomClub = profil.club_name || null;
-  if (!nomClub && profil.club_id) {
-    try {
-      const res = await fetch('../data.json?t=' + Date.now());
-      const donnees = await res.json();
-      const club = (donnees.clubs || []).find(c => String(c.id) === String(profil.club_id));
-      nomClub = club ? club.name : null;
-    } catch (e) { /* pas grave */ }
-  }
-  const ligneClub = profil.club_id ? (nomClub || 'club ' + profil.club_id) : '';
+  rendreNav(profil.role, 'dashboard');
+
+  const res = await fetch('../data.json?t=' + Date.now());
+  donneesPubliques = await res.json();
+  const club = (donneesPubliques.clubs || []).find(c => String(c.id) === String(profil.club_id));
 
   document.getElementById('carte-profil').innerHTML = `
-    ${avatarHtml(profil.photo_url, nomAffichage(profil), 76)}
-    <h1>${nomAffichage(profil)}</h1>
-    <span class="badge badge-primary">${LABEL_ROLE[profil.role] || profil.role}</span>
-    <div class="email" style="margin-top:8px;">${user.email}${ligneClub ? ' · ' + ligneClub : ''}</div>
+    <div class="entete-profil">
+      ${avatarHtml(profil.photo_url, nomAffichage(profil), 48)}
+      <div>
+        <div class="nom">${nomAffichage(profil)}</div>
+        <div class="meta">${LABEL_ROLE[profil.role] || profil.role}${club ? ' · ' + club.name : ''}</div>
+      </div>
+    </div>
   `;
 
-  const $liens = document.getElementById('carte-liens');
-  let html = '<div class="carte-titre">Mon espace</div>';
-  if (ROUTE_ROLE[profil.role]) {
+  equipesSuivies = await determinerEquipes(profil, user.uid, club);
+
+  if (equipesSuivies.length === 0) {
+    document.getElementById('zone-avenir').innerHTML = `<p class="vide">Aucune équipe suivie pour le moment. Utilise le menu en bas pour gérer ton espace.</p>`;
+    document.getElementById('zone-classement').innerHTML = `<p class="vide">Aucun classement à afficher.</p>`;
+    return;
+  }
+
+  if (equipesSuivies.length > 1) {
+    const $carte = document.getElementById('carte-equipes');
+    $carte.style.display = 'block';
+    document.getElementById('puces-equipes').innerHTML = equipesSuivies.map((eq, i) =>
+      `<button class="puce ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.nom}</button>`
+    ).join('');
+    document.querySelectorAll('.puce').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.puce').forEach(b => b.classList.remove('actif'));
+        btn.classList.add('actif');
+        afficherPourEquipe(btn.dataset.id);
+      });
+    });
+  }
+
+  afficherPourEquipe(equipesSuivies[0].id);
+});
+
+// Détermine les équipes à suivre selon le rôle.
+async function determinerEquipes(profil, uid, club) {
+  const nomDe = (id) => {
+    const eq = club ? (club.teams || []).find(t => String(t.id) === String(id)) : null;
+    return eq ? (eq.category || eq.name) : 'Équipe';
+  };
+
+  if (profil.role === 'coach') {
+    return (profil.team_ids || []).map(id => ({ id: String(id), nom: nomDe(id) }));
+  }
+  if (profil.role === 'player') {
+    const p = await getDoc(doc(db, 'players', uid));
+    const tid = p.exists() ? p.data().team_id : null;
+    return tid ? [{ id: String(tid), nom: nomDe(tid) }] : [];
+  }
+  if (profil.role === 'parent') {
+    const ids = profil.children_player_ids || [];
+    const equipes = [];
+    for (const pid of ids) {
+      const p = await getDoc(doc(db, 'players', pid));
+      if (!p.exists()) continue;
+      const d = p.data();
+      if (d.team_id && !equipes.some(e => e.id === String(d.team_id))) {
+        equipes.push({ id: String(d.team_id), nom: `${nomAffichage(d)} · ${nomDe(d.team_id)}` });
+      }
+    }
+    return equipes;
+  }
+  // club_admin / super_admin : toutes les équipes du club
+  return club ? (club.teams || []).map(t => ({ id: String(t.id), nom: t.category || t.name })) : [];
+}
+
+async function afficherPourEquipe(teamId) {
+  equipeActive = String(teamId);
+  const aujourdhui = new Date().toISOString().slice(0, 10);
+
+  // --- Prochain entraînement (Firestore) + prochain match (data.json) ---
+  let prochainEntrainement = null;
+  try {
+    const q = query(collection(db, 'trainings'), where('team_id', '==', equipeActive));
+    const snap = await getDocs(q);
+    prochainEntrainement = snap.docs.map(d => d.data())
+      .filter(t => t.date >= aujourdhui)
+      .sort((a, b) => (a.date + (a.start_time || '')).localeCompare(b.date + (b.start_time || '')))[0] || null;
+  } catch (e) { /* accès restreint selon le rôle : on ignore */ }
+
+  const idNum = Number(equipeActive);
+  const prochainMatch = (donneesPubliques.games || [])
+    .filter(g => (g.home_team_id === idNum || g.away_team_id === idNum) && g.date >= aujourdhui)
+    .sort((a, b) => (a.date + (a.time || '')).localeCompare(b.date + (b.time || '')))[0] || null;
+
+  let html = '';
+  if (prochainEntrainement) {
     html += `
-      <a class="lien-action" href="${ROUTE_ROLE[profil.role]}">
-        <span class="icone">${ICONE_LIEN[profil.role]}</span>
-        <span class="texte">${LABEL_LIEN[profil.role]}</span>
-        <span class="fleche">→</span>
-      </a>
+      <div class="bloc-info">
+        <span class="ico">🏋️</span>
+        <div class="contenu">
+          <div class="quand">${formatDate(prochainEntrainement.date, prochainEntrainement.start_time)}</div>
+          <div class="ou">Entraînement${prochainEntrainement.location ? ' · ' + prochainEntrainement.location : ''}</div>
+        </div>
+      </div>
     `;
   }
-  html += `
-    <a class="lien-action" href="./compte.html">
-      <span class="icone">⚙️</span>
-      <span class="texte">Mon compte (photo, mot de passe)</span>
-      <span class="fleche">→</span>
-    </a>
-  `;
-  $liens.innerHTML = html;
-  $liens.style.display = 'block';
+  if (prochainMatch) {
+    const domicile = prochainMatch.home_team_id === idNum;
+    const adversaire = domicile
+      ? (prochainMatch.away_team_short_name || prochainMatch.away_team_name)
+      : (prochainMatch.home_team_short_name || prochainMatch.home_team_name);
+    html += `
+      <div class="bloc-info">
+        <span class="ico">🏀</span>
+        <div class="contenu">
+          <div class="quand">${formatDate(prochainMatch.date, prochainMatch.time)}</div>
+          <div class="ou">${domicile ? 'Domicile' : 'Déplacement'} vs ${adversaire}${prochainMatch.venue_name ? ' · ' + prochainMatch.venue_name : ''}</div>
+        </div>
+      </div>
+    `;
+  }
+  document.getElementById('zone-avenir').innerHTML = html || `<p class="vide">Aucun entraînement ni match à venir pour cette équipe.</p>`;
 
-  document.getElementById('nav-espace').innerHTML = ROUTE_ROLE[profil.role]
-    ? `<a href="${ROUTE_ROLE[profil.role]}"><span class="icone-nav">${ICONE_LIEN[profil.role]}</span>Mon espace</a>`
-    : '';
-});
+  afficherClassement(idNum);
+}
+
+function afficherClassement(idNum) {
+  const $cible = document.getElementById('zone-classement');
+  const classements = donneesPubliques.classements || {};
+  let trouve = null;
+
+  for (const [serieId, lignes] of Object.entries(classements)) {
+    const ligne = (lignes || []).find(l => l.team_id === idNum);
+    if (ligne) {
+      const serie = (donneesPubliques.series || []).find(s => s.id === parseInt(serieId, 10));
+      trouve = { ligne, serie, total: lignes.length };
+      break;
+    }
+  }
+
+  if (!trouve) {
+    $cible.innerHTML = `<p class="vide">Pas encore de classement disponible pour cette équipe.</p>`;
+    return;
+  }
+
+  const { ligne, serie, total } = trouve;
+  $cible.innerHTML = `
+    <div class="rang-ligne">
+      <span class="rang-grand">${ligne.position ?? '—'}<span style="font-size:14px;font-weight:700;color:var(--text-muted);">/${total}</span></span>
+      <div>
+        <div style="font-weight:700;font-size:13.5px;">${serie ? (serie.name || serie.short_name) : ''}</div>
+        <div class="rang-detail">${ligne.played ?? 0} joués · ${ligne.wins ?? 0}V / ${ligne.losses ?? 0}D · ${ligne.points ?? 0} pts</div>
+      </div>
+    </div>
+  `;
+}
 
 document.getElementById('btn-deconnexion').addEventListener('click', async () => {
   await signOut(auth);
   window.location.href = './index.html';
 });
 </script>
-
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html" class="actif"><span class="icone-nav">🏠</span>Accueil</a>
-    <span id="nav-espace" style="display:contents;"></span>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>

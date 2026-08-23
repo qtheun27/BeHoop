@@ -34,9 +34,9 @@
 </head>
 <body>
 <div class="app-bar">
-  <a class="retour" href="./dashboard.html">←</a>
+  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
   <span class="titre">🏀 Mon équipe</span>
-  <a href="./tactique.html" style="flex-shrink:0;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:20px;">📋 Tactique</a>
+  <a href="./tactique.html" class="cache-si-nav-basse" style="flex-shrink:0;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:20px;">📋 Tactique</a>
 </div>
 <div class="container" style="padding-top:16px;">
 
@@ -83,6 +83,7 @@ import {
   getFirestore, doc, getDoc, setDoc, addDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav } from "./nav.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
@@ -99,6 +100,8 @@ onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
   if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
+  rendreNav('coach', 'espace');
+
   monProfil = snap.data();
 
   const res = await fetch('../data.json?t=' + Date.now());
@@ -366,13 +369,5 @@ async function chargerHistoriqueStat(playerId) {
 }
 </script>
 
-<nav class="bottom-nav">
-  <div class="bottom-nav-inner">
-    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
-    <a href="./coach.html" class="actif"><span class="icone-nav">🏀</span>Équipe</a>
-    <a href="./tactique.html"><span class="icone-nav">📋</span>Tactique</a>
-    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
-  </div>
-</nav>
 </body>
 </html>
