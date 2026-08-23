@@ -23,7 +23,6 @@
   
   body {
     margin: 0; 
-    padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)); 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: var(--bg); 
@@ -191,7 +190,9 @@ import {
   getFirestore, doc, getDoc, addDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav } from "./nav.js";
+import { rendreNav, rendreNavImmediat } from "./nav.js";
+
+rendreNavImmediat('tactique');
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);

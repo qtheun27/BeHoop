@@ -76,7 +76,9 @@ import {
   getFirestore, doc, getDoc, setDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp, arrayUnion,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav } from "./nav.js";
+import { rendreNav, rendreNavImmediat } from "./nav.js";
+
+rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const SITE_URL_CONNEXION = "https://behoop.be/club/finaliser-connexion.html";

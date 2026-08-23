@@ -167,20 +167,23 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
   background: color-mix(in srgb, var(--surface) 94%, transparent);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border-top: 1px solid var(--border);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* La zone sécurisée iOS (barre d'accueil) est absorbée par le padding
+     des liens eux-mêmes, sinon la barre devient très haute avec les
+     libellés collés en haut. */
+  padding-bottom: 0;
 }
 .bottom-nav-inner { display: flex; max-width: 640px; margin: 0 auto; }
 .bottom-nav a {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
-  padding: 9px 4px calc(7px + env(safe-area-inset-bottom, 0px) * 0); text-decoration: none;
-  color: var(--text-muted); font-size: 10.5px; font-weight: 700;
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 8px 4px calc(6px + env(safe-area-inset-bottom, 0px) * 0.55);
+  text-decoration: none; color: var(--text-muted); font-size: 10.5px; font-weight: 700;
 }
 .bottom-nav a .icone-nav { font-size: 21px; line-height: 1; }
 .bottom-nav a.actif { color: var(--primary); }
 
 @media (max-width: 680px) {
   .bottom-nav { display: block; }
-  body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important; }
+  body { padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px) * 0.55) !important; }
 }
 
 /* Masque un élément quand la barre de navigation basse le remplace */

@@ -35,7 +35,13 @@ const ONGLETS_PAR_ROLE = {
 };
 
 // pageActive : 'dashboard' | 'espace' | 'tactique' | 'compte'
-export function rendreNav(role, pageActive) {
+export function rendreNav(role, pageActive, provisoire = false) {
+  if (!provisoire) {
+    try {
+      sessionStorage.setItem(CLE_ROLE, role);
+      localStorage.setItem(CLE_ROLE, role);
+    } catch (e) { /* stockage indisponible, sans conséquence */ }
+  }
   const onglets = ONGLETS_PAR_ROLE[role] || ONGLETS_PAR_ROLE.parent;
   const cleDe = (o) => {
     if (o.href.includes('dashboard')) return 'dashboard';
@@ -57,4 +63,16 @@ export function rendreNav(role, pageActive) {
   const existante = document.querySelector('.bottom-nav');
   if (existante) existante.remove();
   document.body.insertAdjacentHTML('beforeend', html);
+}
+
+const CLE_ROLE = 'behoop_role';
+
+// Affiche la barre immédiatement à partir du rôle mémorisé lors de la
+// dernière session, sans attendre la réponse de Firebase — sinon la barre
+// « clignote » / se reconstruit visiblement à chaque changement de page.
+export function rendreNavImmediat(pageActive) {
+  try {
+    const role = sessionStorage.getItem(CLE_ROLE) || localStorage.getItem(CLE_ROLE);
+    if (role) rendreNav(role, pageActive, true);
+  } catch (e) { /* stockage indisponible : la barre s'affichera après l'auth */ }
 }

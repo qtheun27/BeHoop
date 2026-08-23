@@ -69,7 +69,9 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
-import { rendreNav } from "./nav.js";
+import { rendreNav, rendreNavImmediat } from "./nav.js";
+
+rendreNavImmediat('dashboard');
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -250,6 +252,7 @@ function afficherClassement(idNum) {
 }
 
 document.getElementById('btn-deconnexion').addEventListener('click', async () => {
+  try { sessionStorage.removeItem('behoop_role'); localStorage.removeItem('behoop_role'); } catch (e) {}
   await signOut(auth);
   window.location.href = './index.html';
 });

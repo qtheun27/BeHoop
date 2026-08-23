@@ -65,7 +65,9 @@ import {
   getFirestore, doc, getDoc, addDoc, updateDoc, collection, getDocs, query, where, arrayUnion, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav } from "./nav.js";
+import { rendreNav, rendreNavImmediat } from "./nav.js";
+
+rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 import { afficherVueJoueur } from "./joueur-vue.js";
 

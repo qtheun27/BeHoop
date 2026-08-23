@@ -70,7 +70,9 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav } from "./nav.js";
+import { rendreNav, rendreNavImmediat } from "./nav.js";
+
+rendreNavImmediat('compte');
 import { avatarHtml, comprimerPhoto } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
