@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0b5cab">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="BeHoop">
-<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
-<link rel="manifest" href="../manifest.json">
 <title>Accueil — BeHoop</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
@@ -21,15 +14,6 @@
   .bloc-info .ico { font-size: 20px; flex-shrink: 0; }
   .bloc-info .contenu { flex: 1; min-width: 0; }
   
-  .bloc-info .quand, .quand, .entrainement, .game-date { 
-    font-weight: 700; 
-    font-size: 14px; 
-    white-space: normal !important; 
-    word-break: break-word; 
-    overflow-wrap: anywhere; 
-  }
-  
-  .bloc-info .ou { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
   .rang-grand { font-size: 30px; font-weight: 800; color: var(--primary); line-height: 1; }
   .rang-ligne { display: flex; align-items: center; gap: 14px; }
   .rang-detail { font-size: 12.5px; color: var(--text-muted); }
@@ -94,33 +78,32 @@ function formatDate(d, heure) {
   return heure ? `${jour} · ${heure.slice(0, 5)}` : jour;
 }
 
+// CORRECTION BUG MENU COUPE : Affiche les liens directement dans le flux (inline) au lieu d'un menu absolu
 function liensItineraire(lieu, id) {
   if (!lieu) return '';
   const q = encodeURIComponent(lieu);
   return `
-    <div class="game-venue" style="position:relative;margin-top:4px;">
-      <button class="venue-btn" onclick="window.__menuLieu('${id}')">📍 ${lieu}</button>
-      <div class="venue-menu" id="venue-menu-${id}">
-        <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
-        <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener">Waze</a>
-        <a href="https://maps.apple.com/?q=${q}" target="_blank" rel="noopener">Plans (Apple)</a>
+    <div class="game-venue" style="margin-top:6px;">
+      <button class="venue-btn" onclick="window.__menuLieu('${id}')" style="display:inline-flex;align-items:center;gap:4px;background:var(--surface-2);padding:6px 10px;border-radius:20px;border:1px solid var(--border);">
+        📍 ${lieu} <span style="font-size:10px;">▼</span>
+      </button>
+      <div id="venue-menu-${id}" style="display:none; gap:6px; margin-top:8px; flex-wrap:wrap;">
+        <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener" class="badge badge-muted" style="text-decoration:none;">Google Maps</a>
+        <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener" class="badge badge-muted" style="text-decoration:none;">Waze</a>
+        <a href="https://maps.apple.com/?q=${q}" target="_blank" rel="noopener" class="badge badge-muted" style="text-decoration:none;">Plans (Apple)</a>
       </div>
     </div>
   `;
 }
 
 window.__menuLieu = (id) => {
-  document.querySelectorAll('.venue-menu.ouvert').forEach(m => {
-    if (m.id !== 'venue-menu-' + id) m.classList.remove('ouvert');
-  });
-  document.getElementById('venue-menu-' + id)?.classList.toggle('ouvert');
-};
-
-document.addEventListener('click', e => {
-  if (!e.target.closest('.game-venue')) {
-    document.querySelectorAll('.venue-menu.ouvert').forEach(m => m.classList.remove('ouvert'));
+  const leMenu = document.getElementById('venue-menu-' + id);
+  if (leMenu.style.display === 'none') {
+    leMenu.style.display = 'flex';
+  } else {
+    leMenu.style.display = 'none';
   }
-});
+};
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
@@ -176,9 +159,7 @@ async function determinerEquipes(profil, uid, club) {
     return eq ? (eq.category || eq.name) : 'Équipe';
   };
 
-  if (profil.role === 'coach') {
-    return (profil.team_ids || []).map(id => ({ id: String(id), nom: nomDe(id) }));
-  }
+  if (profil.role === 'coach') return (profil.team_ids || []).map(id => ({ id: String(id), nom: nomDe(id) }));
   if (profil.role === 'player') {
     const p = await getDoc(doc(db, 'players', uid));
     const tid = p.exists() ? p.data().team_id : null;
