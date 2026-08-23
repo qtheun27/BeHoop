@@ -34,10 +34,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
-  <span class="titre" id="titre-club">Mon club<small>Coachs, joueurs, parents</small></span>
-</div>
 <div class="container" style="padding-top:16px;">
 
   <div class="carte">
@@ -76,8 +72,9 @@ import {
   getFirestore, doc, getDoc, setDoc, addDoc, updateDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp, arrayUnion,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Mon club');
 rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
