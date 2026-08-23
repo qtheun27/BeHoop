@@ -29,10 +29,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <span class="titre"><img src="../icons/icon-192.png" alt="" style="width:22px;height:22px;border-radius:6px;vertical-align:-5px;margin-right:2px;"> BeHoop<small>Espace Club</small></span>
-  <a href="../index.html" style="flex-shrink:0;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:20px;">🌐 Site public</a>
-</div>
 <div class="container" style="padding-top:16px;">
 
   <div class="carte" id="carte-profil">
@@ -69,8 +65,9 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Accueil');
 rendreNavImmediat('dashboard');
 
 const app = initializeApp(firebaseConfig);
