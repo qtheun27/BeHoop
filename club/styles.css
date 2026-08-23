@@ -255,3 +255,24 @@ tr.ligne-equipe {
 
 /* Zone de titre principale des pages de contenu */
 h1, h2, h3 { letter-spacing: -0.3px; }
+
+/* ---- En-tête unifié (identique sur toutes les pages) ---- */
+.app-bar .marque { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--text); flex: 1; min-width: 0; }
+.app-bar .marque img { width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; }
+.app-bar .marque-nom { font-weight: 800; font-size: 17.5px; letter-spacing: -0.3px; }
+.app-bar .lien-public {
+  display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
+  font-size: 12px; font-weight: 700; color: var(--primary); text-decoration: none;
+  border: 1px solid var(--border); padding: 7px 12px; border-radius: 20px;
+}
+.app-bar .lien-public svg { width: 16px; height: 16px; }
+
+/* Titre de page : masqué sur mobile (la barre du bas situe déjà l'utilisateur) */
+.titre-page { display: none; }
+.titre-page h1 { font-size: 22px; margin: 18px 0 2px; }
+@media (min-width: 681px) {
+  .titre-page { display: block; }
+}
+
+/* Icônes de la barre basse (SVG au trait) */
+.bottom-nav a svg.icone-nav { width: 22px; height: 22px; }
