@@ -33,11 +33,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
-  <span class="titre">🏀 Mon équipe</span>
-  <a href="./tactique.html" class="cache-si-nav-basse" style="flex-shrink:0;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:6px 12px;border-radius:20px;">📋 Tactique</a>
-</div>
 <div class="container" style="padding-top:16px;">
 
   <div class="puces" id="tabs-equipes"></div>
@@ -83,8 +78,9 @@ import {
   getFirestore, doc, getDoc, setDoc, addDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Mon équipe');
 rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
