@@ -26,7 +26,7 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import {
-  getAuth, isSignInWithEmailLink, signInWithEmailLink,
+  getAuth, isSignInWithEmailLink, signInWithEmailLink, updatePassword
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
@@ -43,17 +43,8 @@ async function finaliser(email) {
     const { user } = await signInWithEmailLink(auth, email, window.location.href);
     window.localStorage.removeItem('emailPourConnexion');
 
-    const profilRef = doc(db, 'users', user.uid);
-    const profilSnap = await getDoc(profilRef);
-    if (!profilSnap.exists()) {
-      const invitation = await lireInvitationEnAttente(db, user);
-      if (invitation && invitation.role === 'player') {
-        window.location.href = './choix-role.html';
-        return;
-      }
-      await reclamerInvitation(db, user);
-    }
-    window.location.href = './dashboard.html';
+    demanderCreationMotDePasse(user);
+
   } catch (e) {
     $zone.innerHTML = `
       <p class="vide">Impossible de finaliser la connexion.</p>
@@ -61,6 +52,44 @@ async function finaliser(email) {
       <p class="vide" style="margin-top:14px;"><a href="./index.html">Retour à la page de connexion</a></p>
     `;
   }
+}
+
+function demanderCreationMotDePasse(user) {
+  $zone.innerHTML = `
+    <div class="carte-titre" style="justify-content:center;">🔐 Choisissez votre mot de passe</div>
+    <p class="carte-desc">Définissez le mot de passe qui vous permettra de vous connecter directement à l'Espace Club.</p>
+    <input type="password" id="mdp1" placeholder="Mot de passe (6 caractères min.)" style="margin-top:12px;">
+    <input type="password" id="mdp2" placeholder="Confirmer le mot de passe" style="margin-top:8px;">
+    <button class="btn btn-primary btn-block" id="btn-save-pass" style="margin-top:14px;">Valider et continuer</button>
+    <div class="msg" id="msg-pass"></div>
+  `;
+
+  document.getElementById('btn-save-pass').addEventListener('click', async () => {
+    const p1 = document.getElementById('mdp1').value;
+    const p2 = document.getElementById('mdp2').value;
+    const $msg = document.getElementById('msg-pass');
+
+    if (p1.length < 6) { $msg.className = 'msg err'; $msg.textContent = 'Le mot de passe doit faire au moins 6 caractères.'; return; }
+    if (p1 !== p2) { $msg.className = 'msg err'; $msg.textContent = 'Les mots de passe ne correspondent pas.'; return; }
+
+    try {
+      await updatePassword(user, p1);
+      
+      const profilRef = doc(db, 'users', user.uid);
+      const profilSnap = await getDoc(profilRef);
+      if (!profilSnap.exists()) {
+        const invitation = await lireInvitationEnAttente(db, user);
+        if (invitation && invitation.role === 'player') {
+          window.location.href = './choix-role.html';
+          return;
+        }
+        await reclamerInvitation(db, user);
+      }
+      window.location.href = './dashboard.html';
+    } catch (err) {
+      $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + err.message;
+    }
+  });
 }
 
 if (!isSignInWithEmailLink(auth, window.location.href)) {
@@ -74,9 +103,9 @@ if (!isSignInWithEmailLink(auth, window.location.href)) {
     finaliser(email);
   } else {
     $zone.innerHTML = `
-      <p><strong>Confirme ton email</strong></p>
+      <p><strong>Confirmez votre email</strong></p>
       <p class="vide">Pour finaliser la connexion en toute sécurité.</p>
-      <input type="email" id="email-confirm" placeholder="ton@email.com" style="margin-top:12px;">
+      <input type="email" id="email-confirm" placeholder="votre@email.com" style="margin-top:12px;">
       <button class="btn btn-primary btn-block" id="btn-confirm" style="margin-top:14px;">Continuer</button>
     `;
     document.getElementById('btn-confirm').addEventListener('click', () => {
