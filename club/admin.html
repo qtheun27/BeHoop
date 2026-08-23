@@ -21,10 +21,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
-  <span class="titre">🛠️ Console Super Admin</span>
-</div>
 <div class="container" style="padding-top:16px;">
 
   <div class="carte">
@@ -55,8 +51,9 @@ import {
   getFirestore, doc, getDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Console Super Admin');
 rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 
