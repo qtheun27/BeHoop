@@ -19,10 +19,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
-  <span class="titre">⚙️ Mon compte</span>
-</div>
 <div class="container" style="padding-top:18px;">
 
   <div class="carte zone-photo">
@@ -70,8 +66,9 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Mon compte');
 rendreNavImmediat('compte');
 import { avatarHtml, comprimerPhoto } from "./avatar.js";
 
