@@ -116,7 +116,8 @@ async function chargerClub() {
   const club = (donnees.clubs || []).find(c => String(c.id) === String(monClubId));
   monClubNom = club ? club.name : monClubNom;
   equipesDuClub = club ? (club.teams || []) : [];
-  document.querySelector('#titre-club').innerHTML = `${monClubNom || 'Mon club'}<small>Coachs, joueurs, parents</small>`;
+  // Le nom du club est affiché par l'en-tête partagé (rendreEntete).
+  rendreEntete(monClubNom || 'Mon club');
 }
 
 // Charge une seule fois coachs/joueurs/parents du club, réutilisé pour

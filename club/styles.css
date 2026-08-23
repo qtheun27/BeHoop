@@ -112,6 +112,11 @@ input[type="number"], select, textarea {
 }
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
 .grille-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+@media (max-width: 460px) {
+  /* Les sélecteurs date/heure iOS ont une largeur minimale importante :
+     sur écran étroit on les empile plutôt que de les forcer côte à côte. */
+  .grille-2 { grid-template-columns: 1fr; }
+}
 .grille-2 > * { min-width: 0; }
 input[type="date"], input[type="time"] { max-width: 100%; min-width: 0; }
 .carte { overflow-x: clip; }
@@ -306,3 +311,20 @@ h1, h2, h3 { letter-spacing: -0.3px; }
   padding: 11px 13px; margin-bottom: 8px; font-size: 13.5px;
 }
 .entrainement .lieu { color: var(--text-muted); font-size: 12px; }
+
+/* ---- Navigation sur ordinateur (la barre du bas est masquée) ---- */
+.nav-bureau { display: none; align-items: center; gap: 4px; margin-left: auto; }
+.nav-bureau a {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 13px; border-radius: 10px; text-decoration: none;
+  color: var(--text-muted); font-weight: 700; font-size: 13.5px;
+}
+.nav-bureau a:hover { background: var(--surface-2); color: var(--text); }
+.nav-bureau a.actif { background: var(--primary-tint); color: var(--primary); }
+.nav-bureau a svg { width: 18px; height: 18px; }
+
+@media (min-width: 681px) {
+  .nav-bureau { display: flex; }
+  /* Le lien "Site public" passe après la navigation */
+  .app-bar .lien-public { margin-left: 10px; }
+}

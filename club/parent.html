@@ -148,6 +148,8 @@ async function afficherEnfant(playerId) {
       <div id="entrainements-enfant-actif"><p class="vide">Chargement…</p></div>
       <h3 class="section">Statistiques</h3>
       <div id="stats-enfant-actif"><p class="vide">Chargement…</p></div>
+      <h3 class="section">Tactiques du coach</h3>
+      <div id="tactiques-enfant-actif"><p class="vide">Chargement…</p></div>
     </div>
   `;
   await afficherVueJoueur(db, playerId, {
@@ -156,7 +158,34 @@ async function afficherEnfant(playerId) {
     stats: document.getElementById('stats-enfant-actif'),
     titre: null,
   });
+  await afficherTactiquesEnfant(playerId);
   $vue.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Phases de jeu et exercices prepares par le coach, en lecture seule.
+async function afficherTactiquesEnfant(playerId) {
+  const $cible = document.getElementById('tactiques-enfant-actif');
+  if (!$cible) return;
+  try {
+    const p = await getDoc(doc(db, 'players', playerId));
+    const teamId = p.exists() ? p.data().team_id : null;
+    if (!teamId) { $cible.innerHTML = '<p class="vide">Aucune equipe assignee.</p>'; return; }
+
+    const snap = await getDocs(query(collection(db, 'plays'), where('team_id', '==', String(teamId))));
+    if (snap.empty) { $cible.innerHTML = '<p class="vide">Aucune tactique partagee par le coach.</p>'; return; }
+
+    $cible.innerHTML = snap.docs.map(d => `
+      <div class="rangee">
+        <div>
+          <div class="nom">${d.data().name || 'Sans titre'}</div>
+          <div class="sous-texte">${d.data().court_type === 'complet' ? 'Terrain complet' : 'Demi-terrain'}</div>
+        </div>
+        <div class="action"><a class="btn-ghost" href="./tactique.html">Ouvrir</a></div>
+      </div>
+    `).join('');
+  } catch (e) {
+    $cible.innerHTML = '<p class="vide">Tactiques indisponibles pour le moment.</p>';
+  }
 }
 
 // Enfants sans email, sans parent lié, dans le même club — candidats à lier.

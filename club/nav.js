@@ -49,6 +49,7 @@ const ONGLETS_PAR_ROLE = {
   parent: [
     { href: './dashboard.html', icone: 'accueil', label: 'Accueil' },
     { href: './parent.html', icone: 'famille', label: 'Enfants' },
+    { href: './tactique.html', icone: 'tactique', label: 'Tactique' },
     { href: './compte.html', icone: 'reglages', label: 'Compte' },
   ],
 };
@@ -82,6 +83,33 @@ export function rendreNav(role, pageActive, provisoire = false) {
   const existante = document.querySelector('.bottom-nav');
   if (existante) existante.remove();
   document.body.insertAdjacentHTML('beforeend', html);
+
+  rendreNavBureau(onglets, pageActive, cleDe);
+}
+
+// Sur ordinateur la barre du bas est masquée : on place les mêmes entrées
+// dans l'en-tête, sinon plus aucune navigation n'est possible.
+let dernierEtatNav = null;
+
+function rendreNavBureau(onglets, pageActive, cleDe) {
+  dernierEtatNav = { onglets, pageActive, cleDe };
+  const barre = document.querySelector('.app-bar');
+  if (!barre) return;
+  const ancienne = barre.querySelector('.nav-bureau');
+  if (ancienne) ancienne.remove();
+
+  const html = `
+    <nav class="nav-bureau">
+      ${onglets.map(o => `
+        <a href="${o.href}" class="${cleDe(o) === pageActive ? 'actif' : ''}">
+          ${svg(o.icone, 18)}<span>${o.label}</span>
+        </a>
+      `).join('')}
+    </nav>
+  `;
+  const lienPublic = barre.querySelector('.lien-public');
+  if (lienPublic) lienPublic.insertAdjacentHTML('beforebegin', html);
+  else barre.insertAdjacentHTML('beforeend', html);
 }
 
 // Affiche la barre immédiatement à partir du rôle mémorisé lors de la
@@ -117,5 +145,9 @@ export function rendreEntete(titrePage = '', prefixe = '.') {
     existant.outerHTML = html;
   } else {
     document.body.insertAdjacentHTML('afterbegin', html);
+  }
+  // L'en-tete vient d'etre reconstruit : on y replace la navigation bureau.
+  if (dernierEtatNav) {
+    rendreNavBureau(dernierEtatNav.onglets, dernierEtatNav.pageActive, dernierEtatNav.cleDe);
   }
 }

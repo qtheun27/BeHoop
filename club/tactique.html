@@ -133,6 +133,21 @@
         <span class="step-info" id="step-counter">Étape 1 / 1</span>
       </div>
 
+      <div class="coach-only" style="display:flex; gap:10px; align-items:center; border-top: 1px solid var(--border); padding-top: 8px; flex-wrap:wrap;">
+        <label style="font-size:12px; display:flex; align-items:center; gap:5px;">
+          Attaque
+          <select id="nb-offense" style="background:var(--surface-2); color:var(--text); border:1px solid var(--border); padding:5px; border-radius:6px; font-size:12px;">
+            <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option>
+          </select>
+        </label>
+        <label style="font-size:12px; display:flex; align-items:center; gap:5px;">
+          Défense
+          <select id="nb-defense" style="background:var(--surface-2); color:var(--text); border:1px solid var(--border); padding:5px; border-radius:6px; font-size:12px;">
+            <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option>
+          </select>
+        </label>
+      </div>
+
       <div class="coach-only" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid var(--border); padding-top: 8px;">
         <div style="display:flex; gap:6px;">
           <button class="btn btn-secondary btn-sm" onclick="addStep()">➕ Étape</button>
@@ -206,19 +221,31 @@ let activeToken = null;
 let offset = { x: 0, y: 0 };
 let showTrajectories = true;
 
-const initialData = [
-  { id: 'O1', type: 'offense', label: '1', x: 250, y: 380 },
-  { id: 'O2', type: 'offense', label: '2', x: 100, y: 300 },
-  { id: 'O3', type: 'offense', label: '3', x: 400, y: 300 },
-  { id: 'O4', type: 'offense', label: '4', x: 170, y: 160 },
-  { id: 'O5', type: 'offense', label: '5', x: 330, y: 160 },
-  { id: 'D1', type: 'defense', label: 'D1', x: 250, y: 330 },
-  { id: 'D2', type: 'defense', label: 'D2', x: 130, y: 270 },
-  { id: 'D3', type: 'defense', label: 'D3', x: 370, y: 270 },
-  { id: 'D4', type: 'defense', label: 'D4', x: 190, y: 170 },
-  { id: 'D5', type: 'defense', label: 'D5', x: 310, y: 170 },
-  { id: 'BALL', type: 'ball', label: '🏀', x: 250, y: 402 }
+// Placements de reference (jusqu'a 5 par camp) ; on prend les N premiers
+// selon le nombre de joueurs choisi par le coach.
+const PLACES_OFFENSE = [
+  { x: 250, y: 380 }, { x: 100, y: 300 }, { x: 400, y: 300 },
+  { x: 170, y: 160 }, { x: 330, y: 160 },
 ];
+const PLACES_DEFENSE = [
+  { x: 250, y: 330 }, { x: 130, y: 270 }, { x: 370, y: 270 },
+  { x: 190, y: 170 }, { x: 310, y: 170 },
+];
+
+function construireEffectif(nbOffense, nbDefense) {
+  const jetons = [];
+  for (let i = 0; i < nbOffense; i++) {
+    jetons.push({ id: 'O' + (i + 1), type: 'offense', label: String(i + 1), ...PLACES_OFFENSE[i] });
+  }
+  for (let i = 0; i < nbDefense; i++) {
+    jetons.push({ id: 'D' + (i + 1), type: 'defense', label: 'D' + (i + 1), ...PLACES_DEFENSE[i] });
+  }
+  jetons.push({ id: 'BALL', type: 'ball', label: '🏀', x: 250, y: 402 });
+  return jetons;
+}
+
+let nbOffense = 5, nbDefense = 5;
+const initialData = construireEffectif(nbOffense, nbDefense);
 
 let steps = [ { step: 1, tokens: JSON.parse(JSON.stringify(initialData)) } ];
 let currentStep = 0;
@@ -253,7 +280,29 @@ async function chargerEquipesCoach() {
     const donnees = await res.json();
     const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
     if (club && club.teams) {
-      const mesEqs = club.teams.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
+      // Quelles equipes proposer selon le role :
+      //  - coach : celles qui lui sont assignees
+      //  - joueur : la sienne
+      //  - parent : celles de ses enfants
+      //  - admin : toutes celles du club
+      let idsAutorises = null;   // null = toutes
+      if (monProfil.role === 'coach') {
+        idsAutorises = (monProfil.team_ids || []).map(String);
+      } else if (monProfil.role === 'player') {
+        const p = await getDoc(doc(db, 'players', auth.currentUser.uid));
+        idsAutorises = p.exists() && p.data().team_id ? [String(p.data().team_id)] : [];
+      } else if (monProfil.role === 'parent') {
+        const ids = [];
+        for (const pid of (monProfil.children_player_ids || [])) {
+          const p = await getDoc(doc(db, 'players', pid));
+          if (p.exists() && p.data().team_id) ids.push(String(p.data().team_id));
+        }
+        idsAutorises = [...new Set(ids)];
+      }
+
+      const mesEqs = idsAutorises === null
+        ? club.teams
+        : club.teams.filter(eq => idsAutorises.includes(String(eq.id)));
       mesEqs.forEach(eq => {
         const opt = document.createElement('option');
         opt.value = String(eq.id);
@@ -661,6 +710,26 @@ window.resetAll = () => {
     reinitialiserFormulaireCreation();
   }
 };
+
+// Changement d'effectif : on repart d'un plateau propre avec le nouveau
+// nombre de joueurs (les etapes en cours seraient incoherentes autrement).
+function appliquerEffectif() {
+  const o = parseInt(document.getElementById('nb-offense').value, 10);
+  const d = parseInt(document.getElementById('nb-defense').value, 10);
+  if (steps.length > 1 && !confirm("Changer le nombre de joueurs reinitialise les etapes en cours. Continuer ?")) {
+    document.getElementById('nb-offense').value = nbOffense;
+    document.getElementById('nb-defense').value = nbDefense;
+    return;
+  }
+  nbOffense = o; nbDefense = d;
+  steps = [ { step: 1, tokens: construireEffectif(nbOffense, nbDefense) } ];
+  currentStep = 0;
+  activeToken = null;
+  drawCourt();
+  updateUI();
+}
+document.getElementById('nb-offense').addEventListener('change', appliquerEffectif);
+document.getElementById('nb-defense').addEventListener('change', appliquerEffectif);
 
 drawCourt();
 updateUI();
