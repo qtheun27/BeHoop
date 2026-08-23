@@ -13,23 +13,17 @@
 <title>Mon équipe — Espace Club</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
-  .grille-3 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .entrainement { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 11px 13px; margin-bottom: 6px; font-size: 13.5px; display: flex; justify-content: space-between; align-items: center; }
-  .entrainement .infos { cursor: pointer; }
-  .entrainement .lieu { color: var(--text-muted); font-size: 12px; }
   .joueur-stat { border-bottom: 1px solid var(--border-soft); padding: 14px 0; }
   .joueur-stat:first-child { padding-top: 4px; }
   .joueur-stat:last-child { border-bottom: none; }
   .joueur-nom { font-weight: 700; font-size: 13.5px; }
   .joueur-entete { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .joueur-sous { font-size: 11.5px; color: var(--text-muted); }
   .ligne-position { display: flex; gap: 8px; align-items: center; margin-top: 8px; margin-bottom: 4px; }
-  .ligne-position select { flex: 1; }
   .badge-position { display: inline-block; background: var(--surface-2); color: var(--text-muted); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 20px; margin-left: 6px; }
   table.historique, table.resume { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
   table.historique th, table.historique td, table.resume th, table.resume td { padding: 6px 4px; text-align: center; border-bottom: 1px solid var(--border-soft); }
-  table.historique td:first-child, table.historique th:first-child,
-  table.resume td:first-child, table.resume th:first-child { text-align: left; }
+  table.historique td:first-child, table.historique th:first-child, table.resume td:first-child, table.resume th:first-child { text-align: left; }
 </style>
 </head>
 <body>
@@ -41,24 +35,24 @@
     <div class="carte-titre" id="titre-form-entrainement">Ajouter au calendrier</div>
 
     <label class="champ-label">Type</label>
-    <div class="segmente" id="segmente-type">
+    <div class="segmente" id="segmente-type" style="margin-bottom:10px;">
       <button type="button" class="actif" data-type="entrainement">Entraînement</button>
       <button type="button" data-type="match">Match</button>
       <button type="button" data-type="tournoi">Tournoi</button>
       <button type="button" data-type="evenement">Événement</button>
     </div>
 
+    <!-- Correctif Anti-débordement Date & Heure -->
     <div class="grille-2">
       <div><label class="champ-label">Date</label><input type="date" id="ent-date"></div>
       <div><label class="champ-label">Heure</label><input type="time" id="ent-heure" value="18:00"></div>
     </div>
 
-    <label class="champ-label">Lieu</label>
-    <input type="text" id="ent-lieu" list="liste-salles" placeholder="Commence à taper le nom d'une salle...">
+    <label class="champ-label" style="margin-top:8px;">Lieu</label>
+    <input type="text" id="ent-lieu" list="liste-salles" placeholder="Nom de la salle ou adresse...">
     <datalist id="liste-salles"></datalist>
-    <p class="vide" style="font-size:11.5px;margin-top:4px;">Les salles connues du club sont proposées automatiquement.</p>
 
-    <label style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13.5px;">
+    <label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13.5px;">
       <input type="checkbox" id="ent-recurrent" style="width:17px;height:17px;">
       Répéter chaque semaine
     </label>
@@ -67,19 +61,19 @@
       <input type="date" id="ent-fin-recurrence">
     </div>
 
-    <label class="champ-label">Notes (optionnel)</label>
+    <label class="champ-label" style="margin-top:8px;">Notes (optionnel)</label>
     <textarea id="ent-notes" rows="2"></textarea>
 
     <div style="display:flex;align-items:center;gap:14px;margin-top:14px;">
       <button class="btn btn-primary" id="btn-save-ent">Ajouter</button>
-      <button class="btn-ghost" id="btn-annuler-edit" style="display:none;">Annuler la modification</button>
+      <button class="btn-ghost" id="btn-annuler-edit" style="display:none;">Annuler</button>
     </div>
     <div class="msg" id="msg-ent"></div>
   </div>
 
   <div class="carte">
     <div class="carte-titre">Calendrier de l'équipe</div>
-    <div class="filtres" id="filtres-agenda">
+    <div class="puces" id="filtres-agenda" style="margin-bottom:10px;">
       <button class="filtre-chip active" data-filtre="avenir">À venir</button>
       <button class="filtre-chip" data-filtre="passes">Passés</button>
       <button class="filtre-chip" data-filtre="tous">Tous</button>
@@ -107,10 +101,10 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 
 rendreEntete('Mon équipe');
 rendreNavImmediat('espace');
-import { avatarHtml, nomAffichage } from "./avatar.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -121,51 +115,8 @@ let mesEquipes = [];
 let joueursEquipe = [];
 let equipeActive = null;
 let entrainementEnEdition = null;
-
-onAuthStateChanged(auth, async (user) => {
-  if (!user) { window.location.href = './index.html'; return; }
-  const snap = await getDoc(doc(db, 'users', user.uid));
-  if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
-  rendreNav('coach', 'espace');
-
-  monProfil = snap.data();
-
-  const res = await fetch('../data.json?t=' + Date.now());
-  const donnees = await res.json();
-  remplirSallesConnues(donnees);
-  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
-  const toutesEquipes = club ? (club.teams || []) : [];
-  mesEquipes = toutesEquipes.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
-
-  if (mesEquipes.length === 0) {
-    document.getElementById('tabs-equipes').innerHTML = '<p class="vide">Aucune équipe ne t\'a encore été assignée.</p>';
-    return;
-  }
-
-  document.getElementById('tabs-equipes').innerHTML = mesEquipes.map((eq, i) => `
-    <button class="puce ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.category || eq.name}</button>
-  `).join('');
-  document.querySelectorAll('.puce').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.puce').forEach(b => b.classList.remove('actif'));
-      btn.classList.add('actif');
-      selectionnerEquipe(btn.dataset.id);
-    });
-  });
-  selectionnerEquipe(mesEquipes[0].id);
-});
-
-async function selectionnerEquipe(teamId) {
-  equipeActive = String(teamId);
-  annulerEdition();
-  await chargerEntrainements();
-  await chargerJoueurs();
-  await chargerResumeEquipe();
-}
-
-function formatDate(d) {
-  return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
-}
+let typeAgendaActif = 'entrainement';
+let filtreAgenda = 'avenir';
 
 const TYPES_AGENDA = {
   entrainement: { label: 'Entraînement', emoji: '🏋️', couleur: 'var(--primary)' },
@@ -174,54 +125,15 @@ const TYPES_AGENDA = {
   evenement:    { label: 'Événement',    emoji: '📅', couleur: 'var(--text-muted)' },
 };
 
-let typeAgendaActif = 'entrainement';
-let filtreAgenda = 'avenir';
-
-document.querySelectorAll('#segmente-type button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#segmente-type button').forEach(b => b.classList.remove('actif'));
-    btn.classList.add('actif');
-    typeAgendaActif = btn.dataset.type;
-  });
-});
-
-document.getElementById('ent-recurrent').addEventListener('change', (e) => {
-  document.getElementById('zone-recurrence').style.display = e.target.checked ? 'block' : 'none';
-});
-
-document.querySelectorAll('#filtres-agenda .filtre-chip').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('#filtres-agenda .filtre-chip').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filtreAgenda = btn.dataset.filtre;
-    chargerEntrainements();
-  });
-});
-
-// Propose les salles déjà connues (celles des clubs de la province) pour
-// éviter la saisie manuelle et garder des adresses cohérentes.
-function remplirSallesConnues(donnees) {
-  const salles = new Map();
-  (donnees.clubs || []).forEach(cl => {
-    const v = cl.venue;
-    if (v && v.name) {
-      const complet = [v.name, v.street, v.zip, v.city].filter(Boolean).join(', ');
-      salles.set(v.name, complet);
-    }
-  });
-  (donnees.games || []).forEach(g => {
-    if (g.venue_name && !salles.has(g.venue_name)) {
-      salles.set(g.venue_name, [g.venue_name, g.venue_street, g.venue_zip, g.venue_city].filter(Boolean).join(', '));
-    }
-  });
-  document.getElementById('liste-salles').innerHTML =
-    [...salles.values()].sort().slice(0, 400).map(a => `<option value="${a.replace(/"/g, '&quot;')}">`).join('');
+function formatDate(d) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
 }
 
 function liensItineraire(lieu, id) {
+  if (!lieu) return '';
   const q = encodeURIComponent(lieu);
   return `
-    <div class="game-venue" style="position:relative;">
+    <div class="game-venue" style="position:relative;margin-top:4px;">
       <button class="venue-btn" onclick="window.__menuLieu('${id}')">📍 ${lieu}</button>
       <div class="venue-menu" id="venue-menu-${id}">
         <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
@@ -244,9 +156,70 @@ document.addEventListener('click', e => {
   }
 });
 
+onAuthStateChanged(auth, async (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists() || snap.data().role !== 'coach') { window.location.href = './dashboard.html'; return; }
+  rendreNav('coach', 'espace');
+
+  monProfil = snap.data();
+
+  const res = await fetch('../data.json?t=' + Date.now());
+  const donnees = await res.json();
+  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
+  const toutesEquipes = club ? (club.teams || []) : [];
+  mesEquipes = toutesEquipes.filter(eq => (monProfil.team_ids || []).includes(String(eq.id)) || (monProfil.team_ids || []).includes(eq.id));
+
+  if (mesEquipes.length === 0) {
+    document.getElementById('tabs-equipes').innerHTML = '<p class="vide">Aucune équipe ne t\'a encore été assignée.</p>';
+    return;
+  }
+
+  document.getElementById('tabs-equipes').innerHTML = mesEquipes.map((eq, i) => `
+    <button class="puce ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.category || eq.name}</button>
+  `).join('');
+  document.querySelectorAll('#tabs-equipes .puce').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#tabs-equipes .puce').forEach(b => b.classList.remove('actif'));
+      btn.classList.add('actif');
+      selectionnerEquipe(btn.dataset.id);
+    });
+  });
+  selectionnerEquipe(mesEquipes[0].id);
+});
+
+async function selectionnerEquipe(teamId) {
+  equipeActive = String(teamId);
+  annulerEdition();
+  await chargerEntrainements();
+  await chargerJoueurs();
+  await chargerResumeEquipe();
+}
+
+document.querySelectorAll('#segmente-type button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#segmente-type button').forEach(b => b.classList.remove('actif'));
+    btn.classList.add('actif');
+    typeAgendaActif = btn.dataset.type;
+  });
+});
+
+document.getElementById('ent-recurrent').addEventListener('change', (e) => {
+  document.getElementById('zone-recurrence').style.display = e.target.checked ? 'block' : 'none';
+});
+
+document.querySelectorAll('#filtres-agenda .filtre-chip').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#filtres-agenda .filtre-chip').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filtreAgenda = btn.dataset.filtre;
+    chargerEntrainements();
+  });
+});
+
 async function chargerEntrainements() {
   const $liste = document.getElementById('liste-entrainements');
-  if (!equipeActive) { $liste.innerHTML = '<p class="vide">Sélectionne une équipe ci-dessus.</p>'; return; }
+  if (!equipeActive) return;
   $liste.innerHTML = 'Chargement…';
   const q = query(collection(db, 'trainings'), where('team_id', '==', equipeActive));
   const snap = await getDocs(q);
@@ -269,14 +242,14 @@ async function chargerEntrainements() {
     return `
       <div class="entrainement" style="border-left:3px solid ${type.couleur};">
         <div style="flex:1;min-width:0;">
-          <div style="font-size:11.5px;font-weight:700;color:${type.couleur};">${type.emoji} ${type.label}${t.serie_id ? ' · série' : ''}</div>
+          <div style="font-size:11.5px;font-weight:700;color:${type.couleur};">${type.emoji} ${type.label}</div>
           <div style="font-weight:700;">${formatDate(t.date)} · ${t.start_time || ''}</div>
           ${t.location ? liensItineraire(t.location, t.id) : ''}
-          ${t.notes ? `<div class="lieu" style="margin-top:3px;">${t.notes}</div>` : ''}
+          ${t.notes ? `<div style="font-size:12px;color:var(--text-muted);margin-top:2px;">${t.notes}</div>` : ''}
         </div>
         <div style="display:flex;flex-direction:column;gap:2px;flex-shrink:0;">
           <button class="btn-ghost" onclick="window.__editerEnt('${t.id}')">Modifier</button>
-          <button class="btn-ghost" onclick="window.__supprimerEnt('${t.id}', ${t.serie_id ? `'${t.serie_id}'` : 'null'})">Supprimer</button>
+          <button class="btn-ghost" onclick="window.__supprimerEnt('${t.id}')">Supprimer</button>
         </div>
       </div>
     `;
@@ -286,36 +259,19 @@ async function chargerEntrainements() {
     const t = items.find(x => x.id === id);
     entrainementEnEdition = id;
     typeAgendaActif = t.type || 'entrainement';
-    document.querySelectorAll('#segmente-type button').forEach(b =>
-      b.classList.toggle('actif', b.dataset.type === typeAgendaActif));
+    document.querySelectorAll('#segmente-type button').forEach(b => b.classList.toggle('actif', b.dataset.type === typeAgendaActif));
     document.getElementById('ent-date').value = t.date || '';
     document.getElementById('ent-heure').value = t.start_time || '';
     document.getElementById('ent-lieu').value = t.location || '';
     document.getElementById('ent-notes').value = t.notes || '';
-    // On ne remodifie pas la récurrence d'un événement déjà créé : on modifie
-    // uniquement l'occurrence choisie (plus prévisible pour l'utilisateur).
-    document.getElementById('ent-recurrent').checked = false;
-    document.getElementById('zone-recurrence').style.display = 'none';
     document.getElementById('titre-form-entrainement').textContent = 'Modifier';
     document.getElementById('btn-save-ent').textContent = 'Enregistrer';
     document.getElementById('btn-annuler-edit').style.display = 'inline';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  window.__supprimerEnt = async (id, serieId) => {
-    if (serieId) {
-      const tout = confirm(
-        "Cet élément fait partie d'une série hebdomadaire.\n\n" +
-        "OK = supprimer TOUTE la série\nAnnuler = supprimer uniquement cette date"
-      );
-      if (tout) {
-        const qs = query(collection(db, 'trainings'), where('team_id', '==', equipeActive), where('serie_id', '==', serieId));
-        const s = await getDocs(qs);
-        await Promise.all(s.docs.map(d => deleteDoc(doc(db, 'trainings', d.id))));
-        await chargerEntrainements();
-        return;
-      }
-    } else if (!confirm('Supprimer cet élément du calendrier ?')) return;
+  window.__supprimerEnt = async (id) => {
+    if (!confirm('Supprimer cet élément ?')) return;
     await deleteDoc(doc(db, 'trainings', id));
     await chargerEntrainements();
   };
@@ -324,14 +280,12 @@ async function chargerEntrainements() {
 function annulerEdition() {
   entrainementEnEdition = null;
   typeAgendaActif = 'entrainement';
-  document.querySelectorAll('#segmente-type button').forEach(b =>
-    b.classList.toggle('actif', b.dataset.type === 'entrainement'));
+  document.querySelectorAll('#segmente-type button').forEach(b => b.classList.toggle('actif', b.dataset.type === 'entrainement'));
   document.getElementById('ent-date').value = '';
   document.getElementById('ent-heure').value = '18:00';
   document.getElementById('ent-lieu').value = '';
   document.getElementById('ent-notes').value = '';
   document.getElementById('ent-recurrent').checked = false;
-  document.getElementById('ent-fin-recurrence').value = '';
   document.getElementById('zone-recurrence').style.display = 'none';
   document.getElementById('titre-form-entrainement').textContent = 'Ajouter au calendrier';
   document.getElementById('btn-save-ent').textContent = 'Ajouter';
@@ -349,46 +303,26 @@ document.getElementById('btn-save-ent').addEventListener('click', async () => {
   const finRecurrence = document.getElementById('ent-fin-recurrence').value;
 
   if (!date || !equipeActive) {
-    $msg.className = 'msg err'; $msg.textContent = 'Choisis au moins une date.'; return;
-  }
-  if (recurrent && !finRecurrence) {
-    $msg.className = 'msg err'; $msg.textContent = 'Indique jusqu\'à quelle date répéter.'; return;
-  }
-  if (recurrent && finRecurrence < date) {
-    $msg.className = 'msg err'; $msg.textContent = 'La date de fin doit être après la première date.'; return;
+    $msg.className = 'msg err'; $msg.textContent = 'Choisissez au moins une date.'; return;
   }
 
   try {
-    const base = {
-      team_id: equipeActive, type: typeAgendaActif,
-      start_time: heure, location: lieu, notes, updated_at: serverTimestamp(),
-    };
+    const base = { team_id: equipeActive, type: typeAgendaActif, start_time: heure, location: lieu, notes, updated_at: serverTimestamp() };
 
     if (entrainementEnEdition) {
       await setDoc(doc(db, 'trainings', entrainementEnEdition), { ...base, date }, { merge: true });
-      $msg.className = 'msg ok'; $msg.textContent = '✅ Modifié.';
-    } else if (recurrent) {
-      // Une série partage un serie_id : ça permet de tout supprimer d'un coup.
-      const serieId = 's' + Date.now().toString(36);
-      const dates = [];
+    } else if (recurrent && finRecurrence) {
       let d = new Date(date + 'T12:00:00');
       const fin = new Date(finRecurrence + 'T12:00:00');
-      while (d <= fin && dates.length < 60) {
-        dates.push(d.toISOString().slice(0, 10));
+      while (d <= fin) {
+        await addDoc(collection(db, 'trainings'), { ...base, date: d.toISOString().slice(0, 10), created_by: auth.currentUser.uid, created_at: serverTimestamp() });
         d.setDate(d.getDate() + 7);
       }
-      await Promise.all(dates.map(dt => addDoc(collection(db, 'trainings'), {
-        ...base, date: dt, serie_id: serieId,
-        created_by: auth.currentUser.uid, created_at: serverTimestamp(),
-      })));
-      $msg.className = 'msg ok'; $msg.textContent = `✅ ${dates.length} dates créées.`;
     } else {
-      await addDoc(collection(db, 'trainings'), {
-        ...base, date, created_by: auth.currentUser.uid, created_at: serverTimestamp(),
-      });
-      $msg.className = 'msg ok'; $msg.textContent = '✅ Ajouté.';
+      await addDoc(collection(db, 'trainings'), { ...base, date, created_by: auth.currentUser.uid, created_at: serverTimestamp() });
     }
 
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Enregistré.';
     annulerEdition();
     await chargerEntrainements();
   } catch (e) {
@@ -396,29 +330,22 @@ document.getElementById('btn-save-ent').addEventListener('click', async () => {
   }
 });
 
-const POSITIONS = {
-  meneur: 'Meneur (1)', arriere: 'Arrière (2)', ailier: 'Ailier (3)',
-  ailier_fort: 'Ailier fort (4)', pivot: 'Pivot (5)',
-};
+const POSITIONS = { meneur: 'Meneur (1)', arriere: 'Arrière (2)', ailier: 'Ailier (3)', ailier_fort: 'Ailier fort (4)', pivot: 'Pivot (5)' };
 
 async function chargerJoueurs() {
   const $liste = document.getElementById('liste-joueurs');
   $liste.innerHTML = 'Chargement…';
   const q = query(collection(db, 'players'), where('team_id', '==', equipeActive));
   const snap = await getDocs(q);
-  if (snap.empty) {
-    $liste.innerHTML = '<p class="vide">Aucun joueur inscrit dans cette équipe.</p>';
-    joueursEquipe = [];
-    return;
-  }
-  const joueurs = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-  joueursEquipe = joueurs;
-  $liste.innerHTML = joueurs.map(j => `
+  if (snap.empty) { $liste.innerHTML = '<p class="vide">Aucun joueur dans cette équipe.</p>'; joueursEquipe = []; return; }
+  joueursEquipe = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+
+  $liste.innerHTML = joueursEquipe.map(j => `
     <div class="joueur-stat">
       <div class="joueur-entete">
         ${avatarHtml(j.photo_url, nomAffichage(j), 36)}
         <div>
-          <div class="joueur-nom">${nomAffichage(j)}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}${!j.account_uid ? ' <span class="badge-position">géré par parent</span>' : ''}</div>
+          <div class="joueur-nom">${nomAffichage(j)}${j.position ? `<span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</div>
         </div>
       </div>
       <div class="ligne-position">
@@ -428,65 +355,42 @@ async function chargerJoueurs() {
         </select>
         <button class="btn-ghost" onclick="window.__enregistrerPosition('${j.id}')">Enregistrer</button>
       </div>
-      <div class="grille-3" style="margin-top:8px;">
+      <div class="grille-2" style="margin-top:8px;">
         <input type="date" id="stat-date-${j.id}">
-        <select id="stat-type-${j.id}">
-          <option value="match">Match</option>
-          <option value="entrainement">Entraînement</option>
-        </select>
+        <select id="stat-type-${j.id}"><option value="match">Match</option><option value="entrainement">Entraînement</option></select>
       </div>
-      <div class="grille-3" style="margin-top:6px;">
+      <div class="grille-2" style="margin-top:6px;">
         <input type="number" id="stat-points-${j.id}" placeholder="Points" min="0">
         <input type="number" id="stat-rebonds-${j.id}" placeholder="Rebonds" min="0">
       </div>
-      <div class="grille-3" style="margin-top:6px;">
+      <div class="grille-2" style="margin-top:6px;">
         <input type="number" id="stat-passes-${j.id}" placeholder="Passes" min="0">
         <input type="number" id="stat-minutes-${j.id}" placeholder="Minutes" min="0">
       </div>
-      <button class="btn btn-primary btn-sm" style="margin-top:10px;" onclick="window.__ajouterStat('${j.id}')">Ajouter la statistique</button>
+      <button class="btn btn-primary btn-block" style="margin-top:10px;" onclick="window.__ajouterStat('${j.id}')">Ajouter la statistique</button>
       <div class="msg" id="msg-stat-${j.id}"></div>
-      <div id="historique-${j.id}"></div>
     </div>
   `).join('');
 
   window.__ajouterStat = async (playerId) => {
-    const $msg = document.getElementById('msg-stat-' + playerId);
     const date = document.getElementById('stat-date-' + playerId).value;
-    if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une date.'; return; }
-    try {
-      await addDoc(collection(db, 'player_stats'), {
-        player_id: playerId,
-        team_id: equipeActive,
-        date,
-        type: document.getElementById('stat-type-' + playerId).value,
-        points: Number(document.getElementById('stat-points-' + playerId).value || 0),
-        rebonds: Number(document.getElementById('stat-rebonds-' + playerId).value || 0),
-        passes: Number(document.getElementById('stat-passes-' + playerId).value || 0),
-        minutes: Number(document.getElementById('stat-minutes-' + playerId).value || 0),
-        created_by: auth.currentUser.uid,
-        created_at: serverTimestamp(),
-      });
-      $msg.className = 'msg ok'; $msg.textContent = '✅ Ajoutée.';
-    } catch (e) {
-      $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-      return;
-    }
-    try {
-      await chargerHistoriqueStat(playerId);
-      await chargerResumeEquipe();
-    } catch (e) { /* l'ajout a réussi, tant pis pour le rafraîchissement visuel */ }
+    if (!date) return;
+    await addDoc(collection(db, 'player_stats'), {
+      player_id: playerId, team_id: equipeActive, date,
+      type: document.getElementById('stat-type-' + playerId).value,
+      points: Number(document.getElementById('stat-points-' + playerId).value || 0),
+      rebonds: Number(document.getElementById('stat-rebonds-' + playerId).value || 0),
+      passes: Number(document.getElementById('stat-passes-' + playerId).value || 0),
+      minutes: Number(document.getElementById('stat-minutes-' + playerId).value || 0),
+      created_by: auth.currentUser.uid, created_at: serverTimestamp(),
+    });
+    await chargerResumeEquipe();
   };
-
-  joueurs.forEach(j => chargerHistoriqueStat(j.id));
 
   window.__enregistrerPosition = async (playerId) => {
     const position = document.getElementById('position-' + playerId).value;
-    try {
-      await setDoc(doc(db, 'players', playerId), { position }, { merge: true });
-      await chargerJoueurs();
-    } catch (e) {
-      alert("Impossible d'enregistrer la position : " + e.message);
-    }
+    await setDoc(doc(db, 'players', playerId), { position }, { merge: true });
+    await chargerJoueurs();
   };
 }
 
@@ -504,47 +408,17 @@ async function chargerResumeEquipe() {
     c.matchs++; c.points += s.points || 0; c.rebonds += s.rebonds || 0; c.passes += s.passes || 0;
   });
 
-  const lignes = joueursEquipe.map(j => {
-    const c = parJoueur[j.id] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
-    const moy = (v) => c.matchs ? (v / c.matchs).toFixed(1) : '—';
-    return `
-      <tr>
-        <td style="display:flex;align-items:center;gap:8px;text-align:left;">${avatarHtml(j.photo_url, nomAffichage(j), 24)}${nomAffichage(j)}${j.position ? ` <span class="badge-position">${POSITIONS[j.position] || j.position}</span>` : ''}</td>
-        <td>${c.matchs}</td>
-        <td>${moy(c.points)}</td>
-        <td>${moy(c.rebonds)}</td>
-        <td>${moy(c.passes)}</td>
-      </tr>
-    `;
-  }).join('');
-
   $cible.innerHTML = `
     <table class="resume">
-      <thead><tr><th>Joueur</th><th>Matchs</th><th>Pts/m</th><th>Reb/m</th><th>Pas/m</th></tr></thead>
-      <tbody>${lignes}</tbody>
-    </table>
-  `;
-}
-
-async function chargerHistoriqueStat(playerId) {
-  const q = query(
-    collection(db, 'player_stats'),
-    where('player_id', '==', playerId),
-    where('team_id', '==', equipeActive)
-  );
-  const snap = await getDocs(q);
-  const $cible = document.getElementById('historique-' + playerId);
-  if (!$cible) return;
-  if (snap.empty) { $cible.innerHTML = ''; return; }
-  const lignes = snap.docs.map(d => d.data()).sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 5);
-  $cible.innerHTML = `
-    <table class="historique">
-      <thead><tr><th>Date</th><th>Pts</th><th>Reb</th><th>Pas</th><th>Min</th></tr></thead>
-      <tbody>${lignes.map(l => `<tr><td>${l.date}</td><td>${l.points ?? 0}</td><td>${l.rebonds ?? 0}</td><td>${l.passes ?? 0}</td><td>${l.minutes ?? 0}</td></tr>`).join('')}</tbody>
+      <thead><tr><th>Joueur</th><th>M</th><th>Pts/m</th><th>Reb/m</th><th>Pas/m</th></tr></thead>
+      <tbody>${joueursEquipe.map(j => {
+        const c = parJoueur[j.id] || { matchs: 0, points: 0, rebonds: 0, passes: 0 };
+        const moy = (v) => c.matchs ? (v / c.matchs).toFixed(1) : '—';
+        return `<tr><td>${nomAffichage(j)}</td><td>${c.matchs}</td><td>${moy(c.points)}</td><td>${moy(c.rebonds)}</td><td>${moy(c.passes)}</td></tr>`;
+      }).join('')}</tbody>
     </table>
   `;
 }
 </script>
-
 </body>
 </html>
