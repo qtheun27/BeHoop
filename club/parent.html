@@ -27,10 +27,6 @@
 </style>
 </head>
 <body>
-<div class="app-bar">
-  <a class="retour cache-si-nav-basse" href="./dashboard.html">←</a>
-  <span class="titre">👨‍👩‍👧 Mes enfants</span>
-</div>
 <div class="container" style="padding-top:16px;">
   <div id="liste-enfants"><div class="carte"><p class="vide">Chargement…</p></div></div>
   <div id="vue-enfant"></div>
@@ -65,8 +61,9 @@ import {
   getFirestore, doc, getDoc, addDoc, updateDoc, collection, getDocs, query, where, arrayUnion, serverTimestamp,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { rendreNav, rendreNavImmediat } from "./nav.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
+rendreEntete('Mes enfants');
 rendreNavImmediat('espace');
 import { avatarHtml, nomAffichage } from "./avatar.js";
 import { afficherVueJoueur } from "./joueur-vue.js";
