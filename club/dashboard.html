@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <title>Tableau de bord — Espace Club</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
@@ -101,6 +108,10 @@ onAuthStateChanged(auth, async (user) => {
   `;
   $liens.innerHTML = html;
   $liens.style.display = 'block';
+
+  document.getElementById('nav-espace').innerHTML = ROUTE_ROLE[profil.role]
+    ? `<a href="${ROUTE_ROLE[profil.role]}"><span class="icone-nav">${ICONE_LIEN[profil.role]}</span>Mon espace</a>`
+    : '';
 });
 
 document.getElementById('btn-deconnexion').addEventListener('click', async () => {
@@ -108,5 +119,13 @@ document.getElementById('btn-deconnexion').addEventListener('click', async () =>
   window.location.href = './index.html';
 });
 </script>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="./dashboard.html" class="actif"><span class="icone-nav">🏠</span>Accueil</a>
+    <span id="nav-espace" style="display:contents;"></span>
+    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
+  </div>
+</nav>
 </body>
 </html>

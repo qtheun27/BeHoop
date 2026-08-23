@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <title>Mon équipe — Espace Club</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
@@ -358,5 +365,14 @@ async function chargerHistoriqueStat(playerId) {
   `;
 }
 </script>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
+    <a href="./coach.html" class="actif"><span class="icone-nav">🏀</span>Équipe</a>
+    <a href="./tactique.html"><span class="icone-nav">📋</span>Tactique</a>
+    <a href="./compte.html"><span class="icone-nav">⚙️</span>Compte</a>
+  </div>
+</nav>
 </body>
 </html>

@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
 <title>Mon compte — Espace Club</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
@@ -91,6 +98,12 @@ onAuthStateChanged(auth, async (user) => {
     document.getElementById('titre-mdp').textContent = 'Créer un mot de passe';
     document.getElementById('desc-mdp').textContent = "Tu t'es connecté(e) via un lien reçu par email. Définis un mot de passe si tu préfères te connecter directement.";
   }
+
+  const ROUTE_ROLE = { super_admin: './admin.html', club_admin: './mon-club.html', coach: './coach.html', player: './joueur.html', parent: './parent.html' };
+  const ICONE_ROLE = { super_admin: '🛠️', club_admin: '🏀', coach: '🏀', player: '🏀', parent: '👨‍👩‍👧' };
+  document.getElementById('nav-espace').innerHTML = ROUTE_ROLE[profil.role]
+    ? `<a href="${ROUTE_ROLE[profil.role]}"><span class="icone-nav">${ICONE_ROLE[profil.role]}</span>Mon espace</a>`
+    : '';
 });
 
 document.getElementById('btn-choisir-photo').addEventListener('click', () => document.getElementById('fichier-photo').click());
@@ -150,5 +163,13 @@ document.getElementById('btn-mdp').addEventListener('click', async () => {
   }
 });
 </script>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="./dashboard.html"><span class="icone-nav">🏠</span>Accueil</a>
+    <span id="nav-espace" style="display:contents;"></span>
+    <a href="./compte.html" class="actif"><span class="icone-nav">⚙️</span>Compte</a>
+  </div>
+</nav>
 </body>
 </html>
