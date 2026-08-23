@@ -3,53 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0b5cab">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="BeHoop">
-<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
-<link rel="manifest" href="../manifest.json">
-<title>Mes enfants — Espace Club</title>
+<title>Mes enfants — BeHoop</title>
 <link rel="stylesheet" href="./styles.css">
-<style>
-  .entete-enfant { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; cursor: pointer; }
-  .entete-joueur { display: flex; align-items: center; gap: 12px; }
-  h3.section { font-size: 12px; margin: 16px 0 6px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
-  .entrainement { border-bottom: 1px solid var(--border-soft); padding: 9px 0; font-size: 13.5px; }
-  .entrainement:last-child { border-bottom: none; }
-  .lieu { color: var(--text-muted); font-size: 12px; }
-  table.historique { width: 100%; border-collapse: collapse; font-size: 13px; }
-  table.historique th, table.historique td { padding: 7px 4px; text-align: center; border-bottom: 1px solid var(--border-soft); }
-  table.historique td:first-child, table.historique th:first-child { text-align: left; }
-  .carte-enfant { cursor: pointer; }
-  .chevron-enfant { margin-left: auto; color: var(--text-muted); }
-</style>
 </head>
 <body>
 <div class="container" style="padding-top:16px;">
-  <div id="liste-enfants"><div class="carte"><p class="vide">Chargement…</p></div></div>
-  <div id="vue-enfant"></div>
-
   <div class="carte">
-    <div class="carte-titre">Lier un enfant déjà inscrit</div>
-    <div class="carte-desc">Si l'admin de ton club a déjà créé la fiche de ton enfant (sans email), choisis-la ici plutôt que d'en créer une nouvelle.</div>
-    <select id="enfant-existant"><option value="">Chargement…</option></select>
-    <button class="btn btn-secondary" style="margin-top:12px;" id="btn-lier-enfant">Lier cet enfant à mon compte</button>
-    <div class="msg" id="msg-lien"></div>
-  </div>
-
-  <div class="carte">
-    <div class="carte-titre">Ajouter un enfant</div>
-    <div class="carte-desc">Ton enfant n'a pas besoin de sa propre adresse email — tu gères son compte depuis le tien.</div>
-    <div class="grille-2">
-      <input type="text" id="enfant-prenom" placeholder="Prénom">
-      <input type="text" id="enfant-nom" placeholder="Nom">
-    </div>
-    <label class="champ-label">Équipe (optionnel, modifiable plus tard par l'admin)</label>
-    <select id="enfant-equipe"><option value="">— Choisir plus tard —</option></select>
-    <button class="btn btn-primary" style="margin-top:14px;" id="btn-ajouter-enfant">Ajouter</button>
-    <div class="msg" id="msg-ajout"></div>
+    <div class="carte-titre">👨‍👩‍👧 Mes enfants</div>
+    <div class="carte-desc">Consultez l'équipe et le suivi de vos enfants rattachés par l'administration du club.</div>
+    <div id="liste-enfants"><p class="vide">Chargement…</p></div>
   </div>
 </div>
 <footer class="pied">BeHoop — Espace Club</footer>
@@ -57,198 +19,55 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-import {
-  getFirestore, doc, getDoc, addDoc, updateDoc, collection, getDocs, query, where, arrayUnion, serverTimestamp,
-} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { avatarHtml, nomAffichage } from "./avatar.js";
 import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
 rendreEntete('Mes enfants');
 rendreNavImmediat('espace');
-import { avatarHtml, nomAffichage } from "./avatar.js";
-import { afficherVueJoueur } from "./joueur-vue.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-let monProfil = null;
-let equipesDuClub = [];
-
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
   const snap = await getDoc(doc(db, 'users', user.uid));
   if (!snap.exists() || snap.data().role !== 'parent') { window.location.href = './dashboard.html'; return; }
+  
   rendreNav('parent', 'espace');
-
-  monProfil = snap.data();
-
-  if (monProfil.club_id) {
-    const res = await fetch('../data.json?t=' + Date.now());
-    const donnees = await res.json();
-    const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
-    equipesDuClub = club ? (club.teams || []) : [];
-    document.getElementById('enfant-equipe').innerHTML = '<option value="">— Choisir plus tard —</option>' +
-      equipesDuClub.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
-  }
-
-  await chargerEnfants();
-  await chargerEnfantsDisponibles();
+  await chargerEnfants(snap.data());
 });
 
-async function chargerEnfants() {
+async function chargerEnfants(profilParent) {
   const $liste = document.getElementById('liste-enfants');
-  const ids = monProfil.children_player_ids || [];
+  const ids = profilParent.children_player_ids || [];
+
   if (ids.length === 0) {
-    $liste.innerHTML = '<div class="carte"><p class="vide">Aucun enfant ajouté pour le moment — utilise le formulaire ci-dessous.</p></div>';
+    $liste.innerHTML = '<p class="vide">Aucun enfant n\'est actuellement associé à votre compte. Contactez l\'administrateur de votre club pour faire le rapprochement.</p>';
     return;
   }
 
-  const enfants = [];
-  for (const id of ids) {
-    const s = await getDoc(doc(db, 'players', id));
-    if (s.exists()) enfants.push({ id, ...s.data() });
-  }
-
-  const nomEquipe = (tid) => {
-    const eq = equipesDuClub.find(e => String(e.id) === String(tid));
-    return eq ? (eq.category || eq.name) : 'Aucune équipe assignée';
-  };
-
-  $liste.innerHTML = `
-    <div class="carte">
-      <div class="carte-titre">Mes enfants</div>
-      <div class="carte-desc">Touche un enfant pour voir son équipe, ses entraînements et ses stats.</div>
-      ${enfants.map(e => `
-        <div class="rangee carte-enfant" data-id="${e.id}">
-          ${avatarHtml(e.photo_url, nomAffichage(e), 40)}
+  let html = '';
+  for (const pid of ids) {
+    const pSnap = await getDoc(doc(db, 'players', pid));
+    if (!pSnap.exists()) continue;
+    const p = pSnap.data();
+    html += `
+      <div class="rangee" style="display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border-soft);">
+        <div style="display:flex;align-items:center;gap:10px;">
+          ${avatarHtml(p.photo_url, nomAffichage(p), 40)}
           <div>
-            <div class="nom">${nomAffichage(e)}</div>
-            <div class="sous-texte">${nomEquipe(e.team_id)}</div>
+            <div style="font-weight:700;">${nomAffichage(p)}</div>
+            <div style="font-size:12px;color:var(--text-muted);">${p.position || 'Joueur'}</div>
           </div>
-          <span class="chevron-enfant">›</span>
         </div>
-      `).join('')}
-    </div>
-  `;
-
-  $liste.querySelectorAll('.carte-enfant').forEach(el => {
-    el.addEventListener('click', () => afficherEnfant(el.dataset.id));
-  });
-
-  if (enfants.length === 1) afficherEnfant(enfants[0].id);
-}
-
-async function afficherEnfant(playerId) {
-  const $vue = document.getElementById('vue-enfant');
-  $vue.innerHTML = `
-    <div class="carte" id="entete-enfant-actif" style="display:none;"></div>
-    <div class="carte">
-      <h3 class="section">Prochains entraînements</h3>
-      <div id="entrainements-enfant-actif"><p class="vide">Chargement…</p></div>
-      <h3 class="section">Statistiques</h3>
-      <div id="stats-enfant-actif"><p class="vide">Chargement…</p></div>
-      <h3 class="section">Tactiques du coach</h3>
-      <div id="tactiques-enfant-actif"><p class="vide">Chargement…</p></div>
-    </div>
-  `;
-  await afficherVueJoueur(db, playerId, {
-    entete: document.getElementById('entete-enfant-actif'),
-    entrainements: document.getElementById('entrainements-enfant-actif'),
-    stats: document.getElementById('stats-enfant-actif'),
-    titre: null,
-  });
-  await afficherTactiquesEnfant(playerId);
-  $vue.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-// Phases de jeu et exercices prepares par le coach, en lecture seule.
-async function afficherTactiquesEnfant(playerId) {
-  const $cible = document.getElementById('tactiques-enfant-actif');
-  if (!$cible) return;
-  try {
-    const p = await getDoc(doc(db, 'players', playerId));
-    const teamId = p.exists() ? p.data().team_id : null;
-    if (!teamId) { $cible.innerHTML = '<p class="vide">Aucune equipe assignee.</p>'; return; }
-
-    const snap = await getDocs(query(collection(db, 'plays'), where('team_id', '==', String(teamId))));
-    if (snap.empty) { $cible.innerHTML = '<p class="vide">Aucune tactique partagee par le coach.</p>'; return; }
-
-    $cible.innerHTML = snap.docs.map(d => `
-      <div class="rangee">
-        <div>
-          <div class="nom">${d.data().name || 'Sans titre'}</div>
-          <div class="sous-texte">${d.data().court_type === 'complet' ? 'Terrain complet' : 'Demi-terrain'}</div>
-        </div>
-        <div class="action"><a class="btn-ghost" href="./tactique.html">Ouvrir</a></div>
       </div>
-    `).join('');
-  } catch (e) {
-    $cible.innerHTML = '<p class="vide">Tactiques indisponibles pour le moment.</p>';
+    `;
   }
+  $liste.innerHTML = html || '<p class="vide">Aucun enfant trouvé.</p>';
 }
-
-// Enfants sans email, sans parent lié, dans le même club — candidats à lier.
-async function chargerEnfantsDisponibles() {
-  const $select = document.getElementById('enfant-existant');
-  if (!monProfil.club_id) { $select.innerHTML = '<option value="">Aucun club associé</option>'; return; }
-  const q = query(collection(db, 'players'), where('club_id', '==', String(monProfil.club_id)));
-  const snap = await getDocs(q);
-  const disponibles = snap.docs
-    .map(d => ({ id: d.id, ...d.data() }))
-    .filter(j => !j.account_uid && (!j.parent_uids || j.parent_uids.length === 0));
-
-  $select.innerHTML = disponibles.length
-    ? '<option value="">— Choisir —</option>' + disponibles.map(j => `<option value="${j.id}">${nomAffichage(j)}</option>`).join('')
-    : '<option value="">Aucun enfant disponible pour le moment</option>';
-}
-
-document.getElementById('btn-lier-enfant').addEventListener('click', async () => {
-  const playerId = document.getElementById('enfant-existant').value;
-  const $msg = document.getElementById('msg-lien');
-  if (!playerId) { $msg.className = 'msg err'; $msg.textContent = 'Choisis un enfant dans la liste.'; return; }
-  try {
-    await updateDoc(doc(db, 'players', playerId), { parent_uids: arrayUnion(auth.currentUser.uid) });
-    await updateDoc(doc(db, 'users', auth.currentUser.uid), { children_player_ids: arrayUnion(playerId) });
-    monProfil.children_player_ids = [...(monProfil.children_player_ids || []), playerId];
-    $msg.className = 'msg ok'; $msg.textContent = '✅ Enfant lié à ton compte.';
-    await chargerEnfants();
-    await chargerEnfantsDisponibles();
-  } catch (e) {
-    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-  }
-});
-
-document.getElementById('btn-ajouter-enfant').addEventListener('click', async () => {
-  const prenom = document.getElementById('enfant-prenom').value.trim();
-  const nom = document.getElementById('enfant-nom').value.trim();
-  const teamId = document.getElementById('enfant-equipe').value;
-  const $msg = document.getElementById('msg-ajout');
-  if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
-
-  try {
-    const nouvelEnfant = await addDoc(collection(db, 'players'), {
-      club_id: monProfil.club_id || null,
-      team_id: teamId ? String(teamId) : null,
-      account_uid: '',
-      parent_uids: [auth.currentUser.uid],
-      prenom, nom,
-      created_at: serverTimestamp(),
-    });
-    await updateDoc(doc(db, 'users', auth.currentUser.uid), {
-      children_player_ids: arrayUnion(nouvelEnfant.id),
-    });
-    monProfil.children_player_ids = [...(monProfil.children_player_ids || []), nouvelEnfant.id];
-
-    $msg.className = 'msg ok'; $msg.textContent = '✅ Enfant ajouté.';
-    document.getElementById('enfant-prenom').value = '';
-    document.getElementById('enfant-nom').value = '';
-    await chargerEnfants();
-  } catch (e) {
-    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-  }
-});
 </script>
-
 </body>
 </html>
