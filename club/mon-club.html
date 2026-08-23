@@ -7,9 +7,12 @@
 <link rel="stylesheet" href="./styles.css">
 <style>
   .joueur-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
-  .dropdown-menu { display: none; position: absolute; right: 0; top: 25px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow-md); z-index: 50; min-width: 190px; }
+  /* Important : on autorise le débordement de la carte pour que le menu déroulant s'affiche ! */
+  .carte { overflow: visible !important; }
+  .dropdown-menu { display: none; position: absolute; right: 0; top: 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow-md); z-index: 99; min-width: 220px; }
   .dropdown-menu.ouvert { display: block; }
-  .dropdown-menu a { display: block; padding: 8px 12px; font-size: 12px; color: var(--text); text-decoration: none; }
+  .dropdown-menu a { display: block; padding: 12px 14px; font-size: 13px; font-weight: 600; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border-soft); }
+  .dropdown-menu a:last-child { border-bottom: none; }
   .dropdown-menu a:hover { background: var(--surface-2); }
 </style>
 </head>
@@ -17,28 +20,33 @@
 <div class="container" style="padding-top:16px;">
 
   <div class="tabs">
-    <button class="tab-btn active" data-tab="tab-equipes">🏀 Équipes & Joueurs</button>
+    <button class="tab-btn active" data-tab="tab-equipes">👥 Équipes & Membres</button>
     <button class="tab-btn" data-tab="tab-calendrier">📅 Calendrier Club</button>
   </div>
 
   <!-- ONGLET 1 : ÉQUIPES & JOUEURS -->
   <div id="tab-equipes" class="tab-content active">
     <div class="carte">
-      <div class="carte-titre">Gestion de l'équipe</div>
+      <div class="carte-titre">Membres de l'équipe</div>
       <div class="puces" id="tabs-equipes"></div>
       
-      <div style="margin-top:14px;">
-        <label class="champ-label">Inviter un nouveau joueur</label>
+      <div style="margin-top:14px; padding-top: 14px; border-top: 1px solid var(--border-soft);">
+        <label class="champ-label">Inviter un membre dans cette équipe</label>
+        <select id="inv-role" style="margin-bottom:8px;">
+          <option value="player">🏀 Joueur</option>
+          <option value="coach">📋 Coach</option>
+          <option value="parent">👨‍👩‍👧 Parent</option>
+        </select>
         <div class="grille-2">
-          <input type="text" id="j-prenom" placeholder="Prénom">
-          <input type="text" id="j-nom" placeholder="Nom">
+          <input type="text" id="inv-prenom" placeholder="Prénom">
+          <input type="text" id="inv-nom" placeholder="Nom">
         </div>
-        <input type="email" id="j-email" placeholder="email@joueur.be" style="margin-top:6px;">
-        <button class="btn btn-primary" id="btn-inviter-joueur" style="margin-top:10px;">Envoyer l'invitation</button>
-        <div class="msg" id="msg-inv-joueur"></div>
+        <input type="email" id="inv-email" placeholder="Adresse email" style="margin-top:8px;">
+        <button class="btn btn-primary btn-block" id="btn-inviter" style="margin-top:10px;">Générer l'invitation</button>
+        <div class="msg" id="msg-inv"></div>
       </div>
 
-      <div id="liste-joueurs-equipe" style="margin-top:16px;"><p class="vide">Chargement…</p></div>
+      <div id="liste-joueurs-equipe" style="margin-top:20px;"><p class="vide">Chargement…</p></div>
     </div>
   </div>
 
@@ -54,9 +62,9 @@
 
       <label class="champ-label">Type</label>
       <select id="cal-type">
+        <option value="evenement">📅 Événement (Souper, réunion...)</option>
         <option value="entrainement">🏋️ Entraînement</option>
         <option value="match">🏀 Match</option>
-        <option value="evenement">📅 Événement</option>
       </select>
 
       <div class="grille-2" style="margin-top:6px;">
@@ -67,7 +75,7 @@
       <label class="champ-label" style="margin-top:6px;">Lieu</label>
       <input type="text" id="cal-lieu" placeholder="Salle / Adresse">
 
-      <button class="btn btn-primary" id="btn-save-cal" style="margin-top:12px;">Ajouter au calendrier</button>
+      <button class="btn btn-primary" id="btn-save-cal" style="margin-top:16px;">Ajouter au calendrier</button>
       <div class="msg" id="msg-cal"></div>
     </div>
   </div>
@@ -117,33 +125,39 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 async function chargerEquipesClub() {
-  const res = await fetch('../data.json?t=' + Date.now());
-  const donnees = await res.json();
-  const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
-  clubEquipes = club ? (club.teams || []) : [];
+  try {
+    const res = await fetch('../data.json?t=' + Date.now());
+    const donnees = await res.json();
+    const clubId = monProfil.club_id;
+    const club = (donnees.clubs || []).find(c => String(c.id) === String(clubId));
+    
+    clubEquipes = club ? (club.teams || []) : [];
 
-  const $select = document.getElementById('cal-target-team');
-  document.getElementById('tabs-equipes').innerHTML = clubEquipes.map((eq, i) => {
-    const opt = document.createElement('option');
-    opt.value = String(eq.id);
-    opt.textContent = eq.category || eq.name;
-    $select.appendChild(opt);
+    const $select = document.getElementById('cal-target-team');
+    document.getElementById('tabs-equipes').innerHTML = clubEquipes.map((eq, i) => {
+      const opt = document.createElement('option');
+      opt.value = String(eq.id);
+      opt.textContent = eq.category || eq.name;
+      $select.appendChild(opt);
 
-    return `<button class="puce ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.category || eq.name}</button>`;
-  }).join('');
+      return `<button class="puce ${i === 0 ? 'actif' : ''}" data-id="${eq.id}">${eq.category || eq.name}</button>`;
+    }).join('');
 
-  document.querySelectorAll('#tabs-equipes .puce').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('#tabs-equipes .puce').forEach(b => b.classList.remove('actif'));
-      btn.classList.add('actif');
-      equipeActive = btn.dataset.id;
-      chargerJoueursEquipe();
+    document.querySelectorAll('#tabs-equipes .puce').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#tabs-equipes .puce').forEach(b => b.classList.remove('actif'));
+        btn.classList.add('actif');
+        equipeActive = btn.dataset.id;
+        chargerJoueursEquipe();
+      });
     });
-  });
 
-  if (clubEquipes.length > 0) {
-    equipeActive = String(clubEquipes[0].id);
-    chargerJoueursEquipe();
+    if (clubEquipes.length > 0) {
+      equipeActive = String(clubEquipes[0].id);
+      chargerJoueursEquipe();
+    }
+  } catch(e) {
+    document.getElementById('tabs-equipes').innerHTML = `<p class="vide">Erreur lors du chargement des équipes.</p>`;
   }
 }
 
@@ -166,16 +180,16 @@ async function chargerJoueursEquipe() {
         <div style="display:flex;align-items:center;gap:10px;">
           ${avatarHtml(j.photo_url, nomAffichage(j), 36)}
           <div>
-            <div style="font-weight:700;">${nomAffichage(j)}</div>
-            <div style="font-size:11.5px;color:var(--text-muted);">${j.email || 'Pas d\'email'}</div>
+            <div style="font-weight:800; font-size:14px;">${nomAffichage(j)}</div>
+            <div style="font-size:12px;color:var(--text-muted);">${j.email || 'Aucune adresse email'}</div>
           </div>
         </div>
         
         <div style="position:relative;">
-          <button class="btn-ghost" onclick="window.__toggleMenuJoueur('${j.id}')">⋮</button>
+          <button class="btn-ghost" style="font-size:18px; padding: 4px 10px;" onclick="window.__toggleMenuJoueur('${j.id}')">⋮</button>
           <div class="dropdown-menu" id="menu-j-${j.id}">
-            <a href="#" onclick="window.__editerJoueur('${j.id}'); return false;">✏️ Modifier infos / email</a>
-            <a href="#" onclick="window.__associerParent('${j.id}'); return false;">👨‍👩‍👧 Associer à un parent</a>
+            <a href="#" onclick="window.__editerJoueur('${j.id}'); return false;">✏️ Modifier infos ou email</a>
+            <a href="#" onclick="window.__associerParent('${j.id}'); return false;">👨‍👩‍👧 Associer un compte Parent</a>
           </div>
         </div>
       </div>
@@ -183,11 +197,15 @@ async function chargerJoueursEquipe() {
   }).join('');
 }
 
+// Fonction pour ouvrir/fermer le menu à 3 points
 window.__toggleMenuJoueur = (id) => {
-  document.querySelectorAll('.dropdown-menu.ouvert').forEach(m => {
-    if (m.id !== 'menu-j-' + id) m.classList.remove('ouvert');
-  });
-  document.getElementById('menu-j-' + id)?.classList.toggle('ouvert');
+  const leMenu = document.getElementById('menu-j-' + id);
+  const etaitOuvert = leMenu.classList.contains('ouvert');
+  
+  // Ferme tous les autres
+  document.querySelectorAll('.dropdown-menu.ouvert').forEach(m => m.classList.remove('ouvert'));
+  
+  if (!etaitOuvert) leMenu.classList.add('ouvert');
 };
 
 document.addEventListener('click', e => {
@@ -196,7 +214,52 @@ document.addEventListener('click', e => {
   }
 });
 
-// Modification des données tout en CONSERVANT le document 'players/{id}' (préserve les statistiques)
+// Envoi d'une invitation générique (Joueur, Coach, Parent) depuis l'équipe
+document.getElementById('btn-inviter').addEventListener('click', async () => {
+  const role = document.getElementById('inv-role').value;
+  const prenom = document.getElementById('inv-prenom').value.trim();
+  const nom = document.getElementById('inv-nom').value.trim();
+  const email = document.getElementById('inv-email').value.trim().toLowerCase();
+  const $msg = document.getElementById('msg-inv');
+
+  if (!prenom || !email) { $msg.className='msg err'; $msg.textContent='Prénom et email requis.'; return; }
+
+  try {
+    let payloadInvite = {
+      role: role,
+      club_id: monProfil.club_id,
+      team_id: equipeActive,
+      status: 'pending',
+      created_by: auth.currentUser.uid,
+      created_at: serverTimestamp()
+    };
+
+    if (role === 'player') {
+      const newPlayer = await addDoc(collection(db, 'players'), {
+        club_id: monProfil.club_id,
+        team_id: equipeActive,
+        account_uid: '',
+        parent_uids: [],
+        prenom, nom, email,
+        created_at: serverTimestamp()
+      });
+      payloadInvite.player_id = newPlayer.id;
+    }
+
+    await setDoc(doc(db, 'invitations', email), payloadInvite);
+
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Invitation envoyée à ' + email;
+    document.getElementById('inv-prenom').value = '';
+    document.getElementById('inv-nom').value = '';
+    document.getElementById('inv-email').value = '';
+    
+    if (role === 'player') await chargerJoueursEquipe();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = e.message;
+  }
+});
+
+// Modification des informations et de l'email AVEC préservation des statistiques
 window.__editerJoueur = async (playerId) => {
   const pSnap = await getDoc(doc(db, 'players', playerId));
   if (!pSnap.exists()) return;
@@ -204,50 +267,65 @@ window.__editerJoueur = async (playerId) => {
 
   const prenom = prompt("Prénom :", p.prenom || '')?.trim();
   const nom = prompt("Nom :", p.nom || '')?.trim();
-  const email = prompt("Nouvel email (renvoie une invitation) :", p.email || '')?.trim().toLowerCase();
+  const email = prompt("Nouvel email de connexion (laissez vide si inchangé) :", p.email || '')?.trim().toLowerCase();
 
-  if (prenom && email) {
-    await updateDoc(doc(db, 'players', playerId), { prenom, nom: nom || '', email });
+  if (!prenom) return;
 
-    // Si un ancien compte user existait, on le détache pour forcer l'utilisation du nouvel email
+  await updateDoc(doc(db, 'players', playerId), { prenom, nom: nom || '' });
+
+  if (email && email !== p.email) {
+    await updateDoc(doc(db, 'players', playerId), { email });
+
+    // Si le joueur avait un compte lié à l'ancienne adresse, on le supprime (par sécurité)
     if (p.account_uid) {
-      await deleteDoc(doc(db, 'users', p.account_uid));
+      try { await deleteDoc(doc(db, 'users', p.account_uid)); } catch(e) {}
       await updateDoc(doc(db, 'players', playerId), { account_uid: '' });
     }
 
+    // On génère une nouvelle invitation
     await setDoc(doc(db, 'invitations', email), {
       role: 'player',
       club_id: monProfil.club_id,
-      team_id: equipeActive,
+      team_id: p.team_id,
       player_id: playerId,
       status: 'pending',
       created_at: serverTimestamp()
     });
-
-    alert("Mise à jour effectuée et nouvelle invitation transmise à " + email);
-    await chargerJoueursEquipe();
+    alert(`Informations mises à jour.\nUne invitation d'accès a été générée pour l'adresse : ${email}\nL'ancien accès (s'il y en avait un) a été révoqué.`);
+  } else {
+    alert("Informations mises à jour.");
   }
+  
+  await chargerJoueursEquipe();
 };
 
+// Associer la fiche du joueur à un compte parent existant
 window.__associerParent = async (playerId) => {
-  const emailParent = prompt("Email du compte parent :")?.trim().toLowerCase();
+  const emailParent = prompt("Email du compte Parent à lier :")?.trim().toLowerCase();
   if (!emailParent) return;
 
   const q = query(collection(db, 'users'), where('email', '==', emailParent));
   const snap = await getDocs(q);
 
   if (snap.empty) {
-    alert("Aucun compte parent trouvé. Veuillez d'abord l'inviter.");
+    alert("Aucun compte Parent trouvé avec cette adresse.\nAssurez-vous d'abord de l'avoir invité avec le rôle 'Parent'.");
     return;
   }
 
-  const parentUid = snap.docs[0].id;
+  const parentDoc = snap.docs[0];
+  if (parentDoc.data().role !== 'parent') {
+    alert("Cet utilisateur existe mais n'a pas le rôle 'Parent'.");
+    return;
+  }
+
+  const parentUid = parentDoc.id;
   await updateDoc(doc(db, 'players', playerId), { parent_uids: arrayUnion(parentUid) });
   await updateDoc(doc(db, 'users', parentUid), { children_player_ids: arrayUnion(playerId) });
 
-  alert("Rapprochement effectué avec succès !");
+  alert("Le parent a été lié au joueur avec succès !");
 };
 
+// Ajouter un événement au calendrier (par l'administrateur)
 document.getElementById('btn-save-cal').addEventListener('click', async () => {
   const $msg = document.getElementById('msg-cal');
   const target = document.getElementById('cal-target-team').value;
@@ -256,7 +334,7 @@ document.getElementById('btn-save-cal').addEventListener('click', async () => {
   const heure = document.getElementById('cal-heure').value;
   const lieu = document.getElementById('cal-lieu').value.trim();
 
-  if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Indiquez une date.'; return; }
+  if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Sélectionnez au moins une date.'; return; }
 
   try {
     const teamsToApply = target === 'all' ? clubEquipes.map(e => String(e.id)) : [target];
@@ -268,7 +346,7 @@ document.getElementById('btn-save-cal').addEventListener('click', async () => {
       });
     }
 
-    $msg.className = 'msg ok'; $msg.textContent = '✅ Événement ajouté !';
+    $msg.className = 'msg ok'; $msg.textContent = '✅ Événement ajouté au calendrier !';
     document.getElementById('cal-date').value = '';
     document.getElementById('cal-lieu').value = '';
   } catch (e) {
