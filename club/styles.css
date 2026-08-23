@@ -1,330 +1,121 @@
-/* ============================================================
-   Système de design — Espace Club Basket Hainaut
-   Mobile & tablette d'abord. Une seule source de vérité pour
-   les couleurs, espacements, composants — importé par toutes
-   les pages de club/.
-   ============================================================ */
-
 :root {
   --primary: #0b5cab;
-  --primary-600: #084a8a;
-  --primary-900: #0a1f3d;
-  --primary-tint: #eaf2fc;
-  --orange: #f26522;
-  --orange-tint: #fff0e8;
+  --primary-tint: #eaf2ff;
   --accent: #d32f2f;
-  --success: #1f9d55;
-  --success-tint: #e8f6ee;
-  --warning: #b45309;
-  --warning-tint: #fff4e5;
-
+  --orange: #ff6b00;
   --bg: #f2f4f8;
   --surface: #ffffff;
-  --surface-2: #f6f8fb;
-  --text: #14181f;
-  --text-muted: #667085;
-  --border: #e5e8ee;
-  --border-soft: #eef1f5;
-
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-  --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06);
-  --shadow-md: 0 10px 30px -10px rgba(16, 24, 40, 0.22);
-
-  --safe-top: env(safe-area-inset-top, 0px);
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --surface-2: #f8fafc;
+  --text: #16202e;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-soft: #f1f5f9;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-tint: #12233a;
-    --orange-tint: #2e1b0f;
-    --success-tint: #103822;
-    --warning-tint: #3a2a0d;
     --bg: #0d1117;
     --surface: #161b22;
-    --surface-2: #1c222b;
-    --text: #e6edf3;
-    --text-muted: #8b96a5;
-    --border: #2a313c;
-    --border-soft: #1f242d;
-    --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+    --surface-2: #21262d;
+    --text: #f0f6fc;
+    --text-muted: #8b949e;
+    --border: #30363d;
+    --border-soft: #21262d;
+    --primary-tint: #1c2d42;
   }
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html { -webkit-text-size-adjust: 100%; }
-html {
-  background: var(--surface);
-  min-height: 100%;
-}
 body {
-  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding-bottom: calc(28px + var(--safe-bottom));
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; }
-.container { max-width: 640px; margin: 0 auto; padding: 0 16px; }
-.container-sm { max-width: 420px; margin: 0 auto; padding: 0 16px; }
-
-/* ---- Barre supérieure ---- */
-.app-bar {
-  position: sticky; top: 0; z-index: 30;
-  display: flex; align-items: center; gap: 12px;
-  padding: calc(12px + var(--safe-top)) 16px 12px;
-  background: color-mix(in srgb, var(--surface) 90%, transparent);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.app-bar .retour {
-  width: 34px; height: 34px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-  border-radius: 50%; background: var(--surface-2); color: var(--text); text-decoration: none; font-size: 16px;
-}
-.app-bar .titre { font-weight: 800; font-size: 17px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.app-bar .titre small { display: block; font-weight: 500; font-size: 11.5px; color: var(--text-muted); }
-
-/* ---- Avatar ---- */
-.avatar {
-  border-radius: 50%; object-fit: cover; flex-shrink: 0;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-weight: 800; color: white; overflow: hidden;
+  padding-bottom: 80px;
 }
 
-/* ---- Cartes ---- */
+.container { max-width: 600px; margin: 0 auto; padding: 0 12px; }
+.container-sm { max-width: 400px; margin: 0 auto; padding: 0 12px; }
+
+/* Cartes et conteneurs */
 .carte {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius-lg); padding: 18px; margin-bottom: 14px;
-}
-.carte-titre { font-weight: 800; font-size: 15px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
-.carte-desc { color: var(--text-muted); font-size: 13px; margin: 0 0 12px; line-height: 1.5; }
-
-/* ---- Formulaires ---- */
-label.champ-label { display: block; font-size: 12px; font-weight: 700; color: var(--text-muted); margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.02em; }
-input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"],
-input[type="number"], select, textarea {
-  width: 100%; padding: 11px 13px; border-radius: var(--radius-sm); border: 1px solid var(--border);
-  font-size: 15px; font-family: inherit; background: var(--surface); color: var(--text);
-}
-input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
-.grille-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
-@media (max-width: 460px) {
-  /* Les sélecteurs date/heure iOS ont une largeur minimale importante :
-     sur écran étroit on les empile plutôt que de les forcer côte à côte. */
-  .grille-2 { grid-template-columns: 1fr; }
-}
-.grille-2 > * { min-width: 0; }
-input[type="date"], input[type="time"] { max-width: 100%; min-width: 0; }
-.carte { overflow-x: clip; }
-
-/* ---- Boutons ---- */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 12px 18px; border-radius: var(--radius-sm); border: none;
-  font-weight: 700; font-size: 14.5px; cursor: pointer; font-family: inherit;
-  transition: transform 0.08s ease;
-}
-.btn:active { transform: scale(0.97); }
-.btn-primary { background: var(--primary); color: white; }
-.btn-primary:disabled { background: #b7c3d6; }
-.btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
-.btn-ghost { background: none; color: var(--text-muted); font-weight: 600; text-decoration: underline; padding: 6px 4px; }
-.btn-danger-ghost { background: none; color: var(--accent); font-weight: 600; padding: 6px 4px; }
-.btn-block { width: 100%; }
-.btn-sm { padding: 8px 14px; font-size: 13px; }
-
-/* ---- Badges ---- */
-.badge { display: inline-flex; align-items: center; font-size: 11.5px; font-weight: 700; padding: 4px 10px; border-radius: 20px; }
-.badge-primary { background: var(--primary-tint); color: var(--primary); }
-.badge-success { background: var(--success-tint); color: var(--success); }
-.badge-warning { background: var(--warning-tint); color: var(--warning); }
-.badge-muted { background: var(--surface-2); color: var(--text-muted); }
-
-/* ---- Rangées de liste (membres, invitations...) ---- */
-.rangee {
-  display: flex; align-items: center; gap: 12px; padding: 11px 0;
-  border-bottom: 1px solid var(--border-soft);
-}
-.rangee:last-child { border-bottom: none; }
-.rangee .nom { font-weight: 700; font-size: 14px; }
-.rangee .sous-texte { font-size: 12px; color: var(--text-muted); }
-.rangee .action { margin-left: auto; flex-shrink: 0; }
-
-/* ---- Messages ---- */
-.msg { font-size: 13px; margin-top: 10px; padding: 10px 13px; border-radius: var(--radius-sm); display: none; line-height: 1.4; }
-.msg.ok { background: var(--success-tint); color: var(--success); display: block; }
-.msg.err { background: #fdecea; color: #b3261e; display: block; }
-
-/* ---- États vides / chargement ---- */
-.vide { color: var(--text-muted); font-size: 13.5px; padding: 4px 0; line-height: 1.6; }
-.skel { background: linear-gradient(90deg, var(--surface-2) 25%, var(--border) 37%, var(--surface-2) 63%); background-size: 400% 100%; animation: skel-pulse 1.4s ease infinite; border-radius: var(--radius-sm); }
-@keyframes skel-pulse { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
-
-/* ---- Onglets segmentés ---- */
-.segmente { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 4px; margin-bottom: 14px; }
-.segmente button { flex: 1; padding: 9px; background: none; border: none; border-radius: 8px; font-size: 13.5px; font-weight: 700; color: var(--text-muted); cursor: pointer; font-family: inherit; }
-.segmente button.actif { background: var(--primary); color: white; }
-
-/* ---- Puces horizontales scrollables ---- */
-.puces { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
-.puces::-webkit-scrollbar { display: none; }
-.puce { padding: 9px 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; scroll-snap-align: start; }
-.puce.actif { background: var(--primary); color: white; border-color: var(--primary); }
-
-footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; padding: 20px 14px; }
-
-/* ---- Barre de navigation basse (mobile uniquement) ---- */
-.bottom-nav {
-  display: none;
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
   background: var(--surface);
-  border-top: 1px solid var(--border);
-  /* Le FOND doit descendre jusqu'au bas de l'écran (zone de la barre
-     d'accueil iOS), sinon un vide apparaît sous la barre. Les liens, eux,
-     restent compacts grâce à leur propre padding. */
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
 }
-.bottom-nav-inner { display: flex; max-width: 640px; margin: 0 auto; }
-.bottom-nav a {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: 9px 4px 8px;
-  text-decoration: none; color: var(--text-muted); font-size: 10.5px; font-weight: 700;
-}
-.bottom-nav a .icone-nav { font-size: 21px; line-height: 1; }
-.bottom-nav a.actif { color: var(--primary); }
+.carte-titre { font-size: 15px; font-weight: 800; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+.carte-desc { font-size: 12.5px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4; }
 
-@media (max-width: 680px) {
-  .bottom-nav { display: block; }
-  body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important; }
-}
-
-/* Masque un élément quand la barre de navigation basse le remplace */
-@media (max-width: 680px) {
-  .cache-si-nav-basse { display: none !important; }
-}
-
-
-/* ============================================================
-   Habillage sportif — hiérarchie plus marquée, accents orange
-   ============================================================ */
-
-/* En-tête : plus affirmé, titres compacts */
-.app-bar { padding-top: calc(14px + var(--safe-top)); padding-bottom: 14px; }
-.app-bar .titre { font-size: 17.5px; letter-spacing: -0.2px; }
-
-/* Titres de cartes : petite barre orange en accent */
-.carte-titre {
-  position: relative; padding-left: 11px; font-size: 15.5px; letter-spacing: -0.2px;
-}
-.carte-titre::before {
-  content: ''; position: absolute; left: 0; top: 3px; bottom: 3px;
-  width: 3.5px; border-radius: 2px; background: var(--orange);
-}
-.carte { box-shadow: var(--shadow-sm); }
-
-/* Boutons principaux : plus punchy */
-.btn-primary {
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-600) 100%);
-  box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--primary) 55%, transparent);
-  letter-spacing: 0.1px;
-}
-.btn-accent { background: var(--orange); color: white; }
-
-/* Badges : le rôle ressort en orange, les statuts gardent leur code couleur */
-.badge-primary { background: var(--orange-tint); color: var(--orange); }
-
-/* Puces de sélection (équipes, filtres) */
-.puce.actif, .segmente button.actif {
-  box-shadow: 0 2px 8px -3px color-mix(in srgb, var(--primary) 60%, transparent);
+/* Correctif Anti-débordement Formulaires Date / Heure */
+.grille-2, .grille-3 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"], input[type="number"], select, textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
 }
 
-/* Barre de navigation basse : indicateur d'onglet actif */
-.bottom-nav a { position: relative; transition: color 0.15s ease; }
-.bottom-nav a.actif::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 26px; height: 3px; border-radius: 0 0 3px 3px; background: var(--orange);
-}
-.bottom-nav a .icone-nav { transition: transform 0.15s ease; }
-.bottom-nav a.actif .icone-nav { transform: scale(1.12); }
-
-/* Lignes de liste : survol/tap plus lisible */
-.rangee { transition: background 0.15s ease; }
-.rangee:hover { background: var(--surface-2); }
-
-/* Tableaux (classements, stats) : en-têtes plus lisibles, ligne active nette */
-table thead th {
-  position: sticky; top: 0; background: var(--surface);
-  border-bottom: 1.5px solid var(--border);
-}
-tr.ligne-equipe {
-  background: var(--orange-tint) !important;
-  box-shadow: inset 3px 0 0 var(--orange);
+/* Correctif Dark Mode : Lisibilité des Onglets et Puces non sélectionnés */
+.puces { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.puce, .tab-btn, .filtre-chip, .segmente button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-/* Zone de titre principale des pages de contenu */
-h1, h2, h3 { letter-spacing: -0.3px; }
-
-/* ---- En-tête unifié (identique sur toutes les pages) ---- */
-.app-bar .marque { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--text); flex: 1; min-width: 0; }
-.app-bar .marque img { width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; }
-.app-bar .marque-nom { font-weight: 800; font-size: 17.5px; letter-spacing: -0.3px; }
-.app-bar .lien-public {
-  display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;
-  font-size: 12px; font-weight: 700; color: var(--primary); text-decoration: none;
-  border: 1px solid var(--border); padding: 7px 12px; border-radius: 20px;
-}
-.app-bar .lien-public svg { width: 16px; height: 16px; }
-
-/* Titre de page : masqué sur mobile (la barre du bas situe déjà l'utilisateur) */
-.titre-page { display: none; }
-.titre-page h1 { font-size: 22px; margin: 18px 0 2px; }
-@media (min-width: 681px) {
-  .titre-page { display: block; }
+.puce.actif, .tab-btn.active, .filtre-chip.active, .segmente button.actif {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  border-color: var(--primary) !important;
 }
 
-/* Icônes de la barre basse (SVG au trait) */
-.bottom-nav a svg.icone-nav { width: 22px; height: 22px; }
+.tabs { display: flex; gap: 4px; background: var(--surface-2); padding: 4px; border-radius: var(--radius-md); border: 1px solid var(--border); margin-bottom: 12px; }
+.tab-btn { flex: 1; border: none; border-radius: var(--radius-sm); text-align: center; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
 
-/* ---- Lieu cliquable (itinéraire) dans les listes de l'espace club ---- */
-.game-venue { margin-top: 5px; }
-.venue-btn {
-  font-size: 12px; color: var(--primary); background: none; border: none; padding: 0;
-  cursor: pointer; font-family: inherit; font-weight: 600; text-align: left;
-}
-.venue-menu {
-  display: none; position: absolute; z-index: 30; top: 22px; left: 0;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-  box-shadow: var(--shadow-md); overflow: hidden; min-width: 180px;
-}
-.venue-menu.ouvert { display: block; }
-.venue-menu a { display: block; padding: 10px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
-.venue-menu a:hover { background: var(--surface-2); }
+/* Boutons */
+.btn { padding: 10px 16px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 13.5px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+.btn-ghost { background: none; border: none; color: var(--text-muted); font-size: 12px; font-weight: 700; cursor: pointer; padding: 4px 8px; }
+.btn-block { width: 100%; }
 
-/* Élément d'agenda (entraînement / match / tournoi / événement) */
-.entrainement {
-  display: flex; gap: 10px; align-items: flex-start;
-  border: 1px solid var(--border-soft); border-radius: var(--radius-sm);
-  padding: 11px 13px; margin-bottom: 8px; font-size: 13.5px;
-}
-.entrainement .lieu { color: var(--text-muted); font-size: 12px; }
+/* Badges & Menus contextuels */
+.badge { padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+.badge-primary { background: var(--primary-tint); color: var(--primary); }
+.badge-success { background: #dcfce7; color: #15803d; }
+.badge-warning { background: #fef3c7; color: #b45309; }
 
-/* ---- Navigation sur ordinateur (la barre du bas est masquée) ---- */
-.nav-bureau { display: none; align-items: center; gap: 4px; margin-left: auto; }
-.nav-bureau a {
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 8px 13px; border-radius: 10px; text-decoration: none;
-  color: var(--text-muted); font-weight: 700; font-size: 13.5px;
-}
-.nav-bureau a:hover { background: var(--surface-2); color: var(--text); }
-.nav-bureau a.actif { background: var(--primary-tint); color: var(--primary); }
-.nav-bureau a svg { width: 18px; height: 18px; }
+.venue-btn { background: none; border: none; padding: 0; color: var(--primary); font-size: 12px; font-weight: 700; cursor: pointer; text-align: left; }
+.venue-menu, .dropdown-menu { display: none; position: absolute; z-index: 50; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: var(--shadow-md); overflow: hidden; min-width: 180px; }
+.venue-menu.ouvert, .dropdown-menu.ouvert { display: block; }
+.venue-menu a, .dropdown-menu a { display: block; padding: 10px 14px; font-size: 12.5px; color: var(--text); text-decoration: none; }
+.venue-menu a:hover, .dropdown-menu a:hover { background: var(--surface-2); }
 
-@media (min-width: 681px) {
-  .nav-bureau { display: flex; }
-  /* Le lien "Site public" passe après la navigation */
-  .app-bar .lien-public { margin-left: 10px; }
-}
+.msg { font-size: 12.5px; margin-top: 8px; font-weight: 600; }
+.msg.err { color: var(--accent); }
+.msg.ok { color: #15803d; }
+.vide { color: var(--text-muted); font-size: 13px; text-align: center; padding: 12px 0; }
+.pied { text-align: center; color: var(--text-muted); font-size: 11px; padding: 24px 0; }
