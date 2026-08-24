@@ -51,13 +51,6 @@
     --border-soft: #1f242d;
     --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
   }
-
-  /* CORRECTIF DARK MODE : Pour que les puces/onglets inactifs soient lisibles (gris clair sur gris foncé au lieu de noir) */
-  .puce:not(.actif), .filtre-chip:not(.active), .tab-btn:not(.active), .segmente button:not(.actif) {
-    color: var(--text-muted) !important;
-    background: var(--surface-2) !important;
-    border-color: var(--border) !important;
-  }
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -120,10 +113,13 @@ input[type="number"], select, textarea {
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
 .grille-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
 @media (max-width: 460px) {
+  /* Les sélecteurs date/heure iOS ont une largeur minimale importante :
+     sur écran étroit on les empile plutôt que de les forcer côte à côte. */
   .grille-2 { grid-template-columns: 1fr; }
 }
 .grille-2 > * { min-width: 0; }
 input[type="date"], input[type="time"] { max-width: 100%; min-width: 0; }
+.carte { overflow-x: clip; }
 
 /* ---- Boutons ---- */
 .btn {
@@ -187,6 +183,9 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
   background: var(--surface);
   border-top: 1px solid var(--border);
+  /* Le FOND doit descendre jusqu'au bas de l'écran (zone de la barre
+     d'accueil iOS), sinon un vide apparaît sous la barre. Les liens, eux,
+     restent compacts grâce à leur propre padding. */
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .bottom-nav-inner { display: flex; max-width: 640px; margin: 0 auto; }
@@ -203,17 +202,21 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
   body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important; }
 }
 
+/* Masque un élément quand la barre de navigation basse le remplace */
 @media (max-width: 680px) {
   .cache-si-nav-basse { display: none !important; }
 }
+
 
 /* ============================================================
    Habillage sportif — hiérarchie plus marquée, accents orange
    ============================================================ */
 
+/* En-tête : plus affirmé, titres compacts */
 .app-bar { padding-top: calc(14px + var(--safe-top)); padding-bottom: 14px; }
 .app-bar .titre { font-size: 17.5px; letter-spacing: -0.2px; }
 
+/* Titres de cartes : petite barre orange en accent */
 .carte-titre {
   position: relative; padding-left: 11px; font-size: 15.5px; letter-spacing: -0.2px;
 }
@@ -223,6 +226,7 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
 }
 .carte { box-shadow: var(--shadow-sm); }
 
+/* Boutons principaux : plus punchy */
 .btn-primary {
   background: linear-gradient(180deg, var(--primary) 0%, var(--primary-600) 100%);
   box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--primary) 55%, transparent);
@@ -230,8 +234,15 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
 }
 .btn-accent { background: var(--orange); color: white; }
 
+/* Badges : le rôle ressort en orange, les statuts gardent leur code couleur */
 .badge-primary { background: var(--orange-tint); color: var(--orange); }
 
+/* Puces de sélection (équipes, filtres) */
+.puce.actif, .segmente button.actif {
+  box-shadow: 0 2px 8px -3px color-mix(in srgb, var(--primary) 60%, transparent);
+}
+
+/* Barre de navigation basse : indicateur d'onglet actif */
 .bottom-nav a { position: relative; transition: color 0.15s ease; }
 .bottom-nav a.actif::before {
   content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
@@ -240,9 +251,11 @@ footer.pied { text-align: center; color: var(--text-muted); font-size: 11.5px; p
 .bottom-nav a .icone-nav { transition: transform 0.15s ease; }
 .bottom-nav a.actif .icone-nav { transform: scale(1.12); }
 
+/* Lignes de liste : survol/tap plus lisible */
 .rangee { transition: background 0.15s ease; }
 .rangee:hover { background: var(--surface-2); }
 
+/* Tableaux (classements, stats) : en-têtes plus lisibles, ligne active nette */
 table thead th {
   position: sticky; top: 0; background: var(--surface);
   border-bottom: 1.5px solid var(--border);
@@ -252,8 +265,10 @@ tr.ligne-equipe {
   box-shadow: inset 3px 0 0 var(--orange);
 }
 
+/* Zone de titre principale des pages de contenu */
 h1, h2, h3 { letter-spacing: -0.3px; }
 
+/* ---- En-tête unifié (identique sur toutes les pages) ---- */
 .app-bar .marque { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--text); flex: 1; min-width: 0; }
 .app-bar .marque img { width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; }
 .app-bar .marque-nom { font-weight: 800; font-size: 17.5px; letter-spacing: -0.3px; }
@@ -264,22 +279,32 @@ h1, h2, h3 { letter-spacing: -0.3px; }
 }
 .app-bar .lien-public svg { width: 16px; height: 16px; }
 
+/* Titre de page : masqué sur mobile (la barre du bas situe déjà l'utilisateur) */
 .titre-page { display: none; }
 .titre-page h1 { font-size: 22px; margin: 18px 0 2px; }
 @media (min-width: 681px) {
   .titre-page { display: block; }
 }
 
+/* Icônes de la barre basse (SVG au trait) */
 .bottom-nav a svg.icone-nav { width: 22px; height: 22px; }
 
-/* Menu Itinéraire et boutons */
+/* ---- Lieu cliquable (itinéraire) dans les listes de l'espace club ---- */
 .game-venue { margin-top: 5px; }
 .venue-btn {
-  font-size: 12.5px; color: var(--text); background: var(--surface-2); border: 1px solid var(--border); 
-  border-radius: 20px; padding: 6px 12px; cursor: pointer; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--primary); background: none; border: none; padding: 0;
+  cursor: pointer; font-family: inherit; font-weight: 600; text-align: left;
 }
-.venue-btn:hover { background: var(--border-soft); }
+.venue-menu {
+  display: none; position: absolute; z-index: 30; top: 22px; left: 0;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: var(--shadow-md); overflow: hidden; min-width: 180px;
+}
+.venue-menu.ouvert { display: block; }
+.venue-menu a { display: block; padding: 10px 14px; font-size: 13px; color: var(--text); text-decoration: none; }
+.venue-menu a:hover { background: var(--surface-2); }
 
+/* Élément d'agenda (entraînement / match / tournoi / événement) */
 .entrainement {
   display: flex; gap: 10px; align-items: flex-start;
   border: 1px solid var(--border-soft); border-radius: var(--radius-sm);
@@ -287,6 +312,7 @@ h1, h2, h3 { letter-spacing: -0.3px; }
 }
 .entrainement .lieu { color: var(--text-muted); font-size: 12px; }
 
+/* ---- Navigation sur ordinateur (la barre du bas est masquée) ---- */
 .nav-bureau { display: none; align-items: center; gap: 4px; margin-left: auto; }
 .nav-bureau a {
   display: inline-flex; align-items: center; gap: 7px;
@@ -299,12 +325,6 @@ h1, h2, h3 { letter-spacing: -0.3px; }
 
 @media (min-width: 681px) {
   .nav-bureau { display: flex; }
+  /* Le lien "Site public" passe après la navigation */
   .app-bar .lien-public { margin-left: 10px; }
-}
-
-/* ANTI-DÉBORDEMENT DATES TEXTE */
-.quand, .game-date, .infos {
-  white-space: normal !important;
-  word-break: break-word;
-  overflow-wrap: anywhere;
 }

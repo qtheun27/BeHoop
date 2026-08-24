@@ -3,21 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Mon équipe — BeHoop</title>
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Mon équipe — Espace Club</title>
 <link rel="stylesheet" href="./styles.css">
 <style>
-  .entete-profil { display: flex; align-items: center; gap: 12px; }
+  .entrainement { border-bottom: 1px solid var(--border-soft); padding: 10px 0; font-size: 13.5px; }
+  .entrainement:last-child { border-bottom: none; }
+  .lieu { color: var(--text-muted); font-size: 12px; }
+  table.historique { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.historique th, table.historique td { padding: 7px 4px; text-align: center; border-bottom: 1px solid var(--border-soft); }
+  table.historique td:first-child, table.historique th:first-child { text-align: left; }
+  .entete-joueur { display: flex; align-items: center; gap: 12px; }
 </style>
 </head>
 <body>
 <div class="container" style="padding-top:16px;">
-  <div class="carte" id="carte-joueur-profil">
-    <div class="skel" style="height:50px;"></div>
-  </div>
-
+  <div class="carte" id="carte-entete" style="display:none;"></div>
   <div class="carte">
-    <div class="carte-titre">🏀 Mes statistiques</div>
-    <div id="zone-stats-joueur"><p class="vide">Chargement…</p></div>
+    <div class="carte-titre">Prochains entraînements</div>
+    <div id="liste-entrainements"><p class="vide">Chargement…</p></div>
+  </div>
+  <div class="carte">
+    <div class="carte-titre">Mes statistiques</div>
+    <div id="mes-stats"><p class="vide">Chargement…</p></div>
   </div>
 </div>
 <footer class="pied">BeHoop — Espace Club</footer>
@@ -25,13 +39,13 @@
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
-import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
-import { avatarHtml } from "./avatar.js";
 import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
 
 rendreEntete('Mon équipe');
 rendreNavImmediat('espace');
+import { afficherVueJoueur } from "./joueur-vue.js";
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -39,65 +53,20 @@ const db = getFirestore(app);
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) { window.location.href = './index.html'; return; }
-  const userSnap = await getDoc(doc(db, 'users', user.uid));
-  if (!userSnap.exists()) { window.location.href = './index.html'; return; }
-  const userProfil = userSnap.data();
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists() || snap.data().role !== 'player') { window.location.href = './dashboard.html'; return; }
+  rendreNav('player', 'espace');
 
-  rendreNav(userProfil.role, 'espace');
 
-  const playerSnap = await getDoc(doc(db, 'players', user.uid));
-  const joueur = playerSnap.exists() ? playerSnap.data() : {};
-
-  const res = await fetch('../data.json?t=' + Date.now());
-  const donnees = await res.json();
-  const club = (donnees.clubs || []).find(c => String(c.id) === String(userProfil.club_id));
-
-  // Récupération de l'équipe du joueur
-  const equipe = (club && club.teams) ? club.teams.find(t => String(t.id) === String(joueur.team_id)) : null;
-  const nomEquipe = equipe ? (equipe.category || equipe.name) : 'Équipe non définie';
-
-  const clubLogo = (club && club.logo_url)
-    ? `<img src="${club.logo_url}" alt="${club.name}" style="width:48px;height:48px;object-fit:contain;background:#fff;border-radius:10px;padding:4px;">`
-    : avatarHtml(null, club ? club.name : 'Mon Club', 48);
-
-  // Nom du club en grand, nom de l'équipe en sous-titre
-  document.getElementById('carte-joueur-profil').innerHTML = `
-    <div class="entete-profil">
-      ${clubLogo}
-      <div>
-        <div class="nom" style="font-weight:800;font-size:16px;">${club ? club.name : 'Mon Club'}</div>
-        <div class="meta" style="font-size:12.5px;color:var(--text-muted);">${nomEquipe}</div>
-      </div>
-    </div>
-  `;
-
-  await chargerStatsJoueur(user.uid);
+  // Pour un joueur auto-géré, l'id de sa fiche players/{id} est son propre uid.
+  await afficherVueJoueur(db, user.uid, {
+    entete: document.getElementById('carte-entete'),
+    entrainements: document.getElementById('liste-entrainements'),
+    stats: document.getElementById('mes-stats'),
+    titre: null,  // le titre est géré par l'en-tête partagé
+  });
 });
-
-async function chargerStatsJoueur(uid) {
-  const $zone = document.getElementById('zone-stats-joueur');
-  const q = query(collection(db, 'player_stats'), where('player_id', '==', uid));
-  const snap = await getDocs(q);
-
-  if (snap.empty) {
-    $zone.innerHTML = '<p class="vide">Aucune statistique enregistrée pour le moment.</p>';
-    return;
-  }
-
-  const stats = snap.docs.map(d => d.data());
-  const total = stats.length;
-  const pts = stats.reduce((acc, s) => acc + (s.points || 0), 0);
-  const reb = stats.reduce((acc, s) => acc + (s.rebonds || 0), 0);
-  const pas = stats.reduce((acc, s) => acc + (s.passes || 0), 0);
-
-  $zone.innerHTML = `
-    <div style="display:flex;justify-content:space-around;text-align:center;padding:10px 0;">
-      <div><div style="font-size:22px;font-weight:800;color:var(--primary);">${(pts/total).toFixed(1)}</div><div style="font-size:11px;color:var(--text-muted);">PTS/M</div></div>
-      <div><div style="font-size:22px;font-weight:800;color:var(--primary);">${(reb/total).toFixed(1)}</div><div style="font-size:11px;color:var(--text-muted);">REB/M</div></div>
-      <div><div style="font-size:22px;font-weight:800;color:var(--primary);">${(pas/total).toFixed(1)}</div><div style="font-size:11px;color:var(--text-muted);">PAS/M</div></div>
-    </div>
-  `;
-}
 </script>
+
 </body>
 </html>
