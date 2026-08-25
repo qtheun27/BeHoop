@@ -133,6 +133,23 @@
         <span class="step-info" id="step-counter">Étape 1 / 1</span>
       </div>
 
+      <div class="coach-only" style="border-top: 1px solid var(--border); padding-top: 8px;">
+        <label class="champ-label" style="margin-top:0;">Geste du ballon sur cette étape</label>
+        <select id="geste-etape" style="width:100%;">
+          <option value="">Déplacement simple</option>
+          <optgroup label="Tir">
+            <option value="shoot">Shoot</option>
+            <option value="layup">Lay-up</option>
+            <option value="power_layup">Power Lay-up</option>
+          </optgroup>
+          <optgroup label="Passe">
+            <option value="handoff">Hand-off</option>
+            <option value="chest">Chest pass</option>
+            <option value="bounce">Bounce pass</option>
+          </optgroup>
+        </select>
+      </div>
+
       <div class="coach-only" style="display:flex; gap:10px; align-items:center; border-top: 1px solid var(--border); padding-top: 8px; flex-wrap:wrap;">
         <label style="font-size:12px; display:flex; align-items:center; gap:5px;">
           Attaque
@@ -647,7 +664,25 @@ window.addEventListener('mouseup', end);
 window.addEventListener('touchend', end);
 window.addEventListener('touchcancel', end);
 
+const GESTES = {
+  shoot:       { label: 'Shoot',        arc: 90,  duree: 1.0 },
+  layup:       { label: 'Lay-up',       arc: 45,  duree: 0.8 },
+  power_layup: { label: 'Power Lay-up', arc: 28,  duree: 0.6 },
+  handoff:     { label: 'Hand-off',     arc: 6,   duree: 0.5 },
+  chest:       { label: 'Chest pass',   arc: 14,  duree: 0.45 },
+  bounce:      { label: 'Bounce pass',  arc: -30, duree: 0.6 },
+};
+
+const $geste = document.getElementById('geste-etape');
+if ($geste) {
+  $geste.addEventListener('change', () => {
+    steps[currentStep].geste = $geste.value || null;
+    renderTrajectories();
+  });
+}
+
 function updateUI() {
+  if ($geste) $geste.value = steps[currentStep].geste || '';
   document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} / ${steps.length}`;
   renderTokens(steps[currentStep].tokens);
   renderTrajectories();
@@ -709,8 +744,24 @@ function startAnimation() {
 
     const fromData = steps[currentStep].tokens;
     const toData = steps[currentStep + 1].tokens;
+    const geste = GESTES[steps[currentStep].geste] || null;
+
     const interpolated = fromData.map(t => {
       const target = toData.find(n => n.id === t.id);
+      if (!target) return { ...t };
+
+      // Le ballon suit une courbe propre au geste : un tir monte haut, une
+      // passe file droit, un bounce pass rebondit au sol a mi-parcours.
+      if (t.type === 'ball' && geste) {
+        // Le ballon part plus vite que les joueurs sur les gestes courts
+        const p = Math.min(1, progress / geste.duree);
+        const x = t.x + (target.x - t.x) * p;
+        let y = t.y + (target.y - t.y) * p;
+        // arc positif = cloche vers le haut ; rebond = creux vers le sol
+        y -= Math.sin(Math.PI * p) * geste.arc;
+        return { ...t, x, y };
+      }
+
       return {
         ...t,
         x: t.x + (target.x - t.x) * progress,
@@ -767,7 +818,7 @@ function appliquerEffectif() {
     return;
   }
   nbOffense = o; nbDefense = d;
-  steps = [ { step: 1, tokens: construireEffectif(nbOffense, nbDefense) } ];
+  steps = [ { step: 1, tokens: construireEffectif(nbOffense, nbDefense), geste: null } ];
   currentStep = 0;
   activeToken = null;
   drawCourt();

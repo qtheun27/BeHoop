@@ -7,6 +7,7 @@
 
 :root {
   color-scheme: light dark;
+  --danger-tint: #fdecea;
   --primary: #0b5cab;
   --primary-600: #084a8a;
   --primary-900: #0a1f3d;
@@ -51,6 +52,7 @@
     --border: #2a313c;
     --border-soft: #1f242d;
     --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.55);
+    --danger-tint: #3a1a18;
   }
 }
 
@@ -137,8 +139,30 @@ input[type="date"], input[type="time"] {
 .btn-primary { background: var(--primary); color: white; }
 .btn-primary:disabled { background: #b7c3d6; }
 .btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
-.btn-ghost { background: none; color: var(--text-muted); font-weight: 600; text-decoration: underline; padding: 6px 4px; }
-.btn-danger-ghost { background: none; color: var(--accent); font-weight: 600; padding: 6px 4px; }
+/* Actions secondaires : pastilles discretes plutot que du texte souligne,
+   qui donnait un aspect de lien brut au milieu de l'interface. */
+.btn-ghost {
+  background: var(--surface-2); color: var(--text-muted);
+  border: 1px solid var(--border); border-radius: 20px;
+  font-weight: 700; font-size: 12.5px; padding: 7px 13px;
+  text-decoration: none; cursor: pointer; font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  min-height: 34px; display: inline-flex; align-items: center; gap: 5px;
+}
+.btn-ghost:hover { background: var(--surface); color: var(--text); }
+/* Les actions destructrices virent au rouge au survol, sans crier avant */
+.btn-ghost.danger, .btn-ghost[data-suppr], .btn-ghost[data-uid] {
+  color: var(--accent);
+}
+.btn-ghost.danger:hover, .btn-ghost[data-suppr]:hover, .btn-ghost[data-uid]:hover {
+  background: var(--danger-tint); border-color: var(--accent); color: var(--accent);
+}
+.btn-danger-ghost {
+  background: var(--surface-2); color: var(--accent);
+  border: 1px solid var(--border); border-radius: 20px;
+  font-weight: 700; font-size: 12.5px; padding: 7px 13px;
+  cursor: pointer; font-family: inherit; min-height: 34px;
+}
 .btn-block { width: 100%; }
 .btn-sm { padding: 8px 14px; font-size: 13px; }
 
