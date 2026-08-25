@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Calendrier du club — BeHoop</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  .grille-equipes { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 8px; }
+  .case-equipe {
+    display: flex; align-items: center; gap: 7px; padding: 9px 11px;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    font-size: 13px; font-weight: 700; cursor: pointer; background: var(--surface);
+  }
+  .case-equipe.cochee { border-color: var(--primary); background: var(--primary-tint); color: var(--primary); }
+  .case-equipe input { width: 16px; height: 16px; flex-shrink: 0; }
+  .mois-titre { font-size: 12px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; margin: 16px 2px 8px; }
+</style>
+</head>
+<body>
+<div class="container" style="padding-top:16px;">
+
+  <div class="carte">
+    <div class="carte-titre" id="titre-form">Ajouter au calendrier</div>
+
+    <label class="champ-label">Type</label>
+    <div class="segmente" id="segmente-type">
+      <button type="button" class="actif" data-type="entrainement">Entraînement</button>
+      <button type="button" data-type="match">Match</button>
+      <button type="button" data-type="tournoi">Tournoi</button>
+      <button type="button" data-type="evenement">Événement</button>
+    </div>
+
+    <label class="champ-label">Équipes concernées</label>
+    <div style="display:flex;gap:8px;margin-bottom:6px;">
+      <button class="btn btn-secondary btn-sm" id="btn-toutes">Tout cocher</button>
+      <button class="btn-ghost" id="btn-aucune">Tout décocher</button>
+    </div>
+    <div class="grille-equipes" id="grille-equipes"></div>
+
+    <div class="grille-2" style="margin-top:14px;">
+      <div><label class="champ-label">Date</label><input type="date" id="ev-date"></div>
+      <div><label class="champ-label">Heure</label><input type="time" id="ev-heure" value="18:00"></div>
+    </div>
+
+    <label class="champ-label">Lieu</label>
+    <input type="text" id="ev-lieu" list="liste-salles" placeholder="Commence à taper le nom d'une salle...">
+    <datalist id="liste-salles"></datalist>
+
+    <label style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13.5px;">
+      <input type="checkbox" id="ev-recurrent" style="width:17px;height:17px;">
+      Répéter chaque semaine
+    </label>
+    <div id="zone-recurrence" style="display:none;margin-top:8px;">
+      <label class="champ-label">Jusqu'au</label>
+      <input type="date" id="ev-fin">
+    </div>
+
+    <label class="champ-label">Notes (optionnel)</label>
+    <textarea id="ev-notes" rows="2"></textarea>
+
+    <button class="btn btn-primary" style="margin-top:14px;" id="btn-ajouter">Ajouter</button>
+    <div class="msg" id="msg-form"></div>
+  </div>
+
+  <div class="carte">
+    <div class="carte-titre">Calendrier du club</div>
+    <div class="filtres" id="filtres">
+      <button class="filtre-chip active" data-filtre="avenir">À venir</button>
+      <button class="filtre-chip" data-filtre="passes">Passés</button>
+      <button class="filtre-chip" data-filtre="tous">Tous</button>
+    </div>
+    <label class="champ-label">Filtrer par équipe</label>
+    <select id="filtre-equipe"><option value="">Toutes les équipes</option></select>
+    <div id="liste-agenda" style="margin-top:12px;"><p class="vide">Chargement…</p></div>
+  </div>
+</div>
+<footer class="pied">BeHoop — Espace Club</footer>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import {
+  getFirestore, doc, getDoc, addDoc, setDoc, deleteDoc, collection, getDocs, query, where, serverTimestamp,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+import { rendreNav, rendreNavImmediat, rendreEntete } from "./nav.js";
+
+rendreEntete('Calendrier du club');
+rendreNavImmediat('calendrier');
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const TYPES = {
+  entrainement: { label: 'Entraînement', emoji: '🏋️', couleur: 'var(--primary)' },
+  match:        { label: 'Match',        emoji: '🏀', couleur: 'var(--orange)' },
+  tournoi:      { label: 'Tournoi',      emoji: '🏆', couleur: '#b45309' },
+  evenement:    { label: 'Événement',    emoji: '📅', couleur: 'var(--text-muted)' },
+};
+
+let monClubId = null, equipesDuClub = [], typeActif = 'entrainement', filtre = 'avenir', enEdition = null;
+
+onAuthStateChanged(auth, async (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  const snap = await getDoc(doc(db, 'users', user.uid));
+  if (!snap.exists() || snap.data().role !== 'club_admin') { window.location.href = './dashboard.html'; return; }
+  rendreNav('club_admin', 'calendrier');
+  monClubId = snap.data().club_id;
+
+  const res = await fetch('../data.json?t=' + Date.now());
+  const donnees = await res.json();
+  const club = (donnees.clubs || []).find(c => String(c.id) === String(monClubId));
+  equipesDuClub = club ? (club.teams || []) : [];
+  rendreEntete(club ? club.name : 'Calendrier du club');
+
+  document.getElementById('grille-equipes').innerHTML = equipesDuClub.map(eq => `
+    <label class="case-equipe" data-id="${eq.id}">
+      <input type="checkbox" value="${eq.id}"> ${eq.category || eq.name}
+    </label>
+  `).join('') || '<p class="vide">Aucune équipe cette saison.</p>';
+
+  document.querySelectorAll('.case-equipe input').forEach(i =>
+    i.addEventListener('change', () => i.closest('.case-equipe').classList.toggle('cochee', i.checked)));
+
+  document.getElementById('filtre-equipe').innerHTML = '<option value="">Toutes les équipes</option>' +
+    equipesDuClub.map(eq => `<option value="${eq.id}">${eq.category || eq.name}</option>`).join('');
+
+  remplirSalles(donnees);
+  chargerAgenda();
+});
+
+function remplirSalles(donnees) {
+  const salles = new Map();
+  (donnees.clubs || []).forEach(cl => {
+    const v = cl.venue;
+    if (v && v.name) salles.set(v.name, [v.name, v.street, v.zip, v.city].filter(Boolean).join(', '));
+  });
+  (donnees.games || []).forEach(g => {
+    if (g.venue_name && !salles.has(g.venue_name)) {
+      salles.set(g.venue_name, [g.venue_name, g.venue_street, g.venue_zip, g.venue_city].filter(Boolean).join(', '));
+    }
+  });
+  document.getElementById('liste-salles').innerHTML =
+    [...salles.values()].sort().slice(0, 400).map(a => `<option value="${a.replace(/"/g, '&quot;')}">`).join('');
+}
+
+document.querySelectorAll('#segmente-type button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#segmente-type button').forEach(x => x.classList.remove('actif'));
+  b.classList.add('actif'); typeActif = b.dataset.type;
+}));
+document.getElementById('ev-recurrent').addEventListener('change', e =>
+  document.getElementById('zone-recurrence').style.display = e.target.checked ? 'block' : 'none');
+document.getElementById('btn-toutes').addEventListener('click', () =>
+  document.querySelectorAll('.case-equipe input').forEach(i => { i.checked = true; i.dispatchEvent(new Event('change')); }));
+document.getElementById('btn-aucune').addEventListener('click', () =>
+  document.querySelectorAll('.case-equipe input').forEach(i => { i.checked = false; i.dispatchEvent(new Event('change')); }));
+document.querySelectorAll('#filtres .filtre-chip').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#filtres .filtre-chip').forEach(x => x.classList.remove('active'));
+  b.classList.add('active'); filtre = b.dataset.filtre; chargerAgenda();
+}));
+document.getElementById('filtre-equipe').addEventListener('change', chargerAgenda);
+
+function nomEquipe(id) {
+  const eq = equipesDuClub.find(e => String(e.id) === String(id));
+  return eq ? (eq.category || eq.name) : 'Équipe';
+}
+function formatDate(d) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: 'short' });
+}
+
+async function assurerEquipe(teamId) {
+  const eq = equipesDuClub.find(e => String(e.id) === String(teamId));
+  await setDoc(doc(db, 'teams', String(teamId)), {
+    club_id: String(monClubId), name: eq ? eq.name : '', category: eq ? eq.category : '',
+  }, { merge: true });
+}
+
+document.getElementById('btn-ajouter').addEventListener('click', async () => {
+  const $msg = document.getElementById('msg-form');
+  const equipes = [...document.querySelectorAll('.case-equipe input:checked')].map(i => i.value);
+  const date = document.getElementById('ev-date').value;
+  const heure = document.getElementById('ev-heure').value;
+  const lieu = document.getElementById('ev-lieu').value.trim();
+  const notes = document.getElementById('ev-notes').value.trim();
+  const recurrent = document.getElementById('ev-recurrent').checked;
+  const fin = document.getElementById('ev-fin').value;
+
+  if (equipes.length === 0) { $msg.className = 'msg err'; $msg.textContent = 'Coche au moins une équipe.'; return; }
+  if (!date) { $msg.className = 'msg err'; $msg.textContent = 'Choisis une date.'; return; }
+  if (recurrent && (!fin || fin < date)) { $msg.className = 'msg err'; $msg.textContent = 'Indique une date de fin valide.'; return; }
+
+  try {
+    // Une date par semaine si recurrent, sinon une seule.
+    const dates = [];
+    let d = new Date(date + 'T12:00:00');
+    const dFin = recurrent ? new Date(fin + 'T12:00:00') : d;
+    while (d <= dFin && dates.length < 60) { dates.push(d.toISOString().slice(0, 10)); d.setDate(d.getDate() + 7); }
+
+    const serieId = recurrent ? 's' + Date.now().toString(36) : null;
+    const lot = 'g' + Date.now().toString(36);   // regroupe les equipes d'un meme ajout
+
+    for (const teamId of equipes) {
+      await assurerEquipe(teamId);
+      await Promise.all(dates.map(dt => addDoc(collection(db, 'trainings'), {
+        team_id: String(teamId), type: typeActif, date: dt, start_time: heure,
+        location: lieu, notes, ...(serieId ? { serie_id: serieId } : {}), lot_id: lot,
+        created_by: auth.currentUser.uid, created_at: serverTimestamp(),
+      })));
+    }
+
+    $msg.className = 'msg ok';
+    $msg.textContent = `✅ ${dates.length * equipes.length} entrée(s) créée(s) pour ${equipes.length} équipe(s).`;
+    document.getElementById('ev-lieu').value = '';
+    document.getElementById('ev-notes').value = '';
+    await chargerAgenda();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+
+async function chargerAgenda() {
+  const $liste = document.getElementById('liste-agenda');
+  if (equipesDuClub.length === 0) { $liste.innerHTML = '<p class="vide">Aucune équipe.</p>'; return; }
+  $liste.innerHTML = '<p class="vide">Chargement…</p>';
+
+  const filtreEq = document.getElementById('filtre-equipe').value;
+  const ids = filtreEq ? [filtreEq] : equipesDuClub.map(e => String(e.id));
+
+  // Firestore limite les requetes "in" a 30 valeurs : on decoupe.
+  const paquets = [];
+  for (let i = 0; i < ids.length; i += 30) paquets.push(ids.slice(i, i + 30));
+
+  let items = [];
+  for (const p of paquets) {
+    const snap = await getDocs(query(collection(db, 'trainings'), where('team_id', 'in', p)));
+    items.push(...snap.docs.map(d => ({ id: d.id, ...d.data() })));
+  }
+
+  const auj = new Date().toISOString().slice(0, 10);
+  if (filtre === 'avenir') items = items.filter(t => t.date >= auj);
+  else if (filtre === 'passes') items = items.filter(t => t.date < auj);
+  items.sort((a, b) => (a.date + (a.start_time || '')).localeCompare(b.date + (b.start_time || '')));
+  if (filtre === 'passes') items.reverse();
+
+  if (items.length === 0) { $liste.innerHTML = '<p class="vide">Rien dans cette catégorie.</p>'; return; }
+
+  // Regroupement par mois pour s'y retrouver dans un calendrier de club
+  const groupes = {};
+  items.forEach(t => { const k = (t.date || '').slice(0, 7); (groupes[k] = groupes[k] || []).push(t); });
+
+  $liste.innerHTML = Object.keys(groupes).sort(filtre === 'passes' ? (a, b) => b.localeCompare(a) : undefined)
+    .map(cle => {
+      const d = new Date(cle + '-01T00:00:00');
+      const mois = d.toLocaleDateString('fr-BE', { month: 'long', year: 'numeric' });
+      return `<div class="mois-titre">${mois.charAt(0).toUpperCase() + mois.slice(1)}</div>` +
+        groupes[cle].map(t => {
+          const ty = TYPES[t.type] || TYPES.entrainement;
+          return `
+            <div class="entrainement" style="border-left:3px solid ${ty.couleur};">
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:11.5px;font-weight:700;color:${ty.couleur};">${ty.emoji} ${ty.label} · ${nomEquipe(t.team_id)}</div>
+                <div style="font-weight:700;">${formatDate(t.date)} · ${t.start_time || ''}</div>
+                ${t.location ? `<div class="lieu">📍 ${t.location}</div>` : ''}
+              </div>
+              <button class="btn-ghost" onclick="window.__suppr('${t.id}', ${t.serie_id ? `'${t.serie_id}'` : 'null'})">Supprimer</button>
+            </div>
+          `;
+        }).join('');
+    }).join('');
+
+  window.__suppr = async (id, serieId) => {
+    if (serieId) {
+      const tout = confirm("Série hebdomadaire.\n\nOK = supprimer toute la série\nAnnuler = seulement cette date");
+      if (tout) {
+        const s = await getDocs(query(collection(db, 'trainings'), where('serie_id', '==', serieId)));
+        await Promise.all(s.docs.map(d => deleteDoc(doc(db, 'trainings', d.id))));
+        return chargerAgenda();
+      }
+    } else if (!confirm('Supprimer cette entrée ?')) return;
+    await deleteDoc(doc(db, 'trainings', id));
+    await chargerAgenda();
+  };
+}
+</script>
+</body>
+</html>

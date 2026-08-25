@@ -118,7 +118,7 @@ document.getElementById('opt-joueur').addEventListener('click', async () => {
     await updateDoc(doc(db, 'invitations', utilisateurActuel.email.toLowerCase()), {
       status: 'used', role: invitation.role, club_id: invitation.club_id, team_id: invitation.team_id ?? null,
     });
-    window.location.href = './dashboard.html';
+    window.location.href = './definir-mdp.html';
   } catch (e) {
     afficherErreur('Erreur : ' + e.message);
   }
@@ -161,7 +161,7 @@ document.getElementById('btn-valider-parent').addEventListener('click', async ()
     await updateDoc(doc(db, 'invitations', utilisateurActuel.email.toLowerCase()), {
       status: 'used', role: invitation.role, club_id: invitation.club_id, team_id: invitation.team_id ?? null,
     });
-    window.location.href = './parent.html';
+    window.location.href = './definir-mdp.html';
   } catch (e) {
     $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
   }

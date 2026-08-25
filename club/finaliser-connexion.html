@@ -52,6 +52,14 @@ async function finaliser(email) {
         return;
       }
       await reclamerInvitation(db, user);
+      // Premiere connexion via lien : on impose la creation d'un mot de passe.
+      window.location.href = './definir-mdp.html';
+      return;
+    }
+    // Compte deja actif mais sans mot de passe (ancien lien magique)
+    if (!user.providerData.some(p => p.providerId === 'password')) {
+      window.location.href = './definir-mdp.html';
+      return;
     }
     window.location.href = './dashboard.html';
   } catch (e) {

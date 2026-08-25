@@ -362,3 +362,30 @@ h1, h2, h3 { letter-spacing: -0.3px; }
   background: var(--surface-2); border-radius: var(--radius-sm);
 }
 .zone-edition.ouvert, .zone-assoc.ouvert { display: block; }
+
+/* ---- Confort d'usage ---- */
+/* Cibles tactiles d'au moins 44px (recommandation Apple) */
+.btn, .puce, .filtre-chip, .segmente button, .bottom-nav a { min-height: 44px; }
+.btn-sm { min-height: 38px; }
+
+/* Retour visuel au toucher, sans attendre le rechargement */
+.puce:active, .filtre-chip:active, .case-equipe:active { transform: scale(0.97); }
+.lien-action:active, .rangee:active { background: var(--surface-2); }
+
+/* Champs plus confortables et sans zoom automatique iOS (16px mini) */
+input, select, textarea { font-size: 16px; }
+
+/* Le contenu ne colle plus au bord sur grand ecran */
+@media (min-width: 681px) {
+  .container, .container-sm { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Etat vide plus lisible */
+.vide { line-height: 1.6; }
+
+/* Les messages de confirmation attirent l'oeil un instant */
+.msg.ok { animation: apparait 0.25s ease; }
+@keyframes apparait { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: none; } }
+
+/* Defilement fluide vers les ancres */
+html { scroll-behavior: smooth; }

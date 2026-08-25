@@ -10,6 +10,7 @@ const ICONES = {
   reglages: '<circle cx="12" cy="12" r="3"/><path d="M12 2v2.5M12 19.5V22M22 12h-2.5M4.5 12H2M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8M18.4 18.4l-1.8-1.8M7.4 7.4 5.6 5.6"/>',
   console: '<path d="M4 6h16v12H4z"/><path d="M8 10l2.5 2L8 14M13 14h3"/>',
   famille: '<circle cx="8.5" cy="8" r="2.8"/><circle cx="16" cy="9.5" r="2.2"/><path d="M3.5 20c0-3 2.2-5 5-5s5 2 5 5"/><path d="M14 20c0-2.2 1.4-3.8 3.4-3.8S21 17.8 21 20"/>',
+  calendrier: '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/><path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2"/>',
   monde: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.4 2.6 3.6 5.6 3.6 9S14.4 18.4 12 21c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z"/>',
 };
 
@@ -31,7 +32,7 @@ const ONGLETS_PAR_ROLE = {
   club_admin: [
     { href: './dashboard.html', icone: 'accueil', label: 'Accueil' },
     { href: './mon-club.html', icone: 'ballon', label: 'Mon club' },
-    { href: './tactique.html', icone: 'tactique', label: 'Tactique' },
+    { href: './calendrier.html', icone: 'calendrier', label: 'Calendrier' },
     { href: './compte.html', icone: 'reglages', label: 'Compte' },
   ],
   coach: [
@@ -66,6 +67,7 @@ export function rendreNav(role, pageActive, provisoire = false) {
   const cleDe = (o) => {
     if (o.href.includes('dashboard')) return 'dashboard';
     if (o.href.includes('tactique')) return 'tactique';
+    if (o.href.includes('calendrier')) return 'calendrier';
     if (o.href.includes('compte')) return 'compte';
     return 'espace';
   };

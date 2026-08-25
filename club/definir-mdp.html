@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b5cab">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BeHoop">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<title>Choisis ton mot de passe — BeHoop</title>
+<link rel="stylesheet" href="./styles.css">
+<style>
+  body { display: flex; align-items: center; min-height: 100vh; padding: 24px 16px; }
+  .logo { width: 60px; height: 60px; border-radius: 18px; margin: 0 auto 14px; display: block; }
+  h1 { font-size: 20px; text-align: center; margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<div class="container-sm" style="width:100%;">
+  <img class="logo" src="../icons/icon-192.png" alt="BeHoop">
+  <h1>Dernière étape</h1>
+  <p class="vide" style="text-align:center;margin-bottom:20px;">
+    Choisis un mot de passe : tu pourras te connecter directement, sans attendre un email à chaque fois.
+  </p>
+
+  <div class="carte">
+    <label class="champ-label">Mot de passe</label>
+    <input type="password" id="mdp1" autocomplete="new-password" placeholder="6 caractères minimum">
+    <label class="champ-label">Confirmer</label>
+    <input type="password" id="mdp2" autocomplete="new-password">
+    <button class="btn btn-primary btn-block" style="margin-top:16px;" id="btn-valider">Continuer</button>
+    <div class="msg" id="msg"></div>
+  </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getAuth, onAuthStateChanged, linkWithCredential, updatePassword, EmailAuthProvider,
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+  if (!user) { window.location.href = './index.html'; return; }
+  // Un compte qui a deja un mot de passe n'a rien a faire ici.
+  if (user.providerData.some(p => p.providerId === 'password')) {
+    window.location.href = './dashboard.html';
+  }
+});
+
+document.getElementById('btn-valider').addEventListener('click', async () => {
+  const m1 = document.getElementById('mdp1').value;
+  const m2 = document.getElementById('mdp2').value;
+  const $msg = document.getElementById('msg');
+
+  if (m1.length < 6) { $msg.className = 'msg err'; $msg.textContent = 'Au moins 6 caractères.'; return; }
+  if (m1 !== m2) { $msg.className = 'msg err'; $msg.textContent = 'Les deux mots de passe ne correspondent pas.'; return; }
+
+  try {
+    const user = auth.currentUser;
+    try {
+      await linkWithCredential(user, EmailAuthProvider.credential(user.email, m1));
+    } catch (e) {
+      // Si la methode email est deja rattachee, on met simplement a jour.
+      if (e.code === 'auth/provider-already-linked') await updatePassword(user, m1);
+      else throw e;
+    }
+    window.location.href = './dashboard.html';
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+});
+</script>
+</body>
+</html>
