@@ -80,6 +80,32 @@ let donneesPubliques = null;
 let equipesSuivies = [];   // [{id, nom}]
 let equipeActive = null;
 
+function lienLieu(lieu, id) {
+  if (!lieu) return '';
+  const q = encodeURIComponent(lieu);
+  return `
+    <span class="game-venue" style="position:relative;display:inline-block;">
+      <button class="venue-btn" onclick="window.__lieuDash('${id}')">📍 ${lieu}</button>
+      <span class="venue-menu" id="venue-menu-${id}">
+        <a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">Google Maps</a>
+        <a href="https://waze.com/ul?q=${q}&navigate=yes" target="_blank" rel="noopener">Waze</a>
+        <a href="https://maps.apple.com/?q=${q}" target="_blank" rel="noopener">Plans (Apple)</a>
+      </span>
+    </span>
+  `;
+}
+window.__lieuDash = (id) => {
+  document.querySelectorAll('.venue-menu.ouvert').forEach(m => {
+    if (m.id !== 'venue-menu-' + id) m.classList.remove('ouvert');
+  });
+  document.getElementById('venue-menu-' + id)?.classList.toggle('ouvert');
+};
+document.addEventListener('click', e => {
+  if (!e.target.closest('.game-venue')) {
+    document.querySelectorAll('.venue-menu.ouvert').forEach(m => m.classList.remove('ouvert'));
+  }
+});
+
 function formatDate(d, heure) {
   const dt = new Date(d + 'T' + (heure || '00:00:00'));
   const jour = dt.toLocaleDateString('fr-BE', { weekday: 'long', day: '2-digit', month: 'long' });
@@ -192,7 +218,8 @@ async function afficherPourEquipe(teamId) {
         <span class="ico">🏋️</span>
         <div class="contenu">
           <div class="quand">${formatDate(prochainEntrainement.date, prochainEntrainement.start_time)}</div>
-          <div class="ou">Entraînement${prochainEntrainement.location ? ' · ' + prochainEntrainement.location : ''}</div>
+          <div class="ou">Entraînement</div>
+          ${lienLieu(prochainEntrainement.location, 'ent')}
         </div>
       </div>
     `;
@@ -207,7 +234,8 @@ async function afficherPourEquipe(teamId) {
         <span class="ico">🏀</span>
         <div class="contenu">
           <div class="quand">${formatDate(prochainMatch.date, prochainMatch.time)}</div>
-          <div class="ou">${domicile ? 'Domicile' : 'Déplacement'} vs ${adversaire}${prochainMatch.venue_name ? ' · ' + prochainMatch.venue_name : ''}</div>
+          <div class="ou">${domicile ? 'Domicile' : 'Déplacement'} vs ${adversaire}</div>
+          ${lienLieu([prochainMatch.venue_name, prochainMatch.venue_street, prochainMatch.venue_zip, prochainMatch.venue_city].filter(Boolean).join(', '), 'match')}
         </div>
       </div>
     `;

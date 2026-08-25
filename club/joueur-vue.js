@@ -23,22 +23,32 @@ export async function afficherVueJoueur(db, playerId, els) {
   const joueur = { id: playerId, ...playerSnap.data() };
 
   let nomEquipe = 'Mon équipe';
+  let logoClub = null, nomClub = '';
   if (joueur.club_id) {
     const res = await fetch('../data.json?t=' + Date.now());
     const donnees = await res.json();
     const club = (donnees.clubs || []).find(c => String(c.id) === String(joueur.club_id));
     const equipe = club ? (club.teams || []).find(e => String(e.id) === String(joueur.team_id)) : null;
     nomEquipe = equipe ? (equipe.category || equipe.name) : 'Aucune équipe assignée';
+    logoClub = club ? club.logo_url : null;
+    nomClub = club ? club.name : '';
   }
   if (titre) titre.textContent = '🏀 ' + nomEquipe;
 
   entete.style.display = 'block';
+  const aUnNom = !!(joueur.prenom || joueur.display_name);
+  const visuel = logoClub
+    ? `<img src="${logoClub}" alt="" style="width:52px;height:52px;object-fit:contain;background:#fff;border-radius:12px;padding:5px;flex-shrink:0;" onerror="this.style.display='none'">`
+    : avatarHtml(joueur.photo_url, nomAffichage(joueur), 52);
+
   entete.innerHTML = `
     <div class="entete-joueur">
-      ${avatarHtml(joueur.photo_url, nomAffichage(joueur), 52)}
+      ${visuel}
       <div>
-        <strong>${nomAffichage(joueur)}</strong>
-        <div class="vide" style="margin-top:2px;">${nomEquipe}${joueur.position ? ' · ' + (POSITIONS[joueur.position] || joueur.position) : ''}</div>
+        <strong>${nomEquipe}</strong>
+        <div class="vide" style="margin-top:2px;">
+          ${nomClub}${aUnNom ? ' · ' + nomAffichage(joueur) : ''}${joueur.position ? ' · ' + (POSITIONS[joueur.position] || joueur.position) : ''}
+        </div>
       </div>
     </div>
   `;

@@ -42,15 +42,6 @@
     <div id="liste-equipes"><p class="vide">Chargement…</p></div>
   </div>
 
-  <div class="carte">
-    <div class="carte-titre">Inviter un parent</div>
-    <div class="carte-desc">Le parent pourra ajouter son enfant lui-même dès sa première connexion — ou tu peux lui associer un joueur déjà créé depuis la fiche de son équipe.</div>
-    <div class="ligne-invite">
-      <input type="email" id="email-parent" placeholder="email du parent">
-      <button class="btn btn-primary btn-sm" id="btn-inviter-parent">Inviter</button>
-    </div>
-    <div class="msg" id="msg-parent"></div>
-  </div>
 
   <div class="carte">
     <div class="carte-titre">Invitations de mon club</div>
@@ -108,6 +99,12 @@ onAuthStateChanged(auth, async (user) => {
   await chargerInvitations();
   await chargerMembres();
   afficherEquipes();
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.menu-points')) {
+    document.querySelectorAll('.menu-deroulant.ouvert').forEach(m => m.classList.remove('ouvert'));
+  }
 });
 
 async function chargerClub() {
@@ -178,15 +175,38 @@ function afficherEquipes() {
             <div class="infos-joueur">
               <div class="nom">${nomAffichage(j)}${!j.account_uid ? ' <span class="badge badge-muted">géré par parent</span>' : ''}</div>
             </div>
-            ${(!j.parent_uids || j.parent_uids.length === 0) ? `
-              <div class="lien-parent">
-                <select id="parent-select-${j.id}">
-                  <option value="">Associer à un parent...</option>
-                  ${tousLesParents.map(p => `<option value="${p.uid}">${nomAffichage(p)} (${p.email})</option>`).join('')}
-                </select>
-                <button class="btn-ghost" data-lier="${j.id}">Lier</button>
+            ${(j.parent_uids && j.parent_uids.length) ? '<span class="badge badge-success" style="flex-shrink:0;">Parent lié</span>' : ''}
+            <div class="menu-points" style="position:relative;flex-shrink:0;">
+              <button class="btn-points" data-menu="${j.id}" aria-label="Options">⋯</button>
+              <div class="menu-deroulant" id="menu-${j.id}">
+                <button data-modifier="${j.id}">Modifier les informations</button>
+                ${(!j.parent_uids || !j.parent_uids.length) ? `<button data-assoc="${j.id}">Associer à un parent</button>` : ''}
+                <button data-suppr="${j.id}" class="danger">Supprimer ce joueur</button>
               </div>
-            ` : `<span class="badge badge-success" style="flex-shrink:0;">Parent lié</span>`}
+            </div>
+            <div class="zone-edition" id="edition-${j.id}">
+              <div class="grille-2">
+                <input type="text" id="edit-prenom-${j.id}" value="${(j.prenom || '').replace(/"/g, '&quot;')}" placeholder="Prénom">
+                <input type="text" id="edit-nom-${j.id}" value="${(j.nom || '').replace(/"/g, '&quot;')}" placeholder="Nom">
+              </div>
+              <input type="email" id="edit-email-${j.id}" style="margin-top:8px;" placeholder="Email (envoie une invitation)" value="${(j.email || '').replace(/"/g, '&quot;')}">
+              <p class="vide" style="font-size:11.5px;margin-top:4px;">Renseigner un email envoie une invitation : le joueur (ou son parent) créera son accès. L'ancien accès est révoqué.</p>
+              <div style="display:flex;gap:8px;margin-top:10px;">
+                <button class="btn btn-primary btn-sm" data-save="${j.id}">Enregistrer</button>
+                <button class="btn-ghost" data-annuler="${j.id}">Annuler</button>
+              </div>
+              <div class="msg" id="msg-edit-${j.id}"></div>
+            </div>
+            <div class="zone-assoc" id="assoc-${j.id}">
+              <select id="parent-select-${j.id}">
+                <option value="">Choisir un parent...</option>
+                ${tousLesParents.map(p => `<option value="${p.uid}">${nomAffichage(p)} (${p.email})</option>`).join('')}
+              </select>
+              <div style="display:flex;gap:8px;margin-top:8px;">
+                <button class="btn btn-primary btn-sm" data-lier="${j.id}">Lier</button>
+                <button class="btn-ghost" data-annuler-assoc="${j.id}">Annuler</button>
+              </div>
+            </div>
           </div>
         `).join('') : '<p class="vide">Aucun joueur pour le moment.</p>'}
 
@@ -214,6 +234,47 @@ function afficherEquipes() {
     btn.addEventListener('click', () => inviter('player', btn.dataset.team)));
   document.querySelectorAll('[data-lier]').forEach(btn =>
     btn.addEventListener('click', () => lierAParent(btn.dataset.lier)));
+
+  // --- Menu 3 points par joueur ---
+  document.querySelectorAll('[data-menu]').forEach(btn =>
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.dataset.menu;
+      document.querySelectorAll('.menu-deroulant.ouvert').forEach(m => {
+        if (m.id !== 'menu-' + id) m.classList.remove('ouvert');
+      });
+      document.getElementById('menu-' + id).classList.toggle('ouvert');
+    }));
+
+  document.querySelectorAll('[data-modifier]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.modifier;
+      document.getElementById('menu-' + id).classList.remove('ouvert');
+      document.getElementById('assoc-' + id).classList.remove('ouvert');
+      document.getElementById('edition-' + id).classList.toggle('ouvert');
+    }));
+
+  document.querySelectorAll('[data-assoc]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.assoc;
+      document.getElementById('menu-' + id).classList.remove('ouvert');
+      document.getElementById('edition-' + id).classList.remove('ouvert');
+      document.getElementById('assoc-' + id).classList.toggle('ouvert');
+    }));
+
+  document.querySelectorAll('[data-annuler]').forEach(btn =>
+    btn.addEventListener('click', () =>
+      document.getElementById('edition-' + btn.dataset.annuler).classList.remove('ouvert')));
+
+  document.querySelectorAll('[data-annuler-assoc]').forEach(btn =>
+    btn.addEventListener('click', () =>
+      document.getElementById('assoc-' + btn.dataset.annulerAssoc).classList.remove('ouvert')));
+
+  document.querySelectorAll('[data-save]').forEach(btn =>
+    btn.addEventListener('click', () => enregistrerJoueur(btn.dataset.save)));
+
+  document.querySelectorAll('[data-suppr]').forEach(btn =>
+    btn.addEventListener('click', () => supprimerJoueur(btn.dataset.suppr)));
   document.querySelectorAll('[data-ajout]').forEach(btn =>
     btn.addEventListener('click', () => ajouterJoueurRapide(btn.dataset.ajout)));
   document.querySelectorAll('[data-bulk]').forEach(btn =>
@@ -270,6 +331,52 @@ async function inviter(role, teamId) {
   }
 }
 
+// Modification d'un joueur : nom/prenom, et email qui declenche une
+// invitation. Si le joueur avait deja un compte, celui-ci est revoque :
+// l'acces est reconstruit proprement via la nouvelle invitation.
+async function enregistrerJoueur(playerId) {
+  const prenom = document.getElementById('edit-prenom-' + playerId).value.trim();
+  const nom = document.getElementById('edit-nom-' + playerId).value.trim();
+  const email = document.getElementById('edit-email-' + playerId).value.trim().toLowerCase();
+  const $msg = document.getElementById('msg-edit-' + playerId);
+  if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
+
+  const joueur = tousLesJoueurs.find(j => j.id === playerId);
+  try {
+    await updateDoc(doc(db, 'players', playerId), { prenom, nom, email: email || null });
+
+    // Nouvel email (ou email modifie) : on envoie une invitation et on
+    // revoque l'ancien acces s'il existait.
+    if (email && email !== (joueur?.email || '')) {
+      if (joueur?.account_uid) {
+        await deleteDoc(doc(db, 'users', joueur.account_uid));
+        await updateDoc(doc(db, 'players', playerId), { account_uid: '' });
+      }
+      await envoyerInvitation(email, 'player', joueur?.team_id || null);
+      $msg.className = 'msg ok';
+      $msg.textContent = `✅ Enregistré. Invitation envoyée à ${email}.`;
+    } else {
+      $msg.className = 'msg ok'; $msg.textContent = '✅ Enregistré.';
+    }
+    await rafraichirEtReafficher();
+    await chargerInvitations();
+  } catch (e) {
+    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
+  }
+}
+
+async function supprimerJoueur(playerId) {
+  const joueur = tousLesJoueurs.find(j => j.id === playerId);
+  if (!confirm(`Supprimer ${nomAffichage(joueur || {})} du club ? Ses statistiques resteront mais il n'apparaîtra plus dans les équipes.`)) return;
+  try {
+    if (joueur?.account_uid) await deleteDoc(doc(db, 'users', joueur.account_uid));
+    await deleteDoc(doc(db, 'players', playerId));
+    await rafraichirEtReafficher();
+  } catch (e) {
+    alert('Erreur : ' + e.message);
+  }
+}
+
 async function lierAParent(playerId) {
   const parentUid = document.getElementById('parent-select-' + playerId).value;
   if (!parentUid) return;
@@ -320,23 +427,6 @@ async function deplacerSelection(teamId) {
   }
 }
 
-document.getElementById('btn-inviter-parent').addEventListener('click', async () => {
-  const email = document.getElementById('email-parent').value.trim().toLowerCase();
-  const $msg = document.getElementById('msg-parent');
-  if (!email || !email.includes('@')) {
-    $msg.className = 'msg err'; $msg.textContent = 'Email invalide.'; return;
-  }
-  try {
-    await envoyerInvitation(email, 'parent', null);
-    $msg.className = 'msg ok';
-    $msg.textContent = `✅ Email envoyé à ${email}.`;
-    document.getElementById('email-parent').value = '';
-    await chargerInvitations();
-  } catch (e) {
-    $msg.className = 'msg err';
-    $msg.textContent = 'Erreur : ' + e.message;
-  }
-});
 
 async function chargerMembres() {
   const q = query(collection(db, 'users'), where('club_id', '==', String(monClubId)));
