@@ -53,15 +53,12 @@
     <div id="zone-classement"><p class="vide">Chargement…</p></div>
   </div>
 
-  <div class="carte">
-    <button class="btn btn-secondary btn-block" id="btn-deconnexion">Se déconnecter</button>
-  </div>
 </div>
 <footer class="pied">BeHoop — Espace Club</footer>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 import { avatarHtml, nomAffichage } from "./avatar.js";
@@ -276,11 +273,6 @@ function afficherClassement(idNum) {
   `;
 }
 
-document.getElementById('btn-deconnexion').addEventListener('click', async () => {
-  try { sessionStorage.removeItem('behoop_role'); localStorage.removeItem('behoop_role'); } catch (e) {}
-  await signOut(auth);
-  window.location.href = './index.html';
-});
 </script>
 </body>
 </html>

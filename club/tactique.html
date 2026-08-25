@@ -568,39 +568,84 @@ function getSVGCoords(e) {
   return pt.matrixTransform(svg.getScreenCTM().inverse());
 }
 
+// Distance (unites SVG) sous laquelle le ballon est considere porte
+const RAYON_POSSESSION = 26;
+let porteurBallon = null;   // id du joueur qui porte le ballon pendant le glissement
+
+function jetonsEtape() { return steps[currentStep].tokens; }
+function jetonBalle() { return jetonsEtape().find(t => t.type === 'ball'); }
+
+// Le joueur le plus proche du ballon, s'il est assez pres pour le porter.
+function trouverPorteur() {
+  const balle = jetonBalle();
+  if (!balle) return null;
+  let meilleur = null, meilleureDist = RAYON_POSSESSION;
+  jetonsEtape().forEach(t => {
+    if (t.type === 'ball') return;
+    const d = Math.hypot(t.x - balle.x, t.y - balle.y);
+    if (d < meilleureDist) { meilleureDist = d; meilleur = t; }
+  });
+  return meilleur;
+}
+
 function initDrag() {
   if (isPlaying || !estEditeur) return;
   document.querySelectorAll('.token').forEach(el => {
     const start = (e) => {
+      // Evite que le navigateur interprete le geste comme un defilement
+      if (e.cancelable) e.preventDefault();
       activeToken = el;
       const coords = getSVGCoords(e);
       const id = el.getAttribute('data-id');
-      const data = steps[currentStep].tokens.find(t => t.id === id);
+      const data = jetonsEtape().find(t => t.id === id);
       offset.x = coords.x - data.x;
       offset.y = coords.y - data.y;
+
+      // Si on saisit un joueur qui a le ballon, celui-ci le suivra.
+      porteurBallon = null;
+      if (data.type !== 'ball') {
+        const porteur = trouverPorteur();
+        if (porteur && porteur.id === id) {
+          const balle = jetonBalle();
+          porteurBallon = { dx: balle.x - data.x, dy: balle.y - data.y };
+        }
+      }
     };
-    el.onmousedown = start;
-    el.ontouchstart = start;
+    el.addEventListener('mousedown', start);
+    el.addEventListener('touchstart', start, { passive: false });
   });
 }
 
 const move = (e) => {
   if (!activeToken || isPlaying || !estEditeur) return;
+  if (e.cancelable) e.preventDefault();
   const coords = getSVGCoords(e);
   const id = activeToken.getAttribute('data-id');
-  const data = steps[currentStep].tokens.find(t => t.id === id);
+  const data = jetonsEtape().find(t => t.id === id);
   data.x = coords.x - offset.x;
   data.y = coords.y - offset.y;
   activeToken.setAttribute('transform', `translate(${data.x}, ${data.y})`);
+
+  // Le ballon accompagne le joueur qui le porte (il ne s'en detache que
+  // si on deplace le ballon lui-meme : c'est alors une passe ou un tir).
+  if (porteurBallon) {
+    const balle = jetonBalle();
+    balle.x = data.x + porteurBallon.dx;
+    balle.y = data.y + porteurBallon.dy;
+    const elBalle = document.querySelector('.token[data-id="BALL"]');
+    if (elBalle) elBalle.setAttribute('transform', `translate(${balle.x}, ${balle.y})`);
+  }
+
   renderTrajectories();
 };
 
-const end = () => { activeToken = null; };
+const end = () => { activeToken = null; porteurBallon = null; };
 
-window.onmousemove = move;
-window.ontouchmove = move;
-window.onmouseup = end;
-window.ontouchend = end;
+window.addEventListener('mousemove', move);
+window.addEventListener('touchmove', move, { passive: false });
+window.addEventListener('mouseup', end);
+window.addEventListener('touchend', end);
+window.addEventListener('touchcancel', end);
 
 function updateUI() {
   document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} / ${steps.length}`;
