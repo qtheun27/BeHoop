@@ -125,7 +125,25 @@ async function chargerDonneesMembres() {
   const qParents = query(collection(db, 'users'), where('club_id', '==', String(monClubId)), where('role', '==', 'parent'));
   const [snapCoachs, snapJoueurs, snapParents] = await Promise.all([getDocs(qCoachs), getDocs(qJoueurs), getDocs(qParents)]);
   tousLesCoachs = snapCoachs.docs.map(d => ({ uid: d.id, ...d.data() }));
-  tousLesJoueurs = snapJoueurs.docs.map(d => ({ id: d.id, ...d.data() }));
+  // La fiche players/ ne porte ni la photo ni le nom saisi par l'utilisateur
+  // dans son compte : on les recupere depuis users/ quand un compte existe.
+  const comptesParUid = {};
+  [...snapCoachs.docs, ...snapParents.docs].forEach(d => { comptesParUid[d.id] = d.data(); });
+  const snapTousComptes = await getDocs(query(collection(db, 'users'), where('club_id', '==', String(monClubId))));
+  snapTousComptes.forEach(d => { comptesParUid[d.id] = d.data(); });
+
+  tousLesJoueurs = snapJoueurs.docs.map(d => {
+    const fiche = { id: d.id, ...d.data() };
+    const compte = fiche.account_uid ? comptesParUid[fiche.account_uid] : null;
+    if (compte) {
+      if (compte.photo_url) fiche.photo_url = compte.photo_url;
+      if (compte.prenom) fiche.prenom = compte.prenom;
+      if (compte.nom) fiche.nom = compte.nom;
+      if (compte.email) fiche.email = compte.email;
+      if (!fiche.prenom && compte.display_name) fiche.display_name = compte.display_name;
+    }
+    return fiche;
+  });
   tousLesParents = snapParents.docs.map(d => ({ uid: d.id, ...d.data() }));
 }
 
@@ -210,11 +228,6 @@ function afficherEquipes() {
           </div>
         `).join('') : '<p class="vide">Aucun joueur pour le moment.</p>'}
 
-        <div class="ajout-rapide">
-          <input type="text" id="prenom-rapide-${eq.id}" placeholder="Prénom">
-          <input type="text" id="nom-rapide-${eq.id}" placeholder="Nom">
-          <button class="btn btn-secondary btn-sm" data-ajout="${eq.id}">+ Joueur sans email</button>
-        </div>
 
         ${joueurs.length > 1 ? `
           <div class="barre-action">
@@ -275,8 +288,6 @@ function afficherEquipes() {
 
   document.querySelectorAll('[data-suppr]').forEach(btn =>
     btn.addEventListener('click', () => supprimerJoueur(btn.dataset.suppr)));
-  document.querySelectorAll('[data-ajout]').forEach(btn =>
-    btn.addEventListener('click', () => ajouterJoueurRapide(btn.dataset.ajout)));
   document.querySelectorAll('[data-bulk]').forEach(btn =>
     btn.addEventListener('click', () => deplacerSelection(btn.dataset.bulk)));
 }
@@ -389,27 +400,6 @@ async function lierAParent(playerId) {
   }
 }
 
-async function ajouterJoueurRapide(teamId) {
-  const prenom = document.getElementById('prenom-rapide-' + teamId).value.trim();
-  const nom = document.getElementById('nom-rapide-' + teamId).value.trim();
-  const $msg = document.getElementById('msg-gestion-' + teamId);
-  if (!prenom) { $msg.className = 'msg err'; $msg.textContent = 'Le prénom est obligatoire.'; return; }
-  try {
-    await assurerEquipeExiste(teamId);
-    await addDoc(collection(db, 'players'), {
-      club_id: String(monClubId),
-      team_id: String(teamId),
-      account_uid: '',
-      parent_uids: [],
-      prenom, nom,
-      created_at: serverTimestamp(),
-    });
-    $msg.className = 'msg ok'; $msg.textContent = '✅ Joueur ajouté.';
-    await rafraichirEtReafficher();
-  } catch (e) {
-    $msg.className = 'msg err'; $msg.textContent = 'Erreur : ' + e.message;
-  }
-}
 
 async function deplacerSelection(teamId) {
   const cibles = [...document.querySelectorAll('.case-joueur-' + teamId + ':checked')].map(c => c.value);

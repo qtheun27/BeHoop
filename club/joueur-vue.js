@@ -22,6 +22,21 @@ export async function afficherVueJoueur(db, playerId, els) {
   }
   const joueur = { id: playerId, ...playerSnap.data() };
 
+  // Photo et nom sont saisis dans le compte (users/), pas dans la fiche
+  // joueur : on les recupere pour que la fiche reste a jour.
+  if (joueur.account_uid) {
+    try {
+      const compte = await getDoc(doc(db, 'users', joueur.account_uid));
+      if (compte.exists()) {
+        const u = compte.data();
+        if (u.photo_url) joueur.photo_url = u.photo_url;
+        if (u.prenom) joueur.prenom = u.prenom;
+        if (u.nom) joueur.nom = u.nom;
+        if (!joueur.prenom && u.display_name) joueur.display_name = u.display_name;
+      }
+    } catch (e) { /* compte inaccessible : on garde la fiche telle quelle */ }
+  }
+
   let nomEquipe = 'Mon équipe';
   let logoClub = null, nomClub = '';
   if (joueur.club_id) {
