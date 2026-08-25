@@ -772,6 +772,10 @@ function appliquerGeste(cible) {
   }
 
   steps.splice(currentStep + 1, 0, suivante);
+  steps.forEach((s, i) => { s.step = i + 1; });   // renumerotation apres insertion
+  // On se place directement sur l'etape d'arrivee : le ballon est deja a
+  // destination, prêt pour enchainer, sans devoir lancer la lecture.
+  currentStep = currentStep + 1;
   gesteEnAttente = null;
   majAideGeste();
   updateUI();
