@@ -437,3 +437,8 @@ html { scroll-behavior: smooth; }
   transition: background 0.15s ease, color 0.15s ease;
 }
 .filtre-chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* Action du ballon selectionnee, en attente de sa cible */
+.btn-geste.actif-geste {
+  background: var(--orange); color: #fff; border-color: var(--orange);
+}

@@ -134,20 +134,18 @@
       </div>
 
       <div class="coach-only" style="border-top: 1px solid var(--border); padding-top: 8px;">
-        <label class="champ-label" style="margin-top:0;">Geste du ballon sur cette étape</label>
-        <select id="geste-etape" style="width:100%;">
-          <option value="">Déplacement simple</option>
-          <optgroup label="Tir">
-            <option value="shoot">Shoot</option>
-            <option value="layup">Lay-up</option>
-            <option value="power_layup">Power Lay-up</option>
-          </optgroup>
-          <optgroup label="Passe">
-            <option value="handoff">Hand-off</option>
-            <option value="chest">Chest pass</option>
-            <option value="bounce">Bounce pass</option>
-          </optgroup>
-        </select>
+        <label class="champ-label" style="margin-top:0;">Action du ballon</label>
+        <div style="display:flex; gap:5px; flex-wrap:wrap;">
+          <button type="button" class="btn-ghost btn-geste" data-geste="chest">Chest pass</button>
+          <button type="button" class="btn-ghost btn-geste" data-geste="bounce">Bounce pass</button>
+          <button type="button" class="btn-ghost btn-geste" data-geste="handoff">Hand-off</button>
+          <button type="button" class="btn-ghost btn-geste" data-geste="shoot">Shoot</button>
+          <button type="button" class="btn-ghost btn-geste" data-geste="layup">Lay-up</button>
+          <button type="button" class="btn-ghost btn-geste" data-geste="power_layup">Power Lay-up</button>
+        </div>
+        <p class="vide" id="aide-geste" style="font-size:11.5px; margin-top:6px;">
+          Choisis une action, puis touche le destinataire (passe) ou le panier (tir).
+        </p>
       </div>
 
       <div class="coach-only" style="display:flex; gap:10px; align-items:center; border-top: 1px solid var(--border); padding-top: 8px; flex-wrap:wrap;">
@@ -556,6 +554,7 @@ function renderTrajectories() {
 
   const currentData = steps[currentStep].tokens;
   const nextData = steps[currentStep + 1].tokens;
+  const geste = GESTES[steps[currentStep].geste] || null;
 
   currentData.forEach(t => {
     const target = nextData.find(n => n.id === t.id);
@@ -566,15 +565,44 @@ function renderTrajectories() {
       
       const strokeColor = t.type === 'offense' ? 'var(--offense)' : (t.type === 'defense' ? 'var(--defense)' : '#fff');
       const marker = t.type === 'offense' ? 'url(#arrow-offense)' : (t.type === 'defense' ? 'url(#arrow-defense)' : 'url(#arrow-ball)');
-      
+
       line.setAttribute('stroke', strokeColor);
-      line.setAttribute('stroke-width', '2.5');
-      line.setAttribute('class', 'trajectory-line');
+      line.setAttribute('stroke-width', t.type === 'ball' ? '3' : '2.5');
       line.setAttribute('marker-end', marker);
-      
+
+      // Le trait du ballon depend du geste : plein pour une passe directe,
+      // pointille serre pour un tir, tirets larges pour un bounce pass...
+      if (t.type === 'ball' && geste) {
+        line.setAttribute('class', '');
+        if (geste.trait) line.setAttribute('stroke-dasharray', geste.trait);
+      } else {
+        line.setAttribute('class', 'trajectory-line');
+      }
+
       container.appendChild(line);
     }
   });
+}
+
+// Un tir se valide en touchant la zone du panier.
+function initClicPanier() {
+  const svg = document.getElementById('court');
+  if (!svg || svg.dataset.clicPanier) return;
+  svg.dataset.clicPanier = '1';
+  const gerer = (e) => {
+    if (!gesteEnAttente) return;
+    const g = GESTES[gesteEnAttente];
+    if (!g.tir) return;
+    const p = getSVGCoords(e);
+    const panier = positionPanier();
+    // Tolerance large : viser le panier au doigt doit rester facile.
+    if (Math.hypot(p.x - panier.x, p.y - panier.y) < 90) {
+      if (e.cancelable) e.preventDefault();
+      appliquerGeste(panier);
+    }
+  };
+  svg.addEventListener('mousedown', gerer);
+  svg.addEventListener('touchstart', gerer, { passive: false });
 }
 
 function getSVGCoords(e) {
@@ -606,11 +634,24 @@ function trouverPorteur() {
 }
 
 function initDrag() {
+  initClicPanier();
   if (isPlaying || !estEditeur) return;
   document.querySelectorAll('.token').forEach(el => {
     const start = (e) => {
       // Evite que le navigateur interprete le geste comme un defilement
       if (e.cancelable) e.preventDefault();
+
+      // Une action du ballon attend sa cible : ce toucher la designe.
+      if (gesteEnAttente) {
+        const idCible = el.getAttribute('data-id');
+        const cible = jetonsEtape().find(t => t.id === idCible);
+        const g = GESTES[gesteEnAttente];
+        if (cible && !g.tir && cible.type !== 'ball') {
+          appliquerGeste(cible);
+          return;
+        }
+      }
+
       activeToken = el;
       const coords = getSVGCoords(e);
       const id = el.getAttribute('data-id');
@@ -665,24 +706,78 @@ window.addEventListener('touchend', end);
 window.addEventListener('touchcancel', end);
 
 const GESTES = {
-  shoot:       { label: 'Shoot',        arc: 90,  duree: 1.0 },
-  layup:       { label: 'Lay-up',       arc: 45,  duree: 0.8 },
-  power_layup: { label: 'Power Lay-up', arc: 28,  duree: 0.6 },
-  handoff:     { label: 'Hand-off',     arc: 6,   duree: 0.5 },
-  chest:       { label: 'Chest pass',   arc: 14,  duree: 0.45 },
-  bounce:      { label: 'Bounce pass',  arc: -30, duree: 0.6 },
+  shoot:       { label: 'Shoot',        arc: 90,  duree: 1.0, tir: true,  trait: '2 6' },
+  layup:       { label: 'Lay-up',       arc: 45,  duree: 0.8, tir: true,  trait: '6 4' },
+  power_layup: { label: 'Power Lay-up', arc: 28,  duree: 0.6, tir: true,  trait: '' },
+  handoff:     { label: 'Hand-off',     arc: 6,   duree: 0.5, tir: false, trait: '1 4' },
+  chest:       { label: 'Chest pass',   arc: 14,  duree: 0.45, tir: false, trait: '' },
+  bounce:      { label: 'Bounce pass',  arc: -30, duree: 0.6, tir: false, trait: '8 5' },
 };
 
-const $geste = document.getElementById('geste-etape');
-if ($geste) {
-  $geste.addEventListener('change', () => {
-    steps[currentStep].geste = $geste.value || null;
-    renderTrajectories();
+// Geste en attente de cible : le coach choisit l'action, puis touche le
+// destinataire (passe) ou le panier (tir).
+let gesteEnAttente = null;
+
+function positionPanier() {
+  // En terrain complet, on vise le panier le plus proche du ballon.
+  const balle = jetonBalle();
+  if (currentMode === 'full' && balle) {
+    return balle.y < 235 ? { x: 250, y: 60 } : { x: 250, y: 410 };
+  }
+  return { x: 250, y: 60 };
+}
+
+function majAideGeste() {
+  const $aide = document.getElementById('aide-geste');
+  if (!$aide) return;
+  if (!gesteEnAttente) {
+    $aide.textContent = "Choisis une action, puis touche le destinataire (passe) ou le panier (tir).";
+    $aide.style.color = '';
+  } else {
+    const g = GESTES[gesteEnAttente];
+    $aide.textContent = g.tir
+      ? `${g.label} : touche le panier pour valider.`
+      : `${g.label} : touche le joueur qui reçoit la balle.`;
+    $aide.style.color = 'var(--orange)';
+  }
+  document.querySelectorAll('.btn-geste').forEach(b =>
+    b.classList.toggle('actif-geste', b.dataset.geste === gesteEnAttente));
+}
+
+document.querySelectorAll('.btn-geste').forEach(btn => {
+  btn.addEventListener('click', () => {
+    gesteEnAttente = (gesteEnAttente === btn.dataset.geste) ? null : btn.dataset.geste;
+    majAideGeste();
   });
+});
+
+// Applique le geste : cree l'etape suivante avec le ballon a destination.
+function appliquerGeste(cible) {
+  const g = GESTES[gesteEnAttente];
+  if (!g) return;
+
+  // On fige l'action sur l'etape courante, puis on cree l'etape d'arrivee.
+  steps[currentStep].geste = gesteEnAttente;
+
+  const suivante = {
+    step: steps.length + 1,
+    geste: null,
+    tokens: JSON.parse(JSON.stringify(jetonsEtape())),
+  };
+  const balle = suivante.tokens.find(t => t.type === 'ball');
+  if (balle) {
+    // Le ballon se pose sur le receveur (legerement decale) ou dans le panier.
+    balle.x = cible.x + (g.tir ? 0 : 14);
+    balle.y = cible.y + (g.tir ? 0 : 14);
+  }
+
+  steps.splice(currentStep + 1, 0, suivante);
+  gesteEnAttente = null;
+  majAideGeste();
+  updateUI();
 }
 
 function updateUI() {
-  if ($geste) $geste.value = steps[currentStep].geste || '';
   document.getElementById('step-counter').textContent = `Étape ${currentStep + 1} / ${steps.length}`;
   renderTokens(steps[currentStep].tokens);
   renderTrajectories();
