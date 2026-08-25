@@ -99,7 +99,7 @@
     <div class="toolbar-board">
       <button id="btn-half" class="btn btn-secondary btn-sm actif" onclick="setCourt('half')">Demi-terrain</button>
       <button id="btn-full" class="btn btn-secondary btn-sm" onclick="setCourt('full')">Terrain complet</button>
-      <button id="btn-traj" class="btn btn-secondary btn-sm actif" onclick="toggleTrajectories()">KM Trajectoires</button>
+      <button id="btn-traj" class="btn btn-secondary btn-sm actif" onclick="toggleTrajectories()">🛣️ Trajectoires</button>
       <button class="btn btn-secondary btn-sm" onclick="resetAll()">🔄 Réinit</button>
     </div>
 
@@ -295,12 +295,7 @@ async function chargerEquipesCoach() {
     const donnees = await res.json();
     const club = (donnees.clubs || []).find(c => String(c.id) === String(monProfil.club_id));
     if (club && club.teams) {
-      // Quelles equipes proposer selon le role :
-      //  - coach : celles qui lui sont assignees
-      //  - joueur : la sienne
-      //  - parent : celles de ses enfants
-      //  - admin : toutes celles du club
-      let idsAutorises = null;   // null = toutes
+      let idsAutorises = null;
       if (monProfil.role === 'coach') {
         idsAutorises = (monProfil.team_ids || []).map(String);
       } else if (monProfil.role === 'player') {
@@ -502,25 +497,69 @@ function drawCourt() {
     document.getElementById('board-container').style.aspectRatio = '500 / 470';
     lines.innerHTML = `
       <rect x="0" y="0" width="500" height="470" fill="var(--court-bg)"/>
-      <rect x="25" y="25" width="450" height="420" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Lignes de fond et de touche -->
+      <rect x="25" y="25" width="450" height="445" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Raquette (Paint) aux proportions FIBA -->
       <rect x="170" y="25" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Cercle des lancers francs -->
       <circle cx="250" cy="215" r="60" fill="none" stroke="#fff" stroke-width="3"/>
-      <path d="M 65 25 L 65 115 A 200 200 0 0 0 435 115 L 435 25" fill="none" stroke="#fff" stroke-width="3"/>
-      <line x1="210" y1="40" x2="290" y2="40" stroke="#fff" stroke-width="4"/>
-      <circle cx="250" cy="55" r="14" fill="none" stroke="var(--offense)" stroke-width="3"/>
+      
+      <!-- Ligne des 3 points -->
+      <path d="M 55 25 L 55 120 A 205 205 0 0 0 445 120 L 445 25" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Zone de non-charge (Arc sous l'anneau) -->
+      <path d="M 210 60 A 40 40 0 0 0 290 60" fill="none" stroke="#fff" stroke-width="2"/>
+      
+      <!-- Panneau et anneau -->
+      <line x1="215" y1="45" x2="285" y2="45" stroke="#fff" stroke-width="4"/>
+      <circle cx="250" cy="55" r="10" fill="none" stroke="var(--offense)" stroke-width="3"/>
+      <line x1="250" y1="45" x2="250" y2="48" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Ligne médiane et demi-cercle central -->
+      <line x1="25" y1="470" x2="475" y2="470" stroke="#fff" stroke-width="3"/>
+      <path d="M 190 470 A 60 60 0 0 1 310 470" fill="none" stroke="#fff" stroke-width="3"/>
     `;
   } else {
     svg.setAttribute('viewBox', '0 0 500 940');
     document.getElementById('board-container').style.aspectRatio = '500 / 940';
     lines.innerHTML = `
       <rect x="0" y="0" width="500" height="940" fill="var(--court-bg)"/>
+      
+      <!-- Lignes de délimitation extérieures -->
       <rect x="25" y="25" width="450" height="890" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- Ligne médiane et cercle central -->
       <line x1="25" y1="470" x2="475" y2="470" stroke="#fff" stroke-width="3"/>
       <circle cx="250" cy="470" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      
+      <!-- === DEMI-TERRAIN HAUT === -->
+      <!-- Raquette -->
       <rect x="170" y="25" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
       <circle cx="250" cy="215" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      <!-- Ligne 3 points -->
+      <path d="M 55 25 L 55 120 A 205 205 0 0 0 445 120 L 445 25" fill="none" stroke="#fff" stroke-width="3"/>
+      <!-- Arc de non-charge -->
+      <path d="M 210 60 A 40 40 0 0 0 290 60" fill="none" stroke="#fff" stroke-width="2"/>
+      <!-- Panneau et anneau -->
+      <line x1="215" y1="45" x2="285" y2="45" stroke="#fff" stroke-width="4"/>
+      <circle cx="250" cy="55" r="10" fill="none" stroke="var(--offense)" stroke-width="3"/>
+      <line x1="250" y1="45" x2="250" y2="48" stroke="#fff" stroke-width="3"/>
+      
+      <!-- === DEMI-TERRAIN BAS === -->
+      <!-- Raquette -->
       <rect x="170" y="725" width="160" height="190" fill="none" stroke="#fff" stroke-width="3"/>
       <circle cx="250" cy="725" r="60" fill="none" stroke="#fff" stroke-width="3"/>
+      <!-- Ligne 3 points (inversée) -->
+      <path d="M 55 915 L 55 820 A 205 205 0 0 1 445 820 L 445 915" fill="none" stroke="#fff" stroke-width="3"/>
+      <!-- Arc de non-charge (inversé) -->
+      <path d="M 210 880 A 40 40 0 0 1 290 880" fill="none" stroke="#fff" stroke-width="2"/>
+      <!-- Panneau et anneau -->
+      <line x1="215" y1="895" x2="285" y2="895" stroke="#fff" stroke-width="4"/>
+      <circle cx="250" cy="885" r="10" fill="none" stroke="var(--offense)" stroke-width="3"/>
+      <line x1="250" y1="895" x2="250" y2="892" stroke="#fff" stroke-width="3"/>
     `;
   }
 }
@@ -570,8 +609,6 @@ function renderTrajectories() {
       line.setAttribute('stroke-width', t.type === 'ball' ? '3' : '2.5');
       line.setAttribute('marker-end', marker);
 
-      // Le trait du ballon depend du geste : plein pour une passe directe,
-      // pointille serre pour un tir, tirets larges pour un bounce pass...
       if (t.type === 'ball' && geste) {
         line.setAttribute('class', '');
         if (geste.trait) line.setAttribute('stroke-dasharray', geste.trait);
@@ -584,7 +621,6 @@ function renderTrajectories() {
   });
 }
 
-// Un tir se valide en touchant la zone du panier.
 function initClicPanier() {
   const svg = document.getElementById('court');
   if (!svg || svg.dataset.clicPanier) return;
@@ -595,7 +631,6 @@ function initClicPanier() {
     if (!g.tir) return;
     const p = getSVGCoords(e);
     const panier = positionPanier();
-    // Tolerance large : viser le panier au doigt doit rester facile.
     if (Math.hypot(p.x - panier.x, p.y - panier.y) < 90) {
       if (e.cancelable) e.preventDefault();
       appliquerGeste(panier);
@@ -613,14 +648,12 @@ function getSVGCoords(e) {
   return pt.matrixTransform(svg.getScreenCTM().inverse());
 }
 
-// Distance (unites SVG) sous laquelle le ballon est considere porte
 const RAYON_POSSESSION = 26;
-let porteurBallon = null;   // id du joueur qui porte le ballon pendant le glissement
+let porteurBallon = null;
 
 function jetonsEtape() { return steps[currentStep].tokens; }
 function jetonBalle() { return jetonsEtape().find(t => t.type === 'ball'); }
 
-// Le joueur le plus proche du ballon, s'il est assez pres pour le porter.
 function trouverPorteur() {
   const balle = jetonBalle();
   if (!balle) return null;
@@ -638,10 +671,8 @@ function initDrag() {
   if (isPlaying || !estEditeur) return;
   document.querySelectorAll('.token').forEach(el => {
     const start = (e) => {
-      // Evite que le navigateur interprete le geste comme un defilement
       if (e.cancelable) e.preventDefault();
 
-      // Une action du ballon attend sa cible : ce toucher la designe.
       if (gesteEnAttente) {
         const idCible = el.getAttribute('data-id');
         const cible = jetonsEtape().find(t => t.id === idCible);
@@ -659,7 +690,6 @@ function initDrag() {
       offset.x = coords.x - data.x;
       offset.y = coords.y - data.y;
 
-      // Si on saisit un joueur qui a le ballon, celui-ci le suivra.
       porteurBallon = null;
       if (data.type !== 'ball') {
         const porteur = trouverPorteur();
@@ -684,8 +714,6 @@ const move = (e) => {
   data.y = coords.y - offset.y;
   activeToken.setAttribute('transform', `translate(${data.x}, ${data.y})`);
 
-  // Le ballon accompagne le joueur qui le porte (il ne s'en detache que
-  // si on deplace le ballon lui-meme : c'est alors une passe ou un tir).
   if (porteurBallon) {
     const balle = jetonBalle();
     balle.x = data.x + porteurBallon.dx;
@@ -714,12 +742,9 @@ const GESTES = {
   bounce:      { label: 'Bounce pass',  arc: -30, duree: 0.6, tir: false, trait: '8 5' },
 };
 
-// Geste en attente de cible : le coach choisit l'action, puis touche le
-// destinataire (passe) ou le panier (tir).
 let gesteEnAttente = null;
 
 function positionPanier() {
-  // En terrain complet, on vise le panier le plus proche du ballon.
   const balle = jetonBalle();
   if (currentMode === 'full' && balle) {
     return balle.y < 235 ? { x: 250, y: 60 } : { x: 250, y: 410 };
@@ -751,12 +776,10 @@ document.querySelectorAll('.btn-geste').forEach(btn => {
   });
 });
 
-// Applique le geste : cree l'etape suivante avec le ballon a destination.
 function appliquerGeste(cible) {
   const g = GESTES[gesteEnAttente];
   if (!g) return;
 
-  // On fige l'action sur l'etape courante, puis on cree l'etape d'arrivee.
   steps[currentStep].geste = gesteEnAttente;
 
   const suivante = {
@@ -766,15 +789,12 @@ function appliquerGeste(cible) {
   };
   const balle = suivante.tokens.find(t => t.type === 'ball');
   if (balle) {
-    // Le ballon se pose sur le receveur (legerement decale) ou dans le panier.
     balle.x = cible.x + (g.tir ? 0 : 14);
     balle.y = cible.y + (g.tir ? 0 : 14);
   }
 
   steps.splice(currentStep + 1, 0, suivante);
-  steps.forEach((s, i) => { s.step = i + 1; });   // renumerotation apres insertion
-  // On se place directement sur l'etape d'arrivee : le ballon est deja a
-  // destination, prêt pour enchainer, sans devoir lancer la lecture.
+  steps.forEach((s, i) => { s.step = i + 1; });
   currentStep = currentStep + 1;
   gesteEnAttente = null;
   majAideGeste();
@@ -849,14 +869,10 @@ function startAnimation() {
       const target = toData.find(n => n.id === t.id);
       if (!target) return { ...t };
 
-      // Le ballon suit une courbe propre au geste : un tir monte haut, une
-      // passe file droit, un bounce pass rebondit au sol a mi-parcours.
       if (t.type === 'ball' && geste) {
-        // Le ballon part plus vite que les joueurs sur les gestes courts
         const p = Math.min(1, progress / geste.duree);
         const x = t.x + (target.x - t.x) * p;
         let y = t.y + (target.y - t.y) * p;
-        // arc positif = cloche vers le haut ; rebond = creux vers le sol
         y -= Math.sin(Math.PI * p) * geste.arc;
         return { ...t, x, y };
       }
@@ -906,8 +922,6 @@ window.resetAll = () => {
   }
 };
 
-// Changement d'effectif : on repart d'un plateau propre avec le nouveau
-// nombre de joueurs (les etapes en cours seraient incoherentes autrement).
 function appliquerEffectif() {
   const o = parseInt(document.getElementById('nb-offense').value, 10);
   const d = parseInt(document.getElementById('nb-defense').value, 10);
