@@ -1,0 +1,26 @@
+name: Notifications et purge
+
+# Toutes les 30 min : « Match dans 2 h », rappel covoiturage (la veille à 18 h), purge des rushes après 48 h.
+on:
+  schedule:
+    - cron: '5,35 * * * *'
+  workflow_dispatch:
+
+concurrency: { group: notify, cancel-in-progress: false }
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx tsx ops/notify.ts
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
