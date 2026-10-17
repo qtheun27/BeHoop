@@ -32,7 +32,8 @@ if (meta.data()?.hash !== hash) {
 // 2. Posts score des 4 derniers jours
 const since = new Date(Date.now() - 4 * 864e5).toISOString().slice(0, 10);
 const today = new Date().toISOString().slice(0, 10);
-const recent = data.games.map(slimGame).filter((g: any) => g.d >= since && g.d <= today && isPlayed(g));
+// Matchs sans adversaire (exempt, forfait administratif) ignorés
+const recent = data.games.map(slimGame).filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a);
 let created = 0, updated = 0;
 for (const g of recent) {
   const ref = db.doc(`posts/score-${g.id}`);

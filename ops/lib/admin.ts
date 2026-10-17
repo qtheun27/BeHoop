@@ -7,6 +7,7 @@ import { createReadStream, createWriteStream, statSync } from 'node:fs';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
+let configured = false;
 export function admin() {
   if (!getApps().length) {
     const sa = process.env.FIREBASE_SERVICE_ACCOUNT;
@@ -14,7 +15,9 @@ export function admin() {
     else if (process.env.FIRESTORE_EMULATOR_HOST) initializeApp({ projectId: process.env.GCLOUD_PROJECT ?? 'demo-behoop' });
     else throw new Error('FIREBASE_SERVICE_ACCOUNT manquant (ou FIRESTORE_EMULATOR_HOST pour l’émulateur)');
   }
-  return { db: getFirestore(), messaging: getMessaging(), FieldValue };
+  const db = getFirestore();
+  if (!configured) { db.settings({ ignoreUndefinedProperties: true }); configured = true; }
+  return { db, messaging: getMessaging(), FieldValue };
 }
 export const hasFirebase = () => !!(process.env.FIREBASE_SERVICE_ACCOUNT || process.env.FIRESTORE_EMULATOR_HOST);
 
