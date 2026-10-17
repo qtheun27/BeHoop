@@ -1,0 +1,201 @@
+rules_version = '2';
+// ============================================================================================
+// Règles Firestore — couche sociale BeHoop.
+// ⚠️ Le projet Firebase « basket-awbb-club » héberge aussi l'Espace Club (/club/), dont les règles
+// ne sont pas dans ce dépôt. AVANT tout déploiement, fusionner ce fichier avec les règles du Club
+// (voir docs/A_FAIRE_QUENTIN.md). Collections Club : users, teams, players, trainings, plays, invitations.
+// Les écritures automatiques (posts « score », teamInfo, renderJobs, matchVideos, moments) se font
+// avec le compte de service (Admin SDK), qui ignore ces règles.
+// ============================================================================================
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function uid() { return request.auth.uid; }
+    function isAdmin() { return signedIn() && request.auth.token.email == 'q.theuninck@gmail.com' && request.auth.token.email_verified == true; }
+    function profile() { return get(/databases/$(database)/documents/profiles/$(uid())); }
+    function active() { return signedIn() && exists(/databases/$(database)/documents/profiles/$(uid())) && profile().data.get('banned', false) != true; }
+    function memberDoc(teamId) { return /databases/$(database)/documents/teamMembers/$(string(teamId))/members/$(uid()); }
+    function isMember(teamId) { return signedIn() && exists(memberDoc(teamId)) && get(memberDoc(teamId)).data.status == 'accepted'; }
+    function isResponsible(teamId) { return isMember(teamId) && get(memberDoc(teamId)).data.role == 'responsable'; }
+    // Catégorie inconnue (pas de document teamInfo) → Jeunes, par sécurité.
+    function isSeniors(teamId) {
+      let p = /databases/$(database)/documents/teamInfo/$(string(teamId));
+      return exists(p) && get(p).data.get('ageGroupOverride', get(p).data.ageGroup) == 'seniors';
+    }
+    function unchanged(keys) { return !request.resource.data.diff(resource.data).affectedKeys().hasAny(keys); }
+    function onlyChanged(keys) { return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys); }
+
+    // ---------- Profils (« users » du cahier des charges) ----------
+    match /profiles/{userId} {
+      allow read: if signedIn() && (uid() == userId || isAdmin());
+      allow create: if signedIn() && uid() == userId && request.resource.data.ageConfirmed == true
+        && request.resource.data.displayName is string && request.resource.data.displayName.size() <= 40
+        && request.resource.data.get('banned', false) == false;
+      allow update: if (signedIn() && uid() == userId && unchanged(['banned'])) || isAdmin();
+      allow delete: if signedIn() && uid() == userId;
+    }
+    match /legalAcceptances/{userId} {
+      allow read, write: if signedIn() && uid() == userId;
+    }
+
+    // ---------- Suivis ----------
+    match /follows/{userId}/items/{itemId} {
+      allow read, write: if signedIn() && uid() == userId;
+    }
+
+    // ---------- Infos équipe (Jeunes/Seniors) ----------
+    match /teamInfo/{teamId} {
+      allow read: if true;
+      // Personnalisation (nom/logo/couleurs) par un membre ; correction Jeunes/Seniors par le super admin.
+      allow write: if isAdmin() || (active() && isMember(int(teamId)) && request.resource.data.diff(resource == null ? {} : resource.data).affectedKeys().hasOnly(['override']));
+    }
+
+    // ---------- Équipes 🔒 ----------
+    match /teamMembers/{teamId}/members/{memberId} {
+      allow read: if signedIn() && (uid() == memberId || isMember(int(teamId)) || isAdmin());
+      // Demande d'accès : uniquement pour soi, en attente, rôle membre.
+      allow create: if (active() && uid() == memberId && request.resource.data.status == 'pending' && request.resource.data.role == 'membre'
+                        && request.resource.data.uid == memberId && request.resource.data.teamId == int(teamId)
+                        && request.resource.data.get('message', '').size() <= 200)
+                    || isAdmin();
+      // Accepter / nommer responsable : responsable de l'équipe ou super admin.
+      allow update: if (isResponsible(int(teamId)) && onlyChanged(['status', 'role'])) || isAdmin();
+      // Quitter (soi-même), retirer/refuser (responsable), super admin.
+      allow delete: if signedIn() && (uid() == memberId || isResponsible(int(teamId)) || isAdmin());
+    }
+    // Requête « mes adhésions » (collectionGroup members where uid == moi)
+    match /{path=**}/members/{memberId} {
+      allow read: if signedIn() && resource.data.uid == uid();
+    }
+
+    // ---------- Posts ----------
+    function canRead(d) {
+      return d.visibility == 'public' || isAdmin() || (d.teamIdPrivate != null && isMember(d.teamIdPrivate));
+    }
+    function validNewPost(d, postId) {
+      let hasMedia = d.type == 'photo';
+      let team = d.teamIds.size() == 1 ? d.teamIds[0] : null;
+      return active() && d.authorUid == uid() && d.hidden == false && d.reactions.size() == 0
+        && d.type in ['photo', 'message']
+        && d.get('payload', {}).get('text', '').size() <= 500
+        && d.get('payload', {}).get('photos', []).size() <= 10
+        // Média d'une équipe Jeunes : visibilité équipe obligatoire et auteur membre accepté.
+        && (!hasMedia || (team != null && (
+              (isSeniors(team) && d.visibility == 'public' && d.teamIdPrivate == null)
+           || (!isSeniors(team) && d.visibility == 'team' && d.teamIdPrivate == team && isMember(team)))))
+        && (hasMedia || (d.visibility == 'public' && d.teamIdPrivate == null));
+    }
+    function validLivePost(d, postId) {
+      return active() && postId.matches('live-[0-9]+') && d.type == 'live' && d.visibility == 'public' && d.teamIdPrivate == null && d.authorUid == uid();
+    }
+    // Réaction : seul le compteur change, d'au plus ±1 par emoji, en cohérence avec le document reactions/{uid}.
+    function validReactionUpdate(postId) {
+      let before = resource.data.reactions;
+      let after = request.resource.data.reactions;
+      let mine = /databases/$(database)/documents/posts/$(postId)/reactions/$(uid());
+      return onlyChanged(['reactions'])
+        && after.keys().hasOnly(['🏀', '🔥', '👏'])
+        && (existsAfter(mine) != exists(mine) || getAfter(mine).data.emoji != get(mine).data.emoji);
+    }
+    match /posts/{postId} {
+      allow read: if canRead(resource.data);
+      allow create: if validNewPost(request.resource.data, postId) || validLivePost(request.resource.data, postId);
+      allow update: if
+          // Score en direct : tout compte (dernier qui écrit gagne)
+          (resource.data.type == 'live' && validLivePost(request.resource.data, postId) && onlyChanged(['payload', 'authorUid', 'authorName', 'createdAt', 'hidden', 'reactions', 'type', 'clubId', 'teamIds', 'targets', 'visibility', 'teamIdPrivate']))
+          // Réactions
+       || (active() && canRead(resource.data) && validReactionUpdate(postId))
+          // « Je suis parent — retirer ce contenu » : masquage immédiat par tout lecteur d'un média Jeunes
+       || (active() && resource.data.visibility == 'team' && canRead(resource.data) && onlyChanged(['hidden', 'hiddenReason', 'hiddenBy', 'hiddenAt'])
+           && request.resource.data.hidden == true && request.resource.data.hiddenReason == 'parent' && request.resource.data.hiddenBy == uid())
+          // Masquage par l'auteur ou un responsable de l'équipe
+       || (active() && onlyChanged(['hidden', 'hiddenReason', 'hiddenBy', 'hiddenAt']) && request.resource.data.hidden == true
+           && (resource.data.authorUid == uid() || (resource.data.teamIds.size() > 0 && isResponsible(resource.data.teamIds[0]))))
+          // Réactivation, modération : super admin uniquement
+       || isAdmin();
+      allow delete: if (signedIn() && resource.data.authorUid == uid()) || isAdmin();
+
+      match /reactions/{userId} {
+        allow read: if signedIn() && uid() == userId;
+        allow create, update: if active() && uid() == userId && request.resource.data.emoji in ['🏀', '🔥', '👏']
+          && canRead(get(/databases/$(database)/documents/posts/$(postId)).data);
+        allow delete: if signedIn() && uid() == userId;
+      }
+    }
+
+    // ---------- Signalements ----------
+    match /reports/{reportId} {
+      allow create: if active() && request.resource.data.reporterUid == uid() && request.resource.data.status == 'open'
+        && reportId == request.resource.data.postId + '_' + uid();
+      allow read, update, delete: if isAdmin();
+    }
+
+    // ---------- Montage vidéo ----------
+    function canReadVideo(d) { return d.authorUid == uid() || d.visibility == 'public' || isAdmin() || (d.get('teamIdPrivate', null) != null && isMember(d.teamIdPrivate)); }
+    match /matchVideos/{id} {
+      allow read: if signedIn() && canReadVideo(resource.data);
+      allow create: if active() && request.resource.data.authorUid == uid() && request.resource.data.status == 'draft'
+        && (request.resource.data.visibility == 'team' || isSeniors(request.resource.data.teamIds[0]));
+      // L'auteur modifie ses réglages et médias ; statut/HLS réservés au pipeline (compte de service).
+      allow update: if (signedIn() && resource.data.authorUid == uid() && unchanged(['authorUid', 'hls', 'visibility', 'teamIdPrivate', 'version'])
+                        && request.resource.data.status in ['draft', 'uploading', 'queued', 'deleted'])
+                    || isAdmin();
+      allow delete: if (signedIn() && resource.data.authorUid == uid()) || isAdmin();
+    }
+    match /renderJobs/{id} {
+      allow read: if signedIn() && (resource.data.authorUid == uid() || isAdmin());
+    }
+
+    // ---------- V2 : score en direct ----------
+    match /liveScores/{gameId} {
+      allow read: if true;
+      allow create, update: if active() && request.resource.data.updatedBy == uid()
+        && request.resource.data.home is int && request.resource.data.away is int
+        && request.resource.data.home >= 0 && request.resource.data.away >= 0 && request.resource.data.home < 250 && request.resource.data.away < 250
+        && request.resource.data.quarter in [1, 2, 3, 4] && request.resource.data.history.size() <= 200
+        && (resource == null || resource.data.get('status', 'live') != 'official');
+    }
+
+    // ---------- V2 : Moments et vote « Action du match » ----------
+    match /moments/{id} {
+      allow read: if signedIn() && canReadVideo(get(/databases/$(database)/documents/matchVideos/$(resource.data.matchVideoId)).data);
+      match /votes/{userId} {
+        allow read: if signedIn();
+        allow create: if active() && uid() == userId;
+      }
+    }
+    match /momentVotes/{matchVideoId}/votes/{userId} {
+      allow read: if signedIn();
+      // un vote par compte et par match, pendant 48 h après la publication des Moments
+      allow create, update: if active() && uid() == userId && request.resource.data.momentId is string
+        && request.time < get(/databases/$(database)/documents/matchVideos/$(matchVideoId)).data.voteUntil;
+    }
+
+    // ---------- V2 : covoiturage ----------
+    function carpoolAllowed(teamIdPrivate) { return teamIdPrivate == null || isMember(teamIdPrivate); }
+    match /carpools/{gameId}/offers/{offerId} {
+      allow read: if active() && carpoolAllowed(resource.data.teamIdPrivate);
+      allow create: if active() && request.resource.data.driverUid == uid() && carpoolAllowed(request.resource.data.teamIdPrivate)
+        && request.resource.data.requests.size() == 0 && request.resource.data.seats >= 0 && request.resource.data.seats <= 8;
+      allow update: if active() && carpoolAllowed(resource.data.teamIdPrivate) && onlyChanged(['requests', 'seats', 'from', 'time']) && (
+          resource.data.driverUid == uid()
+          // un passager n'ajoute/modifie que sa propre demande, en attente
+       || (request.resource.data.requests.diff(resource.data.requests).affectedKeys().hasOnly([uid()])
+           && request.resource.data.requests[uid()].status == 'pending' && onlyChanged(['requests'])));
+      allow delete: if signedIn() && resource.data.driverUid == uid();
+
+      // Coordonnées : visibles par le propriétaire, le conducteur, et un passager accepté (après acceptation).
+      match /contacts/{userId} {
+        function offer() { return get(/databases/$(database)/documents/carpools/$(gameId)/offers/$(offerId)).data; }
+        allow write: if active() && uid() == userId;
+        allow read: if signedIn() && (uid() == userId
+          || (offer().driverUid == uid() && offer().requests.get(userId, {}).get('status', '') == 'accepted')
+          || (userId == offer().driverUid && offer().requests.get(uid(), {}).get('status', '') == 'accepted'));
+      }
+    }
+
+    // Journal anti-spam des notifications : serveur uniquement.
+    match /notifLog/{id} { allow read, write: if false; }
+  }
+}
