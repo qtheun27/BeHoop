@@ -11,7 +11,7 @@ import { useClubs } from './Explore';
 
 export function Publish() {
   const s = useSession();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(() => new URLSearchParams(location.hash.split('?')[1] ?? '').get('photo') === '1');
   if (!s.user) return <Screen title="Publier"><Empty ill="➕" title="Publie pour ton équipe" text="Photos, messages et vidéos de match montées automatiquement." action={<button className="btn" onClick={() => s.requireAuth()}>Se connecter</button>} /></Screen>;
   return (
     <Screen title="Publier">

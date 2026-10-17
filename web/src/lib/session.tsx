@@ -4,6 +4,7 @@ import { auth } from './firebase';
 import * as D from './db';
 import { loadIndex, type Club } from './data';
 import { SUPER_ADMIN_EMAIL } from './config';
+import { applyTheme, DEFAULT_THEME } from './theme';
 
 interface Session {
   ready: boolean; user: User | null; profile: D.Profile | null; isAdmin: boolean;
@@ -42,9 +43,9 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     try { if (user && profile) localStorage.setItem('behoop.session', profile.displayName); else if (ready && !user) localStorage.removeItem('behoop.session'); } catch { /* stockage indisponible */ }
   }, [user, profile, ready]);
   useEffect(() => {
-    const t = profile?.theme ?? 'auto';
-    if (t === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.dataset.theme = t;
-  }, [profile?.theme]);
+    if (!profile) return;
+    applyTheme({ ...DEFAULT_THEME, mode: profile.theme ?? 'auto', ...profile.ui }, clubs);
+  }, [profile, clubs]);
 
   const toast = useCallback((m: string) => { setToast(m); setTimeout(() => setToast(''), 2600); }, []);
   const derived = useMemo(() => {

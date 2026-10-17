@@ -9,11 +9,13 @@ import { useClubs, MembersList } from './Explore';
 import { PostCard } from './Feed';
 import { enableNotifications, needsInstallForPush, pushSupported } from '../lib/push';
 import { SHOW_CLUB_SPACE } from '../lib/config';
+import { ACCENTS, DEFAULT_THEME, clubColors, type ThemePrefs } from '../lib/theme';
+import { Disc } from '../ui/kit';
 
 export function Profile() {
   const s = useSession();
   const clubs = useClubs();
-  const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete'>('');
+  const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme'>('');
   if (!s.user || !s.profile) {
     return <Screen title="Profil"><Empty ill="👤" title="Connecte-toi" text="Suis tes clubs, rejoins l'Équipe de ton enfant, publie tes photos et vidéos de match."
       action={<button className="btn" onClick={() => s.requireAuth()}>Se connecter ou créer un compte</button>} />
@@ -46,10 +48,7 @@ export function Profile() {
       <div className="group">
         <button className="row" onClick={() => setSheet('posts')}><div className="grow">Mes publications</div><span className="chev">›</span></button>
         <button className="row" onClick={() => setSheet('notifs')}><div className="grow">Notifications</div><span className="chev">›</span></button>
-        <div className="row"><div className="grow">Thème</div>
-          <select className="field" style={{ width: 'auto', padding: '6px 10px' }} value={p.theme ?? 'auto'} aria-label="Thème"
-            onChange={async (e) => { const theme = e.target.value as 'auto'; s.setProfile({ ...p, theme }); await D.updateProfile(s.user!.uid, { theme }); }}>
-            <option value="auto">Automatique</option><option value="light">Clair</option><option value="dark">Sombre</option></select></div>
+        <button className="row" onClick={() => setSheet('theme')}><div className="grow">Mon thème</div><span className="chev">›</span></button>
         {SHOW_CLUB_SPACE && <a className="row" href="/club/">Espace Club <span className="chev">›</span></a>}
         {s.isAdmin && <a className="row" href="#/moderation" style={{ color: 'inherit' }}><div className="grow">Console de modération</div><span className="chev">›</span></a>}
       </div>
@@ -63,6 +62,7 @@ export function Profile() {
       {sheet === 'posts' && <Sheet title="Mes publications" onClose={() => setSheet('')}><MyPosts /></Sheet>}
       {sheet === 'requests' && <Sheet title="Demandes à valider" onClose={() => setSheet('')}>{s.responsibleTeams.map((t) => <div key={t}><div className="group-title">{teamName(t)}</div><TeamMembers teamId={t} /></div>)}</Sheet>}
       {sheet === 'delete' && <DeleteSheet onClose={() => setSheet('')} />}
+      {sheet === 'theme' && <ThemeSheet onClose={() => setSheet('')} />}
     </Screen>
   );
 }
@@ -127,3 +127,45 @@ export const LegalLinks = () => (
     <a className="row" href="#/legal/charte" style={{ color: 'inherit' }}><div className="grow">Charte BeHoop</div><span className="chev">›</span></a>
   </div>
 );
+
+/** Mon thème : couleur (palette basket ou couleurs d'un club suivi), mode, fond, accessibilité. Enregistré sur le profil. */
+function ThemeSheet({ onClose }: { onClose: () => void }) {
+  const s = useSession();
+  const clubs = useClubs();
+  const p = s.profile!;
+  const t: ThemePrefs = { ...DEFAULT_THEME, mode: p.theme ?? 'auto', ...p.ui };
+  const save = async (patch: Partial<ThemePrefs>) => {
+    const n = { ...t, ...patch };
+    s.setProfile({ ...p, theme: n.mode, ui: n });
+    await D.updateProfile(s.user!.uid, { theme: n.mode, ui: n }).catch(() => s.toast('Thème non enregistré'));
+  };
+  const myClubs = clubs.filter((c) => s.followedClubs.includes(c.id) || s.follows.some((f) => f.type === 'team' && c.teams.some((x) => x.id === f.refId)));
+  const Seg = <K extends string>({ v, opts, on }: { v: K; opts: [K, string][]; on: (k: K) => void }) => (
+    <div className="seg">{opts.map(([k, l]) => <button key={k} className={v === k ? 'on' : ''} onClick={() => on(k)}>{l}</button>)}</div>);
+  return (
+    <Sheet title="Mon thème" onClose={onClose}>
+      <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>Enregistré sur ton profil : il te suit sur tous tes appareils.</p>
+      <div className="group-title">Ma couleur</div>
+      <div className="swatches">{ACCENTS.map((a) => <button key={a.id} className={`swatch${t.accent === a.id ? ' on' : ''}`} style={{ background: a.css }} aria-label={a.label} title={a.label} onClick={() => save({ accent: a.id })} />)}</div>
+      {myClubs.length > 0 && <>
+        <div className="group-title mt">Aux couleurs de mon club</div>
+        <div className="group">{myClubs.map((c) => { const k = clubColors(c); const on = t.accent === `club:${c.id}`; return (
+          <button key={c.id} className="row" onClick={() => save({ accent: `club:${c.id}` })} aria-pressed={on}>
+            <Disc src={c.logo} name={c.name} size={36} ring={k.accent} /><div className="grow ellipsis">{c.name}</div>
+            <span style={{ width: 44, height: 22, borderRadius: 11, background: k.grad }} aria-hidden />
+            <span style={{ width: 22, color: 'var(--accent)', fontWeight: 700 }}>{on ? '✓' : ''}</span>
+          </button>); })}</div>
+      </>}
+      <div className="group-title mt">Mode</div>
+      <Seg v={t.mode} opts={[['light', '☀️ Clair'], ['dark', '🌙 Sombre'], ['auto', 'Auto']]} on={(mode) => save({ mode })} />
+      <div className="group-title">Fond</div>
+      <Seg v={t.bg} opts={[['parquet', '🏀 Parquet'], ['nuit', 'Nuit de match'], ['uni', 'Uni']]} on={(bg) => save({ bg })} />
+      <div className="group">
+        <label className="row"><div className="grow">Réduire la transparence<div className="sub">Plus lisible et plus fluide sur les téléphones modestes</div></div>
+          <input type="checkbox" className="switch" checked={t.rt} onChange={(e) => save({ rt: e.target.checked })} /></label>
+        <label className="row"><div className="grow">Réduire les animations</div>
+          <input type="checkbox" className="switch" checked={t.rm} onChange={(e) => save({ rm: e.target.checked })} /></label>
+      </div>
+    </Sheet>
+  );
+}

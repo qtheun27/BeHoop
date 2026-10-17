@@ -5,6 +5,43 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
+import { loadClub, isPlayed, teamIndex, teamLabel, type Club } from '../lib/data';
+import { clubColors } from '../lib/theme';
+
+/** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
+function Stories() {
+  const s = useSession();
+  const { data } = useAsync(async () => {
+    const idx = await teamIndex();
+    const clubs = new Map<number, Club>();
+    s.followedClubs.forEach((id) => { for (const [, e] of idx) if (e.club.id === id) { clubs.set(id, e.club); break; } });
+    const items: { key: string; href: string; name: string; logo: string | null; club: Club; teams: number[] }[] = [];
+    clubs.forEach((c) => items.push({ key: `c${c.id}`, href: `#/club/${c.id}`, name: c.short, logo: c.logo, club: c, teams: c.teams.map((t) => t.id) }));
+    s.follows.filter((f) => f.type === 'team').forEach((f) => { const e = idx.get(f.refId); if (e && !clubs.has(e.club.id)) items.push({ key: `t${f.refId}`, href: `#/equipe/${f.refId}`, name: teamLabel(e.team), logo: e.club.logo, club: e.club, teams: [f.refId] }); });
+    const today = new Date().toISOString().slice(0, 10);
+    const games = (await Promise.all([...new Set(items.map((i) => i.club.id))].map((id) => loadClub(id).catch(() => null)))).flatMap((x) => x?.games ?? []).filter((g) => g.d === today && !isPlayed(g));
+    return items.map((i) => ({ ...i, match: games.find((g) => (i.teams.includes(g.h) || i.teams.includes(g.a)) && s.followedTeams.some((t) => t === g.h || t === g.a))?.t }));
+  }, [s.follows.length, s.followedTeams.join()]);
+  return (
+    <div className="stories" aria-label="Mes clubs">
+      <a className="story create" href="#/publier"><div className="ring"><div>+</div></div><span className="name">Créer</span></a>
+      {data?.map((i) => { const k = clubColors(i.club); return (
+        <a key={i.key} className="story" href={i.href}>
+          <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : <b>{i.name.slice(0, 2)}</b>}</div>
+            {i.match && <span className="tag match">MATCH {i.match.replace(':', 'H')}</span>}</div>
+          <span className="name">{i.name}</span>
+        </a>); })}
+    </div>
+  );
+}
+const FILTERS: { id: string; label: string; ok: (p: D.Post, uid?: string) => boolean }[] = [
+  { id: 'tout', label: 'Tout', ok: () => true },
+  { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
+  { id: 'photos', label: 'Photos', ok: (p) => p.type === 'photo' },
+  { id: 'videos', label: '🎬 Vidéos', ok: (p) => p.type === 'video' || p.type === 'moment' },
+  { id: 'messages', label: 'Messages', ok: (p) => p.type === 'message' },
+  { id: 'moi', label: 'Mes posts', ok: (p, uid) => !!uid && p.authorUid === uid },
+];
 
 export interface ScorePayload { gameId: number; date: string; time?: string; competition: string;
   home: { id: number; name: string; logo?: string | null; color?: string; score: number }; away: { id: number; name: string; logo?: string | null; color?: string; score: number }; official?: boolean }
@@ -107,6 +144,7 @@ export function Feed() {
   const cur = useRef<D.FeedCursor | undefined>(undefined);
   const sentinel = useRef<HTMLDivElement>(null);
   const [pull, setPull] = useState(0);
+  const [filter, setFilter] = useState('tout');
   const key = s.targets.join() + '|' + s.privateTeams.join();
 
   const load = useCallback(async (reset: boolean) => {
@@ -139,17 +177,21 @@ export function Feed() {
   }, [load]);
 
   if (!s.user) return (
-    <Screen title="Fil"><Empty ill="🏀" title="Ton fil basket" text="Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct."
+    <Screen title="Fil" home hideTitle><Empty ill="🏀" title="Ton fil basket" text="Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct."
       action={<><button className="btn" onClick={() => s.requireAuth()}>Créer mon compte</button><a className="btn ghost" href="/">Voir le site public</a></>} /></Screen>
   );
   return (
-    <Screen title="Fil">
+    <Screen title="Fil" home hideTitle>
+      <Stories />
+      <a className="composer" href="#/publier?photo=1"><Avatar name={s.profile?.displayName ?? '?'} /><span className="ph">Partage une photo du match…</span><span className="cam" aria-hidden>{Icons.camera}</span></a>
+      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.label}</button>)}</div>
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
       {posts === null ? <Skeleton h={260} /> : posts.length === 0 ? (
         <Empty ill="🗞️" title={s.targets.length ? 'Pas encore de publications' : 'Ton fil est vide'} text={s.targets.length ? 'Les prochains résultats de tes équipes apparaîtront ici.' : 'Suis des clubs ou des équipes pour remplir ton fil.'}
           action={!s.targets.length && <a className="btn" href="#/explorer">Explorer les clubs</a>} />
-      ) : posts.map((p) => <PostCard key={p.id} post={p} />)}
+      ) : (() => { const f = FILTERS.find((x) => x.id === filter)!; const l = posts.filter((p) => f.ok(p, s.user?.uid));
+          return l.length ? l.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title="Rien dans ce filtre" text="Essaie « Tout »." />; })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
     </Screen>

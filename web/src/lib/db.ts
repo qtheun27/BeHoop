@@ -19,6 +19,7 @@ export interface Post {
 export interface Profile {
   displayName: string; avatarUrl?: string; createdAt?: unknown; ageConfirmed: boolean; onboarded?: boolean;
   notifPrefs: Record<string, boolean>; fcmTokens?: string[]; banned?: boolean; theme?: 'auto' | 'light' | 'dark';
+  /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
 }
 export interface Follow { id: string; type: 'club' | 'team'; refId: number; mutedTeams?: number[] }
 export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; message?: string; displayName?: string; createdAt?: unknown }
