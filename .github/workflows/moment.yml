@@ -18,7 +18,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-        with: { sparse-checkout-cone-mode: false, sparse-checkout: "/*\n!/data.json\n!/calendars/\n" }
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data.json
+            !/calendars/
       - uses: actions/setup-node@v4
         with: { node-version: '22', cache: 'npm' }
       - name: FFmpeg
@@ -26,7 +31,9 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Cache Playwright
         uses: actions/cache@v4
-        with: { path: ~/.cache/ms-playwright, key: pw-${{ hashFiles('package-lock.json') }} }
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ hashFiles('package-lock.json') }}
       - run: npx playwright install --with-deps chromium
       - name: Rendu du Moment
         run: npx tsx ops/render/moment.ts "${{ inputs.momentId }}"
