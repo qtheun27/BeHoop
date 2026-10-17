@@ -236,6 +236,47 @@
   .vide { color: var(--muted); font-size: 13.5px; padding: 6px 2px; line-height: 1.5; }
   footer { text-align: center; color: var(--muted); font-size: 11.5px; padding: 18px 14px; }
 </style>
+<!-- BeHoop : style « basket » partagé avec l'appli (couche ajoutée, les styles d'origine restent au-dessus) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+<style id="bh-style">
+  :root { --primary: #f26a1b; --bh-grad: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 55%, #f2c14e));
+    --bg: #f4ece0; --card-bg: rgba(255,255,255,.94); --border: rgba(255,255,255,.8); --radius: 22px; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0d0a07; --card-bg: rgba(26,22,18,.94); --border: rgba(255,255,255,.08); } }
+  body { background: var(--bg); }
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(circle at 50% 40%, transparent 129px, color-mix(in srgb, var(--primary) 20%, transparent) 130px 133px, transparent 134px),
+      linear-gradient(transparent calc(40% - 1.5px), color-mix(in srgb, var(--primary) 14%, transparent) calc(40% - 1.5px) calc(40% + 1.5px), transparent calc(40% + 1.5px)),
+      repeating-linear-gradient(90deg, rgba(160,105,50,.05) 0 3px, transparent 3px 58px); }
+  /* En-tête : barre flottante en verre + recherche en pilule */
+  header { background: none; border: 0; backdrop-filter: none; -webkit-backdrop-filter: none; padding: calc(10px + var(--safe-top)) 12px 6px; }
+  header::before { content: ""; position: absolute; inset: 0 0 auto 0; height: calc(var(--safe-top) + 16px); z-index: -1; background: linear-gradient(var(--bg) 55%, transparent); }
+  header .titre-app { padding: 9px 10px 9px 12px; border-radius: 22px; background: color-mix(in srgb, var(--card-bg) 80%, transparent); border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(40,25,10,.08); backdrop-filter: saturate(180%) blur(22px); -webkit-backdrop-filter: saturate(180%) blur(22px);
+    font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .02em; text-transform: uppercase; color: var(--primary); gap: 6px !important; }
+  header .titre-app img { width: 30px !important; height: 30px !important; border-radius: 9px !important; }
+  header .titre-app a { white-space: nowrap; font-size: 12.5px !important; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-transform: none; letter-spacing: 0; border-radius: 999px !important; padding: 7px 12px !important; }
+  header .titre-app a#bh-compte { background: var(--bh-grad) !important; }
+  .search-box input[type="text"] { border-radius: 999px; padding: 13px 18px; border: 1px solid var(--border); background: var(--card-bg); box-shadow: 0 6px 20px rgba(40,25,10,.07); }
+  button.btn-main { border-radius: 999px; background: var(--bh-grad); min-width: 56px; box-shadow: 0 6px 16px color-mix(in srgb, var(--primary) 40%, transparent); }
+  #status { margin-left: 6px; }
+  @media (max-width: 400px) { header .titre-app .bh-lbl { display: none; } }
+  /* Cartes */
+  .carte, .game-card { border-radius: 22px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(40,25,10,.07); }
+  /* Bandeau du club : mini-planche (fond nuit, bandes diagonales aux couleurs du club) */
+  .club-banner { background: linear-gradient(115deg, transparent 0 68%, var(--primary) 68% 74%, transparent 74% 75.5%, color-mix(in srgb, var(--primary) 50%, #f2c14e) 75.5% 78%, transparent 78%), #0a0c12;
+    border-radius: 24px; padding: 20px 18px; box-shadow: 0 14px 34px rgba(0,0,0,.25); }
+  .club-banner h1 { font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: 26px; }
+  .club-banner-logo { background: #fff; border-radius: 50%; box-shadow: 0 0 0 3px var(--primary); }
+  /* Puces, onglets, titres */
+  .team-chip, .filtre-chip { border-radius: 999px; font-family: Oswald, sans-serif; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; border: 1px solid var(--border); background: var(--card-bg); box-shadow: 0 2px 8px rgba(40,25,10,.06); }
+  .team-chip.active, .filtre-chip.active { background: var(--primary); color: #fff; border-color: transparent; }
+  .tabs { border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 6px 20px rgba(40,25,10,.06); }
+  .tab-btn { border-radius: 14px; font-family: Oswald, sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+  .tab-btn.active { background: var(--bh-grad); }
+  .mois-titre { font-family: Oswald, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+  .game-row .pts { font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 1.15em; }
+</style>
 </head>
 <body>
 
@@ -243,7 +284,7 @@
   <div class="titre-app">
     <img src="icons/icon-192.png" alt="" style="width:24px;height:24px;border-radius:7px;vertical-align:-6px;margin-right:2px;"> BeHoop
     <a href="./app/#/profil" id="bh-compte" style="margin-left:auto;font-size:12px;font-weight:700;color:#fff;background:var(--primary);text-decoration:none;padding:6px 11px;border-radius:20px;">👤 Mon compte</a>
-    <a href="./club/" style="margin-left:6px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:5px 10px;border-radius:20px;">🔐 Espace Club</a>
+    <a href="./club/" style="margin-left:6px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:5px 10px;border-radius:20px;" aria-label="Espace Club">🔐<span class="bh-lbl"> Espace Club</span></a>
   </div>
   <div class="search-box">
     <input type="text" id="club-input" list="clubs-list" placeholder="Rechercher un club..." disabled>
