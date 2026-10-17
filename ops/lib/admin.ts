@@ -22,7 +22,8 @@ export class R2 {
   private c: AwsClient; private base: string;
   constructor(env = process.env) {
     this.c = new AwsClient({ accessKeyId: env.R2_ACCESS_KEY_ID!, secretAccessKey: env.R2_SECRET_ACCESS_KEY!, service: 's3', region: 'auto' });
-    this.base = `https://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${env.R2_BUCKET}`;
+    // Bucket en juridiction UE : point d'accès https://<compte>.eu.r2.cloudflarestorage.com
+    this.base = `https://${env.R2_ACCOUNT_ID}${(env.R2_JURISDICTION ?? 'eu') ? '.' + (env.R2_JURISDICTION ?? 'eu') : ''}.r2.cloudflarestorage.com/${env.R2_BUCKET}`;
   }
   url(key: string) { return `${this.base}/${key.split('/').map(encodeURIComponent).join('/')}`; }
   async download(key: string, to: string) {

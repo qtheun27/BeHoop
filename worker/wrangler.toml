@@ -9,14 +9,17 @@ routes = [{ pattern = "media.behoop.be", custom_domain = true }]
 [[r2_buckets]]
 binding = "BUCKET"
 bucket_name = "behoop-media"
+jurisdiction = "eu"
 
 [vars]
 FIREBASE_PROJECT_ID = "basket-awbb-club"
 GITHUB_REPO = "qtheun27/BeHoop"
 ALLOWED_ORIGINS = "https://behoop.be,https://www.behoop.be,http://localhost:5173"
 R2_BUCKET = "behoop-media"
+R2_JURISDICTION = "eu"
+R2_ACCOUNT_ID = "981771f4d8dfa9830653358e49659206"
 SITE_URL = "https://behoop.be"
 
 # Secrets (à créer avec « npx wrangler secret put NOM ») — voir docs/SETUP.md :
 # FIREBASE_SERVICE_ACCOUNT, GITHUB_TOKEN, RENDER_SECRET, MEDIA_COOKIE_SECRET,
-# R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, ANTHROPIC_API_KEY (optionnel), SUPER_ADMIN_UID (optionnel)
+# R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, ANTHROPIC_API_KEY (optionnel), SUPER_ADMIN_UID (optionnel)

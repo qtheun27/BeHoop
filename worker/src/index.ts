@@ -12,7 +12,7 @@ export interface Env {
   BUCKET: R2Bucket;
   FIREBASE_PROJECT_ID: string; FIREBASE_SERVICE_ACCOUNT: string; GITHUB_TOKEN: string; GITHUB_REPO: string;
   RENDER_SECRET: string; MEDIA_COOKIE_SECRET: string; ALLOWED_ORIGINS: string; SITE_URL: string;
-  R2_ACCOUNT_ID: string; R2_ACCESS_KEY_ID: string; R2_SECRET_ACCESS_KEY: string; R2_BUCKET: string;
+  R2_ACCOUNT_ID: string; R2_JURISDICTION?: string; R2_ACCESS_KEY_ID: string; R2_SECRET_ACCESS_KEY: string; R2_BUCKET: string;
   ANTHROPIC_API_KEY?: string; SUPER_ADMIN_UID?: string;
 }
 const COOKIE_TTL = 6 * 3600;
@@ -84,7 +84,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   if (profile?.banned) throw new Error('FORBIDDEN');
   const body: any = req.method === 'POST' ? await req.json().catch(() => ({})) : {};
   const s3 = new AwsClient({ accessKeyId: env.R2_ACCESS_KEY_ID, secretAccessKey: env.R2_SECRET_ACCESS_KEY, service: 's3', region: 'auto' });
-  const r2url = (key: string) => `https://${env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${env.R2_BUCKET}/${key.split('/').map(encodeURIComponent).join('/')}`;
+  const r2url = (key: string) => `https://${env.R2_ACCOUNT_ID}${env.R2_JURISDICTION ? '.' + env.R2_JURISDICTION : ''}.r2.cloudflarestorage.com/${env.R2_BUCKET}/${key.split('/').map(encodeURIComponent).join('/')}`;
   const presign = async (key: string, query = '', type?: string) =>
     (await s3.sign(new Request(`${r2url(key)}?${query}${query ? '&' : ''}X-Amz-Expires=3600`, { method: 'PUT', headers: type ? { 'Content-Type': type } : {} }), { aws: { signQuery: true } })).url;
   const memberTeams = async (uid: string) => (await fs.query('members', [['uid', 'EQUAL', uid], ['status', 'EQUAL', 'accepted']], { allDescendants: true })).map((m) => Number(m.teamId));
