@@ -8,15 +8,38 @@ import { PostCard } from './Feed';
 
 export default function Moderation() {
   const s = useSession();
-  const [tab, setTab] = useState<'reports' | 'hidden' | 'teams' | 'users'>('reports');
+  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users'>('requests');
   if (!s.isAdmin) return <Screen title="Modération" back="profil"><Empty ill="⛔" title="Réservé au super admin" /></Screen>;
   return (
     <Screen title="Modération" back="profil">
-      <div className="seg">{([['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{l}</button>)}</div>
-      {tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}
+      <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{l}</button>)}</div>
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}
     </Screen>
   );
 }
+/** Demandes d'accès en attente, toutes équipes confondues (utile tant qu'une équipe n'a pas de responsable). */
+function Requests() {
+  const idx = useAsync(teamIndex, []);
+  const { data, reload } = useAsync(async () => {
+    const s = await D.getDocs(D.query(D.collectionGroup(D.db, 'members'), D.where('status', '==', 'pending')));
+    return s.docs.map((d) => d.data() as D.Membership);
+  }, []);
+  if (!data) return <Skeleton />;
+  if (!data.length) return <Empty ill="✅" title="Aucune demande en attente" />;
+  const act = async (f: () => Promise<unknown>) => { await f(); reload(); };
+  return (
+    <div className="group">{data.map((m) => { const e = idx.data?.get(m.teamId); return (
+      <div key={`${m.teamId}-${m.uid}`} className="row" style={{ flexWrap: 'wrap' }}>
+        <div className="grow"><div style={{ fontWeight: 600 }}>{m.displayName}</div>
+          <div className="sub">{e ? `${e.club.short} · ${teamLabel(e.team)}` : `Équipe ${m.teamId}`}</div>
+          {m.message && <div className="sub">« {m.message} »</div>}</div>
+        <button className="btn small" onClick={() => act(() => D.setMember(m.teamId, m.uid, { status: 'accepted' }))}>Accepter</button>
+        <button className="btn small secondary" onClick={() => act(() => D.setMember(m.teamId, m.uid, { status: 'accepted', role: 'responsable' }))}>Responsable</button>
+        <button className="btn small danger" onClick={() => act(() => D.removeMember(m.teamId, m.uid))}>Refuser</button>
+      </div>); })}</div>
+  );
+}
+
 function Reports() {
   const { data, reload } = useAsync(D.openReports, []);
   if (!data) return <Skeleton />;

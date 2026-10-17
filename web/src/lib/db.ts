@@ -179,4 +179,4 @@ export const banUser = (uid: string, banned: boolean) => setDoc(profileRef(uid),
 /* ---------- Temps réel ---------- */
 export const watchDoc = <T,>(path: string, cb: (d: T | null) => void) =>
   onSnapshot(doc(db, path), (s) => cb(s.exists() ? (s.data() as T) : null), () => cb(null));
-export { serverTimestamp, doc, db, setDoc, updateDoc, getDocs, query, collection, where, orderBy, limit, onSnapshot, deleteDoc, getDoc, arrayUnion };
+export { serverTimestamp, doc, db, setDoc, updateDoc, getDocs, query, collection, collectionGroup, where, orderBy, limit, onSnapshot, deleteDoc, getDoc, arrayUnion };

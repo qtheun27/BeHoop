@@ -305,7 +305,7 @@ service cloud.firestore {
     }
     // Requête « mes adhésions » (collectionGroup members where uid == moi)
     match /{path=**}/members/{memberId} {
-      allow read: if signedIn() && resource.data.uid == uid();
+      allow read: if signedIn() && (resource.data.uid == uid() || isAdmin());
     }
 
     // ---------- Posts ----------

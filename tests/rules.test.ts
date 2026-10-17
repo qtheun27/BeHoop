@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, it, beforeAll, afterAll, beforeEach } from 'vitest';
 import { initializeTestEnvironment, assertFails, assertSucceeds, type RulesTestEnvironment } from '@firebase/rules-unit-testing';
-import { doc, getDoc, setDoc, updateDoc, getDocs, collection, query, where, writeBatch, increment, deleteDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc, getDocs, collection, collectionGroup, query, where, writeBatch, increment, deleteDoc } from 'firebase/firestore';
 
 let env: RulesTestEnvironment;
 const U12 = 51653, SEN = 50741;
@@ -108,6 +108,11 @@ describe('Équipes 🔒', () => {
   it('un membre peut quitter, un responsable peut retirer', async () => {
     await assertSucceeds(deleteDoc(doc(as('alice'), 'teamMembers', String(U12), 'members', 'alice')));
     await assertSucceeds(deleteDoc(doc(as('resp'), 'teamMembers', String(U12), 'members', 'carol')));
+  });
+  it('le super admin liste toutes les demandes en attente, pas les autres', async () => {
+    const q = (db: ReturnType<typeof as>) => getDocs(query(collectionGroup(db, 'members'), where('status', '==', 'pending')));
+    await assertSucceeds(q(as('x', ADMIN)));
+    await assertFails(q(as('bob')));
   });
   it('mes adhésions via collectionGroup', async () => {
     await assertSucceeds(getDocs(query(collection(as('alice'), 'teamMembers', String(U12), 'members'))));
