@@ -1,0 +1,38 @@
+name: Moment (extrait vertical)
+
+# Déclenché par le Worker quand un utilisateur crée un Moment (V2).
+on:
+  workflow_dispatch:
+    inputs:
+      momentId:
+        description: 'Identifiant du Moment (moments/{id})'
+        required: true
+
+concurrency:
+  group: moment-${{ inputs.momentId }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout-cone-mode: false, sparse-checkout: "/*\n!/data.json\n!/calendars/\n" }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - name: FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Cache Playwright
+        uses: actions/cache@v4
+        with: { path: ~/.cache/ms-playwright, key: pw-${{ hashFiles('package-lock.json') }} }
+      - run: npx playwright install --with-deps chromium
+      - name: Rendu du Moment
+        run: npx tsx ops/render/moment.ts "${{ inputs.momentId }}"
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
