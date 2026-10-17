@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { deleteUser } from 'firebase/auth';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { api } from '../lib/api';
+import { api, mediaUrl } from '../lib/api';
+import { uploadSmall } from '../lib/upload';
+import { compressImage } from '../lib/media';
 import { teamLabel } from '../lib/data';
 import { Screen, Avatar, Empty, Sheet, useAsync } from '../ui/kit';
 import { useClubs, MembersList } from './Explore';
@@ -26,7 +28,11 @@ export function Profile() {
   const p = s.profile;
   return (
     <Screen title="Profil">
-      <div className="group"><div className="row"><Avatar name={p.displayName} src={p.avatarUrl} /><div className="grow"><div style={{ fontWeight: 600 }}>{p.displayName}</div><div className="sub">{s.user.email}</div></div></div></div>
+      <div className="group"><div className="row"><label style={{ position: 'relative', cursor: 'pointer' }} aria-label="Changer ma photo de profil">
+        <Avatar name={p.displayName} src={p.avatarUrl} /><span style={{ position: 'absolute', right: -4, bottom: -4, fontSize: 13, background: 'var(--bg2)', borderRadius: 10, padding: '0 3px' }}>📷</span>
+        <input type="file" accept="image/*" hidden onChange={async (e) => { const f = e.target.files?.[0]; if (!f) return;
+          try { const key = await uploadSmall('avatar', await compressImage(f, 400, .85), {}); const url = mediaUrl(key); await D.updateProfile(s.user!.uid, { avatarUrl: url }); s.setProfile({ ...p, avatarUrl: url }); s.toast('Photo mise à jour'); }
+          catch { s.toast('Impossible de changer la photo'); } }} /></label><div className="grow"><div style={{ fontWeight: 600 }}>{p.displayName}</div><div className="sub">{s.user.email}</div></div></div></div>
 
       <div className="group-title">Je suis</div>
       <div className="group">

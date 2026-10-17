@@ -66,7 +66,7 @@ export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | n
     </div>
   );
 }
-export const Avatar = ({ name, src }: { name: string; src?: string }) => <div className="avatar" aria-hidden>{src ? <img src={src} alt="" /> : initials(name || '?')}</div>;
+export const Avatar = ({ name, src }: { name: string; src?: string }) => <div className="avatar" aria-hidden>{src ? <img src={src} alt="" referrerPolicy="no-referrer" /> : initials(name || '?')}</div>;
 
 export function useAsync<T>(fn: () => Promise<T>, deps: unknown[]) {
   const [state, set] = useState<{ data?: T; error?: string; loading: boolean }>({ loading: true });

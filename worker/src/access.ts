@@ -37,7 +37,7 @@ export function readCookie(header: string | null, name = 'bh_media') {
  */
 export function canAccess(key: string, c: MediaClaims | null): boolean {
   if (key.includes('..')) return false;
-  if (key.startsWith('logos/')) return true;
+  if (key.startsWith('logos/') || key.startsWith('avatars/')) return true;
   const m = /^(photos|videos|moments)\/(public|team-(\d+))\//.exec(key);
   if (!m || !c) return false;
   if (m[2] === 'public') return true;

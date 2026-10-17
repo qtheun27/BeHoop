@@ -34,6 +34,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const load = useCallback(async (u: User | null) => {
     if (!u) { setProfile(null); setFollows([]); setMemberships([]); return; }
     const [p, f, m] = await Promise.all([D.getProfile(u.uid), D.listFollows(u.uid).catch(() => []), D.myMemberships(u.uid).catch(() => [])]);
+    if (p && !p.avatarUrl && u.photoURL) { p.avatarUrl = u.photoURL; D.updateProfile(u.uid, { avatarUrl: u.photoURL }).catch(() => {}); }
     setProfile(p); setFollows(f); setMemberships(m);
   }, []);
   useEffect(() => onAuthStateChanged(auth, async (u) => { setUser(u); try { await load(u); } finally { setReady(true); } }), [load]);
