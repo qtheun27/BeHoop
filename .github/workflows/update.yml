@@ -27,11 +27,34 @@ jobs:
       - name: Interroger l'API Basket Hainaut
         run: python scraper.py
 
+      # --- BeHoop Social (ajouts) : ces étapes ne peuvent jamais bloquer la mise à jour du site ---
+      - name: Installer Node (appli BeHoop)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+        continue-on-error: true
+
+      - name: Dépendances Node
+        run: npm ci --ignore-scripts --no-audit --no-fund
+        continue-on-error: true
+
+      - name: Données allégées pour l'appli (app-data/)
+        run: npx tsx ops/build-app-data.ts
+        continue-on-error: true
+
+      - name: Cartes de score automatiques et Jeunes/Seniors (Firestore)
+        run: npx tsx ops/sync-scores.ts
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        continue-on-error: true
+
       - name: Enregistrer les changements dans GitHub
         run: |
           git config --global user.name "AWBB Auto-Bot"
           git config --global user.email "bot@github.com"
           touch data.json
           git add data.json calendars/
+          git add app-data/ || true
           git commit -m "🤖 Mise à jour automatique saison en cours" || echo "Rien à commiter"
           git push

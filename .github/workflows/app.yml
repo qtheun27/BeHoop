@@ -1,0 +1,35 @@
+name: Appli BeHoop — tests et build
+
+# À chaque modification de l'appli : tests, compilation dans /app/ (servi par GitHub Pages) et commit du build.
+on:
+  push:
+    branches: [main]
+    paths: ['web/**', 'shared/**', 'package.json', 'package-lock.json']
+  workflow_dispatch:
+
+concurrency: { group: app-build, cancel-in-progress: true }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - name: Compiler l'appli
+        run: npm run build
+        env:
+          VITE_FCM_VAPID_KEY: ${{ vars.FCM_VAPID_KEY }}
+          VITE_WORKER_URL: ${{ vars.WORKER_URL }}
+      - name: Publier le build
+        run: |
+          git config user.name "BeHoop Build-Bot"
+          git config user.email "bot@github.com"
+          git add app/
+          git commit -m "🏗️ Build de l'appli" || exit 0
+          git pull --rebase
+          git push
