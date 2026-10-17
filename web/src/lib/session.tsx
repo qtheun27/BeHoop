@@ -37,6 +37,10 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   }, []);
   useEffect(() => onAuthStateChanged(auth, async (u) => { setUser(u); try { await load(u); } finally { setReady(true); } }), [load]);
   useEffect(() => { loadIndex().then((i) => setClubs(i.clubs)).catch(() => {}); }, []);
+  // Le site public (behoop.be) affiche « Ouvrir mon fil » quand on est connecté
+  useEffect(() => {
+    try { if (user && profile) localStorage.setItem('behoop.session', profile.displayName); else if (ready && !user) localStorage.removeItem('behoop.session'); } catch { /* stockage indisponible */ }
+  }, [user, profile, ready]);
   useEffect(() => {
     const t = profile?.theme ?? 'auto';
     if (t === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.dataset.theme = t;
