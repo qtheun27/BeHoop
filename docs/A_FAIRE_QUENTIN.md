@@ -5,7 +5,7 @@ Le détail clic par clic de chaque étape est dans **[SETUP.md](SETUP.md)** (mê
 
 | # | Action | Où | Pourquoi | Bloquant pour |
 |---|---|---|---|---|
-| 1 | **Fusionner les règles Firestore** avec celles de l'Espace Club, puis les publier | Console Firebase → Firestore → Règles | Le projet `basket-awbb-club` n'a qu'un seul fichier de règles : publier `firestore.rules` tel quel **casserait l'Espace Club**. | Tout (comptes, fil) |
+| 1 | **Publier les règles Firestore** (déjà fusionnées avec celles de l'Espace Club dans `firestore.rules`) | Console Firebase → Firestore → Règles | Le projet `basket-awbb-club` n'a qu'un seul fichier de règles : publier `firestore.rules` tel quel **casserait l'Espace Club**. | Tout (comptes, fil) |
 | 2 | Créer les **index Firestore** | Terminal (`npx firebase deploy --only firestore:indexes`) ou liens d'erreur | Requêtes du fil, des publications, des signalements | Fil, Profil |
 | 3 | Vérifier **Google** et **E-mail (lien + mot de passe)** dans Authentication, et `behoop.be` dans les domaines autorisés | Console Firebase → Authentication | Connexion | Comptes |
 | 4 | Créer une **clé de compte de service** Firebase (fichier JSON) | Console Firebase → Paramètres → Comptes de service | Cartes de score automatiques, Worker, montage | Fil auto, vidéo |
