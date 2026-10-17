@@ -57,4 +57,5 @@ jobs:
           git add data.json calendars/
           git add app-data/ || true
           git commit -m "🤖 Mise à jour automatique saison en cours" || echo "Rien à commiter"
+          git pull --rebase
           git push
