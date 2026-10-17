@@ -33,9 +33,5 @@ export async function teamIndex() {
   return teamMap;
 }
 export const isPlayed = (g: Game) => g.hs !== null && g.as !== null && !(g.hs === 0 && g.as === 0);
-/** Libellé lisible d'une équipe : « U12 A » plutôt que « PU12HM A ». */
-export function teamLabel(t: Team) {
-  const c = t.cat.replace(/^[PR](?=U|\d)/, '').replace(/^U(\d+)(HM|H|D|M)?/, 'U$1').replace(/^(\d)H/, 'Messieurs P$1').replace(/^(\d)D/, 'Dames P$1');
-  return (t.cat.startsWith('R') && !/U/.test(t.cat) ? 'Régionale ' : '') + c;
-}
+export { teamLabel } from '../../../shared/teamLabel';
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
