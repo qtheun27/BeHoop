@@ -270,6 +270,8 @@
   .club-banner-logo { background: #fff; border-radius: 50%; box-shadow: 0 0 0 3px var(--primary); }
   /* Puces, onglets, titres */
   .team-chip, .filtre-chip { border-radius: 999px; font-family: Oswald, sans-serif; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; border: 1px solid var(--border); background: var(--card-bg); box-shadow: 0 2px 8px rgba(40,25,10,.06); }
+  .team-selector, .filtres { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
+  .team-chip, .filtre-chip { white-space: nowrap; flex: none; }
   .team-chip.active, .filtre-chip.active { background: var(--primary); color: #fff; border-color: transparent; }
   .tabs { border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 6px 20px rgba(40,25,10,.06); }
   .tab-btn { border-radius: 14px; font-family: Oswald, sans-serif; letter-spacing: .03em; text-transform: uppercase; }
@@ -677,7 +679,7 @@ function rechercher() {
   if (!club) {
     // Clubs ajoutés par BeHoop (Flandre, national, BNXT, NBA, Belgian Lions) : ouverts dans leur fiche, sans compte
     const autre = (window.bhAutresClubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short || '').toLowerCase().includes(texte));
-    if (autre) { location.href = './app/#/club/' + autre.id; return; }
+    if (autre) { bhAfficherAutreClub(autre.id); return; }
     alert('Club introuvable. Essayez un autre mot-clé.'); return;
   }
   afficherClub(club);
@@ -758,11 +760,51 @@ fetch('./app-data/news.json').then(function (r) { return r.json(); }).then(funct
   });
   box.style.display = 'block';
 }).catch(function () {});
+// BeHoop : affiche un club Flandre / national / BNXT / NBA / Belgian Lions avec la même vue que les clubs wallons.
+// Les données allégées (app-data) sont converties au format AWBB attendu par afficherClub(), sans modifier ce dernier.
+async function bhAfficherAutreClub(id) {
+  try {
+    const cj = await (await fetch('./app-data/clubs/' + id + '.json')).json();
+    const c = cj.club, games = cj.games || [];
+    const raw = {
+      id: c.id, name: c.name, short_name: c.short, province: c.province, logo_url: c.logo, primary_color: c.c1, accent_color: c.c2,
+      street: c.venue ? c.venue.street : null, zip: c.venue ? c.venue.zip : null, city: c.venue ? c.venue.city : null, venue: c.venue || null, // pas de salle connue : pas d'adresse affichée
+      teams: c.teams.map(t => ({ id: t.id, name: t.name, category: t.cat, ics_url: location.origin + '/calendars/team-' + t.id + '.ics' }))
+    };
+    const seen = new Set((donnees.games || []).map(g => g.id));
+    const parAdr = a => { const m = /^(.*?),\s*(\d{4})\s+(.*)$/.exec(a || ''); return m ? [m[1], m[2], m[3]] : [a || '', '', '']; };
+    games.forEach(g => {
+      if (seen.has(g.id)) return;
+      const [rue, cp, ville] = parAdr(g.adr);
+      donnees.games.push({ id: g.id, date: g.d, time: (g.t || '00:00') + ':00', serie_id: g.s, serie_name: g.sn, serie_short_name: g.sn,
+        home_team_id: g.h, away_team_id: g.a, home_team_name: g.hn, away_team_name: g.an, home_team_short_name: g.hn, away_team_short_name: g.an,
+        home_score: g.hs, away_score: g.as, game_status_id: g.hs !== null ? 2 : 1, venue_name: g.v, venue_street: rue, venue_zip: cp, venue_city: ville,
+        venue_lat: g.lat, venue_lng: g.lng, match_type: g.ty === 'coupe' ? 'coupe' : g.ty === 'amical' ? 'amical' : 'championnat' });
+    });
+    const sids = [...new Set(games.map(g => g.s))];
+    await Promise.all(sids.map(async sid => {
+      if ((donnees.series || []).some(s => s.id === sid)) return;
+      const sj = await (await fetch('./app-data/series/' + sid + '.json')).json().catch(() => null);
+      if (!sj) return;
+      donnees.series.push({ id: sid, name: sj.serie.name, short_name: sj.serie.short, competition_name: sj.serie.name });
+      const noms = {}; (sj.games || []).forEach(g => { noms[g.h] = g.hn; noms[g.a] = g.an; });
+      const tri = [...(sj.standings || [])].sort((a, b) => b.pts - a.pts || (b.pf - b.pa) - (a.pf - a.pa));
+      donnees.classements[String(sid)] = tri.map((r, i) => ({ team_id: r.team, team_name: noms[r.team] || '', team_short_name: noms[r.team] || '', position: i + 1,
+        played: r.played, wins: r.wins, losses: r.losses, points: r.pts }));
+    }));
+    if (!(donnees.clubs || []).some(x => x.id === raw.id)) donnees.clubs.push(raw);
+    afficherClub(raw);
+  } catch (e) { alert('Impossible de charger ce club. Réessaie dans un instant.'); }
+}
 // BeHoop : la recherche trouve aussi les clubs flamands, nationaux, BNXT, NBA et les Belgian Lions (fiches ouvertes sans compte).
 (function () {
   fetch('./app-data/index.json').then(function (r) { return r.json(); }).then(function (idx) {
     var autres = idx.clubs.filter(function (c) { return c.id >= 1e10; });
     window.bhAutresClubs = autres;
+    // Compteur : tous les clubs disponibles (Wallonie, Flandre, national, BNXT, NBA…)
+    var st = document.getElementById('status'), eq = idx.clubs.reduce(function (n, c) { return n + c.teams.length; }, 0);
+    var txt = '✅ ' + idx.clubs.length + ' clubs, ' + eq.toLocaleString('fr-BE') + ' équipes — Wallonie, Flandre, national, BNXT, NBA';
+    (function maj(n) { if (st && /✅/.test(st.textContent)) st.textContent = txt; else if (n < 60) setTimeout(function () { maj(n + 1); }, 500); })(0);
     var liste = document.getElementById('clubs-list');
     autres.forEach(function (c) { var o = document.createElement('option'); o.value = c.name; o.label = c.province; liste.appendChild(o); });
   }).catch(function () {});
