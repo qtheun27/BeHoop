@@ -46,7 +46,7 @@ export function Explore() {
             <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? c.teams[0].cat : `${c.teams.length} équipes`].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
-      <p className="muted center" style={{ fontSize: 13 }}>Classements et calendriers complets : <a href="/">site BeHoop</a></p>
+      <p className="muted center" style={{ fontSize: 13 }}>Classements et calendriers complets : <a href="/?site=1">site BeHoop</a></p>
     </Screen>
   );
 }

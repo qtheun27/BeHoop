@@ -178,7 +178,7 @@ export function Feed() {
 
   if (!s.user) return (
     <Screen title="Fil" home hideTitle><Empty ill="🏀" title="Ton fil basket" text="Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct."
-      action={<><button className="btn" onClick={() => s.requireAuth()}>Créer mon compte</button><a className="btn ghost" href="/">Voir le site public</a></>} /></Screen>
+      action={<><button className="btn" onClick={() => s.requireAuth()}>Créer mon compte</button><a className="btn ghost" href="/?site=1">Voir le site public</a></>} /></Screen>
   );
   return (
     <Screen title="Fil" home hideTitle>
