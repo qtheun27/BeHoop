@@ -4,7 +4,7 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
 import { PostCard } from './Feed';
-import { haptic, frDate } from '../lib/util';
+import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
@@ -119,7 +119,7 @@ export function TeamPage({ id }: { id: number }) {
           {accepted && <button className="btn small secondary" onClick={async () => { if (confirm('Quitter l’Équipe ?')) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>Quitter</button>}
         </div>)}
       {accepted && member!.role === 'responsable' && <TeamAdmin teamId={id} />}
-      <TeamStats team={team} club={club} games={games} />
+      <TeamTabs team={team} club={club} games={games} />
       <div className="group-title">Publications</div>
       {!s.user ? <Empty ill="📰" title="Connecte-toi pour voir le fil de l'équipe" action={<button className="btn small" onClick={() => s.requireAuth()}>Se connecter</button>} />
         : posts.loading ? <Skeleton /> : posts.data?.length ? posts.data.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title="Rien pour l'instant" text="Les résultats et publications de l'équipe apparaîtront ici." />}
@@ -233,3 +233,74 @@ function TeamStats({ team, games }: { team: Team; club: Club; games: Game[] }) {
 }
 
 export function useClubs() { const [c, set] = useState<Club[]>([]); useEffect(() => { loadIndex().then((i) => set(i.clubs)); }, []); return c; }
+
+/* ---------- Fiche Équipe : Matchs, Classement, Infos (visibles sans compte) ---------- */
+function TeamTabs({ team, club, games }: { team: Team; club: Club; games: Game[] }) {
+  const [tab, setTab] = useState<'matchs' | 'classement' | 'infos'>('matchs');
+  const ics = `${location.origin}/calendars/team-${team.id}.ics`;
+  return (
+    <>
+      <div className="seg" role="tablist">
+        {([['matchs', '📅 Matchs'], ['classement', '📊 Classement'], ['infos', '📈 Infos']] as const).map(([k, l]) =>
+          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{l}</button>)}
+      </div>
+      {tab === 'matchs' && <TeamGames team={team} games={games} ics={ics} />}
+      {tab === 'classement' && <TeamStandings team={team} games={games} />}
+      {tab === 'infos' && <TeamStats team={team} club={club} games={games} />}
+    </>
+  );
+}
+
+function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: string }) {
+  const [which, setWhich] = useState<'avenir' | 'joues'>('avenir');
+  const today = new Date().toISOString().slice(0, 10);
+  const next = games.filter((g) => g.d >= today && !isPlayed(g));
+  const past = games.filter(isPlayed).slice().reverse();
+  const list = which === 'avenir' ? next : past;
+  return (
+    <>
+      <div className="hstack" style={{ gap: 8, marginBottom: 12 }}>
+        <a className="btn small" href={ics.replace(/^https?:/, 'webcal:')}>📆 Ajouter au calendrier</a>
+        <button className="btn small secondary" onClick={() => { navigator.clipboard?.writeText(ics); }}>Copier le lien</button>
+      </div>
+      <div className="chips">
+        <button className={`chip${which === 'avenir' ? ' on' : ''}`} onClick={() => setWhich('avenir')}>À venir ({next.length})</button>
+        <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>Joués ({past.length})</button>
+      </div>
+      {list.length === 0 ? <Empty ill="📅" title={which === 'avenir' ? 'Aucun match prévu' : 'Aucun match joué'} /> : (
+        <div className="group">{list.slice(0, 40).map((g) => (
+          <div key={g.id}>
+            <GameRow g={g} teamIds={[team.id]} />
+            {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">📍 {g.v} · Itinéraire ›</a>}
+          </div>))}</div>
+      )}
+    </>
+  );
+}
+
+function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
+  const series = [...new Map(games.filter((g) => g.ty !== 'amical').map((g) => [g.s, g.sn])).entries()];
+  const [sid, setSid] = useState<number | null>(series[0]?.[0] ?? null);
+  const serie = useAsync(() => (sid ? loadSerie(sid) : Promise.resolve(null)), [sid]);
+  if (!series.length) return <Empty ill="📊" title="Pas de classement" text="Cette équipe ne joue que des matchs amicaux pour l'instant." />;
+  const names = new Map<number, string>();
+  serie.data?.games.forEach((g) => { names.set(g.h, g.hn); names.set(g.a, g.an); });
+  const rows = [...(serie.data?.standings ?? [])].sort((a, b) => b.pts - a.pts || (b.pf - b.pa) - (a.pf - a.pa));
+  return (
+    <>
+      {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
+      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="📊" title="Classement pas encore publié" /> : (
+        <div className="group" style={{ padding: '6px 0' }}>
+          <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}><span style={{ width: 22 }}>#</span><span className="grow">Équipe</span><span style={{ width: 28, textAlign: 'center' }}>J</span><span style={{ width: 28, textAlign: 'center' }}>V</span><span style={{ width: 34, textAlign: 'right' }}>Pts</span></div>
+          {rows.map((r, i) => { const me = r.team === team.id; return (
+            <a key={r.team} className="row" href={`#/equipe/${r.team}`} style={{ color: 'inherit', minHeight: 44, background: me ? 'color-mix(in srgb, var(--accent) 12%, transparent)' : undefined, fontWeight: me ? 700 : 400 }}>
+              <span style={{ width: 22, fontFamily: 'Anton', color: i < 3 ? 'var(--accent)' : undefined }}>{i + 1}</span>
+              <span className="grow ellipsis">{names.get(r.team) ?? `Équipe ${r.team}`}</span>
+              <span style={{ width: 28, textAlign: 'center' }}>{r.played}</span><span style={{ width: 28, textAlign: 'center' }}>{r.wins}</span>
+              <span style={{ width: 34, textAlign: 'right', fontFamily: 'Anton' }}>{r.pts}</span>
+            </a>); })}
+        </div>
+      )}
+    </>
+  );
+}
