@@ -36,7 +36,8 @@ const today = new Date().toISOString().slice(0, 10);
 // Matchs sans adversaire (exempt, forfait administratif) ignorés
 const recent = all.games.filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a);
 let created = 0, updated = 0;
-for (const g of recent) {
+const tc = new Map<number, number>(); teamClub.forEach((c, t) => tc.set(t, c.id));
+async function syncGame(g: (typeof recent)[number]): Promise<'created' | 'updated' | 'skip'> {
   const ref = db.doc(`posts/score-${g.id}`);
   const cur = await ref.get();
   const hc = teamClub.get(g.h), ac = teamClub.get(g.a);
@@ -44,7 +45,7 @@ for (const g of recent) {
     home: { id: g.h, name: hc?.short ?? g.hn, logo: hc?.logo ?? null, color: hc?.c1 ?? '#3d8fdb', score: g.hs },
     away: { id: g.a, name: ac?.short ?? g.an, logo: ac?.logo ?? null, color: ac?.c1 ?? '#8a1e36', score: g.as } };
   const old = cur.data()?.payload;
-  if (cur.exists && old?.home?.score === g.hs && old?.away?.score === g.as && old?.home?.name === payload.home.name && old?.away?.name === payload.away.name && old?.home?.logo === payload.home.logo && old?.away?.logo === payload.away.logo) continue;
+  if (cur.exists && old?.home?.score === g.hs && old?.away?.score === g.as && old?.home?.name === payload.home.name && old?.away?.name === payload.away.name && old?.home?.logo === payload.home.logo && old?.away?.logo === payload.away.logo) return 'skip';
   await ref.set({ type: 'score', authorUid: null, authorName: 'BeHoop', clubId: hc?.id ?? null, teamIds: [g.h, g.a],
     targets: [`t:${g.h}`, `t:${g.a}`, ...(hc ? [`c:${hc.id}`] : []), ...(ac ? [`c:${ac.id}`] : [])],
     visibility: 'public', teamIdPrivate: null, hidden: false, payload,
@@ -52,11 +53,18 @@ for (const g of recent) {
   // Le résultat officiel remplace le score en direct
   const live = db.doc(`liveScores/${g.id}`);
   if ((await live.get()).exists) { await live.update({ status: 'official', home: g.hs, away: g.as }); await db.doc(`posts/live-${g.id}`).delete().catch(() => {}); }
-  if (cur.exists) { updated++; continue; }
-  created++;
-  const tc = new Map<number, number>(); teamClub.forEach((c, t) => tc.set(t, c.id));
+  if (cur.exists) return 'updated';
   const uids = await followers([g.h, g.a], tc);
   await notifyUsers(uids, { title: `Résultat final : ${payload.home.name} ${g.hs} – ${g.as} ${payload.away.name}`, body: g.sn, url: `/app/#/post/score-${g.id}` }, 'result', g.h, `result_${g.id}`).catch(() => 0);
+  return 'created';
 }
+// 10 matchs traités en parallèle (rattrapage rapide même après une grosse journée)
+const queue = [...recent];
+await Promise.all(Array.from({ length: 10 }, async () => {
+  for (let g = queue.shift(); g; g = queue.shift()) {
+    const r = await syncGame(g).catch((e) => { console.error('carte', g!.id, e.message); return 'skip' as const; });
+    if (r === 'created') created++; else if (r === 'updated') updated++;
+  }
+}));
 console.log(`posts score : ${created} créés, ${updated} mis à jour (${recent.length} résultats récents)`);
 void FieldValue;

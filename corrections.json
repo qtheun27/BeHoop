@@ -1,5 +1,5 @@
 {
-  "_note": "Corrections BeHoop appliquées par-dessus les données officielles (AWBB / Basketbal Vlaanderen) à chaque mise à jour. Logos de remplacement : dossier logos/overrides/.",
+  "_note": "Corrections BeHoop temporaires : un nom n'est remplacé que tant que la fédération affiche encore l'ancien (ancienNom). Dès qu'elle publie le nouveau nom, la correction devient sans effet. Logos de secours (si le logo officiel est introuvable) : dossier logos/overrides/.",
   "clubs": {
     "1312": { "name": "Mons Basketball", "short": "Mons Basketball", "ancienNom": ["Union Mons-Hainaut", "Union Mons Hainaut"] }
   }

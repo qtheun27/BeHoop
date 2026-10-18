@@ -1,7 +1,7 @@
 """
 Copie locale des logos de clubs (lancé par update.yml après le scraper, qui n'est pas modifié).
 - logos/<id>.webp : logo réduit à 256 px, servi par behoop.be (un fichier supprimé chez l'AWBB ne casse plus l'affichage) ;
-- logos/overrides/<id>.(png|jpg|webp) : logo imposé manuellement, prioritaire ;
+- logos/overrides/<id>.(png|jpg|webp) : logo de secours, utilisé seulement si l'officiel est introuvable ;
 - si le téléchargement échoue, la copie précédente est conservée.
 """
 import io, json, os, sys
@@ -20,19 +20,22 @@ def save(img_bytes, dest):
     im.save(dest, 'WEBP', quality=86, method=6)
 
 def one(club):
+    """Logo officiel retéléchargé à chaque passage (suit les changements des clubs) ;
+    logo de remplacement seulement si l'officiel est introuvable ; sinon la dernière bonne copie est gardée."""
     cid, url = club
     dest = os.path.join(OUT, f'{cid}.webp')
+    if url:
+        try:
+            r = requests.get(url, timeout=30, headers={'User-Agent': 'BeHoop/1.0 (+https://behoop.be)'})
+            if r.status_code == 200 and len(r.content) <= 15_000_000:
+                save(r.content, dest); return 'ok'
+        except Exception:
+            pass
     for ext in ('png', 'jpg', 'jpeg', 'webp'):
         o = os.path.join(OUT, 'overrides', f'{cid}.{ext}')
         if os.path.exists(o):
             save(open(o, 'rb').read(), dest); return 'remplacé'
-    if not url: return 'aucun'
-    try:
-        r = requests.get(url, timeout=30, headers={'User-Agent': 'BeHoop/1.0 (+https://behoop.be)'})
-        if r.status_code != 200 or len(r.content) > 15_000_000: raise ValueError(r.status_code)
-        save(r.content, dest); return 'ok'
-    except Exception:
-        return 'gardé' if os.path.exists(dest) else 'absent'
+    return 'gardé' if os.path.exists(dest) else ('aucun' if not url else 'absent')
 
 clubs = [(c['id'], c.get('logo_url')) for c in json.load(open(os.path.join(ROOT, 'data.json')))['clubs']]
 vbl = os.path.join(ROOT, 'vbl.json')

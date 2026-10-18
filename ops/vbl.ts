@@ -55,19 +55,30 @@ function ics(teamName: string, games: SlimGame[], teamId: number) {
 }
 
 export async function run(outFile = 'vbl.json', calDir = 'calendars') {
-  const orgs = (await get<any[]>('OrgList?p=1')).filter((o) => FLANDRE.includes(o.regioNaam));
+  const allOrgs = await get<any[]>('OrgList?p=1');
+  const orgs = allOrgs.filter((o) => FLANDRE.includes(o.regioNaam) || o.regioNaam === 'AWBB');
   console.log(`Flandre : ${orgs.length} clubs`);
   const details = await pool(orgs, 6, (o) => get<any[]>(`OrgDetailByGuid?issguid=${encodeURIComponent(o.guid)}`).then((d) => (Array.isArray(d) ? d[0] : d)));
   const clubs: SlimClub[] = []; const teamGuids: { guid: string; name: string; id: number }[] = []; const poules = new Map<string, string>();
   const venues = new Map<string, { name: string; adr: string }>();
+  const national: { stamNr: string; name: string; teams: SlimClub['teams'] }[] = [];
   details.forEach((d, i) => {
     if (!d || !(d.teams ?? []).length) return; // club sans équipe inscrite cette saison
     const o = orgs[i];
+    if (o.regioNaam === 'AWBB') {
+      // Club wallon inscrit en national : ses équipes seront rattachées au club AWBB existant (matricule / nom)
+      national.push({ stamNr: String(d.stamNr ?? o.stamNr ?? ''), name: (d.naam ?? o.naam).trim(), teams: (d.teams ?? []).map((t: any) => {
+        teamGuids.push({ guid: t.guid, name: t.naam.trim(), id: vblId(t.guid) });
+        (t.poules ?? []).forEach((p: any) => poules.set(p.guid, p.naam));
+        return { id: vblId(t.guid), name: t.naam.trim(), cat: `${catFr(t.categorie ?? '', t.naam)} · National`, ag: classifyCategory(t.categorie) };
+      }) });
+      return;
+    }
     (d.accomms ?? []).forEach((a: any) => venues.set(a.guid, { name: a.naam?.trim(), adr: [[a.adres?.straat?.trim(), a.adres?.huisNr].filter(Boolean).join(' '), [a.adres?.postcode, a.adres?.plaats].filter(Boolean).join(' ')].filter(Boolean).join(', ') }));
     const v = d.accomms?.[0];
     const c1 = color(d.shirtKleur) ?? color(d.shirtReserve) ?? '#1a6fe0';
     clubs.push({
-      id: vblId(o.guid), name: d.naam?.trim() ?? o.naam, short: (d.naam ?? o.naam).trim(), province: PROVINCE_FR[o.regioNaam] ?? o.regioNaam, logo: null,
+      id: vblId(o.guid), name: d.naam?.trim() ?? o.naam, short: (d.naam ?? o.naam).trim(), province: PROVINCE_FR[o.regioNaam] ?? o.regioNaam, logo: `https://vblapi1.wisseq.eu/vbldataOrgLogo/${o.guid.trim()}.jpg`,
       c1, c2: color(d.shirtReserve) ?? c1, city: o.plaats ?? '',
       venue: v ? { name: v.naam?.trim(), street: [v.adres?.straat?.trim(), v.adres?.huisNr].filter(Boolean).join(' '), zip: v.adres?.postcode ?? '', city: v.adres?.plaats ?? '' } : null,
       teams: (d.teams ?? []).map((t: any) => {
@@ -96,10 +107,10 @@ export async function run(outFile = 'vbl.json', calDir = 'calendars') {
     standings[sid] = (standingsRaw[i]?.teams ?? []).map((t: any) => ({ team: vblId(t.guid), played: +t.wedAant || 0, wins: +t.wedWinst || 0, losses: +t.wedVerloren || 0, pf: +t.ptVoor || 0, pa: +t.ptTegen || 0, pts: +t.wedPunt || 0 }));
   });
   const all = [...games.values()].sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
-  writeFileSync(outFile, JSON.stringify({ generated_at: new Date().toISOString(), source: 'Basketbal Vlaanderen', clubs, games: all, series, standings }));
+  writeFileSync(outFile, JSON.stringify({ generated_at: new Date().toISOString(), source: 'Basketbal Vlaanderen', clubs, national, games: all, series, standings }));
   mkdirSync(calDir, { recursive: true });
   for (const t of teamGuids) writeFileSync(`${calDir}/team-${t.id}.ics`, ics(t.name, all.filter((g) => g.h === t.id || g.a === t.id), t.id));
-  console.log(`vbl.json : ${clubs.length} clubs, ${all.length} matchs, ${pouleGuids.length} classements`);
+  console.log(`vbl.json : ${clubs.length} clubs flamands, ${national.length} clubs wallons en national, ${all.length} matchs, ${pouleGuids.length} classements`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) run().catch((e) => { console.error('Flandre indisponible :', e.message); process.exit(1); });
