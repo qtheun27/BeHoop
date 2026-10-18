@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:CityX Mons HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13181362795-13009665764@behoop.be
+DTSTAMP:20261018T191342Z
+DTSTART;TZID=Europe/Brussels:20260925T204500
+DTEND;TZID=Europe/Brussels:20260925T224500
+SUMMARY:G&V Breakpoint Basket Waregem HSE A – CityX Mons HSE A (76-92)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+END:VCALENDAR
