@@ -1,0 +1,38 @@
+name: Actualités basket
+
+# Toutes les 2 heures : titres et liens des actus (Belgique, international, NBA) → app-data/news.json
+on:
+  schedule:
+    - cron: '20 */2 * * *'
+  workflow_dispatch:
+
+concurrency: { group: news, cancel-in-progress: false }
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data.json
+            !/calendars/
+            !/app-data/clubs/
+            !/app-data/series/
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx tsx ops/news.ts
+      - name: Enregistrer
+        run: |
+          git config user.name "BeHoop Actus-Bot"
+          git config user.email "bot@github.com"
+          git add app-data/news.json
+          git commit -m "📰 Actualités basket" || exit 0
+          git pull --rebase
+          git push

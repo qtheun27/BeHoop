@@ -310,6 +310,14 @@
       </div>
     </div>
   </section>
+  <!-- BeHoop : dernières actus basket (titres + lien vers l'article original) -->
+  <section id="bh-news" class="carte" style="display:none;padding:14px 16px;margin-top:12px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+      <strong style="font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:13px;">📰 Actus basket</strong>
+      <a href="./app/#/actus" style="font-weight:600;font-size:14px;text-decoration:none;">Toutes les actus ›</a>
+    </div>
+    <div id="bh-news-list"></div>
+  </section>
 </header>
 
 <main class="container">
@@ -629,6 +637,7 @@ function afficherClub(club) {
   $vue.style.display = 'block';
   $etatVide.style.display = 'none';
   var bhApp = document.getElementById('bh-app'); if (bhApp) bhApp.style.display = 'none';
+  var bhNews = document.getElementById('bh-news'); if (bhNews) bhNews.style.display = 'none';
   appliquerTheme(club);
 
   const logo = document.getElementById('club-logo');
@@ -736,6 +745,19 @@ window.onload = async function () {
 })();
 </script>
 <script>
+// BeHoop : 4 dernières actus basket (sans compte)
+fetch('./app-data/news.json').then(function (r) { return r.json(); }).then(function (d) {
+  var box = document.getElementById('bh-news'), list = document.getElementById('bh-news-list');
+  if (!d.items || !d.items.length || document.getElementById('club-view').style.display === 'block') return;
+  d.items.slice(0, 4).forEach(function (n) {
+    var a = document.createElement('a'); a.href = n.url; a.target = '_blank'; a.rel = 'noopener';
+    a.style.cssText = 'display:block;padding:9px 0;border-top:1px solid var(--border-soft);color:inherit;text-decoration:none;';
+    var t = document.createElement('div'); t.textContent = n.title; t.style.cssText = 'font-weight:600;font-size:15px;line-height:1.3;';
+    var s = document.createElement('div'); s.textContent = n.source; s.style.cssText = 'font-size:12.5px;color:var(--muted);margin-top:2px;';
+    a.appendChild(t); a.appendChild(s); list.appendChild(a);
+  });
+  box.style.display = 'block';
+}).catch(function () {});
 // BeHoop : la recherche trouve aussi les clubs flamands, nationaux, BNXT, NBA et les Belgian Lions (fiches ouvertes sans compte).
 (function () {
   fetch('./app-data/index.json').then(function (r) { return r.json(); }).then(function (idx) {

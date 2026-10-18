@@ -1,6 +1,6 @@
 // Découpe les données basket (AWBB + Flandre) en fichiers légers pour l'appli :
 // app-data/index.json, clubs/{id}.json, series/{id}.json. Lancé par update.yml après les récupérations.
-import { writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadAll } from './allData';
 import type { SlimGame } from './appData';
@@ -8,9 +8,12 @@ import type { SlimGame } from './appData';
 const root = process.argv[2] ?? '.';
 const out = join(root, 'app-data');
 const all = loadAll(root);
+// Les actualités (ops/news.ts) sont conservées d'une génération à l'autre
+const news = existsSync(join(out, 'news.json')) ? readFileSync(join(out, 'news.json')) : null;
 rmSync(out, { recursive: true, force: true });
 mkdirSync(join(out, 'clubs'), { recursive: true });
 mkdirSync(join(out, 'series'), { recursive: true });
+if (news) writeFileSync(join(out, 'news.json'), news);
 
 const teamClub = new Map<number, number>();
 all.clubs.forEach((c) => c.teams.forEach((t) => teamClub.set(t.id, c.id)));

@@ -6,6 +6,7 @@ import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/
 import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
+import { NewsCarousel } from './News';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
   const s = useSession();
@@ -36,6 +37,7 @@ export function Explore() {
       {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>Crée ton compte</b><div className="muted" style={{ fontSize: 14 }}>pour suivre tes clubs et recevoir les résultats.</div></div><button className="btn small" onClick={() => s.requireAuth()}>Créer</button></div>}
       <div className="search"><input className="field" type="search" placeholder="Club, ville…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Rechercher un club" /></div>
       <div className="chips">{['', ...provinces].map((p) => <button key={p} className={`chip${prov === p ? ' on' : ''}`} onClick={() => setProv(p)}>{p || 'Toutes'}</button>)}</div>
+      {!q && !prov && <NewsCarousel />}
       {error && <ErrorBox msg={error} retry={reload} />}
       {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? <Empty ill="🔎" title="Aucun club trouvé" text="Essaie un autre nom ou une ville." /> : (
         <div className="group">{list.slice(0, 120).map((c) => (

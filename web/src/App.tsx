@@ -9,6 +9,7 @@ import { Legal } from './screens/Legal';
 import { Feed, PostPage } from './screens/Feed';
 import { Matches } from './screens/Matches';
 import { Publish } from './screens/Publish';
+import { NewsPage } from './screens/News';
 
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
@@ -40,9 +41,10 @@ export function App() {
     case 'moderation': el = <Moderation />; break;
     case 'video': el = <Watch id={a} t={b} />; break;
     case 'post': el = <PostPage id={a} />; break;
+    case 'actus': el = <NewsPage />; break;
     default: el = <Feed />;
   }
-  const tab = page === 'club' || page === 'equipe' ? 'explorer' : page === 'montage' ? 'publier' : page;
+  const tab = page === 'club' || page === 'equipe' || page === 'actus' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
       <Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense>

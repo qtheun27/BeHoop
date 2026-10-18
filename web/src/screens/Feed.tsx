@@ -7,6 +7,7 @@ import { ago, haptic, dotted } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
 import { loadClub, isPlayed, teamIndex, teamLabel, type Club } from '../lib/data';
 import { clubColors } from '../lib/theme';
+import { NewsCarousel } from './News';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
 function Stories() {
@@ -184,6 +185,7 @@ export function Feed() {
     <Screen title="Fil" home hideTitle>
       <Stories />
       <a className="composer" href="#/publier?photo=1"><Avatar name={s.profile?.displayName ?? '?'} /><span className="ph">Partage une photo du match…</span><span className="cam" aria-hidden>{Icons.camera}</span></a>
+      <NewsCarousel />
       <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.label}</button>)}</div>
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
