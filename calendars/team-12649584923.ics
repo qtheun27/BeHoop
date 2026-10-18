@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs G12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10154547460-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T133000
+DTEND;TZID=Europe/Brussels:20260912T153000
+SUMMARY:Partena Professional Okapi Aalst G12 A – House Of Talents Kortrijk Spurs G12 A (51-96)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13660819568-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T113000
+DTEND;TZID=Europe/Brussels:20260919T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Royal Tigers Evergem G12 A (102-57)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10423577744-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T090000
+DTEND;TZID=Europe/Brussels:20260926T110000
+SUMMARY:Basket SKT Ieper G12 A – House Of Talents Kortrijk Spurs G12 A (50-55)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13878928615-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T113000
+DTEND;TZID=Europe/Brussels:20261003T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – KBGOB Finexa Basket@Sea G12 A (64-78)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13644483234-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:Gent-Oost Eagles G12 A – House Of Talents Kortrijk Spurs G12 A (59-48)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13376585783-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T110000
+DTEND;TZID=Europe/Brussels:20261018T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G12 A – House Of Talents Kortrijk Spurs G12 A (60-92)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13107011046-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T170000
+DTEND;TZID=Europe/Brussels:20261025T190000
+SUMMARY:Royal Tigers Evergem G12 A – House Of Talents Kortrijk Spurs G12 A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10948272195-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:Basket Scaldis Otegem G12 A – House Of Talents Kortrijk Spurs G12 A
+LOCATION:Sport-Ontmoetingscentrum Otegem\, Scheldestraat 14\, 8553 Otegem
+DESCRIPTION:Beker van West-Vlaanderen U12 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13895706234-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T113000
+DTEND;TZID=Europe/Brussels:20261114T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10691578363-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:KBGOB Finexa Basket@Sea G12 A – House Of Talents Kortrijk Spurs G12 A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13828595758-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T093000
+DTEND;TZID=Europe/Brussels:20261128T113000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Basket SKT Ieper G12 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13811818139-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T113000
+DTEND;TZID=Europe/Brussels:20261205T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Jumbo Elektrooghe Gembas Knesselare G12 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13862150996-12649584923@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T113000
+DTEND;TZID=Europe/Brussels:20261212T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Gent-Oost Eagles G12 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+END:VCALENDAR

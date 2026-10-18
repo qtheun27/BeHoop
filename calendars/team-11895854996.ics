@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Rapid Raptors Langemark G12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11826901825-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele G12 B – Rapid Raptors Langemark G12 A (27-80)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12648607798-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T090000
+DTEND;TZID=Europe/Brussels:20260919T110000
+SUMMARY:Rapid Raptors Langemark G12 A – BBC Wervik G12 A (54-55)
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12496476394-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T090000
+DTEND;TZID=Europe/Brussels:20260926T110000
+SUMMARY:Olympos Marke G12 A – Rapid Raptors Langemark G12 A (26-72)
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12615052560-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:Rapid Raptors Langemark G12 A – BBC Vanuxeem Ploegsteert Heuvelland G12 A (57-80)
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12431043204-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:BC Lamett Deerlijk-Zwevegem G12 C – Rapid Raptors Langemark G12 A (38-59)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12665385417-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T090000
+DTEND;TZID=Europe/Brussels:20261017T110000
+SUMMARY:Rapid Raptors Langemark G12 A – G&V Breakpoint Basket Waregem G12 B (34-53)
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12027688800-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T110000
+DTEND;TZID=Europe/Brussels:20261024T130000
+SUMMARY:BBC Wervik G12 A – Rapid Raptors Langemark G12 A
+LOCATION:De Pionier\, Gosserieslaan 6\, 8940 Wervik
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10881014624-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:Basket Desselgem G12 A – Rapid Raptors Langemark G12 A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:Beker van West-Vlaanderen U12 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12732495893-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T090000
+DTEND;TZID=Europe/Brussels:20261114T110000
+SUMMARY:Rapid Raptors Langemark G12 A – Holstra WINGS Wevelgem-Moorsele G12 B
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12899830798-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland G12 A – Rapid Raptors Langemark G12 A
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12816383988-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T090000
+DTEND;TZID=Europe/Brussels:20261128T110000
+SUMMARY:Rapid Raptors Langemark G12 A – Olympos Marke G12 A
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11423547421-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T090000
+DTEND;TZID=Europe/Brussels:20261205T110000
+SUMMARY:G&V Breakpoint Basket Waregem G12 B – Rapid Raptors Langemark G12 A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12715718274-11895854996@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:Rapid Raptors Langemark G12 A – BC Lamett Deerlijk-Zwevegem G12 C
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:U12 Niveau 4 A2
+END:VEVENT
+END:VCALENDAR

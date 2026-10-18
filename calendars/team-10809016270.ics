@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Ford Unicars Avanti Brugge Dames M14 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13194862566-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260829T090000
+DTEND;TZID=Europe/Brussels:20260829T110000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – G&V Breakpoint Basket Waregem M14 B (82-27)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Avanti Dames Brugge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10681079467-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T151500
+DTEND;TZID=Europe/Brussels:20260905T171500
+SUMMARY:G&V Breakpoint Basket Waregem M14 A – Ford Unicars Avanti Brugge Dames M14 A (88-54)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Koninklijk Basket Team ION Waregem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10024496509-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260913T150000
+DTEND;TZID=Europe/Brussels:20260913T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – Amon Jeugd Gentson M14 A (77-40)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14018011116-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T100000
+DTEND;TZID=Europe/Brussels:20260919T120000
+SUMMARY:Phantoms Basket Boom M14 A – Ford Unicars Avanti Brugge Dames M14 A (78-45)
+LOCATION:Braxhall\, Kapelstraat 143\, 2850 Boom
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13212979594-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260927T131500
+DTEND;TZID=Europe/Brussels:20260927T151500
+SUMMARY:House Of Talents Kortrijk Spurs M14 A – Ford Unicars Avanti Brugge Dames M14 A (61-61)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14252353329-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – Basket Willebroek M14 A (47-47)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12809728358-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T120000
+DTEND;TZID=Europe/Brussels:20261010T140000
+SUMMARY:Femina Habac Sint-Truiden M14 A – Ford Unicars Avanti Brugge Dames M14 A (65-56)
+LOCATION:Trudosporthal\, Speelhoflaan\, 3800 Sint-Truiden
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13077625809-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:Amon Jeugd Gentson M14 A – Ford Unicars Avanti Brugge Dames M14 A (47-65)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14235575710-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T150000
+DTEND;TZID=Europe/Brussels:20261024T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – Phantoms Basket Boom M14 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14205625778-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – Phantoms Basket Boom M14 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Beker van Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14202020472-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – House Of Talents Kortrijk Spurs M14 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13480980213-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:Basket Willebroek M14 A – Ford Unicars Avanti Brugge Dames M14 A
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14269130948-10809016270@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261129T150000
+DTEND;TZID=Europe/Brussels:20261129T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 A – Femina Habac Sint-Truiden M14 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 1 A
+END:VEVENT
+END:VCALENDAR

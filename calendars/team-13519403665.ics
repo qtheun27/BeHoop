@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Koninklijke Basket Avelgem J16 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12337874975-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:BC Lamett Deerlijk-Zwevegem J16 A – Koninklijke Basket Avelgem J16 A (63-34)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:BC Lamett Deerlijk-Zwevegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10714634705-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T110000
+DTEND;TZID=Europe/Brussels:20260905T130000
+SUMMARY:G&V Breakpoint Basket Waregem J16 B – Koninklijke Basket Avelgem J16 A (86-42)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Koninklijk Basket Team ION Waregem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11055900461-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T100000
+DTEND;TZID=Europe/Brussels:20260912T120000
+SUMMARY:Koninklijke Basket Avelgem J16 A – Basket Poperinge J16 A (82-43)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14143717832-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T100000
+DTEND;TZID=Europe/Brussels:20260919T120000
+SUMMARY:House Of Talents Kortrijk Spurs J16 B – Koninklijke Basket Avelgem J16 A (62-38)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10972012366-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:Koninklijke Basket Avelgem J16 A – ALL4ONE Basketbal Menen J16 A (133-22)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13506021215-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T153000
+DTEND;TZID=Europe/Brussels:20261003T173000
+SUMMARY:Joppo Basket Izegem J16 B – Koninklijke Basket Avelgem J16 A (33-100)
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10938457128-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T100000
+DTEND;TZID=Europe/Brussels:20261010T120000
+SUMMARY:Koninklijke Basket Avelgem J16 A – KBBC Vk Iebac Ieper J16 A (75-26)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10553557629-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T110000
+DTEND;TZID=Europe/Brussels:20261017T130000
+SUMMARY:Basket Poperinge J16 A – Koninklijke Basket Avelgem J16 A (43-97)
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11039122842-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T100000
+DTEND;TZID=Europe/Brussels:20261024T120000
+SUMMARY:Koninklijke Basket Avelgem J16 A – House Of Talents Kortrijk Spurs J16 B
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11227979487-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Mibac Middelkerke J16 A – Koninklijke Basket Avelgem J16 A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Beker van West-Vlaanderen U16 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13740466596-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:ALL4ONE Basketbal Menen J16 A – Koninklijke Basket Avelgem J16 A
+LOCATION:Ter Steenlandt\, Lauwestraat 64\, 8930 Rekkem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11022345223-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T100000
+DTEND;TZID=Europe/Brussels:20261121T120000
+SUMMARY:Koninklijke Basket Avelgem J16 A – Joppo Basket Izegem J16 B
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10384648606-13519403665@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T153000
+DTEND;TZID=Europe/Brussels:20261128T173000
+SUMMARY:KBBC Vk Iebac Ieper J16 A – Koninklijke Basket Avelgem J16 A
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:U16 Niveau 3 B
+END:VEVENT
+END:VCALENDAR

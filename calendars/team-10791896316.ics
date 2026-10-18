@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13748948888-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T170000
+DTEND;TZID=Europe/Brussels:20260809T190000
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – House Of Talents Kortrijk Spurs HSE B (68-58)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11081263540-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T131500
+DTEND;TZID=Europe/Brussels:20260823T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – KBBC Zolder vzw HSE B (20-0)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10091678209-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T110000
+DTEND;TZID=Europe/Brussels:20260830T130000
+SUMMARY:Basket SKT Ieper HSE B – House Of Talents Kortrijk Spurs HSE B (73-65)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11014153064-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T131500
+DTEND;TZID=Europe/Brussels:20260906T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Titans Basketball Bonheiden HSE A (73-87)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13280330682-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T181500
+DTEND;TZID=Europe/Brussels:20260912T201500
+SUMMARY:ABO LDP Donza HSE B – House Of Talents Kortrijk Spurs HSE B (93-48)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14135150608-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T100000
+DTEND;TZID=Europe/Brussels:20260920T120000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – KBGOB Finexa Basket@Sea HSE B (82-76)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14287282012-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T174500
+DTEND;TZID=Europe/Brussels:20260926T194500
+SUMMARY:Avanti Brugge 2015 HSE B – House Of Talents Kortrijk Spurs HSE B (76-69)
+LOCATION:Stamina\, Daverlostraat 132\, 8310 Assebroek
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10007959502-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Antwerp Giants HSE C (62-74)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10057851074-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:Basics Melsele-Beveren HSE B – House Of Talents Kortrijk Spurs HSE B (61-59)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10091847597-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T131500
+DTEND;TZID=Europe/Brussels:20261018T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Gent-Oost Eagles HSE B (64-77)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13748676991-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:BC Black Beez Erpe-Mere HSE A – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14219038703-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Oxaco BBC Boechout HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13279889397-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:Nieuw Brabo Antwerpen HSE A – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Expohal\, Frank Craeybeckxlaan 77\, 2100 Deurne (Ant)
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14168705846-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Joppo Basket Izegem HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12741725661-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T174500
+DTEND;TZID=Europe/Brussels:20261128T194500
+SUMMARY:G&V Breakpoint Basket Waregem HSE B – House Of Talents Kortrijk Spurs HSE B
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13749118276-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Amon Jeugd Gentson HSE B – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14286149179-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – BBC Haantjes Certifisc Oudenaarde HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12608637542-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T181500
+DTEND;TZID=Europe/Brussels:20270109T201500
+SUMMARY:KBGOB Finexa Basket@Sea HSE B – House Of Talents Kortrijk Spurs HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14202261084-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T100000
+DTEND;TZID=Europe/Brussels:20270117T120000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – ABO LDP Donza HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13077425136-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270122T210000
+DTEND;TZID=Europe/Brussels:20270122T230000
+SUMMARY:Antwerp Giants HSE C – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Heylen Vastgoed Basketcampus\, Gasthuishoevestraat 71\, 2170 Antwerpen
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14235816322-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T110000
+DTEND;TZID=Europe/Brussels:20270131T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Avanti Brugge 2015 HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13144976897-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270205T201500
+DTEND;TZID=Europe/Brussels:20270205T221500
+SUMMARY:Gent-Oost Eagles HSE B – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14185483465-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Nieuw Brabo Antwerpen HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14152472680-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T203000
+DTEND;TZID=Europe/Brussels:20270227T223000
+SUMMARY:Joppo Basket Izegem HSE A – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10024737121-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – G&V Breakpoint Basket Waregem HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10058292359-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – BC Black Beez Erpe-Mere HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12676189303-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T181500
+DTEND;TZID=Europe/Brussels:20270320T201500
+SUMMARY:Oxaco BBC Boechout HSE B – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Sportpark Sneppenbos\, Vremdesesteenweg 224\, 2530 Boechout
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10041514740-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T110000
+DTEND;TZID=Europe/Brussels:20270411T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Basics Melsele-Beveren HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10075069978-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:House Of Talents Kortrijk Spurs HSE B – Amon Jeugd Gentson HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13613764491-10791896316@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE A – House Of Talents Kortrijk Spurs HSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:2e Landelijke Heren A 
+END:VEVENT
+END:VCALENDAR

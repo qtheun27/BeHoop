@@ -11,11 +11,11 @@ const serveRepo: Plugin = {
   configureServer(server) {
     server.middlewares.use((req, res, next) => {
       const url = decodeURIComponent((req.url ?? '').split('?')[0]);
-      if (!/^\/(app-data|docs\/test|docs\/planches|out\/render|icons)\//.test(url)) return next();
+      if (!/^\/(app-data|docs\/test|docs\/planches|out\/render|icons|logos)\//.test(url)) return next();
       const f = join(repo, url);
       if (!f.startsWith(repo) || !existsSync(f) || !statSync(f).isFile()) return next();
       const ext = f.split('.').pop()!;
-      res.setHeader('Content-Type', ({ json: 'application/json', png: 'image/png', m3u8: 'application/vnd.apple.mpegurl', ts: 'video/mp2t', vtt: 'text/vtt' } as Record<string, string>)[ext] ?? 'image/jpeg');
+      res.setHeader('Content-Type', ({ json: 'application/json', png: 'image/png', m3u8: 'application/vnd.apple.mpegurl', webp: 'image/webp', ts: 'video/mp2t', vtt: 'text/vtt' } as Record<string, string>)[ext] ?? 'image/jpeg');
       createReadStream(f).pipe(res);
     });
   },

@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs G14 C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12687598535-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:Bobcat Wielsbeke G14 B – House Of Talents Kortrijk Spurs G14 C (20-111)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11832234156-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T153000
+DTEND;TZID=Europe/Brussels:20260919T173000
+SUMMARY:House Of Talents Kortrijk Spurs G14 C – Rozenbeka Oostrozebeke G14 A (110-37)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11144204682-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:Koninklijke Basket Avelgem G14 B – House Of Talents Kortrijk Spurs G14 C (40-71)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11865789394-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T153000
+DTEND;TZID=Europe/Brussels:20261003T173000
+SUMMARY:House Of Talents Kortrijk Spurs G14 C – Basket Poperinge G14 A (68-61)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11412205301-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele G14 B – House Of Talents Kortrijk Spurs G14 C (30-73)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11781901299-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T153000
+DTEND;TZID=Europe/Brussels:20261017T173000
+SUMMARY:House Of Talents Kortrijk Spurs G14 C – Bobcat Wielsbeke G14 B (119-20)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10740953446-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:Rozenbeka Oostrozebeke G14 A – House Of Talents Kortrijk Spurs G14 C
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11765123680-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T153000
+DTEND;TZID=Europe/Brussels:20261114T173000
+SUMMARY:House Of Talents Kortrijk Spurs G14 C – Koninklijke Basket Avelgem G14 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12016346680-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:Basket Poperinge G14 A – House Of Talents Kortrijk Spurs G14 C
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11882567013-10916700955@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T153000
+DTEND;TZID=Europe/Brussels:20261128T173000
+SUMMARY:House Of Talents Kortrijk Spurs G14 C – Holstra WINGS Wevelgem-Moorsele G14 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 4 A2
+END:VEVENT
+END:VCALENDAR

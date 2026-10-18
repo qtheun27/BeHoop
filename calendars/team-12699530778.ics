@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Nieuwerkerken HSE R
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11483203585-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260911T210000
+DTEND;TZID=Europe/Brussels:20260911T230000
+SUMMARY:BBC Pelt HSE B – Nieuwerkerken HSE R
+LOCATION:Campus De Wingerd\, Sint-Jansstraat 37\, 3900 Overpelt
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12305012726-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:Nieuwerkerken HSE R – KBBC Zolder vzw HSE R
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12472788916-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:Nieuwerkerken HSE R – Orly Hasselt HSE R
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12506344154-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:Nieuwerkerken HSE R – Baclo Lommel HSE A
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11749526918-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:BasKet Tongeren HSE R – Nieuwerkerken HSE R
+LOCATION:Pibo\, Kruissteenweg 323\, 3700 Tongeren-Borgloon
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12372123202-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:Nieuwerkerken HSE R – Kon Sint-Truidense Basketbal (KSTBB) HSE D (40-93)
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11951991179-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261106T210000
+DTEND;TZID=Europe/Brussels:20261106T230000
+SUMMARY:KBBC Zolder vzw HSE D – Nieuwerkerken HSE R
+LOCATION:Olympia Heusden\, Pastoor van Mierlolaan\, 3550 Heusden-Zolder
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12439233678-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Nieuwerkerken HSE R – The Valley Basketball Maaseik HSE R
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10676597945-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:Hades Kiewit BBC HSE F – Nieuwerkerken HSE R
+LOCATION:Kiewit\, Tulpinstraat 40\, 3500 Hasselt
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12321790345-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:Nieuwerkerken HSE R – Helchteren 2020 HSE B
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11145385539-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE C – Nieuwerkerken HSE R
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11548739943-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Basket Lummen HSE C – Nieuwerkerken HSE R
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11684093728-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270108T210000
+DTEND;TZID=Europe/Brussels:20270108T230000
+SUMMARY:KBBC Zolder vzw HSE R – Nieuwerkerken HSE R
+LOCATION:Olympia Heusden\, Pastoor van Mierlolaan\, 3550 Heusden-Zolder
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12388900821-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:Nieuwerkerken HSE R – BBC Pelt HSE B
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11280739324-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:Baclo Lommel HSE A – Nieuwerkerken HSE R
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12152881322-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T090000
+DTEND;TZID=Europe/Brussels:20270131T110000
+SUMMARY:Orly Hasselt HSE R – Nieuwerkerken HSE R
+LOCATION:Sportschool GO! Next\, Elfde Liniestraat 14\, 3500 Hasselt
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12087344964-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T123000
+DTEND;TZID=Europe/Brussels:20270207T143000
+SUMMARY:Kon Sint-Truidense Basketbal (KSTBB) HSE D – Nieuwerkerken HSE R
+LOCATION:Tuinwijk\, Sportlaan 1\, 3800 Sint-Truiden
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10877488088-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270219T210000
+DTEND;TZID=Europe/Brussels:20270219T230000
+SUMMARY:The Valley Basketball Maaseik HSE R – Nieuwerkerken HSE R
+LOCATION:Sporthal De Borg\, Rotemerlaan 36\, 3680 Neeroeteren
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12523121773-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T150000
+DTEND;TZID=Europe/Brussels:20270228T170000
+SUMMARY:Nieuwerkerken HSE R – Hades Kiewit BBC HSE F
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11079952349-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T130000
+DTEND;TZID=Europe/Brussels:20270307T150000
+SUMMARY:Helchteren 2020 HSE B – Nieuwerkerken HSE R
+LOCATION:Sportcentrum Helchteren\, Sportstraat 11\, 3530 Helchteren
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12288235107-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:Nieuwerkerken HSE R – KBBC Zolder vzw HSE D
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12405678440-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:Nieuwerkerken HSE R – BasKet Tongeren HSE R
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12422456059-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:Nieuwerkerken HSE R – Koninklijke BBC Union Leopoldsburg HSE C
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12489566535-12699530778@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:Nieuwerkerken HSE R – Basket Lummen HSE C
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:4e Prov. Heren Limburg
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Houthalen DSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12038048976-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260808T180000
+DTEND;TZID=Europe/Brussels:20260808T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Basket Houthalen DSE B (46-101)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11383574740-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:Basket Houthalen DSE B – Antwerp Giants DSE A (50-62)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11366797121-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260829T180000
+DTEND;TZID=Europe/Brussels:20260829T200000
+SUMMARY:Basket Houthalen DSE B – House Of Talents Kortrijk Spurs DSE C (64-40)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11634694572-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:Amon Jeugd Gentson DSE B – Basket Houthalen DSE B (77-75)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11131305026-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:Basket Houthalen DSE B – BC Grimbergen DSE A (88-32)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11250322477-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:Hasselt BT DSE A – Basket Houthalen DSE B (68-84)
+LOCATION:Stedelijke sportschuur Kuringen\, Grote Baan 171\, 3511 Kuringen
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11198415502-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:Basket Houthalen DSE B – BC Cobras Schoten-Brasschaat DSE B (69-44)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13934344159-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Basket Zonhoven DSE A – Basket Houthalen DSE B (64-68)
+LOCATION:Evenementenhal Den Dijk Zonhoven\, Rozenkransweg 4\, 3520 Zonhoven
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11265525978-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:Basket Houthalen DSE B – Campinia Dessel-Retie DSE A (78-56)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13901333374-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261018T131500
+DTEND;TZID=Europe/Brussels:20261018T151500
+SUMMARY:Phantoms Basket Boom DSE C – Basket Houthalen DSE B (70-67)
+LOCATION:Braxhall\, Kapelstraat 143\, 2850 Boom
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11215193121-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T201500
+DTEND;TZID=Europe/Brussels:20261024T221500
+SUMMARY:Basket Houthalen DSE B – Titans Basketball Bonheiden DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11164860264-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:Basket Houthalen DSE B – BBC Croonen Lommel DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10680427884-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T181500
+DTEND;TZID=Europe/Brussels:20261114T201500
+SUMMARY:Stevoort BBC DSE A – Basket Houthalen DSE B
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11282303597-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:Basket Houthalen DSE B – Neteland Basket Ladies DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11249336739-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261129T120000
+DTEND;TZID=Europe/Brussels:20261129T140000
+SUMMARY:Basket Lummen DSE B – Basket Houthalen DSE B
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11047416931-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:Basket Houthalen DSE B – Antwerp Giants DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11216325954-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261220T161500
+DTEND;TZID=Europe/Brussels:20261220T181500
+SUMMARY:Basket Willebroek DSE B – Basket Houthalen DSE B
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11776435131-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270103T170000
+DTEND;TZID=Europe/Brussels:20270103T190000
+SUMMARY:Basket Houthalen DSE B – Basket Lummen DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11148082645-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T201500
+DTEND;TZID=Europe/Brussels:20270109T221500
+SUMMARY:Basket Houthalen DSE B – Hasselt BT DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10142852528-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:BC Grimbergen DSE A – Basket Houthalen DSE B
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11114527407-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:Basket Houthalen DSE B – Basket Zonhoven DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10142264148-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270131T130000
+DTEND;TZID=Europe/Brussels:20270131T150000
+SUMMARY:BC Cobras Schoten-Brasschaat DSE B – Basket Houthalen DSE B
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11030639312-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:Basket Houthalen DSE B – Phantoms Basket Boom DSE C
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11064194550-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T180000
+DTEND;TZID=Europe/Brussels:20270221T200000
+SUMMARY:Basket Houthalen DSE B – Stevoort BBC DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10175274933-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T150000
+DTEND;TZID=Europe/Brussels:20270227T170000
+SUMMARY:Neteland Basket Ladies DSE A – Basket Houthalen DSE B
+LOCATION:Sporthal De Komeet\, Eeuwfeestlaan 183\, 2500 Lier
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11181637883-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:Basket Houthalen DSE B – Basket Lummen DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10712850289-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:Titans Basketball Bonheiden DSE A – Basket Houthalen DSE B
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10678750598-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270321T133000
+DTEND;TZID=Europe/Brussels:20270321T153000
+SUMMARY:BBC Croonen Lommel DSE A – Basket Houthalen DSE B
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13899656088-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T183000
+DTEND;TZID=Europe/Brussels:20270410T203000
+SUMMARY:Campinia Dessel-Retie DSE A – Basket Houthalen DSE B
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10176952219-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:Antwerp Giants DSE B – Basket Houthalen DSE B
+LOCATION:Heylen Vastgoed Basketcampus\, Gasthuishoevestraat 71\, 2170 Antwerpen
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11097749788-14047524078@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:Basket Houthalen DSE B – Basket Willebroek DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:2e Landelijke Dames B
+END:VEVENT
+END:VCALENDAR

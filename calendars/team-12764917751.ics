@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bebita Eernegem HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-14237971060-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260815T180000
+DTEND;TZID=Europe/Brussels:20260815T200000
+SUMMARY:Bebita Eernegem HSE B – Red Sharks Koekelare HSE B (64-80)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Bebita Eernegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14204562917-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260823T170000
+DTEND;TZID=Europe/Brussels:20260823T190000
+SUMMARY:Bebita Eernegem HSE B – A.C.J. Basket Brugge HSE B (92-45)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Bebita Eernegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13996396089-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T183000
+DTEND;TZID=Europe/Brussels:20260905T203000
+SUMMARY:Bebita Eernegem HSE B – Basket Desselgem HSE C (100-38)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Beker van West-Vlaanderen Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10361745132-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T180000
+DTEND;TZID=Europe/Brussels:20260912T200000
+SUMMARY:Bebita Eernegem HSE B – A.C.J. Basket Brugge HSE R (74-42)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10512743703-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Bebita Eernegem HSE B – Wibac BBC Sint-Eloois-Winkel HSE B (114-62)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10311412275-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Bebita Eernegem HSE B – Olympos Marke HSE B (71-54)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13871963924-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Bebita Eernegem HSE B – Basket Midwest BP Tielt HSE A
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14154369596-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T183000
+DTEND;TZID=Europe/Brussels:20261107T203000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE E – Bebita Eernegem HSE B
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14019015811-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Zedelgem Lions HSE B – Bebita Eernegem HSE B
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10796977488-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Koninklijke Basket Avelgem HSE B – Bebita Eernegem HSE B
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10328189894-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:Bebita Eernegem HSE B – KBGOB Finexa Basket@Sea HSE E
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13615661407-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T193000
+DTEND;TZID=Europe/Brussels:20261212T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Bebita Eernegem HSE B
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11201906010-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:Bobcat Wielsbeke HSE C – Bebita Eernegem HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10529521322-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:Bebita Eernegem HSE B – Bobcat Wielsbeke HSE C
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11200228724-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Bebita Eernegem HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13617338693-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel HSE B – Bebita Eernegem HSE B
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10344967513-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Bebita Eernegem HSE B – Rozenbeka Oostrozebeke HSE A
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10495966084-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:Bebita Eernegem HSE B – Holstra WINGS Wevelgem-Moorsele HSE E
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10412077989-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Bebita Eernegem HSE B – Zedelgem Lions HSE B
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10294634656-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:Bebita Eernegem HSE B – Koninklijke Basket Avelgem HSE B
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14286913262-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T190000
+DTEND;TZID=Europe/Brussels:20270306T210000
+SUMMARY:KBGOB Finexa Basket@Sea HSE E – Bebita Eernegem HSE B
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10259946585-12764917751@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T183000
+DTEND;TZID=Europe/Brussels:20270417T203000
+SUMMARY:Olympos Marke HSE B – Bebita Eernegem HSE B
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+END:VCALENDAR

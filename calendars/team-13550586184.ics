@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jets Basket Zaventem HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12659095307-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T160000
+DTEND;TZID=Europe/Brussels:20260823T180000
+SUMMARY:Jets Basket Zaventem HSE A – Boortmeerbeek & Berg Bulldogs HSE B (52-38)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:Jets Zaventem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12675872926-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260826T200000
+DTEND;TZID=Europe/Brussels:20260826T220000
+SUMMARY:Jets Basket Zaventem HSE A – Panters Baasrode HSE B (64-75)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:Jets Zaventem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12692650545-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:Jets Basket Zaventem HSE A – Basket Groot Zemst HSE A (67-36)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:Jets Zaventem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11389957330-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T161500
+DTEND;TZID=Europe/Brussels:20260905T181500
+SUMMARY:Jets Basket Zaventem HSE A – BBC Haacht HSE C (92-32)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:Beker van Vlaams-Brabant Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13992982749-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T161500
+DTEND;TZID=Europe/Brussels:20260913T181500
+SUMMARY:Jets Basket Zaventem HSE A – Merchtem Eagles HSE A (51-41)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13943782725-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:Triton Leuven HSE A – Jets Basket Zaventem HSE A (52-76)
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13959427511-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T161500
+DTEND;TZID=Europe/Brussels:20260927T181500
+SUMMARY:Jets Basket Zaventem HSE A – Basket Club Groot Dilbeek HSE B (68-67)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10117603023-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:BC Asse-Ternat HSE C – Jets Basket Zaventem HSE A (83-54)
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13858761797-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T120000
+DTEND;TZID=Europe/Brussels:20261011T140000
+SUMMARY:Jets Basket Zaventem HSE A – Dynamo Bertem HSE B (105-54)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11158550876-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T133000
+DTEND;TZID=Europe/Brussels:20261018T153000
+SUMMARY:Bavi Vilvoorde HSE D – Jets Basket Zaventem HSE A (82-89)
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10186287617-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Hageland United HSE A – Jets Basket Zaventem HSE A
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13712918225-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:Bavi Vilvoorde HSE D – Jets Basket Zaventem HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13976205130-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:Jets Basket Zaventem HSE A – Tigers Halle HSE A
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10621078688-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:AB InBev Leuven Bears HSE D – Jets Basket Zaventem HSE A
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10620387140-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T140000
+DTEND;TZID=Europe/Brussels:20261122T160000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven HSE A – Jets Basket Zaventem HSE A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13808428940-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T161500
+DTEND;TZID=Europe/Brussels:20261129T181500
+SUMMARY:Jets Basket Zaventem HSE A – BC Opwijk HSE B
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11192650567-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261209T203000
+DTEND;TZID=Europe/Brussels:20261209T223000
+SUMMARY:BC Grimbergen HSE B – Jets Basket Zaventem HSE A
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13774873702-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T161500
+DTEND;TZID=Europe/Brussels:20261213T181500
+SUMMARY:Jets Basket Zaventem HSE A – Londerzeelse Dunkers HSE A
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13758096083-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270110T161500
+DTEND;TZID=Europe/Brussels:20270110T181500
+SUMMARY:Jets Basket Zaventem HSE A – Triton Leuven HSE A
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10655075211-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:Merchtem Eagles HSE A – Jets Basket Zaventem HSE A
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13925872273-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270124T161500
+DTEND;TZID=Europe/Brussels:20270124T181500
+SUMMARY:Jets Basket Zaventem HSE A – BC Asse-Ternat HSE C
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11258775305-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Basket Club Groot Dilbeek HSE B – Jets Basket Zaventem HSE A
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13741318464-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T161500
+DTEND;TZID=Europe/Brussels:20270207T181500
+SUMMARY:Jets Basket Zaventem HSE A – Bavi Vilvoorde HSE D
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13942649892-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270218T210000
+DTEND;TZID=Europe/Brussels:20270218T230000
+SUMMARY:Jets Basket Zaventem HSE A – AB InBev Leuven Bears HSE D
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13875539416-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T161500
+DTEND;TZID=Europe/Brussels:20270228T181500
+SUMMARY:Jets Basket Zaventem HSE A – Stella Artois 0.0 Blue Tigers Leuven HSE A
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13843558296-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T190000
+DTEND;TZID=Europe/Brussels:20270306T210000
+SUMMARY:BC Opwijk HSE B – Jets Basket Zaventem HSE A
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13825206559-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T161500
+DTEND;TZID=Europe/Brussels:20270314T181500
+SUMMARY:Jets Basket Zaventem HSE A – Hageland United HSE A
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10151599546-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Tigers Halle HSE A – Jets Basket Zaventem HSE A
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11193238947-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:Dynamo Bertem HSE B – Jets Basket Zaventem HSE A
+LOCATION:Sportzaal Verona\, Dorpstraat 259\, 3061 Leefdaal
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10152291094-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:Londerzeelse Dunkers HSE A – Jets Basket Zaventem HSE A
+LOCATION:Sportoase De Lijster\, lijsterstraat 1\, 1840 Londerzeel
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13791651321-13550586184@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T161500
+DTEND;TZID=Europe/Brussels:20270425T181500
+SUMMARY:Jets Basket Zaventem HSE A – BC Grimbergen HSE B
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant A
+END:VEVENT
+END:VCALENDAR

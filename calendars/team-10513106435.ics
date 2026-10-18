@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBC Haantjes Certifisc Oudenaarde DSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12038048976-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260808T180000
+DTEND;TZID=Europe/Brussels:20260808T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Basket Houthalen DSE B (46-101)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12148595395-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260813T200000
+DTEND;TZID=Europe/Brussels:20260813T220000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – BBC Wildcats Gavere DSE A (34-57)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:BBC Haantjes Oudenaarde OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11685027429-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T170000
+DTEND;TZID=Europe/Brussels:20260816T190000
+SUMMARY:Amon Jeugd Gentson DSE B – BBC Haantjes Certifisc Oudenaarde DSE A (97-45)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12054826595-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T180000
+DTEND;TZID=Europe/Brussels:20260823T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Antwerp Giants DSE A (37-89)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12131817776-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T181500
+DTEND;TZID=Europe/Brussels:20260829T201500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Bobcat Wielsbeke DSE A (64-49)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:BBC Haantjes Oudenaarde OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12441883093-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Koninklijke Sint-Niklase Condors DSE A (67-69)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Dames Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12289168808-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:House Of Talents Kortrijk Spurs DSE C – BBC Haantjes Certifisc Oudenaarde DSE A (57-54)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Beker van Vlaanderen Dames Poule F
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13886118527-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T180000
+DTEND;TZID=Europe/Brussels:20260913T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A (76-18)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13869340908-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Royal Tigers Evergem DSE A (59-49)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13280299862-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:Koninklijke Sint-Niklase Condors DSE A – BBC Haantjes Certifisc Oudenaarde DSE A (60-68)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13970006622-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Amon Jeugd Gentson DSE D (89-39)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14003561860-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – ABO LDP Donza DSE C
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14086905502-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:BBC Wildcats Gavere DSE B – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13919673765-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13850886003-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Gent-Oost Eagles DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13835785670-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – BBC Houtem Redwolves DSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14254240407-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:KBBC Sparta Laarne DSE B – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13449208885-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE C – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13986784241-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10195292610-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12913310815-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13936451384-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Koninklijke Sint-Niklase Condors DSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13551007432-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13802230432-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – BBC Wildcats Gavere DSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13953229003-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Gent-Oost Eagles DSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13147756196-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T163000
+DTEND;TZID=Europe/Brussels:20270227T183000
+SUMMARY:BBC Houtem Redwolves DSE B – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14020339479-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T180000
+DTEND;TZID=Europe/Brussels:20270307T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – KBBC Sparta Laarne DSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13683654266-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:ABO LDP Donza DSE C – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14255814525-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T181500
+DTEND;TZID=Europe/Brussels:20270320T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10193615324-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T170000
+DTEND;TZID=Europe/Brussels:20270411T190000
+SUMMARY:Amon Jeugd Gentson DSE D – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14053894717-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Jumbo Elektrooghe Gembas Knesselare DSE C
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13045957649-10513106435@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T143000
+DTEND;TZID=Europe/Brussels:20270425T163000
+SUMMARY:BBC Garage Wille Hansbeke DSE A – BBC Haantjes Certifisc Oudenaarde DSE A (0-20)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

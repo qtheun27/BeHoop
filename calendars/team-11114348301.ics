@@ -1,0 +1,267 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Desselgem HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11183466005-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260820T204500
+DTEND;TZID=Europe/Brussels:20260820T224500
+SUMMARY:Bobcat Wielsbeke HSE B – Basket Desselgem HSE A (66-63)
+LOCATION:Centrum Hernieuwenburg - NIEUW\, Hernieuwenstraat 14C\, 8710 WIelsbeke
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10246293835-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T103000
+DTEND;TZID=Europe/Brussels:20260906T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Basket Desselgem HSE A (59-51)
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:KBBC Wikings Kortrijk OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12267453211-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T201500
+DTEND;TZID=Europe/Brussels:20260912T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – Basket Desselgem HSE A (72-54)
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13306826946-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T201500
+DTEND;TZID=Europe/Brussels:20260919T221500
+SUMMARY:Basket Desselgem HSE A – G&V Breakpoint Basket Waregem HSE C (60-90)
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13339249351-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Joppo Basket Izegem HSE B – Basket Desselgem HSE A (59-58)
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13357159803-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T201500
+DTEND;TZID=Europe/Brussels:20261003T221500
+SUMMARY:Basket Desselgem HSE A – Bbv Oedelem HSE A (65-50)
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13339837731-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Basket Desselgem HSE A (58-62)
+LOCATION:Sportcomplex Waasten\, Rijsel Voorstadstraat 45\, 7784 Komen-Waasten
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13206161232-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T201500
+DTEND;TZID=Europe/Brussels:20261017T221500
+SUMMARY:Basket Desselgem HSE A – Wytewa Roeselare HSE B (47-56)
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11729877855-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T171500
+DTEND;TZID=Europe/Brussels:20261024T191500
+SUMMARY:Basket Sijsele HSE B – Basket Desselgem HSE A
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11456384146-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261030T204500
+DTEND;TZID=Europe/Brussels:20261030T224500
+SUMMARY:BC Delrue JP Oostende HSE A – Basket Desselgem HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12802806828-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:Red Sharks Koekelare HSE A – Basket Desselgem HSE A
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13239716470-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:Basket Desselgem HSE A – KBBC Racing Brugge HSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13408625493-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – Basket Desselgem HSE A
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13441047898-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T201500
+DTEND;TZID=Europe/Brussels:20261128T221500
+SUMMARY:Basket Desselgem HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11730422308-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T201500
+DTEND;TZID=Europe/Brussels:20261212T221500
+SUMMARY:Rapid Raptors Langemark HSE A – Basket Desselgem HSE A
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13424270279-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T201500
+DTEND;TZID=Europe/Brussels:20261219T221500
+SUMMARY:Basket Desselgem HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12334019234-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270110T173000
+DTEND;TZID=Europe/Brussels:20270110T193000
+SUMMARY:G&V Breakpoint Basket Waregem HSE C – Basket Desselgem HSE A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13256494089-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T201500
+DTEND;TZID=Europe/Brussels:20270116T221500
+SUMMARY:Basket Desselgem HSE A – KBBC Vk Iebac Ieper HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12870461757-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T181500
+DTEND;TZID=Europe/Brussels:20270123T201500
+SUMMARY:Bbv Oedelem HSE A – Basket Desselgem HSE A
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13457825517-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T201500
+DTEND;TZID=Europe/Brussels:20270130T221500
+SUMMARY:Basket Desselgem HSE A – Joppo Basket Izegem HSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11731010688-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:Wytewa Roeselare HSE B – Basket Desselgem HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12871594590-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T181500
+DTEND;TZID=Europe/Brussels:20270220T201500
+SUMMARY:KBBC Racing Brugge HSE B – Basket Desselgem HSE A
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13222938851-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:Basket Desselgem HSE A – BC Lamett Deerlijk-Zwevegem HSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11795855498-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Basket Desselgem HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13323604565-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T201500
+DTEND;TZID=Europe/Brussels:20270313T221500
+SUMMARY:Basket Desselgem HSE A – Basket Sijsele HSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13407492660-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T201500
+DTEND;TZID=Europe/Brussels:20270320T221500
+SUMMARY:Basket Desselgem HSE A – Red Sharks Koekelare HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13390715041-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T201500
+DTEND;TZID=Europe/Brussels:20270410T221500
+SUMMARY:Basket Desselgem HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13273271708-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T201500
+DTEND;TZID=Europe/Brussels:20270417T221500
+SUMMARY:Basket Desselgem HSE A – Rapid Raptors Langemark HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12332886401-11114348301@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Basket Desselgem HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

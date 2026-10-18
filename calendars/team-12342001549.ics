@@ -1,0 +1,177 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Rozenbeka Oostrozebeke HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13749882359-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T193000
+DTEND;TZID=Europe/Brussels:20260912T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Bobcat Wielsbeke HSE C (51-75)
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11149895867-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T160000
+DTEND;TZID=Europe/Brussels:20260919T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Rozenbeka Oostrozebeke HSE A (54-59)
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13649216645-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – A.C.J. Basket Brugge HSE R (54-47)
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13533450598-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel HSE B – Rozenbeka Oostrozebeke HSE A (67-75)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13582106169-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T193000
+DTEND;TZID=Europe/Brussels:20261017T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Koninklijke Basket Avelgem HSE B (57-66)
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11355718432-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Rozenbeka Oostrozebeke HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14069348668-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Zedelgem Lions HSE B – Rozenbeka Oostrozebeke HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13548550931-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T193000
+DTEND;TZID=Europe/Brussels:20261114T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – KBGOB Finexa Basket@Sea HSE E
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10310279442-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:Olympos Marke HSE B – Rozenbeka Oostrozebeke HSE A
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13783437597-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Holstra WINGS Wevelgem-Moorsele HSE E
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13615661407-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T193000
+DTEND;TZID=Europe/Brussels:20261212T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Bebita Eernegem HSE B
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11151573153-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:Bobcat Wielsbeke HSE C – Rozenbeka Oostrozebeke HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10344967513-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Bebita Eernegem HSE B – Rozenbeka Oostrozebeke HSE A
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13598883788-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270219T193000
+DTEND;TZID=Europe/Brussels:20270219T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Zedelgem Lions HSE B
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10075834061-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T133000
+DTEND;TZID=Europe/Brussels:20270221T153000
+SUMMARY:KBGOB Finexa Basket@Sea HSE E – Rozenbeka Oostrozebeke HSE A
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13565328550-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T193000
+DTEND;TZID=Europe/Brussels:20270227T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Olympos Marke HSE B
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14104036739-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE E – Rozenbeka Oostrozebeke HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13766659978-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T193000
+DTEND;TZID=Europe/Brussels:20270410T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – Wibac BBC Sint-Eloois-Winkel HSE B
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10880865583-12342001549@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:Koninklijke Basket Avelgem HSE B – Rozenbeka Oostrozebeke HSE A
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+END:VCALENDAR

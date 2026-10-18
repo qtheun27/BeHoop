@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare G10 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11827822056-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T110000
+DTEND;TZID=Europe/Brussels:20260913T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – e5 Sgolba Aalter G10 B (45-45)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10698962568-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T111500
+DTEND;TZID=Europe/Brussels:20260919T131500
+SUMMARY:Bbv Oedelem G10 A – Jumbo Elektrooghe Gembas Knesselare G10 B (23-8)
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:Bbv Oedelem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10970129464-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – Basket Sijsele G10 A (1-1)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13989703526-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:KBGOB Finexa Basket@Sea G10 A – Jumbo Elektrooghe Gembas Knesselare G10 B (1-1)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10265322371-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:e5 Sgolba Aalter G10 A – Jumbo Elektrooghe Gembas Knesselare G10 B (1-1)
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11020462321-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – Basket Blankenberge G10 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10986907083-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T104500
+DTEND;TZID=Europe/Brussels:20261107T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – KBGOB Finexa Basket@Sea G10 E
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11070795178-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261111T090000
+DTEND;TZID=Europe/Brussels:20261111T110000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – KBGOB Finexa Basket@Sea G10 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11338692629-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:KBGOB Finexa Basket@Sea G10 E – Jumbo Elektrooghe Gembas Knesselare G10 B
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10499664584-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:Basket Sijsele G10 A – Jumbo Elektrooghe Gembas Knesselare G10 B
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11087572797-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G10 B – e5 Sgolba Aalter G10 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14291156215-12316465739@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:Basket Blankenberge G10 A – Jumbo Elektrooghe Gembas Knesselare G10 B
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:U10 Niveau 4 A1
+END:VEVENT
+END:VCALENDAR

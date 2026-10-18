@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare M14 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13278750661-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 B – Jumbo Elektrooghe Gembas Knesselare M14 B (63-20)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Avanti Dames Brugge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11518384119-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:BBC Wildcats Gavere M14 A – Jumbo Elektrooghe Gembas Knesselare M14 B (50-47)
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:Wildcats Gavere OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12543996249-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T143000
+DTEND;TZID=Europe/Brussels:20260913T163000
+SUMMARY:Partena Professional DBC Okapi Aalst M14 B – Jumbo Elektrooghe Gembas Knesselare M14 B (42-45)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13365702222-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M14 B – Royal Tigers Evergem M14 A (44-52)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13148137628-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:Amon Jeugd Gentson M14 B – Jumbo Elektrooghe Gembas Knesselare M14 B (42-31)
+LOCATION:Provinciale Sporthal Henleykaai (Abdis)\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13332146984-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T090000
+DTEND;TZID=Europe/Brussels:20261004T110000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M14 B – BBC Wildcats Gavere M14 A (38-77)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13012783843-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Gent-Oost Eagles M14 B – Jumbo Elektrooghe Gembas Knesselare M14 B (32-31)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13449590317-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T124500
+DTEND;TZID=Europe/Brussels:20261017T144500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M14 B – Partena Professional DBC Okapi Aalst M14 B (50-40)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12744783224-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:Royal Tigers Evergem M14 A – Jumbo Elektrooghe Gembas Knesselare M14 B
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11871032158-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T123000
+DTEND;TZID=Europe/Brussels:20261108T143000
+SUMMARY:Partena Professional DBC Okapi Aalst M14 A – Jumbo Elektrooghe Gembas Knesselare M14 B
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13432812698-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M14 B – Amon Jeugd Gentson M14 B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11469389990-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:BBC Wildcats Gavere M14 A – Jumbo Elektrooghe Gembas Knesselare M14 B
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13348924603-11727401049@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T150000
+DTEND;TZID=Europe/Brussels:20261129T170000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M14 B – Gent-Oost Eagles M14 B
+LOCATION:MEOS\, Bloemenstraat\, 9990 Maldegem
+DESCRIPTION:U14 Meisjes Niveau 3 C
+END:VEVENT
+END:VCALENDAR

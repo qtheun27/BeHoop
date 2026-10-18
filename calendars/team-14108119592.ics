@@ -1,0 +1,132 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare M19 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13228417804-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260820T203000
+DTEND;TZID=Europe/Brussels:20260820T223000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 B – Jumbo Elektrooghe Gembas Knesselare M19 B (56-49)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Avanti Dames Brugge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13200216176-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T110000
+DTEND;TZID=Europe/Brussels:20260829T130000
+SUMMARY:Royal Tigers Evergem M19 A – Jumbo Elektrooghe Gembas Knesselare M19 B (55-33)
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:Tigers Evergem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10865918950-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T110000
+DTEND;TZID=Europe/Brussels:20260912T130000
+SUMMARY:Gent-Oost Eagles M19 A – Jumbo Elektrooghe Gembas Knesselare M19 B (77-35)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:Gent-Oost Eagles OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14138041052-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T130000
+DTEND;TZID=Europe/Brussels:20260920T150000
+SUMMARY:ABO LDP Donza M19 B – Jumbo Elektrooghe Gembas Knesselare M19 B (60-44)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13013205104-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T124500
+DTEND;TZID=Europe/Brussels:20260926T144500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – BC Asse-Ternat M19 A (39-80)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13029982723-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – Erembodegem Silverbacks M19 A (40-90)
+LOCATION:MEOS\, Bloemenstraat\, 9990 Maldegem
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13130648437-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – KBBC Wezen-Vrienden Geraardsbergen M19 A (59-75)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13600568864-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T110000
+DTEND;TZID=Europe/Brussels:20261018T130000
+SUMMARY:Amon Jeugd Gentson M19 B – Jumbo Elektrooghe Gembas Knesselare M19 B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13046760342-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T144500
+DTEND;TZID=Europe/Brussels:20261024T164500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – ABO LDP Donza M19 B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14290005701-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – KBBC Sparta Laarne M19 B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Oost-Vlaanderen U19 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12795537342-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T100000
+DTEND;TZID=Europe/Brussels:20261115T120000
+SUMMARY:BC Asse-Ternat M19 A – Jumbo Elektrooghe Gembas Knesselare M19 B
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13366123483-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:Erembodegem Silverbacks M19 A – Jumbo Elektrooghe Gembas Knesselare M19 B
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10144629613-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T110000
+DTEND;TZID=Europe/Brussels:20261128T130000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen M19 A – Jumbo Elektrooghe Gembas Knesselare M19 B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13113870818-14108119592@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T160000
+DTEND;TZID=Europe/Brussels:20261205T180000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 B – Amon Jeugd Gentson M19 B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U19 Meisjes Niveau 2 C
+END:VEVENT
+END:VCALENDAR

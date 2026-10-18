@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bavi Vilvoorde HSE E
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11931313228-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:Bct Overijse HSE B – Bavi Vilvoorde HSE E (57-86)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12553909512-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Bavi Vilvoorde HSE E – Jets Basket Zaventem HSE B (93-49)
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12737918868-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Basket Groot Zemst HSE A – Bavi Vilvoorde HSE E (77-87)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12419688560-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Bavi Vilvoorde HSE E – Boortmeerbeek & Berg Bulldogs HSE B (67-54)
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13812525127-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:BC Grimbergen HSE A – Bavi Vilvoorde HSE E (65-54)
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12468344131-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:L.S.V. Basket Landen HSE B – Bavi Vilvoorde HSE E (72-98)
+LOCATION:Sporthal Landen (stedelijke stadshal)\, Sportlaan 1\, 3400 Landen
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12671352845-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:Bavi Vilvoorde HSE E – KYD Kortenberg Young Devils HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12537131893-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Bavi Vilvoorde HSE E – GSG Aarschot HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13005919487-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T180000
+DTEND;TZID=Europe/Brussels:20261115T200000
+SUMMARY:Green Bananas Affligem Ants HSE A – Bavi Vilvoorde HSE E
+LOCATION:Bellekouter\, Bellestraat 99\, 1790 Affligem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12453243798-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T173000
+DTEND;TZID=Europe/Brussels:20261122T193000
+SUMMARY:Bavi Vilvoorde HSE E – BBC Haacht HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13274949771-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T183000
+DTEND;TZID=Europe/Brussels:20261128T203000
+SUMMARY:2B|SAFE Tienen HSE B – Bavi Vilvoorde HSE E
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13273816938-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Clem Scherpenheuvel HSE B – Bavi Vilvoorde HSE E
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12587464750-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261220T173000
+DTEND;TZID=Europe/Brussels:20261220T193000
+SUMMARY:Bavi Vilvoorde HSE E – BC Asse-Ternat HSE D
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13542950390-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270110T140000
+DTEND;TZID=Europe/Brussels:20270110T160000
+SUMMARY:Jets Basket Zaventem HSE B – Bavi Vilvoorde HSE E
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12654575226-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T173000
+DTEND;TZID=Europe/Brussels:20270117T193000
+SUMMARY:Bavi Vilvoorde HSE E – Bct Overijse HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12520354274-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270131T173000
+DTEND;TZID=Europe/Brussels:20270131T193000
+SUMMARY:Bavi Vilvoorde HSE E – Basket Groot Zemst HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12637797607-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:Bavi Vilvoorde HSE E – L.S.V. Basket Landen HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13541817557-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270214T143000
+DTEND;TZID=Europe/Brussels:20270214T163000
+SUMMARY:KYD Kortenberg Young Devils HSE B – Bavi Vilvoorde HSE E
+LOCATION:Sporthal Hertblok Steenokkerzeel\, Orchideeenlaan\, 1820 Steenokkerzeel
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12570687131-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T173000
+DTEND;TZID=Europe/Brussels:20270221T193000
+SUMMARY:Bavi Vilvoorde HSE E – Green Bananas Affligem Ants HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13007052320-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T113000
+DTEND;TZID=Europe/Brussels:20270228T133000
+SUMMARY:BBC Haacht HSE A – Bavi Vilvoorde HSE E
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12503576655-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270307T173000
+DTEND;TZID=Europe/Brussels:20270307T193000
+SUMMARY:Bavi Vilvoorde HSE E – 2B|SAFE Tienen HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12200887965-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T174500
+DTEND;TZID=Europe/Brussels:20270320T194500
+SUMMARY:GSG Aarschot HSE B – Bavi Vilvoorde HSE E
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12202020798-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270403T190000
+DTEND;TZID=Europe/Brussels:20270403T210000
+SUMMARY:Boortmeerbeek & Berg Bulldogs HSE B – Bavi Vilvoorde HSE E
+LOCATION:Sporthal Boortmeerbeek\, Sportveldweg 6\, 3190 Boortmeerbeek
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12436466179-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:Bavi Vilvoorde HSE E – BC Grimbergen HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12621019988-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270418T173000
+DTEND;TZID=Europe/Brussels:20270418T193000
+SUMMARY:Bavi Vilvoorde HSE E – Clem Scherpenheuvel HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12200446680-10429507022@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270425T161500
+DTEND;TZID=Europe/Brussels:20270425T181500
+SUMMARY:BC Asse-Ternat HSE D – Bavi Vilvoorde HSE E
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+END:VCALENDAR

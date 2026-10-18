@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Zonhoven M12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11524221962-11620214529@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T100000
+DTEND;TZID=Europe/Brussels:20261219T120000
+SUMMARY:Basket Zonhoven M12 A – The Valley Basketball Maaseik M12 A
+LOCATION:Evenementenhal Den Dijk Zonhoven\, Rozenkransweg 4\, 3520 Zonhoven
+DESCRIPTION:Beker van Limburg U12 Meisjes 1/4 Finale
+END:VEVENT
+END:VCALENDAR

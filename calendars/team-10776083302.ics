@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs M14 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11581895399-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T090000
+DTEND;TZID=Europe/Brussels:20260823T110000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – ABO LDP Donza M14 A (35-95)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12842819084-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T110000
+DTEND;TZID=Europe/Brussels:20260829T130000
+SUMMARY:KBGOB Finexa Basket@Sea M14 A – House Of Talents Kortrijk Spurs M14 B (64-39)
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:KBGO OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13245195423-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 B – House Of Talents Kortrijk Spurs M14 B (65-46)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Avanti Dames Brugge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13171520728-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T133000
+DTEND;TZID=Europe/Brussels:20260912T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – G&V Breakpoint Basket Waregem M14 B (30-80)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13876327821-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T150000
+DTEND;TZID=Europe/Brussels:20260919T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 B – House Of Talents Kortrijk Spurs M14 B (55-47)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12937075347-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:BC Lamett Deerlijk-Zwevegem M14 A – House Of Talents Kortrijk Spurs M14 B (24-84)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13238631204-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – Bobcat Wielsbeke M14 A (60-36)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10386288879-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde M14 A – House Of Talents Kortrijk Spurs M14 B (68-47)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14010004320-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T151500
+DTEND;TZID=Europe/Brussels:20261018T171500
+SUMMARY:G&V Breakpoint Basket Waregem M14 B – House Of Talents Kortrijk Spurs M14 B (74-31)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13255408823-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T133000
+DTEND;TZID=Europe/Brussels:20261024T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – Ford Unicars Avanti Brugge Dames M14 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13288964061-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T133000
+DTEND;TZID=Europe/Brussels:20261114T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – BC Lamett Deerlijk-Zwevegem M14 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10118391428-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T143000
+DTEND;TZID=Europe/Brussels:20261121T163000
+SUMMARY:Bobcat Wielsbeke M14 A – House Of Talents Kortrijk Spurs M14 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13221853585-10776083302@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T133000
+DTEND;TZID=Europe/Brussels:20261128T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – BBC Haantjes Certifisc Oudenaarde M14 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basics Melsele-Beveren HSE D
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12893933226-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T133000
+DTEND;TZID=Europe/Brussels:20260830T153000
+SUMMARY:BBC Musketiers Wommelgem HSE A – Basics Melsele-Beveren HSE D (78-57)
+LOCATION:Sportkaffe 'Het Brieleke'\, Brieleke 16\, 2160 Wommelgem
+DESCRIPTION:BBC Musketiers OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11964637057-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T000000
+DTEND;TZID=Europe/Brussels:20260905T020000
+SUMMARY:Basics Melsele-Beveren HSE D – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Basics Melsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12068151302-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T000000
+DTEND;TZID=Europe/Brussels:20260905T020000
+SUMMARY:Titans Basketball Bonheiden HSE C – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Basket Bonheiden OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12031747533-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T140000
+DTEND;TZID=Europe/Brussels:20260905T160000
+SUMMARY:Basics Melsele-Beveren HSE D – Titans Basketball Bonheiden HSE C (86-81)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Basics Melsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13738814884-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T170000
+DTEND;TZID=Europe/Brussels:20260913T190000
+SUMMARY:Royal Tigers Evergem HSE C – Basics Melsele-Beveren HSE D (55-48)
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10954715868-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T200000
+DTEND;TZID=Europe/Brussels:20260919T220000
+SUMMARY:Basics Melsele-Beveren HSE D – Erembodegem Silverbacks HSE C (56-59)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11139269677-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Basics Melsele-Beveren HSE D – BBC Assenede HSE B (74-46)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13569905861-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:Onderons Grembergen HSE A – Basics Melsele-Beveren HSE D (70-50)
+LOCATION:Sporthal Scheldedreef\, Scheldedreef 26\, 9200 Grembergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11072159201-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basics Melsele-Beveren HSE D – CSS Outdoor Living Ninove HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10887605392-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Basics Melsele-Beveren HSE D – BBC Olympia Denderleeuw HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14007845168-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:BBC White Star - Witte Sterren St. Amandsberg HSE A – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11005048725-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Basics Melsele-Beveren HSE D – KBBC Wezen-Vrienden Geraardsbergen HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14073381526-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE B – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10988271106-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:Basics Melsele-Beveren HSE D – Koninklijke Sint-Niklase Condors HSE D
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11038603963-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Basics Melsele-Beveren HSE D – BBC Houtem Redwolves HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11053807464-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:Erembodegem Silverbacks HSE C – Basics Melsele-Beveren HSE D
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11021826344-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:Basics Melsele-Beveren HSE D – Royal Tigers Evergem HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13773502955-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T151500
+DTEND;TZID=Europe/Brussels:20270131T171500
+SUMMARY:BBC Assenede HSE B – Basics Melsele-Beveren HSE D
+LOCATION:Gemeentelijke Sporthal Assenede\, Kapelledreef 4\, 9960 Assenede
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10904383011-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T130000
+DTEND;TZID=Europe/Brussels:20270207T150000
+SUMMARY:Basics Melsele-Beveren HSE D – Onderons Grembergen HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11088936820-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:Basics Melsele-Beveren HSE D – BBC White Star - Witte Sterren St. Amandsberg HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10819362083-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270226T210000
+DTEND;TZID=Europe/Brussels:20270226T230000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE C – Basics Melsele-Beveren HSE D
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10921160630-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T130000
+DTEND;TZID=Europe/Brussels:20270307T150000
+SUMMARY:Basics Melsele-Beveren HSE D – Koninklijke BBC Scheldejeugd Temse HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13504369503-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10784674012-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:BBC Olympia Denderleeuw HSE C – Basics Melsele-Beveren HSE D
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10315886418-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE D – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10081544205-10583442485@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270423T210000
+DTEND;TZID=Europe/Brussels:20270423T230000
+SUMMARY:BBC Houtem Redwolves HSE C – Basics Melsele-Beveren HSE D
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+END:VCALENDAR

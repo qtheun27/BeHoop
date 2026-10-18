@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Tigers Halle HSE R
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11906818025-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:Tigers Halle HSE R – BBC Alsemberg HSE R (82-45)
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13064767926-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Londerzeelse Dunkers HSE R – Tigers Halle HSE R (64-59)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11856485168-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:Tigers Halle HSE R – BC Machelen-Diegem HSE R (62-64)
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12460626547-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T160000
+DTEND;TZID=Europe/Brussels:20261025T180000
+SUMMARY:BBC Alsemberg HSE R – Tigers Halle HSE R
+LOCATION:Sportcomplex Kerkeveld\, Schoolstraat 46\, 1650 Beersel
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11973928501-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:Tigers Halle HSE R – Basket Club Groot Dilbeek HSE R
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13332768545-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Boortmeerbeek & Berg Bulldogs HSE R – Tigers Halle HSE R
+LOCATION:Sporthal Boortmeerbeek\, Sportveldweg 6\, 3190 Boortmeerbeek
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11940373263-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:Tigers Halle HSE R – Boortmeerbeek & Berg Bulldogs HSE R
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11890040406-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:Tigers Halle HSE R – Londerzeelse Dunkers HSE R
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12192729096-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T130000
+DTEND;TZID=Europe/Brussels:20261129T150000
+SUMMARY:BC Machelen-Diegem HSE R – Tigers Halle HSE R
+LOCATION:Sporthal Heirbaan Machelen\, Heirbaan 10\, 1830 Machelen
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12191596263-13564366223@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Basket Club Groot Dilbeek HSE R – Tigers Halle HSE R
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:Recreatie Heren Vlaams-Brabant
+END:VEVENT
+END:VCALENDAR

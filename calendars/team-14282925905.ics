@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Blue Rocks Ronse-Kluisbergen DSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13618822920-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260820T201500
+DTEND;TZID=Europe/Brussels:20260820T221500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Basket Desselgem DSE A (51-63)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12374772617-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T163000
+DTEND;TZID=Europe/Brussels:20260822T183000
+SUMMARY:BBC Houtem Redwolves DSE B – Blue Rocks Ronse-Kluisbergen DSE A (49-89)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:Beker van Oost-Vlaanderen Dames Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10943750790-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:BasKet Tongeren DSE A – Blue Rocks Ronse-Kluisbergen DSE A (70-72)
+LOCATION:Pibo\, Kruissteenweg 323\, 3700 Tongeren-Borgloon
+DESCRIPTION:BasKet Tongeren OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13518010111-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T183000
+DTEND;TZID=Europe/Brussels:20260905T203000
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Amon Jeugd Gentson DSE C (77-55)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14154015978-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T200000
+DTEND;TZID=Europe/Brussels:20260919T220000
+SUMMARY:BBC Wildcats Gavere DSE B – Blue Rocks Ronse-Kluisbergen DSE A (68-83)
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14239036906-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T181500
+DTEND;TZID=Europe/Brussels:20260926T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – BBC Houtem Redwolves DSE B (68-42)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14054483097-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T181500
+DTEND;TZID=Europe/Brussels:20261003T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Jumbo Elektrooghe Gembas Knesselare DSE C (89-38)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13917996479-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:Gent-Oost Eagles DSE A – Blue Rocks Ronse-Kluisbergen DSE A (66-60)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14020927859-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T181500
+DTEND;TZID=Europe/Brussels:20261017T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – KBBC Sparta Laarne DSE B (66-61)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13113068125-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T143000
+DTEND;TZID=Europe/Brussels:20261025T163000
+SUMMARY:BBC Garage Wille Hansbeke DSE A – Blue Rocks Ronse-Kluisbergen DSE A (0-20)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11684329263-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261104T203000
+DTEND;TZID=Europe/Brussels:20261104T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – ABO LDP Donza DSE C
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Beker van Oost-Vlaanderen Dames 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13919673765-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14155148811-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T181500
+DTEND;TZID=Europe/Brussels:20261114T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13618117908-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T174500
+DTEND;TZID=Europe/Brussels:20261121T194500
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14138371192-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Royal Tigers Evergem DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14004150240-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T181500
+DTEND;TZID=Europe/Brussels:20261205T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – ABO LDP Donza DSE C
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14071260716-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T181500
+DTEND;TZID=Europe/Brussels:20261212T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Koninklijke Sint-Niklase Condors DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10126504848-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:Amon Jeugd Gentson DSE D – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14205481668-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T181500
+DTEND;TZID=Europe/Brussels:20270109T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – BBC Wildcats Gavere DSE B
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13616543790-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T170000
+DTEND;TZID=Europe/Brussels:20270117T190000
+SUMMARY:ABO LDP Donza DSE C – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13382098409-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T164500
+DTEND;TZID=Europe/Brussels:20270123T184500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE C – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13080645720-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T163000
+DTEND;TZID=Europe/Brussels:20270130T183000
+SUMMARY:BBC Houtem Redwolves DSE B – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14187129931-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T181500
+DTEND;TZID=Europe/Brussels:20270206T201500
+SUMMARY:KBBC Sparta Laarne DSE B – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12846200339-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14171926430-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T181500
+DTEND;TZID=Europe/Brussels:20270227T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10128182134-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:Royal Tigers Evergem DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14121593573-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T181500
+DTEND;TZID=Europe/Brussels:20270313T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14255814525-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T181500
+DTEND;TZID=Europe/Brussels:20270320T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14088038335-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T181500
+DTEND;TZID=Europe/Brussels:20270327T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Gent-Oost Eagles DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13347410338-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:Koninklijke Sint-Niklase Condors DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14104815954-14282925905@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T181500
+DTEND;TZID=Europe/Brussels:20270424T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Amon Jeugd Gentson DSE D
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:KYD Kortenberg Young Devils HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13197050503-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260913T093000
+DTEND;TZID=Europe/Brussels:20260913T113000
+SUMMARY:BBC Haacht HSE B – KYD Kortenberg Young Devils HSE C (39-65)
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12796506218-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – GSG Aarschot HSE C (70-47)
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12695840504-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Dino Brussels HSE B (61-51)
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12526931481-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261009T210000
+DTEND;TZID=Europe/Brussels:20261009T230000
+SUMMARY:Jets Basket Zaventem HSE C – KYD Kortenberg Young Devils HSE C (55-52)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12813283837-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T183000
+DTEND;TZID=Europe/Brussels:20261017T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Red Dragons Huldenberg HSE A (66-54)
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11988767745-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T183000
+DTEND;TZID=Europe/Brussels:20261024T203000
+SUMMARY:Hageland United HSE B – KYD Kortenberg Young Devils HSE C
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13679362987-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Clem Scherpenheuvel HSE A
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11452428390-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Clem Scherpenheuvel HSE C – KYD Kortenberg Young Devils HSE C
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12628730028-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Black Devils Vorst HSE A
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12645507647-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T153000
+DTEND;TZID=Europe/Brussels:20261122T173000
+SUMMARY:KYD Kortenberg Young Devils HSE C – WIZ Basket Leuven HSE B
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12660711148-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T163000
+DTEND;TZID=Europe/Brussels:20261128T183000
+SUMMARY:2B|SAFE Tienen HSE C – KYD Kortenberg Young Devils HSE C
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12124121530-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T174500
+DTEND;TZID=Europe/Brussels:20270109T194500
+SUMMARY:GSG Aarschot HSE C – KYD Kortenberg Young Devils HSE C
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12746173361-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:KYD Kortenberg Young Devils HSE C – BBC Haacht HSE B
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12525798648-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T173000
+DTEND;TZID=Europe/Brussels:20270123T193000
+SUMMARY:Dino Brussels HSE B – KYD Kortenberg Young Devils HSE C
+LOCATION:Sporthal Emanuel Hiel\, Freesiadreef 7\, 1030 Schaarbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11588223460-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Black Devils Vorst HSE A – KYD Kortenberg Young Devils HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13198727789-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T134500
+DTEND;TZID=Europe/Brussels:20270228T154500
+SUMMARY:WIZ Basket Leuven HSE B – KYD Kortenberg Young Devils HSE C
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12762950980-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – 2B|SAFE Tienen HSE C
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12712618123-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Hageland United HSE B
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12729395742-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Clem Scherpenheuvel HSE C
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12578397171-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T183000
+DTEND;TZID=Europe/Brussels:20270410T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Jets Basket Zaventem HSE C
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11452869675-12232847656@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:Red Dragons Huldenberg HSE A – KYD Kortenberg Young Devils HSE C
+LOCATION:Sporthal de kronkel\, Gemeenteplein 2\, 3040 Huldenberg
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+END:VCALENDAR

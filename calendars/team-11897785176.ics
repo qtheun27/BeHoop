@@ -1,0 +1,258 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Royal Tigers Evergem DSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12357994998-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T170000
+DTEND;TZID=Europe/Brussels:20260829T190000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Houtem Redwolves DSE C (79-60)
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen Dames Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13331765552-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T210000
+DTEND;TZID=Europe/Brussels:20260912T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE C – Royal Tigers Evergem DSE A (65-56)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13869340908-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – Royal Tigers Evergem DSE A (59-49)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12862977958-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Royal Tigers Evergem DSE A (64-80)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10176837705-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:Amon Jeugd Gentson DSE D – Royal Tigers Evergem DSE A (49-74)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10144959753-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:Royal Tigers Evergem DSE A – Partena Professional DBC Okapi Aalst DSE C (74-52)
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13599766171-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:ABO LDP Donza DSE C – Royal Tigers Evergem DSE A (38-82)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10312735943-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T183000
+DTEND;TZID=Europe/Brussels:20261024T203000
+SUMMARY:Royal Tigers Evergem DSE A – Koninklijke Sint-Niklase Condors DSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11751439739-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T173000
+DTEND;TZID=Europe/Brussels:20261031T193000
+SUMMARY:Royal Tigers Evergem DSE A – Partena Professional DBC Okapi Aalst DSE B
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen Dames 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10178514991-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Wildcats Gavere DSE B
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13130978577-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T163000
+DTEND;TZID=Europe/Brussels:20261114T183000
+SUMMARY:BBC Houtem Redwolves DSE B – Royal Tigers Evergem DSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14138371192-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Royal Tigers Evergem DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10295958324-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Royal Tigers Evergem DSE A – Gent-Oost Eagles DSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13062735268-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T143000
+DTEND;TZID=Europe/Brussels:20261213T163000
+SUMMARY:BBC Garage Wille Hansbeke DSE A – Royal Tigers Evergem DSE A (0-20)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10228847848-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:Royal Tigers Evergem DSE A – KBBC Sparta Laarne DSE B
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10195292610-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10262403086-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:Royal Tigers Evergem DSE A – Jumbo Elektrooghe Gembas Knesselare DSE C
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10346291181-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:Royal Tigers Evergem DSE A – Amon Jeugd Gentson DSE D
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10094626896-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:Royal Tigers Evergem DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10245625467-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T183000
+DTEND;TZID=Europe/Brussels:20270206T203000
+SUMMARY:Royal Tigers Evergem DSE A – ABO LDP Donza DSE C
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10212070229-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T183000
+DTEND;TZID=Europe/Brussels:20270220T203000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Houtem Redwolves DSE B
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13934774098-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T150000
+DTEND;TZID=Europe/Brussels:20270228T170000
+SUMMARY:Gent-Oost Eagles DSE A – Royal Tigers Evergem DSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10128182134-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:Royal Tigers Evergem DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13330632719-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:Koninklijke Sint-Niklase Condors DSE A – Royal Tigers Evergem DSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14137238359-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:BBC Wildcats Gavere DSE B – Royal Tigers Evergem DSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13668450765-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Royal Tigers Evergem DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10329513562-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T183000
+DTEND;TZID=Europe/Brussels:20270417T203000
+SUMMARY:Royal Tigers Evergem DSE A – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14203907550-11897785176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T181500
+DTEND;TZID=Europe/Brussels:20270424T201500
+SUMMARY:KBBC Sparta Laarne DSE B – Royal Tigers Evergem DSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Kangoeroes Basket Mechelen HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11084410683-14018940359@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:BC Sprimont HSE A – Kangoeroes Basket Mechelen HSE A (85-130)
+LOCATION:Hall Omnisports Sprimont
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12404175822-14018940359@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261209T200000
+DTEND;TZID=Europe/Brussels:20261209T220000
+SUMMARY:Kangoeroes Basket Mechelen HSE A – Brussels Basketball HSE A
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:Beker van België Heren 1/8ste finale
+END:VEVENT
+END:VCALENDAR

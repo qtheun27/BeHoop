@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Titans Basketball Bonheiden HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10364949605-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T160000
+DTEND;TZID=Europe/Brussels:20260809T180000
+SUMMARY:Rupel Pirates BBC Niel HSE B – Titans Basketball Bonheiden HSE C
+LOCATION:Gemeentelijke Sporthal Niel\, Landbouwstraat 145\, 2845 Niel
+DESCRIPTION:BBC Niel OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12168817016-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T140000
+DTEND;TZID=Europe/Brussels:20260816T160000
+SUMMARY:Titans Basketball Bonheiden HSE C – Duffel K.B.B.C. HSE B (56-57)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Basket Bonheiden OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12073176142-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T173000
+DTEND;TZID=Europe/Brussels:20260822T193000
+SUMMARY:Hageland United HSE A – Titans Basketball Bonheiden HSE C (46-67)
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:Hageland United OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10205188798-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T183000
+DTEND;TZID=Europe/Brussels:20260829T203000
+SUMMARY:BC Grimbergen HSE C – Titans Basketball Bonheiden HSE C (49-86)
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:BC Grimbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12039499913-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T113000
+DTEND;TZID=Europe/Brussels:20260830T133000
+SUMMARY:BBC Haacht HSE C – Titans Basketball Bonheiden HSE C (46-55)
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:BBC Haacht OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12068151302-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T000000
+DTEND;TZID=Europe/Brussels:20260905T020000
+SUMMARY:Titans Basketball Bonheiden HSE C – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Basket Bonheiden OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12031747533-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T140000
+DTEND;TZID=Europe/Brussels:20260905T160000
+SUMMARY:Basics Melsele-Beveren HSE D – Titans Basketball Bonheiden HSE C (86-81)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Basics Melsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11416874088-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T200000
+DTEND;TZID=Europe/Brussels:20260912T220000
+SUMMARY:BBC Baskas Kasterlee HSE A – Titans Basketball Bonheiden HSE C (63-69)
+LOCATION:Sporthal De Vlieger\, Mgr. Heylenstraat 22\, 2460 Kasterlee
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11232761564-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – Red Vic Wilrijk HSE B (66-73)
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10075944496-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Duffel K.B.B.C. HSE B – Titans Basketball Bonheiden HSE C (59-68)
+LOCATION:Sporthal Rooienberg\, Rooienberg 58\, 2570 Duffel
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11366982516-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – Essense Esbac HSE A (51-70)
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10343945115-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Zuiderkempen Diamonds HSE C – Titans Basketball Bonheiden HSE C (58-49)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10074811663-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:Telstar B.B.C. Mechelen HSE A – Titans Basketball Bonheiden HSE C (100-48)
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11215983945-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T170000
+DTEND;TZID=Europe/Brussels:20261025T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – Fellows Legal Brokers Ekeren BBC HSE C
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13832306771-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T161500
+DTEND;TZID=Europe/Brussels:20261114T181500
+SUMMARY:Campinia Dessel-Retie HSE B – Titans Basketball Bonheiden HSE C
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11400537754-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – BBC Geel HSE C
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10881417303-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Aartselaar BBC HSE B – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal De Twee Ringen\, Della Faillelaan 30\, 2630 Aartselaar
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11350204897-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:Titans Basketball Bonheiden HSE C – K. Vabco Mol BBC HSE B
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10611842566-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:Basket Willebroek HSE C – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11266316802-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T110000
+DTEND;TZID=Europe/Brussels:20261220T130000
+SUMMARY:Titans Basketball Bonheiden HSE C – KBBC T&T Turnhout HSE D
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10342812282-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T173000
+DTEND;TZID=Europe/Brussels:20270109T193000
+SUMMARY:Red Vic Wilrijk HSE B – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal Red Vic\, Pachthofplein 30\, 2610 Wilrijk
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11199206326-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:Titans Basketball Bonheiden HSE C – BBC Baskas Kasterlee HSE A
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11149417922-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T210000
+DTEND;TZID=Europe/Brussels:20270123T230000
+SUMMARY:Essense Esbac HSE A – Titans Basketball Bonheiden HSE C
+LOCATION:Sportcomplex Hemelrijk\, MOERKANTSEBAAN 32-34\, 2910 Essen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11333427278-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T110000
+DTEND;TZID=Europe/Brussels:20270131T130000
+SUMMARY:Titans Basketball Bonheiden HSE C – Duffel K.B.B.C. HSE B
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11182428707-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:Titans Basketball Bonheiden HSE C – Telstar B.B.C. Mechelen HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11249539183-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – Campinia Dessel-Retie HSE B
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14101881508-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T160000
+DTEND;TZID=Europe/Brussels:20270228T180000
+SUMMARY:BBC Geel HSE C – Titans Basketball Bonheiden HSE C
+LOCATION:Axion\, Zwaarvoerdersspoor 1\, 2440 Geel
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11316649659-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T120000
+DTEND;TZID=Europe/Brussels:20270307T140000
+SUMMARY:Titans Basketball Bonheiden HSE C – Aartselaar BBC HSE B
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10879843185-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T184500
+DTEND;TZID=Europe/Brussels:20270313T204500
+SUMMARY:Fellows Legal Brokers Ekeren BBC HSE C – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal t Venneke\, Den Geer 19\, 2180 Ekeren
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13833880889-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:K. Vabco Mol BBC HSE B – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal Rozenberginstituut\, Molenhoekstraat\, 2400 Mol
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11383760135-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T120000
+DTEND;TZID=Europe/Brussels:20270411T140000
+SUMMARY:Titans Basketball Bonheiden HSE C – Zuiderkempen Diamonds HSE C
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11165651088-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:Titans Basketball Bonheiden HSE C – Basket Willebroek HSE C
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11147740636-10423324183@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:KBBC T&T Turnhout HSE D – Titans Basketball Bonheiden HSE C
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:3e Prov. Heren Antwerpen A
+END:VEVENT
+END:VCALENDAR

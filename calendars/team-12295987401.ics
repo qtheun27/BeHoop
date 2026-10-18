@@ -1,0 +1,258 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Ford Unicars Avanti Brugge Dames DSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13312158804-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260829T160000
+DTEND;TZID=Europe/Brussels:20260829T180000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Avanti Dames Brugge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13205943938-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T170000
+DTEND;TZID=Europe/Brussels:20260905T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – KBBC Racing Brugge DSE A (67-48)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Beker van West-Vlaanderen Dames Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13009407347-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:Basket Blankenberge DSE A – Ford Unicars Avanti Brugge Dames DSE B (58-53)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12019925184-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T170000
+DTEND;TZID=Europe/Brussels:20260919T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Wytewa Roeselare DSE B (75-81)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13548115536-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:House Of Talents Kortrijk Spurs DSE D – Ford Unicars Avanti Brugge Dames DSE B (0-20)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12221256612-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – B.C. Blue Stars Brugge DSE A (59-64)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13951366772-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T163000
+DTEND;TZID=Europe/Brussels:20261010T183000
+SUMMARY:Bobcat Wielsbeke DSE A – Ford Unicars Avanti Brugge Dames DSE B (49-66)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12087035660-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Basket SKT Ieper DSE B (41-74)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13144761132-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261025T150000
+DTEND;TZID=Europe/Brussels:20261025T170000
+SUMMARY:Basket Poperinge DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12540619753-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:KBGOB Finexa Basket@Sea DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12154146136-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – BBC Koksijde DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13816012987-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T181500
+DTEND;TZID=Europe/Brussels:20261121T201500
+SUMMARY:Bbv Oedelem DSE B – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12036702803-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Wibac BBC Sint-Eloois-Winkel DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12204478993-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Basket Desselgem DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12943974157-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Kon BBC De Panne vzw DSE B – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Sportzaal Den Oosthoek\, Sportlaan 2\, 8660 De Panne
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14016903130-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:Wytewa Roeselare DSE B – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12103813279-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Basket Blankenberge DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12272722302-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:B.C. Blue Stars Brugge DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:VTI Brugge\, Vaartdijkstraat 3\, 8200 Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12254811850-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – House Of Talents Kortrijk Spurs DSE D (20-0)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13613548726-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270207T144500
+DTEND;TZID=Europe/Brussels:20270207T164500
+SUMMARY:Basket SKT Ieper DSE B – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12675973538-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:BBC Koksijde DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12238034231-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T170000
+DTEND;TZID=Europe/Brussels:20270227T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Bbv Oedelem DSE B
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13412761751-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12053480422-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Basket Poperinge DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12070258041-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T170000
+DTEND;TZID=Europe/Brussels:20270320T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – KBGOB Finexa Basket@Sea DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12187701374-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Bobcat Wielsbeke DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13347225393-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:Basket Desselgem DSE A – Ford Unicars Avanti Brugge Dames DSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12271589469-12295987401@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270424T170000
+DTEND;TZID=Europe/Brussels:20270424T190000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – Kon BBC De Panne vzw DSE B
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:1e Prov. Dames West-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

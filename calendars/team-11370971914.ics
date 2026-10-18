@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bobcat Wielsbeke G14 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11082800291-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T123000
+DTEND;TZID=Europe/Brussels:20260829T143000
+SUMMARY:Bobcat Wielsbeke G14 A – BC Lamett Deerlijk-Zwevegem G14 A (64-75)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11284131719-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T153000
+DTEND;TZID=Europe/Brussels:20260906T173000
+SUMMARY:Bobcat Wielsbeke G14 A – Royal Tigers Evergem G14 A (51-54)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12417473350-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T120000
+DTEND;TZID=Europe/Brussels:20260912T140000
+SUMMARY:Koninklijke Basket Avelgem G14 A – Bobcat Wielsbeke G14 A (61-82)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13105502824-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T163000
+DTEND;TZID=Europe/Brussels:20260919T183000
+SUMMARY:Bobcat Wielsbeke G14 A – BC Lamett Deerlijk-Zwevegem G14 A (80-79)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11545331352-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:House Of Talents Kortrijk Spurs G14 B – Bobcat Wielsbeke G14 A (80-67)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11544198519-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:G&V Breakpoint Basket Waregem G14 B – Bobcat Wielsbeke G14 A (54-42)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13155835681-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T131500
+DTEND;TZID=Europe/Brussels:20261011T151500
+SUMMARY:Bobcat Wielsbeke G14 A – ABO LDP Donza G14 D (110-43)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13172613300-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T163000
+DTEND;TZID=Europe/Brussels:20261017T183000
+SUMMARY:Bobcat Wielsbeke G14 A – Koninklijke Basket Avelgem G14 A (82-73)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12148339898-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:BC Lamett Deerlijk-Zwevegem G14 A – Bobcat Wielsbeke G14 A
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13879097070-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:Basket Poperinge G14 A – Bobcat Wielsbeke G14 A
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:Beker van West-Vlaanderen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13206168538-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T163000
+DTEND;TZID=Europe/Brussels:20261114T183000
+SUMMARY:Bobcat Wielsbeke G14 A – House Of Talents Kortrijk Spurs G14 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13122280443-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T163000
+DTEND;TZID=Europe/Brussels:20261121T183000
+SUMMARY:Bobcat Wielsbeke G14 A – G&V Breakpoint Basket Waregem G14 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12685370801-11370971914@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T090000
+DTEND;TZID=Europe/Brussels:20261129T110000
+SUMMARY:ABO LDP Donza G14 D – Bobcat Wielsbeke G14 A
+LOCATION:Palaestra\, Kastanjelaan 14\, 9800 Deinze
+DESCRIPTION:U14 Niveau 3 C
+END:VEVENT
+END:VCALENDAR

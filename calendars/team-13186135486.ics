@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare M16 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11928634865-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260826T203000
+DTEND;TZID=Europe/Brussels:20260826T223000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – House Of Talents Kortrijk Spurs M16 A (84-57)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11827969151-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T160000
+DTEND;TZID=Europe/Brussels:20260830T180000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Utrecht M16 (100-24)
+LOCATION:MEOS\, Bloemenstraat\, 9990 Maldegem
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11895079627-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T144500
+DTEND;TZID=Europe/Brussels:20260905T164500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – WEERT VU18 (112-20)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10245704999-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T100000
+DTEND;TZID=Europe/Brussels:20260912T120000
+SUMMARY:G&V Breakpoint Basket Waregem M16 A – Jumbo Elektrooghe Gembas Knesselare M16 A (63-58)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14255997225-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T104500
+DTEND;TZID=Europe/Brussels:20260919T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Basket SKT Ieper M16 A (127-31)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11386877281-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T100000
+DTEND;TZID=Europe/Brussels:20260926T120000
+SUMMARY:Basket Houthalen M16 A – Jumbo Elektrooghe Gembas Knesselare M16 A (31-108)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11118979830-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:Kangoeroes Basket Mechelen M16 A – Jumbo Elektrooghe Gembas Knesselare M16 A (53-72)
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14205664368-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T124500
+DTEND;TZID=Europe/Brussels:20261010T144500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – B.C. Gems Diepenbeek M16 A (98-68)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10028140405-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T130000
+DTEND;TZID=Europe/Brussels:20261018T150000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – G&V Breakpoint Basket Waregem M16 A (75-49)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10514838451-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T100000
+DTEND;TZID=Europe/Brussels:20261025T120000
+SUMMARY:Basket SKT Ieper M16 A – Jumbo Elektrooghe Gembas Knesselare M16 A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11861377294-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T104500
+DTEND;TZID=Europe/Brussels:20261031T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Ford Unicars Avanti Brugge Dames M16 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13513091273-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Red Vic Wilrijk M16 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14289552463-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Basket Houthalen M16 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14239219606-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Kangoeroes Basket Mechelen M16 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10246837832-13186135486@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T113000
+DTEND;TZID=Europe/Brussels:20261129T133000
+SUMMARY:B.C. Gems Diepenbeek M16 A – Jumbo Elektrooghe Gembas Knesselare M16 A
+LOCATION:Demerstrand\, Stationstraat 27\, 3590 Diepenbeek
+DESCRIPTION:U16 Meisjes Niveau 1 B
+END:VEVENT
+END:VCALENDAR

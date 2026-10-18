@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Groot Zemst DSE R
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11226651347-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260906T180000
+DTEND;TZID=Europe/Brussels:20260906T200000
+SUMMARY:Basket Groot Zemst DSE R – Molenbeek Rebels Basketball DSE R (74-28)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11411205156-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T210000
+DTEND;TZID=Europe/Brussels:20260912T230000
+SUMMARY:Basket Groot Zemst DSE R – Hageland United DSE R (50-22)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11546558941-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T153000
+DTEND;TZID=Europe/Brussels:20260919T173000
+SUMMARY:GSG Aarschot DSE R – Basket Groot Zemst DSE R (56-55)
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11461538013-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Basket Groot Zemst DSE R – De Rode Leeuwen DSE A (44-47)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12484134129-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Molenbeek Rebels Basketball DSE R – Basket Groot Zemst DSE R (24-83)
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11143204537-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:BC Opwijk DSE R – Basket Groot Zemst DSE R (54-59)
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11293761823-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T210000
+DTEND;TZID=Europe/Brussels:20261024T230000
+SUMMARY:Basket Groot Zemst DSE R – Thor Tervuren DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11444760394-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261112T210000
+DTEND;TZID=Europe/Brussels:20261112T230000
+SUMMARY:Basket Groot Zemst DSE R – Strombeek Beavers Wemmel Basket Club DSE R
+LOCATION:Sporthal Hofstade Heide\, Zandstraat\, 1981 Hofstade (Bt.)
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11779327036-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:BC Machelen-Diegem DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Heirbaan Machelen\, Heirbaan 10\, 1830 Machelen
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11260206585-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261119T203000
+DTEND;TZID=Europe/Brussels:20261119T223000
+SUMMARY:Basket Groot Zemst DSE R – Jets Basket Zaventem DSE R
+LOCATION:Sporthal Hofstade Heide\, Zandstraat\, 1981 Hofstade (Bt.)
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11394427537-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Basket Groot Zemst DSE R – Londerzeelse Dunkers DSE R (20-0)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12182578272-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:BC Streek Inn Vilvoorde DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Koningslo\, Streekbaan 185\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11427982775-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:Basket Groot Zemst DSE R – GSG Aarschot DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13121830746-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven DSE R – Basket Groot Zemst DSE R
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11243428966-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:Basket Groot Zemst DSE R – L.S.V. Basket Landen DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12989183912-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:Hageland United DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12351487295-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:De Rode Leeuwen DSE A – Basket Groot Zemst DSE R
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11209873728-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:Basket Groot Zemst DSE R – BC Machelen-Diegem DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11948236059-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T140000
+DTEND;TZID=Europe/Brussels:20270228T160000
+SUMMARY:Londerzeelse Dunkers DSE R – Basket Groot Zemst DSE R (0-20)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11276984204-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270307T120000
+DTEND;TZID=Europe/Brussels:20270307T140000
+SUMMARY:Basket Groot Zemst DSE R – BC Streek Inn Vilvoorde DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12887385365-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:Thor Tervuren DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Diependal\, Lindeboomstraat 30\, 3080 Tervuren
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11780901154-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:Strombeek Beavers Wemmel Basket Club DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Campus Wemmel\, Zijp 14-16\, 1780 Wemmel
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11360872299-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270327T210000
+DTEND;TZID=Europe/Brussels:20270327T230000
+SUMMARY:Basket Groot Zemst DSE R – BC Opwijk DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11141630419-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270411T140000
+DTEND;TZID=Europe/Brussels:20270411T160000
+SUMMARY:Jets Basket Zaventem DSE R – Basket Groot Zemst DSE R
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11310539442-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:Basket Groot Zemst DSE R – Stella Artois 0.0 Blue Tigers Leuven DSE R
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12718476342-13376175962@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:L.S.V. Basket Landen DSE R – Basket Groot Zemst DSE R
+LOCATION:Sporthal Landen (stedelijke stadshal)\, Sportlaan 1\, 3400 Landen
+DESCRIPTION:2e Prov. Dames Vlaams-Brabant
+END:VEVENT
+END:VCALENDAR

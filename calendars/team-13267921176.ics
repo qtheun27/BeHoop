@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bobcat Wielsbeke M14 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11099577910-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T110000
+DTEND;TZID=Europe/Brussels:20260816T130000
+SUMMARY:Bobcat Wielsbeke M14 A – ABO LDP Donza M14 A (28-99)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13037741061-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T090000
+DTEND;TZID=Europe/Brussels:20260913T110000
+SUMMARY:BC Lamett Deerlijk-Zwevegem M14 A – Bobcat Wielsbeke M14 A (23-55)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10135169047-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T103000
+DTEND;TZID=Europe/Brussels:20260919T123000
+SUMMARY:Bobcat Wielsbeke M14 A – BBC Haantjes Certifisc Oudenaarde M14 A (38-79)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13775662107-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T150000
+DTEND;TZID=Europe/Brussels:20260926T170000
+SUMMARY:Ford Unicars Avanti Brugge Dames M14 B – Bobcat Wielsbeke M14 A (63-42)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13238631204-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:House Of Talents Kortrijk Spurs M14 B – Bobcat Wielsbeke M14 A (60-36)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10151946666-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T143000
+DTEND;TZID=Europe/Brussels:20261010T163000
+SUMMARY:Bobcat Wielsbeke M14 A – G&V Breakpoint Basket Waregem M14 B (12-113)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10068058571-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T143000
+DTEND;TZID=Europe/Brussels:20261017T163000
+SUMMARY:Bobcat Wielsbeke M14 A – BC Lamett Deerlijk-Zwevegem M14 A (83-32)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10352733641-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T110000
+DTEND;TZID=Europe/Brussels:20261024T130000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde M14 A – Bobcat Wielsbeke M14 A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12482388065-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Bobcat Wielsbeke M14 A – KBGOB Finexa Basket@Sea M14 A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10101613809-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T143000
+DTEND;TZID=Europe/Brussels:20261114T163000
+SUMMARY:Bobcat Wielsbeke M14 A – Ford Unicars Avanti Brugge Dames M14 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10118391428-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T143000
+DTEND;TZID=Europe/Brussels:20261121T163000
+SUMMARY:Bobcat Wielsbeke M14 A – House Of Talents Kortrijk Spurs M14 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14110670034-13267921176@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T151500
+DTEND;TZID=Europe/Brussels:20261129T171500
+SUMMARY:G&V Breakpoint Basket Waregem M14 B – Bobcat Wielsbeke M14 A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U14 Meisjes Niveau 2 A
+END:VEVENT
+END:VCALENDAR

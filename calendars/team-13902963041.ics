@@ -1,0 +1,186 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Groot Zemst HSE R
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10118479931-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T210000
+DTEND;TZID=Europe/Brussels:20260912T230000
+SUMMARY:Basket Groot Zemst HSE R – Londerzeelse Dunkers HSE C (73-36)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10050236622-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:Tigers Halle HSE B – Basket Groot Zemst HSE R (59-53)
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10135257550-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Basket Groot Zemst HSE R – Triton Leuven HSE B (43-51)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13941952682-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261002T210000
+DTEND;TZID=Europe/Brussels:20261002T230000
+SUMMARY:Merchtem Eagles HSE C – Basket Groot Zemst HSE R (63-57)
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10168812788-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:Basket Groot Zemst HSE R – BC Opwijk HSE C (59-54)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10051369455-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T210000
+DTEND;TZID=Europe/Brussels:20261024T230000
+SUMMARY:Basket Groot Zemst HSE R – De Rode Leeuwen HSE A
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10152035169-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Basket Groot Zemst HSE R – Strombeek Beavers Wemmel Basket Club HSE A
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13809305848-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:BBC Wobac Sint-Stevens-Woluwe HSE A – Basket Groot Zemst HSE R
+LOCATION:Gemeentelijke Sporthal Sint-Stevens-Woluwe\, Leuvensesteenweg 194\, 1932 Sint-Stevens-Woluwe
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10084924693-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Basket Groot Zemst HSE R – AB InBev Leuven Bears HSE E
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14109184419-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Basket Club Groot Dilbeek HSE C – Basket Groot Zemst HSE R
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10034591836-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:Basket Groot Zemst HSE R – Merchtem Eagles HSE C
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14279226275-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:Basket Groot Zemst HSE R – Basket Club Groot Dilbeek HSE C
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12768357995-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:Londerzeelse Dunkers HSE C – Basket Groot Zemst HSE R
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13406054612-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T163000
+DTEND;TZID=Europe/Brussels:20270130T183000
+SUMMARY:Triton Leuven HSE B – Basket Groot Zemst HSE R
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10202368026-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:Basket Groot Zemst HSE R – BBC Wobac Sint-Stevens-Woluwe HSE A
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13707507301-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T170000
+DTEND;TZID=Europe/Brussels:20270228T190000
+SUMMARY:AB InBev Leuven Bears HSE E – Basket Groot Zemst HSE R
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10217571527-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T163000
+DTEND;TZID=Europe/Brussels:20270314T183000
+SUMMARY:De Rode Leeuwen HSE A – Basket Groot Zemst HSE R
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14110861705-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T200000
+DTEND;TZID=Europe/Brussels:20270320T220000
+SUMMARY:Strombeek Beavers Wemmel Basket Club HSE A – Basket Groot Zemst HSE R
+LOCATION:Sporthal Campus Wemmel\, Zijp 14-16\, 1780 Wemmel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10101702312-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270327T170000
+DTEND;TZID=Europe/Brussels:20270327T190000
+SUMMARY:Basket Groot Zemst HSE R – Tigers Halle HSE B
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12601023090-13902963041@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:BC Opwijk HSE C – Basket Groot Zemst HSE R
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+END:VCALENDAR

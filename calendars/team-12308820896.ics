@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Londerzeelse Dunkers HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13436429490-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260829T170000
+DTEND;TZID=Europe/Brussels:20260829T190000
+SUMMARY:Boortmeerbeek & Berg Bulldogs HSE B – Londerzeelse Dunkers HSE B (108-45)
+LOCATION:Sporthal Boortmeerbeek\, Sportveldweg 6\, 3190 Boortmeerbeek
+DESCRIPTION:Beker van Vlaams-Brabant Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14047014913-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T170000
+DTEND;TZID=Europe/Brussels:20260912T190000
+SUMMARY:Basket Groot Zemst HSE B – Londerzeelse Dunkers HSE B (48-53)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10624189615-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T120000
+DTEND;TZID=Europe/Brussels:20260920T140000
+SUMMARY:Londerzeelse Dunkers HSE B – BC Streek Inn Vilvoorde HSE A (69-49)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10741632948-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:Londerzeelse Dunkers HSE B – BC Grimbergen HSE C (64-59)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13140288012-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:Fenics Leuven BBC HSE B – Londerzeelse Dunkers HSE B (60-76)
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10540301520-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:Londerzeelse Dunkers HSE B – Merchtem Eagles HSE B (40-48)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13409318296-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:Titans Basketball Keerbergen HSE A – Londerzeelse Dunkers HSE B (59-84)
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10573856758-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261025T140000
+DTEND;TZID=Europe/Brussels:20261025T160000
+SUMMARY:Londerzeelse Dunkers HSE B – Jets Basket Zaventem HSE D
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10523965186-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:BC Asse-Ternat HSE E – Londerzeelse Dunkers HSE B
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10791965805-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:Londerzeelse Dunkers HSE B – BBC Haacht HSE C
+LOCATION:Sportoase De Lijster\, lijsterstraat 1\, 1840 Londerzeel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13981581723-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261129T160000
+DTEND;TZID=Europe/Brussels:20261129T180000
+SUMMARY:WIZ Basket Leuven HSE A – Londerzeelse Dunkers HSE B
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13712448271-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T183000
+DTEND;TZID=Europe/Brussels:20270109T203000
+SUMMARY:BC Streek Inn Vilvoorde HSE A – Londerzeelse Dunkers HSE B
+LOCATION:Sporthal Koningslo\, Streekbaan 185\, 1800 Vilvoorde
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10724855329-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:Londerzeelse Dunkers HSE B – Basket Groot Zemst HSE B
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10775188186-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:Londerzeelse Dunkers HSE B – Fenics Leuven BBC HSE B
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14281460294-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:BC Grimbergen HSE C – Londerzeelse Dunkers HSE B
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10674522472-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T120000
+DTEND;TZID=Europe/Brussels:20270221T140000
+SUMMARY:Londerzeelse Dunkers HSE B – BC Asse-Ternat HSE E
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13777984629-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T133000
+DTEND;TZID=Europe/Brussels:20270228T153000
+SUMMARY:BBC Haacht HSE C – Londerzeelse Dunkers HSE B
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10557079139-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270307T140000
+DTEND;TZID=Europe/Brussels:20270307T160000
+SUMMARY:Londerzeelse Dunkers HSE B – WIZ Basket Leuven HSE A
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14215923936-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T161500
+DTEND;TZID=Europe/Brussels:20270314T181500
+SUMMARY:Jets Basket Zaventem HSE D – Londerzeelse Dunkers HSE B
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13478106058-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:Merchtem Eagles HSE B – Londerzeelse Dunkers HSE B
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10708077710-12308820896@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270418T130000
+DTEND;TZID=Europe/Brussels:20270418T150000
+SUMMARY:Londerzeelse Dunkers HSE B – Titans Basketball Keerbergen HSE A
+LOCATION:Sportoase De Lijster\, lijsterstraat 1\, 1840 Londerzeel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant C
+END:VEVENT
+END:VCALENDAR

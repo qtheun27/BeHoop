@@ -1,0 +1,114 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Wibac BBC Sint-Eloois-Winkel J16 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10807346831-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T130000
+DTEND;TZID=Europe/Brussels:20260829T150000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – Rozenbeka Oostrozebeke J16 A (64-60)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:Wibac BBC OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11238553443-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T110000
+DTEND;TZID=Europe/Brussels:20260912T130000
+SUMMARY:Basket Midwest BP Tielt J16 B – Wibac BBC Sint-Eloois-Winkel J16 A (37-58)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13871550720-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T163000
+DTEND;TZID=Europe/Brussels:20260919T183000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – Holstra WINGS Wevelgem-Moorsele J16 B (39-71)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13972216434-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – BBC Gullegem J16 A (43-69)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11472895656-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:Wytewa Roeselare J16 B – Wibac BBC Sint-Eloois-Winkel J16 A (73-65)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13955438815-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – Rozenbeka Oostrozebeke J16 A (37-56)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13888328339-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – Basket Midwest BP Tielt J16 B (80-33)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10735077778-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T130000
+DTEND;TZID=Europe/Brussels:20261025T150000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele J16 B – Wibac BBC Sint-Eloois-Winkel J16 A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11093611440-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T163000
+DTEND;TZID=Europe/Brussels:20261107T183000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – KBBC Racing Brugge J16 A
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:Beker van West-Vlaanderen U16 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11203865372-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:BBC Gullegem J16 A – Wibac BBC Sint-Eloois-Winkel J16 A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13905105958-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T163000
+DTEND;TZID=Europe/Brussels:20261121T183000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 A – Wytewa Roeselare J16 B
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10969419991-13383047641@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Rozenbeka Oostrozebeke J16 A – Wibac BBC Sint-Eloois-Winkel J16 A
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:U16 Niveau 4 C
+END:VEVENT
+END:VCALENDAR

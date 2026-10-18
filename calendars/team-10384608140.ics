@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Royal Tigers Evergem M12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10350432646-10384608140@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T163000
+DTEND;TZID=Europe/Brussels:20261107T183000
+SUMMARY:Royal Tigers Evergem M12 A – BBC Houtem Redwolves M12 A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen U12 Meisjes 1/8 Finale
+END:VEVENT
+END:VCALENDAR

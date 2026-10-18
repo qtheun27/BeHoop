@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBC Vanuxeem Ploegsteert Heuvelland HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13962840851-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Olympos Marke HSE B (0-20)
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10671311787-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Basket Blankenberge HSE B (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10603068478-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Wytewa Roeselare HSE D – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12347249306-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261004T144500
+DTEND;TZID=Europe/Brussels:20261004T164500
+SUMMARY:Red Sharks Koekelare HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10721644644-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – A.C.J. Basket Brugge HSE B (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11408100000-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:BBC Koksijde HSE R – BBC Vanuxeem Ploegsteert Heuvelland HSE C
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10604201311-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T160000
+DTEND;TZID=Europe/Brussels:20261024T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – KBGOB Finexa Basket@Sea HSE D (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10704867025-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – BC Digiresto Knokke-Heist HSE B (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12214705640-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Bebita Eernegem HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10637756549-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T160000
+DTEND;TZID=Europe/Brussels:20261121T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Kon BBC De Panne vzw HSE A (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10367048979-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:Mibac Middelkerke HSE R – BBC Vanuxeem Ploegsteert Heuvelland HSE C
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10654534168-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Wytewa Roeselare HSE D (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11173654619-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:Basket Blankenberge HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10587423692-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T160000
+DTEND;TZID=Europe/Brussels:20270123T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Red Sharks Koekelare HSE B (0-20)
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10755199882-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Bebita Eernegem HSE A (0-20)
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12112907093-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:Kon BBC De Panne vzw HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sportzaal Den Oosthoek\, Sportlaan 2\, 8660 De Panne
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10537090835-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T160000
+DTEND;TZID=Europe/Brussels:20270306T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – Mibac Middelkerke HSE R
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10770403383-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T171500
+DTEND;TZID=Europe/Brussels:20270313T191500
+SUMMARY:KBGOB Finexa Basket@Sea HSE D – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sportcentrum Zomerloos Gistel\, Sportstraat 1\, 8470 Gistel
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10368726265-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:BC Digiresto Knokke-Heist HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11006422882-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:A.C.J. Basket Brugge HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE C (20-0)
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10620978930-14136181802@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE C – BBC Koksijde HSE R
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:4e Prov. Heren West-Vlaanderen B 
+END:VEVENT
+END:VCALENDAR

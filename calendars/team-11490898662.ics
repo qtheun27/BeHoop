@@ -1,0 +1,168 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:A.C.J. Basket Brugge HSE R
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10361745132-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T180000
+DTEND;TZID=Europe/Brussels:20260912T200000
+SUMMARY:Bebita Eernegem HSE B – A.C.J. Basket Brugge HSE R (74-42)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11149895867-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T160000
+DTEND;TZID=Europe/Brussels:20260919T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Rozenbeka Oostrozebeke HSE A (54-59)
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13583783455-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel HSE B – A.C.J. Basket Brugge HSE R (20-0)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13649216645-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:Rozenbeka Oostrozebeke HSE A – A.C.J. Basket Brugge HSE R (54-47)
+LOCATION:Stedelijke Sporthal "Mandelmeersen" Oostrozebeke\, Ernest Brengierstraat 8\, 8780 Oostrozebeke
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14052571049-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:Zedelgem Lions HSE B – A.C.J. Basket Brugge HSE R (78-58)
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14253358024-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261025T133000
+DTEND;TZID=Europe/Brussels:20261025T153000
+SUMMARY:KBGOB Finexa Basket@Sea HSE E – A.C.J. Basket Brugge HSE R
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10830532726-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Koninklijke Basket Avelgem HSE B – A.C.J. Basket Brugge HSE R
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11183451105-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Olympos Marke HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14187924834-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T183000
+DTEND;TZID=Europe/Brussels:20261121T203000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE E – A.C.J. Basket Brugge HSE R
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11066007772-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Bobcat Wielsbeke HSE C
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11200228724-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T160000
+DTEND;TZID=Europe/Brussels:20270116T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Bebita Eernegem HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11116340629-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T160000
+DTEND;TZID=Europe/Brussels:20270130T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Wibac BBC Sint-Eloois-Winkel HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10226391347-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T183000
+DTEND;TZID=Europe/Brussels:20270220T203000
+SUMMARY:Olympos Marke HSE B – A.C.J. Basket Brugge HSE R
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11099563010-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T160000
+DTEND;TZID=Europe/Brussels:20270227T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Holstra WINGS Wevelgem-Moorsele HSE E
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11168350772-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T183000
+DTEND;TZID=Europe/Brussels:20270306T203000
+SUMMARY:Bobcat Wielsbeke HSE C – A.C.J. Basket Brugge HSE R
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11133118248-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – KBGOB Finexa Basket@Sea HSE E
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11166673486-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T160000
+DTEND;TZID=Europe/Brussels:20270320T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Koninklijke Basket Avelgem HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11217006343-11490898662@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T160000
+DTEND;TZID=Europe/Brussels:20270410T180000
+SUMMARY:A.C.J. Basket Brugge HSE R – Zedelgem Lions HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:4e Prov. Heren West-Vlaanderen A 
+END:VEVENT
+END:VCALENDAR

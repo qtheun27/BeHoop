@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House of Talents Kortrijk Spurs G10 F
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12068597443-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T133000
+DTEND;TZID=Europe/Brussels:20260919T153000
+SUMMARY:House of Talents Kortrijk Spurs G10 F – BC Lamett Deerlijk-Zwevegem G10 D (1-1)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12102152681-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T113000
+DTEND;TZID=Europe/Brussels:20260926T133000
+SUMMARY:House of Talents Kortrijk Spurs G10 F – G&V Breakpoint Basket Waregem G10 F (1-1)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12085375062-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T113000
+DTEND;TZID=Europe/Brussels:20261003T133000
+SUMMARY:House of Talents Kortrijk Spurs G10 F – BBC Vanuxeem Ploegsteert Heuvelland G10 B (1-1)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13226547344-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Basket SKT Ieper G10 C – House of Talents Kortrijk Spurs G10 F (1-1)
+LOCATION:Stedelijke sporthal 2 Ieper\, Leopold III laan 18\, 8900 Ieper
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11918143325-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T090000
+DTEND;TZID=Europe/Brussels:20261017T110000
+SUMMARY:Basket Poperinge G10 B – House of Talents Kortrijk Spurs G10 F (1-1)
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12187173609-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:BC Lamett Deerlijk-Zwevegem G10 D – House of Talents Kortrijk Spurs G10 F
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12992205131-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:G&V Breakpoint Basket Waregem G10 F – House of Talents Kortrijk Spurs G10 F
+LOCATION:Heilig Hart College\, Olmstraat 47\, 8790 Waregem
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12421618990-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland G10 B – House of Talents Kortrijk Spurs G10 F
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12118930300-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T113000
+DTEND;TZID=Europe/Brussels:20261128T133000
+SUMMARY:House of Talents Kortrijk Spurs G10 F – Basket SKT Ieper G10 C
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12135707919-11347677784@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T093000
+DTEND;TZID=Europe/Brussels:20261205T113000
+SUMMARY:House of Talents Kortrijk Spurs G10 F – Basket Poperinge G10 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U10 Niveau 4 C4
+END:VEVENT
+END:VCALENDAR

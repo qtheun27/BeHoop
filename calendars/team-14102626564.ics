@@ -1,0 +1,267 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBC Vanuxeem Ploegsteert Heuvelland HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10330181930-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260823T103000
+DTEND;TZID=Europe/Brussels:20260823T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A (69-69)
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:KBBC Wikings Kortrijk OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10941059166-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:Basket Poperinge HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A (48-79)
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:BBC Poperinge OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13474058683-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Wytewa Roeselare HSE B (79-49)
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13358292636-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A (74-60)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13406948207-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Red Sharks Koekelare HSE A (65-72)
+LOCATION:De Pionier\, Gosserieslaan 6\, 8940 Wervik
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12284230830-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T201500
+DTEND;TZID=Europe/Brussels:20261003T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A (84-52)
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13339837731-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Basket Desselgem HSE A (58-62)
+LOCATION:Sportcomplex Waasten\, Rijsel Voorstadstraat 45\, 7784 Komen-Waasten
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12317241615-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261018T173000
+DTEND;TZID=Europe/Brussels:20261018T193000
+SUMMARY:G&V Breakpoint Basket Waregem HSE C – BBC Vanuxeem Ploegsteert Heuvelland HSE A (107-72)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13390170588-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11355718432-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Rozenbeka Oostrozebeke HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13440503445-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11780755165-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:Rapid Raptors Langemark HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13323060112-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Bbv Oedelem HSE A
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13356026970-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Joppo Basket Izegem HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13557946778-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Basket Sijsele HSE B
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12854816971-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T181500
+DTEND;TZID=Europe/Brussels:20261219T201500
+SUMMARY:KBBC Racing Brugge HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13457281064-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – BC Lamett Deerlijk-Zwevegem HSE B
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11781343545-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:Wytewa Roeselare HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13490836302-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – KBBC Vk Iebac Ieper HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12853139685-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:Red Sharks Koekelare HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13574724397-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – G&V Breakpoint Basket Waregem HSE C
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13541169159-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Rapid Raptors Langemark HSE A
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12820128900-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T181500
+DTEND;TZID=Europe/Brussels:20270227T201500
+SUMMARY:Bbv Oedelem HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13423725826-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Joppo Basket Izegem HSE B
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12282553544-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11779077879-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Bobcat Wielsbeke HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13390715041-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T201500
+DTEND;TZID=Europe/Brussels:20270410T221500
+SUMMARY:Basket Desselgem HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11746655474-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T171500
+DTEND;TZID=Europe/Brussels:20270417T191500
+SUMMARY:Basket Sijsele HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13507613921-14102626564@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – KBBC Racing Brugge HSE B
+LOCATION:Sporthal Le Bizet\, Rue des Trois Evêchés 41\, 7783 Comines-Warneton
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Zuiderkempen Diamonds HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12005904433-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260815T200000
+DTEND;TZID=Europe/Brussels:20260815T220000
+SUMMARY:Zuiderkempen Diamonds HSE A – Dynamo Bertem HSE A (20-0)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Beker van Vlaanderen Heren Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11485651149-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T160000
+DTEND;TZID=Europe/Brussels:20260816T180000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE A – Zuiderkempen Diamonds HSE A (82-66)
+LOCATION:Sportschuur Fort VIII\, Hoofdfrontweg 9\, 2660 Hoboken
+DESCRIPTION:Beker van Vlaanderen Heren Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11443450337-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260821T210000
+DTEND;TZID=Europe/Brussels:20260821T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – GSG Aarschot HSE A (76-69)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Zuiderkempen Diamonds OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11477005575-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T203000
+DTEND;TZID=Europe/Brussels:20260823T223000
+SUMMARY:Zuiderkempen Diamonds HSE A – K. Vabco Mol BBC HSE A (82-68)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Zuiderkempen Diamonds OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11989126814-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260828T210000
+DTEND;TZID=Europe/Brussels:20260828T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – Amon Jeugd Gentson HSE B (60-80)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Beker van Vlaanderen Heren Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11217753698-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T164500
+DTEND;TZID=Europe/Brussels:20260829T184500
+SUMMARY:KBBC Bavi Gent HSE A – Zuiderkempen Diamonds HSE A (75-59)
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:Beker van Vlaanderen Heren Poule M
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11477152670-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T140000
+DTEND;TZID=Europe/Brussels:20260906T160000
+SUMMARY:Zuiderkempen Diamonds HSE A – Olicsa Antwerpen HSE A (91-60)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Zuiderkempen Diamonds OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10248105182-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T210000
+DTEND;TZID=Europe/Brussels:20260912T230000
+SUMMARY:KBBC Zolder vzw HSE A – Zuiderkempen Diamonds HSE A (80-78)
+LOCATION:Olympia Heusden\, Pastoor van Mierlolaan\, 3550 Heusden-Zolder
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13890172360-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – Stevoort BBC HSE B (73-63)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13990838074-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – BasKet Tongeren HSE B (62-71)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13669797647-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T153000
+DTEND;TZID=Europe/Brussels:20261004T173000
+SUMMARY:BBC Croonen Lommel HSE B – Zuiderkempen Diamonds HSE A (82-67)
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13974060455-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – Titans Basketball Bonheiden HSE A (83-74)
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13201010053-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T204500
+DTEND;TZID=Europe/Brussels:20261017T224500
+SUMMARY:Fellows Legal Brokers Ekeren BBC HSE A – Zuiderkempen Diamonds HSE A (79-75)
+LOCATION:Sporthal t Venneke\, Den Geer 19\, 2180 Ekeren
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13806284265-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T210000
+DTEND;TZID=Europe/Brussels:20261024T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – L.S.V. Basket Landen HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13940505217-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – 2B|SAFE Tienen HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10181435991-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:Geranimo Bornem Basket HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13202142886-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:Guco Lier HSE C – Zuiderkempen Diamonds HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13789506646-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – Hades Kiewit BBC HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14273939026-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:Bree Basket HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Olympia Bree\, Sportlaan 6\, 3960 Bree
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13856617122-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – KBBC Miners Beringen HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10785577370-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270110T154500
+DTEND;TZID=Europe/Brussels:20270110T174500
+SUMMARY:Stevoort BBC HSE B – Zuiderkempen Diamonds HSE A
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13823061884-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – KBBC Zolder vzw HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13772729027-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – BBC Croonen Lommel HSE B
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10182568824-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:BasKet Tongeren HSE B – Zuiderkempen Diamonds HSE A
+LOCATION:Pibo\, Kruissteenweg 323\, 3700 Tongeren-Borgloon
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13873394741-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – Fellows Legal Brokers Ekeren BBC HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13670930480-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T203000
+DTEND;TZID=Europe/Brussels:20270213T223000
+SUMMARY:KBBC Miners Beringen HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Spectrum College Campus Beringen\, Koolmijnlaan 80\, 3580 Beringen
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13906949979-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:Zuiderkempen Diamonds HSE A – Geranimo Bornem Basket HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13401900196-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T204500
+DTEND;TZID=Europe/Brussels:20270227T224500
+SUMMARY:Hades Kiewit BBC HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Kiewit\, Tulpinstraat 40\, 3500 Hasselt
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13957282836-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T190000
+DTEND;TZID=Europe/Brussels:20270306T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – Guco Lier HSE C
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10516002633-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T201500
+DTEND;TZID=Europe/Brussels:20270313T221500
+SUMMARY:L.S.V. Basket Landen HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Sporthal Landen (stedelijke stadshal)\, Sportlaan 1\, 3400 Landen
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13470143505-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:2B|SAFE Tienen HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10450569443-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:Titans Basketball Bonheiden HSE A – Zuiderkempen Diamonds HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13755951408-13158327252@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:Zuiderkempen Diamonds HSE A – Bree Basket HSE A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:2e Landelijke Heren B 
+END:VEVENT
+END:VCALENDAR

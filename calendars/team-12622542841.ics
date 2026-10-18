@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Partena Professional Okapi Aalst G12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13379783077-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T153000
+DTEND;TZID=Europe/Brussels:20260822T173000
+SUMMARY:Partena Professional Okapi Aalst G12 A – BC Lede G12 A (46-58)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Okapi Aalst OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10154547460-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T133000
+DTEND;TZID=Europe/Brussels:20260912T153000
+SUMMARY:Partena Professional Okapi Aalst G12 A – House Of Talents Kortrijk Spurs G12 A (51-96)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13359808164-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T090000
+DTEND;TZID=Europe/Brussels:20260920T110000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare G12 A – Partena Professional Okapi Aalst G12 A (93-38)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10087436984-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:Partena Professional Okapi Aalst G12 A – Koninklijke BBC Oostkamp G12 A (44-84)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10003548889-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:Partena Professional Okapi Aalst G12 A – Royal Tigers Evergem G12 A (70-83)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10674800744-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:KBGOB Finexa Basket@Sea G12 A – Partena Professional Okapi Aalst G12 A (86-34)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10204880317-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:Partena Professional Okapi Aalst G12 A – Gent-Oost Eagles G12 A (23-84)
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10120992222-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T110000
+DTEND;TZID=Europe/Brussels:20261024T130000
+SUMMARY:Partena Professional Okapi Aalst G12 A – Jumbo Elektrooghe Gembas Knesselare G12 A
+LOCATION:Sportcentrum Schotte\, Kapellekensbaan 8\, 9320 Erembodegem
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12986158680-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:BC Lede G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:De Ommegang\, Ommeganglaan 1\, 9340 Lede
+DESCRIPTION:BC Lede OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12298758240-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13895706234-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T113000
+DTEND;TZID=Europe/Brussels:20261114T133000
+SUMMARY:House Of Talents Kortrijk Spurs G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13123788665-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:Royal Tigers Evergem G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14164736518-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T111500
+DTEND;TZID=Europe/Brussels:20261129T131500
+SUMMARY:Koninklijke BBC Oostkamp G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:Riderfort Domein\, Sportstraat 4\, 8020 Ruddervoorde
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13661260853-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:Gent-Oost Eagles G12 A – Partena Professional Okapi Aalst G12 A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10188102698-12622542841@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T133000
+DTEND;TZID=Europe/Brussels:20261212T153000
+SUMMARY:Partena Professional Okapi Aalst G12 A – KBGOB Finexa Basket@Sea G12 A
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:U12 Niveau 3 A
+END:VEVENT
+END:VCALENDAR

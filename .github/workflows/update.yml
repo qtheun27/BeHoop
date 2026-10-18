@@ -39,6 +39,14 @@ jobs:
         run: npm ci --ignore-scripts --no-audit --no-fund
         continue-on-error: true
 
+      - name: Clubs de Flandre (Basketbal Vlaanderen)
+        run: npx tsx ops/vbl.ts
+        continue-on-error: true
+
+      - name: Copie locale des logos de clubs
+        run: python ops/logos.py
+        continue-on-error: true
+
       - name: Données allégées pour l'appli (app-data/)
         run: npx tsx ops/build-app-data.ts
         continue-on-error: true
@@ -55,7 +63,7 @@ jobs:
           git config --global user.email "bot@github.com"
           touch data.json
           git add data.json calendars/
-          git add app-data/ || true
+          git add app-data/ vbl.json logos/ || true
           git commit -m "🤖 Mise à jour automatique saison en cours" || echo "Rien à commiter"
           git pull --rebase
           git push

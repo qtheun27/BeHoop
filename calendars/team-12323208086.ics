@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Partena Professional DBC Okapi Aalst DSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11295967502-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260809T150000
+DTEND;TZID=Europe/Brussels:20260809T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Titans Basketball Bonheiden DSE A (45-71)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Vlaanderen Dames Poule H
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14164984278-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260815T163000
+DTEND;TZID=Europe/Brussels:20260815T183000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE B – Partena Professional DBC Okapi Aalst DSE C (83-55)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen Dames Poule H
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11312745121-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260830T150000
+DTEND;TZID=Europe/Brussels:20260830T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Amon Jeugd Gentson DSE C (51-96)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Vlaanderen Dames Poule H
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10138017601-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:Hasselt BT DSE A – Partena Professional DBC Okapi Aalst DSE C (96-39)
+LOCATION:Stedelijke sportschuur Kuringen\, Grote Baan 171\, 3511 Kuringen
+DESCRIPTION:Beker van Vlaanderen Dames Poule H
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13096290506-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260913T143000
+DTEND;TZID=Europe/Brussels:20260913T163000
+SUMMARY:BBC Garage Wille Hansbeke DSE A – Partena Professional DBC Okapi Aalst DSE C (0-20)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13517452194-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – KBBC Sparta Laarne DSE B (49-67)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13651673146-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – KBBC Wezen-Vrienden Geraardsbergen DSE A (61-45)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10144959753-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:Royal Tigers Evergem DSE A – Partena Professional DBC Okapi Aalst DSE C (74-52)
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13364187957-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T160000
+DTEND;TZID=Europe/Brussels:20261017T180000
+SUMMARY:Koninklijke Sint-Niklase Condors DSE A – Partena Professional DBC Okapi Aalst DSE C (82-44)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13433564099-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T174500
+DTEND;TZID=Europe/Brussels:20261024T194500
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Amon Jeugd Gentson DSE D
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11600441168-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261101T160000
+DTEND;TZID=Europe/Brussels:20261101T180000
+SUMMARY:Erembodegem Silverbacks DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:Beker van Oost-Vlaanderen Dames 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13567785051-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – BBC Houtem Redwolves DSE B
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13633321409-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:ABO LDP Donza DSE C – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13618117908-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T174500
+DTEND;TZID=Europe/Brussels:20261121T194500
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14170793597-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261127T210000
+DTEND;TZID=Europe/Brussels:20261127T230000
+SUMMARY:BBC Wildcats Gavere DSE B – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13901218860-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:Gent-Oost Eagles DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13483896956-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Jumbo Elektrooghe Gembas Knesselare DSE C
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14170352312-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T181500
+DTEND;TZID=Europe/Brussels:20270109T201500
+SUMMARY:KBBC Sparta Laarne DSE B – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13416786480-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12829422720-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13551007432-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13467119337-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270207T100000
+DTEND;TZID=Europe/Brussels:20270207T120000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Koninklijke Sint-Niklase Condors DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13534229813-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – ABO LDP Donza DSE C
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14171926430-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T181500
+DTEND;TZID=Europe/Brussels:20270227T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13601340289-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270307T150000
+DTEND;TZID=Europe/Brussels:20270307T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – BBC Wildcats Gavere DSE B
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10143282467-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:Amon Jeugd Gentson DSE D – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13097423339-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T163000
+DTEND;TZID=Europe/Brussels:20270320T183000
+SUMMARY:BBC Houtem Redwolves DSE B – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13668450765-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270411T150000
+DTEND;TZID=Europe/Brussels:20270411T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Royal Tigers Evergem DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13450341718-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – Gent-Oost Eagles DSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13365320790-12323208086@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE C – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

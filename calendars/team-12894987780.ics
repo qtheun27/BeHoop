@@ -1,0 +1,186 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Clem Scherpenheuvel HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12997396361-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T134500
+DTEND;TZID=Europe/Brussels:20260913T154500
+SUMMARY:WIZ Basket Leuven HSE B – Clem Scherpenheuvel HSE C (79-40)
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11385759199-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:Red Dragons Huldenberg HSE A – Clem Scherpenheuvel HSE C (70-44)
+LOCATION:Sporthal de kronkel\, Gemeenteplein 2\, 3040 Huldenberg
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11636982199-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Clem Scherpenheuvel HSE C – Hageland United HSE B (46-59)
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12458688172-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T173000
+DTEND;TZID=Europe/Brussels:20261010T193000
+SUMMARY:Dino Brussels HSE B – Clem Scherpenheuvel HSE C (95-32)
+LOCATION:Sporthal Emanuel Hiel\, Freesiadreef 7\, 1030 Schaarbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11386892032-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:Black Devils Vorst HSE A – Clem Scherpenheuvel HSE C (88-33)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11553094104-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Clem Scherpenheuvel HSE C – 2B|SAFE Tienen HSE C
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11452428390-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Clem Scherpenheuvel HSE C – KYD Kortenberg Young Devils HSE C
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12995719075-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T093000
+DTEND;TZID=Europe/Brussels:20261115T113000
+SUMMARY:BBC Haacht HSE B – Clem Scherpenheuvel HSE C
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11502761247-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:Clem Scherpenheuvel HSE C – Jets Basket Zaventem HSE C
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11922790102-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T174500
+DTEND;TZID=Europe/Brussels:20261128T194500
+SUMMARY:GSG Aarschot HSE C – Clem Scherpenheuvel HSE C
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11921657269-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T173000
+DTEND;TZID=Europe/Brussels:20261219T193000
+SUMMARY:Hageland United HSE B – Clem Scherpenheuvel HSE C
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11435650771-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Clem Scherpenheuvel HSE C – WIZ Basket Leuven HSE B
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11603426961-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T151500
+DTEND;TZID=Europe/Brussels:20270131T171500
+SUMMARY:Clem Scherpenheuvel HSE C – Red Dragons Huldenberg HSE A
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11670537437-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Clem Scherpenheuvel HSE C – BBC Haacht HSE B
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12728262909-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270226T210000
+DTEND;TZID=Europe/Brussels:20270226T230000
+SUMMARY:Jets Basket Zaventem HSE C – Clem Scherpenheuvel HSE C
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11586649342-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Clem Scherpenheuvel HSE C – GSG Aarschot HSE C
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12727821624-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T163000
+DTEND;TZID=Europe/Brussels:20270313T183000
+SUMMARY:2B|SAFE Tienen HSE C – Clem Scherpenheuvel HSE C
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12729395742-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Clem Scherpenheuvel HSE C
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11620204580-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Clem Scherpenheuvel HSE C – Dino Brussels HSE B
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11418873152-12894987780@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Clem Scherpenheuvel HSE C – Black Devils Vorst HSE A
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+END:VCALENDAR

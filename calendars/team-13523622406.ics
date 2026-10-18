@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:KBBC Wezen-Vrienden Geraardsbergen DSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11776297965-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T150000
+DTEND;TZID=Europe/Brussels:20260816T170000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Duffel K.B.B.C. DSE A (33-70)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Wezen-Vrienden Geraardsbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11742742727-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T170000
+DTEND;TZID=Europe/Brussels:20260822T190000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BC Asse-Ternat DSE B (83-52)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Wezen-Vrienden Geraardsbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10037412608-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260826T203000
+DTEND;TZID=Europe/Brussels:20260826T223000
+SUMMARY:BC Grimbergen DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A (68-49)
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:BC Grimbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10630625284-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260828T000000
+DTEND;TZID=Europe/Brussels:20260828T020000
+SUMMARY:BBC Vesting Denderleeuw DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:BBC Vesting Denderleeuw OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11759667441-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260828T210000
+DTEND;TZID=Europe/Brussels:20260828T230000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Vesting Denderleeuw DSE A (50-53)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Wezen-Vrienden Geraardsbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11793222679-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T150000
+DTEND;TZID=Europe/Brussels:20260906T170000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Partena Professional DBC Okapi Aalst DSE B (0-20)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Wezen-Vrienden Geraardsbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13886118527-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T180000
+DTEND;TZID=Europe/Brussels:20260913T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A (76-18)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12980421291-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Jumbo Elektrooghe Gembas Knesselare DSE C (69-49)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12862977958-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Royal Tigers Evergem DSE A (64-80)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13651673146-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:Partena Professional DBC Okapi Aalst DSE C – KBBC Wezen-Vrienden Geraardsbergen DSE A (61-45)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13064309386-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Koninklijke Sint-Niklase Condors DSE A (44-91)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10160060086-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:Amon Jeugd Gentson DSE D – KBBC Wezen-Vrienden Geraardsbergen DSE A (55-47)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12930088434-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Wildcats Gavere DSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11667551644-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – KBBC Sparta Laarne DSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Beker van Oost-Vlaanderen Dames 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12896533196-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261104T200000
+DTEND;TZID=Europe/Brussels:20261104T220000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Houtem Redwolves DSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13047531767-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Garage Wille Hansbeke DSE A (20-0)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14155148811-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T181500
+DTEND;TZID=Europe/Brussels:20261114T201500
+SUMMARY:Blue Rocks Ronse-Kluisbergen DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12997198910-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – ABO LDP Donza DSE C
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13951551717-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T150000
+DTEND;TZID=Europe/Brussels:20261129T170000
+SUMMARY:Gent-Oost Eagles DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14220685169-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T181500
+DTEND;TZID=Europe/Brussels:20261212T201500
+SUMMARY:KBBC Sparta Laarne DSE B – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13348543171-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T164500
+DTEND;TZID=Europe/Brussels:20270109T184500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE C – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12913310815-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – BBC Haantjes Certifisc Oudenaarde DSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12829422720-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Partena Professional DBC Okapi Aalst DSE C
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10094626896-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:Royal Tigers Evergem DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13030754148-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Amon Jeugd Gentson DSE D
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14120460740-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:BBC Wildcats Gavere DSE B – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12846200339-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Blue Rocks Ronse-Kluisbergen DSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13582988552-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T170000
+DTEND;TZID=Europe/Brussels:20270228T190000
+SUMMARY:ABO LDP Donza DSE C – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13081087005-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T180000
+DTEND;TZID=Europe/Brussels:20270306T200000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – Gent-Oost Eagles DSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13079512887-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T143000
+DTEND;TZID=Europe/Brussels:20270321T163000
+SUMMARY:BBC Garage Wille Hansbeke DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A (0-20)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13313855100-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T160000
+DTEND;TZID=Europe/Brussels:20270410T180000
+SUMMARY:Koninklijke Sint-Niklase Condors DSE A – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13013976529-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen DSE A – KBBC Sparta Laarne DSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13114200958-13523622406@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T163000
+DTEND;TZID=Europe/Brussels:20270424T183000
+SUMMARY:BBC Houtem Redwolves DSE B – KBBC Wezen-Vrienden Geraardsbergen DSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Dames Oost-Vlaanderen 
+END:VEVENT
+END:VCALENDAR

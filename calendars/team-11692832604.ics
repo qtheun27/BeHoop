@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs M16 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13511615774-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T100000
+DTEND;TZID=Europe/Brussels:20260905T120000
+SUMMARY:House Of Talents Kortrijk Spurs M16 B – ABO LDP Donza M16 A (63-34)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13735305474-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T153000
+DTEND;TZID=Europe/Brussels:20260919T173000
+SUMMARY:G&V Breakpoint Basket Waregem M16 B – House Of Talents Kortrijk Spurs M16 B (61-56)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12392801764-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T103000
+DTEND;TZID=Europe/Brussels:20260926T123000
+SUMMARY:Bobcat Wielsbeke M16 A – House Of Talents Kortrijk Spurs M16 B (45-75)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13633506927-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T121500
+DTEND;TZID=Europe/Brussels:20261003T141500
+SUMMARY:House Of Talents Kortrijk Spurs M16 B – Holstra WINGS Wevelgem-Moorsele M16 A (58-56)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11989550528-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:Basket SKT Ieper M16 B – House Of Talents Kortrijk Spurs M16 B (37-93)
+LOCATION:Stedelijke sporthal 2 Ieper\, Leopold III laan 18\, 8900 Ieper
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13616729308-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T143000
+DTEND;TZID=Europe/Brussels:20261024T163000
+SUMMARY:House Of Talents Kortrijk Spurs M16 B – G&V Breakpoint Basket Waregem M16 B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13711343731-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T131500
+DTEND;TZID=Europe/Brussels:20261108T151500
+SUMMARY:G&V Breakpoint Basket Waregem M16 B – House Of Talents Kortrijk Spurs M16 B
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13650284546-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T100000
+DTEND;TZID=Europe/Brussels:20261114T120000
+SUMMARY:House Of Talents Kortrijk Spurs M16 B – Bobcat Wielsbeke M16 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13064053619-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele M16 A – House Of Talents Kortrijk Spurs M16 B
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13583174070-11692832604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T121500
+DTEND;TZID=Europe/Brussels:20261128T141500
+SUMMARY:House Of Talents Kortrijk Spurs M16 B – Basket SKT Ieper M16 B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U16 Meisjes Niveau 2 B
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBC Houtem Redwolves HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12866116522-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260829T203000
+DTEND;TZID=Europe/Brussels:20260829T223000
+SUMMARY:BBC Houtem Redwolves HSE C – BBC Houtem Redwolves HSE D (65-64)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:BBC Houtem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10456902581-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T183000
+DTEND;TZID=Europe/Brussels:20260905T203000
+SUMMARY:KBBC Eksaarde HSE B – BBC Houtem Redwolves HSE C (20-0)
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14292623406-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260911T210000
+DTEND;TZID=Europe/Brussels:20260911T230000
+SUMMARY:BBC Houtem Redwolves HSE C – CSS Outdoor Living Ninove HSE A (59-87)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10903250178-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE C – BBC Houtem Redwolves HSE C (45-70)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14125288501-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:BBC White Star - Witte Sterren St. Amandsberg HSE A – BBC Houtem Redwolves HSE C (88-41)
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14175180073-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T163000
+DTEND;TZID=Europe/Brussels:20261003T183000
+SUMMARY:BBC Houtem Redwolves HSE C – Koninklijke BBC Scheldejeugd Temse HSE B (66-79)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10767896393-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:BBC Olympia Denderleeuw HSE C – BBC Houtem Redwolves HSE C (86-47)
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14208735311-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:BBC Houtem Redwolves HSE C – Erembodegem Silverbacks HSE C (59-62)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10231998323-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261025T150000
+DTEND;TZID=Europe/Brussels:20261025T170000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE D – BBC Houtem Redwolves HSE C
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10064766586-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261113T210000
+DTEND;TZID=Europe/Brussels:20261113T230000
+SUMMARY:BBC Houtem Redwolves HSE C – BBC Assenede HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13722037265-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:Royal Tigers Evergem HSE C – BBC Houtem Redwolves HSE C
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14124847216-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:BBC Houtem Redwolves HSE C – Onderons Grembergen HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11038603963-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Basics Melsele-Beveren HSE D – BBC Houtem Redwolves HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14225512930-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T183000
+DTEND;TZID=Europe/Brussels:20270109T203000
+SUMMARY:BBC Houtem Redwolves HSE C – KBBC Wezen-Vrienden Geraardsbergen HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13454036646-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – BBC Houtem Redwolves HSE C
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14123714383-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE B – BBC Houtem Redwolves HSE C
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10047988967-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T200000
+DTEND;TZID=Europe/Brussels:20270130T220000
+SUMMARY:BBC Houtem Redwolves HSE C – BBC White Star - Witte Sterren St. Amandsberg HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11171250797-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270214T170000
+DTEND;TZID=Europe/Brussels:20270214T190000
+SUMMARY:Erembodegem Silverbacks HSE C – BBC Houtem Redwolves HSE C
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13857391050-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T181500
+DTEND;TZID=Europe/Brussels:20270220T201500
+SUMMARY:BBC Assenede HSE B – BBC Houtem Redwolves HSE C
+LOCATION:Gemeentelijke Sporthal Assenede\, Kapelledreef 4\, 9960 Assenede
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14275845787-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270226T210000
+DTEND;TZID=Europe/Brussels:20270226T230000
+SUMMARY:BBC Houtem Redwolves HSE C – Royal Tigers Evergem HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14242290549-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:BBC Houtem Redwolves HSE C – Koninklijke Sint-Niklase Condors HSE D
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14141624835-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:BBC Houtem Redwolves HSE C – BBC Olympia Denderleeuw HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13452462528-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:Onderons Grembergen HSE A – BBC Houtem Redwolves HSE C
+LOCATION:Sporthal Scheldedreef\, Scheldedreef 26\, 9200 Grembergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10081544205-12083926633@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270423T210000
+DTEND;TZID=Europe/Brussels:20270423T230000
+SUMMARY:BBC Houtem Redwolves HSE C – Basics Melsele-Beveren HSE D
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+END:VCALENDAR

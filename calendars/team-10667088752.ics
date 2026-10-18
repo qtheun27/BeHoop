@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBC Helios SanoRice Zottegem HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12181394795-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260808T200000
+DTEND;TZID=Europe/Brussels:20260808T220000
+SUMMARY:Basket Midwest BP Tielt HSE A – BBC Helios SanoRice Zottegem HSE A (41-77)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:Basket Tielt OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13748948888-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T170000
+DTEND;TZID=Europe/Brussels:20260809T190000
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – House Of Talents Kortrijk Spurs HSE B (68-58)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10108455828-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260815T181500
+DTEND;TZID=Europe/Brussels:20260815T201500
+SUMMARY:Basket SKT Ieper HSE B – BBC Helios SanoRice Zottegem HSE A (75-63)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13765726507-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T163000
+DTEND;TZID=Europe/Brussels:20260816T183000
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – KBBC Zolder vzw HSE B (20-0)
+LOCATION:Sport Vlaanderen Hofstade
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10779707683-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T200000
+DTEND;TZID=Europe/Brussels:20260822T220000
+SUMMARY:Titans Basketball Bonheiden HSE A – BBC Helios SanoRice Zottegem HSE A (83-65)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Beker van Vlaanderen Heren Poule B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11513933399-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Holstra WINGS Wevelgem-Moorsele HSE B (67-54)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:BBC Zottegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11253646673-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:BBC Houtem Redwolves HSE A – BBC Helios SanoRice Zottegem HSE A (60-78)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12075455814-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T204500
+DTEND;TZID=Europe/Brussels:20260919T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Blue Rocks Ronse-Kluisbergen HSE A (84-69)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11923324410-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T193000
+DTEND;TZID=Europe/Brussels:20260926T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – BBC Helios SanoRice Zottegem HSE A (41-85)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12276787242-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T204500
+DTEND;TZID=Europe/Brussels:20261003T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – BBC Olympia Denderleeuw HSE A (82-72)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11519970006-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:ABO LDP Donza HSE C – BBC Helios SanoRice Zottegem HSE A (70-81)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12142566290-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T204500
+DTEND;TZID=Europe/Brussels:20261017T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Royal Tigers Evergem HSE A (67-65)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12326575646-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T181500
+DTEND;TZID=Europe/Brussels:20261024T201500
+SUMMARY:Panters Baasrode HSE B – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Pantershal\, Molenberg 25\, 9200 Baasrode
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11304498515-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11722434267-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261106T203000
+DTEND;TZID=Europe/Brussels:20261106T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12209676766-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T204500
+DTEND;TZID=Europe/Brussels:20261114T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – B.B.C. Zele HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12594576265-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:KBBC Sparta Laarne HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12092233433-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T204500
+DTEND;TZID=Europe/Brussels:20261128T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – KBBC Bavi Gent HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12192899147-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T204500
+DTEND;TZID=Europe/Brussels:20261212T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – BBC Feniks Futuria Gent HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11319183031-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11454536816-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12159343909-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T204500
+DTEND;TZID=Europe/Brussels:20270116T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – BBC Houtem Redwolves HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11051182412-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T204500
+DTEND;TZID=Europe/Brussels:20270123T224500
+SUMMARY:BBC Olympia Denderleeuw HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11857788052-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:Royal Tigers Evergem HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12243232004-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T204500
+DTEND;TZID=Europe/Brussels:20270213T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12795363240-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:B.B.C. Zele HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:De Klodde\, Dendermondebaan 10\, 9240 Zele
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12293564861-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T204500
+DTEND;TZID=Europe/Brussels:20270227T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – KBBC Sparta Laarne HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12997827501-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:KBBC Bavi Gent HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12041900576-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T204500
+DTEND;TZID=Europe/Brussels:20270313T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Panters Baasrode HSE B
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12058678195-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Partena Professional Okapi Aalst HSE B
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12260009623-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T204500
+DTEND;TZID=Europe/Brussels:20270327T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12176121528-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T204500
+DTEND;TZID=Europe/Brussels:20270410T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – ABO LDP Donza HSE C
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10915828627-10667088752@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T202000
+DTEND;TZID=Europe/Brussels:20270417T222000
+SUMMARY:BBC Feniks Futuria Gent HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

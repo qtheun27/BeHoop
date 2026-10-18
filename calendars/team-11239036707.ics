@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare J21 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12081337824-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T170000
+DTEND;TZID=Europe/Brussels:20260823T190000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A (68-72)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:BBC Haantjes Oudenaarde OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10820447890-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T111500
+DTEND;TZID=Europe/Brussels:20260829T131500
+SUMMARY:e5 Sgolba Aalter J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A (79-74)
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:Sgolba Aalter OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12496888836-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T104500
+DTEND;TZID=Europe/Brussels:20260905T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Amon Jeugd Gentson J21 A (43-95)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen U21 Poule O
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11407182244-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T120000
+DTEND;TZID=Europe/Brussels:20260912T140000
+SUMMARY:Bavi Vilvoorde J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A (102-54)
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:Beker van Vlaanderen U21 Poule O
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12513666455-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Koninklijke BBC Oostkamp J21 A (69-72)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen U21 Poule O
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10739179622-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T104500
+DTEND;TZID=Europe/Brussels:20260926T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Geranimo Bornem Basket J21 A (75-70)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11125653239-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T110000
+DTEND;TZID=Europe/Brussels:20261004T130000
+SUMMARY:KBBC Sparta Laarne J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A (74-64)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10705624384-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Koninklijke BBC Oostkamp J21 A (89-54)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12468156949-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T151500
+DTEND;TZID=Europe/Brussels:20261018T171500
+SUMMARY:Mercurius BBC Hoboken-Berchem J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A (56-57)
+LOCATION:Sportschuur Fort VIII\, Hoofdfrontweg 9\, 2660 Hoboken
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10806290098-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T124500
+DTEND;TZID=Europe/Brussels:20261024T144500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Wytewa Roeselare J21 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11360098620-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T140000
+DTEND;TZID=Europe/Brussels:20261107T160000
+SUMMARY:Geranimo Bornem Basket J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10789512479-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – KBBC Sparta Laarne J21 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12299247926-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T111500
+DTEND;TZID=Europe/Brussels:20261128T131500
+SUMMARY:Koninklijke BBC Oostkamp J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10823067717-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare J21 A – Mercurius BBC Hoboken-Berchem J21 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11763349856-11239036707@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:Wytewa Roeselare J21 A – Jumbo Elektrooghe Gembas Knesselare J21 A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:U21 Niveau 2 A
+END:VEVENT
+END:VCALENDAR

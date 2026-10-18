@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:CSS Outdoor Living Ninove HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11530711018-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260822T183000
+DTEND;TZID=Europe/Brussels:20260822T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – CSS Outdoor Living Ninove HSE A (78-61)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:BBC Zottegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10507382533-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260906T170000
+DTEND;TZID=Europe/Brussels:20260906T190000
+SUMMARY:Erembodegem Silverbacks HSE C – CSS Outdoor Living Ninove HSE A (68-49)
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:Beker van Oost-Vlaanderen Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14292623406-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260911T210000
+DTEND;TZID=Europe/Brussels:20260911T230000
+SUMMARY:BBC Houtem Redwolves HSE C – CSS Outdoor Living Ninove HSE A (59-87)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13537924741-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T193000
+DTEND;TZID=Europe/Brussels:20260919T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – BBC White Star - Witte Sterren St. Amandsberg HSE A (48-43)
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14157269621-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE B – CSS Outdoor Living Ninove HSE A (48-79)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13605035217-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – BBC Olympia Denderleeuw HSE C (66-60)
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10265553561-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T200000
+DTEND;TZID=Europe/Brussels:20261010T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE D – CSS Outdoor Living Ninove HSE A (68-67)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13470814265-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T193000
+DTEND;TZID=Europe/Brussels:20261017T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Royal Tigers Evergem HSE C (80-62)
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11072159201-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basics Melsele-Beveren HSE D – CSS Outdoor Living Ninove HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13823835812-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T173000
+DTEND;TZID=Europe/Brussels:20261107T193000
+SUMMARY:BBC Assenede HSE B – CSS Outdoor Living Ninove HSE A
+LOCATION:Gemeentelijke Sporthal Assenede\, Kapelledreef 4\, 9960 Assenede
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13672145693-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T160000
+DTEND;TZID=Europe/Brussels:20261115T180000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Erembodegem Silverbacks HSE C
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13486017766-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Onderons Grembergen HSE A – CSS Outdoor Living Ninove HSE A
+LOCATION:Sporthal Scheldedreef\, Scheldedreef 26\, 9200 Grembergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13621812836-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T193000
+DTEND;TZID=Europe/Brussels:20261212T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – KBBC Wezen-Vrienden Geraardsbergen HSE C
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14091733263-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:BBC White Star - Witte Sterren St. Amandsberg HSE A – CSS Outdoor Living Ninove HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13454036646-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – BBC Houtem Redwolves HSE C
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10734341155-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:BBC Olympia Denderleeuw HSE C – CSS Outdoor Living Ninove HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13571479979-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Koninklijke BBC Scheldejeugd Temse HSE B
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13688482027-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:Royal Tigers Evergem HSE C – CSS Outdoor Living Ninove HSE A
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11137695559-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:Erembodegem Silverbacks HSE C – CSS Outdoor Living Ninove HSE A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13588257598-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270228T153000
+DTEND;TZID=Europe/Brussels:20270228T173000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Onderons Grembergen HSE A
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13504369503-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Basics Melsele-Beveren HSE D
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13487591884-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270320T193000
+DTEND;TZID=Europe/Brussels:20270320T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – BBC Assenede HSE B
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13638590455-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T193000
+DTEND;TZID=Europe/Brussels:20270410T213000
+SUMMARY:CSS Outdoor Living Ninove HSE A – Koninklijke Sint-Niklase Condors HSE D
+LOCATION:Sporthal Ninove\, Parklaan 15\, 9400 Ninove
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10869694940-13510202377@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE C – CSS Outdoor Living Ninove HSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:4e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+END:VCALENDAR

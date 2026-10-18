@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Triton Leuven HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12574704421-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260530T200000
+DTEND;TZID=Europe/Brussels:20260530T220000
+SUMMARY:Team A – Triton Leuven HSE B
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:Fenics Leuven OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10135257550-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Basket Groot Zemst HSE R – Triton Leuven HSE B (43-51)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13372499374-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T163000
+DTEND;TZID=Europe/Brussels:20261003T183000
+SUMMARY:Triton Leuven HSE B – Londerzeelse Dunkers HSE C (61-40)
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13891619825-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261016T210000
+DTEND;TZID=Europe/Brussels:20261016T230000
+SUMMARY:Merchtem Eagles HSE C – Triton Leuven HSE B (56-54)
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13456387469-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T163000
+DTEND;TZID=Europe/Brussels:20261024T183000
+SUMMARY:Triton Leuven HSE B – BC Opwijk HSE C
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14161194562-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Strombeek Beavers Wemmel Basket Club HSE A – Triton Leuven HSE B
+LOCATION:Sporthal Campus Wemmel\, Zijp 14-16\, 1780 Wemmel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13238278422-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261121T163000
+DTEND;TZID=Europe/Brussels:20261121T183000
+SUMMARY:Triton Leuven HSE B – Basket Club Groot Dilbeek HSE C
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13893193943-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T201500
+DTEND;TZID=Europe/Brussels:20261128T221500
+SUMMARY:BBC Wobac Sint-Stevens-Woluwe HSE A – Triton Leuven HSE B
+LOCATION:Gemeentelijke Sporthal Sint-Stevens-Woluwe\, Leuvensesteenweg 194\, 1932 Sint-Stevens-Woluwe
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10133683432-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261213T163000
+DTEND;TZID=Europe/Brussels:20261213T183000
+SUMMARY:De Rode Leeuwen HSE A – Triton Leuven HSE B
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13623619206-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:AB InBev Leuven Bears HSE E – Triton Leuven HSE B
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13305388898-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:Triton Leuven HSE B – De Rode Leeuwen HSE A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12818690852-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:Londerzeelse Dunkers HSE C – Triton Leuven HSE B
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13406054612-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T163000
+DTEND;TZID=Europe/Brussels:20270130T183000
+SUMMARY:Triton Leuven HSE B – Basket Groot Zemst HSE R
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13338944136-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270220T163000
+DTEND;TZID=Europe/Brussels:20270220T183000
+SUMMARY:Triton Leuven HSE B – Strombeek Beavers Wemmel Basket Club HSE A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14159517276-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:Basket Club Groot Dilbeek HSE C – Triton Leuven HSE B
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13422832231-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T163000
+DTEND;TZID=Europe/Brussels:20270306T183000
+SUMMARY:Triton Leuven HSE B – BBC Wobac Sint-Stevens-Woluwe HSE A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12550690233-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:BC Opwijk HSE C – Triton Leuven HSE B
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13271833660-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270327T183000
+DTEND;TZID=Europe/Brussels:20270327T203000
+SUMMARY:Triton Leuven HSE B – AB InBev Leuven Bears HSE E
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10134124717-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270403T203000
+DTEND;TZID=Europe/Brussels:20270403T223000
+SUMMARY:Tigers Halle HSE B – Triton Leuven HSE B
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13389276993-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270410T163000
+DTEND;TZID=Europe/Brussels:20270410T183000
+SUMMARY:Triton Leuven HSE B – Tigers Halle HSE B
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13322166517-12955529417@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270417T163000
+DTEND;TZID=Europe/Brussels:20270417T183000
+SUMMARY:Triton Leuven HSE B – Merchtem Eagles HSE C
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+END:VCALENDAR

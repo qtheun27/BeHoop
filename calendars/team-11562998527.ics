@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Jumbo Elektrooghe Gembas Knesselare HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12505651165-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260815T180000
+DTEND;TZID=Europe/Brussels:20260815T200000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B (59-63)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:BC Lamett Deerlijk-Zwevegem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11945412484-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T204500
+DTEND;TZID=Europe/Brussels:20260822T224500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Bobcat Wielsbeke HSE A (83-57)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11904816568-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260828T200000
+DTEND;TZID=Europe/Brussels:20260828T220000
+SUMMARY:Mibac Middelkerke HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B (66-72)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Mibac Middelkerke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11066022672-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T000000
+DTEND;TZID=Europe/Brussels:20260906T020000
+SUMMARY:Bobcat Wielsbeke HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12625143871-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:Wytewa Roeselare HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B (66-57)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:Wytewa Roeselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11271276817-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:Amon Jeugd Gentson HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B (92-72)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11305964888-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T210000
+DTEND;TZID=Europe/Brussels:20260919T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Houtem Redwolves HSE B (61-46)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12346912741-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B (57-78)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11289187269-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Basket Meetjesland HSE A (83-69)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11809440553-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B (83-81)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11406630602-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BC Black Beez Erpe-Mere HSE B (57-75)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11808749005-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:Gent-Oost Eagles HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13603179413-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:Royal Tigers Evergem HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11809881838-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:BBC Falco Gent HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11373075364-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Bavi Gent HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12277536599-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T173000
+DTEND;TZID=Europe/Brussels:20261122T193000
+SUMMARY:Basics Melsele-Beveren HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11171743936-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T210000
+DTEND;TZID=Europe/Brussels:20261128T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Sparta Laarne HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12882369526-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T201500
+DTEND;TZID=Europe/Brussels:20261212T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11222076793-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – e5 Sgolba Aalter HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12278669432-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11389852983-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Amon Jeugd Gentson HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12815700335-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T201500
+DTEND;TZID=Europe/Brussels:20270123T221500
+SUMMARY:Basket Meetjesland HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11188521555-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12881677978-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270205T183000
+DTEND;TZID=Europe/Brussels:20270205T203000
+SUMMARY:BC Black Beez Erpe-Mere HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11741197244-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T174500
+DTEND;TZID=Europe/Brussels:20270220T194500
+SUMMARY:KBBC Bavi Gent HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11423408221-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T210000
+DTEND;TZID=Europe/Brussels:20270227T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Basics Melsele-Beveren HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12816833168-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T181500
+DTEND;TZID=Europe/Brussels:20270306T201500
+SUMMARY:KBBC Sparta Laarne HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11322742507-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Gent-Oost Eagles HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11205299174-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Falco Gent HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11255632031-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11339520126-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Vesting Denderleeuw HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11205740459-11562998527@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T181500
+DTEND;TZID=Europe/Brussels:20270424T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

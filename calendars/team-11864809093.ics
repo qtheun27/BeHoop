@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Wytewa Roeselare HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10957353503-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T110000
+DTEND;TZID=Europe/Brussels:20260809T130000
+SUMMARY:Koninklijke BBC Oostkamp HSE C – Wytewa Roeselare HSE B (55-57)
+LOCATION:Riderfort Domein\, Sportstraat 4\, 8020 Ruddervoorde
+DESCRIPTION:KBBC Oostkamp OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10600843767-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T000000
+DTEND;TZID=Europe/Brussels:20260830T020000
+SUMMARY:BBC Houtem Redwolves HSE B – Wytewa Roeselare HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:BBC Houtem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12625143871-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T110000
+DTEND;TZID=Europe/Brussels:20260906T130000
+SUMMARY:Wytewa Roeselare HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B (66-57)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:Wytewa Roeselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13474058683-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Wytewa Roeselare HSE B (79-49)
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11982674973-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T110000
+DTEND;TZID=Europe/Brussels:20260920T130000
+SUMMARY:Wytewa Roeselare HSE B – Basket Sijsele HSE B (67-69)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13542846445-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – Wytewa Roeselare HSE B (58-68)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11661634546-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Wytewa Roeselare HSE B (68-59)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11898786878-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Wytewa Roeselare HSE B – KBBC Racing Brugge HSE B (65-66)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13206161232-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T201500
+DTEND;TZID=Europe/Brussels:20261017T221500
+SUMMARY:Basket Desselgem HSE A – Wytewa Roeselare HSE B (47-56)
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11798121164-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:Wytewa Roeselare HSE B – Red Sharks Koekelare HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13888888638-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Wytewa Roeselare HSE B
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11932342116-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:Wytewa Roeselare HSE B – Rapid Raptors Langemark HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12468240186-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:G&V Breakpoint Basket Waregem HSE C – Wytewa Roeselare HSE B
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12133232259-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T201500
+DTEND;TZID=Europe/Brussels:20261128T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – Wytewa Roeselare HSE B
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11814898783-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261204T210000
+DTEND;TZID=Europe/Brussels:20261204T230000
+SUMMARY:Wytewa Roeselare HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13205028399-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Joppo Basket Izegem HSE B – Wytewa Roeselare HSE B
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11747788307-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T110000
+DTEND;TZID=Europe/Brussels:20261220T130000
+SUMMARY:Wytewa Roeselare HSE B – Bbv Oedelem HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11864098807-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T171500
+DTEND;TZID=Europe/Brussels:20270109T191500
+SUMMARY:Basket Sijsele HSE B – Wytewa Roeselare HSE B
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11781343545-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:Wytewa Roeselare HSE B – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11831676402-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:Wytewa Roeselare HSE B – Bobcat Wielsbeke HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11882009259-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T110000
+DTEND;TZID=Europe/Brussels:20270131T130000
+SUMMARY:Wytewa Roeselare HSE B – BC Lamett Deerlijk-Zwevegem HSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11731010688-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:Wytewa Roeselare HSE B – Basket Desselgem HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11965897354-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:Wytewa Roeselare HSE B – G&V Breakpoint Basket Waregem HSE C
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12198665449-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T160000
+DTEND;TZID=Europe/Brussels:20270227T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Wytewa Roeselare HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11915564497-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:Wytewa Roeselare HSE B – KBBC Vk Iebac Ieper HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12937027780-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:Red Sharks Koekelare HSE A – Wytewa Roeselare HSE B
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11596201356-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:Rapid Raptors Langemark HSE A – Wytewa Roeselare HSE B
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12737373638-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T181500
+DTEND;TZID=Europe/Brussels:20270410T201500
+SUMMARY:KBBC Racing Brugge HSE B – Wytewa Roeselare HSE B
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11848454021-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270418T110000
+DTEND;TZID=Europe/Brussels:20270418T130000
+SUMMARY:Wytewa Roeselare HSE B – Joppo Basket Izegem HSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12736240805-11864809093@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T181500
+DTEND;TZID=Europe/Brussels:20270424T201500
+SUMMARY:Bbv Oedelem HSE A – Wytewa Roeselare HSE B
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs M19 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13461282917-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260814T000000
+DTEND;TZID=Europe/Brussels:20260814T020000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Partena Professional DBC Okapi Aalst M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13595650964-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T160000
+DTEND;TZID=Europe/Brussels:20260830T180000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Liège Panthers M19 A (AWBB) (48-82)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11498007304-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T104500
+DTEND;TZID=Europe/Brussels:20260905T124500
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Phantoms Basket Boom M19 A
+LOCATION:Sport Vlaanderen Blankenberge\, Koning Boudewijnlaan 11\, 8370 Blankenberge
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13410950060-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T000000
+DTEND;TZID=Europe/Brussels:20260906T020000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Phantoms Basket Boom M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Kortrijk Spurs OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12312937849-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T100000
+DTEND;TZID=Europe/Brussels:20260912T120000
+SUMMARY:Red Vic Wilrijk M19 A – House Of Talents Kortrijk Spurs M19 A (85-55)
+LOCATION:Sporthal Red Vic\, Pachthofplein 30\, 2610 Wilrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10781745181-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T110000
+DTEND;TZID=Europe/Brussels:20260919T130000
+SUMMARY:G&V Breakpoint Basket Waregem M19 A – House Of Talents Kortrijk Spurs M19 A (86-65)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Koninklijk Basket Team ION Waregem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13521220607-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:Basket Houthalen M19 A – House Of Talents Kortrijk Spurs M19 A (69-79)
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12347625920-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – ABO LDP Donza M19 A (87-61)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13924471843-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:Kangoeroes Basket Mechelen M19 A – House Of Talents Kortrijk Spurs M19 A (79-60)
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13253219988-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T104500
+DTEND;TZID=Europe/Brussels:20261017T124500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M19 A – House Of Talents Kortrijk Spurs M19 A (46-71)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12364403539-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T120000
+DTEND;TZID=Europe/Brussels:20261024T140000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Red Vic Wilrijk M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13143208406-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:KBBC Sparta Laarne M19 A – House Of Talents Kortrijk Spurs M19 A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:Beker van Vlaanderen U19 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12397958777-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T120000
+DTEND;TZID=Europe/Brussels:20261114T140000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Basket Houthalen M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12849968752-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:ABO LDP Donza M19 A – House Of Talents Kortrijk Spurs M19 A
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12465069253-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T120000
+DTEND;TZID=Europe/Brussels:20261128T140000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Kangoeroes Basket Mechelen M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12414736396-13189760202@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T120000
+DTEND;TZID=Europe/Brussels:20261205T140000
+SUMMARY:House Of Talents Kortrijk Spurs M19 A – Jumbo Elektrooghe Gembas Knesselare M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 1a A
+END:VEVENT
+END:VCALENDAR

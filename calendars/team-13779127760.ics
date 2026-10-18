@@ -1,0 +1,303 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Koninklijke BBC Scheldejeugd Temse HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10245693035-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260807T201500
+DTEND;TZID=Europe/Brussels:20260807T221500
+SUMMARY:Gent-Oost Eagles HSE B – Koninklijke BBC Scheldejeugd Temse HSE A (100-69)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:Beker van Vlaanderen Heren Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13776075456-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260808T173000
+DTEND;TZID=Europe/Brussels:20260808T193000
+SUMMARY:Basics Melsele-Beveren HSE B – Koninklijke BBC Scheldejeugd Temse HSE A (114-61)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Basics Melsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11967177857-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260813T203000
+DTEND;TZID=Europe/Brussels:20260813T223000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Geranimo Bornem Basket HSE A (45-79)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:BBC Scheldejeugd Temse OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10227782583-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T193000
+DTEND;TZID=Europe/Brussels:20260822T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – KBBC Miners Beringen HSE A (61-68)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:Beker van Vlaanderen Heren Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11889649434-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T201500
+DTEND;TZID=Europe/Brussels:20260829T221500
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE A – Koninklijke BBC Scheldejeugd Temse HSE A (102-54)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:Beker van Vlaanderen Heren Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10160672107-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – GSG Aarschot HSE A (74-93)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:Beker van Vlaanderen Heren Poule K
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11755548220-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T193000
+DTEND;TZID=Europe/Brussels:20260912T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – KBBC Sparta Laarne HSE A (57-77)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11168184460-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Koninklijke BBC Scheldejeugd Temse HSE A (69-46)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11923324410-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T193000
+DTEND;TZID=Europe/Brussels:20260926T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – BBC Helios SanoRice Zottegem HSE A (41-85)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11102648102-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:BBC Houtem Redwolves HSE A – Koninklijke BBC Scheldejeugd Temse HSE A (78-72)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11839436315-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Blue Rocks Ronse-Kluisbergen HSE A (65-57)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11772325839-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T193000
+DTEND;TZID=Europe/Brussels:20261017T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – BBC Olympia Denderleeuw HSE A (60-39)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12677919907-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:B.B.C. Zele HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:De Klodde\, Dendermondebaan 10\, 9240 Zele
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13552846556-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:BBC Falco Gent HSE E – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11670968577-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:ABO LDP Donza HSE C – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11906546791-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T193000
+DTEND;TZID=Europe/Brussels:20261114T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Royal Tigers Evergem HSE A
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11571435696-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11872991553-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Panters Baasrode HSE B
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11822658696-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261211T210000
+DTEND;TZID=Europe/Brussels:20261211T230000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – KBBC Bavi Gent HSE A
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11033271960-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T202000
+DTEND;TZID=Europe/Brussels:20261219T222000
+SUMMARY:BBC Feniks Futuria Gent HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11789103458-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12712019598-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:KBBC Sparta Laarne HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11889769172-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T193000
+DTEND;TZID=Europe/Brussels:20270123T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – BBC Houtem Redwolves HSE A
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11202180983-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270205T203000
+DTEND;TZID=Europe/Brussels:20270205T223000
+SUMMARY:BBC Olympia Denderleeuw HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12243232004-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T204500
+DTEND;TZID=Europe/Brussels:20270213T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11740344719-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Royal Tigers Evergem HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11856213934-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T193000
+DTEND;TZID=Europe/Brussels:20270227T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Partena Professional Okapi Aalst HSE B
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12209132313-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Panters Baasrode HSE B – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Pantershal\, Molenberg 25\, 9200 Baasrode
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11705215363-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – B.B.C. Zele HSE A
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11738770601-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T193000
+DTEND;TZID=Europe/Brussels:20270320T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – ABO LDP Donza HSE C
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11721992982-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T193000
+DTEND;TZID=Europe/Brussels:20270327T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – BBC Feniks Futuria Gent HSE A
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11605535387-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12846828930-13779127760@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:KBBC Bavi Gent HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

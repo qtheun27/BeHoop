@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Koninklijke BBC Union Leopoldsburg HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13844546302-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T154500
+DTEND;TZID=Europe/Brussels:20260809T174500
+SUMMARY:Stevoort BBC HSE D – Koninklijke BBC Union Leopoldsburg HSE A (53-63)
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:Stevoort BBC OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13900070037-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T180000
+DTEND;TZID=Europe/Brussels:20260816T200000
+SUMMARY:K. Vabco Mol BBC HSE A – Koninklijke BBC Union Leopoldsburg HSE A (67-65)
+LOCATION:Sporthal Rozenberginstituut\, Molenhoekstraat\, 2400 Mol
+DESCRIPTION:K. Vabco Mol BBC OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13939047873-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T203000
+DTEND;TZID=Europe/Brussels:20260829T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – BBC Pelt HSE A (68-61)
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:KBBC Union Leopoldsburg OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12007899915-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:Basket Zonhoven HSE A – Koninklijke BBC Union Leopoldsburg HSE A (64-85)
+LOCATION:Evenementenhal Den Dijk Zonhoven\, Rozenkransweg 4\, 3520 Zonhoven
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10899841586-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – BC Maasmechelen HSE A (20-0)
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10932263991-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T183000
+DTEND;TZID=Europe/Brussels:20260926T203000
+SUMMARY:Hades Kiewit BBC HSE B – Koninklijke BBC Union Leopoldsburg HSE A (63-76)
+LOCATION:Kiewit\, Tulpinstraat 40\, 3500 Hasselt
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10950174443-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – KBBC Miners Beringen HSE B (76-49)
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10932852371-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:KBBC Zolder vzw HSE B – Koninklijke BBC Union Leopoldsburg HSE A (71-58)
+LOCATION:Olympia Heusden\, Pastoor van Mierlolaan\, 3550 Heusden-Zolder
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10799175872-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Basket Peer HSE A (51-65)
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11470427727-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T194500
+DTEND;TZID=Europe/Brussels:20261024T214500
+SUMMARY:Nieuwerkerken HSE A – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Gemeentelijke Sporthal Nieuwerkerken\, Kerkstraat 132\, 3850 Nieuwerkerken (Limb.)
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11373095406-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:BBC Optima Tessenderlo HSE B – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Sporthal Campus Max STEM\, Heilig Hartlaan 16\, 3980 Tessenderlo
+DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12543356700-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Basket Lummen HSE A – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10832731110-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – B.C. Gems Diepenbeek HSE A
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11001640133-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:Hasselt BT HSE B – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Stedelijke sportschuur Kuringen\, Grote Baan 171\, 3511 Kuringen
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11034062538-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T180000
+DTEND;TZID=Europe/Brussels:20261129T200000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – BBC Croonen Lommel HSE C
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11470869012-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T180000
+DTEND;TZID=Europe/Brussels:20261213T200000
+SUMMARY:Stevoort BBC HSE C – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11017284919-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – BBC Optima Tessenderlo HSE A
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12074569106-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:BC Maasmechelen HSE A – Koninklijke BBC Union Leopoldsburg HSE A (0-20)
+LOCATION:Sportcomplex De Helix\, Collegestraat 1\, 3630 Maasmechelen
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10849508729-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Basket Zonhoven HSE A
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12610908461-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:KBBC Miners Beringen HSE B – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Spectrum College Campus Beringen\, Koolmijnlaan 80\, 3580 Beringen
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11050840157-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Hades Kiewit BBC HSE B
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11471560560-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:Basket Peer HSE A – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:College Peer\, Collegelaan 20\, 3990 Peer
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12612041294-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:B.C. Gems Diepenbeek HSE A – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Demerstrand\, Stationstraat 27\, 3590 Diepenbeek
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10815953491-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270224T203000
+DTEND;TZID=Europe/Brussels:20270224T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Hasselt BT HSE B
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11536405370-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T173000
+DTEND;TZID=Europe/Brussels:20270306T193000
+SUMMARY:BBC Croonen Lommel HSE C – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10916619205-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Nieuwerkerken HSE A
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11000507300-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Basket Lummen HSE A
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10866286348-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T203000
+DTEND;TZID=Europe/Brussels:20270327T223000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – Stevoort BBC HSE C
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10983729681-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T160000
+DTEND;TZID=Europe/Brussels:20270411T180000
+SUMMARY:Koninklijke BBC Union Leopoldsburg HSE A – KBBC Zolder vzw HSE B
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12073436273-11109529708@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T204500
+DTEND;TZID=Europe/Brussels:20270424T224500
+SUMMARY:BBC Optima Tessenderlo HSE A – Koninklijke BBC Union Leopoldsburg HSE A
+LOCATION:Sporthal Campus Max STEM\, Heilig Hartlaan 16\, 3980 Tessenderlo
+DESCRIPTION:1e Prov. Heren Limburg
+END:VEVENT
+END:VCALENDAR

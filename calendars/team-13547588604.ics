@@ -1,0 +1,186 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Tigers Halle HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-14193072514-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T180000
+DTEND;TZID=Europe/Brussels:20260912T200000
+SUMMARY:Basket Club Groot Dilbeek HSE C – Tigers Halle HSE B (49-72)
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10050236622-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T203000
+DTEND;TZID=Europe/Brussels:20260919T223000
+SUMMARY:Tigers Halle HSE B – Basket Groot Zemst HSE R (59-53)
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12852246090-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Londerzeelse Dunkers HSE C – Tigers Halle HSE B (39-57)
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14127639324-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:Strombeek Beavers Wemmel Basket Club HSE A – Tigers Halle HSE B (61-49)
+LOCATION:Sporthal Campus Wemmel\, Zijp 14-16\, 1780 Wemmel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14194205347-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Tigers Halle HSE B – Merchtem Eagles HSE C
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12517134995-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:BC Opwijk HSE C – Tigers Halle HSE B
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10167238670-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T163000
+DTEND;TZID=Europe/Brussels:20261115T183000
+SUMMARY:De Rode Leeuwen HSE A – Tigers Halle HSE B
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10067014241-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:Tigers Halle HSE B – BBC Wobac Sint-Stevens-Woluwe HSE A
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13590063968-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:AB InBev Leuven Bears HSE E – Tigers Halle HSE B
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14244538204-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Tigers Halle HSE B – Basket Club Groot Dilbeek HSE C
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10083791860-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Tigers Halle HSE B – Londerzeelse Dunkers HSE C
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14177427728-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Tigers Halle HSE B – De Rode Leeuwen HSE A
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13926749181-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:BBC Wobac Sint-Stevens-Woluwe HSE A – Tigers Halle HSE B
+LOCATION:Gemeentelijke Sporthal Sint-Stevens-Woluwe\, Leuvensesteenweg 194\, 1932 Sint-Stevens-Woluwe
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14210982966-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Tigers Halle HSE B – AB InBev Leuven Bears HSE E
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13858064587-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270312T210000
+DTEND;TZID=Europe/Brussels:20270312T230000
+SUMMARY:Merchtem Eagles HSE C – Tigers Halle HSE B
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10033459003-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:Tigers Halle HSE B – BC Opwijk HSE C
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10101702312-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T170000
+DTEND;TZID=Europe/Brussels:20270327T190000
+SUMMARY:Basket Groot Zemst HSE R – Tigers Halle HSE B
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10134124717-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270403T203000
+DTEND;TZID=Europe/Brussels:20270403T223000
+SUMMARY:Tigers Halle HSE B – Triton Leuven HSE B
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13389276993-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T163000
+DTEND;TZID=Europe/Brussels:20270410T183000
+SUMMARY:Triton Leuven HSE B – Tigers Halle HSE B
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10117347098-13547588604@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Tigers Halle HSE B – Strombeek Beavers Wemmel Basket Club HSE A
+LOCATION:Stedelijk Sporthal De Bres\, Mgr. Senciestraat 13\, 1500 Halle
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant A 
+END:VEVENT
+END:VCALENDAR

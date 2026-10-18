@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bct Overijse HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12167773347-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260809T140000
+DTEND;TZID=Europe/Brussels:20260809T160000
+SUMMARY:Aartselaar BBC HSE B – Bct Overijse HSE B (61-65)
+LOCATION:Sporthal De Twee Ringen\, Della Faillelaan 30\, 2630 Aartselaar
+DESCRIPTION:Aartselaar BBC OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12914262049-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260815T183000
+DTEND;TZID=Europe/Brussels:20260815T203000
+SUMMARY:Bct Overijse HSE B – BC Sombreffe (62-64)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:Bct Overijse OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12964594906-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260826T204500
+DTEND;TZID=Europe/Brussels:20260826T224500
+SUMMARY:Bct Overijse HSE B – BC Auderghem
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:Bct Overijse OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12366124950-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T000000
+DTEND;TZID=Europe/Brussels:20260905T020000
+SUMMARY:Basket Peer HSE B – Bct Overijse HSE B
+LOCATION:College Peer\, Collegelaan 20\, 3990 Peer
+DESCRIPTION:Peer BBC OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12947817287-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T183000
+DTEND;TZID=Europe/Brussels:20260905T203000
+SUMMARY:Bct Overijse HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE B (80-61)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:Bct Overijse OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11931313228-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T190000
+DTEND;TZID=Europe/Brussels:20260912T210000
+SUMMARY:Bct Overijse HSE B – Bavi Vilvoorde HSE E (57-86)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13592150414-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:KYD Kortenberg Young Devils HSE B – Bct Overijse HSE B (78-61)
+LOCATION:Sporthal Hertblok Steenokkerzeel\, Orchideeenlaan\, 1820 Steenokkerzeel
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12099089418-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Bct Overijse HSE B – Green Bananas Affligem Ants HSE A (50-57)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13191061676-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:2B|SAFE Tienen HSE B – Bct Overijse HSE B (93-55)
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11864202752-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Bct Overijse HSE B – GSG Aarschot HSE B (47-81)
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13089263129-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Clem Scherpenheuvel HSE B – Bct Overijse HSE B (70-79)
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11948090847-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:Bct Overijse HSE B – BBC Haacht HSE A
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12151687941-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Boortmeerbeek & Berg Bulldogs HSE B – Bct Overijse HSE B
+LOCATION:Sporthal Boortmeerbeek\, Sportveldweg 6\, 3190 Boortmeerbeek
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12115867037-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:Bct Overijse HSE B – Jets Basket Zaventem HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12652897940-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:L.S.V. Basket Landen HSE B – Bct Overijse HSE B
+LOCATION:Sporthal Landen (stedelijke stadshal)\, Sportlaan 1\, 3400 Landen
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12082311799-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:Bct Overijse HSE B – BC Asse-Ternat HSE D
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11964868466-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:Bct Overijse HSE B – BC Grimbergen HSE A
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11880980371-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Bct Overijse HSE B – Basket Groot Zemst HSE A
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11998423704-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:Bct Overijse HSE B – KYD Kortenberg Young Devils HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12654575226-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T173000
+DTEND;TZID=Europe/Brussels:20270117T193000
+SUMMARY:Bavi Vilvoorde HSE E – Bct Overijse HSE B
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11897757990-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Bct Overijse HSE B – 2B|SAFE Tienen HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13056252344-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T180000
+DTEND;TZID=Europe/Brussels:20270131T200000
+SUMMARY:Green Bananas Affligem Ants HSE A – Bct Overijse HSE B
+LOCATION:Bellekouter\, Bellestraat 99\, 1790 Affligem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12048756561-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:Bct Overijse HSE B – Clem Scherpenheuvel HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13761059437-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T140000
+DTEND;TZID=Europe/Brussels:20270221T160000
+SUMMARY:Jets Basket Zaventem HSE B – Bct Overijse HSE B
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12031978942-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T190000
+DTEND;TZID=Europe/Brussels:20270227T210000
+SUMMARY:Bct Overijse HSE B – L.S.V. Basket Landen HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12150113823-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T161500
+DTEND;TZID=Europe/Brussels:20270307T181500
+SUMMARY:BC Asse-Ternat HSE D – Bct Overijse HSE B
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13225161367-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T113000
+DTEND;TZID=Europe/Brussels:20270314T133000
+SUMMARY:BBC Haacht HSE A – Bct Overijse HSE B
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11981646085-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T190000
+DTEND;TZID=Europe/Brussels:20270320T210000
+SUMMARY:Bct Overijse HSE B – Boortmeerbeek & Berg Bulldogs HSE B
+LOCATION:Gemeentelijk Sporthal Overijse Den Heurk\, Heurkstraat 3\, 3090 Overijse
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11982778918-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T174500
+DTEND;TZID=Europe/Brussels:20270410T194500
+SUMMARY:GSG Aarschot HSE B – Bct Overijse HSE B
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13594416080-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:BC Grimbergen HSE A – Bct Overijse HSE B
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12553365059-12244900761@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T190000
+DTEND;TZID=Europe/Brussels:20270424T210000
+SUMMARY:Basket Groot Zemst HSE A – Bct Overijse HSE B
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:2e Prov. Heren Vlaams-Brabant B
+END:VEVENT
+END:VCALENDAR

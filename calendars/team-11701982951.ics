@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Telstar B.B.C. Mechelen DSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13469463479-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T183000
+DTEND;TZID=Europe/Brussels:20260912T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Basket Willebroek DSE D (42-45)
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13956161525-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T100000
+DTEND;TZID=Europe/Brussels:20260920T120000
+SUMMARY:Red Vic Wilrijk DSE C – Telstar B.B.C. Mechelen DSE B (46-30)
+LOCATION:Sporthal Red Vic\, Pachthofplein 30\, 2610 Wilrijk
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13954484239-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T140000
+DTEND;TZID=Europe/Brussels:20261004T160000
+SUMMARY:Duffel K.B.B.C. DSE B – Telstar B.B.C. Mechelen DSE B (66-51)
+LOCATION:Sporthal Rooienberg\, Rooienberg 58\, 2570 Duffel
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13452685860-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T183000
+DTEND;TZID=Europe/Brussels:20261024T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – BBC Musketiers Wommelgem DSE R
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13249088766-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T160000
+DTEND;TZID=Europe/Brussels:20261108T180000
+SUMMARY:BBC Schelle DSE A – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sportschuur De Griene\, Kattenberg 1\, 2627 Schelle
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13352020146-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Neteland Basket Ladies DSE C
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10734564487-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T130000
+DTEND;TZID=Europe/Brussels:20261122T150000
+SUMMARY:Olicsa Antwerpen DSE A – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13318464908-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T183000
+DTEND;TZID=Europe/Brussels:20261128T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Antwerp Giants DSE D
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13402353003-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T183000
+DTEND;TZID=Europe/Brussels:20261205T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Kangoeroes Basket Mechelen DSE C
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13503018717-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Mercurius BBC Hoboken-Berchem DSE B
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10565655464-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Aartselaar BBC DSE B – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal De Twee Ringen\, Della Faillelaan 30\, 2630 Aartselaar
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13268132051-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T183000
+DTEND;TZID=Europe/Brussels:20270109T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Red Vic Wilrijk DSE C
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10598769417-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T093000
+DTEND;TZID=Europe/Brussels:20270117T113000
+SUMMARY:Basket Willebroek DSE D – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13435908241-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Duffel K.B.B.C. DSE B
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13284909670-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T183000
+DTEND;TZID=Europe/Brussels:20270206T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Titans Basketball Bonheiden DSE C
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13787252502-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Neteland Basket Ladies DSE C – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal De Komeet\, Eeuwfeestlaan 183\, 2500 Lier
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13301687289-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270228T150000
+DTEND;TZID=Europe/Brussels:20270228T170000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Olicsa Antwerpen DSE A
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10700567964-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:Antwerp Giants DSE D – Telstar B.B.C. Mechelen DSE B
+LOCATION:Heylen Vastgoed Basketcampus\, Gasthuishoevestraat 71\, 2170 Antwerpen
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10162404228-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T153000
+DTEND;TZID=Europe/Brussels:20270314T173000
+SUMMARY:BBC Musketiers Wommelgem DSE R – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sportkaffe 'Het Brieleke'\, Brieleke 16\, 2160 Wommelgem
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13486241098-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – BBC Schelle DSE A
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10163978346-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270328T170000
+DTEND;TZID=Europe/Brussels:20270328T190000
+SUMMARY:Titans Basketball Bonheiden DSE C – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13417997789-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T143000
+DTEND;TZID=Europe/Brussels:20270411T163000
+SUMMARY:Kangoeroes Basket Mechelen DSE C – Telstar B.B.C. Mechelen DSE B
+LOCATION:Stedelijke Sporthal Winketkaai\, Frans Broersstraat 49\, 2800 Mechelen
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13819674907-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:Mercurius BBC Hoboken-Berchem DSE B – Telstar B.B.C. Mechelen DSE B
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13385575384-11701982951@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T183000
+DTEND;TZID=Europe/Brussels:20270424T203000
+SUMMARY:Telstar B.B.C. Mechelen DSE B – Aartselaar BBC DSE B
+LOCATION:Sporthal Appelaar\, J.F. Van Geelstraat\, 2812 Muizen (Mech.)
+DESCRIPTION:2e Prov. Dames Antwerpen A
+END:VEVENT
+END:VCALENDAR

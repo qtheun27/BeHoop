@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs J16 D
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10981836280-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T120000
+DTEND;TZID=Europe/Brussels:20260913T140000
+SUMMARY:House Of Talents Kortrijk Spurs J16 D – BC Lamett Deerlijk-Zwevegem J16 C (78-57)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11686643373-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T123000
+DTEND;TZID=Europe/Brussels:20260919T143000
+SUMMARY:Wibac BBC Sint-Eloois-Winkel J16 B – House Of Talents Kortrijk Spurs J16 D (66-38)
+LOCATION:Gemeentelijke Sporthal Sint-Eloois Winkel\, Dorpsplein\, 8880 Sint-Eloois Winkel
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10747494067-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T150000
+DTEND;TZID=Europe/Brussels:20260926T170000
+SUMMARY:Basket Midwest BP Tielt J16 A – House Of Talents Kortrijk Spurs J16 D (75-25)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10344139663-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T144500
+DTEND;TZID=Europe/Brussels:20261010T164500
+SUMMARY:Olympos Marke J16 B – House Of Talents Kortrijk Spurs J16 D (79-56)
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13967855104-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:BC Lamett Deerlijk-Zwevegem J16 C – House Of Talents Kortrijk Spurs J16 D (43-69)
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11065724375-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261025T120000
+DTEND;TZID=Europe/Brussels:20261025T140000
+SUMMARY:House Of Talents Kortrijk Spurs J16 D – Wibac BBC Sint-Eloois-Winkel J16 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10076242212-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:Basket Scaldis Otegem J16 A – House Of Talents Kortrijk Spurs J16 D
+LOCATION:Sport-Ontmoetingscentrum Otegem\, Scheldestraat 14\, 8553 Otegem
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11099279613-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T120000
+DTEND;TZID=Europe/Brussels:20261115T140000
+SUMMARY:House Of Talents Kortrijk Spurs J16 D – Basket Midwest BP Tielt J16 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11048946756-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T100000
+DTEND;TZID=Europe/Brussels:20261122T120000
+SUMMARY:House Of Talents Kortrijk Spurs J16 D – Basket Scaldis Otegem J16 A
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11032169137-10819915345@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T120000
+DTEND;TZID=Europe/Brussels:20261129T140000
+SUMMARY:House Of Talents Kortrijk Spurs J16 D – Olympos Marke J16 B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U16 Niveau 4 D 
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:House Of Talents Kortrijk Spurs M19 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12415493359-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T173000
+DTEND;TZID=Europe/Brussels:20260927T193000
+SUMMARY:G&V Breakpoint Basket Waregem M19 B – House Of Talents Kortrijk Spurs M19 B (43-62)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11241898672-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T100000
+DTEND;TZID=Europe/Brussels:20261003T120000
+SUMMARY:House Of Talents Kortrijk Spurs M19 B – Holstra WINGS Wevelgem-Moorsele M19 A (81-37)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10671312531-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:Basket SKT Ieper M19 A – House Of Talents Kortrijk Spurs M19 B (55-58)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12147595908-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T160000
+DTEND;TZID=Europe/Brussels:20261018T180000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde M19 A – House Of Talents Kortrijk Spurs M19 B (41-53)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11258676291-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T100000
+DTEND;TZID=Europe/Brussels:20261024T120000
+SUMMARY:House Of Talents Kortrijk Spurs M19 B – Bobcat Wielsbeke M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11292231529-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T100000
+DTEND;TZID=Europe/Brussels:20261114T120000
+SUMMARY:House Of Talents Kortrijk Spurs M19 B – G&V Breakpoint Basket Waregem M19 B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11744241504-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele M19 A – House Of Talents Kortrijk Spurs M19 B
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11359342005-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T100000
+DTEND;TZID=Europe/Brussels:20261128T120000
+SUMMARY:House Of Talents Kortrijk Spurs M19 B – Basket SKT Ieper M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11309009148-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261205T100000
+DTEND;TZID=Europe/Brussels:20261205T120000
+SUMMARY:House Of Talents Kortrijk Spurs M19 B – BBC Haantjes Certifisc Oudenaarde M19 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11207210601-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:Bobcat Wielsbeke M19 A – House Of Talents Kortrijk Spurs M19 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:U19 Meisjes Niveau 2 B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11157117790-13172982583@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:BBC Koksijde M19 A – House Of Talents Kortrijk Spurs M19 B (0-20)
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:Beker van West-Vlaanderen U19 Meisjes 1/4 Finale
+END:VEVENT
+END:VCALENDAR

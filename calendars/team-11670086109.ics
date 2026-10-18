@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Blue Rocks Ronse-Kluisbergen HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13840028785-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260628T000000
+DTEND;TZID=Europe/Brussels:20260628T020000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:Holstra WINGS Wevelgem-Moorsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13568342968-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260806T203000
+DTEND;TZID=Europe/Brussels:20260806T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BC Lamett Deerlijk-Zwevegem HSE B (80-64)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13585120587-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260813T203000
+DTEND;TZID=Europe/Brussels:20260813T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Koninklijke Basket Avelgem HSE A (70-58)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13601898206-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T170000
+DTEND;TZID=Europe/Brussels:20260823T190000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Koksijde HSE A (49-55)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13789695928-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T170000
+DTEND;TZID=Europe/Brussels:20260830T190000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Blue Rocks Ronse-Kluisbergen HSE A (71-61)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:Holstra WINGS Wevelgem-Moorsele OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13501232492-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T203000
+DTEND;TZID=Europe/Brussels:20260905T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Basket Midwest BP Tielt HSE A (59-51)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:Blue Rocks Ronse-Kluisbergen OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11655868244-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T203000
+DTEND;TZID=Europe/Brussels:20260912T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Feniks Futuria Gent HSE A (58-63)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12075455814-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T204500
+DTEND;TZID=Europe/Brussels:20260919T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Blue Rocks Ronse-Kluisbergen HSE A (84-69)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11488092054-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Houtem Redwolves HSE A (61-73)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11706201101-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – B.B.C. Zele HSE A (58-41)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11839436315-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Blue Rocks Ronse-Kluisbergen HSE A (65-57)
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11672645863-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – ABO LDP Donza HSE C (94-91)
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11034404793-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261023T203000
+DTEND;TZID=Europe/Brussels:20261023T223000
+SUMMARY:BBC Olympia Denderleeuw HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11841010433-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:Royal Tigers Evergem HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11538424911-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Panters Baasrode HSE B
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12880384168-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:KBBC Bavi Gent HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11521647292-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Partena Professional Okapi Aalst HSE B
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11588757768-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12611353884-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:KBBC Sparta Laarne HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11454536816-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10999716722-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T202000
+DTEND;TZID=Europe/Brussels:20270116T222000
+SUMMARY:BBC Feniks Futuria Gent HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11270424292-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:BBC Houtem Redwolves HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11570302863-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T160000
+DTEND;TZID=Europe/Brussels:20270206T180000
+SUMMARY:ABO LDP Donza HSE C – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12912806573-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270213T203000
+DTEND;TZID=Europe/Brussels:20270213T223000
+SUMMARY:B.B.C. Zele HSE A – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:De Klodde\, Dendermondebaan 10\, 9240 Zele
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12376908503-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T181500
+DTEND;TZID=Europe/Brussels:20270220T201500
+SUMMARY:Panters Baasrode HSE B – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Pantershal\, Molenberg 25\, 9200 Baasrode
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11555202530-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T203000
+DTEND;TZID=Europe/Brussels:20270227T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – KBBC Bavi Gent HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11806322362-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270305T203000
+DTEND;TZID=Europe/Brussels:20270305T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11639090625-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – BBC Olympia Denderleeuw HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11504869673-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Royal Tigers Evergem HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11622313006-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T203000
+DTEND;TZID=Europe/Brussels:20270327T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – KBBC Sparta Laarne HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11605535387-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11268850174-11670086109@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

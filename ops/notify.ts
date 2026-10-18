@@ -1,18 +1,18 @@
 // Tâches planifiées (notify.yml, toutes les 30 min) :
 //  • « Match dans 2 h » aux abonnés ; • rappel covoiturage la veille (18 h) ; • purge des rushes 48 h après le montage.
-import { readFileSync } from 'node:fs';
 import { admin, hasFirebase, notifyUsers, followers, R2 } from './lib/admin';
-import { slimGame, isPlayed } from './appData';
+import { isPlayed } from './appData';
+import { loadAll } from './allData';
 
 if (!hasFirebase()) { console.log('ℹ️  Pas de compte de service Firebase : rien à faire.'); process.exit(0); }
 const { db } = admin();
-const data = JSON.parse(readFileSync('data.json', 'utf8'));
+const all = loadAll('.');
 const tc = new Map<number, number>();
-data.clubs.forEach((c: any) => (c.teams ?? []).forEach((t: any) => tc.set(t.id, c.id)));
+all.clubs.forEach((c) => c.teams.forEach((t) => tc.set(t.id, c.id)));
 // Heure de Bruxelles
 const nowBxl = new Date(new Date().toLocaleString('en-US', { timeZone: 'Europe/Brussels' }));
 const iso = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-const games = data.games.map(slimGame).filter((g: any) => !isPlayed(g));
+const games = all.games.filter((g) => !isPlayed(g));
 
 // 1. Match dans 2 h (fenêtre 1 h 45 – 2 h 15)
 let n = 0;

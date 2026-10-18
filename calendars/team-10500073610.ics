@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bobcat Wielsbeke HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11945412484-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T204500
+DTEND;TZID=Europe/Brussels:20260822T224500
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Bobcat Wielsbeke HSE A (83-57)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Jumbo Elektrooghe Gembas Knesselare OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11769142516-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:Koninklijke Basket Avelgem HSE A – Bobcat Wielsbeke HSE A (45-69)
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:Basket Avelgem OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11066022672-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T000000
+DTEND;TZID=Europe/Brussels:20260906T020000
+SUMMARY:Bobcat Wielsbeke HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Basket Wielsbeke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12366441639-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Bobcat Wielsbeke HSE A (74-81)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11711967403-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T183000
+DTEND;TZID=Europe/Brussels:20260919T203000
+SUMMARY:Bobcat Wielsbeke HSE A – Joppo Basket Izegem HSE B (56-44)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12769796043-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T181500
+DTEND;TZID=Europe/Brussels:20260926T201500
+SUMMARY:Bbv Oedelem HSE A – Bobcat Wielsbeke HSE A (69-65)
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11661634546-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Wytewa Roeselare HSE B (68-59)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11696322617-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T171500
+DTEND;TZID=Europe/Brussels:20261010T191500
+SUMMARY:Basket Sijsele HSE B – Bobcat Wielsbeke HSE A (91-66)
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11678412165-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:Bobcat Wielsbeke HSE A – BC Lamett Deerlijk-Zwevegem HSE B (77-75)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12905149828-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T181500
+DTEND;TZID=Europe/Brussels:20261024T201500
+SUMMARY:KBBC Racing Brugge HSE B – Bobcat Wielsbeke HSE A
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13872111019-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Bobcat Wielsbeke HSE A – Basket Sijsele HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13440503445-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11728745022-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Red Sharks Koekelare HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11594524070-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:Bobcat Wielsbeke HSE A – Rapid Raptors Langemark HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13441047898-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T201500
+DTEND;TZID=Europe/Brussels:20261128T221500
+SUMMARY:Basket Desselgem HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12233353520-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261213T173000
+DTEND;TZID=Europe/Brussels:20261213T193000
+SUMMARY:G&V Breakpoint Basket Waregem HSE C – Bobcat Wielsbeke HSE A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11644856927-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T110000
+DTEND;TZID=Europe/Brussels:20261220T130000
+SUMMARY:Bobcat Wielsbeke HSE A – KBBC Vk Iebac Ieper HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13305694113-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:Joppo Basket Izegem HSE B – Bobcat Wielsbeke HSE A
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11745522641-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:Bobcat Wielsbeke HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11831676402-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:Wytewa Roeselare HSE B – Bobcat Wielsbeke HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11812633117-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Bbv Oedelem HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13307959779-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – Bobcat Wielsbeke HSE A
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12769251590-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Red Sharks Koekelare HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11696867070-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:Rapid Raptors Langemark HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11795855498-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Basket Desselgem HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11628079308-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:Bobcat Wielsbeke HSE A – KBBC Racing Brugge HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11779077879-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Bobcat Wielsbeke HSE A – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11577746451-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Bobcat Wielsbeke HSE A – Basket Sijsele HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11560968832-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Bobcat Wielsbeke HSE A – G&V Breakpoint Basket Waregem HSE C
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12368118925-10500073610@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T201500
+DTEND;TZID=Europe/Brussels:20270424T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – Bobcat Wielsbeke HSE A
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

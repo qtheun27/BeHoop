@@ -1,0 +1,159 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Basket Blankenberge DSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13289832033-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland DSE A – Basket Blankenberge DSE B (36-31)
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Dames Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11163771679-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260920T113000
+DTEND;TZID=Europe/Brussels:20260920T133000
+SUMMARY:BBC Gullegem DSE A – Basket Blankenberge DSE B (60-43)
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12218790200-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Basket Blankenberge DSE B – Basket Desselgem DSE B (45-75)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10994862656-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T163000
+DTEND;TZID=Europe/Brussels:20261003T183000
+SUMMARY:Bobcat Wielsbeke DSE R – Basket Blankenberge DSE B (33-69)
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12285900676-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Basket Blankenberge DSE B – Holstra WINGS Wevelgem-Moorsele DSE A (38-33)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11094395537-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:House Of Talents Kortrijk Spurs DSE E – Basket Blankenberge DSE B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12319455914-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:Basket Blankenberge DSE B – KBGOB Finexa Basket@Sea DSE C
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11632559273-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:BC Oostende DSE B – Basket Blankenberge DSE B (0-20)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12084569248-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Basket Blankenberge DSE B – B.C. Blue Stars Brugge DSE R
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12302678295-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:Basket Blankenberge DSE B – BBC Gullegem DSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12134902105-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Basket Blankenberge DSE B – House Of Talents Kortrijk Spurs DSE E
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11732092154-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:B.C. Blue Stars Brugge DSE R – Basket Blankenberge DSE B
+LOCATION:VTI Brugge\, Vaartdijkstraat 3\, 8200 Brugge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12252345438-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:Basket Blankenberge DSE B – Bobcat Wielsbeke DSE R
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12270255890-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270130T160000
+DTEND;TZID=Europe/Brussels:20270130T180000
+SUMMARY:Basket Desselgem DSE B – Basket Blankenberge DSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12673507126-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele DSE A – Basket Blankenberge DSE B
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11666555796-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270306T181500
+DTEND;TZID=Europe/Brussels:20270306T201500
+SUMMARY:KBGOB Finexa Basket@Sea DSE C – Basket Blankenberge DSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12269123057-11282711501@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:Basket Blankenberge DSE B – BC Oostende DSE B (20-0)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:2e Prov. Dames West-Vlaanderen B
+END:VEVENT
+END:VCALENDAR

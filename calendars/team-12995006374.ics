@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Molenbeek Rebels Basketball M16 B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-12326481048-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T140000
+DTEND;TZID=Europe/Brussels:20260912T160000
+SUMMARY:Molenbeek Rebels Basketball M16 B – KBBC Wezen-Vrienden Geraardsbergen M16 A (47-65)
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13936985377-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260919T134500
+DTEND;TZID=Europe/Brussels:20260919T154500
+SUMMARY:BC Black Beez Erpe-Mere M16 A – Molenbeek Rebels Basketball M16 B (57-36)
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12410369143-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:Molenbeek Rebels Basketball M16 B – Partena Professional DBC Okapi Aalst M16 B (50-33)
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12443924381-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261010T140000
+DTEND;TZID=Europe/Brussels:20261010T160000
+SUMMARY:Molenbeek Rebels Basketball M16 B – BC Opwijk M16 A (45-61)
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13232178284-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261017T150000
+DTEND;TZID=Europe/Brussels:20261017T170000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen M16 A – Molenbeek Rebels Basketball M16 B (61-51)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12343258667-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T120000
+DTEND;TZID=Europe/Brussels:20261024T140000
+SUMMARY:Molenbeek Rebels Basketball M16 B – BC Black Beez Erpe-Mere M16 A
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12192804549-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:Partena Professional DBC Okapi Aalst M16 B – Molenbeek Rebels Basketball M16 B
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12997732903-12995006374@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:BC Opwijk M16 A – Molenbeek Rebels Basketball M16 B
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:U16 Meisjes Niveau 3 D
+END:VEVENT
+END:VCALENDAR

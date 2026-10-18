@@ -1,0 +1,258 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Koninklijke Sint-Niklase Condors HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11254937423-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T130000
+DTEND;TZID=Europe/Brussels:20260823T150000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Basket Willebroek HSE B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:Sint-Niklase Condors OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11305270280-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260829T200000
+DTEND;TZID=Europe/Brussels:20260829T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Mercurius BBC Hoboken-Berchem HSE B (80-51)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:Sint-Niklase Condors OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11654190958-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:ABO LDP Donza HSE C – Koninklijke Sint-Niklase Condors HSE B (96-56)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11168184460-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260919T180000
+DTEND;TZID=Europe/Brussels:20260919T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Koninklijke BBC Scheldejeugd Temse HSE A (69-46)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12661142288-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:B.B.C. Zele HSE A – Koninklijke Sint-Niklase Condors HSE B (54-61)
+LOCATION:De Klodde\, Dendermondebaan 10\, 9240 Zele
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11335960650-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Royal Tigers Evergem HSE A (58-65)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12192354694-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T181500
+DTEND;TZID=Europe/Brussels:20261010T201500
+SUMMARY:Panters Baasrode HSE B – Koninklijke Sint-Niklase Condors HSE B (68-91)
+LOCATION:Pantershal\, Molenberg 25\, 9200 Baasrode
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11285627793-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – KBBC Bavi Gent HSE A (58-71)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11588213315-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261023T203000
+DTEND;TZID=Europe/Brussels:20261023T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11117851603-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – BBC Feniks Futuria Gent HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12728797217-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:KBBC Sparta Laarne HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11201739698-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – BBC Olympia Denderleeuw HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11119425721-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:BBC Houtem Redwolves HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11588757768-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:Blue Rocks Ronse-Kluisbergen HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11319183031-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11789103458-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11101073984-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – ABO LDP Donza HSE C
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11723567100-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:Royal Tigers Evergem HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11134629222-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – B.B.C. Zele HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12863606549-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:KBBC Bavi Gent HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11218517317-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – KBBC Sparta Laarne HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11185403364-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270226T203000
+DTEND;TZID=Europe/Brussels:20270226T223000
+SUMMARY:BBC Olympia Denderleeuw HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11352738269-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T180000
+DTEND;TZID=Europe/Brussels:20270306T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – BBC Houtem Redwolves HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11252072555-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Partena Professional Okapi Aalst HSE B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11050049579-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T202000
+DTEND;TZID=Europe/Brussels:20270320T222000
+SUMMARY:BBC Feniks Futuria Gent HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12260009623-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T204500
+DTEND;TZID=Europe/Brussels:20270327T224500
+SUMMARY:BBC Helios SanoRice Zottegem HSE A – Koninklijke Sint-Niklase Condors HSE B
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11235294936-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Panters Baasrode HSE B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11268850174-11159460973@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE B – Blue Rocks Ronse-Kluisbergen HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:1e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,231 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Black Devils Vorst HSE A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13236855096-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260823T170000
+DTEND;TZID=Europe/Brussels:20260823T190000
+SUMMARY:Black Devils Vorst HSE A – Runners Sint-Gilles (57-60)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:Black Devils Vorst OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13270410334-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T160000
+DTEND;TZID=Europe/Brussels:20260830T180000
+SUMMARY:Black Devils Vorst HSE A – La chênaie Uccle (68-48)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:Black Devils Vorst OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13469984728-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260906T160000
+DTEND;TZID=Europe/Brussels:20260906T180000
+SUMMARY:Black Devils Vorst HSE A – Red Dragons Huldenberg HSE A (86-44)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:Beker van Vlaams-Brabant Heren Voorronde
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14112314224-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260913T200000
+DTEND;TZID=Europe/Brussels:20260913T220000
+SUMMARY:Strombeek Beavers Wemmel Basket Club HSE A – Black Devils Vorst HSE A (50-68)
+LOCATION:Sporthal Campus Wemmel\, Zijp 14-16\, 1780 Wemmel
+DESCRIPTION:Strombeek Beavers Wemmel OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12493376243-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260925T210000
+DTEND;TZID=Europe/Brussels:20260925T230000
+SUMMARY:Jets Basket Zaventem HSE C – Black Devils Vorst HSE A (50-79)
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11470780127-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:Black Devils Vorst HSE A – Red Dragons Huldenberg HSE A (69-27)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11955212507-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:Hageland United HSE B – Black Devils Vorst HSE A (30-70)
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11386892032-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:Black Devils Vorst HSE A – Clem Scherpenheuvel HSE C (88-33)
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12559353886-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T173000
+DTEND;TZID=Europe/Brussels:20261024T193000
+SUMMARY:Dino Brussels HSE B – Black Devils Vorst HSE A
+LOCATION:Sporthal Emanuel Hiel\, Freesiadreef 7\, 1030 Schaarbeek
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13763251082-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261105T203000
+DTEND;TZID=Europe/Brussels:20261105T223000
+SUMMARY:Black Devils Vorst HSE A – AB InBev Leuven Bears HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11454002508-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T160000
+DTEND;TZID=Europe/Brussels:20261108T180000
+SUMMARY:Black Devils Vorst HSE A – GSG Aarschot HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12628730028-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Black Devils Vorst HSE A
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11487557746-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T140000
+DTEND;TZID=Europe/Brussels:20261122T160000
+SUMMARY:Black Devils Vorst HSE A – 2B|SAFE Tienen HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13230605741-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261129T093000
+DTEND;TZID=Europe/Brussels:20261129T113000
+SUMMARY:BBC Haacht HSE B – Black Devils Vorst HSE A
+LOCATION:Sportcomplex Den Dijk Wespelaar\, Dijkstraat 1\, 3150 Haacht
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11638556317-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261206T140000
+DTEND;TZID=Europe/Brussels:20261206T160000
+SUMMARY:Black Devils Vorst HSE A – WIZ Basket Leuven HSE B
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13165172551-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270110T134500
+DTEND;TZID=Europe/Brussels:20270110T154500
+SUMMARY:WIZ Basket Leuven HSE B – Black Devils Vorst HSE A
+LOCATION:Sportoase Wilsele\, Pastoor Eralystraat 2\, 3012 Leuven
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11571445841-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270131T160000
+DTEND;TZID=Europe/Brussels:20270131T180000
+SUMMARY:Black Devils Vorst HSE A – Jets Basket Zaventem HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11588223460-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Black Devils Vorst HSE A – KYD Kortenberg Young Devils HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12694266386-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T163000
+DTEND;TZID=Europe/Brussels:20270227T183000
+SUMMARY:2B|SAFE Tienen HSE C – Black Devils Vorst HSE A
+LOCATION:Sportschuur Tienen Hal 3\, Sporthalstraat 30\, 3300 Tienen
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11403669651-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:Black Devils Vorst HSE A – BBC Haacht HSE B
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11420447270-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T160000
+DTEND;TZID=Europe/Brussels:20270314T180000
+SUMMARY:Black Devils Vorst HSE A – Dino Brussels HSE B
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12090566292-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T174500
+DTEND;TZID=Europe/Brussels:20270320T194500
+SUMMARY:GSG Aarschot HSE C – Black Devils Vorst HSE A
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11486424913-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270327T160000
+DTEND;TZID=Europe/Brussels:20270327T180000
+SUMMARY:Red Dragons Huldenberg HSE A – Black Devils Vorst HSE A
+LOCATION:Sporthal de kronkel\, Gemeenteplein 2\, 3040 Huldenberg
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11437224889-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270411T160000
+DTEND;TZID=Europe/Brussels:20270411T180000
+SUMMARY:Black Devils Vorst HSE A – Hageland United HSE B
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11418873152-13324942860@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Clem Scherpenheuvel HSE C – Black Devils Vorst HSE A
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:3e Prov. Heren Vlaams-Brabant B 
+END:VEVENT
+END:VCALENDAR

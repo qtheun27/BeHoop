@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Partena Professional DBC Okapi Aalst M12 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10518208836-12242438740@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:BBC Lokeren M12 A – Partena Professional DBC Okapi Aalst M12 A
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:Beker van Oost-Vlaanderen U12 Meisjes 1/8 Finale
+END:VEVENT
+END:VCALENDAR

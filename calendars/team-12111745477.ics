@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:KBGOB Finexa Basket@Sea HSE C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-10980900733-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T173000
+DTEND;TZID=Europe/Brussels:20260816T193000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – KBBC Sparta Laarne HSE B (78-56)
+LOCATION:Ter Polder\, Spuikomlaan 21\, 8450 Bredene
+DESCRIPTION:KBGO OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10913790257-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260822T160000
+DTEND;TZID=Europe/Brussels:20260822T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – BBC Groep Linden Oudenburg HSE A (59-57)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:KBGO OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10930567876-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260830T140000
+DTEND;TZID=Europe/Brussels:20260830T160000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Avanti Brugge 2015 HSE C (74-56)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:KBGO OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11921594187-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T200000
+DTEND;TZID=Europe/Brussels:20260905T220000
+SUMMARY:Mibac Middelkerke HSE A – KBGOB Finexa Basket@Sea HSE C (62-51)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Mibac Middelkerke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12366441639-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260912T160000
+DTEND;TZID=Europe/Brussels:20260912T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Bobcat Wielsbeke HSE A (74-81)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12752473971-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Red Sharks Koekelare HSE A – KBGOB Finexa Basket@Sea HSE C (83-80)
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12265775925-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Rapid Raptors Langemark HSE A (79-85)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12283686377-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261004T153000
+DTEND;TZID=Europe/Brussels:20261004T173000
+SUMMARY:G&V Breakpoint Basket Waregem HSE C – KBGOB Finexa Basket@Sea HSE C (85-60)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12148332592-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – KBBC Vk Iebac Ieper HSE A (65-83)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12349664020-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261018T120000
+DTEND;TZID=Europe/Brussels:20261018T140000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Joppo Basket Izegem HSE B (71-69)
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13390170588-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11372496051-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Joppo Basket Izegem HSE C – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12786573662-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261107T181500
+DTEND;TZID=Europe/Brussels:20261107T201500
+SUMMARY:Bbv Oedelem HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12215443068-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Basket Sijsele HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12181887830-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – BC Lamett Deerlijk-Zwevegem HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11814898783-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261204T210000
+DTEND;TZID=Europe/Brussels:20261204T230000
+SUMMARY:Wytewa Roeselare HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12165110211-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – KBBC Racing Brugge HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13424270279-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T201500
+DTEND;TZID=Europe/Brussels:20261219T221500
+SUMMARY:Basket Desselgem HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12399996877-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Red Sharks Koekelare HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11745522641-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270117T110000
+DTEND;TZID=Europe/Brussels:20270117T130000
+SUMMARY:Bobcat Wielsbeke HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12232220687-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T160000
+DTEND;TZID=Europe/Brussels:20270123T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – G&V Breakpoint Basket Waregem HSE C
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11680089451-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270130T201500
+DTEND;TZID=Europe/Brussels:20270130T221500
+SUMMARY:Rapid Raptors Langemark HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13255361256-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:Joppo Basket Izegem HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11645989760-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T171500
+DTEND;TZID=Europe/Brussels:20270220T191500
+SUMMARY:Basket Sijsele HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12198665449-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270227T160000
+DTEND;TZID=Europe/Brussels:20270227T180000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Wytewa Roeselare HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13324737398-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T180000
+DTEND;TZID=Europe/Brussels:20270306T200000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12282553544-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – BBC Vanuxeem Ploegsteert Heuvelland HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12316108782-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Bbv Oedelem HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12317786068-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270410T201500
+DTEND;TZID=Europe/Brussels:20270410T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12955482685-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270417T181500
+DTEND;TZID=Europe/Brussels:20270417T201500
+SUMMARY:KBBC Racing Brugge HSE B – KBGOB Finexa Basket@Sea HSE C
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12332886401-12111745477@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:KBGOB Finexa Basket@Sea HSE C – Basket Desselgem HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:2e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

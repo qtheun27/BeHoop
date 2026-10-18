@@ -1,0 +1,267 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Mibac Middelkerke HSE B
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-11854483711-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260816T140000
+DTEND;TZID=Europe/Brussels:20260816T160000
+SUMMARY:Mibac Middelkerke HSE B – BBC Haantjes Certifisc Oudenaarde HSE B (52-59)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Mibac Middelkerke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11904816568-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260828T200000
+DTEND;TZID=Europe/Brussels:20260828T220000
+SUMMARY:Mibac Middelkerke HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B (66-72)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Mibac Middelkerke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11837706092-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260905T180000
+DTEND;TZID=Europe/Brussels:20260905T200000
+SUMMARY:Mibac Middelkerke HSE B – KBGOB Finexa Basket@Sea HSE E (52-56)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Mibac Middelkerke OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12170499331-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260911T203000
+DTEND;TZID=Europe/Brussels:20260911T223000
+SUMMARY:Mibac Middelkerke HSE B – BBC Groep Linden Oudenburg HSE A (68-62)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12220832188-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260918T203000
+DTEND;TZID=Europe/Brussels:20260918T223000
+SUMMARY:Mibac Middelkerke HSE B – Basket Poperinge HSE A (67-62)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12320953449-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE D – Mibac Middelkerke HSE B (48-82)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12338275521-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Mibac Middelkerke HSE B – Bbv Oedelem HSE B (56-40)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12858528805-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Avanti Brugge 2015 HSE C – Mibac Middelkerke HSE B (70-58)
+LOCATION:Stamina\, Daverlostraat 132\, 8310 Assebroek
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12187276950-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261016T203000
+DTEND;TZID=Europe/Brussels:20261016T223000
+SUMMARY:Mibac Middelkerke HSE B – BBC Wervik HSE A (87-64)
+LOCATION:Vita Krokodiel\, Westendelaan 96\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11782789713-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261024T173000
+DTEND;TZID=Europe/Brussels:20261024T193000
+SUMMARY:Basket Sijsele HSE C – Mibac Middelkerke HSE B
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11783922546-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261108T140000
+DTEND;TZID=Europe/Brussels:20261108T160000
+SUMMARY:BC Delrue JP Oostende HSE A – Mibac Middelkerke HSE B
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12153721712-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Mibac Middelkerke HSE B – KBBC Racing Brugge HSE C
+LOCATION:Vita Krokodiel\, Westendelaan 96\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12789741043-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:Koninklijke BBC Oostkamp HSE C – Mibac Middelkerke HSE B
+LOCATION:Riderfort Domein\, Sportstraat 4\, 8020 Ruddervoorde
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12355053140-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:Mibac Middelkerke HSE B – BBC Gullegem HSE B
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13393294042-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:A.C.J. Basket Brugge HSE A – Mibac Middelkerke HSE B
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12405385997-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Mibac Middelkerke HSE B – House Of Talents Kortrijk Spurs HSE D
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12252710140-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:Basket Poperinge HSE A – Mibac Middelkerke HSE B
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12320365069-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:BBC Groep Linden Oudenburg HSE A – Mibac Middelkerke HSE B
+LOCATION:Sporthal Ter Beke\, Bekestraat 16\, 8460 Oudenburg
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-11717356523-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:Bbv Oedelem HSE B – Mibac Middelkerke HSE B
+LOCATION:Gemeentelijk Sportcomplex "Den Akker"\, Sportstraat\, 8730 Oedelem
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12371830759-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:Mibac Middelkerke HSE B – Holstra WINGS Wevelgem-Moorsele HSE D
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13393882422-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270206T201500
+DTEND;TZID=Europe/Brussels:20270206T221500
+SUMMARY:BBC Wervik HSE A – Mibac Middelkerke HSE B
+LOCATION:De Pionier\, Gosserieslaan 6\, 8940 Wervik
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12790285496-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:KBBC Racing Brugge HSE C – Mibac Middelkerke HSE B
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12204054569-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270226T203000
+DTEND;TZID=Europe/Brussels:20270226T223000
+SUMMARY:Mibac Middelkerke HSE B – Koninklijke BBC Oostkamp HSE C
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13327757684-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:BBC Gullegem HSE B – Mibac Middelkerke HSE B
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12237609807-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270312T203000
+DTEND;TZID=Europe/Brussels:20270312T223000
+SUMMARY:Mibac Middelkerke HSE B – Basket Sijsele HSE C
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12388608378-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Mibac Middelkerke HSE B – BC Delrue JP Oostende HSE A
+LOCATION:Vita Krokodiel\, Westendelaan 96\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12304720283-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270409T203000
+DTEND;TZID=Europe/Brussels:20270409T223000
+SUMMARY:Mibac Middelkerke HSE B – Avanti Brugge 2015 HSE C
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-12254387426-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270416T203000
+DTEND;TZID=Europe/Brussels:20270416T223000
+SUMMARY:Mibac Middelkerke HSE B – A.C.J. Basket Brugge HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13327316399-11412344845@behoop.be
+DTSTAMP:20261018T183601Z
+DTSTART;TZID=Europe/Brussels:20270424T201500
+DTEND;TZID=Europe/Brussels:20270424T221500
+SUMMARY:House Of Talents Kortrijk Spurs HSE D – Mibac Middelkerke HSE B
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:3e Prov. Heren West-Vlaanderen B
+END:VEVENT
+END:VCALENDAR

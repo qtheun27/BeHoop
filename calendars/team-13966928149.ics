@@ -1,0 +1,105 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Ford Unicars Avanti Brugge Dames M19 C
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:vbl-13794238132-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260912T153000
+DTEND;TZID=Europe/Brussels:20260912T173000
+SUMMARY:BC Oostende M19 A – Ford Unicars Avanti Brugge Dames M19 C (90-19)
+LOCATION:COREtec Dôme\, Northlaan 13\, 8400 Oostende
+DESCRIPTION:BC Oostende Basket@Sea OEFEN
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13145889247-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20260927T100000
+DTEND;TZID=Europe/Brussels:20260927T120000
+SUMMARY:House of Talents Kortrijk Spurs M19 C – Ford Unicars Avanti Brugge Dames M19 C (60-53)
+LOCATION:Athena Campus 3 Hofsteden\, Renaat De Rudderlaan\, 8500 Kortrijk
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10680123707-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 C – Basket Poperinge M19 A (49-36)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10327205328-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:ALL4ONE Basketbal Menen M19 A – Ford Unicars Avanti Brugge Dames M19 C (0-20)
+LOCATION:Ter Steenlandt\, Lauwestraat 64\, 8930 Rekkem
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10764011802-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 C – Basket Scaldis Otegem M19 A (60-41)
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10595102779-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261024T100000
+DTEND;TZID=Europe/Brussels:20261024T120000
+SUMMARY:Blue Rocks Ronse-Kluisbergen M19 A – Ford Unicars Avanti Brugge Dames M19 C
+LOCATION:Kluisbos\, Poletsestraat 59\, 9690 Kluisbergen
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10780789421-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 C – House of Talents Kortrijk Spurs M19 C
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-14018031245-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:Basket Poperinge M19 A – Ford Unicars Avanti Brugge Dames M19 C
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10663346088-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261128T110000
+DTEND;TZID=Europe/Brussels:20261128T130000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 C – ALL4ONE Basketbal Menen M19 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-13750030626-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:Basket Scaldis Otegem M19 A – Ford Unicars Avanti Brugge Dames M19 C
+LOCATION:Sport-Ontmoetingscentrum Otegem\, Scheldestraat 14\, 8553 Otegem
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+BEGIN:VEVENT
+UID:vbl-10713678945-13966928149@behoop.be
+DTSTAMP:20261018T183602Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:Ford Unicars Avanti Brugge Dames M19 C – Blue Rocks Ronse-Kluisbergen M19 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:U19 Meisjes Niveau 3 A
+END:VEVENT
+END:VCALENDAR
