@@ -5,9 +5,9 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
-import { loadClub, isPlayed, teamIndex, teamLabel, type Club } from '../lib/data';
+import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, type Club } from '../lib/data';
 import { clubColors } from '../lib/theme';
-import { NewsCarousel } from './News';
+import { NewsCard } from './News';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
 function Stories() {
@@ -34,14 +34,14 @@ function Stories() {
     </div>
   );
 }
-const FILTERS: { id: string; label: string; ok: (p: D.Post, uid?: string) => boolean }[] = [
+// Filtres du fil : une seule rangée ; « Actus » ouvre une petite sous-rangée Belgique / International / NBA.
+const FILTERS: { id: string; label: string; ok: (p: D.Post) => boolean }[] = [
   { id: 'tout', label: 'Tout', ok: () => true },
   { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
-  { id: 'photos', label: 'Photos', ok: (p) => p.type === 'photo' },
-  { id: 'videos', label: '🎬 Vidéos', ok: (p) => p.type === 'video' || p.type === 'moment' },
-  { id: 'messages', label: 'Messages', ok: (p) => p.type === 'message' },
-  { id: 'moi', label: 'Mes posts', ok: (p, uid) => !!uid && p.authorUid === uid },
+  { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' },
+  { id: 'actus', label: '📰 Actus', ok: () => false },
 ];
+const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['international', 'International'], ['nba', 'NBA']];
 
 export interface ScorePayload { gameId: number; date: string; time?: string; competition: string;
   home: { id: number; name: string; logo?: string | null; color?: string; score: number }; away: { id: number; name: string; logo?: string | null; color?: string; score: number }; official?: boolean }
@@ -143,8 +143,11 @@ export function Feed() {
   const [more, setMore] = useState(false);
   const cur = useRef<D.FeedCursor | undefined>(undefined);
   const sentinel = useRef<HTMLDivElement>(null);
+  const cursorDone = !!cur.current?.done;
   const [pull, setPull] = useState(0);
   const [filter, setFilter] = useState('tout');
+  const [newsCat, setNewsCat] = useState('');
+  const news = useAsync(loadNews, []);
   const key = s.targets.join() + '|' + s.privateTeams.join();
 
   const load = useCallback(async (reset: boolean) => {
@@ -183,15 +186,24 @@ export function Feed() {
   return (
     <Screen title="Fil" home hideTitle>
       <Stories />
-      <NewsCarousel />
       <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.label}</button>)}</div>
+      {filter === 'actus' && <div className="seg" style={{ marginTop: -4 }}>{NEWS_CATS.map(([k, l]) => <button key={k} className={newsCat === k ? 'on' : ''} onClick={() => setNewsCat(k)}>{l}</button>)}</div>}
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
-      {posts === null ? <Skeleton h={260} /> : posts.length === 0 ? (
-        <Empty ill="🗞️" title={s.targets.length ? 'Pas encore de publications' : 'Ton fil est vide'} text={s.targets.length ? 'Les prochains résultats de tes équipes apparaîtront ici.' : 'Suis des clubs ou des équipes pour remplir ton fil.'}
-          action={!s.targets.length && <a className="btn" href="#/explorer">Explorer les clubs</a>} />
-      ) : (() => { const f = FILTERS.find((x) => x.id === filter)!; const l = posts.filter((p) => f.ok(p, s.user?.uid));
-          return l.length ? l.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title="Rien dans ce filtre" text="Essaie « Tout »." />; })()}
+      {posts === null ? <Skeleton h={260} /> : (() => {
+          // Publications de tes clubs + actus, mélangées par date. Les actus ne remontent pas plus loin que les posts chargés.
+          const allNews = (news.data?.items ?? []).filter((n) => !newsCat || n.cat === newsCat);
+          if (filter === 'actus') return allNews.length ? allNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="📰" title="Pas d'actualité" />;
+          const f = FILTERS.find((x) => x.id === filter)!;
+          const shown = posts.filter((p) => f.ok(p));
+          const oldest = shown.length ? shown[shown.length - 1].createdAt : 0;
+          const mix: { t: number; el: JSX.Element }[] = shown.map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
+          if (filter === 'tout') allNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide /> }));
+          mix.sort((a, b) => b.t - a.t);
+          if (mix.length) return mix.map((x) => x.el);
+          return filter === 'tout' ? <Empty ill="🗞️" title="Ton fil est vide" text="Suis des clubs ou des équipes pour voir leurs résultats et publications."
+            action={<a className="btn" href="#/explorer">Trouver des clubs</a>} /> : <Empty ill="🏀" title="Rien dans ce filtre" text="Essaie « Tout »." />;
+        })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
     </Screen>

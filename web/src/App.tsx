@@ -17,7 +17,7 @@ const Moderation = lazy(() => import('./screens/Moderation'));
 const Watch = lazy(() => import('./screens/Watch'));
 
 const TABS = [
-  { id: 'fil', label: 'Fil', icon: Icons.home }, { id: 'explorer', label: 'Explorer', icon: Icons.search },
+  { id: 'fil', label: 'Fil', icon: Icons.home }, { id: 'explorer', label: 'Rechercher', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
   { id: 'matchs', label: 'Matchs', icon: Icons.cal }, { id: 'equipes', label: 'Équipes', icon: Icons.users },
 ];

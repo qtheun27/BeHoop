@@ -7,7 +7,7 @@ import { mediaUrl, ensureMediaCookie } from '../lib/api';
 import { loadClub, teamIndex, teamLabel, isPlayed, type Game } from '../lib/data';
 import { Screen, Empty, Skeleton, Disc, Sheet, useAsync } from '../ui/kit';
 import { PostCard } from './Feed';
-import { MembersList } from './Explore';
+import { MembersList, RELATION_FR } from './Explore';
 import { CarpoolSheet, LiveScoreSheet, useLive } from './Live';
 import { frDate, mapsUrl, store } from '../lib/util';
 
@@ -62,7 +62,7 @@ function TeamSpace({ m }: { m: D.Membership }) {
       <a className="hstack" href={`#/equipe/${team.id}`} style={{ color: 'inherit', marginBottom: 18 }}>
         <Disc src={club.logo} name={club.name} size={60} ring={club.c1} />
         <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 19 }}>{teamLabel(team)}</div><div className="muted">{club.name}</div></div>
-        <span className="pill">{resp ? 'Responsable' : 'Membre'}</span>
+        <span className="pill">{[m.relation ? RELATION_FR[m.relation] : null, resp ? 'Responsable' : !m.relation ? 'Membre' : null].filter(Boolean).join(' · ')}</span>
       </a>
 
       <div className="group-title">Prochains matchs</div>
@@ -101,7 +101,7 @@ function TeamSpace({ m }: { m: D.Membership }) {
       {sheet?.kind === 'live' && sheet.g && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
       {sheet?.kind === 'members' && <Sheet title="Membres de l'équipe" onClose={() => setSheet(null)}>
         {resp ? <MembersList teamId={team.id} members={members.data ?? []} reload={members.reload} me={s.user!.uid} />
-          : <div className="group">{acc.map((x) => <div key={x.uid} className="row"><div className="grow">{x.displayName}</div>{x.role === 'responsable' && <span className="pill">Responsable</span>}</div>)}</div>}
+          : <div className="group">{acc.map((x) => <div key={x.uid} className="row"><div className="grow">{x.displayName} {x.relation && <span className="muted">· {RELATION_FR[x.relation]}</span>}</div>{x.role === 'responsable' && <span className="pill">Responsable</span>}</div>)}</div>}
       </Sheet>}
     </>
   );

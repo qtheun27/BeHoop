@@ -5,12 +5,12 @@ import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { mapsUrl, frDate } from '../lib/util';
 import { qs } from '../lib/router';
 import * as D from '../lib/db';
-import { LiveScoreSheet, CarpoolSheet, useLive } from './Live';
+import { LiveScoreSheet, useLive } from './Live';
 
 export function Matches() {
   const s = useSession();
   const [tab, setTab] = useState<'next' | 'past'>('next');
-  const [sheet, setSheet] = useState<null | { kind: 'live' | 'car'; g: Game }>(null);
+  const [sheet, setSheet] = useState<null | { kind: 'live'; g: Game }>(null);
   const focus = Number(qs().get('g')) || null;
   const { data, error, reload } = useAsync(async () => {
     const idx = await teamIndex();
@@ -40,19 +40,14 @@ export function Matches() {
       {!data && !error ? <Skeleton h={110} /> : groups.length === 0 ? <Empty ill="📅" title="Aucun match" text={s.followedTeams.length ? 'Rien de prévu pour tes équipes.' : 'Suis des équipes pour voir leurs matchs.'} action={!s.followedTeams.length && <a className="btn" href="#/explorer">Explorer</a>} /> :
         groups.map((gr) => (
           <section key={gr.t}><div className="group-title">{gr.t}</div>
-            {gr.l.map((g) => <MatchCard key={g.id} g={g} focus={g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g })} onCar={() => setSheet({ kind: 'car', g })} />)}</section>))}
+            {gr.l.map((g) => <MatchCard key={g.id} g={g} focus={g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g })} />)}</section>))}
       {sheet?.kind === 'live' && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
-      {sheet?.kind === 'car' && <CarpoolSheet g={sheet.g} youthTeam={youthTeamOf(sheet.g, data!.idx, s.followedTeams)} onClose={() => setSheet(null)} />}
     </Screen>
   );
 }
 
-function youthTeamOf(g: Game, idx: Awaited<ReturnType<typeof teamIndex>>, followed: number[]) {
-  const t = [g.h, g.a].find((x) => followed.includes(x)) ?? g.h;
-  return idx.get(t)?.team.ag === 'jeunes' ? t : null;
-}
 
-function MatchCard({ g, data, focus, onLive, onCar }: { g: Game; data: { idx: Awaited<ReturnType<typeof teamIndex>>; vids: Map<number, string> }; focus: boolean; onLive: () => void; onCar: () => void }) {
+function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<ReturnType<typeof teamIndex>>; vids: Map<number, string> }; focus: boolean; onLive: () => void }) {
   const s = useSession();
   const played = isPlayed(g);
   const today = new Date().toISOString().slice(0, 10);
@@ -77,7 +72,6 @@ function MatchCard({ g, data, focus, onLive, onCar }: { g: Game; data: { idx: Aw
         {!played && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">Itinéraire</a>}
         {!played && <a className="btn small secondary" href={ics.replace(/^https?:/, 'webcal:')}>Ajouter au calendrier</a>}
         {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>Score en direct</button>}
-        {!played && !mineHome && <button className="btn small secondary" onClick={() => s.requireAuth(onCar) && onCar()}>Covoiturage</button>}
         {played && vid && <a className="btn small" href={`#/video/${vid}`}>▶ Vidéo du match</a>}
         {played && <a className="btn small secondary" href={`#/montage/new?g=${g.id}`}>Créer la vidéo</a>}
       </div>

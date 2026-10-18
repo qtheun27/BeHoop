@@ -290,8 +290,7 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 <header>
   <div class="titre-app">
     <img src="icons/icon-192.png" alt="" style="width:24px;height:24px;border-radius:7px;vertical-align:-6px;margin-right:2px;"> BeHoop
-    <a href="./app/#/profil" id="bh-compte" style="margin-left:auto;font-size:12px;font-weight:700;color:#fff;background:var(--primary);text-decoration:none;padding:6px 11px;border-radius:20px;">👤 Mon compte</a>
-    <a href="./club/" style="margin-left:6px;font-size:12px;font-weight:700;color:var(--primary);text-decoration:none;border:1px solid var(--border);padding:5px 10px;border-radius:20px;" aria-label="Espace Club">🔐<span class="bh-lbl"> Espace Club</span></a>
+
   </div>
   <div class="search-box">
     <input type="text" id="club-input" list="clubs-list" placeholder="Rechercher un club..." disabled>
@@ -735,7 +734,6 @@ window.onload = async function () {
   try { nom = localStorage.getItem('behoop.session'); } catch (e) {}
   if (!nom) return;
   var prenom = nom.split(' ')[0];
-  document.getElementById('bh-compte').textContent = '👤 ' + prenom;
   document.getElementById('bh-titre').textContent = 'Salut ' + prenom + ' 👋';
   document.getElementById('bh-avantages').innerHTML = '<li>Tes résultats, vidéos et prochains matchs t\u2019attendent.</li>';
   var c = document.getElementById('bh-cta'); c.textContent = 'Ouvrir mon fil'; c.href = './app/#/fil';

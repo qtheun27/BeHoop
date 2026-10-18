@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, normalize, teamLabel, isPlayed, teamIndex, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, normalize, teamLabel, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
 import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
-import { NewsCarousel } from './News';
+import { NewsCard } from './News';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
   const s = useSession();
@@ -19,34 +19,47 @@ export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }
   );
 }
 
+// Régions : 6 filtres simples au lieu des 14 provinces
+const WALLONIE = ['Hainaut', 'Liège', 'Namur', 'Luxembourg', 'Bruxelles - Brabant Wallon'];
+const FLANDRE = ['Anvers', 'Brabant flamand', 'Flandre-Occidentale', 'Flandre-Orientale', 'Limbourg'];
+const REGIONS: { id: string; label: string; ok: (p: string) => boolean }[] = [
+  { id: '', label: 'Tous', ok: () => true },
+  { id: 'w', label: 'Wallonie-Bxl', ok: (p) => WALLONIE.includes(p) },
+  { id: 'f', label: 'Flandre', ok: (p) => FLANDRE.includes(p) },
+  { id: 'n', label: 'National', ok: (p) => p === 'National' || p === 'BNXT League' },
+  { id: 'i', label: 'International', ok: (p) => p === 'International' },
+  { id: 'nba', label: 'NBA', ok: (p) => p === 'NBA' },
+];
+
 export function Explore() {
   const { data, error, reload } = useAsync(loadIndex, []);
+  const news = useAsync(loadNews, []);
   const [q, setQ] = useState('');
-  const [prov, setProv] = useState('');
+  const [reg, setReg] = useState('');
   const s = useSession();
-  // Wallonie-Bruxelles, Flandre, puis National, BNXT League, International, NBA
-  const ORDER = ['Hainaut', 'Liège', 'Namur', 'Luxembourg', 'Bruxelles - Brabant Wallon', 'Anvers', 'Brabant flamand', 'Flandre-Occidentale', 'Flandre-Orientale', 'Limbourg', 'National', 'BNXT League', 'International', 'NBA'];
-  const provinces = useMemo(() => [...new Set(data?.clubs.map((c) => c.province))].sort((a, b) => ((ORDER.indexOf(a) + 1) || 99) - ((ORDER.indexOf(b) + 1) || 99) || a.localeCompare(b)), [data]);
+  const n = normalize(q.trim());
   const list = useMemo(() => {
-    const n = normalize(q);
-    return (data?.clubs ?? []).filter((c) => (!prov || c.province === prov) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
+    const r = REGIONS.find((x) => x.id === reg)!;
+    return (data?.clubs ?? []).filter((c) => r.ok(c.province) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
       .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
-  }, [data, q, prov]);
+  }, [data, n, reg]);
+  // La recherche porte aussi sur les actus (titres et accroches)
+  const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
-    <Screen title="Explorer">
+    <Screen title="Rechercher">
       {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>Crée ton compte</b><div className="muted" style={{ fontSize: 14 }}>pour suivre tes clubs et recevoir les résultats.</div></div><button className="btn small" onClick={() => s.requireAuth()}>Créer</button></div>}
-      <div className="search"><input className="field" type="search" placeholder="Club, ville…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Rechercher un club" /></div>
-      <div className="chips">{['', ...provinces].map((p) => <button key={p} className={`chip${prov === p ? ' on' : ''}`} onClick={() => setProv(p)}>{p || 'Toutes'}</button>)}</div>
-      {!q && !prov && <NewsCarousel />}
+      <div className="search"><input className="field" type="search" placeholder="Club, ville ou actu…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Rechercher" /></div>
+      <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{r.label}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? <Empty ill="🔎" title="Aucun club trouvé" text="Essaie un autre nom ou une ville." /> : (
-        <div className="group">{list.slice(0, 120).map((c) => (
+      {n && <div className="group-title">Clubs et équipes</div>}
+      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="🔎" title="Aucun club trouvé" text="Essaie un autre nom ou une ville." />) : (
+        <div className="group">{list.slice(0, n ? 30 : 120).map((c) => (
           <a key={c.id} className="row" href={c.teams.length === 1 ? `#/equipe/${c.teams[0].id}` : `#/club/${c.id}`} style={{ color: 'inherit' }}>
             <Disc src={c.logo} name={c.name} size={40} ring={c.c1} />
             <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? c.teams[0].cat : `${c.teams.length} équipes`].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
-      <p className="muted center" style={{ fontSize: 13 }}>Classements et calendriers complets : <a href="/?site=1">site BeHoop</a></p>
+      {foundNews.length > 0 && <><div className="group-title">📰 Actus</div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
     </Screen>
   );
 }
@@ -104,9 +117,10 @@ export function TeamPage({ id }: { id: number }) {
     <Screen title={club.teams.length === 1 ? team.name : teamLabel(team)} back={club.teams.length === 1 ? 'explorer' : `club/${club.id}`} right={<FollowButton type="team" id={id} />}>
       <div className="hstack" style={{ marginBottom: 16 }}><Disc src={club.logo} name={club.name} size={56} ring={club.c1} />
         <div className="grow" style={{ flex: 1 }}><div style={{ fontWeight: 700 }}>{club.name}</div><div className="muted">{team.ag === 'jeunes' ? 'Jeunes' : 'Seniors'} · {team.cat}</div></div><LiveBadge teamId={id} games={games} /></div>
-      {team.ag === 'jeunes' && (
-        <div className="banner"><span style={{ fontSize: 26 }}>🔒</span><div style={{ flex: 1 }}><b>Équipe {teamLabel(team)}</b>
-          <div className="muted" style={{ fontSize: 14 }}>{accepted ? `Tu es ${member!.role === 'responsable' ? 'responsable' : 'membre'} : tu vois les photos et vidéos de l'équipe.` : member ? 'Demande envoyée, en attente de validation.' : 'Photos et vidéos réservées aux membres (joueurs, parents, coachs).'}</div></div>
+      {(
+        <div className="banner"><span style={{ fontSize: 26 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div style={{ flex: 1 }}><b>Tu fais partie de cette équipe ?</b>
+          <div className="muted" style={{ fontSize: 14 }}>{accepted ? `Tu es ${member!.role === 'responsable' ? 'responsable' : 'membre'} : retrouve-la dans l'onglet Équipes.` : member ? 'Demande envoyée, en attente de validation.'
+            : team.ag === 'jeunes' ? 'Parent, joueur ou coach : rejoins-la pour ses photos, vidéos et le covoiturage.' : 'Joueur ou coach : rejoins-la pour son espace (covoiturage, membres, vidéos).'}</div></div>
           {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>Rejoindre</button>}
           {accepted && <button className="btn small secondary" onClick={async () => { if (confirm('Quitter l’Équipe ?')) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>Quitter</button>}
         </div>)}
@@ -120,15 +134,19 @@ export function TeamPage({ id }: { id: number }) {
   );
 }
 
+const RELATIONS: [D.Relation, string][] = [['parent', 'Parent'], ['joueur', 'Joueur'], ['coach', 'Coach'], ['autre', 'Autre']];
 function JoinSheet({ teamId, name, onClose }: { teamId: number; name: string; onClose: () => void }) {
   const s = useSession();
   const [m, setM] = useState('');
+  const [rel, setRel] = useState<D.Relation | null>(null);
   return (
-    <Sheet title="Demander à rejoindre" onClose={onClose}>
-      <p className="muted">Un responsable de l'équipe <b>{name}</b> validera ta demande.</p>
+    <Sheet title="Rejoindre l'équipe" onClose={onClose}>
+      <p className="muted" style={{ marginTop: 0 }}>Un responsable de l'équipe <b>{name}</b> validera ta demande.</p>
+      <div className="label">Je suis…</div>
+      <div className="seg">{RELATIONS.map(([k, l]) => <button key={k} className={rel === k ? 'on' : ''} onClick={() => setRel(k)}>{l}</button>)}</div>
       <label className="label" htmlFor="jm">Message (optionnel)</label>
-      <textarea id="jm" className="field" maxLength={200} placeholder="Je suis le papa de…" value={m} onChange={(e) => setM(e.target.value)} />
-      <button className="btn mt" onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m); await s.refresh(); s.toast('Demande envoyée'); onClose(); }}>Envoyer la demande</button>
+      <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? 'Je suis le papa / la maman de…' : 'Un mot pour le responsable…'} value={m} onChange={(e) => setM(e.target.value)} />
+      <button className="btn mt" disabled={!rel} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!); await s.refresh(); s.toast('Demande envoyée'); onClose(); }}>Envoyer la demande</button>
     </Sheet>
   );
 }
@@ -148,18 +166,19 @@ function TeamAdmin({ teamId }: { teamId: number }) {
   );
 }
 
+export const RELATION_FR: Record<string, string> = { parent: 'Parent', joueur: 'Joueur', coach: 'Coach', autre: 'Autre' };
 export function MembersList({ teamId, members, reload, me }: { teamId: number; members: D.Membership[]; reload: () => void; me: string }) {
   const act = async (f: () => Promise<unknown>) => { await f(); reload(); };
   const pending = members.filter((m) => m.status === 'pending'), acc = members.filter((m) => m.status === 'accepted');
   return (
     <>
       {pending.length > 0 && <><div className="group-title">Demandes</div><div className="group">{pending.map((m) => (
-        <div key={m.uid} className="row"><div className="grow"><div>{m.displayName}</div>{m.message && <div className="sub">« {m.message} »</div>}</div>
+        <div key={m.uid} className="row"><div className="grow"><div>{m.displayName} {m.relation && <span className="muted">· {RELATION_FR[m.relation]}</span>}</div>{m.message && <div className="sub">« {m.message} »</div>}</div>
           <button className="btn small" onClick={() => act(() => D.setMember(teamId, m.uid, { status: 'accepted' }))}>Accepter</button>
           <button className="btn small danger" onClick={() => act(() => D.removeMember(teamId, m.uid))}>Refuser</button></div>))}</div></>}
       <div className="group-title">Membres ({acc.length})</div>
       <div className="group">{acc.map((m) => (
-        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.role === 'responsable' && <span className="pill">Responsable</span>}</div>
+        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {RELATION_FR[m.relation]}</span>} {m.role === 'responsable' && <span className="pill">Responsable</span>}</div>
           {m.role !== 'responsable' && <button className="btn small secondary" onClick={() => act(() => D.setMember(teamId, m.uid, { role: 'responsable' }))}>Nommer responsable</button>}
           {m.uid !== me && <button className="btn small danger" onClick={() => confirm(`Retirer ${m.displayName} ?`) && act(() => D.removeMember(teamId, m.uid))}>Retirer</button>}</div>))}</div>
     </>

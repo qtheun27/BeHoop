@@ -13,7 +13,7 @@ async function login(page: Page, who: 'responsable' | 'parent' | 'visiteur') {
 
 test('sans compte : Explorer fonctionne et invite à créer un compte', async ({ page }) => {
   await page.goto('/app/#/explorer');
-  await page.getByLabel('Rechercher un club').fill('AMLL');
+  await page.getByLabel('Rechercher', { exact: true }).fill('AMLL');
   await expect(page.getByRole('link', { name: /BC AMLL/ })).toBeVisible();
   await expect(page.getByText('Crée ton compte')).toBeVisible();
   await page.goto('/app/#/fil');

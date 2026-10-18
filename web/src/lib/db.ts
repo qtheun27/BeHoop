@@ -22,7 +22,8 @@ export interface Profile {
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
 }
 export interface Follow { id: string; type: 'club' | 'team'; refId: number; mutedTeams?: number[] }
-export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; message?: string; displayName?: string; createdAt?: unknown }
+export type Relation = 'parent' | 'joueur' | 'coach' | 'autre';
+export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; relation?: Relation; message?: string; displayName?: string; createdAt?: unknown }
 
 export const NOTIF_TYPES: { key: string; label: string }[] = [
   { key: 'match2h', label: 'Match dans 2 h' }, { key: 'result', label: 'Résultat final' }, { key: 'newVideo', label: 'Nouvelle vidéo d’une équipe' },
@@ -67,8 +68,8 @@ export async function myMemberships(uid: string): Promise<Membership[]> {
   const s = await getDocs(query(collectionGroup(db, 'members'), where('uid', '==', uid)));
   return s.docs.map((d) => d.data() as Membership);
 }
-export async function requestJoin(uid: string, teamId: number, displayName: string, message: string) {
-  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', message: message.slice(0, 200), displayName, createdAt: serverTimestamp() });
+export async function requestJoin(uid: string, teamId: number, displayName: string, message: string, relation: Relation) {
+  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', relation, message: message.slice(0, 200), displayName, createdAt: serverTimestamp() });
   notifyApi('/notify/join-request', { teamId }); // prévient les responsables
 }
 export async function teamMembersList(teamId: number): Promise<Membership[]> {
