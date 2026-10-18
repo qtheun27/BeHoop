@@ -81,6 +81,7 @@ export function ClubPage({ id }: { id: number }) {
     <Screen title={club.short} back="explorer" right={<FollowButton type="club" id={id} />}>
       <div className="hstack" style={{ marginBottom: 20 }}><Disc src={club.logo} name={club.name} size={72} ring={club.c1} />
         <div><div style={{ fontWeight: 700, fontSize: 20 }}>{club.name}</div><div className="muted">{club.venue?.name ?? club.city}</div></div></div>
+      {club.linked && <LinkedClub id={club.linked} />}
       <div className="group-title">Équipes</div>
       <div className="group">{club.teams.map((t) => (
         <div key={t.id} className="row">
@@ -302,5 +303,18 @@ function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
         </div>
       )}
     </>
+  );
+}
+
+/** Lien vers un club lié (ex. Mons Basketball ↔ CityX Mons : deux matricules, même famille). */
+function LinkedClub({ id }: { id: number }) {
+  const { data } = useAsync(loadIndex, []);
+  const c = data?.clubs.find((x) => x.id === id);
+  if (!c) return null;
+  return (
+    <a className="row group" href={`#/club/${c.id}`} style={{ color: 'inherit', marginBottom: 22 }}>
+      <Disc src={c.logo} name={c.name} size={36} ring={c.c1} />
+      <div className="grow"><div className="sub">Club lié</div><div style={{ fontWeight: 600 }}>{c.name}</div></div><span className="chev">›</span>
+    </a>
   );
 }

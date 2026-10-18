@@ -61,13 +61,14 @@ export async function run(outFile = 'vbl.json', calDir = 'calendars') {
   const details = await pool(orgs, 6, (o) => get<any[]>(`OrgDetailByGuid?issguid=${encodeURIComponent(o.guid)}`).then((d) => (Array.isArray(d) ? d[0] : d)));
   const clubs: SlimClub[] = []; const teamGuids: { guid: string; name: string; id: number }[] = []; const poules = new Map<string, string>();
   const venues = new Map<string, { name: string; adr: string }>();
-  const national: { stamNr: string; name: string; teams: SlimClub['teams'] }[] = [];
+  const national: { id: number; stamNr: string; name: string; city: string; logo: string; c1: string; c2: string; teams: SlimClub['teams'] }[] = [];
   details.forEach((d, i) => {
     if (!d || !(d.teams ?? []).length) return; // club sans équipe inscrite cette saison
     const o = orgs[i];
     if (o.regioNaam === 'AWBB') {
       // Club wallon inscrit en national : ses équipes seront rattachées au club AWBB existant (matricule / nom)
-      national.push({ stamNr: String(d.stamNr ?? o.stamNr ?? ''), name: (d.naam ?? o.naam).trim(), teams: (d.teams ?? []).map((t: any) => {
+      const c1n = color(d.shirtKleur) ?? color(d.shirtReserve) ?? '#1a6fe0';
+      national.push({ id: vblId(o.guid), stamNr: String(d.stamNr ?? o.stamNr ?? ''), name: (d.naam ?? o.naam).trim(), city: o.plaats ?? '', logo: `https://vblapi1.wisseq.eu/vbldataOrgLogo/${o.guid.trim()}.jpg`, c1: c1n, c2: color(d.shirtReserve) ?? c1n, teams: (d.teams ?? []).map((t: any) => {
         teamGuids.push({ guid: t.guid, name: t.naam.trim(), id: vblId(t.guid) });
         (t.poules ?? []).forEach((p: any) => poules.set(p.guid, p.naam));
         return { id: vblId(t.guid), name: t.naam.trim(), cat: `${catFr(t.categorie ?? '', t.naam)} · National`, ag: classifyCategory(t.categorie) };

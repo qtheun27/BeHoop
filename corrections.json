@@ -1,6 +1,17 @@
 {
-  "_note": "Corrections BeHoop temporaires : un nom n'est remplacé que tant que la fédération affiche encore l'ancien (ancienNom). Dès qu'elle publie le nouveau nom, la correction devient sans effet. Logos de secours (si le logo officiel est introuvable) : dossier logos/overrides/.",
+  "_note": "Corrections BeHoop : un nom n'est remplacé que tant que la fédération affiche encore l'ancien (ancienNom) ; « lie » ajoute un lien vers un club lié. Logos de secours (si l'officiel est introuvable) : dossier logos/overrides/.",
   "clubs": {
-    "1312": { "name": "Mons Basketball", "short": "Mons Basketball", "ancienNom": ["Union Mons-Hainaut", "Union Mons Hainaut"] }
+    "1312": {
+      "lie": 12767740410
+    },
+    "12767740410": {
+      "name": "CityX Mons",
+      "short": "CityX Mons",
+      "ancienNom": [
+        "Union Mons Hainaut",
+        "Union Mons-Hainaut"
+      ],
+      "lie": 1312
+    }
   }
 }

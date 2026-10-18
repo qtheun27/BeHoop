@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite --config web/vite.config.ts",
     "build": "tsc -p tsconfig.json --noEmit && vite build --config web/vite.config.ts",
-    "test": "vitest run shared worker",
+    "test": "vitest run shared worker ops/test",
     "test:rules": "firebase emulators:exec --only firestore --project demo-behoop \"vitest run tests/rules\"",
     "test:e2e": "firebase emulators:exec --only auth,firestore --project demo-behoop \"tsx ops/seed-demo.ts && playwright test\"",
     "app-data": "tsx ops/build-app-data.ts",

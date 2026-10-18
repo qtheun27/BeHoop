@@ -4,7 +4,7 @@ import type { AgeGroup } from '../../../shared/types';
 
 export interface Team { id: number; name: string; cat: string; ag: AgeGroup }
 export interface Club { id: number; name: string; short: string; province: string; logo: string | null; c1: string; c2: string; city: string;
-  venue?: { name: string; street: string; zip: string; city: string; lat?: number; lng?: number } | null; teams: Team[] }
+  venue?: { name: string; street: string; zip: string; city: string; lat?: number; lng?: number } | null; teams: Team[]; linked?: number }
 export interface Game { id: number; d: string; t: string; s: number; sn: string; h: number; a: number; hn: string; an: string;
   hs: number | null; as: number | null; v: string; adr: string; lat?: number; lng?: number; ty: string }
 export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number }

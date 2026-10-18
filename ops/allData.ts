@@ -19,13 +19,14 @@ export function loadAll(root = '.'): AllData {
   if (existsSync(vf)) {
     const v = JSON.parse(readFileSync(vf, 'utf8'));
     clubs.push(...v.clubs); games.push(...v.games);
-    // Équipes nationales des clubs wallons : rattachées au club AWBB (matricule dans le logo AWBB, sinon nom proche)
-    const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\b(bc|bbc|rbc|basket|basketball|club|asbl|royal)\b/g, '').trim();
+    // Équipes nationales des clubs wallons : rattachées au club AWBB seulement si le matricule correspond exactement
+    // (matricule lu dans le nom du fichier logo AWBB) ; sinon club national à part entière (ex. CityX Mons).
     const byStam = new Map<string, SlimClub>();
-    for (const c of clubs) { const m = /\/(\d{3,5})-[^/]+$/.exec(c.logo ?? ''); if (m) byStam.set(String(+m[1]), c); }
+    for (const c of clubs) { const m = /\/(\d{3,5})-[^/]+$/.exec(c.logo ?? ''); if (m && c.id < 1e10) byStam.set(String(+m[1]), c); }
     for (const n of v.national ?? []) {
-      const c = byStam.get(String(+n.stamNr)) ?? clubs.find((x) => x.id < 1e10 && (norm(x.name) === norm(n.name) || norm(x.short) === norm(n.name)));
+      const c = byStam.get(String(+n.stamNr));
       if (c) c.teams.push(...n.teams.filter((t: { id: number }) => !c.teams.some((x) => x.id === t.id)));
+      else clubs.push({ id: n.id, name: n.name, short: n.name, province: 'National', logo: n.logo, c1: n.c1, c2: n.c2, city: n.city, venue: null, teams: n.teams });
     }
     for (const [k, s] of Object.entries<any>(v.series)) series.set(+k, s);
     for (const [k, s] of Object.entries<any>(v.standings)) standings.set(+k, s);
@@ -38,6 +39,8 @@ export function loadAll(root = '.'): AllData {
       const k = corr[c.id]; if (!k) continue;
       const old: string[] = k.ancienNom ?? [c.name, c.short];
       // Correction temporaire : appliquée seulement tant que la fédération affiche encore l'ancien nom
+      if (k.lie) (c as SlimClub & { linked?: number }).linked = k.lie;
+      if (!k.name && !k.short) continue; // correction sans changement de nom (lien seul)
       if (!old.includes(c.name) && !old.includes(c.short)) continue;
       const fix = (n: string) => old.reduce((acc, o) => acc.replace(o, k.short ?? k.name), n);
       const mine = new Set(c.teams.map((t) => t.id));
