@@ -67,13 +67,20 @@ export async function myMemberships(uid: string): Promise<Membership[]> {
   const s = await getDocs(query(collectionGroup(db, 'members'), where('uid', '==', uid)));
   return s.docs.map((d) => d.data() as Membership);
 }
-export const requestJoin = (uid: string, teamId: number, displayName: string, message: string) =>
-  setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', message: message.slice(0, 200), displayName, createdAt: serverTimestamp() });
+export async function requestJoin(uid: string, teamId: number, displayName: string, message: string) {
+  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', message: message.slice(0, 200), displayName, createdAt: serverTimestamp() });
+  notifyApi('/notify/join-request', { teamId }); // prévient les responsables
+}
 export async function teamMembersList(teamId: number): Promise<Membership[]> {
   const s = await getDocs(membersCol(teamId));
   return s.docs.map((d) => d.data() as Membership);
 }
-export const setMember = (teamId: number, uid: string, p: Partial<Membership>) => updateDoc(doc(membersCol(teamId), uid), p as DocumentData);
+export async function setMember(teamId: number, uid: string, p: Partial<Membership>) {
+  await updateDoc(doc(membersCol(teamId), uid), p as DocumentData);
+  if (p.status === 'accepted') notifyApi('/notify/join-accepted', { teamId, uid }); // « Ta demande est acceptée »
+}
+/** Notification via le Worker, sans bloquer l'action si le Worker est indisponible. */
+function notifyApi(path: string, body: unknown) { import('./api').then(({ api }) => api(path, body)).catch(() => {}); }
 export const removeMember = (teamId: number, uid: string) => deleteDoc(doc(membersCol(teamId), uid));
 export async function pendingForResponsible(teamIds: number[]): Promise<Membership[]> {
   const out: Membership[] = [];

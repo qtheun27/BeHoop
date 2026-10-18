@@ -10,6 +10,7 @@ import { Feed, PostPage } from './screens/Feed';
 import { Matches } from './screens/Matches';
 import { Publish } from './screens/Publish';
 import { NewsPage } from './screens/News';
+import { MyTeams } from './screens/Teams';
 
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
@@ -18,7 +19,7 @@ const Watch = lazy(() => import('./screens/Watch'));
 const TABS = [
   { id: 'fil', label: 'Fil', icon: Icons.home }, { id: 'explorer', label: 'Explorer', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
-  { id: 'matchs', label: 'Matchs', icon: Icons.cal }, { id: 'profil', label: 'Profil', icon: Icons.user },
+  { id: 'matchs', label: 'Matchs', icon: Icons.cal }, { id: 'equipes', label: 'Équipes', icon: Icons.users },
 ];
 
 export function App() {
@@ -42,6 +43,7 @@ export function App() {
     case 'video': el = <Watch id={a} t={b} />; break;
     case 'post': el = <PostPage id={a} />; break;
     case 'actus': el = <NewsPage />; break;
+    case 'equipes': el = <MyTeams id={a ? +a : undefined} />; break;
     default: el = <Feed />;
   }
   const tab = page === 'club' || page === 'equipe' || page === 'actus' ? 'explorer' : page === 'montage' ? 'publier' : page;

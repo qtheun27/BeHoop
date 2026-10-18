@@ -207,6 +207,25 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await sendToUsers(fs, env, uids, { title: `Fin du match : ${l.home} – ${l.away}`, body: 'Score saisi en direct sur BeHoop', url: '/app/#/matchs' }, 'live', l.teamIds[0]);
     return json({ ok: true });
   }
+  // Demande d'accès à une Équipe 🔒 → responsables de l'équipe (ou super admin si elle n'en a pas encore)
+  if (path === '/notify/join-request') {
+    const teamId = Number(body.teamId);
+    const me = await fs.get<any>(`teamMembers/${teamId}/members/${user.uid}`);
+    if (!me || me.status !== 'pending') return json({ ok: true });
+    const resp = (await fs.query('members', [['role', 'EQUAL', 'responsable'], ['status', 'EQUAL', 'accepted']], { parent: `teamMembers/${teamId}` })).map((m) => m._path.split('/').pop() as string);
+    const to = resp.length ? resp : [env.SUPER_ADMIN_UID].filter(Boolean) as string[];
+    await sendToUsers(fs, env, to, { title: 'Demande d’accès à l’Équipe 🔒', body: `${profile?.displayName ?? 'Quelqu’un'} souhaite rejoindre l’équipe.${me.message ? ` « ${String(me.message).slice(0, 80)} »` : ''}`, url: `/app/#/equipes/${teamId}` }, 'joinRequest', null);
+    return json({ ok: true });
+  }
+  // Demande acceptée → le nouveau membre (appel par un responsable ou le super admin)
+  if (path === '/notify/join-accepted') {
+    const teamId = Number(body.teamId), uid = String(body.uid).replace(/[^\w-]/g, '');
+    const me = await fs.get<any>(`teamMembers/${teamId}/members/${user.uid}`);
+    if (!isAdmin && !(me?.status === 'accepted' && me?.role === 'responsable')) throw new Error('FORBIDDEN');
+    const m = await fs.get<any>(`teamMembers/${teamId}/members/${uid}`);
+    if (m?.status === 'accepted') await sendToUsers(fs, env, [uid], { title: 'Bienvenue dans l’Équipe 🔒', body: 'Ta demande est acceptée : tu vois maintenant les photos et vidéos de l’équipe.', url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
+    return json({ ok: true });
+  }
   if (path === '/notify/carpool') {
     const o = await fs.get<any>(`carpools/${Number(body.gameId)}/offers/${String(body.offerId).replace(/\W/g, '')}`);
     if (o) await sendToUsers(fs, env, [o.driverUid], { title: 'Covoiturage', body: `${profile?.displayName ?? 'Quelqu’un'} a répondu à ton annonce.`, url: '/app/#/matchs' }, 'carpool', null);
