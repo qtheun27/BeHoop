@@ -9,4 +9,5 @@ it('libellés d’équipes', () => {
   expect(L('R1H B')).toBe('R1 Messieurs B');
   expect(L('P3D')).toBe('P3 Dames');
   expect(L('PU8')).toBe('U8 · Provinciale');
+  expect(L('TDW1 A')).toBe('Top Division Dames 1 A');
 });

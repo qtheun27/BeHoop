@@ -34,7 +34,12 @@ if (meta.data()?.hash !== hash) {
 const since = new Date(Date.now() - 4 * 864e5).toISOString().slice(0, 10);
 const today = new Date().toISOString().slice(0, 10);
 // Matchs sans adversaire (exempt, forfait administratif) ignorés
-const recent = all.games.filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a);
+// Fenêtre : 4 jours pour tous ; toute la saison (60 jours) pour les équipes pro, nationales et internationales
+// (BNXT, NBA, Belgian Lions, équipes « National »), pour qu'un nouvel abonné voie leurs derniers résultats.
+const proTeams = new Set<number>();
+clubs.forEach((c) => c.teams.forEach((t) => { if (t.id >= 20e9 || /National|BNXT|NBA/.test(t.cat)) proTeams.add(t.id); }));
+const sincePro = new Date(Date.now() - 60 * 864e5).toISOString().slice(0, 10);
+const recent = all.games.filter((g) => (proTeams.has(g.h) || proTeams.has(g.a)) && g.d >= sincePro && g.d <= today && isPlayed(g) && g.h && g.a).concat(all.games.filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a && !(proTeams.has(g.h) || proTeams.has(g.a))));
 let created = 0, updated = 0;
 const tc = new Map<number, number>(); teamClub.forEach((c, t) => tc.set(t, c.id));
 async function syncGame(g: (typeof recent)[number]): Promise<'created' | 'updated' | 'skip'> {
@@ -54,6 +59,8 @@ async function syncGame(g: (typeof recent)[number]): Promise<'created' | 'update
   const live = db.doc(`liveScores/${g.id}`);
   if ((await live.get()).exists) { await live.update({ status: 'official', home: g.hs, away: g.as }); await db.doc(`posts/live-${g.id}`).delete().catch(() => {}); }
   if (cur.exists) return 'updated';
+  // Pas de notification pour un résultat ancien (rattrapage) : seulement les matchs des dernières 36 h
+  if (Date.parse(`${g.d}T23:59:00`) < Date.now() - 36 * 3600e3) return 'created';
   const uids = await followers([g.h, g.a], tc);
   await notifyUsers(uids, { title: `Résultat final : ${payload.home.name} ${g.hs} – ${g.as} ${payload.away.name}`, body: g.sn, url: `/app/#/post/score-${g.id}` }, 'result', g.h, `result_${g.id}`).catch(() => 0);
   return 'created';

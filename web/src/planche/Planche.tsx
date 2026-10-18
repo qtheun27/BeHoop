@@ -19,7 +19,7 @@ const twoLines = (n: string) => { const w = n.split(' '); if (w.length < 3 && n.
 const shortTeam = (n: string) => n.split(' ').slice(0, 2).join(' ');
 
 function Logo({ s, ring, src, style }: { s: number; ring: string; src: string; style?: CSSProperties }) {
-  return <div className="logo" style={{ '--s': `${s}px`, '--ring': ring, ...style } as CSSProperties}><img src={src} alt="" /></div>;
+  return <div className="logo" style={{ '--s': `${s}px`, '--ring': ring, ...style } as CSSProperties}><img src={src} alt="" style={src.includes('/logos/') ? { width: '100%', height: '100%', mixBlendMode: 'normal' } : undefined} /></div>;
 }
 function Stripes({ st, opacity, t, slide }: { st: MatchSettings; opacity: number; t: number; slide?: boolean }) {
   const p = slide ? easeOut(prog(t, 0, 0.4)) : 1;

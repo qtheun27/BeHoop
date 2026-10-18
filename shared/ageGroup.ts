@@ -8,6 +8,7 @@ const SENIORS = /^(P|R|N|TDM|TD)\s?\d?\s?[HDM]\b|SENIOR|DAMES|MESSIEURS|HOMMES|R
 export function classifyCategory(category: string | null | undefined): AgeGroup {
   const c = (category ?? '').trim().toUpperCase();
   if (!c) return 'jeunes';
+  if (/^TD[MW]?\s?\d/.test(c)) return 'seniors'; // Top Division (TDM1, TDW1 A…) : national seniors
   if (JEUNES.test(c)) return 'jeunes';
   if (SENIORS.test(c)) return 'seniors';
   return 'jeunes';

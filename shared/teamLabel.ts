@@ -8,6 +8,8 @@ export function teamLabel(t: { cat: string; name: string }) {
   const c = t.cat.trim().toUpperCase();
   const m = /^([PR])?U(\d{1,2})(HM|H|D|M)?\s*([A-Z])?$/.exec(c);
   if (m) return `U${m[2]}${m[3] === 'D' ? ' Filles' : ''}${m[4] ? ' ' + m[4] : ''}${m[1] ? ` · ${m[1] === 'R' ? 'Régionale' : 'Provinciale'}` : ''}`;
+  const td = /^TD([MW])(\d)\s*([A-Z])?$/.exec(c);
+  if (td) return `Top Division ${td[1] === 'W' ? 'Dames' : 'Messieurs'} ${td[2]}${td[3] ? ' ' + td[3] : ''}`;
   const s = /^([PR])(\d)\s*(H|D)\s*([A-Z])?$/.exec(c);
   if (s) return `${s[1]}${s[2]} ${s[3] === 'D' ? 'Dames' : 'Messieurs'}${s[4] ? ' ' + s[4] : ''}`;
   return t.cat || t.name;

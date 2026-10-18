@@ -268,6 +268,7 @@
     border-radius: 24px; padding: 20px 18px; box-shadow: 0 14px 34px rgba(0,0,0,.25); }
   .club-banner h1 { font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: 26px; }
   .club-banner-logo { background: #fff; border-radius: 50%; box-shadow: 0 0 0 3px var(--primary); }
+  .club-banner-logo[src^="/logos/"] { padding: 0; }
   /* Puces, onglets, titres */
   .team-chip, .filtre-chip { border-radius: 999px; font-family: Oswald, sans-serif; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; border: 1px solid var(--border); background: var(--card-bg); box-shadow: 0 2px 8px rgba(40,25,10,.06); }
   .team-selector, .filtres { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; }
@@ -796,15 +797,31 @@ async function bhAfficherAutreClub(id) {
     afficherClub(raw);
   } catch (e) { alert('Impossible de charger ce club. Réessaie dans un instant.'); }
 }
+// BeHoop : couleur de club trop claire (ex. beige) → assombrie pour que le texte blanc des boutons reste lisible
+(function () {
+  if (typeof appliquerTheme !== 'function') return;
+  var orig = appliquerTheme;
+  appliquerTheme = function (club) {
+    orig(club);
+    var m = /^#?([0-9a-f]{6})$/i.exec(club.primary_color || ''); if (!m) return;
+    var rgb = [0, 2, 4].map(function (i) { return parseInt(m[1].substr(i, 2), 16); });
+    var lum = function (c) { return c.map(function (v) { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }).reduce(function (a, v, i) { return a + v * [.2126, .7152, .0722][i]; }, 0); };
+    for (var k = 0; k < 10 && lum(rgb) > .25; k++) rgb = rgb.map(function (v) { return Math.round(v * .82); });
+    document.documentElement.style.setProperty('--primary', '#' + rgb.map(function (v) { return v.toString(16).padStart(2, '0'); }).join(''));
+  };
+})();
 // BeHoop : la recherche trouve aussi les clubs flamands, nationaux, BNXT, NBA et les Belgian Lions (fiches ouvertes sans compte).
 (function () {
   fetch('./app-data/index.json').then(function (r) { return r.json(); }).then(function (idx) {
     var autres = idx.clubs.filter(function (c) { return c.id >= 1e10; });
     window.bhAutresClubs = autres;
+    // Logos harmonisés (copie locale) pour tous les clubs du site public
+    var locaux = {}; idx.clubs.forEach(function (c) { if (c.logo && c.logo.indexOf('/logos/') === 0) locaux[c.id] = c.logo; });
+    (function logos(n) { if (typeof donnees !== 'undefined' && donnees.clubs && donnees.clubs.length) donnees.clubs.forEach(function (c) { if (locaux[c.id]) c.logo_url = locaux[c.id]; }); else if (n < 60) setTimeout(function () { logos(n + 1); }, 500); })(0);
     // Compteur : tous les clubs disponibles (Wallonie, Flandre, national, BNXT, NBA…)
     var st = document.getElementById('status'), eq = idx.clubs.reduce(function (n, c) { return n + c.teams.length; }, 0);
     var txt = '✅ ' + idx.clubs.length + ' clubs, ' + eq.toLocaleString('fr-BE') + ' équipes — Wallonie, Flandre, national, BNXT, NBA';
-    (function maj(n) { if (st && /✅/.test(st.textContent)) st.textContent = txt; else if (n < 60) setTimeout(function () { maj(n + 1); }, 500); })(0);
+    if (st) { var fix = function () { if (/✅/.test(st.textContent) && st.textContent !== txt) st.textContent = txt; }; fix(); new MutationObserver(fix).observe(st, { childList: true, characterData: true, subtree: true }); }
     var liste = document.getElementById('clubs-list');
     autres.forEach(function (c) { var o = document.createElement('option'); o.value = c.name; o.label = c.province; liste.appendChild(o); });
   }).catch(function () {});

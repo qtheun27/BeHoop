@@ -25,7 +25,6 @@ function Stories() {
   }, [s.follows.length, s.followedTeams.join()]);
   return (
     <div className="stories" aria-label="Mes clubs">
-      <a className="story create" href="#/publier"><div className="ring"><div>+</div></div><span className="name">Créer</span></a>
       {data?.map((i) => { const k = clubColors(i.club); return (
         <a key={i.key} className="story" href={i.href}>
           <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : <b>{i.name.slice(0, 2)}</b>}</div>
@@ -184,7 +183,6 @@ export function Feed() {
   return (
     <Screen title="Fil" home hideTitle>
       <Stories />
-      <a className="composer" href="#/publier?photo=1"><Avatar name={s.profile?.displayName ?? '?'} /><span className="ph">Partage une photo du match…</span><span className="cam" aria-hidden>{Icons.camera}</span></a>
       <NewsCarousel />
       <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.label}</button>)}</div>
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>

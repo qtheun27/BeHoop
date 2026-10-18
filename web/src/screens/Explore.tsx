@@ -66,9 +66,7 @@ function GameRow({ g, teamIds }: { g: Game; teamIds: number[] }) {
 }
 
 export function ClubPage({ id }: { id: number }) {
-  const s = useSession();
   const { data, error, reload } = useAsync(() => loadClub(id), [id]);
-  const f = s.follows.find((x) => x.type === 'club' && x.refId === id);
   if (error) return <Screen title="Club" back="explorer"><ErrorBox msg={error} retry={reload} /></Screen>;
   if (!data) return <Screen title="Club" back="explorer"><Skeleton /></Screen>;
   const { club, games } = data;
@@ -76,23 +74,12 @@ export function ClubPage({ id }: { id: number }) {
   const today = new Date().toISOString().slice(0, 10);
   const recent = games.filter((g) => isPlayed(g)).slice(-5).reverse();
   const next = games.filter((g) => g.d >= today && !isPlayed(g)).slice(0, 5);
-  const toggleMute = async (tid: number) => {
-    if (!f || !s.user) return;
-    const muted = f.mutedTeams?.includes(tid) ? f.mutedTeams.filter((x) => x !== tid) : [...(f.mutedTeams ?? []), tid];
-    await D.setMuted(s.user.uid, id, muted); await s.refresh();
-  };
   return (
     <Screen title={club.short} back="explorer" right={<FollowButton type="club" id={id} />}>
       <div className="hstack" style={{ marginBottom: 20 }}><Disc src={club.logo} name={club.name} size={72} ring={club.c1} />
         <div><div style={{ fontWeight: 700, fontSize: 20 }}>{club.name}</div><div className="muted">{club.venue?.name ?? club.city}</div></div></div>
       {club.linked && <LinkedClub id={club.linked} />}
-      <div className="group-title">Équipes</div>
-      <div className="group">{club.teams.map((t) => (
-        <div key={t.id} className="row">
-          <a className="grow" href={`#/equipe/${t.id}`} style={{ color: 'inherit' }}><div>{teamLabel(t)}</div><div className="sub">{t.ag === 'jeunes' ? 'Jeunes · Équipe 🔒 disponible' : 'Seniors'}</div></a>
-          {f ? <input type="checkbox" className="switch" aria-label={`Suivre ${teamLabel(t)}`} checked={!f.mutedTeams?.includes(t.id)} onChange={() => toggleMute(t.id)} /> : <span className="chev">›</span>}
-        </div>))}</div>
-      {f && <p className="group-foot">Suivre le club = suivre toutes ses équipes. Désactive celles qui ne t'intéressent pas.</p>}
+      <TeamList club={club} />
       {next.length > 0 && <><div className="group-title">Prochains matchs</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
       {recent.length > 0 && <><div className="group-title">Derniers résultats</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
     </Screen>
@@ -326,5 +313,51 @@ function LinkedClub({ id }: { id: number }) {
       <Disc src={c.logo} name={c.name} size={36} ring={c.c1} />
       <div className="grow"><div className="sub">Club lié</div><div style={{ fontWeight: 600 }}>{c.name}</div></div><span className="chev">›</span>
     </a>
+  );
+}
+
+/** Équipes du club : liste sobre par niveau ; le choix des équipes suivies se fait dans une feuille dédiée. */
+function TeamList({ club }: { club: Club }) {
+  const s = useSession();
+  const f = s.follows.find((x) => x.type === 'club' && x.refId === club.id);
+  const [edit, setEdit] = useState(false);
+  const groups: [string, Team[]][] = [
+    ['Seniors', club.teams.filter((t) => t.ag === 'seniors')],
+    ['Jeunes', club.teams.filter((t) => t.ag !== 'seniors')],
+  ];
+  const muted = f?.mutedTeams ?? [];
+  const toggle = async (tid: number) => {
+    if (!f || !s.user) return;
+    haptic();
+    await D.setMuted(s.user.uid, club.id, muted.includes(tid) ? muted.filter((x) => x !== tid) : [...muted, tid]);
+    await s.refresh();
+  };
+  return (
+    <>
+      {groups.filter(([, l]) => l.length).map(([g, list]) => (
+        <section key={g}>
+          <div className="group-title">{g}</div>
+          <div className="group">{list.map((t) => (
+            <a key={t.id} className="row" href={`#/equipe/${t.id}`} style={{ color: 'inherit' }}>
+              <div className="grow">{teamLabel(t)}</div>
+              {f && muted.includes(t.id) && <span className="muted" style={{ fontSize: 13 }}>non suivie</span>}
+              <span className="chev">›</span>
+            </a>))}</div>
+        </section>))}
+      {f && club.teams.length > 1 && (
+        <button className="btn ghost small" style={{ margin: '-10px auto 22px', display: 'flex' }} onClick={() => setEdit(true)}>
+          Équipes suivies : {club.teams.length - muted.length}/{club.teams.length} · Modifier
+        </button>)}
+      {edit && (
+        <Sheet title="Équipes suivies" onClose={() => setEdit(false)}>
+          <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>Les équipes cochées apparaissent dans ton fil et tes matchs.</p>
+          <div className="group">{club.teams.map((t) => { const on = !muted.includes(t.id); return (
+            <button key={t.id} className="row" onClick={() => toggle(t.id)} aria-pressed={on}>
+              <div className="grow">{teamLabel(t)}</div>
+              <span style={{ width: 24, height: 24, borderRadius: 12, display: 'grid', placeItems: 'center', fontSize: 14, fontWeight: 800,
+                background: on ? 'var(--accent)' : 'transparent', color: '#fff', boxShadow: on ? 'none' : 'inset 0 0 0 2px var(--sep)' }}>{on ? '✓' : ''}</span>
+            </button>); })}</div>
+        </Sheet>)}
+    </>
   );
 }

@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { initials } from '../lib/util';
-import { useSession } from '../lib/session';
 
 /**
  * Écran avec barre du haut flottante (verre dépoli) :
- *  - écrans principaux : logo BEHOOP + recherche, matchs, modération (super admin) et avatar ;
+ *  - écrans principaux : logo BEHOOP seul (tout le reste est dans la barre du bas) ;
  *  - sous-écrans : bouton Retour + titre. Le grand titre en lettres de match suit en dessous.
  */
 export function Screen({ title, children, left, right, tabs = true, back, home, hideTitle }: { title: string; children: ReactNode; left?: ReactNode; right?: ReactNode; tabs?: boolean; back?: string; home?: boolean; hideTitle?: boolean }) {
-  const s = useSession();
   useEffect(() => { document.title = `${title} · BeHoop`; }, [title]);
   return (
     <main className={`screen${tabs ? '' : ' no-tabs'}`}>
@@ -17,12 +15,7 @@ export function Screen({ title, children, left, right, tabs = true, back, home, 
           {back ? <button className="back" onClick={() => (history.length > 1 ? history.back() : (location.hash = back))} aria-label="Retour">‹ Retour</button> : left}
           {home || !back ? <a className="brand" href="#/fil" aria-label="BeHoop, accueil"><img src="/icons/icon-192.png" alt="" /><span>BeHoop</span></a> : <div className="small-title ellipsis">{title}</div>}
           {right}
-          {!back && <>
-            <a className="top-ic" href="#/explorer" aria-label="Explorer les clubs">{Icons.search}</a>
-            <a className="top-ic" href="#/matchs" aria-label="Mes matchs">{Icons.bell}</a>
-            {s.isAdmin && <a className="top-ic" href="#/moderation" aria-label="Modération">{Icons.shield}</a>}
-            <a className="top-av" href="#/profil" aria-label="Mon profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
-          </>}
+          {/* Explorer, Matchs, Profil (et la modération, dans Profil) sont dans la barre du bas : rien en double en haut. */}
         </div>
       </div>
       {!hideTitle && <h1 className="large-title">{title}</h1>}
@@ -62,7 +55,7 @@ export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | n
   const [err, setErr] = useState(false);
   return (
     <div className="disc" style={{ '--s': `${size}px`, '--ring': ring } as React.CSSProperties}>
-      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} /> : <span>{initials(name)}</span>}
+      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/') ? { width: '100%', height: '100%' } : undefined} /> : <span>{initials(name)}</span>}
     </div>
   );
 }

@@ -10,7 +10,7 @@ describe('Jeunes / Seniors', () => {
   it.each([
     ['PU12HM A', 'jeunes'], ['PU8', 'jeunes'], ['RU21H', 'jeunes'], ['PU19D A', 'jeunes'], ['Benjamins', 'jeunes'],
     ['Cadets', 'jeunes'], ['P3H B', 'seniors'], ['R2H A', 'seniors'], ['P1D A', 'seniors'], ['Seniors', 'seniors'],
-    ['Dames', 'seniors'], ['Régionale 1', 'seniors'], ['', 'jeunes'], ['XYZ', 'jeunes'], [null, 'jeunes'],
+    ['Dames', 'seniors'], ['Régionale 1', 'seniors'], ['TDW1 A', 'seniors'], ['TDM2 B', 'seniors'], ['', 'jeunes'], ['XYZ', 'jeunes'], [null, 'jeunes'],
   ])('%s → %s', (c, g) => expect(classifyCategory(c as string)).toBe(g));
   it('correction du super admin prioritaire', () => expect(ageGroupOf('PU12HM', 'seniors')).toBe('seniors'));
 });
