@@ -42,6 +42,9 @@ vbl = os.path.join(ROOT, 'vbl.json')
 if os.path.exists(vbl):
     v = json.load(open(vbl))
     clubs += [(c['id'], c.get('logo')) for c in v['clubs'] + v.get('national', [])]
+pro = os.path.join(ROOT, 'pro.json')
+if os.path.exists(pro):
+    clubs += [(c['id'], c.get('logo')) for c in json.load(open(pro))['clubs']]
 with ThreadPoolExecutor(12) as ex:
     res = list(ex.map(one, clubs))
 print('logos :', {k: res.count(k) for k in set(res)})

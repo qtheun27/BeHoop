@@ -41,13 +41,13 @@ async function pool<T, R>(items: T[], n: number, f: (x: T) => Promise<R>): Promi
   return out;
 }
 
-function ics(teamName: string, games: SlimGame[], teamId: number) {
+export function ics(teamName: string, games: SlimGame[], teamId: number) {
   const esc = (s: string) => s.replace(/[\\;,]/g, (c) => '\\' + c).replace(/\n/g, '\\n');
   const ev = games.filter((g) => g.t).map((g) => {
     const [h, m] = g.t.split(':'); const start = `${g.d.replace(/-/g, '')}T${h}${m}00`;
     const end = `${g.d.replace(/-/g, '')}T${String(Math.min(23, +h + 2)).padStart(2, '0')}${m}00`;
     const res = g.hs !== null ? ` (${g.hs}-${g.as})` : '';
-    return ['BEGIN:VEVENT', `UID:vbl-${g.id}-${teamId}@behoop.be`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
+    return ['BEGIN:VEVENT', `UID:bh-${g.id}-${teamId}@behoop.be`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
       `DTSTART;TZID=Europe/Brussels:${start}`, `DTEND;TZID=Europe/Brussels:${end}`, `SUMMARY:${esc(`${g.hn} – ${g.an}${res}`)}`,
       `LOCATION:${esc([g.v, g.adr].filter(Boolean).join(', '))}`, `DESCRIPTION:${esc(g.sn)}`, 'END:VEVENT'].join('\r\n');
   });

@@ -23,7 +23,9 @@ export function Explore() {
   const [q, setQ] = useState('');
   const [prov, setProv] = useState('');
   const s = useSession();
-  const provinces = useMemo(() => [...new Set(data?.clubs.map((c) => c.province))].sort(), [data]);
+  // Wallonie-Bruxelles, Flandre, puis National, BNXT League, International, NBA
+  const ORDER = ['Hainaut', 'Liège', 'Namur', 'Luxembourg', 'Bruxelles - Brabant Wallon', 'Anvers', 'Brabant flamand', 'Flandre-Occidentale', 'Flandre-Orientale', 'Limbourg', 'National', 'BNXT League', 'International', 'NBA'];
+  const provinces = useMemo(() => [...new Set(data?.clubs.map((c) => c.province))].sort((a, b) => ((ORDER.indexOf(a) + 1) || 99) - ((ORDER.indexOf(b) + 1) || 99) || a.localeCompare(b)), [data]);
   const list = useMemo(() => {
     const n = normalize(q);
     return (data?.clubs ?? []).filter((c) => (!prov || c.province === prov) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
@@ -37,9 +39,9 @@ export function Explore() {
       {error && <ErrorBox msg={error} retry={reload} />}
       {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? <Empty ill="🔎" title="Aucun club trouvé" text="Essaie un autre nom ou une ville." /> : (
         <div className="group">{list.slice(0, 120).map((c) => (
-          <a key={c.id} className="row" href={`#/club/${c.id}`} style={{ color: 'inherit' }}>
+          <a key={c.id} className="row" href={c.teams.length === 1 ? `#/equipe/${c.teams[0].id}` : `#/club/${c.id}`} style={{ color: 'inherit' }}>
             <Disc src={c.logo} name={c.name} size={40} ring={c.c1} />
-            <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{c.city} · {c.teams.length} équipes</div></div><span className="chev">›</span>
+            <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? c.teams[0].cat : `${c.teams.length} équipes`].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
       <p className="muted center" style={{ fontSize: 13 }}>Classements et calendriers complets : <a href="/">site BeHoop</a></p>
@@ -110,7 +112,7 @@ export function TeamPage({ id }: { id: number }) {
   if (!data) return <Screen title="Équipe" back="explorer"><Skeleton /></Screen>;
   const { team, club, games } = data;
   return (
-    <Screen title={teamLabel(team)} back={`club/${club.id}`} right={<FollowButton type="team" id={id} />}>
+    <Screen title={club.teams.length === 1 ? team.name : teamLabel(team)} back={club.teams.length === 1 ? 'explorer' : `club/${club.id}`} right={<FollowButton type="team" id={id} />}>
       <div className="hstack" style={{ marginBottom: 16 }}><Disc src={club.logo} name={club.name} size={56} ring={club.c1} />
         <div className="grow" style={{ flex: 1 }}><div style={{ fontWeight: 700 }}>{club.name}</div><div className="muted">{team.ag === 'jeunes' ? 'Jeunes' : 'Seniors'} · {team.cat}</div></div><LiveBadge teamId={id} games={games} /></div>
       {team.ag === 'jeunes' && (
@@ -280,9 +282,15 @@ function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: strin
 }
 
 function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
-  const series = [...new Map(games.filter((g) => g.ty !== 'amical').map((g) => [g.s, g.sn])).entries()];
-  const [sid, setSid] = useState<number | null>(series[0]?.[0] ?? null);
-  const serie = useAsync(() => (sid ? loadSerie(sid) : Promise.resolve(null)), [sid]);
+  // Compétitions de l'équipe : on garde celles dont le classement contient l'équipe (ou sans classement, ex. coupe)
+  const ids = [...new Set(games.filter((g) => g.ty !== 'amical').map((g) => g.s))];
+  const all = useAsync(async () => (await Promise.all(ids.map((i) => loadSerie(i).catch(() => null)))).filter(Boolean)
+    .filter((x) => !x!.standings.length || x!.standings.some((r) => r.team === team.id)) as Awaited<ReturnType<typeof loadSerie>>[], [ids.join()]);
+  const series = (all.data ?? []).map((x) => [x.serie.id, x.serie.short || x.serie.name] as [number, string]);
+  const [pick, setSid] = useState<number | null>(null);
+  const sid = pick ?? series[0]?.[0] ?? null;
+  const serie = { data: all.data?.find((x) => x.serie.id === sid) ?? null };
+  if (all.loading) return <Skeleton h={44} n={6} />;
   if (!series.length) return <Empty ill="📊" title="Pas de classement" text="Cette équipe ne joue que des matchs amicaux pour l'instant." />;
   const names = new Map<number, string>();
   serie.data?.games.forEach((g) => { names.set(g.h, g.hn); names.set(g.a, g.an); });

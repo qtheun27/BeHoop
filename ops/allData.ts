@@ -49,9 +49,26 @@ export function loadAll(root = '.'): AllData {
       for (const g of games) { if (mine.has(g.h)) g.hn = fix(g.hn); if (mine.has(g.a)) g.an = fix(g.an); }
     }
   }
+  // Basket pro et international (BNXT, NBA, Belgian Lions) : pro.json. Une équipe BNXT dont le nom correspond
+  // à un club belge existant (ex. CityX Mons) est ajoutée à ce club ; sinon elle forme son propre club.
+  const pf = join(root, 'pro.json');
+  if (existsSync(pf)) {
+    const p = JSON.parse(readFileSync(pf, 'utf8'));
+    const key = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    for (const c of p.clubs as SlimClub[]) {
+      const host = p.attach?.[c.id] ? clubs.find((x) => x.id < 20e9 && key(x.name) === key(p.attach[c.id])) : undefined;
+      if (host) { host.teams.push(...c.teams.filter((t) => !host.teams.some((x) => x.id === t.id))); if (c.logo) { host.logo = c.logo; (host as SlimClub & { logoId?: number }).logoId = c.id; } }
+      else clubs.push(c);
+    }
+    games.push(...p.games);
+    for (const [k, s] of Object.entries<any>(p.series)) series.set(+k, s);
+    for (const [k, s] of Object.entries<any>(p.standings)) standings.set(+k, s);
+  }
   // Logos : copie locale servie par behoop.be (voir ops/logos.py), sinon l'adresse d'origine
   for (const c of clubs) {
-    if (existsSync(join(root, 'logos', `${c.id}.webp`))) c.logo = `/logos/${c.id}.webp`;
+    const lid = (c as SlimClub & { logoId?: number }).logoId ?? c.id;
+    delete (c as SlimClub & { logoId?: number }).logoId;
+    if (existsSync(join(root, 'logos', `${lid}.webp`))) c.logo = `/logos/${lid}.webp`;
     else if (c.logo?.includes('vbldataOrgLogo')) c.logo = null; // club flamand sans logo publié : initiales
   }
   return { generated_at: d.generated_at, season: d.season?.name, clubs, games, series, standings };

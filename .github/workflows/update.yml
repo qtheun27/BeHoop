@@ -43,6 +43,10 @@ jobs:
         run: npx tsx ops/vbl.ts
         continue-on-error: true
 
+      - name: BNXT League, NBA et Belgian Lions
+        run: npx tsx ops/pro.ts
+        continue-on-error: true
+
       - name: Copie locale des logos de clubs
         run: python ops/logos.py
         continue-on-error: true
@@ -63,7 +67,7 @@ jobs:
           git config --global user.email "bot@github.com"
           touch data.json
           git add data.json calendars/
-          git add app-data/ vbl.json logos/ || true
+          git add app-data/ vbl.json pro.json logos/ || true
           git commit -m "🤖 Mise à jour automatique saison en cours" || echo "Rien à commiter"
           git pull --rebase
           git push

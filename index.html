@@ -665,7 +665,12 @@ function rechercher() {
   const texte = $input.value.trim().toLowerCase();
   if (!texte) return;
   const club = (donnees.clubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short_name || '').toLowerCase().includes(texte));
-  if (!club) { alert('Club introuvable. Essayez un autre mot-clé.'); return; }
+  if (!club) {
+    // Clubs ajoutés par BeHoop (Flandre, national, BNXT, NBA, Belgian Lions) : ouverts dans leur fiche, sans compte
+    const autre = (window.bhAutresClubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short || '').toLowerCase().includes(texte));
+    if (autre) { location.href = './app/#/club/' + autre.id; return; }
+    alert('Club introuvable. Essayez un autre mot-clé.'); return;
+  }
   afficherClub(club);
 }
 
@@ -728,6 +733,17 @@ window.onload = async function () {
   document.getElementById('bh-avantages').innerHTML = '<li>Tes résultats, vidéos et prochains matchs t\u2019attendent.</li>';
   var c = document.getElementById('bh-cta'); c.textContent = 'Ouvrir mon fil'; c.href = './app/#/fil';
   var c2 = document.getElementById('bh-cta2'); c2.textContent = 'Mes matchs'; c2.href = './app/#/matchs';
+})();
+</script>
+<script>
+// BeHoop : la recherche trouve aussi les clubs flamands, nationaux, BNXT, NBA et les Belgian Lions (fiches ouvertes sans compte).
+(function () {
+  fetch('./app-data/index.json').then(function (r) { return r.json(); }).then(function (idx) {
+    var autres = idx.clubs.filter(function (c) { return c.id >= 1e10; });
+    window.bhAutresClubs = autres;
+    var liste = document.getElementById('clubs-list');
+    autres.forEach(function (c) { var o = document.createElement('option'); o.value = c.name; o.label = c.province; liste.appendChild(o); });
+  }).catch(function () {});
 })();
 </script>
 </body>
