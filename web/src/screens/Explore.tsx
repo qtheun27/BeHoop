@@ -65,7 +65,7 @@ export function Explore() {
   );
 }
 
-function GameRow({ g, teamIds }: { g: Game; teamIds: number[] }) {
+export function GameRow({ g, teamIds }: { g: Game; teamIds: number[] }) {
   const played = isPlayed(g);
   const home = teamIds.includes(g.h);
   const won = played && (home ? g.hs! > g.as! : g.as! > g.hs!);
@@ -136,7 +136,7 @@ export function TeamPage({ id }: { id: number }) {
 }
 
 const RELATIONS: [D.Relation, string][] = [['parent', 'Parent'], ['joueur', 'Joueur'], ['coach', 'Coach'], ['autre', 'Autre']];
-function JoinSheet({ teamId, name, onClose }: { teamId: number; name: string; onClose: () => void }) {
+export function JoinSheet({ teamId, name, onClose }: { teamId: number; name: string; onClose: () => void }) {
   const s = useSession();
   const [m, setM] = useState('');
   const [rel, setRel] = useState<D.Relation | null>(null);
@@ -152,7 +152,7 @@ function JoinSheet({ teamId, name, onClose }: { teamId: number; name: string; on
   );
 }
 
-function TeamAdmin({ teamId }: { teamId: number }) {
+export function TeamAdmin({ teamId }: { teamId: number }) {
   const s = useSession();
   const { data, reload } = useAsync(() => D.teamMembersList(teamId), [teamId]);
   const [open, setOpen] = useState(false);
@@ -207,7 +207,7 @@ function rankHistory(games: Game[], teamId: number) {
   return out;
 }
 
-function TeamStats({ team, games }: { team: Team; club: Club; games: Game[] }) {
+export function TeamStats({ team, games }: { team: Team; club: Club; games: Game[] }) {
   const today = new Date().toISOString().slice(0, 10);
   const played = games.filter(isPlayed).filter((g) => g.ty !== 'amical');
   const last5 = played.slice(-5);
@@ -263,7 +263,7 @@ function TeamTabs({ team, club, games }: { team: Team; club: Club; games: Game[]
   );
 }
 
-function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: string }) {
+export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: string }) {
   const [which, setWhich] = useState<'avenir' | 'joues'>('avenir');
   const today = new Date().toISOString().slice(0, 10);
   const next = games.filter((g) => g.d >= today && !isPlayed(g));
@@ -290,7 +290,7 @@ function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: strin
   );
 }
 
-function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
+export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
   // Compétitions de l'équipe : on garde celles dont le classement contient l'équipe (ou sans classement, ex. coupe)
   const ids = [...new Set(games.filter((g) => g.ty !== 'amical').map((g) => g.s))];
   const all = useAsync(async () => (await Promise.all(ids.map((i) => loadSerie(i).catch(() => null)))).filter(Boolean)
@@ -324,7 +324,7 @@ function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
 }
 
 /** Lien vers un club lié (ex. Mons Basketball ↔ CityX Mons : deux matricules, même famille). */
-function LinkedClub({ id }: { id: number }) {
+export function LinkedClub({ id }: { id: number }) {
   const { data } = useAsync(loadIndex, []);
   const c = data?.clubs.find((x) => x.id === id);
   if (!c) return null;
@@ -337,7 +337,7 @@ function LinkedClub({ id }: { id: number }) {
 }
 
 /** Équipes du club : liste sobre par niveau ; le choix des équipes suivies se fait dans une feuille dédiée. */
-function TeamList({ club }: { club: Club }) {
+export function TeamList({ club }: { club: Club }) {
   const s = useSession();
   const f = s.follows.find((x) => x.type === 'club' && x.refId === club.id);
   const [edit, setEdit] = useState(false);

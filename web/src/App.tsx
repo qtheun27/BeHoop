@@ -11,6 +11,7 @@ import { Matches } from './screens/Matches';
 import { Publish } from './screens/Publish';
 import { NewsPage } from './screens/News';
 import { MyTeams } from './screens/Teams';
+import { ClubHub } from './screens/ClubHub';
 
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
@@ -32,8 +33,9 @@ export function App() {
   let el;
   switch (page) {
     case 'explorer': el = <Explore />; break;
-    case 'club': el = <ClubPage id={+a} />; break;
-    case 'equipe': el = <TeamPage id={+a} />; break;
+    // Connecté : page club/équipe avec son propre fil ; sinon fiches publiques
+    case 'club': el = s.user ? <ClubHub clubId={+a} /> : <ClubPage id={+a} />; break;
+    case 'equipe': el = s.user ? <ClubHub teamId={+a} /> : <TeamPage id={+a} />; break;
     case 'publier': el = <Publish />; break;
     case 'montage': el = <Montage id={a} />; break;
     case 'matchs': el = <Matches />; break;
