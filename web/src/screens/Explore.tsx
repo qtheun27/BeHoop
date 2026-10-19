@@ -3,6 +3,7 @@ import { loadIndex, loadClub, loadSerie, normalize, teamLabel, isPlayed, teamInd
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
+import { CalendarButton } from '../ui/CalendarButton';
 import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
@@ -271,7 +272,7 @@ function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: strin
   return (
     <>
       <div className="hstack" style={{ gap: 8, marginBottom: 12 }}>
-        <a className="btn small" href={ics.replace(/^https?:/, 'webcal:')}>📆 Ajouter au calendrier</a>
+        <CalendarButton teamId={team.id} primary />
         <button className="btn small secondary" onClick={() => { navigator.clipboard?.writeText(ics); }}>Copier le lien</button>
       </div>
       <div className="chips">

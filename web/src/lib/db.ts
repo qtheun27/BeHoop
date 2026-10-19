@@ -20,6 +20,7 @@ export interface Profile {
   displayName: string; avatarUrl?: string; createdAt?: unknown; ageConfirmed: boolean; onboarded?: boolean;
   notifPrefs: Record<string, boolean>; fcmTokens?: string[]; banned?: boolean; theme?: 'auto' | 'light' | 'dark';
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
+  /** Équipes dont le calendrier a déjà été ajouté au téléphone */ calendars?: number[];
 }
 export interface Follow { id: string; type: 'club' | 'team'; refId: number; mutedTeams?: number[] }
 export type Relation = 'parent' | 'joueur' | 'coach' | 'autre';

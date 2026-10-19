@@ -2,6 +2,7 @@
 // Droits d'auteur : on ne garde que le titre, une courte accroche (≤ 200 caractères), la source, l'image d'aperçu
 // fournie par le flux et le lien vers l'article original. Jamais le texte complet.
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
+import { execFile } from 'node:child_process';
 
 export type Cat = 'belgique' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat }
@@ -65,6 +66,64 @@ async function bnxtNews(): Promise<News[]> {
     source: 'BNXT League', image: a.cover_image?.thumbnails?.medium ?? a.cover_image?.public_url ?? null, date: new Date(a.publish_date ?? a.created_at).toISOString(), cat: 'belgique' as Cat }));
 }
 
+const UA = 'Mozilla/5.0 (compatible; BeHoopBot/1.0; +https://behoop.be)';
+const isGoogle = (u: string) => /^https:\/\/news\.google\.com\//.test(u);
+
+/** Lien Google Actualités → lien de l'article chez le média (même procédé que le bouton « Ouvrir » de Google). */
+async function resolveGoogle(url: string): Promise<string | null> {
+  const page = await (await fetch(url, { headers: { 'User-Agent': UA, Cookie: 'CONSENT=YES+' }, signal: AbortSignal.timeout(15_000) })).text();
+  const at = (k: string) => new RegExp(`data-n-a-${k}="([^"]+)"`).exec(page)?.[1];
+  const [id, ts, sg] = [at('id'), at('ts'), at('sg')];
+  if (!id || !ts || !sg) return null;
+  const inner = JSON.stringify(['garturlreq', [['X', 'X', ['X', 'X'], null, null, 1, 1, 'US:en', null, 1, null, null, null, null, null, 0, 1], 'X', 'X', 1, [1, 1, 1], 1, 1, null, 0, 0, null, 0], id, +ts, sg]);
+  const r = await fetch('https://news.google.com/_/DotsSplashUi/data/batchexecute', {
+    method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8', 'User-Agent': UA },
+    body: `f.req=${encodeURIComponent(JSON.stringify([[['Fbv4je', inner, null, 'generic']]]))}`, signal: AbortSignal.timeout(15_000),
+  });
+  return /\\"garturlres\\",\\"(https?:[^"\\]+)\\"/.exec(await r.text())?.[1] ?? null;
+}
+
+/** Page HTML via curl : plusieurs médias refusent le fetch de Node mais acceptent curl (présent sur les runners GitHub). */
+function curl(url: string): Promise<{ html: string; url: string } | null> {
+  return new Promise((res) => execFile('curl', ['-sSL', '--compressed', '-m', '15', '-A', UA, '-H', 'Accept: text/html', '-w', '\n%{http_code} %{url_effective}', url],
+    { maxBuffer: 16 << 20 }, (err, out) => {
+      const i = out?.lastIndexOf('\n') ?? -1;
+      const [code, final] = i < 0 ? [] : out.slice(i + 1).split(' ');
+      res(err || code !== '200' ? null : { html: out.slice(0, i), url: final });
+    }));
+}
+
+/** Image d'aperçu de l'article (celle que le média affiche quand on partage le lien). */
+export function pageImage(html: string, base: string): string | null {
+  for (const key of ['og:image:secure_url', 'og:image', 'twitter:image', 'twitter:image:src']) {
+    for (const [m] of html.matchAll(/<meta\b[^>]*>/gi)) {
+      if (!new RegExp(`(?:property|name)=["']${key}["']`, 'i').test(m)) continue;
+      const c = /content=["']([^"']+)["']/i.exec(m)?.[1];
+      // On écarte les logos génériques des sites (image identique pour tous les articles)
+      if (c && !/logo|_opengraph\.|placeholder|\.svg(\?|$)/i.test(c)) {
+        try { return new URL(unxml(c), base).href; } catch { /* lien invalide */ }
+      }
+    }
+  }
+  return null;
+}
+
+/** Complète les articles sans image : vrai lien (Google), puis image d'aperçu de la page. */
+async function enrich(items: News[]) {
+  const todo = items.filter((n) => !n.image || isGoogle(n.url));
+  let found = 0;
+  const work = async (n: News) => {
+    try {
+      if (isGoogle(n.url)) n.url = (await resolveGoogle(n.url)) ?? n.url;
+      if (n.image || isGoogle(n.url)) return;
+      const page = await curl(n.url);
+      if (page) { n.image = pageImage(page.html, page.url); if (n.image) found++; }
+    } catch { /* site lent ou indisponible : la carte garde son visuel de repli */ }
+  };
+  for (let i = 0; i < todo.length; i += 6) await Promise.all(todo.slice(i, i + 6).map(work));
+  console.log(`Images d'aperçu ajoutées : ${found}/${todo.length}`);
+}
+
 export async function run(out = 'app-data/news.json') {
   const prev: News[] = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')).items ?? [] : [];
   const all: News[] = [];
@@ -79,8 +138,15 @@ export async function run(out = 'app-data/news.json') {
   // On garde aussi les articles récents déjà connus (si une source est momentanément en panne)
   const since = Date.now() - 21 * 864e5;
   const byId = new Map<string, News>();
-  for (const n of [...all, ...prev]) if (!byId.has(n.id) && Date.parse(n.date) > since) byId.set(n.id, n);
+  const known = new Map(prev.map((n) => [n.id, n]));
+  for (const n of [...all, ...prev]) {
+    if (byId.has(n.id) || Date.parse(n.date) <= since) continue;
+    // Déjà traité lors d'un passage précédent : on réutilise le vrai lien et l'image trouvés
+    const old = known.get(n.id);
+    byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? old.image } : n);
+  }
   const items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 150);
+  await enrich(items);
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
   writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items }));
   console.log(`news.json : ${items.length} articles (${['belgique', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);

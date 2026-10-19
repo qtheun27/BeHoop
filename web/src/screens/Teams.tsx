@@ -6,6 +6,7 @@ import * as D from '../lib/db';
 import { mediaUrl, ensureMediaCookie } from '../lib/api';
 import { loadClub, teamIndex, teamLabel, isPlayed, type Game } from '../lib/data';
 import { Screen, Empty, Skeleton, Disc, Sheet, useAsync } from '../ui/kit';
+import { CalendarButton } from '../ui/CalendarButton';
 import { PostCard } from './Feed';
 import { MembersList, RELATION_FR } from './Explore';
 import { CarpoolSheet, LiveScoreSheet, useLive } from './Live';
@@ -123,7 +124,7 @@ function NextGame({ g, teamId, big, onCar, onLive }: { g: Game; teamId: number; 
       <div className="hstack" style={{ flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
         <button className="btn small" onClick={onCar}>🚗 Covoiturage</button>
         {big && g.v && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">Itinéraire</a>}
-        {big && <a className="btn small secondary" href={`${location.origin}/calendars/team-${teamId}.ics`.replace(/^https?:/, 'webcal:')}>📆 Calendrier</a>}
+        {big && <CalendarButton teamId={teamId} label="📆 Calendrier" compact />}
         {g.d === today && <button className="btn small secondary" onClick={onLive}>Score en direct</button>}
       </div>
     </div>

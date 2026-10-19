@@ -34,5 +34,11 @@ jobs:
           git config user.email "bot@github.com"
           git add app-data/news.json
           git commit -m "📰 Actualités basket" || exit 0
-          git pull --rebase
-          git push
+          # Si quelqu'un a poussé pendant la mise à jour, nos fichiers générés l'emportent
+          # (ils sont de toute façon recalculés à chaque passage) ; jusqu'à 3 essais.
+          for i in 1 2 3; do
+            git pull --rebase -X theirs && git push && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 10))
+          done
+          exit 1

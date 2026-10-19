@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import { loadClub, teamIndex, isPlayed, teamLabel, type Game } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
+import { CalendarButton } from '../ui/CalendarButton';
 import { mapsUrl, frDate } from '../lib/util';
 import { qs } from '../lib/router';
 import * as D from '../lib/db';
@@ -54,7 +55,6 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
   const live = useLive(g.d === today && !played ? g.id : null);
   const mineHome = s.followedTeams.includes(g.h);
   const t = data.idx.get(mineHome ? g.h : g.a);
-  const ics = `${location.origin}/calendars/team-${mineHome ? g.h : g.a}.ics`;
   const vid = data.vids.get(g.id);
   return (
     <div className="card" style={{ padding: 14, outline: focus ? '2px solid var(--accent)' : undefined }}>
@@ -70,7 +70,7 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
       {!played && <div className="muted" style={{ fontSize: 14, marginTop: 6 }}>📍 {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack mt" style={{ flexWrap: 'wrap', gap: 8 }}>
         {!played && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">Itinéraire</a>}
-        {!played && <a className="btn small secondary" href={ics.replace(/^https?:/, 'webcal:')}>Ajouter au calendrier</a>}
+        {!played && <CalendarButton teamId={mineHome ? g.h : g.a} label="Ajouter au calendrier" compact />}
         {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>Score en direct</button>}
         {played && vid && <a className="btn small" href={`#/video/${vid}`}>▶ Vidéo du match</a>}
         {played && <a className="btn small secondary" href={`#/montage/new?g=${g.id}`}>Créer la vidéo</a>}
