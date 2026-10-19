@@ -34,8 +34,17 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const load = useCallback(async (u: User | null) => {
     if (!u) { setProfile(null); setFollows([]); setMemberships([]); return; }
     const [p, f, m] = await Promise.all([D.getProfile(u.uid), D.listFollows(u.uid).catch(() => []), D.myMemberships(u.uid).catch(() => [])]);
+    // Club fusionné (ancien identifiant) : on déplace le suivi vers la fiche actuelle
+    const alias = (await loadIndex().catch(() => null))?.alias ?? {};
+    for (const x of f) {
+      const n = x.type === 'club' ? alias[x.refId] : undefined;
+      if (!n) continue;
+      if (!f.some((y) => y.type === 'club' && y.refId === n)) D.follow(u.uid, 'club', n).catch(() => {});
+      D.unfollow(u.uid, 'club', x.refId).catch(() => {});
+      x.refId = n; x.id = D.followId('club', n);
+    }
     if (p && !p.avatarUrl && u.photoURL) { p.avatarUrl = u.photoURL; D.updateProfile(u.uid, { avatarUrl: u.photoURL }).catch(() => {}); }
-    setProfile(p); setFollows(f); setMemberships(m);
+    setProfile(p); setFollows([...new Map(f.map((x) => [x.id, x])).values()]); setMemberships(m);
   }, []);
   useEffect(() => onAuthStateChanged(auth, async (u) => { setUser(u); try { await load(u); } finally { setReady(true); } }), [load]);
   useEffect(() => { loadIndex().then((i) => setClubs(i.clubs)).catch(() => {}); }, []);

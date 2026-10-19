@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage, clubMatcher, isBasketNews } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews, clubTagger } from '../news';
 describe('classement des actualités', () => {
   it.each([
     ['Droomaffiche voor Basket Willebroek: tweedeklasser krijgt in beker bezoek', 'belgique'],
@@ -31,4 +31,21 @@ describe('actus régionales : uniquement le basket', () => {
     ['Noorderhart in Pelt investeert 26,7 miljoen euro', false],
     ['FOOT - P2B : Mesvin sort vainqueur du derby', false],
   ])('%s → %s', (t, ok) => expect(isBasketNews(n(t), hit)).toBe(ok));
+});
+
+describe('clubs cités par une actu', () => {
+  const clubs = [
+    { id: 1, name: 'Mons Basketball', short: 'Mons Basketball' }, { id: 2, name: 'CityX Mons', short: 'CityX Mons' },
+    { id: 3, name: 'BC Mons Capitale', short: 'BC Mons Capitale' }, { id: 4, name: 'Wibac BBC Sint-Eloois-Winkel', short: 'Wibac BBC Sint-Eloois-Winkel' },
+    { id: 5, name: 'Partena Professional Okapi Aalst', short: 'Okapi Aalst', teams: [{ id: 20000000557 }] },
+    { id: 6, name: 'Partena Professional DBC Okapi Aalst', short: 'DBC Okapi Aalst', teams: [{ id: 1 }] },
+  ];
+  const tag = clubTagger(clubs);
+  it.each([
+    ['Le BC Mons-Capitale sort la copie parfaite à Haneffe', [3]],
+    ['Mons Basket-ball est sur la bonne voie face à Estaimpuis', [1]],
+    ['Du mieux pour CityX Mons face au champion', [2]],
+    ['Antwerp wint in Mons: “Maar er is nog veel werk aan de winkel”', []],
+    ['ZZ Leiden smeert Okapi Aalst eerste nederlaag aan', [5]],
+  ])('%s → %j', (t, ids) => expect(tag(t as string).sort()).toEqual(ids));
 });

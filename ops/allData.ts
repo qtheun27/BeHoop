@@ -5,11 +5,12 @@ import { join } from 'node:path';
 import { slimClub, slimGame, type SlimClub, type SlimGame } from './appData';
 
 export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number }
-export interface AllData { generated_at: string; season: string; clubs: SlimClub[]; games: SlimGame[]; series: Map<number, { id: number; name: string; short: string }>; standings: Map<number, Standing[]> }
+export interface AllData { generated_at: string; season: string; clubs: SlimClub[]; games: SlimGame[]; series: Map<number, { id: number; name: string; short: string }>; standings: Map<number, Standing[]>; alias: Record<number, number> }
 
 export function loadAll(root = '.'): AllData {
   const d = JSON.parse(readFileSync(join(root, 'data.json'), 'utf8'));
-  const clubs: SlimClub[] = d.clubs.map(slimClub);
+  // L'AWBB liste parfois un club deux fois (ex. Libramont, dans deux provinces) : une seule fiche par identifiant
+  const clubs: SlimClub[] = [...new Map<number, SlimClub>(d.clubs.map(slimClub).reverse().map((c: SlimClub) => [c.id, c])).values()].reverse();
   const games: SlimGame[] = d.games.map(slimGame);
   const series = new Map<number, { id: number; name: string; short: string }>(d.series.map((s: any) => [s.id, { id: s.id, name: s.division_name ?? s.name, short: s.short_name }]));
   const standings = new Map<number, Standing[]>();
@@ -49,14 +50,34 @@ export function loadAll(root = '.'): AllData {
       for (const g of games) { if (mine.has(g.h)) g.hn = fix(g.hn); if (mine.has(g.a)) g.an = fix(g.an); }
     }
   }
+  // Un même club peut arriver deux fois : fiche nationale Basketbal Vlaanderen + fiche AWBB (ex. CityX Mons, créé à l'AWBB
+  // en cours de saison). On garde la fiche AWBB, on y ajoute les équipes nationales et on redirige les liens « club lié ».
+  const nkey = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const awbb = new Map(clubs.filter((c) => c.id < 1e10).map((c) => [nkey(c.name), c]));
+  const alias = new Map<number, number>();
+  for (const c of clubs) {
+    const h = c.province === 'National' ? awbb.get(nkey(c.name)) : undefined;
+    if (!h || h === c) continue;
+    h.teams.push(...c.teams.filter((t) => !h.teams.some((x) => x.id === t.id)));
+    if (!h.logo) h.logo = c.logo;
+    const hl = h as SlimClub & { linked?: number }, cl = c as SlimClub & { linked?: number };
+    if (cl.linked && !hl.linked) hl.linked = cl.linked;
+    alias.set(c.id, h.id);
+  }
+  for (let i = clubs.length - 1; i >= 0; i--) if (alias.has(clubs[i].id)) clubs.splice(i, 1);
+  for (const c of clubs as (SlimClub & { linked?: number })[]) if (c.linked && alias.has(c.linked)) c.linked = alias.get(c.linked);
   // Basket pro et international (BNXT, NBA, Belgian Lions) : pro.json. Une équipe BNXT dont le nom correspond
   // à un club belge existant (ex. CityX Mons) est ajoutée à ce club ; sinon elle forme son propre club.
   const pf = join(root, 'pro.json');
   if (existsSync(pf)) {
     const p = JSON.parse(readFileSync(pf, 'utf8'));
+    const bnxt: Record<number, number> = existsSync(cf) ? JSON.parse(readFileSync(cf, 'utf8')).bnxt ?? {} : {};
     const key = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
     for (const c of p.clubs as SlimClub[]) {
-      const host = p.attach?.[c.id] ? clubs.find((x) => x.id < 20e9 && key(x.name) === key(p.attach[c.id])) : undefined;
+      const forced = bnxt[c.id];
+      const host = forced ? clubs.find((x) => x.id === forced)
+        : p.attach?.[c.id] ? clubs.find((x) => x.id < 20e9 && key(x.name) === key(p.attach[c.id])) : undefined;
+      if (host && host.id !== c.id) alias.set(c.id, host.id); // fiche BNXT seule auparavant : les suivis existants suivent
       if (host) { host.teams.push(...c.teams.filter((t) => !host.teams.some((x) => x.id === t.id))); if (c.logo) { host.logo = c.logo; (host as SlimClub & { logoId?: number }).logoId = c.id; } }
       else clubs.push(c);
     }
@@ -71,5 +92,5 @@ export function loadAll(root = '.'): AllData {
     if (existsSync(join(root, 'logos', `${lid}.webp`))) c.logo = `/logos/${lid}.webp`;
     else if (c.logo?.includes('vbldataOrgLogo')) c.logo = null; // club flamand sans logo publié : initiales
   }
-  return { generated_at: d.generated_at, season: d.season?.name, clubs, games, series, standings };
+  return { generated_at: d.generated_at, season: d.season?.name, clubs, games, series, standings, alias: Object.fromEntries(alias) };
 }

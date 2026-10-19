@@ -2,7 +2,7 @@
 // et un fil propre au club (résultats, photos & vidéos, actus qui le citent). Choisir une équipe filtre le fil
 // et ouvre ses onglets Matchs / Classement / Infos.
 import { useEffect, useMemo, useState } from 'react';
-import { loadClub, loadNews, teamIndex, teamLabel, isPlayed, normalize, type Club, type Game, type Team, type News } from '../lib/data';
+import { loadClub, loadNews, teamIndex, teamLabel, isPlayed, type Club, type Game, type Team, type News } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { clubColors } from '../lib/theme';
@@ -21,34 +21,14 @@ const isMedia = (p: D.Post) => p.type === 'photo' || p.type === 'video' || p.typ
 const isScore = (p: D.Post) => p.type === 'score' || p.type === 'live';
 const RESULTS_DAYS = 45;
 
-// Mots trop courants dans les noms de clubs pour identifier un club dans un article
-const GENERIC = new Set('basket basketball basketbal basketbalclub club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
-const words = (s: string) => normalize(s).replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
-
-/** Actus qui citent le club (ou son club lié, ex. Mons Basketball ↔ CityX Mons) : nom sans les mots génériques, ou mot propre à ce club. */
-function clubNews(items: News[], clubs: Club[], names: string[]) {
-  const freq = new Map<string, number>();
-  for (const c of clubs) for (const w of new Set(words(`${c.name} ${c.short}`))) freq.set(w, (freq.get(w) ?? 0) + 1);
-  const keys = new Set<string>();
-  for (const n of names) {
-    const ws = words(n).filter((w) => !GENERIC.has(w) && !/^\d+$/.test(w));
-    if (ws.join(' ').length >= 4) keys.add(ws.join(' '));
-    ws.filter((w) => w.length >= 5 && freq.get(w) === 1).forEach((w) => keys.add(w));
-  }
-  if (!keys.size) return [];
-  const re = new RegExp(`\\b(${[...keys].join('|')})\\b`);
-  return items.filter((n) => re.test(words(`${n.title} ${n.excerpt}`).join(' ')));
-}
-
 export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }) {
   const base = useAsync(async () => {
     const idx = await teamIndex();
     const cid = clubId ?? idx.get(teamId!)?.club.id;
     if (!cid) throw new Error('Équipe introuvable');
     const [c, all] = await Promise.all([loadClub(cid), loadNews().catch(() => null)]);
-    const linked = c.club.linked ? [...idx.values()].find((e) => e.club.id === c.club.linked)?.club : undefined;
-    const clubs = [...new Map([...idx.values()].map((e) => [e.club.id, e.club])).values()];
-    return { ...c, idx, news: clubNews(all?.items ?? [], clubs, [c.club.name, c.club.short, ...(linked ? [linked.name, linked.short] : [])]) };
+    // Actus citant ce club précisément (classées à la récupération, voir ops/news.ts) ; un club lié garde son propre fil
+    return { ...c, idx, news: (all?.items ?? []).filter((n) => n.clubs?.includes(c.club.id)) };
   }, [clubId, teamId]);
   const [sel, setSel] = useState<number | null>(teamId ?? null);
   useEffect(() => setSel(teamId ?? null), [teamId, clubId]);

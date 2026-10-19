@@ -22,7 +22,7 @@ for (const g of all.games) {
   for (const tid of [g.h, g.a]) { const cid = teamClub.get(tid); if (cid !== undefined) { const s = byClub.get(cid) ?? new Set(); s.add(g); byClub.set(cid, s); } }
   const s = bySerie.get(g.s) ?? []; s.push(g); bySerie.set(g.s, s);
 }
-writeFileSync(join(out, 'index.json'), JSON.stringify({ generated_at: all.generated_at, season: all.season, clubs: all.clubs }));
+writeFileSync(join(out, 'index.json'), JSON.stringify({ generated_at: all.generated_at, season: all.season, clubs: all.clubs, alias: all.alias }));
 for (const c of all.clubs) {
   const list = [...(byClub.get(c.id) ?? [])].sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
   writeFileSync(join(out, 'clubs', `${c.id}.json`), JSON.stringify({ club: c, games: list }));

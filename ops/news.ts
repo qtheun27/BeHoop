@@ -5,7 +5,7 @@ import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { execFile } from 'node:child_process';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat }
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[] }
 
 const GN = 'https://news.google.com/rss/search?';
 const gq = (q: string, lang: 'fr' | 'nl') => `${GN}q=${q}+when:14d&hl=${lang}&gl=BE&ceid=BE:${lang}`;
@@ -145,7 +145,7 @@ async function enrich(items: News[]) {
 // Recherches régionales : Google renvoie aussi le foot, le tennis… de ces médias. On garde ce qui parle de basket
 // ou cite un club de basket (nom propre à un seul club), sauf si l'article parle visiblement d'un autre sport.
 const OTHER_SPORT = /voetbal|football|\bfoot\b|tennis|handbal|handball|volley|wielren|cyclis|hockey|rugby|atletiek|athl[ée]tisme|doelpunt|penalty|rode kaart|carton rouge|croky cup|jupiler|\bgoal|keeper|gardien de but|veldrit|gravel|motocross|judo|zwemmen|natation/i;
-const GENERIC = new Set('basket basketball basketbal basketbalclub club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
+const GENERIC = new Set('basket basketball basketbal basketbalclub ball bal club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
 export function clubMatcher(clubs: { name: string; short: string }[]) {
   // Noms de club d'au moins deux mots (« limburg united », « okapi aalst »), avec ou sans les mots génériques :
   // un nom de ville seul est trop ambigu (foot, faits divers…)
@@ -159,6 +159,54 @@ export function clubMatcher(clubs: { name: string; short: string }[]) {
   const re = new RegExp(`\\b(${[...keys].join('|')})\\b`);
   return (text: string) => keys.size > 0 && re.test(normalize(text));
 }
+/**
+ * Clubs cités par un article. Clés d'un club : morceaux de son nom (1 à n mots) qu'aucun autre club ne porte —
+ * un mot seul doit faire 5 lettres et ne pas être générique (« basket », « royal »…), un nom de ville partagé
+ * (« mons » : 3 clubs) ne compte donc pas seul. Si deux clés se chevauchent dans le texte, la plus longue gagne :
+ * « BC Mons Capitale » ne compte pas pour CityX Mons ni pour Mons Basketball.
+ */
+// Mots de noms de club trop courants seuls dans un article (prénoms, « Europe Cup », « Belgian Cats », « Euroleague Women »…)
+const SOLO_STOP = new Set('dynamo women ladies europe european belgian belgium pierre louis jean paul marie martin nicolas joseph georges michel andre jacques marc vincent hubert lambert laurent gilles ghislain amand servais remy roch thomas antoine charles francois henri julien pieter peter willem'.split(' '));
+export function clubTagger(clubs: { id: number; name: string; short: string; teams?: { id: number }[] }[]) {
+  const toks = (x: string) => normalize(x).split(' ').filter(Boolean);
+  const owners = new Map<string, Set<number>>();
+  const add = (k: string, id: number) => { if (!owners.has(k)) owners.set(k, new Set()); owners.get(k)!.add(id); };
+  for (const c of clubs) for (const n of new Set([c.name, c.short])) {
+    const w = toks(n);
+    for (let i = 0; i < w.length; i++) for (let j = i + 1; j <= w.length; j++) add(w.slice(i, j).join(' '), c.id);
+  }
+  const keys = new Map<string, number>();
+  // Nom partagé par plusieurs clubs : il revient au seul d'entre eux qui joue en BNXT (« Okapi Aalst » = l'équipe pro), sinon à personne
+  const pro = new Set(clubs.filter((c) => c.teams?.some((t) => t.id >= 2e10)).map((c) => c.id));
+  for (const [k, ids] of owners) {
+    if (ids.size > 1) { const p = [...ids].filter((i) => pro.has(i)); if (p.length !== 1) continue; ids.clear(); ids.add(p[0]); }
+    const w = k.split(' ');
+    const own = w.filter((x) => !GENERIC.has(x) && !/^\d+$/.test(x));
+    if (!own.length) continue;
+    if (w.length === 1 ? k.length >= 5 && !SOLO_STOP.has(k) : k.length >= 7) keys.set(k, [...ids][0]);
+  }
+  // Motif tolérant : espaces multiples, « basket-ball » = « basketball » ; un mot seul doit porter une majuscule
+  // dans l'article (nom propre) : « Winkel » est un club, « aan de winkel » non.
+  const pat = (k: string) => k.split(' ').map((w) => w.replace(/basketball/, 'basket\\s*ball')).join('\\s+');
+  const list = [...keys.keys()].sort((a, b) => b.length - a.length).map((k) => ({
+    id: keys.get(k)!, first: k.split(' ')[0].slice(0, 5),
+    re: k.includes(' ') ? new RegExp(`\\b${pat(k)}\\b`, 'gi') : new RegExp(`\\b(${k[0].toUpperCase()}${k.slice(1)}|${k.toUpperCase()})\\b`, 'g'),
+  }));
+  return (text: string): number[] => {
+    // Même longueur que le texte d'origine (accents retirés, ponctuation → espace) : positions comparables
+    const orig = text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z0-9]/g, ' ');
+    const low = orig.toLowerCase();
+    const hits: { s: number; e: number; id: number }[] = [];
+    for (const { id, first, re } of list) {
+      if (!low.includes(first)) continue;
+      re.lastIndex = 0; let m;
+      while ((m = re.exec(orig))) hits.push({ s: m.index, e: m.index + m[0].length, id });
+    }
+    const kept = hits.filter((h) => !hits.some((o) => o.id !== h.id && o.s <= h.s && o.e >= h.e && o.e - o.s > h.e - h.s));
+    return [...new Set(kept.map((h) => h.id))];
+  };
+}
+
 export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit: (t: string) => boolean) {
   const t = `${n.title} ${n.excerpt}`;
   if (/basket/i.test(`${t} ${n.url}`)) return true;
@@ -168,7 +216,8 @@ export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit
 export async function run(out = 'app-data/news.json') {
   const prev: News[] = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')).items ?? [] : [];
   const all: News[] = [];
-  const clubHit = clubMatcher(existsSync('app-data/index.json') ? JSON.parse(readFileSync('app-data/index.json', 'utf8')).clubs : []);
+  const indexClubs = existsSync('app-data/index.json') ? JSON.parse(readFileSync('app-data/index.json', 'utf8')).clubs : [];
+  const clubHit = clubMatcher(indexClubs);
   for (const f of FEEDS) {
     try {
       // fetch d'abord ; curl en secours (Mediahuis refuse le fetch de Node mais sert ses flux à curl)
@@ -200,6 +249,8 @@ export async function run(out = 'app-data/news.json') {
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
   items = [...new Set(seen.values())].slice(0, 500);
+  // Clubs cités (pour le fil de chaque club)
+  if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
   writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items }));
   console.log(`news.json : ${items.length} articles (${['belgique', 'regional', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);

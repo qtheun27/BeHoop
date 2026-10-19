@@ -18,9 +18,11 @@ function get<T>(path: string): Promise<T> {
   }
   return cache.get(path) as Promise<T>;
 }
-export interface Index { generated_at: string; season: string; clubs: Club[] }
+/** alias : anciens identifiants de club fusionnés (ex. fiche nationale + fiche AWBB) → identifiant actuel */
+export interface Index { generated_at: string; season: string; clubs: Club[]; alias?: Record<string, number> }
 export const loadIndex = () => get<Index>('index.json');
-export const loadClub = (id: number) => get<{ club: Club; games: Game[] }>(`clubs/${id}.json`);
+export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?? id;
+export const loadClub = async (id: number) => get<{ club: Club; games: Game[] }>(`clubs/${await clubAlias(id)}.json`);
 export const loadSerie = (id: number) => get<{ serie: { id: number; name: string; short: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
 
 let teamMap: Map<number, { team: Team; club: Club }> | null = null;
@@ -37,5 +39,5 @@ export { teamLabel } from '../../../shared/teamLabel';
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba' }
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[] }
 export const loadNews = () => get<{ generated_at: string; items: News[] }>('news.json');

@@ -13,5 +13,12 @@
       ],
       "lie": 1312
     }
+  },
+  "_note_bnxt": "« bnxt » : équipe BNXT (pro.json) → fiche fédération du même club, quand les noms diffèrent (sponsor, ordre des mots).",
+  "bnxt": {
+    "20000000541": 13681030066,
+    "20000000539": 13982733018,
+    "20000000565": 13359757090,
+    "20000000537": 1261
   }
 }
