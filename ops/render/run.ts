@@ -14,6 +14,7 @@ import { normalizeArgs, framesToClipArgs, photoClipArgs, segmentArgs, concatList
 import { buildChapters, chaptersToVtt, type Segment } from '../../shared/chapters';
 import { mosaicPhotos, quarterItems } from '../../shared/quarters';
 import { settingsFromStore, type MatchSettings, type MediaItem, type PlancheType } from '../../shared/types';
+import { N } from '../../shared/notifText';
 
 const ROOT = resolve(import.meta.dirname, '../..');
 const FFMPEG = process.env.FFMPEG ?? (existsSync('/usr/bin/ffmpeg') ? '/usr/bin/ffmpeg' : (ffmpegStatic as unknown as string));
@@ -220,12 +221,12 @@ async function remote(id: string) {
       payload: { matchVideoId: id, title: job.settings.title, duration: hls.duration, posterKey: hls.posterKey, score: `${fh} – ${fa}` },
     }, { merge: true });
     await jobRef.update({ status: 'done', progress: 100, step: 'Vidéo prête', finishedAt: FieldValue.serverTimestamp() });
-    await notifyUsers([mv.authorUid], { title: 'Ta vidéo est prête 🎬', body: job.settings.title, url: `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
+    await notifyUsers([mv.authorUid], { title: N.videoReady, body: job.settings.title, url: `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
     // « Nouvelle vidéo de [équipe] » : membres de l'Équipe 🔒 (Jeunes) ou abonnés (Seniors)
     let to: string[] = [];
     if (job.visibility === 'team') to = (await db.collection(`teamMembers/${job.teamIdPrivate}/members`).where('status', '==', 'accepted').get()).docs.map((d) => d.id);
     else { const idx = JSON.parse(readFileSync(join(ROOT, 'app-data/index.json'), 'utf8')); const m = new Map<number, number>(); idx.clubs.forEach((c: any) => c.teams.forEach((t: any) => m.set(t.id, c.id))); to = await followers(teamIds, m); }
-    await notifyUsers(to.filter((u) => u !== mv.authorUid), { title: `Nouvelle vidéo : ${job.settings.home.name} – ${job.settings.away.name}`, body: job.settings.title, url: `/app/#/video/${id}` }, 'newVideo', teamIds[0], `video_${id}_${version}`).catch(() => 0);
+    await notifyUsers(to.filter((u) => u !== mv.authorUid), { title: N.newVideo(job.settings.home.name, job.settings.away.name), body: job.settings.title, url: `/app/#/video/${id}` }, 'newVideo', teamIds[0], `video_${id}_${version}`).catch(() => 0);
   } catch (e) {
     console.error(e);
     await jobRef.set({ status: 'error', step: 'Erreur', error: `Le montage a échoué : ${String((e as Error).message).slice(0, 300)}`, ghRunUrl, finishedAt: FieldValue.serverTimestamp() }, { merge: true });

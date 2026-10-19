@@ -7,6 +7,7 @@ import { Firestore } from './firestore';
 import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName } from './access';
 import { sendToUsers, followersOfTeams } from './notify';
 import { settingsToStore } from '../../shared/types';
+import { N } from '../../shared/notifText';
 
 export interface Env {
   BUCKET: R2Bucket;
@@ -196,7 +197,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!p?.hidden || p.hiddenReason !== 'parent') return fail('rien à faire');
     await fs.set(`reports/${body.postId}_parent`, { postId: body.postId, reporterUid: user.uid, reason: 'Retrait parent (contenu masqué)', status: 'open', createdAt: new Date() }, false);
     const to = [p.authorUid, env.SUPER_ADMIN_UID].filter(Boolean) as string[];
-    await sendToUsers(fs, env, to, { title: 'Contenu retiré', body: 'Un parent a retiré une publication de jeunes. Elle est masquée.', url: '/app/#/moderation' }, 'parent', null);
+    await sendToUsers(fs, env, to, { title: N.removedTitle, body: N.removedBody, url: '/app/#/moderation' }, 'parent', null);
     return json({ ok: true });
   }
   if (path === '/notify/live-final') {
@@ -204,7 +205,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!l || l.status !== 'final' || l.notified) return json({ ok: true });
     await fs.set(`liveScores/${Number(body.gameId)}`, { notified: true });
     const uids = await followersOfTeams(fs, env, l.teamIds);
-    await sendToUsers(fs, env, uids, { title: `Fin du match : ${l.home} – ${l.away}`, body: 'Score saisi en direct sur BeHoop', url: '/app/#/matchs' }, 'live', l.teamIds[0]);
+    await sendToUsers(fs, env, uids, { title: N.liveFinal(l.home, l.away), body: N.liveBody, url: '/app/#/matchs' }, 'live', l.teamIds[0]);
     return json({ ok: true });
   }
   // Demande d'accès à une Équipe 🔒 → responsables de l'équipe (ou super admin si elle n'en a pas encore)
@@ -214,7 +215,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!me || me.status !== 'pending') return json({ ok: true });
     const resp = (await fs.query('members', [['role', 'EQUAL', 'responsable'], ['status', 'EQUAL', 'accepted']], { parent: `teamMembers/${teamId}` })).map((m) => m._path.split('/').pop() as string);
     const to = resp.length ? resp : [env.SUPER_ADMIN_UID].filter(Boolean) as string[];
-    await sendToUsers(fs, env, to, { title: 'Demande d’accès à l’Équipe 🔒', body: `${profile?.displayName ?? 'Quelqu’un'} souhaite rejoindre l’équipe.${me.message ? ` « ${String(me.message).slice(0, 80)} »` : ''}`, url: `/app/#/equipes/${teamId}` }, 'joinRequest', null);
+    await sendToUsers(fs, env, to, { title: N.joinTitle, body: N.joinBody(profile?.displayName, me.message ? ` « ${String(me.message).slice(0, 80)} »` : ''), url: `/app/#/equipes/${teamId}` }, 'joinRequest', null);
     return json({ ok: true });
   }
   // Demande acceptée → le nouveau membre (appel par un responsable ou le super admin)
@@ -223,12 +224,12 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const me = await fs.get<any>(`teamMembers/${teamId}/members/${user.uid}`);
     if (!isAdmin && !(me?.status === 'accepted' && me?.role === 'responsable')) throw new Error('FORBIDDEN');
     const m = await fs.get<any>(`teamMembers/${teamId}/members/${uid}`);
-    if (m?.status === 'accepted') await sendToUsers(fs, env, [uid], { title: 'Bienvenue dans l’Équipe 🔒', body: 'Ta demande est acceptée : tu vois maintenant les photos et vidéos de l’équipe.', url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
+    if (m?.status === 'accepted') await sendToUsers(fs, env, [uid], { title: N.welcomeTitle, body: N.welcomeBody, url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
     return json({ ok: true });
   }
   if (path === '/notify/carpool') {
     const o = await fs.get<any>(`carpools/${Number(body.gameId)}/offers/${String(body.offerId).replace(/\W/g, '')}`);
-    if (o) await sendToUsers(fs, env, [o.driverUid], { title: 'Covoiturage', body: `${profile?.displayName ?? 'Quelqu’un'} a répondu à ton annonce.`, url: '/app/#/matchs' }, 'carpool', null);
+    if (o) await sendToUsers(fs, env, [o.driverUid], { title: N.carpool, body: N.carpoolReply(profile?.displayName), url: '/app/#/matchs' }, 'carpool', null);
     return json({ ok: true });
   }
 

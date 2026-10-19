@@ -35,9 +35,29 @@ export async function teamIndex() {
   return teamMap;
 }
 export const isPlayed = (g: Game) => g.hs !== null && g.as !== null && !(g.hs === 0 && g.as === 0);
-export { teamLabel } from '../../../shared/teamLabel';
+import { teamLabel as frTeamLabel } from '../../../shared/teamLabel';
+import { lang } from './i18n';
+// Libellés d'équipe (générés en français) : mots traduits selon la langue de l'appli
+const CAT_WORDS: Record<'nl' | 'en', Record<string, string>> = {
+  nl: { Mixte: 'Gemengd', Seniors: 'Senioren', Garçons: 'Jongens', Messieurs: 'Heren', Filles: 'Meisjes', Dames: 'Dames', National: 'Nationaal', nationale: 'nationaal', Régionale: 'Regionaal', Provinciale: 'Provinciaal', Équipe: 'Ploeg' },
+  en: { Mixte: 'Mixed', Seniors: 'Seniors', Garçons: 'Boys', Messieurs: 'Men', Filles: 'Girls', Dames: 'Women', National: 'National', nationale: 'national', Régionale: 'Regional', Provinciale: 'Provincial', Équipe: 'Team' },
+};
+export function trCat(s: string) {
+  const l = lang(); if (l === 'fr') return s;
+  return s.replace(/[A-Za-zÀ-ÿ]+/g, (w) => CAT_WORDS[l][w] ?? w);
+}
+export const teamLabel = (t: { cat: string; name: string }) => trCat(frTeamLabel(t));
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[] }
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[];
+  lang?: 'fr' | 'nl' | 'en'; tr?: Partial<Record<'fr' | 'nl' | 'en', { t: string; e: string }>> }
+/** Titre et accroche dans la langue de l'appli (traduction automatique si disponible). */
+export function newsText(n: News) {
+  const l = lang(), x = n.tr?.[l];
+  if (!x?.t || n.lang === l) return { title: n.title, excerpt: n.excerpt, translated: false };
+  return { title: x.t, excerpt: x.e, translated: true };
+}
+/** Lisible dans la langue de l'appli : écrit dans cette langue ou traduit. */
+export const readable = (n: News) => !n.lang || n.lang === lang() || !!n.tr?.[lang()]?.t;
 export const loadNews = () => get<{ generated_at: string; items: News[] }>('news.json');

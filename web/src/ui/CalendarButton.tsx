@@ -4,6 +4,7 @@
 import { arrayUnion } from 'firebase/firestore';
 import { useSession } from '../lib/session';
 import { updateProfile } from '../lib/db';
+import { t } from '../lib/i18n';
 
 const KEY = 'behoop.calendars';
 const local = (): number[] => { try { return JSON.parse(localStorage.getItem(KEY) ?? '[]'); } catch { return []; } };
@@ -24,15 +25,15 @@ export function useCalendar(teamId: number) {
 }
 
 /** compact : sur une carte de match → rien du tout une fois l'équipe ajoutée. */
-export function CalendarButton({ teamId, label = '📆 Ajouter au calendrier', compact, primary }: { teamId: number; label?: string; compact?: boolean; primary?: boolean }) {
+export function CalendarButton({ teamId, label = t('📆 Ajouter au calendrier'), compact, primary }: { teamId: number; label?: string; compact?: boolean; primary?: boolean }) {
   const { done, mark } = useCalendar(teamId);
   const href = icsUrl(teamId).replace(/^https?:/, 'webcal:');
   if (done && compact) return null;
-  if (done) return <a className="btn small secondary" href={href} title="Ajouter à nouveau (autre appareil)">✓ Dans ton calendrier</a>;
+  if (done) return <a className="btn small secondary" href={href} title={t('Ajouter à nouveau (autre appareil)')}>{t('✓ Dans ton calendrier')}</a>;
   return (
     <>
       <a className={`btn small${primary ? '' : ' secondary'}`} href={href} onClick={mark}>{label}</a>
-      <button className="btn small ghost" onClick={mark} title="Ton calendrier contient déjà les matchs de cette équipe">✓ Déjà fait</button>
+      <button className="btn small ghost" onClick={mark} title={t('Ton calendrier contient déjà les matchs de cette équipe')}>{t('✓ Déjà fait')}</button>
     </>
   );
 }

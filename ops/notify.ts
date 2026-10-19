@@ -3,6 +3,7 @@
 import { admin, hasFirebase, notifyUsers, followers, R2 } from './lib/admin';
 import { isPlayed } from './appData';
 import { loadAll } from './allData';
+import { N } from '../shared/notifText';
 
 if (!hasFirebase()) { console.log('ℹ️  Pas de compte de service Firebase : rien à faire.'); process.exit(0); }
 const { db } = admin();
@@ -21,7 +22,7 @@ for (const g of games.filter((g: any) => g.d === iso(nowBxl) && g.t)) {
   const diff = (h * 60 + m) - (nowBxl.getHours() * 60 + nowBxl.getMinutes());
   if (diff < 105 || diff >= 135) continue;
   const uids = await followers([g.h, g.a], tc);
-  n += await notifyUsers(uids, { title: `Match dans 2 h : ${g.hn} – ${g.an}`, body: `${g.t} · ${g.v}`, url: `/app/#/matchs?g=${g.id}` }, 'match2h', g.h, `m2h_${g.id}`);
+  n += await notifyUsers(uids, { title: N.match2h(g.hn, g.an), body: `${g.t} · ${g.v}`, url: `/app/#/matchs?g=${g.id}` }, 'match2h', g.h, `m2h_${g.id}`);
 }
 // 2. Rappel covoiturage la veille, à 18 h
 if (nowBxl.getHours() === 18 && nowBxl.getMinutes() < 30) {
@@ -30,7 +31,7 @@ if (nowBxl.getHours() === 18 && nowBxl.getMinutes() < 30) {
     const offers = await db.collection(`carpools/${g.id}/offers`).get();
     for (const o of offers.docs) {
       const d = o.data(); const riders = Object.entries(d.requests ?? {}).filter(([, r]: any) => r.status === 'accepted').map(([u]) => u);
-      if (riders.length) n += await notifyUsers([d.driverUid, ...riders], { title: 'Covoiturage demain', body: `${g.hn} – ${g.an} · départ ${d.time} de ${d.from}`, url: `/app/#/matchs?g=${g.id}` }, 'carpool', null, `car_${o.id}`);
+      if (riders.length) n += await notifyUsers([d.driverUid, ...riders], { title: N.carpoolTomorrow, body: N.carpoolDetail(g.hn, g.an, d.time, d.from), url: `/app/#/matchs?g=${g.id}` }, 'carpool', null, `car_${o.id}`);
     }
   }
 }

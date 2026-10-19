@@ -1,4 +1,5 @@
 // Génère une image 1080×1350 de la carte de score (style planches) et ouvre le partage (WhatsApp…).
+import { t } from './i18n';
 import type { ScorePayload } from '../screens/Feed';
 import { dotted } from './util';
 
@@ -18,7 +19,7 @@ export async function renderScoreCanvas(p: ScorePayload): Promise<HTMLCanvasElem
   g.globalAlpha = .07; g.strokeStyle = '#fff'; g.lineWidth = 4; g.beginPath(); g.arc(540, 675, 180, 0, Math.PI * 2); g.stroke(); g.globalAlpha = 1;
   g.textAlign = 'center'; g.fillStyle = '#f2c14e'; g.font = '600 30px Oswald'; g.letterSpacing = '10px';
   g.fillText(`${p.competition} · ${dotted(p.date)}`.toUpperCase(), 540, 150);
-  g.letterSpacing = '0px'; g.fillStyle = '#fff'; g.font = '130px Anton'; g.fillText('SCORE FINAL', 540, 300);
+  g.letterSpacing = '0px'; g.fillStyle = '#fff'; g.font = '130px Anton'; g.fillText(t('Score final').toUpperCase(), 540, 300);
   const [lh, la] = await Promise.all([loadImg(p.home.logo), loadImg(p.away.logo)]);
   const disc = (x: number, y: number, img: HTMLImageElement | null, ring: string, name: string) => {
     g.beginPath(); g.arc(x, y, 150, 0, Math.PI * 2); g.fillStyle = ring; g.fill();
@@ -28,7 +29,7 @@ export async function renderScoreCanvas(p: ScorePayload): Promise<HTMLCanvasElem
   };
   disc(270, 560, lh, p.home.color ?? '#3d8fdb', p.home.name); disc(810, 560, la, p.away.color ?? '#8a1e36', p.away.name);
   g.font = '700 40px Oswald'; g.fillStyle = '#fff';
-  const wrap = (t: string, x: number, y: number) => { const w = t.toUpperCase().split(' '); let l = '', yy = y; for (const x2 of w) { if (g.measureText(l + x2).width > 420) { g.fillText(l.trim(), x, yy); l = ''; yy += 46; } l += x2 + ' '; } g.fillText(l.trim(), x, yy); };
+  const wrap = (txt: string, x: number, y: number) => { const w = txt.toUpperCase().split(' '); let l = '', yy = y; for (const x2 of w) { if (g.measureText(l + x2).width > 420) { g.fillText(l.trim(), x, yy); l = ''; yy += 46; } l += x2 + ' '; } g.fillText(l.trim(), x, yy); };
   wrap(p.home.name, 270, 770); wrap(p.away.name, 810, 770);
   g.font = '300px Anton';
   const lead = p.home.score === p.away.score ? 0 : p.home.score > p.away.score ? 1 : 2;

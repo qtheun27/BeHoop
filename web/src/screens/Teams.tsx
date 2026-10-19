@@ -11,6 +11,7 @@ import { PostCard } from './Feed';
 import { MembersList, RELATION_FR } from './Explore';
 import { CarpoolSheet, LiveScoreSheet, useLive } from './Live';
 import { frDate, mapsUrl, store } from '../lib/util';
+import { t, tn } from '../lib/i18n';
 
 export function MyTeams({ id }: { id?: number }) {
   const s = useSession();
@@ -21,18 +22,18 @@ export function MyTeams({ id }: { id?: number }) {
   useEffect(() => { if (current) store.set('behoop.equipe', current.teamId); }, [current?.teamId]); // eslint-disable-line
 
   if (!s.user) return (
-    <Screen title="Équipes"><Empty ill="👨‍👩‍👧" title="L'espace de ton équipe" text="Connecte-toi pour retrouver l'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos."
-      action={<button className="btn" onClick={() => s.requireAuth()}>Se connecter</button>} /></Screen>);
+    <Screen title={t('Équipes')}><Empty ill="👨‍👩‍👧" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
+      action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>);
   if (!mine.length) return (
-    <Screen title="Équipes"><Empty ill="👨‍👩‍👧" title="Tu ne fais encore partie d'aucune équipe" text="Ouvre la fiche de l'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande."
-      action={<a className="btn" href="#/explorer">Trouver mon équipe</a>} /></Screen>);
-  const name = (tid: number) => { const e = idx.data?.get(tid); return e ? `${e.club.short} · ${teamLabel(e.team)}` : `Équipe ${tid}`; };
+    <Screen title={t('Équipes')}><Empty ill="👨‍👩‍👧" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
+      action={<a className="btn" href="#/explorer">{t('Trouver mon équipe')}</a>} /></Screen>);
+  const name = (tid: number) => { const e = idx.data?.get(tid); return e ? `${e.club.short} · ${teamLabel(e.team)}` : `${t('Équipe')} ${tid}`; };
   return (
-    <Screen title="Équipes">
+    <Screen title={t('Équipes')}>
       {mine.length > 1 && <div className="chips">{mine.map((m) => (
         <button key={m.teamId} className={`chip${current?.teamId === m.teamId ? ' on' : ''}`} onClick={() => setSel(m.teamId)}>{name(m.teamId)}</button>))}</div>}
       {current && (current.status === 'accepted' ? <TeamSpace key={current.teamId} m={current} /> : (
-        <Empty ill="⏳" title={`Demande envoyée : ${name(current.teamId)}`} text="Un responsable de l'équipe doit valider ta demande. Tu recevras une notification." />))}
+        <Empty ill="⏳" title={t('Demande envoyée : {name}', { name: name(current.teamId) })} text={t('Un responsable de l\'équipe doit valider ta demande. Tu recevras une notification.')} />))}
     </Screen>
   );
 }
@@ -40,7 +41,7 @@ export function MyTeams({ id }: { id?: number }) {
 function TeamSpace({ m }: { m: D.Membership }) {
   const s = useSession();
   const data = useAsync(async () => {
-    const e = (await teamIndex()).get(m.teamId); if (!e) throw new Error('Équipe introuvable');
+    const e = (await teamIndex()).get(m.teamId); if (!e) throw new Error(t('Équipe introuvable'));
     const c = await loadClub(e.club.id);
     await ensureMediaCookie();
     const posts = await D.postsForTeam(m.teamId, true);
@@ -63,18 +64,18 @@ function TeamSpace({ m }: { m: D.Membership }) {
       <a className="hstack" href={`#/equipe/${team.id}`} style={{ color: 'inherit', marginBottom: 18 }}>
         <Disc src={club.logo} name={club.name} size={60} ring={club.c1} />
         <div style={{ flex: 1 }}><div style={{ fontWeight: 800, fontSize: 19 }}>{teamLabel(team)}</div><div className="muted">{club.name}</div></div>
-        <span className="pill">{[m.relation ? RELATION_FR[m.relation] : null, resp ? 'Responsable' : !m.relation ? 'Membre' : null].filter(Boolean).join(' · ')}</span>
+        <span className="pill">{[m.relation ? t(RELATION_FR[m.relation]) : null, resp ? t('Responsable') : !m.relation ? t('Membre') : null].filter(Boolean).join(' · ')}</span>
       </a>
 
-      <div className="group-title">Prochains matchs</div>
-      {upcoming.length === 0 ? <div className="group"><div className="row muted">Aucun match programmé.</div></div> : upcoming.map((g, i) => (
+      <div className="group-title">{t('Prochains matchs')}</div>
+      {upcoming.length === 0 ? <div className="group"><div className="row muted">{t('Aucun match programmé.')}</div></div> : upcoming.map((g, i) => (
         <NextGame key={g.id} g={g} teamId={team.id} big={i === 0} onCar={() => setSheet({ kind: 'car', g })} onLive={() => setSheet({ kind: 'live', g })} />))}
       {last && <a className="row group" href={`#/equipe/${team.id}`} style={{ color: 'inherit' }}>
-        <div className="grow"><div className="sub">Dernier résultat · {frDate(last.d, { day: 'numeric', month: 'short' })}</div>
+        <div className="grow"><div className="sub">{t('Dernier résultat')} · {frDate(last.d, { day: 'numeric', month: 'short' })}</div>
           <div style={{ fontWeight: 600 }}>{last.hn} {last.hs} – {last.as} {last.an}</div></div><span className="chev">›</span></a>}
 
       {videos.length > 0 && <>
-        <div className="group-title">🎬 Vidéos de match</div>
+        <div className="group-title">{t('🎬 Vidéos de match')}</div>
         <div className="group">{videos.slice(0, 5).map((p) => (
           <a key={p.id} className="row" href={p.type === 'video' ? `#/video/${p.payload.matchVideoId}` : `#/video/${p.payload.matchVideoId}/m-${p.payload.momentId}`} style={{ color: 'inherit' }}>
             <div className="thumb" style={{ width: 72, aspectRatio: '16/9', backgroundImage: p.payload.posterKey ? `url(${mediaUrl(p.payload.posterKey)})` : undefined }} />
@@ -82,27 +83,27 @@ function TeamSpace({ m }: { m: D.Membership }) {
       </>}
 
       {photos.length > 0 && <>
-        <div className="group-title">📷 Galerie</div>
+        <div className="group-title">{t('📷 Galerie')}</div>
         <div className="grid3" style={{ marginBottom: 22 }}>{photos.map((ph, i) => (
-          <a key={i} className="thumb" href={`#/post/${ph.post}`} style={{ backgroundImage: `url(${mediaUrl(ph.key)})` }} aria-label="Voir la photo" />))}</div>
+          <a key={i} className="thumb" href={`#/post/${ph.post}`} style={{ backgroundImage: `url(${mediaUrl(ph.key)})` }} aria-label={t('Voir la photo')} />))}</div>
       </>}
 
-      <div className="group-title">👥 Membres</div>
+      <div className="group-title">{t('👥 Membres')}</div>
       <button className="row group" onClick={() => setSheet({ kind: 'members' })}>
-        <div className="grow">{acc.length} membre{acc.length > 1 ? 's' : ''}{resp && pending.length > 0 && <span className="pill live" style={{ marginLeft: 8 }}>{pending.length} demande{pending.length > 1 ? 's' : ''}</span>}</div>
+        <div className="grow">{tn(acc.length, '{n} membre', '{n} membres')}{resp && pending.length > 0 && <span className="pill live" style={{ marginLeft: 8 }}>{tn(pending.length, '{n} demande', '{n} demandes')}</span>}</div>
         <span className="chev">›</span></button>
 
       <div className="hstack" style={{ justifyContent: 'space-between', margin: '6px 4px 8px' }}>
-        <div className="group-title" style={{ margin: 0 }}>Fil de l'équipe</div>
-        <a href="#/publier?photo=1" style={{ fontWeight: 600, fontSize: 15 }}>＋ Publier</a>
+        <div className="group-title" style={{ margin: 0 }}>{t('Fil de l\'équipe')}</div>
+        <a href="#/publier?photo=1" style={{ fontWeight: 600, fontSize: 15 }}>{t('＋ Publier')}</a>
       </div>
-      {posts.length === 0 ? <Empty ill="🏀" title="Rien pour l'instant" text="Les résultats, photos et vidéos de l'équipe apparaîtront ici." /> : posts.slice(0, 10).map((p) => <PostCard key={p.id} post={p} />)}
+      {posts.length === 0 ? <Empty ill="🏀" title={t('Rien pour l\'instant')} text={t('Les résultats, photos et vidéos de l\'équipe apparaîtront ici.')} /> : posts.slice(0, 10).map((p) => <PostCard key={p.id} post={p} />)}
 
       {sheet?.kind === 'car' && sheet.g && <CarpoolSheet g={sheet.g} youthTeam={team.ag === 'jeunes' ? team.id : null} onClose={() => setSheet(null)} />}
       {sheet?.kind === 'live' && sheet.g && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
-      {sheet?.kind === 'members' && <Sheet title="Membres de l'équipe" onClose={() => setSheet(null)}>
+      {sheet?.kind === 'members' && <Sheet title={t('Membres de l\'équipe')} onClose={() => setSheet(null)}>
         {resp ? <MembersList teamId={team.id} members={members.data ?? []} reload={members.reload} me={s.user!.uid} />
-          : <div className="group">{acc.map((x) => <div key={x.uid} className="row"><div className="grow">{x.displayName} {x.relation && <span className="muted">· {RELATION_FR[x.relation]}</span>}</div>{x.role === 'responsable' && <span className="pill">Responsable</span>}</div>)}</div>}
+          : <div className="group">{acc.map((x) => <div key={x.uid} className="row"><div className="grow">{x.displayName} {x.relation && <span className="muted">· {t(RELATION_FR[x.relation])}</span>}</div>{x.role === 'responsable' && <span className="pill">{t('Responsable')}</span>}</div>)}</div>}
       </Sheet>}
     </>
   );
@@ -116,16 +117,16 @@ function NextGame({ g, teamId, big, onCar, onLive }: { g: Game; teamId: number; 
     <div className="card" style={{ padding: big ? 16 : 12 }}>
       <div className="hstack" style={{ justifyContent: 'space-between' }}>
         <span className="muted" style={{ fontSize: 14 }}>{frDate(g.d)} · {g.t}</span>
-        <span className="pill">{home ? 'Domicile' : 'Extérieur'}</span>
+        <span className="pill">{home ? t('Domicile') : t('Extérieur')}</span>
       </div>
       <div style={{ fontWeight: 700, fontSize: big ? 18 : 16, marginTop: 6 }}>{home ? `vs ${g.an}` : `@ ${g.hn}`}</div>
       {live?.status === 'live' && <div className="pill live" style={{ marginTop: 6 }}>🔴 {live.home} – {live.away} · Q{live.quarter}</div>}
       {big && g.v && <div className="muted" style={{ fontSize: 14, marginTop: 4 }}>📍 {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack" style={{ flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
-        <button className="btn small" onClick={onCar}>🚗 Covoiturage</button>
-        {big && g.v && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">Itinéraire</a>}
-        {big && <CalendarButton teamId={teamId} label="📆 Calendrier" compact />}
-        {g.d === today && <button className="btn small secondary" onClick={onLive}>Score en direct</button>}
+        <button className="btn small" onClick={onCar}>{t('🚗 Covoiturage')}</button>
+        {big && g.v && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
+        {big && <CalendarButton teamId={teamId} label={t('📆 Calendrier')} compact />}
+        {g.d === today && <button className="btn small secondary" onClick={onLive}>{t('Score en direct')}</button>}
       </div>
     </div>
   );

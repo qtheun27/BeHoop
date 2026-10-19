@@ -28,6 +28,9 @@ jobs:
         with: { node-version: '22', cache: 'npm' }
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npx tsx ops/news.ts
+        env:
+          # Traduction des actus FR · NL · EN (facultatif : sans clé, les articles restent dans leur langue)
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Enregistrer
         run: |
           git config user.name "BeHoop Actus-Bot"

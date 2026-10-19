@@ -3,14 +3,15 @@
 import type { Firestore } from './firestore';
 import { accessToken } from './google';
 import type { Env } from './index';
+import { pick, type Txt } from '../../shared/notifText';
 
-export interface Notif { title: string; body: string; url: string }
+export interface Notif { title: Txt; body: Txt; url: string }
 
 export async function sendToUsers(fs: Firestore, env: Env, uids: string[], n: Notif, type: string, teamId: number | null) {
   const hour = new Date().toISOString().slice(0, 13);
   const token = await accessToken(env.FIREBASE_SERVICE_ACCOUNT);
   for (const uid of [...new Set(uids)].slice(0, 500)) {
-    const p = await fs.get<{ notifPrefs?: Record<string, boolean>; fcmTokens?: string[] }>(`profiles/${uid}`);
+    const p = await fs.get<{ notifPrefs?: Record<string, boolean>; fcmTokens?: string[]; lang?: string }>(`profiles/${uid}`);
     if (!p?.fcmTokens?.length || p.notifPrefs?.[type] === false) continue;
     if (teamId && type !== 'videoReady') {
       const log = `notifLog/${uid}_${teamId}_${hour}`;
@@ -20,7 +21,7 @@ export async function sendToUsers(fs: Firestore, env: Env, uids: string[], n: No
     for (const t of p.fcmTokens) {
       const r = await fetch(`https://fcm.googleapis.com/v1/projects/${env.FIREBASE_PROJECT_ID}/messages:send`, {
         method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: { token: t, notification: { title: n.title, body: n.body }, data: { url: n.url, tag: type },
+        body: JSON.stringify({ message: { token: t, notification: { title: pick(n.title, p.lang), body: pick(n.body, p.lang) }, data: { url: n.url, tag: type },
           webpush: { fcmOptions: { link: env.SITE_URL + n.url }, notification: { icon: '/icons/icon-192.png' } } } }),
       });
       if (r.status === 404 || r.status === 400) {

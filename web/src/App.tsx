@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
 import { Icons, Skeleton } from './ui/kit';
+import { t } from './lib/i18n';
 import { AuthSheet, Onboarding } from './screens/Auth';
 import { Explore, ClubPage, TeamPage } from './screens/Explore';
 import { Profile } from './screens/Profile';
@@ -17,6 +18,7 @@ const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
 const Watch = lazy(() => import('./screens/Watch'));
 
+const tr = t;
 const TABS = [
   { id: 'fil', label: 'Fil', icon: Icons.home }, { id: 'explorer', label: 'Rechercher', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
@@ -52,10 +54,10 @@ export function App() {
   return (
     <>
       <Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense>
-      <nav className="tabbar" aria-label="Navigation principale">
+      <nav className="tabbar" aria-label={tr('Navigation principale')}>
         {TABS.map((t) => (
           <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
-            {t.icon}{t.id !== 'publier' && <span>{t.label}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>Publier</span>}
+            {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Publier')}</span>}
           </a>
         ))}
       </nav>

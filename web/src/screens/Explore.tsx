@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, normalize, teamLabel, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, normalize, newsText, teamLabel, trCat, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
@@ -8,6 +8,7 @@ import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
 import { NewsCard } from './News';
+import { t } from '../lib/i18n';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
   const s = useSession();
@@ -15,7 +16,7 @@ export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }
   return (
     <button className={`btn small${on ? ' secondary' : ''}`} aria-pressed={on}
       onClick={() => { if (!s.requireAuth(() => s.toggleFollow(type, id))) return; haptic(); s.toggleFollow(type, id); }}>
-      {on ? 'Suivi ✓' : 'Suivre'}
+      {on ? t('Suivi ✓') : t('Suivre')}
     </button>
   );
 }
@@ -45,22 +46,22 @@ export function Explore() {
       .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   }, [data, n, reg]);
   // La recherche porte aussi sur les actus (titres et accroches)
-  const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
+  const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source} ${newsText(x).title}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
-    <Screen title="Rechercher">
-      {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>Crée ton compte</b><div className="muted" style={{ fontSize: 14 }}>pour suivre tes clubs et recevoir les résultats.</div></div><button className="btn small" onClick={() => s.requireAuth()}>Créer</button></div>}
-      <div className="search"><input className="field" type="search" placeholder="Club, ville ou actu…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Rechercher" /></div>
-      <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{r.label}</button>)}</div>
+    <Screen title={t('Rechercher')}>
+      {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
+      <div className="search"><input className="field" type="search" placeholder={t('Club, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
+      <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{t(r.label)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {n && <div className="group-title">Clubs et équipes</div>}
-      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="🔎" title="Aucun club trouvé" text="Essaie un autre nom ou une ville." />) : (
+      {n && <div className="group-title">{t('Clubs et équipes')}</div>}
+      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="🔎" title={t('Aucun club trouvé')} text={t('Essaie un autre nom ou une ville.')} />) : (
         <div className="group">{list.slice(0, n ? 30 : 120).map((c) => (
           <a key={c.id} className="row" href={c.teams.length === 1 ? `#/equipe/${c.teams[0].id}` : `#/club/${c.id}`} style={{ color: 'inherit' }}>
             <Disc src={c.logo} name={c.name} size={40} ring={c.c1} />
-            <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? c.teams[0].cat : `${c.teams.length} équipes`].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
+            <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? trCat(c.teams[0].cat) : t('{n} équipes', { n: c.teams.length })].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
-      {foundNews.length > 0 && <><div className="group-title">📰 Actus</div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
+      {foundNews.length > 0 && <><div className="group-title">{t('📰 Actus')}</div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
     </Screen>
   );
 }
@@ -74,15 +75,15 @@ export function GameRow({ g, teamIds }: { g: Game; teamIds: number[] }) {
       <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{played ? '' : g.t}</div>
       <div className="grow"><div className="ellipsis" style={{ fontWeight: home ? 600 : 400 }}>{g.hn}</div><div className="ellipsis" style={{ fontWeight: home ? 400 : 600 }}>{g.an}</div></div>
       {played ? <div style={{ textAlign: 'right', fontWeight: 700 }}><div>{g.hs}</div><div>{g.as}</div></div> : <span className="pill">{g.sn}</span>}
-      {played && <span className="pill" style={{ background: won ? 'var(--green)' : 'var(--red)', color: '#fff' }}>{won ? 'V' : 'D'}</span>}
+      {played && <span className="pill" style={{ background: won ? 'var(--green)' : 'var(--red)', color: '#fff' }}>{won ? t('V') : t('D')}</span>}
     </a>
   );
 }
 
 export function ClubPage({ id }: { id: number }) {
   const { data, error, reload } = useAsync(() => loadClub(id), [id]);
-  if (error) return <Screen title="Club" back="explorer"><ErrorBox msg={error} retry={reload} /></Screen>;
-  if (!data) return <Screen title="Club" back="explorer"><Skeleton /></Screen>;
+  if (error) return <Screen title={t('Club')} back="explorer"><ErrorBox msg={error} retry={reload} /></Screen>;
+  if (!data) return <Screen title={t('Club')} back="explorer"><Skeleton /></Screen>;
   const { club, games } = data;
   const tids = club.teams.map((t) => t.id);
   const today = new Date().toISOString().slice(0, 10);
@@ -94,8 +95,8 @@ export function ClubPage({ id }: { id: number }) {
         <div><div style={{ fontWeight: 700, fontSize: 20 }}>{club.name}</div><div className="muted">{club.venue?.name ?? club.city}</div></div></div>
       {club.linked && <LinkedClub id={club.linked} />}
       <TeamList club={club} />
-      {next.length > 0 && <><div className="group-title">Prochains matchs</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
-      {recent.length > 0 && <><div className="group-title">Derniers résultats</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
+      {next.length > 0 && <><div className="group-title">{t('Prochains matchs')}</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
+      {recent.length > 0 && <><div className="group-title">{t('Derniers résultats')}</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
     </Screen>
   );
 }
@@ -103,7 +104,7 @@ export function ClubPage({ id }: { id: number }) {
 export function TeamPage({ id }: { id: number }) {
   const s = useSession();
   const { data, error, reload } = useAsync(async () => {
-    const idx = await teamIndex(); const e = idx.get(id); if (!e) throw new Error('Équipe introuvable');
+    const idx = await teamIndex(); const e = idx.get(id); if (!e) throw new Error(t('Équipe introuvable'));
     const c = await loadClub(e.club.id);
     return { ...e, games: c.games.filter((g) => g.h === id || g.a === id) };
   }, [id]);
@@ -111,25 +112,25 @@ export function TeamPage({ id }: { id: number }) {
   const accepted = member?.status === 'accepted';
   const posts = useAsync(() => (s.user ? D.postsForTeam(id, accepted) : Promise.resolve([])), [id, s.user?.uid, accepted]);
   const [join, setJoin] = useState(false);
-  if (error) return <Screen title="Équipe" back="explorer"><ErrorBox msg={error} retry={reload} /></Screen>;
-  if (!data) return <Screen title="Équipe" back="explorer"><Skeleton /></Screen>;
+  if (error) return <Screen title={t('Équipe')} back="explorer"><ErrorBox msg={error} retry={reload} /></Screen>;
+  if (!data) return <Screen title={t('Équipe')} back="explorer"><Skeleton /></Screen>;
   const { team, club, games } = data;
   return (
     <Screen title={club.teams.length === 1 ? team.name : teamLabel(team)} back={club.teams.length === 1 ? 'explorer' : `club/${club.id}`} right={<FollowButton type="team" id={id} />}>
       <div className="hstack" style={{ marginBottom: 16 }}><Disc src={club.logo} name={club.name} size={56} ring={club.c1} />
-        <div className="grow" style={{ flex: 1 }}><div style={{ fontWeight: 700 }}>{club.name}</div><div className="muted">{team.ag === 'jeunes' ? 'Jeunes' : 'Seniors'} · {team.cat}</div></div><LiveBadge teamId={id} games={games} /></div>
+        <div className="grow" style={{ flex: 1 }}><div style={{ fontWeight: 700 }}>{club.name}</div><div className="muted">{team.ag === 'jeunes' ? t('Jeunes') : t('Seniors')} · {trCat(team.cat)}</div></div><LiveBadge teamId={id} games={games} /></div>
       {(
-        <div className="banner"><span style={{ fontSize: 26 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div style={{ flex: 1 }}><b>Tu fais partie de cette équipe ?</b>
-          <div className="muted" style={{ fontSize: 14 }}>{accepted ? `Tu es ${member!.role === 'responsable' ? 'responsable' : 'membre'} : retrouve-la dans l'onglet Équipes.` : member ? 'Demande envoyée, en attente de validation.'
-            : team.ag === 'jeunes' ? 'Parent, joueur ou coach : rejoins-la pour ses photos, vidéos et le covoiturage.' : 'Joueur ou coach : rejoins-la pour son espace (covoiturage, membres, vidéos).'}</div></div>
-          {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>Rejoindre</button>}
-          {accepted && <button className="btn small secondary" onClick={async () => { if (confirm('Quitter l’Équipe ?')) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>Quitter</button>}
+        <div className="banner"><span style={{ fontSize: 26 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div style={{ flex: 1 }}><b>{t('Tu fais partie de cette équipe ?')}</b>
+          <div className="muted" style={{ fontSize: 14 }}>{accepted ? (member!.role === 'responsable' ? t('Tu es responsable : retrouve-la dans l’onglet Équipes.') : t('Tu es membre : retrouve-la dans l’onglet Équipes.')) : member ? t('Demande envoyée, en attente de validation.')
+            : team.ag === 'jeunes' ? t('Parent, joueur ou coach : rejoins-la pour ses photos, vidéos et le covoiturage.') : t('Joueur ou coach : rejoins-la pour son espace (covoiturage, membres, vidéos).')}</div></div>
+          {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>{t('Rejoindre')}</button>}
+          {accepted && <button className="btn small secondary" onClick={async () => { if (confirm(t('Quitter l’Équipe ?'))) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>{t('Quitter')}</button>}
         </div>)}
       {accepted && member!.role === 'responsable' && <TeamAdmin teamId={id} />}
       <TeamTabs team={team} club={club} games={games} />
-      <div className="group-title">Publications</div>
-      {!s.user ? <Empty ill="📰" title="Connecte-toi pour voir le fil de l'équipe" action={<button className="btn small" onClick={() => s.requireAuth()}>Se connecter</button>} />
-        : posts.loading ? <Skeleton /> : posts.data?.length ? posts.data.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title="Rien pour l'instant" text="Les résultats et publications de l'équipe apparaîtront ici." />}
+      <div className="group-title">{t('Publications')}</div>
+      {!s.user ? <Empty ill="📰" title={t('Connecte-toi pour voir le fil de l\'équipe')} action={<button className="btn small" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} />
+        : posts.loading ? <Skeleton /> : posts.data?.length ? posts.data.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title={t('Rien pour l\'instant')} text={t('Les résultats et publications de l\'équipe apparaîtront ici.')} />}
       {join && <JoinSheet teamId={id} name={teamLabel(team)} onClose={() => setJoin(false)} />}
     </Screen>
   );
@@ -141,13 +142,13 @@ export function JoinSheet({ teamId, name, onClose }: { teamId: number; name: str
   const [m, setM] = useState('');
   const [rel, setRel] = useState<D.Relation | null>(null);
   return (
-    <Sheet title="Rejoindre l'équipe" onClose={onClose}>
-      <p className="muted" style={{ marginTop: 0 }}>Un responsable de l'équipe <b>{name}</b> validera ta demande.</p>
-      <div className="label">Je suis…</div>
-      <div className="seg">{RELATIONS.map(([k, l]) => <button key={k} className={rel === k ? 'on' : ''} onClick={() => setRel(k)}>{l}</button>)}</div>
-      <label className="label" htmlFor="jm">Message (optionnel)</label>
-      <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? 'Je suis le papa / la maman de…' : 'Un mot pour le responsable…'} value={m} onChange={(e) => setM(e.target.value)} />
-      <button className="btn mt" disabled={!rel} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!); await s.refresh(); s.toast('Demande envoyée'); onClose(); }}>Envoyer la demande</button>
+    <Sheet title={t('Rejoindre l\'équipe')} onClose={onClose}>
+      <p className="muted" style={{ marginTop: 0 }}>{t('Un responsable de l’équipe {name} validera ta demande.', { name })}</p>
+      <div className="label">{t('Je suis…')}</div>
+      <div className="seg">{RELATIONS.map(([k, l]) => <button key={k} className={rel === k ? 'on' : ''} onClick={() => setRel(k)}>{t(l)}</button>)}</div>
+      <label className="label" htmlFor="jm">{t('Message (optionnel)')}</label>
+      <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? t('Je suis le papa / la maman de…') : t('Un mot pour le responsable…')} value={m} onChange={(e) => setM(e.target.value)} />
+      <button className="btn mt" disabled={!rel} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
     </Sheet>
   );
 }
@@ -161,8 +162,8 @@ export function TeamAdmin({ teamId }: { teamId: number }) {
   return (
     <>
       <button className="row group" style={{ marginBottom: 22 }} onClick={() => setOpen(true)}>
-        <div className="grow">Gérer l'Équipe 🔒</div>{pending.length > 0 && <span className="pill live">{pending.length}</span>}<span className="chev">›</span></button>
-      {open && <Sheet title="Membres" onClose={() => setOpen(false)}><MembersList teamId={teamId} members={data} reload={reload} me={s.user!.uid} /></Sheet>}
+        <div className="grow">{t('Gérer l\'Équipe 🔒')}</div>{pending.length > 0 && <span className="pill live">{pending.length}</span>}<span className="chev">›</span></button>
+      {open && <Sheet title={t('Membres')} onClose={() => setOpen(false)}><MembersList teamId={teamId} members={data} reload={reload} me={s.user!.uid} /></Sheet>}
     </>
   );
 }
@@ -173,15 +174,15 @@ export function MembersList({ teamId, members, reload, me }: { teamId: number; m
   const pending = members.filter((m) => m.status === 'pending'), acc = members.filter((m) => m.status === 'accepted');
   return (
     <>
-      {pending.length > 0 && <><div className="group-title">Demandes</div><div className="group">{pending.map((m) => (
-        <div key={m.uid} className="row"><div className="grow"><div>{m.displayName} {m.relation && <span className="muted">· {RELATION_FR[m.relation]}</span>}</div>{m.message && <div className="sub">« {m.message} »</div>}</div>
-          <button className="btn small" onClick={() => act(() => D.setMember(teamId, m.uid, { status: 'accepted' }))}>Accepter</button>
-          <button className="btn small danger" onClick={() => act(() => D.removeMember(teamId, m.uid))}>Refuser</button></div>))}</div></>}
-      <div className="group-title">Membres ({acc.length})</div>
+      {pending.length > 0 && <><div className="group-title">{t('Demandes')}</div><div className="group">{pending.map((m) => (
+        <div key={m.uid} className="row"><div className="grow"><div>{m.displayName} {m.relation && <span className="muted">· {t(RELATION_FR[m.relation])}</span>}</div>{m.message && <div className="sub">« {m.message} »</div>}</div>
+          <button className="btn small" onClick={() => act(() => D.setMember(teamId, m.uid, { status: 'accepted' }))}>{t('Accepter')}</button>
+          <button className="btn small danger" onClick={() => act(() => D.removeMember(teamId, m.uid))}>{t('Refuser')}</button></div>))}</div></>}
+      <div className="group-title">{t('Membres')} ({acc.length})</div>
       <div className="group">{acc.map((m) => (
-        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {RELATION_FR[m.relation]}</span>} {m.role === 'responsable' && <span className="pill">Responsable</span>}</div>
-          {m.role !== 'responsable' && <button className="btn small secondary" onClick={() => act(() => D.setMember(teamId, m.uid, { role: 'responsable' }))}>Nommer responsable</button>}
-          {m.uid !== me && <button className="btn small danger" onClick={() => confirm(`Retirer ${m.displayName} ?`) && act(() => D.removeMember(teamId, m.uid))}>Retirer</button>}</div>))}</div>
+        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {t(RELATION_FR[m.relation])}</span>} {m.role === 'responsable' && <span className="pill">{t('Responsable')}</span>}</div>
+          {m.role !== 'responsable' && <button className="btn small secondary" onClick={() => act(() => D.setMember(teamId, m.uid, { role: 'responsable' }))}>{t('Nommer responsable')}</button>}
+          {m.uid !== me && <button className="btn small danger" onClick={() => confirm(t('Retirer {name} ?', { name: m.displayName ?? '' })) && act(() => D.removeMember(teamId, m.uid))}>{t('Retirer')}</button>}</div>))}</div>
     </>
   );
 }
@@ -226,19 +227,19 @@ export function TeamStats({ team, games }: { team: Team; club: Club; games: Game
   const pts = hist.map((h, i) => `${(i / Math.max(hist.length - 1, 1)) * W},${((h.rank - 1) / (n - 1)) * H}`).join(' ');
   return (
     <>
-      <div className="group-title">Forme & statistiques</div>
+      <div className="group-title">{t('Forme & statistiques')}</div>
       <div className="group" style={{ padding: 16 }}>
-        {last5.length > 0 && <div className="hstack" style={{ justifyContent: 'space-between' }}><span className="muted">5 derniers</span>
-          <div className="dots">{last5.map((g) => { const w = g.h === team.id ? g.hs! > g.as! : g.as! > g.hs!; return <i key={g.id} style={{ background: w ? 'var(--green)' : 'var(--red)' }} title={`${g.hn} ${g.hs}-${g.as} ${g.an}`}>{w ? 'V' : 'D'}</i>; })}</div></div>}
+        {last5.length > 0 && <div className="hstack" style={{ justifyContent: 'space-between' }}><span className="muted">{t('5 derniers')}</span>
+          <div className="dots">{last5.map((g) => { const w = g.h === team.id ? g.hs! > g.as! : g.as! > g.hs!; return <i key={g.id} style={{ background: w ? 'var(--green)' : 'var(--red)' }} title={`${g.hn} ${g.hs}-${g.as} ${g.an}`}>{w ? t('V') : t('D')}</i>; })}</div></div>}
         {played.length > 0 && <div className="hstack mt" style={{ justifyContent: 'space-around', textAlign: 'center' }}>
-          <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsFor / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>pts marqués / match</div></div>
-          <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsAg / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>pts encaissés / match</div></div></div>}
+          <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsFor / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>{t('pts marqués / match')}</div></div>
+          <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsAg / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>{t('pts encaissés / match')}</div></div></div>}
         {hist.length > 1 && <div className="mt"><div className="muted" style={{ fontSize: 13, marginBottom: 6 }}>Évolution au classement (actuellement {hist[hist.length - 1].rank}ᵉ / {hist[hist.length - 1].n})</div>
-          <svg viewBox={`-6 -6 ${W + 12} ${H + 12}`} width="100%" role="img" aria-label="Évolution au classement"><polyline points={pts} fill="none" stroke="var(--accent)" strokeWidth="3" strokeLinejoin="round" />
+          <svg viewBox={`-6 -6 ${W + 12} ${H + 12}`} width="100%" role="img" aria-label={t('Évolution au classement')}><polyline points={pts} fill="none" stroke="var(--accent)" strokeWidth="3" strokeLinejoin="round" />
             {hist.map((h, i) => <circle key={h.d} cx={(i / Math.max(hist.length - 1, 1)) * W} cy={((h.rank - 1) / (n - 1)) * H} r="4" fill="var(--accent)" />)}</svg></div>}
-        {next && <div className="mt"><div className="muted" style={{ fontSize: 13 }}>Prochain adversaire</div>
+        {next && <div className="mt"><div className="muted" style={{ fontSize: 13 }}>{t('Prochain adversaire')}</div>
           <div style={{ fontWeight: 600 }}>{next.h === team.id ? next.an : next.hn} {oppRank > 0 && <span className="pill">{oppRank}ᵉ</span>}</div>
-          <div className="muted" style={{ fontSize: 14 }}>{frDate(next.d)} · {next.t}{aller ? ` · Match aller : ${aller.hs}–${aller.as}` : ''}</div></div>}
+          <div className="muted" style={{ fontSize: 14 }}>{frDate(next.d)} · {next.t}{aller ? ` · ${t('Match aller')} : ${aller.hs}–${aller.as}` : ''}</div></div>}
       </div>
     </>
   );
@@ -254,7 +255,7 @@ function TeamTabs({ team, club, games }: { team: Team; club: Club; games: Game[]
     <>
       <div className="seg" role="tablist">
         {([['matchs', '📅 Matchs'], ['classement', '📊 Classement'], ['infos', '📈 Infos']] as const).map(([k, l]) =>
-          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{l}</button>)}
+          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{t(l)}</button>)}
       </div>
       {tab === 'matchs' && <TeamGames team={team} games={games} ics={ics} />}
       {tab === 'classement' && <TeamStandings team={team} games={games} />}
@@ -273,17 +274,17 @@ export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics
     <>
       <div className="hstack" style={{ gap: 8, marginBottom: 12 }}>
         <CalendarButton teamId={team.id} primary />
-        <button className="btn small secondary" onClick={() => { navigator.clipboard?.writeText(ics); }}>Copier le lien</button>
+        <button className="btn small secondary" onClick={() => { navigator.clipboard?.writeText(ics); }}>{t('Copier le lien')}</button>
       </div>
       <div className="chips">
-        <button className={`chip${which === 'avenir' ? ' on' : ''}`} onClick={() => setWhich('avenir')}>À venir ({next.length})</button>
-        <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>Joués ({past.length})</button>
+        <button className={`chip${which === 'avenir' ? ' on' : ''}`} onClick={() => setWhich('avenir')}>{t('À venir')} ({next.length})</button>
+        <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>{t('Joués')} ({past.length})</button>
       </div>
-      {list.length === 0 ? <Empty ill="📅" title={which === 'avenir' ? 'Aucun match prévu' : 'Aucun match joué'} /> : (
+      {list.length === 0 ? <Empty ill="📅" title={which === 'avenir' ? t('Aucun match prévu') : t('Aucun match joué')} /> : (
         <div className="group">{list.slice(0, 40).map((g) => (
           <div key={g.id}>
             <GameRow g={g} teamIds={[team.id]} />
-            {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">📍 {g.v} · Itinéraire ›</a>}
+            {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">📍 {g.v} · {t('Itinéraire')} ›</a>}
           </div>))}</div>
       )}
     </>
@@ -300,20 +301,20 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
   const sid = pick ?? series[0]?.[0] ?? null;
   const serie = { data: all.data?.find((x) => x.serie.id === sid) ?? null };
   if (all.loading) return <Skeleton h={44} n={6} />;
-  if (!series.length) return <Empty ill="📊" title="Pas de classement" text="Cette équipe ne joue que des matchs amicaux pour l'instant." />;
+  if (!series.length) return <Empty ill="📊" title={t('Pas de classement')} text={t('Cette équipe ne joue que des matchs amicaux pour l\'instant.')} />;
   const names = new Map<number, string>();
   serie.data?.games.forEach((g) => { names.set(g.h, g.hn); names.set(g.a, g.an); });
   const rows = [...(serie.data?.standings ?? [])].sort((a, b) => b.pts - a.pts || (b.pf - b.pa) - (a.pf - a.pa));
   return (
     <>
       {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
-      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="📊" title="Classement pas encore publié" /> : (
+      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="📊" title={t('Classement pas encore publié')} /> : (
         <div className="group" style={{ padding: '6px 0' }}>
-          <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}><span style={{ width: 22 }}>#</span><span className="grow">Équipe</span><span style={{ width: 28, textAlign: 'center' }}>J</span><span style={{ width: 28, textAlign: 'center' }}>V</span><span style={{ width: 34, textAlign: 'right' }}>Pts</span></div>
+          <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}><span style={{ width: 22 }}>#</span><span className="grow">{t('Équipe')}</span><span style={{ width: 28, textAlign: 'center' }}>{t('J')}</span><span style={{ width: 28, textAlign: 'center' }}>{t('V')}</span><span style={{ width: 34, textAlign: 'right' }}>{t('Pts')}</span></div>
           {rows.map((r, i) => { const me = r.team === team.id; return (
             <a key={r.team} className="row" href={`#/equipe/${r.team}`} style={{ color: 'inherit', minHeight: 44, background: me ? 'color-mix(in srgb, var(--accent) 12%, transparent)' : undefined, fontWeight: me ? 700 : 400 }}>
               <span style={{ width: 22, fontFamily: 'Anton', color: i < 3 ? 'var(--accent)' : undefined }}>{i + 1}</span>
-              <span className="grow ellipsis">{names.get(r.team) ?? `Équipe ${r.team}`}</span>
+              <span className="grow ellipsis">{names.get(r.team) ?? `${t('Équipe')} ${r.team}`}</span>
               <span style={{ width: 28, textAlign: 'center' }}>{r.played}</span><span style={{ width: 28, textAlign: 'center' }}>{r.wins}</span>
               <span style={{ width: 34, textAlign: 'right', fontFamily: 'Anton' }}>{r.pts}</span>
             </a>); })}
@@ -331,7 +332,7 @@ export function LinkedClub({ id }: { id: number }) {
   return (
     <a className="row group" href={`#/club/${c.id}`} style={{ color: 'inherit', marginBottom: 22 }}>
       <Disc src={c.logo} name={c.name} size={36} ring={c.c1} />
-      <div className="grow"><div className="sub">Club lié</div><div style={{ fontWeight: 600 }}>{c.name}</div></div><span className="chev">›</span>
+      <div className="grow"><div className="sub">{t('Club lié')}</div><div style={{ fontWeight: 600 }}>{c.name}</div></div><span className="chev">›</span>
     </a>
   );
 }
@@ -356,21 +357,21 @@ export function TeamList({ club }: { club: Club }) {
     <>
       {groups.filter(([, l]) => l.length).map(([g, list]) => (
         <section key={g}>
-          <div className="group-title">{g}</div>
-          <div className="group">{list.map((t) => (
-            <a key={t.id} className="row" href={`#/equipe/${t.id}`} style={{ color: 'inherit' }}>
-              <div className="grow">{teamLabel(t)}</div>
-              {f && muted.includes(t.id) && <span className="muted" style={{ fontSize: 13 }}>non suivie</span>}
+          <div className="group-title">{t(g)}</div>
+          <div className="group">{list.map((tm) => (
+            <a key={tm.id} className="row" href={`#/equipe/${tm.id}`} style={{ color: 'inherit' }}>
+              <div className="grow">{teamLabel(tm)}</div>
+              {f && muted.includes(tm.id) && <span className="muted" style={{ fontSize: 13 }}>{t('non suivie')}</span>}
               <span className="chev">›</span>
             </a>))}</div>
         </section>))}
       {f && club.teams.length > 1 && (
         <button className="btn ghost small" style={{ margin: '-10px auto 22px', display: 'flex' }} onClick={() => setEdit(true)}>
-          Équipes suivies : {club.teams.length - muted.length}/{club.teams.length} · Modifier
+          {t('Équipes suivies')} : {club.teams.length - muted.length}/{club.teams.length} · {t('Modifier')}
         </button>)}
       {edit && (
-        <Sheet title="Équipes suivies" onClose={() => setEdit(false)}>
-          <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>Les équipes cochées apparaissent dans ton fil et tes matchs.</p>
+        <Sheet title={t('Équipes suivies')} onClose={() => setEdit(false)}>
+          <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>{t('Les équipes cochées apparaissent dans ton fil et tes matchs.')}</p>
           <div className="group">{club.teams.map((t) => { const on = !muted.includes(t.id); return (
             <button key={t.id} className="row" onClick={() => toggle(t.id)} aria-pressed={on}>
               <div className="grow">{teamLabel(t)}</div>

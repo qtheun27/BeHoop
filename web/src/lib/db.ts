@@ -21,6 +21,7 @@ export interface Profile {
   notifPrefs: Record<string, boolean>; fcmTokens?: string[]; banned?: boolean; theme?: 'auto' | 'light' | 'dark';
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
   /** Équipes dont le calendrier a déjà été ajouté au téléphone */ calendars?: number[];
+  /** Langue de l'appli (notifications envoyées dans cette langue) */ lang?: 'fr' | 'nl' | 'en';
 }
 export interface Follow { id: string; type: 'club' | 'team'; refId: number; mutedTeams?: number[] }
 export type Relation = 'parent' | 'joueur' | 'coach' | 'autre';

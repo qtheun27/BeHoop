@@ -7,6 +7,7 @@ import { mapsUrl, frDate } from '../lib/util';
 import { qs } from '../lib/router';
 import * as D from '../lib/db';
 import { LiveScoreSheet, useLive } from './Live';
+import { t } from '../lib/i18n';
 
 export function Matches() {
   const s = useSession();
@@ -28,17 +29,17 @@ export function Matches() {
   const weekEnd = new Date(Date.now() + 7 * 864e5).toISOString().slice(0, 10);
   const groups = useMemo(() => {
     if (!data) return [];
-    if (tab === 'past') return [{ t: 'Matchs passés', l: data.games.filter((g) => g.d <= today && isPlayed(g)).reverse().slice(0, 40) }];
+    if (tab === 'past') return [{ t: t('Matchs passés'), l: data.games.filter((g) => g.d <= today && isPlayed(g)).reverse().slice(0, 40) }];
     const up = data.games.filter((g) => g.d >= today && !isPlayed(g));
-    return [{ t: "Aujourd'hui", l: up.filter((g) => g.d === today) }, { t: 'Cette semaine', l: up.filter((g) => g.d > today && g.d <= weekEnd) }, { t: 'Plus tard', l: up.filter((g) => g.d > weekEnd).slice(0, 30) }].filter((x) => x.l.length);
+    return [{ t: t('Aujourd’hui'), l: up.filter((g) => g.d === today) }, { t: t('Cette semaine'), l: up.filter((g) => g.d > today && g.d <= weekEnd) }, { t: t('Plus tard'), l: up.filter((g) => g.d > weekEnd).slice(0, 30) }].filter((x) => x.l.length);
   }, [data, tab, today, weekEnd]);
 
-  if (!s.user) return <Screen title="Matchs"><Empty ill="📅" title="Tes prochains matchs" text="Connecte-toi et suis tes équipes pour voir leurs prochains matchs ici." action={<button className="btn" onClick={() => s.requireAuth()}>Se connecter</button>} /></Screen>;
+  if (!s.user) return <Screen title={t('Matchs')}><Empty ill="📅" title={t('Tes prochains matchs')} text={t('Connecte-toi et suis tes équipes pour voir leurs prochains matchs ici.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   return (
-    <Screen title="Matchs">
-      <div className="seg"><button className={tab === 'next' ? 'on' : ''} onClick={() => setTab('next')}>À venir</button><button className={tab === 'past' ? 'on' : ''} onClick={() => setTab('past')}>Passés</button></div>
+    <Screen title={t('Matchs')}>
+      <div className="seg"><button className={tab === 'next' ? 'on' : ''} onClick={() => setTab('next')}>{t('À venir')}</button><button className={tab === 'past' ? 'on' : ''} onClick={() => setTab('past')}>{t('Passés')}</button></div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {!data && !error ? <Skeleton h={110} /> : groups.length === 0 ? <Empty ill="📅" title="Aucun match" text={s.followedTeams.length ? 'Rien de prévu pour tes équipes.' : 'Suis des équipes pour voir leurs matchs.'} action={!s.followedTeams.length && <a className="btn" href="#/explorer">Explorer</a>} /> :
+      {!data && !error ? <Skeleton h={110} /> : groups.length === 0 ? <Empty ill="📅" title={t('Aucun match')} text={s.followedTeams.length ? t('Rien de prévu pour tes équipes.') : t('Suis des équipes pour voir leurs matchs.')} action={!s.followedTeams.length && <a className="btn" href="#/explorer">{t('Explorer')}</a>} /> :
         groups.map((gr) => (
           <section key={gr.t}><div className="group-title">{gr.t}</div>
             {gr.l.map((g) => <MatchCard key={g.id} g={g} focus={g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g })} />)}</section>))}
@@ -54,13 +55,13 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
   const today = new Date().toISOString().slice(0, 10);
   const live = useLive(g.d === today && !played ? g.id : null);
   const mineHome = s.followedTeams.includes(g.h);
-  const t = data.idx.get(mineHome ? g.h : g.a);
+  const te = data.idx.get(mineHome ? g.h : g.a);
   const vid = data.vids.get(g.id);
   return (
     <div className="card" style={{ padding: 14, outline: focus ? '2px solid var(--accent)' : undefined }}>
       <div className="hstack" style={{ justifyContent: 'space-between' }}>
-        <span className="muted" style={{ fontSize: 14 }}>{frDate(g.d)} · {g.t} {t && `· ${teamLabel(t.team)}`}</span>
-        {live?.status === 'live' && <span className="pill live">🔴 LIVE</span>}
+        <span className="muted" style={{ fontSize: 14 }}>{frDate(g.d)} · {g.t} {te && `· ${teamLabel(te.team)}`}</span>
+        {live?.status === 'live' && <span className="pill live">{t('🔴 LIVE')}</span>}
       </div>
       <div className="hstack mt" style={{ alignItems: 'center' }}>
         <div style={{ flex: 1 }}><div style={{ fontWeight: mineHome ? 700 : 500 }}>{g.hn}</div><div style={{ fontWeight: mineHome ? 500 : 700 }}>{g.an}</div></div>
@@ -69,11 +70,11 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
       {live && !played && <div className="muted" style={{ fontSize: 13 }}>Q{live.quarter} · mis à jour par {live.updatedByName}</div>}
       {!played && <div className="muted" style={{ fontSize: 14, marginTop: 6 }}>📍 {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack mt" style={{ flexWrap: 'wrap', gap: 8 }}>
-        {!played && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">Itinéraire</a>}
-        {!played && <CalendarButton teamId={mineHome ? g.h : g.a} label="Ajouter au calendrier" compact />}
-        {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>Score en direct</button>}
-        {played && vid && <a className="btn small" href={`#/video/${vid}`}>▶ Vidéo du match</a>}
-        {played && <a className="btn small secondary" href={`#/montage/new?g=${g.id}`}>Créer la vidéo</a>}
+        {!played && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
+        {!played && <CalendarButton teamId={mineHome ? g.h : g.a} label={t('Ajouter au calendrier')} compact />}
+        {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>{t('Score en direct')}</button>}
+        {played && vid && <a className="btn small" href={`#/video/${vid}`}>{t('▶ Vidéo du match')}</a>}
+        {played && <a className="btn small secondary" href={`#/montage/new?g=${g.id}`}>{t('Créer la vidéo')}</a>}
       </div>
     </div>
   );

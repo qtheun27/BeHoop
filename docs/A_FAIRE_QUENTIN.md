@@ -1,6 +1,15 @@
 # À faire par Quentin — mise en service
 
-✅ **Tout est fait** (vérifié le 19/10/2026) : la mise en service est terminée, l'appli tourne en production sur **behoop.be/app/**.
+✅ **Mise en service terminée** (19/10/2026) : l'appli tourne en production sur **behoop.be/app/**.
+
+## 🆕 Appli en 3 langues (FR · NL · EN) — 2 réglages
+
+| # | Action | Où | Pourquoi |
+|---|---|---|---|
+| 16 | Ajouter le **secret GitHub `ANTHROPIC_API_KEY`** (la même clé que celle du Worker) | GitHub → Settings → Secrets and variables → Actions | Traduction automatique des actus en FR · NL · EN (sans elle, chacun ne voit que les articles de sa langue) |
+| 17 | **Redéployer le Worker** : `cd worker && npx wrangler deploy` | Terminal | Notifications « demande d'accès », « bienvenue », « covoiturage », « fin du match » dans la langue de chacun |
+
+## Historique de la mise en service
 Le détail clic par clic de chaque étape reste dans **[SETUP.md](SETUP.md)** (même numérotation), utile pour refaire une configuration.
 
 | # | Action | Où | État |

@@ -49,3 +49,15 @@ test('planche de rendu du match test', async ({ page }) => {
   await expect(page.getByText('Score final')).toBeVisible();
   await expect(page.getByText("Victoire de l'Union Mons Hainaut")).toBeVisible();
 });
+
+test.describe('langues', () => {
+  test.use({ locale: 'nl-BE' });
+  test('téléphone en néerlandais : appli en néerlandais, puis anglais depuis l’en-tête', async ({ page }) => {
+    await page.goto('/app/#/fil');
+    await expect(page.getByRole('button', { name: 'Mijn account aanmaken' })).toBeVisible();
+    await page.getByLabel('Taal').selectOption('en');
+    await expect(page.getByRole('button', { name: 'Create my account' })).toBeVisible();
+    await page.reload();
+    await expect(page.getByRole('button', { name: 'Create my account' })).toBeVisible(); // choix mémorisé
+  });
+});

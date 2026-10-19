@@ -1,4 +1,5 @@
 import { Screen } from '../ui/kit';
+import { t } from '../lib/i18n';
 
 // Brouillons — À RELIRE par Quentin (et idéalement un juriste) avant la mise en ligne publique.
 const DOCS: Record<string, { title: string; body: [string, string][] }> = {
@@ -11,7 +12,7 @@ const DOCS: Record<string, { title: string; body: [string, string][] }> = {
     ['Contact', 'q.theuninck@gmail.com'],
   ] },
   confidentialite: { title: 'Politique de confidentialité', body: [
-    ['Responsable', 'Quentin T. — q.theuninck@gmail.com.'],
+    ['Responsable du traitement', 'Quentin T. — q.theuninck@gmail.com.'],
     ['Données collectées', "Adresse e-mail et identifiant de connexion (Firebase Auth), prénom et initiale du nom, clubs et équipes suivis, adhésions aux Équipes, publications, réactions, signalements, jetons de notification, photos et vidéos envoyées."],
     ['Pourquoi', "Faire fonctionner ton compte, ton fil, les notifications et le montage vidéo. Aucune publicité, aucune revente, aucun profilage."],
     ['Où', "Google Firebase (UE/États-Unis, clauses contractuelles types) et Cloudflare R2 (stockage des médias). Les rushes vidéo sont supprimés 48 h après le montage."],
@@ -30,10 +31,10 @@ const DOCS: Record<string, { title: string; body: [string, string][] }> = {
 export function Legal({ doc }: { doc: string }) {
   const d = DOCS[doc] ?? DOCS.cgu;
   return (
-    <Screen title={d.title} back="profil">
-      <p className="pill" style={{ background: 'var(--gold)', color: '#000' }}>Brouillon — à relire</p>
-      {d.body.map(([h, t]) => <section key={h}><h2 style={{ fontSize: 20, margin: '20px 0 6px' }}>{h}</h2><p style={{ margin: 0 }}>{t}</p></section>)}
-      <p className="muted mt" style={{ fontSize: 13 }}>Version 2026-10</p>
+    <Screen title={t(d.title)} back="profil">
+      <p className="pill" style={{ background: 'var(--gold)', color: '#000' }}>{t('Brouillon — à relire')}</p>
+      {d.body.map(([h, txt]) => <section key={h}><h2 style={{ fontSize: 20, margin: '20px 0 6px' }}>{t(h)}</h2><p style={{ margin: 0 }}>{t(txt)}</p></section>)}
+      <p className="muted mt" style={{ fontSize: 13 }}>{t('Version')} 2026-10</p>
     </Screen>
   );
 }

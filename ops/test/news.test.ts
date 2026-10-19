@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { classify, pageImage, clubMatcher, isBasketNews, clubTagger } from '../news';
+import { detectLang } from '../translate-news';
 describe('classement des actualités', () => {
   it.each([
     ['Droomaffiche voor Basket Willebroek: tweedeklasser krijgt in beker bezoek', 'belgique'],
@@ -48,4 +49,13 @@ describe('clubs cités par une actu', () => {
     ['Antwerp wint in Mons: “Maar er is nog veel werk aan de winkel”', []],
     ['ZZ Leiden smeert Okapi Aalst eerste nederlaag aan', [5]],
   ])('%s → %j', (t, ids) => expect(tag(t as string).sort()).toEqual(ids));
+});
+
+describe('langue des actus', () => {
+  it.each([
+    ['Le BC Mons-Capitale sort la copie parfaite à Haneffe en Régionale 2 dames', 'fr'],
+    ['Okapi Aalst wint met 79-94 tegen Kangoeroes Mechelen', 'nl'],
+    ['KD fires back at Mat Ishbia for framing of Suns tenure', 'en'],
+  ])('%s → %s', (t, l) => expect(detectLang(t)).toBe(l));
+  it('sans mot courant : la langue du site', () => expect(detectLang('Antwerp Giants verpletteren Den Bosch: 86-125', 'https://www.hln.be/sport/x')).toBe('nl'));
 });

@@ -8,6 +8,7 @@ import * as D from '../lib/db';
 import { clubColors } from '../lib/theme';
 import { frDate, mapsUrl } from '../lib/util';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
+import { t, tn } from '../lib/i18n';
 import { CalendarButton } from '../ui/CalendarButton';
 import { PostCard, ScoreCard, type ScorePayload } from './Feed';
 import { NewsCard } from './News';
@@ -25,7 +26,7 @@ export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }
   const base = useAsync(async () => {
     const idx = await teamIndex();
     const cid = clubId ?? idx.get(teamId!)?.club.id;
-    if (!cid) throw new Error('Équipe introuvable');
+    if (!cid) throw new Error(t('Équipe introuvable'));
     const [c, all] = await Promise.all([loadClub(cid), loadNews().catch(() => null)]);
     // Actus citant ce club précisément (classées à la récupération, voir ops/news.ts) ; un club lié garde son propre fil
     return { ...c, idx, news: (all?.items ?? []).filter((n) => n.clubs?.includes(c.club.id)) };
@@ -38,8 +39,8 @@ export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }
     if (base.data) history.replaceState(null, '', `#/${t ? `equipe/${t}` : `club/${base.data.club.id}`}`);
   };
 
-  if (base.error) return <Screen title="Club" back="explorer"><ErrorBox msg={base.error} retry={base.reload} /></Screen>;
-  if (!base.data) return <Screen title="Club" back="explorer"><Skeleton h={180} n={1} /><Skeleton /></Screen>;
+  if (base.error) return <Screen title={t('Club')} back="explorer"><ErrorBox msg={base.error} retry={base.reload} /></Screen>;
+  if (!base.data) return <Screen title={t('Club')} back="explorer"><Skeleton h={180} n={1} /><Skeleton /></Screen>;
   const { club, games, idx, news } = base.data;
   const team = sel ? club.teams.find((t) => t.id === sel) ?? null : null;
   return (
@@ -69,12 +70,12 @@ function Hero({ club, team, games }: { club: Club; team: Team | null; games: Gam
         <Disc src={club.logo} name={club.name} size={68} ring="#fff" />
         <div style={{ minWidth: 0, flex: 1 }}>
           <div style={{ fontFamily: 'Anton, Impact, sans-serif', fontSize: 24, lineHeight: 1.1, textTransform: 'uppercase', letterSpacing: '.02em' }}>{club.name}</div>
-          <div style={{ opacity: .9, fontSize: 14, marginTop: 2 }}>{team ? `${teamLabel(team)} · ${team.ag === 'jeunes' ? 'Jeunes' : 'Seniors'}` : [club.venue?.name ?? club.city, `${club.teams.length} équipe${club.teams.length > 1 ? 's' : ''}`].filter(Boolean).join(' · ')}</div>
+          <div style={{ opacity: .9, fontSize: 14, marginTop: 2 }}>{team ? `${teamLabel(team)} · ${team.ag === 'jeunes' ? t('Jeunes') : t('Seniors')}` : [club.venue?.name ?? club.city, tn(club.teams.length, '{n} équipe', '{n} équipes')].filter(Boolean).join(' · ')}</div>
         </div>
         {team && <LiveBadge teamId={team.id} games={mine} />}
       </div>
       <div className="hstack" style={{ gap: 8, marginTop: 14, flexWrap: 'wrap', position: 'relative' }}>
-        {played.length > 0 && <span className="pill" style={{ background: 'rgba(0,0,0,.25)', color: '#fff' }}>{wins} V · {played.length - wins} D</span>}
+        {played.length > 0 && <span className="pill" style={{ background: 'rgba(0,0,0,.25)', color: '#fff' }}>{wins} {t('V')} · {played.length - wins} {t('D')}</span>}
         {next && <span className="pill" style={{ background: 'rgba(255,255,255,.92)', color: '#111' }}>⏱ {frDate(next.d, { weekday: 'short', day: 'numeric', month: 'short' })} {next.t} · {tids.includes(next.h) ? `vs ${next.an}` : `@ ${next.hn}`}</span>}
       </div>
     </section>
@@ -92,15 +93,15 @@ function TeamPicker({ club, sel, onPick }: { club: Club; sel: number | null; onP
   const groups: [string, Team[]][] = [['Seniors', club.teams.filter((t) => t.ag === 'seniors')], ['Jeunes', club.teams.filter((t) => t.ag !== 'seniors')]];
   return (
     <>
-      <div className="chips" role="tablist" aria-label="Équipe">
-        <button className={`chip${sel === null ? ' on' : ''}`} onClick={() => onPick(null)} aria-pressed={sel === null}>🏟️ Tout le club</button>
+      <div className="chips" role="tablist" aria-label={t('Équipe')}>
+        <button className={`chip${sel === null ? ' on' : ''}`} onClick={() => onPick(null)} aria-pressed={sel === null}>{t('🏟️ Tout le club')}</button>
         {shown.map((t) => <button key={t.id} className={`chip${sel === t.id ? ' on' : ''}`} onClick={() => onPick(t.id)} aria-pressed={sel === t.id}>{mineIds.has(t.id) ? '★ ' : ''}{teamLabel(t)}</button>)}
-        <button className="chip" onClick={() => setOpen(true)}>Équipes ▾</button>
+        <button className="chip" onClick={() => setOpen(true)}>{t('Équipes ▾')}</button>
       </div>
       {open && (
-        <Sheet title="Choisir une équipe" onClose={() => setOpen(false)}>
+        <Sheet title={t('Choisir une équipe')} onClose={() => setOpen(false)}>
           {groups.filter(([, l]) => l.length).map(([g, list]) => (
-            <section key={g}><div className="group-title">{g}</div>
+            <section key={g}><div className="group-title">{t(g)}</div>
               <div className="group">{list.map((t) => (
                 <button key={t.id} className="row" onClick={() => { onPick(t.id); setOpen(false); }} aria-pressed={sel === t.id}>
                   <div className="grow" style={{ textAlign: 'left' }}>{mineIds.has(t.id) ? '★ ' : ''}{teamLabel(t)}</div>
@@ -122,7 +123,7 @@ function ClubSection({ club, games, idx, news, onPick }: { club: Club; games: Ga
     <>
       <div className="seg" role="tablist">
         {([['fil', '📰 Fil du club'], ['matchs', '📅 Matchs'], ['equipes', '👥 Équipes']] as const).map(([k, l]) =>
-          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{l}</button>)}
+          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{t(l)}</button>)}
       </div>
       {tab === 'fil' && <HubFeed posts={posts.data} error={posts.error} retry={posts.reload} games={games} teamIds={tids} idx={idx} news={news} />}
       {tab === 'matchs' && (() => {
@@ -130,9 +131,9 @@ function ClubSection({ club, games, idx, news, onPick }: { club: Club; games: Ga
         const recent = games.filter(isPlayed).slice(-12).reverse();
         return <>
           {club.linked && <LinkedClub id={club.linked} />}
-          {next.length > 0 && <><div className="group-title">Prochains matchs</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
-          {recent.length > 0 && <><div className="group-title">Derniers résultats</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
-          {!next.length && !recent.length && <Empty ill="📅" title="Aucun match pour l'instant" />}
+          {next.length > 0 && <><div className="group-title">{t('Prochains matchs')}</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
+          {recent.length > 0 && <><div className="group-title">{t('Derniers résultats')}</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
+          {!next.length && !recent.length && <Empty ill="📅" title={t('Aucun match pour l\'instant')} />}
         </>;
       })()}
       {tab === 'equipes' && <div onClickCapture={(e) => {
@@ -160,28 +161,28 @@ function TeamSection({ club, team, games, idx }: { club: Club; team: Team; games
       {next && (
         <div className="card" style={{ padding: 14 }}>
           <div className="hstack" style={{ justifyContent: 'space-between' }}>
-            <span className="group-title" style={{ margin: 0 }}>Prochain match</span>
-            <span className="pill">{next.h === team.id ? 'Domicile' : 'Extérieur'}</span>
+            <span className="group-title" style={{ margin: 0 }}>{t('Prochain match')}</span>
+            <span className="pill">{next.h === team.id ? t('Domicile') : t('Extérieur')}</span>
           </div>
           <div style={{ fontWeight: 700, fontSize: 18, marginTop: 6 }}>{next.h === team.id ? `vs ${next.an}` : `@ ${next.hn}`}</div>
           <div className="muted" style={{ fontSize: 14 }}>{frDate(next.d)} · {next.t}{next.v ? ` · 📍 ${next.v}` : ''}</div>
           <div className="hstack" style={{ flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
-            {next.v && <a className="btn small secondary" href={mapsUrl(`${next.v} ${next.adr}`, next.lat, next.lng)} target="_blank" rel="noopener">Itinéraire</a>}
-            <CalendarButton teamId={team.id} label="📆 Ajouter au calendrier" compact />
+            {next.v && <a className="btn small secondary" href={mapsUrl(`${next.v} ${next.adr}`, next.lat, next.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
+            <CalendarButton teamId={team.id} label={t('📆 Ajouter au calendrier')} compact />
           </div>
         </div>)}
       {!accepted && (
         <div className="banner"><span style={{ fontSize: 24 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span>
-          <div style={{ flex: 1, fontSize: 14 }}><b>Tu fais partie de cette équipe ?</b><div className="muted">{member ? 'Demande envoyée, en attente de validation.'
-            : team.ag === 'jeunes' ? 'Parent, joueur ou coach : photos, vidéos et covoiturage.' : 'Joueur ou coach : covoiturage, membres, vidéos.'}</div></div>
-          {!member && <button className="btn small" onClick={() => setJoin(true)}>Rejoindre</button>}
+          <div style={{ flex: 1, fontSize: 14 }}><b>{t('Tu fais partie de cette équipe ?')}</b><div className="muted">{member ? t('Demande envoyée, en attente de validation.')
+            : team.ag === 'jeunes' ? t('Parent, joueur ou coach : photos, vidéos et covoiturage.') : t('Joueur ou coach : covoiturage, membres, vidéos.')}</div></div>
+          {!member && <button className="btn small" onClick={() => setJoin(true)}>{t('Rejoindre')}</button>}
         </div>)}
       {accepted && <a className="row group" href={`#/equipes/${team.id}`} style={{ color: 'inherit', marginBottom: 16 }}>
-        <span style={{ fontSize: 22 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div className="grow"><b>Espace de l'équipe</b><div className="sub">Covoiturage, galerie, membres</div></div><span className="chev">›</span></a>}
+        <span style={{ fontSize: 22 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div className="grow"><b>{t('Espace de l\'équipe')}</b><div className="sub">{t('Covoiturage, galerie, membres')}</div></div><span className="chev">›</span></a>}
       {accepted && member!.role === 'responsable' && <TeamAdmin teamId={team.id} />}
       <div className="seg" role="tablist">
         {([['fil', '📰 Fil'], ['matchs', '📅 Matchs'], ['classement', '📊 Classement'], ['infos', '📈 Infos']] as const).map(([k, l]) =>
-          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{l}</button>)}
+          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{t(l)}</button>)}
       </div>
       {/* Fil de l'équipe : uniquement ses résultats et publications (les actus du club restent sur « Tout le club ») */}
       {tab === 'fil' && <HubFeed posts={posts.data} error={posts.error} retry={posts.reload} games={mine} teamIds={[team.id]} idx={idx} news={[]} />}
@@ -228,12 +229,12 @@ function HubFeed({ posts, error, retry, games, teamIds, idx, news }: {
   const shown = items.filter((x) => kind === 'tout' || x.kind === kind);
   return (
     <>
-      <div className="chips">{KINDS.filter((k) => k.id !== 'actus' || news.length).map((k) => <button key={k.id} className={`chip${kind === k.id ? ' on' : ''}`} onClick={() => { setKind(k.id); setMax(15); }} aria-pressed={kind === k.id}>{k.label}</button>)}</div>
+      <div className="chips">{KINDS.filter((k) => k.id !== 'actus' || news.length).map((k) => <button key={k.id} className={`chip${kind === k.id ? ' on' : ''}`} onClick={() => { setKind(k.id); setMax(15); }} aria-pressed={kind === k.id}>{t(k.label)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={retry} />}
       {!posts && !error ? <Skeleton h={240} n={2} /> : shown.length ? <>{shown.slice(0, max).map((x) => x.el)}
-          {shown.length > max && <button className="btn secondary" onClick={() => setMax((m) => m + 15)}>Voir plus ({shown.length - max})</button>}</>
-        : <Empty ill={kind === 'actus' ? '📰' : kind === 'medias' ? '📸' : '🏀'} title={kind === 'actus' ? 'Aucune actu ne parle de ce club pour l’instant' : kind === 'medias' ? 'Pas encore de photo ni de vidéo' : 'Rien pour l’instant'}
-          text={kind === 'medias' ? 'Publie la première depuis l’onglet ＋.' : undefined} />}
+          {shown.length > max && <button className="btn secondary" onClick={() => setMax((m) => m + 15)}>{t('Voir plus')} ({shown.length - max})</button>}</>
+        : <Empty ill={kind === 'actus' ? '📰' : kind === 'medias' ? '📸' : '🏀'} title={kind === 'actus' ? t('Aucune actu ne parle de ce club pour l’instant') : kind === 'medias' ? t('Pas encore de photo ni de vidéo') : t('Rien pour l’instant')}
+          text={kind === 'medias' ? t('Publie la première depuis l’onglet ＋.') : undefined} />}
     </>
   );
 }

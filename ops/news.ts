@@ -3,9 +3,12 @@
 // fournie par le flux et le lien vers l'article original. Jamais le texte complet.
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { execFile } from 'node:child_process';
+import { translateNews } from './translate-news';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[] }
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
+  /** Langue d'origine et traductions (titre t, accroche e) : voir translate-news.ts */
+  lang?: 'fr' | 'nl' | 'en'; tr?: Partial<Record<'fr' | 'nl' | 'en', { t: string; e: string }>> }
 
 const GN = 'https://news.google.com/rss/search?';
 const gq = (q: string, lang: 'fr' | 'nl') => `${GN}q=${q}+when:14d&hl=${lang}&gl=BE&ceid=BE:${lang}`;
@@ -249,6 +252,7 @@ export async function run(out = 'app-data/news.json') {
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
   items = [...new Set(seen.values())].slice(0, 500);
+  await translateNews(items, known);
   // Clubs cités (pour le fil de chaque club)
   if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });

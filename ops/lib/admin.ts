@@ -6,6 +6,7 @@ import { AwsClient } from 'aws4fetch';
 import { createReadStream, createWriteStream, statSync } from 'node:fs';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
+import { pick, type Txt } from '../../shared/notifText';
 
 let configured = false;
 export function admin() {
@@ -57,7 +58,7 @@ export class R2 {
 }
 
 /** Envoi FCM avec préférences et anti-spam (max 1 notif par équipe et par heure, sauf « vidéo prête »). */
-export async function notifyUsers(uids: string[], n: { title: string; body: string; url: string }, type: string, teamId: number | null, dedupeKey?: string) {
+export async function notifyUsers(uids: string[], n: { title: Txt; body: Txt; url: string }, type: string, teamId: number | null, dedupeKey?: string) {
   const { db, messaging } = admin();
   const hour = new Date().toISOString().slice(0, 13);
   let sent = 0;
@@ -69,7 +70,7 @@ export async function notifyUsers(uids: string[], n: { title: string; body: stri
     for (const l of logs) if ((await db.doc(l).get()).exists) skip = true;
     if (skip) continue;
     await Promise.all(logs.map((l) => db.doc(l).set({ at: new Date() })));
-    const r = await messaging.sendEachForMulticast({ tokens: p.fcmTokens, notification: { title: n.title, body: n.body }, data: { url: n.url, tag: type },
+    const r = await messaging.sendEachForMulticast({ tokens: p.fcmTokens, notification: { title: pick(n.title, p.lang), body: pick(n.body, p.lang) }, data: { url: n.url, tag: type },
       webpush: { fcmOptions: { link: `https://behoop.be${n.url}` } } });
     const dead = r.responses.map((x, i) => (!x.success && /registration-token-not-registered|invalid-argument/.test(x.error?.code ?? '') ? p.fcmTokens[i] : null)).filter(Boolean);
     if (dead.length) await db.doc(`profiles/${uid}`).update({ fcmTokens: p.fcmTokens.filter((t: string) => !dead.includes(t)) });

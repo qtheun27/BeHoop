@@ -13,6 +13,7 @@ import { validateScores } from '../../../shared/scores';
 import type { MatchSettings, MediaItem, PlancheType } from '../../../shared/types';
 import { qs } from '../lib/router';
 import { store, haptic, dotted, uid as rid } from '../lib/util';
+import { t } from '../lib/i18n';
 
 type Item = MediaItem;
 interface Draft { id: string; gameId: number; teamId: number; youth: boolean; settings: MatchSettings; media: Item[]; remember: boolean; step: number }
@@ -25,7 +26,7 @@ export default function Montage({ id }: { id: string }) {
   const s = useSession();
   const [draft, setDraft] = useState<Draft | null>(() => (id && id !== 'new' ? store.get<Draft | null>(draftKey(id), null) : null));
   useEffect(() => { if (draft && draft.step < 4) saveDraft(draft); }, [draft]);
-  if (!s.user) return <Screen title="Montage" back="publier"><Empty ill="🎬" title="Connecte-toi pour créer une vidéo" action={<button className="btn" onClick={() => s.requireAuth()}>Se connecter</button>} /></Screen>;
+  if (!s.user) return <Screen title={t('Montage')} back="publier"><Empty ill="🎬" title={t('Connecte-toi pour créer une vidéo')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   if (id && id !== 'new' && !draft) return <RenderStatus id={id} />;
   if (!draft) return <PickMatch onPick={setDraft} />;
   if (draft.step >= 3) return <SendStep draft={draft} setDraft={setDraft} />;
@@ -34,8 +35,8 @@ export default function Montage({ id }: { id: string }) {
 
 const normHex = (c: string) => (/^#[0-9a-f]{6}$/i.test(c) ? c : /^#[0-9a-f]{3}$/i.test(c) ? '#' + [...c.slice(1)].map((x) => x + x).join('') : '#3d8fdb');
 const Steps = ({ n }: { n: number }) => (
-  <div className="hstack" style={{ gap: 6, marginBottom: 16 }} aria-label={`Étape ${n + 1} sur 4`}>{['Match', 'Médias', 'Vérifier', 'Envoi'].map((l, i) => (
-    <div key={l} style={{ flex: 1 }}><div style={{ height: 4, borderRadius: 2, background: i <= n ? 'var(--accent)' : 'var(--bg3)' }} /><div className="muted" style={{ fontSize: 11, marginTop: 4, fontWeight: i === n ? 700 : 400 }}>{l}</div></div>))}</div>
+  <div className="hstack" style={{ gap: 6, marginBottom: 16 }} aria-label={t('Étape {n} sur 4', { n: n + 1 })}>{['Match', 'Médias', 'Vérifier', 'Envoi'].map((l, i) => (
+    <div key={l} style={{ flex: 1 }}><div style={{ height: 4, borderRadius: 2, background: i <= n ? 'var(--accent)' : 'var(--bg3)' }} /><div className="muted" style={{ fontSize: 11, marginTop: 4, fontWeight: i === n ? 700 : 400 }}>{t(l)}</div></div>))}</div>
 );
 
 /* ---------- 1. Choisir le match (tout est prérempli depuis data.json) ---------- */
@@ -78,14 +79,14 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
     <button className="row" onClick={() => pick(g)}><div className="grow"><div className="ellipsis">{g.hn} – {g.an}</div><div className="sub">{dotted(g.d)} · {g.sn}{isPlayed(g) ? ` · ${g.hs}–${g.as}` : ''}</div></div><span className="chev">›</span></button>
   );
   return (
-    <Screen title="Quel match ?" back="publier">
+    <Screen title={t('Quel match ?')} back="publier">
       <Steps n={0} />
-      <div className="search"><input className="field" placeholder="Chercher un autre club…" value={q} onChange={(e) => { setQ(e.target.value); setClubGames(null); }} /></div>
+      <div className="search"><input className="field" placeholder={t('Chercher un autre club…')} value={q} onChange={(e) => { setQ(e.target.value); setClubGames(null); }} /></div>
       {results.length > 0 && !clubGames && <div className="group">{results.map((c) => <button key={c.id} className="row" onClick={async () => setClubGames((await loadClub(c.id)).games.filter((g) => g.d <= today).reverse().slice(0, 40))}><Disc src={c.logo} name={c.name} size={32} ring={c.c1} /><div className="grow">{c.name}</div></button>)}</div>}
       {clubGames && <div className="group">{clubGames.map((g) => <Row key={g.id} g={g} />)}</div>}
       {data.error && <ErrorBox msg={data.error} retry={data.reload} />}
-      {!data.data ? <Skeleton h={56} n={6} /> : !clubGames && (data.data.mine.length ? <><div className="group-title">Matchs récents de tes équipes</div><div className="group">{data.data.mine.map((g) => <Row key={g.id} g={g} />)}</div></>
-        : <Empty ill="📅" title="Aucun match récent" text="Suis une équipe ou cherche un club ci-dessus." />)}
+      {!data.data ? <Skeleton h={56} n={6} /> : !clubGames && (data.data.mine.length ? <><div className="group-title">{t('Matchs récents de tes équipes')}</div><div className="group">{data.data.mine.map((g) => <Row key={g.id} g={g} />)}</div></>
+        : <Empty ill="📅" title={t('Aucun match récent')} text={t('Suis une équipe ou cherche un club ci-dessus.')} />)}
     </Screen>
   );
 }
@@ -98,25 +99,25 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => voi
     if (!list?.length) return;
     const arr = Array.from(list); const out: Item[] = [];
     for (const [i, f] of arr.entries()) {
-      setBusy(`Lecture des médias ${i + 1}/${arr.length}…`);
+      setBusy(t('Lecture des médias {i}/{n}…', { i: i + 1, n: arr.length }));
       const known = draft.media.find((m) => m.r2Key === fileId(draft.id, f));
       if (known) { FILES.set(known.id, f); continue; } // fichier resélectionné : reprise
       const p: Prepared = await prepare(f);
       const id = rid(10); FILES.set(id, f);
       out.push({ id, r2Key: fileId(draft.id, f), kind: p.kind, name: f.name, takenAt: p.takenAt, duration: p.duration, width: p.width, height: p.height, thumb: p.thumb });
     }
-    setBusy(''); upd({ media: assignQuarters([...draft.media, ...out]) }); haptic();
+    setBusy(t('')); upd({ media: assignQuarters([...draft.media, ...out]) }); haptic();
   };
   if (draft.step === 1) return (
-    <Screen title="Vidéos et photos" back="publier">
+    <Screen title={t('Vidéos et photos')} back="publier">
       <Steps n={1} />
-      <p className="muted">Sélectionne toutes les vidéos et photos du match depuis ta galerie. BeHoop les classe par quart-temps grâce à l'heure de prise de vue.</p>
-      <label className="btn">＋ Ajouter depuis la galerie<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
+      <p className="muted">{t('Sélectionne toutes les vidéos et photos du match depuis ta galerie. BeHoop les classe par quart-temps grâce à l\'heure de prise de vue.')}</p>
+      <label className="btn">{t('＋ Ajouter depuis la galerie')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
       {busy && <p className="muted center">{busy}</p>}
       {draft.media.length > 0 && <>
-        <p className="mt"><b>{draft.media.filter((m) => m.kind === 'video').length}</b> vidéo(s) · <b>{draft.media.filter((m) => m.kind === 'photo').length}</b> photo(s)</p>
+        <p className="mt"><b>{draft.media.filter((m) => m.kind === 'video').length}</b> {t('vidéo(s)')} · <b>{draft.media.filter((m) => m.kind === 'photo').length}</b> {t('photo(s)')}</p>
         <div className="grid3">{draft.media.slice(0, 30).map((m) => <Thumb key={m.id} m={m} />)}</div>
-        <button className="btn mt" onClick={() => upd({ step: 2 })}>Continuer</button>
+        <button className="btn mt" onClick={() => upd({ step: 2 })}>{t('Continuer')}</button>
       </>}
     </Screen>
   );
@@ -166,14 +167,14 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
       const b = await compressImage(f, 1280, .8);
       const b64 = await new Promise<string>((r) => { const fr = new FileReader(); fr.onload = () => r(String(fr.result).split(',')[1]); fr.readAsDataURL(b); });
       const r = await api<{ home: number; away: number } | null>('/score-ocr', { image: b64 });
-      if (r && confirm(`Score lu : ${r.home} – ${r.away}. L'utiliser pour la fin du Q${m.scoreboardOfQuarter} ?`)) {
+      if (r && confirm(t('Score lu : {h} – {a}. L’utiliser pour la fin du Q{q} ?', { h: r.home, a: r.away, q: m.scoreboardOfQuarter ?? '' }))) {
         const sc = st.scores.map((x) => [...x] as [number, number]); sc[m.scoreboardOfQuarter - 1] = [r.home, r.away]; setSt({ scores: sc });
       }
-    } catch { s.toast('Lecture automatique indisponible : saisis le score.'); }
+    } catch { s.toast(t('Lecture automatique indisponible : saisis le score.')); }
   };
   const go = async () => {
     const e = validateScores(st.scores); if (e) { setErr(e); return; }
-    if (!media.some((m) => m.kind === 'video' && !m.excluded)) { setErr('Ajoute au moins une vidéo.'); return; }
+    if (!media.some((m) => m.kind === 'video' && !m.excluded)) { setErr(t('Ajoute au moins une vidéo.')); return; }
     if (draft.remember) for (const side of ['home', 'away'] as const) if (st[side].awbbTeamId)
       await D.setTeamOverride(st[side].awbbTeamId!, { displayName: st[side].name, ...(st[side].logo.startsWith('blob:') ? {} : { logoUrl: st[side].logo }), colors: [st[side].color] }).catch(() => {});
     upd({ step: 3 });
@@ -181,61 +182,61 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
   const Field = ({ label, v, on, type = 'text' }: { label: string; v: string; on: (x: string) => void; type?: string }) =>
     <><label className="label">{label}</label><input className="field" type={type} defaultValue={v} onBlur={(e) => on(e.target.value)} /></>;
   return (
-    <Screen title="Vérifier" back="publier">
+    <Screen title={t('Vérifier')} back="publier">
       <Steps n={2} />
       <PlanchePreview type={pl} st={preview} />
-      <div className="chips mt">{(['pre', 'q1', 'q2', 'q3', 'fin', 'wipe'] as PlancheType[]).map((t) => <button key={t} className={`chip${pl === t ? ' on' : ''}`} onClick={() => setPl(t)}>{({ pre: 'Avant-match', q1: 'Fin Q1', q2: 'Fin Q2', q3: 'Fin Q3', fin: 'Fin de match', wipe: 'Transition' } as Record<string, string>)[t]}</button>)}</div>
+      <div className="chips mt">{(['pre', 'q1', 'q2', 'q3', 'fin', 'wipe'] as PlancheType[]).map((pt) => <button key={pt} className={`chip${pl === pt ? ' on' : ''}`} onClick={() => setPl(pt)}>{t(({ pre: 'Avant-match', q1: 'Fin Q1', q2: 'Fin Q2', q3: 'Fin Q3', fin: 'Fin de match', wipe: 'Transition' } as Record<string, string>)[pt])}</button>)}</div>
 
-      <div className="group-title">Équipes</div>
+      <div className="group-title">{t('Équipes')}</div>
       {(['home', 'away'] as const).map((side) => (
         <div key={side} className="group" style={{ padding: 14 }}>
           <div className="hstack"><Disc src={st[side].logo} name={st[side].name} size={52} ring={st[side].color} />
-            <input className="field" defaultValue={st[side].name} onBlur={(e) => setSide(side, { name: e.target.value })} aria-label="Nom affiché" /></div>
-          <div className="hstack mt"><label className="btn small secondary">Changer le logo<input type="file" accept="image/*" hidden onChange={(e) => setLogo(side, e.target.files?.[0])} /></label>
-            <label className="hstack" style={{ gap: 6 }}>Couleur <input type="color" value={st[side].color} onChange={(e) => setSide(side, { color: e.target.value })} style={{ width: 44, height: 34, border: 0, background: 'none' }} /></label>
-            <span className="muted" style={{ fontSize: 13 }}>{side === 'home' ? 'Domicile' : 'Visiteurs'}</span></div>
+            <input className="field" defaultValue={st[side].name} onBlur={(e) => setSide(side, { name: e.target.value })} aria-label={t('Nom affiché')} /></div>
+          <div className="hstack mt"><label className="btn small secondary">{t('Changer le logo')}<input type="file" accept="image/*" hidden onChange={(e) => setLogo(side, e.target.files?.[0])} /></label>
+            <label className="hstack" style={{ gap: 6 }}>{t('Couleur')} <input type="color" value={st[side].color} onChange={(e) => setSide(side, { color: e.target.value })} style={{ width: 44, height: 34, border: 0, background: 'none' }} /></label>
+            <span className="muted" style={{ fontSize: 13 }}>{side === 'home' ? t('Domicile') : t('Visiteurs')}</span></div>
         </div>))}
-      <label className="check"><input type="checkbox" checked={draft.remember} onChange={(e) => upd({ remember: e.target.checked })} />Toujours utiliser ces noms, logos et couleurs pour ces équipes</label>
+      <label className="check"><input type="checkbox" checked={draft.remember} onChange={(e) => upd({ remember: e.target.checked })} />{t('Toujours utiliser ces noms, logos et couleurs pour ces équipes')}</label>
 
-      <div className="group-title">Scores cumulés</div>
+      <div className="group-title">{t('Scores cumulés')}</div>
       <div className="group" style={{ padding: 12 }}>
         {['Fin Q1', 'Fin Q2', 'Fin Q3', 'Final'].map((l, i) => (
           <div key={l} className="hstack" style={{ justifyContent: 'space-between', padding: '6px 0' }}>
-            <b style={{ width: 60 }}>{l}</b>
-            {[0, 1].map((side) => <div key={side} className="stepper"><button onClick={() => setScore(i, side, st.scores[i][side] - 1)} aria-label="Moins">−</button>
+            <b style={{ width: 60 }}>{t(l)}</b>
+            {[0, 1].map((side) => <div key={side} className="stepper"><button onClick={() => setScore(i, side, st.scores[i][side] - 1)} aria-label={t('Moins')}>−</button>
               <input inputMode="numeric" value={st.scores[i][side]} onChange={(e) => setScore(i, side, +e.target.value.replace(/\D/g, '') || 0)} aria-label={`${l} ${side ? st.away.name : st.home.name}`} />
-              <button onClick={() => setScore(i, side, st.scores[i][side] + 1)} aria-label="Plus">+</button></div>)}
+              <button onClick={() => setScore(i, side, st.scores[i][side] + 1)} aria-label={t('Plus')}>+</button></div>)}
           </div>))}
       </div>
 
-      <div className="group-title">Match</div>
+      <div className="group-title">{t('Match')}</div>
       <div className="group" style={{ padding: '0 14px 14px' }}>
-        <Field label="Titre de la vidéo" v={st.title} on={(v) => setSt({ title: v })} />
-        <div className="hstack"><div style={{ flex: 1 }}><Field label="Date" type="date" v={st.date} on={(v) => setSt({ date: v })} /></div><div style={{ flex: 1 }}><Field label="Heure" type="time" v={st.time} on={(v) => setSt({ time: v })} /></div></div>
-        <Field label="Lieu" v={st.venue} on={(v) => setSt({ venue: v })} />
+        <Field label={t('Titre de la vidéo')} v={st.title} on={(v) => setSt({ title: v })} />
+        <div className="hstack"><div style={{ flex: 1 }}><Field label={t('Date')} type="date" v={st.date} on={(v) => setSt({ date: v })} /></div><div style={{ flex: 1 }}><Field label={t('Heure')} type="time" v={st.time} on={(v) => setSt({ time: v })} /></div></div>
+        <Field label={t('Lieu')} v={st.venue} on={(v) => setSt({ venue: v })} />
       </div>
 
-      <div className="group-title">Médias par quart-temps</div>
+      <div className="group-title">{t('Médias par quart-temps')}</div>
       <div className="seg">{([1, 2, 3, 4] as const).map((n) => <button key={n} className={q === n ? 'on' : ''} onClick={() => setQ(n)}>Q{n} ({media.filter((m) => m.quarter === n && !m.excluded).length})</button>)}</div>
       <div className="grid3">{items.map((m) => <Thumb key={m.id} m={m} sel={sel?.id === m.id} onClick={() => setSel(m)} />)}</div>
-      <label className="btn secondary mt">＋ Ajouter des médias<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
-      <button className="btn ghost" onClick={() => upd({ media: assignQuarters(media) })}>Reclasser automatiquement</button>
+      <label className="btn secondary mt">{t('＋ Ajouter des médias')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
+      <button className="btn ghost" onClick={() => upd({ media: assignQuarters(media) })}>{t('Reclasser automatiquement')}</button>
       {busy && <p className="muted center">{busy}</p>}
       {err && <div className="err mt">{err}</div>}
-      <button className="btn mt" onClick={go}>Générer la vidéo</button>
+      <button className="btn mt" onClick={go}>{t('Générer la vidéo')}</button>
 
       {sel && <Sheet title={sel.name} onClose={() => setSel(null)}>
         <div className="hstack" style={{ flexWrap: 'wrap', gap: 8 }}>{([1, 2, 3, 4] as const).map((n) => <button key={n} className={`btn small${sel.quarter === n ? '' : ' secondary'}`} onClick={() => { patch(sel.id, { quarter: n }); setSel(null); }}>Q{n}</button>)}</div>
         <div className="group mt">
-          <button className="row" onClick={() => { move(sel, -1); setSel(null); }}>↑ Avancer dans l'ordre</button>
-          <button className="row" onClick={() => { move(sel, 1); setSel(null); }}>↓ Reculer dans l'ordre</button>
-          <button className="row" onClick={() => { patch(sel.id, { excluded: !sel.excluded }); setSel(null); }}>{sel.excluded ? 'Réintégrer' : 'Exclure du montage'}</button>
+          <button className="row" onClick={() => { move(sel, -1); setSel(null); }}>{t('↑ Avancer dans l\'ordre')}</button>
+          <button className="row" onClick={() => { move(sel, 1); setSel(null); }}>{t('↓ Reculer dans l\'ordre')}</button>
+          <button className="row" onClick={() => { patch(sel.id, { excluded: !sel.excluded }); setSel(null); }}>{sel.excluded ? t('Réintégrer') : t('Exclure du montage')}</button>
           {sel.kind === 'photo' && <>
-            <button className="row" onClick={() => { patch(sel.id, { offPlay: !sel.offPlay }); setSel(null); }}>{sel.offPlay ? 'Photo de jeu' : 'Hors jeu (banc, temps mort…)'}</button>
-            <button className="row" onClick={() => { upd({ media: media.map((m) => (m.quarter === sel.quarter ? { ...m, featured: m.id === sel.id } : m)) }); setSel(null); }}>★ Photo vedette du quart</button>
+            <button className="row" onClick={() => { patch(sel.id, { offPlay: !sel.offPlay }); setSel(null); }}>{sel.offPlay ? t('Photo de jeu') : t('Hors jeu (banc, temps mort…)')}</button>
+            <button className="row" onClick={() => { upd({ media: media.map((m) => (m.quarter === sel.quarter ? { ...m, featured: m.id === sel.id } : m)) }); setSel(null); }}>{t('★ Photo vedette du quart')}</button>
             {([1, 2, 3] as const).map((n) => <button key={n} className="row" onClick={() => { upd({ media: assignQuarters(media.map((m) => (m.id === sel.id ? { ...m, scoreboardOfQuarter: sel.scoreboardOfQuarter === n ? null : n } : m))) }); setSel(null); }}>
-              🧮 Tableau « fin du quart {n} » {sel.scoreboardOfQuarter === n ? '✓' : ''}</button>)}
-            {sel.scoreboardOfQuarter && <button className="row" onClick={() => { ocr(sel); setSel(null); }}>✨ Lire le score automatiquement</button>}
+              🧮 {t('Tableau « fin du quart {n} »', { n })} {sel.scoreboardOfQuarter === n ? '✓' : ''}</button>)}
+            {sel.scoreboardOfQuarter && <button className="row" onClick={() => { ocr(sel); setSel(null); }}>{t('✨ Lire le score automatiquement')}</button>}
           </>}
         </div>
       </Sheet>}
@@ -294,11 +295,11 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
   };
   if (draft.step === 4) return <RenderStatus id={draft.id} />;
   return (
-    <Screen title="Envoi" back="publier">
+    <Screen title={t('Envoi')} back="publier">
       <Steps n={3} />
       {missing.length > 0 ? (
-        <div className="banner"><span>📂</span><div style={{ flex: 1 }}>L'appli a été fermée : resélectionne les {missing.length} fichier(s) pour reprendre l'envoi là où il s'était arrêté.
-          <label className="btn small mt">Resélectionner<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => {
+        <div className="banner"><span>📂</span><div style={{ flex: 1 }}>{t('L’appli a été fermée : resélectionne les {n} fichier(s) pour reprendre l’envoi là où il s’était arrêté.', { n: missing.length })}
+          <label className="btn small mt">{t('Resélectionner')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => {
             Array.from(e.target.files ?? []).forEach((f) => { const m = draft.media.find((x) => x.r2Key === fileId(draft.id, f)); if (m) FILES.set(m.id, f); });
             setDraft({ ...draft });
           }} /></label></div></div>
@@ -307,9 +308,9 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
           <div className="center"><div style={{ fontSize: 48, fontWeight: 700 }}>{total ? Math.floor((sent / total) * 100) : 0} %</div>
             <div className="muted">{(sent / 1e9).toFixed(2)} / {(total / 1e9).toFixed(2)} Go</div></div>
           <div className="progress mt"><i style={{ width: `${total ? (sent / total) * 100 : 0}%` }} /></div>
-          {state === 'sending' && <div className="banner mt"><span>📱</span><div>Garde BeHoop ouvert pendant l'envoi. En cas de coupure, l'envoi reprend tout seul.</div></div>}
-          {state === 'error' && <ErrorBox msg="L'envoi a été interrompu. Il reprendra là où il s'était arrêté." retry={start} />}
-          {state === 'idle' && <button className="btn mt" onClick={start}>Envoyer et générer</button>}
+          {state === 'sending' && <div className="banner mt"><span>📱</span><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
+          {state === 'error' && <ErrorBox msg={t('L’envoi a été interrompu. Il reprendra là où il s’était arrêté.')} retry={start} />}
+          {state === 'idle' && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
           <div className="group mt">{media.map((m) => { const f = FILES.get(m.id); const p = f ? (prog[m.id] ?? 0) / f.size : 0; return (
             <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}>{m.kind === 'video' ? '🎬' : '📷'} {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>
               <span className="muted" style={{ fontSize: 13, width: 40, textAlign: 'right' }}>{Math.round(p * 100)}%</span></div>); })}</div>
@@ -327,19 +328,19 @@ function RenderStatus({ id }: { id: string }) {
   const [mv, setMv] = useState<{ authorUid: string; version: number } | null>(null);
   useEffect(() => D.watchDoc<Job>(`renderJobs/${id}`, setJob), [id]);
   useEffect(() => D.watchDoc<{ authorUid: string; version: number }>(`matchVideos/${id}`, setMv), [id]);
-  const relaunch = async () => { try { await api('/render', { matchVideoId: id, rerun: true }); s.toast('Rendu relancé'); } catch { s.toast('Impossible de relancer'); } };
-  const del = async () => { if (!confirm('Supprimer cette vidéo ?')) return; await api(`/montage/${id}`, undefined, 'DELETE').catch(() => {}); location.hash = '/fil'; };
+  const relaunch = async () => { try { await api('/render', { matchVideoId: id, rerun: true }); s.toast(t('Rendu relancé')); } catch { s.toast(t('Impossible de relancer')); } };
+  const del = async () => { if (!confirm(t('Supprimer cette vidéo ?'))) return; await api(`/montage/${id}`, undefined, 'DELETE').catch(() => {}); location.hash = '/fil'; };
   return (
-    <Screen title="Montage" back="fil">
-      {job === undefined ? <Skeleton /> : !job ? <Empty ill="🎬" title="Montage introuvable" /> : (
+    <Screen title={t('Montage')} back="fil">
+      {job === undefined ? <Skeleton /> : !job ? <Empty ill="🎬" title={t('Montage introuvable')} /> : (
         <div className="center" style={{ paddingTop: 30 }}>
           <div style={{ fontSize: 64 }}>{job.status === 'done' ? '🎉' : job.status === 'error' ? '⚠️' : '🎬'}</div>
-          <h2>{job.status === 'done' ? 'Ta vidéo est prête !' : job.status === 'error' ? 'Le montage a échoué' : 'Montage en cours…'}</h2>
-          <p className="muted">{job.status === 'error' ? job.error : job.step}</p>
-          {job.status !== 'done' && job.status !== 'error' && <><div className="progress"><i style={{ width: `${job.progress}%` }} /></div><p className="muted">{job.progress} % · tu recevras une notification quand ce sera prêt.</p></>}
-          {job.status === 'done' && <a className="btn" href={`#/video/${id}`}>▶ Regarder</a>}
-          {job.status === 'error' && <><button className="btn" onClick={relaunch}>Relancer</button>{job.ghRunUrl && <a className="btn ghost" href={job.ghRunUrl} target="_blank" rel="noopener">Voir le détail technique</a>}</>}
-          {mv?.authorUid === s.user?.uid && job.status === 'done' && <div className="hstack mt"><button className="btn secondary" onClick={relaunch}>Régénérer (v{(mv?.version ?? 1) + 1})</button><button className="btn danger" onClick={del}>Supprimer</button></div>}
+          <h2>{job.status === 'done' ? t('Ta vidéo est prête !') : job.status === 'error' ? t('Le montage a échoué') : t('Montage en cours…')}</h2>
+          <p className="muted">{job.status === 'error' ? job.error : t(job.step ?? '')}</p>
+          {job.status !== 'done' && job.status !== 'error' && <><div className="progress"><i style={{ width: `${job.progress}%` }} /></div><p className="muted">{job.progress} % · {t('tu recevras une notification quand ce sera prêt.')}</p></>}
+          {job.status === 'done' && <a className="btn" href={`#/video/${id}`}>{t('▶ Regarder')}</a>}
+          {job.status === 'error' && <><button className="btn" onClick={relaunch}>{t('Relancer')}</button>{job.ghRunUrl && <a className="btn ghost" href={job.ghRunUrl} target="_blank" rel="noopener">{t('Voir le détail technique')}</a>}</>}
+          {mv?.authorUid === s.user?.uid && job.status === 'done' && <div className="hstack mt"><button className="btn secondary" onClick={relaunch}>{t('Régénérer')} (v{(mv?.version ?? 1) + 1})</button><button className="btn danger" onClick={del}>{t('Supprimer')}</button></div>}
         </div>)}
     </Screen>
   );

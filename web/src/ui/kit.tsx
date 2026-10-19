@@ -1,6 +1,19 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { initials } from '../lib/util';
 import { useSession } from '../lib/session';
+import { t, lang, setLang, LANGS, type Lang } from '../lib/i18n';
+
+/** Choix de la langue (en-tête) : FR · NL · EN */
+export function LangSwitch() {
+  return (
+    <label className="lang-switch" title={t('Langue')}>
+      <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{t('Langue')}</span>
+      <select value={lang()} onChange={(e) => setLang(e.target.value as Lang)} aria-label={t('Langue')}>
+        {LANGS.map((l) => <option key={l.id} value={l.id}>{l.label}</option>)}
+      </select>
+    </label>
+  );
+}
 
 /**
  * Écran avec barre du haut flottante (verre dépoli) :
@@ -14,12 +27,13 @@ export function Screen({ title, children, left, right, tabs = true, back, home, 
     <main className={`screen${tabs ? '' : ' no-tabs'}`}>
       <div className="navbar">
         <div className="bar">
-          {back ? <button className="back" onClick={() => (history.length > 1 ? history.back() : (location.hash = back))} aria-label="Retour">‹ Retour</button> : left}
-          {home || !back ? <a className="brand" href={s.user ? '#/fil' : '/'} aria-label="BeHoop, accueil"><img src="/icons/icon-192.png" alt="" /><span>BeHoop</span></a> : <div className="small-title ellipsis">{title}</div>}
+          {back ? <button className="back" onClick={() => (history.length > 1 ? history.back() : (location.hash = back))} aria-label={t('Retour')}>‹ {t('Retour')}</button> : left}
+          {home || !back ? <a className="brand" href={s.user ? '#/fil' : '/'} aria-label={t('BeHoop, accueil')}><img src="/icons/icon-192.png" alt="" /><span>BeHoop</span></a> : <div className="small-title ellipsis">{title}</div>}
           {right}
+          {!back && <LangSwitch />}
           {/* Profil (et la modération, dans Profil) : avatar en haut à droite ; le reste est dans la barre du bas. */}
-          {!back && (s.user ? <a className="top-av" href="#/profil" aria-label="Mon profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
-            : <a className="btn small secondary" href="/" style={{ width: 'auto' }}>‹ Accueil</a>)}
+          {!back && (s.user ? <a className="top-av" href="#/profil" aria-label={t('Mon profil')}><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
+            : <a className="btn small secondary" href="/" style={{ width: 'auto' }}>‹ {t('Accueil')}</a>)}
         </div>
       </div>
       {!hideTitle && <h1 className="large-title">{title}</h1>}
@@ -39,7 +53,7 @@ export function Sheet({ title, onClose, children, right }: { title: string; onCl
       <div className="sheet-back" onClick={onClose} />
       <div className="sheet" role="dialog" aria-modal="true" aria-label={title}>
         <div className="grab" />
-        <div className="sheet-head"><button className="btn ghost small" onClick={onClose}>Fermer</button><h2>{title}</h2><div style={{ minWidth: 72, textAlign: 'right' }}>{right}</div></div>
+        <div className="sheet-head"><button className="btn ghost small" onClick={onClose}>{t('Fermer')}</button><h2>{title}</h2><div style={{ minWidth: 72, textAlign: 'right' }}>{right}</div></div>
         {children}
       </div>
     </>
@@ -50,10 +64,10 @@ export const Empty = ({ ill, title, text, action }: { ill: string; title: string
   <div className="empty"><div className="ill" aria-hidden>{ill}</div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
 );
 export const Skeleton = ({ h = 120, n = 3 }: { h?: number; n?: number }) => (
-  <div className="stack" aria-busy="true" aria-label="Chargement">{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>
+  <div className="stack" aria-busy="true" aria-label={t('Chargement')}>{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>
 );
 export const ErrorBox = ({ msg, retry }: { msg: string; retry?: () => void }) => (
-  <div className="err" role="alert"><span style={{ flex: 1 }}>{msg}</span>{retry && <button className="btn small" onClick={retry}>Réessayer</button>}</div>
+  <div className="err" role="alert"><span style={{ flex: 1 }}>{msg}</span>{retry && <button className="btn small" onClick={retry}>{t('Réessayer')}</button>}</div>
 );
 export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | null; name: string; size?: number; ring?: string }) {
   const [err, setErr] = useState(false);
@@ -72,7 +86,7 @@ export function useAsync<T>(fn: () => Promise<T>, deps: unknown[]) {
     const id = ++n.current;
     set((s) => ({ ...s, loading: true, error: undefined }));
     fn().then((data) => id === n.current && set({ data, loading: false }))
-      .catch((e) => id === n.current && set({ error: e?.code === 'permission-denied' || /permission/i.test(e?.message ?? '') ? 'Accès refusé.' : 'Impossible de charger. Vérifie ta connexion.', loading: false }));
+      .catch((e) => id === n.current && set({ error: e?.code === 'permission-denied' || /permission/i.test(e?.message ?? '') ? t('Accès refusé.') : t('Impossible de charger. Vérifie ta connexion.'), loading: false }));
   };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(run, deps);

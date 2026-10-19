@@ -4,6 +4,7 @@ import { auth } from './firebase';
 import * as D from './db';
 import { loadIndex, type Club } from './data';
 import { SUPER_ADMIN_EMAIL } from './config';
+import { t, lang, onLang } from './i18n';
 import { applyTheme, DEFAULT_THEME } from './theme';
 
 interface Session {
@@ -52,6 +53,12 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try { if (user && profile) localStorage.setItem('behoop.session', profile.displayName); else if (ready && !user) localStorage.removeItem('behoop.session'); } catch { /* stockage indisponible */ }
   }, [user, profile, ready]);
+  // Langue de l'appli enregistrée sur le profil : les notifications arrivent dans cette langue
+  useEffect(() => {
+    if (!user || !profile) return;
+    if (profile.lang !== lang()) D.updateProfile(user.uid, { lang: lang() }).catch(() => {});
+    return onLang((l) => { D.updateProfile(user.uid, { lang: l }).catch(() => {}); });
+  }, [user, profile?.lang, !!profile]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!profile) return;
     applyTheme({ ...DEFAULT_THEME, mode: profile.theme ?? 'auto', ...profile.ui }, clubs);
@@ -78,7 +85,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     // UI optimiste
     setFollows((fs) => (exists ? fs.filter((f) => !(f.type === type && f.refId === id)) : [...fs, { id: D.followId(type, id), type, refId: id, mutedTeams: [] }]));
     try { exists ? await D.unfollow(user.uid, type, id) : await D.follow(user.uid, type, id); }
-    catch { toast('Impossible de modifier le suivi. Réessaie.'); setFollows(await D.listFollows(user.uid)); }
+    catch { toast(t('Impossible de modifier le suivi. Réessaie.')); setFollows(await D.listFollows(user.uid)); }
   }, [user, follows, toast]);
 
   const value: Session = {

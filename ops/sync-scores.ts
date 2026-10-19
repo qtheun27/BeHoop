@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 import { admin, hasFirebase, notifyUsers, followers } from './lib/admin';
 import { isPlayed } from './appData';
 import { loadAll } from './allData';
+import { N } from '../shared/notifText';
 
 if (!hasFirebase()) { console.log('ℹ️  Pas de compte de service Firebase : synchronisation sociale ignorée.'); process.exit(0); }
 const { db, FieldValue } = admin();
@@ -62,7 +63,7 @@ async function syncGame(g: (typeof recent)[number]): Promise<'created' | 'update
   // Pas de notification pour un résultat ancien (rattrapage) : seulement les matchs des dernières 36 h
   if (Date.parse(`${g.d}T23:59:00`) < Date.now() - 36 * 3600e3) return 'created';
   const uids = await followers([g.h, g.a], tc);
-  await notifyUsers(uids, { title: `Résultat final : ${payload.home.name} ${g.hs} – ${g.as} ${payload.away.name}`, body: g.sn, url: `/app/#/post/score-${g.id}` }, 'result', g.h, `result_${g.id}`).catch(() => 0);
+  await notifyUsers(uids, { title: N.result(payload.home.name, g.hs!, g.as!, payload.away.name), body: g.sn, url: `/app/#/post/score-${g.id}` }, 'result', g.h, `result_${g.id}`).catch(() => 0);
   return 'created';
 }
 // 10 matchs traités en parallèle (rattrapage rapide même après une grosse journée)

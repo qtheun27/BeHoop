@@ -6,6 +6,7 @@ import { ff } from './run';
 import { momentArgs } from '../../shared/ffmpeg';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
+import { N } from '../../shared/notifText';
 
 const ROOT = resolve(import.meta.dirname, '../..');
 const id = process.argv[2];
@@ -51,7 +52,7 @@ try {
     visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: false, reactions: {}, createdAt: FieldValue.serverTimestamp(),
     payload: { matchVideoId: m.matchVideoId, momentId: id, title: st.title, duration: m.end - m.start, posterKey: mv.hls.posterKey, score: `${h} – ${a}` },
   });
-  await notifyUsers([m.authorUid], { title: 'Ton Moment est prêt ⚡', body: st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
+  await notifyUsers([m.authorUid], { title: N.momentReady, body: st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {
   console.error(e); await ref.update({ status: 'error', error: String((e as Error).message).slice(0, 300) }); process.exitCode = 1;
 }
