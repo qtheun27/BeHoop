@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:De Rode Leeuwen Pajot Masters
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12501697227-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20261027T210000
+DTEND;TZID=Europe/Brussels:20261027T230000
+SUMMARY:Rallye Longchamps A Masters – De Rode Leeuwen Pajot Masters
+LOCATION:Salle du Globe
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12251018680-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20261106T210000
+DTEND;TZID=Europe/Brussels:20261106T230000
+SUMMARY:De Rode Leeuwen Pajot Masters – RCA Jette Masters
+LOCATION:Gemeentelijk Sportcentrum Koornmolen\, Processiestraat 15\, 1755 Gooik
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13039169415-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20261209T210000
+DTEND;TZID=Europe/Brussels:20261209T230000
+SUMMARY:BBC Wobac Sint-Stevens-Woluwe Masters – De Rode Leeuwen Pajot Masters
+LOCATION:Gemeentelijke Sporthal Sint-Stevens-Woluwe\, Leuvensesteenweg 194\, 1932 Sint-Stevens-Woluwe
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12284573918-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20270219T210000
+DTEND;TZID=Europe/Brussels:20270219T230000
+SUMMARY:De Rode Leeuwen Pajot Masters – BC Chalet Masters
+LOCATION:Gemeentelijk Sportcentrum Koornmolen\, Processiestraat 15\, 1755 Gooik
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12503271345-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20270304T204500
+DTEND;TZID=Europe/Brussels:20270304T224500
+SUMMARY:ASA St. Hubert Masters A – De Rode Leeuwen Pajot Masters
+LOCATION:College Saint-Hubert
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12318129156-13470710752@behoop.be
+DTSTAMP:20261019T080726Z
+DTSTART;TZID=Europe/Brussels:20270416T210000
+DTEND;TZID=Europe/Brussels:20270416T230000
+SUMMARY:De Rode Leeuwen Pajot Masters – Basket Club Groot Dilbeek Masters
+LOCATION:Gemeentelijk Sportcentrum Koornmolen\, Processiestraat 15\, 1755 Gooik
+DESCRIPTION:WMASTERS LEVEL B / Vlaams-Brabant
+END:VEVENT
+END:VCALENDAR
