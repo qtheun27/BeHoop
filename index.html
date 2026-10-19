@@ -8,6 +8,27 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>BeHoop</title>
+<script>
+// BeHoop : site public en 3 langues (FR · NL · EN), même choix que dans l'appli (behoop.lang), sinon langue du téléphone.
+(function () {
+  var l = null; try { l = localStorage.getItem('behoop.lang'); } catch (e) {}
+  if (l !== 'fr' && l !== 'nl' && l !== 'en') { l = 'fr'; var ls = navigator.languages || [navigator.language];
+    for (var i = 0; i < ls.length; i++) { var p = String(ls[i] || '').slice(0, 2).toLowerCase(); if (p === 'fr' || p === 'nl' || p === 'en') { l = p; break; } if (p === 'de') { l = 'nl'; break; } } }
+  var D = {"Rechercher un club...": ["Zoek een club...", "Search for a club..."], "Chargement des données...": ["Gegevens laden...", "Loading data..."], "Nouveau · Gratuit": ["Nieuw · Gratis", "New · Free"], "Ton basket, en un coup d'œil": ["Jouw basket, in één oogopslag", "Your basketball, at a glance"], "🏀 Le fil de tes clubs : résultats dès qu'ils tombent": ["🏀 De feed van je clubs: uitslagen zodra ze binnen zijn", "🏀 Your clubs’ feed: results as soon as they’re in"], "🔔 Rappel 2 h avant le match et score final sur ton téléphone": ["🔔 Herinnering 2 u voor de wedstrijd en eindstand op je telefoon", "🔔 Reminder 2 hours before the game and final score on your phone"], "🎬 La vidéo de ton match montée automatiquement": ["🎬 De video van je wedstrijd, automatisch gemonteerd", "🎬 Your game video, edited automatically"], "🔒 Photos des jeunes réservées aux parents de l'équipe": ["🔒 Jeugdfoto’s enkel voor de ouders van de ploeg", "🔒 Youth photos for the team’s parents only"], "Créer mon compte": ["Mijn account aanmaken", "Create my account"], "J'ai déjà un compte": ["Ik heb al een account", "I already have an account"], "S'abonner à l'agenda de l'équipe": ["Abonneren op de agenda van de ploeg", "Subscribe to the team calendar"], "📊 Classement": ["📊 Rangschikking", "📊 Standings"], "📅 Calendrier": ["📅 Kalender", "📅 Schedule"], "À venir": ["Komend", "Upcoming"], "Terminés": ["Gespeeld", "Played"], "Tous": ["Alle", "All"], "👋 Cherche un club ci-dessus pour voir ses équipes, classements et calendriers.": ["👋 Zoek hierboven een club om de ploegen, rangschikkingen en kalenders te zien.", "👋 Search for a club above to see its teams, standings and schedules."], "Coupe": ["Beker", "Cup"], "Amical": ["Vriendschappelijk", "Friendly"], "Championnat": ["Competitie", "League"], "Salle": ["Zaal", "Venue"], "Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.": ["Rangschikking nog niet beschikbaar — het seizoen is nog niet begonnen of er is nog geen wedstrijd gevalideerd.", "Standings not available yet — the season hasn’t started or no game has been validated."], "Classement pas encore disponible pour cette compétition — la saison n'a pas encore débuté ou aucun match n'est validé.": ["Rangschikking nog niet beschikbaar voor deze competitie — het seizoen is nog niet begonnen of er is nog geen wedstrijd gevalideerd.", "Standings not available yet for this competition — the season hasn’t started or no game has been validated."], "Équipe": ["Ploeg", "Team"], "J": ["G", "P"], "G": ["W", "W"], "P": ["V", "L"], "Pts": ["Ptn", "Pts"], "Aucun match trouvé pour cette équipe cette saison.": ["Geen wedstrijden gevonden voor deze ploeg dit seizoen.", "No games found for this team this season."], "⏭️ Prochain match": ["⏭️ Volgende wedstrijd", "⏭️ Next game"], "Aucun match dans cette catégorie.": ["Geen wedstrijden in deze categorie.", "No games in this category."], "📱 S'abonner (Apple / iOS / macOS)": ["📱 Abonneren (Apple / iOS / macOS)", "📱 Subscribe (Apple / iOS / macOS)"], "🗓️ S'abonner (Google Agenda)": ["🗓️ Abonneren (Google Agenda)", "🗓️ Subscribe (Google Calendar)"], "Se met à jour automatiquement": ["Wordt automatisch bijgewerkt", "Updates automatically"], "⬇️ Télécharger (.ics)": ["⬇️ Downloaden (.ics)", "⬇️ Download (.ics)"], "Import ponctuel, pas de mise à jour": ["Eenmalige import, geen updates", "One-off import, no updates"], "Aucune équipe active trouvée pour ce club cette saison.": ["Geen actieve ploegen gevonden voor deze club dit seizoen.", "No active teams found for this club this season."], "Club introuvable. Essayez un autre mot-clé.": ["Club niet gevonden. Probeer een ander zoekwoord.", "Club not found. Try another keyword."], "clubs": ["clubs", "clubs"], "équipes": ["ploegen", "teams"], "saison": ["seizoen", "season"], "Dernière mise à jour :": ["Laatste update:", "Last updated:"], "⏳ Données en cours d'initialisation par le robot. Réessayez dans quelques minutes.": ["⏳ De gegevens worden nog klaargezet. Probeer het over enkele minuten opnieuw.", "⏳ Data is still being prepared. Please try again in a few minutes."], "Salut": ["Hallo", "Hi"], "Tes résultats, vidéos et prochains matchs t’attendent.": ["Je uitslagen, video’s en volgende wedstrijden wachten op je.", "Your results, videos and upcoming games are waiting."], "Ouvrir mon fil": ["Mijn feed openen", "Open my feed"], "Mes matchs": ["Mijn wedstrijden", "My games"], "Impossible de charger ce club. Réessaie dans un instant.": ["Deze club kon niet geladen worden. Probeer zo dadelijk opnieuw.", "Couldn’t load this club. Try again in a moment."], "Langue": ["Taal", "Language"]};
+  window.BH_LANG = l; window.BH_LOC = { fr: 'fr-BE', nl: 'nl-BE', en: 'en-GB' }[l];
+  window.T = function (fr) { return l === 'fr' || !D[fr] ? fr : D[fr][l === 'nl' ? 0 : 1]; };
+  document.documentElement.lang = l;
+  window.bhSetLang = function (v) { try { localStorage.setItem('behoop.lang', v); } catch (e) {} location.reload(); };
+  // Textes du HTML : data-i18n (contenu), data-i18n-ph (placeholder), data-i18n-title (infobulle)
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-i18n]').forEach(function (e) { e.textContent = T(e.textContent.trim()); });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function (e) { e.placeholder = T(e.placeholder); });
+    document.querySelectorAll('[data-i18n-title]').forEach(function (e) { e.title = T(e.title); });
+    var sel = document.getElementById('bh-lang'); if (sel) sel.value = l;
+  });
+})();
+</script>
+
 
 <!-- PWA -->
 <link rel="manifest" href="manifest.json">
@@ -290,29 +311,32 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 <header>
   <div class="titre-app">
     <img src="icons/icon-192.png" alt="" style="width:24px;height:24px;border-radius:7px;vertical-align:-6px;margin-right:2px;"> BeHoop
+    <select id="bh-lang" aria-label="Langue" onchange="bhSetLang(this.value)" style="margin-left:auto;float:right;border:0;border-radius:12px;padding:6px 8px;font:700 13px Oswald,sans-serif;letter-spacing:.06em;background:color-mix(in srgb,var(--primary) 12%,transparent);color:inherit;">
+      <option value="fr">FR</option><option value="nl">NL</option><option value="en">EN</option>
+    </select>
 
   </div>
   <div class="search-box">
-    <input type="text" id="club-input" list="clubs-list" placeholder="Rechercher un club..." disabled>
+    <input type="text" id="club-input" list="clubs-list" placeholder="Rechercher un club..." data-i18n-ph disabled>
     <datalist id="clubs-list"></datalist>
     <button class="btn-main" id="btn-search" disabled>OK</button>
   </div>
-  <div id="status">Chargement des données...</div>
+  <div id="status" data-i18n>Chargement des données...</div>
   <!-- BeHoop Social : présentation de l'appli et connexion (ajout) -->
   <section id="bh-app" class="carte" style="padding:18px 16px;margin-top:12px;background:linear-gradient(135deg,#0a0c12 0%,#162033 100%);color:#fff;position:relative;overflow:hidden;">
     <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 70%,rgba(242,193,78,.85) 70% 73%,transparent 73% 74.5%,rgba(61,143,219,.9) 74.5% 77%,transparent 77%);opacity:.55;"></div>
     <div style="position:relative;">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#f2c14e;">Nouveau · Gratuit</div>
-      <h2 id="bh-titre" style="margin:6px 0 10px;font-size:22px;line-height:1.15;">Ton basket, en un coup d'œil</h2>
+      <div style="font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#f2c14e;" data-i18n>Nouveau · Gratuit</div>
+      <h2 id="bh-titre" style="margin:6px 0 10px;font-size:22px;line-height:1.15;" data-i18n>Ton basket, en un coup d'œil</h2>
       <ul id="bh-avantages" style="list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;font-size:14.5px;opacity:.95;">
-        <li>🏀 Le fil de tes clubs : résultats dès qu'ils tombent</li>
-        <li>🔔 Rappel 2 h avant le match et score final sur ton téléphone</li>
-        <li>🎬 La vidéo de ton match montée automatiquement</li>
-        <li>🔒 Photos des jeunes réservées aux parents de l'équipe</li>
+        <li data-i18n>🏀 Le fil de tes clubs : résultats dès qu'ils tombent</li>
+        <li data-i18n>🔔 Rappel 2 h avant le match et score final sur ton téléphone</li>
+        <li data-i18n>🎬 La vidéo de ton match montée automatiquement</li>
+        <li data-i18n>🔒 Photos des jeunes réservées aux parents de l'équipe</li>
       </ul>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a id="bh-cta" href="./app/#/profil" style="flex:1;min-width:150px;text-align:center;background:#fff;color:#0a0c12;font-weight:700;padding:12px 14px;border-radius:12px;text-decoration:none;">Créer mon compte</a>
-        <a id="bh-cta2" href="./app/#/profil" style="flex:1;min-width:150px;text-align:center;background:rgba(255,255,255,.14);color:#fff;font-weight:600;padding:12px 14px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,.25);">J'ai déjà un compte</a>
+        <a id="bh-cta" href="./app/#/profil" style="flex:1;min-width:150px;text-align:center;background:#fff;color:#0a0c12;font-weight:700;padding:12px 14px;border-radius:12px;text-decoration:none;" data-i18n>Créer mon compte</a>
+        <a id="bh-cta2" href="./app/#/profil" style="flex:1;min-width:150px;text-align:center;background:rgba(255,255,255,.14);color:#fff;font-weight:600;padding:12px 14px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,.25);" data-i18n>J'ai déjà un compte</a>
       </div>
     </div>
   </section>
@@ -327,7 +351,7 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
         <div class="adresse" id="club-adresse"></div>
       </div>
       <div class="agenda-menu-wrap">
-        <button class="agenda-btn" id="btn-agenda" title="S'abonner à l'agenda de l'équipe">📆</button>
+        <button class="agenda-btn" id="btn-agenda" title="S'abonner à l'agenda de l'équipe" data-i18n-title>📆</button>
         <div class="agenda-menu" id="agenda-menu"></div>
       </div>
     </div>
@@ -335,8 +359,8 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
     <div class="team-selector" id="team-selector"></div>
 
     <div class="tabs">
-      <button class="tab-btn active" data-tab="tab-classement">📊 Classement</button>
-      <button class="tab-btn" data-tab="tab-calendrier">📅 Calendrier</button>
+      <button class="tab-btn active" data-tab="tab-classement" data-i18n>📊 Classement</button>
+      <button class="tab-btn" data-tab="tab-calendrier" data-i18n>📅 Calendrier</button>
     </div>
 
     <div id="tab-classement" class="tab-content active">
@@ -345,15 +369,15 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
     </div>
     <div id="tab-calendrier" class="tab-content">
       <div class="filtres" id="filtres-calendrier">
-        <button class="filtre-chip active" data-filtre="avenir">À venir</button>
-        <button class="filtre-chip" data-filtre="termines">Terminés</button>
-        <button class="filtre-chip" data-filtre="tous">Tous</button>
+        <button class="filtre-chip active" data-filtre="avenir" data-i18n>À venir</button>
+        <button class="filtre-chip" data-filtre="termines" data-i18n>Terminés</button>
+        <button class="filtre-chip" data-filtre="tous" data-i18n>Tous</button>
       </div>
       <div id="calendrier-contenu"></div>
     </div>
   </div>
 
-  <div id="etat-vide" class="carte vide" style="text-align:center; padding:30px 16px;">
+  <div id="etat-vide" class="carte vide" style="text-align:center; padding:30px 16px;" data-i18n>
     👋 Cherche un club ci-dessus pour voir ses équipes, classements et calendriers.
   </div>
 </main>
@@ -378,12 +402,12 @@ const $vue = document.getElementById('club-view');
 const $etatVide = document.getElementById('etat-vide');
 
 const EMOJI_TYPE = { coupe: '🏆', amical: '🤝', championnat: '🏀' };
-const LABEL_TYPE = { coupe: 'Coupe', amical: 'Amical', championnat: 'Championnat' };
+const LABEL_TYPE = { coupe: T('Coupe'), amical: T('Amical'), championnat: T('Championnat') };
 
 function formatAdresse(club) {
   const v = club.venue;
   if (v && (v.street || v.city)) {
-    return `📍 ${v.name || 'Salle'} — ${v.street || ''}${v.street2 ? ', ' + v.street2 : ''}, ${v.zip || ''} ${v.city || ''}`;
+    return `📍 ${v.name || T('Salle')} — ${v.street || ''}${v.street2 ? ', ' + v.street2 : ''}, ${v.zip || ''} ${v.city || ''}`;
   }
   if (club.street || club.city) return `📍 ${club.street || ''}, ${club.zip || ''} ${club.city || ''}`;
   return '';
@@ -392,14 +416,14 @@ function formatAdresse(club) {
 function formatDate(dateStr, timeStr) {
   if (!dateStr) return '';
   const d = new Date(dateStr + 'T' + (timeStr || '00:00:00'));
-  const jour = d.toLocaleDateString('fr-BE', { weekday: 'short', day: '2-digit', month: '2-digit' });
-  const heure = timeStr ? d.toLocaleTimeString('fr-BE', { hour: '2-digit', minute: '2-digit' }) : '';
+  const jour = d.toLocaleDateString(BH_LOC, { weekday: 'short', day: '2-digit', month: '2-digit' });
+  const heure = timeStr ? d.toLocaleTimeString(BH_LOC, { hour: '2-digit', minute: '2-digit' }) : '';
   return heure ? `${jour}\n${heure}` : jour;
 }
 
 function nomMois(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
-  const s = d.toLocaleDateString('fr-BE', { month: 'long', year: 'numeric' });
+  const s = d.toLocaleDateString(BH_LOC, { month: 'long', year: 'numeric' });
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
@@ -431,7 +455,7 @@ function rendreClassement(equipe) {
 
   if (serieIds.length === 0) {
     $filtres.innerHTML = '';
-    $cible.innerHTML = `<p class="vide">Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    $cible.innerHTML = `<p class="vide">${T("Classement pas encore disponible — la saison n'a pas encore débuté ou aucun match n'est validé.")}</p>`;
     return;
   }
 
@@ -459,7 +483,7 @@ function rendreClassement(equipe) {
   const titre = serieActive ? (serieActive.name || serieActive.short_name) : '';
 
   if (lignes.length === 0) {
-    $cible.innerHTML = `<h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3><p class="vide">Classement pas encore disponible pour cette compétition — la saison n'a pas encore débuté ou aucun match n'est validé.</p>`;
+    $cible.innerHTML = `<h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3><p class="vide">${T("Classement pas encore disponible pour cette compétition — la saison n'a pas encore débuté ou aucun match n'est validé.")}</p>`;
     return;
   }
 
@@ -478,7 +502,7 @@ function rendreClassement(equipe) {
   $cible.innerHTML = `
     <h3 style="margin:0 0 10px;font-size:14px;">${titre}</h3>
     <table>
-      <thead><tr><th>#</th><th>Équipe</th><th>J</th><th>G</th><th>P</th><th>Pts</th></tr></thead>
+      <thead><tr><th>#</th><th>${T('Équipe')}</th><th>${T('J')}</th><th>${T('G')}</th><th>${T('P')}</th><th>${T('Pts')}</th></tr></thead>
       <tbody>${rangees}</tbody>
     </table>
   `;
@@ -529,7 +553,7 @@ function carteMatch(g, equipe, venueId) {
       <div class="game-head">
         <div class="game-type ${type}">
           <span>${EMOJI_TYPE[type] || '🏀'}</span>
-          <span>${LABEL_TYPE[type] || 'Championnat'}</span>
+          <span>${LABEL_TYPE[type] || T('Championnat')}</span>
         </div>
         <div class="game-date">${formatDate(g.date, g.time).replace('\n', ' · ')}</div>
       </div>
@@ -558,7 +582,7 @@ function rendreCalendrier(equipe) {
     .sort((a, b) => (a.date + (a.time || '')).localeCompare(b.date + (b.time || '')));
 
   if (matchs.length === 0) {
-    cible.innerHTML = `<p class="vide">Aucun match trouvé pour cette équipe cette saison.</p>`;
+    cible.innerHTML = `<p class="vide">${T('Aucun match trouvé pour cette équipe cette saison.')}</p>`;
     return;
   }
 
@@ -568,7 +592,7 @@ function rendreCalendrier(equipe) {
     if (prochain) {
       prochainHtml = `
         <div class="prochain-match">
-          <div class="prochain-label">⏭️ Prochain match</div>
+          <div class="prochain-label">${T('⏭️ Prochain match')}</div>
           ${carteMatch(prochain, equipe, 'next')}
         </div>
       `;
@@ -579,7 +603,7 @@ function rendreCalendrier(equipe) {
   }
 
   if (matchs.length === 0 && !prochainHtml) {
-    cible.innerHTML = `<p class="vide">Aucun match dans cette catégorie.</p>`;
+    cible.innerHTML = `<p class="vide">${T('Aucun match dans cette catégorie.')}</p>`;
     return;
   }
 
@@ -595,7 +619,7 @@ function rendreCalendrier(equipe) {
     html += groupes[cle].map((g, i) => carteMatch(g, equipe, cle + '-' + i)).join('');
   });
 
-  cible.innerHTML = html || `<p class="vide">Aucun match dans cette catégorie.</p>`;
+  cible.innerHTML = html || `<p class="vide">${T('Aucun match dans cette catégorie.')}</p>`;
 }
 
 function selectionnerEquipe(equipe, chipEl) {
@@ -618,9 +642,9 @@ function rendreMenuAgenda(equipe) {
   const webcal = equipe.ics_url.replace(/^https?:\/\//, 'webcal://');
   const google = 'https://calendar.google.com/calendar/render?cid=' + encodeURIComponent(webcal);
   menu.innerHTML = `
-    <a href="${webcal}">📱 S'abonner (Apple / iOS / macOS)<span class="sous-texte">Se met à jour automatiquement</span></a>
-    <a href="${google}" target="_blank" rel="noopener">🗓️ S'abonner (Google Agenda)<span class="sous-texte">Se met à jour automatiquement</span></a>
-    <a href="${equipe.ics_url}" target="_blank" rel="noopener">⬇️ Télécharger (.ics)<span class="sous-texte">Import ponctuel, pas de mise à jour</span></a>
+    <a href="${webcal}">${T("📱 S'abonner (Apple / iOS / macOS)")}<span class="sous-texte">${T('Se met à jour automatiquement')}</span></a>
+    <a href="${google}" target="_blank" rel="noopener">${T("🗓️ S'abonner (Google Agenda)")}<span class="sous-texte">${T('Se met à jour automatiquement')}</span></a>
+    <a href="${equipe.ics_url}" target="_blank" rel="noopener">${T('⬇️ Télécharger (.ics)')}<span class="sous-texte">${T('Import ponctuel, pas de mise à jour')}</span></a>
   `;
 }
 document.getElementById('btn-agenda').addEventListener('click', () => toggleMenu('agenda-menu'));
@@ -648,7 +672,7 @@ function afficherClub(club) {
   selecteur.innerHTML = '';
 
   if (!club.teams || club.teams.length === 0) {
-    selecteur.innerHTML = '<p class="vide">Aucune équipe active trouvée pour ce club cette saison.</p>';
+    selecteur.innerHTML = '<p class="vide">' + T('Aucune équipe active trouvée pour ce club cette saison.') + '</p>';
     document.getElementById('classement-carte').innerHTML = '';
     document.getElementById('calendrier-contenu').innerHTML = '';
     document.getElementById('btn-agenda').style.display = 'none';
@@ -675,7 +699,7 @@ function rechercher() {
     // Clubs ajoutés par BeHoop (Flandre, national, BNXT, NBA, Belgian Lions) : ouverts dans leur fiche, sans compte
     const autre = (window.bhAutresClubs || []).find(c => (c.name || '').toLowerCase().includes(texte) || (c.short || '').toLowerCase().includes(texte));
     if (autre) { bhAfficherAutreClub(autre.id); return; }
-    alert('Club introuvable. Essayez un autre mot-clé.'); return;
+    alert(T('Club introuvable. Essayez un autre mot-clé.')); return;
   }
   afficherClub(club);
 }
@@ -715,14 +739,14 @@ window.onload = async function () {
     });
 
     const totalEquipes = (donnees.clubs || []).reduce((s, c) => s + (c.teams || []).length, 0);
-    $status.textContent = `✅ ${(donnees.clubs || []).length} clubs, ${totalEquipes} équipes — saison ${(donnees.season || {}).name || ''}`;
+    $status.textContent = `✅ ${(donnees.clubs || []).length} ${T('clubs')}, ${totalEquipes} ${T('équipes')} — ${T('saison')} ${(donnees.season || {}).name || ''}`;
     $input.disabled = false;
     $btn.disabled = false;
 
-    const genere = donnees.generated_at ? new Date(donnees.generated_at).toLocaleString('fr-BE') : '';
-    document.getElementById('pied').textContent = genere ? `Dernière mise à jour : ${genere}` : '';
+    const genere = donnees.generated_at ? new Date(donnees.generated_at).toLocaleString(BH_LOC) : '';
+    document.getElementById('pied').textContent = genere ? `${T('Dernière mise à jour :')} ${genere}` : '';
   } catch (err) {
-    $status.textContent = "⏳ Données en cours d'initialisation par le robot. Réessayez dans quelques minutes.";
+    $status.textContent = T("⏳ Données en cours d'initialisation par le robot. Réessayez dans quelques minutes.");
   }
 };
 </script>
@@ -734,10 +758,10 @@ window.onload = async function () {
   try { nom = localStorage.getItem('behoop.session'); } catch (e) {}
   if (!nom) return;
   var prenom = nom.split(' ')[0];
-  document.getElementById('bh-titre').textContent = 'Salut ' + prenom + ' 👋';
-  document.getElementById('bh-avantages').innerHTML = '<li>Tes résultats, vidéos et prochains matchs t\u2019attendent.</li>';
-  var c = document.getElementById('bh-cta'); c.textContent = 'Ouvrir mon fil'; c.href = './app/#/fil';
-  var c2 = document.getElementById('bh-cta2'); c2.textContent = 'Mes matchs'; c2.href = './app/#/matchs';
+  document.getElementById('bh-titre').textContent = T('Salut') + ' ' + prenom + ' 👋';
+  document.getElementById('bh-avantages').innerHTML = '<li>' + T('Tes résultats, vidéos et prochains matchs t\u2019attendent.') + '</li>';
+  var c = document.getElementById('bh-cta'); c.textContent = T('Ouvrir mon fil'); c.href = './app/#/fil';
+  var c2 = document.getElementById('bh-cta2'); c2.textContent = T('Mes matchs'); c2.href = './app/#/matchs';
 })();
 </script>
 <script>
@@ -775,7 +799,7 @@ async function bhAfficherAutreClub(id) {
     }));
     if (!(donnees.clubs || []).some(x => x.id === raw.id)) donnees.clubs.push(raw);
     afficherClub(raw);
-  } catch (e) { alert('Impossible de charger ce club. Réessaie dans un instant.'); }
+  } catch (e) { alert(T('Impossible de charger ce club. Réessaie dans un instant.')); }
 }
 // BeHoop : couleur de club trop claire (ex. beige) → assombrie pour que le texte blanc des boutons reste lisible
 (function () {
