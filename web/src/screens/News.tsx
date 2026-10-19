@@ -4,7 +4,7 @@ import { loadNews, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
 
-const CATS: [string, string][] = [['tout', 'Tout'], ['belgique', '🇧🇪 Belgique'], ['international', '🌍 International'], ['nba', '🏀 NBA']];
+const CATS: [string, string][] = [['tout', 'Tout'], ['belgique', '🇧🇪 Belgique'], ['regional', '📍 Régional'], ['international', '🌍 International'], ['nba', '🏀 NBA']];
 const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
 
 /** Image de l'article ; si le média n'en fournit pas (ou bloque son affichage), visuel « demi-terrain » aux couleurs de la source. */

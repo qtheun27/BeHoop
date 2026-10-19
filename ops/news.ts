@@ -4,17 +4,32 @@
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { execFile } from 'node:child_process';
 
-export type Cat = 'belgique' | 'international' | 'nba';
+export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat }
 
 const GN = 'https://news.google.com/rss/search?';
-const FEEDS: { source: string; url: string; cat: Cat | 'auto'; keep?: (link: string, text: string) => boolean; google?: boolean }[] = [
+const gq = (q: string, lang: 'fr' | 'nl') => `${GN}q=${q}+when:14d&hl=${lang}&gl=BE&ceid=BE:${lang}`;
+const sites = (l: string[]) => `(${l.map((d) => `site:${d}`).join('+OR+')})`;
+const isBasket = (l: string, t: string) => /basket/i.test(l + t);
+const FEEDS: { source: string; url: string; cat: Cat | 'auto'; keep?: (link: string, text: string) => boolean; google?: boolean; max?: number; check?: boolean }[] = [
   // Google Actualités (flux public) : basket belge, Belgian Cats et Lions, en français et en néerlandais — la source réelle est indiquée
   { source: 'Google Actualités', google: true, cat: 'belgique', url: `${GN}q=basket+(Belgique+OR+BNXT+OR+%22Belgian+Cats%22+OR+%22Belgian+Lions%22)&hl=fr&gl=BE&ceid=BE:fr` },
   { source: 'Google Actualités', google: true, cat: 'belgique', url: `${GN}q=basketbal+(BNXT+OR+%22Belgian+Cats%22+OR+%22Belgian+Lions%22+OR+Giants+OR+Oostende)&hl=nl&gl=BE&ceid=BE:nl` },
-  { source: 'DH Les Sports+', url: 'https://www.dhnet.be/arc/outboundfeeds/rss/section/sports/?outputType=xml', cat: 'auto', keep: (l) => /\/sports\/basket\//.test(l) },
-  { source: 'RTBF Sport', url: 'https://rss.rtbf.be/article/rss/highlight_rtbf_sport.xml', cat: 'auto', keep: (l, t) => /basket/i.test(l + t) },
-  { source: 'Sporza', url: 'https://sporza.be/nl.rss.xml', cat: 'auto', keep: (l, t) => /basket/i.test(l + t) },
+  // Basket provincial et régional : presse régionale et télés locales, Wallonie-Bruxelles et Flandre
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+${sites(['sudinfo.be', 'lavenir.net', 'dhnet.be'])}`, 'fr') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+${sites(['telemb.be', 'antennecentre.tv', 'notele.be', 'tvlux.be', 'rtc.be'])}`, 'fr') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+${sites(['canalzoom.be', 'matele.be', 'tvcom.be', 'bx1.be', 'canalc.be', 'vedia.be'])}`, 'fr') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basketbal+${sites(['hln.be', 'nieuwsblad.be', 'hbvl.be', 'gva.be', 'standaard.be', 'kw.be'])}`, 'nl') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basketbal+${sites(['tvl.be', 'focus-wtv.be', 'robtv.be', 'atv.be', 'avs.be', 'tvoost.be', 'ringtv.be', 'bruzz.be', 'rtv.be', 'lokaalnieuws.online'])}`, 'nl') },
+  // Flux directs (avec image) — Mediahuis bloque la lecture de ses pages par les robots, mais pas ses flux RSS
+  { source: 'Nieuwsblad', url: 'https://www.nieuwsblad.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
+  { source: 'HBVL', url: 'https://www.hbvl.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
+  { source: 'GVA', url: 'https://www.gva.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
+  { source: 'DH Les Sports+', url: 'https://www.dhnet.be/arc/outboundfeeds/rss/section/sports/basket/?outputType=xml', cat: 'auto' },
+  { source: "L'Avenir", url: 'https://www.lavenir.net/arc/outboundfeeds/rss/section/sports/basket/?outputType=xml', cat: 'auto' },
+  { source: "L'Avenir", url: 'https://www.lavenir.net/arc/outboundfeeds/rss/section/regions/?outputType=xml', cat: 'regional', keep: isBasket, check: true },
+  { source: 'RTBF Sport', url: 'https://rss.rtbf.be/article/rss/highlight_rtbf_sport.xml', cat: 'auto', keep: isBasket },
+  { source: 'Sporza', url: 'https://sporza.be/nl.rss.xml', cat: 'auto', keep: isBasket },
   { source: 'BasketUSA', url: 'https://www.basketusa.com/feed/', cat: 'auto' },
   { source: 'Basketsession', url: 'https://www.basketsession.com/feed/', cat: 'auto' },
   { source: 'ESPN', url: 'https://www.espn.com/espn/rss/nba/news', cat: 'nba' },
@@ -27,6 +42,7 @@ const unxml = (s = '') => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').replace
   .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)))
   .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#039;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
   .replace(/\s+/g, ' ').trim();
+const normalize = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const cut = (s: string, n = 200) => (s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n - 1) > 80 ? s.lastIndexOf(' ', n - 1) : n - 1) + '…');
 const tag = (it: string, name: string) => new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, 'i').exec(it)?.[1] ?? '';
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }
@@ -38,6 +54,7 @@ export function classify(text: string, fallback: Cat | 'auto', source: string): 
   if (NBA.test(text)) return 'nba';
   if (BE.test(text)) return 'belgique';
   if (fallback !== 'auto') return fallback;
+  if (/\/(regions?|sportregio|sport-in-de-buurt)\//i.test(text)) return 'regional';
   return /BasketUSA|Basketsession|ESPN/.test(source) ? 'nba' : 'belgique';
 }
 
@@ -54,7 +71,7 @@ export function parseFeed(xml: string, f: (typeof FEEDS)[number]): News[] {
     const gtitle = f.google && gsrc ? title.replace(new RegExp(`\\s+-\\s+${gsrc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`), '') : title;
     return { url, title: gtitle, excerpt: f.google ? '' : excerpt, image, date, cats, src: gsrc };
   }).filter((x) => x.url && x.title && (!f.keep || f.keep(x.url, `${x.title} ${x.cats}`)))
-    .filter((x) => Date.parse(x.date) > Date.now() - 21 * 864e5).slice(0, 40)
+    .filter((x) => Date.parse(x.date) > Date.now() - 21 * 864e5).slice(0, f.max ?? 40)
     .map((x) => ({ id: hashId(f.google ? `${x.src}|${x.title}` : x.url), title: x.title, excerpt: x.excerpt, url: x.url, source: x.src || f.source, image: x.image, date: x.date,
       cat: classify(`${x.title} ${x.excerpt} ${x.cats} ${x.url}`, f.cat, f.source) }));
 }
@@ -84,8 +101,8 @@ async function resolveGoogle(url: string): Promise<string | null> {
 }
 
 /** Page HTML via curl : plusieurs médias refusent le fetch de Node mais acceptent curl (présent sur les runners GitHub). */
-function curl(url: string): Promise<{ html: string; url: string } | null> {
-  return new Promise((res) => execFile('curl', ['-sSL', '--compressed', '-m', '15', '-A', UA, '-H', 'Accept: text/html', '-w', '\n%{http_code} %{url_effective}', url],
+function curl(url: string, accept = 'text/html'): Promise<{ html: string; url: string } | null> {
+  return new Promise((res) => execFile('curl', ['-sSL', '--compressed', '-m', '15', '-A', UA, '-H', `Accept: ${accept}`, '-w', '\n%{http_code} %{url_effective}', url],
     { maxBuffer: 16 << 20 }, (err, out) => {
       const i = out?.lastIndexOf('\n') ?? -1;
       const [code, final] = i < 0 ? [] : out.slice(i + 1).split(' ');
@@ -115,7 +132,8 @@ async function enrich(items: News[]) {
   const work = async (n: News) => {
     try {
       if (isGoogle(n.url)) n.url = (await resolveGoogle(n.url)) ?? n.url;
-      if (n.image || isGoogle(n.url)) return;
+      // Pages Mediahuis protégées (403 pour les robots) : l'image vient de leurs flux RSS, inutile d'insister
+      if (n.image || isGoogle(n.url) || /(nieuwsblad|hbvl|gva|standaard)\.be\//.test(n.url)) return;
       const page = await curl(n.url);
       if (page) { n.image = pageImage(page.html, page.url); if (n.image) found++; }
     } catch { /* site lent ou indisponible : la carte garde son visuel de repli */ }
@@ -124,14 +142,41 @@ async function enrich(items: News[]) {
   console.log(`Images d'aperçu ajoutées : ${found}/${todo.length}`);
 }
 
+// Recherches régionales : Google renvoie aussi le foot, le tennis… de ces médias. On garde ce qui parle de basket
+// ou cite un club de basket (nom propre à un seul club), sauf si l'article parle visiblement d'un autre sport.
+const OTHER_SPORT = /voetbal|football|\bfoot\b|tennis|handbal|handball|volley|wielren|cyclis|hockey|rugby|atletiek|athl[ée]tisme|doelpunt|penalty|rode kaart|carton rouge|croky cup|jupiler|\bgoal|keeper|gardien de but|veldrit|gravel|motocross|judo|zwemmen|natation/i;
+const GENERIC = new Set('basket basketball basketbal basketbalclub club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
+export function clubMatcher(clubs: { name: string; short: string }[]) {
+  // Noms de club d'au moins deux mots (« limburg united », « okapi aalst »), avec ou sans les mots génériques :
+  // un nom de ville seul est trop ambigu (foot, faits divers…)
+  const keys = new Set<string>();
+  for (const c of clubs) for (const n of [c.name, c.short]) {
+    const all = normalize(n).split(' ').filter((w) => w && !/^\d+$/.test(w));
+    const own = all.filter((w) => !GENERIC.has(w));
+    if (all.length >= 2 && all.join(' ').length >= 9) keys.add(all.join(' '));
+    if (own.length >= 2 && own.join(' ').length >= 9) keys.add(own.join(' '));
+  }
+  const re = new RegExp(`\\b(${[...keys].join('|')})\\b`);
+  return (text: string) => keys.size > 0 && re.test(normalize(text));
+}
+export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit: (t: string) => boolean) {
+  const t = `${n.title} ${n.excerpt}`;
+  if (/basket/i.test(`${t} ${n.url}`)) return true;
+  return !OTHER_SPORT.test(t) && clubHit(t);
+}
+
 export async function run(out = 'app-data/news.json') {
   const prev: News[] = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')).items ?? [] : [];
   const all: News[] = [];
+  const clubHit = clubMatcher(existsSync('app-data/index.json') ? JSON.parse(readFileSync('app-data/index.json', 'utf8')).clubs : []);
   for (const f of FEEDS) {
     try {
+      // fetch d'abord ; curl en secours (Mediahuis refuse le fetch de Node mais sert ses flux à curl)
       const r = await fetch(f.url, { signal: AbortSignal.timeout(20_000), headers: { Accept: 'application/rss+xml, application/xml' } });
-      if (!r.ok) throw new Error(`${r.status}`);
-      const items = parseFeed(await r.text(), f); all.push(...items); console.log(`${f.source} : ${items.length}`);
+      const xml = r.ok ? await r.text() : (await curl(f.url, 'application/rss+xml, application/xml'))?.html;
+      if (!xml) throw new Error(`${r.status}`);
+      let items = parseFeed(xml, f);
+      if (f.check) items = items.filter((n) => isBasketNews(n, clubHit)); all.push(...items); console.log(`${f.source} : ${items.length}`);
     } catch (e) { console.error(`${f.source} indisponible (${(e as Error).message})`); }
   }
   try { const b = await bnxtNews(); all.push(...b); console.log(`BNXT League : ${b.length}`); } catch (e) { console.error('BNXT indisponible', (e as Error).message); }
@@ -145,10 +190,18 @@ export async function run(out = 'app-data/news.json') {
     const old = known.get(n.id);
     byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? old.image } : n);
   }
-  const items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 150);
+  let items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 700);
   await enrich(items);
+  // Un même article arrive par plusieurs chemins (flux direct, Google, Nieuwsblad = GVA = HBVL…) : un seul exemplaire, de préférence avec image
+  const seen = new Map<string, News>();
+  for (const n of items) {
+    const k = normalize(n.title);
+    const o = seen.get(k) ?? seen.get(n.url);
+    if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
+  }
+  items = [...new Set(seen.values())].slice(0, 500);
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
   writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items }));
-  console.log(`news.json : ${items.length} articles (${['belgique', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);
+  console.log(`news.json : ${items.length} articles (${['belgique', 'regional', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);
 }
 if (import.meta.url === `file://${process.argv[1]}`) run().catch((e) => { console.error(e); process.exit(1); });

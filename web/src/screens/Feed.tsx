@@ -41,7 +41,7 @@ const FILTERS: { id: string; label: string; ok: (p: D.Post) => boolean }[] = [
   { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' },
   { id: 'actus', label: '📰 Actus', ok: () => false },
 ];
-const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['international', 'International'], ['nba', 'NBA']];
+const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['regional', 'Régional'], ['international', 'International'], ['nba', 'NBA']];
 
 export interface ScorePayload { gameId: number; date: string; time?: string; competition: string;
   home: { id: number; name: string; logo?: string | null; color?: string; score: number }; away: { id: number; name: string; logo?: string | null; color?: string; score: number }; official?: boolean }

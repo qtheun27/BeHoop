@@ -21,11 +21,23 @@ const isMedia = (p: D.Post) => p.type === 'photo' || p.type === 'video' || p.typ
 const isScore = (p: D.Post) => p.type === 'score' || p.type === 'live';
 const RESULTS_DAYS = 45;
 
-/** Actus qui citent le club (ou son club lié, ex. Mons Basketball ↔ CityX Mons). */
-function clubNews(items: News[], names: string[]) {
-  const keys = [...new Set(names.map((n) => normalize(n).trim()).filter((n) => n.length >= 4))];
-  const re = keys.length ? new RegExp(`\\b(${keys.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`) : null;
-  return re ? items.filter((n) => re.test(normalize(`${n.title} ${n.excerpt}`))) : [];
+// Mots trop courants dans les noms de clubs pour identifier un club dans un article
+const GENERIC = new Set('basket basketball basketbal basketbalclub club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
+const words = (s: string) => normalize(s).replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean);
+
+/** Actus qui citent le club (ou son club lié, ex. Mons Basketball ↔ CityX Mons) : nom sans les mots génériques, ou mot propre à ce club. */
+function clubNews(items: News[], clubs: Club[], names: string[]) {
+  const freq = new Map<string, number>();
+  for (const c of clubs) for (const w of new Set(words(`${c.name} ${c.short}`))) freq.set(w, (freq.get(w) ?? 0) + 1);
+  const keys = new Set<string>();
+  for (const n of names) {
+    const ws = words(n).filter((w) => !GENERIC.has(w) && !/^\d+$/.test(w));
+    if (ws.join(' ').length >= 4) keys.add(ws.join(' '));
+    ws.filter((w) => w.length >= 5 && freq.get(w) === 1).forEach((w) => keys.add(w));
+  }
+  if (!keys.size) return [];
+  const re = new RegExp(`\\b(${[...keys].join('|')})\\b`);
+  return items.filter((n) => re.test(words(`${n.title} ${n.excerpt}`).join(' ')));
 }
 
 export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }) {
@@ -35,7 +47,8 @@ export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }
     if (!cid) throw new Error('Équipe introuvable');
     const [c, all] = await Promise.all([loadClub(cid), loadNews().catch(() => null)]);
     const linked = c.club.linked ? [...idx.values()].find((e) => e.club.id === c.club.linked)?.club : undefined;
-    return { ...c, idx, news: clubNews(all?.items ?? [], [c.club.name, c.club.short, ...(linked ? [linked.name, linked.short] : [])]) };
+    const clubs = [...new Map([...idx.values()].map((e) => [e.club.id, e.club])).values()];
+    return { ...c, idx, news: clubNews(all?.items ?? [], clubs, [c.club.name, c.club.short, ...(linked ? [linked.name, linked.short] : [])]) };
   }, [clubId, teamId]);
   const [sel, setSel] = useState<number | null>(teamId ?? null);
   useEffect(() => setSel(teamId ?? null), [teamId, clubId]);
@@ -53,7 +66,7 @@ export function ClubHub({ clubId, teamId }: { clubId?: number; teamId?: number }
     <Screen title={team ? teamLabel(team) : club.short} back="fil" hideTitle right={<FollowButton type={team ? 'team' : 'club'} id={team ? team.id : club.id} />}>
       <Hero club={club} team={team} games={games} />
       <TeamPicker club={club} sel={sel} onPick={pick} />
-      {team ? <TeamSection key={team.id} club={club} team={team} games={games} idx={idx} news={news} />
+      {team ? <TeamSection key={team.id} club={club} team={team} games={games} idx={idx} />
         : <ClubSection club={club} games={games} idx={idx} news={news} onPick={pick} />}
     </Screen>
   );
@@ -151,7 +164,7 @@ function ClubSection({ club, games, idx, news, onPick }: { club: Club; games: Ga
   );
 }
 
-function TeamSection({ club, team, games, idx, news }: { club: Club; team: Team; games: Game[]; idx: Map<number, { team: Team; club: Club }>; news: News[] }) {
+function TeamSection({ club, team, games, idx }: { club: Club; team: Team; games: Game[]; idx: Map<number, { team: Team; club: Club }> }) {
   const s = useSession();
   const [tab, setTab] = useState<'fil' | 'matchs' | 'classement' | 'infos'>('fil');
   const [join, setJoin] = useState(false);
@@ -190,7 +203,8 @@ function TeamSection({ club, team, games, idx, news }: { club: Club; team: Team;
         {([['fil', '📰 Fil'], ['matchs', '📅 Matchs'], ['classement', '📊 Classement'], ['infos', '📈 Infos']] as const).map(([k, l]) =>
           <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{l}</button>)}
       </div>
-      {tab === 'fil' && <HubFeed posts={posts.data} error={posts.error} retry={posts.reload} games={mine} teamIds={[team.id]} idx={idx} news={news} />}
+      {/* Fil de l'équipe : uniquement ses résultats et publications (les actus du club restent sur « Tout le club ») */}
+      {tab === 'fil' && <HubFeed posts={posts.data} error={posts.error} retry={posts.reload} games={mine} teamIds={[team.id]} idx={idx} news={[]} />}
       {tab === 'matchs' && <TeamGames team={team} games={mine} ics={ics} />}
       {tab === 'classement' && <TeamStandings team={team} games={mine} />}
       {tab === 'infos' && <TeamStats team={team} club={club} games={mine} />}
@@ -234,7 +248,7 @@ function HubFeed({ posts, error, retry, games, teamIds, idx, news }: {
   const shown = items.filter((x) => kind === 'tout' || x.kind === kind);
   return (
     <>
-      <div className="chips">{KINDS.map((k) => <button key={k.id} className={`chip${kind === k.id ? ' on' : ''}`} onClick={() => { setKind(k.id); setMax(15); }} aria-pressed={kind === k.id}>{k.label}</button>)}</div>
+      <div className="chips">{KINDS.filter((k) => k.id !== 'actus' || news.length).map((k) => <button key={k.id} className={`chip${kind === k.id ? ' on' : ''}`} onClick={() => { setKind(k.id); setMax(15); }} aria-pressed={kind === k.id}>{k.label}</button>)}</div>
       {error && <ErrorBox msg={error} retry={retry} />}
       {!posts && !error ? <Skeleton h={240} n={2} /> : shown.length ? <>{shown.slice(0, max).map((x) => x.el)}
           {shown.length > max && <button className="btn secondary" onClick={() => setMax((m) => m + 15)}>Voir plus ({shown.length - max})</button>}</>

@@ -37,5 +37,5 @@ export { teamLabel } from '../../../shared/teamLabel';
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'international' | 'nba' }
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba' }
 export const loadNews = () => get<{ generated_at: string; items: News[] }>('news.json');

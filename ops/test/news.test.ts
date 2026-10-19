@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews } from '../news';
 describe('classement des actualités', () => {
   it.each([
     ['Droomaffiche voor Basket Willebroek: tweedeklasser krijgt in beker bezoek', 'belgique'],
@@ -20,4 +20,15 @@ describe("image d'aperçu des articles", () => {
     expect(pageImage('<meta property="og:image" content="https://site.be/logoSeo.svg">', 'https://site.be')).toBeNull();
     expect(pageImage('<meta property="og:image" content="https://site.be/1638_sudinfo_opengraph.png">', 'https://site.be')).toBeNull();
   });
+});
+
+describe('actus régionales : uniquement le basket', () => {
+  const hit = clubMatcher([{ name: 'Okapi Aalst', short: 'Okapi Aalst' }, { name: 'BC Pelt', short: 'Pelt' }]);
+  const n = (title: string) => ({ title, excerpt: '', url: 'https://news.google.com/x' });
+  it.each([
+    ['Basket | Les U18 d’Orp Jauche font sensation', true],
+    ['Okapi Aalst wint met 79-94 tegen Kangoeroes Mechelen', true],
+    ['Noorderhart in Pelt investeert 26,7 miljoen euro', false],
+    ['FOOT - P2B : Mesvin sort vainqueur du derby', false],
+  ])('%s → %s', (t, ok) => expect(isBasketNews(n(t), hit)).toBe(ok));
 });
