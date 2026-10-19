@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, normalize, newsText, teamLabel, trCat, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, normalize, teamLabel, trCat, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
@@ -46,7 +46,7 @@ export function Explore() {
       .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   }, [data, n, reg]);
   // La recherche porte aussi sur les actus (titres et accroches)
-  const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source} ${newsText(x).title}`).includes(n)).slice(0, 6)), [news.data, n]);
+  const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
     <Screen title={t('Rechercher')}>
       {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}

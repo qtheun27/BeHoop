@@ -561,8 +561,6 @@ export const NL: Record<string, string> = {
   "Publié !": "Gepost!",
   "Moment en préparation…": "Moment in voorbereiding…",
   "Impossible de créer le Moment": "Moment maken mislukt",
-  "Traduit automatiquement": "Automatisch vertaald",
-  "traduit": "vertaald",
   "Masquer les articles dans d’autres langues": "Artikels in andere talen verbergen",
   "Voir aussi {n} articles dans d’autres langues": "Ook {n} artikels in andere talen tonen",
 };

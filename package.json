@@ -16,7 +16,6 @@
     "emulators": "firebase emulators:start --only auth,firestore --project demo-behoop"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.135.0",
     "@fontsource/anton": "^5.3.0",
     "@fontsource/oswald": "^5.3.0",
     "exifr": "^7.1.3",

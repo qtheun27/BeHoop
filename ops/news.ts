@@ -3,15 +3,15 @@
 // fournie par le flux et le lien vers l'article original. Jamais le texte complet.
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { execFile } from 'node:child_process';
-import { translateNews } from './translate-news';
+import { detectLang } from './news-lang';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
-  /** Langue d'origine et traductions (titre t, accroche e) : voir translate-news.ts */
-  lang?: 'fr' | 'nl' | 'en'; tr?: Partial<Record<'fr' | 'nl' | 'en', { t: string; e: string }>> }
+  /** Langue de l'article (voir news-lang.ts) */
+  lang?: 'fr' | 'nl' | 'en' }
 
 const GN = 'https://news.google.com/rss/search?';
-const gq = (q: string, lang: 'fr' | 'nl') => `${GN}q=${q}+when:14d&hl=${lang}&gl=BE&ceid=BE:${lang}`;
+const gq = (q: string, lang: 'fr' | 'nl' | 'en') => lang === 'en' ? `${GN}q=${q}+when:7d&hl=en-GB&gl=GB&ceid=GB:en` : `${GN}q=${q}+when:14d&hl=${lang}&gl=BE&ceid=BE:${lang}`;
 const sites = (l: string[]) => `(${l.map((d) => `site:${d}`).join('+OR+')})`;
 const isBasket = (l: string, t: string) => /basket/i.test(l + t);
 const FEEDS: { source: string; url: string; cat: Cat | 'auto'; keep?: (link: string, text: string) => boolean; google?: boolean; max?: number; check?: boolean }[] = [
@@ -36,6 +36,16 @@ const FEEDS: { source: string; url: string; cat: Cat | 'auto'; keep?: (link: str
   { source: 'BasketUSA', url: 'https://www.basketusa.com/feed/', cat: 'auto' },
   { source: 'Basketsession', url: 'https://www.basketsession.com/feed/', cat: 'auto' },
   { source: 'ESPN', url: 'https://www.espn.com/espn/rss/nba/news', cat: 'nba' },
+  // En anglais : NBA, Europe, basket belge
+  { source: 'Yahoo Sports', url: 'https://sports.yahoo.com/nba/rss/', cat: 'nba' },
+  { source: 'CBS Sports', url: 'https://www.cbssports.com/rss/headlines/nba/', cat: 'nba' },
+  { source: 'Eurohoops', url: 'https://www.eurohoops.net/en/feed/', cat: 'international' },
+  { source: 'Sportando', url: 'https://www.sportando.basketball/en/feed/', cat: 'international' },
+  { source: 'Google Actualités', google: true, cat: 'belgique', url: gq('basketball+(Belgium+OR+BNXT+OR+%22Belgian+Cats%22+OR+%22Belgian+Lions%22)', 'en') },
+  { source: 'Google Actualités', google: true, cat: 'international', url: gq('EuroLeague+basketball', 'en') },
+  // En néerlandais : NBA et international (le basket belge est déjà couvert par HLN, Nieuwsblad, Sporza…)
+  { source: 'Google Actualités', google: true, cat: 'nba', url: gq('NBA+basketbal', 'nl') },
+  { source: 'Google Actualités', google: true, cat: 'international', url: gq('basketbal+(Euroleague+OR+EuroBasket+OR+FIBA+OR+%22Belgian+Cats%22)', 'nl') },
 ];
 const INTER = /fiba|eurobasket|euroleague|euroligue|eurocup|belgian (cats|lions)|\bcats\b|\blions\b|mondial|coupe du monde|world cup|jeux olympiques|\bjo\b|équipe de france|bleus|bleues/i;
 const NBA = /\bnba\b|wnba|lakers|celtics|warriors|knicks|bulls|spurs|wembanyama|lebron|curry|playoffs|draft/i;
@@ -223,9 +233,10 @@ export async function run(out = 'app-data/news.json') {
   const clubHit = clubMatcher(indexClubs);
   for (const f of FEEDS) {
     try {
-      // fetch d'abord ; curl en secours (Mediahuis refuse le fetch de Node mais sert ses flux à curl)
+      // fetch d'abord ; curl en secours (Mediahuis refuse le fetch de Node, ESPN lui renvoie une page vide, curl passe)
       const r = await fetch(f.url, { signal: AbortSignal.timeout(20_000), headers: { Accept: 'application/rss+xml, application/xml' } });
-      const xml = r.ok ? await r.text() : (await curl(f.url, 'application/rss+xml, application/xml'))?.html;
+      const body = r.ok ? await r.text() : '';
+      const xml = /<item\b/i.test(body) ? body : (await curl(f.url, 'application/rss+xml, application/xml'))?.html;
       if (!xml) throw new Error(`${r.status}`);
       let items = parseFeed(xml, f);
       if (f.check) items = items.filter((n) => isBasketNews(n, clubHit)); all.push(...items); console.log(`${f.source} : ${items.length}`);
@@ -251,8 +262,11 @@ export async function run(out = 'app-data/news.json') {
     const o = seen.get(k) ?? seen.get(n.url);
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
-  items = [...new Set(seen.values())].slice(0, 500);
-  await translateNews(items, known);
+  items = [...new Set(seen.values())];
+  for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
+  // Au plus 300 articles par langue (les plus récents) : une langue très active n'écrase pas les autres
+  const perLang: Record<string, number> = {};
+  items = items.filter((n) => (perLang[n.lang!] = (perLang[n.lang!] ?? 0) + 1) <= 300);
   // Clubs cités (pour le fil de chaque club)
   if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });

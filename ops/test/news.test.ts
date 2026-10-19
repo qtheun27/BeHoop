@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { classify, pageImage, clubMatcher, isBasketNews, clubTagger } from '../news';
-import { detectLang } from '../translate-news';
+import { detectLang } from '../news-lang';
 describe('classement des actualités', () => {
   it.each([
     ['Droomaffiche voor Basket Willebroek: tweedeklasser krijgt in beker bezoek', 'belgique'],

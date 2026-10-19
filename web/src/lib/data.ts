@@ -51,13 +51,7 @@ export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[];
-  lang?: 'fr' | 'nl' | 'en'; tr?: Partial<Record<'fr' | 'nl' | 'en', { t: string; e: string }>> }
-/** Titre et accroche dans la langue de l'appli (traduction automatique si disponible). */
-export function newsText(n: News) {
-  const l = lang(), x = n.tr?.[l];
-  if (!x?.t || n.lang === l) return { title: n.title, excerpt: n.excerpt, translated: false };
-  return { title: x.t, excerpt: x.e, translated: true };
-}
-/** Lisible dans la langue de l'appli : écrit dans cette langue ou traduit. */
-export const readable = (n: News) => !n.lang || n.lang === lang() || !!n.tr?.[lang()]?.t;
+  lang?: 'fr' | 'nl' | 'en' }
+/** Article écrit dans la langue de l'appli (chaque langue a ses propres sources, pas de traduction). */
+export const readable = (n: News) => !n.lang || n.lang === lang();
 export const loadNews = () => get<{ generated_at: string; items: News[] }>('news.json');

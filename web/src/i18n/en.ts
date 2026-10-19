@@ -561,8 +561,6 @@ export const EN: Record<string, string> = {
   "Publié !": "Posted!",
   "Moment en préparation…": "Moment being prepared…",
   "Impossible de créer le Moment": "Couldn’t create the Moment",
-  "Traduit automatiquement": "Automatically translated",
-  "traduit": "translated",
   "Masquer les articles dans d’autres langues": "Hide articles in other languages",
   "Voir aussi {n} articles dans d’autres langues": "Also show {n} articles in other languages",
 };

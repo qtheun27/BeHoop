@@ -1,6 +1,6 @@
 // Actualités basket : Belgique, International, NBA. Visibles sans compte ; on renvoie toujours vers l'article original.
 import { useState } from 'react';
-import { loadNews, newsText, readable, type News } from '../lib/data';
+import { loadNews, readable, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
 import { t } from '../lib/i18n';
@@ -31,14 +31,13 @@ function NewsVisual({ n, ratio }: { n: News; ratio: string }) {
 }
 
 export function NewsCard({ n, wide }: { n: News; wide?: boolean }) {
-  const x = newsText(n);
   return (
     <a className="card news" href={n.url} target="_blank" rel="noopener" style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
       <NewsVisual n={n} ratio={wide ? '16/8' : '16/9'} />
       <div style={{ padding: '10px 14px 14px' }}>
-        <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span>{x.translated && <span className="muted" title={t('Traduit automatiquement')}>· 🌐 {t('traduit')}</span>}</div>
-        <div style={{ fontWeight: 700, fontSize: wide ? 18 : 15.5, lineHeight: 1.25, marginTop: 6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{x.title}</div>
-        {wide && x.excerpt && <div className="muted" style={{ fontSize: 14.5, marginTop: 4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{x.excerpt}</div>}
+        <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>
+        <div style={{ fontWeight: 700, fontSize: wide ? 18 : 15.5, lineHeight: 1.25, marginTop: 6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</div>
+        {wide && n.excerpt && <div className="muted" style={{ fontSize: 14.5, marginTop: 4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.excerpt}</div>}
       </div>
     </a>
   );

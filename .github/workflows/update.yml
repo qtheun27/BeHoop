@@ -57,8 +57,6 @@ jobs:
 
       - name: Actualités basket
         run: npx tsx ops/news.ts
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         continue-on-error: true
 
       - name: Cartes de score automatiques et Jeunes/Seniors (Firestore)
