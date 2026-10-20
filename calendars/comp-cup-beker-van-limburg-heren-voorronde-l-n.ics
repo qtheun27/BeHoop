@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Limburg Heren Voorronde L & N
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-13024507715-comp-cup-beker-van-limburg-heren-voorronde-l-n@behoop.be
-DTSTAMP:20261020T142538Z
+DTSTAMP:20261020T211200Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
 SUMMARY:Hades Kiewit BBC HSE A – KBBC Zolder vzw HSE A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Limburg Heren Voorronde L & N
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13007730096-comp-cup-beker-van-limburg-heren-voorronde-l-n@behoop.be
-DTSTAMP:20261020T142538Z
+DTSTAMP:20261020T211200Z
 DTSTART;TZID=Europe/Brussels:20270114T210000
 DTEND;TZID=Europe/Brussels:20270114T230000
 SUMMARY:KBBC Miners Beringen HSE A – BasKet Tongeren HSE B

@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Limburg U19 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11391998873-comp-cup-beker-van-limburg-u19-meisjes@behoop.be
-DTSTAMP:20261020T142538Z
+DTSTAMP:20261020T211200Z
 DTSTART;TZID=Europe/Brussels:20261107T134500
 DTEND;TZID=Europe/Brussels:20261107T154500
 SUMMARY:B.C. Gems Diepenbeek M19 B – BBC Croonen Lommel M19 B
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Limburg U19 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12163487670-comp-cup-beker-van-limburg-u19-meisjes@behoop.be
-DTSTAMP:20261020T142538Z
+DTSTAMP:20261020T211200Z
 DTSTART;TZID=Europe/Brussels:20261220T110000
 DTEND;TZID=Europe/Brussels:20261220T130000
 SUMMARY:Basket Zonhoven M19 A – BC Maasmechelen M19 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Limburg U19 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12213820527-comp-cup-beker-van-limburg-u19-meisjes@behoop.be
-DTSTAMP:20261020T142538Z
+DTSTAMP:20261020T211200Z
 DTSTART;TZID=Europe/Brussels:20261220T130000
 DTEND;TZID=Europe/Brussels:20261220T150000
 SUMMARY:Basket Lummen M19 B – Koninklijke BBC Union Leopoldsburg M19 A
