@@ -5,6 +5,10 @@
 ## ✅ Appli en 3 langues (FR · NL · EN) — fait le 20/10/2026
 Le secret GitHub `CLOUDFLARE_API_TOKEN` est en place : le Worker se redéploie tout seul à chaque modification (workflow « Worker media.behoop.be — déploiement »).
 
+## ✅ Compétitions européennes et internationales — 20/10/2026
+Rien à faire : EuroLeague, EuroCup, WNBA, Champions League, FIBA Europe Cup, EuroLeague Women, EuroCup Women, qualifications de la Coupe du monde 2027, Coupe du monde féminine 2026 et EuroBasket féminin 2027 (avec ses qualifications) se mettent à jour toutes seules, avec le classement officiel de chaque organisateur.
+ℹ️ Les épreuves d'équipes nationales ont une adresse par édition (`FIBA_EVENTS` dans `ops/pro.ts`) : quand une nouvelle édition démarre (qualifications de l'EuroBasket 2029, JO de Los Angeles 2028…), il suffit de demander à Claude de l'ajouter.
+
 ## Historique de la mise en service
 Le détail clic par clic de chaque étape reste dans **[SETUP.md](SETUP.md)** (même numérotation), utile pour refaire une configuration.
 
