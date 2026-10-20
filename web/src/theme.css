@@ -20,7 +20,9 @@
 :root[data-theme="dark"] { --bg: #070b14; --bg2: rgba(22,27,38,.92); --glass: rgba(24,30,44,.72); --glass-border: rgba(255,255,255,.08); --card-shadow: 0 10px 30px rgba(0,0,0,.45); }
 
 /* ---------- Fonds : Parquet (défaut), Nuit de match, Uni ---------- */
-body { background: var(--bg); }
+/* Le fond uni est sur html ; body reste transparent, sinon il recouvrirait le parquet (body::before, z-index -1) */
+html { background: var(--bg); }
+body { background: transparent !important; }
 body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 /* Parquet : lames de bois + rond central et ligne médiane, très discrets */
 :root:not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
@@ -28,8 +30,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     radial-gradient(circle at 50% 42%, transparent 129px, color-mix(in srgb, var(--accent) 22%, transparent) 130px 133px, transparent 134px),
     linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 16%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
     radial-gradient(70vw 50vh at 100% 0%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%),
-    repeating-linear-gradient(90deg, rgba(160,105,50,.05) 0 3px, transparent 3px 58px),
-    linear-gradient(180deg, #f7efe3, #f3e6d3);
+    repeating-linear-gradient(90deg, rgba(160,105,50,.09) 0 2px, transparent 2px 58px),
+    repeating-linear-gradient(90deg, rgba(190,130,70,.035) 0 29px, transparent 29px 58px),
+    linear-gradient(180deg, #f7efe3, #f1e2cb);
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
   background: radial-gradient(circle at 50% 42%, transparent 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
