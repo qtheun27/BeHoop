@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Great Britain
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127027-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T203000
+DTEND;TZID=Europe/Brussels:20251127T223000
+SUMMARY:Great Britain – Lithuania (88-89)
+LOCATION:Copper Box Arena\, London\, Great Britain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127029-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T174500
+DTEND;TZID=Europe/Brussels:20251130T194500
+SUMMARY:Iceland – Great Britain (84-90)
+LOCATION:Laugardalshöll\, Reykjavik\, Iceland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127032-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T203000
+DTEND;TZID=Europe/Brussels:20260227T223000
+SUMMARY:Great Britain – Italy (57-93)
+LOCATION:Vertu Arena\, Newcastle upon Tyne\, Great Britain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127033-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T193000
+DTEND;TZID=Europe/Brussels:20260302T213000
+SUMMARY:Italy – Great Britain (84-75)
+LOCATION:Palazzetto Amedeo Modigliani Forum\, Livorno\, Italy
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127035-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T173000
+DTEND;TZID=Europe/Brussels:20260702T193000
+SUMMARY:Lithuania – Great Britain (105-85)
+LOCATION:Svyturio Arena\, Klaipėda\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127026-31000283302@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260705T160000
+DTEND;TZID=Europe/Brussels:20260705T180000
+SUMMARY:Great Britain – Iceland (86-88)
+LOCATION:National Basketball Performance Centre\, Manchester\, Great Britain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

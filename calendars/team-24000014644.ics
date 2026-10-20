@@ -1,0 +1,348 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Kosner Baskonia Vitoria-Gasteiz
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-24500000005-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260924T203000
+DTEND;TZID=Europe/Brussels:20260924T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Olympiacos Piraeus (89-106)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000015-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260929T203000
+DTEND;TZID=Europe/Brussels:20260929T223000
+SUMMARY:Valencia Basket – Kosner Baskonia Vitoria-Gasteiz (111-88)
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000027-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261002T203000
+DTEND;TZID=Europe/Brussels:20261002T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Armani Olimpia Milan (86-76)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000038-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261009T203000
+DTEND;TZID=Europe/Brussels:20261009T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Besiktas Istanbul (84-92)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000042-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Dubai Basketball (79-93)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000059-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261016T203000
+DTEND;TZID=Europe/Brussels:20261016T223000
+SUMMARY:Virtus Bologna – Kosner Baskonia Vitoria-Gasteiz (86-78)
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000067-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261022T201500
+DTEND;TZID=Europe/Brussels:20261022T221500
+SUMMARY:Panathinaikos AKTOR Athens – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000073-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261027T210000
+DTEND;TZID=Europe/Brussels:20261027T230000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Real Madrid
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000085-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261030T200000
+DTEND;TZID=Europe/Brussels:20261030T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000092-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261105T190000
+DTEND;TZID=Europe/Brussels:20261105T210000
+SUMMARY:Fenerbahce Tarfin Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000102-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261111T204500
+DTEND;TZID=Europe/Brussels:20261111T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000114-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Hapoel IBI Tel Aviv
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000124-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261119T200000
+DTEND;TZID=Europe/Brussels:20261119T220000
+SUMMARY:FC Bayern Munich – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000138-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261125T203000
+DTEND;TZID=Europe/Brussels:20261125T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Anadolu Efes Istanbul
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000148-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000152-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261210T190000
+DTEND;TZID=Europe/Brussels:20261210T210000
+SUMMARY:Zalgiris Kaunas – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000168-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T203000
+DTEND;TZID=Europe/Brussels:20261216T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – FC Barcelona
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000177-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261218T203000
+DTEND;TZID=Europe/Brussels:20261218T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Paris Basketball
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000186-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T200000
+DTEND;TZID=Europe/Brussels:20261223T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000192-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261229T203000
+DTEND;TZID=Europe/Brussels:20261229T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Valencia Basket
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000209-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270108T203000
+DTEND;TZID=Europe/Brussels:20270108T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Virtus Bologna
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000220-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270113T201500
+DTEND;TZID=Europe/Brussels:20270113T221500
+SUMMARY:Olympiacos Piraeus – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000226-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270115T180000
+DTEND;TZID=Europe/Brussels:20270115T200000
+SUMMARY:Besiktas Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000234-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270121T204500
+DTEND;TZID=Europe/Brussels:20270121T224500
+SUMMARY:Paris Basketball – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000242-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270128T203000
+DTEND;TZID=Europe/Brussels:20270128T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Zalgiris Kaunas
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000253-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270202T203000
+DTEND;TZID=Europe/Brussels:20270202T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Fenerbahce Tarfin Istanbul
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000266-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270205T203000
+DTEND;TZID=Europe/Brussels:20270205T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000271-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270210T190000
+DTEND;TZID=Europe/Brussels:20270210T210000
+SUMMARY:Hapoel IBI Tel Aviv – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000281-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270304T204500
+DTEND;TZID=Europe/Brussels:20270304T224500
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Partizan Mozzart Bet Belgrade
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000294-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270309T203000
+DTEND;TZID=Europe/Brussels:20270309T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Panathinaikos AKTOR Athens
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000308-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270312T203000
+DTEND;TZID=Europe/Brussels:20270312T223000
+SUMMARY:FC Barcelona – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000314-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270318T204500
+DTEND;TZID=Europe/Brussels:20270318T224500
+SUMMARY:Real Madrid – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000321-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270323T170000
+DTEND;TZID=Europe/Brussels:20270323T190000
+SUMMARY:Dubai Basketball – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000333-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270325T183000
+DTEND;TZID=Europe/Brussels:20270325T203000
+SUMMARY:Anadolu Efes Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000348-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270402T203000
+DTEND;TZID=Europe/Brussels:20270402T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – FC Bayern Munich
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000353-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270406T203000
+DTEND;TZID=Europe/Brussels:20270406T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – LDLC ASVEL Villeurbanne
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000363-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270408T203000
+DTEND;TZID=Europe/Brussels:20270408T223000
+SUMMARY:Armani Olimpia Milan – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000373-24000014644@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270415T200500
+DTEND;TZID=Europe/Brussels:20270415T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+END:VCALENDAR

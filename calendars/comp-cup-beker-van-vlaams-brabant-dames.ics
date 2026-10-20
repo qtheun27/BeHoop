@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11048365952-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261027T200000
 DTEND;TZID=Europe/Brussels:20261027T220000
 SUMMARY:Stella Artois 0.0 Blue Tigers Leuven DSE A – Jets Basket Zaventem DSE A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant Dames 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11165809285-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261031T174500
 DTEND;TZID=Europe/Brussels:20261031T194500
 SUMMARY:GSG Aarschot DSE A – Dino Brussels DSE A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant Dames 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11149031666-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:Clem Scherpenheuvel DSE A – Londerzeelse Dunkers DSE A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaams-Brabant Dames 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11132254047-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261031T183000
 DTEND;TZID=Europe/Brussels:20261031T203000
 SUMMARY:Triton Leuven DSE A – BC Streek Inn Vilvoorde DSE A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaams-Brabant Dames 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11065143571-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261031T193000
 DTEND;TZID=Europe/Brussels:20261031T213000
 SUMMARY:Hageland United DSE A – BC Machelen-Diegem DSE A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaams-Brabant Dames 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11081921190-comp-cup-beker-van-vlaams-brabant-dames@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101437Z
 DTSTART;TZID=Europe/Brussels:20261101T140000
 DTEND;TZID=Europe/Brussels:20261101T160000
 SUMMARY:BC Asse-Ternat DSE B – GSG Aarschot DSE R (20-0)

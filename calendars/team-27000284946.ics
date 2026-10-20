@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Futebol Clube do Porto
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136308-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T200000
+DTEND;TZID=Europe/Brussels:20261007T220000
+SUMMARY:Telekom Baskets Bonn – Futebol Clube do Porto (78-74)
+LOCATION:Telekom Dome\, Bonn\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136309-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T183000
+DTEND;TZID=Europe/Brussels:20261021T203000
+SUMMARY:Bnei Penlink Herzliya – Futebol Clube do Porto
+LOCATION:Arena SamElyon\, Samokov\, Bulgaria
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136312-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261103T203000
+DTEND;TZID=Europe/Brussels:20261103T223000
+SUMMARY:Futebol Clube do Porto – Club Joventut Badalona SAD
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Porto\, Portugal
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136314-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:Club Joventut Badalona SAD – Futebol Clube do Porto
+LOCATION:Palau Municipal d'Esports de Badalona\, Badalona\, Spain
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136316-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T203000
+DTEND;TZID=Europe/Brussels:20261216T223000
+SUMMARY:Futebol Clube do Porto – Bnei Penlink Herzliya
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Porto\, Portugal
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136317-27000284946@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T183000
+DTEND;TZID=Europe/Brussels:20261223T203000
+SUMMARY:Futebol Clube do Porto – Telekom Baskets Bonn
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Porto\, Portugal
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

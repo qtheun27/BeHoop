@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Ireland
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-34500128997-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251112T180000
+DTEND;TZID=Europe/Brussels:20251112T200000
+SUMMARY:Ireland – Luxembourg (53-69)
+LOCATION:National Basketball Arena\, Dublin\, Ireland
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129000-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251115T202500
+DTEND;TZID=Europe/Brussels:20251115T222500
+SUMMARY:Ireland – Bosnia and Herzegovina (94-67)
+LOCATION:National Basketball Arena\, Dublin\, Ireland
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129002-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251118T190000
+DTEND;TZID=Europe/Brussels:20251118T210000
+SUMMARY:Israel – Ireland (93-86)
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129004-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260311T190000
+DTEND;TZID=Europe/Brussels:20260311T210000
+SUMMARY:Luxembourg – Ireland (85-73)
+LOCATION:Centre National Sportif & Culturel d'Coque\, Luxembourg\, Luxembourg
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129006-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260314T200000
+DTEND;TZID=Europe/Brussels:20260314T220000
+SUMMARY:Bosnia and Herzegovina – Ireland (78-81)
+LOCATION:Arena "Husejin Smajlovic"\, Zenica\, Bosnia and Herzegovina
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129008-34000283554@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260317T173000
+DTEND;TZID=Europe/Brussels:20260317T193000
+SUMMARY:Ireland – Israel (54-90)
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+END:VCALENDAR

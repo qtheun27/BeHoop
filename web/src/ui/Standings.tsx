@@ -3,8 +3,10 @@
 import { ranked, type Standing } from '../lib/data';
 import { t } from '../lib/i18n';
 
-export function StandingsTable({ rows, names, me, pct }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean }) {
+export function StandingsTable({ rows, names, me, pct: forcePct }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean }) {
   const list = ranked(rows);
+  // Ligues sans points au classement (NBA, WNBA, EuroLeague, EuroCup : points = victoires) → % de victoires
+  const pct = forcePct ?? (list.length > 0 && list.some((r) => r.played) && list.every((r) => r.pts === r.wins));
   const nuls = list.some((r) => r.draws);
   const col = (w: number, align: 'center' | 'right' = 'center') => ({ width: w, textAlign: align, flex: 'none' as const });
   return (

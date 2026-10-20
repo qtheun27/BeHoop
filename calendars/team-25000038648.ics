@@ -1,0 +1,132 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Turk Telekom Ankara
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-25500000005-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260930T210000
+DTEND;TZID=Europe/Brussels:20260930T230000
+SUMMARY:La Laguna Tenerife – Turk Telekom Ankara (82-75)
+LOCATION:Pabellon Santiago Martin\, Calle Mercedes S/N\, La Laguna\, 38108\, Spain
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000024-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261006T183000
+DTEND;TZID=Europe/Brussels:20261006T203000
+SUMMARY:Turk Telekom Ankara – Maxima Roma (92-77)
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000038-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T210000
+DTEND;TZID=Europe/Brussels:20261014T230000
+SUMMARY:Umana Reyer Venice – Turk Telekom Ankara (75-65)
+LOCATION:Palasport Taliercio\, Via Vendramin 10\, 30174 Venezia\, Italy
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000055-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261020T183000
+DTEND;TZID=Europe/Brussels:20261020T203000
+SUMMARY:Turk Telekom Ankara – Siauliai Basketball
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000071-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T203000
+DTEND;TZID=Europe/Brussels:20261028T223000
+SUMMARY:London Lions – Turk Telekom Ankara
+LOCATION:Copper Box Arena\, Queen Elizabeth Olympic Park\, London\, United Kingdom
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000086-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261104T173000
+DTEND;TZID=Europe/Brussels:20261104T193000
+SUMMARY:Turk Telekom Ankara – Skyliners Frankfurt
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000104-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261110T180000
+DTEND;TZID=Europe/Brussels:20261110T200000
+SUMMARY:U-BT Cluj-Napoca – Turk Telekom Ankara
+LOCATION:Bt Arena\, 4 Aleea Stadionului\, Cluj-Napoca 400375\, Romania
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000117-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T173000
+DTEND;TZID=Europe/Brussels:20261117T193000
+SUMMARY:Turk Telekom Ankara – La Laguna Tenerife
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000136-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261209T203000
+DTEND;TZID=Europe/Brussels:20261209T223000
+SUMMARY:Maxima Roma – Turk Telekom Ankara
+LOCATION:Palaeur\, Piazzale Pier Luigi Nervi 1\, 00144 Roma\, Italy
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000150-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T173000
+DTEND;TZID=Europe/Brussels:20261216T193000
+SUMMARY:Turk Telekom Ankara – Umana Reyer Venice
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000167-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T173000
+DTEND;TZID=Europe/Brussels:20261223T193000
+SUMMARY:Siauliai Basketball – Turk Telekom Ankara
+LOCATION:Siauliai Arena\, J. Jablonskio ST. 16\, LT-76001\, Siauliai\, Lithuania
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000183-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261229T173000
+DTEND;TZID=Europe/Brussels:20261229T193000
+SUMMARY:Turk Telekom Ankara – London Lions
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000198-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270106T193000
+DTEND;TZID=Europe/Brussels:20270106T213000
+SUMMARY:Skyliners Frankfurt – Turk Telekom Ankara
+LOCATION:Suwag Energie Arena\, Silostraße 46\, 65929 Frankfurt AM Main\, Germany
+DESCRIPTION:EuroCup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-25500000216-25000038648@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270113T173000
+DTEND;TZID=Europe/Brussels:20270113T193000
+SUMMARY:Turk Telekom Ankara – U-BT Cluj-Napoca
+LOCATION:Ankara Spor Salonu\, Bati Sitesi Magallesi\, Ankara Hipodromu Kavsagi No:2\, 06370\, Ankara\, Turkiye
+DESCRIPTION:EuroCup
+END:VEVENT
+END:VCALENDAR

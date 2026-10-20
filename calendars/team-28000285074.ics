@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Tartu Ülikool Maks & Moorits
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-28500135785-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261006T180000
+DTEND;TZID=Europe/Brussels:20261006T200000
+SUMMARY:Tartu Ülikool Maks & Moorits – Dziki Warszawa (76-103)
+LOCATION:University of Tartu Sports Hall\, Tartu\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135787-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T183000
+DTEND;TZID=Europe/Brussels:20261014T203000
+SUMMARY:BC MZT Skopje Aerodrom AD Skopje – Tartu Ülikool Maks & Moorits (92-95)
+LOCATION:Sports Centre Jane Sandanski\, Skopje\, North Macedonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135791-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:Petrolina AEK Larnaca Basketball Club – Tartu Ülikool Maks & Moorits
+LOCATION:Kition Athletic Center\, Larnaca\, Cyprus
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135795-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:Tartu Ülikool Maks & Moorits – Gymnastikos Syllogos Agias Iraklis KAE
+LOCATION:University of Tartu Sports Hall\, Tartu\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135798-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261102T190000
+DTEND;TZID=Europe/Brussels:20261102T210000
+SUMMARY:Sport und Event Würzburg Baskets GmbH – Tartu Ülikool Maks & Moorits
+LOCATION:tectake ARENA\, Würzburg\, Germany
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135800-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261111T190000
+DTEND;TZID=Europe/Brussels:20261111T210000
+SUMMARY:Dziki Warszawa – Tartu Ülikool Maks & Moorits
+LOCATION:Kola Arena\, Warsaw\, Poland
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135802-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261118T180000
+DTEND;TZID=Europe/Brussels:20261118T200000
+SUMMARY:Tartu Ülikool Maks & Moorits – BC MZT Skopje Aerodrom AD Skopje
+LOCATION:University of Tartu Sports Hall\, Tartu\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135806-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261209T180000
+DTEND;TZID=Europe/Brussels:20261209T200000
+SUMMARY:Tartu Ülikool Maks & Moorits – Petrolina AEK Larnaca Basketball Club
+LOCATION:University of Tartu Sports Hall\, Tartu\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135810-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T183000
+DTEND;TZID=Europe/Brussels:20261216T203000
+SUMMARY:Gymnastikos Syllogos Agias Iraklis KAE – Tartu Ülikool Maks & Moorits
+LOCATION:Ivanofio\, Thessaloniki\, Greece
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135813-28000285074@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261222T180000
+DTEND;TZID=Europe/Brussels:20261222T200000
+SUMMARY:Tartu Ülikool Maks & Moorits – Sport und Event Würzburg Baskets GmbH
+LOCATION:University of Tartu Sports Hall\, Tartu\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+END:VCALENDAR

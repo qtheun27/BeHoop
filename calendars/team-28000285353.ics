@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Manchester Basketball Club
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-28500135814-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T200000
+DTEND;TZID=Europe/Brussels:20261007T220000
+SUMMARY:Elan Chalon – Manchester Basketball Club (79-72)
+LOCATION:Le Colisée\, Chalon sur Saone\, France
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135817-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T200000
+DTEND;TZID=Europe/Brussels:20261013T220000
+SUMMARY:Manchester Basketball Club – Basketball Club Bashkimi
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135820-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T183000
+DTEND;TZID=Europe/Brussels:20261021T203000
+SUMMARY:Biotekno Korfez Basket – Manchester Basketball Club
+LOCATION:Sehit Polis Recep Topaloglu Spor Salonu\, Kocaeli\, Türkiye
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135823-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:Manchester Basketball Club – Bigbank/Kalev
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135826-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:Valmiera Glass VIA – Manchester Basketball Club
+LOCATION:Vidzemes Olimpiskas Centrs\, Valmiera\, Latvia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135829-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261110T200000
+DTEND;TZID=Europe/Brussels:20261110T220000
+SUMMARY:Manchester Basketball Club – Elan Chalon
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135832-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261118T210000
+DTEND;TZID=Europe/Brussels:20261118T230000
+SUMMARY:Basketball Club Bashkimi – Manchester Basketball Club
+LOCATION:Sezai Surroi\, Prizren\, Kosovo
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135835-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261209T200000
+DTEND;TZID=Europe/Brussels:20261209T220000
+SUMMARY:Manchester Basketball Club – Biotekno Korfez Basket
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135838-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261215T183000
+DTEND;TZID=Europe/Brussels:20261215T203000
+SUMMARY:Bigbank/Kalev – Manchester Basketball Club
+LOCATION:Kalevi Spordihall\, Tallinn\, Estonia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135841-28000285353@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T200000
+DTEND;TZID=Europe/Brussels:20261223T220000
+SUMMARY:Manchester Basketball Club – Valmiera Glass VIA
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+END:VCALENDAR

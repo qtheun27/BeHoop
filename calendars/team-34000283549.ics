@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:France
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-34500129142-34000283549@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261111T173000
+DTEND;TZID=Europe/Brussels:20261111T193000
+SUMMARY:France – Great Britain
+LOCATION:Vendespace\, Mouilleron-Le- Captif\, France
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129144-34000283549@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Luxembourg – France
+LOCATION:Centre National Sportif & Culturel d'Coque\, Luxembourg\, Luxembourg
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129145-34000283549@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T140000
+DTEND;TZID=Europe/Brussels:20261117T160000
+SUMMARY:Ukraine – France
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+END:VCALENDAR

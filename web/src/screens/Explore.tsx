@@ -28,13 +28,18 @@ export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }
 // Régions : 6 filtres simples au lieu des 14 provinces
 const WALLONIE = ['Hainaut', 'Liège', 'Namur', 'Luxembourg', 'Bruxelles - Brabant Wallon'];
 const FLANDRE = ['Anvers', 'Brabant flamand', 'Flandre-Occidentale', 'Flandre-Orientale', 'Limbourg'];
-const REGIONS: { id: string; label: string; ok: (p: string) => boolean }[] = [
-  { id: '', label: 'Tous', ok: () => true },
+// Clubs étrangers (Coupes d'Europe, NBA, WNBA) et sélections nationales : filtres à part, et dans « Tous » seulement en recherche
+const EUROPE_P = ['EuroLeague', 'EuroCup', 'Basketball Champions League', 'FIBA Europe Cup', 'EuroLeague Women', 'EuroCup Women'];
+const NATIONS_P = (p: string) => /^(Coupe du monde|EuroBasket)/.test(p);
+const BELGE = (p: string) => !EUROPE_P.includes(p) && !NATIONS_P(p) && p !== 'NBA' && p !== 'WNBA';
+const REGIONS: { id: string; label: string; ok: (p: string, search: boolean) => boolean }[] = [
+  { id: '', label: 'Tous', ok: (p, search) => search || BELGE(p) },
   { id: 'w', label: 'Wallonie-Bxl', ok: (p) => WALLONIE.includes(p) },
   { id: 'f', label: 'Flandre', ok: (p) => FLANDRE.includes(p) },
   { id: 'n', label: 'National', ok: (p) => p === 'National' || p === 'BNXT League' },
-  { id: 'i', label: 'International', ok: (p) => p === 'International' },
-  { id: 'nba', label: 'NBA', ok: (p) => p === 'NBA' },
+  { id: 'i', label: 'Sélections', ok: (p) => p === 'International' || NATIONS_P(p) },
+  { id: 'e', label: 'Europe', ok: (p) => EUROPE_P.includes(p) },
+  { id: 'nba', label: 'NBA · WNBA', ok: (p) => p === 'NBA' || p === 'WNBA' },
 ];
 
 const COMP_CATS: [string, IconName | null, string][] = [['', null, 'Toutes'], ['national', 'flag', 'Belgique'], ['wallonie', null, 'Wallonie-Bxl'], ['flandre', null, 'Flandre'], ['europe', 'europe', 'Europe'], ['monde', 'globe', 'Monde'], ['nba', 'ball', 'NBA · WNBA']];
@@ -61,7 +66,7 @@ export function Explore() {
     && (!n || normalize(`${c.name} ${c.sub}`).includes(n))), [comps.data, cat, women, youth, n]);
   const list = useMemo(() => {
     const r = REGIONS.find((x) => x.id === reg)!;
-    return (data?.clubs ?? []).filter((c) => r.ok(c.province) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
+    return (data?.clubs ?? []).filter((c) => r.ok(c.province, !!n) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
       .sort((a, b) => a.name.localeCompare(b.name, 'fr'));
   }, [data, n, reg]);
   // La recherche porte aussi sur les actus (titres et accroches)
@@ -341,7 +346,7 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
     <>
       {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
       {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="standings" title={t('Classement pas encore publié')} /> : (
-        <StandingsTable rows={rows} names={names} me={team.id} pct={team.cat === 'NBA'} />
+        <StandingsTable rows={rows} names={names} me={team.id} />
       )}
     </>
   );

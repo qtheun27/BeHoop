@@ -1,0 +1,348 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Dubai Basketball
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-24500000002-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260924T180000
+DTEND;TZID=Europe/Brussels:20260924T200000
+SUMMARY:Dubai Basketball – Real Madrid (78-77)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000013-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260929T180000
+DTEND;TZID=Europe/Brussels:20260929T200000
+SUMMARY:Dubai Basketball – FC Barcelona (94-87)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000029-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261002T194500
+DTEND;TZID=Europe/Brussels:20261002T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Dubai Basketball (76-66)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000037-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261008T180000
+DTEND;TZID=Europe/Brussels:20261008T200000
+SUMMARY:Dubai Basketball – Crvena Zvezda Meridianbet Belgrade (58-77)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000042-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Dubai Basketball (79-93)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000051-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261015T203000
+DTEND;TZID=Europe/Brussels:20261015T223000
+SUMMARY:Armani Olimpia Milan – Dubai Basketball (97-101)
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000065-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:FC Bayern Munich – Dubai Basketball
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000072-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261027T170000
+DTEND;TZID=Europe/Brussels:20261027T190000
+SUMMARY:Dubai Basketball – Paris Basketball
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000084-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261030T170000
+DTEND;TZID=Europe/Brussels:20261030T190000
+SUMMARY:Dubai Basketball – Hapoel IBI Tel Aviv
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000098-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261106T203000
+DTEND;TZID=Europe/Brussels:20261106T223000
+SUMMARY:Virtus Bologna – Dubai Basketball
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000107-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261112T201500
+DTEND;TZID=Europe/Brussels:20261112T221500
+SUMMARY:Olympiacos Piraeus – Dubai Basketball
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000111-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T170000
+DTEND;TZID=Europe/Brussels:20261117T190000
+SUMMARY:Dubai Basketball – Anadolu Efes Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000122-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261119T183000
+DTEND;TZID=Europe/Brussels:20261119T203000
+SUMMARY:Maccabi Rapyd Tel Aviv – Dubai Basketball
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000137-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261125T170000
+DTEND;TZID=Europe/Brussels:20261125T190000
+SUMMARY:Dubai Basketball – Partizan Mozzart Bet Belgrade
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000147-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261204T190000
+DTEND;TZID=Europe/Brussels:20261204T210000
+SUMMARY:Zalgiris Kaunas – Dubai Basketball
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000156-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261211T170000
+DTEND;TZID=Europe/Brussels:20261211T190000
+SUMMARY:Dubai Basketball – Besiktas Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000162-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261215T203000
+DTEND;TZID=Europe/Brussels:20261215T223000
+SUMMARY:Valencia Basket – Dubai Basketball
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000172-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261217T200000
+DTEND;TZID=Europe/Brussels:20261217T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Dubai Basketball
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000187-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T170000
+DTEND;TZID=Europe/Brussels:20261223T190000
+SUMMARY:Dubai Basketball – Panathinaikos AKTOR Athens
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000195-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261229T210000
+DTEND;TZID=Europe/Brussels:20261229T230000
+SUMMARY:Real Madrid – Dubai Basketball
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000208-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270108T170000
+DTEND;TZID=Europe/Brussels:20270108T190000
+SUMMARY:Dubai Basketball – FC Bayern Munich
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000217-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270112T170000
+DTEND;TZID=Europe/Brussels:20270112T190000
+SUMMARY:Dubai Basketball – Fenerbahce Tarfin Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000227-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270115T170000
+DTEND;TZID=Europe/Brussels:20270115T190000
+SUMMARY:Dubai Basketball – Maccabi Rapyd Tel Aviv
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000239-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270122T183000
+DTEND;TZID=Europe/Brussels:20270122T203000
+SUMMARY:Anadolu Efes Istanbul – Dubai Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000248-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:FC Barcelona – Dubai Basketball
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000256-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270202T201500
+DTEND;TZID=Europe/Brussels:20270202T221500
+SUMMARY:Panathinaikos AKTOR Athens – Dubai Basketball
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000261-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270204T170000
+DTEND;TZID=Europe/Brussels:20270204T190000
+SUMMARY:Dubai Basketball – Virtus Bologna
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000273-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270211T180000
+DTEND;TZID=Europe/Brussels:20270211T200000
+SUMMARY:Besiktas Istanbul – Dubai Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000287-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270305T170000
+DTEND;TZID=Europe/Brussels:20270305T190000
+SUMMARY:Dubai Basketball – Olympiacos Piraeus
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000299-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270310T170000
+DTEND;TZID=Europe/Brussels:20270310T190000
+SUMMARY:Dubai Basketball – Valencia Basket
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000306-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270312T200000
+DTEND;TZID=Europe/Brussels:20270312T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Dubai Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000318-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270319T170000
+DTEND;TZID=Europe/Brussels:20270319T190000
+SUMMARY:Dubai Basketball – Armani Olimpia Milan
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000321-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270323T170000
+DTEND;TZID=Europe/Brussels:20270323T190000
+SUMMARY:Dubai Basketball – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000331-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270325T190000
+DTEND;TZID=Europe/Brussels:20270325T210000
+SUMMARY:Hapoel IBI Tel Aviv – Dubai Basketball
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000347-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270401T204500
+DTEND;TZID=Europe/Brussels:20270401T224500
+SUMMARY:Paris Basketball – Dubai Basketball
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000359-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270407T180000
+DTEND;TZID=Europe/Brussels:20270407T200000
+SUMMARY:Dubai Basketball – Zalgiris Kaunas
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000369-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270409T204500
+DTEND;TZID=Europe/Brussels:20270409T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Dubai Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000378-24000017939@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270416T180000
+DTEND;TZID=Europe/Brussels:20270416T200000
+SUMMARY:Dubai Basketball – LDLC ASVEL Villeurbanne
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+END:VCALENDAR

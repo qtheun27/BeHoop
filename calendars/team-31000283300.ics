@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bosnia and Herzegovina
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127023-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T190000
+DTEND;TZID=Europe/Brussels:20251127T210000
+SUMMARY:Türkiye – Bosnia and Herzegovina (93-71)
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127024-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T200000
+DTEND;TZID=Europe/Brussels:20251130T220000
+SUMMARY:Bosnia and Herzegovina – Serbia (72-74)
+LOCATION:Dvorana "Mirza Delibasic" - Skenderija\, Sarajevo\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127018-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T200000
+DTEND;TZID=Europe/Brussels:20260227T220000
+SUMMARY:Bosnia and Herzegovina – Switzerland (84-60)
+LOCATION:Mejdan\, Tuzla\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127016-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T190000
+DTEND;TZID=Europe/Brussels:20260302T210000
+SUMMARY:Switzerland – Bosnia and Herzegovina (60-91)
+LOCATION:Pilatus Arena\, Kriens\, Switzerland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127014-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T200000
+DTEND;TZID=Europe/Brussels:20260702T220000
+SUMMARY:Bosnia and Herzegovina – Türkiye (75-82)
+LOCATION:Arena "Husejin Smajlovic"\, Zenica\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127019-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260706T200000
+DTEND;TZID=Europe/Brussels:20260706T220000
+SUMMARY:Serbia – Bosnia and Herzegovina (94-81)
+LOCATION:Aleksandar Nikolic Hall\, Belgrade\, Serbia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127136-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T200000
+DTEND;TZID=Europe/Brussels:20260828T220000
+SUMMARY:Bosnia and Herzegovina – Italy (78-76)
+LOCATION:Mejdan\, Tuzla\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127139-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T173000
+DTEND;TZID=Europe/Brussels:20260831T193000
+SUMMARY:Lithuania – Bosnia and Herzegovina (78-73)
+LOCATION:Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127142-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T203000
+DTEND;TZID=Europe/Brussels:20261126T223000
+SUMMARY:Iceland – Bosnia and Herzegovina
+LOCATION:Laugardalshöll\, Reykjavik\, Iceland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127145-31000283300@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T180000
+DTEND;TZID=Europe/Brussels:20261129T200000
+SUMMARY:Bosnia and Herzegovina – Lithuania
+LOCATION:"Juan Antonio Samaranch" - Zetra\, Sarajevo\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

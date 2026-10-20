@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Kangoeroes Basket Mechelen
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-29500135163-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:KKZ Crvena Zvezda – Kangoeroes Basket Mechelen (89-56)
+LOCATION:Ranko Zeravica Sports Hall\, Belgrade\, Serbia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135164-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261022T203000
+DTEND;TZID=Europe/Brussels:20261022T223000
+SUMMARY:Kangoeroes Basket Mechelen – Galatasaray Spor Kulübü
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135167-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:Kangoeroes Basket Mechelen – Beretta Famila Schio
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135168-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261104T203000
+DTEND;TZID=Europe/Brussels:20261104T223000
+SUMMARY:Kangoeroes Basket Mechelen – KKZ Crvena Zvezda
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135170-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Galatasaray Spor Kulübü – Kangoeroes Basket Mechelen
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135173-29000285030@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Beretta Famila Schio – Kangoeroes Basket Mechelen
+LOCATION:Palaromare\, Schio\, Italy
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+END:VCALENDAR

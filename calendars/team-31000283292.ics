@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Montenegro
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127590-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T180000
+DTEND;TZID=Europe/Brussels:20251127T200000
+SUMMARY:Montenegro – Portugal (62-83)
+LOCATION:Moraca Sports Centre\, Podgorica\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127596-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T180000
+DTEND;TZID=Europe/Brussels:20251130T200000
+SUMMARY:Romania – Montenegro (75-80)
+LOCATION:Pitesti Arena\, Pitesti\, Romania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127593-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T180000
+DTEND;TZID=Europe/Brussels:20260227T200000
+SUMMARY:Greece – Montenegro (65-67)
+LOCATION:SUNEL Arena\, Athens\, Greece
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127597-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T190000
+DTEND;TZID=Europe/Brussels:20260302T210000
+SUMMARY:Montenegro – Greece (65-79)
+LOCATION:Moraca Sports Centre\, Podgorica\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127592-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T200000
+DTEND;TZID=Europe/Brussels:20260702T220000
+SUMMARY:Portugal – Montenegro (68-72)
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127599-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260705T203000
+DTEND;TZID=Europe/Brussels:20260705T223000
+SUMMARY:Montenegro – Romania (65-64)
+LOCATION:Sports Hall Topolica\, Bar\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127100-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T173000
+DTEND;TZID=Europe/Brussels:20260828T193000
+SUMMARY:Georgia – Montenegro (101-74)
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127102-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T203000
+DTEND;TZID=Europe/Brussels:20260831T223000
+SUMMARY:Montenegro – Ukraine (89-98)
+LOCATION:Moraca Sports Centre\, Podgorica\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127104-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T190000
+DTEND;TZID=Europe/Brussels:20261126T210000
+SUMMARY:Montenegro – Spain
+LOCATION:Moraca Sports Centre\, Podgorica\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127108-31000283292@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T173000
+DTEND;TZID=Europe/Brussels:20261129T193000
+SUMMARY:Ukraine – Montenegro
+LOCATION:Xiaomi Arena\, Riga\, Latvia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

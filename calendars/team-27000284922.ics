@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:ALBA Berlin Basketballteam e.V.
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136296-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T180000
+DTEND;TZID=Europe/Brussels:20261007T200000
+SUMMARY:ERA Basketball Nymburk – ALBA Berlin Basketballteam e.V. (86-110)
+LOCATION:Enteria Arena \, Pardubice\, Czechia
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136297-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T200000
+DTEND;TZID=Europe/Brussels:20261013T220000
+SUMMARY:ALBA Berlin Basketballteam e.V. – Igokea m:tel (90-79)
+LOCATION:Berlin Arena\, Berlin\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136300-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:ALBA Berlin Basketballteam e.V. – C.D. Basket Bilbao Berri S.A.D.
+LOCATION:Berlin Arena\, Berlin\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136301-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261110T200000
+DTEND;TZID=Europe/Brussels:20261110T220000
+SUMMARY:C.D. Basket Bilbao Berri S.A.D. – ALBA Berlin Basketballteam e.V.
+LOCATION:Bilbao Arena\, Bilbao\, Spain
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136304-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261208T200000
+DTEND;TZID=Europe/Brussels:20261208T220000
+SUMMARY:Igokea m:tel – ALBA Berlin Basketballteam e.V.
+LOCATION:SD Laktaši\, Laktaši\, Bosnia and Herzegovina
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136305-27000284922@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261222T200000
+DTEND;TZID=Europe/Brussels:20261222T220000
+SUMMARY:ALBA Berlin Basketballteam e.V. – ERA Basketball Nymburk
+LOCATION:Berlin Arena\, Berlin\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

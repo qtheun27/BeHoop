@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Georgia
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127004-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T180000
+DTEND;TZID=Europe/Brussels:20251127T200000
+SUMMARY:Georgia – Ukraine (79-92)
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127002-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T194500
+DTEND;TZID=Europe/Brussels:20251130T214500
+SUMMARY:Spain – Georgia (90-61)
+LOCATION:Santiago Martin Arena \, La Laguna\, Spain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127001-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T183000
+DTEND;TZID=Europe/Brussels:20260227T203000
+SUMMARY:Denmark – Georgia (71-89)
+LOCATION:Farum Arena\, Farum\, Denmark
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500126999-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T180000
+DTEND;TZID=Europe/Brussels:20260302T200000
+SUMMARY:Georgia – Denmark (89-60)
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500126996-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T173000
+DTEND;TZID=Europe/Brussels:20260702T193000
+SUMMARY:Ukraine – Georgia (95-76)
+LOCATION:Xiaomi Arena\, Riga\, Latvia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500126995-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260705T173000
+DTEND;TZID=Europe/Brussels:20260705T193000
+SUMMARY:Georgia – Spain (91-89)
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127100-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T173000
+DTEND;TZID=Europe/Brussels:20260828T193000
+SUMMARY:Georgia – Montenegro (101-74)
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127103-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T200000
+DTEND;TZID=Europe/Brussels:20260831T220000
+SUMMARY:Portugal – Georgia (90-98)
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127114-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T190000
+DTEND;TZID=Europe/Brussels:20261126T210000
+SUMMARY:Greece – Georgia
+LOCATION:Telekom Center Athens\, Athens\, Greece
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127109-31000283296@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T163000
+DTEND;TZID=Europe/Brussels:20261129T183000
+SUMMARY:Georgia – Portugal
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

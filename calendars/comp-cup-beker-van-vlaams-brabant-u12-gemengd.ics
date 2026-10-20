@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U12 Gemengd
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-12738625222-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261107T133000
 DTEND;TZID=Europe/Brussels:20261107T153000
 SUMMARY:Clem Scherpenheuvel G12 A – BC Opwijk G12 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12721847603-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261107T133000
 DTEND;TZID=Europe/Brussels:20261107T153000
 SUMMARY:Dino Brussels G12 A – Basket Groot Zemst G12 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12705069984-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261108T093000
 DTEND;TZID=Europe/Brussels:20261108T113000
 SUMMARY:Dynamo Bertem G12 A – BBC Haacht G12 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12805735698-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261108T104500
 DTEND;TZID=Europe/Brussels:20261108T124500
 SUMMARY:KYD Kortenberg Young Devils G12 A – Toyota Wouters Diest G12 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12822513317-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:Jets Basket Zaventem G12 A – Londerzeelse Dunkers G12 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12071835762-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261219T130000
 DTEND;TZID=Europe/Brussels:20261219T150000
 SUMMARY:AB InBev Leuven Bears G12 A – BC Machelen-Diegem G12 A (20-0)
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12088613381-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261219T150000
 DTEND;TZID=Europe/Brussels:20261219T170000
 SUMMARY:Hageland United G12 A – Basket Club Groot Dilbeek G12 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Gemengd 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12021502905-comp-cup-beker-van-vlaams-brabant-u12-gemengd@behoop.be
-DTSTAMP:20261020T095454Z
+DTSTAMP:20261020T101438Z
 DTSTART;TZID=Europe/Brussels:20261220T120000
 DTEND;TZID=Europe/Brussels:20261220T140000
 SUMMARY:Bavi Vilvoorde G12 A – 2B|SAFE Tienen G12 A

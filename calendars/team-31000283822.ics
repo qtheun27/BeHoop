@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Switzerland
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127021-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T190000
+DTEND;TZID=Europe/Brussels:20251127T210000
+SUMMARY:Serbia – Switzerland (90-86)
+LOCATION:Aleksandar Nikolic Hall\, Belgrade\, Serbia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127022-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T170000
+DTEND;TZID=Europe/Brussels:20251130T190000
+SUMMARY:Switzerland – Türkiye (60-85)
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127018-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T200000
+DTEND;TZID=Europe/Brussels:20260227T220000
+SUMMARY:Bosnia and Herzegovina – Switzerland (84-60)
+LOCATION:Mejdan\, Tuzla\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127016-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T190000
+DTEND;TZID=Europe/Brussels:20260302T210000
+SUMMARY:Switzerland – Bosnia and Herzegovina (60-91)
+LOCATION:Pilatus Arena\, Kriens\, Switzerland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127015-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T200000
+DTEND;TZID=Europe/Brussels:20260702T220000
+SUMMARY:Switzerland – Serbia (73-97)
+LOCATION:BCF Arena\, Fribourg\, Switzerland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127013-31000283822@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260706T180000
+DTEND;TZID=Europe/Brussels:20260706T200000
+SUMMARY:Türkiye – Switzerland (95-72)
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Bosnia and Herzegovina
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-34500128998-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251112T180000
+DTEND;TZID=Europe/Brussels:20251112T200000
+SUMMARY:Bosnia and Herzegovina – Israel (91-98)
+LOCATION:"Juan Antonio Samaranch" - Zetra\, Sarajevo\, Bosnia and Herzegovina
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129000-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251115T202500
+DTEND;TZID=Europe/Brussels:20251115T222500
+SUMMARY:Ireland – Bosnia and Herzegovina (94-67)
+LOCATION:National Basketball Arena\, Dublin\, Ireland
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129001-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251118T190000
+DTEND;TZID=Europe/Brussels:20251118T210000
+SUMMARY:Luxembourg – Bosnia and Herzegovina (75-39)
+LOCATION:Centre National Sportif & Culturel d'Coque\, Luxembourg\, Luxembourg
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129003-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260311T143000
+DTEND;TZID=Europe/Brussels:20260311T163000
+SUMMARY:Israel – Bosnia and Herzegovina (94-71)
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129006-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260314T200000
+DTEND;TZID=Europe/Brussels:20260314T220000
+SUMMARY:Bosnia and Herzegovina – Ireland (78-81)
+LOCATION:Arena "Husejin Smajlovic"\, Zenica\, Bosnia and Herzegovina
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129007-34000283535@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260317T200000
+DTEND;TZID=Europe/Brussels:20260317T220000
+SUMMARY:Bosnia and Herzegovina – Luxembourg (81-73)
+LOCATION:Arena "Husejin Smajlovic"\, Zenica\, Bosnia and Herzegovina
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+END:VCALENDAR

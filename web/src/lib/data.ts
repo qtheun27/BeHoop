@@ -31,7 +31,8 @@ export const loadSerie = (id: number) => get<{ serie: { id: number; name: string
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */
 export type CompCat = 'national' | 'wallonie' | 'flandre' | 'europe' | 'monde' | 'nba';
 export interface Competition { id: string; name: string; sub: string; cat: CompCat; women: boolean; youth: boolean; series: number[]; clubs: number[]; teams: number; games: number; kw?: string[]; rank: number; logo?: string; dark?: boolean }
-export const loadComps = () => get<Competition[]>('competitions.json');
+/** Noms et sous-titres dans la langue de l'appli (voir trName) */
+export const loadComps = async () => (await get<Competition[]>('competitions.json')).map((c) => ({ ...c, name: trName(c.name), sub: trName(c.sub) }));
 export async function getComp(id: string) { return (await loadComps()).find((c) => c.id === id) ?? null; }
 /** Icône d'une compétition sans logo officiel (voir CompLogo) */
 export const compIcon = (c: Pick<Competition, 'id' | 'cat' | 'women' | 'youth'>): IconName =>
@@ -59,6 +60,26 @@ export function trCat(s: string) {
   return s.replace(/[A-Za-zÀ-ÿ]+/g, (w) => CAT_WORDS[l][w] ?? w);
 }
 export const teamLabel = (t: { cat: string; name: string }) => trCat(frTeamLabel(t));
+/** Noms de compétitions et de séries écrits en français dans les données (« Coupe du monde 2027 · Qualifications »,
+ *  « EuroCup · Groupe A ») : traduits morceau par morceau (séparateur « · »), les noms propres restent tels quels. */
+const NAME_PARTS: Record<'nl' | 'en', Record<string, string>> = {
+  nl: { Belgique: 'België', 'Pays-Bas': 'Nederland', 'États-Unis': 'Verenigde Staten', Dames: 'Dames', Messieurs: 'Heren', Europe: 'Europa', 'Équipe nationale': 'Nationale ploeg',
+    'Coupe du monde 2027': 'WK 2027', 'Coupe du monde féminine 2026': 'WK vrouwen 2026', 'EuroBasket féminin 2027': 'EuroBasket vrouwen 2027', Qualifications: 'Kwalificaties',
+    Allemagne: 'Duitsland', Finlande: 'Finland', Suède: 'Zweden', Lituanie: 'Litouwen', 'Saison régulière': 'Reguliere competitie', 'Phase de groupes': 'Groepsfase',
+    '1er tour': '1e ronde', '2e tour': '2e ronde', Huitièmes: 'Achtste finales', 'Play-offs': 'Play-offs', 'Quarts de finale': 'Kwartfinales', 'Demi-finales': 'Halve finales',
+    Finale: 'Finale', 'Pays hôtes': 'Gastlanden', 'Phase finale': 'Eindfase', 'Conférence Est': 'Oostelijke conferentie', 'Conférence Ouest': 'Westelijke conferentie',
+    'Coupe de Belgique': 'Beker van België', 'FIBA Europe': 'FIBA Europe', Wallonie: 'Wallonië', Flandre: 'Vlaanderen' },
+  en: { Belgique: 'Belgium', 'Pays-Bas': 'Netherlands', 'États-Unis': 'United States', Dames: 'Women', Messieurs: 'Men', Europe: 'Europe', 'Équipe nationale': 'National team',
+    'Coupe du monde 2027': 'World Cup 2027', 'Coupe du monde féminine 2026': "Women's World Cup 2026", 'EuroBasket féminin 2027': "Women's EuroBasket 2027", Qualifications: 'Qualifiers',
+    Allemagne: 'Germany', Finlande: 'Finland', Suède: 'Sweden', Lituanie: 'Lithuania', 'Saison régulière': 'Regular season', 'Phase de groupes': 'Group phase',
+    '1er tour': '1st round', '2e tour': '2nd round', Huitièmes: 'Round of 16', 'Play-offs': 'Play-offs', 'Quarts de finale': 'Quarter-finals', 'Demi-finales': 'Semi-finals',
+    Finale: 'Final', 'Pays hôtes': 'Hosts', 'Phase finale': 'Final phase', 'Conférence Est': 'Eastern Conference', 'Conférence Ouest': 'Western Conference',
+    'Coupe de Belgique': 'Belgian Cup', 'FIBA Europe': 'FIBA Europe', Wallonie: 'Wallonia', Flandre: 'Flanders' },
+};
+export function trName(s: string) {
+  const l = lang(); if (l === 'fr' || !s) return s;
+  return s.split(' · ').map((p) => NAME_PARTS[l][p] ?? p.replace(/^Groupe (\w+)$/, l === 'nl' ? 'Groep $1' : 'Group $1')).join(' · ');
+}
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */

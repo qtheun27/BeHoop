@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Fenerbahçe Spor Kulübü
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-29500135186-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T200000
+DTEND;TZID=Europe/Brussels:20261014T220000
+SUMMARY:Valencia Basket Club – Fenerbahçe Spor Kulübü (69-88)
+LOCATION:Roig Arena\, Valencia\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135188-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T183000
+DTEND;TZID=Europe/Brussels:20261021T203000
+SUMMARY:CS Rapid Bucuresti – Fenerbahçe Spor Kulübü
+LOCATION:Rapid Polyvalent Hall\, Bucharest\, Romania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135190-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:Fenerbahçe Spor Kulübü – Flammes Carolo Basket Ardennes
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135192-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261103T180000
+DTEND;TZID=Europe/Brussels:20261103T200000
+SUMMARY:Fenerbahçe Spor Kulübü – Valencia Basket Club
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135194-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Fenerbahçe Spor Kulübü – CS Rapid Bucuresti
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135196-29000285059@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261202T190000
+DTEND;TZID=Europe/Brussels:20261202T210000
+SUMMARY:Flammes Carolo Basket Ardennes – Fenerbahçe Spor Kulübü
+LOCATION:Guinguette Arena\, Charleville-Mézères\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+END:VCALENDAR

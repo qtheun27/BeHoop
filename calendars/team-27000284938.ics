@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Pallacanestro Reggiana
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136271-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261006T200000
+DTEND;TZID=Europe/Brussels:20261006T220000
+SUMMARY:Pallacanestro Reggiana – BK KVIS Pardubice (82-65)
+LOCATION:Palasport Giulio Bigi\, Reggio Emilia\, Italy
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136274-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T200000
+DTEND;TZID=Europe/Brussels:20261021T220000
+SUMMARY:Pallacanestro Reggiana – BC Juventus Utena
+LOCATION:Palasport Giulio Bigi\, Reggio Emilia\, Italy
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136276-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261103T203000
+DTEND;TZID=Europe/Brussels:20261103T223000
+SUMMARY:Unicaja SD – Pallacanestro Reggiana
+LOCATION:Palacio de Deportes Jose Maria Martin Carpena\, Malaga\, Spain
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136277-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T190000
+DTEND;TZID=Europe/Brussels:20261117T210000
+SUMMARY:BC Juventus Utena – Pallacanestro Reggiana
+LOCATION:Vilnius Arena\, Utena\, Lithuania
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136279-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261215T200000
+DTEND;TZID=Europe/Brussels:20261215T220000
+SUMMARY:Pallacanestro Reggiana – Unicaja SD
+LOCATION:Palasport Giulio Bigi\, Reggio Emilia\, Italy
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136282-27000284938@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T203000
+DTEND;TZID=Europe/Brussels:20261223T223000
+SUMMARY:BK KVIS Pardubice – Pallacanestro Reggiana
+LOCATION:Enteria Arena \, Pardubice\, Czechia
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

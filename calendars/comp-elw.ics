@@ -1,0 +1,510 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:EuroLeague Women
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-29500136146-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260923T180000
+DTEND;TZID=Europe/Brussels:20260923T200000
+SUMMARY:Kibirkstis-TOKS Vilnius – ENEA AZS Politechnika Poznan (91-69)
+LOCATION:Active Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136148-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260923T180000
+DTEND;TZID=Europe/Brussels:20260923T200000
+SUMMARY:Zabiny Brno – KKZ Crvena Zvezda (69-75)
+LOCATION:Starez Arena Vodova\, Brno\, Czechia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136152-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260923T190000
+DTEND;TZID=Europe/Brussels:20260923T210000
+SUMMARY:Flammes Carolo Basket Ardennes – KP Brno (101-81)
+LOCATION:Guinguette Arena\, Charleville-Mézères\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136150-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260923T203000
+DTEND;TZID=Europe/Brussels:20260923T223000
+SUMMARY:Panathinaikos A.C. – Emlak Konut Spor Kulübü (68-91)
+LOCATION:Cholargos Sports Hall\, Athens\, Greece
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136147-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T180000
+DTEND;TZID=Europe/Brussels:20260930T200000
+SUMMARY:Sopron Basket – Kibirkstis-TOKS Vilnius (62-81)
+LOCATION:Arena Sopron\, Sopron\, Hungary
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136149-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T180000
+DTEND;TZID=Europe/Brussels:20260930T200000
+SUMMARY:DVTK HUNTHERM – KKZ Crvena Zvezda (66-71)
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136153-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T193000
+DTEND;TZID=Europe/Brussels:20260930T213000
+SUMMARY:Umana Reyer Venice – Flammes Carolo Basket Ardennes (55-81)
+LOCATION:Palasport Taliercio\, Venezia\, Italy
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136151-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T201500
+DTEND;TZID=Europe/Brussels:20260930T221500
+SUMMARY:Spar Girona – Emlak Konut Spor Kulübü (69-81)
+LOCATION:Pavello Fontajau\, Girona\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135151-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Kibirkstis-TOKS Vilnius – Athinaikos Qualco (103-65)
+LOCATION:Active Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135163-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:KKZ Crvena Zvezda – Kangoeroes Basket Mechelen (89-56)
+LOCATION:Ranko Zeravica Sports Hall\, Belgrade\, Serbia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135175-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Emlak Konut Spor Kulübü – AZS UMCS Lublin (85-61)
+LOCATION:Basaksehir Genclik ve Spor Tesisleri\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135150-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T190000
+DTEND;TZID=Europe/Brussels:20261014T210000
+SUMMARY:Casademont Zaragoza – Basket Landes (76-75)
+LOCATION:Pabellon Principe Felipe\, Zaragoza\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135174-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T190000
+DTEND;TZID=Europe/Brussels:20261014T210000
+SUMMARY:ZVVZ USK Praha – Tango Bourges Basket (76-55)
+LOCATION:Kralovka Arena\, Prague\, Czechia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135187-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T190000
+DTEND;TZID=Europe/Brussels:20261014T210000
+SUMMARY:Flammes Carolo Basket Ardennes – CS Rapid Bucuresti (98-66)
+LOCATION:Guinguette Arena\, Charleville-Mézères\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135186-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T200000
+DTEND;TZID=Europe/Brussels:20261014T220000
+SUMMARY:Valencia Basket Club – Fenerbahçe Spor Kulübü (69-88)
+LOCATION:Roig Arena\, Valencia\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135162-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T190000
+DTEND;TZID=Europe/Brussels:20261015T210000
+SUMMARY:Galatasaray Spor Kulübü – Beretta Famila Schio (66-84)
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135176-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:AZS UMCS Lublin – ZVVZ USK Praha
+LOCATION:Hala Mosir\, Lublin\, Poland
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135188-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T183000
+DTEND;TZID=Europe/Brussels:20261021T203000
+SUMMARY:CS Rapid Bucuresti – Fenerbahçe Spor Kulübü
+LOCATION:Rapid Polyvalent Hall\, Bucharest\, Romania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135152-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T193000
+DTEND;TZID=Europe/Brussels:20261021T213000
+SUMMARY:Athinaikos Qualco – Casademont Zaragoza
+LOCATION:Glyfada Hall\, Glyfada\, Greece
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135153-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T193000
+DTEND;TZID=Europe/Brussels:20261021T213000
+SUMMARY:Basket Landes – Kibirkstis-TOKS Vilnius
+LOCATION:Espace Francois Mitterrand\, Mont de Marsan\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135177-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T200000
+DTEND;TZID=Europe/Brussels:20261021T220000
+SUMMARY:Tango Bourges Basket – Emlak Konut Spor Kulübü
+LOCATION:Caisse d'Epargne Loire Centre - le Prado\, Bourges\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135189-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T200000
+DTEND;TZID=Europe/Brussels:20261021T220000
+SUMMARY:Valencia Basket Club – Flammes Carolo Basket Ardennes
+LOCATION:Roig Arena\, Valencia\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135165-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:Beretta Famila Schio – KKZ Crvena Zvezda
+LOCATION:Palaromare\, Schio\, Italy
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135164-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T203000
+DTEND;TZID=Europe/Brussels:20261022T223000
+SUMMARY:Kangoeroes Basket Mechelen – Galatasaray Spor Kulübü
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135155-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:Athinaikos Qualco – Basket Landes
+LOCATION:Glyfada Hall\, Glyfada\, Greece
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135179-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:AZS UMCS Lublin – Tango Bourges Basket
+LOCATION:Hala Mosir\, Lublin\, Poland
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135190-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:Fenerbahçe Spor Kulübü – Flammes Carolo Basket Ardennes
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135178-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T190000
+DTEND;TZID=Europe/Brussels:20261028T210000
+SUMMARY:ZVVZ USK Praha – Emlak Konut Spor Kulübü
+LOCATION:Kralovka Arena\, Prague\, Czechia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135191-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:Valencia Basket Club – CS Rapid Bucuresti
+LOCATION:Roig Arena\, Valencia\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135166-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T180000
+DTEND;TZID=Europe/Brussels:20261029T200000
+SUMMARY:Galatasaray Spor Kulübü – KKZ Crvena Zvezda
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135154-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T200000
+DTEND;TZID=Europe/Brussels:20261029T220000
+SUMMARY:Casademont Zaragoza – Kibirkstis-TOKS Vilnius
+LOCATION:Pabellon Principe Felipe\, Zaragoza\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135167-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:Kangoeroes Basket Mechelen – Beretta Famila Schio
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135180-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T180000
+DTEND;TZID=Europe/Brussels:20261103T200000
+SUMMARY:AZS UMCS Lublin – Emlak Konut Spor Kulübü
+LOCATION:Hala Mosir\, Lublin\, Poland
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135192-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T180000
+DTEND;TZID=Europe/Brussels:20261103T200000
+SUMMARY:Fenerbahçe Spor Kulübü – Valencia Basket Club
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135193-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T183000
+DTEND;TZID=Europe/Brussels:20261103T203000
+SUMMARY:CS Rapid Bucuresti – Flammes Carolo Basket Ardennes
+LOCATION:Rapid Polyvalent Hall\, Bucharest\, Romania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135156-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T193000
+DTEND;TZID=Europe/Brussels:20261103T213000
+SUMMARY:Athinaikos Qualco – Kibirkstis-TOKS Vilnius
+LOCATION:Glyfada Hall\, Glyfada\, Greece
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135157-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T193000
+DTEND;TZID=Europe/Brussels:20261103T213000
+SUMMARY:Basket Landes – Casademont Zaragoza
+LOCATION:Espace Francois Mitterrand\, Mont de Marsan\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135181-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T200000
+DTEND;TZID=Europe/Brussels:20261103T220000
+SUMMARY:Tango Bourges Basket – ZVVZ USK Praha
+LOCATION:Caisse d'Epargne Loire Centre - le Prado\, Bourges\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135169-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T200000
+DTEND;TZID=Europe/Brussels:20261104T220000
+SUMMARY:Beretta Famila Schio – Galatasaray Spor Kulübü
+LOCATION:Palaromare\, Schio\, Italy
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135168-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T203000
+DTEND;TZID=Europe/Brussels:20261104T223000
+SUMMARY:Kangoeroes Basket Mechelen – KKZ Crvena Zvezda
+LOCATION:Sport- & Recreatiedomein De Nekker\, Mechelen\, Belgium
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135183-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T170000
+DTEND;TZID=Europe/Brussels:20261125T190000
+SUMMARY:Emlak Konut Spor Kulübü – Tango Bourges Basket
+LOCATION:Basaksehir Genclik ve Spor Tesisleri\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135159-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Kibirkstis-TOKS Vilnius – Basket Landes
+LOCATION:Active Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135170-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Galatasaray Spor Kulübü – Kangoeroes Basket Mechelen
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135171-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:KKZ Crvena Zvezda – Beretta Famila Schio
+LOCATION:Ranko Zeravica Sports Hall\, Belgrade\, Serbia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135194-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Fenerbahçe Spor Kulübü – CS Rapid Bucuresti
+LOCATION:Ülker Sports and Event Hall\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135182-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T190000
+DTEND;TZID=Europe/Brussels:20261125T210000
+SUMMARY:ZVVZ USK Praha – AZS UMCS Lublin
+LOCATION:Kralovka Arena\, Prague\, Czechia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135195-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T190000
+DTEND;TZID=Europe/Brussels:20261125T210000
+SUMMARY:Flammes Carolo Basket Ardennes – Valencia Basket Club
+LOCATION:Guinguette Arena\, Charleville-Mézères\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135158-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T200000
+DTEND;TZID=Europe/Brussels:20261125T220000
+SUMMARY:Casademont Zaragoza – Athinaikos Qualco
+LOCATION:Pabellon Principe Felipe\, Zaragoza\, Spain
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135184-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T170000
+DTEND;TZID=Europe/Brussels:20261202T190000
+SUMMARY:Emlak Konut Spor Kulübü – ZVVZ USK Praha
+LOCATION:Basaksehir Genclik ve Spor Tesisleri\, Istanbul\, Türkiye
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135160-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T180000
+DTEND;TZID=Europe/Brussels:20261202T200000
+SUMMARY:Kibirkstis-TOKS Vilnius – Casademont Zaragoza
+LOCATION:Active Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135172-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T180000
+DTEND;TZID=Europe/Brussels:20261202T200000
+SUMMARY:KKZ Crvena Zvezda – Galatasaray Spor Kulübü
+LOCATION:Ranko Zeravica Sports Hall\, Belgrade\, Serbia
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500136819-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T183000
+DTEND;TZID=Europe/Brussels:20261202T203000
+SUMMARY:CS Rapid Bucuresti – Valencia Basket Club
+LOCATION:Rapid Polyvalent Hall\, Bucharest\, Romania
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135196-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T190000
+DTEND;TZID=Europe/Brussels:20261202T210000
+SUMMARY:Flammes Carolo Basket Ardennes – Fenerbahçe Spor Kulübü
+LOCATION:Guinguette Arena\, Charleville-Mézères\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135161-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T193000
+DTEND;TZID=Europe/Brussels:20261202T213000
+SUMMARY:Basket Landes – Athinaikos Qualco
+LOCATION:Espace Francois Mitterrand\, Mont de Marsan\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135173-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Beretta Famila Schio – Kangoeroes Basket Mechelen
+LOCATION:Palaromare\, Schio\, Italy
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-29500135185-comp-elw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Tango Bourges Basket – AZS UMCS Lublin
+LOCATION:Caisse d'Epargne Loire Centre - le Prado\, Bourges\, France
+DESCRIPTION:EuroLeague Women
+END:VEVENT
+END:VCALENDAR

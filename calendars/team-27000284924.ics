@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Telekom Baskets Bonn
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136308-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T200000
+DTEND;TZID=Europe/Brussels:20261007T220000
+SUMMARY:Telekom Baskets Bonn – Futebol Clube do Porto (78-74)
+LOCATION:Telekom Dome\, Bonn\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136310-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261021T200000
+DTEND;TZID=Europe/Brussels:20261021T220000
+SUMMARY:Club Joventut Badalona SAD – Telekom Baskets Bonn
+LOCATION:Palau Municipal d'Esports de Badalona\, Badalona\, Spain
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136311-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261104T200000
+DTEND;TZID=Europe/Brussels:20261104T220000
+SUMMARY:Telekom Baskets Bonn – Bnei Penlink Herzliya
+LOCATION:Telekom Dome\, Bonn\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136313-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T183000
+DTEND;TZID=Europe/Brussels:20261117T203000
+SUMMARY:Bnei Penlink Herzliya – Telekom Baskets Bonn
+LOCATION:Telekom Dome\, Bonn\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136315-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T200000
+DTEND;TZID=Europe/Brussels:20261216T220000
+SUMMARY:Telekom Baskets Bonn – Club Joventut Badalona SAD
+LOCATION:Telekom Dome\, Bonn\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136317-27000284924@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T183000
+DTEND;TZID=Europe/Brussels:20261223T203000
+SUMMARY:Futebol Clube do Porto – Telekom Baskets Bonn
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Porto\, Portugal
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

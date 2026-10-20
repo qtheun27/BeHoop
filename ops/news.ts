@@ -223,9 +223,11 @@ export function clubTagger(clubs: { id: number; name: string; short: string; tea
 }
 
 /** Compétitions citées par un article, d'après leurs mots-clés (mot entier, accents ignorés). */
-export function compTagger(comps: { id: string; kw?: string[] }[]) {
-  const list = comps.filter((c) => c.kw?.length).map((c) => ({ id: c.id, re: new RegExp(`\\b(${c.kw!.map((k) => normalize(k).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`) }));
-  return (text: string) => { const t = normalize(text); return list.filter((c) => c.re.test(t)).map((c) => c.id); };
+export function compTagger(comps: { id: string; kw?: string[]; not?: string[] }[]) {
+  const re = (ks: string[]) => new RegExp(`\\b(${ks.map((k) => normalize(k).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`);
+  const list = comps.filter((c) => c.kw?.length).map((c) => ({ id: c.id, re: re(c.kw!), not: c.not?.length ? re(c.not) : null }));
+  // « not » : l'actu parle d'une autre compétition au nom voisin (EuroLeague Women ≠ EuroLeague, WNBA ≠ NBA)
+  return (text: string) => { const t = normalize(text); return list.filter((c) => c.re.test(t) && !(c.not && c.not.test(t) && !c.re.test(t.replace(c.not, ' ')))).map((c) => c.id); };
 }
 
 export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit: (t: string) => boolean) {

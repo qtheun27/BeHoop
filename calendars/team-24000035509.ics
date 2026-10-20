@@ -1,0 +1,348 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Crvena Zvezda Meridianbet Belgrade
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-24500000001-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Zalgiris Kaunas (77-83)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000012-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260929T200000
+DTEND;TZID=Europe/Brussels:20260929T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Hapoel IBI Tel Aviv (80-81)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000021-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261001T200000
+DTEND;TZID=Europe/Brussels:20261001T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Anadolu Efes Istanbul (77-72)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000037-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261008T180000
+DTEND;TZID=Europe/Brussels:20261008T200000
+SUMMARY:Dubai Basketball – Crvena Zvezda Meridianbet Belgrade (58-77)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000041-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T200000
+DTEND;TZID=Europe/Brussels:20261013T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Crvena Zvezda Meridianbet Belgrade (82-84)
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000056-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261016T200000
+DTEND;TZID=Europe/Brussels:20261016T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Paris Basketball (90-81)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000066-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261022T204500
+DTEND;TZID=Europe/Brussels:20261022T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000071-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261027T200000
+DTEND;TZID=Europe/Brussels:20261027T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Maccabi Rapyd Tel Aviv
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000081-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261029T200000
+DTEND;TZID=Europe/Brussels:20261029T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000100-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261106T201500
+DTEND;TZID=Europe/Brussels:20261106T221500
+SUMMARY:Olympiacos Piraeus – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000106-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261112T210000
+DTEND;TZID=Europe/Brussels:20261112T230000
+SUMMARY:Real Madrid – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000115-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:Armani Olimpia Milan – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000128-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:FC Barcelona – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000131-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261124T190000
+DTEND;TZID=Europe/Brussels:20261124T210000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Virtus Bologna
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000144-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261203T184500
+DTEND;TZID=Europe/Brussels:20261203T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000157-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261210T203000
+DTEND;TZID=Europe/Brussels:20261210T223000
+SUMMARY:Valencia Basket – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000170-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T201500
+DTEND;TZID=Europe/Brussels:20261216T221500
+SUMMARY:Panathinaikos AKTOR Athens – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000175-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261218T203000
+DTEND;TZID=Europe/Brussels:20261218T223000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Besiktas Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000186-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T200000
+DTEND;TZID=Europe/Brussels:20261223T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000200-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261230T204500
+DTEND;TZID=Europe/Brussels:20261230T224500
+SUMMARY:Paris Basketball – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Accor Arena
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000207-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270108T200000
+DTEND;TZID=Europe/Brussels:20270108T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – LDLC ASVEL Villeurbanne
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000211-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270112T200000
+DTEND;TZID=Europe/Brussels:20270112T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Real Madrid
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000222-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270114T190000
+DTEND;TZID=Europe/Brussels:20270114T210000
+SUMMARY:Zalgiris Kaunas – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000237-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270122T200000
+DTEND;TZID=Europe/Brussels:20270122T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – FC Barcelona
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000241-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270128T180000
+DTEND;TZID=Europe/Brussels:20270128T200000
+SUMMARY:Besiktas Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000259-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270203T200000
+DTEND;TZID=Europe/Brussels:20270203T220000
+SUMMARY:FC Bayern Munich – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000266-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270205T203000
+DTEND;TZID=Europe/Brussels:20270205T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000274-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270211T200000
+DTEND;TZID=Europe/Brussels:20270211T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Partizan Mozzart Bet Belgrade
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000286-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270305T200000
+DTEND;TZID=Europe/Brussels:20270305T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Fenerbahce Tarfin Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000293-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270309T200500
+DTEND;TZID=Europe/Brussels:20270309T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000306-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270312T200000
+DTEND;TZID=Europe/Brussels:20270312T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Dubai Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000317-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270319T200000
+DTEND;TZID=Europe/Brussels:20270319T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Olympiacos Piraeus
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000324-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270323T183000
+DTEND;TZID=Europe/Brussels:20270323T203000
+SUMMARY:Anadolu Efes Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000335-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270326T200000
+DTEND;TZID=Europe/Brussels:20270326T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Valencia Basket
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000342-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270331T203000
+DTEND;TZID=Europe/Brussels:20270331T223000
+SUMMARY:Virtus Bologna – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000352-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270406T203000
+DTEND;TZID=Europe/Brussels:20270406T223000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Panathinaikos AKTOR Athens
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000361-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270408T190000
+DTEND;TZID=Europe/Brussels:20270408T210000
+SUMMARY:Hapoel IBI Tel Aviv – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000372-24000035509@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20270415T200000
+DTEND;TZID=Europe/Brussels:20270415T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Armani Olimpia Milan
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+END:VCALENDAR

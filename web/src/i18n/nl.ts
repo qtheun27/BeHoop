@@ -637,4 +637,5 @@ export const NL: Record<string, string> = {
   "{r}ᵉ au classement": "{r}e in het klassement",
   "Calendrier de la compétition": "Agenda van de competitie",
   "Confrontations cette saison": "Onderlinge duels dit seizoen",
+  "Sélections": "Nationale ploegen",
 };

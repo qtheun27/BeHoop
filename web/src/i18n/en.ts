@@ -637,4 +637,5 @@ export const EN: Record<string, string> = {
   "{r}ᵉ au classement": "#{r} in the standings",
   "Calendrier de la compétition": "Competition calendar",
   "Confrontations cette saison": "Head-to-head this season",
+  "Sélections": "National teams",
 };

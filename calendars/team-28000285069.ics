@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:"Basketball Club Lokomotiv Plovdiv" Association
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-28500135875-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T180000
+DTEND;TZID=Europe/Brussels:20261007T200000
+SUMMARY:VEF RIGA – "Basketball Club Lokomotiv Plovdiv" Association (106-83)
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135879-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:"Basketball Club Lokomotiv Plovdiv" Association – CSM CSU Raiffeisen Oradea (79-69)
+LOCATION:Sila Complex\, Plovdiv\, Bulgaria
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135882-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261020T180000
+DTEND;TZID=Europe/Brussels:20261020T200000
+SUMMARY:Athilitikos Omilos Mykonoy KAE – "Basketball Club Lokomotiv Plovdiv" Association
+LOCATION:P. Chanioti Ano Mera Indoor Hall\, Mykonos\, Greece
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135884-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:"Basketball Club Lokomotiv Plovdiv" Association – Fribourg Olympic Basket
+LOCATION:Sila Complex\, Plovdiv\, Bulgaria
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135886-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:"Basketball Club Lokomotiv Plovdiv" Association – Neftchi Sports Club Public Union
+LOCATION:Sila Complex\, Plovdiv\, Bulgaria
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135890-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261111T180000
+DTEND;TZID=Europe/Brussels:20261111T200000
+SUMMARY:"Basketball Club Lokomotiv Plovdiv" Association – VEF RIGA
+LOCATION:Sila Complex\, Plovdiv\, Bulgaria
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135894-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261118T180000
+DTEND;TZID=Europe/Brussels:20261118T200000
+SUMMARY:CSM CSU Raiffeisen Oradea – "Basketball Club Lokomotiv Plovdiv" Association
+LOCATION:Oradea Arena\, Oradea\, Romania
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135897-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261209T180000
+DTEND;TZID=Europe/Brussels:20261209T200000
+SUMMARY:"Basketball Club Lokomotiv Plovdiv" Association – Athilitikos Omilos Mykonoy KAE
+LOCATION:Sila Complex\, Plovdiv\, Bulgaria
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135899-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261216T200000
+DTEND;TZID=Europe/Brussels:20261216T220000
+SUMMARY:Fribourg Olympic Basket – "Basketball Club Lokomotiv Plovdiv" Association
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-28500135901-28000285069@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261223T160000
+DTEND;TZID=Europe/Brussels:20261223T180000
+SUMMARY:Neftchi Sports Club Public Union – "Basketball Club Lokomotiv Plovdiv" Association
+LOCATION:Baku Sports Palace\, Baku\, Azerbaijan
+DESCRIPTION:FIBA Europe Cup
+END:VEVENT
+END:VCALENDAR

@@ -1,6 +1,6 @@
 // Fiche d'un match (#/match/{série}/{match}) : neutre, sans « équipe à nous » — score ou heure, salle, compétition,
 // confrontations de la saison et place des deux équipes au classement officiel.
-import { loadSerie, loadComps, teamIndex, isPlayed, ranked, type Game } from '../lib/data';
+import { loadSerie, loadComps, teamIndex, isPlayed, ranked, trName, type Game } from '../lib/data';
 import { t } from '../lib/i18n';
 import { frDate, mapsUrl } from '../lib/util';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, useAsync } from '../ui/kit';
@@ -12,7 +12,7 @@ import { CompGameRow } from './CompPage';
 export function MatchPage({ serie, id }: { serie: number; id: number }) {
   const d = useAsync(async () => {
     const [s, comps, idx] = await Promise.all([loadSerie(serie), loadComps().catch(() => []), teamIndex()]);
-    return { s, comp: comps.find((c) => c.series.includes(serie)) ?? null, idx, g: s.games.find((x) => x.id === id) ?? null };
+    return { s, comp: comps.find((c) => c.series.includes(serie) && c.id !== 'lions' && c.id !== 'cats') ?? comps.find((c) => c.series.includes(serie)) ?? null, idx, g: s.games.find((x) => x.id === id) ?? null };
   }, [serie, id]);
   if (d.error) return <Screen title={t('Match')} back="explorer"><ErrorBox msg={d.error} retry={d.reload} /></Screen>;
   if (!d.data) return <Screen title={t('Match')} back="explorer"><Skeleton h={180} n={1} /><Skeleton /></Screen>;
@@ -37,7 +37,7 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
     <Screen title={t('Match')} back={comp ? `competition/${comp.id}` : 'explorer'} hideTitle>
       <section className="card" style={{ padding: 18, margin: '4px 0 14px' }}>
         {comp && <a href={`#/competition/${comp.id}`} className="hstack" style={{ gap: 10, color: 'inherit', marginBottom: 14 }}>
-          <CompLogo c={comp} size={34} /><div style={{ minWidth: 0 }}><div className="ellipsis" style={{ fontWeight: 600 }}>{comp.name}</div><div className="sub ellipsis">{s.serie.name}</div></div><span className="chev" style={{ marginLeft: 'auto' }}>›</span></a>}
+          <CompLogo c={comp} size={34} /><div style={{ minWidth: 0 }}><div className="ellipsis" style={{ fontWeight: 600 }}>{comp.name}</div><div className="sub ellipsis">{trName(s.serie.name)}</div></div><span className="chev" style={{ marginLeft: 'auto' }}>›</span></a>}
         <div className="hstack" style={{ alignItems: 'flex-start', gap: 10 }}>
           {side(g.h, g.hn, g.hs, played && g.hs! > g.as!)}
           <div style={{ paddingTop: 22, textAlign: 'center', flex: 'none', width: 70 }}>
@@ -45,7 +45,7 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
           </div>
           {side(g.a, g.an, g.as, played && g.as! > g.hs!)}
         </div>
-        {played && <div className="sub" style={{ textAlign: 'center', marginTop: 10 }}>{frDate(g.d, { weekday: 'long', day: 'numeric', month: 'long' })}</div>}
+        {played && <div className="sub" style={{ textAlign: 'center', marginTop: 10 }}>{frDate(g.d, { weekday: 'long', day: 'numeric', month: 'long', ...(g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? { year: 'numeric' } : {}) })}</div>}
       </section>
       {g.v && <a className="row card" style={{ color: 'inherit', marginBottom: 14 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">
         <Ico n="pin" size={22} style={{ color: 'var(--accent)' }} /><div className="grow"><b>{g.v}</b>{g.adr && <div className="sub">{g.adr}</div>}</div><span className="sub">{t('Itinéraire')} ›</span></a>}

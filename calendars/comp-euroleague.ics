@@ -1,0 +1,3426 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:EuroLeague
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-24500000003-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T180000
+DTEND;TZID=Europe/Brussels:20260924T200000
+SUMMARY:Hapoel IBI Tel Aviv – FC Bayern Munich (84-86)
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000002-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T180000
+DTEND;TZID=Europe/Brussels:20260924T200000
+SUMMARY:Dubai Basketball – Real Madrid (78-77)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000001-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Zalgiris Kaunas (77-83)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000007-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T201500
+DTEND;TZID=Europe/Brussels:20260924T221500
+SUMMARY:Panathinaikos AKTOR Athens – Paris Basketball (91-72)
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000005-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T203000
+DTEND;TZID=Europe/Brussels:20260924T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Olympiacos Piraeus (89-106)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000004-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T203000
+DTEND;TZID=Europe/Brussels:20260924T223000
+SUMMARY:FC Barcelona – Anadolu Efes Istanbul (89-82)
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000006-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T204500
+DTEND;TZID=Europe/Brussels:20260924T224500
+SUMMARY:LDLC ASVEL Villeurbanne – Maccabi Rapyd Tel Aviv (84-74)
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000008-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260925T190000
+DTEND;TZID=Europe/Brussels:20260925T210000
+SUMMARY:Besiktas Istanbul – Valencia Basket (94-96)
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000009-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260925T194500
+DTEND;TZID=Europe/Brussels:20260925T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Virtus Bologna (78-68)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000010-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260925T204500
+DTEND;TZID=Europe/Brussels:20260925T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Armani Olimpia Milan (92-76)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000013-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T180000
+DTEND;TZID=Europe/Brussels:20260929T200000
+SUMMARY:Dubai Basketball – FC Barcelona (94-87)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000014-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T190000
+DTEND;TZID=Europe/Brussels:20260929T210000
+SUMMARY:Zalgiris Kaunas – Olympiacos Piraeus (91-93)
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000011-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T190000
+DTEND;TZID=Europe/Brussels:20260929T210000
+SUMMARY:Anadolu Efes Istanbul – Real Madrid (94-84)
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000017-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T194500
+DTEND;TZID=Europe/Brussels:20260929T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – FC Bayern Munich (100-76)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000012-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T200000
+DTEND;TZID=Europe/Brussels:20260929T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Hapoel IBI Tel Aviv (80-81)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000016-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T203000
+DTEND;TZID=Europe/Brussels:20260929T223000
+SUMMARY:Armani Olimpia Milan – Virtus Bologna (87-85)
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000015-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T203000
+DTEND;TZID=Europe/Brussels:20260929T223000
+SUMMARY:Valencia Basket – Kosner Baskonia Vitoria-Gasteiz (111-88)
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000018-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260929T204500
+DTEND;TZID=Europe/Brussels:20260929T224500
+SUMMARY:Paris Basketball – Partizan Mozzart Bet Belgrade (79-92)
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000019-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T200500
+DTEND;TZID=Europe/Brussels:20260930T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Besiktas Istanbul (93-109)
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000020-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T201500
+DTEND;TZID=Europe/Brussels:20260930T221500
+SUMMARY:Panathinaikos AKTOR Athens – LDLC ASVEL Villeurbanne (102-79)
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000022-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T180000
+DTEND;TZID=Europe/Brussels:20261001T200000
+SUMMARY:Hapoel IBI Tel Aviv – Real Madrid (102-98)
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000021-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T200000
+DTEND;TZID=Europe/Brussels:20261001T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Anadolu Efes Istanbul (77-72)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000023-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T203000
+DTEND;TZID=Europe/Brussels:20261001T223000
+SUMMARY:Virtus Bologna – Olympiacos Piraeus (96-94)
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000024-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T204500
+DTEND;TZID=Europe/Brussels:20261001T224500
+SUMMARY:Paris Basketball – Zalgiris Kaunas (82-78)
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000025-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T190000
+DTEND;TZID=Europe/Brussels:20261002T210000
+SUMMARY:Besiktas Istanbul – FC Barcelona (82-95)
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000029-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T194500
+DTEND;TZID=Europe/Brussels:20261002T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Dubai Basketball (76-66)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000028-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T200000
+DTEND;TZID=Europe/Brussels:20261002T220000
+SUMMARY:FC Bayern Munich – Partizan Mozzart Bet Belgrade (84-86)
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000026-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T200000
+DTEND;TZID=Europe/Brussels:20261002T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Valencia Basket (92-105)
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000030-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T201500
+DTEND;TZID=Europe/Brussels:20261002T221500
+SUMMARY:Panathinaikos AKTOR Athens – Maccabi Rapyd Tel Aviv (90-67)
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000027-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261002T203000
+DTEND;TZID=Europe/Brussels:20261002T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Armani Olimpia Milan (86-76)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000031-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261007T204500
+DTEND;TZID=Europe/Brussels:20261007T224500
+SUMMARY:Paris Basketball – LDLC ASVEL Villeurbanne (96-98)
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000037-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T180000
+DTEND;TZID=Europe/Brussels:20261008T200000
+SUMMARY:Dubai Basketball – Crvena Zvezda Meridianbet Belgrade (58-77)
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000032-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T180000
+DTEND;TZID=Europe/Brussels:20261008T200000
+SUMMARY:Maccabi Rapyd Tel Aviv – Armani Olimpia Milan (97-79)
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000033-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T200000
+DTEND;TZID=Europe/Brussels:20261008T220000
+SUMMARY:FC Bayern Munich – Virtus Bologna (87-94)
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000036-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T201500
+DTEND;TZID=Europe/Brussels:20261008T221500
+SUMMARY:Panathinaikos AKTOR Athens – Fenerbahce Tarfin Istanbul (92-74)
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000034-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T203000
+DTEND;TZID=Europe/Brussels:20261008T223000
+SUMMARY:Valencia Basket – Hapoel IBI Tel Aviv (93-82)
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000035-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261008T204500
+DTEND;TZID=Europe/Brussels:20261008T224500
+SUMMARY:Real Madrid – Partizan Mozzart Bet Belgrade (86-76)
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000040-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261009T201500
+DTEND;TZID=Europe/Brussels:20261009T221500
+SUMMARY:Olympiacos Piraeus – Anadolu Efes Istanbul (89-66)
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000039-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261009T203000
+DTEND;TZID=Europe/Brussels:20261009T223000
+SUMMARY:FC Barcelona – Zalgiris Kaunas (81-88)
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000038-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261009T203000
+DTEND;TZID=Europe/Brussels:20261009T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Besiktas Istanbul (84-92)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000046-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T194500
+DTEND;TZID=Europe/Brussels:20261013T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Zalgiris Kaunas (99-80)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000041-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T200000
+DTEND;TZID=Europe/Brussels:20261013T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Crvena Zvezda Meridianbet Belgrade (82-84)
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000047-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Partizan Mozzart Bet Belgrade – Panathinaikos AKTOR Athens (55-72)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000044-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:FC Barcelona – Maccabi Rapyd Tel Aviv (90-87)
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000043-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Armani Olimpia Milan – Real Madrid (89-98)
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000042-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Dubai Basketball (79-93)
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000045-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T210000
+DTEND;TZID=Europe/Brussels:20261013T230000
+SUMMARY:Valencia Basket – Olympiacos Piraeus (97-102)
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000048-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Hapoel IBI Tel Aviv – Besiktas Istanbul (100-82)
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000049-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T193000
+DTEND;TZID=Europe/Brussels:20261014T213000
+SUMMARY:Anadolu Efes Istanbul – FC Bayern Munich (93-101)
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000050-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T204500
+DTEND;TZID=Europe/Brussels:20261014T224500
+SUMMARY:Paris Basketball – Virtus Bologna (94-96)
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000054-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T194500
+DTEND;TZID=Europe/Brussels:20261015T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Partizan Mozzart Bet Belgrade (74-65)
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000052-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T203000
+DTEND;TZID=Europe/Brussels:20261015T223000
+SUMMARY:Valencia Basket – Maccabi Rapyd Tel Aviv (88-91)
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000051-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T203000
+DTEND;TZID=Europe/Brussels:20261015T223000
+SUMMARY:Armani Olimpia Milan – Dubai Basketball (97-101)
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000053-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T210000
+DTEND;TZID=Europe/Brussels:20261015T230000
+SUMMARY:Real Madrid – LDLC ASVEL Villeurbanne (111-92)
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000057-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T190000
+DTEND;TZID=Europe/Brussels:20261016T210000
+SUMMARY:Zalgiris Kaunas – Anadolu Efes Istanbul (70-85)
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000055-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T190000
+DTEND;TZID=Europe/Brussels:20261016T210000
+SUMMARY:Besiktas Istanbul – FC Bayern Munich (95-87)
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000056-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T200000
+DTEND;TZID=Europe/Brussels:20261016T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Paris Basketball (90-81)
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000060-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T201500
+DTEND;TZID=Europe/Brussels:20261016T221500
+SUMMARY:Panathinaikos AKTOR Athens – Hapoel IBI Tel Aviv (81-91)
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000059-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T203000
+DTEND;TZID=Europe/Brussels:20261016T223000
+SUMMARY:Virtus Bologna – Kosner Baskonia Vitoria-Gasteiz (86-78)
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000058-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261016T203000
+DTEND;TZID=Europe/Brussels:20261016T223000
+SUMMARY:FC Barcelona – Olympiacos Piraeus (100-105)
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000061-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:Hapoel IBI Tel Aviv – Virtus Bologna
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000064-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T193000
+DTEND;TZID=Europe/Brussels:20261022T213000
+SUMMARY:Anadolu Efes Istanbul – Besiktas Istanbul
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000065-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:FC Bayern Munich – Dubai Basketball
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000062-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T200500
+DTEND;TZID=Europe/Brussels:20261022T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Real Madrid
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000067-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T201500
+DTEND;TZID=Europe/Brussels:20261022T221500
+SUMMARY:Panathinaikos AKTOR Athens – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000063-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T203000
+DTEND;TZID=Europe/Brussels:20261022T223000
+SUMMARY:Armani Olimpia Milan – FC Barcelona
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000066-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T204500
+DTEND;TZID=Europe/Brussels:20261022T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000068-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261023T190000
+DTEND;TZID=Europe/Brussels:20261023T210000
+SUMMARY:Zalgiris Kaunas – LDLC ASVEL Villeurbanne
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000070-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261023T201500
+DTEND;TZID=Europe/Brussels:20261023T221500
+SUMMARY:Olympiacos Piraeus – Fenerbahce Tarfin Istanbul
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000069-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261023T204500
+DTEND;TZID=Europe/Brussels:20261023T224500
+SUMMARY:Paris Basketball – Valencia Basket
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000072-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T170000
+DTEND;TZID=Europe/Brussels:20261027T190000
+SUMMARY:Dubai Basketball – Paris Basketball
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000074-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T200000
+DTEND;TZID=Europe/Brussels:20261027T220000
+SUMMARY:FC Bayern Munich – FC Barcelona
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000071-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T200000
+DTEND;TZID=Europe/Brussels:20261027T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Maccabi Rapyd Tel Aviv
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000076-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T201500
+DTEND;TZID=Europe/Brussels:20261027T221500
+SUMMARY:Panathinaikos AKTOR Athens – Armani Olimpia Milan
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000075-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T203000
+DTEND;TZID=Europe/Brussels:20261027T223000
+SUMMARY:Valencia Basket – Fenerbahce Tarfin Istanbul
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000073-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261027T210000
+DTEND;TZID=Europe/Brussels:20261027T230000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Real Madrid
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000079-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T183000
+DTEND;TZID=Europe/Brussels:20261028T203000
+SUMMARY:Besiktas Istanbul – Olympiacos Piraeus
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000077-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T190000
+DTEND;TZID=Europe/Brussels:20261028T210000
+SUMMARY:Hapoel IBI Tel Aviv – Anadolu Efes Istanbul
+LOCATION:Arena Botevgrad\, 2 Zahari Stoyanov Str\, Botevgrad\, 2140\, Bulgaria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000078-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Partizan Mozzart Bet Belgrade
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000080-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T203000
+DTEND;TZID=Europe/Brussels:20261028T223000
+SUMMARY:Virtus Bologna – Zalgiris Kaunas
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000081-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T200000
+DTEND;TZID=Europe/Brussels:20261029T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000082-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T200500
+DTEND;TZID=Europe/Brussels:20261029T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Paris Basketball
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000083-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T204500
+DTEND;TZID=Europe/Brussels:20261029T224500
+SUMMARY:Real Madrid – Fenerbahce Tarfin Istanbul
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000084-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T170000
+DTEND;TZID=Europe/Brussels:20261030T190000
+SUMMARY:Dubai Basketball – Hapoel IBI Tel Aviv
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000088-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T183000
+DTEND;TZID=Europe/Brussels:20261030T203000
+SUMMARY:Anadolu Efes Istanbul – Panathinaikos AKTOR Athens
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000086-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T190000
+DTEND;TZID=Europe/Brussels:20261030T210000
+SUMMARY:Zalgiris Kaunas – Partizan Mozzart Bet Belgrade
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000085-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T200000
+DTEND;TZID=Europe/Brussels:20261030T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000090-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T201500
+DTEND;TZID=Europe/Brussels:20261030T221500
+SUMMARY:Olympiacos Piraeus – Armani Olimpia Milan
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000089-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:Virtus Bologna – Besiktas Istanbul
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000087-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:FC Barcelona – Valencia Basket
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000091-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T204500
+DTEND;TZID=Europe/Brussels:20261104T224500
+SUMMARY:Real Madrid – Panathinaikos AKTOR Athens
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000095-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261105T181500
+DTEND;TZID=Europe/Brussels:20261105T201500
+SUMMARY:Anadolu Efes Istanbul – Paris Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000093-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261105T190000
+DTEND;TZID=Europe/Brussels:20261105T210000
+SUMMARY:Hapoel IBI Tel Aviv – FC Barcelona
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000092-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261105T190000
+DTEND;TZID=Europe/Brussels:20261105T210000
+SUMMARY:Fenerbahce Tarfin Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000094-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261105T200000
+DTEND;TZID=Europe/Brussels:20261105T220000
+SUMMARY:LDLC ASVEL Villeurbanne – FC Bayern Munich
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000096-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261105T203000
+DTEND;TZID=Europe/Brussels:20261105T223000
+SUMMARY:Armani Olimpia Milan – Valencia Basket
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000097-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261106T180000
+DTEND;TZID=Europe/Brussels:20261106T200000
+SUMMARY:Besiktas Istanbul – Zalgiris Kaunas
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000100-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261106T201500
+DTEND;TZID=Europe/Brussels:20261106T221500
+SUMMARY:Olympiacos Piraeus – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000098-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261106T203000
+DTEND;TZID=Europe/Brussels:20261106T223000
+SUMMARY:Virtus Bologna – Dubai Basketball
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000099-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261106T204500
+DTEND;TZID=Europe/Brussels:20261106T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Maccabi Rapyd Tel Aviv
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000102-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T204500
+DTEND;TZID=Europe/Brussels:20261111T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000101-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T204500
+DTEND;TZID=Europe/Brussels:20261111T224500
+SUMMARY:Paris Basketball – Fenerbahce Tarfin Istanbul
+LOCATION:Accor Arena
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000103-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T200500
+DTEND;TZID=Europe/Brussels:20261112T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Hapoel IBI Tel Aviv
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000107-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T201500
+DTEND;TZID=Europe/Brussels:20261112T221500
+SUMMARY:Olympiacos Piraeus – Dubai Basketball
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000105-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T203000
+DTEND;TZID=Europe/Brussels:20261112T223000
+SUMMARY:Valencia Basket – FC Bayern Munich
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000104-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T203000
+DTEND;TZID=Europe/Brussels:20261112T223000
+SUMMARY:Armani Olimpia Milan – Zalgiris Kaunas
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000106-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T210000
+DTEND;TZID=Europe/Brussels:20261112T230000
+SUMMARY:Real Madrid – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000109-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261113T183000
+DTEND;TZID=Europe/Brussels:20261113T203000
+SUMMARY:Anadolu Efes Istanbul – Virtus Bologna
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000110-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261113T201500
+DTEND;TZID=Europe/Brussels:20261113T221500
+SUMMARY:Panathinaikos AKTOR Athens – FC Barcelona
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000108-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261113T203000
+DTEND;TZID=Europe/Brussels:20261113T223000
+SUMMARY:LDLC ASVEL Villeurbanne – Besiktas Istanbul
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000111-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T170000
+DTEND;TZID=Europe/Brussels:20261117T190000
+SUMMARY:Dubai Basketball – Anadolu Efes Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000113-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Maccabi Rapyd Tel Aviv – Olympiacos Piraeus
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000117-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T190000
+DTEND;TZID=Europe/Brussels:20261117T210000
+SUMMARY:Fenerbahce Tarfin Istanbul – LDLC ASVEL Villeurbanne
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000112-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T190000
+DTEND;TZID=Europe/Brussels:20261117T210000
+SUMMARY:Zalgiris Kaunas – FC Bayern Munich
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000116-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:FC Barcelona – Paris Basketball
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000115-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:Armani Olimpia Milan – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000114-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T203000
+DTEND;TZID=Europe/Brussels:20261117T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Hapoel IBI Tel Aviv
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000118-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T204500
+DTEND;TZID=Europe/Brussels:20261117T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Valencia Basket
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000119-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T210000
+DTEND;TZID=Europe/Brussels:20261117T230000
+SUMMARY:Virtus Bologna – Panathinaikos AKTOR Athens
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000120-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261118T180000
+DTEND;TZID=Europe/Brussels:20261118T200000
+SUMMARY:Besiktas Istanbul – Real Madrid
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000122-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T183000
+DTEND;TZID=Europe/Brussels:20261119T203000
+SUMMARY:Maccabi Rapyd Tel Aviv – Dubai Basketball
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000121-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T190000
+DTEND;TZID=Europe/Brussels:20261119T210000
+SUMMARY:Zalgiris Kaunas – Panathinaikos AKTOR Athens
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000124-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T200000
+DTEND;TZID=Europe/Brussels:20261119T220000
+SUMMARY:FC Bayern Munich – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000123-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T203000
+DTEND;TZID=Europe/Brussels:20261119T223000
+SUMMARY:Armani Olimpia Milan – Fenerbahce Tarfin Istanbul
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000126-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T204500
+DTEND;TZID=Europe/Brussels:20261119T224500
+SUMMARY:Paris Basketball – Hapoel IBI Tel Aviv
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000125-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261119T210000
+DTEND;TZID=Europe/Brussels:20261119T230000
+SUMMARY:Valencia Basket – Virtus Bologna
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000127-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261120T183000
+DTEND;TZID=Europe/Brussels:20261120T203000
+SUMMARY:Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000130-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261120T201500
+DTEND;TZID=Europe/Brussels:20261120T221500
+SUMMARY:Olympiacos Piraeus – Real Madrid
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000128-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:FC Barcelona – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000129-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261120T204500
+DTEND;TZID=Europe/Brussels:20261120T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Besiktas Istanbul
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000132-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T180000
+DTEND;TZID=Europe/Brussels:20261124T200000
+SUMMARY:Besiktas Istanbul – Paris Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000131-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T190000
+DTEND;TZID=Europe/Brussels:20261124T210000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Virtus Bologna
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000134-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T200000
+DTEND;TZID=Europe/Brussels:20261124T220000
+SUMMARY:FC Bayern Munich – Maccabi Rapyd Tel Aviv
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000135-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T203000
+DTEND;TZID=Europe/Brussels:20261124T223000
+SUMMARY:Valencia Basket – Panathinaikos AKTOR Athens
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000136-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T204500
+DTEND;TZID=Europe/Brussels:20261124T224500
+SUMMARY:LDLC ASVEL Villeurbanne – Armani Olimpia Milan
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000133-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261124T210000
+DTEND;TZID=Europe/Brussels:20261124T230000
+SUMMARY:FC Barcelona – Fenerbahce Tarfin Istanbul
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000137-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T170000
+DTEND;TZID=Europe/Brussels:20261125T190000
+SUMMARY:Dubai Basketball – Partizan Mozzart Bet Belgrade
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000140-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T201500
+DTEND;TZID=Europe/Brussels:20261125T221500
+SUMMARY:Olympiacos Piraeus – Hapoel IBI Tel Aviv
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000138-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T203000
+DTEND;TZID=Europe/Brussels:20261125T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Anadolu Efes Istanbul
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000139-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T204500
+DTEND;TZID=Europe/Brussels:20261125T224500
+SUMMARY:Real Madrid – Zalgiris Kaunas
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000142-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T183000
+DTEND;TZID=Europe/Brussels:20261203T203000
+SUMMARY:Anadolu Efes Istanbul – Valencia Basket
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000144-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T184500
+DTEND;TZID=Europe/Brussels:20261203T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000141-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T190000
+DTEND;TZID=Europe/Brussels:20261203T210000
+SUMMARY:Hapoel IBI Tel Aviv – Armani Olimpia Milan
+LOCATION:Arena Botevgrad\, 2 Zahari Stoyanov Str\, Botevgrad\, 2140\, Bulgaria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000143-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T200000
+DTEND;TZID=Europe/Brussels:20261203T220000
+SUMMARY:FC Bayern Munich – Paris Basketball
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000145-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T204500
+DTEND;TZID=Europe/Brussels:20261203T224500
+SUMMARY:Real Madrid – FC Barcelona
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000146-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261204T180000
+DTEND;TZID=Europe/Brussels:20261204T200000
+SUMMARY:Besiktas Istanbul – Panathinaikos AKTOR Athens
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000147-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261204T190000
+DTEND;TZID=Europe/Brussels:20261204T210000
+SUMMARY:Zalgiris Kaunas – Dubai Basketball
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000150-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261204T201500
+DTEND;TZID=Europe/Brussels:20261204T221500
+SUMMARY:Olympiacos Piraeus – LDLC ASVEL Villeurbanne
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000149-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:Virtus Bologna – Partizan Mozzart Bet Belgrade
+LOCATION:Paladozza\, Via Nannetti 1\, 40122 Bologna - Italy
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000148-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000155-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T184500
+DTEND;TZID=Europe/Brussels:20261210T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Anadolu Efes Istanbul
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000152-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T190000
+DTEND;TZID=Europe/Brussels:20261210T210000
+SUMMARY:Zalgiris Kaunas – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000151-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T190000
+DTEND;TZID=Europe/Brussels:20261210T210000
+SUMMARY:Hapoel IBI Tel Aviv – LDLC ASVEL Villeurbanne
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000157-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T203000
+DTEND;TZID=Europe/Brussels:20261210T223000
+SUMMARY:Valencia Basket – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000153-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T203000
+DTEND;TZID=Europe/Brussels:20261210T223000
+SUMMARY:Armani Olimpia Milan – FC Bayern Munich
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000154-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261210T204500
+DTEND;TZID=Europe/Brussels:20261210T224500
+SUMMARY:Paris Basketball – Real Madrid
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000156-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261211T170000
+DTEND;TZID=Europe/Brussels:20261211T190000
+SUMMARY:Dubai Basketball – Besiktas Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000160-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261211T201500
+DTEND;TZID=Europe/Brussels:20261211T221500
+SUMMARY:Panathinaikos AKTOR Athens – Olympiacos Piraeus
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000158-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261211T203000
+DTEND;TZID=Europe/Brussels:20261211T223000
+SUMMARY:Virtus Bologna – Maccabi Rapyd Tel Aviv
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000159-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261211T204500
+DTEND;TZID=Europe/Brussels:20261211T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – FC Barcelona
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000169-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T183000
+DTEND;TZID=Europe/Brussels:20261215T203000
+SUMMARY:Anadolu Efes Istanbul – Partizan Mozzart Bet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000164-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T184500
+DTEND;TZID=Europe/Brussels:20261215T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Hapoel IBI Tel Aviv
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000163-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T203000
+DTEND;TZID=Europe/Brussels:20261215T223000
+SUMMARY:Virtus Bologna – LDLC ASVEL Villeurbanne
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000162-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T203000
+DTEND;TZID=Europe/Brussels:20261215T223000
+SUMMARY:Valencia Basket – Dubai Basketball
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000166-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T204500
+DTEND;TZID=Europe/Brussels:20261215T224500
+SUMMARY:Real Madrid – FC Bayern Munich
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000165-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T204500
+DTEND;TZID=Europe/Brussels:20261215T224500
+SUMMARY:Paris Basketball – Olympiacos Piraeus
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000161-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261215T210000
+DTEND;TZID=Europe/Brussels:20261215T230000
+SUMMARY:Maccabi Rapyd Tel Aviv – Zalgiris Kaunas
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000167-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261216T180000
+DTEND;TZID=Europe/Brussels:20261216T200000
+SUMMARY:Besiktas Istanbul – Armani Olimpia Milan
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000170-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261216T201500
+DTEND;TZID=Europe/Brussels:20261216T221500
+SUMMARY:Panathinaikos AKTOR Athens – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000168-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261216T203000
+DTEND;TZID=Europe/Brussels:20261216T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – FC Barcelona
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000173-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261217T184500
+DTEND;TZID=Europe/Brussels:20261217T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Maccabi Rapyd Tel Aviv
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000171-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261217T190000
+DTEND;TZID=Europe/Brussels:20261217T210000
+SUMMARY:Hapoel IBI Tel Aviv – Zalgiris Kaunas
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000172-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261217T200000
+DTEND;TZID=Europe/Brussels:20261217T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Dubai Basketball
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000174-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261217T204500
+DTEND;TZID=Europe/Brussels:20261217T224500
+SUMMARY:Real Madrid – Valencia Basket
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000176-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T183000
+DTEND;TZID=Europe/Brussels:20261218T203000
+SUMMARY:Anadolu Efes Istanbul – Armani Olimpia Milan
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000180-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T193000
+DTEND;TZID=Europe/Brussels:20261218T213000
+SUMMARY:Olympiacos Piraeus – Partizan Mozzart Bet Belgrade
+LOCATION:Sunel Arena\, Konstantinoupoleos 59\, Ano Liosia\, 13342 Athens\, Greece
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000179-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T200000
+DTEND;TZID=Europe/Brussels:20261218T220000
+SUMMARY:FC Bayern Munich – Panathinaikos AKTOR Athens
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000177-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T203000
+DTEND;TZID=Europe/Brussels:20261218T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Paris Basketball
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000175-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T203000
+DTEND;TZID=Europe/Brussels:20261218T223000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Besiktas Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000178-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261218T204500
+DTEND;TZID=Europe/Brussels:20261218T224500
+SUMMARY:FC Barcelona – Virtus Bologna
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000181-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261222T180000
+DTEND;TZID=Europe/Brussels:20261222T200000
+SUMMARY:Besiktas Istanbul – Fenerbahce Tarfin Istanbul
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000182-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261222T190000
+DTEND;TZID=Europe/Brussels:20261222T210000
+SUMMARY:Hapoel IBI Tel Aviv – Partizan Mozzart Bet Belgrade
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000184-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261222T200000
+DTEND;TZID=Europe/Brussels:20261222T220000
+SUMMARY:FC Bayern Munich – Olympiacos Piraeus
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000183-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261222T200000
+DTEND;TZID=Europe/Brussels:20261222T220000
+SUMMARY:LDLC ASVEL Villeurbanne – FC Barcelona
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000185-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261222T203000
+DTEND;TZID=Europe/Brussels:20261222T223000
+SUMMARY:Virtus Bologna – Real Madrid
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000187-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261223T170000
+DTEND;TZID=Europe/Brussels:20261223T190000
+SUMMARY:Dubai Basketball – Panathinaikos AKTOR Athens
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000188-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261223T190000
+DTEND;TZID=Europe/Brussels:20261223T210000
+SUMMARY:Zalgiris Kaunas – Valencia Basket
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000186-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261223T200000
+DTEND;TZID=Europe/Brussels:20261223T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000189-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261223T200500
+DTEND;TZID=Europe/Brussels:20261223T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Anadolu Efes Istanbul
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000190-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261223T203000
+DTEND;TZID=Europe/Brussels:20261223T223000
+SUMMARY:Armani Olimpia Milan – Paris Basketball
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000193-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261229T184500
+DTEND;TZID=Europe/Brussels:20261229T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Panathinaikos AKTOR Athens
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000191-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261229T190000
+DTEND;TZID=Europe/Brussels:20261229T210000
+SUMMARY:Hapoel IBI Tel Aviv – Maccabi Rapyd Tel Aviv
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000192-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261229T203000
+DTEND;TZID=Europe/Brussels:20261229T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Valencia Basket
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000194-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261229T204500
+DTEND;TZID=Europe/Brussels:20261229T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Zalgiris Kaunas
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000195-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261229T210000
+DTEND;TZID=Europe/Brussels:20261229T230000
+SUMMARY:Real Madrid – Dubai Basketball
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000197-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261230T183000
+DTEND;TZID=Europe/Brussels:20261230T203000
+SUMMARY:Anadolu Efes Istanbul – FC Barcelona
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000198-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261230T200000
+DTEND;TZID=Europe/Brussels:20261230T220000
+SUMMARY:FC Bayern Munich – Besiktas Istanbul
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000196-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261230T200000
+DTEND;TZID=Europe/Brussels:20261230T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Olympiacos Piraeus
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000199-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261230T203000
+DTEND;TZID=Europe/Brussels:20261230T223000
+SUMMARY:Virtus Bologna – Armani Olimpia Milan
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000200-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261230T204500
+DTEND;TZID=Europe/Brussels:20261230T224500
+SUMMARY:Paris Basketball – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Accor Arena
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000201-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270106T203000
+DTEND;TZID=Europe/Brussels:20270106T223000
+SUMMARY:FC Barcelona – Besiktas Istanbul
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000203-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T180000
+DTEND;TZID=Europe/Brussels:20270107T200000
+SUMMARY:Maccabi Rapyd Tel Aviv – Panathinaikos AKTOR Athens
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000204-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T183000
+DTEND;TZID=Europe/Brussels:20270107T203000
+SUMMARY:Anadolu Efes Istanbul – Fenerbahce Tarfin Istanbul
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000202-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T190000
+DTEND;TZID=Europe/Brussels:20270107T210000
+SUMMARY:Zalgiris Kaunas – Paris Basketball
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000206-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T203000
+DTEND;TZID=Europe/Brussels:20270107T223000
+SUMMARY:Valencia Basket – Partizan Mozzart Bet Belgrade
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000205-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T203000
+DTEND;TZID=Europe/Brussels:20270107T223000
+SUMMARY:Armani Olimpia Milan – Hapoel IBI Tel Aviv
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000210-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270107T204500
+DTEND;TZID=Europe/Brussels:20270107T224500
+SUMMARY:Real Madrid – Olympiacos Piraeus
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000208-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270108T170000
+DTEND;TZID=Europe/Brussels:20270108T190000
+SUMMARY:Dubai Basketball – FC Bayern Munich
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000207-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270108T200000
+DTEND;TZID=Europe/Brussels:20270108T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – LDLC ASVEL Villeurbanne
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000209-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270108T203000
+DTEND;TZID=Europe/Brussels:20270108T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Virtus Bologna
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000217-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T170000
+DTEND;TZID=Europe/Brussels:20270112T190000
+SUMMARY:Dubai Basketball – Fenerbahce Tarfin Istanbul
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000212-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T180000
+DTEND;TZID=Europe/Brussels:20270112T200000
+SUMMARY:Hapoel IBI Tel Aviv – Paris Basketball
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000213-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T200000
+DTEND;TZID=Europe/Brussels:20270112T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Zalgiris Kaunas
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000211-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T200000
+DTEND;TZID=Europe/Brussels:20270112T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Real Madrid
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000218-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T201500
+DTEND;TZID=Europe/Brussels:20270112T221500
+SUMMARY:Panathinaikos AKTOR Athens – Valencia Basket
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000216-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T203000
+DTEND;TZID=Europe/Brussels:20270112T223000
+SUMMARY:Virtus Bologna – Anadolu Efes Istanbul
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000215-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T203000
+DTEND;TZID=Europe/Brussels:20270112T223000
+SUMMARY:FC Barcelona – Armani Olimpia Milan
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000214-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270112T203000
+DTEND;TZID=Europe/Brussels:20270112T223000
+SUMMARY:Maccabi Rapyd Tel Aviv – FC Bayern Munich
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000219-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270113T180000
+DTEND;TZID=Europe/Brussels:20270113T200000
+SUMMARY:Besiktas Istanbul – Partizan Mozzart Bet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000220-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270113T201500
+DTEND;TZID=Europe/Brussels:20270113T221500
+SUMMARY:Olympiacos Piraeus – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000222-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270114T190000
+DTEND;TZID=Europe/Brussels:20270114T210000
+SUMMARY:Zalgiris Kaunas – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000221-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270114T190000
+DTEND;TZID=Europe/Brussels:20270114T210000
+SUMMARY:Hapoel IBI Tel Aviv – Valencia Basket
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000225-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270114T201500
+DTEND;TZID=Europe/Brussels:20270114T221500
+SUMMARY:Panathinaikos AKTOR Athens – FC Bayern Munich
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000223-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270114T203000
+DTEND;TZID=Europe/Brussels:20270114T223000
+SUMMARY:Armani Olimpia Milan – LDLC ASVEL Villeurbanne
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000224-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270114T204500
+DTEND;TZID=Europe/Brussels:20270114T224500
+SUMMARY:Real Madrid – Anadolu Efes Istanbul
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000227-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270115T170000
+DTEND;TZID=Europe/Brussels:20270115T190000
+SUMMARY:Dubai Basketball – Maccabi Rapyd Tel Aviv
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000226-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270115T180000
+DTEND;TZID=Europe/Brussels:20270115T200000
+SUMMARY:Besiktas Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000230-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270115T201500
+DTEND;TZID=Europe/Brussels:20270115T221500
+SUMMARY:Olympiacos Piraeus – Paris Basketball
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000228-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270115T203000
+DTEND;TZID=Europe/Brussels:20270115T223000
+SUMMARY:Virtus Bologna – FC Barcelona
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000229-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270115T204500
+DTEND;TZID=Europe/Brussels:20270115T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Fenerbahce Tarfin Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000231-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T180000
+DTEND;TZID=Europe/Brussels:20270121T200000
+SUMMARY:Hapoel IBI Tel Aviv – Panathinaikos AKTOR Athens
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000233-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T184500
+DTEND;TZID=Europe/Brussels:20270121T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Besiktas Istanbul
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000232-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T200000
+DTEND;TZID=Europe/Brussels:20270121T220000
+SUMMARY:FC Bayern Munich – Armani Olimpia Milan
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000236-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T204500
+DTEND;TZID=Europe/Brussels:20270121T224500
+SUMMARY:Real Madrid – Maccabi Rapyd Tel Aviv
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000235-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T204500
+DTEND;TZID=Europe/Brussels:20270121T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Olympiacos Piraeus
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000234-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270121T204500
+DTEND;TZID=Europe/Brussels:20270121T224500
+SUMMARY:Paris Basketball – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000239-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270122T183000
+DTEND;TZID=Europe/Brussels:20270122T203000
+SUMMARY:Anadolu Efes Istanbul – Dubai Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000238-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270122T190000
+DTEND;TZID=Europe/Brussels:20270122T210000
+SUMMARY:Zalgiris Kaunas – Virtus Bologna
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000237-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270122T200000
+DTEND;TZID=Europe/Brussels:20270122T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – FC Barcelona
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000240-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270122T203000
+DTEND;TZID=Europe/Brussels:20270122T223000
+SUMMARY:Valencia Basket – LDLC ASVEL Villeurbanne
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000241-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270128T180000
+DTEND;TZID=Europe/Brussels:20270128T200000
+SUMMARY:Besiktas Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000243-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270128T200000
+DTEND;TZID=Europe/Brussels:20270128T220000
+SUMMARY:FC Bayern Munich – Valencia Basket
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000245-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270128T201500
+DTEND;TZID=Europe/Brussels:20270128T221500
+SUMMARY:Olympiacos Piraeus – Maccabi Rapyd Tel Aviv
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000244-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270128T203000
+DTEND;TZID=Europe/Brussels:20270128T223000
+SUMMARY:Virtus Bologna – Paris Basketball
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000242-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270128T203000
+DTEND;TZID=Europe/Brussels:20270128T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Zalgiris Kaunas
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000249-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270129T184500
+DTEND;TZID=Europe/Brussels:20270129T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Real Madrid
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000246-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270129T200000
+DTEND;TZID=Europe/Brussels:20270129T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Hapoel IBI Tel Aviv
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000250-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270129T201500
+DTEND;TZID=Europe/Brussels:20270129T221500
+SUMMARY:Panathinaikos AKTOR Athens – Anadolu Efes Istanbul
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000248-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:FC Barcelona – Dubai Basketball
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000247-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:Armani Olimpia Milan – Partizan Mozzart Bet Belgrade
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000252-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T183000
+DTEND;TZID=Europe/Brussels:20270202T203000
+SUMMARY:Anadolu Efes Istanbul – Zalgiris Kaunas
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000251-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T200500
+DTEND;TZID=Europe/Brussels:20270202T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Virtus Bologna
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000256-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T201500
+DTEND;TZID=Europe/Brussels:20270202T221500
+SUMMARY:Panathinaikos AKTOR Athens – Dubai Basketball
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000253-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T203000
+DTEND;TZID=Europe/Brussels:20270202T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Fenerbahce Tarfin Istanbul
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000255-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T204500
+DTEND;TZID=Europe/Brussels:20270202T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Real Madrid
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000254-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270202T204500
+DTEND;TZID=Europe/Brussels:20270202T224500
+SUMMARY:Paris Basketball – Besiktas Istanbul
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000257-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270203T190000
+DTEND;TZID=Europe/Brussels:20270203T210000
+SUMMARY:Hapoel IBI Tel Aviv – Olympiacos Piraeus
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000259-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270203T200000
+DTEND;TZID=Europe/Brussels:20270203T220000
+SUMMARY:FC Bayern Munich – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000258-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270203T203000
+DTEND;TZID=Europe/Brussels:20270203T223000
+SUMMARY:FC Barcelona – LDLC ASVEL Villeurbanne
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000260-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270203T204500
+DTEND;TZID=Europe/Brussels:20270203T224500
+SUMMARY:Valencia Basket – Armani Olimpia Milan
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000261-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270204T170000
+DTEND;TZID=Europe/Brussels:20270204T190000
+SUMMARY:Dubai Basketball – Virtus Bologna
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000263-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270204T183000
+DTEND;TZID=Europe/Brussels:20270204T203000
+SUMMARY:Anadolu Efes Istanbul – Maccabi Rapyd Tel Aviv
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000262-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270204T190000
+DTEND;TZID=Europe/Brussels:20270204T210000
+SUMMARY:Zalgiris Kaunas – Besiktas Istanbul
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000264-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270204T204500
+DTEND;TZID=Europe/Brussels:20270204T224500
+SUMMARY:Real Madrid – Paris Basketball
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000270-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T193000
+DTEND;TZID=Europe/Brussels:20270205T213000
+SUMMARY:Olympiacos Piraeus – FC Bayern Munich
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000265-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T200000
+DTEND;TZID=Europe/Brussels:20270205T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Fenerbahce Tarfin Istanbul
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000267-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T203000
+DTEND;TZID=Europe/Brussels:20270205T223000
+SUMMARY:Armani Olimpia Milan – Panathinaikos AKTOR Athens
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000266-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T203000
+DTEND;TZID=Europe/Brussels:20270205T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000269-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T204500
+DTEND;TZID=Europe/Brussels:20270205T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Hapoel IBI Tel Aviv
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000268-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270205T204500
+DTEND;TZID=Europe/Brussels:20270205T224500
+SUMMARY:Valencia Basket – FC Barcelona
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000271-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270210T190000
+DTEND;TZID=Europe/Brussels:20270210T210000
+SUMMARY:Hapoel IBI Tel Aviv – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000272-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270210T200000
+DTEND;TZID=Europe/Brussels:20270210T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Anadolu Efes Istanbul
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000273-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270211T180000
+DTEND;TZID=Europe/Brussels:20270211T200000
+SUMMARY:Besiktas Istanbul – Dubai Basketball
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000274-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270211T200000
+DTEND;TZID=Europe/Brussels:20270211T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Partizan Mozzart Bet Belgrade
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000275-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270211T200500
+DTEND;TZID=Europe/Brussels:20270211T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – FC Barcelona
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000277-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270211T203000
+DTEND;TZID=Europe/Brussels:20270211T223000
+SUMMARY:Virtus Bologna – FC Bayern Munich
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000276-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270211T203000
+DTEND;TZID=Europe/Brussels:20270211T223000
+SUMMARY:Valencia Basket – Paris Basketball
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000279-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270212T184500
+DTEND;TZID=Europe/Brussels:20270212T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Armani Olimpia Milan
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000278-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270212T190000
+DTEND;TZID=Europe/Brussels:20270212T210000
+SUMMARY:Zalgiris Kaunas – Real Madrid
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000280-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270212T201500
+DTEND;TZID=Europe/Brussels:20270212T221500
+SUMMARY:Olympiacos Piraeus – Panathinaikos AKTOR Athens
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000285-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270304T201500
+DTEND;TZID=Europe/Brussels:20270304T221500
+SUMMARY:Panathinaikos AKTOR Athens – Besiktas Istanbul
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000283-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270304T203000
+DTEND;TZID=Europe/Brussels:20270304T223000
+SUMMARY:Virtus Bologna – Hapoel IBI Tel Aviv
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000282-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270304T203000
+DTEND;TZID=Europe/Brussels:20270304T223000
+SUMMARY:Valencia Basket – Zalgiris Kaunas
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000284-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270304T204500
+DTEND;TZID=Europe/Brussels:20270304T224500
+SUMMARY:Paris Basketball – Maccabi Rapyd Tel Aviv
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000281-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270304T204500
+DTEND;TZID=Europe/Brussels:20270304T224500
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Partizan Mozzart Bet Belgrade
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000287-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270305T170000
+DTEND;TZID=Europe/Brussels:20270305T190000
+SUMMARY:Dubai Basketball – Olympiacos Piraeus
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000290-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270305T200000
+DTEND;TZID=Europe/Brussels:20270305T220000
+SUMMARY:FC Bayern Munich – LDLC ASVEL Villeurbanne
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000286-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270305T200000
+DTEND;TZID=Europe/Brussels:20270305T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Fenerbahce Tarfin Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000289-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270305T203000
+DTEND;TZID=Europe/Brussels:20270305T223000
+SUMMARY:FC Barcelona – Real Madrid
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000288-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270305T203000
+DTEND;TZID=Europe/Brussels:20270305T223000
+SUMMARY:Armani Olimpia Milan – Anadolu Efes Istanbul
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000291-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T180000
+DTEND;TZID=Europe/Brussels:20270309T200000
+SUMMARY:Besiktas Istanbul – LDLC ASVEL Villeurbanne
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000292-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T190000
+DTEND;TZID=Europe/Brussels:20270309T210000
+SUMMARY:Zalgiris Kaunas – FC Barcelona
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000295-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T200000
+DTEND;TZID=Europe/Brussels:20270309T220000
+SUMMARY:FC Bayern Munich – Anadolu Efes Istanbul
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000293-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T200500
+DTEND;TZID=Europe/Brussels:20270309T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000296-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T203000
+DTEND;TZID=Europe/Brussels:20270309T223000
+SUMMARY:Virtus Bologna – Fenerbahce Tarfin Istanbul
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000294-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T203000
+DTEND;TZID=Europe/Brussels:20270309T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – Panathinaikos AKTOR Athens
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000298-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T204500
+DTEND;TZID=Europe/Brussels:20270309T224500
+SUMMARY:Real Madrid – Hapoel IBI Tel Aviv
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000297-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270309T204500
+DTEND;TZID=Europe/Brussels:20270309T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Paris Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000299-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270310T170000
+DTEND;TZID=Europe/Brussels:20270310T190000
+SUMMARY:Dubai Basketball – Valencia Basket
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000300-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270310T203000
+DTEND;TZID=Europe/Brussels:20270310T223000
+SUMMARY:Armani Olimpia Milan – Olympiacos Piraeus
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000303-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270311T200000
+DTEND;TZID=Europe/Brussels:20270311T220000
+SUMMARY:FC Bayern Munich – Hapoel IBI Tel Aviv
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000301-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270311T200500
+DTEND;TZID=Europe/Brussels:20270311T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – LDLC ASVEL Villeurbanne
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000305-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270311T204500
+DTEND;TZID=Europe/Brussels:20270311T224500
+SUMMARY:Real Madrid – Virtus Bologna
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000304-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270311T204500
+DTEND;TZID=Europe/Brussels:20270311T224500
+SUMMARY:Paris Basketball – Panathinaikos AKTOR Athens
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000302-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270311T204500
+DTEND;TZID=Europe/Brussels:20270311T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Anadolu Efes Istanbul
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000309-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270312T184500
+DTEND;TZID=Europe/Brussels:20270312T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Valencia Basket
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000307-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270312T190000
+DTEND;TZID=Europe/Brussels:20270312T210000
+SUMMARY:Zalgiris Kaunas – Armani Olimpia Milan
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000306-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270312T200000
+DTEND;TZID=Europe/Brussels:20270312T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Dubai Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000310-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270312T201500
+DTEND;TZID=Europe/Brussels:20270312T221500
+SUMMARY:Olympiacos Piraeus – Besiktas Istanbul
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000308-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270312T203000
+DTEND;TZID=Europe/Brussels:20270312T223000
+SUMMARY:FC Barcelona – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000313-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270318T184500
+DTEND;TZID=Europe/Brussels:20270318T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – Paris Basketball
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000311-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270318T200500
+DTEND;TZID=Europe/Brussels:20270318T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Valencia Basket
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000315-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270318T201500
+DTEND;TZID=Europe/Brussels:20270318T221500
+SUMMARY:Panathinaikos AKTOR Athens – Zalgiris Kaunas
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000314-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270318T204500
+DTEND;TZID=Europe/Brussels:20270318T224500
+SUMMARY:Real Madrid – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000312-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270318T204500
+DTEND;TZID=Europe/Brussels:20270318T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – FC Bayern Munich
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000318-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270319T170000
+DTEND;TZID=Europe/Brussels:20270319T190000
+SUMMARY:Dubai Basketball – Armani Olimpia Milan
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000316-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270319T180000
+DTEND;TZID=Europe/Brussels:20270319T200000
+SUMMARY:Besiktas Istanbul – Anadolu Efes Istanbul
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000319-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270319T200000
+DTEND;TZID=Europe/Brussels:20270319T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Virtus Bologna
+LOCATION:Astroballe\, 40/44 Av. Marcel Cerdan\, 69100 Villeurbanne\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000317-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270319T200000
+DTEND;TZID=Europe/Brussels:20270319T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Olympiacos Piraeus
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000320-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270319T203000
+DTEND;TZID=Europe/Brussels:20270319T223000
+SUMMARY:FC Barcelona – Hapoel IBI Tel Aviv
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000321-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T170000
+DTEND;TZID=Europe/Brussels:20270323T190000
+SUMMARY:Dubai Basketball – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000324-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T183000
+DTEND;TZID=Europe/Brussels:20270323T203000
+SUMMARY:Anadolu Efes Istanbul – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000322-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T190000
+DTEND;TZID=Europe/Brussels:20270323T210000
+SUMMARY:Hapoel IBI Tel Aviv – Fenerbahce Tarfin Istanbul
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000323-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T200000
+DTEND;TZID=Europe/Brussels:20270323T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Panathinaikos AKTOR Athens
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000326-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T204500
+DTEND;TZID=Europe/Brussels:20270323T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Virtus Bologna
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000325-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270323T204500
+DTEND;TZID=Europe/Brussels:20270323T224500
+SUMMARY:Paris Basketball – Armani Olimpia Milan
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000327-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270324T190000
+DTEND;TZID=Europe/Brussels:20270324T210000
+SUMMARY:Zalgiris Kaunas – Maccabi Rapyd Tel Aviv
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000328-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270324T200000
+DTEND;TZID=Europe/Brussels:20270324T220000
+SUMMARY:FC Bayern Munich – Real Madrid
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000330-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270324T201500
+DTEND;TZID=Europe/Brussels:20270324T221500
+SUMMARY:Olympiacos Piraeus – FC Barcelona
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000329-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270324T203000
+DTEND;TZID=Europe/Brussels:20270324T223000
+SUMMARY:Valencia Basket – Besiktas Istanbul
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000333-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270325T183000
+DTEND;TZID=Europe/Brussels:20270325T203000
+SUMMARY:Anadolu Efes Istanbul – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000331-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270325T190000
+DTEND;TZID=Europe/Brussels:20270325T210000
+SUMMARY:Hapoel IBI Tel Aviv – Dubai Basketball
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000332-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270325T200000
+DTEND;TZID=Europe/Brussels:20270325T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Paris Basketball
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000334-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270325T201500
+DTEND;TZID=Europe/Brussels:20270325T221500
+SUMMARY:Panathinaikos AKTOR Athens – Partizan Mozzart Bet Belgrade
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000338-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T184500
+DTEND;TZID=Europe/Brussels:20270326T204500
+SUMMARY:Fenerbahce Tarfin Istanbul – FC Barcelona
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000337-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T200000
+DTEND;TZID=Europe/Brussels:20270326T220000
+SUMMARY:FC Bayern Munich – Zalgiris Kaunas
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000335-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T200000
+DTEND;TZID=Europe/Brussels:20270326T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Valencia Basket
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000340-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T201500
+DTEND;TZID=Europe/Brussels:20270326T221500
+SUMMARY:Olympiacos Piraeus – Virtus Bologna
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000336-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T203000
+DTEND;TZID=Europe/Brussels:20270326T223000
+SUMMARY:Armani Olimpia Milan – Maccabi Rapyd Tel Aviv
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000339-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270326T204500
+DTEND;TZID=Europe/Brussels:20270326T224500
+SUMMARY:Real Madrid – Besiktas Istanbul
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000343-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270331T193000
+DTEND;TZID=Europe/Brussels:20270331T213000
+SUMMARY:Anadolu Efes Istanbul – Olympiacos Piraeus
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000341-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270331T200000
+DTEND;TZID=Europe/Brussels:20270331T220000
+SUMMARY:Zalgiris Kaunas – Hapoel IBI Tel Aviv
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000342-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270331T203000
+DTEND;TZID=Europe/Brussels:20270331T223000
+SUMMARY:Virtus Bologna – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000344-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270401T200500
+DTEND;TZID=Europe/Brussels:20270401T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Fenerbahce Tarfin Istanbul
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000346-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270401T203000
+DTEND;TZID=Europe/Brussels:20270401T223000
+SUMMARY:Valencia Basket – Real Madrid
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000345-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270401T203000
+DTEND;TZID=Europe/Brussels:20270401T223000
+SUMMARY:Armani Olimpia Milan – Besiktas Istanbul
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000347-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270401T204500
+DTEND;TZID=Europe/Brussels:20270401T224500
+SUMMARY:Paris Basketball – Dubai Basketball
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000349-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270402T203000
+DTEND;TZID=Europe/Brussels:20270402T223000
+SUMMARY:FC Barcelona – Panathinaikos AKTOR Athens
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000348-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270402T203000
+DTEND;TZID=Europe/Brussels:20270402T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – FC Bayern Munich
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000350-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270402T204500
+DTEND;TZID=Europe/Brussels:20270402T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – LDLC ASVEL Villeurbanne
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000351-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T190000
+DTEND;TZID=Europe/Brussels:20270406T210000
+SUMMARY:Besiktas Istanbul – Hapoel IBI Tel Aviv
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000356-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T194500
+DTEND;TZID=Europe/Brussels:20270406T214500
+SUMMARY:Fenerbahce Tarfin Istanbul – Olympiacos Piraeus
+LOCATION:Ulker Sports And Event Hall\, Barbaros Mah. Ihlamur Sok. Batı Ataşehir\, 34764 Istanbul\, Turkiye 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000355-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T203000
+DTEND;TZID=Europe/Brussels:20270406T223000
+SUMMARY:Virtus Bologna – Valencia Basket
+LOCATION:Virtus Arena\, Viale della Fiera\, 40128\, Bologna
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000353-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T203000
+DTEND;TZID=Europe/Brussels:20270406T223000
+SUMMARY:Kosner Baskonia Vitoria-Gasteiz – LDLC ASVEL Villeurbanne
+LOCATION:Buesa Arena\, Ctra.  Zurbano s/n\, 01013 Vitoria
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000352-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T203000
+DTEND;TZID=Europe/Brussels:20270406T223000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Panathinaikos AKTOR Athens
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000358-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T204500
+DTEND;TZID=Europe/Brussels:20270406T224500
+SUMMARY:Real Madrid – Armani Olimpia Milan
+LOCATION:Movistar Arena\, Avenida de Felipe II 1\, 28009\, Madrid
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000357-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T204500
+DTEND;TZID=Europe/Brussels:20270406T224500
+SUMMARY:Paris Basketball – Anadolu Efes Istanbul
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000354-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270406T204500
+DTEND;TZID=Europe/Brussels:20270406T224500
+SUMMARY:FC Barcelona – FC Bayern Munich
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000360-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270407T180000
+DTEND;TZID=Europe/Brussels:20270407T200000
+SUMMARY:Maccabi Rapyd Tel Aviv – Partizan Mozzart Bet Belgrade
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000359-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270407T180000
+DTEND;TZID=Europe/Brussels:20270407T200000
+SUMMARY:Dubai Basketball – Zalgiris Kaunas
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000361-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T190000
+DTEND;TZID=Europe/Brussels:20270408T210000
+SUMMARY:Hapoel IBI Tel Aviv – Crvena Zvezda Meridianbet Belgrade
+LOCATION:Arena 8888 Sofia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000364-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T200000
+DTEND;TZID=Europe/Brussels:20270408T220000
+SUMMARY:FC Bayern Munich – Fenerbahce Tarfin Istanbul
+LOCATION:Sap Garden\, Toni-Merkens-Weg 4\, 80809 Munich - Germany
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000362-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T200000
+DTEND;TZID=Europe/Brussels:20270408T220000
+SUMMARY:LDLC ASVEL Villeurbanne – Real Madrid
+LOCATION:Ldlc Arena\, Avenue Simone Veil 5\, 69150 Décines-Charpieu - France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000367-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T201500
+DTEND;TZID=Europe/Brussels:20270408T221500
+SUMMARY:Panathinaikos AKTOR Athens – Virtus Bologna
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000365-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T203000
+DTEND;TZID=Europe/Brussels:20270408T223000
+SUMMARY:Valencia Basket – Anadolu Efes Istanbul
+LOCATION:Roig Arena\, C/ del Bomber Ramon Duart\, 12\, Quatre Carreres\, 46013 Valencia 
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000363-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T203000
+DTEND;TZID=Europe/Brussels:20270408T223000
+SUMMARY:Armani Olimpia Milan – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Unipol Forum\, Via G. Di Vittorio 6\, 20090 Assago
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000366-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270408T204500
+DTEND;TZID=Europe/Brussels:20270408T224500
+SUMMARY:Paris Basketball – FC Barcelona
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000368-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270409T190000
+DTEND;TZID=Europe/Brussels:20270409T210000
+SUMMARY:Besiktas Istanbul – Maccabi Rapyd Tel Aviv
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000370-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270409T201500
+DTEND;TZID=Europe/Brussels:20270409T221500
+SUMMARY:Olympiacos Piraeus – Zalgiris Kaunas
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000369-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270409T204500
+DTEND;TZID=Europe/Brussels:20270409T224500
+SUMMARY:Partizan Mozzart Bet Belgrade – Dubai Basketball
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000371-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T190000
+DTEND;TZID=Europe/Brussels:20270415T210000
+SUMMARY:Zalgiris Kaunas – Fenerbahce Tarfin Istanbul
+LOCATION:Zalgirio Arena\, Karaliaus Mindaugo Av. 50\, 44287 Kaunas
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000374-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T193000
+DTEND;TZID=Europe/Brussels:20270415T213000
+SUMMARY:Anadolu Efes Istanbul – Hapoel IBI Tel Aviv
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000372-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T200000
+DTEND;TZID=Europe/Brussels:20270415T220000
+SUMMARY:Crvena Zvezda Meridianbet Belgrade – Armani Olimpia Milan
+LOCATION:Belgrade Arena\, Bulevar Arsenija Carnojevica 58\, 11070 Belgrade - Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000373-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T200500
+DTEND;TZID=Europe/Brussels:20270415T220500
+SUMMARY:Maccabi Rapyd Tel Aviv – Kosner Baskonia Vitoria-Gasteiz
+LOCATION:Aleksandar Nikolic Hall\, Carlija Caplina 39\, Belgrade 11000\, Serbia
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000376-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T201500
+DTEND;TZID=Europe/Brussels:20270415T221500
+SUMMARY:Panathinaikos AKTOR Athens – Real Madrid
+LOCATION:Telekom Center Athens\, 37 Kifisias Avenue\, 15123 Marousi
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000375-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270415T204500
+DTEND;TZID=Europe/Brussels:20270415T224500
+SUMMARY:Paris Basketball – FC Bayern Munich
+LOCATION:Adidas Arena\, 56 Boulevard Ney\, 75018 Paris\, France
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000378-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270416T180000
+DTEND;TZID=Europe/Brussels:20270416T200000
+SUMMARY:Dubai Basketball – LDLC ASVEL Villeurbanne
+LOCATION:Coca-Cola Arena\, Al Wasl - سٹی واک - Dubai - United Arab Emirates
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000377-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270416T190000
+DTEND;TZID=Europe/Brussels:20270416T210000
+SUMMARY:Besiktas Istanbul – Virtus Bologna
+LOCATION:Turkcell Basketball Development Center\, Kazliçesme Mah. 10. Yil Caddesi No: 2/1 Zeytinburnu / Turkiye
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000380-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270416T201500
+DTEND;TZID=Europe/Brussels:20270416T221500
+SUMMARY:Olympiacos Piraeus – Valencia Basket
+LOCATION:Peace And Friendship Stadium\, Ethnarchou Makariou Av.\, Piraeus
+DESCRIPTION:EuroLeague
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-24500000379-comp-euroleague@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20270416T203000
+DTEND;TZID=Europe/Brussels:20270416T223000
+SUMMARY:FC Barcelona – Partizan Mozzart Bet Belgrade
+LOCATION:Palau Blaugrana\, Aristides Maillol Av S/N\, 08028 Barcelona
+DESCRIPTION:EuroLeague
+END:VEVENT
+END:VCALENDAR

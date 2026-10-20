@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Lithuania
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127027-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T203000
+DTEND;TZID=Europe/Brussels:20251127T223000
+SUMMARY:Great Britain – Lithuania (88-89)
+LOCATION:Copper Box Arena\, London\, Great Britain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127030-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T173000
+DTEND;TZID=Europe/Brussels:20251130T193000
+SUMMARY:Lithuania – Italy (81-82)
+LOCATION:Svyturio Arena\, Klaipeda\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127031-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T203000
+DTEND;TZID=Europe/Brussels:20260227T223000
+SUMMARY:Iceland – Lithuania (86-85)
+LOCATION:Laugardalshöll\, Reykjavik\, Iceland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127034-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T173000
+DTEND;TZID=Europe/Brussels:20260302T193000
+SUMMARY:Lithuania – Iceland (99-82)
+LOCATION:Svyturio Arena\, Klaipėda\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127035-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T173000
+DTEND;TZID=Europe/Brussels:20260702T193000
+SUMMARY:Lithuania – Great Britain (105-85)
+LOCATION:Svyturio Arena\, Klaipėda\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127025-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260705T200000
+DTEND;TZID=Europe/Brussels:20260705T220000
+SUMMARY:Italy – Lithuania (87-84)
+LOCATION:Virtus Arena\, Bologna\, Italy
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127134-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T200000
+DTEND;TZID=Europe/Brussels:20260828T220000
+SUMMARY:Türkiye – Lithuania (94-66)
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127139-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T173000
+DTEND;TZID=Europe/Brussels:20260831T193000
+SUMMARY:Lithuania – Bosnia and Herzegovina (78-73)
+LOCATION:Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127141-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T173000
+DTEND;TZID=Europe/Brussels:20261126T193000
+SUMMARY:Lithuania – Serbia
+LOCATION:Svyturio Arena\, Klaipėda\, Lithuania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127145-31000283288@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T180000
+DTEND;TZID=Europe/Brussels:20261129T200000
+SUMMARY:Bosnia and Herzegovina – Lithuania
+LOCATION:"Juan Antonio Samaranch" - Zetra\, Sarajevo\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

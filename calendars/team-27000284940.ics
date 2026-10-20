@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Igokea m:tel
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136295-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261006T200000
+DTEND;TZID=Europe/Brussels:20261006T220000
+SUMMARY:Igokea m:tel – C.D. Basket Bilbao Berri S.A.D. (79-92)
+LOCATION:SD Laktaši\, Laktaši\, Bosnia and Herzegovina
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136297-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261013T200000
+DTEND;TZID=Europe/Brussels:20261013T220000
+SUMMARY:ALBA Berlin Basketballteam e.V. – Igokea m:tel (90-79)
+LOCATION:Berlin Arena\, Berlin\, Germany
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136299-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261027T200000
+DTEND;TZID=Europe/Brussels:20261027T220000
+SUMMARY:Igokea m:tel – ERA Basketball Nymburk
+LOCATION:SD Laktaši\, Laktaši\, Bosnia and Herzegovina
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136302-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261111T180000
+DTEND;TZID=Europe/Brussels:20261111T200000
+SUMMARY:ERA Basketball Nymburk – Igokea m:tel
+LOCATION:Enteria Arena \, Pardubice\, Czechia
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136304-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261208T200000
+DTEND;TZID=Europe/Brussels:20261208T220000
+SUMMARY:Igokea m:tel – ALBA Berlin Basketballteam e.V.
+LOCATION:SD Laktaši\, Laktaši\, Bosnia and Herzegovina
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136306-27000284940@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261222T200000
+DTEND;TZID=Europe/Brussels:20261222T220000
+SUMMARY:C.D. Basket Bilbao Berri S.A.D. – Igokea m:tel
+LOCATION:Bilbao Arena\, Bilbao\, Spain
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

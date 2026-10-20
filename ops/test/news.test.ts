@@ -69,3 +69,10 @@ describe('compétitions citées par une actu', () => {
     ['Le BC Hannut signe un mini-hold-up', []],
   ])('%s → %j', (t, ids) => expect(tag(t as string)).toEqual(ids));
 });
+
+describe('compTagger : compétitions au nom voisin', () => {
+  const tag = compTagger([{ id: 'euroleague', kw: ['euroleague'], not: ['euroleague women'] }, { id: 'elw', kw: ['euroleague women'] }, { id: 'nba', kw: ['nba'], not: ['wnba'] }]);
+  it('EuroLeague Women n’est pas l’EuroLeague', () => expect(tag('Castors Braine en EuroLeague Women')).toEqual(['elw']));
+  it('les deux cités : les deux repérés', () => expect(tag('EuroLeague : le Real gagne ; en EuroLeague Women, Mechelen aussi')).toEqual(['euroleague', 'elw']));
+  it('WNBA n’est pas la NBA', () => expect(tag('Finale WNBA : Atlanta égalise')).toEqual([]));
+});

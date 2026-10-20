@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Türkiye
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127023-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T190000
+DTEND;TZID=Europe/Brussels:20251127T210000
+SUMMARY:Türkiye – Bosnia and Herzegovina (93-71)
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127022-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T170000
+DTEND;TZID=Europe/Brussels:20251130T190000
+SUMMARY:Switzerland – Türkiye (60-85)
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127020-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T190000
+DTEND;TZID=Europe/Brussels:20260227T210000
+SUMMARY:Serbia – Türkiye (78-82)
+LOCATION:Aleksandar Nikolic Hall\, Belgrade\, Serbia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127017-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T190000
+DTEND;TZID=Europe/Brussels:20260302T210000
+SUMMARY:Türkiye – Serbia (94-86)
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127014-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T200000
+DTEND;TZID=Europe/Brussels:20260702T220000
+SUMMARY:Bosnia and Herzegovina – Türkiye (75-82)
+LOCATION:Arena "Husejin Smajlovic"\, Zenica\, Bosnia and Herzegovina
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127013-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260706T180000
+DTEND;TZID=Europe/Brussels:20260706T200000
+SUMMARY:Türkiye – Switzerland (95-72)
+LOCATION:Sinan Erdem Dome\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127134-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T200000
+DTEND;TZID=Europe/Brussels:20260828T220000
+SUMMARY:Türkiye – Lithuania (94-66)
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127137-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T213000
+DTEND;TZID=Europe/Brussels:20260831T233000
+SUMMARY:Iceland – Türkiye (73-110)
+LOCATION:Laugardalshöll\, Reykjavik\, Iceland
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127140-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T200000
+DTEND;TZID=Europe/Brussels:20261126T220000
+SUMMARY:Italy – Türkiye
+LOCATION:Palaeur\, Rome\, Italy
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127150-31000283297@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:Türkiye – Iceland
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

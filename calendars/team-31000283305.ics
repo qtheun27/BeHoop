@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Portugal
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-31500127590-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251127T180000
+DTEND;TZID=Europe/Brussels:20251127T200000
+SUMMARY:Montenegro – Portugal (62-83)
+LOCATION:Moraca Sports Centre\, Podgorica\, Montenegro
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127600-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20251130T180000
+DTEND;TZID=Europe/Brussels:20251130T200000
+SUMMARY:Portugal – Greece (68-76)
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127598-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260227T200000
+DTEND;TZID=Europe/Brussels:20260227T220000
+SUMMARY:Portugal – Romania (99-82)
+LOCATION:Multisports Hall Dr. Mario Mexia\, Coimbra\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127594-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260302T180000
+DTEND;TZID=Europe/Brussels:20260302T200000
+SUMMARY:Romania – Portugal (101-96)
+LOCATION:Pitesti Arena\, Pitesti\, Romania
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127592-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260702T200000
+DTEND;TZID=Europe/Brussels:20260702T220000
+SUMMARY:Portugal – Montenegro (68-72)
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127595-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260705T183000
+DTEND;TZID=Europe/Brussels:20260705T203000
+SUMMARY:Greece – Portugal (56-71)
+LOCATION:SUNEL Arena\, Athens\, Greece
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127098-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260828T210000
+DTEND;TZID=Europe/Brussels:20260828T230000
+SUMMARY:Spain – Portugal (89-95)
+LOCATION:Pabellon Principe Felipe\, Zaragoza\, Spain
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127103-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20260831T200000
+DTEND;TZID=Europe/Brussels:20260831T220000
+SUMMARY:Portugal – Georgia (90-98)
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127106-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261126T200000
+DTEND;TZID=Europe/Brussels:20261126T220000
+SUMMARY:Portugal – Ukraine
+LOCATION:Centro de Desportos e Congressos de Matosinhos\, Matosinhos\, Portugal
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-31500127109-31000283305@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261129T163000
+DTEND;TZID=Europe/Brussels:20261129T183000
+SUMMARY:Georgia – Portugal
+LOCATION:Otar Korkia and Nodar Jorjikia Tbilisi Sports Palace\, Tbilisi\, Georgia
+DESCRIPTION:Coupe du monde 2027 · Qualifications Europe
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Trabzonspor Basketball Club
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-27500136224-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261007T180000
+DTEND;TZID=Europe/Brussels:20261007T200000
+SUMMARY:Trabzonspor Basketball Club – Nanterre 92 (93-83)
+LOCATION:Hayri Gur Spor Salonu\, Trabzon\, Türkiye
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136226-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Trabzonspor Basketball Club – Sabah BC (100-83)
+LOCATION:Hayri Gur Spor Salonu\, Trabzon\, Türkiye
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136228-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261028T183000
+DTEND;TZID=Europe/Brussels:20261028T203000
+SUMMARY:BC Rytas – Trabzonspor Basketball Club
+LOCATION:Vilnius Arena\, Vilnius\, Lithuania
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136229-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261110T170000
+DTEND;TZID=Europe/Brussels:20261110T190000
+SUMMARY:Sabah BC – Trabzonspor Basketball Club
+LOCATION:National Gymnastics Arena\, Baku\, Azerbaijan
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136231-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261209T180000
+DTEND;TZID=Europe/Brussels:20261209T200000
+SUMMARY:Trabzonspor Basketball Club – BC Rytas
+LOCATION:Hayri Gur Spor Salonu\, Trabzon\, Türkiye
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-27500136233-27000284931@behoop.be
+DTSTAMP:20261020T101058Z
+DTSTART;TZID=Europe/Brussels:20261222T180000
+DTEND;TZID=Europe/Brussels:20261222T200000
+SUMMARY:Nanterre 92 – Trabzonspor Basketball Club
+LOCATION:Palais des Sports Maurice Thorez\, Nanterre\, France
+DESCRIPTION:Basketball Champions League
+END:VEVENT
+END:VCALENDAR

@@ -1,7 +1,7 @@
 // Page compétition (#/competition/{id}) : comme une page équipe, pour toute une compétition —
 // actus, classement(s), résultats, calendrier et équipes, avec un bouton Suivre.
 import { useMemo, useState } from 'react';
-import { getComp, loadSerie, loadNews, teamIndex, isPlayed, readable, type Competition, type Game} from '../lib/data';
+import { getComp, loadSerie, loadNews, teamIndex, isPlayed, readable, trName, type Competition, type Game} from '../lib/data';
 import { useSession } from '../lib/session';
 import { t, tn } from '../lib/i18n';
 import { frDate, haptic } from '../lib/util';
@@ -37,7 +37,7 @@ export function CompGameRow({ g }: { g: Game }) {
   const played = isPlayed(g);
   return (
     <a className="row" href={`#/match/${g.s}/${g.id}`} style={{ color: 'inherit' }}>
-      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{played ? '' : g.t}</div>
+      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{played ? (g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? g.d.slice(0, 4) : '') : g.t}</div>
       <div className="grow" style={{ minWidth: 0 }}>
         <div className="ellipsis" style={{ fontWeight: played && g.hs! > g.as! ? 700 : 400 }}>{g.hn}</div>
         <div className="ellipsis" style={{ fontWeight: played && g.as! > g.hs! ? 700 : 400 }}>{g.an}</div>
@@ -99,8 +99,8 @@ export function CompPage({ id }: { id: string }) {
       {tab === 'calendrier' && (upcoming.length ? <div className="group">{upcoming.slice(0, 60).map((g) => <CompGameRow key={g.id} g={g} />)}</div>
         : <Empty ill="calendar" title={t('Aucun match prévu')} />)}
       {tab === 'classement' && (!cur ? <Empty ill="standings" title={t('Pas de classement')} text={t('Cette compétition se joue par élimination directe ou le classement n’est pas encore publié.')} /> : <>
-        {withTable.length > 1 && <div className="chips">{withTable.map((x) => <button key={x.serie.id} className={`chip${cur.serie.id === x.serie.id ? ' on' : ''}`} onClick={() => setSid(x.serie.id)}>{x.serie.name.split(' · ')[1] ?? (x.serie.short || x.serie.name)}</button>)}</div>}
-        <StandingsTable rows={cur.standings} names={names} pct={c.id === 'nba'} />
+        {withTable.length > 1 && <div className="chips">{withTable.map((x) => <button key={x.serie.id} className={`chip${cur.serie.id === x.serie.id ? ' on' : ''}`} onClick={() => setSid(x.serie.id)}>{trName(x.serie.name.split(' · ').slice(1).join(' · ') || x.serie.short || x.serie.name)}</button>)}</div>}
+        <StandingsTable rows={cur.standings} names={names} />
       </>)}
       {tab === 'actus' && (news.data ? (compNews.length ? compNews.slice(0, 30).map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="news" title={t('Pas d’actualité pour cette compétition pour l’instant')} />) : <Skeleton h={200} n={2} />)}
       {tab === 'equipes' && <div className="group">{teams.map(([tid, name]) => { const e = idx.data?.get(tid); return (

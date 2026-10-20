@@ -74,9 +74,11 @@ export function loadAll(root = '.'): AllData {
   if (existsSync(pf)) {
     const p = JSON.parse(readFileSync(pf, 'utf8'));
     const bnxt: Record<number, number> = existsSync(cf) ? JSON.parse(readFileSync(cf, 'utf8')).bnxt ?? {} : {};
+    // Clubs belges en Coupe d'Europe (nom FIBA → fiche club) : corrections.json « europe »
+    const europe: Record<string, number> = existsSync(cf) ? JSON.parse(readFileSync(cf, 'utf8')).europe ?? {} : {};
     const key = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
     for (const c of p.clubs as SlimClub[]) {
-      const forced = bnxt[c.id];
+      const forced = bnxt[c.id] ?? europe[c.name];
       const host = forced ? clubs.find((x) => x.id === forced)
         : p.attach?.[c.id] ? clubs.find((x) => x.id < 20e9 && key(x.name) === key(p.attach[c.id])) : undefined;
       if (host && host.id !== c.id) alias.set(c.id, host.id); // fiche BNXT seule auparavant : les suivis existants suivent

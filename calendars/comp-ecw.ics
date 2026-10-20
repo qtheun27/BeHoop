@@ -1,0 +1,1392 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:EuroCup Women
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-30500135255-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260923T193000
+DTEND;TZID=Europe/Brussels:20260923T213000
+SUMMARY:AEO Proteas Voulas – Elitzur Ramle (46-79)
+LOCATION:Sofia Befon Arena P.Faliro\, Paleo Faliro\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135256-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T170000
+DTEND;TZID=Europe/Brussels:20260924T190000
+SUMMARY:BK Beroe Stara Zagora – Club Universitario de Ferrol (61-76)
+LOCATION:Obshtinska-Stara Zagora\, Stara Zagora\, Bulgaria
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135258-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T193000
+DTEND;TZID=Europe/Brussels:20260924T213000
+SUMMARY:Ravens de Geneve LPLO – BC Saarlouis e.V.  (75-109)
+LOCATION:Pavillon des Sports du Bout-du-Monde\, Geneva\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135253-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:C'Chartres Metropole Basket Feminin – BK Levharti Chomutov (80-66)
+LOCATION:Le Colisée\, Chartres\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135260-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:CAB Estepona – GEAS Basket SSDRL (65-76)
+LOCATION:Pabellón J.A Pineda\, Estepona\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135254-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260925T193000
+DTEND;TZID=Europe/Brussels:20260925T213000
+SUMMARY:Elitzur Ramle – AEO Proteas Voulas (88-56)
+LOCATION:Sofia Befon Arena P.Faliro\, Paleo Faliro\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135261-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20260930T193000
+DTEND;TZID=Europe/Brussels:20260930T213000
+SUMMARY:GEAS Basket SSDRL – CAB Estepona (76-71)
+LOCATION:PalaAllende\, Milan\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135259-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T190000
+DTEND;TZID=Europe/Brussels:20261001T210000
+SUMMARY:BC Saarlouis e.V.  – Ravens de Geneve LPLO (77-56)
+LOCATION:Stadtgartenhalle Saarlouis\, Saarlouis\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135252-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T190000
+DTEND;TZID=Europe/Brussels:20261001T210000
+SUMMARY:BK Levharti Chomutov – C'Chartres Metropole Basket Feminin (46-87)
+LOCATION:City Sports Hall\, Chomutov\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135257-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261001T201500
+DTEND;TZID=Europe/Brussels:20261001T221500
+SUMMARY:Club Universitario de Ferrol – BK Beroe Stara Zagora (85-58)
+LOCATION:A Malata\, Ferrol\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135327-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261013T220000
+DTEND;TZID=Europe/Brussels:20261013T230000
+SUMMARY:Sport Lisboa e Benfica – BC Saarlouis e.V.  (69-65)
+LOCATION:Pavilhao Fidelidade\, Lisbon\, Portugal
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135282-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T173000
+DTEND;TZID=Europe/Brussels:20261014T193000
+SUMMARY:Panathinaikos A.C. – ALBA Berlin Basketballteam e.V. (81-73)
+LOCATION:Cholargos Sports Hall\, Athens\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135324-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Sopron Basket – UZKK Student Nis (89-71)
+LOCATION:Arena Sopron\, Sopron\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135396-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Zabiny Brno – AEL Limassol (102-64)
+LOCATION:Gym Rosnicka\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135286-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:Olympiacos S.F.P. – Club Universitario de Ferrol (96-68)
+LOCATION:Eleftheria Moschatou Basketball Arena\, Moschato\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135308-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:DVTK HUNTHERM – Panathlitikos A.C. Sykeon (56-38)
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135383-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T180000
+DTEND;TZID=Europe/Brussels:20261014T200000
+SUMMARY:KP Brno – Nyon Basket Feminin (72-60)
+LOCATION:Starez Arena Vodova Hall 2\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135344-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T183000
+DTEND;TZID=Europe/Brussels:20261014T203000
+SUMMARY:ENEA AZS Politechnika Poznan – Landerneau Bretagne Basket (77-65)
+LOCATION:Centrum Sportu Politechniki Poznanskiej\, Poznan\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135279-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T193000
+DTEND;TZID=Europe/Brussels:20261014T213000
+SUMMARY:Castors Braine – GEAS Basket SSDRL (78-75)
+LOCATION:Stade Gaston Reiff\, Braine-l'Alleud\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135400-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T200000
+DTEND;TZID=Europe/Brussels:20261014T220000
+SUMMARY:Charnay Basket Bourgogne SUD – Helsinki Basketball Academy (91-54)
+LOCATION:Salle Maurice Chevalier\, Charnay-lès-Mâcon\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135303-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T200000
+DTEND;TZID=Europe/Brussels:20261014T220000
+SUMMARY:Hozono Global Jairis – ZKK Brod Na Savi (79-44)
+LOCATION:Pabellón Municipal Fausto Vicent\, Alcantarilla\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135273-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T200000
+DTEND;TZID=Europe/Brussels:20261014T220000
+SUMMARY:Villeneuve d'Ascq Lille Metropole – DSK Basketball (92-51)
+LOCATION:Palacium\, Villeneuve d' Ascq\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135368-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T201500
+DTEND;TZID=Europe/Brussels:20261014T221500
+SUMMARY:Spar Girona – SBS Ostrava (77-49)
+LOCATION:Pavello Fontajau\, Girona\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135382-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T203000
+DTEND;TZID=Europe/Brussels:20261014T223000
+SUMMARY:Magnolia Basket Campobasso – Cinkarna Celje (75-53)
+LOCATION:Molisana Arena\, Campobasso\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135372-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261014T203000
+DTEND;TZID=Europe/Brussels:20261014T223000
+SUMMARY:Club Baloncesto Avenida – MBK Ruzomberok (75-64)
+LOCATION:Pabellón Municipal Wurzburg\, Salamanca\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135363-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T183000
+DTEND;TZID=Europe/Brussels:20261015T203000
+SUMMARY:Rutronik Stars Keltern – BC Montana 2003 (66-60)
+LOCATION:Speiterlinghalle\, Keltern\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135287-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T190000
+DTEND;TZID=Europe/Brussels:20261015T210000
+SUMMARY:CIMSA CBK Mersin – 1KS Ślęza Wrocław (72-59)
+LOCATION:Servet Tazegul Spor Salonu\, Mersin\, Türkiye
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135352-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T190000
+DTEND;TZID=Europe/Brussels:20261015T210000
+SUMMARY:PRO-NETWORK ENEA AJP Gorzow – M.G.S PANSERRAIKOS (87-63)
+LOCATION:Arena Gorzow\, Gorzów Wielkopolski\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135339-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T193000
+DTEND;TZID=Europe/Brussels:20261015T213000
+SUMMARY:BCF Elfic Fribourg – Autosped BCC Castelnuovo Scrivia (60-71)
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135314-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T193000
+DTEND;TZID=Europe/Brussels:20261015T213000
+SUMMARY:Umana Reyer Venezia – CS Universitatea Cluj (111-47)
+LOCATION:Palasport Taliercio\, Venezia\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135348-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T200000
+DTEND;TZID=Europe/Brussels:20261015T220000
+SUMMARY:Basket Lattes Montpellier Association – Ensino Lugo CB (89-64)
+LOCATION:Palais des Sports de Lattes\, Lattes\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135375-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261015T203000
+DTEND;TZID=Europe/Brussels:20261015T223000
+SUMMARY:Basket Namur Capitale – C'Chartres Metropole Basket Feminin (60-70)
+LOCATION:Hall Octave Henry\, Namur\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135353-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T170000
+DTEND;TZID=Europe/Brussels:20261021T190000
+SUMMARY:M.G.S PANSERRAIKOS – Basket Lattes Montpellier Association
+LOCATION:IOANNIS TSINTSARIS ARENA\, Serres\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135269-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:DSK Basketball – BEŞİKTAŞ JİMNASTİK KULÜBÜ
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135379-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:MBK Ruzomberok – Basket Namur Capitale
+LOCATION:Sportova Hala Koniaren\, Ruzomberok\, Slovakia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135349-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T180000
+DTEND;TZID=Europe/Brussels:20261021T200000
+SUMMARY:Ensino Lugo CB – PRO-NETWORK ENEA AJP Gorzow
+LOCATION:Pazo Provincial Dos Deportes De Lugo\, Lugo\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135288-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T183000
+DTEND;TZID=Europe/Brussels:20261021T203000
+SUMMARY:1KS Ślęza Wrocław – Olympiacos S.F.P.
+LOCATION:KGHM Ślęza Arena\, Wroclaw\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135328-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T190000
+DTEND;TZID=Europe/Brussels:20261021T210000
+SUMMARY:BC Saarlouis e.V.  – Sopron Basket
+LOCATION:Stadtgartenhalle Saarlouis\, Saarlouis\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135376-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T190000
+DTEND;TZID=Europe/Brussels:20261021T210000
+SUMMARY:C'Chartres Metropole Basket Feminin – Club Baloncesto Avenida
+LOCATION:Le Colisée\, Chartres\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135280-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T193000
+DTEND;TZID=Europe/Brussels:20261021T213000
+SUMMARY:GEAS Basket SSDRL – Panathinaikos A.C.
+LOCATION:PalaAllende\, Milan\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135384-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T193000
+DTEND;TZID=Europe/Brussels:20261021T213000
+SUMMARY:Nyon Basket Feminin – Magnolia Basket Campobasso
+LOCATION:Salle du Rocher\, Nyon\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135309-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T200000
+DTEND;TZID=Europe/Brussels:20261021T220000
+SUMMARY:Hozono Global Jairis – Panathlitikos A.C. Sykeon
+LOCATION:Pabellón Municipal Fausto Vicent\, Alcantarilla\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135289-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261021T201500
+DTEND;TZID=Europe/Brussels:20261021T221500
+SUMMARY:Club Universitario de Ferrol – CIMSA CBK Mersin
+LOCATION:A Malata\, Ferrol\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135401-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T173000
+DTEND;TZID=Europe/Brussels:20261022T193000
+SUMMARY:Helsinki Basketball Academy – Zabiny Brno
+LOCATION:Urheahalli\, Helsinki\, Finland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135385-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T180000
+DTEND;TZID=Europe/Brussels:20261022T200000
+SUMMARY:Cinkarna Celje – KP Brno
+LOCATION:DVORANA GIMNAZIJE CELJE\, Celje\, Slovenia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135321-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T180000
+DTEND;TZID=Europe/Brussels:20261022T200000
+SUMMARY:CS Universitatea Cluj – TTT Riga
+LOCATION:Horia Demian Sports Hall\, Cluj-Napoca\, Romania
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135397-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T183000
+DTEND;TZID=Europe/Brussels:20261022T203000
+SUMMARY:AEL Limassol – Charnay Basket Bourgogne SUD
+LOCATION:Spyros Kyprianou Arena\, Limassol\, Cyprus
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135369-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T183000
+DTEND;TZID=Europe/Brussels:20261022T203000
+SUMMARY:Rutronik Stars Keltern – SBS Ostrava
+LOCATION:Speiterlinghalle\, Keltern\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135362-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T183000
+DTEND;TZID=Europe/Brussels:20261022T203000
+SUMMARY:BC Montana 2003 – Spar Girona
+LOCATION:Arena Botevgrad\, Botevgrad\, Bulgaria
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135331-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T190000
+DTEND;TZID=Europe/Brussels:20261022T210000
+SUMMARY:UZKK Student Nis – Sport Lisboa e Benfica
+LOCATION:OS Mika Antic\, Nis\, Serbia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135338-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T190000
+DTEND;TZID=Europe/Brussels:20261022T210000
+SUMMARY:Autosped BCC Castelnuovo Scrivia – ENEA AZS Politechnika Poznan
+LOCATION:Nova Arena Cittadella dello Sport\, Tortona\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135276-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T193000
+DTEND;TZID=Europe/Brussels:20261022T213000
+SUMMARY:ALBA Berlin Basketballteam e.V. – Castors Braine
+LOCATION:Sporthalle Charlottenburg\, Berlin\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135345-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T193000
+DTEND;TZID=Europe/Brussels:20261022T213000
+SUMMARY:Landerneau Bretagne Basket – BCF Elfic Fribourg
+LOCATION:La Cimenterie\, Landerneau\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135318-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T193000
+DTEND;TZID=Europe/Brussels:20261022T213000
+SUMMARY:Elitzur Ramle – Umana Reyer Venezia
+LOCATION:Palasport Taliercio\, Venice\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135302-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:ZKK Brod Na Savi – DVTK HUNTHERM
+LOCATION:Sports Hall Vijus\, Slavonski Brod\, Croatia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135311-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261024T193000
+DTEND;TZID=Europe/Brussels:20261024T213000
+SUMMARY:Umana Reyer Venezia – Elitzur Ramle
+LOCATION:Palasport Taliercio\, Venezia\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135266-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:Maccabi Bnot Ashdod – DSK Basketball
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135377-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T170000
+DTEND;TZID=Europe/Brussels:20261028T190000
+SUMMARY:MBK Ruzomberok – C'Chartres Metropole Basket Feminin
+LOCATION:Sportova Hala Koniaren\, Ruzomberok\, Slovakia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135358-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T171500
+DTEND;TZID=Europe/Brussels:20261028T191500
+SUMMARY:SBS Ostrava – BC Montana 2003
+LOCATION:City Campus\, Ostrava\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135290-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:Olympiacos S.F.P. – CIMSA CBK Mersin
+LOCATION:Eleftheria Moschatou Basketball Arena\, Moschato\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135271-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:BEŞİKTAŞ JİMNASTİK KULÜBÜ – Villeneuve d'Ascq Lille Metropole
+LOCATION:Besiktas Gain Sport Complex\, Istanbul\, Türkiye
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135263-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T180000
+DTEND;TZID=Europe/Brussels:20261028T200000
+SUMMARY:DSK Basketball – Maccabi Bnot Ashdod
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135405-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T183000
+DTEND;TZID=Europe/Brussels:20261028T203000
+SUMMARY:AEL Limassol – Helsinki Basketball Academy
+LOCATION:Spyros Kyprianou Arena\, Limassol\, Cyprus
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135291-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T183000
+DTEND;TZID=Europe/Brussels:20261028T203000
+SUMMARY:1KS Ślęza Wrocław – Club Universitario de Ferrol
+LOCATION:KGHM Ślęza Arena\, Wroclaw\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135274-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T193000
+DTEND;TZID=Europe/Brussels:20261028T213000
+SUMMARY:Castors Braine – Panathinaikos A.C.
+LOCATION:Stade Gaston Reiff\, Braine-l'Alleud\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135281-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T193000
+DTEND;TZID=Europe/Brussels:20261028T213000
+SUMMARY:GEAS Basket SSDRL – ALBA Berlin Basketballteam e.V.
+LOCATION:PalaAllende\, Milan\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135387-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T193000
+DTEND;TZID=Europe/Brussels:20261028T213000
+SUMMARY:Nyon Basket Feminin – Cinkarna Celje
+LOCATION:Salle du Rocher\, Nyon\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135394-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:Charnay Basket Bourgogne SUD – Zabiny Brno
+LOCATION:Salle Maurice Chevalier\, Charnay-lès-Mâcon\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135306-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:Hozono Global Jairis – DVTK HUNTHERM
+LOCATION:Pabellón Municipal Fausto Vicent\, Alcantarilla\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135354-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T200000
+DTEND;TZID=Europe/Brussels:20261028T220000
+SUMMARY:Ensino Lugo CB – M.G.S PANSERRAIKOS
+LOCATION:Pazo Provincial Dos Deportes De Lugo\, Lugo\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135386-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261028T203000
+DTEND;TZID=Europe/Brussels:20261028T223000
+SUMMARY:Magnolia Basket Campobasso – KP Brno
+LOCATION:Molisana Arena\, Campobasso\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135312-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T180000
+DTEND;TZID=Europe/Brussels:20261029T200000
+SUMMARY:TTT Riga – Umana Reyer Venezia
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135366-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T183000
+DTEND;TZID=Europe/Brussels:20261029T203000
+SUMMARY:Rutronik Stars Keltern – Spar Girona
+LOCATION:Speiterlinghalle\, Keltern\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135329-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T190000
+DTEND;TZID=Europe/Brussels:20261029T210000
+SUMMARY:UZKK Student Nis – BC Saarlouis e.V. 
+LOCATION:Sports Centre Cair\, Nis\, Serbia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135347-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T190000
+DTEND;TZID=Europe/Brussels:20261029T210000
+SUMMARY:PRO-NETWORK ENEA AJP Gorzow – Basket Lattes Montpellier Association
+LOCATION:Arena Gorzow\, Gorzów Wielkopolski\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135298-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T191500
+DTEND;TZID=Europe/Brussels:20261029T211500
+SUMMARY:Panathlitikos A.C. Sykeon – ZKK Brod Na Savi
+LOCATION:EPTAPYRGIO ARENA\, Thessaloniki\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135342-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T193000
+DTEND;TZID=Europe/Brussels:20261029T213000
+SUMMARY:BCF Elfic Fribourg – ENEA AZS Politechnika Poznan
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135334-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T193000
+DTEND;TZID=Europe/Brussels:20261029T213000
+SUMMARY:Landerneau Bretagne Basket – Autosped BCC Castelnuovo Scrivia
+LOCATION:La Cimenterie\, Landerneau\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135370-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:Basket Namur Capitale – Club Baloncesto Avenida
+LOCATION:Hall Octave Henry\, Namur\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135322-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261029T210000
+DTEND;TZID=Europe/Brussels:20261029T230000
+SUMMARY:Sport Lisboa e Benfica – Sopron Basket
+LOCATION:Pavilhao Fidelidade\, Lisbon\, Portugal
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135267-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261102T180000
+DTEND;TZID=Europe/Brussels:20261102T200000
+SUMMARY:BEŞİKTAŞ JİMNASTİK KULÜBÜ – Maccabi Bnot Ashdod
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135317-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261102T180000
+DTEND;TZID=Europe/Brussels:20261102T200000
+SUMMARY:TTT Riga – Elitzur Ramle
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135293-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T183000
+DTEND;TZID=Europe/Brussels:20261103T203000
+SUMMARY:1KS Ślęza Wrocław – CIMSA CBK Mersin
+LOCATION:KGHM Ślęza Arena\, Wroclaw\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135292-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261103T201500
+DTEND;TZID=Europe/Brussels:20261103T221500
+SUMMARY:Club Universitario de Ferrol – Olympiacos S.F.P.
+LOCATION:A Malata\, Ferrol\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135357-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T170000
+DTEND;TZID=Europe/Brussels:20261104T190000
+SUMMARY:M.G.S PANSERRAIKOS – PRO-NETWORK ENEA AJP Gorzow
+LOCATION:IOANNIS TSINTSARIS ARENA\, Serres\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135364-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T171500
+DTEND;TZID=Europe/Brussels:20261104T191500
+SUMMARY:SBS Ostrava – Spar Girona
+LOCATION:City Campus\, Ostrava\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135402-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T173000
+DTEND;TZID=Europe/Brussels:20261104T193000
+SUMMARY:Helsinki Basketball Academy – Charnay Basket Bourgogne SUD
+LOCATION:Urheahalli\, Helsinki\, Finland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135388-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:Cinkarna Celje – Magnolia Basket Campobasso
+LOCATION:DVORANA GIMNAZIJE CELJE\, Celje\, Slovenia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135270-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:DSK Basketball – Villeneuve d'Ascq Lille Metropole
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135373-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:MBK Ruzomberok – Club Baloncesto Avenida
+LOCATION:Sportova Hala Koniaren\, Ruzomberok\, Slovakia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135320-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:Elitzur Ramle – TTT Riga
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135315-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T180000
+DTEND;TZID=Europe/Brussels:20261104T200000
+SUMMARY:CS Universitatea Cluj – Umana Reyer Venezia
+LOCATION:Horia Demian Sports Hall\, Cluj-Napoca\, Romania
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135398-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T183000
+DTEND;TZID=Europe/Brussels:20261104T203000
+SUMMARY:AEL Limassol – Zabiny Brno
+LOCATION:Spyros Kyprianou Arena\, Limassol\, Cyprus
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135359-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T183000
+DTEND;TZID=Europe/Brussels:20261104T203000
+SUMMARY:BC Montana 2003 – Rutronik Stars Keltern
+LOCATION:Arena Botevgrad\, Botevgrad\, Bulgaria
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135330-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T190000
+DTEND;TZID=Europe/Brussels:20261104T210000
+SUMMARY:BC Saarlouis e.V.  – Sport Lisboa e Benfica
+LOCATION:Stadtgartenhalle Saarlouis\, Saarlouis\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135325-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T190000
+DTEND;TZID=Europe/Brussels:20261104T210000
+SUMMARY:UZKK Student Nis – Sopron Basket
+LOCATION:Sports Centre Cair\, Nis\, Serbia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135335-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T190000
+DTEND;TZID=Europe/Brussels:20261104T210000
+SUMMARY:Autosped BCC Castelnuovo Scrivia – BCF Elfic Fribourg
+LOCATION:Nova Arena Cittadella dello Sport\, Tortona\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135378-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T190000
+DTEND;TZID=Europe/Brussels:20261104T210000
+SUMMARY:C'Chartres Metropole Basket Feminin – Basket Namur Capitale
+LOCATION:Le Colisée\, Chartres\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135305-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T191500
+DTEND;TZID=Europe/Brussels:20261104T211500
+SUMMARY:Panathlitikos A.C. Sykeon – DVTK HUNTHERM
+LOCATION:EPTAPYRGIO ARENA\, Thessaloniki\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135283-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T193000
+DTEND;TZID=Europe/Brussels:20261104T213000
+SUMMARY:GEAS Basket SSDRL – Castors Braine
+LOCATION:PalaAllende\, Milan\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135277-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T193000
+DTEND;TZID=Europe/Brussels:20261104T213000
+SUMMARY:ALBA Berlin Basketballteam e.V. – Panathinaikos A.C.
+LOCATION:Sporthalle Charlottenburg\, Berlin\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135389-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T193000
+DTEND;TZID=Europe/Brussels:20261104T213000
+SUMMARY:Nyon Basket Feminin – KP Brno
+LOCATION:Salle du Rocher\, Nyon\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135340-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T193000
+DTEND;TZID=Europe/Brussels:20261104T213000
+SUMMARY:Landerneau Bretagne Basket – ENEA AZS Politechnika Poznan
+LOCATION:La Cimenterie\, Landerneau\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135299-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T200000
+DTEND;TZID=Europe/Brussels:20261104T220000
+SUMMARY:ZKK Brod Na Savi – Hozono Global Jairis
+LOCATION:Sports Hall Vijus\, Slavonski Brod\, Croatia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135350-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T200000
+DTEND;TZID=Europe/Brussels:20261104T220000
+SUMMARY:Ensino Lugo CB – Basket Lattes Montpellier Association
+LOCATION:Pazo Provincial Dos Deportes De Lugo\, Lugo\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135264-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261104T204500
+DTEND;TZID=Europe/Brussels:20261104T224500
+SUMMARY:Maccabi Bnot Ashdod – BEŞİKTAŞ JİMNASTİK KULÜBÜ
+LOCATION:CEZ Sportovni Hala Nymburk\, Nymburk\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135365-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T171500
+DTEND;TZID=Europe/Brussels:20261125T191500
+SUMMARY:SBS Ostrava – Rutronik Stars Keltern
+LOCATION:City Campus\, Ostrava\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135332-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Sopron Basket – BC Saarlouis e.V. 
+LOCATION:Arena Sopron\, Sopron\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135403-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Zabiny Brno – Helsinki Basketball Academy
+LOCATION:Gym Rosnicka\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135294-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:Olympiacos S.F.P. – 1KS Ślęza Wrocław
+LOCATION:Eleftheria Moschatou Basketball Arena\, Moschato\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135300-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:DVTK HUNTHERM – ZKK Brod Na Savi
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135391-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:KP Brno – Cinkarna Celje
+LOCATION:Starez Arena Vodova\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135268-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T180000
+DTEND;TZID=Europe/Brussels:20261125T200000
+SUMMARY:BEŞİKTAŞ JİMNASTİK KULÜBÜ – DSK Basketball
+LOCATION:Besiktas Gain Sport Complex\, Istanbul\, Türkiye
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135336-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T183000
+DTEND;TZID=Europe/Brussels:20261125T203000
+SUMMARY:ENEA AZS Politechnika Poznan – Autosped BCC Castelnuovo Scrivia
+LOCATION:Centrum Sportu Politechniki Poznanskiej\, Poznan\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135278-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T193000
+DTEND;TZID=Europe/Brussels:20261125T213000
+SUMMARY:Castors Braine – ALBA Berlin Basketballteam e.V.
+LOCATION:Stade Gaston Reiff\, Braine-l'Alleud\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135341-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T193000
+DTEND;TZID=Europe/Brussels:20261125T213000
+SUMMARY:BCF Elfic Fribourg – Landerneau Bretagne Basket
+LOCATION:Salle Saint Leonard\, Fribourg\, Switzerland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135399-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T200000
+DTEND;TZID=Europe/Brussels:20261125T220000
+SUMMARY:Charnay Basket Bourgogne SUD – AEL Limassol
+LOCATION:Salle Maurice Chevalier\, Charnay-lès-Mâcon\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135304-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T200000
+DTEND;TZID=Europe/Brussels:20261125T220000
+SUMMARY:Panathlitikos A.C. Sykeon – Hozono Global Jairis
+LOCATION:EPTAPYRGIO ARENA\, Thessaloniki\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135262-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T200000
+DTEND;TZID=Europe/Brussels:20261125T220000
+SUMMARY:Maccabi Bnot Ashdod – Villeneuve d'Ascq Lille Metropole
+LOCATION:Palacium\, Villeneuve d' Ascq\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135360-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T200000
+DTEND;TZID=Europe/Brussels:20261125T220000
+SUMMARY:Spar Girona – BC Montana 2003
+LOCATION:Pavello Fontajau\, Girona\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135390-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T203000
+DTEND;TZID=Europe/Brussels:20261125T223000
+SUMMARY:Magnolia Basket Campobasso – Nyon Basket Feminin
+LOCATION:Molisana Arena\, Campobasso\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135380-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261125T203000
+DTEND;TZID=Europe/Brussels:20261125T223000
+SUMMARY:Club Baloncesto Avenida – C'Chartres Metropole Basket Feminin
+LOCATION:Pabellón Municipal Wurzburg\, Salamanca\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135284-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T173000
+DTEND;TZID=Europe/Brussels:20261126T193000
+SUMMARY:Panathinaikos A.C. – GEAS Basket SSDRL
+LOCATION:Cholargos Sports Hall\, Athens\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135295-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T180000
+DTEND;TZID=Europe/Brussels:20261126T200000
+SUMMARY:CIMSA CBK Mersin – Club Universitario de Ferrol
+LOCATION:Servet Tazegul Spor Salonu\, Mersin\, Türkiye
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135316-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T180000
+DTEND;TZID=Europe/Brussels:20261126T200000
+SUMMARY:TTT Riga – CS Universitatea Cluj
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135351-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T190000
+DTEND;TZID=Europe/Brussels:20261126T210000
+SUMMARY:PRO-NETWORK ENEA AJP Gorzow – Ensino Lugo CB
+LOCATION:Arena Gorzow\, Gorzów Wielkopolski\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135265-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T200000
+DTEND;TZID=Europe/Brussels:20261126T220000
+SUMMARY:Villeneuve d'Ascq Lille Metropole – Maccabi Bnot Ashdod
+LOCATION:Palacium\, Villeneuve d' Ascq\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135355-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T200000
+DTEND;TZID=Europe/Brussels:20261126T220000
+SUMMARY:Basket Lattes Montpellier Association – M.G.S PANSERRAIKOS
+LOCATION:Palais des Sports de Lattes\, Lattes\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135374-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T203000
+DTEND;TZID=Europe/Brussels:20261126T223000
+SUMMARY:Basket Namur Capitale – MBK Ruzomberok
+LOCATION:Hall Octave Henry\, Namur\, Belgium
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135326-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261126T210000
+DTEND;TZID=Europe/Brussels:20261126T230000
+SUMMARY:Sport Lisboa e Benfica – UZKK Student Nis
+LOCATION:Pavilhao Fidelidade\, Lisbon\, Portugal
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135319-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261201T180000
+DTEND;TZID=Europe/Brussels:20261201T200000
+SUMMARY:CS Universitatea Cluj – Elitzur Ramle
+LOCATION:Horia Demian Sports Hall\, Cluj-Napoca\, Romania
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135361-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261201T183000
+DTEND;TZID=Europe/Brussels:20261201T203000
+SUMMARY:BC Montana 2003 – SBS Ostrava
+LOCATION:Arena Botevgrad\, Botevgrad\, Bulgaria
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135356-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T170000
+DTEND;TZID=Europe/Brussels:20261202T190000
+SUMMARY:M.G.S PANSERRAIKOS – Ensino Lugo CB
+LOCATION:IOANNIS TSINTSARIS ARENA\, Serres\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135323-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T180000
+DTEND;TZID=Europe/Brussels:20261202T200000
+SUMMARY:Sopron Basket – Sport Lisboa e Benfica
+LOCATION:Arena Sopron\, Sopron\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135307-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T180000
+DTEND;TZID=Europe/Brussels:20261202T200000
+SUMMARY:DVTK HUNTHERM – Hozono Global Jairis
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135392-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T180000
+DTEND;TZID=Europe/Brussels:20261202T200000
+SUMMARY:KP Brno – Magnolia Basket Campobasso
+LOCATION:Starez Arena Vodova\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135333-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T190000
+DTEND;TZID=Europe/Brussels:20261202T210000
+SUMMARY:BC Saarlouis e.V.  – UZKK Student Nis
+LOCATION:Stadtgartenhalle Saarlouis\, Saarlouis\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135337-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T190000
+DTEND;TZID=Europe/Brussels:20261202T210000
+SUMMARY:Autosped BCC Castelnuovo Scrivia – Landerneau Bretagne Basket
+LOCATION:Nova Arena Cittadella dello Sport\, Tortona\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135285-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T193000
+DTEND;TZID=Europe/Brussels:20261202T213000
+SUMMARY:ALBA Berlin Basketballteam e.V. – GEAS Basket SSDRL
+LOCATION:Sporthalle Charlottenburg\, Berlin\, Germany
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135313-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T193000
+DTEND;TZID=Europe/Brussels:20261202T213000
+SUMMARY:Umana Reyer Venezia – TTT Riga
+LOCATION:Palasport Taliercio\, Venezia\, Italy
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135272-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Villeneuve d'Ascq Lille Metropole – BEŞİKTAŞ JİMNASTİK KULÜBÜ
+LOCATION:Palacium\, Villeneuve d' Ascq\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135367-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Spar Girona – Rutronik Stars Keltern
+LOCATION:Pavello Fontajau\, Girona\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135297-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T201500
+DTEND;TZID=Europe/Brussels:20261202T221500
+SUMMARY:Club Universitario de Ferrol – 1KS Ślęza Wrocław
+LOCATION:A Malata\, Ferrol\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135371-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261202T203000
+DTEND;TZID=Europe/Brussels:20261202T223000
+SUMMARY:Club Baloncesto Avenida – Basket Namur Capitale
+LOCATION:Pabellón Municipal Wurzburg\, Salamanca\, Spain
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135275-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T173000
+DTEND;TZID=Europe/Brussels:20261203T193000
+SUMMARY:Panathinaikos A.C. – Castors Braine
+LOCATION:Cholargos Sports Hall\, Athens\, Greece
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135404-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T173000
+DTEND;TZID=Europe/Brussels:20261203T193000
+SUMMARY:Helsinki Basketball Academy – AEL Limassol
+LOCATION:Urheahalli\, Helsinki\, Finland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135395-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T180000
+DTEND;TZID=Europe/Brussels:20261203T200000
+SUMMARY:Zabiny Brno – Charnay Basket Bourgogne SUD
+LOCATION:Gym Rosnicka\, Brno\, Czechia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135296-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T180000
+DTEND;TZID=Europe/Brussels:20261203T200000
+SUMMARY:CIMSA CBK Mersin – Olympiacos S.F.P.
+LOCATION:Servet Tazegul Spor Salonu\, Mersin\, Türkiye
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135393-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T180000
+DTEND;TZID=Europe/Brussels:20261203T200000
+SUMMARY:Cinkarna Celje – Nyon Basket Feminin
+LOCATION:DVORANA GIMNAZIJE CELJE\, Celje\, Slovenia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135310-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T180000
+DTEND;TZID=Europe/Brussels:20261203T200000
+SUMMARY:Elitzur Ramle – CS Universitatea Cluj
+LOCATION:Horia Demian Sports Hall\, Ramla\, Israel
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135343-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T183000
+DTEND;TZID=Europe/Brussels:20261203T203000
+SUMMARY:ENEA AZS Politechnika Poznan – BCF Elfic Fribourg
+LOCATION:Centrum Sportu Politechniki Poznanskiej\, Poznan\, Poland
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135381-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T190000
+DTEND;TZID=Europe/Brussels:20261203T210000
+SUMMARY:C'Chartres Metropole Basket Feminin – MBK Ruzomberok
+LOCATION:Le Colisée\, Chartres\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135301-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T200000
+DTEND;TZID=Europe/Brussels:20261203T220000
+SUMMARY:ZKK Brod Na Savi – Panathlitikos A.C. Sykeon
+LOCATION:Sports Hall Vijus\, Slavonski Brod\, Croatia
+DESCRIPTION:EuroCup Women
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-30500135346-comp-ecw@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261203T200000
+DTEND;TZID=Europe/Brussels:20261203T220000
+SUMMARY:Basket Lattes Montpellier Association – PRO-NETWORK ENEA AJP Gorzow
+LOCATION:Palais des Sports de Lattes\, Lattes\, France
+DESCRIPTION:EuroCup Women
+END:VEVENT
+END:VCALENDAR

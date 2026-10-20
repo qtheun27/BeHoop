@@ -1,0 +1,366 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:EuroBasket féminin 2027 · Qualifications
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-34500129106-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261110T203000
+DTEND;TZID=Europe/Brussels:20261110T223000
+SUMMARY:Spain – Czechia
+LOCATION:Palacio de los Deportes de Oviedo\, Oviedo\, Spain
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129105-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T150000
+DTEND;TZID=Europe/Brussels:20261111T170000
+SUMMARY:Bulgaria – Croatia
+LOCATION:Arena SamElyon\, Samokov\, Bulgaria
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129094-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T170000
+DTEND;TZID=Europe/Brussels:20261111T190000
+SUMMARY:Türkiye – Montenegro
+LOCATION:Turkcell Basketball Development Centre\, Istanbul\, Türkiye
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129142-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T173000
+DTEND;TZID=Europe/Brussels:20261111T193000
+SUMMARY:France – Great Britain
+LOCATION:Vendespace\, Mouilleron-Le- Captif\, France
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129117-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T180000
+DTEND;TZID=Europe/Brussels:20261111T200000
+SUMMARY:Austria – Latvia
+LOCATION:Sport Arena Wien\, Vienna\, Austria
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129130-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T180000
+DTEND;TZID=Europe/Brussels:20261111T200000
+SUMMARY:Serbia – Greece
+LOCATION:Ranko Zeravica Sports Hall\, Belgrade\, Serbia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129081-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T183000
+DTEND;TZID=Europe/Brussels:20261111T203000
+SUMMARY:Denmark – Portugal
+LOCATION:Gentofte Sportspark\, Gentofte Municipality\, Denmark
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129093-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T184000
+DTEND;TZID=Europe/Brussels:20261111T204000
+SUMMARY:Israel – Poland
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129141-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T190000
+DTEND;TZID=Europe/Brussels:20261111T210000
+SUMMARY:Luxembourg – Ukraine
+LOCATION:Centre National Sportif & Culturel d'Coque\, Luxembourg\, Luxembourg
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129082-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T190000
+DTEND;TZID=Europe/Brussels:20261111T210000
+SUMMARY:Germany – Hungary
+LOCATION:Inselpark Arena\, Hamburg\, Germany
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129129-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T193000
+DTEND;TZID=Europe/Brussels:20261111T213000
+SUMMARY:Netherlands – Slovakia
+LOCATION:Topsportcentrum\, Almere Stad\, Netherlands
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129118-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261111T200000
+DTEND;TZID=Europe/Brussels:20261111T220000
+SUMMARY:Italy – Slovenia
+LOCATION:PalaTerni\, Terni\, Italy
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129158-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T173000
+DTEND;TZID=Europe/Brussels:20261112T193000
+SUMMARY:Lithuania – Finland
+LOCATION:Svyturio Arena\, Klaipeda\, Lithuania
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129157-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261112T203000
+DTEND;TZID=Europe/Brussels:20261112T223000
+SUMMARY:Belgian Cats – Sweden
+LOCATION:Dome Charleroi\, Charleroi\, Belgium
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129132-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T143000
+DTEND;TZID=Europe/Brussels:20261114T163000
+SUMMARY:Netherlands – Serbia
+LOCATION:Topsportcentrum\, Almere Stad\, Netherlands
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129084-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:Denmark – Germany
+LOCATION:Gentofte Sportspark\, Gentofte Municipality\, Denmark
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129107-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T163000
+DTEND;TZID=Europe/Brussels:20261114T183000
+SUMMARY:Czechia – Croatia
+LOCATION:Kralovka Arena\, Prague\, Czechia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129143-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:Great Britain – Ukraine
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129108-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Bulgaria – Spain
+LOCATION:Arena SamElyon\, Samokov\, Bulgaria
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129095-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Montenegro – Poland
+LOCATION:Sports Hall Topolica\, Bar\, Montenegro
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129144-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Luxembourg – France
+LOCATION:Centre National Sportif & Culturel d'Coque\, Luxembourg\, Luxembourg
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129119-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Slovenia – Latvia
+LOCATION:Kodeljevo Hall\, Ljubljana\, Slovenia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129120-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Austria – Italy
+LOCATION:Sport Arena Wien\, Vienna\, Austria
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129131-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Greece – Slovakia
+LOCATION:Ivanofio\, Thessaloniki\, Greece
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129083-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Hungary – Portugal
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129096-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261114T184000
+DTEND;TZID=Europe/Brussels:20261114T204000
+SUMMARY:Israel – Türkiye
+LOCATION:Rimi Olympic Centre\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129166-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Finland – Lithuania
+LOCATION:Urheahalli\, Helsinki\, Finland
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129165-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261115T160000
+DTEND;TZID=Europe/Brussels:20261115T180000
+SUMMARY:Sweden – Belgian Cats
+LOCATION:Ulvsunda Idrottscenter\, Bromma\, Sweden
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129145-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T140000
+DTEND;TZID=Europe/Brussels:20261117T160000
+SUMMARY:Ukraine – France
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129097-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T170000
+DTEND;TZID=Europe/Brussels:20261117T190000
+SUMMARY:Poland – Türkiye
+LOCATION:Arena Gorzow\, Gorzów Wielkopolski\, Poland
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129134-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T170000
+DTEND;TZID=Europe/Brussels:20261117T190000
+SUMMARY:Greece – Netherlands
+LOCATION:Ivanofio\, Thessaloniki\, Greece
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129110-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T171500
+DTEND;TZID=Europe/Brussels:20261117T191500
+SUMMARY:Czechia – Bulgaria
+LOCATION:Kralovka Arena\, Prague\, Czechia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129109-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Croatia – Spain
+LOCATION:Zatika Sports Centre\, Porec\, Croatia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129098-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Montenegro – Israel
+LOCATION:Sports Hall Topolica\, Bar\, Montenegro
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129121-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Latvia – Italy
+LOCATION:Komandas Sporta Spelu Halle\, Riga\, Latvia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129122-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Slovenia – Austria
+LOCATION:Kodeljevo Hall\, Ljubljana\, Slovenia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129133-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Slovakia – Serbia
+LOCATION:GOPASS Arena\, Bratislava\, Slovakia
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129086-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T180000
+DTEND;TZID=Europe/Brussels:20261117T200000
+SUMMARY:Hungary – Denmark
+LOCATION:DVTK Arena\, Miskolc\, Hungary
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129146-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T200000
+DTEND;TZID=Europe/Brussels:20261117T220000
+SUMMARY:Great Britain – Luxembourg
+LOCATION:National Basketball Performance Centre\, Manchester\, England
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-34500129085-comp-ebwq@behoop.be
+DTSTAMP:20261020T101437Z
+DTSTART;TZID=Europe/Brussels:20261117T200000
+DTEND;TZID=Europe/Brussels:20261117T220000
+SUMMARY:Portugal – Germany
+LOCATION:Pavilhão Multiusos de Odivelas\, Odivelas\, Portugal
+DESCRIPTION:EuroBasket féminin 2027 · Qualifications
+END:VEVENT
+END:VCALENDAR
