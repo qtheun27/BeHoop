@@ -123,7 +123,7 @@ export function CommentsSheet({ k, title, onClose, onCount }: { k: D.ThreadKey; 
       </div>
       {menu && <Sheet title={t('Options')} onClose={() => setMenu(null)}>
         <div className="group">
-          {menu.authorUid === s.user?.uid && <button className="row" style={{ color: 'var(--red)' }} onClick={() => confirm(t('Supprimer ce commentaire ?')) && act(() => D.deleteComment(k, menu.id), t('Commentaire supprimé'), (l) => l.filter((c) => c.id !== menu.id))}>{t('Supprimer')}</button>}
+          {menu.authorUid === s.user?.uid && <button className="row" style={{ color: 'var(--red)' }} onClick={() => confirm(t('Supprimer ce commentaire ?')) && act(() => D.deleteComment(k, menu.id, s.user!.uid), t('Commentaire supprimé'), (l) => l.filter((c) => c.id !== menu.id))}>{t('Supprimer')}</button>}
           {s.isAdmin && !menu.hidden && <button className="row" onClick={() => act(() => D.hideComment(k, menu.id), t('Commentaire masqué'), (l) => l.map((c) => (c.id === menu.id ? { ...c, hidden: true } : c)))}>{t('Masquer')}</button>}
           {s.isAdmin && menu.hidden && <button className="row" onClick={() => act(() => D.hideComment(k, menu.id, false), t('Contenu réactivé'), (l) => l.map((c) => (c.id === menu.id ? { ...c, hidden: false } : c)))}>{t('Réactiver')}</button>}
           {menu.authorUid !== s.user?.uid && D.REPORT_REASONS.map((r) => <button key={r} className="row" onClick={() => s.requireAuth() && act(() => D.report(D.commentReportId(k, menu.id), s.user!.uid, r), t('Merci, on va regarder.'), (l) => l)}>{t('Signaler')} · {t(r)}</button>)}

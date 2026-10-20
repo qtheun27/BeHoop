@@ -67,7 +67,7 @@ export function NewsCarousel() {
   const list = topStories(data?.items ?? []);
   if (!list.length) return null;
   return (
-    <section style={{ marginBottom: 18 }}>
+    <section className="top-carousel" style={{ marginBottom: 18 }}>
       <div className="hstack" style={{ justifyContent: 'space-between', margin: '0 4px 8px' }}>
         <div className="group-title" style={{ margin: 0 }}><><Ico n="news" />{t('À la une')}</></div><a href="#/actus" style={{ fontWeight: 600, fontSize: 15 }}>{t('Toutes les actus ›')}</a>
       </div>
@@ -88,7 +88,7 @@ export function NewsPage() {
     <Screen title={t('Actus')}>
       <div className="chips">{CATS.map(([k, ic, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{ic && <Ico n={ic} />}{t(l)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="news" title={t('Pas d\'actualité pour le moment')} /> : list.map((n) => <NewsCard key={n.id} n={n} wide />)}
+      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="news" title={t('Pas d\'actualité pour le moment')} /> : <div className="news-grid">{list.map((n) => <NewsCard key={n.id} n={n} wide />)}</div>}
       {other > 0 && <button className="btn ghost small" style={{ margin: '0 auto 12px', display: 'flex' }} onClick={() => setAll(!all)}>{all ? t('Masquer les articles dans d’autres langues') : t('Voir aussi {n} articles dans d’autres langues', { n: other })}</button>}
       <p className="muted center" style={{ fontSize: 12.5 }}>{t('Titres et liens vers les articles des médias cités. Mis à jour deux fois par jour.')}</p>
     </Screen>

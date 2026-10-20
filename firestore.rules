@@ -406,6 +406,13 @@ service cloud.firestore {
       }
     }
 
+    // Liste personnelle de mes commentaires (pour les effacer avec le compte) : moi seul
+    match /myComments/{userId}/items/{commentId} {
+      allow read, delete: if signedIn() && uid() == userId;
+      allow create: if active() && uid() == userId && request.resource.data.keys().hasOnly(['thread']) && request.resource.data.thread is string
+        && existsAfter(/databases/$(database)/documents/threads/$(request.resource.data.thread)/comments/$(commentId));
+    }
+
     // ---------- Signalements ----------
     match /reports/{reportId} {
       // postId : la publication, ou « c~{fil}~{commentaire} » pour un commentaire

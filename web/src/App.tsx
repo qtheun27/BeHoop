@@ -1,7 +1,8 @@
 import { lazy, Suspense, Component, type ReactNode } from 'react';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
-import { Icons, Skeleton } from './ui/kit';
+import { Icons, Skeleton, Logo, LangSwitch, Avatar, useWide } from './ui/kit';
+import { Ico } from './ui/icons';
 import { t } from './lib/i18n';
 import { AuthSheet, Onboarding } from './screens/Auth';
 import { Explore, ClubPage, TeamPage } from './screens/Explore';
@@ -29,6 +30,7 @@ const TABS = [
 
 export function App() {
   const s = useSession();
+  const wide = useWide();
   const [page, a, b] = useRoute();
   if (!s.ready) return <main className="screen"><div style={{ height: 80 }} /><Skeleton n={4} /></main>;
   if (s.user && s.profile && !s.profile.onboarded) return <Onboarding />;
@@ -58,6 +60,7 @@ export function App() {
   return (
     <>
       <Guard key={location.hash}><Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense></Guard>
+      {wide && <SideNav tab={page === 'actus' ? 'actus' : tab} />}
       <nav className="tabbar" aria-label={tr('Navigation principale')}>
         {TABS.map((t) => (
           <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
@@ -68,6 +71,29 @@ export function App() {
       {s.authSheet !== undefined && <AuthSheet onClose={s.closeAuth} />}
       {s.toastMsg && <div className="toast" role="status">{s.toastMsg}</div>}
     </>
+  );
+}
+
+/** Ordinateur : navigation à gauche (la barre du bas est masquée), même destinations que sur téléphone, plus les actus */
+function SideNav({ tab }: { tab: string }) {
+  const s = useSession();
+  const items: [string, React.ReactNode, string][] = [
+    ['fil', Icons.home, 'Fil'], ['explorer', Icons.search, 'Rechercher'], ['actus', <Ico n="news" />, 'Actus'],
+    ['matchs', Icons.cal, 'Matchs'], ['equipes', Icons.users, 'Équipes'],
+  ];
+  return (
+    <nav className="sidenav" aria-label={tr('Navigation principale')}>
+      <a className="brand" href={s.user ? '#/fil' : '/'} aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
+      <div className="side-items">
+        {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+      </div>
+      <a className="btn side-publish" href="#/publier"><Ico n="plus" />{tr('Publier')}</a>
+      <div className="side-foot">
+        {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
+          : <button className="btn secondary" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>}
+        <LangSwitch />
+      </div>
+    </nav>
   );
 }
 

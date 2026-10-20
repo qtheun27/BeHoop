@@ -3,12 +3,12 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
-import { ago, haptic, dotted } from '../lib/util';
+import { ago, haptic, dotted, frDate } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
 import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Competition } from '../lib/data';
 import { CompLogo } from '../ui/CompLogo';
 import { clubColors } from '../lib/theme';
-import { NewsCard, NewsCarousel } from './News';
+import { NewsCard, NewsCarousel, topStories } from './News';
 import { GameScoreCard } from './ClubHub';
 import { loadCompData, CompFollowButton } from './CompPage';
 import { t } from '../lib/i18n';
@@ -212,11 +212,11 @@ export function Feed() {
   }, [load]);
 
   if (!s.user) return (
-    <Screen title={t('Fil')} home hideTitle><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
+    <Screen title={t('Fil')} home hideTitle aside={<FeedAside />}><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
       action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/?site=1">{t('Voir le site public')}</a></>} /></Screen>
   );
   return (
-    <Screen title={t('Fil')} home hideTitle>
+    <Screen title={t('Fil')} home hideTitle aside={<FeedAside />}>
       <Stories />
       {filter === 'tout' && <NewsCarousel />}
       {followsNothing && <Suggestions />}
@@ -251,6 +251,48 @@ export function Feed() {
 }
 
 /** Pour bien démarrer : les compétitions les plus suivies, à suivre d'un geste. */
+/** Ordinateur : colonne de droite du fil — à la une, mes prochains matchs, compétitions */
+function FeedAside() {
+  const s = useSession();
+  const news = useAsync(loadNews, []);
+  const top = topStories(news.data?.items ?? [], 5);
+  const next = useAsync(async () => {
+    if (!s.followedTeams.length) return [];
+    const idx = await teamIndex();
+    const clubs = [...new Set(s.followedTeams.map((x) => idx.get(x)?.club.id).filter((x): x is number => !!x))];
+    const today = new Date().toISOString().slice(0, 10);
+    const all = (await Promise.all(clubs.map((c) => loadClub(c).catch(() => null)))).flatMap((x) => x?.games ?? []);
+    return [...new Map(all.filter((g) => g.d >= today && !isPlayed(g) && (s.followedTeams.includes(g.h) || s.followedTeams.includes(g.a))).map((g) => [g.id, g])).values()]
+      .sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t)).slice(0, 5);
+  }, [s.followedTeams.join()]);
+  const comps = useAsync(loadComps, []);
+  const mine = (comps.data ?? []).filter((c) => s.followedComps.includes(c.id));
+  const sugg = (comps.data ?? []).filter((c) => c.rank < 20 && !s.followedComps.includes(c.id)).slice(0, 4);
+  return (
+    <>
+      {top.length > 0 && <section className="aside-card">
+        <div className="group-title"><Ico n="news" />{t('À la une')}</div>
+        {top.map((n) => <a key={n.id} className="aside-news" href={n.url} target="_blank" rel="noopener">
+          <span className="ph"><Ico n="ball" />{n.image && <img src={n.image} alt="" loading="lazy" onError={(e) => e.currentTarget.remove()} />}</span>
+          <span><b>{n.title}</b><small>{n.source}</small></span></a>)}
+        <a className="aside-more" href="#/actus">{t('Toutes les actus ›')}</a>
+      </section>}
+      {!!next.data?.length && <section className="aside-card">
+        <div className="group-title"><Ico n="calendar" />{t('Tes prochains matchs')}</div>
+        {next.data.map((g) => <a key={g.id} className="aside-row" href={`#/match/${g.s}/${g.id}`}>
+          <span className="when">{frDate(g.d, { weekday: 'short', day: 'numeric' })}<br />{g.t}</span>
+          <span className="ellipsis"><b className="ellipsis" style={{ display: 'block' }}>{g.hn}</b><span className="ellipsis" style={{ display: 'block' }}>{g.an}</span></span></a>)}
+        <a className="aside-more" href="#/matchs">{t('Tous mes matchs ›')}</a>
+      </section>}
+      {(mine.length > 0 || sugg.length > 0) && <section className="aside-card">
+        <div className="group-title"><Ico n="trophy" />{mine.length ? t('Mes compétitions') : t('Compétitions à suivre')}</div>
+        {(mine.length ? mine.slice(0, 6) : sugg).map((c) => <div key={c.id} className="aside-row">
+          <CompLogo c={c} size={32} /><a className="grow ellipsis" href={`#/competition/${c.id}`} style={{ color: 'inherit' }}>{c.name}</a>{!mine.length && <CompFollowButton id={c.id} />}</div>)}
+      </section>}
+    </>
+  );
+}
+
 function Suggestions() {
   const comps = useAsync(loadComps, []);
   const list = (comps.data ?? []).filter((c) => c.rank < 20).slice(0, 8);

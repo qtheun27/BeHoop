@@ -4,6 +4,19 @@ import { useSession } from '../lib/session';
 import { t, lang, setLang, LANGS, type Lang } from '../lib/i18n';
 import { Ico, type IconName } from './icons';
 
+/** Écran d'ordinateur (≥ 1100 px, même seuil que le CSS) : navigation latérale et colonne de droite n'existent que là */
+export function useWide() {
+  const q = '(min-width: 1100px)';
+  const [w, setW] = useState(() => matchMedia(q).matches);
+  useEffect(() => { const m = matchMedia(q); const f = () => setW(m.matches); m.addEventListener('change', f); return () => m.removeEventListener('change', f); }, []);
+  return w;
+}
+
+/** Logo BeHoop : emblème (ballon et panier) + « BE » foncé et « HOOP » orange, comme le logo de l'appli */
+export const Logo = ({ size = 34 }: { size?: number }) => (
+  <span className="logo"><img src="/icons/logo-mark.png" alt="" width={size} height={size} /><span className="wm"><b>BE</b>HOOP</span></span>
+);
+
 /** Choix de la langue (en-tête) : FR · NL · EN */
 export function LangSwitch() {
   return (
@@ -21,24 +34,30 @@ export function LangSwitch() {
  *  - écrans principaux : logo BEHOOP + avatar (Profil) ;
  *  - sous-écrans : bouton Retour + titre. Le grand titre en lettres de match suit en dessous.
  */
-export function Screen({ title, children, left, right, tabs = true, back, home, hideTitle }: { title: string; children: ReactNode; left?: ReactNode; right?: ReactNode; tabs?: boolean; back?: string; home?: boolean; hideTitle?: boolean }) {
+/** aside : colonne de droite sur ordinateur (masquée sur téléphone) */
+export function Screen({ title, children, left, right, tabs = true, back, home, hideTitle, aside }: { title: string; children: ReactNode; left?: ReactNode; right?: ReactNode; tabs?: boolean; back?: string; home?: boolean; hideTitle?: boolean; aside?: ReactNode }) {
   const s = useSession();
+  const wide = useWide();
+  if (!wide) aside = undefined;
   useEffect(() => { document.title = `${title} · BeHoop`; }, [title]);
   return (
-    <main className={`screen${tabs ? '' : ' no-tabs'}`}>
+    <main className={`screen${tabs ? '' : ' no-tabs'}${aside ? ' has-aside' : ''}`}>
+      <div className="col-main">
       <div className="navbar">
         <div className="bar">
           {back ? <button className="back" onClick={() => (history.length > 1 ? history.back() : (location.hash = back))} aria-label={t('Retour')}>‹ {t('Retour')}</button> : left}
-          {home || !back ? <a className="brand" href={s.user ? '#/fil' : '/'} aria-label={t('BeHoop, accueil')}><img src="/icons/icon-192.png" alt="" /><span>BeHoop</span></a> : <div className="small-title ellipsis">{title}</div>}
+          {home || !back ? <a className="brand m-only" href={s.user ? '#/fil' : '/'} aria-label={t('BeHoop, accueil')}><Logo /></a> : <div className="small-title ellipsis">{title}</div>}
           {right}
           {!back && <LangSwitch />}
           {/* Profil (et la modération, dans Profil) : avatar en haut à droite ; le reste est dans la barre du bas. */}
-          {!back && (s.user ? <a className="top-av" href="#/profil" aria-label={t('Mon profil')}><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
-            : <a className="btn small secondary" href="/" style={{ width: 'auto' }}>‹ {t('Accueil')}</a>)}
+          {!back && (s.user ? <a className="top-av m-only" href="#/profil" aria-label={t('Mon profil')}><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
+            : <a className="btn small secondary m-only" href="/" style={{ width: 'auto' }}>‹ {t('Accueil')}</a>)}
         </div>
       </div>
       {!hideTitle && <h1 className="large-title">{title}</h1>}
       {children}
+      </div>
+      {aside && <aside className="col-aside">{aside}</aside>}
     </main>
   );
 }

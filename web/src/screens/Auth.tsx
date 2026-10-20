@@ -41,7 +41,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
 
   // Connexion réussie avec un profil existant : on ferme la feuille et on rejoue l'action demandée
   useEffect(() => {
-    if (s.user && s.profile && !finishOnly) { const then = s.authSheet; onClose(); if (typeof then === 'function') then(); }
+    if (s.user && s.profile && !finishOnly) afterLogin(s.authSheet, onClose);
   }, [s.user, s.profile]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (s.user) { const n = s.user.displayName?.split(' ') ?? []; setFirst((f) => f || n[0] || ''); setLast((l) => l || n.slice(1).join(' ')); }
@@ -66,7 +66,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
     if (!s.user) return;
     const p = await D.createProfile(s.user.uid, shortName(`${first} ${last}`));
     s.setProfile(p); haptic();
-    const then = s.authSheet; onClose(); if (typeof then === 'function') then();
+    afterLogin(s.authSheet, onClose);
   });
 
   if (s.user && !s.profile) {
@@ -116,6 +116,13 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
       )}
     </Sheet>
   );
+}
+
+/** Après connexion : l'action demandée (ex. réagir), sinon le fil — jamais la page Profil d'où l'on s'est connecté. */
+function afterLogin(then: (() => void) | null | undefined, close: () => void) {
+  close();
+  if (typeof then === 'function') then();
+  else if (/^#\/(profil)?$/.test(location.hash) || !location.hash) location.hash = '#/fil';
 }
 
 /** Termine la connexion par lien magique au retour sur l'appli. */

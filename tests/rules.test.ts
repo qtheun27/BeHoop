@@ -187,6 +187,17 @@ describe('Fils de discussion (commentaires et réactions)', () => {
     await assertSucceeds(updateDoc(doc(as('x', ADMIN), 'threads', 'game-9', 'comments', 'c1'), { hidden: true }));
     await assertSucceeds(deleteDoc(doc(as('bob'), 'threads', 'game-9', 'comments', 'c1')));
   });
+  it('liste personnelle des commentaires : la sienne seulement, et pour un vrai commentaire', async () => {
+    const db = as('bob');
+    const b = writeBatch(db);
+    b.set(doc(db, 'threads', 'game-5', 'comments', 'k1'), comment('bob'));
+    b.set(doc(db, 'threads', 'game-5'), { comments: increment(1) }, { merge: true });
+    b.set(doc(db, 'myComments', 'bob', 'items', 'k1'), { thread: 'game-5' });
+    await assertSucceeds(b.commit());
+    await assertFails(setDoc(doc(as('alice'), 'myComments', 'bob', 'items', 'k2'), { thread: 'game-5' }));
+    await assertFails(setDoc(doc(as('bob'), 'myComments', 'bob', 'items', 'nope'), { thread: 'game-5' })); // pas de commentaire
+    await assertFails(getDoc(doc(as('alice'), 'myComments', 'bob', 'items', 'k1')));
+  });
   it('signaler un commentaire', async () => {
     const id = 'c~game-9~c1';
     await assertSucceeds(setDoc(doc(as('alice'), 'reports', `${id}_alice`), { postId: id, reporterUid: 'alice', reason: 'Spam', status: 'open', createdAt: new Date() }));

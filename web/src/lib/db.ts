@@ -215,13 +215,15 @@ export async function addComment(k: ThreadKey, uid: string, authorName: string, 
   const id = rid(20);
   const b = writeBatch(db);
   b.set(doc(db, 'threads', k, 'comments', id), { authorUid: uid, authorName: authorName.slice(0, 60), text, createdAt: serverTimestamp(), hidden: false });
+  b.set(doc(db, 'myComments', uid, 'items', id), { thread: k }); // liste personnelle : effacement à la suppression du compte
   b.set(threadRef(k), { comments: increment(1) }, { merge: true }); // pas de « reactions: {} » : la fusion viderait les compteurs
   await b.commit();
   return id;
 }
-export async function deleteComment(k: ThreadKey, id: string) {
+export async function deleteComment(k: ThreadKey, id: string, uid?: string) {
   const b = writeBatch(db);
   b.delete(doc(db, 'threads', k, 'comments', id));
+  if (uid) b.delete(doc(db, 'myComments', uid, 'items', id));
   b.set(threadRef(k), { comments: increment(-1) }, { merge: true });
   await b.commit();
 }

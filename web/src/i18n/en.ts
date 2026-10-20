@@ -655,4 +655,7 @@ export const EN: Record<string, string> = {
   "Commentaires et réactions": "Comments and reactions",
   "Tes commentaires sont visibles de tous, avec ton prénom et l'initiale de ton nom ; tes réactions sont comptées sans ton nom. Tu peux supprimer un commentaire à tout moment ; ils sont effacés avec ton compte.": "Your comments are visible to everyone, with your first name and last-name initial; your reactions are counted without your name. You can delete a comment at any time; they are erased with your account.",
   "Sous les actus et les matchs, on commente le jeu, pas les personnes. Pas de commentaires sous les matchs de jeunes : seulement des encouragements (🏀 🔥 👏).": "Under news and games, we discuss the game, not people. No comments under youth games: only cheers (🏀 🔥 👏).",
+  "Tous mes matchs ›": "All my games ›",
+  "Mes compétitions": "My competitions",
+  "Compétitions à suivre": "Competitions to follow",
 };

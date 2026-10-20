@@ -655,4 +655,7 @@ export const NL: Record<string, string> = {
   "Commentaires et réactions": "Reacties en emoji's",
   "Tes commentaires sont visibles de tous, avec ton prénom et l'initiale de ton nom ; tes réactions sont comptées sans ton nom. Tu peux supprimer un commentaire à tout moment ; ils sont effacés avec ton compte.": "Je reacties zijn voor iedereen zichtbaar, met je voornaam en de initiaal van je achternaam; je emoji's worden geteld zonder je naam. Je kunt een reactie altijd verwijderen; ze worden gewist samen met je account.",
   "Sous les actus et les matchs, on commente le jeu, pas les personnes. Pas de commentaires sous les matchs de jeunes : seulement des encouragements (🏀 🔥 👏).": "Onder het nieuws en de wedstrijden bespreken we het spel, niet de personen. Geen reacties onder jeugdwedstrijden: alleen aanmoedigingen (🏀 🔥 👏).",
+  "Tous mes matchs ›": "Al mijn wedstrijden ›",
+  "Mes compétitions": "Mijn competities",
+  "Compétitions à suivre": "Competities om te volgen",
 };

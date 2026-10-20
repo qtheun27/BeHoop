@@ -242,10 +242,12 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       await fs.delete(p._path);
     }
     for (const v of await fs.query('matchVideos', [['authorUid', 'EQUAL', user.uid]])) await fs.set(v._path, { status: 'deleted', authorUid: 'supprimé' });
-    // Commentaires (actus, matchs, publications) : effacés, puis compteur du fil recalculé
+    // Commentaires (actus, matchs, publications) : liste personnelle myComments/{uid}, effacés puis compteur du fil recalculé
     const threads = new Set<string>();
-    for (const c of await fs.query('comments', [['authorUid', 'EQUAL', user.uid]], { allDescendants: true }).catch(() => [])) {
-      await fs.delete(c._path); threads.add(c._path.split('/comments/')[0]);
+    for (const m of await fs.query('items', [], { parent: `myComments/${user.uid}` }).catch(() => [])) {
+      const id = m._path.split('/').pop()!;
+      if (typeof m.thread === 'string' && /^(news|game|post)-[\w-]+$/.test(m.thread)) { await fs.delete(`threads/${m.thread}/comments/${id}`); threads.add(`threads/${m.thread}`); }
+      await fs.delete(m._path);
     }
     for (const th of threads) await fs.set(th, { comments: (await fs.query('comments', [], { parent: th }).catch(() => [])).length });
     await fs.delete(`legalAcceptances/${user.uid}`);

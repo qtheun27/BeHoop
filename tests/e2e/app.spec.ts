@@ -8,7 +8,9 @@ async function login(page: Page, who: 'responsable' | 'parent' | 'visiteur') {
   await page.getByLabel('E-mail').fill(users[who].email);
   await page.getByLabel('Mot de passe').fill(users[who].password);
   await page.getByRole('button', { name: 'Se connecter', exact: true }).click();
-  await expect(page.getByText(users[who].name).first()).toBeVisible();
+  // Après connexion depuis Profil : direction le fil
+  await expect(page).toHaveURL(/#\/fil$/);
+  await expect(page.getByRole('link', { name: 'Mon profil' })).toBeVisible();
 }
 
 test('sans compte : Explorer fonctionne et invite à créer un compte', async ({ page }) => {
