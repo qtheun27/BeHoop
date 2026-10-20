@@ -16,7 +16,7 @@ export function useWide() {
 export const Logo = ({ size = 38 }: { size?: number }) => (
   <span className="logo" style={{ '--lg': `${size}px` } as React.CSSProperties}>
     <img className="em-light" src="/icons/emblem-light.png" alt="" /><img className="em-dark" src="/icons/emblem-dark.png" alt="" />
-    <span className="wm"><b>BE</b><i>HOOP</i></span>
+    <span className="wm"><b>Be</b><i>Hoop</i></span>
   </span>
 );
 
@@ -66,15 +66,32 @@ export function Screen({ title, children, left, right, tabs = true, back, home, 
 }
 
 export function Sheet({ title, onClose, children, right }: { title: string; onClose: () => void; children: ReactNode; right?: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const k = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
-    window.addEventListener('keydown', k); document.body.style.overflow = 'hidden';
-    return () => { window.removeEventListener('keydown', k); document.body.style.overflow = ''; };
+    window.addEventListener('keydown', k);
+    // Page derrière figée (iOS ignore overflow:hidden sur body) : on la fixe à sa position et on la remet en place à la fermeture
+    const y = window.scrollY, b = document.body.style;
+    Object.assign(b, { position: 'fixed', top: `-${y}px`, left: '0', right: '0', overflow: 'hidden' });
+    return () => { window.removeEventListener('keydown', k); Object.assign(b, { position: '', top: '', left: '', right: '', overflow: '' }); window.scrollTo(0, y); };
   }, [onClose]);
+  // Glisser vers le bas pour fermer (depuis la poignée, ou n'importe où quand le contenu est tout en haut)
+  const drag = useRef<{ y0: number; dy: number } | null>(null);
+  const onTouchStart = (e: React.TouchEvent) => { if ((ref.current?.scrollTop ?? 0) <= 0) drag.current = { y0: e.touches[0].clientY, dy: 0 }; };
+  const onTouchMove = (e: React.TouchEvent) => {
+    const d = drag.current; if (!d || !ref.current) return;
+    d.dy = Math.max(0, e.touches[0].clientY - d.y0);
+    if (d.dy > 0) { ref.current.style.transform = `translateY(${d.dy}px)`; ref.current.style.transition = 'none'; }
+  };
+  const onTouchEnd = () => {
+    const d = drag.current; drag.current = null; if (!d || !ref.current) return;
+    ref.current.style.transition = 'transform .2s ease';
+    if (d.dy > 90) { ref.current.style.transform = 'translateY(100%)'; setTimeout(onClose, 180); } else ref.current.style.transform = '';
+  };
   return (
     <>
-      <div className="sheet-back" onClick={onClose} />
-      <div className="sheet" role="dialog" aria-modal="true" aria-label={title}>
+      <div className="sheet-back" onClick={onClose} onTouchMove={(e) => e.preventDefault()} />
+      <div className="sheet" ref={ref} role="dialog" aria-modal="true" aria-label={title} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
         <div className="grab" />
         <div className="sheet-head"><button className="btn ghost small" onClick={onClose}>{t('Fermer')}</button><h2>{title}</h2><div style={{ minWidth: 72, textAlign: 'right' }}>{right}</div></div>
         {children}

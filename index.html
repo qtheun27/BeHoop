@@ -263,7 +263,7 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 </style>
 <!-- BeHoop : style « basket » partagé avec l'appli (couche ajoutée, les styles d'origine restent au-dessus) -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 <style id="bh-style">
   :root { --primary: #f26a1b; --bh-grad: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 55%, #f2c14e));
     --bg: #f4ece0; --card-bg: rgba(255,255,255,.94); --border: rgba(255,255,255,.8); --radius: 22px; }
@@ -283,9 +283,9 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
   /* Logo : emblème détouré + « BE » bleu nuit (blanc en sombre) « HOOP » en dégradé orange, lettrage penché */
   header .titre-app img.em-light, header .titre-app img.em-dark { width: 34px !important; height: 34px !important; border-radius: 0 !important; object-fit: contain; vertical-align: -9px; margin-right: 6px; filter: drop-shadow(0 2px 4px rgba(10,30,80,.18)); }
   header .titre-app img.em-dark { display: none; }
-  header .bh-wm { font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: .03em; display: inline-block; transform: skewX(-8deg); vertical-align: -3px; }
-  header .bh-wm b { font-weight: 400; color: #0d2a5c; }
-  header .bh-wm i { font-style: normal; background: linear-gradient(135deg, #f26a1b, #f5a623); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header .bh-wm { font-family: Sora, 'Avenir Next', sans-serif; font-weight: 300; font-size: 24px; letter-spacing: -.035em; display: inline-block; vertical-align: -3px; text-transform: none; }
+  header .bh-wm b { font-weight: 300; color: #0d2a5c; }
+  header .bh-wm i { font-style: normal; font-weight: 700; background: linear-gradient(120deg, #f26a1b 10%, #f5a623 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   @media (prefers-color-scheme: dark) { header .bh-wm b { color: #fff; } header .titre-app img.em-light { display: none; } header .titre-app img.em-dark { display: inline; } }
   header .titre-app a { white-space: nowrap; font-size: 12.5px !important; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-transform: none; letter-spacing: 0; border-radius: 999px !important; padding: 7px 12px !important; }
   header .titre-app a#bh-compte { background: var(--bh-grad) !important; }
@@ -317,7 +317,7 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 
 <header>
   <div class="titre-app">
-    <img class="em-light" src="icons/emblem-light.png" alt=""><img class="em-dark" src="icons/emblem-dark.png" alt=""><span class="bh-wm"><b>BE</b><i>HOOP</i></span>
+    <img class="em-light" src="icons/emblem-light.png" alt=""><img class="em-dark" src="icons/emblem-dark.png" alt=""><span class="bh-wm"><b>Be</b><i>Hoop</i></span>
     <select id="bh-lang" aria-label="Langue" onchange="bhSetLang(this.value)" style="margin-left:auto;float:right;border:0;border-radius:12px;padding:6px 8px;font:700 13px Oswald,sans-serif;letter-spacing:.06em;background:color-mix(in srgb,var(--primary) 12%,transparent);color:inherit;">
       <option value="fr">FR</option><option value="nl">NL</option><option value="en">EN</option>
     </select>

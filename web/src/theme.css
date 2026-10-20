@@ -192,9 +192,9 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .logo { display: inline-flex; align-items: center; gap: 9px; }
 .logo img { width: var(--lg, 38px); height: var(--lg, 38px); object-fit: contain; border-radius: 0 !important; filter: drop-shadow(0 2px 4px rgba(10,30,80,.18)); }
 .logo .em-dark { display: none; }
-.logo .wm { font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: calc(var(--lg, 38px) * .74); line-height: 1; letter-spacing: .03em; transform: skewX(-8deg); display: inline-block; padding-right: 2px; }
-.logo .wm b { font-weight: 400; color: var(--brand-be, #0d2a5c); }
-.logo .wm i { font-style: normal; background: linear-gradient(135deg, #f26a1b, #f5a623); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.logo .wm { text-transform: none; font-family: Sora, 'Avenir Next', 'Segoe UI', sans-serif; font-weight: 300; font-size: calc(var(--lg, 38px) * .66); line-height: 1; letter-spacing: -.035em; display: inline-block; padding-right: 2px; }
+.logo .wm b { font-weight: 300; color: var(--brand-be, #0d2a5c); }
+.logo .wm i { font-style: normal; font-weight: 700; background: linear-gradient(120deg, #f26a1b 10%, #f5a623 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 :root[data-theme="dark"], :root[data-bg="nuit"] { --brand-be: #fff; }
 :root[data-theme="dark"] .logo .em-light, :root[data-bg="nuit"] .logo .em-light { display: none; }
 :root[data-theme="dark"] .logo .em-dark, :root[data-bg="nuit"] .logo .em-dark { display: inline; }
@@ -281,3 +281,12 @@ html { overflow-x: hidden; }
 /* Actu sans image : carte texte, pastille aux couleurs du média */
 .news-text { display: flex; gap: 14px; padding: 16px 14px 6px; align-items: flex-start; }
 .news-badge { width: 54px; height: 54px; flex: none; border-radius: 16px; display: grid; place-items: center; color: #fff; font: 400 20px/1 Anton, Impact, sans-serif; letter-spacing: .03em; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
+
+/* Fenêtres : leur défilement ne fait jamais bouger la page derrière */
+.sheet { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
+.sheet-back { touch-action: none; }
+
+/* Thème d'un club : son logo dans le rond central, comme sur le parquet de l'équipe */
+:root[data-accent="club"]:not([data-bg="uni"]) body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; left: 50%; top: 42%; width: 200px; height: 200px;
+  transform: translate(-50%, -50%); border-radius: 50%; background: var(--club-logo, none) center / 72% no-repeat; opacity: .24; filter: saturate(.9); }
+:root[data-accent="club"][data-bg="nuit"] body::after { top: 45%; width: 280px; height: 280px; opacity: .16; }
