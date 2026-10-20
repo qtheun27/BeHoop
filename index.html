@@ -280,11 +280,13 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
     box-shadow: 0 10px 30px rgba(40,25,10,.08); backdrop-filter: saturate(180%) blur(22px); -webkit-backdrop-filter: saturate(180%) blur(22px);
     font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .02em; text-transform: uppercase; color: var(--primary); gap: 6px !important; }
   header .titre-app img { width: 30px !important; height: 30px !important; border-radius: 50% !important; }
-  /* Logo : « BE » foncé (blanc en sombre), « HOOP » orange, comme le logo de l'appli */
-  header .bh-wm { font-family: Montserrat, 'Arial Black', sans-serif; font-weight: 900; font-size: 21px; letter-spacing: .01em; color: #f26a1b; vertical-align: -2px; }
-  header .bh-wm b { color: #0d2a5c; font-weight: 900; }
-  @media (prefers-color-scheme: dark) { html:not([data-theme="light"]) header .bh-wm b { color: #fff; } }
-  html[data-theme="dark"] header .bh-wm b { color: #fff; }
+  /* Logo : emblème détouré + « BE » bleu nuit (blanc en sombre) « HOOP » en dégradé orange, lettrage penché */
+  header .titre-app img.em-light, header .titre-app img.em-dark { width: 34px !important; height: 34px !important; border-radius: 0 !important; object-fit: contain; vertical-align: -9px; margin-right: 6px; filter: drop-shadow(0 2px 4px rgba(10,30,80,.18)); }
+  header .titre-app img.em-dark { display: none; }
+  header .bh-wm { font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: .03em; display: inline-block; transform: skewX(-8deg); vertical-align: -3px; }
+  header .bh-wm b { font-weight: 400; color: #0d2a5c; }
+  header .bh-wm i { font-style: normal; background: linear-gradient(135deg, #f26a1b, #f5a623); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  @media (prefers-color-scheme: dark) { header .bh-wm b { color: #fff; } header .titre-app img.em-light { display: none; } header .titre-app img.em-dark { display: inline; } }
   header .titre-app a { white-space: nowrap; font-size: 12.5px !important; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; text-transform: none; letter-spacing: 0; border-radius: 999px !important; padding: 7px 12px !important; }
   header .titre-app a#bh-compte { background: var(--bh-grad) !important; }
   .search-box input[type="text"] { border-radius: 999px; padding: 13px 18px; border: 1px solid var(--border); background: var(--card-bg); box-shadow: 0 6px 20px rgba(40,25,10,.07); }
@@ -315,7 +317,7 @@ try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.
 
 <header>
   <div class="titre-app">
-    <img src="icons/logo-mark.png" alt="" style="width:30px;height:30px;border-radius:50%;vertical-align:-8px;margin-right:4px;box-shadow:0 2px 8px rgba(10,30,80,.25);"><span class="bh-wm"><b>BE</b>HOOP</span>
+    <img class="em-light" src="icons/emblem-light.png" alt=""><img class="em-dark" src="icons/emblem-dark.png" alt=""><span class="bh-wm"><b>BE</b><i>HOOP</i></span>
     <select id="bh-lang" aria-label="Langue" onchange="bhSetLang(this.value)" style="margin-left:auto;float:right;border:0;border-radius:12px;padding:6px 8px;font:700 13px Oswald,sans-serif;letter-spacing:.06em;background:color-mix(in srgb,var(--primary) 12%,transparent);color:inherit;">
       <option value="fr">FR</option><option value="nl">NL</option><option value="en">EN</option>
     </select>

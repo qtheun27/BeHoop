@@ -35,12 +35,13 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
   const r = document.documentElement;
   if (p.mode === 'auto') r.removeAttribute('data-theme'); else r.dataset.theme = p.mode;
   r.dataset.bg = p.bg; r.dataset.rt = p.rt ? '1' : '0'; r.dataset.rm = p.rm ? '1' : '0';
-  ['--accent', '--accent-2', '--accent-grad'].forEach((k) => r.style.removeProperty(k));
+  ['--accent', '--accent-base', '--accent-2', '--accent-grad'].forEach((k) => r.style.removeProperty(k));
   if (p.accent.startsWith('club:')) {
     const c = clubs.find((x) => x.id === Number(p.accent.slice(5)));
     r.dataset.accent = 'club';
     const k = c ? clubColors(c) : store.get<{ accent: string; second: string; grad: string } | null>('behoop.themeClub', null);
-    if (k) { r.style.setProperty('--accent', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); store.set('behoop.themeClub', k); }
+    // --accent-base : la couleur du club ; theme.css en dérive --accent (éclaircie en mode sombre pour rester lisible)
+    if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); store.set('behoop.themeClub', k); }
   } else r.dataset.accent = p.accent;
   const meta = document.querySelector('meta[name="theme-color"]:not([media])') ?? Object.assign(document.head.appendChild(document.createElement('meta')), { name: 'theme-color' });
   meta.setAttribute('content', getComputedStyle(r).getPropertyValue('--bg').trim() || '#f4f1ec');

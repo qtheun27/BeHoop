@@ -36,6 +36,7 @@ export default {
     try {
       if (url.pathname.startsWith('/m/')) res = await serveMedia(req, env, ctx, decodeURIComponent(url.pathname.slice(3)));
       else if (url.pathname.startsWith('/api/')) res = await api(req, env, url.pathname.slice(4));
+      else if (url.pathname === '/img') res = await newsImage(ctx, url.searchParams.get('u') ?? '');
       else res = fail('BeHoop media', 404);
     } catch (e) {
       const m = String((e as Error)?.message ?? e);
@@ -46,6 +47,27 @@ export default {
     return out;
   },
 };
+
+/* ---------------- Images des actus ----------------
+ * Certains médias refusent d'afficher leurs images sur un autre site (Sudinfo…) : l'appli les demande alors ici.
+ * Seules les images citées dans app-data/news.json sont servies (pas de relais ouvert), en cache 7 jours. */
+let newsImages: { at: number; set: Set<string> } | null = null;
+async function newsImage(ctx: ExecutionContext, u: string): Promise<Response> {
+  if (!/^https:\/\//.test(u) || u.length > 2000) return fail('Image invalide', 400);
+  const key = new Request(`https://cache.behoop.internal/img/${encodeURIComponent(u)}`);
+  const hit = await caches.default.match(key); if (hit) return hit;
+  if (!newsImages || Date.now() - newsImages.at > 10 * 60_000) {
+    const d = await (await fetch('https://behoop.be/app-data/news.json', { cf: { cacheTtl: 600 } })).json<{ items: { image: string | null }[] }>();
+    newsImages = { at: Date.now(), set: new Set(d.items.map((n) => n.image).filter((x): x is string => !!x)) };
+  }
+  if (!newsImages.set.has(u)) return fail('Image inconnue', 404);
+  const r = await fetch(u, { headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36', Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' } });
+  const type = r.headers.get('Content-Type') ?? '';
+  if (!r.ok || !type.startsWith('image/') || Number(r.headers.get('Content-Length') ?? 0) > 8 << 20) return fail('Image indisponible', 502);
+  const out = new Response(r.body, { headers: { 'Content-Type': type, 'Cache-Control': 'public, max-age=604800', 'Access-Control-Allow-Origin': '*' } });
+  ctx.waitUntil(caches.default.put(key, out.clone()));
+  return out;
+}
 
 /* ---------------- Médias ---------------- */
 async function serveMedia(req: Request, env: Env, ctx: ExecutionContext, key: string): Promise<Response> {

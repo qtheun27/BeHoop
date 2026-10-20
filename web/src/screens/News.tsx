@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { loadNews, readable, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
+import { WORKER_URL } from '../lib/config';
 import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
 import { SocialBar } from '../ui/Social';
@@ -11,13 +12,17 @@ import * as D from '../lib/db';
 const CATS: [string, IconName | null, string][] = [['tout', null, 'Tout'], ['belgique', 'flag', 'Belgique'], ['regional', 'pin', 'Régional'], ['international', 'globe', 'International'], ['nba', 'ball', 'NBA']];
 const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
 
-/** Image de l'article ; si le média n'en fournit pas (ou bloque son affichage), visuel « demi-terrain » aux couleurs de la source. */
-function NewsVisual({ n, ratio }: { n: News; ratio: string }) {
-  const [broken, setBroken] = useState(false);
-  const box = { aspectRatio: ratio, width: '100%', display: 'block' } as const;
-  if (n.image && !broken) return <img src={n.image} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setBroken(true)} style={{ ...box, objectFit: 'cover', background: '#0a0c12' }} />;
+/** Image de l'article : d'abord chez le média ; s'il en bloque l'affichage sur un autre site, par media.behoop.be
+ *  (relais limité aux images des actus) ; sinon rien — la carte passe en version texte. */
+function useNewsImage(n: News) {
+  const [stage, setStage] = useState(0);
+  const src = !n.image || stage > 1 ? null : stage === 0 ? n.image : `${WORKER_URL}/img?u=${encodeURIComponent(n.image)}`;
+  return { src, fail: () => setStage((x) => x + 1) };
+}
+/** Visuel de repli (carrousel « À la une » seulement) : demi-terrain aux couleurs de la source */
+function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
   return (
-    <div style={{ ...box, position: 'relative', overflow: 'hidden', background: tint(n.source) }}>
+    <div style={{ aspectRatio: ratio, width: '100%', display: 'block', position: 'relative', overflow: 'hidden', background: tint(n.source) }}>
       <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} aria-hidden>
         <g fill="none" stroke="rgba(255,255,255,.22)" strokeWidth="2.5">
           <rect x="-4" y="-4" width="328" height="168" /><line x1="160" y1="-4" x2="160" y2="164" /><circle cx="160" cy="80" r="34" />
@@ -25,10 +30,7 @@ function NewsVisual({ n, ratio }: { n: News; ratio: string }) {
           <rect x="254" y="48" width="70" height="64" /><circle cx="254" cy="80" r="22" /><path d="M324 18 H280 A82 82 0 0 0 280 142 H324" />
         </g>
       </svg>
-      <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', textAlign: 'center', color: '#fff', padding: 12 }}>
-        <div><Ico n="ball" size={42} style={{ filter: 'drop-shadow(0 4px 10px rgba(0,0,0,.35))' }} />
-          <div style={{ fontFamily: 'Anton', fontSize: 22, letterSpacing: '.04em', marginTop: 8, textShadow: '0 2px 8px rgba(0,0,0,.35)' }}>{n.source.toUpperCase()}</div></div>
-      </div>
+      <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: '#fff' }}><Ico n="ball" size={38} /></div>
     </div>
   );
 }
@@ -43,12 +45,25 @@ export function NewsCard({ n, wide }: { n: News; wide?: boolean }) {
   );
   return <NewsLink n={n} />;
 }
+const initials = (s: string) => s.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
 function NewsLink({ n, wide }: { n: News; wide?: boolean }) {
+  const img = useNewsImage(n);
+  const meta = <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>;
+  // Pas d'image : carte texte (pastille aux couleurs du média), jamais de grand visuel vide
+  if (wide && !img.src) return (
+    <a href={n.url} target="_blank" rel="noopener" className="news-text" style={{ color: 'inherit' }}>
+      <span className="news-badge" style={{ background: tint(n.source) }} aria-hidden>{initials(n.source) || <Ico n="news" />}</span>
+      <span style={{ minWidth: 0 }}>{meta}
+        <span style={{ display: '-webkit-box', fontWeight: 700, fontSize: 17, lineHeight: 1.25, marginTop: 6, WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</span>
+        {n.excerpt && <span className="muted" style={{ display: '-webkit-box', fontSize: 14.5, marginTop: 4, WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.excerpt}</span>}</span>
+    </a>
+  );
   return (
     <a className={wide ? '' : 'card news'} href={n.url} target="_blank" rel="noopener" style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
-      <NewsVisual n={n} ratio={wide ? '16/8' : '16/9'} />
+      {img.src ? <img src={img.src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={img.fail} style={{ aspectRatio: wide ? '16/8' : '16/9', width: '100%', display: 'block', objectFit: 'cover', background: '#0a0c12' }} />
+        : <CourtVisual n={n} ratio="16/9" />}
       <div style={{ padding: '10px 14px 14px' }}>
-        <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>
+        {meta}
         <div style={{ fontWeight: 700, fontSize: wide ? 18 : 15.5, lineHeight: 1.25, marginTop: 6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</div>
         {wide && n.excerpt && <div className="muted" style={{ fontSize: 14.5, marginTop: 4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.excerpt}</div>}
       </div>

@@ -60,6 +60,21 @@ const unxml = (s = '') => s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').replace
 const normalize = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 const cut = (s: string, n = 200) => (s.length <= n ? s : s.slice(0, s.lastIndexOf(' ', n - 1) > 80 ? s.lastIndexOf(' ', n - 1) : n - 1) + '…');
 const tag = (it: string, name: string) => new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, 'i').exec(it)?.[1] ?? '';
+/** Lien d'image propre : entités HTML décodées (parfois deux fois : « &amp;amp; » chez DH), https seulement */
+export function cleanImg(u: string | null | undefined): string | null {
+  if (!u) return null;
+  let s = u.trim(), prev = '';
+  while (s !== prev) { prev = s; s = s.replace(/&amp;/g, '&').replace(/&#38;/g, '&').replace(/&quot;/g, '"'); }
+  if (s.startsWith('//')) s = `https:${s}`;
+  return /^https?:\/\//.test(s) ? s.replace(/^http:/, 'https:') : null;
+}
+/** Spam (faux « streams » gratuits relayés par Google Actualités), paris et casinos : jamais dans BeHoop */
+export const SPAM = /live\s*-?\s*streams?|livestream|stream(?:ing)? (?:free|gratuit|online)|watch .{0,60}(?:free|online|live)|free online|how to watch|【|\+\+\[|TV!!|\b(?:betting|paris sportifs|odds)\b/i;
+export const BLOCKED_SOURCES = /golden ?palace|casino|\bbet|bwin|unibet|napoleon|sofascore|365scores|universidad|starsporttv/i;
+/** Fiches générées automatiquement par les médias (scores bruts) : déjà dans BeHoop, en mieux */
+export const AUTO_RESULTS = /^r[ée]sultats et classements sportifs\b|^uitslagen en klassementen\b/i;
+export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'>) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting/i.test(n.url);
+
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }
 
 /** Classe un article : international > NBA > Belgique (le flux d'origine sert de repli). */
@@ -78,7 +93,7 @@ export function parseFeed(xml: string, f: (typeof FEEDS)[number]): News[] {
     const url = unxml(tag(it, 'link')) || (/<link[^>]+href="([^"]+)"/.exec(it)?.[1] ?? '');
     const title = unxml(tag(it, 'title'));
     const excerpt = cut(unxml(tag(it, 'description')));
-    const image = /<media:(?:content|thumbnail)[^>]+url="([^"]+)"/i.exec(it)?.[1] ?? /<enclosure[^>]+url="([^"]+)"[^>]*type="image/i.exec(it)?.[1] ?? null;
+    const image = cleanImg(/<media:(?:content|thumbnail)[^>]+url="([^"]+)"/i.exec(it)?.[1] ?? /<enclosure[^>]+url="([^"]+)"[^>]*type="image/i.exec(it)?.[1] ?? null);
     const date = new Date(unxml(tag(it, 'pubDate')) || unxml(tag(it, 'dc:date')) || Date.now()).toISOString();
     const cats = [...it.matchAll(/<category[^>]*>([\s\S]*?)<\/category>/gi)].map((m) => unxml(m[1])).join(' ');
     // Google Actualités : « Titre - Média » → titre + vraie source ; pas d'accroche (le flux ne contient que des liens)
@@ -127,15 +142,29 @@ function curl(url: string, accept = 'text/html'): Promise<{ html: string; url: s
 
 /** Image d'aperçu de l'article (celle que le média affiche quand on partage le lien). */
 export function pageImage(html: string, base: string): string | null {
-  for (const key of ['og:image:secure_url', 'og:image', 'twitter:image', 'twitter:image:src']) {
+  // On écarte les logos génériques des sites (image identique pour tous les articles), icônes et pixels
+  const ok = (c?: string | null) => !!c && !/logo|_opengraph\.|placeholder|default[-_]?(?:image|share)|favicon|sprite|pixel|\.svg(\?|$)|\.gif(\?|$)|data:/i.test(c);
+  const abs = (c: string) => { try { return cleanImg(new URL(cleanImg(c) ?? c, base).href); } catch { return null; } };
+  for (const key of ['og:image:secure_url', 'og:image', 'og:image:url', 'twitter:image', 'twitter:image:src']) {
     for (const [m] of html.matchAll(/<meta\b[^>]*>/gi)) {
-      if (!new RegExp(`(?:property|name)=["']${key}["']`, 'i').test(m)) continue;
+      if (!new RegExp(`(?:property|name|itemprop)=["']${key}["']`, 'i').test(m)) continue;
       const c = /content=["']([^"']+)["']/i.exec(m)?.[1];
-      // On écarte les logos génériques des sites (image identique pour tous les articles)
-      if (c && !/logo|_opengraph\.|placeholder|\.svg(\?|$)/i.test(c)) {
-        try { return new URL(unxml(c), base).href; } catch { /* lien invalide */ }
-      }
+      if (ok(c)) { const u = abs(c!); if (u) return u; }
     }
+  }
+  // Données structurées (JSON-LD) : "image": "…" | ["…"] | { "url": "…" }
+  for (const [, j] of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+    const m = /"image"\s*:\s*(?:\[\s*)?(?:\{[^}]*?"url"\s*:\s*)?"([^"]+)"/.exec(j);
+    if (m && ok(m[1])) { const u = abs(m[1].replace(/\\\//g, '/')); if (u) return u; }
+  }
+  const link = /<link[^>]+rel=["']image_src["'][^>]*href=["']([^"']+)["']/i.exec(html)?.[1];
+  if (ok(link)) { const u = abs(link!); if (u) return u; }
+  // Première grande image de l'article
+  const body = /<article\b[\s\S]*?<\/article>/i.exec(html)?.[0] ?? html;
+  for (const [tagImg] of body.matchAll(/<img\b[^>]*>/gi)) {
+    const src = /\b(?:data-src|src)=["']([^"']+)["']/i.exec(tagImg)?.[1];
+    const w = Number(/\bwidth=["']?(\d+)/i.exec(tagImg)?.[1] ?? 0);
+    if (ok(src) && (w >= 300 || /\/(?:uploads|images?|media|photos?|resizer)\//i.test(src!))) { const u = abs(src!); if (u) return u; }
   }
   return null;
 }
@@ -258,7 +287,7 @@ export async function run(out = 'app-data/news.json') {
   const byId = new Map<string, News>();
   const known = new Map(prev.map((n) => [n.id, n]));
   for (const n of [...all, ...prev]) {
-    if (byId.has(n.id) || Date.parse(n.date) <= since) continue;
+    if (byId.has(n.id) || Date.parse(n.date) <= since || isSpam(n)) continue;
     // Déjà traité lors d'un passage précédent : on réutilise le vrai lien et l'image trouvés
     const old = known.get(n.id);
     byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? old.image } : n);
@@ -273,6 +302,7 @@ export async function run(out = 'app-data/news.json') {
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
   items = [...new Set(seen.values())];
+  for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
   // Au plus 300 articles par langue (les plus récents) : une langue très active n'écrase pas les autres
   const perLang: Record<string, number> = {};

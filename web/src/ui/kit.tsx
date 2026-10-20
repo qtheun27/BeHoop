@@ -12,9 +12,12 @@ export function useWide() {
   return w;
 }
 
-/** Logo BeHoop : emblème (ballon et panier) + « BE » foncé et « HOOP » orange, comme le logo de l'appli */
-export const Logo = ({ size = 34 }: { size?: number }) => (
-  <span className="logo"><img src="/icons/logo-mark.png" alt="" width={size} height={size} /><span className="wm"><b>BE</b>HOOP</span></span>
+/** Logo BeHoop : emblème détouré (ballon, panier, filet bleu sur fond clair / blanc sur fond sombre) + lettrage sportif */
+export const Logo = ({ size = 38 }: { size?: number }) => (
+  <span className="logo" style={{ '--lg': `${size}px` } as React.CSSProperties}>
+    <img className="em-light" src="/icons/emblem-light.png" alt="" /><img className="em-dark" src="/icons/emblem-dark.png" alt="" />
+    <span className="wm"><b>BE</b><i>HOOP</i></span>
+  </span>
 );
 
 /** Choix de la langue (en-tête) : FR · NL · EN */

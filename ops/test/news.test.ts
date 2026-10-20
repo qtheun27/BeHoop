@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger, isSpam, cleanImg } from '../news';
 import { detectLang } from '../news-lang';
 describe('classement des actualités', () => {
   it.each([
@@ -75,4 +75,24 @@ describe('compTagger : compétitions au nom voisin', () => {
   it('EuroLeague Women n’est pas l’EuroLeague', () => expect(tag('Castors Braine en EuroLeague Women')).toEqual(['elw']));
   it('les deux cités : les deux repérés', () => expect(tag('EuroLeague : le Real gagne ; en EuroLeague Women, Mechelen aussi')).toEqual(['euroleague', 'elw']));
   it('WNBA n’est pas la NBA', () => expect(tag('Finale WNBA : Atlanta égalise')).toEqual([]));
+});
+
+describe('spam et images', () => {
+  it('écarte les faux streams, paris et casinos ; garde les vraies actus', () => {
+    expect(isSpam({ title: '【LIVESTREAMS】FREE]Olympiacos Piraeus vs FC Barcelona Live Free Euroleague Basketball', source: 'Universidad de Córdoba (UCO)', url: 'https://news.google.com/x' })).toBe(true);
+    expect(isSpam({ title: 'HERE’S!* WAY TO WATCH Hapoel Tel Aviv vs Panathinaikos LIVE STREAMS', source: 'X', url: 'https://x.y' })).toBe(true);
+    expect(isSpam({ title: 'NBA – Portland en Camara verliezen laatste oefenduel', source: 'Golden Palace News', url: 'https://www.goldenpalacenews.be/nl/x' })).toBe(true);
+    expect(isSpam({ title: 'Brussels vs BC Oostende scores & predictions', source: 'Sofascore', url: 'https://www.sofascore.com/x' })).toBe(true);
+    expect(isSpam({ title: 'Mons Basket-ball est sur la bonne voie !', source: 'Sudinfo', url: 'https://www.sudinfo.be/x' })).toBe(false);
+    expect(isSpam({ title: 'Les Spurs vont reprendre sans Tobias Harris', source: 'BasketUSA', url: 'https://www.basketusa.com/x' })).toBe(false);
+  });
+  it('liens d’image : entités décodées (même deux fois), https', () => {
+    expect(cleanImg('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&amp;amp;smart=true&amp;width=1200')).toBe('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&smart=true&width=1200');
+    expect(cleanImg('//cdn.x/y.jpg')).toBe('https://cdn.x/y.jpg');
+    expect(cleanImg('javascript:alert(1)')).toBeNull();
+  });
+  it('image de la page : JSON-LD et première grande image si pas d’og:image', () => {
+    expect(pageImage('<script type="application/ld+json">{"image":{"@type":"ImageObject","url":"https://a.b/photo.jpg"}}</script>', 'https://a.b/')).toBe('https://a.b/photo.jpg');
+    expect(pageImage('<article><img src="/logo.png"><img src="/uploads/2026/match.jpg"></article>', 'https://a.b/n/1')).toBe('https://a.b/uploads/2026/match.jpg');
+  });
 });

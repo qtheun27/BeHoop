@@ -19,35 +19,52 @@
 }
 :root[data-theme="dark"] { --bg: #070b14; --bg2: rgba(22,27,38,.92); --glass: rgba(24,30,44,.72); --glass-border: rgba(255,255,255,.08); --card-shadow: 0 10px 30px rgba(0,0,0,.45); }
 
-/* ---------- Fonds : Parquet (défaut), Nuit de match, Uni ---------- */
-/* Le fond uni est sur html ; body reste transparent, sinon il recouvrirait le parquet (body::before, z-index -1) */
+/* ---------- Fonds : Parquet (défaut), Nuit de match, Uni ----------
+ * Tous les fonds suivent la couleur du thème : --accent (lignes, rond central) et --tint (teinte du sol).
+ * Couleurs d'un club : le parquet devient celui de l'équipe (sol teinté, rond central et ligne médiane à ses couleurs). */
+:root { --tint: 0%; --tint-strong: 0%; }
+:root[data-accent="maillot"], :root[data-accent="rouge"], :root[data-accent="vert"], :root[data-accent="violet"], :root[data-accent="nuit"] { --tint: 6%; --tint-strong: 10%; }
+:root[data-accent="club"] { --tint: 13%; --tint-strong: 22%; --accent: var(--accent-base, #f26a1b); }
+/* Couleur de club foncée sur fond sombre : éclaircie pour les textes et icônes */
+:root[data-accent="club"][data-theme="dark"], :root[data-accent="club"][data-bg="nuit"] { --accent: color-mix(in srgb, var(--accent-base, #f26a1b) 62%, #fff); }
+@media (prefers-color-scheme: dark) { :root[data-accent="club"]:not([data-theme="light"]) { --accent: color-mix(in srgb, var(--accent-base, #f26a1b) 62%, #fff); } }
+/* Le fond uni est sur html ; body reste transparent, sinon il recouvrirait le décor (body::before, z-index -1) */
 html { background: var(--bg); }
 body { background: transparent !important; }
 body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; }
-/* Parquet : lames de bois + rond central et ligne médiane, très discrets */
+/* Parquet : lames de bois + rond central (rempli aux couleurs du club) et ligne médiane */
 :root:not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
   background:
-    radial-gradient(circle at 50% 42%, transparent 129px, color-mix(in srgb, var(--accent) 22%, transparent) 130px 133px, transparent 134px),
-    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 16%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
+    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
+    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 20%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
     radial-gradient(70vw 50vh at 100% 0%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%),
+    radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
     repeating-linear-gradient(90deg, rgba(160,105,50,.09) 0 2px, transparent 2px 58px),
     repeating-linear-gradient(90deg, rgba(190,130,70,.035) 0 29px, transparent 29px 58px),
-    linear-gradient(180deg, #f7efe3, #f1e2cb);
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), #f7efe3), color-mix(in srgb, var(--accent) var(--tint), #f1e2cb));
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
-  background: radial-gradient(circle at 50% 42%, transparent 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
-    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 22%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
-    repeating-linear-gradient(90deg, rgba(255,170,90,.04) 0 3px, transparent 3px 58px), linear-gradient(180deg, #17110b, #0d0a07); } }
+  background: radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
+    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 26%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
+    radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(255,170,90,.05) 0 2px, transparent 2px 58px),
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), #17110b), color-mix(in srgb, var(--accent) var(--tint), #0d0a07)); } }
 :root[data-theme="dark"]:not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
-  background: radial-gradient(circle at 50% 42%, transparent 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
-    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 22%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
-    repeating-linear-gradient(90deg, rgba(255,170,90,.04) 0 3px, transparent 3px 58px), linear-gradient(180deg, #17110b, #0d0a07); }
-/* Nuit de match : l'univers des planches (fond nuit, bandes diagonales 115°) */
+  background: radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
+    linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 26%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
+    radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(255,170,90,.05) 0 2px, transparent 2px 58px),
+    linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), #17110b), color-mix(in srgb, var(--accent) var(--tint), #0d0a07)); }
+/* Nuit de match : l'univers des planches (fond nuit teinté, bandes diagonales 115° aux couleurs du thème) */
 :root[data-bg="nuit"] { --bg: #0a0c12; --text: #fff; --text2: rgba(235,235,245,.62); --bg2: rgba(22,26,36,.94); --glass: rgba(18,22,32,.78); --glass-border: rgba(255,255,255,.08); --sep: rgba(255,255,255,.12); --fill: rgba(255,255,255,.1); --bg3: #2a2f3c; color-scheme: dark; }
 :root[data-bg="nuit"] body::before {
   background: linear-gradient(115deg, transparent 0 62%, color-mix(in srgb, var(--accent) 55%, transparent) 62% 66%, transparent 66% 67.2%, color-mix(in srgb, var(--accent-2) 50%, transparent) 67.2% 68.4%, transparent 68.4%),
-    radial-gradient(circle at 50% 45%, transparent 179px, rgba(255,255,255,.05) 180px 183px, transparent 184px), #0a0c12;
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) var(--tint), transparent) 0 179px, rgba(255,255,255,.06) 180px 183px, transparent 184px),
+    radial-gradient(80vw 60vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
+    color-mix(in srgb, var(--accent) var(--tint), #0a0c12);
 }
+/* Uni : la couleur du thème en voile léger */
+:root[data-bg="uni"] body::before { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), transparent), color-mix(in srgb, var(--accent-2) var(--tint), transparent)); }
 /* ---------- Barre du haut flottante ---------- */
 .screen { padding: 0 14px calc(var(--tab-h) + 24px); }
 .navbar { position: sticky; top: 0; z-index: 30; margin: 0 -2px; padding: calc(var(--safe-t) + 8px) 0 10px; border: 0 !important; background: none !important; backdrop-filter: none !important; }
@@ -171,13 +188,18 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .tabs button.on { color: var(--accent); background: color-mix(in srgb, var(--accent) 11%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, transparent); }
 .standings .row { gap: 4px; }
 
-/* Logo BeHoop (en-tête) : emblème rond + mot « BEHOOP » (BE foncé / blanc en sombre, HOOP orange) */
-.brand .logo { display: inline-flex; align-items: center; gap: 8px; }
-.brand .logo img { width: 34px; height: 34px; border-radius: 50%; box-shadow: 0 2px 8px rgba(10,30,80,.25); }
-.brand .wm { font-family: Montserrat, 'Arial Black', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: .01em; color: #f26a1b; background: none; -webkit-background-clip: initial; background-clip: initial; }
-.brand .wm b { color: var(--brand-be, #0d2a5c); font-weight: 900; }
-:root[data-theme="dark"] { --brand-be: #fff; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand-be: #fff; } }
+/* Logo BeHoop : emblème détouré + « BE » (bleu nuit, blanc en sombre) « HOOP » en dégradé orange, lettrage penché */
+.logo { display: inline-flex; align-items: center; gap: 9px; }
+.logo img { width: var(--lg, 38px); height: var(--lg, 38px); object-fit: contain; border-radius: 0 !important; filter: drop-shadow(0 2px 4px rgba(10,30,80,.18)); }
+.logo .em-dark { display: none; }
+.logo .wm { font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: calc(var(--lg, 38px) * .74); line-height: 1; letter-spacing: .03em; transform: skewX(-8deg); display: inline-block; padding-right: 2px; }
+.logo .wm b { font-weight: 400; color: var(--brand-be, #0d2a5c); }
+.logo .wm i { font-style: normal; background: linear-gradient(135deg, #f26a1b, #f5a623); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root[data-theme="dark"], :root[data-bg="nuit"] { --brand-be: #fff; }
+:root[data-theme="dark"] .logo .em-light, :root[data-bg="nuit"] .logo .em-light { display: none; }
+:root[data-theme="dark"] .logo .em-dark, :root[data-bg="nuit"] .logo .em-dark { display: inline; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --brand-be: #fff; } :root:not([data-theme="light"]) .logo .em-light { display: none; } :root:not([data-theme="light"]) .logo .em-dark { display: inline; } }
+.brand .logo { background: none; }
 
 /* Jamais de défilement horizontal de la page (iPhone : un élément de 2 px de trop suffisait à dézoomer l'écran au démarrage) */
 html { overflow-x: hidden; }
@@ -211,8 +233,6 @@ html { overflow-x: hidden; }
   .sidenav { display: flex; flex-direction: column; gap: 6px; position: fixed; left: 0; top: 0; bottom: 0; width: var(--side-w); z-index: 40; padding: 22px 16px 18px;
     background: var(--glass); border-right: 1px solid var(--glass-border); backdrop-filter: saturate(180%) blur(22px); -webkit-backdrop-filter: saturate(180%) blur(22px); }
   .sidenav .brand { flex: none; margin: 0 8px 18px; }
-  .sidenav .brand .logo img { width: 40px; height: 40px; }
-  .sidenav .brand .wm { font-size: 26px; }
   .side-items { display: flex; flex-direction: column; gap: 4px; }
   .side-items a { display: flex; align-items: center; gap: 14px; padding: 11px 14px; border-radius: 14px; color: var(--text); font-weight: 600; font-size: 16px; transition: background .2s, color .2s; }
   .side-items a svg { width: 24px; height: 24px; flex: none; }
@@ -257,3 +277,7 @@ html { overflow-x: hidden; }
 
 .aside-row > .grow { flex: 1; min-width: 0; }
 .aside-row .btn { flex: none; }
+
+/* Actu sans image : carte texte, pastille aux couleurs du média */
+.news-text { display: flex; gap: 14px; padding: 16px 14px 6px; align-items: flex-start; }
+.news-badge { width: 54px; height: 54px; flex: none; border-radius: 16px; display: grid; place-items: center; color: #fff; font: 400 20px/1 Anton, Impact, sans-serif; letter-spacing: .03em; box-shadow: inset 0 0 0 1px rgba(255,255,255,.12); }
