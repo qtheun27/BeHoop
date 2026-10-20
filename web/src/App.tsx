@@ -1,4 +1,5 @@
-import { lazy, Suspense, Component, type ReactNode } from 'react';
+import { lazy, Suspense, Component, useEffect, type ReactNode } from 'react';
+import { hideSplash } from './lib/splash';
 import { CourtBg } from './ui/CourtBg';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
@@ -33,6 +34,7 @@ export function App() {
   const s = useSession();
   const wide = useWide();
   const [page, a, b] = useRoute();
+  useEffect(() => { if (s.ready) hideSplash(); }, [s.ready]);
   if (!s.ready) return <Loader full />;
   if (s.user && s.profile && !s.profile.onboarded) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
