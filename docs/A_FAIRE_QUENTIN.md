@@ -2,11 +2,11 @@
 
 ✅ **Mise en service terminée** (19/10/2026) : l'appli tourne en production sur **behoop.be/app/**.
 
-## 🆕 Appli en 3 langues (FR · NL · EN) — 1 réglage
+## 🆕 Appli en 3 langues (FR · NL · EN) — 1 réglage (une seule fois)
 
 | # | Action | Où | Pourquoi |
 |---|---|---|---|
-| 16 | **Redéployer le Worker** : `cd worker && npx wrangler deploy` | Terminal | Notifications « demande d'accès », « bienvenue », « covoiturage », « fin du match » dans la langue de chacun |
+| 17 | **Déploiement automatique du Worker** : créer un jeton Cloudflare et l'ajouter en secret GitHub `CLOUDFLARE_API_TOKEN`, puis lancer une fois le workflow (≈ 5 min, détail : [SETUP.md §17](SETUP.md)) | Cloudflare + GitHub (navigateur) | Le Worker se met à jour tout seul ; notifications « demande d'accès », « bienvenue », « covoiturage », « fin du match » dans la langue de chacun |
 
 ## Historique de la mise en service
 Le détail clic par clic de chaque étape reste dans **[SETUP.md](SETUP.md)** (même numérotation), utile pour refaire une configuration.

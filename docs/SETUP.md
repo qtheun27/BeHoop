@@ -92,3 +92,32 @@ VITE_USE_EMULATOR=1 npm run dev                             # puis http://localh
 ```
 Comptes de test : `ops/fixtures/demo-users.json`. Tests : `npm test`, `npm run test:rules`, `npm run test:e2e`.
 Rendu vidéo local : `npx tsx ops/render/demo-job.ts && npm run build && npm run render:local -- out/demo-job`.
+
+## 17. Déploiement automatique du Worker (une seule fois)
+But : chaque fois que le code du Worker change, GitHub le redéploie tout seul (plus besoin de `npx wrangler deploy`).
+Tout se fait dans le navigateur, même depuis le téléphone.
+
+**A. Créer le jeton chez Cloudflare**
+1. Va sur https://dash.cloudflare.com/profile/api-tokens (connecte-toi si besoin).
+2. Clique **Create Token**.
+3. Sur la ligne **Edit Cloudflare Workers**, clique **Use template**.
+4. Plus bas :
+   - **Account Resources** : `Include` → ton compte (celui de behoop.be) ;
+   - **Zone Resources** : `Include` → `Specific zone` → `behoop.be`.
+   Ne change rien d'autre.
+5. Clique **Continue to summary** puis **Create Token**.
+6. Clique **Copy** pour copier le jeton. ⚠️ Il n'est affiché qu'une fois : ne ferme pas la page avant l'étape B.
+
+**B. Le donner à GitHub**
+1. Va sur https://github.com/qtheun27/BeHoop/settings/secrets/actions
+2. Clique **New repository secret**.
+3. **Name** : `CLOUDFLARE_API_TOKEN` — **Secret** : colle le jeton.
+4. Clique **Add secret**.
+
+**C. Premier déploiement (pour vérifier)**
+1. Va sur https://github.com/qtheun27/BeHoop/actions/workflows/worker.yml
+2. Clique **Run workflow** → branche `main` → **Run workflow**.
+3. Après 1 à 2 minutes, la ligne doit passer au vert ✅. En rouge ❌ : préviens-moi, je lis le message d'erreur et je te dis quoi ajouter au jeton.
+
+Les secrets déjà enregistrés dans le Worker (Firebase, R2, GitHub…) ne sont pas touchés par ce déploiement.
+

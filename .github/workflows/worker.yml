@@ -1,0 +1,48 @@
+name: Worker media.behoop.be — déploiement
+
+# Redéploie le Worker Cloudflare (API + médias) dès que son code change sur main.
+# Nécessite le secret GitHub CLOUDFLARE_API_TOKEN (voir docs/SETUP.md, étape 17).
+# Les secrets du Worker (Firebase, R2, GitHub…) restent ceux déjà enregistrés chez Cloudflare : on ne les touche pas.
+on:
+  push:
+    branches: [main]
+    paths: ['worker/**', 'shared/**', '.github/workflows/worker.yml']
+  workflow_dispatch:
+
+concurrency: { group: worker-deploy, cancel-in-progress: false }
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: 981771f4d8dfa9830653358e49659206
+    steps:
+      - uses: actions/checkout@v4
+      - name: Jeton Cloudflare présent ?
+        id: token
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::notice::Secret CLOUDFLARE_API_TOKEN absent : déploiement automatique du Worker ignoré (voir docs/SETUP.md, étape 17)."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.token.outputs.ok == 'true'
+        with: { node-version: '22', cache: 'npm' }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        if: steps.token.outputs.ok == 'true'
+      - name: Vérification du code (TypeScript)
+        if: steps.token.outputs.ok == 'true'
+        run: npx tsc -p worker/tsconfig.json
+      - name: Déploiement
+        if: steps.token.outputs.ok == 'true'
+        run: npx wrangler deploy --config worker/wrangler.toml
+      - name: Le Worker répond ?
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          sleep 10
+          code=$(curl -s -o /dev/null -w '%{http_code}' https://media.behoop.be/)
+          echo "media.behoop.be → HTTP $code"
+          [ "$code" -lt 500 ]
