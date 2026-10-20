@@ -25,7 +25,7 @@ test('parent membre : carte de score, photos 🔒 et vidéo du match', async ({ 
   await page.goto('/app/#/fil');
   await expect(page.locator('.scorecard').first()).toContainText('94');
   await expect(page.getByText('Quelques photos du match de samedi')).toBeVisible();
-  await expect(page.getByText('🔒 Équipe').first()).toBeVisible();
+  await expect(page.locator('.lock', { hasText: 'Équipe' }).first()).toBeVisible();
   // réaction optimiste
   const r = page.getByRole('button', { name: 'Réagir 🔥' }).first();
   await r.click();
