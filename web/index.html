@@ -16,44 +16,30 @@
   <title>BeHoop</title>
 </head>
 <body>
-  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />, voir ui/HoopLoader.tsx) -->
+  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />, voir ui/HoopLoader.tsx, CenterSvg) -->
   <div id="root"><div class="bh-splash" role="status" aria-label="Chargement">
-    <svg class="hoop-anim" width="110" height="121" viewBox="0 0 100 110" aria-hidden="true">
-    <defs>
-      <radialGradient id="hb-ball" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffb25b" /><stop offset=".55" stop-color="#f26a1b" /><stop offset="1" stop-color="#c2410c" /></radialGradient>
-    </defs>
-    <rect class="hb-board" x="24" y="30" width="52" height="34" rx="5" />
-    <rect class="hb-square" x="39" y="44" width="22" height="14" rx="2" />
-    <ellipse class="hb-rim-back" cx="50" cy="64" rx="19" ry="5" />
-    <g class="hb-ball"><g class="hb-spin">
-      <circle cx="50" cy="20" r="11" fill="url(#hb-ball)" />
-      <path d="M39 20h22M50 9v22M42.5 12.5c4 5 4 10 0 15M57.5 12.5c-4 5-4 10 0 15" fill="none" stroke="#7c2d12" stroke-width="1.3" stroke-linecap="round" opacity=".75" />
-    </g></g>
-    <g class="hb-net">
-      <path d="M31 64l5 26M38 65.5l3 25M46 66.5l1.5 25M54 66.5l-1.5 25M62 65.5l-3 25M69 64l-5 26M32.5 72h35M34.5 80h31M37 88h26" fill="none" stroke-width="1.6" stroke-linecap="round" />
-    </g>
-    <path class="hb-rim" d="M31 64a19 5 0 0 0 38 0" fill="none" stroke-width="3.2" stroke-linecap="round" />
-  </svg>
+    <svg class="cc-anim" width="150" height="150" viewBox="0 0 140 140" aria-hidden="true">
+      <line class="cc-l" x1="0" y1="70" x2="140" y2="70" /><circle class="cc-o" cx="70" cy="70" r="48" /><circle class="cc-n" cx="70" cy="70" r="20" />
+      <g class="cc-logo"><circle cx="70" cy="70" r="40" class="cc-disc" /><image class="em-l" href="/icons/emblem-light.png" x="38" y="38" width="64" height="64" /><image class="em-d" href="/icons/emblem-dark.png" x="38" y="38" width="64" height="64" /></g>
+    </svg>
     <div class="bh-wm"><span>Be</span><b>Hoop</b></div>
   </div></div>
   <style>
     .bh-splash { position: fixed; inset: 0; display: grid; place-items: center; align-content: center; gap: 14px; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
     @media (prefers-color-scheme: dark) { .bh-splash { background: #070b14; } .bh-wm span { color: #fff !important; } }
-.hoop-anim { overflow: visible; }
-.hoop-anim .hb-board { fill: color-mix(in srgb, #fff 70%, transparent); stroke: #8a93a6; stroke-width: 2; }
-.hoop-anim .hb-square { fill: none; stroke: #f26a1b; stroke-width: 1.8; }
-.hoop-anim .hb-rim-back { fill: none; stroke: #c2410c; stroke-width: 2.4; }
-.hoop-anim .hb-rim { stroke: #f26a1b; }
-.hoop-anim .hb-net path { stroke: #0d2a5c; opacity: .5; }
-.hoop-anim .hb-ball { animation: hb-shot 1.6s cubic-bezier(.35,0,.65,1) infinite; }
-.hoop-anim .hb-spin { transform-box: fill-box; transform-origin: center; animation: hb-spin 1.6s linear infinite; }
-.hoop-anim .hb-net { transform-box: fill-box; transform-origin: 50% 0; animation: hb-net 1.6s ease-out infinite; }
-@keyframes hb-shot { 0% { transform: translate(-46px, 34px); opacity: 0; } 12% { opacity: 1; } 48% { transform: translate(-8px, -14px); }
-  72% { transform: translate(0, 44px); opacity: 1; } 88%, 100% { transform: translate(0, 70px); opacity: 0; } }
-@keyframes hb-spin { to { transform: rotate(-540deg); } }
-@keyframes hb-net { 0%, 70% { transform: scale(1, 1); } 80% { transform: scale(.88, 1.14); } 90% { transform: scale(1.04, .97); } 100% { transform: scale(1, 1); } }
-@media (prefers-reduced-motion: reduce) { .hoop-anim * { animation: none !important; } }
-    @media (prefers-color-scheme: dark) { .hoop-anim .hb-board { fill: #111827; } .hoop-anim .hb-net path { stroke: #fff; } }
+/* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
+.cc-anim { overflow: visible; }
+.cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
+.cc-anim .cc-o { stroke: #f26a1b; stroke-width: 3; stroke-dasharray: 302; animation: cc-draw 2.8s cubic-bezier(.6,0,.2,1) infinite; --l: 302; }
+.cc-anim .cc-n { stroke: #0d2a5c; stroke-width: 2; stroke-dasharray: 126; animation: cc-draw 2.8s .2s cubic-bezier(.6,0,.2,1) infinite; --l: 126; }
+.cc-anim .cc-l { stroke: #0d2a5c; stroke-width: 2; stroke-dasharray: 140; animation: cc-draw 2.8s .1s cubic-bezier(.6,0,.2,1) infinite; --l: 140; }
+.cc-anim .cc-disc { fill: #f4f1ec; }
+.cc-anim .cc-logo { transform-box: view-box; transform-origin: 70px 70px; animation: cc-pop 2.8s infinite; }
+.cc-anim .em-d, .ball-anim .em-d { display: none; }
+@keyframes cc-draw { 0% { stroke-dashoffset: var(--l); opacity: 1; } 38% { stroke-dashoffset: 0; opacity: 1; } 52%, 86% { stroke-dashoffset: 0; opacity: .35; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes cc-pop { 0%, 36% { transform: scale(0) rotate(-90deg); opacity: 0; } 50% { transform: scale(1.1) rotate(6deg); opacity: 1; } 58%, 86% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
+    @media (prefers-color-scheme: dark) { .cc-anim .cc-n, .cc-anim .cc-l { stroke: #fff; } .cc-anim .cc-disc { fill: #070b14; } .cc-anim .em-l { display: none; } .cc-anim .em-d { display: inline; } }
+    @media (prefers-reduced-motion: reduce) { .cc-anim * { animation: none !important; } }
   </style>
   <script type="module" src="/src/main.tsx"></script>
 </body>

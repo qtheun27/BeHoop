@@ -95,10 +95,11 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .tabbar .plus { width: 62px; height: 62px; border-radius: 50%; background: var(--accent-grad); color: #fff; margin-top: -26px;
   box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 45%, transparent), 0 0 0 5px var(--bg); }
 .tabbar .plus svg { width: 26px; height: 26px; position: relative; z-index: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
-/* Ballon : base orange + coutures noires */
+/* Ballon : couleur du thème (ballon orange par défaut) + coutures foncées, cerclé de la 2e couleur pour rester en évidence */
 .tabbar .plus { position: relative; overflow: hidden; background:
   radial-gradient(circle at 32% 28%, rgba(255,255,255,.35), transparent 40%),
-  radial-gradient(circle at 50% 50%, #f58a2a, #d4550d 75%); }
+  radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 82%, #fff), color-mix(in srgb, var(--accent) 88%, #000) 75%);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 50%, transparent), 0 0 0 3px var(--bg), 0 0 0 5.5px var(--accent-2, var(--accent)); }
 .tabbar .plus::before, .tabbar .plus::after { content: ""; position: absolute; inset: -2px; border-radius: 50%; pointer-events: none; }
 .tabbar .plus::before { background: linear-gradient(90deg, transparent calc(50% - 1.2px), rgba(30,15,5,.75) calc(50% - 1.2px) calc(50% + 1.2px), transparent calc(50% + 1.2px)),
   linear-gradient(0deg, transparent calc(50% - 1.2px), rgba(30,15,5,.75) calc(50% - 1.2px) calc(50% + 1.2px), transparent calc(50% + 1.2px)); }
@@ -247,7 +248,11 @@ html { overflow-x: hidden; }
   .side-foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
   .side-me { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 14px; color: var(--text); font-weight: 600; min-width: 0; }
   .side-me:hover, .side-me.on { background: color-mix(in srgb, var(--text) 6%, transparent); }
-  .side-foot .lang-switch { align-self: flex-start; }
+  .lang-seg { display: flex; align-items: center; gap: 2px; padding: 3px 3px 3px 10px; border-radius: 12px; background: var(--fill); color: var(--text2); }
+  .lang-seg .ico { width: 16px; height: 16px; margin-right: auto; }
+  .lang-seg button { border: 0; background: none; color: inherit; font: 700 12px/1 Oswald, sans-serif; letter-spacing: .06em; padding: 7px 10px; border-radius: 9px; cursor: pointer; }
+  .lang-seg button:hover { color: var(--text); }
+  .lang-seg button.on { background: var(--bg2); color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 
   /* Fenêtres : au centre de l'écran plutôt qu'en bas */
   .sheet { left: 50%; right: auto; top: 50%; bottom: auto; transform: translate(-50%, -50%); width: min(600px, 92vw); max-height: 86dvh; border-radius: 24px; animation: pop .22s ease-out; }
@@ -302,30 +307,38 @@ html { overflow-x: hidden; }
 :root[data-logo-dark="1"] { --medal-bg: #0d1220; }
 :root[data-accent="club"][data-bg="nuit"] body::after { opacity: .22; }
 
-/* Chargement : le ballon BeHoop rebondit (même animation que l'écran d'ouverture de web/index.html) */
+/* Chargement (Loader dans kit.tsx, animations dans ui/HoopLoader.tsx) */
 .loader { display: grid; place-items: center; gap: 14px; padding: 64px 0; }
 .loader.full { position: fixed; inset: 0; z-index: 100; padding: 0; background: var(--bg); align-content: center; }
-/* Animation « swish » : le ballon arrive en cloche, tourne, passe dans le cercle et le filet bouge */
-.hoop-anim { overflow: visible; }
-.hoop-anim .hb-board { fill: color-mix(in srgb, var(--bg2, #fff) 70%, transparent); stroke: var(--text2, #8a93a6); stroke-width: 2; }
-.hoop-anim .hb-square { fill: none; stroke: #f26a1b; stroke-width: 1.8; }
-.hoop-anim .hb-rim-back { fill: none; stroke: #c2410c; stroke-width: 2.4; }
-.hoop-anim .hb-rim { stroke: #f26a1b; }
-.hoop-anim .hb-net path { stroke: var(--text, #0d2a5c); opacity: .5; }
-.hoop-anim .hb-ball { animation: hb-shot 1.6s cubic-bezier(.35,0,.65,1) infinite; }
-.hoop-anim .hb-spin { transform-box: fill-box; transform-origin: center; animation: hb-spin 1.6s linear infinite; }
-.hoop-anim .hb-net { transform-box: fill-box; transform-origin: 50% 0; animation: hb-net 1.6s ease-out infinite; }
-@keyframes hb-shot { 0% { transform: translate(-46px, 34px); opacity: 0; } 12% { opacity: 1; } 48% { transform: translate(-8px, -14px); }
-  72% { transform: translate(0, 44px); opacity: 1; } 88%, 100% { transform: translate(0, 70px); opacity: 0; } }
-@keyframes hb-spin { to { transform: rotate(-540deg); } }
-@keyframes hb-net { 0%, 70% { transform: scale(1, 1); } 80% { transform: scale(.88, 1.14); } 90% { transform: scale(1.04, .97); } 100% { transform: scale(1, 1); } }
-@media (prefers-reduced-motion: reduce) { .hoop-anim * { animation: none !important; } }
-:root[data-rm="1"] .hoop-anim * { animation: none !important; }
+/* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
+.cc-anim { overflow: visible; }
+.cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
+.cc-anim .cc-o { stroke: #f26a1b; stroke-width: 3; stroke-dasharray: 302; animation: cc-draw 2.8s cubic-bezier(.6,0,.2,1) infinite; --l: 302; }
+.cc-anim .cc-n { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 126; animation: cc-draw 2.8s .2s cubic-bezier(.6,0,.2,1) infinite; --l: 126; }
+.cc-anim .cc-l { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 140; animation: cc-draw 2.8s .1s cubic-bezier(.6,0,.2,1) infinite; --l: 140; }
+.cc-anim .cc-disc { fill: var(--bg, #f4f1ec); }
+.cc-anim .cc-logo { transform-box: view-box; transform-origin: 70px 70px; animation: cc-pop 2.8s infinite; }
+.cc-anim .em-d, .ball-anim .em-d { display: none; }
+@keyframes cc-draw { 0% { stroke-dashoffset: var(--l); opacity: 1; } 38% { stroke-dashoffset: 0; opacity: 1; } 52%, 86% { stroke-dashoffset: 0; opacity: .35; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes cc-pop { 0%, 36% { transform: scale(0) rotate(-90deg); opacity: 0; } 50% { transform: scale(1.1) rotate(6deg); opacity: 1; } 58%, 86% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
+:root[data-theme="dark"] .cc-anim .em-l, :root[data-bg="nuit"] .cc-anim .em-l { display: none; }
+:root[data-theme="dark"] .cc-anim .em-d, :root[data-bg="nuit"] .cc-anim .em-d { display: inline; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cc-anim .em-l { display: none; } :root:not([data-theme="light"]) .cc-anim .em-d { display: inline; } }
+/* Autres chargements : le ballon se dessine puis tourne */
+.ball-anim .ba-b, .ball-anim .ba-s { fill: none; stroke: var(--accent, #f26a1b); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 252; animation: ba-draw 2.4s cubic-bezier(.6,0,.2,1) infinite; }
+.ball-anim .ba-s { animation-delay: .2s; }
+.ball-anim .ba-f { fill: var(--accent, #f26a1b); animation: ba-fill 2.4s infinite; }
+.ball-anim g { transform-box: view-box; transform-origin: 70px 70px; animation: ba-spin 2.4s cubic-bezier(.5,0,.3,1) infinite; }
+@keyframes ba-draw { 0% { stroke-dashoffset: 252; opacity: 1; } 45%, 85% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes ba-fill { 0%, 40% { opacity: 0; } 60%, 85% { opacity: .18; } 100% { opacity: 0; } }
+@keyframes ba-spin { 0%, 45% { transform: rotate(0); } 75%, 100% { transform: rotate(180deg); } }
+@media (prefers-reduced-motion: reduce) { .cc-anim *, .ball-anim * { animation: none !important; } }
+:root[data-rm="1"] .cc-anim *, :root[data-rm="1"] .ball-anim * { animation: none !important; }
 
 
 /* Terrain dessiné (ui/CourtBg) : remplace le parquet générique et le médaillon quand un club ou une compétition est choisi */
 .court-bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 :root[data-court="light"] .court-bg { opacity: .42; }
 :root[data-court="dark"] .court-bg { opacity: .7; }
-:root[data-court="light"] body::before, :root[data-court="dark"] body::before { background: var(--bg); }
+:root[data-court="light"] body::before, :root[data-court="dark"] body::before { background: var(--bg) !important; }
 :root[data-court="light"] body::after, :root[data-court="dark"] body::after { content: none !important; }

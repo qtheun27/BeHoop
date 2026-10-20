@@ -6,7 +6,8 @@ import { courtTheme, onCourtTheme, type CourtTheme } from '../lib/theme';
 
 function rand(seed: number) { return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
 
-function svg(k: CourtTheme, dark: boolean) {
+/** wide : le terrain sera couché (rotation de 90°) ; logo et noms sont tournés en sens inverse pour rester droits */
+function svg(k: CourtTheme, dark: boolean, wide: boolean) {
   const W = 170, H = 300, o = 10, lw = 1.3, rnd = rand(7);
   const L = dark ? k.c1 : '#fff', floor = dark ? '#151a24' : k.c1, band = dark ? '#0b0e15' : k.c2, ink = dark ? k.c1 : k.c1;
   let wood = '';
@@ -22,8 +23,8 @@ function svg(k: CourtTheme, dark: boolean) {
     <path d="M${o + 9} ${o}V${o + 29.9}A67.5 67.5 0 0 0 ${o + 141} ${o + 29.9}V${o}" fill="none" stroke="${L}" stroke-width="${lw}"/>
     <path d="M${o + 67} ${o + 12}h16" stroke="${L}" stroke-width="1.6"/><circle cx="${o + 75}" cy="${o + 15.75}" r="2.3" fill="none" stroke="#f26a1b" stroke-width="1"/></g>`;
   const name = esc(k.name.toUpperCase());
-  const base = (y: number) => `<text x="${W / 2}" y="${y}" text-anchor="middle" font-family="Anton" font-size="7" letter-spacing="2.5" fill="${ink}">${name}</text>`;
-  const side = (x: number, r: number) => `<text transform="translate(${x} ${H / 2}) rotate(${r})" text-anchor="middle" font-family="Anton" font-size="7.5" letter-spacing="3" fill="${ink}" opacity=".9">${name} · BEHOOP</text>`;
+  const base = (y: number) => wide ? `<text transform="translate(${y < H / 2 ? o / 2 + 2.5 : W - o / 2 - 2.5} ${H / 2}) rotate(-90)" text-anchor="middle" dominant-baseline="middle" font-family="Anton" font-size="7" letter-spacing="2.5" fill="${ink}">${name}</text>` : `<text x="${W / 2}" y="${y}" text-anchor="middle" font-family="Anton" font-size="7" letter-spacing="2.5" fill="${ink}">${name}</text>`;
+  const side = (x: number, r: number) => `<text transform="translate(${x} ${H / 2}) rotate(${r})" text-anchor="middle" dominant-baseline="${wide ? 'middle' : 'auto'}" font-family="Anton" font-size="7.5" letter-spacing="3" fill="${ink}" opacity=".9">${name} · BEHOOP</text>`;
   return `<defs><radialGradient id="cg"><stop offset=".55" stop-color="${k.c1}" stop-opacity=".55"/><stop offset="1" stop-color="${k.c1}" stop-opacity="0"/></radialGradient></defs>
     <rect width="${W}" height="${H}" fill="${band}"/>${wood}
     ${dark ? '' : `<rect x="${o}" y="${o}" width="150" height="280" fill="#000" fill-opacity=".08"/>`}${half(false)}${half(true)}
@@ -31,8 +32,8 @@ function svg(k: CourtTheme, dark: boolean) {
     ${dark ? `<circle cx="${W / 2}" cy="${H / 2}" r="42" fill="url(#cg)"/>` : ''}
     <circle cx="${W / 2}" cy="${H / 2}" r="27" fill="${dark ? k.c1 : k.c2}" stroke="${L}" stroke-width="${lw}"/>
     <circle cx="${W / 2}" cy="${H / 2}" r="22" fill="${k.logoDark ? '#0d1220' : '#fff'}" stroke="${dark ? k.c2 : k.c1}" stroke-width="1"/>
-    ${k.logo ? `<image href="${esc(k.logo)}" x="${W / 2 - 17}" y="${H / 2 - 17}" width="34" height="34" preserveAspectRatio="xMidYMid meet"/>` : ''}
-    ${base(o - 2.6)}${base(H - 2.6)}${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, 90)}`;
+    ${k.logo ? `<image href="${esc(k.logo)}" x="${W / 2 - 17}" y="${H / 2 - 17}" width="34" height="34" preserveAspectRatio="xMidYMid meet"${wide ? ` transform="rotate(-90 ${W / 2} ${H / 2})"` : ''}/>` : ''}
+    ${wide ? `${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, -90)}` : `${base(o - 2.6)}${base(H - 2.6)}${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, 90)}`}`;
 }
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
 
@@ -48,7 +49,7 @@ export function CourtBg() {
     const off = onCourtTheme(up); mq.addEventListener('change', up); addEventListener('resize', up);
     return () => { off(); mq.removeEventListener('change', up); removeEventListener('resize', up); };
   }, []);
-  const inner = useMemo(() => (k ? svg(k, dark) : ''), [k, dark]);
+  const inner = useMemo(() => (k ? svg(k, dark, wide) : ''), [k, dark, wide]);
   useEffect(() => { document.documentElement.dataset.court = k ? (dark ? 'dark' : 'light') : ''; }, [k, dark]);
   if (!k) return null;
   return (

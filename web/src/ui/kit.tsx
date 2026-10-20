@@ -3,7 +3,7 @@ import { initials } from '../lib/util';
 import { useSession } from '../lib/session';
 import { t, lang, setLang, LANGS, type Lang } from '../lib/i18n';
 import { Ico, type IconName } from './icons';
-import { HoopSvg } from './HoopLoader';
+import { CenterSvg, BallSvg } from './HoopLoader';
 
 /** Écran d'ordinateur (≥ 1100 px, même seuil que le CSS) : navigation latérale et colonne de droite n'existent que là */
 export function useWide() {
@@ -21,8 +21,14 @@ export const Logo = ({ size = 38 }: { size?: number }) => (
   </span>
 );
 
-/** Choix de la langue (en-tête) : FR · NL · EN */
-export function LangSwitch() {
+/** Choix de la langue : liste courte dans l'en-tête mobile ; seg : trois boutons côte à côte (barre latérale ordinateur) */
+export function LangSwitch({ seg }: { seg?: boolean }) {
+  if (seg) return (
+    <div className="lang-seg" role="group" aria-label={t('Langue')}>
+      <Ico n="globe" />
+      {LANGS.map((l) => <button key={l.id} className={lang() === l.id ? 'on' : ''} aria-pressed={lang() === l.id} onClick={() => setLang(l.id)}>{l.id.toUpperCase()}</button>)}
+    </div>
+  );
   return (
     <label className="lang-switch" title={t('Langue')}>
       <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{t('Langue')}</span>
@@ -113,11 +119,10 @@ export function Tabs<K extends string>({ value, onChange, items }: { value: K; o
 export const Empty = ({ ill, title, text, action }: { ill: IconName; title: string; text?: string; action?: ReactNode }) => (
   <div className="empty"><div className="ill" aria-hidden><Ico n={ill} /></div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
 );
-/** Animation de chargement BeHoop : tir qui rentre dans le panier (full : plein écran, à l'ouverture de l'appli) */
+/** Animation de chargement BeHoop : rond central + logo à l'ouverture (full), ballon dessiné ailleurs (full : plein écran, à l'ouverture de l'appli) */
 export const Loader = ({ full }: { full?: boolean }) => (
   <div className={`loader${full ? ' full' : ''}`} role="status" aria-label={t('Chargement')}>
-    <HoopSvg size={full ? 110 : 84} />
-    {full ? <div className="wm-load"><span style={{ fontWeight: 300 }}>Be</span><i>Hoop</i></div> : <div className="dots"><span /><span /><span /></div>}
+    {full ? <><CenterSvg /><div className="wm-load"><span style={{ fontWeight: 300 }}>Be</span><i>Hoop</i></div></> : <BallSvg />}
   </div>
 );
 /** Chargement : blocs gris d'abord ; si ça dure (> 0,7 s), l'animation BeHoop prend le relais */

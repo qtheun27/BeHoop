@@ -1,23 +1,27 @@
-// Animation BeHoop : le ballon tourne, entre dans le panier, le filet bouge (« swish »). Même dessin que l'écran
-// d'ouverture de web/index.html (copie en HTML statique, avant le chargement de l'appli).
-export const HoopSvg = ({ size = 96 }: { size?: number }) => (
-  <svg className="hoop-anim" width={size} height={size * 1.1} viewBox="0 0 100 110" aria-hidden>
-    <defs>
-      <radialGradient id="hb-ball" cx="38%" cy="32%" r="70%"><stop offset="0" stopColor="#ffb25b" /><stop offset=".55" stopColor="#f26a1b" /><stop offset="1" stopColor="#c2410c" /></radialGradient>
-    </defs>
-    {/* Panneau et cercle (arrière) */}
-    <rect className="hb-board" x="24" y="30" width="52" height="34" rx="5" />
-    <rect className="hb-square" x="39" y="44" width="22" height="14" rx="2" />
-    <ellipse className="hb-rim-back" cx="50" cy="64" rx="19" ry="5" />
-    {/* Ballon */}
-    <g className="hb-ball"><g className="hb-spin">
-      <circle cx="50" cy="20" r="11" fill="url(#hb-ball)" />
-      <path d="M39 20h22M50 9v22M42.5 12.5c4 5 4 10 0 15M57.5 12.5c-4 5-4 10 0 15" fill="none" stroke="#7c2d12" strokeWidth="1.3" strokeLinecap="round" opacity=".75" />
-    </g></g>
-    {/* Filet et cercle (avant) */}
-    <g className="hb-net">
-      <path d="M31 64l5 26M38 65.5l3 25M46 66.5l1.5 25M54 66.5l-1.5 25M62 65.5l-3 25M69 64l-5 26M32.5 72h35M34.5 80h31M37 88h26" fill="none" strokeWidth="1.6" strokeLinecap="round" />
+// Animations de chargement BeHoop.
+// CenterSvg (ouverture de l'appli) : les lignes du rond central se tracent, puis le logo BeHoop arrive sur un disque clair
+// qui masque les lignes (logo bien lisible). Copie statique dans web/index.html (écran affiché avant le chargement de l'appli).
+// BallSvg (autres chargements) : le ballon se dessine trait par trait, puis tourne.
+export const CenterSvg = ({ size = 150 }: { size?: number }) => (
+  <svg className="cc-anim" width={size} height={size} viewBox="0 0 140 140" aria-hidden>
+    <line className="cc-l" x1="0" y1="70" x2="140" y2="70" />
+    <circle className="cc-o" cx="70" cy="70" r="48" />
+    <circle className="cc-n" cx="70" cy="70" r="20" />
+    <g className="cc-logo">
+      <circle cx="70" cy="70" r="40" className="cc-disc" />
+      <image className="em-l" href="/icons/emblem-light.png" x="38" y="38" width="64" height="64" />
+      <image className="em-d" href="/icons/emblem-dark.png" x="38" y="38" width="64" height="64" />
     </g>
-    <path className="hb-rim" d="M31 64a19 5 0 0 0 38 0" fill="none" strokeWidth="3.2" strokeLinecap="round" />
+  </svg>
+);
+
+export const BallSvg = ({ size = 72 }: { size?: number }) => (
+  <svg className="ball-anim" width={size} height={size} viewBox="0 0 140 140" aria-hidden>
+    <g>
+      <circle className="ba-f" cx="70" cy="70" r="40" />
+      <circle className="ba-b" cx="70" cy="70" r="40" />
+      <path className="ba-s" d="M30 70h80M70 30v80" />
+      <path className="ba-s" d="M42 42c12 14 12 42 0 56M98 42c-12 14-12 42 0 56" />
+    </g>
   </svg>
 );

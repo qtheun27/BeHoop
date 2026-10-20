@@ -93,7 +93,7 @@ function SideNav({ tab }: { tab: string }) {
       <div className="side-foot">
         {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
           : <button className="btn secondary" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>}
-        <LangSwitch />
+        <LangSwitch seg />
       </div>
     </nav>
   );
