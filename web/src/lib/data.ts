@@ -25,6 +25,15 @@ export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?
 export const loadClub = async (id: number) => get<{ club: Club; games: Game[] }>(`clubs/${await clubAlias(id)}.json`);
 export const loadSerie = (id: number) => get<{ serie: { id: number; name: string; short: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
 
+/* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */
+export type CompCat = 'national' | 'wallonie' | 'flandre' | 'europe' | 'monde' | 'nba';
+export interface Competition { id: string; name: string; sub: string; cat: CompCat; women: boolean; youth: boolean; series: number[]; clubs: number[]; teams: number; games: number; kw?: string[]; rank: number }
+export const loadComps = () => get<Competition[]>('competitions.json');
+export async function getComp(id: string) { return (await loadComps()).find((c) => c.id === id) ?? null; }
+/** Pictogramme d'une compétition (pas de logo officiel pour la plupart) */
+export const compIcon = (c: Pick<Competition, 'id' | 'cat' | 'women' | 'youth'>) =>
+  c.id === 'nba' ? '🇺🇸' : c.id === 'lions' || c.id === 'cats' ? '🇧🇪' : c.cat === 'europe' ? '🇪🇺' : c.cat === 'monde' ? '🌍' : /beker|cup|coupe/.test(c.id) ? '🏆' : c.youth ? '🧒' : '🏀';
+
 let teamMap: Map<number, { team: Team; club: Club }> | null = null;
 export async function teamIndex() {
   if (!teamMap) {
@@ -50,7 +59,7 @@ export const teamLabel = (t: { cat: string; name: string }) => trCat(frTeamLabel
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[];
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[]; comps?: string[];
   lang?: 'fr' | 'nl' | 'en' }
 /** Article écrit dans la langue de l'appli (chaque langue a ses propres sources, pas de traduction). */
 export const readable = (n: News) => !n.lang || n.lang === lang();

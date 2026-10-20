@@ -11,10 +11,11 @@ interface Session {
   ready: boolean; user: User | null; profile: D.Profile | null; isAdmin: boolean;
   follows: D.Follow[]; memberships: D.Membership[];
   /** Équipes suivies (directement ou via un club, moins les équipes désactivées) */
-  followedTeams: number[]; followedClubs: number[]; targets: string[];
+  followedTeams: number[]; followedClubs: number[]; followedComps: string[]; targets: string[];
   privateTeams: number[]; responsibleTeams: number[];
   refresh: () => Promise<void>; setProfile: (p: D.Profile | null) => void;
   toggleFollow: (type: 'club' | 'team', id: number) => Promise<void>;
+  toggleComp: (id: string) => Promise<void>;
   /** Ouvre la feuille de connexion puis rejoue l'action */
   requireAuth: (then?: () => void) => boolean; authSheet: (() => void) | null | undefined; closeAuth: () => void;
   logout: () => Promise<void>; toast: (m: string) => void; toastMsg: string;
@@ -69,11 +70,11 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     const teams = new Set<number>(), cl: number[] = [];
     for (const f of follows) {
       if (f.type === 'team') teams.add(f.refId);
-      else { cl.push(f.refId); clubs.find((c) => c.id === f.refId)?.teams.forEach((t) => { if (!f.mutedTeams?.includes(t.id)) teams.add(t.id); }); }
+      else if (f.type === 'club') { cl.push(f.refId); clubs.find((c) => c.id === f.refId)?.teams.forEach((t) => { if (!f.mutedTeams?.includes(t.id)) teams.add(t.id); }); }
     }
     const acc = memberships.filter((m) => m.status === 'accepted');
     return {
-      followedTeams: [...teams], followedClubs: cl,
+      followedTeams: [...teams], followedClubs: cl, followedComps: follows.filter((f) => f.type === 'comp' && f.compId).map((f) => f.compId!),
       targets: [...[...teams].map((t) => `t:${t}`), ...cl.map((c) => `c:${c}`)],
       privateTeams: acc.map((m) => m.teamId), responsibleTeams: acc.filter((m) => m.role === 'responsable').map((m) => m.teamId),
     };
@@ -88,10 +89,18 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     catch { toast(t('Impossible de modifier le suivi. Réessaie.')); setFollows(await D.listFollows(user.uid)); }
   }, [user, follows, toast]);
 
+  const toggleComp = useCallback(async (id: string) => {
+    if (!user) return;
+    const exists = follows.some((f) => f.type === 'comp' && f.compId === id);
+    setFollows((fs) => (exists ? fs.filter((f) => !(f.type === 'comp' && f.compId === id)) : [...fs, { id: D.compFollowId(id), type: 'comp', refId: 0, compId: id }]));
+    try { exists ? await D.unfollowComp(user.uid, id) : await D.followComp(user.uid, id); }
+    catch { toast(t('Impossible de modifier le suivi. Réessaie.')); setFollows(await D.listFollows(user.uid)); }
+  }, [user, follows, toast]);
+
   const value: Session = {
     ready, user, profile, isAdmin: !!user?.email && user.email === SUPER_ADMIN_EMAIL && user.emailVerified,
     follows, memberships, ...derived,
-    refresh: () => load(user), setProfile, toggleFollow,
+    refresh: () => load(user), setProfile, toggleFollow, toggleComp,
     requireAuth: (then) => { if (user && profile) return true; setAuthSheet(() => then ?? null); return false; },
     authSheet, closeAuth: () => setAuthSheet(undefined),
     logout: async () => { await signOut(auth); }, toast, toastMsg,

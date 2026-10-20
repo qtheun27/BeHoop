@@ -7,6 +7,8 @@ import { detectLang } from './news-lang';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
+  /** Compétitions citées (mots-clés de competitions.json : BNXT, NBA, Top Division…) */
+  comps?: string[];
   /** Langue de l'article (voir news-lang.ts) */
   lang?: 'fr' | 'nl' | 'en' }
 
@@ -220,6 +222,12 @@ export function clubTagger(clubs: { id: number; name: string; short: string; tea
   };
 }
 
+/** Compétitions citées par un article, d'après leurs mots-clés (mot entier, accents ignorés). */
+export function compTagger(comps: { id: string; kw?: string[] }[]) {
+  const list = comps.filter((c) => c.kw?.length).map((c) => ({ id: c.id, re: new RegExp(`\\b(${c.kw!.map((k) => normalize(k).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`) }));
+  return (text: string) => { const t = normalize(text); return list.filter((c) => c.re.test(t)).map((c) => c.id); };
+}
+
 export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit: (t: string) => boolean) {
   const t = `${n.title} ${n.excerpt}`;
   if (/basket/i.test(`${t} ${n.url}`)) return true;
@@ -268,6 +276,8 @@ export async function run(out = 'app-data/news.json') {
   const perLang: Record<string, number> = {};
   items = items.filter((n) => (perLang[n.lang!] = (perLang[n.lang!] ?? 0) + 1) <= 300);
   // Clubs cités (pour le fil de chaque club)
+  const compsFile = 'app-data/competitions.json';
+  if (existsSync(compsFile)) { const tagC = compTagger(JSON.parse(readFileSync(compsFile, 'utf8'))); for (const n of items) { const c = tagC(`${n.title} ${n.excerpt}`); if (c.length) n.comps = c; else delete n.comps; } }
   if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
   writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items }));

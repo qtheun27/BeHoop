@@ -5,9 +5,11 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
-import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, readable, type Club } from '../lib/data';
+import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, compIcon, type Club, type News } from '../lib/data';
 import { clubColors } from '../lib/theme';
-import { NewsCard } from './News';
+import { NewsCard, NewsCarousel } from './News';
+import { GameScoreCard } from './ClubHub';
+import { loadCompData, CompFollowButton } from './CompPage';
 import { t } from '../lib/i18n';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
@@ -20,15 +22,17 @@ function Stories() {
     const items: { key: string; href: string; name: string; logo: string | null; club: Club; teams: number[] }[] = [];
     clubs.forEach((c) => items.push({ key: `c${c.id}`, href: `#/club/${c.id}`, name: c.short, logo: c.logo, club: c, teams: c.teams.map((t) => t.id) }));
     s.follows.filter((f) => f.type === 'team').forEach((f) => { const e = idx.get(f.refId); if (e && !clubs.has(e.club.id)) items.push({ key: `t${f.refId}`, href: `#/equipe/${f.refId}`, name: teamLabel(e.team), logo: e.club.logo, club: e.club, teams: [f.refId] }); });
+    const comps = (await loadComps().catch(() => [])).filter((c) => s.followedComps.includes(c.id));
     const today = new Date().toISOString().slice(0, 10);
     const games = (await Promise.all([...new Set(items.map((i) => i.club.id))].map((id) => loadClub(id).catch(() => null)))).flatMap((x) => x?.games ?? []).filter((g) => g.d === today && !isPlayed(g));
-    return items.map((i) => ({ ...i, match: games.find((g) => (i.teams.includes(g.h) || i.teams.includes(g.a)) && s.followedTeams.some((t) => t === g.h || t === g.a))?.t }));
+    return [...comps.map((c) => ({ key: `k${c.id}`, href: `#/competition/${c.id}`, name: c.name, icon: compIcon(c), logo: null, club: null as Club | null, teams: [] as number[], match: undefined as string | undefined })),
+      ...items.map((i) => ({ ...i, icon: '', match: games.find((g) => (i.teams.includes(g.h) || i.teams.includes(g.a)) && s.followedTeams.some((t) => t === g.h || t === g.a))?.t }))];
   }, [s.follows.length, s.followedTeams.join()]);
   return (
     <div className="stories" aria-label={t('Mes clubs')}>
-      {data?.map((i) => { const k = clubColors(i.club); return (
+      {data?.map((i) => { const k = i.club ? clubColors(i.club) : { grad: 'linear-gradient(135deg, var(--accent), #0a0c12)' }; return (
         <a key={i.key} className="story" href={i.href}>
-          <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : <b>{i.name.slice(0, 2)}</b>}</div>
+          <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : i.icon ? <span style={{ fontSize: 28 }}>{i.icon}</span> : <b>{i.name.slice(0, 2)}</b>}</div>
             {i.match && <span className="tag match">MATCH {i.match.replace(':', 'H')}</span>}</div>
           <span className="name">{i.name}</span>
         </a>); })}
@@ -150,6 +154,21 @@ export function Feed() {
   const [newsCat, setNewsCat] = useState('');
   const news = useAsync(loadNews, []);
   const key = s.targets.join() + '|' + s.privateTeams.join();
+  // Ce que je suis : clubs (directement ou via une équipe) et compétitions — sert à filtrer les actus et à ajouter
+  // les résultats des compétitions suivies (calendrier officiel, 10 derniers jours)
+  const mine = useAsync(async () => {
+    const idx = await teamIndex();
+    const comps = (await loadComps().catch(() => [])).filter((c) => s.followedComps.includes(c.id));
+    const clubs = new Set<number>(s.followedClubs);
+    s.followedTeams.forEach((tid) => { const e = idx.get(tid); if (e) clubs.add(e.club.id); });
+    const since = new Date(Date.now() - 10 * 864e5).toISOString().slice(0, 10);
+    const data = await Promise.all(comps.map((c) => loadCompData(c).catch(() => null)));
+    const games = [...new Map(data.flatMap((x) => x?.games ?? []).filter((g) => isPlayed(g) && g.d >= since).map((g) => [g.id, g])).values()];
+    return { idx, clubs, compClubs: new Set(comps.flatMap((c) => c.clubs)), comps: new Set(comps.map((c) => c.id)), games };
+  }, [s.followedClubs.join(), s.followedTeams.join(), s.followedComps.join()]);
+  const followsNothing = !s.follows.length && !s.memberships.length;
+  /** Une actu me concerne : elle cite un club ou une compétition que je suis */
+  const relevant = (n: News) => !!mine.data && (n.clubs?.some((c) => mine.data!.clubs.has(c) || mine.data!.compClubs.has(c)) || n.comps?.some((c) => mine.data!.comps.has(c)));
 
   const load = useCallback(async (reset: boolean) => {
     if (!s.user || (!s.targets.length && !s.privateTeams.length)) { setPosts([]); return; }
@@ -181,33 +200,58 @@ export function Feed() {
   }, [load]);
 
   if (!s.user) return (
-    <Screen title={t('Fil')} home hideTitle><Empty ill="🏀" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
+    <Screen title={t('Fil')} home hideTitle><NewsCarousel /><Empty ill="🏀" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
       action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/?site=1">{t('Voir le site public')}</a></>} /></Screen>
   );
   return (
     <Screen title={t('Fil')} home hideTitle>
       <Stories />
+      {filter === 'tout' && <NewsCarousel />}
+      {followsNothing && <Suggestions />}
       <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{t(f.label)}</button>)}</div>
       {filter === 'actus' && <div className="seg" style={{ marginTop: -4 }}>{NEWS_CATS.map(([k, l]) => <button key={k} className={newsCat === k ? 'on' : ''} onClick={() => setNewsCat(k)}>{t(l)}</button>)}</div>}
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
       {posts === null ? <Skeleton h={260} /> : (() => {
-          // Publications de tes clubs + actus, mélangées par date. Les actus ne remontent pas plus loin que les posts chargés.
-          const allNews = (news.data?.items ?? []).filter((n) => (!newsCat || n.cat === newsCat) && readable(n));
-          if (filter === 'actus') return allNews.length ? allNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="📰" title={t('Pas d\'actualité')} />;
+          // Ton fil = ce que tu suis : publications, résultats des compétitions suivies et actus qui les citent, mélangés par date.
+          // Les actus ne remontent pas plus loin que les publications chargées.
+          const myNews = (news.data?.items ?? []).filter((n) => (!newsCat || n.cat === newsCat) && readable(n) && relevant(n));
+          const allLink = <a className="btn ghost small" style={{ display: 'flex', margin: '0 auto 14px' }} href="#/actus">{t('Toute l’actu du basket ›')}</a>;
+          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="📰" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
           const f = FILTERS.find((x) => x.id === filter)!;
           const shown = posts.filter((p) => f.ok(p));
           const oldest = shown.length ? shown[shown.length - 1].createdAt : 0;
           const mix: { t: number; el: JSX.Element }[] = shown.map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
-          if (filter === 'tout') allNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide /> }));
+          if (filter === 'tout' || filter === 'scores') {
+            const known = new Set(posts.filter((p) => p.type === 'score' || p.type === 'live').map((p) => p.payload.gameId));
+            for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
+          }
+          if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide /> }));
           mix.sort((a, b) => b.t - a.t);
-          if (mix.length) return mix.map((x) => x.el);
-          return filter === 'tout' ? <Empty ill="🗞️" title={t('Ton fil est vide')} text={t('Suis des clubs ou des équipes pour voir leurs résultats et publications.')}
+          if (mix.length) return <>{mix.slice(0, filter === 'tout' ? 80 : 60).map((x) => x.el)}{filter === 'tout' && allLink}</>;
+          return filter === 'tout' ? <Empty ill="🗞️" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
             action={<a className="btn" href="#/explorer">{t('Trouver des clubs')}</a>} /> : <Empty ill="🏀" title={t('Rien dans ce filtre')} text={t('Essaie « Tout ».')} />;
         })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
     </Screen>
+  );
+}
+
+/** Pour bien démarrer : les compétitions les plus suivies, à suivre d'un geste. */
+function Suggestions() {
+  const comps = useAsync(loadComps, []);
+  const list = (comps.data ?? []).filter((c) => c.rank < 20).slice(0, 8);
+  if (!list.length) return null;
+  return (
+    <section className="card" style={{ padding: 14 }}>
+      <div style={{ fontWeight: 700 }}>{t('Pour bien démarrer')}</div>
+      <div className="muted" style={{ fontSize: 14, margin: '2px 0 10px' }}>{t('Suis des compétitions pour voir leurs résultats et leurs actus dans ton fil.')}</div>
+      <div className="group" style={{ margin: 0 }}>{list.map((c) => (
+        <div key={c.id} className="row"><span style={{ fontSize: 22 }} aria-hidden>{compIcon(c)}</span>
+          <a className="grow ellipsis" href={`#/competition/${c.id}`} style={{ color: 'inherit' }}>{c.name}<div className="sub">{c.sub}</div></a><CompFollowButton id={c.id} /></div>))}</div>
+      <a className="btn secondary small mt" href="#/explorer">{t('Trouver mon club')}</a>
+    </section>
   );
 }
 

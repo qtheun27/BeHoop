@@ -43,10 +43,15 @@ export function NewsCard({ n, wide }: { n: News; wide?: boolean }) {
   );
 }
 
-/** Carrousel « À la une » (Explorer, Fil). */
-export function NewsCarousel({ cat }: { cat?: News['cat'] }) {
+/** « À la une » : les grandes actus du basket, pour tout le monde, dans sa langue (pas le régional ; 2 par média au plus). */
+export function topStories(items: News[], max = 8) {
+  const per = new Map<string, number>();
+  return items.filter((n) => readable(n) && n.cat !== 'regional' && n.image && Date.parse(n.date) > Date.now() - 4 * 864e5)
+    .filter((n) => { const k = per.get(n.source) ?? 0; per.set(n.source, k + 1); return k < 2; }).slice(0, max);
+}
+export function NewsCarousel() {
   const { data } = useAsync(loadNews, []);
-  const list = (data?.items ?? []).filter((n) => (!cat || n.cat === cat) && readable(n)).slice(0, 8);
+  const list = topStories(data?.items ?? []);
   if (!list.length) return null;
   return (
     <section style={{ marginBottom: 18 }}>

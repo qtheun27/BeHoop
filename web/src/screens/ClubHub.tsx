@@ -195,9 +195,20 @@ function TeamSection({ club, team, games, idx }: { club: Club; team: Team; games
 }
 
 /** Carte de score construite depuis le calendrier quand aucune publication n'existe encore pour ce match. */
-function scoreFromGame(g: Game, idx: Map<number, { team: Team; club: Club }>): ScorePayload {
+export function scoreFromGame(g: Game, idx: Map<number, { team: Team; club: Club }>): ScorePayload {
   const side = (id: number, name: string, score: number) => { const c = idx.get(id)?.club; return { id, name, logo: c?.logo ?? null, color: c ? clubColors(c).accent : undefined, score }; };
   return { gameId: g.id, date: g.d, time: g.t, competition: g.sn, home: side(g.h, g.hn, g.hs!), away: side(g.a, g.an, g.as!), official: true };
+}
+
+/** Résultat d'un match (calendrier officiel) présenté comme une publication BeHoop */
+export function GameScoreCard({ g, idx, label }: { g: Game; idx: Map<number, { team: Team; club: Club }>; label?: string }) {
+  return (
+    <article className="card">
+      <header className="card-head"><div className="avatar" style={{ background: '#0a0c12' }}>🏀</div>
+        <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">BeHoop {label && <span className="muted" style={{ fontWeight: 400 }}>· {label}</span>}</div><div className="when">{frDate(g.d)}</div></div></header>
+      <ScoreCard p={scoreFromGame(g, idx)} />
+    </article>
+  );
 }
 
 function HubFeed({ posts, error, retry, games, teamIds, idx, news }: {
@@ -217,11 +228,7 @@ function HubFeed({ posts, error, retry, games, teamIds, idx, news }: {
       if (!isPlayed(g) || g.d < since || known.has(g.id) || !(teamIds.includes(g.h) || teamIds.includes(g.a))) continue;
       const mine = idx.get(teamIds.includes(g.h) ? g.h : g.a)?.team;
       out.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, key: `g${g.id}`, kind: 'scores', el: (
-        <article key={`g${g.id}`} className="card">
-          <header className="card-head"><div className="avatar" style={{ background: '#0a0c12' }}>🏀</div>
-            <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">BeHoop {mine && <span className="muted" style={{ fontWeight: 400 }}>· {teamLabel(mine)}</span>}</div><div className="when">{frDate(g.d)}</div></div></header>
-          <ScoreCard p={scoreFromGame(g, idx)} />
-        </article>) });
+        <GameScoreCard key={`g${g.id}`} g={g} idx={idx} label={mine ? teamLabel(mine) : undefined} />) });
     }
     for (const n of news) out.push({ t: Date.parse(n.date), key: `n${n.id}`, kind: 'actus', el: <NewsCard key={`n${n.id}`} n={n} wide /> });
     return out.sort((a, b) => b.t - a.t);

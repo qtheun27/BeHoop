@@ -1,14 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, normalize, teamLabel, trCat, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, loadComps, compIcon, normalize, teamLabel, trCat, type Competition, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
 import { CalendarButton } from '../ui/CalendarButton';
+import { CompFollowButton } from './CompPage';
 import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
 import { NewsCard } from './News';
-import { t } from '../lib/i18n';
+import { t, tn } from '../lib/i18n';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
   const s = useSession();
@@ -33,13 +34,28 @@ const REGIONS: { id: string; label: string; ok: (p: string) => boolean }[] = [
   { id: 'nba', label: 'NBA', ok: (p) => p === 'NBA' },
 ];
 
+const COMP_CATS: [string, string][] = [['', 'Toutes'], ['national', '🇧🇪 Belgique'], ['wallonie', 'Wallonie-Bxl'], ['flandre', 'Flandre'], ['europe', '🇪🇺 Europe'], ['monde', '🌍 Monde'], ['nba', '🇺🇸 NBA · WNBA']];
+function CompRow({ c }: { c: Competition }) {
+  return (
+    <div className="row"><span style={{ fontSize: 24, width: 40, textAlign: 'center' }} aria-hidden>{compIcon(c)}</span>
+      <a className="grow" href={`#/competition/${c.id}`} style={{ color: 'inherit', minWidth: 0 }}><div className="ellipsis">{c.name}</div><div className="sub ellipsis">{[c.sub, tn(c.teams, '{n} équipe', '{n} équipes')].join(' · ')}</div></a>
+      <CompFollowButton id={c.id} /></div>
+  );
+}
+
 export function Explore() {
   const { data, error, reload } = useAsync(loadIndex, []);
   const news = useAsync(loadNews, []);
+  const comps = useAsync(loadComps, []);
   const [q, setQ] = useState('');
   const [reg, setReg] = useState('');
+  const [view, setView] = useState<'clubs' | 'comps'>(() => (location.hash.includes('vue=comps') ? 'comps' : 'clubs'));
+  const [cat, setCat] = useState<string>('');
+  const [women, setWomen] = useState(false), [youth, setYouth] = useState(false);
   const s = useSession();
   const n = normalize(q.trim());
+  const compList = useMemo(() => (comps.data ?? []).filter((c) => (!cat || c.cat === cat) && (!women || c.women) && (youth ? c.youth : !n ? !c.youth : true)
+    && (!n || normalize(`${c.name} ${c.sub}`).includes(n))), [comps.data, cat, women, youth, n]);
   const list = useMemo(() => {
     const r = REGIONS.find((x) => x.id === reg)!;
     return (data?.clubs ?? []).filter((c) => r.ok(c.province) && (!n || normalize(`${c.name} ${c.short} ${c.city}`).includes(n)))
@@ -50,7 +66,20 @@ export function Explore() {
   return (
     <Screen title={t('Rechercher')}>
       {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
-      <div className="search"><input className="field" type="search" placeholder={t('Club, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
+      <div className="search"><input className="field" type="search" placeholder={t('Club, compétition, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
+      <div className="seg" role="tablist">
+        <button className={view === 'clubs' ? 'on' : ''} onClick={() => setView('clubs')} aria-pressed={view === 'clubs'}>{t('🏟️ Clubs')}</button>
+        <button className={view === 'comps' ? 'on' : ''} onClick={() => setView('comps')} aria-pressed={view === 'comps'}>{t('🏆 Compétitions')}</button>
+      </div>
+      {view === 'comps' ? <>
+        <div className="chips">{COMP_CATS.map(([k, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{t(l)}</button>)}
+          <button className={`chip${women ? ' on' : ''}`} onClick={() => setWomen(!women)} aria-pressed={women}>{t('♀ Femmes')}</button>
+          <button className={`chip${youth ? ' on' : ''}`} onClick={() => setYouth(!youth)} aria-pressed={youth}>{t('🧒 Jeunes')}</button></div>
+        {!comps.data ? <Skeleton h={56} n={8} /> : compList.length === 0 ? <Empty ill="🏆" title={t('Aucune compétition trouvée')} /> : (
+          <div className="group">{compList.slice(0, 80).map((c) => <CompRow key={c.id} c={c} />)}</div>)}
+        {compList.length > 80 && <p className="muted center" style={{ fontSize: 13 }}>{t('Affine ta recherche pour voir les autres compétitions.')}</p>}
+      </> : <>
+      {n && compList.length > 0 && <><div className="group-title">{t('🏆 Compétitions')}</div><div className="group">{compList.slice(0, 5).map((c) => <CompRow key={c.id} c={c} />)}</div></>}
       <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{t(r.label)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
       {n && <div className="group-title">{t('Clubs et équipes')}</div>}
@@ -62,6 +91,7 @@ export function Explore() {
           </a>))}</div>
       )}
       {foundNews.length > 0 && <><div className="group-title">{t('📰 Actus')}</div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
+      </>}
     </Screen>
   );
 }

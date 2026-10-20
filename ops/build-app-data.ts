@@ -3,6 +3,7 @@
 import { writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadAll } from './allData';
+import { buildCompetitions } from './competitions';
 import type { SlimGame } from './appData';
 
 const root = process.argv[2] ?? '.';
@@ -29,4 +30,6 @@ for (const c of all.clubs) {
 }
 for (const [sid, list] of bySerie)
   writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: all.series.get(sid) ?? { id: sid }, standings: all.standings.get(sid) ?? [], games: list }));
-console.log(`app-data : ${all.clubs.length} clubs, ${bySerie.size} séries, ${all.games.length} matchs`);
+const comps = buildCompetitions(all);
+writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
+console.log(`app-data : ${comps.length} compétitions, ${all.clubs.length} clubs, ${bySerie.size} séries, ${all.games.length} matchs`);

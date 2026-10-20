@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage, clubMatcher, isBasketNews, clubTagger } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger } from '../news';
 import { detectLang } from '../news-lang';
 describe('classement des actualités', () => {
   it.each([
@@ -58,4 +58,14 @@ describe('langue des actus', () => {
     ['KD fires back at Mat Ishbia for framing of Suns tenure', 'en'],
   ])('%s → %s', (t, l) => expect(detectLang(t)).toBe(l));
   it('sans mot courant : la langue du site', () => expect(detectLang('Antwerp Giants verpletteren Den Bosch: 86-125', 'https://www.hln.be/sport/x')).toBe('nl'));
+});
+
+describe('compétitions citées par une actu', () => {
+  const tag = compTagger([{ id: 'bnxt', kw: ['bnxt'] }, { id: 'nba', kw: ['nba'] }, { id: 'beker-heren', kw: ['coupe de belgique', 'beker van belgië'] }, { id: 's1' }]);
+  it.each([
+    ['BNXT League : Louvain impose ses vues à Courtrai', ['bnxt']],
+    ['Droomaffiche in de Beker van België voor Willebroek', ['beker-heren']],
+    ['Wembanyama, la NBA à ses pieds', ['nba']],
+    ['Le BC Hannut signe un mini-hold-up', []],
+  ])('%s → %j', (t, ids) => expect(tag(t as string)).toEqual(ids));
 });

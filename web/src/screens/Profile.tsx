@@ -5,7 +5,7 @@ import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
 import { uploadSmall } from '../lib/upload';
 import { compressImage } from '../lib/media';
-import { teamLabel } from '../lib/data';
+import { teamLabel, loadComps } from '../lib/data';
 import { Screen, Avatar, Empty, Sheet, useAsync, LangSwitch } from '../ui/kit';
 import { useClubs, MembersList } from './Explore';
 import { PostCard } from './Feed';
@@ -18,6 +18,7 @@ import { t } from '../lib/i18n';
 export function Profile() {
   const s = useSession();
   const clubs = useClubs();
+  const comps = useAsync(loadComps, []).data ?? [];
   const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme'>('');
   if (!s.user || !s.profile) {
     return <Screen title={t('Profil')}><Empty ill="👤" title={t('Connecte-toi')} text={t('Suis tes clubs, rejoins l\'Équipe de ton enfant, publie tes photos et vidéos de match.')}
@@ -38,10 +39,14 @@ export function Profile() {
       <div className="group-title">{t('Je suis')}</div>
       <div className="group">
         {s.follows.length === 0 && <a className="row" href="#/explorer">{t('Trouver des clubs à suivre')} <span className="chev">›</span></a>}
-        {s.follows.map((f) => (
+        {s.follows.filter((f) => f.type === 'comp').map((f) => (
+          <div key={f.id} className="row"><a className="grow ellipsis" style={{ color: 'inherit' }} href={`#/competition/${f.compId}`}>
+            {comps.find((c) => c.id === f.compId)?.name ?? f.compId}<div className="sub">{t('Compétition')}</div></a>
+            <button className="btn small secondary" onClick={() => s.toggleComp(f.compId!)}>{t('Ne plus suivre')}</button></div>))}
+        {s.follows.filter((f) => f.type !== 'comp').map((f) => (
           <div key={f.id} className="row"><a className="grow ellipsis" style={{ color: 'inherit' }} href={f.type === 'club' ? `#/club/${f.refId}` : `#/equipe/${f.refId}`}>
             {f.type === 'club' ? clubName(f.refId) : teamName(f.refId)}<div className="sub">{f.type === 'club' ? `${t('Club')} · ${t('{n} équipes', { n: (clubs.find((c) => c.id === f.refId)?.teams.length ?? 0) - (f.mutedTeams?.length ?? 0) })}` : t('Équipe')}</div></a>
-            <button className="btn small secondary" onClick={() => s.toggleFollow(f.type, f.refId)}>{t('Ne plus suivre')}</button></div>))}
+            <button className="btn small secondary" onClick={() => s.toggleFollow(f.type as 'club' | 'team', f.refId)}>{t('Ne plus suivre')}</button></div>))}
       </div>
 
       <div className="group-title">{t('Mes Équipes 🔒')}</div>

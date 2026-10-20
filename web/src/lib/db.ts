@@ -23,7 +23,8 @@ export interface Profile {
   /** Équipes dont le calendrier a déjà été ajouté au téléphone */ calendars?: number[];
   /** Langue de l'appli (notifications envoyées dans cette langue) */ lang?: 'fr' | 'nl' | 'en';
 }
-export interface Follow { id: string; type: 'club' | 'team'; refId: number; mutedTeams?: number[] }
+/** Suivi d'un club, d'une équipe ou d'une compétition (compId : identifiant de competitions.json, refId vaut alors 0) */
+export interface Follow { id: string; type: 'club' | 'team' | 'comp'; refId: number; compId?: string; mutedTeams?: number[] }
 export type Relation = 'parent' | 'joueur' | 'coach' | 'autre';
 export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; relation?: Relation; message?: string; displayName?: string; createdAt?: unknown }
 
@@ -62,6 +63,10 @@ export const followId = (type: 'club' | 'team', id: number) => `${type}-${id}`;
 export const follow = (uid: string, type: 'club' | 'team', refId: number) =>
   setDoc(doc(followsCol(uid), followId(type, refId)), { type, refId, uid, createdAt: serverTimestamp(), mutedTeams: [] });
 export const unfollow = (uid: string, type: 'club' | 'team', refId: number) => deleteDoc(doc(followsCol(uid), followId(type, refId)));
+export const compFollowId = (compId: string) => `comp-${compId}`;
+export const followComp = (uid: string, compId: string) =>
+  setDoc(doc(followsCol(uid), compFollowId(compId)), { type: 'comp', refId: 0, compId, uid, createdAt: serverTimestamp() });
+export const unfollowComp = (uid: string, compId: string) => deleteDoc(doc(followsCol(uid), compFollowId(compId)));
 export const setMuted = (uid: string, clubId: number, muted: number[]) => updateDoc(doc(followsCol(uid), followId('club', clubId)), { mutedTeams: muted });
 
 /* ---------- Équipes 🔒 ---------- */

@@ -6,7 +6,7 @@ import {
 import { auth } from '../lib/firebase';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { loadIndex, normalize, teamLabel, type Club } from '../lib/data';
+import { loadIndex, loadComps, compIcon, normalize, teamLabel, type Club, type Competition } from '../lib/data';
 import { Sheet, Disc, Skeleton } from '../ui/kit';
 import { haptic, shortName, store } from '../lib/util';
 import { enableNotifications } from '../lib/push';
@@ -135,7 +135,9 @@ export function Onboarding() {
   const [q, setQ] = useState('');
   const [picked, setPicked] = useState<number[]>([]);
   const [teams, setTeams] = useState<number[]>([]);
-  useEffect(() => { loadIndex().then((i) => setClubs(i.clubs)); }, []);
+  const [comps, setComps] = useState<Competition[]>([]);
+  const [pickedComps, setPickedComps] = useState<string[]>([]);
+  useEffect(() => { loadIndex().then((i) => setClubs(i.clubs)); loadComps().then((c) => setComps(c.filter((x) => x.rank < 20).slice(0, 8))).catch(() => {}); }, []);
   const list = useMemo(() => {
     if (!clubs) return [];
     const n = normalize(q);
@@ -149,6 +151,7 @@ export function Onboarding() {
       const muted = teams.length ? all.filter((t) => !teams.includes(t)) : [];
       if (muted.length) await D.setMuted(s.user.uid, c, muted);
     }
+    for (const c of pickedComps) await D.followComp(s.user.uid, c);
     await D.updateProfile(s.user.uid, { onboarded: true });
     await s.refresh(); location.hash = '/fil';
   };
@@ -159,14 +162,18 @@ export function Onboarding() {
       </div>
       {step === 0 && <>
         <h1 className="large-title">{t('Tes clubs')}</h1>
-        <p className="muted">{t('Choisis les clubs que tu veux suivre. Tu verras leurs résultats et publications dans ton fil.')}</p>
+        <p className="muted">{t('Choisis les compétitions et les clubs que tu veux suivre : leurs résultats et leurs actus arriveront dans ton fil.')}</p>
+        {comps.length > 0 && <><div className="group-title">{t('Compétitions')}</div>
+          <div className="chips" style={{ flexWrap: 'wrap' }}>{comps.map((c) => { const on = pickedComps.includes(c.id); return (
+            <button key={c.id} className={`chip${on ? ' on' : ''}`} aria-pressed={on} onClick={() => { haptic(); setPickedComps((p) => on ? p.filter((x) => x !== c.id) : [...p, c.id]); }}>{compIcon(c)} {c.name}</button>); })}</div>
+          <div className="group-title">{t('Clubs')}</div></>}
         <div className="search"><input className="field" placeholder={t('Rechercher un club ou une ville')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
         {!clubs ? <Skeleton h={56} n={6} /> : <div className="group">{list.map((c) => (
           <button key={c.id} className="row" onClick={() => { haptic(); setPicked((p) => p.includes(c.id) ? p.filter((x) => x !== c.id) : [...p, c.id]); }} aria-pressed={picked.includes(c.id)}>
             <Disc src={c.logo} name={c.name} size={36} ring={c.c1} /><div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{c.city} · {c.province}</div></div>
             <span style={{ fontSize: 22, color: 'var(--accent)' }}>{picked.includes(c.id) ? '✓' : ''}</span>
           </button>))}</div>}
-        <div style={{ position: 'sticky', bottom: 'calc(var(--safe-b) + 12px)' }}><button className="btn" disabled={!picked.length} onClick={() => setStep(1)}>{t('Continuer')} ({picked.length})</button>
+        <div style={{ position: 'sticky', bottom: 'calc(var(--safe-b) + 12px)' }}><button className="btn" disabled={!picked.length && !pickedComps.length} onClick={() => setStep(picked.length ? 1 : 2)}>{t('Continuer')} ({picked.length + pickedComps.length})</button>
           <button className="btn ghost" onClick={() => setStep(2)}>{t('Plus tard')}</button></div>
       </>}
       {step === 1 && <>
