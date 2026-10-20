@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van West-Vlaanderen U19 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11883138305-comp-cup-beker-van-west-vlaanderen-u19-meisjes@behoop.be
-DTSTAMP:20261020T101438Z
+DTSTAMP:20261020T103517Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:G&V Breakpoint Basket Waregem M19 B – Holstra WINGS Wevelgem-Moorsele M19 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van West-Vlaanderen U19 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11866360686-comp-cup-beker-van-west-vlaanderen-u19-meisjes@behoop.be
-DTSTAMP:20261020T101438Z
+DTSTAMP:20261020T103517Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:BC Oostende M19 A – Basket Scaldis Otegem M19 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van West-Vlaanderen U19 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11832805448-comp-cup-beker-van-west-vlaanderen-u19-meisjes@behoop.be
-DTSTAMP:20261020T101438Z
+DTSTAMP:20261020T103517Z
 DTSTART;TZID=Europe/Brussels:20261108T150000
 DTEND;TZID=Europe/Brussels:20261108T170000
 SUMMARY:Basket Poperinge M19 A – B.C. Blue Stars Brugge M19 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van West-Vlaanderen U19 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11157117790-comp-cup-beker-van-west-vlaanderen-u19-meisjes@behoop.be
-DTSTAMP:20261020T101438Z
+DTSTAMP:20261020T103517Z
 DTSTART;TZID=Europe/Brussels:20261220T150000
 DTEND;TZID=Europe/Brussels:20261220T170000
 SUMMARY:BBC Koksijde M19 A – House Of Talents Kortrijk Spurs M19 B (0-20)
