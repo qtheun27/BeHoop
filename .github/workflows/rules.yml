@@ -2,7 +2,7 @@ name: Règles et index Firestore — publication
 
 # Publie firestore.rules et firestore.indexes.json en production dès qu'il change sur main, après les tests des règles sur l'émulateur.
 # Utilise le secret FIREBASE_SERVICE_ACCOUNT (compte de service Firebase). S'il n'a pas le droit de publier les règles,
-# l'étape le signale : publier alors firestore.rules à la main (console Firebase → Firestore → Règles).
+# l'étape échoue : publier alors firestore.rules à la main (console Firebase → Firestore → Règles). Voir ops/deploy-rules.ts.
 on:
   push:
     branches: [main]
@@ -26,10 +26,7 @@ jobs:
         run: npm run test:rules
       - name: Publication
         env:
-          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: |
-          if [ -z "$SA" ]; then echo "::notice::Secret FIREBASE_SERVICE_ACCOUNT absent : publier firestore.rules à la main."; exit 0; fi
-          printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
-          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/sa.json"
-          PROJECT=$(node -e "console.log(JSON.parse(require('fs').readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS,'utf8')).project_id)")
-          npx firebase deploy --only firestore:rules,firestore:indexes --project "$PROJECT" --non-interactive
+          if [ -z "$FIREBASE_SERVICE_ACCOUNT" ]; then echo "::notice::Secret FIREBASE_SERVICE_ACCOUNT absent : publier firestore.rules à la main."; exit 0; fi
+          npx tsx ops/deploy-rules.ts
