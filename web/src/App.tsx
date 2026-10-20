@@ -1,4 +1,5 @@
 import { lazy, Suspense, Component, type ReactNode } from 'react';
+import { CourtBg } from './ui/CourtBg';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
 import { Icons, Logo, LangSwitch, Avatar, useWide, Loader } from './ui/kit';
@@ -59,6 +60,7 @@ export function App() {
   const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
+      <CourtBg />
       <Guard key={location.hash}><Suspense fallback={<main className="screen"><Loader /></main>}>{el}</Suspense></Guard>
       {wide && <SideNav tab={page === 'actus' ? 'actus' : tab} />}
       <nav className="tabbar" aria-label={tr('Navigation principale')}>

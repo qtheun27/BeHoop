@@ -26,6 +26,14 @@ export const COMP_THEME: Record<string, { c1: string; c2: string; logo: string; 
   ebwq: { c1: '#0057b8', c2: '#ffd100', logo: '/logos/comps/eurobasket-w.webp', dark: true },
 };
 
+/** Terrain dessiné en fond (ui/CourtBg) : couleurs d'origine du club ou de la compétition, quand le fond « parquet » est choisi */
+export interface CourtTheme { c1: string; c2: string; logo?: string | null; logoDark?: boolean; name: string }
+let court: CourtTheme | null = null;
+const courtSubs = new Set<() => void>();
+export const courtTheme = () => court;
+export const onCourtTheme = (f: () => void) => { courtSubs.add(f); return () => { courtSubs.delete(f); }; };
+const setCourt = (k: CourtTheme | null) => { court = k; courtSubs.forEach((f) => f()); };
+
 const hex = (c: string) => { const m = /^#?([0-9a-f]{6})$/i.exec(c.trim()); return m ? m[1] : null; };
 const rgb = (h: string) => [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
 const lum = (h: string) => { const [r, g, b] = rgb(h).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
@@ -50,22 +58,30 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
   ['--accent', '--accent-base', '--accent-2', '--accent-grad', '--club-logo'].forEach((k) => r.style.removeProperty(k));
   delete r.dataset.logoDark;
   const comp = p.accent.startsWith('comp:') ? COMP_THEME[p.accent.slice(5)] : undefined;
+  let ct: CourtTheme | null = null;
   if (comp) {
     // Compétition : mêmes effets qu'un club (parquet teinté, logo dans le rond central)
     const k = clubColors(comp);
     r.dataset.accent = 'club';
     r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad);
     r.style.setProperty('--club-logo', `url("${comp.logo}")`); if (comp.dark) r.dataset.logoDark = '1';
+    ct = { c1: comp.c1, c2: comp.c2, logo: comp.logo, logoDark: comp.dark, name: COMP_NAME[p.accent.slice(5)] ?? p.accent.slice(5) };
   } else if (p.accent.startsWith('club:')) {
     const c = clubs.find((x) => x.id === Number(p.accent.slice(5)));
     r.dataset.accent = 'club';
-    const k = c ? { ...clubColors(c), logo: c.logo } : store.get<{ accent: string; second: string; grad: string; logo?: string | null } | null>('behoop.themeClub', null);
+    const k = c ? { ...clubColors(c), logo: c.logo, c1: c.c1, c2: c.c2, name: c.short || c.name } : store.get<{ accent: string; second: string; grad: string; logo?: string | null; c1?: string; c2?: string; name?: string } | null>('behoop.themeClub', null);
     // --accent-base : la couleur du club ; theme.css en dérive --accent (éclaircie en mode sombre pour rester lisible)
     if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) r.style.setProperty('--club-logo', `url("${k.logo}")`); store.set('behoop.themeClub', k); }
+    if (k?.c1) ct = { c1: k.c1, c2: k.c2 && hex(k.c2) ? k.c2 : k.second, logo: k.logo, name: courtName(k.name ?? '') };
   } else r.dataset.accent = p.accent;
+  setCourt(p.bg === 'parquet' ? ct : null);
   const meta = document.querySelector('meta[name="theme-color"]:not([media])') ?? Object.assign(document.head.appendChild(document.createElement('meta')), { name: 'theme-color' });
   meta.setAttribute('content', getComputedStyle(r).getPropertyValue('--bg').trim() || '#f4f1ec');
   store.set('behoop.theme', p);
 }
+const COMP_NAME: Record<string, string> = { bnxt: 'BNXT League', nba: 'NBA', wnba: 'WNBA', euroleague: 'EuroLeague', eurocup: 'EuroCup', bcl: 'Champions League',
+  fec: 'FIBA Europe Cup', elw: 'EuroLeague Women', ecw: 'EuroCup Women', lions: 'Belgian Lions', cats: 'Belgian Cats', wcq: 'World Cup', wwc: 'World Cup', 'eurobasket-w': 'EuroBasket', ebwq: 'EuroBasket' };
+/** Nom du club sur le bord du terrain : sans les préfixes BC, BBC, Basket… */
+const courtName = (n: string) => n.replace(/^(r\.?\s*)?(k\.?\s*)?(b\.?b\.?c\.?|b\.?c\.?|basket(ball)?( club)?|royal)\s+/i, '').trim() || n;
 /** Application immédiate au démarrage (avant le chargement du profil). */
 export const bootTheme = () => applyTheme({ ...DEFAULT_THEME, ...store.get<Partial<ThemePrefs>>('behoop.theme', {}) });
