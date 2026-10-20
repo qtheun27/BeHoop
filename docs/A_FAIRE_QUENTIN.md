@@ -2,11 +2,8 @@
 
 ✅ **Mise en service terminée** (19/10/2026) : l'appli tourne en production sur **behoop.be/app/**.
 
-## 🆕 Appli en 3 langues (FR · NL · EN) — 1 réglage (une seule fois)
-
-| # | Action | Où | Pourquoi |
-|---|---|---|---|
-| 17 | **Déploiement automatique du Worker** : créer un jeton Cloudflare et l'ajouter en secret GitHub `CLOUDFLARE_API_TOKEN`, puis lancer une fois le workflow (≈ 5 min, détail : [SETUP.md §17](SETUP.md)) | Cloudflare + GitHub (navigateur) | Le Worker se met à jour tout seul ; notifications « demande d'accès », « bienvenue », « covoiturage », « fin du match » dans la langue de chacun |
+## ✅ Appli en 3 langues (FR · NL · EN) — fait le 20/10/2026
+Le secret GitHub `CLOUDFLARE_API_TOKEN` est en place : le Worker se redéploie tout seul à chaque modification (workflow « Worker media.behoop.be — déploiement »).
 
 ## Historique de la mise en service
 Le détail clic par clic de chaque étape reste dans **[SETUP.md](SETUP.md)** (même numérotation), utile pour refaire une configuration.
