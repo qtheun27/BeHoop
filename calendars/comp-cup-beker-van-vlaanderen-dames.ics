@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaanderen Dames
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12340613385-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Basket Houthalen DSE A – G&V Breakpoint Basket Waregem DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12541944813-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Kangoeroes Basket Mechelen DSE B – BC Cobras Schoten-Brasschaat DSE A
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12424501480-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:Basket SKT Ieper DSE A – Partena Professional DBC Okapi Aalst DSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12458056718-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE B – Ford Unicars Avanti Brugge Dames DSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12525167194-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T194500
+DTEND;TZID=Europe/Brussels:20261031T214500
+SUMMARY:Red Vic Wilrijk DSE A – Phantoms Basket Boom DSE B
+LOCATION:Sporthal Red Vic\, Pachthofplein 30\, 2610 Wilrijk
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12441279099-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Basket Lummen DSE B – Antwerp Giants DSE A
+LOCATION:Vélodroom\, Kerkstraat 155\, 3550 Zolder
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12508389575-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare DSE A – House Of Talents Kortrijk Spurs DSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12491611956-comp-cup-beker-van-vlaanderen-dames@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T190000
+DTEND;TZID=Europe/Brussels:20261101T210000
+SUMMARY:BBC Wildcats Gavere DSE A – Basket Willebroek DSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:Beker van Vlaanderen Dames 1/8 Finale
+END:VEVENT
+END:VCALENDAR

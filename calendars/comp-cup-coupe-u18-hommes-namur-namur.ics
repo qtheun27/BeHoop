@@ -1,0 +1,159 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U18 Hommes Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-495940-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:Royal Gallia BC Beez A – BC Marche (35-86)
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495941-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:Royal BC Maillen – BC Malonne (20-0)
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495956-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:BC Marche – Royal BC Maillen
+LOCATION:Athénée Royal de Marche\, Rue Cornimont\, 6900 Marche-en-Famenne
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495957-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:RBC Éghezée – Andenne Basket A
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310 Eghezée
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495960-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:RUS Mariembourg A – Profondeville Sharks A
+LOCATION:Complexe Sportif Chimay\, avenue du Chalon 1/B\, 6460 Chimay
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495961-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:RBC Erpent A – RBC Erpent B
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495963-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T153000
+DTEND;TZID=Europe/Brussels:20261031T173000
+SUMMARY:RBB Gembloux – Ramillies BC
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030 Gembloux
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495959-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Royal Gallia BC Beez B – BC Miavoye GH
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495962-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Royal CS Natoye – Jeunesse Basket Hotton
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495958-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Andenne Basket B – BC Rochefort
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495964-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA205017 – Vainqueur NA205018
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495965-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA205019 – Vainqueur NA205020
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495966-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA205021 – Vainqueur NA205022
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495967-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA205023 – Vainqueur NA205024
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495968-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:Vainqueur NA205025 – Vainqueur NA205026
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495969-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:Vainqueur NA205027 – Vainqueur NA205028
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495970-comp-cup-coupe-u18-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270405T180000
+DTEND;TZID=Europe/Brussels:20270405T200000
+SUMMARY:Vainqueur NA205029 – Vainqueur NA205030
+LOCATION:
+DESCRIPTION:CHU18
+END:VEVENT
+END:VCALENDAR

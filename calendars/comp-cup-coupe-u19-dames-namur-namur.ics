@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U19 Dames Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-485563-comp-cup-coupe-u19-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:Cerfontaine B.C. A – Royal BC Maillen A
+LOCATION:Hall Omnisports du Fouery\, Rue du Fouery\, 4\, 5630 Cerfontaine
+DESCRIPTION:CDU19
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485562-comp-cup-coupe-u19-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T143000
+DTEND;TZID=Europe/Brussels:20261031T163000
+SUMMARY:Royal BC Maillen B – BC Marche
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CDU19
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485564-comp-cup-coupe-u19-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:BC Fernelmont A – BC Boninne A
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380 Noville-les-Bois
+DESCRIPTION:CDU19
+END:VEVENT
+END:VCALENDAR

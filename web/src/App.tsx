@@ -14,6 +14,7 @@ import { NewsPage } from './screens/News';
 import { MyTeams } from './screens/Teams';
 import { ClubHub } from './screens/ClubHub';
 import { CompPage } from './screens/CompPage';
+import { MatchPage } from './screens/MatchPage';
 
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
@@ -40,6 +41,7 @@ export function App() {
     case 'club': el = s.user ? <ClubHub clubId={+a} /> : <ClubPage id={+a} />; break;
     case 'equipe': el = s.user ? <ClubHub teamId={+a} /> : <TeamPage id={+a} />; break;
     case 'competition': el = <CompPage id={a} />; break;
+    case 'match': el = <MatchPage serie={+a} id={+b} />; break;
     case 'publier': el = <Publish />; break;
     case 'montage': el = <Montage id={a} />; break;
     case 'matchs': el = <Matches />; break;
@@ -52,7 +54,7 @@ export function App() {
     case 'equipes': el = <MyTeams id={a ? +a : undefined} />; break;
     default: el = <Feed />;
   }
-  const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' ? 'explorer' : page === 'montage' ? 'publier' : page;
+  const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
       <Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense>

@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Limburg Dames Land
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11860323226-comp-cup-beker-van-limburg-dames-land@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270102T201500
+DTEND;TZID=Europe/Brussels:20270102T221500
+SUMMARY:Basket Houthalen DSE A – BBC Croonen Lommel DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11759657512-comp-cup-beker-van-limburg-dames-land@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270103T144500
+DTEND;TZID=Europe/Brussels:20270103T164500
+SUMMARY:Basket Lummen DSE A – Hasselt BT DSE A
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11809990369-comp-cup-beker-van-limburg-dames-land@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270103T150000
+DTEND;TZID=Europe/Brussels:20270103T170000
+SUMMARY:Basket Zonhoven DSE A – Stevoort BBC DSE A
+LOCATION:Evenementenhal Den Dijk Zonhoven\, Rozenkransweg 4\, 3520 Zonhoven
+DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11776435131-comp-cup-beker-van-limburg-dames-land@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270103T170000
+DTEND;TZID=Europe/Brussels:20270103T190000
+SUMMARY:Basket Houthalen DSE B – Basket Lummen DSE B
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
+END:VEVENT
+END:VCALENDAR

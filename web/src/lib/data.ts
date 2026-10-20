@@ -1,13 +1,16 @@
 // Accès aux données publiques BeHoop (app-data généré depuis data.json par le scraper).
 import { DATA_BASE } from './config';
 import type { AgeGroup } from '../../../shared/types';
+import type { IconName } from '../ui/icons';
 
 export interface Team { id: number; name: string; cat: string; ag: AgeGroup }
 export interface Club { id: number; name: string; short: string; province: string; logo: string | null; c1: string; c2: string; city: string;
   venue?: { name: string; street: string; zip: string; city: string; lat?: number; lng?: number } | null; teams: Team[]; linked?: number }
 export interface Game { id: number; d: string; t: string; s: number; sn: string; h: number; a: number; hn: string; an: string;
   hs: number | null; as: number | null; v: string; adr: string; lat?: number; lng?: number; ty: string }
-export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number }
+export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number; /** Matchs nuls (jeunes en Flandre) */ draws?: number; /** Rang officiel (départages de la fédération compris) */ rank?: number }
+
+export { ranked } from './standings';
 
 const cache = new Map<string, Promise<unknown>>();
 function get<T>(path: string): Promise<T> {
@@ -27,12 +30,12 @@ export const loadSerie = (id: number) => get<{ serie: { id: number; name: string
 
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */
 export type CompCat = 'national' | 'wallonie' | 'flandre' | 'europe' | 'monde' | 'nba';
-export interface Competition { id: string; name: string; sub: string; cat: CompCat; women: boolean; youth: boolean; series: number[]; clubs: number[]; teams: number; games: number; kw?: string[]; rank: number }
+export interface Competition { id: string; name: string; sub: string; cat: CompCat; women: boolean; youth: boolean; series: number[]; clubs: number[]; teams: number; games: number; kw?: string[]; rank: number; logo?: string; dark?: boolean }
 export const loadComps = () => get<Competition[]>('competitions.json');
 export async function getComp(id: string) { return (await loadComps()).find((c) => c.id === id) ?? null; }
-/** Pictogramme d'une compétition (pas de logo officiel pour la plupart) */
-export const compIcon = (c: Pick<Competition, 'id' | 'cat' | 'women' | 'youth'>) =>
-  c.id === 'nba' ? '🇺🇸' : c.id === 'lions' || c.id === 'cats' ? '🇧🇪' : c.cat === 'europe' ? '🇪🇺' : c.cat === 'monde' ? '🌍' : /beker|cup|coupe/.test(c.id) ? '🏆' : c.youth ? '🧒' : '🏀';
+/** Icône d'une compétition sans logo officiel (voir CompLogo) */
+export const compIcon = (c: Pick<Competition, 'id' | 'cat' | 'women' | 'youth'>): IconName =>
+  /beker|cup|coupe/.test(c.id) ? 'trophy' : c.cat === 'europe' ? 'europe' : c.cat === 'monde' ? 'globe' : c.youth ? 'youth' : c.cat === 'national' ? 'flag' : 'ball';
 
 let teamMap: Map<number, { team: Team; club: Club }> | null = null;
 export async function teamIndex() {

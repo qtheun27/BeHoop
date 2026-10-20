@@ -1,15 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, loadComps, compIcon, normalize, teamLabel, trCat, type Competition, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, ranked, loadComps, normalize, teamLabel, trCat, type Competition, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { Screen, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
+import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
 import { CalendarButton } from '../ui/CalendarButton';
+import { StandingsTable } from '../ui/Standings';
+import { CompLogo } from '../ui/CompLogo';
 import { CompFollowButton } from './CompPage';
 import { PostCard } from './Feed';
 import { haptic, frDate, mapsUrl } from '../lib/util';
 import { LiveBadge } from './Live';
 import { NewsCard } from './News';
 import { t, tn } from '../lib/i18n';
+import { Ico, type IconName } from '../ui/icons';
 
 export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }) {
   const s = useSession();
@@ -17,7 +20,7 @@ export function FollowButton({ type, id }: { type: 'club' | 'team'; id: number }
   return (
     <button className={`btn small${on ? ' secondary' : ''}`} aria-pressed={on}
       onClick={() => { if (!s.requireAuth(() => s.toggleFollow(type, id))) return; haptic(); s.toggleFollow(type, id); }}>
-      {on ? t('Suivi ✓') : t('Suivre')}
+      {on ? <><Ico n="check" />{t('Suivi')}</> : t('Suivre')}
     </button>
   );
 }
@@ -34,10 +37,10 @@ const REGIONS: { id: string; label: string; ok: (p: string) => boolean }[] = [
   { id: 'nba', label: 'NBA', ok: (p) => p === 'NBA' },
 ];
 
-const COMP_CATS: [string, string][] = [['', 'Toutes'], ['national', '🇧🇪 Belgique'], ['wallonie', 'Wallonie-Bxl'], ['flandre', 'Flandre'], ['europe', '🇪🇺 Europe'], ['monde', '🌍 Monde'], ['nba', '🇺🇸 NBA · WNBA']];
+const COMP_CATS: [string, IconName | null, string][] = [['', null, 'Toutes'], ['national', 'flag', 'Belgique'], ['wallonie', null, 'Wallonie-Bxl'], ['flandre', null, 'Flandre'], ['europe', 'europe', 'Europe'], ['monde', 'globe', 'Monde'], ['nba', 'ball', 'NBA · WNBA']];
 function CompRow({ c }: { c: Competition }) {
   return (
-    <div className="row"><span style={{ fontSize: 24, width: 40, textAlign: 'center' }} aria-hidden>{compIcon(c)}</span>
+    <div className="row"><CompLogo c={c} size={40} />
       <a className="grow" href={`#/competition/${c.id}`} style={{ color: 'inherit', minWidth: 0 }}><div className="ellipsis">{c.name}</div><div className="sub ellipsis">{[c.sub, tn(c.teams, '{n} équipe', '{n} équipes')].join(' · ')}</div></a>
       <CompFollowButton id={c.id} /></div>
   );
@@ -65,32 +68,32 @@ export function Explore() {
   const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
     <Screen title={t('Rechercher')}>
-      {!s.user && <div className="banner"><span style={{ fontSize: 28 }}>🏀</span><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
+      {!s.user && <div className="banner"><Ico n="ball" size={30} style={{ color: 'var(--accent)' }} /><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
       <div className="search"><input className="field" type="search" placeholder={t('Club, compétition, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
       <div className="seg" role="tablist">
-        <button className={view === 'clubs' ? 'on' : ''} onClick={() => setView('clubs')} aria-pressed={view === 'clubs'}>{t('🏟️ Clubs')}</button>
-        <button className={view === 'comps' ? 'on' : ''} onClick={() => setView('comps')} aria-pressed={view === 'comps'}>{t('🏆 Compétitions')}</button>
+        <button className={view === 'clubs' ? 'on' : ''} onClick={() => setView('clubs')} aria-pressed={view === 'clubs'}><><Ico n="club" />{t('Clubs')}</></button>
+        <button className={view === 'comps' ? 'on' : ''} onClick={() => setView('comps')} aria-pressed={view === 'comps'}><><Ico n="trophy" />{t('Compétitions')}</></button>
       </div>
       {view === 'comps' ? <>
-        <div className="chips">{COMP_CATS.map(([k, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{t(l)}</button>)}
-          <button className={`chip${women ? ' on' : ''}`} onClick={() => setWomen(!women)} aria-pressed={women}>{t('♀ Femmes')}</button>
-          <button className={`chip${youth ? ' on' : ''}`} onClick={() => setYouth(!youth)} aria-pressed={youth}>{t('🧒 Jeunes')}</button></div>
-        {!comps.data ? <Skeleton h={56} n={8} /> : compList.length === 0 ? <Empty ill="🏆" title={t('Aucune compétition trouvée')} /> : (
+        <div className="chips">{COMP_CATS.map(([k, ic, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{ic && <Ico n={ic} />}{t(l)}</button>)}
+          <button className={`chip${women ? ' on' : ''}`} onClick={() => setWomen(!women)} aria-pressed={women}><><Ico n="women" />{t('Femmes')}</></button>
+          <button className={`chip${youth ? ' on' : ''}`} onClick={() => setYouth(!youth)} aria-pressed={youth}><><Ico n="youth" />{t('Jeunes')}</></button></div>
+        {!comps.data ? <Skeleton h={56} n={8} /> : compList.length === 0 ? <Empty ill="trophy" title={t('Aucune compétition trouvée')} /> : (
           <div className="group">{compList.slice(0, 80).map((c) => <CompRow key={c.id} c={c} />)}</div>)}
         {compList.length > 80 && <p className="muted center" style={{ fontSize: 13 }}>{t('Affine ta recherche pour voir les autres compétitions.')}</p>}
       </> : <>
-      {n && compList.length > 0 && <><div className="group-title">{t('🏆 Compétitions')}</div><div className="group">{compList.slice(0, 5).map((c) => <CompRow key={c.id} c={c} />)}</div></>}
+      {n && compList.length > 0 && <><div className="group-title"><><Ico n="trophy" />{t('Compétitions')}</></div><div className="group">{compList.slice(0, 5).map((c) => <CompRow key={c.id} c={c} />)}</div></>}
       <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{t(r.label)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
       {n && <div className="group-title">{t('Clubs et équipes')}</div>}
-      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="🔎" title={t('Aucun club trouvé')} text={t('Essaie un autre nom ou une ville.')} />) : (
+      {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="search" title={t('Aucun club trouvé')} text={t('Essaie un autre nom ou une ville.')} />) : (
         <div className="group">{list.slice(0, n ? 30 : 120).map((c) => (
           <a key={c.id} className="row" href={c.teams.length === 1 ? `#/equipe/${c.teams[0].id}` : `#/club/${c.id}`} style={{ color: 'inherit' }}>
             <Disc src={c.logo} name={c.name} size={40} ring={c.c1} />
             <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? trCat(c.teams[0].cat) : t('{n} équipes', { n: c.teams.length })].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
-      {foundNews.length > 0 && <><div className="group-title">{t('📰 Actus')}</div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
+      {foundNews.length > 0 && <><div className="group-title"><><Ico n="news" />{t('Actus')}</></div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
       </>}
     </Screen>
   );
@@ -150,7 +153,7 @@ export function TeamPage({ id }: { id: number }) {
       <div className="hstack" style={{ marginBottom: 16 }}><Disc src={club.logo} name={club.name} size={56} ring={club.c1} />
         <div className="grow" style={{ flex: 1 }}><div style={{ fontWeight: 700 }}>{club.name}</div><div className="muted">{team.ag === 'jeunes' ? t('Jeunes') : t('Seniors')} · {trCat(team.cat)}</div></div><LiveBadge teamId={id} games={games} /></div>
       {(
-        <div className="banner"><span style={{ fontSize: 26 }}>{team.ag === 'jeunes' ? '🔒' : '👥'}</span><div style={{ flex: 1 }}><b>{t('Tu fais partie de cette équipe ?')}</b>
+        <div className="banner"><Ico n={team.ag === 'jeunes' ? 'lock' : 'users'} size={28} style={{ color: 'var(--accent)' }} /><div style={{ flex: 1 }}><b>{t('Tu fais partie de cette équipe ?')}</b>
           <div className="muted" style={{ fontSize: 14 }}>{accepted ? (member!.role === 'responsable' ? t('Tu es responsable : retrouve-la dans l’onglet Équipes.') : t('Tu es membre : retrouve-la dans l’onglet Équipes.')) : member ? t('Demande envoyée, en attente de validation.')
             : team.ag === 'jeunes' ? t('Parent, joueur ou coach : rejoins-la pour ses photos, vidéos et le covoiturage.') : t('Joueur ou coach : rejoins-la pour son espace (covoiturage, membres, vidéos).')}</div></div>
           {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>{t('Rejoindre')}</button>}
@@ -159,8 +162,8 @@ export function TeamPage({ id }: { id: number }) {
       {accepted && member!.role === 'responsable' && <TeamAdmin teamId={id} />}
       <TeamTabs team={team} club={club} games={games} />
       <div className="group-title">{t('Publications')}</div>
-      {!s.user ? <Empty ill="📰" title={t('Connecte-toi pour voir le fil de l\'équipe')} action={<button className="btn small" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} />
-        : posts.loading ? <Skeleton /> : posts.data?.length ? posts.data.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="🏀" title={t('Rien pour l\'instant')} text={t('Les résultats et publications de l\'équipe apparaîtront ici.')} />}
+      {!s.user ? <Empty ill="news" title={t('Connecte-toi pour voir le fil de l\'équipe')} action={<button className="btn small" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} />
+        : posts.loading ? <Skeleton /> : posts.data?.length ? posts.data.map((p) => <PostCard key={p.id} post={p} />) : <Empty ill="ball" title={t('Rien pour l\'instant')} text={t('Les résultats et publications de l\'équipe apparaîtront ici.')} />}
       {join && <JoinSheet teamId={id} name={teamLabel(team)} onClose={() => setJoin(false)} />}
     </Screen>
   );
@@ -192,7 +195,7 @@ export function TeamAdmin({ teamId }: { teamId: number }) {
   return (
     <>
       <button className="row group" style={{ marginBottom: 22 }} onClick={() => setOpen(true)}>
-        <div className="grow">{t('Gérer l\'Équipe 🔒')}</div>{pending.length > 0 && <span className="pill live">{pending.length}</span>}<span className="chev">›</span></button>
+        <div className="grow"><Ico n="lock" style={{ marginRight: 6 }} />{t('Gérer l\'Équipe')}</div>{pending.length > 0 && <span className="pill live">{pending.length}</span>}<span className="chev">›</span></button>
       {open && <Sheet title={t('Membres')} onClose={() => setOpen(false)}><MembersList teamId={teamId} members={data} reload={reload} me={s.user!.uid} /></Sheet>}
     </>
   );
@@ -250,9 +253,11 @@ export function TeamStats({ team, games }: { team: Team; club: Club; games: Game
   if (!played.length && !next) return null;
   const opp = next ? (next.h === team.id ? next.a : next.h) : null;
   const st = serie.data?.standings ?? [];
-  const sorted = [...st].sort((a, b) => b.pts - a.pts);
-  const oppRank = opp ? sorted.findIndex((r) => r.team === opp) + 1 : 0;
+  const official = ranked(st);
+  const oppRank = opp ? official.find((r) => r.team === opp)?.rank ?? 0 : 0;
+  const myRank = official.find((r) => r.team === team.id);
   const aller = opp ? played.find((g) => g.h === opp || g.a === opp) : undefined;
+  if (myRank && hist.length) hist[hist.length - 1] = { ...hist[hist.length - 1], rank: myRank.rank, n: official.length };
   const W = 300, H = 90, n = Math.max(...hist.map((h) => h.n), 2);
   const pts = hist.map((h, i) => `${(i / Math.max(hist.length - 1, 1)) * W},${((h.rank - 1) / (n - 1)) * H}`).join(' ');
   return (
@@ -264,7 +269,7 @@ export function TeamStats({ team, games }: { team: Team; club: Club; games: Game
         {played.length > 0 && <div className="hstack mt" style={{ justifyContent: 'space-around', textAlign: 'center' }}>
           <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsFor / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>{t('pts marqués / match')}</div></div>
           <div><div style={{ fontSize: 26, fontWeight: 700 }}>{(ptsAg / played.length).toFixed(1)}</div><div className="muted" style={{ fontSize: 13 }}>{t('pts encaissés / match')}</div></div></div>}
-        {hist.length > 1 && <div className="mt"><div className="muted" style={{ fontSize: 13, marginBottom: 6 }}>Évolution au classement (actuellement {hist[hist.length - 1].rank}ᵉ / {hist[hist.length - 1].n})</div>
+        {hist.length > 1 && <div className="mt"><div className="muted" style={{ fontSize: 13, marginBottom: 6 }}>{t('Évolution au classement (actuellement {r}ᵉ / {n})', { r: myRank?.rank ?? hist[hist.length - 1].rank, n: official.length || hist[hist.length - 1].n })}</div>
           <svg viewBox={`-6 -6 ${W + 12} ${H + 12}`} width="100%" role="img" aria-label={t('Évolution au classement')}><polyline points={pts} fill="none" stroke="var(--accent)" strokeWidth="3" strokeLinejoin="round" />
             {hist.map((h, i) => <circle key={h.d} cx={(i / Math.max(hist.length - 1, 1)) * W} cy={((h.rank - 1) / (n - 1)) * H} r="4" fill="var(--accent)" />)}</svg></div>}
         {next && <div className="mt"><div className="muted" style={{ fontSize: 13 }}>{t('Prochain adversaire')}</div>
@@ -283,10 +288,7 @@ function TeamTabs({ team, club, games }: { team: Team; club: Club; games: Game[]
   const ics = `${location.origin}/calendars/team-${team.id}.ics`;
   return (
     <>
-      <div className="seg" role="tablist">
-        {([['matchs', '📅 Matchs'], ['classement', '📊 Classement'], ['infos', '📈 Infos']] as const).map(([k, l]) =>
-          <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)} aria-pressed={tab === k}>{t(l)}</button>)}
-      </div>
+      <Tabs value={tab} onChange={setTab} items={[['matchs', 'calendar', 'Matchs'], ['classement', 'standings', 'Classement'], ['infos', 'stats', 'Infos']] as const} />
       {tab === 'matchs' && <TeamGames team={team} games={games} ics={ics} />}
       {tab === 'classement' && <TeamStandings team={team} games={games} />}
       {tab === 'infos' && <TeamStats team={team} club={club} games={games} />}
@@ -310,11 +312,11 @@ export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics
         <button className={`chip${which === 'avenir' ? ' on' : ''}`} onClick={() => setWhich('avenir')}>{t('À venir')} ({next.length})</button>
         <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>{t('Joués')} ({past.length})</button>
       </div>
-      {list.length === 0 ? <Empty ill="📅" title={which === 'avenir' ? t('Aucun match prévu') : t('Aucun match joué')} /> : (
+      {list.length === 0 ? <Empty ill="calendar" title={which === 'avenir' ? t('Aucun match prévu') : t('Aucun match joué')} /> : (
         <div className="group">{list.slice(0, 40).map((g) => (
           <div key={g.id}>
             <GameRow g={g} teamIds={[team.id]} />
-            {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">📍 {g.v} · {t('Itinéraire')} ›</a>}
+            {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener"><Ico n="pin" style={{ marginRight: 4 }} />{g.v} · {t('Itinéraire')} ›</a>}
           </div>))}</div>
       )}
     </>
@@ -331,24 +333,15 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
   const sid = pick ?? series[0]?.[0] ?? null;
   const serie = { data: all.data?.find((x) => x.serie.id === sid) ?? null };
   if (all.loading) return <Skeleton h={44} n={6} />;
-  if (!series.length) return <Empty ill="📊" title={t('Pas de classement')} text={t('Cette équipe ne joue que des matchs amicaux pour l\'instant.')} />;
+  if (!series.length) return <Empty ill="standings" title={t('Pas de classement')} text={t('Cette équipe ne joue que des matchs amicaux pour l\'instant.')} />;
   const names = new Map<number, string>();
   serie.data?.games.forEach((g) => { names.set(g.h, g.hn); names.set(g.a, g.an); });
-  const rows = [...(serie.data?.standings ?? [])].sort((a, b) => b.pts - a.pts || (b.pf - b.pa) - (a.pf - a.pa));
+  const rows = serie.data?.standings ?? [];
   return (
     <>
       {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
-      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="📊" title={t('Classement pas encore publié')} /> : (
-        <div className="group" style={{ padding: '6px 0' }}>
-          <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}><span style={{ width: 22 }}>#</span><span className="grow">{t('Équipe')}</span><span style={{ width: 28, textAlign: 'center' }}>{t('J')}</span><span style={{ width: 28, textAlign: 'center' }}>{t('V')}</span><span style={{ width: 34, textAlign: 'right' }}>{t('Pts')}</span></div>
-          {rows.map((r, i) => { const me = r.team === team.id; return (
-            <a key={r.team} className="row" href={`#/equipe/${r.team}`} style={{ color: 'inherit', minHeight: 44, background: me ? 'color-mix(in srgb, var(--accent) 12%, transparent)' : undefined, fontWeight: me ? 700 : 400 }}>
-              <span style={{ width: 22, fontFamily: 'Anton', color: i < 3 ? 'var(--accent)' : undefined }}>{i + 1}</span>
-              <span className="grow ellipsis">{names.get(r.team) ?? `${t('Équipe')} ${r.team}`}</span>
-              <span style={{ width: 28, textAlign: 'center' }}>{r.played}</span><span style={{ width: 28, textAlign: 'center' }}>{r.wins}</span>
-              <span style={{ width: 34, textAlign: 'right', fontFamily: 'Anton' }}>{r.pts}</span>
-            </a>); })}
-        </div>
+      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="standings" title={t('Classement pas encore publié')} /> : (
+        <StandingsTable rows={rows} names={names} me={team.id} pct={team.cat === 'NBA'} />
       )}
     </>
   );
@@ -406,7 +399,7 @@ export function TeamList({ club }: { club: Club }) {
             <button key={t.id} className="row" onClick={() => toggle(t.id)} aria-pressed={on}>
               <div className="grow">{teamLabel(t)}</div>
               <span style={{ width: 24, height: 24, borderRadius: 12, display: 'grid', placeItems: 'center', fontSize: 14, fontWeight: 800,
-                background: on ? 'var(--accent)' : 'transparent', color: '#fff', boxShadow: on ? 'none' : 'inset 0 0 0 2px var(--sep)' }}>{on ? '✓' : ''}</span>
+                background: on ? 'var(--accent)' : 'transparent', color: '#fff', boxShadow: on ? 'none' : 'inset 0 0 0 2px var(--sep)' }}>{on && <Ico n="check" size={16} />}</span>
             </button>); })}</div>
         </Sheet>)}
     </>

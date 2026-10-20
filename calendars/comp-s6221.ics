@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Régional U21 Hommes Gold
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-456765-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:Royal Excelsior Brussels A – ESL United (81-125)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456739-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:Olympic Mont Sur Marchienne – RIVBEE A (50-59)
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456755-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T103000
+DTEND;TZID=Europe/Brussels:20261010T123000
+SUMMARY:RIVBEE A – Royal Excelsior Brussels A (74-65)
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456745-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:ESL United – JSE Enghien (76-58)
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456759-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T121500
+DTEND;TZID=Europe/Brussels:20261011T141500
+SUMMARY:Royal Linthout BC W.S. – Olympic Mont Sur Marchienne (59-60)
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456748-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:JSE Enghien – Olympic Mont Sur Marchienne (57-59)
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456749-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T110000
+DTEND;TZID=Europe/Brussels:20261024T130000
+SUMMARY:JSE Enghien – Royal Linthout BC W.S.
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456756-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T103000
+DTEND;TZID=Europe/Brussels:20261107T123000
+SUMMARY:RIVBEE A – Olympic Mont Sur Marchienne
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456760-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T121500
+DTEND;TZID=Europe/Brussels:20261108T141500
+SUMMARY:Royal Linthout BC W.S. – JSE Enghien
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456746-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:ESL United – Royal Excelsior Brussels A
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456766-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T090000
+DTEND;TZID=Europe/Brussels:20261114T110000
+SUMMARY:Royal Excelsior Brussels A – RIVBEE A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456740-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T120000
+DTEND;TZID=Europe/Brussels:20261114T140000
+SUMMARY:Olympic Mont Sur Marchienne – Royal Linthout BC W.S.
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456750-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:JSE Enghien – ESL United
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456741-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T120000
+DTEND;TZID=Europe/Brussels:20261121T140000
+SUMMARY:Olympic Mont Sur Marchienne – JSE Enghien
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456757-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T123000
+DTEND;TZID=Europe/Brussels:20261122T143000
+SUMMARY:RIVBEE A – ESL United
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456761-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T160000
+DTEND;TZID=Europe/Brussels:20261122T180000
+SUMMARY:Royal Linthout BC W.S. – Royal Excelsior Brussels A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456767-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T090000
+DTEND;TZID=Europe/Brussels:20261205T110000
+SUMMARY:Royal Excelsior Brussels A – Olympic Mont Sur Marchienne
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456751-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T110000
+DTEND;TZID=Europe/Brussels:20261205T130000
+SUMMARY:JSE Enghien – RIVBEE A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456747-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T120000
+DTEND;TZID=Europe/Brussels:20261206T140000
+SUMMARY:ESL United – Royal Linthout BC W.S.
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456742-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T140000
+DTEND;TZID=Europe/Brussels:20261212T160000
+SUMMARY:Olympic Mont Sur Marchienne – ESL United
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456752-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:JSE Enghien – Royal Excelsior Brussels A
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:U21HG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-456753-comp-s6221@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T113000
+DTEND;TZID=Europe/Brussels:20261213T133000
+SUMMARY:RIVBEE A – Royal Linthout BC W.S.
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U21HG B
+END:VEVENT
+END:VCALENDAR

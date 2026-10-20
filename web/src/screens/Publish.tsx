@@ -9,19 +9,20 @@ import { USE_EMULATOR } from '../lib/config';
 import { haptic } from '../lib/util';
 import { useClubs } from './Explore';
 import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 export function Publish() {
   const s = useSession();
   const [open, setOpen] = useState(() => new URLSearchParams(location.hash.split('?')[1] ?? '').get('photo') === '1');
-  if (!s.user) return <Screen title={t('Publier')}><Empty ill="➕" title={t('Publie pour ton équipe')} text={t('Photos, messages et vidéos de match montées automatiquement.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
+  if (!s.user) return <Screen title={t('Publier')}><Empty ill="plus" title={t('Publie pour ton équipe')} text={t('Photos, messages et vidéos de match montées automatiquement.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   return (
     <Screen title={t('Publier')}>
       <button className="card" style={{ width: '100%', textAlign: 'left', padding: 20 }} onClick={() => setOpen(true)}>
-        <div style={{ fontSize: 34 }}>📸</div><div style={{ fontWeight: 700, fontSize: 20, marginTop: 6 }}>{t('Photo / message')}</div>
+        <div className="ill-tile sm" aria-hidden><Ico n="camera" /></div><div style={{ fontWeight: 700, fontSize: 20, marginTop: 6 }}>{t('Photo / message')}</div>
         <div className="muted">{t('Partage un moment ou une info avec une équipe ou un club.')}</div></button>
       <a className="card" style={{ display: 'block', padding: 20, color: 'inherit', background: '#0a0c12', position: 'relative', overflow: 'hidden' }} href="#/montage/new">
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(115deg,transparent 0 62%,#8a1e36 62% 70%,transparent 70% 72%,#3d8fdb 72% 75%,transparent 75%)', opacity: .8 }} />
-        <div style={{ position: 'relative', color: '#fff' }}><div style={{ fontSize: 34 }}>🎬</div><div style={{ fontFamily: 'Anton', fontSize: 30, textTransform: 'uppercase', marginTop: 6 }}>{t('Montage de match')}</div>
+        <div style={{ position: 'relative', color: '#fff' }}><div className="ill-tile sm on-dark" aria-hidden><Ico n="video" /></div><div style={{ fontFamily: 'Anton', fontSize: 30, textTransform: 'uppercase', marginTop: 6 }}>{t('Montage de match')}</div>
           <div style={{ opacity: .75 }}>{t('Envoie tes vidéos et photos : BeHoop monte la vidéo avec les planches animées.')}</div></div></a>
       {open && <Composer onClose={() => setOpen(false)} />}
     </Screen>
@@ -80,13 +81,13 @@ function Composer({ onClose }: { onClose: () => void }) {
       <label className="label" htmlFor="tx">{t('Message')}</label>
       <textarea id="tx" className="field" maxLength={500} value={text} onChange={(e) => setText(e.target.value)} placeholder={t('Quel match !')} />
       <div className="muted" style={{ fontSize: 12, textAlign: 'right' }}>{text.length}/500</div>
-      <label className="btn secondary mt">📷 {t('Ajouter des photos')} ({files.length}/10)
+      <label className="btn secondary mt"><Ico n="image" />{t('Ajouter des photos')} ({files.length}/10)
         <input type="file" accept={ACCEPT.replace(/\.(mov|mp4|m4v),?|video\/\*,?/g, '')} multiple hidden onChange={(e) => setFiles([...files, ...Array.from(e.target.files ?? [])].slice(0, 10))} /></label>
-      {files.length > 0 && <div className="grid3 mt">{files.map((f, i) => <button key={i} className="thumb" style={{ backgroundImage: `url(${URL.createObjectURL(f)})` }} onClick={() => setFiles(files.filter((_, j) => j !== i))} aria-label={t('Retirer la photo')}><span className="badge">✕</span></button>)}</div>}
+      {files.length > 0 && <div className="grid3 mt">{files.map((f, i) => <button key={i} className="thumb" style={{ backgroundImage: `url(${URL.createObjectURL(f)})` }} onClick={() => setFiles(files.filter((_, j) => j !== i))} aria-label={t('Retirer la photo')}><span className="badge"><Ico n="close" /></span></button>)}</div>}
       {sel?.kind === 'club' && files.length > 0 && <div className="err mt">{t('Les photos doivent être liées à une équipe (pas à un club entier).')}</div>}
       {youth && <>
-        <div className="banner mt"><span>🔒</span><div style={{ fontSize: 14 }}>{t('Équipe Jeunes : ces photos ne seront visibles que par les membres de l\'Équipe.')}</div></div>
-        {blocked ? <div className="err">{t('Tu dois être membre de l\'Équipe 🔒 pour publier des photos de jeunes. Demande à la rejoindre depuis sa page.')}</div>
+        <div className="banner mt"><Ico n="lock" /><div style={{ fontSize: 14 }}>{t('Équipe Jeunes : ces photos ne seront visibles que par les membres de l\'Équipe.')}</div></div>
+        {blocked ? <div className="err">{t('Tu dois être membre de l\'Équipe pour publier des photos de jeunes. Demande à la rejoindre depuis sa page.')}</div>
           : <label className="check"><input type="checkbox" checked={pledge} onChange={(e) => setPledge(e.target.checked)} />{t('Je publie pour les membres de l’équipe et je retirerai ce contenu si un parent le demande.')}</label>}
       </>}
       {busy && <p className="muted center">{busy}</p>}

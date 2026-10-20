@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe Lux U18 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-481878-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:BC Habay – BC Centre Gaume B
+LOCATION:Centre Sportif et Culturel Le Pachis\, Place Pierre Nothomb\, 5\, 6720 Habay-La-Neuve
+DESCRIPTION:CU18H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481879-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T113000
+DTEND;TZID=Europe/Brussels:20261213T133000
+SUMMARY:BC Florenville – Junior Arlonais A
+LOCATION:Centre Sportif Florenville\, Rue de Carignan 62\, 6820 Florenville
+DESCRIPTION:CU18H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481880-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:Royal BC Saint-Hubert A – Rebond Musson
+LOCATION:Hall des Sports Michaël Paquay\, Rue du Parc\, 6870 Saint-Hubert
+DESCRIPTION:CU18H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481881-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Nuts Bastogne – Vainqueur LU220002
+LOCATION:
+DESCRIPTION:CU18H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481882-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Vainqueur LU220003 – Vainqueur LU220004
+LOCATION:
+DESCRIPTION:CU18H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481883-comp-cup-coupe-lux-u18-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T000000
+DTEND;TZID=Europe/Brussels:20270320T020000
+SUMMARY:undefined – undefined
+LOCATION:
+DESCRIPTION:CU18H
+END:VEVENT
+END:VCALENDAR

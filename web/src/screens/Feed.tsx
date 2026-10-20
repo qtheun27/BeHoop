@@ -5,12 +5,14 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
-import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, compIcon, type Club, type News } from '../lib/data';
+import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Competition } from '../lib/data';
+import { CompLogo } from '../ui/CompLogo';
 import { clubColors } from '../lib/theme';
 import { NewsCard, NewsCarousel } from './News';
 import { GameScoreCard } from './ClubHub';
 import { loadCompData, CompFollowButton } from './CompPage';
 import { t } from '../lib/i18n';
+import { Ico, type IconName } from '../ui/icons';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
 function Stories() {
@@ -25,14 +27,14 @@ function Stories() {
     const comps = (await loadComps().catch(() => [])).filter((c) => s.followedComps.includes(c.id));
     const today = new Date().toISOString().slice(0, 10);
     const games = (await Promise.all([...new Set(items.map((i) => i.club.id))].map((id) => loadClub(id).catch(() => null)))).flatMap((x) => x?.games ?? []).filter((g) => g.d === today && !isPlayed(g));
-    return [...comps.map((c) => ({ key: `k${c.id}`, href: `#/competition/${c.id}`, name: c.name, icon: compIcon(c), logo: null, club: null as Club | null, teams: [] as number[], match: undefined as string | undefined })),
-      ...items.map((i) => ({ ...i, icon: '', match: games.find((g) => (i.teams.includes(g.h) || i.teams.includes(g.a)) && s.followedTeams.some((t) => t === g.h || t === g.a))?.t }))];
+    return [...comps.map((c) => ({ key: `k${c.id}`, href: `#/competition/${c.id}`, name: c.name, comp: c, logo: null, club: null as Club | null, teams: [] as number[], match: undefined as string | undefined })),
+      ...items.map((i) => ({ ...i, comp: null as Competition | null, match: games.find((g) => (i.teams.includes(g.h) || i.teams.includes(g.a)) && s.followedTeams.some((t) => t === g.h || t === g.a))?.t }))];
   }, [s.follows.length, s.followedTeams.join()]);
   return (
     <div className="stories" aria-label={t('Mes clubs')}>
       {data?.map((i) => { const k = i.club ? clubColors(i.club) : { grad: 'linear-gradient(135deg, var(--accent), #0a0c12)' }; return (
         <a key={i.key} className="story" href={i.href}>
-          <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : i.icon ? <span style={{ fontSize: 28 }}>{i.icon}</span> : <b>{i.name.slice(0, 2)}</b>}</div>
+          <div className="ring" style={{ '--ring': k.grad } as React.CSSProperties}><div>{i.logo ? <img src={i.logo} alt="" loading="lazy" /> : i.comp ? <CompLogo c={i.comp} size={58} /> : <b>{i.name.slice(0, 2)}</b>}</div>
             {i.match && <span className="tag match">MATCH {i.match.replace(':', 'H')}</span>}</div>
           <span className="name">{i.name}</span>
         </a>); })}
@@ -40,11 +42,11 @@ function Stories() {
   );
 }
 // Filtres du fil : une seule rangée ; « Actus » ouvre une petite sous-rangée Belgique / International / NBA.
-const FILTERS: { id: string; label: string; ok: (p: D.Post) => boolean }[] = [
+const FILTERS: { id: string; label: string; ic?: IconName; ok: (p: D.Post) => boolean }[] = [
   { id: 'tout', label: 'Tout', ok: () => true },
   { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
   { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' },
-  { id: 'actus', label: '📰 Actus', ok: () => false },
+  { id: 'actus', label: 'Actus', ic: 'news', ok: () => false },
 ];
 const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['regional', 'Régional'], ['international', 'International'], ['nba', 'NBA']];
 
@@ -55,7 +57,7 @@ export function ScoreCard({ p, live }: { p: ScorePayload; live?: boolean }) {
   const lead = p.home.score === p.away.score ? 0 : p.home.score > p.away.score ? 1 : 2;
   return (
     <div className="scorecard" style={{ '--h': p.home.color ?? '#3d8fdb', '--a': p.away.color ?? '#8a1e36' } as React.CSSProperties}>
-      <div className="kick">{live ? `🔴 ${t('En direct')}` : t('Score final')} · {p.competition} · {dotted(p.date)}</div>
+      <div className="kick">{live ? <><Ico n="live" />{t('En direct')}</> : t('Score final')} · {p.competition} · {dotted(p.date)}</div>
       <div className="teams">
         <div className="t"><Disc src={p.home.logo} name={p.home.name} size={64} ring={p.home.color} />{p.home.name}</div>
         <div className="sc"><span className={lead === 1 ? 'lead' : ''}>{p.home.score}</span><span className="d">–</span><span className={lead === 2 ? 'lead' : ''}>{p.away.score}</span></div>
@@ -90,10 +92,10 @@ export function PostCard({ post }: { post: D.Post }) {
   return (
     <article className="card" style={p.hidden ? { opacity: .5 } : undefined}>
       <header className="card-head">
-        {p.authorUid ? <Avatar name={p.authorName ?? '?'} /> : <div className="avatar" style={{ background: '#0a0c12' }}>🏀</div>}
+        {p.authorUid ? <Avatar name={p.authorName ?? '?'} /> : <div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="ball" size={22} /></div>}
         <div style={{ flex: 1, minWidth: 0 }}>
           <div className="who ellipsis">{p.authorUid ? p.authorName : 'BeHoop'} {pl.teamLabel && <span className="muted" style={{ fontWeight: 400 }}>· {pl.teamLabel}</span>}</div>
-          <div className="when">{ago(p.createdAt)} {isYouthMedia && <span className="lock">🔒 {t('Équipe')}</span>} {p.hidden && <span className="lock">{t('Masqué')}</span>}</div>
+          <div className="when">{ago(p.createdAt)} {isYouthMedia && <span className="lock"><Ico n="lock" /> {t('Équipe')}</span>} {p.hidden && <span className="lock">{t('Masqué')}</span>}</div>
         </div>
         <button className="icon-btn" aria-label={t('Plus d\'options')} onClick={() => setMenu(true)}>{Icons.more}</button>
       </header>
@@ -105,7 +107,7 @@ export function PostCard({ post }: { post: D.Post }) {
         <a href={p.type === 'video' ? `#/video/${pl.matchVideoId}` : `#/video/${pl.matchVideoId}/m-${pl.momentId}`} style={{ display: 'block', position: 'relative', color: '#fff' }}>
           <div style={{ aspectRatio: p.type === 'moment' ? '9/16' : '16/9', maxHeight: p.type === 'moment' ? 520 : undefined, margin: '0 auto', background: `#0a0c12 center/cover url(${pl.posterKey ? mediaUrl(pl.posterKey) : ''})` }} />
           <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' }}><span style={{ width: 64, height: 64, borderRadius: 32, background: 'rgba(0,0,0,.55)', backdropFilter: 'blur(10px)', display: 'grid', placeItems: 'center', fontSize: 26 }}>▶</span></div>
-          <div style={{ position: 'absolute', left: 12, bottom: 10, fontFamily: 'Oswald', fontWeight: 700, textShadow: '0 2px 8px #000' }}>{p.type === 'moment' ? `⚡ ${t('Moment')} · ` : ''}{pl.title} {pl.duration ? `· ${fmtDur(pl.duration)}` : ''}</div>
+          <div style={{ position: 'absolute', left: 12, bottom: 10, fontFamily: 'Oswald', fontWeight: 700, textShadow: '0 2px 8px #000' }}>{p.type === 'moment' && <><Ico n="bolt" /> {t('Moment')} · </>}{pl.title} {pl.duration ? `· ${fmtDur(pl.duration)}` : ''}</div>
           {pl.score && <div style={{ position: 'absolute', right: 12, bottom: 8, fontFamily: 'Anton', fontSize: 24 }}>{pl.score}</div>}
         </a>)}
       <div className="card-actions">
@@ -200,7 +202,7 @@ export function Feed() {
   }, [load]);
 
   if (!s.user) return (
-    <Screen title={t('Fil')} home hideTitle><NewsCarousel /><Empty ill="🏀" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
+    <Screen title={t('Fil')} home hideTitle><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
       action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/?site=1">{t('Voir le site public')}</a></>} /></Screen>
   );
   return (
@@ -208,7 +210,7 @@ export function Feed() {
       <Stories />
       {filter === 'tout' && <NewsCarousel />}
       {followsNothing && <Suggestions />}
-      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{t(f.label)}</button>)}</div>
+      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.ic && <Ico n={f.ic} />}{t(f.label)}</button>)}</div>
       {filter === 'actus' && <div className="seg" style={{ marginTop: -4 }}>{NEWS_CATS.map(([k, l]) => <button key={k} className={newsCat === k ? 'on' : ''} onClick={() => setNewsCat(k)}>{t(l)}</button>)}</div>}
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
@@ -217,7 +219,7 @@ export function Feed() {
           // Les actus ne remontent pas plus loin que les publications chargées.
           const myNews = (news.data?.items ?? []).filter((n) => (!newsCat || n.cat === newsCat) && readable(n) && relevant(n));
           const allLink = <a className="btn ghost small" style={{ display: 'flex', margin: '0 auto 14px' }} href="#/actus">{t('Toute l’actu du basket ›')}</a>;
-          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="📰" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
+          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="news" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
           const f = FILTERS.find((x) => x.id === filter)!;
           const shown = posts.filter((p) => f.ok(p));
           const oldest = shown.length ? shown[shown.length - 1].createdAt : 0;
@@ -229,8 +231,8 @@ export function Feed() {
           if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide /> }));
           mix.sort((a, b) => b.t - a.t);
           if (mix.length) return <>{mix.slice(0, filter === 'tout' ? 80 : 60).map((x) => x.el)}{filter === 'tout' && allLink}</>;
-          return filter === 'tout' ? <Empty ill="🗞️" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
-            action={<a className="btn" href="#/explorer">{t('Trouver des clubs')}</a>} /> : <Empty ill="🏀" title={t('Rien dans ce filtre')} text={t('Essaie « Tout ».')} />;
+          return filter === 'tout' ? <Empty ill="news" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
+            action={<a className="btn" href="#/explorer">{t('Trouver des clubs')}</a>} /> : <Empty ill="ball" title={t('Rien dans ce filtre')} text={t('Essaie « Tout ».')} />;
         })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
@@ -248,7 +250,7 @@ function Suggestions() {
       <div style={{ fontWeight: 700 }}>{t('Pour bien démarrer')}</div>
       <div className="muted" style={{ fontSize: 14, margin: '2px 0 10px' }}>{t('Suis des compétitions pour voir leurs résultats et leurs actus dans ton fil.')}</div>
       <div className="group" style={{ margin: 0 }}>{list.map((c) => (
-        <div key={c.id} className="row"><span style={{ fontSize: 22 }} aria-hidden>{compIcon(c)}</span>
+        <div key={c.id} className="row"><CompLogo c={c} size={36} />
           <a className="grow ellipsis" href={`#/competition/${c.id}`} style={{ color: 'inherit' }}>{c.name}<div className="sub">{c.sub}</div></a><CompFollowButton id={c.id} /></div>))}</div>
       <a className="btn secondary small mt" href="#/explorer">{t('Trouver mon club')}</a>
     </section>
@@ -257,5 +259,5 @@ function Suggestions() {
 
 export function PostPage({ id }: { id: string }) {
   const { data, error, loading } = useAsync(() => D.getPost(id), [id]);
-  return <Screen title={t('Publication')} back="fil">{loading ? <Skeleton /> : error ? <ErrorBox msg={error} /> : data ? <PostCard post={data} /> : <Empty ill="🤷" title={t('Publication introuvable')} />}</Screen>;
+  return <Screen title={t('Publication')} back="fil">{loading ? <Skeleton /> : error ? <ErrorBox msg={error} /> : data ? <PostCard post={data} /> : <Empty ill="help" title={t('Publication introuvable')} />}</Screen>;
 }

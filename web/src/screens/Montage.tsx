@@ -1,4 +1,4 @@
-// ➕ Montage de match : choisir le match → ajouter les médias → Vérifier (aperçu en direct des planches) → envoyer → suivre le rendu.
+// Montage de match : choisir le match → ajouter les médias → Vérifier (aperçu en direct des planches) → envoyer → suivre le rendu.
 import { useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
@@ -14,6 +14,7 @@ import type { MatchSettings, MediaItem, PlancheType } from '../../../shared/type
 import { qs } from '../lib/router';
 import { store, haptic, dotted, uid as rid } from '../lib/util';
 import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 type Item = MediaItem;
 interface Draft { id: string; gameId: number; teamId: number; youth: boolean; settings: MatchSettings; media: Item[]; remember: boolean; step: number }
@@ -26,7 +27,7 @@ export default function Montage({ id }: { id: string }) {
   const s = useSession();
   const [draft, setDraft] = useState<Draft | null>(() => (id && id !== 'new' ? store.get<Draft | null>(draftKey(id), null) : null));
   useEffect(() => { if (draft && draft.step < 4) saveDraft(draft); }, [draft]);
-  if (!s.user) return <Screen title={t('Montage')} back="publier"><Empty ill="🎬" title={t('Connecte-toi pour créer une vidéo')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
+  if (!s.user) return <Screen title={t('Montage')} back="publier"><Empty ill="video" title={t('Connecte-toi pour créer une vidéo')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   if (id && id !== 'new' && !draft) return <RenderStatus id={id} />;
   if (!draft) return <PickMatch onPick={setDraft} />;
   if (draft.step >= 3) return <SendStep draft={draft} setDraft={setDraft} />;
@@ -86,7 +87,7 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
       {clubGames && <div className="group">{clubGames.map((g) => <Row key={g.id} g={g} />)}</div>}
       {data.error && <ErrorBox msg={data.error} retry={data.reload} />}
       {!data.data ? <Skeleton h={56} n={6} /> : !clubGames && (data.data.mine.length ? <><div className="group-title">{t('Matchs récents de tes équipes')}</div><div className="group">{data.data.mine.map((g) => <Row key={g.id} g={g} />)}</div></>
-        : <Empty ill="📅" title={t('Aucun match récent')} text={t('Suis une équipe ou cherche un club ci-dessus.')} />)}
+        : <Empty ill="calendar" title={t('Aucun match récent')} text={t('Suis une équipe ou cherche un club ci-dessus.')} />)}
     </Screen>
   );
 }
@@ -127,7 +128,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => voi
 function Thumb({ m, onClick, sel }: { m: Item; onClick?: () => void; sel?: boolean }) {
   return (
     <button className={`thumb${m.excluded || m.offPlay ? ' off' : ''}${m.featured ? ' feat' : ''}`} onClick={onClick} style={{ backgroundImage: m.thumb ? `url(${m.thumb})` : undefined, outline: sel ? '3px solid var(--accent)' : undefined }} aria-label={m.name}>
-      <span className="badge">{m.kind === 'video' ? `▶ ${m.duration ? Math.round(m.duration) + ' s' : ''}` : m.scoreboardOfQuarter ? `🧮 Q${m.scoreboardOfQuarter}` : m.featured ? '★' : '📷'}</span>
+      <span className="badge">{m.kind === 'video' ? <><Ico n="play" /> {m.duration ? Math.round(m.duration) + ' s' : ''}</> : m.scoreboardOfQuarter ? <><Ico n="scoreboard" /> Q{m.scoreboardOfQuarter}</> : <Ico n={m.featured ? 'star' : 'image'} />}</span>
     </button>
   );
 }
@@ -233,10 +234,10 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
           <button className="row" onClick={() => { patch(sel.id, { excluded: !sel.excluded }); setSel(null); }}>{sel.excluded ? t('Réintégrer') : t('Exclure du montage')}</button>
           {sel.kind === 'photo' && <>
             <button className="row" onClick={() => { patch(sel.id, { offPlay: !sel.offPlay }); setSel(null); }}>{sel.offPlay ? t('Photo de jeu') : t('Hors jeu (banc, temps mort…)')}</button>
-            <button className="row" onClick={() => { upd({ media: media.map((m) => (m.quarter === sel.quarter ? { ...m, featured: m.id === sel.id } : m)) }); setSel(null); }}>{t('★ Photo vedette du quart')}</button>
+            <button className="row" onClick={() => { upd({ media: media.map((m) => (m.quarter === sel.quarter ? { ...m, featured: m.id === sel.id } : m)) }); setSel(null); }}><><Ico n="star" />{t('Photo vedette du quart')}</></button>
             {([1, 2, 3] as const).map((n) => <button key={n} className="row" onClick={() => { upd({ media: assignQuarters(media.map((m) => (m.id === sel.id ? { ...m, scoreboardOfQuarter: sel.scoreboardOfQuarter === n ? null : n } : m))) }); setSel(null); }}>
-              🧮 {t('Tableau « fin du quart {n} »', { n })} {sel.scoreboardOfQuarter === n ? '✓' : ''}</button>)}
-            {sel.scoreboardOfQuarter && <button className="row" onClick={() => { ocr(sel); setSel(null); }}>{t('✨ Lire le score automatiquement')}</button>}
+              <Ico n="scoreboard" style={{ marginRight: 6 }} />{t('Tableau « fin du quart {n} »', { n })} {sel.scoreboardOfQuarter === n && <Ico n="check" style={{ color: 'var(--accent)' }} />}</button>)}
+            {sel.scoreboardOfQuarter && <button className="row" onClick={() => { ocr(sel); setSel(null); }}><><Ico n="sparkles" />{t('Lire le score automatiquement')}</></button>}
           </>}
         </div>
       </Sheet>}
@@ -298,7 +299,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
     <Screen title={t('Envoi')} back="publier">
       <Steps n={3} />
       {missing.length > 0 ? (
-        <div className="banner"><span>📂</span><div style={{ flex: 1 }}>{t('L’appli a été fermée : resélectionne les {n} fichier(s) pour reprendre l’envoi là où il s’était arrêté.', { n: missing.length })}
+        <div className="banner"><Ico n="folder" /><div style={{ flex: 1 }}>{t('L’appli a été fermée : resélectionne les {n} fichier(s) pour reprendre l’envoi là où il s’était arrêté.', { n: missing.length })}
           <label className="btn small mt">{t('Resélectionner')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => {
             Array.from(e.target.files ?? []).forEach((f) => { const m = draft.media.find((x) => x.r2Key === fileId(draft.id, f)); if (m) FILES.set(m.id, f); });
             setDraft({ ...draft });
@@ -308,11 +309,11 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
           <div className="center"><div style={{ fontSize: 48, fontWeight: 700 }}>{total ? Math.floor((sent / total) * 100) : 0} %</div>
             <div className="muted">{(sent / 1e9).toFixed(2)} / {(total / 1e9).toFixed(2)} Go</div></div>
           <div className="progress mt"><i style={{ width: `${total ? (sent / total) * 100 : 0}%` }} /></div>
-          {state === 'sending' && <div className="banner mt"><span>📱</span><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
+          {state === 'sending' && <div className="banner mt"><Ico n="device" /><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
           {state === 'error' && <ErrorBox msg={t('L’envoi a été interrompu. Il reprendra là où il s’était arrêté.')} retry={start} />}
           {state === 'idle' && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
           <div className="group mt">{media.map((m) => { const f = FILES.get(m.id); const p = f ? (prog[m.id] ?? 0) / f.size : 0; return (
-            <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}>{m.kind === 'video' ? '🎬' : '📷'} {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>
+            <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}><Ico n={m.kind === 'video' ? 'video' : 'image'} /> {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>
               <span className="muted" style={{ fontSize: 13, width: 40, textAlign: 'right' }}>{Math.round(p * 100)}%</span></div>); })}</div>
         </>
       )}
@@ -332,9 +333,9 @@ function RenderStatus({ id }: { id: string }) {
   const del = async () => { if (!confirm(t('Supprimer cette vidéo ?'))) return; await api(`/montage/${id}`, undefined, 'DELETE').catch(() => {}); location.hash = '/fil'; };
   return (
     <Screen title={t('Montage')} back="fil">
-      {job === undefined ? <Skeleton /> : !job ? <Empty ill="🎬" title={t('Montage introuvable')} /> : (
+      {job === undefined ? <Skeleton /> : !job ? <Empty ill="video" title={t('Montage introuvable')} /> : (
         <div className="center" style={{ paddingTop: 30 }}>
-          <div style={{ fontSize: 64 }}>{job.status === 'done' ? '🎉' : job.status === 'error' ? '⚠️' : '🎬'}</div>
+          <div className="ill-tile" aria-hidden><Ico n={job.status === 'done' ? 'checkCircle' : job.status === 'error' ? 'alert' : 'video'} /></div>
           <h2>{job.status === 'done' ? t('Ta vidéo est prête !') : job.status === 'error' ? t('Le montage a échoué') : t('Montage en cours…')}</h2>
           <p className="muted">{job.status === 'error' ? job.error : t(job.step ?? '')}</p>
           {job.status !== 'done' && job.status !== 'error' && <><div className="progress"><i style={{ width: `${job.progress}%` }} /></div><p className="muted">{job.progress} % · {t('tu recevras une notification quand ce sera prêt.')}</p></>}

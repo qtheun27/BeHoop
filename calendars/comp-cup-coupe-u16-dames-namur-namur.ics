@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U16 Dames Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-482282-comp-cup-coupe-u16-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261026T000000
+DTEND;TZID=Europe/Brussels:20261026T020000
+SUMMARY:BC Malonne – BC Marche (0-20)
+LOCATION:Centre Sportif Malonne\, Champ Ha 20\, 5020 Malonne
+DESCRIPTION:CDU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482285-comp-cup-coupe-u16-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T100000
+DTEND;TZID=Europe/Brussels:20261101T120000
+SUMMARY:BC Boninne A – RUS Mariembourg A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CDU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482278-comp-cup-coupe-u16-dames-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:Basket Namur Capitale A – RBC Éghezée (20-0)
+LOCATION:Hall Octave Henry\, Rue de Gembloux\, 224\, 5002 Saint-Servais
+DESCRIPTION:CDU16
+END:VEVENT
+END:VCALENDAR

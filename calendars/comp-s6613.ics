@@ -1,0 +1,582 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U14 Dames
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-489038-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T090000
+DTEND;TZID=Europe/Brussels:20260920T110000
+SUMMARY:Royal Renaissance Basket Montegnée A – Alliance Flémalle (42-37)
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489039-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:Basket Club Verlaine – Lg. Atlas Ath. Jupille A (108-24)
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489364-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:Royal BC Awans – ABC Waremme B (45-40)
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489366-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:Cristal SGH – Lg. Atlas Ath. Jupille A (51-45)
+LOCATION:Site des 18 Bonniers\, Rue des 18 Bonniers\, 4460 Grâce-Hollogne
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489367-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Basket Club Verlaine (12-71)
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489365-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:Mailleux Comblain – Royal Renaissance Basket Montegnée A (81-28)
+LOCATION:Hall Omnisports d'Hamoir\, Rue du Moulin 10B\, 4180 Hamoir
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489696-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – Royal BC Awans (28-50)
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489699-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Alliance Flémalle – Le Royal Haut Pré Ougrée (51-44)
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489697-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:Royal Renaissance Basket Montegnée A – Cristal SGH (58-45)
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489698-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T153000
+DTEND;TZID=Europe/Brussels:20261011T173000
+SUMMARY:Basket Club Verlaine – Mailleux Comblain (62-64)
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490299-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T120000
+DTEND;TZID=Europe/Brussels:20261107T140000
+SUMMARY:Mailleux Comblain – Le Royal Haut Pré Ougrée
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490297-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Royal Renaissance Basket Montegnée A – ABC Waremme B
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490298-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Basket Club Verlaine – Royal BC Awans
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490626-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T110000
+DTEND;TZID=Europe/Brussels:20261114T130000
+SUMMARY:Royal BC Awans – Royal Renaissance Basket Montegnée A
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490628-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T140000
+DTEND;TZID=Europe/Brussels:20261114T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Cristal SGH
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490627-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:ABC Waremme B – Alliance Flémalle
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300 Waremme
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490955-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T120000
+DTEND;TZID=Europe/Brussels:20261121T140000
+SUMMARY:Mailleux Comblain – Alliance Flémalle
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490956-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T133000
+DTEND;TZID=Europe/Brussels:20261121T153000
+SUMMARY:Cristal SGH – Royal BC Awans
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-490954-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T090000
+DTEND;TZID=Europe/Brussels:20261122T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – ABC Waremme B
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491300-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:Royal BC Awans – Le Royal Haut Pré Ougrée
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491301-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:ABC Waremme B – Basket Club Verlaine
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300 Waremme
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491302-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:Alliance Flémalle – Lg. Atlas Ath. Jupille A
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491629-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:Royal BC Awans – Alliance Flémalle
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491630-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T133000
+DTEND;TZID=Europe/Brussels:20261212T153000
+SUMMARY:Cristal SGH – Mailleux Comblain
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491631-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T140000
+DTEND;TZID=Europe/Brussels:20261212T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Lg. Atlas Ath. Jupille A
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491958-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T120000
+DTEND;TZID=Europe/Brussels:20261219T140000
+SUMMARY:Mailleux Comblain – Royal BC Awans
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491956-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T090000
+DTEND;TZID=Europe/Brussels:20261220T110000
+SUMMARY:Royal Renaissance Basket Montegnée A – Le Royal Haut Pré Ougrée
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-491957-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Basket Club Verlaine – Cristal SGH
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-489040-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T120000
+DTEND;TZID=Europe/Brussels:20270109T140000
+SUMMARY:Mailleux Comblain – ABC Waremme B
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492283-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – Basket Club Verlaine
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492285-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:Alliance Flémalle – Royal Renaissance Basket Montegnée A
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492615-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T133000
+DTEND;TZID=Europe/Brussels:20270116T153000
+SUMMARY:Cristal SGH – ABC Waremme B
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492613-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T090000
+DTEND;TZID=Europe/Brussels:20270117T110000
+SUMMARY:Royal Renaissance Basket Montegnée A – Lg. Atlas Ath. Jupille A
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492614-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:Basket Club Verlaine – Alliance Flémalle
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492943-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T120000
+DTEND;TZID=Europe/Brussels:20270123T140000
+SUMMARY:Mailleux Comblain – Cristal SGH
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492942-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T090000
+DTEND;TZID=Europe/Brussels:20270124T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – Le Royal Haut Pré Ougrée
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-492944-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:Alliance Flémalle – Royal BC Awans
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493268-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T113000
+DTEND;TZID=Europe/Brussels:20270130T133000
+SUMMARY:Cristal SGH – Alliance Flémalle
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493267-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T120000
+DTEND;TZID=Europe/Brussels:20270130T140000
+SUMMARY:Mailleux Comblain – Lg. Atlas Ath. Jupille A
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493269-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T130000
+DTEND;TZID=Europe/Brussels:20270130T150000
+SUMMARY:Le Royal Haut Pré Ougrée – ABC Waremme B
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493266-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:Basket Club Verlaine – Royal Renaissance Basket Montegnée A
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493471-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T113000
+DTEND;TZID=Europe/Brussels:20270206T133000
+SUMMARY:Cristal SGH – Le Royal Haut Pré Ougrée
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493472-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:Alliance Flémalle – ABC Waremme B
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493470-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:Royal Renaissance Basket Montegnée A – Royal BC Awans
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493800-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T150000
+DTEND;TZID=Europe/Brussels:20270213T170000
+SUMMARY:ABC Waremme B – Royal BC Awans
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300 Waremme
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493797-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T090000
+DTEND;TZID=Europe/Brussels:20270214T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – Cristal SGH
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493799-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T133000
+DTEND;TZID=Europe/Brussels:20270214T153000
+SUMMARY:Basket Club Verlaine – Le Royal Haut Pré Ougrée
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-493798-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:Royal Renaissance Basket Montegnée A – Mailleux Comblain
+LOCATION:Hall Omnisports Montégnée\, Rue Pasteur\, 14\, 4420 Montegnée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494397-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T133000
+DTEND;TZID=Europe/Brussels:20270313T153000
+SUMMARY:Cristal SGH – Basket Club Verlaine
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494398-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T140000
+DTEND;TZID=Europe/Brussels:20270313T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Royal Renaissance Basket Montegnée A
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494724-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T110000
+DTEND;TZID=Europe/Brussels:20270320T130000
+SUMMARY:Royal BC Awans – Basket Club Verlaine
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494726-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T140000
+DTEND;TZID=Europe/Brussels:20270320T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Mailleux Comblain
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494725-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T150000
+DTEND;TZID=Europe/Brussels:20270320T170000
+SUMMARY:ABC Waremme B – Royal Renaissance Basket Montegnée A
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300 Waremme
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495055-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T110000
+DTEND;TZID=Europe/Brussels:20270327T130000
+SUMMARY:Royal BC Awans – Lg. Atlas Ath. Jupille A
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495056-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T120000
+DTEND;TZID=Europe/Brussels:20270327T140000
+SUMMARY:Mailleux Comblain – Basket Club Verlaine
+LOCATION:Centre Sportif de Comblain-au-Pont\, Rue du Moulin 4\, 4170 Comblain-au-Pont
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495057-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T133000
+DTEND;TZID=Europe/Brussels:20270327T153000
+SUMMARY:Cristal SGH – Royal Renaissance Basket Montegnée A
+LOCATION:Ecole de la Troque\,  Rue Basse Marihaye\, 350\, 4100 Seraing
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495058-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T140000
+DTEND;TZID=Europe/Brussels:20270327T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Alliance Flémalle
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-494396-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270403T110000
+DTEND;TZID=Europe/Brussels:20270403T130000
+SUMMARY:Royal BC Awans – Mailleux Comblain
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495399-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T110000
+DTEND;TZID=Europe/Brussels:20270410T130000
+SUMMARY:Royal BC Awans – Cristal SGH
+LOCATION:Complexe Sportif d'Awans\, Rue de l'Eglise 21\, 4340 Awans
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495400-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T150000
+DTEND;TZID=Europe/Brussels:20270410T170000
+SUMMARY:ABC Waremme B – Lg. Atlas Ath. Jupille A
+LOCATION:Pôle Ballon\, Chaussée Romaine 71\, 4300 Waremme
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495401-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T110000
+DTEND;TZID=Europe/Brussels:20270411T130000
+SUMMARY:Alliance Flémalle – Mailleux Comblain
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495733-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T140000
+DTEND;TZID=Europe/Brussels:20270417T160000
+SUMMARY:Le Royal Haut Pré Ougrée – Royal BC Awans
+LOCATION:Hall Omnisports du Centenaire\, Avenue du Centenaire 39\, 4102 Ougrée
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495731-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T090000
+DTEND;TZID=Europe/Brussels:20270418T110000
+SUMMARY:Lg. Atlas Ath. Jupille A – Alliance Flémalle
+LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
+DESCRIPTION:U14D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-495732-comp-s6613@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T150000
+DTEND;TZID=Europe/Brussels:20270418T170000
+SUMMARY:Basket Club Verlaine – ABC Waremme B
+LOCATION:Centre Sportif\, Rue de la Station\, 37\, 4537 Verlaine
+DESCRIPTION:U14D A
+END:VEVENT
+END:VCALENDAR

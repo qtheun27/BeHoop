@@ -1,0 +1,1113 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial 2 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-473064-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T183000
+DTEND;TZID=Europe/Brussels:20260926T203000
+SUMMARY:B.B.C Braine-Le-Château B – Genappe Lothier (70-110)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472998-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Speedy MSG B – BCD Wavre A (66-37)
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473008-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T193000
+DTEND;TZID=Europe/Brussels:20260926T213000
+SUMMARY:BC Lillois – Royal Castors Braine (86-85)
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473042-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Royal Nivelles Basketball C – Asteras (57-64)
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473086-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T204500
+DTEND;TZID=Europe/Brussels:20260926T224500
+SUMMARY:Royal Waterloo Basket B – Châlet Woluwé St.Pierre B (69-58)
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473108-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T153000
+DTEND;TZID=Europe/Brussels:20260927T173000
+SUMMARY:Phoenix VLV – BC École Européenne B (52-64)
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473075-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260930T210000
+DTEND;TZID=Europe/Brussels:20260930T230000
+SUMMARY:Châlet Woluwé St.Pierre B – Speedy MSG B (63-61)
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472987-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T210000
+DTEND;TZID=Europe/Brussels:20261002T230000
+SUMMARY:Royal Castors Braine – Royal Waterloo Basket B (75-73)
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473097-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T190000
+DTEND;TZID=Europe/Brussels:20261003T210000
+SUMMARY:Asteras – BC École Européenne B (105-104)
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473043-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:Royal Nivelles Basketball C – Phoenix VLV (74-54)
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473109-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:Phoenix VLV – Asteras (70-89)
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473065-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T183000
+DTEND;TZID=Europe/Brussels:20261010T203000
+SUMMARY:B.B.C Braine-Le-Château B – Royal Nivelles Basketball C (76-67)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473087-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T204500
+DTEND;TZID=Europe/Brussels:20261010T224500
+SUMMARY:Royal Waterloo Basket B – BC Lillois (75-61)
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472999-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:Speedy MSG B – Royal Castors Braine (71-73)
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473021-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:BCD Wavre A – Châlet Woluwé St.Pierre B (58-59)
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473031-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T154500
+DTEND;TZID=Europe/Brussels:20261011T174500
+SUMMARY:BC École Européenne B – Genappe Lothier (64-55)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473106-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:Asteras – Royal Castors Braine (88-82)
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473070-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:B.B.C Braine-Le-Château B – Châlet Woluwé St.Pierre B (72-78)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473090-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:Royal Waterloo Basket B – BC École Européenne B (71-66)
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473113-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T153000
+DTEND;TZID=Europe/Brussels:20261018T173000
+SUMMARY:Phoenix VLV – BC Lillois (58-65)
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472988-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:Royal Castors Braine – BCD Wavre A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473024-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T140000
+DTEND;TZID=Europe/Brussels:20261025T160000
+SUMMARY:BCD Wavre A – Asteras
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473041-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Royal Nivelles Basketball C – BC Lillois
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473063-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:B.B.C Braine-Le-Château B – Royal Castors Braine
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473111-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T153000
+DTEND;TZID=Europe/Brussels:20261101T173000
+SUMMARY:Phoenix VLV – Genappe Lothier
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473000-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Speedy MSG B – Royal Nivelles Basketball C
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473054-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Genappe Lothier – Asteras
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473076-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Châlet Woluwé St.Pierre B – BC Lillois
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473095-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Royal Waterloo Basket B – BCD Wavre A
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473032-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T153000
+DTEND;TZID=Europe/Brussels:20261108T173000
+SUMMARY:BC École Européenne B – Royal Castors Braine
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473110-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T153000
+DTEND;TZID=Europe/Brussels:20261108T173000
+SUMMARY:Phoenix VLV – B.B.C Braine-Le-Château B
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473053-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261112T210000
+DTEND;TZID=Europe/Brussels:20261112T230000
+SUMMARY:Genappe Lothier – BCD Wavre A
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473098-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T170000
+DTEND;TZID=Europe/Brussels:20261114T190000
+SUMMARY:Asteras – Châlet Woluwé St.Pierre B
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473066-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:B.B.C Braine-Le-Château B – BC École Européenne B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473044-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:Royal Nivelles Basketball C – Genappe Lothier
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473099-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Asteras – B.B.C Braine-Le-Château B
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473055-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Genappe Lothier – Phoenix VLV
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473089-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Royal Waterloo Basket B – Speedy MSG B
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473077-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Châlet Woluwé St.Pierre B – Royal Castors Braine
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473033-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T153000
+DTEND;TZID=Europe/Brussels:20261122T173000
+SUMMARY:BC École Européenne B – BC Lillois
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472989-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T210000
+DTEND;TZID=Europe/Brussels:20261127T230000
+SUMMARY:Royal Castors Braine – Châlet Woluwé St.Pierre B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473067-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T183000
+DTEND;TZID=Europe/Brussels:20261128T203000
+SUMMARY:B.B.C Braine-Le-Château B – Asteras
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473059-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:Genappe Lothier – Châlet Woluwé St.Pierre B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473011-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:BC Lillois – BC École Européenne B
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473045-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T133000
+DTEND;TZID=Europe/Brussels:20261129T153000
+SUMMARY:Royal Nivelles Basketball C – BCD Wavre A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473001-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261201T203000
+DTEND;TZID=Europe/Brussels:20261201T223000
+SUMMARY:Speedy MSG B – Royal Waterloo Basket B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472990-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:Royal Castors Braine – Asteras
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473052-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:Genappe Lothier – Royal Waterloo Basket B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473046-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:Royal Nivelles Basketball C – Châlet Woluwé St.Pierre B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473068-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T203000
+DTEND;TZID=Europe/Brussels:20261205T223000
+SUMMARY:B.B.C Braine-Le-Château B – BCD Wavre A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473035-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T180000
+DTEND;TZID=Europe/Brussels:20261206T200000
+SUMMARY:BC École Européenne B – Phoenix VLV
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472991-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T210000
+DTEND;TZID=Europe/Brussels:20261211T230000
+SUMMARY:Royal Castors Braine – Phoenix VLV
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473100-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:Asteras – Speedy MSG B
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473093-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:Royal Waterloo Basket B – B.B.C Braine-Le-Château B
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473047-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:Royal Nivelles Basketball C – BC École Européenne B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473078-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T210000
+DTEND;TZID=Europe/Brussels:20261212T230000
+SUMMARY:Châlet Woluwé St.Pierre B – Genappe Lothier
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473010-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261215T203000
+DTEND;TZID=Europe/Brussels:20261215T223000
+SUMMARY:BC Lillois – Speedy MSG B
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473049-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T160000
+DTEND;TZID=Europe/Brussels:20261219T180000
+SUMMARY:Royal Nivelles Basketball C – Royal Waterloo Basket B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473071-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T183000
+DTEND;TZID=Europe/Brussels:20261219T203000
+SUMMARY:B.B.C Braine-Le-Château B – Speedy MSG B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473056-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:Genappe Lothier – Royal Castors Braine
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473034-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T153000
+DTEND;TZID=Europe/Brussels:20261220T173000
+SUMMARY:BC École Européenne B – Châlet Woluwé St.Pierre B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473003-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:Speedy MSG B – BC École Européenne B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473014-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:BC Lillois – Asteras
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473048-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:Royal Nivelles Basketball C – Royal Castors Braine
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473092-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T204500
+DTEND;TZID=Europe/Brussels:20270109T224500
+SUMMARY:Royal Waterloo Basket B – Genappe Lothier
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473114-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T153000
+DTEND;TZID=Europe/Brussels:20270110T173000
+SUMMARY:Phoenix VLV – BCD Wavre A
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472992-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270115T210000
+DTEND;TZID=Europe/Brussels:20270115T230000
+SUMMARY:Royal Castors Braine – BC Lillois
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473101-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:Asteras – Royal Nivelles Basketball C
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473057-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:Genappe Lothier – B.B.C Braine-Le-Château B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473088-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T190000
+DTEND;TZID=Europe/Brussels:20270116T210000
+SUMMARY:Royal Waterloo Basket B – Phoenix VLV
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473025-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:BCD Wavre A – Speedy MSG B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473079-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270120T210000
+DTEND;TZID=Europe/Brussels:20270120T230000
+SUMMARY:Châlet Woluwé St.Pierre B – Royal Waterloo Basket B
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472993-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270122T210000
+DTEND;TZID=Europe/Brussels:20270122T230000
+SUMMARY:Royal Castors Braine – Genappe Lothier
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473002-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T180000
+DTEND;TZID=Europe/Brussels:20270123T200000
+SUMMARY:Speedy MSG B – B.B.C Braine-Le-Château B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473091-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Royal Waterloo Basket B – Royal Nivelles Basketball C
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473015-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T193000
+DTEND;TZID=Europe/Brussels:20270123T213000
+SUMMARY:BC Lillois – Phoenix VLV
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473102-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T193000
+DTEND;TZID=Europe/Brussels:20270123T213000
+SUMMARY:Asteras – BCD Wavre A
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472994-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T210000
+DTEND;TZID=Europe/Brussels:20270129T230000
+SUMMARY:Royal Castors Braine – B.B.C Braine-Le-Château B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473058-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:Genappe Lothier – Speedy MSG B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473081-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:Châlet Woluwé St.Pierre B – Phoenix VLV
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473085-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:Royal Waterloo Basket B – Asteras
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473016-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:BC Lillois – Royal Nivelles Basketball C
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473036-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T153000
+DTEND;TZID=Europe/Brussels:20270131T173000
+SUMMARY:BC École Européenne B – BCD Wavre A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473012-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270202T200000
+DTEND;TZID=Europe/Brussels:20270202T220000
+SUMMARY:BC Lillois – Genappe Lothier
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473080-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270203T210000
+DTEND;TZID=Europe/Brussels:20270203T230000
+SUMMARY:Châlet Woluwé St.Pierre B – BC École Européenne B
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473004-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:Speedy MSG B – Asteras
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473069-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:B.B.C Braine-Le-Château B – Royal Waterloo Basket B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473026-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:BCD Wavre A – BC Lillois
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473037-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T153000
+DTEND;TZID=Europe/Brussels:20270207T173000
+SUMMARY:BC École Européenne B – Royal Nivelles Basketball C
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473115-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T153000
+DTEND;TZID=Europe/Brussels:20270207T173000
+SUMMARY:Phoenix VLV – Royal Castors Braine
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473005-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:Speedy MSG B – Châlet Woluwé St.Pierre B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473072-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T183000
+DTEND;TZID=Europe/Brussels:20270213T203000
+SUMMARY:B.B.C Braine-Le-Château B – BC Lillois
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473094-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T204500
+DTEND;TZID=Europe/Brussels:20270213T224500
+SUMMARY:Royal Waterloo Basket B – Royal Castors Braine
+LOCATION:Hall Omnisports du Chenois\, Chemin des Postes 156\, 1410 Waterloo
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473027-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:BCD Wavre A – Genappe Lothier
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473038-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T153000
+DTEND;TZID=Europe/Brussels:20270214T173000
+SUMMARY:BC École Européenne B – Asteras
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473116-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T153000
+DTEND;TZID=Europe/Brussels:20270214T173000
+SUMMARY:Phoenix VLV – Royal Nivelles Basketball C
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473017-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270216T203000
+DTEND;TZID=Europe/Brussels:20270216T223000
+SUMMARY:BC Lillois – Royal Waterloo Basket B
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473006-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:Speedy MSG B – BC Lillois
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473060-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:Genappe Lothier – Royal Nivelles Basketball C
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473028-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:BCD Wavre A – Royal Castors Braine
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473039-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T153000
+DTEND;TZID=Europe/Brussels:20270221T173000
+SUMMARY:BC École Européenne B – B.B.C Braine-Le-Château B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473117-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T153000
+DTEND;TZID=Europe/Brussels:20270221T173000
+SUMMARY:Phoenix VLV – Royal Waterloo Basket B
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473023-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T210000
+DTEND;TZID=Europe/Brussels:20270227T230000
+SUMMARY:BCD Wavre A – Royal Nivelles Basketball C
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473013-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T150000
+DTEND;TZID=Europe/Brussels:20270307T170000
+SUMMARY:BC Lillois – BCD Wavre A
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473112-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T153000
+DTEND;TZID=Europe/Brussels:20270307T173000
+SUMMARY:Phoenix VLV – Speedy MSG B
+LOCATION:Complexe sportif\, Chemin de la Bruyère du Coq\, 51\, 1495 Sart-Dames-Avelines
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473082-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270310T210000
+DTEND;TZID=Europe/Brussels:20270310T230000
+SUMMARY:Châlet Woluwé St.Pierre B – Asteras
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472995-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270312T210000
+DTEND;TZID=Europe/Brussels:20270312T230000
+SUMMARY:Royal Castors Braine – Speedy MSG B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473104-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:Asteras – Phoenix VLV
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473061-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:Genappe Lothier – BC École Européenne B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473083-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:Châlet Woluwé St.Pierre B – BCD Wavre A
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473050-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T124500
+DTEND;TZID=Europe/Brussels:20270314T144500
+SUMMARY:Royal Nivelles Basketball C – B.B.C Braine-Le-Château B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-472996-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270319T210000
+DTEND;TZID=Europe/Brussels:20270319T230000
+SUMMARY:Royal Castors Braine – BC École Européenne B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473105-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T170000
+DTEND;TZID=Europe/Brussels:20270320T190000
+SUMMARY:Asteras – Genappe Lothier
+LOCATION:Ecole du Centre\, Avenue Charles Thielemans 30\, 1150 Woluwe-Saint-Pierre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473073-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:B.B.C Braine-Le-Château B – Phoenix VLV
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473018-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T193000
+DTEND;TZID=Europe/Brussels:20270320T213000
+SUMMARY:BC Lillois – Châlet Woluwé St.Pierre B
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473022-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:BCD Wavre A – Royal Waterloo Basket B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473051-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:Royal Nivelles Basketball C – Speedy MSG B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473009-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270323T200000
+DTEND;TZID=Europe/Brussels:20270323T220000
+SUMMARY:BC Lillois – B.B.C Braine-Le-Château B
+LOCATION:Complexe Willy Denuit\, Rue René Francq 7\, 1428 Lillois
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473007-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T190000
+DTEND;TZID=Europe/Brussels:20270327T210000
+SUMMARY:Speedy MSG B – Phoenix VLV
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473062-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T190000
+DTEND;TZID=Europe/Brussels:20270327T210000
+SUMMARY:Genappe Lothier – BC Lillois
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473084-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T190000
+DTEND;TZID=Europe/Brussels:20270327T210000
+SUMMARY:Châlet Woluwé St.Pierre B – Royal Nivelles Basketball C
+LOCATION:Sportcity\, Avenue Salomé\, 2\, 1150 Bruxelles
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473029-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T210000
+DTEND;TZID=Europe/Brussels:20270327T230000
+SUMMARY:BCD Wavre A – B.B.C Braine-Le-Château B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P2H B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473040-comp-s6283@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T153000
+DTEND;TZID=Europe/Brussels:20270328T173000
+SUMMARY:BC École Européenne B – Royal Waterloo Basket B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P2H B
+END:VEVENT
+END:VCALENDAR

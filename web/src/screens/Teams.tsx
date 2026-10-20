@@ -1,5 +1,5 @@
 // Onglet « Équipes » : les équipes dont je fais partie (que je gère, de mon enfant, où je joue) — pas les équipes suivies.
-// Tout l'essentiel au même endroit : prochain match, covoiturage, fil de l'équipe (🔒 compris), galerie, vidéos, membres.
+// Tout l'essentiel au même endroit : prochain match, covoiturage, fil de l'équipe (privé compris), galerie, vidéos, membres.
 import { useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
@@ -12,6 +12,7 @@ import { MembersList, RELATION_FR } from './Explore';
 import { CarpoolSheet, LiveScoreSheet, useLive } from './Live';
 import { frDate, mapsUrl, store } from '../lib/util';
 import { t, tn } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 export function MyTeams({ id }: { id?: number }) {
   const s = useSession();
@@ -22,10 +23,10 @@ export function MyTeams({ id }: { id?: number }) {
   useEffect(() => { if (current) store.set('behoop.equipe', current.teamId); }, [current?.teamId]); // eslint-disable-line
 
   if (!s.user) return (
-    <Screen title={t('Équipes')}><Empty ill="👨‍👩‍👧" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
+    <Screen title={t('Équipes')}><Empty ill="users" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>);
   if (!mine.length) return (
-    <Screen title={t('Équipes')}><Empty ill="👨‍👩‍👧" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
+    <Screen title={t('Équipes')}><Empty ill="users" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
       action={<a className="btn" href="#/explorer">{t('Trouver mon équipe')}</a>} /></Screen>);
   const name = (tid: number) => { const e = idx.data?.get(tid); return e ? `${e.club.short} · ${teamLabel(e.team)}` : `${t('Équipe')} ${tid}`; };
   return (
@@ -33,7 +34,7 @@ export function MyTeams({ id }: { id?: number }) {
       {mine.length > 1 && <div className="chips">{mine.map((m) => (
         <button key={m.teamId} className={`chip${current?.teamId === m.teamId ? ' on' : ''}`} onClick={() => setSel(m.teamId)}>{name(m.teamId)}</button>))}</div>}
       {current && (current.status === 'accepted' ? <TeamSpace key={current.teamId} m={current} /> : (
-        <Empty ill="⏳" title={t('Demande envoyée : {name}', { name: name(current.teamId) })} text={t('Un responsable de l\'équipe doit valider ta demande. Tu recevras une notification.')} />))}
+        <Empty ill="hourglass" title={t('Demande envoyée : {name}', { name: name(current.teamId) })} text={t('Un responsable de l\'équipe doit valider ta demande. Tu recevras une notification.')} />))}
     </Screen>
   );
 }
@@ -75,20 +76,20 @@ function TeamSpace({ m }: { m: D.Membership }) {
           <div style={{ fontWeight: 600 }}>{last.hn} {last.hs} – {last.as} {last.an}</div></div><span className="chev">›</span></a>}
 
       {videos.length > 0 && <>
-        <div className="group-title">{t('🎬 Vidéos de match')}</div>
+        <div className="group-title"><><Ico n="video" />{t('Vidéos de match')}</></div>
         <div className="group">{videos.slice(0, 5).map((p) => (
           <a key={p.id} className="row" href={p.type === 'video' ? `#/video/${p.payload.matchVideoId}` : `#/video/${p.payload.matchVideoId}/m-${p.payload.momentId}`} style={{ color: 'inherit' }}>
             <div className="thumb" style={{ width: 72, aspectRatio: '16/9', backgroundImage: p.payload.posterKey ? `url(${mediaUrl(p.payload.posterKey)})` : undefined }} />
-            <div className="grow ellipsis">{p.type === 'moment' ? '⚡ ' : ''}{p.payload.title}<div className="sub">{p.payload.score}</div></div><span className="chev">›</span></a>))}</div>
+            <div className="grow ellipsis">{p.type === 'moment' && <Ico n="bolt" style={{ marginRight: 4 }} />}{p.payload.title}<div className="sub">{p.payload.score}</div></div><span className="chev">›</span></a>))}</div>
       </>}
 
       {photos.length > 0 && <>
-        <div className="group-title">{t('📷 Galerie')}</div>
+        <div className="group-title"><><Ico n="image" />{t('Galerie')}</></div>
         <div className="grid3" style={{ marginBottom: 22 }}>{photos.map((ph, i) => (
           <a key={i} className="thumb" href={`#/post/${ph.post}`} style={{ backgroundImage: `url(${mediaUrl(ph.key)})` }} aria-label={t('Voir la photo')} />))}</div>
       </>}
 
-      <div className="group-title">{t('👥 Membres')}</div>
+      <div className="group-title"><><Ico n="users" />{t('Membres')}</></div>
       <button className="row group" onClick={() => setSheet({ kind: 'members' })}>
         <div className="grow">{tn(acc.length, '{n} membre', '{n} membres')}{resp && pending.length > 0 && <span className="pill live" style={{ marginLeft: 8 }}>{tn(pending.length, '{n} demande', '{n} demandes')}</span>}</div>
         <span className="chev">›</span></button>
@@ -97,7 +98,7 @@ function TeamSpace({ m }: { m: D.Membership }) {
         <div className="group-title" style={{ margin: 0 }}>{t('Fil de l\'équipe')}</div>
         <a href="#/publier?photo=1" style={{ fontWeight: 600, fontSize: 15 }}>{t('＋ Publier')}</a>
       </div>
-      {posts.length === 0 ? <Empty ill="🏀" title={t('Rien pour l\'instant')} text={t('Les résultats, photos et vidéos de l\'équipe apparaîtront ici.')} /> : posts.slice(0, 10).map((p) => <PostCard key={p.id} post={p} />)}
+      {posts.length === 0 ? <Empty ill="ball" title={t('Rien pour l\'instant')} text={t('Les résultats, photos et vidéos de l\'équipe apparaîtront ici.')} /> : posts.slice(0, 10).map((p) => <PostCard key={p.id} post={p} />)}
 
       {sheet?.kind === 'car' && sheet.g && <CarpoolSheet g={sheet.g} youthTeam={team.ag === 'jeunes' ? team.id : null} onClose={() => setSheet(null)} />}
       {sheet?.kind === 'live' && sheet.g && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
@@ -120,12 +121,12 @@ function NextGame({ g, teamId, big, onCar, onLive }: { g: Game; teamId: number; 
         <span className="pill">{home ? t('Domicile') : t('Extérieur')}</span>
       </div>
       <div style={{ fontWeight: 700, fontSize: big ? 18 : 16, marginTop: 6 }}>{home ? `vs ${g.an}` : `@ ${g.hn}`}</div>
-      {live?.status === 'live' && <div className="pill live" style={{ marginTop: 6 }}>🔴 {live.home} – {live.away} · Q{live.quarter}</div>}
-      {big && g.v && <div className="muted" style={{ fontSize: 14, marginTop: 4 }}>📍 {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
+      {live?.status === 'live' && <div className="pill live" style={{ marginTop: 6 }}><Ico n="live" />{live.home} – {live.away} · Q{live.quarter}</div>}
+      {big && g.v && <div className="muted" style={{ fontSize: 14, marginTop: 4 }}><Ico n="pin" /> {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack" style={{ flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
-        <button className="btn small" onClick={onCar}>{t('🚗 Covoiturage')}</button>
+        <button className="btn small" onClick={onCar}><><Ico n="car" />{t('Covoiturage')}</></button>
         {big && g.v && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
-        {big && <CalendarButton teamId={teamId} label={t('📆 Calendrier')} compact />}
+        {big && <CalendarButton teamId={teamId} label={t('Calendrier')} compact />}
         {g.d === today && <button className="btn small secondary" onClick={onLive}>{t('Score en direct')}</button>}
       </div>
     </div>

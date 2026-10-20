@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U8 Mixtes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-496497-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:RE Pont-de-Loup C – Spirou Basket B
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496498-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:Olympic Mont Sur Marchienne B – Basket Entité Courcelles C
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496499-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:BCJ Ressaix C – CEP Fleurus B
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496500-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:RE Pont-de-Loup C – Spirou Basket B
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496501-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:Olympic Mont Sur Marchienne B – Basket Entité Courcelles C
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496502-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:BCJ Ressaix C – CEP Fleurus B
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496503-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:RE Pont-de-Loup C – Spirou Basket B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496504-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:Olympic Mont Sur Marchienne B – Basket Entité Courcelles C
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496505-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:BCJ Ressaix C – CEP Fleurus B
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496506-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:RE Pont-de-Loup C – Spirou Basket B
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496507-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:Olympic Mont Sur Marchienne B – Basket Entité Courcelles C
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496508-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:BCJ Ressaix C – CEP Fleurus B
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496509-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T140000
+DTEND;TZID=Europe/Brussels:20261122T160000
+SUMMARY:RE Pont-de-Loup C – Spirou Basket B
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183 Trazegnies
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496510-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T140000
+DTEND;TZID=Europe/Brussels:20261122T160000
+SUMMARY:Olympic Mont Sur Marchienne B – Basket Entité Courcelles C
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183 Trazegnies
+DESCRIPTION:U8M C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496511-comp-s6655@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T140000
+DTEND;TZID=Europe/Brussels:20261122T160000
+SUMMARY:BCJ Ressaix C – CEP Fleurus B
+LOCATION:Hall Omnisports\, Avenue de l'Europe 1\, 6183 Trazegnies
+DESCRIPTION:U8M C
+END:VEVENT
+END:VCALENDAR

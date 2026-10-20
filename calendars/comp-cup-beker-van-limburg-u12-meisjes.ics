@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Limburg U12 Meisjes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11524221962-comp-cup-beker-van-limburg-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T100000
+DTEND;TZID=Europe/Brussels:20261219T120000
+SUMMARY:Basket Zonhoven M12 A – The Valley Basketball Maaseik M12 A
+LOCATION:Evenementenhal Den Dijk Zonhoven\, Rozenkransweg 4\, 3520 Zonhoven
+DESCRIPTION:Beker van Limburg U12 Meisjes 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11490666724-comp-cup-beker-van-limburg-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T090000
+DTEND;TZID=Europe/Brussels:20261220T110000
+SUMMARY:Stevoort BBC M12 A – Hasselt BT M12 A
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:Beker van Limburg U12 Meisjes 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11440333867-comp-cup-beker-van-limburg-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T110000
+DTEND;TZID=Europe/Brussels:20261220T130000
+SUMMARY:Basket Lummen M12 A – B.C. Gems Diepenbeek M12 A
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:Beker van Limburg U12 Meisjes 1/4 Finale
+END:VEVENT
+END:VCALENDAR

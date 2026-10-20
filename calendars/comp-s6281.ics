@@ -1,0 +1,1077 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial 1 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-474772-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260923T203000
+DTEND;TZID=Europe/Brussels:20260923T223000
+SUMMARY:BC École Européenne A – R. Rebond Ottignies-LLN A (58-69)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474718-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Royal Excelsior Brussels B – R. Rebond Ottignies-LLN A (107-79)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474762-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:B.B.C Braine-Le-Château A – BC École Européenne A (53-57)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474790-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Royal BC Wezembeek Oppem A – UJ Koekelberg A (49-77)
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474678-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Speedy MSG A – Royal Canter Schaerbeek B (66-58)
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474773-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T203000
+DTEND;TZID=Europe/Brussels:20261002T223000
+SUMMARY:BC École Européenne A – Racing BCS Uccle A (66-59)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474729-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:UJ Koekelberg A – Royal Linthout BC W.S. B (55-80)
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474719-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T200000
+DTEND;TZID=Europe/Brussels:20261003T220000
+SUMMARY:Royal Excelsior Brussels B – Royal BC Wezembeek Oppem A (93-47)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474685-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Royal Canter Schaerbeek B (82-72)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474663-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:Royal UAA Etterbeek A – B.B.C Braine-Le-Château A (72-50)
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474751-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T120000
+DTEND;TZID=Europe/Brussels:20261004T140000
+SUMMARY:Fresh Air A – Speedy MSG A (61-86)
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474741-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261009T201500
+DTEND;TZID=Europe/Brussels:20261009T221500
+SUMMARY:Royal Canter Schaerbeek B – Royal Excelsior Brussels B (65-105)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474697-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:Royal Linthout BC W.S. B – Fresh Air A (90-55)
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474707-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:Racing BCS Uccle A – UJ Koekelberg A (74-58)
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474763-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:B.B.C Braine-Le-Château A – R. Rebond Ottignies-LLN A (58-70)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474785-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:Royal BC Wezembeek Oppem A – BC École Européenne A (62-71)
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474675-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:Speedy MSG A – Royal UAA Etterbeek A (68-59)
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474750-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T190000
+DTEND;TZID=Europe/Brussels:20261017T210000
+SUMMARY:Fresh Air A – Royal Canter Schaerbeek B (75-55)
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474792-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Royal BC Wezembeek Oppem A – Royal Excelsior Brussels B
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474669-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261029T210000
+DTEND;TZID=Europe/Brussels:20261029T230000
+SUMMARY:Royal UAA Etterbeek A – Royal Canter Schaerbeek B
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474765-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:B.B.C Braine-Le-Château A – Racing BCS Uccle A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474698-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Royal Linthout BC W.S. B – B.B.C Braine-Le-Château A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474752-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Fresh Air A – R. Rebond Ottignies-LLN A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474708-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T193000
+DTEND;TZID=Europe/Brussels:20261107T213000
+SUMMARY:Racing BCS Uccle A – Royal UAA Etterbeek A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474730-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T193000
+DTEND;TZID=Europe/Brussels:20261107T213000
+SUMMARY:UJ Koekelberg A – BC École Européenne A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474786-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Royal BC Wezembeek Oppem A – Royal Canter Schaerbeek B
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474676-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Speedy MSG A – Royal Excelsior Brussels B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474774-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261113T203000
+DTEND;TZID=Europe/Brussels:20261113T223000
+SUMMARY:BC École Européenne A – Fresh Air A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474720-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:Royal Excelsior Brussels B – UJ Koekelberg A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474686-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Speedy MSG A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474764-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:B.B.C Braine-Le-Château A – Royal BC Wezembeek Oppem A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474664-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:Royal UAA Etterbeek A – Royal Linthout BC W.S. B
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474742-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Royal Canter Schaerbeek B – Racing BCS Uccle A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474775-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261120T203000
+DTEND;TZID=Europe/Brussels:20261120T223000
+SUMMARY:BC École Européenne A – Royal Canter Schaerbeek B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474699-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Royal Linthout BC W.S. B – Royal Excelsior Brussels B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474753-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Fresh Air A – Royal UAA Etterbeek A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474709-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:Racing BCS Uccle A – R. Rebond Ottignies-LLN A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474731-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:UJ Koekelberg A – Royal BC Wezembeek Oppem A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474677-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Speedy MSG A – B.B.C Braine-Le-Château A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474769-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:B.B.C Braine-Le-Château A – Royal Canter Schaerbeek B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474706-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T210000
+DTEND;TZID=Europe/Brussels:20261128T230000
+SUMMARY:Racing BCS Uccle A – Speedy MSG A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474756-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T141500
+DTEND;TZID=Europe/Brussels:20261129T161500
+SUMMARY:Fresh Air A – Royal BC Wezembeek Oppem A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474715-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261202T200000
+DTEND;TZID=Europe/Brussels:20261202T220000
+SUMMARY:Racing BCS Uccle A – Royal Canter Schaerbeek B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474721-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:Royal Excelsior Brussels B – Fresh Air A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474687-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T203000
+DTEND;TZID=Europe/Brussels:20261205T223000
+SUMMARY:R. Rebond Ottignies-LLN A – UJ Koekelberg A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474787-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T203000
+DTEND;TZID=Europe/Brussels:20261205T223000
+SUMMARY:Royal BC Wezembeek Oppem A – Speedy MSG A
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474665-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:Royal UAA Etterbeek A – BC École Européenne A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474743-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:Royal Canter Schaerbeek B – Royal Linthout BC W.S. B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474666-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261210T210000
+DTEND;TZID=Europe/Brussels:20261210T230000
+SUMMARY:Royal UAA Etterbeek A – Royal BC Wezembeek Oppem A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474722-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T203000
+DTEND;TZID=Europe/Brussels:20261211T223000
+SUMMARY:Royal Excelsior Brussels B – Racing BCS Uccle A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474776-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T203000
+DTEND;TZID=Europe/Brussels:20261211T223000
+SUMMARY:BC École Européenne A – Speedy MSG A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474688-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Royal Linthout BC W.S. B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474754-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T141500
+DTEND;TZID=Europe/Brussels:20261213T161500
+SUMMARY:Fresh Air A – UJ Koekelberg A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474744-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:Royal Canter Schaerbeek B – B.B.C Braine-Le-Château A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474700-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Royal Linthout BC W.S. B – BC École Européenne A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474710-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T193000
+DTEND;TZID=Europe/Brussels:20261219T213000
+SUMMARY:Racing BCS Uccle A – Fresh Air A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474732-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T193000
+DTEND;TZID=Europe/Brussels:20261219T213000
+SUMMARY:UJ Koekelberg A – Royal UAA Etterbeek A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474766-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:B.B.C Braine-Le-Château A – Royal Excelsior Brussels B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474788-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Royal BC Wezembeek Oppem A – R. Rebond Ottignies-LLN A
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474748-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Royal Canter Schaerbeek B – Speedy MSG A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474723-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270108T210000
+DTEND;TZID=Europe/Brussels:20270108T230000
+SUMMARY:Royal Excelsior Brussels B – Royal UAA Etterbeek A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474689-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:R. Rebond Ottignies-LLN A – BC École Européenne A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474767-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:B.B.C Braine-Le-Château A – UJ Koekelberg A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474789-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:Royal BC Wezembeek Oppem A – Royal Linthout BC W.S. B
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474679-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T210000
+DTEND;TZID=Europe/Brussels:20270109T230000
+SUMMARY:Speedy MSG A – Racing BCS Uccle A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474701-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270112T203000
+DTEND;TZID=Europe/Brussels:20270112T223000
+SUMMARY:Royal Linthout BC W.S. B – Speedy MSG A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474777-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270115T203000
+DTEND;TZID=Europe/Brussels:20270115T223000
+SUMMARY:BC École Européenne A – Royal Excelsior Brussels B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474711-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:Racing BCS Uccle A – Royal BC Wezembeek Oppem A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474733-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:UJ Koekelberg A – Royal Canter Schaerbeek B
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474667-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:Royal UAA Etterbeek A – R. Rebond Ottignies-LLN A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474768-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270119T203000
+DTEND;TZID=Europe/Brussels:20270119T223000
+SUMMARY:B.B.C Braine-Le-Château A – Speedy MSG A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474724-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:Royal Excelsior Brussels B – Royal Linthout BC W.S. B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474690-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Racing BCS Uccle A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474668-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T210000
+DTEND;TZID=Europe/Brussels:20270123T230000
+SUMMARY:Royal UAA Etterbeek A – Fresh Air A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474746-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T150000
+DTEND;TZID=Europe/Brussels:20270124T170000
+SUMMARY:Royal Canter Schaerbeek B – BC École Européenne A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474778-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:BC École Européenne A – B.B.C Braine-Le-Château A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474734-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T173000
+DTEND;TZID=Europe/Brussels:20270130T193000
+SUMMARY:UJ Koekelberg A – Speedy MSG A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474712-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:Racing BCS Uccle A – Royal Linthout BC W.S. B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474691-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Royal Excelsior Brussels B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474755-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270204T203000
+DTEND;TZID=Europe/Brussels:20270204T223000
+SUMMARY:Fresh Air A – B.B.C Braine-Le-Château A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474702-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:Royal Linthout BC W.S. B – R. Rebond Ottignies-LLN A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474735-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:UJ Koekelberg A – Fresh Air A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474713-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:Racing BCS Uccle A – Royal Excelsior Brussels B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474791-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:Royal BC Wezembeek Oppem A – Royal UAA Etterbeek A
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474680-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:Speedy MSG A – BC École Européenne A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474703-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T180000
+DTEND;TZID=Europe/Brussels:20270213T200000
+SUMMARY:Royal Linthout BC W.S. B – UJ Koekelberg A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474714-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T193000
+DTEND;TZID=Europe/Brussels:20270213T213000
+SUMMARY:Racing BCS Uccle A – BC École Européenne A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474770-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T203000
+DTEND;TZID=Europe/Brussels:20270213T223000
+SUMMARY:B.B.C Braine-Le-Château A – Royal UAA Etterbeek A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474681-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:Speedy MSG A – Fresh Air A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474747-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:Royal Canter Schaerbeek B – R. Rebond Ottignies-LLN A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474745-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270218T203000
+DTEND;TZID=Europe/Brussels:20270218T223000
+SUMMARY:Royal Canter Schaerbeek B – Fresh Air A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474704-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:Royal Linthout BC W.S. B – Royal UAA Etterbeek A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474736-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:UJ Koekelberg A – Royal Excelsior Brussels B
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474757-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:Fresh Air A – BC École Européenne A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474793-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Royal BC Wezembeek Oppem A – B.B.C Braine-Le-Château A
+LOCATION:Hall des Sports de Wezembeek-Oppem\, Avenue Astrid\, 85\, 1970 Wezembeek-Oppem
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474682-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:Speedy MSG A – R. Rebond Ottignies-LLN A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474779-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270305T203000
+DTEND;TZID=Europe/Brussels:20270305T223000
+SUMMARY:BC École Européenne A – Royal Linthout BC W.S. B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474725-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:Royal Excelsior Brussels B – B.B.C Braine-Le-Château A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474692-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Royal BC Wezembeek Oppem A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474670-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T210000
+DTEND;TZID=Europe/Brussels:20270306T230000
+SUMMARY:Royal UAA Etterbeek A – UJ Koekelberg A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474758-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T141500
+DTEND;TZID=Europe/Brussels:20270307T161500
+SUMMARY:Fresh Air A – Racing BCS Uccle A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474780-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270312T203000
+DTEND;TZID=Europe/Brussels:20270312T223000
+SUMMARY:BC École Européenne A – Royal BC Wezembeek Oppem A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474759-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T190000
+DTEND;TZID=Europe/Brussels:20270313T210000
+SUMMARY:Fresh Air A – Royal Linthout BC W.S. B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474737-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:UJ Koekelberg A – Racing BCS Uccle A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474726-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:Royal Excelsior Brussels B – Royal Canter Schaerbeek B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474671-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:Royal UAA Etterbeek A – Speedy MSG A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474693-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T150000
+DTEND;TZID=Europe/Brussels:20270314T170000
+SUMMARY:R. Rebond Ottignies-LLN A – B.B.C Braine-Le-Château A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474781-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270319T203000
+DTEND;TZID=Europe/Brussels:20270319T223000
+SUMMARY:BC École Européenne A – UJ Koekelberg A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474727-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T200000
+DTEND;TZID=Europe/Brussels:20270320T220000
+SUMMARY:Royal Excelsior Brussels B – Speedy MSG A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474694-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:R. Rebond Ottignies-LLN A – Fresh Air A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474771-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:B.B.C Braine-Le-Château A – Royal Linthout BC W.S. B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474672-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:Royal UAA Etterbeek A – Racing BCS Uccle A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474749-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:Royal Canter Schaerbeek B – Royal BC Wezembeek Oppem A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474738-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270323T213000
+DTEND;TZID=Europe/Brussels:20270323T233000
+SUMMARY:UJ Koekelberg A – R. Rebond Ottignies-LLN A
+LOCATION:Salle Victoria\, Léon Autrique 4A\, 1081 Koekelberg
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474782-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270326T203000
+DTEND;TZID=Europe/Brussels:20270326T223000
+SUMMARY:BC École Européenne A – Royal UAA Etterbeek A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474705-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T180000
+DTEND;TZID=Europe/Brussels:20270327T200000
+SUMMARY:Royal Linthout BC W.S. B – Royal Canter Schaerbeek B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474716-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T193000
+DTEND;TZID=Europe/Brussels:20270327T213000
+SUMMARY:Racing BCS Uccle A – B.B.C Braine-Le-Château A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474683-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T210000
+DTEND;TZID=Europe/Brussels:20270327T230000
+SUMMARY:Speedy MSG A – Royal BC Wezembeek Oppem A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:P1H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474760-comp-s6281@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T141500
+DTEND;TZID=Europe/Brussels:20270328T161500
+SUMMARY:Fresh Air A – Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:P1H
+END:VEVENT
+END:VCALENDAR

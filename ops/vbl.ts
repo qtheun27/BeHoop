@@ -41,7 +41,8 @@ async function pool<T, R>(items: T[], n: number, f: (x: T) => Promise<R>): Promi
   return out;
 }
 
-export function ics(teamName: string, games: SlimGame[], teamId: number) {
+/** uid : équipe (identifiant) ou compétition ('comp-bnxt'), pour des UID d'événements propres à chaque calendrier */
+export function ics(teamName: string, games: SlimGame[], teamId: number | string) {
   const esc = (s: string) => s.replace(/[\\;,]/g, (c) => '\\' + c).replace(/\n/g, '\\n');
   const ev = games.filter((g) => g.t).map((g) => {
     const [h, m] = g.t.split(':'); const start = `${g.d.replace(/-/g, '')}T${h}${m}00`;
@@ -105,7 +106,7 @@ export async function run(outFile = 'vbl.json', calDir = 'calendars') {
   const standings: Record<number, unknown[]> = {}; const series: Record<number, { id: number; name: string; short: string }> = {};
   pouleGuids.forEach((g, i) => {
     const sid = vblId(g); series[sid] = { id: sid, name: poules.get(g)!, short: poules.get(g)! };
-    standings[sid] = (standingsRaw[i]?.teams ?? []).map((t: any) => ({ team: vblId(t.guid), played: +t.wedAant || 0, wins: +t.wedWinst || 0, losses: +t.wedVerloren || 0, pf: +t.ptVoor || 0, pa: +t.ptTegen || 0, pts: +t.wedPunt || 0 }));
+    standings[sid] = (standingsRaw[i]?.teams ?? []).map((t: any) => ({ team: vblId(t.guid), played: +t.wedAant || 0, wins: +t.wedWinst || 0, losses: +t.wedVerloren || 0, pf: +t.ptVoor || 0, pa: +t.ptTegen || 0, pts: +t.wedPunt || 0, draws: +t.wedGelijk || undefined, rank: +t.rangNr || undefined })).sort((a: any, b: any) => (a.rank ?? 999) - (b.rank ?? 999));
   });
   const all = [...games.values()].sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
   writeFileSync(outFile, JSON.stringify({ generated_at: new Date().toISOString(), source: 'Basketbal Vlaanderen', clubs, national, games: all, series, standings }));

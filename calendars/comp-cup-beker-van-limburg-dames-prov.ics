@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Limburg Dames Prov
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12563853892-comp-cup-beker-van-limburg-dames-prov@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T173000
+DTEND;TZID=Europe/Brussels:20261205T193000
+SUMMARY:Basket Houthalen DSE C – Basket Peer DSE A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Limburg Dames Prov 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12614186749-comp-cup-beker-van-limburg-dames-prov@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:BC Maasmechelen DSE A – BasKet Tongeren DSE A
+LOCATION:Sportcomplex De Helix\, Collegestraat 1\, 3630 Maasmechelen
+DESCRIPTION:Beker van Limburg Dames Prov 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12547076273-comp-cup-beker-van-limburg-dames-prov@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T181500
+DTEND;TZID=Europe/Brussels:20261205T201500
+SUMMARY:Stevoort BBC DSE B – Basket Lummen DSE D
+LOCATION:Sporthal Mariaburcht\, Hofbeemdenstraat\, 3512 Stevoort
+DESCRIPTION:Beker van Limburg Dames Prov 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12496743416-comp-cup-beker-van-limburg-dames-prov@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T183000
+DTEND;TZID=Europe/Brussels:20261205T203000
+SUMMARY:Koninklijke BBC Union Leopoldsburg DSE A – Basket Zonhoven DSE B
+LOCATION:Sporthal 't Geleeg\, Caimolaan 130\, 3970 Leopoldsburg
+DESCRIPTION:Beker van Limburg Dames Prov 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12597409130-comp-cup-beker-van-limburg-dames-prov@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:BBC Croonen Lommel DSE B – Hades Kiewit BBC DSE A
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:Beker van Limburg Dames Prov 1/8 Finale
+END:VEVENT
+END:VCALENDAR

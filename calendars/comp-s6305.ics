@@ -1,0 +1,510 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U14 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-470924-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T121500
+DTEND;TZID=Europe/Brussels:20260926T141500
+SUMMARY:B55 Academy XL B – CRBB The Runners (15-101)
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470933-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:Royal Linthout BC W.S. A – Royal IV Brussels A (95-34)
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470964-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T150000
+DTEND;TZID=Europe/Brussels:20260926T170000
+SUMMARY:Royal Excelsior Brussels B – Fresh Air A (49-57)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470934-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T140000
+DTEND;TZID=Europe/Brussels:20261003T160000
+SUMMARY:Royal Linthout BC W.S. A – Fresh Air A (90-21)
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470914-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T141500
+DTEND;TZID=Europe/Brussels:20261003T161500
+SUMMARY:Royal IV Brussels A – CRBB The Runners (41-85)
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470965-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T150000
+DTEND;TZID=Europe/Brussels:20261003T170000
+SUMMARY:Royal Excelsior Brussels B – B55 Academy XL B (20-0)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470925-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T121500
+DTEND;TZID=Europe/Brussels:20261010T141500
+SUMMARY:B55 Academy XL B – Royal Linthout BC W.S. A (9-129)
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470954-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:Fresh Air A – Royal IV Brussels A (68-23)
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470952-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T090000
+DTEND;TZID=Europe/Brussels:20261017T110000
+SUMMARY:CRBB The Runners – Fresh Air A (73-82)
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470913-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T123000
+DTEND;TZID=Europe/Brussels:20261018T143000
+SUMMARY:Royal IV Brussels A – Royal Excelsior Brussels B (43-54)
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470953-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T090000
+DTEND;TZID=Europe/Brussels:20261031T110000
+SUMMARY:Fresh Air A – B55 Academy XL B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470926-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T121500
+DTEND;TZID=Europe/Brussels:20261107T141500
+SUMMARY:B55 Academy XL B – Royal Excelsior Brussels B
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470946-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T123000
+DTEND;TZID=Europe/Brussels:20261107T143000
+SUMMARY:CRBB The Runners – Royal IV Brussels A
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470955-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:Fresh Air A – Royal Linthout BC W.S. A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470935-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T140000
+DTEND;TZID=Europe/Brussels:20261114T160000
+SUMMARY:Royal Linthout BC W.S. A – B55 Academy XL B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470966-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:Royal Excelsior Brussels B – CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470915-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:Royal IV Brussels A – Fresh Air A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470947-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:CRBB The Runners – B55 Academy XL B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470916-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T143000
+DTEND;TZID=Europe/Brussels:20261121T163000
+SUMMARY:Royal IV Brussels A – Royal Linthout BC W.S. A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470956-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:Fresh Air A – Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470917-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T103000
+DTEND;TZID=Europe/Brussels:20261128T123000
+SUMMARY:Royal IV Brussels A – Fresh Air A
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470945-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T140000
+DTEND;TZID=Europe/Brussels:20261128T160000
+SUMMARY:CRBB The Runners – Royal Excelsior Brussels B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470936-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T140000
+DTEND;TZID=Europe/Brussels:20261129T160000
+SUMMARY:Royal Linthout BC W.S. A – B55 Academy XL B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470927-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T121500
+DTEND;TZID=Europe/Brussels:20261205T141500
+SUMMARY:B55 Academy XL B – Fresh Air A
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470937-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T140000
+DTEND;TZID=Europe/Brussels:20261205T160000
+SUMMARY:Royal Linthout BC W.S. A – CRBB The Runners
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470968-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:Royal Excelsior Brussels B – Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470938-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T140000
+DTEND;TZID=Europe/Brussels:20261212T160000
+SUMMARY:Royal Linthout BC W.S. A – Royal Excelsior Brussels B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470918-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T150000
+DTEND;TZID=Europe/Brussels:20261212T170000
+SUMMARY:Royal IV Brussels A – B55 Academy XL B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470957-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T090000
+DTEND;TZID=Europe/Brussels:20261213T110000
+SUMMARY:Fresh Air A – CRBB The Runners
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470929-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T121500
+DTEND;TZID=Europe/Brussels:20261219T141500
+SUMMARY:B55 Academy XL B – Fresh Air A
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470928-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T121500
+DTEND;TZID=Europe/Brussels:20270109T141500
+SUMMARY:B55 Academy XL B – CRBB The Runners
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470939-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T140000
+DTEND;TZID=Europe/Brussels:20270109T160000
+SUMMARY:Royal Linthout BC W.S. A – Royal IV Brussels A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470969-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T150000
+DTEND;TZID=Europe/Brussels:20270109T170000
+SUMMARY:Royal Excelsior Brussels B – Fresh Air A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470948-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T103000
+DTEND;TZID=Europe/Brussels:20270116T123000
+SUMMARY:CRBB The Runners – Royal Linthout BC W.S. A
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470958-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T090000
+DTEND;TZID=Europe/Brussels:20270117T110000
+SUMMARY:Fresh Air A – B55 Academy XL B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470919-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T100000
+DTEND;TZID=Europe/Brussels:20270117T120000
+SUMMARY:Royal IV Brussels A – Royal Excelsior Brussels B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470940-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T140000
+DTEND;TZID=Europe/Brussels:20270123T160000
+SUMMARY:Royal Linthout BC W.S. A – CRBB The Runners
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470970-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T150000
+DTEND;TZID=Europe/Brussels:20270123T170000
+SUMMARY:Royal Excelsior Brussels B – Royal IV Brussels A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470941-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T191500
+DTEND;TZID=Europe/Brussels:20270129T211500
+SUMMARY:Royal Linthout BC W.S. A – Royal Excelsior Brussels B
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470920-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T141500
+DTEND;TZID=Europe/Brussels:20270130T161500
+SUMMARY:Royal IV Brussels A – B55 Academy XL B
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470949-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T110000
+DTEND;TZID=Europe/Brussels:20270206T130000
+SUMMARY:CRBB The Runners – Royal Excelsior Brussels B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470930-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T121500
+DTEND;TZID=Europe/Brussels:20270206T141500
+SUMMARY:B55 Academy XL B – Royal Linthout BC W.S. A
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470960-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T100000
+DTEND;TZID=Europe/Brussels:20270207T120000
+SUMMARY:Fresh Air A – Royal IV Brussels A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470950-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T110000
+DTEND;TZID=Europe/Brussels:20270213T130000
+SUMMARY:CRBB The Runners – Royal IV Brussels A
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470931-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T121500
+DTEND;TZID=Europe/Brussels:20270213T141500
+SUMMARY:B55 Academy XL B – Royal Excelsior Brussels B
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470961-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T110000
+DTEND;TZID=Europe/Brussels:20270214T130000
+SUMMARY:Fresh Air A – Royal Linthout BC W.S. A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470962-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:Fresh Air A – Royal Excelsior Brussels B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470951-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T110000
+DTEND;TZID=Europe/Brussels:20270220T130000
+SUMMARY:CRBB The Runners – B55 Academy XL B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470921-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T163000
+DTEND;TZID=Europe/Brussels:20270220T183000
+SUMMARY:Royal IV Brussels A – Royal Linthout BC W.S. A
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470967-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T150000
+DTEND;TZID=Europe/Brussels:20270306T170000
+SUMMARY:Royal Excelsior Brussels B – CRBB The Runners
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470922-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T134500
+DTEND;TZID=Europe/Brussels:20270320T154500
+SUMMARY:Royal IV Brussels A – CRBB The Runners
+LOCATION:Complexe Sportif Palais du Midi\, Rue Roger Van der Weyden 3\, 1000 Bruxelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470942-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T140000
+DTEND;TZID=Europe/Brussels:20270320T160000
+SUMMARY:Royal Linthout BC W.S. A – Fresh Air A
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470971-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T150000
+DTEND;TZID=Europe/Brussels:20270320T170000
+SUMMARY:Royal Excelsior Brussels B – B55 Academy XL B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470932-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T121500
+DTEND;TZID=Europe/Brussels:20270327T141500
+SUMMARY:B55 Academy XL B – Royal IV Brussels A
+LOCATION:Salle Omnisports Ecoles 7 et 8\, Avenue du Bois de la Cambre 211\, 1050 Ixelles
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470972-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T150000
+DTEND;TZID=Europe/Brussels:20270327T170000
+SUMMARY:Royal Excelsior Brussels B – Royal Linthout BC W.S. A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U14H A Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470959-comp-s6305@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T120000
+DTEND;TZID=Europe/Brussels:20270328T140000
+SUMMARY:Fresh Air A – CRBB The Runners
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U14H A Elite
+END:VEVENT
+END:VCALENDAR

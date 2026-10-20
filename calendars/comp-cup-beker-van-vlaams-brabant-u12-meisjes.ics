@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaams-Brabant U12 Meisjes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13175438395-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T140000
+DTEND;TZID=Europe/Brussels:20261219T160000
+SUMMARY:Molenbeek Rebels Basketball M12 A – BBC Haacht M12 A
+LOCATION:Zaal Comenius\, Dapperenstraat 20\, 1081 Brussel (Koekelberg)
+DESCRIPTION:Beker van Vlaams-Brabant U12 Meisjes 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13192216014-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T150000
+DTEND;TZID=Europe/Brussels:20261219T170000
+SUMMARY:BC Opwijk M12 A – Stella Artois 0.0 Blue Tigers Leuven M12 A
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:Beker van Vlaams-Brabant U12 Meisjes 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13606881981-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:Hageland United M12 A – winnaar BVBM1204 01
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:Beker van Vlaams-Brabant U12 Meisjes 1/2 Finale
+END:VEVENT
+END:VCALENDAR

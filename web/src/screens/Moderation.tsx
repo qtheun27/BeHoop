@@ -10,7 +10,7 @@ import { t } from '../lib/i18n';
 export default function Moderation() {
   const s = useSession();
   const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users'>('requests');
-  if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="⛔" title={t('Réservé au super admin')} /></Screen>;
+  if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
     <Screen title={t('Modération')} back="profil">
       <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
@@ -26,7 +26,7 @@ function Requests() {
     return s.docs.map((d) => d.data() as D.Membership);
   }, []);
   if (!data) return <Skeleton />;
-  if (!data.length) return <Empty ill="✅" title={t('Aucune demande en attente')} />;
+  if (!data.length) return <Empty ill="checkCircle" title={t('Aucune demande en attente')} />;
   const act = async (f: () => Promise<unknown>) => { await f(); reload(); };
   return (
     <div className="group">{data.map((m) => { const e = idx.data?.get(m.teamId); return (
@@ -44,7 +44,7 @@ function Requests() {
 function Reports() {
   const { data, reload } = useAsync(D.openReports, []);
   if (!data) return <Skeleton />;
-  if (!data.length) return <Empty ill="✅" title={t('Aucun signalement ouvert')} />;
+  if (!data.length) return <Empty ill="checkCircle" title={t('Aucun signalement ouvert')} />;
   return <>{data.map((r) => <Report key={r.id} r={r} done={reload} />)}</>;
 }
 function Report({ r, done }: { r: { id: string; postId: string; reason: string }; done: () => void }) {
@@ -62,7 +62,7 @@ function Report({ r, done }: { r: { id: string; postId: string; reason: string }
 function Hidden() {
   const { data } = useAsync(D.hiddenPosts, []);
   if (!data) return <Skeleton />;
-  return data.length ? <>{data.map((p) => <div key={p.id}><div className="muted" style={{ fontSize: 13 }}>{t('Motif')} : {p.hiddenReason}</div><PostCard post={p} /></div>)}</> : <Empty ill="🙈" title={t('Aucun contenu masqué')} />;
+  return data.length ? <>{data.map((p) => <div key={p.id}><div className="muted" style={{ fontSize: 13 }}>{t('Motif')} : {p.hiddenReason}</div><PostCard post={p} /></div>)}</> : <Empty ill="eyeOff" title={t('Aucun contenu masqué')} />;
 }
 function Teams() {
   const [q, setQ] = useState('');

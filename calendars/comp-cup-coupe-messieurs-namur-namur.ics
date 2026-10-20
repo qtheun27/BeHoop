@@ -1,0 +1,285 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe Messieurs Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-486733-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260921T180000
+DTEND;TZID=Europe/Brussels:20260921T200000
+SUMMARY:undefined – RBC Mettet A (0-20)
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486725-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260922T210000
+DTEND;TZID=Europe/Brussels:20260922T230000
+SUMMARY:BC Sombreffe A – BC Malonne A (47-78)
+LOCATION:Complexe sportif de Sombreffe\, Allée du Château Chinon 6\, 5140 Sombreffe
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486718-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:RBC Loyers B – J.S.La Plante (20-0)
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486721-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T210000
+DTEND;TZID=Europe/Brussels:20260925T230000
+SUMMARY:RBC Erpent B – RBB Gembloux C (63-61)
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486719-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Royal Gallia BC Beez B – RBC Éghezée A (86-48)
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486720-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:RBC Loyers D – R.B.C. Belgrade D (69-56)
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486726-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Profondeville Sharks B – RBB Gembloux B (83-64)
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486727-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Profondeville Sharks C – RCS Faulx Les Tombes (69-48)
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486730-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T103000
+DTEND;TZID=Europe/Brussels:20260927T123000
+SUMMARY:New Conti 21 – Royal Gallia BC Beez C (55-72)
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486723-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T140000
+DTEND;TZID=Europe/Brussels:20260927T160000
+SUMMARY:BC Fernelmont C – BC Marche A (42-113)
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380 Noville-les-Bois
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486722-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:ABC Temploux – BC Ohey A (65-69)
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486732-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:RBC Erpent C – RUS Mariembourg B (97-48)
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486724-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T160000
+DTEND;TZID=Europe/Brussels:20260927T180000
+SUMMARY:BC Fernelmont A – R.B.C. Belgrade C (75-95)
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380 Noville-les-Bois
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486729-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T160000
+DTEND;TZID=Europe/Brussels:20260927T180000
+SUMMARY:Royal CS Natoye D – Profondeville Sharks A (46-107)
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486728-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:RUS Mariembourg A – Royal CS Natoye B (66-78)
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660 Couvin
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486731-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:RBC Erpent D – Jeunesse Basket Hotton A (48-88)
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486738-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T200000
+DTEND;TZID=Europe/Brussels:20261030T220000
+SUMMARY:Profondeville Sharks B – Profondeville Sharks C
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486735-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:RBC Loyers D – RBC Erpent B
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486740-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Royal Gallia BC Beez C – Jeunesse Basket Hotton A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486737-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T193000
+DTEND;TZID=Europe/Brussels:20261031T213000
+SUMMARY:R.B.C. Belgrade C – BC Malonne A
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001 Belgrade
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486734-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:RBC Loyers B – Royal Gallia BC Beez B
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486741-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:RBC Erpent C – RBC Mettet A
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486739-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T140000
+DTEND;TZID=Europe/Brussels:20261101T160000
+SUMMARY:Royal CS Natoye B – Profondeville Sharks A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486736-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T150000
+DTEND;TZID=Europe/Brussels:20261101T170000
+SUMMARY:BC Ohey A – BC Marche A
+LOCATION:Salle Communale\,  Voie de Rauyisse\, 2\, 5350 Ohey
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486742-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA201113 – Vainqueur NA201114
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486743-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA201115 – Vainqueur NA201116
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486744-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA201117 – Vainqueur NA201118
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486745-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur NA201119 – Vainqueur NA201120
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486746-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:Vainqueur NA201121 – Vainqueur NA201122
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486747-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:Vainqueur NA201123 – Vainqueur NA201124
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-486748-comp-cup-coupe-messieurs-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270405T180000
+DTEND;TZID=Europe/Brussels:20270405T200000
+SUMMARY:Vainqueur NA201125 – Vainqueur NA201126
+LOCATION:
+DESCRIPTION:CHH
+END:VEVENT
+END:VCALENDAR

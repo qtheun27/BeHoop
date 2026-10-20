@@ -14,6 +14,7 @@ import { SHOW_CLUB_SPACE } from '../lib/config';
 import { ACCENTS, DEFAULT_THEME, clubColors, type ThemePrefs } from '../lib/theme';
 import { Disc } from '../ui/kit';
 import { t } from '../lib/i18n';
+import { Ico, type IconName } from '../ui/icons';
 
 export function Profile() {
   const s = useSession();
@@ -21,7 +22,7 @@ export function Profile() {
   const comps = useAsync(loadComps, []).data ?? [];
   const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme'>('');
   if (!s.user || !s.profile) {
-    return <Screen title={t('Profil')}><Empty ill="👤" title={t('Connecte-toi')} text={t('Suis tes clubs, rejoins l\'Équipe de ton enfant, publie tes photos et vidéos de match.')}
+    return <Screen title={t('Profil')}><Empty ill="user" title={t('Connecte-toi')} text={t('Suis tes clubs, rejoins l\'Équipe de ton enfant, publie tes photos et vidéos de match.')}
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter ou créer un compte')}</button>} />
       <LegalLinks /></Screen>;
   }
@@ -31,7 +32,7 @@ export function Profile() {
   return (
     <Screen title={t('Profil')}>
       <div className="group"><div className="row"><label style={{ position: 'relative', cursor: 'pointer' }} aria-label={t('Changer ma photo de profil')}>
-        <Avatar name={p.displayName} src={p.avatarUrl} /><span style={{ position: 'absolute', right: -4, bottom: -4, fontSize: 13, background: 'var(--bg2)', borderRadius: 10, padding: '0 3px' }}>📷</span>
+        <Avatar name={p.displayName} src={p.avatarUrl} /><span style={{ position: 'absolute', right: -4, bottom: -4, fontSize: 13, background: 'var(--bg2)', borderRadius: 10, padding: '2px 3px', display: 'grid' }}><Ico n="camera" size={13} /></span>
         <input type="file" accept="image/*" hidden onChange={async (e) => { const f = e.target.files?.[0]; if (!f) return;
           try { const key = await uploadSmall('avatar', await compressImage(f, 400, .85), {}); const url = mediaUrl(key); await D.updateProfile(s.user!.uid, { avatarUrl: url }); s.setProfile({ ...p, avatarUrl: url }); s.toast(t('Photo mise à jour')); }
           catch { s.toast(t('Impossible de changer la photo')); } }} /></label><div className="grow"><div style={{ fontWeight: 600 }}>{p.displayName}</div><div className="sub">{s.user.email}</div></div></div></div>
@@ -49,7 +50,7 @@ export function Profile() {
             <button className="btn small secondary" onClick={() => s.toggleFollow(f.type as 'club' | 'team', f.refId)}>{t('Ne plus suivre')}</button></div>))}
       </div>
 
-      <div className="group-title">{t('Mes Équipes 🔒')}</div>
+      <div className="group-title"><Ico n="lock" />{t('Mes Équipes')}</div>
       <div className="group">
         {s.memberships.length === 0 ? <div className="row muted" style={{ fontSize: 15 }}>{t('Demande à rejoindre l\'Équipe de ton enfant depuis sa page Équipe.')}</div>
           : s.memberships.map((m) => <a key={m.teamId} className="row" href={`#/equipe/${m.teamId}`} style={{ color: 'inherit' }}><div className="grow">{teamName(m.teamId)}</div>
@@ -88,7 +89,7 @@ function TeamMembers({ teamId }: { teamId: number }) {
 function MyPosts() {
   const s = useSession();
   const { data } = useAsync(() => D.myPosts(s.user!.uid), []);
-  return data?.length ? <>{data.map((p) => <PostCard key={p.id} post={p} />)}</> : <Empty ill="📝" title={t('Aucune publication')} />;
+  return data?.length ? <>{data.map((p) => <PostCard key={p.id} post={p} />)}</> : <Empty ill="edit" title={t('Aucune publication')} />;
 }
 
 function NotifSheet({ onClose }: { onClose: () => void }) {
@@ -99,7 +100,7 @@ function NotifSheet({ onClose }: { onClose: () => void }) {
   const toggle = async (k: string) => { const n = { ...prefs, [k]: !prefs[k] }; setPrefs(n); await D.updateProfile(s.user!.uid, { notifPrefs: n }); s.setProfile({ ...p, notifPrefs: n }); };
   return (
     <Sheet title={t('Notifications')} onClose={onClose}>
-      {!granted && <div className="banner"><span style={{ fontSize: 26 }}>🔔</span><div style={{ flex: 1, fontSize: 15 }}>
+      {!granted && <div className="banner"><Ico n="bell" /><div style={{ flex: 1, fontSize: 15 }}>
         {needsInstallForPush() ? t('Sur iPhone : touche Partager puis « Sur l’écran d’accueil », ouvre BeHoop depuis l’icône, puis active les notifications.') : t('Les notifications ne sont pas encore activées sur cet appareil.')}</div>
         {!needsInstallForPush() && <button className="btn small" onClick={async () => { const ok = await enableNotifications(s.user!.uid).catch(() => false); s.toast(ok ? t('Notifications activées') : t('Notifications refusées ou indisponibles')); await s.refresh(); }}>{t('Activer')}</button>}</div>}
       <div className="group">{D.NOTIF_TYPES.map((n) => (
@@ -153,8 +154,8 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
     await D.updateProfile(s.user!.uid, { theme: n.mode, ui: n }).catch(() => s.toast(t('Thème non enregistré')));
   };
   const myClubs = clubs.filter((c) => s.followedClubs.includes(c.id) || s.follows.some((f) => f.type === 'team' && c.teams.some((x) => x.id === f.refId)));
-  const Seg = <K extends string>({ v, opts, on }: { v: K; opts: [K, string][]; on: (k: K) => void }) => (
-    <div className="seg">{opts.map(([k, l]) => <button key={k} className={v === k ? 'on' : ''} onClick={() => on(k)}>{t(l)}</button>)}</div>);
+  const Seg = <K extends string>({ v, opts, on }: { v: K; opts: [K, string, IconName?][]; on: (k: K) => void }) => (
+    <div className="seg">{opts.map(([k, l, ic]) => <button key={k} className={v === k ? 'on' : ''} onClick={() => on(k)}>{ic && <Ico n={ic} />}{t(l)}</button>)}</div>);
   return (
     <Sheet title={t('Mon thème')} onClose={onClose}>
       <p className="muted" style={{ marginTop: 0, fontSize: 14 }}>{t('Enregistré sur ton profil : il te suit sur tous tes appareils.')}</p>
@@ -166,13 +167,13 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
           <button key={c.id} className="row" onClick={() => save({ accent: `club:${c.id}` })} aria-pressed={on}>
             <Disc src={c.logo} name={c.name} size={36} ring={k.accent} /><div className="grow ellipsis">{c.name}</div>
             <span style={{ width: 44, height: 22, borderRadius: 11, background: k.grad }} aria-hidden />
-            <span style={{ width: 22, color: 'var(--accent)', fontWeight: 700 }}>{on ? '✓' : ''}</span>
+            <span style={{ width: 22, color: 'var(--accent)' }}>{on && <Ico n="check" size={20} />}</span>
           </button>); })}</div>
       </>}
       <div className="group-title mt">{t('Mode')}</div>
-      <Seg v={th.mode} opts={[['light', '☀️ Clair'], ['dark', '🌙 Sombre'], ['auto', 'Auto']]} on={(mode) => save({ mode })} />
+      <Seg v={th.mode} opts={[['light', 'Clair', 'sun'], ['dark', 'Sombre', 'moon'], ['auto', 'Auto']]} on={(mode) => save({ mode })} />
       <div className="group-title">{t('Fond')}</div>
-      <Seg v={th.bg} opts={[['parquet', '🏀 Parquet'], ['nuit', 'Nuit de match'], ['uni', 'Uni']]} on={(bg) => save({ bg })} />
+      <Seg v={th.bg} opts={[['parquet', 'Parquet', 'ball'], ['nuit', 'Nuit de match'], ['uni', 'Uni']]} on={(bg) => save({ bg })} />
       <div className="group">
         <label className="row"><div className="grow">{t('Réduire la transparence')}<div className="sub">{t('Plus lisible et plus fluide sur les téléphones modestes')}</div></div>
           <input type="checkbox" className="switch" checked={th.rt} onChange={(e) => save({ rt: e.target.checked })} /></label>

@@ -1,0 +1,1536 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:3e Prov. Heren Oost-Vlaanderen A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12047041814-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T160000
+DTEND;TZID=Europe/Brussels:20260920T180000
+SUMMARY:KBBC Sparta Laarne HSE C – Koninklijke Sint-Niklase Condors HSE C (54-88)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11543021696-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Erembodegem Silverbacks HSE A – Amon Jeugd Gentson HSE D (52-82)
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12701516050-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Feniks Futuria Gent HSE B (101-52)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11896484528-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T191500
+DTEND;TZID=Europe/Brussels:20260926T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – BBC Helios SanoRice Zottegem HSE B (84-95)
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11426122816-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:BBC Lokeren HSE A – Gent-Oost Eagles HSE D (54-115)
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11995576124-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – Erembodegem Silverbacks HSE A (77-63)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13306098714-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:ABO LDP Donza HSE D – KBBC Eksaarde HSE A (41-59)
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12199173218-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:Amon Jeugd Gentson HSE D – KBBC Sparta Laarne HSE C (75-58)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12331716884-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:BBC Wildcats Gavere HSE A – KBBC Wasocub Waasmunster vzw HSE A (74-54)
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11611809458-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T182000
+DTEND;TZID=Europe/Brussels:20261003T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – Amon Jeugd Gentson HSE D (65-49)
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12717160836-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T183000
+DTEND;TZID=Europe/Brussels:20261003T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – Koninklijke Sint-Niklase Condors HSE C (72-82)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13389545524-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:KBBC Eksaarde HSE A – BBC Haantjes Certifisc Oudenaarde HSE B (59-37)
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12147163075-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:BBC Wildcats Gavere HSE A – ABO LDP Donza HSE D (81-68)
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11677242648-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Lokeren HSE A (84-52)
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12231595623-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:KBBC Sparta Laarne HSE C – Gent-Oost Eagles HSE D (51-55)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11475322840-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – BBC Hotshots Destelbergen HSE A (31-75)
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13070079215-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:Gent-Oost Eagles HSE D – Erembodegem Silverbacks HSE A (68-52)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12735071288-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T180000
+DTEND;TZID=Europe/Brussels:20261010T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – KBBC Wasocub Waasmunster vzw HSE A (93-29)
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12013927861-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T191500
+DTEND;TZID=Europe/Brussels:20261010T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – BBC Wildcats Gavere HSE A (65-55)
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12062686600-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T201500
+DTEND;TZID=Europe/Brussels:20261010T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – KBBC Sparta Laarne HSE C (72-74)
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13238988238-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:ABO LDP Donza HSE D – BBC Feniks Futuria Gent HSE B (67-55)
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12299838932-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Helios SanoRice Zottegem HSE B (63-72)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12214818004-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T181500
+DTEND;TZID=Europe/Brussels:20261017T201500
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Lokeren HSE A (85-51)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11762808029-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T182000
+DTEND;TZID=Europe/Brussels:20261017T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – Gent-Oost Eagles HSE D (67-57)
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12582939884-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T183000
+DTEND;TZID=Europe/Brussels:20261017T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – BBC Haantjes Certifisc Oudenaarde HSE B (88-83)
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12081038337-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T191500
+DTEND;TZID=Europe/Brussels:20261017T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – Koninklijke Sint-Niklase Condors HSE C (61-95)
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13339212667-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:KBBC Eksaarde HSE A – Erembodegem Silverbacks HSE A (70-61)
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11575988554-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – ABO LDP Donza HSE D (84-90)
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12180718313-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:BBC Wildcats Gavere HSE A – Amon Jeugd Gentson HSE D (65-82)
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13170744929-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:Gent-Oost Eagles HSE D – KBBC Eksaarde HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12818959383-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Wildcats Gavere HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11493233292-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T200000
+DTEND;TZID=Europe/Brussels:20261024T220000
+SUMMARY:BBC Lokeren HSE A – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12163352314-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T201500
+DTEND;TZID=Europe/Brussels:20261024T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – BBC Feniks Futuria Gent HSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11660465029-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T210000
+DTEND;TZID=Europe/Brussels:20261024T230000
+SUMMARY:Erembodegem Silverbacks HSE A – KBBC Sparta Laarne HSE C
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13322876333-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:ABO LDP Donza HSE D – BBC Hotshots Destelbergen HSE A
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12333394170-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T170000
+DTEND;TZID=Europe/Brussels:20261025T190000
+SUMMARY:Amon Jeugd Gentson HSE D – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11761130743-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12182395599-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Hotshots Destelbergen HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13036523977-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Gent-Oost Eagles HSE D – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11677787101-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T200000
+DTEND;TZID=Europe/Brussels:20261107T220000
+SUMMARY:BBC Lokeren HSE A – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12012353743-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T201500
+DTEND;TZID=Europe/Brussels:20261107T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – BBC Wildcats Gavere HSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11794685981-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Erembodegem Silverbacks HSE A – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13238546953-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13272543476-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:ABO LDP Donza HSE D – KBBC Sparta Laarne HSE C
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12718293669-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11729252791-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T182000
+DTEND;TZID=Europe/Brussels:20261114T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – Erembodegem Silverbacks HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12650050360-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T183000
+DTEND;TZID=Europe/Brussels:20261114T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – ABO LDP Donza HSE D
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11946817385-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T191500
+DTEND;TZID=Europe/Brussels:20261114T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12314939265-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:BBC Wildcats Gavere HSE A – BBC Lokeren HSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12030264195-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:KBBC Sparta Laarne HSE C – KBBC Eksaarde HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11424989983-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – Gent-Oost Eagles HSE D
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13153967310-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:Gent-Oost Eagles HSE D – BBC Hotshots Destelbergen HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11560343768-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:BBC Lokeren HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11928465648-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T201500
+DTEND;TZID=Europe/Brussels:20261121T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13255324572-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:KBBC Eksaarde HSE A – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13255765857-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:ABO LDP Donza HSE D – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12164485147-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T170000
+DTEND;TZID=Europe/Brussels:20261122T190000
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12350171789-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T210000
+DTEND;TZID=Europe/Brussels:20261127T230000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12298161646-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T210000
+DTEND;TZID=Europe/Brussels:20261127T230000
+SUMMARY:BBC Wildcats Gavere HSE A – Gent-Oost Eagles HSE D
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12684738431-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – ABO LDP Donza HSE D
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11527921363-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T182000
+DTEND;TZID=Europe/Brussels:20261128T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – KBBC Sparta Laarne HSE C
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12532607027-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T183000
+DTEND;TZID=Europe/Brussels:20261128T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – Erembodegem Silverbacks HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11980372623-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T191500
+DTEND;TZID=Europe/Brussels:20261128T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – BBC Lokeren HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11492100459-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – KBBC Eksaarde HSE A
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12163940694-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261204T203000
+DTEND;TZID=Europe/Brussels:20261204T223000
+SUMMARY:BBC Wildcats Gavere HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11526788530-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T200000
+DTEND;TZID=Europe/Brussels:20261205T220000
+SUMMARY:BBC Lokeren HSE A – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12751848907-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T203000
+DTEND;TZID=Europe/Brussels:20261205T223000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11710797886-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Wildcats Gavere HSE A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12835737002-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – Gent-Oost Eagles HSE D
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12700383217-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T183000
+DTEND;TZID=Europe/Brussels:20261212T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – BBC Feniks Futuria Gent HSE B
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11997150242-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T191500
+DTEND;TZID=Europe/Brussels:20261212T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – Erembodegem Silverbacks HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12231051170-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:BBC Wildcats Gavere HSE A – KBBC Eksaarde HSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13155100143-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:ABO LDP Donza HSE D – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12249506075-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Lokeren HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11525655697-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – KBBC Sparta Laarne HSE C
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11576576934-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261218T203000
+DTEND;TZID=Europe/Brussels:20261218T223000
+SUMMARY:Erembodegem Silverbacks HSE A – ABO LDP Donza HSE D
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13221077786-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:Gent-Oost Eagles HSE D – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11544698982-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T182000
+DTEND;TZID=Europe/Brussels:20261219T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – BBC Hotshots Destelbergen HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12079464219-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T201500
+DTEND;TZID=Europe/Brussels:20261219T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13439878381-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12248373242-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T170000
+DTEND;TZID=Europe/Brussels:20261220T190000
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Wildcats Gavere HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12030705480-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T191500
+DTEND;TZID=Europe/Brussels:20270109T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – KBBC Eksaarde HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12600850336-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – KBBC Sparta Laarne HSE C
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12029131362-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T201500
+DTEND;TZID=Europe/Brussels:20270109T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – Gent-Oost Eagles HSE D
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13121544905-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:ABO LDP Donza HSE D – BBC Lokeren HSE A
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12365272122-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:BBC Wildcats Gavere HSE A – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11559210935-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12266283694-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:Amon Jeugd Gentson HSE D – Erembodegem Silverbacks HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13187522548-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:Gent-Oost Eagles HSE D – ABO LDP Donza HSE D
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11712475172-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T182000
+DTEND;TZID=Europe/Brussels:20270116T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – BBC Wildcats Gavere HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12599717503-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T183000
+DTEND;TZID=Europe/Brussels:20270116T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11543566149-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T200000
+DTEND;TZID=Europe/Brussels:20270116T220000
+SUMMARY:BBC Lokeren HSE A – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11643687410-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Erembodegem Silverbacks HSE A – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13221769334-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:KBBC Eksaarde HSE A – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12013486576-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T170000
+DTEND;TZID=Europe/Brussels:20270117T190000
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Hotshots Destelbergen HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13137189691-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:Gent-Oost Eagles HSE D – KBBC Sparta Laarne HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11930039766-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T191500
+DTEND;TZID=Europe/Brussels:20270123T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12096241838-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T201500
+DTEND;TZID=Europe/Brussels:20270123T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – KBBC Eksaarde HSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12768626526-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13087989667-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:ABO LDP Donza HSE D – BBC Wildcats Gavere HSE A
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12098507504-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Feniks Futuria Gent HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13086856834-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:Gent-Oost Eagles HSE D – BBC Lokeren HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11511143744-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T182000
+DTEND;TZID=Europe/Brussels:20270130T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11777908362-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13188214096-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:KBBC Eksaarde HSE A – ABO LDP Donza HSE D
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12080597052-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:KBBC Sparta Laarne HSE C – Amon Jeugd Gentson HSE D
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11441767602-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T170000
+DTEND;TZID=Europe/Brussels:20270131T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – BBC Wildcats Gavere HSE A
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11962020886-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T180000
+DTEND;TZID=Europe/Brussels:20270205T200000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13237855405-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:Gent-Oost Eagles HSE D – BBC Feniks Futuria Gent HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12651183193-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Hotshots Destelbergen HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11661009482-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:BBC Lokeren HSE A – KBBC Sparta Laarne HSE C
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13138322524-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T110000
+DTEND;TZID=Europe/Brussels:20270207T130000
+SUMMARY:ABO LDP Donza HSE D – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12283061313-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:Amon Jeugd Gentson HSE D – BBC Wildcats Gavere HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12750716074-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T183000
+DTEND;TZID=Europe/Brussels:20270213T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – BBC Hotshots Destelbergen HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11626909791-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:Erembodegem Silverbacks HSE A – KBBC Eksaarde HSE A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12214273551-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T170000
+DTEND;TZID=Europe/Brussels:20270214T190000
+SUMMARY:BBC Wildcats Gavere HSE A – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13002968739-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:Gent-Oost Eagles HSE D – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11476455673-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:BBC Lokeren HSE A – BBC Wildcats Gavere HSE A
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12113019457-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T201500
+DTEND;TZID=Europe/Brussels:20270220T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – BBC Hotshots Destelbergen HSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13272102191-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:KBBC Eksaarde HSE A – KBBC Sparta Laarne HSE C
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11559799315-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13171877762-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T110000
+DTEND;TZID=Europe/Brussels:20270221T130000
+SUMMARY:ABO LDP Donza HSE D – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12215950837-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Amon Jeugd Gentson HSE D – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12733938455-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T183000
+DTEND;TZID=Europe/Brussels:20270227T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – KBBC Sparta Laarne HSE C
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11963595004-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T191500
+DTEND;TZID=Europe/Brussels:20270227T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – Gent-Oost Eagles HSE D
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12634405574-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T200000
+DTEND;TZID=Europe/Brussels:20270227T220000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – KBBC Eksaarde HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11746030410-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T202000
+DTEND;TZID=Europe/Brussels:20270227T222000
+SUMMARY:BBC Feniks Futuria Gent HSE B – BBC Lokeren HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12264606408-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T130000
+DTEND;TZID=Europe/Brussels:20270228T150000
+SUMMARY:BBC Wildcats Gavere HSE A – Erembodegem Silverbacks HSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11374657126-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T170000
+DTEND;TZID=Europe/Brussels:20270228T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12148840361-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T170000
+DTEND;TZID=Europe/Brussels:20270228T190000
+SUMMARY:Amon Jeugd Gentson HSE D – ABO LDP Donza HSE D
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13053301596-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T170000
+DTEND;TZID=Europe/Brussels:20270306T190000
+SUMMARY:Gent-Oost Eagles HSE D – BBC Wildcats Gavere HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11644231863-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:BBC Lokeren HSE A – BBC Hotshots Destelbergen HSE A
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12180129933-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T201500
+DTEND;TZID=Europe/Brussels:20270306T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – Amon Jeugd Gentson HSE D
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13406323143-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:KBBC Eksaarde HSE A – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13289321095-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:ABO LDP Donza HSE D – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12097374671-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Feniks Futuria Gent HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11645364696-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T182000
+DTEND;TZID=Europe/Brussels:20270313T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12549384646-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T183000
+DTEND;TZID=Europe/Brussels:20270313T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – BBC Lokeren HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13372767905-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:KBBC Eksaarde HSE A – Gent-Oost Eagles HSE D
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12148148813-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T131500
+DTEND;TZID=Europe/Brussels:20270314T151500
+SUMMARY:BBC Hotshots Destelbergen HSE A – ABO LDP Donza HSE D
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12265150861-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:KBBC Sparta Laarne HSE C – Erembodegem Silverbacks HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11542433316-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T170000
+DTEND;TZID=Europe/Brussels:20270314T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – Amon Jeugd Gentson HSE D
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11561476601-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T182000
+DTEND;TZID=Europe/Brussels:20270320T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – KBBC Eksaarde HSE A
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12852514621-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T130000
+DTEND;TZID=Europe/Brussels:20270321T150000
+SUMMARY:Koninklijke Sint-Niklase Condors HSE C – BBC Lokeren HSE A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12566162265-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – Gent-Oost Eagles HSE D
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12348494503-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:BBC Wildcats Gavere HSE A – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12114152290-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:KBBC Sparta Laarne HSE C – ABO LDP Donza HSE D
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11458545221-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – Erembodegem Silverbacks HSE A
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12114593575-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270403T191500
+DTEND;TZID=Europe/Brussels:20270403T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11459678054-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270403T200000
+DTEND;TZID=Europe/Brussels:20270403T220000
+SUMMARY:BBC Lokeren HSE A – Erembodegem Silverbacks HSE A
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12181262766-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T160000
+DTEND;TZID=Europe/Brussels:20270410T180000
+SUMMARY:KBBC Sparta Laarne HSE C – BBC Haantjes Certifisc Oudenaarde HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11578254220-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T182000
+DTEND;TZID=Europe/Brussels:20270410T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – ABO LDP Donza HSE D
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12683605598-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T183000
+DTEND;TZID=Europe/Brussels:20270410T203000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – Amon Jeugd Gentson HSE D
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13355990286-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Lokeren HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11694020267-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Erembodegem Silverbacks HSE A – Gent-Oost Eagles HSE D
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12247828789-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:BBC Wildcats Gavere HSE A – BBC Hotshots Destelbergen HSE A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11508878078-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T170000
+DTEND;TZID=Europe/Brussels:20270411T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13120412072-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:Gent-Oost Eagles HSE D – Koninklijke Sint-Niklase Condors HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11695697553-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T182000
+DTEND;TZID=Europe/Brussels:20270417T202000
+SUMMARY:BBC Feniks Futuria Gent HSE B – BBC Helios SanoRice Zottegem HSE B
+LOCATION:Hekers\, Ter Linden 29\, 9052 Zwijnaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11577121387-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:BBC Lokeren HSE A – Amon Jeugd Gentson HSE D
+LOCATION:Stedelijke Sporthal Durmehal\, Sportlaan 1\, 9160 Lokeren
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12146574695-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T201500
+DTEND;TZID=Europe/Brussels:20270417T221500
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – ABO LDP Donza HSE D
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13322435048-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Wildcats Gavere HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11610132172-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Erembodegem Silverbacks HSE A – BBC Hotshots Destelbergen HSE A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12198040385-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:KBBC Sparta Laarne HSE C – KBBC Wasocub Waasmunster vzw HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12232728456-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T160000
+DTEND;TZID=Europe/Brussels:20270424T180000
+SUMMARY:Amon Jeugd Gentson HSE D – Gent-Oost Eagles HSE D
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12097815956-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T191500
+DTEND;TZID=Europe/Brussels:20270424T211500
+SUMMARY:BBC Hotshots Destelbergen HSE A – BBC Feniks Futuria Gent HSE B
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12197495932-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:BBC Wildcats Gavere HSE A – KBBC Sparta Laarne HSE C
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11408212364-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:KBBC Wasocub Waasmunster vzw HSE A – BBC Lokeren HSE A
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12767493693-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:BBC Helios SanoRice Zottegem HSE B – KBBC Eksaarde HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13071212048-comp-s13111538371@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:ABO LDP Donza HSE D – Erembodegem Silverbacks HSE A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:3e Prov. Heren Oost-Vlaanderen A
+END:VEVENT
+END:VCALENDAR

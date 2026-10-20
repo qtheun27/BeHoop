@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { initials } from '../lib/util';
 import { useSession } from '../lib/session';
 import { t, lang, setLang, LANGS, type Lang } from '../lib/i18n';
+import { Ico, type IconName } from './icons';
 
 /** Choix de la langue (en-tête) : FR · NL · EN */
 export function LangSwitch() {
@@ -60,8 +61,17 @@ export function Sheet({ title, onClose, children, right }: { title: string; onCl
   );
 }
 
-export const Empty = ({ ill, title, text, action }: { ill: string; title: string; text?: string; action?: ReactNode }) => (
-  <div className="empty"><div className="ill" aria-hidden>{ill}</div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
+/** Onglets d'une page (club, équipe, compétition) : même composant partout, icône au-dessus du libellé */
+export function Tabs<K extends string>({ value, onChange, items }: { value: K; onChange: (k: K) => void; items: readonly (readonly [K, IconName, string])[] }) {
+  return (
+    <div className="tabs" role="tablist">
+      {items.map(([k, ic, l]) => <button key={k} role="tab" className={value === k ? 'on' : ''} aria-selected={value === k} onClick={() => onChange(k)}><Ico n={ic} /><span>{t(l)}</span></button>)}
+    </div>
+  );
+}
+
+export const Empty = ({ ill, title, text, action }: { ill: IconName; title: string; text?: string; action?: ReactNode }) => (
+  <div className="empty"><div className="ill" aria-hidden><Ico n={ill} /></div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
 );
 export const Skeleton = ({ h = 120, n = 3 }: { h?: number; n?: number }) => (
   <div className="stack" aria-busy="true" aria-label={t('Chargement')}>{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>

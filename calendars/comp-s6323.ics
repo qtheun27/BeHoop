@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Régional U19 Dames Gold
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-457931-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T203000
+DTEND;TZID=Europe/Brussels:20261002T223000
+SUMMARY:GGBC Colfontaine A – Royal Nivelles Basketball A (62-40)
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457947-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T110000
+DTEND;TZID=Europe/Brussels:20261003T130000
+SUMMARY:Royal CS Natoye A – Ganshoren Dames Basket (72-40)
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457921-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T113000
+DTEND;TZID=Europe/Brussels:20261003T133000
+SUMMARY:Liège Panthers A – East Belgium BCA A (89-56)
+LOCATION:Salle du Bois Saint-Jean\, Allée du Bol d'Air 13\, 4031 Liège
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457941-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T113000
+DTEND;TZID=Europe/Brussels:20261010T133000
+SUMMARY:Royal Nivelles Basketball A – Liège Panthers A (37-97)
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457927-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T150000
+DTEND;TZID=Europe/Brussels:20261011T170000
+SUMMARY:Ganshoren Dames Basket – GGBC Colfontaine A (65-50)
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457937-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T160000
+DTEND;TZID=Europe/Brussels:20261011T180000
+SUMMARY:East Belgium BCA A – Royal CS Natoye A (52-89)
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457936-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T110000
+DTEND;TZID=Europe/Brussels:20261018T130000
+SUMMARY:East Belgium BCA A – GGBC Colfontaine A (71-52)
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457942-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261106T203000
+DTEND;TZID=Europe/Brussels:20261106T223000
+SUMMARY:Royal Nivelles Basketball A – GGBC Colfontaine A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457938-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T123000
+DTEND;TZID=Europe/Brussels:20261107T143000
+SUMMARY:East Belgium BCA A – Liège Panthers A
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457928-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:Ganshoren Dames Basket – Royal CS Natoye A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457932-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261113T200000
+DTEND;TZID=Europe/Brussels:20261113T220000
+SUMMARY:GGBC Colfontaine A – Ganshoren Dames Basket
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457922-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T113000
+DTEND;TZID=Europe/Brussels:20261114T133000
+SUMMARY:Liège Panthers A – Royal Nivelles Basketball A
+LOCATION:Salle du Bois Saint-Jean\, Allée du Bol d'Air 13\, 4031 Liège
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457948-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:Royal CS Natoye A – East Belgium BCA A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457923-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T113000
+DTEND;TZID=Europe/Brussels:20261121T133000
+SUMMARY:Liège Panthers A – GGBC Colfontaine A
+LOCATION:Salle du Bois Saint-Jean\, Allée du Bol d'Air 13\, 4031 Liège
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457943-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T113000
+DTEND;TZID=Europe/Brussels:20261121T133000
+SUMMARY:Royal Nivelles Basketball A – Royal CS Natoye A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457939-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:East Belgium BCA A – Ganshoren Dames Basket
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457949-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:Royal CS Natoye A – Liège Panthers A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457933-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T130000
+DTEND;TZID=Europe/Brussels:20261206T150000
+SUMMARY:GGBC Colfontaine A – East Belgium BCA A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457929-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Ganshoren Dames Basket – Royal Nivelles Basketball A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457924-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T113000
+DTEND;TZID=Europe/Brussels:20261212T133000
+SUMMARY:Liège Panthers A – Ganshoren Dames Basket
+LOCATION:Salle du Bois Saint-Jean\, Allée du Bol d'Air 13\, 4031 Liège
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457934-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:GGBC Colfontaine A – Royal CS Natoye A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U19DG B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-457944-comp-s6323@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:Royal Nivelles Basketball A – East Belgium BCA A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U19DG B
+END:VEVENT
+END:VCALENDAR

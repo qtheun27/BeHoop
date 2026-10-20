@@ -1,0 +1,69 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaanderen U16 Jongens
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-10549392518-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T120000
+DTEND;TZID=Europe/Brussels:20261107T140000
+SUMMARY:Koninklijke Sint-Niklase Condors J16 A – BBC Falco Gent J16 A
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10566170137-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T120000
+DTEND;TZID=Europe/Brussels:20261107T140000
+SUMMARY:KBGOB Finexa Basket@Sea J16 A – Bavi Vilvoorde J16 A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10599725375-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:Partena Professional Okapi Aalst J16 A – BC Oostende J16 A
+LOCATION:Sportcentrum Schotte\, Kapellekensbaan 8\, 9320 Erembodegem
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10515837280-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T100000
+DTEND;TZID=Europe/Brussels:20261108T120000
+SUMMARY:Hubo Limburg United J16 A – Antwerp Giants J16 A
+LOCATION:SportinGenk PARK\, E. Van Dorenlaan 144\, 3600 Genk
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10616502994-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:BBC Croonen Lommel J16 A – AB InBev Leuven Bears J16 A
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10532614899-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T120000
+DTEND;TZID=Europe/Brussels:20261108T140000
+SUMMARY:GSG Aarschot J16 A – Jumbo Elektrooghe Gembas Knesselare J16 A
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10633280613-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T143000
+DTEND;TZID=Europe/Brussels:20261108T163000
+SUMMARY:Bazel Sobabee@Den Dulpop J16 A – KBBC Miners Beringen J16 A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
+END:VEVENT
+END:VCALENDAR

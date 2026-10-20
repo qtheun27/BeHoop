@@ -1,0 +1,510 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U14 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-471044-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T131500
+DTEND;TZID=Europe/Brussels:20260926T151500
+SUMMARY:Royal Waterloo Basket A – R. Rebond Ottignies-LLN (57-50)
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471084-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:Uccle Europe C – Anderlecht BB A (52-71)
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471053-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T133000
+DTEND;TZID=Europe/Brussels:20260927T153000
+SUMMARY:BC École Européenne B – RBC Auderghem A (24-76)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471085-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T090000
+DTEND;TZID=Europe/Brussels:20261004T110000
+SUMMARY:Uccle Europe C – Royal Waterloo Basket A (84-57)
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471054-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T111500
+DTEND;TZID=Europe/Brussels:20261004T131500
+SUMMARY:BC École Européenne B – Anderlecht BB A (28-79)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471065-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T090000
+DTEND;TZID=Europe/Brussels:20261010T110000
+SUMMARY:R. Rebond Ottignies-LLN – Uccle Europe C (65-70)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471045-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T131500
+DTEND;TZID=Europe/Brussels:20261010T151500
+SUMMARY:Royal Waterloo Basket A – BC École Européenne B (65-35)
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471074-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T091500
+DTEND;TZID=Europe/Brussels:20261011T111500
+SUMMARY:Anderlecht BB A – RBC Auderghem A (83-40)
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471066-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T110000
+DTEND;TZID=Europe/Brussels:20261017T130000
+SUMMARY:R. Rebond Ottignies-LLN – RBC Auderghem A (31-72)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471073-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T091500
+DTEND;TZID=Europe/Brussels:20261018T111500
+SUMMARY:Anderlecht BB A – Royal Waterloo Basket A (67-61)
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471070-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T090000
+DTEND;TZID=Europe/Brussels:20261024T110000
+SUMMARY:R. Rebond Ottignies-LLN – RBC Auderghem A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471046-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T131500
+DTEND;TZID=Europe/Brussels:20261107T151500
+SUMMARY:Royal Waterloo Basket A – Uccle Europe C
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471034-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:RBC Auderghem A – R. Rebond Ottignies-LLN
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471075-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T091500
+DTEND;TZID=Europe/Brussels:20261108T111500
+SUMMARY:Anderlecht BB A – BC École Européenne B
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471035-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:RBC Auderghem A – Anderlecht BB A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471086-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:Uccle Europe C – R. Rebond Ottignies-LLN
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471055-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T111500
+DTEND;TZID=Europe/Brussels:20261115T131500
+SUMMARY:BC École Européenne B – Royal Waterloo Basket A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471067-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:R. Rebond Ottignies-LLN – Royal Waterloo Basket A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471036-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:RBC Auderghem A – BC École Européenne B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471076-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T091500
+DTEND;TZID=Europe/Brussels:20261122T111500
+SUMMARY:Anderlecht BB A – Uccle Europe C
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471087-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T123000
+DTEND;TZID=Europe/Brussels:20261128T143000
+SUMMARY:Uccle Europe C – R. Rebond Ottignies-LLN
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471037-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T130000
+DTEND;TZID=Europe/Brussels:20261128T150000
+SUMMARY:RBC Auderghem A – Anderlecht BB A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471056-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T111500
+DTEND;TZID=Europe/Brussels:20261129T131500
+SUMMARY:BC École Européenne B – Royal Waterloo Basket A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471088-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T090000
+DTEND;TZID=Europe/Brussels:20261206T110000
+SUMMARY:Uccle Europe C – RBC Auderghem A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471057-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T133000
+DTEND;TZID=Europe/Brussels:20261206T153000
+SUMMARY:BC École Européenne B – R. Rebond Ottignies-LLN
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471038-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:RBC Auderghem A – Royal Waterloo Basket A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471077-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T091500
+DTEND;TZID=Europe/Brussels:20261213T111500
+SUMMARY:Anderlecht BB A – R. Rebond Ottignies-LLN
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471058-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T131500
+DTEND;TZID=Europe/Brussels:20261213T151500
+SUMMARY:BC École Européenne B – Uccle Europe C
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471047-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T131500
+DTEND;TZID=Europe/Brussels:20261219T151500
+SUMMARY:Royal Waterloo Basket A – Anderlecht BB A
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471048-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T131500
+DTEND;TZID=Europe/Brussels:20270109T151500
+SUMMARY:Royal Waterloo Basket A – R. Rebond Ottignies-LLN
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471089-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T090000
+DTEND;TZID=Europe/Brussels:20270110T110000
+SUMMARY:Uccle Europe C – Anderlecht BB A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471059-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T111500
+DTEND;TZID=Europe/Brussels:20270110T131500
+SUMMARY:BC École Européenne B – RBC Auderghem A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471068-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T090000
+DTEND;TZID=Europe/Brussels:20270116T110000
+SUMMARY:R. Rebond Ottignies-LLN – BC École Européenne B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471039-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T130000
+DTEND;TZID=Europe/Brussels:20270116T150000
+SUMMARY:RBC Auderghem A – Uccle Europe C
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471078-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T091500
+DTEND;TZID=Europe/Brussels:20270117T111500
+SUMMARY:Anderlecht BB A – Royal Waterloo Basket A
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471049-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T090000
+DTEND;TZID=Europe/Brussels:20270124T110000
+SUMMARY:Royal Waterloo Basket A – Anderlecht BB A
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471090-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T090000
+DTEND;TZID=Europe/Brussels:20270124T110000
+SUMMARY:Uccle Europe C – RBC Auderghem A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471040-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T090000
+DTEND;TZID=Europe/Brussels:20270130T110000
+SUMMARY:RBC Auderghem A – Royal Waterloo Basket A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471079-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T091500
+DTEND;TZID=Europe/Brussels:20270131T111500
+SUMMARY:Anderlecht BB A – R. Rebond Ottignies-LLN
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471061-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T111500
+DTEND;TZID=Europe/Brussels:20270131T131500
+SUMMARY:BC École Européenne B – Uccle Europe C
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471069-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:R. Rebond Ottignies-LLN – Uccle Europe C
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471080-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T091500
+DTEND;TZID=Europe/Brussels:20270207T111500
+SUMMARY:Anderlecht BB A – RBC Auderghem A
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471050-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T094500
+DTEND;TZID=Europe/Brussels:20270207T114500
+SUMMARY:Royal Waterloo Basket A – BC École Européenne B
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471051-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T131500
+DTEND;TZID=Europe/Brussels:20270213T151500
+SUMMARY:Royal Waterloo Basket A – Uccle Europe C
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471081-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T151500
+DTEND;TZID=Europe/Brussels:20270214T171500
+SUMMARY:Anderlecht BB A – BC École Européenne B
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471071-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T090000
+DTEND;TZID=Europe/Brussels:20270220T110000
+SUMMARY:R. Rebond Ottignies-LLN – Royal Waterloo Basket A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471041-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T130000
+DTEND;TZID=Europe/Brussels:20270220T150000
+SUMMARY:RBC Auderghem A – BC École Européenne B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471082-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T091500
+DTEND;TZID=Europe/Brussels:20270221T111500
+SUMMARY:Anderlecht BB A – Uccle Europe C
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471043-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T131500
+DTEND;TZID=Europe/Brussels:20270313T151500
+SUMMARY:Royal Waterloo Basket A – RBC Auderghem A
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471060-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T110000
+DTEND;TZID=Europe/Brussels:20270314T130000
+SUMMARY:BC École Européenne B – R. Rebond Ottignies-LLN
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471042-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T130000
+DTEND;TZID=Europe/Brussels:20270320T150000
+SUMMARY:RBC Auderghem A – R. Rebond Ottignies-LLN
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471091-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T090000
+DTEND;TZID=Europe/Brussels:20270321T110000
+SUMMARY:Uccle Europe C – Royal Waterloo Basket A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471062-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T110000
+DTEND;TZID=Europe/Brussels:20270321T130000
+SUMMARY:BC École Européenne B – Anderlecht BB A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471072-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T090000
+DTEND;TZID=Europe/Brussels:20270327T110000
+SUMMARY:R. Rebond Ottignies-LLN – Anderlecht BB A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471092-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T123000
+DTEND;TZID=Europe/Brussels:20270327T143000
+SUMMARY:Uccle Europe C – BC École Européenne B
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:U14H C Elite
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-471052-comp-s6307@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T131500
+DTEND;TZID=Europe/Brussels:20270327T151500
+SUMMARY:Royal Waterloo Basket A – RBC Auderghem A
+LOCATION:Hall omnisports de Waterloo\, Rue Théophile Delbar 33\, 1410 Waterloo
+DESCRIPTION:U14H C Elite
+END:VEVENT
+END:VCALENDAR

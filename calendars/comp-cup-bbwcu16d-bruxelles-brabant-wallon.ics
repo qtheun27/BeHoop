@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBWCU16D
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-497257-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261118T190000
+DTEND;TZID=Europe/Brussels:20261118T210000
+SUMMARY:BC École Européenne B – RBC Auderghem
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497264-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270119T183000
+DTEND;TZID=Europe/Brussels:20270119T203000
+SUMMARY:CRBB The Runners – Royal Canter Schaerbeek
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497258-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Atlas Brussels BB Academy – RBC Éclair C
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497259-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Uccle Europe – ASA Saint-Hubert Boitsfort
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497261-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:R. Rebond Ottignies-LLN – Royal IV Brussels A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497262-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW208002 – Vainqueur BW208001
+LOCATION:
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497263-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW208003 – Royal La Chenaie Uccle BC
+LOCATION:
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497265-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW208006 – Vainqueur BW208005
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497266-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW208007 – Vainqueur BW208004
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU16D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497267-comp-cup-bbwcu16d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T220000
+DTEND;TZID=Europe/Brussels:20270411T230000
+SUMMARY:Vainqueur BW208009 – Vainqueur BW208001
+LOCATION:Hall des Sports de Neerstalle\, Rue Zwartebeek 23\, 1180 Uccle
+DESCRIPTION:CU16D
+END:VEVENT
+END:VCALENDAR

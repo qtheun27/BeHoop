@@ -20,7 +20,7 @@ export interface Profile {
   displayName: string; avatarUrl?: string; createdAt?: unknown; ageConfirmed: boolean; onboarded?: boolean;
   notifPrefs: Record<string, boolean>; fcmTokens?: string[]; banned?: boolean; theme?: 'auto' | 'light' | 'dark';
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
-  /** Équipes dont le calendrier a déjà été ajouté au téléphone */ calendars?: number[];
+  /** Équipes (ou compétitions 'comp-…') dont le calendrier a déjà été ajouté au téléphone */ calendars?: (number | string)[];
   /** Langue de l'appli (notifications envoyées dans cette langue) */ lang?: 'fr' | 'nl' | 'en';
 }
 /** Suivi d'un club, d'une équipe ou d'une compétition (compId : identifiant de competitions.json, refId vaut alors 0) */

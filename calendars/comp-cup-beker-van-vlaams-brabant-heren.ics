@@ -1,0 +1,150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaams-Brabant Heren
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13780028701-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T201500
+DTEND;TZID=Europe/Brussels:20261030T221500
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven HSE A – Bct Overijse HSE A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13679215892-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:BC Grimbergen HSE A – BC Opwijk HSE A
+LOCATION:Sporthal J. Vertommen\, Grote Winkellaan 101\, 1853 Strombeek-Bever
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13712918225-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:Bavi Vilvoorde HSE D – Jets Basket Zaventem HSE A
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13729548749-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T163000
+DTEND;TZID=Europe/Brussels:20261031T183000
+SUMMARY:Triton Leuven HSE A – BC Asse-Ternat HSE C
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13595474892-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:BC Asse-Ternat HSE D – AB InBev Leuven Bears HSE E
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13696140606-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:BC Opwijk HSE B – Dino Brussels HSE A
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13645660654-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T173000
+DTEND;TZID=Europe/Brussels:20261031T193000
+SUMMARY:Hageland United HSE A – AB InBev Leuven Bears HSE D
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13628883035-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basket Club Groot Dilbeek HSE B – KYD Kortenberg Young Devils HSE A
+LOCATION:Ten Gaerde\, J. Mertensstraat 27\, 1702 Groot-Bijgaarden
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13712771130-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Merchtem Eagles HSE B – BC Asse-Ternat HSE B
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13612252511-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Londerzeelse Dunkers HSE A – Boortmeerbeek & Berg Bulldogs HSE A
+LOCATION:Sporthal Verma Malderen\, Karreveld 3\, 1840 Malderen
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13679362987-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:KYD Kortenberg Young Devils HSE C – Clem Scherpenheuvel HSE A
+LOCATION:Sporthal Erps-Kwerps\, Oudebaan 31\, 3071 Erps-Kwerps
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13662585368-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:BC Asse-Ternat HSE E – Bavi Vilvoorde HSE C
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13662438273-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:Boortmeerbeek & Berg Bulldogs HSE B – GSG Aarschot HSE A
+LOCATION:Sporthal Boortmeerbeek\, Sportveldweg 6\, 3190 Boortmeerbeek
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13612105416-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T144500
+DTEND;TZID=Europe/Brussels:20261101T164500
+SUMMARY:KYD Kortenberg Young Devils HSE B – Tigers Halle HSE A
+LOCATION:Sporthal Hertblok Steenokkerzeel\, Orchideeenlaan\, 1820 Steenokkerzeel
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13729695844-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261103T210000
+DTEND;TZID=Europe/Brussels:20261103T230000
+SUMMARY:Merchtem Eagles HSE A – Toyota Wouters Diest HSE A
+LOCATION:Tuinbouwschool\, Molenbaan 54\, 1785 Merchtem
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13763251082-comp-cup-beker-van-vlaams-brabant-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261105T203000
+DTEND;TZID=Europe/Brussels:20261105T223000
+SUMMARY:Black Devils Vorst HSE A – AB InBev Leuven Bears HSE C
+LOCATION:Petit Palais des Sports de Forest\, Roosendaelstraat 2\, 1190 Vorst
+DESCRIPTION:Beker van Vlaams-Brabant Heren 1/16 Finale
+END:VEVENT
+END:VCALENDAR

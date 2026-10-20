@@ -15,7 +15,7 @@ const serveRepo: Plugin = {
       const f = join(repo, url);
       if (!f.startsWith(repo) || !existsSync(f) || !statSync(f).isFile()) return next();
       const ext = f.split('.').pop()!;
-      res.setHeader('Content-Type', ({ json: 'application/json', png: 'image/png', m3u8: 'application/vnd.apple.mpegurl', webp: 'image/webp', ts: 'video/mp2t', vtt: 'text/vtt' } as Record<string, string>)[ext] ?? 'image/jpeg');
+      res.setHeader('Content-Type', ({ json: 'application/json', png: 'image/png', m3u8: 'application/vnd.apple.mpegurl', webp: 'image/webp', svg: 'image/svg+xml', ts: 'video/mp2t', vtt: 'text/vtt' } as Record<string, string>)[ext] ?? 'image/jpeg');
       createReadStream(f).pipe(res);
     });
   },

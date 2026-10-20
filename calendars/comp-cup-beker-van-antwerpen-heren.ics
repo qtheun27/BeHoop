@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Antwerpen Heren
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11251887490-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261029T204500
+DTEND;TZID=Europe/Brussels:20261029T224500
+SUMMARY:Fellows Legal Brokers Ekeren BBC HSE D – Fellows Legal Brokers Ekeren BBC HSE B
+LOCATION:Sporthal t Venneke\, Den Geer 19\, 2180 Ekeren
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11386402632-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:Red Vic Wilrijk HSE C – Basket Willebroek HSE B
+LOCATION:Sporthal Red Vic\, Pachthofplein 30\, 2610 Wilrijk
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11487068346-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:Zuiderkempen Diamonds HSE E – Rucon Gembo Borgerhout HSE C
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13315284364-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Aartselaar BBC HSE C – Antwerp Giants HSE D
+LOCATION:Sporthal De Twee Ringen\, Della Faillelaan 30\, 2630 Aartselaar
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13281729126-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Imprenta Kontich Wolves HSE C – Rucon Gembo Borgerhout HSE B
+LOCATION:Sporthal Sint Rita\, Rompelei 29\, 2550 Kontich
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13365617221-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Rupel Pirates BBC Niel HSE B – Essense Esbac HSE B
+LOCATION:Gemeentelijke Sporthal Niel\, Landbouwstraat 145\, 2845 Niel
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13264951507-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Oxaco BBC Boechout HSE D – Olicsa Antwerpen HSE B
+LOCATION:Sportpark Sneppenbos\, Vremdesesteenweg 224\, 2530 Boechout
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11151221776-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Oxaco BBC Boechout HSE C – Guco Lier HSE F
+LOCATION:Sportpark Sneppenbos\, Vremdesesteenweg 224\, 2530 Boechout
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11218332252-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Duffel K.B.B.C. HSE A – Nieuw Brabo Antwerpen HSE C
+LOCATION:Sporthal Rooienberg\, Rooienberg 58\, 2570 Duffel
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11386255537-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Phantoms Basket Boom HSE C
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11453513108-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Imprenta Kontich Wolves HSE D – BBC Laakdal HSE A
+LOCATION:Sporthal Sint Rita\, Rompelei 29\, 2550 Kontich
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11503845965-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Fellows Legal Brokers Ekeren BBC HSE C – Guco Lier HSE D
+LOCATION:Sporthal t Venneke\, Den Geer 19\, 2180 Ekeren
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11419957870-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:KBBC T&T Turnhout HSE B – Wuustwezel BBC HSE B
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13248173888-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basket Willebroek HSE C – KBBC T&T Turnhout HSE D
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13449505316-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:BBC Schelle HSE A – Phantoms Basket Boom HSE B
+LOCATION:Sportschuur De Griene\, Kattenberg 1\, 2627 Schelle
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11436735489-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basket Stabroek HSE C – Willibies Antwerpen HSE B
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11369477918-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Willibies Antwerpen HSE C – Basket Stabroek HSE A
+LOCATION:Buurtcentrum Cortina\, Kerkstraat 68\, 2060 Antwerpen
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13298506745-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T181500
+DTEND;TZID=Europe/Brussels:20261031T201500
+SUMMARY:Nieuw Brabo Antwerpen HSE B – Essense Esbac HSE A
+LOCATION:Expohal\, Frank Craeybeckxlaan 77\, 2100 Deurne (Ant)
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11235109871-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Mercurius BBC Hoboken-Berchem HSE B
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11167999395-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:Koninklijke Herentalse BBC HSE A – KBBC Okido Arendonk HSE A
+LOCATION:Atheneum De Vesten\, Augustijnenlaan 32\, 2200 Herentals
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11335922680-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:BBC Lyra Nila Nijlen HSE A – BBC Geel HSE B
+LOCATION:Gemeentelijke Sporthal Nijlen\, Gemeentestraat 36a\, 2560 Nijlen
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11201554633-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Sobabee Bazel@Den Draver HSE A – Guco Lier HSE E
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11184777014-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Willibies Antwerpen HSE A – Zuiderkempen Diamonds HSE B
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13348839602-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Wuustwezel BBC HSE A – Rupel Pirates BBC Niel HSE A
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11386108442-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T201500
+DTEND;TZID=Europe/Brussels:20261031T221500
+SUMMARY:K. Vabco Mol BBC HSE A – Duffel K.B.B.C. HSE B
+LOCATION:Sporthal Rozenberginstituut\, Molenhoekstraat\, 2400 Mol
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11403180251-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Imprenta Kontich Wolves HSE B – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Sint Rita\, Rompelei 29\, 2550 Kontich
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13332061983-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:BBC Berlaar HSE A – Maccabi Antwerpen HSE A
+LOCATION:Sporthal t Stapveld\, Pastorijstraat 62\, 2590 Berlaar
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11470290727-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE B – Red Vic Wilrijk HSE B
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11336069775-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:Olicsa Antwerpen HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11402886061-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Aartselaar BBC HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11319292156-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T150000
+DTEND;TZID=Europe/Brussels:20261101T170000
+SUMMARY:KBBC Okido Arendonk HSE B – Aartselaar BBC HSE B
+LOCATION:Okido Sporthal\, Kerkstraat 11\, 2370 Arendonk
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13466282935-comp-cup-beker-van-antwerpen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:Olicsa Antwerpen HSE C – BBC Putte HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:Beker van Antwerpen Heren 1/32 Finale
+END:VEVENT
+END:VCALENDAR

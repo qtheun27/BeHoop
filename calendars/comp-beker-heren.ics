@@ -1,0 +1,177 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe de Belgique · Messieurs
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13265250890-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260924T203000
+DTEND;TZID=Europe/Brussels:20260924T223000
+SUMMARY:B.C. L’9 Flénu-Frameries HSE A – Windrose Giants Antwerp HSE A (74-120)
+LOCATION:Centre Sportif Max Audain
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11134743540-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T200000
+DTEND;TZID=Europe/Brussels:20260925T220000
+SUMMARY:Basket SKT Ieper HSE A – Coretec Oostende HSE A (76-110)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13198140414-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:Antwerp Giants HSE B – House Of Talents Kortrijk Spurs HSE A (77-124)
+LOCATION:Heylen Vastgoed Basketcampus\, Gasthuishoevestraat 71\, 2170 Antwerpen
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13248473271-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:Rucon Gembo Borgerhout HSE A – Ninane Promotion HSE A (73-75)
+LOCATION:Sporthal Luysbekelaar\, Luisbekelaar\, 2140 Borgerhout
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11084410683-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:BC Sprimont HSE A – Kangoeroes Basket Mechelen HSE A (85-130)
+LOCATION:Hall Omnisports Sprimont
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13114252319-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:Avanti Brugge 2015 HSE A – Hubo Limburg United HSE A (94-127)
+LOCATION:Stamina\, Daverlostraat 132\, 8310 Assebroek
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13181362795-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T204500
+DTEND;TZID=Europe/Brussels:20260925T224500
+SUMMARY:G&V Breakpoint Basket Waregem HSE A – CityX Mons HSE A (76-92)
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13164585176-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T204500
+DTEND;TZID=Europe/Brussels:20260925T224500
+SUMMARY:Guco Lier HSE A – AB InBev Leuven Bears HSE A (69-86)
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11185076397-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T210000
+DTEND;TZID=Europe/Brussels:20260925T230000
+SUMMARY:Imprenta Kontich Wolves HSE A – Basics Melsele-Beveren HSE A (98-93)
+LOCATION:Sporthal Sint Rita\, Rompelei 29\, 2550 Kontich
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11151521159-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T210000
+DTEND;TZID=Europe/Brussels:20260925T230000
+SUMMARY:CEP Fleurus HSE A – Brussels Basketball HSE A (72-109)
+LOCATION:Complexe Sportif de Wanfercée-Baulet
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11101188302-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:Bavi Vilvoorde HSE A – Val-Dieu Spirou Basket HSE A (70-101)
+LOCATION:Stedelijke Sporthal Vilvoorde\, Kolvenierstraat 54\, 1800 Vilvoorde
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11168298778-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Basket Willebroek HSE A – United Basket Woluwé HSE A (107-81)
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13097474700-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:ABO LDP Donza HSE A – BBC Falco Gent HSE A (85-80)
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13214918033-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T160000
+DTEND;TZID=Europe/Brussels:20260927T180000
+SUMMARY:Spirou Basket HSE B – CB Liège HSE A (77-113)
+LOCATION:Salle Pierre de Coubertin
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13282028509-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T180000
+DTEND;TZID=Europe/Brussels:20260927T200000
+SUMMARY:Phantoms Basket Boom HSE A – Partena Professional Okapi Aalst HSE A (72-101)
+LOCATION:Braxhall\, Kapelstraat 143\, 2850 Boom
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11117965921-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261001T204500
+DTEND;TZID=Europe/Brussels:20261001T224500
+SUMMARY:BBC Croonen Lommel HSE A – Hasselt BT HSE A (88-65)
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:Beker van België Heren 1/16e finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12437731060-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:Imprenta Kontich Wolves HSE A – House Of Talents Kortrijk Spurs HSE A
+LOCATION:Sporthal Sint Rita\, Rompelei 29\, 2550 Kontich
+DESCRIPTION:Beker van België Heren 1/8ste finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12387398203-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261208T203000
+DTEND;TZID=Europe/Brussels:20261208T223000
+SUMMARY:BBC Croonen Lommel HSE A – Windrose Giants Antwerp HSE A
+LOCATION:De Soeverein  Lommel\, Sportveldenstraat 10\, 3920 Lommel
+DESCRIPTION:Beker van België Heren 1/8ste finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12404175822-comp-beker-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261209T200000
+DTEND;TZID=Europe/Brussels:20261209T220000
+SUMMARY:Kangoeroes Basket Mechelen HSE A – Brussels Basketball HSE A
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:Beker van België Heren 1/8ste finale
+END:VEVENT
+END:VCALENDAR

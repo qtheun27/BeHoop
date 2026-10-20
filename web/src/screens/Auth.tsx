@@ -6,11 +6,13 @@ import {
 import { auth } from '../lib/firebase';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { loadIndex, loadComps, compIcon, normalize, teamLabel, type Club, type Competition } from '../lib/data';
+import { loadIndex, loadComps, normalize, teamLabel, type Club, type Competition } from '../lib/data';
+import { CompLogo } from '../ui/CompLogo';
 import { Sheet, Disc, Skeleton } from '../ui/kit';
 import { haptic, shortName, store } from '../lib/util';
 import { enableNotifications } from '../lib/push';
 import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 const msg = (e: any): string => {
   const c = String(e?.code ?? '');
@@ -95,7 +97,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
         <button className={mode === 'mdp' ? 'on' : ''} onClick={() => setMode('mdp')}>{t('Mot de passe')}</button>
       </div>
       {sent ? (
-        <div className="center"><div style={{ fontSize: 48 }}>📬</div><h3>{t('Regarde tes e-mails')}</h3><p className="muted">{t('Clique sur le lien envoyé à')} <b>{email}</b> {t('depuis ce téléphone pour te connecter.')}</p></div>
+        <div className="center"><div className="ill-tile" aria-hidden><Ico n="mail" /></div><h3>{t('Regarde tes e-mails')}</h3><p className="muted">{t('Clique sur le lien envoyé à')} <b>{email}</b> {t('depuis ce téléphone pour te connecter.')}</p></div>
       ) : (
         <>
           <input className="field" type="email" inputMode="email" autoComplete="email" placeholder="ton@email.be" value={email} onChange={(e) => setEmail(e.target.value)} aria-label={t('E-mail')} />
@@ -165,13 +167,13 @@ export function Onboarding() {
         <p className="muted">{t('Choisis les compétitions et les clubs que tu veux suivre : leurs résultats et leurs actus arriveront dans ton fil.')}</p>
         {comps.length > 0 && <><div className="group-title">{t('Compétitions')}</div>
           <div className="chips" style={{ flexWrap: 'wrap' }}>{comps.map((c) => { const on = pickedComps.includes(c.id); return (
-            <button key={c.id} className={`chip${on ? ' on' : ''}`} aria-pressed={on} onClick={() => { haptic(); setPickedComps((p) => on ? p.filter((x) => x !== c.id) : [...p, c.id]); }}>{compIcon(c)} {c.name}</button>); })}</div>
+            <button key={c.id} className={`chip${on ? ' on' : ''}`} aria-pressed={on} onClick={() => { haptic(); setPickedComps((p) => on ? p.filter((x) => x !== c.id) : [...p, c.id]); }}><CompLogo c={c} size={22} /> {c.name}</button>); })}</div>
           <div className="group-title">{t('Clubs')}</div></>}
         <div className="search"><input className="field" placeholder={t('Rechercher un club ou une ville')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
         {!clubs ? <Skeleton h={56} n={6} /> : <div className="group">{list.map((c) => (
           <button key={c.id} className="row" onClick={() => { haptic(); setPicked((p) => p.includes(c.id) ? p.filter((x) => x !== c.id) : [...p, c.id]); }} aria-pressed={picked.includes(c.id)}>
             <Disc src={c.logo} name={c.name} size={36} ring={c.c1} /><div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{c.city} · {c.province}</div></div>
-            <span style={{ fontSize: 22, color: 'var(--accent)' }}>{picked.includes(c.id) ? '✓' : ''}</span>
+            <span style={{ width: 22, color: 'var(--accent)' }}>{picked.includes(c.id) && <Ico n="check" size={22} />}</span>
           </button>))}</div>}
         <div style={{ position: 'sticky', bottom: 'calc(var(--safe-b) + 12px)' }}><button className="btn" disabled={!picked.length && !pickedComps.length} onClick={() => setStep(picked.length ? 1 : 2)}>{t('Continuer')} ({picked.length + pickedComps.length})</button>
           <button className="btn ghost" onClick={() => setStep(2)}>{t('Plus tard')}</button></div>
@@ -186,7 +188,7 @@ export function Onboarding() {
         <button className="btn" onClick={() => setStep(2)}>{t('Continuer')}</button>
       </>}
       {step === 2 && <div className="center" style={{ paddingTop: 40 }}>
-        <div style={{ fontSize: 64 }}>🔔</div>
+        <div className="ill-tile" aria-hidden><Ico n="bell" /></div>
         <h1 className="large-title">{t('Ne rate rien')}</h1>
         <p className="muted">{t('Rappel 2 h avant les matchs, résultats finaux, nouvelles vidéos. Tu peux tout régler dans ton profil.')}</p>
         <button className="btn mt" onClick={async () => { await enableNotifications(s.user!.uid).catch(() => {}); await done(); }}>{t('Activer les notifications')}</button>

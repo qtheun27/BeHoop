@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van West-Vlaanderen U16 Meisjes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13761676588-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:B.C. Blue Stars Brugge M16 A – Bobcat Wielsbeke M16 A
+LOCATION:VTI Brugge\, Vaartdijkstraat 3\, 8200 Brugge
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13744898969-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:BBC Koksijde M16 A – Basket Desselgem M16 A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13862342302-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:Ford Unicars Avanti Brugge Dames M16 B – Kon BBC De Panne vzw M16 A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13795231826-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:Mibac Middelkerke M16 A – Holstra WINGS Wevelgem-Moorsele M16 A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13711343731-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T131500
+DTEND;TZID=Europe/Brussels:20261108T151500
+SUMMARY:G&V Breakpoint Basket Waregem M16 B – House Of Talents Kortrijk Spurs M16 B
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+END:VCALENDAR

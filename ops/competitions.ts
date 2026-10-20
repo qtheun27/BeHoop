@@ -11,7 +11,22 @@ export interface Competition {
   kw?: string[];
   /** Ordre d'affichage (plus petit = plus haut) */
   rank: number;
+  /** Logo officiel (logos/comps/) ; dark : logo blanc, à poser sur fond sombre */
+  logo?: string; dark?: boolean;
 }
+
+/** Logos officiels (sites des ligues et de la FIBA, Wikipédia) rangés dans logos/comps/.
+ *  Séries régionales : logo de la fédération qui les organise (AWBB, Basketbal Vlaanderen). */
+export const COMP_LOGOS: Record<string, { logo: string; dark?: boolean }> = {
+  bnxt: { logo: '/logos/comps/bnxt.webp' }, nba: { logo: '/logos/comps/nba.webp' }, wnba: { logo: '/logos/comps/wnba.webp' },
+  lions: { logo: '/logos/comps/lions.webp' }, cats: { logo: '/logos/comps/cats.webp' },
+  euroleague: { logo: '/logos/comps/euroleague.svg' }, eurocup: { logo: '/logos/comps/eurocup.svg' },
+  bcl: { logo: '/logos/comps/bcl.webp', dark: true }, fec: { logo: '/logos/comps/fec.webp' },
+  elw: { logo: '/logos/comps/elw.webp' }, ecw: { logo: '/logos/comps/ecw.webp' },
+  eurobasket: { logo: '/logos/comps/eurobasket.webp', dark: true }, 'eurobasket-w': { logo: '/logos/comps/eurobasket-w.webp', dark: true },
+  wc: { logo: '/logos/comps/wc.webp', dark: true }, wwc: { logo: '/logos/comps/wwc.webp', dark: true },
+  wallonie: { logo: '/logos/comps/awbb.webp' }, flandre: { logo: '/logos/comps/vbl.webp' },
+};
 
 const WOMEN = /\b(dames?|women|meisjes|filles|vrouwen|wnba|cats|ladies|w)\b|\b[PR]\d\s?D\b|U\d{2}\s?D\b|\bTDW|\bD\s*[A-Z]?$/i;
 const YOUTH = /\bU\s?\d{1,2}\b|minibasket|jeunes|jeugd/i;
@@ -70,6 +85,6 @@ export function buildCompetitions(all: AllData): Competition[] {
   }
   return [...comps.values()].map(({ _teams, ...c }) => {
     const clubs = [...new Set([..._teams].map((t) => clubOf.get(t)?.id).filter((x): x is number => x !== undefined))];
-    return { ...c, clubs, teams: _teams.size };
+    return { ...c, clubs, teams: _teams.size, ...(COMP_LOGOS[c.id] ?? COMP_LOGOS[c.cat] ?? {}) };
   }).filter((c) => c.teams > 1).sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name, 'fr'));
 }

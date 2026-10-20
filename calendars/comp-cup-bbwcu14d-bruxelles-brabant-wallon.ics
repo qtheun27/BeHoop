@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBWCU14D
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-497181-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261013T183000
+DTEND;TZID=Europe/Brussels:20261013T203000
+SUMMARY:Royal Canter Schaerbeek – Ganshoren Dames Basket (0-0)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497179-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261120T190000
+DTEND;TZID=Europe/Brussels:20261120T210000
+SUMMARY:RBC Auderghem – BC École Européenne B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497177-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Royal IV Brussels A – Genappe Lothier
+LOCATION:
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497178-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW209001 – ASA Saint-Hubert Boitsfort
+LOCATION:
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497180-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Uccle Europe A – B55 Academy XL C
+LOCATION:
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497182-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW209004 – Vainqueur BW209005
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497183-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW209002 – Vainqueur BW209003
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU14D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497184-comp-cup-bbwcu14d-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T220000
+DTEND;TZID=Europe/Brussels:20270411T230000
+SUMMARY:Vainqueur BW209006 – Vainqueur BW209007
+LOCATION:Hall des Sports de Neerstalle\, Rue Zwartebeek 23\, 1180 Uccle
+DESCRIPTION:CU14D
+END:VEVENT
+END:VCALENDAR

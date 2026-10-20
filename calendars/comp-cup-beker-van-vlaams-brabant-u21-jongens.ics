@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaams-Brabant U21 Jongens
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13651812016-comp-cup-beker-van-vlaams-brabant-u21-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:BC Opwijk J21 A – Bavi Vilvoorde J21 B
+LOCATION:Gemeentelijk Sporthal Opwijk\, Heiveld 65\, 1745 Opwijk
+DESCRIPTION:Beker van Vlaams-Brabant U21 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13702144873-comp-cup-beker-van-vlaams-brabant-u21-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T140000
+DTEND;TZID=Europe/Brussels:20261108T160000
+SUMMARY:BC Asse-Ternat J21 B – Boortmeerbeek & Berg Bulldogs J21 A
+LOCATION:Sportloods Waalborre\, Potaarde 14\, 1730 Asse
+DESCRIPTION:Beker van Vlaams-Brabant U21 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13173103748-comp-cup-beker-van-vlaams-brabant-u21-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T150000
+DTEND;TZID=Europe/Brussels:20261219T170000
+SUMMARY:AB InBev Leuven Bears J21 B – Merchtem Eagles J21 A
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:Beker van Vlaams-Brabant U21 Jongens 1/4 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13206658986-comp-cup-beker-van-vlaams-brabant-u21-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T120000
+DTEND;TZID=Europe/Brussels:20261220T140000
+SUMMARY:Jets Basket Zaventem J21 A – Dynamo Bertem J21 B
+LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
+DESCRIPTION:Beker van Vlaams-Brabant U21 Jongens 1/4 Finale
+END:VEVENT
+END:VCALENDAR

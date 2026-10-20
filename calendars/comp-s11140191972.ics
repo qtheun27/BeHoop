@@ -1,0 +1,1527 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:2e Prov. Heren Oost-Vlaanderen
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11170611103-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Amon Jeugd Gentson HSE C – BBC Houtem Redwolves HSE B (91-54)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11640972815-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Gent-Oost Eagles HSE C – KBBC Bavi Gent HSE B (78-83)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12782145097-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:Basket Meetjesland HSE A – KBBC Sparta Laarne HSE B (79-65)
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11876551029-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – BBC Falco Gent HSE C (106-66)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11138629983-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T153000
+DTEND;TZID=Europe/Brussels:20260927T173000
+SUMMARY:e5 Sgolba Aalter HSE B – BBC Vesting Denderleeuw HSE A (87-83)
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12346912741-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B (57-78)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12143315647-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T173000
+DTEND;TZID=Europe/Brussels:20260927T193000
+SUMMARY:Basics Melsele-Beveren HSE C – BC Black Beez Erpe-Mere HSE B (78-79)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11725993743-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T203000
+DTEND;TZID=Europe/Brussels:20261002T223000
+SUMMARY:BBC Falco Gent HSE C – Gent-Oost Eagles HSE C (63-70)
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11220943960-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:Amon Jeugd Gentson HSE C – KBBC Wezen-Vrienden Geraardsbergen HSE A (62-85)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11892195815-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T174500
+DTEND;TZID=Europe/Brussels:20261003T194500
+SUMMARY:KBBC Bavi Gent HSE B – Basics Melsele-Beveren HSE C (67-74)
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12362557527-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:BBC Houtem Redwolves HSE B – e5 Sgolba Aalter HSE B (44-66)
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12951054120-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T181500
+DTEND;TZID=Europe/Brussels:20261003T201500
+SUMMARY:KBBC Sparta Laarne HSE B – BC Black Beez Erpe-Mere HSE B (53-52)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12932702383-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T201500
+DTEND;TZID=Europe/Brussels:20261003T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – BBC Garage Wille Hansbeke HSE A (50-61)
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11289187269-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Basket Meetjesland HSE A (83-69)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12713901788-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T181500
+DTEND;TZID=Europe/Brussels:20261010T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – KBBC Bavi Gent HSE B (88-64)
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11088297126-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T181500
+DTEND;TZID=Europe/Brussels:20261010T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Amon Jeugd Gentson HSE C (53-69)
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11708083291-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Gent-Oost Eagles HSE C – KBBC Sparta Laarne HSE B (75-64)
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12882810811-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T201500
+DTEND;TZID=Europe/Brussels:20261010T221500
+SUMMARY:Basket Meetjesland HSE A – BBC Vesting Denderleeuw HSE A (71-56)
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11809440553-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B (83-81)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12380467979-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – BBC Houtem Redwolves HSE B (60-73)
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12210426123-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T173000
+DTEND;TZID=Europe/Brussels:20261011T193000
+SUMMARY:Basics Melsele-Beveren HSE C – BBC Falco Gent HSE C (74-56)
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11289628554-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T181500
+DTEND;TZID=Europe/Brussels:20261017T201500
+SUMMARY:e5 Sgolba Aalter HSE B – BBC Garage Wille Hansbeke HSE A (84-80)
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11642105648-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T193000
+DTEND;TZID=Europe/Brussels:20261017T213000
+SUMMARY:BBC Falco Gent HSE C – KBBC Bavi Gent HSE B (56-52)
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13066923335-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T201500
+DTEND;TZID=Europe/Brussels:20261017T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – Gent-Oost Eagles HSE C (57-62)
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11977216743-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – BBC Houtem Redwolves HSE B (100-71)
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11406630602-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BC Black Beez Erpe-Mere HSE B (57-75)
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11254499198-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:Amon Jeugd Gentson HSE C – Basket Meetjesland HSE A (66-78)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12967831739-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:KBBC Sparta Laarne HSE B – Basics Melsele-Beveren HSE C (77-81)
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12814567502-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T181500
+DTEND;TZID=Europe/Brussels:20261024T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – BBC Falco Gent HSE C
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11808749005-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:Gent-Oost Eagles HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11707642006-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T200000
+DTEND;TZID=Europe/Brussels:20261024T220000
+SUMMARY:KBBC Bavi Gent HSE B – KBBC Sparta Laarne HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12916366049-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T201500
+DTEND;TZID=Europe/Brussels:20261024T221500
+SUMMARY:Basket Meetjesland HSE A – BBC Houtem Redwolves HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11859773410-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – e5 Sgolba Aalter HSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12430800836-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T170000
+DTEND;TZID=Europe/Brussels:20261025T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Amon Jeugd Gentson HSE C
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12076205171-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T173000
+DTEND;TZID=Europe/Brussels:20261025T193000
+SUMMARY:Basics Melsele-Beveren HSE C – BBC Vesting Denderleeuw HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11841862958-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T174500
+DTEND;TZID=Europe/Brussels:20261107T194500
+SUMMARY:KBBC Bavi Gent HSE B – BBC Houtem Redwolves HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11809881838-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:BBC Falco Gent HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12680346550-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T181500
+DTEND;TZID=Europe/Brussels:20261107T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – BBC Vesting Denderleeuw HSE A
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11624195196-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T190000
+DTEND;TZID=Europe/Brussels:20261107T210000
+SUMMARY:Gent-Oost Eagles HSE C – Amon Jeugd Gentson HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12731812240-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T201500
+DTEND;TZID=Europe/Brussels:20261107T221500
+SUMMARY:Basket Meetjesland HSE A – e5 Sgolba Aalter HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11842995791-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – KBBC Sparta Laarne HSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12227203742-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T173000
+DTEND;TZID=Europe/Brussels:20261108T193000
+SUMMARY:Basics Melsele-Beveren HSE C – BBC Garage Wille Hansbeke HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12144448480-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:BBC Houtem Redwolves HSE B – BC Black Beez Erpe-Mere HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12883943644-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T181500
+DTEND;TZID=Europe/Brussels:20261114T201500
+SUMMARY:KBBC Sparta Laarne HSE B – BBC Falco Gent HSE C
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11155407602-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T181500
+DTEND;TZID=Europe/Brussels:20261114T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Gent-Oost Eagles HSE C
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11373075364-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Bavi Gent HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12865591907-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:BBC Vesting Denderleeuw HSE A – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11120278246-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Amon Jeugd Gentson HSE C – Basics Melsele-Beveren HSE C
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12330135122-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T170000
+DTEND;TZID=Europe/Brussels:20261115T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Basket Meetjesland HSE A
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11925751053-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T174500
+DTEND;TZID=Europe/Brussels:20261121T194500
+SUMMARY:KBBC Bavi Gent HSE B – Amon Jeugd Gentson HSE C
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12831345121-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T181500
+DTEND;TZID=Europe/Brussels:20261121T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – e5 Sgolba Aalter HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13018164596-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T181500
+DTEND;TZID=Europe/Brussels:20261121T201500
+SUMMARY:KBBC Sparta Laarne HSE B – BBC Vesting Denderleeuw HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11573862339-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Gent-Oost Eagles HSE C – BBC Houtem Redwolves HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11860214695-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:BBC Falco Gent HSE C – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11792662934-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – Basket Meetjesland HSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12277536599-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T173000
+DTEND;TZID=Europe/Brussels:20261122T193000
+SUMMARY:Basics Melsele-Beveren HSE C – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11137055865-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:Amon Jeugd Gentson HSE C – BC Black Beez Erpe-Mere HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12345779908-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:BBC Houtem Redwolves HSE B – BBC Falco Gent HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12983035240-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:BBC Vesting Denderleeuw HSE A – KBBC Bavi Gent HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11054741888-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T181500
+DTEND;TZID=Europe/Brussels:20261128T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Basics Melsele-Beveren HSE C
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12899588430-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T201500
+DTEND;TZID=Europe/Brussels:20261128T221500
+SUMMARY:Basket Meetjesland HSE A – Gent-Oost Eagles HSE C
+LOCATION:Sporthal Kaprijke Berkakker\, Alfred De Taeyestraat\, 9970 Kaprijke
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11171743936-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T210000
+DTEND;TZID=Europe/Brussels:20261128T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Sparta Laarne HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12296579884-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T170000
+DTEND;TZID=Europe/Brussels:20261129T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11657750434-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Gent-Oost Eagles HSE C – Basics Melsele-Beveren HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11960439124-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T210000
+DTEND;TZID=Europe/Brussels:20261211T230000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – Gent-Oost Eagles HSE C
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11338387293-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:Amon Jeugd Gentson HSE C – BBC Falco Gent HSE C
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12379335146-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:BBC Houtem Redwolves HSE B – KBBC Sparta Laarne HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11105074745-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T181500
+DTEND;TZID=Europe/Brussels:20261212T201500
+SUMMARY:e5 Sgolba Aalter HSE B – KBBC Bavi Gent HSE B
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12882369526-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T201500
+DTEND;TZID=Europe/Brussels:20261212T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12933143668-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T201500
+DTEND;TZID=Europe/Brussels:20261212T221500
+SUMMARY:Basket Meetjesland HSE A – Basics Melsele-Beveren HSE C
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12481133693-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – BC Black Beez Erpe-Mere HSE B
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11791530101-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T174500
+DTEND;TZID=Europe/Brussels:20261219T194500
+SUMMARY:KBBC Bavi Gent HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11222076793-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – e5 Sgolba Aalter HSE B
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12898455597-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T181500
+DTEND;TZID=Europe/Brussels:20261219T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – Basket Meetjesland HSE A
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13001386977-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T181500
+DTEND;TZID=Europe/Brussels:20261219T201500
+SUMMARY:KBBC Sparta Laarne HSE B – Amon Jeugd Gentson HSE C
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11691305672-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:Gent-Oost Eagles HSE C – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sporthal Bergenmeers\, Koedreef 1\, 9070 Destelbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11742771362-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T200000
+DTEND;TZID=Europe/Brussels:20261219T220000
+SUMMARY:BBC Falco Gent HSE C – BBC Vesting Denderleeuw HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12109760409-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T173000
+DTEND;TZID=Europe/Brussels:20261220T193000
+SUMMARY:Basics Melsele-Beveren HSE C – BBC Houtem Redwolves HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11204166341-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:Amon Jeugd Gentson HSE C – BBC Vesting Denderleeuw HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12278669432-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11674528053-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:Gent-Oost Eagles HSE C – BC Black Beez Erpe-Mere HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12294314218-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:Basics Melsele-Beveren HSE C – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12983476525-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T201500
+DTEND;TZID=Europe/Brussels:20270109T221500
+SUMMARY:Basket Meetjesland HSE A – KBBC Bavi Gent HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11272850935-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T153000
+DTEND;TZID=Europe/Brussels:20270110T173000
+SUMMARY:e5 Sgolba Aalter HSE B – BBC Falco Gent HSE C
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12246247027-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – KBBC Sparta Laarne HSE B
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11826659457-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270115T203000
+DTEND;TZID=Europe/Brussels:20270115T223000
+SUMMARY:BBC Falco Gent HSE C – Basket Meetjesland HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11724419625-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T174500
+DTEND;TZID=Europe/Brussels:20270116T194500
+SUMMARY:KBBC Bavi Gent HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12864900359-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T181500
+DTEND;TZID=Europe/Brussels:20270116T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12900721263-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T181500
+DTEND;TZID=Europe/Brussels:20270116T201500
+SUMMARY:KBBC Sparta Laarne HSE B – e5 Sgolba Aalter HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13050145716-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T201500
+DTEND;TZID=Europe/Brussels:20270116T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – BBC Houtem Redwolves HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11389852983-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Amon Jeugd Gentson HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12092982790-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T173000
+DTEND;TZID=Europe/Brussels:20270117T193000
+SUMMARY:Basics Melsele-Beveren HSE C – Gent-Oost Eagles HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12781012264-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T181500
+DTEND;TZID=Europe/Brussels:20270123T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – KBBC Sparta Laarne HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11172185221-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T181500
+DTEND;TZID=Europe/Brussels:20270123T201500
+SUMMARY:e5 Sgolba Aalter HSE B – BBC Houtem Redwolves HSE B
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11741638529-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Gent-Oost Eagles HSE C – BBC Falco Gent HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12815700335-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T201500
+DTEND;TZID=Europe/Brussels:20270123T221500
+SUMMARY:Basket Meetjesland HSE A – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11893328648-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – Amon Jeugd Gentson HSE C
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12414023217-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – BBC Vesting Denderleeuw HSE A
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12176870885-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T173000
+DTEND;TZID=Europe/Brussels:20270124T193000
+SUMMARY:Basics Melsele-Beveren HSE C – KBBC Bavi Gent HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11793104219-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T203000
+DTEND;TZID=Europe/Brussels:20270129T223000
+SUMMARY:BBC Falco Gent HSE C – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11858640577-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T174500
+DTEND;TZID=Europe/Brussels:20270130T194500
+SUMMARY:KBBC Bavi Gent HSE B – Gent-Oost Eagles HSE C
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12194781337-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Amon Jeugd Gentson HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12764234645-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T181500
+DTEND;TZID=Europe/Brussels:20270130T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – Basics Melsele-Beveren HSE C
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12833610787-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T181500
+DTEND;TZID=Europe/Brussels:20270130T201500
+SUMMARY:KBBC Sparta Laarne HSE B – Basket Meetjesland HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12966257621-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T201500
+DTEND;TZID=Europe/Brussels:20270130T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – e5 Sgolba Aalter HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11188521555-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12881677978-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T183000
+DTEND;TZID=Europe/Brussels:20270205T203000
+SUMMARY:BC Black Beez Erpe-Mere HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12243981361-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T210000
+DTEND;TZID=Europe/Brussels:20270205T230000
+SUMMARY:Basics Melsele-Beveren HSE C – KBBC Sparta Laarne HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12329002289-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T160000
+DTEND;TZID=Europe/Brussels:20270206T180000
+SUMMARY:BBC Houtem Redwolves HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11674086768-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T174500
+DTEND;TZID=Europe/Brussels:20270206T194500
+SUMMARY:KBBC Bavi Gent HSE B – BBC Falco Gent HSE C
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11607417577-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:Gent-Oost Eagles HSE C – BBC Vesting Denderleeuw HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12966698906-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T201500
+DTEND;TZID=Europe/Brussels:20270206T221500
+SUMMARY:Basket Meetjesland HSE A – Amon Jeugd Gentson HSE C
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12263024646-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – e5 Sgolba Aalter HSE B
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11741197244-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T174500
+DTEND;TZID=Europe/Brussels:20270220T194500
+SUMMARY:KBBC Bavi Gent HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12646791312-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T181500
+DTEND;TZID=Europe/Brussels:20270220T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – BBC Houtem Redwolves HSE B
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11724860910-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T190000
+DTEND;TZID=Europe/Brussels:20270220T210000
+SUMMARY:Gent-Oost Eagles HSE C – e5 Sgolba Aalter HSE B
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11843437076-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:BBC Falco Gent HSE C – KBBC Sparta Laarne HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12765367478-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T201500
+DTEND;TZID=Europe/Brussels:20270220T221500
+SUMMARY:Basket Meetjesland HSE A – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12010771981-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – BBC Vesting Denderleeuw HSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12160093266-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T173000
+DTEND;TZID=Europe/Brussels:20270221T193000
+SUMMARY:Basics Melsele-Beveren HSE C – Amon Jeugd Gentson HSE C
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11103500627-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T160000
+DTEND;TZID=Europe/Brussels:20270227T180000
+SUMMARY:Amon Jeugd Gentson HSE C – KBBC Bavi Gent HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12261891813-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Gent-Oost Eagles HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11071519507-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T181500
+DTEND;TZID=Europe/Brussels:20270227T201500
+SUMMARY:e5 Sgolba Aalter HSE B – BC Black Beez Erpe-Mere HSE B
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12832477954-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:Basket Meetjesland HSE A – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12915924764-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – KBBC Sparta Laarne HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11423408221-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T210000
+DTEND;TZID=Europe/Brussels:20270227T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Basics Melsele-Beveren HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12279802265-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T170000
+DTEND;TZID=Europe/Brussels:20270228T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – BBC Falco Gent HSE C
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12193648504-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270305T210000
+DTEND;TZID=Europe/Brussels:20270305T230000
+SUMMARY:Basics Melsele-Beveren HSE C – e5 Sgolba Aalter HSE B
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11808307720-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T174500
+DTEND;TZID=Europe/Brussels:20270306T194500
+SUMMARY:KBBC Bavi Gent HSE B – BBC Vesting Denderleeuw HSE A
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12730679407-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T181500
+DTEND;TZID=Europe/Brussels:20270306T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – Amon Jeugd Gentson HSE C
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12816833168-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T181500
+DTEND;TZID=Europe/Brussels:20270306T201500
+SUMMARY:KBBC Sparta Laarne HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11791971386-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T190000
+DTEND;TZID=Europe/Brussels:20270306T210000
+SUMMARY:Gent-Oost Eagles HSE C – Basket Meetjesland HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11709216124-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:BBC Falco Gent HSE C – BBC Houtem Redwolves HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11826218172-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – BBC Garage Wille Hansbeke HSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11288054436-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T160000
+DTEND;TZID=Europe/Brussels:20270313T180000
+SUMMARY:Amon Jeugd Gentson HSE C – BBC Garage Wille Hansbeke HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12295447051-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Basket Meetjesland HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12984609358-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T181500
+DTEND;TZID=Europe/Brussels:20270313T201500
+SUMMARY:KBBC Sparta Laarne HSE B – KBBC Bavi Gent HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13033368097-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T181500
+DTEND;TZID=Europe/Brussels:20270313T201500
+SUMMARY:BBC Vesting Denderleeuw HSE A – Basics Melsele-Beveren HSE C
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11675660886-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:BBC Falco Gent HSE C – BC Black Beez Erpe-Mere HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11322742507-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – Gent-Oost Eagles HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11222518078-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T153000
+DTEND;TZID=Europe/Brussels:20270314T173000
+SUMMARY:e5 Sgolba Aalter HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11153833484-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T160000
+DTEND;TZID=Europe/Brussels:20270320T180000
+SUMMARY:Amon Jeugd Gentson HSE C – Gent-Oost Eagles HSE C
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12178003718-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:BBC Houtem Redwolves HSE B – KBBC Bavi Gent HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12867166025-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T181500
+DTEND;TZID=Europe/Brussels:20270320T201500
+SUMMARY:KBBC Sparta Laarne HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11188962840-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T181500
+DTEND;TZID=Europe/Brussels:20270320T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Basket Meetjesland HSE A
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13016590478-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T201500
+DTEND;TZID=Europe/Brussels:20270320T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – BC Black Beez Erpe-Mere HSE B
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11205299174-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Falco Gent HSE C
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12464356074-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Basics Melsele-Beveren HSE C
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12899147145-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270404T150000
+DTEND;TZID=Europe/Brussels:20270404T170000
+SUMMARY:BBC Vesting Denderleeuw HSE A – Basket Meetjesland HSE A
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11321609674-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T160000
+DTEND;TZID=Europe/Brussels:20270410T180000
+SUMMARY:Amon Jeugd Gentson HSE C – e5 Sgolba Aalter HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11875418196-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T174500
+DTEND;TZID=Europe/Brussels:20270410T194500
+SUMMARY:KBBC Bavi Gent HSE B – BC Black Beez Erpe-Mere HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12396112765-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:BBC Houtem Redwolves HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13068497453-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T181500
+DTEND;TZID=Europe/Brussels:20270410T201500
+SUMMARY:KBBC Sparta Laarne HSE B – Gent-Oost Eagles HSE C
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11692438505-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:BBC Falco Gent HSE C – Basics Melsele-Beveren HSE C
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11255632031-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12260758980-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270416T210000
+DTEND;TZID=Europe/Brussels:20270416T230000
+SUMMARY:Basics Melsele-Beveren HSE C – Basket Meetjesland HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11690864387-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T174500
+DTEND;TZID=Europe/Brussels:20270417T194500
+SUMMARY:KBBC Bavi Gent HSE B – e5 Sgolba Aalter HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12797789883-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T181500
+DTEND;TZID=Europe/Brussels:20270417T201500
+SUMMARY:BC Black Beez Erpe-Mere HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:Sint Bavo\, St. Bavoweg\, 9420 Mere
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13051719834-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T181500
+DTEND;TZID=Europe/Brussels:20270417T201500
+SUMMARY:KBBC Sparta Laarne HSE B – BBC Houtem Redwolves HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11758416148-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T190000
+DTEND;TZID=Europe/Brussels:20270417T210000
+SUMMARY:Gent-Oost Eagles HSE C – KBBC Wezen-Vrienden Geraardsbergen HSE A
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11658883267-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T200000
+DTEND;TZID=Europe/Brussels:20270417T220000
+SUMMARY:BBC Falco Gent HSE C – Amon Jeugd Gentson HSE C
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11339520126-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare HSE B – BBC Vesting Denderleeuw HSE A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11304832055-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:Amon Jeugd Gentson HSE C – KBBC Sparta Laarne HSE B
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12161226099-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:BBC Houtem Redwolves HSE B – Basics Melsele-Beveren HSE C
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11205740459-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T181500
+DTEND;TZID=Europe/Brussels:20270424T201500
+SUMMARY:e5 Sgolba Aalter HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12949921287-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T201500
+DTEND;TZID=Europe/Brussels:20270424T221500
+SUMMARY:Basket Meetjesland HSE A – BC Black Beez Erpe-Mere HSE B
+LOCATION:Sportpark Eeklo\, Burgemeester Lionel Pussemierstraat 157\, 9900 Eeklo
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12949480002-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T201500
+DTEND;TZID=Europe/Brussels:20270424T221500
+SUMMARY:BBC Vesting Denderleeuw HSE A – BBC Falco Gent HSE C
+LOCATION:A. Ottoy\, Walleken 12\, 9470 Denderleeuw
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11910106267-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – KBBC Bavi Gent HSE B
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12363690360-comp-s11140191972@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:BBC Garage Wille Hansbeke HSE A – Gent-Oost Eagles HSE C
+LOCATION:Sporthal Oostbroek\, Zeistraat 41\, 9850 Nevele
+DESCRIPTION:2e Prov. Heren Oost-Vlaanderen
+END:VEVENT
+END:VCALENDAR

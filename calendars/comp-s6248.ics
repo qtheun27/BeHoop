@@ -1,0 +1,150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Régional U18 Hommes Bronze
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-459941-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:GGBC Colfontaine A – Speedy MSG (54-71)
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459932-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T190000
+DTEND;TZID=Europe/Brussels:20261002T210000
+SUMMARY:Union BC Quaregnon – GGBC Colfontaine A (111-42)
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390 Quaregnon
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459922-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:RE Pont-de-Loup – Royal Nivelles Basketball A (84-59)
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250 Aiseau-Presles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459942-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T140000
+DTEND;TZID=Europe/Brussels:20261011T160000
+SUMMARY:GGBC Colfontaine A – RE Pont-de-Loup (55-108)
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459931-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T130000
+DTEND;TZID=Europe/Brussels:20261024T150000
+SUMMARY:Union BC Quaregnon – RE Pont-de-Loup
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390 Quaregnon
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459939-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T133000
+DTEND;TZID=Europe/Brussels:20261107T153000
+SUMMARY:Royal Nivelles Basketball A – RE Pont-de-Loup
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459943-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:GGBC Colfontaine A – Union BC Quaregnon
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459933-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:Union BC Quaregnon – Speedy MSG
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390 Quaregnon
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459923-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:RE Pont-de-Loup – GGBC Colfontaine A
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250 Aiseau-Presles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459924-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T090000
+DTEND;TZID=Europe/Brussels:20261121T110000
+SUMMARY:RE Pont-de-Loup – Union BC Quaregnon
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250 Aiseau-Presles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459940-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T133000
+DTEND;TZID=Europe/Brussels:20261121T153000
+SUMMARY:Royal Nivelles Basketball A – Speedy MSG
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459928-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T140000
+DTEND;TZID=Europe/Brussels:20261128T160000
+SUMMARY:Speedy MSG – Union BC Quaregnon
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459934-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T130000
+DTEND;TZID=Europe/Brussels:20261205T150000
+SUMMARY:Union BC Quaregnon – Royal Nivelles Basketball A
+LOCATION:Salle  Edgard Hismans\, Rue De l'Egalité 91\, 7390 Quaregnon
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459930-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T150000
+DTEND;TZID=Europe/Brussels:20261205T170000
+SUMMARY:Speedy MSG – GGBC Colfontaine A
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459925-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:RE Pont-de-Loup – Speedy MSG
+LOCATION:Complexe Sportif Hortent Moraux\, rue Auguste Scohy 139\, 6250 Aiseau-Presles
+DESCRIPTION:U18HB B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-459945-comp-s6248@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:GGBC Colfontaine A – Royal Nivelles Basketball A
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:U18HB B
+END:VEVENT
+END:VCALENDAR

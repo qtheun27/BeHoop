@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe AWBB U16 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-485973-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T100000
+DTEND;TZID=Europe/Brussels:20260926T120000
+SUMMARY:DPK Carnières Morlanwelz B – Henri Chapelle (65-48)
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140 Morlanwelz
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485975-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T100000
+DTEND;TZID=Europe/Brussels:20260926T120000
+SUMMARY:Mons Basketball – Spirou Basket A (85-95)
+LOCATION:Mons Arena\, Rue des Laminoirs 2a\, 7012 Jemappes
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485977-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T103000
+DTEND;TZID=Europe/Brussels:20260926T123000
+SUMMARY:Aste Kain – ESL United A (68-75)
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540 Kain
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485985-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:DPK Carnières Morlanwelz A – R.B.C. Belgrade B (83-59)
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140 Morlanwelz
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485983-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:JSE Enghien – B55 Academy XL A (80-63)
+LOCATION:Salle Omnisports de Petit-Enghien\, Place\, 10\, 7850 Petit-Enghien
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485984-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:Condroz Modave Basketball B – BC Sprimont A (50-73)
+LOCATION:Hall Omnisports\, Tige de Hestreux 1\, 4577 Vierset-Barse
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485981-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:RBC Libramont A – Royal Excelsior Brussels A (61-88)
+LOCATION:Hall des Sports\, Place Communale\, 3\, 6800 Libramont
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485986-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T133000
+DTEND;TZID=Europe/Brussels:20260926T153000
+SUMMARY:United Basket Woluwé A – Spirou Basket B (71-69)
+LOCATION:Salle Malou (Stade Fallon)\, Chemin du Struykbeken 2\, 1200 Bruxelles
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485979-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:Royal Gallia BC Beez – GGBC Colfontaine (84-46)
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485982-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T143000
+DTEND;TZID=Europe/Brussels:20260926T163000
+SUMMARY:East Belgium BCA A – Rebond Musson (106-35)
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485980-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T154500
+DTEND;TZID=Europe/Brussels:20260926T174500
+SUMMARY:Floréal BCCA Neufchâteau A – R.B.C. Belgrade A (43-119)
+LOCATION:Hall Sportif Communal\, rue des Tanneries\, 6840 Neufchateau
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485978-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:BC Belleflamme – Olympic Mont Sur Marchienne (80-64)
+LOCATION:Salle de l'IESE \, Rue Nicolas Spiroux 62\, 4030 Grivegnée
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485987-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:Uccle Europe A – Royal Canter Schaerbeek (139-37)
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485976-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T160000
+DTEND;TZID=Europe/Brussels:20260927T180000
+SUMMARY:BC Fraire-Philippeville A – Condroz Modave Basketball A (58-112)
+LOCATION:Hall Omnisports de Laneffe\, Les Battis 17\, 5651 Walcourt
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485974-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T161500
+DTEND;TZID=Europe/Brussels:20260927T181500
+SUMMARY:Fresh Air A – Royal CS Natoye (57-49)
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485972-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T100000
+DTEND;TZID=Europe/Brussels:20261017T120000
+SUMMARY:JS Dottignies – BC Malonne A (19-134)
+LOCATION:Hall De l'Europe\, Rue De l'Arsenal 2\, 7711 Dottignies
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485991-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:BC Malonne A – ESL United A
+LOCATION:
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485992-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:R.B.C. Belgrade A – DPK Carnières Morlanwelz B
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001 Belgrade
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485993-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:Royal Excelsior Brussels A – Uccle Europe A
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485990-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:BC Sprimont A – JSE Enghien
+LOCATION:Hall Omnisports de Sprimont\, Rue Joseph Potier 15\, 4140 Sprimont
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485995-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T100000
+DTEND;TZID=Europe/Brussels:20261101T120000
+SUMMARY:DPK Carnières Morlanwelz A – Royal Gallia BC Beez
+LOCATION:Hall Lucien Walravens\, Rue De L'Enseignement 1\, 7140 Morlanwelz
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485994-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Spirou Basket A – BC Belleflamme
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485988-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:East Belgium BCA A – Fresh Air A
+LOCATION:Complexe Sportif\, Chaussée de Liége 26\, 4841 Henri-Chapelle
+DESCRIPTION:CA U16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485989-comp-cup-coupe-awbb-u16-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T151500
+DTEND;TZID=Europe/Brussels:20261101T171500
+SUMMARY:Condroz Modave Basketball A – United Basket Woluwé A
+LOCATION:Hall Omnisports\, Tige de Hestreux 1\, 4577 Vierset-Barse
+DESCRIPTION:CA U16H
+END:VEVENT
+END:VCALENDAR

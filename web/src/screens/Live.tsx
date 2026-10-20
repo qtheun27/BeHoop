@@ -7,6 +7,7 @@ import { Sheet, Empty } from '../ui/kit';
 import { haptic } from '../lib/util';
 import type { Game } from '../lib/data';
 import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 export interface LiveScore { home: number; away: number; quarter: number; status: 'live' | 'final'; updatedBy: string; updatedByName: string; updatedAt: unknown;
   history: { home: number; away: number; quarter: number; by: string; at: number }[]; gameId: number; teamIds: number[] }
@@ -17,13 +18,13 @@ export function useLive(gameId: number | null) {
   return l;
 }
 
-/** Pastille 🔴 LIVE sur la page Équipe pour le match du jour. */
+/** Pastille LIVE sur la page Équipe pour le match du jour. */
 export function LiveBadge({ teamId, games }: { teamId: number; games: Game[] }) {
   const today = new Date().toISOString().slice(0, 10);
   const g = games.find((x) => x.d === today && (x.h === teamId || x.a === teamId) && x.hs === null);
   const l = useLive(g?.id ?? null);
   if (!l || l.status !== 'live') return null;
-  return <a className="pill live" href="#/matchs">🔴 LIVE {l.home}–{l.away}</a>;
+  return <a className="pill live" href="#/matchs"><Ico n="live" />LIVE {l.home}–{l.away}</a>;
 }
 
 export function LiveScoreSheet({ g, home, away, onClose }: { g: Game; home: string; away: string; onClose: () => void }) {
@@ -83,7 +84,7 @@ export function CarpoolSheet({ g, youthTeam, onClose }: { g: Game; youthTeam: nu
     return D.onSnapshot(q, (x) => setOffers(x.docs.map((d) => ({ id: d.id, ...(d.data() as Omit<Offer, 'id'>) }))), () => setOffers([]));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [g.id, allowed]);
-  if (!allowed) return <Sheet title={t('Covoiturage')} onClose={onClose}><Empty ill="🔒" title={t('Réservé à l\'Équipe')} text={t('Pour les matchs de jeunes, le covoiturage est réservé aux membres de l\'Équipe 🔒.')} /></Sheet>;
+  if (!allowed) return <Sheet title={t('Covoiturage')} onClose={onClose}><Empty ill="lock" title={t('Réservé à l\'Équipe')} text={t('Pour les matchs de jeunes, le covoiturage est réservé aux membres de l\'Équipe.')} /></Sheet>;
   const create = async () => {
     const ref = D.doc(col);
     await D.setDoc(ref, { kind: form, driverUid: s.user!.uid, driverName: s.profile!.displayName, seats: form === 'offer' ? seats : 0, from, time, teamIdPrivate: youthTeam, requests: {}, gameDate: g.d, createdAt: D.serverTimestamp() });
@@ -98,19 +99,19 @@ export function CarpoolSheet({ g, youthTeam, onClose }: { g: Game; youthTeam: nu
   const decide = (o: Offer, uid: string, status: 'accepted' | 'refused') => D.updateDoc(D.doc(col, o.id), { [`requests.${uid}.status`]: status });
   return (
     <Sheet title={t('Covoiturage')} onClose={onClose}>
-      {offers === null ? null : offers.length === 0 && !form ? <Empty ill="🚗" title={t('Personne pour l\'instant')} text={t('Propose des places ou indique que tu en cherches une.')} /> : null}
+      {offers === null ? null : offers.length === 0 && !form ? <Empty ill="car" title={t('Personne pour l\'instant')} text={t('Propose des places ou indique que tu en cherches une.')} /> : null}
       {offers?.map((o) => {
         const me = o.driverUid === s.user?.uid, r = o.requests?.[s.user?.uid ?? ''];
         const accepted = Object.values(o.requests ?? {}).filter((x) => x.status === 'accepted').length;
         return (
           <div key={o.id} className="group" style={{ padding: 14 }}>
-            <b>{o.kind === 'offer' ? `🚗 ${t('{name} propose {n} place(s)', { name: o.driverName, n: o.seats - accepted })}` : `🙋 ${t('{name} cherche une place', { name: o.driverName })}`}</b>
+            <b><Ico n={o.kind === 'offer' ? 'car' : 'userAdd'} style={{ marginRight: 6, color: 'var(--accent)' }} />{o.kind === 'offer' ? t('{name} propose {n} place(s)', { name: o.driverName, n: o.seats - accepted }) : t('{name} cherche une place', { name: o.driverName })}</b>
             <div className="muted">{t('Départ de {from} à {time}', { from: o.from || '—', time: o.time || '—' })}</div>
             {me ? Object.entries(o.requests ?? {}).map(([uid, x]) => (
               <div key={uid} className="hstack mt"><span style={{ flex: 1 }}>{x.name} · {x.status === 'pending' ? t('en attente') : x.status === 'accepted' ? t('accepté') : t('refusé')}</span>
                 {x.status === 'pending' && <><button className="btn small" onClick={() => decide(o, uid, 'accepted')}>{t('Accepter')}</button><button className="btn small danger" onClick={() => decide(o, uid, 'refused')}>{t('Refuser')}</button></>}
                 {x.status === 'accepted' && <Contact gameId={g.id} offerId={o.id} uid={uid} />}</div>))
-              : r ? <div className="mt">{r.status === 'accepted' ? <>✅ {t('Accepté')} · <Contact gameId={g.id} offerId={o.id} uid={o.driverUid} /></> : r.status === 'pending' ? t('⏳ Demande en attente') : t('Demande refusée')}</div>
+              : r ? <div className="mt">{r.status === 'accepted' ? <><Ico n="checkCircle" style={{ color: '#1f9d55' }} /> {t('Accepté')} · <Contact gameId={g.id} offerId={o.id} uid={o.driverUid} /></> : r.status === 'pending' ? <><Ico n="hourglass" /> {t('Demande en attente')}</> : t('Demande refusée')}</div>
                 : <button className="btn small mt" onClick={() => ask(o)}>{o.kind === 'offer' ? t('Demander une place') : t('Proposer de l’emmener')}</button>}
           </div>);
       })}
@@ -132,5 +133,5 @@ export function CarpoolSheet({ g, youthTeam, onClose }: { g: Game; youthTeam: nu
 function Contact({ gameId, offerId, uid }: { gameId: number; offerId: string; uid: string }) {
   const [c, set] = useState<{ phone?: string } | null>(null);
   useEffect(() => { D.getDoc(D.doc(D.db, 'carpools', String(gameId), 'offers', offerId, 'contacts', uid)).then((x) => set(x.exists() ? x.data() : {})).catch(() => set({})); }, [gameId, offerId, uid]);
-  return c?.phone ? <a href={`tel:${c.phone}`}>📞 {c.phone}</a> : <span className="muted">{t('pas de téléphone')}</span>;
+  return c?.phone ? <a href={`tel:${c.phone}`}><Ico n="phone" /> {c.phone}</a> : <span className="muted">{t('pas de téléphone')}</span>;
 }

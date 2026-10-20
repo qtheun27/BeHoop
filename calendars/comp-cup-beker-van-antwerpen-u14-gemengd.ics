@@ -1,0 +1,150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Antwerpen U14 Gemengd
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-10682621173-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:Rupel Pirates BBC Niel G14 A – Antwerp Giants G14 B
+LOCATION:Gemeentelijke Sporthal Niel\, Landbouwstraat 145\, 2845 Niel
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10766509268-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:BBC Geel G14 A – BBC Baskas Kasterlee G14 A
+LOCATION:Axion\, Zwaarvoerdersspoor 1\, 2440 Geel
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10632141221-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:Geranimo Bornem Basket G14 A – Kangoeroes Basket Mechelen G14 B
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10632288316-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:Zuiderkempen Diamonds G14 B – BBC Makeba Mariaburg Brasschaat G14 A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10581955459-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:Phantoms Basket Boom G14 B – BC Cobras Schoten-Brasschaat G14 A
+LOCATION:Braxhall\, Kapelstraat 143\, 2850 Boom
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10615363602-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T104500
+DTEND;TZID=Europe/Brussels:20261107T124500
+SUMMARY:Willibies Antwerpen G14 A – Rucon Gembo Borgerhout G14 B
+LOCATION:Buurtcentrum Cortina\, Kerkstraat 68\, 2060 Antwerpen
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10783286887-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:Koninklijke Herentalse BBC G14 A – Wuustwezel BBC G14 A
+LOCATION:Atheneum De Vesten\, Augustijnenlaan 32\, 2200 Herentals
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10565177840-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:Essense Esbac G14 A – Red Vic Wilrijk G14 B
+LOCATION:Sportcomplex Hemelrijk\, MOERKANTSEBAAN 32-34\, 2910 Essen
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10514697888-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:KBBC Okido Arendonk G14 B – BBC Putte G14 A
+LOCATION:Okido Sporthal\, Kerkstraat 11\, 2370 Arendonk
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10665843554-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Basket Willebroek G14 B – Aartselaar BBC G14 A
+LOCATION:Sporthal de Schalk (NIEUW)\, Stadionlaan 6\, 2830 Willebroek
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10565030745-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:Mercurius BBC Hoboken-Berchem G14 B – Oxaco BBC Boechout G14 A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10548253126-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T163000
+DTEND;TZID=Europe/Brussels:20261107T183000
+SUMMARY:Basket Malle G14 A – Campinia Dessel-Retie G14 A
+LOCATION:Sporthal Karel Mintjens\, Heidemolenbaan 75\, 2390 Malle
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10531475507-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T093000
+DTEND;TZID=Europe/Brussels:20261108T113000
+SUMMARY:Basket Stabroek G14 A – BBC Musketiers Wommelgem G14 A
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10581808364-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:KBBC T&T Turnhout G14 A – BBC Schelle G14 A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10615510697-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:Olicsa Antwerpen G14 A – Duffel K.B.B.C. G14 A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10598733078-comp-cup-beker-van-antwerpen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T151500
+DTEND;TZID=Europe/Brussels:20261108T171500
+SUMMARY:Guco Lier G14 B – Fellows Legal Brokers Ekeren BBC G14 A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:Beker van Antwerpen U14 Gemengd 1/16 Finale
+END:VEVENT
+END:VCALENDAR

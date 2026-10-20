@@ -6,7 +6,7 @@ const DOCS: Record<string, { title: string; body: [string, string][] }> = {
   cgu: { title: "Conditions d'utilisation", body: [
     ['Le service', "BeHoop (behoop.be) est un projet personnel et gratuit qui affiche les résultats du basket AWBB et permet de suivre des clubs, de publier des messages, photos et vidéos de match."],
     ['Ton compte', "Il faut avoir 13 ans ou plus. Ton prénom et l'initiale de ton nom sont visibles des autres utilisateurs. Tu es responsable de ce que tu publies."],
-    ['Ce que tu publies', "Tu dois avoir le droit de publier tes photos et vidéos. Les médias d'une équipe Jeunes ne sont visibles que par les membres validés de l'Équipe 🔒. Tu t'engages à retirer un contenu si un parent le demande."],
+    ['Ce que tu publies', "Tu dois avoir le droit de publier tes photos et vidéos. Les médias d'une équipe Jeunes ne sont visibles que par les membres validés de l'Équipe. Tu t'engages à retirer un contenu si un parent le demande."],
     ['Modération', "Tout contenu peut être signalé. BeHoop peut masquer un contenu ou suspendre un compte qui ne respecte pas la charte, sans préavis."],
     ['Responsabilité', "Les données sportives proviennent de l'AWBB et peuvent contenir des erreurs. Le service est fourni « tel quel », sans garantie de disponibilité."],
     ['Contact', 'q.theuninck@gmail.com'],
@@ -23,7 +23,7 @@ const DOCS: Record<string, { title: string; body: [string, string][] }> = {
   charte: { title: 'Charte BeHoop', body: [
     ['Respect', "On parle de basket avec respect : joueurs, coachs, arbitres, parents et bénévoles."],
     ['Pas de moquerie', "Aucune moquerie, aucun commentaire sur le physique ou le niveau d'un joueur, surtout chez les jeunes."],
-    ['Enfants', "Pas de publication d'enfants sans l'accord de leurs parents. Les médias Jeunes restent dans l'Équipe 🔒."],
+    ['Enfants', "Pas de publication d'enfants sans l'accord de leurs parents. Les médias Jeunes restent dans l'Équipe."],
     ['Signaler', "Si quelque chose te dérange, utilise « Signaler » : on regarde chaque signalement."],
   ] },
 };

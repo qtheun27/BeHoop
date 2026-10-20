@@ -1,0 +1,1554 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:1e Prov. Heren West-Vlaanderen
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12133880415-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T103000
+DTEND;TZID=Europe/Brussels:20260920T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Koninklijke BBC Oostkamp HSE B (79-46)
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12688233390-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T121500
+DTEND;TZID=Europe/Brussels:20260920T141500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – De West-Hoek Zwevezele HSE A (87-76)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13829846957-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T170000
+DTEND;TZID=Europe/Brussels:20260920T190000
+SUMMARY:Basket Midwest BP Tielt HSE A – BBC Koksijde HSE A (44-70)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12605478128-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:Basket SKT Ieper HSE C – Basket Blankenberge HSE A (61-73)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13845638838-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T173000
+DTEND;TZID=Europe/Brussels:20260926T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – KBBC. Stella P. Wikings Kortrijk HSE A (59-64)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12670911318-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Mibac Middelkerke HSE A – BBC Gullegem HSE A (68-82)
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13174931436-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:De West-Hoek Zwevezele HSE A – Zedelgem Lions HSE A (80-94)
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12269234200-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Koninklijke BBC Oostkamp HSE B (104-61)
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13645293148-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Wytewa Roeselare HSE A (68-81)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13777939982-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:BBC Koksijde HSE A – House Of Talents Kortrijk Spurs HSE C (81-53)
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12520457200-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T161500
+DTEND;TZID=Europe/Brussels:20261003T181500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Basket SKT Ieper HSE C (47-76)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12219445796-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – De West-Hoek Zwevezele HSE A (85-88)
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13896516148-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T181500
+DTEND;TZID=Europe/Brussels:20261003T201500
+SUMMARY:Basket Blankenberge HSE A – Basket Midwest BP Tielt HSE A (66-60)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12218901343-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – BBC Koksijde HSE A (66-75)
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12217768510-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T103000
+DTEND;TZID=Europe/Brussels:20261004T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Mibac Middelkerke HSE A (64-51)
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13375718411-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T113000
+DTEND;TZID=Europe/Brussels:20261004T133000
+SUMMARY:BBC Gullegem HSE A – Wytewa Roeselare HSE A (74-68)
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13192841888-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T170000
+DTEND;TZID=Europe/Brussels:20261004T190000
+SUMMARY:Zedelgem Lions HSE A – Holstra WINGS Wevelgem-Moorsele HSE B (96-72)
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12873375579-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261009T210000
+DTEND;TZID=Europe/Brussels:20261009T230000
+SUMMARY:Wytewa Roeselare HSE A – Basket Blankenberge HSE A (59-82)
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12806809556-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:Basket SKT Ieper HSE C – BBC Gullegem HSE A (51-61)
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14013415028-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T173000
+DTEND;TZID=Europe/Brussels:20261010T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Koninklijke BBC Oostkamp HSE B (101-53)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13293507602-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T201500
+DTEND;TZID=Europe/Brussels:20261010T221500
+SUMMARY:Zedelgem Lions HSE A – Mibac Middelkerke HSE A (81-60)
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13712403624-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T203000
+DTEND;TZID=Europe/Brussels:20261010T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – House Of Talents Kortrijk Spurs HSE C (77-48)
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13158153817-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T160000
+DTEND;TZID=Europe/Brussels:20261011T180000
+SUMMARY:De West-Hoek Zwevezele HSE A – BC Digiresto Knokke-Heist HSE A (81-86)
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13845050458-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:BBC Koksijde HSE A – KBBC. Stella P. Wikings Kortrijk HSE A (67-58)
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13409420744-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261016T210000
+DTEND;TZID=Europe/Brussels:20261016T230000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Basket Blankenberge HSE A (66-83)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12185890558-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – BBC Koksijde HSE A (62-85)
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13327062840-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T193000
+DTEND;TZID=Europe/Brussels:20261017T213000
+SUMMARY:Zedelgem Lions HSE A – Basket SKT Ieper HSE C (69-58)
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12252456581-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T203000
+DTEND;TZID=Europe/Brussels:20261017T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Mibac Middelkerke HSE A (84-95)
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12100325177-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T103000
+DTEND;TZID=Europe/Brussels:20261018T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Wytewa Roeselare HSE A (61-70)
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13358940792-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T113000
+DTEND;TZID=Europe/Brussels:20261018T133000
+SUMMARY:BBC Gullegem HSE A – Basket Midwest BP Tielt HSE A (81-54)
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13929526933-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – De West-Hoek Zwevezele HSE A (80-83)
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12604345295-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T153000
+DTEND;TZID=Europe/Brussels:20261018T173000
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Basket Blankenberge HSE A (53-93)
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12839820341-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261023T210000
+DTEND;TZID=Europe/Brussels:20261023T230000
+SUMMARY:Wytewa Roeselare HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12773254318-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T160000
+DTEND;TZID=Europe/Brussels:20261024T180000
+SUMMARY:Basket SKT Ieper HSE C – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13963082171-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T173000
+DTEND;TZID=Europe/Brussels:20261024T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – BC Digiresto Knokke-Heist HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13745517577-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Basket Blankenberge HSE A – BBC Gullegem HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13578182672-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T203000
+DTEND;TZID=Europe/Brussels:20261024T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Zedelgem Lions HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12805132270-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T153000
+DTEND;TZID=Europe/Brussels:20261025T173000
+SUMMARY:Mibac Middelkerke HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13794717601-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T170000
+DTEND;TZID=Europe/Brussels:20261025T190000
+SUMMARY:BBC Koksijde HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12974041293-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261106T210000
+DTEND;TZID=Europe/Brussels:20261106T230000
+SUMMARY:Wytewa Roeselare HSE A – Zedelgem Lions HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12622255747-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:Basket SKT Ieper HSE C – BC Digiresto Knokke-Heist HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12654133699-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T200000
+DTEND;TZID=Europe/Brussels:20261107T220000
+SUMMARY:Mibac Middelkerke HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13879738529-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Basket Blankenberge HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13762736481-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12772121485-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T131500
+DTEND;TZID=Europe/Brussels:20261108T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13744384744-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:BBC Koksijde HSE A – BBC Gullegem HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13862416457-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T173000
+DTEND;TZID=Europe/Brussels:20261114T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Mibac Middelkerke HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12034891987-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Wytewa Roeselare HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13225264293-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:De West-Hoek Zwevezele HSE A – Basket SKT Ieper HSE C
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13259952364-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T201500
+DTEND;TZID=Europe/Brussels:20261114T221500
+SUMMARY:Zedelgem Lions HSE A – BBC Koksijde HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12386677533-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12066769939-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T103000
+DTEND;TZID=Europe/Brussels:20261115T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Basket Blankenberge HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13308607935-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T113000
+DTEND;TZID=Europe/Brussels:20261115T133000
+SUMMARY:BBC Gullegem HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12823042722-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261120T210000
+DTEND;TZID=Europe/Brussels:20261120T230000
+SUMMARY:Wytewa Roeselare HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12672588604-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T160000
+DTEND;TZID=Europe/Brussels:20261121T180000
+SUMMARY:Basket SKT Ieper HSE C – Koninklijke BBC Oostkamp HSE B
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13779514100-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13930071386-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:Basket Blankenberge HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13442828887-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T113000
+DTEND;TZID=Europe/Brussels:20261122T133000
+SUMMARY:BBC Gullegem HSE A – Zedelgem Lions HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12654678152-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T131500
+DTEND;TZID=Europe/Brussels:20261122T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13861828077-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:BBC Koksijde HSE A – Mibac Middelkerke HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13828861219-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T173000
+DTEND;TZID=Europe/Brussels:20261128T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – BBC Koksijde HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12236223415-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T180000
+DTEND;TZID=Europe/Brussels:20261128T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – House Of Talents Kortrijk Spurs HSE C
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13410950935-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:Zedelgem Lions HSE A – Basket Blankenberge HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13124598579-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T200000
+DTEND;TZID=Europe/Brussels:20261128T220000
+SUMMARY:De West-Hoek Zwevezele HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12369899914-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Wytewa Roeselare HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12821909889-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:Mibac Middelkerke HSE A – Basket SKT Ieper HSE C
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12268101367-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T103000
+DTEND;TZID=Europe/Brussels:20261129T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – BBC Gullegem HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13979859790-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T173000
+DTEND;TZID=Europe/Brussels:20261212T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Wytewa Roeselare HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12269778653-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – BBC Gullegem HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13310285221-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T193000
+DTEND;TZID=Europe/Brussels:20261212T213000
+SUMMARY:Zedelgem Lions HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12168568486-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12855465127-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T133000
+DTEND;TZID=Europe/Brussels:20261213T153000
+SUMMARY:Mibac Middelkerke HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13141376198-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T160000
+DTEND;TZID=Europe/Brussels:20261213T180000
+SUMMARY:De West-Hoek Zwevezele HSE A – Basket Blankenberge HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13626941411-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:BBC Koksijde HSE A – Basket SKT Ieper HSE C
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12284878986-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261217T210000
+DTEND;TZID=Europe/Brussels:20261217T230000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12755932246-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261218T210000
+DTEND;TZID=Europe/Brussels:20261218T230000
+SUMMARY:Wytewa Roeselare HSE A – Mibac Middelkerke HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12823587175-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T160000
+DTEND;TZID=Europe/Brussels:20261219T180000
+SUMMARY:Basket SKT Ieper HSE C – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12570790057-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T161500
+DTEND;TZID=Europe/Brussels:20261219T181500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Zedelgem Lions HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13611737910-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13795850434-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Basket Blankenberge HSE A – BBC Koksijde HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13392496030-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T113000
+DTEND;TZID=Europe/Brussels:20261220T133000
+SUMMARY:BBC Gullegem HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12639033366-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:Basket SKT Ieper HSE C – Wytewa Roeselare HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12169112939-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12872242746-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:Mibac Middelkerke HSE A – Basket Blankenberge HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13309152388-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:De West-Hoek Zwevezele HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12302789438-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T203000
+DTEND;TZID=Europe/Brussels:20270109T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Zedelgem Lions HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13325385554-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T113000
+DTEND;TZID=Europe/Brussels:20270110T133000
+SUMMARY:BBC Gullegem HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13727607125-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:BBC Koksijde HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13343840459-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:Zedelgem Lions HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13628515529-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Basket SKT Ieper HSE C
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13728739958-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Basket Blankenberge HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12049992320-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T103000
+DTEND;TZID=Europe/Brussels:20270117T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13291830316-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T113000
+DTEND;TZID=Europe/Brussels:20270117T133000
+SUMMARY:BBC Gullegem HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12755343866-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T121500
+DTEND;TZID=Europe/Brussels:20270117T141500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Mibac Middelkerke HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12722377008-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T130000
+DTEND;TZID=Europe/Brussels:20270117T150000
+SUMMARY:Wytewa Roeselare HSE A – BBC Koksijde HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12806265103-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270122T210000
+DTEND;TZID=Europe/Brussels:20270122T230000
+SUMMARY:Wytewa Roeselare HSE A – BBC Gullegem HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14046970266-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T173000
+DTEND;TZID=Europe/Brussels:20270123T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Zedelgem Lions HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13694051887-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:BBC Koksijde HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12704466556-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:Mibac Middelkerke HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Vita Krokodiel\, Westendelaan 96\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12840364794-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T150000
+DTEND;TZID=Europe/Brussels:20270124T170000
+SUMMARY:Basket SKT Ieper HSE C – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Stedelijke sporthal 2 Ieper\, Leopold III laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13208486674-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T160000
+DTEND;TZID=Europe/Brussels:20270124T180000
+SUMMARY:De West-Hoek Zwevezele HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13678848386-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T170000
+DTEND;TZID=Europe/Brussels:20270124T190000
+SUMMARY:Basket Midwest BP Tielt HSE A – Basket Blankenberge HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12890153198-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T210000
+DTEND;TZID=Europe/Brussels:20270129T230000
+SUMMARY:Wytewa Roeselare HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12051669606-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – BC Digiresto Knokke-Heist HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13226397126-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:Zedelgem Lions HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13862960910-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Basket Blankenberge HSE A – Basket SKT Ieper HSE C
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12251323748-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T103000
+DTEND;TZID=Europe/Brussels:20270131T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13224719840-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T113000
+DTEND;TZID=Europe/Brussels:20270131T133000
+SUMMARY:BBC Gullegem HSE A – Mibac Middelkerke HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12721788628-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T131500
+DTEND;TZID=Europe/Brussels:20270131T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – BBC Koksijde HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12772709865-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T210000
+DTEND;TZID=Europe/Brussels:20270205T230000
+SUMMARY:Wytewa Roeselare HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12706143842-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T160000
+DTEND;TZID=Europe/Brussels:20270206T180000
+SUMMARY:Basket SKT Ieper HSE C – Zedelgem Lions HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13359485245-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:De West-Hoek Zwevezele HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12889020365-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:Mibac Middelkerke HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13745958862-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – BBC Gullegem HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13711962339-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T203000
+DTEND;TZID=Europe/Brussels:20270206T223000
+SUMMARY:Basket Blankenberge HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13610163792-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T170000
+DTEND;TZID=Europe/Brussels:20270207T190000
+SUMMARY:BBC Koksijde HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12940486055-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270219T210000
+DTEND;TZID=Europe/Brussels:20270219T230000
+SUMMARY:Wytewa Roeselare HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12857142413-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:Basket SKT Ieper HSE C – De West-Hoek Zwevezele HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12687688937-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:Mibac Middelkerke HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13643719030-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T200000
+DTEND;TZID=Europe/Brussels:20270220T220000
+SUMMARY:BBC Koksijde HSE A – Zedelgem Lions HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13779072815-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Basket Blankenberge HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13695626005-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12671455771-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T131500
+DTEND;TZID=Europe/Brussels:20270221T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – BBC Gullegem HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13107820960-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270226T190000
+DTEND;TZID=Europe/Brussels:20270226T210000
+SUMMARY:De West-Hoek Zwevezele HSE A – Wytewa Roeselare HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13912749314-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T173000
+DTEND;TZID=Europe/Brussels:20270227T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12118780082-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T180000
+DTEND;TZID=Europe/Brussels:20270227T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Basket SKT Ieper HSE C
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13209619507-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T193000
+DTEND;TZID=Europe/Brussels:20270227T213000
+SUMMARY:Zedelgem Lions HSE A – BBC Gullegem HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12754799413-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T200000
+DTEND;TZID=Europe/Brussels:20270227T220000
+SUMMARY:Mibac Middelkerke HSE A – BBC Koksijde HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12083547558-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T103000
+DTEND;TZID=Europe/Brussels:20270228T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12336344676-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T140000
+DTEND;TZID=Europe/Brussels:20270228T160000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Basket Blankenberge HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12856597960-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270305T210000
+DTEND;TZID=Europe/Brussels:20270305T230000
+SUMMARY:Wytewa Roeselare HSE A – BC Digiresto Knokke-Heist HSE A
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12790031937-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T160000
+DTEND;TZID=Europe/Brussels:20270306T180000
+SUMMARY:Basket SKT Ieper HSE C – Mibac Middelkerke HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13729181243-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13846183291-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Basket Blankenberge HSE A – Zedelgem Lions HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13241497459-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T113000
+DTEND;TZID=Europe/Brussels:20270307T133000
+SUMMARY:BBC Gullegem HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12537234819-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T131500
+DTEND;TZID=Europe/Brussels:20270307T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Koninklijke BBC Oostkamp HSE B
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13761162363-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:BBC Koksijde HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12152335320-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T180000
+DTEND;TZID=Europe/Brussels:20270313T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Mibac Middelkerke HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13427728554-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:Zedelgem Lions HSE A – Basket Midwest BP Tielt HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12151790867-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12117102796-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T103000
+DTEND;TZID=Europe/Brussels:20270314T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Basket SKT Ieper HSE C
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13409273649-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T113000
+DTEND;TZID=Europe/Brussels:20270314T133000
+SUMMARY:BBC Gullegem HSE A – Basket Blankenberge HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12637900533-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T131500
+DTEND;TZID=Europe/Brussels:20270314T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Wytewa Roeselare HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13292374769-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T160000
+DTEND;TZID=Europe/Brussels:20270314T180000
+SUMMARY:De West-Hoek Zwevezele HSE A – BBC Koksijde HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13996637409-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T173000
+DTEND;TZID=Europe/Brussels:20270320T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Basket Midwest BP Tielt HSE A
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12068447225-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Basket Blankenberge HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13444506173-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T193000
+DTEND;TZID=Europe/Brussels:20270320T213000
+SUMMARY:Zedelgem Lions HSE A – Wytewa Roeselare HSE A
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13258819531-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T200000
+DTEND;TZID=Europe/Brussels:20270320T220000
+SUMMARY:De West-Hoek Zwevezele HSE A – Mibac Middelkerke HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12286011819-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – Basket SKT Ieper HSE C
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12301656605-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T103000
+DTEND;TZID=Europe/Brussels:20270321T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13258275078-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T113000
+DTEND;TZID=Europe/Brussels:20270321T133000
+SUMMARY:BBC Gullegem HSE A – BBC Koksijde HSE A
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12253001034-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13913293767-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T181500
+DTEND;TZID=Europe/Brussels:20270410T201500
+SUMMARY:Basket Blankenberge HSE A – Wytewa Roeselare HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12771577032-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T200000
+DTEND;TZID=Europe/Brussels:20270410T220000
+SUMMARY:Mibac Middelkerke HSE A – Zedelgem Lions HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12185346105-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12184213272-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T103000
+DTEND;TZID=Europe/Brussels:20270411T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – BBC Koksijde HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13459606506-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T113000
+DTEND;TZID=Europe/Brussels:20270411T133000
+SUMMARY:BBC Gullegem HSE A – Basket SKT Ieper HSE C
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12621122914-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T131500
+DTEND;TZID=Europe/Brussels:20270411T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Basket Midwest BP Tielt HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12789487484-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270416T210000
+DTEND;TZID=Europe/Brussels:20270416T230000
+SUMMARY:Wytewa Roeselare HSE A – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12756476699-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T160000
+DTEND;TZID=Europe/Brussels:20270417T180000
+SUMMARY:Basket SKT Ieper HSE C – BBC Koksijde HSE A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13796291719-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Basket Midwest BP Tielt HSE A – Mibac Middelkerke HSE A
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13695184720-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Basket Blankenberge HSE A – De West-Hoek Zwevezele HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12167435653-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T103000
+DTEND;TZID=Europe/Brussels:20270418T123000
+SUMMARY:KBBC. Stella P. Wikings Kortrijk HSE A – Zedelgem Lions HSE A
+LOCATION:Lagae Plein\, Lagae Plein\, 8501 Heule
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13476384125-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T113000
+DTEND;TZID=Europe/Brussels:20270418T133000
+SUMMARY:BBC Gullegem HSE A – Koninklijke BBC Oostkamp HSE B
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12587567676-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T131500
+DTEND;TZID=Europe/Brussels:20270418T151500
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – BC Digiresto Knokke-Heist HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14030192647-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T173000
+DTEND;TZID=Europe/Brussels:20270424T193000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE B – Basket SKT Ieper HSE C
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12018114368-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T180000
+DTEND;TZID=Europe/Brussels:20270424T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Basket Midwest BP Tielt HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13243174745-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T193000
+DTEND;TZID=Europe/Brussels:20270424T213000
+SUMMARY:Zedelgem Lions HSE A – House Of Talents Kortrijk Spurs HSE C
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12838687508-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:Mibac Middelkerke HSE A – Wytewa Roeselare HSE A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12135013248-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T203000
+DTEND;TZID=Europe/Brussels:20270424T223000
+SUMMARY:BC Digiresto Knokke-Heist HSE A – BBC Gullegem HSE A
+LOCATION:De Stormmeeuw\, edw. Verheyestraat 14\, 8300 Knokke
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13242041912-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T160000
+DTEND;TZID=Europe/Brussels:20270425T180000
+SUMMARY:De West-Hoek Zwevezele HSE A – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13677274268-comp-s12503615663@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T170000
+DTEND;TZID=Europe/Brussels:20270425T190000
+SUMMARY:BBC Koksijde HSE A – Basket Blankenberge HSE A
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:1e Prov. Heren West-Vlaanderen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,942 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial 3 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-475312-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Bxl360 A – RBC Éclair D (59-42)
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475268-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T182000
+DTEND;TZID=Europe/Brussels:20260926T202000
+SUMMARY:BX Basketball – Athentia SC (78-83)
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475290-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:Avenir Evere BC B – Royal UAA Etterbeek B (74-51)
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475246-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:Royal Canter Schaerbeek – RBC Auderghem C (62-59)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475288-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T170000
+DTEND;TZID=Europe/Brussels:20261003T190000
+SUMMARY:Royal UAA Etterbeek B – Royal Canter Schaerbeek (57-73)
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475257-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T201500
+DTEND;TZID=Europe/Brussels:20261003T221500
+SUMMARY:Athentia SC – ASA Saint-Hubert Boitsfort B (67-63)
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475313-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:Bxl360 A – RBC Auderghem C (80-56)
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475291-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Avenir Evere BC B – Royal La Chenaie Uccle BC (65-48)
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475225-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T210000
+DTEND;TZID=Europe/Brussels:20261010T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – Royal UAA Etterbeek B (50-59)
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475254-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T110000
+DTEND;TZID=Europe/Brussels:20261011T130000
+SUMMARY:Royal Canter Schaerbeek – BX Basketball (65-58)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475223-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261016T191500
+DTEND;TZID=Europe/Brussels:20261016T211500
+SUMMARY:ASA Saint-Hubert Boitsfort B – RBC Éclair D (57-90)
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475238-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T130000
+DTEND;TZID=Europe/Brussels:20261018T150000
+SUMMARY:RBC Éclair D – Royal UAA Etterbeek B (61-60)
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475233-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261022T200000
+DTEND;TZID=Europe/Brussels:20261022T220000
+SUMMARY:ASA Saint-Hubert Boitsfort B – BX Basketball
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475300-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:RBC Auderghem C – Royal La Chenaie Uccle BC
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475286-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Royal UAA Etterbeek B – RBC Auderghem C
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475276-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T182000
+DTEND;TZID=Europe/Brussels:20261031T202000
+SUMMARY:BX Basketball – Royal La Chenaie Uccle BC
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475190-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Ass.Sp.St.Augustin A – Royal Canter Schaerbeek
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475280-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Royal UAA Etterbeek B – Royal La Chenaie Uccle BC
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475314-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Bxl360 A – BX Basketball
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475236-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T193000
+DTEND;TZID=Europe/Brussels:20261107T213000
+SUMMARY:RBC Éclair D – Ass.Sp.St.Augustin A
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475258-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T201500
+DTEND;TZID=Europe/Brussels:20261107T221500
+SUMMARY:Athentia SC – RBC Auderghem C
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475226-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – Avenir Evere BC B
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475235-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261112T203000
+DTEND;TZID=Europe/Brussels:20261112T223000
+SUMMARY:RBC Éclair D – Athentia SC
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475270-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T182000
+DTEND;TZID=Europe/Brussels:20261114T202000
+SUMMARY:BX Basketball – RBC Éclair D
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475292-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:Avenir Evere BC B – Bxl360 A
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475248-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:Royal Canter Schaerbeek – Athentia SC
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475281-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T190000
+DTEND;TZID=Europe/Brussels:20261121T210000
+SUMMARY:Royal UAA Etterbeek B – Ass.Sp.St.Augustin A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475237-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:RBC Éclair D – Royal La Chenaie Uccle BC
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475259-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T201500
+DTEND;TZID=Europe/Brussels:20261121T221500
+SUMMARY:Athentia SC – Bxl360 A
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475227-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – Royal Canter Schaerbeek
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475303-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:RBC Auderghem C – BX Basketball
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475315-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Bxl360 A – Athentia SC
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475271-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T182000
+DTEND;TZID=Europe/Brussels:20261128T202000
+SUMMARY:BX Basketball – RBC Auderghem C
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475215-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:Royal La Chenaie Uccle BC – RBC Éclair D
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475193-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:Ass.Sp.St.Augustin A – Royal UAA Etterbeek B
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475249-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261204T201500
+DTEND;TZID=Europe/Brussels:20261204T221500
+SUMMARY:Royal Canter Schaerbeek – ASA Saint-Hubert Boitsfort B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475294-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T190000
+DTEND;TZID=Europe/Brussels:20261205T210000
+SUMMARY:Avenir Evere BC B – RBC Éclair D
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475194-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T203000
+DTEND;TZID=Europe/Brussels:20261205T223000
+SUMMARY:Ass.Sp.St.Augustin A – RBC Auderghem C
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475216-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T210000
+DTEND;TZID=Europe/Brussels:20261205T230000
+SUMMARY:Royal La Chenaie Uccle BC – Athentia SC
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475250-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:Royal Canter Schaerbeek – Royal UAA Etterbeek B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475282-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:Royal UAA Etterbeek B – Athentia SC
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475273-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T182000
+DTEND;TZID=Europe/Brussels:20261212T202000
+SUMMARY:BX Basketball – Avenir Evere BC B
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475195-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:Ass.Sp.St.Augustin A – Bxl360 A
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475217-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T210000
+DTEND;TZID=Europe/Brussels:20261212T230000
+SUMMARY:Royal La Chenaie Uccle BC – ASA Saint-Hubert Boitsfort B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475251-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T110000
+DTEND;TZID=Europe/Brussels:20261213T130000
+SUMMARY:Royal Canter Schaerbeek – RBC Éclair D
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475317-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:Bxl360 A – Royal La Chenaie Uccle BC
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475295-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T190000
+DTEND;TZID=Europe/Brussels:20261219T210000
+SUMMARY:Avenir Evere BC B – Royal Canter Schaerbeek
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475260-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T201500
+DTEND;TZID=Europe/Brussels:20261219T221500
+SUMMARY:Athentia SC – Ass.Sp.St.Augustin A
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475228-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – RBC Auderghem C
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475301-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270102T210000
+DTEND;TZID=Europe/Brussels:20270102T230000
+SUMMARY:RBC Auderghem C – RBC Éclair D
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475220-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270103T150000
+DTEND;TZID=Europe/Brussels:20270103T170000
+SUMMARY:Royal La Chenaie Uccle BC – Royal Canter Schaerbeek
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475318-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:Bxl360 A – ASA Saint-Hubert Boitsfort B
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475274-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T182000
+DTEND;TZID=Europe/Brussels:20270109T202000
+SUMMARY:BX Basketball – Royal UAA Etterbeek B
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475218-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:Royal La Chenaie Uccle BC – RBC Auderghem C
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475252-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T110000
+DTEND;TZID=Europe/Brussels:20270110T130000
+SUMMARY:Royal Canter Schaerbeek – Ass.Sp.St.Augustin A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475283-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T150000
+DTEND;TZID=Europe/Brussels:20270116T170000
+SUMMARY:Royal UAA Etterbeek B – Avenir Evere BC B
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475239-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:RBC Éclair D – Bxl360 A
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475196-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Ass.Sp.St.Augustin A – Royal La Chenaie Uccle BC
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475305-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:RBC Auderghem C – Royal Canter Schaerbeek
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475284-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:Royal UAA Etterbeek B – RBC Éclair D
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475219-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:Royal La Chenaie Uccle BC – Bxl360 A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475197-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T203000
+DTEND;TZID=Europe/Brussels:20270123T223000
+SUMMARY:Ass.Sp.St.Augustin A – Athentia SC
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475306-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T110000
+DTEND;TZID=Europe/Brussels:20270124T130000
+SUMMARY:RBC Auderghem C – ASA Saint-Hubert Boitsfort B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475253-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:Royal Canter Schaerbeek – Avenir Evere BC B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475212-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270125T203000
+DTEND;TZID=Europe/Brussels:20270125T223000
+SUMMARY:Royal La Chenaie Uccle BC – Ass.Sp.St.Augustin A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475285-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:Royal UAA Etterbeek B – Bxl360 A
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475240-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:RBC Éclair D – ASA Saint-Hubert Boitsfort B
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475198-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Ass.Sp.St.Augustin A – BX Basketball
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475307-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:RBC Auderghem C – Avenir Evere BC B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475319-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:Bxl360 A – Ass.Sp.St.Augustin A
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475297-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:Avenir Evere BC B – BX Basketball
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475241-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:RBC Éclair D – Royal Canter Schaerbeek
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475263-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T201500
+DTEND;TZID=Europe/Brussels:20270206T221500
+SUMMARY:Athentia SC – Royal UAA Etterbeek B
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475230-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – Royal La Chenaie Uccle BC
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475242-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:RBC Éclair D – RBC Auderghem C
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475320-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:Bxl360 A – Royal Canter Schaerbeek
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475298-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:Avenir Evere BC B – Ass.Sp.St.Augustin A
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475231-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:ASA Saint-Hubert Boitsfort B – Athentia SC
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475213-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T150000
+DTEND;TZID=Europe/Brussels:20270214T170000
+SUMMARY:Royal La Chenaie Uccle BC – BX Basketball
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475232-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270219T191500
+DTEND;TZID=Europe/Brussels:20270219T211500
+SUMMARY:ASA Saint-Hubert Boitsfort B – Ass.Sp.St.Augustin A
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475321-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:Bxl360 A – Avenir Evere BC B
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475243-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T193000
+DTEND;TZID=Europe/Brussels:20270220T213000
+SUMMARY:RBC Éclair D – BX Basketball
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475264-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T201500
+DTEND;TZID=Europe/Brussels:20270220T221500
+SUMMARY:Athentia SC – Royal Canter Schaerbeek
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475296-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270224T210000
+DTEND;TZID=Europe/Brussels:20270224T230000
+SUMMARY:Avenir Evere BC B – Athentia SC
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475261-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T201500
+DTEND;TZID=Europe/Brussels:20270227T221500
+SUMMARY:Athentia SC – BX Basketball
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475192-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T203000
+DTEND;TZID=Europe/Brussels:20270227T223000
+SUMMARY:Ass.Sp.St.Augustin A – ASA Saint-Hubert Boitsfort B
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475302-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T210000
+DTEND;TZID=Europe/Brussels:20270227T230000
+SUMMARY:RBC Auderghem C – Royal UAA Etterbeek B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475272-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T182000
+DTEND;TZID=Europe/Brussels:20270306T202000
+SUMMARY:BX Basketball – ASA Saint-Hubert Boitsfort B
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475191-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:Ass.Sp.St.Augustin A – Avenir Evere BC B
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475247-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T110000
+DTEND;TZID=Europe/Brussels:20270307T130000
+SUMMARY:Royal Canter Schaerbeek – Bxl360 A
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475267-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270311T201500
+DTEND;TZID=Europe/Brussels:20270311T221500
+SUMMARY:BX Basketball – Ass.Sp.St.Augustin A
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475287-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:Royal UAA Etterbeek B – ASA Saint-Hubert Boitsfort B
+LOCATION:Salle Serge Chojnacki\, Avenue des Volontaires 110\, 1040 Etterbeek
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475265-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T201500
+DTEND;TZID=Europe/Brussels:20270313T221500
+SUMMARY:Athentia SC – RBC Éclair D
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475221-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:Royal La Chenaie Uccle BC – Avenir Evere BC B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475308-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:RBC Auderghem C – Bxl360 A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475299-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270317T210000
+DTEND;TZID=Europe/Brussels:20270317T230000
+SUMMARY:Avenir Evere BC B – ASA Saint-Hubert Boitsfort B
+LOCATION:Salle Omnisports de l'Aubier\, Rue des Deux Maison 34\, 1140 Evere
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475277-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T182000
+DTEND;TZID=Europe/Brussels:20270320T202000
+SUMMARY:BX Basketball – Bxl360 A
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475222-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T200000
+DTEND;TZID=Europe/Brussels:20270320T220000
+SUMMARY:Royal La Chenaie Uccle BC – Royal UAA Etterbeek B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475200-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T203000
+DTEND;TZID=Europe/Brussels:20270320T223000
+SUMMARY:Ass.Sp.St.Augustin A – RBC Éclair D
+LOCATION:Petit Palais des Sports de Forest\, Rue Rosendael 2\, 1190 Forest
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475309-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T110000
+DTEND;TZID=Europe/Brussels:20270321T130000
+SUMMARY:RBC Auderghem C – Athentia SC
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475269-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T182000
+DTEND;TZID=Europe/Brussels:20270327T202000
+SUMMARY:BX Basketball – Royal Canter Schaerbeek
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475244-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T193000
+DTEND;TZID=Europe/Brussels:20270327T213000
+SUMMARY:RBC Éclair D – Avenir Evere BC B
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475266-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T201500
+DTEND;TZID=Europe/Brussels:20270327T221500
+SUMMARY:Athentia SC – Royal La Chenaie Uccle BC
+LOCATION:Complexe Sportif Berchem\, Rue des Chalets 1\, 1082 Berchem-Sainte-Agathe
+DESCRIPTION:P3H C
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475310-comp-s6286@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T210000
+DTEND;TZID=Europe/Brussels:20270327T230000
+SUMMARY:RBC Auderghem C – Ass.Sp.St.Augustin A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H C
+END:VEVENT
+END:VCALENDAR

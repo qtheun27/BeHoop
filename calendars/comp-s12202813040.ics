@@ -1,0 +1,1536 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:2e Prov. Heren Antwerpen A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11379795415-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T111500
+DTEND;TZID=Europe/Brussels:20260920T131500
+SUMMARY:Guco Lier HSE E – Basket Stabroek HSE A (70-79)
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11043654655-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T150000
+DTEND;TZID=Europe/Brussels:20260920T170000
+SUMMARY:Basket Malle HSE A – Mercurius BBC Hoboken-Berchem HSE C (51-61)
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10592777513-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Olicsa Antwerpen HSE B (69-51)
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11766813485-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T173000
+DTEND;TZID=Europe/Brussels:20260926T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – BBC Makeba Mariaburg Brasschaat HSE A (95-53)
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14181804883-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T193000
+DTEND;TZID=Europe/Brussels:20260926T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Geranimo Bornem Basket HSE B (70-66)
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11195786059-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Wuustwezel BBC HSE A – Basket Malle HSE A (74-81)
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10725321179-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:BBC Putte HSE A – Guco Lier HSE E (78-80)
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11563907939-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:Basket Stabroek HSE A – Titans Basketball Bonheiden HSE B (76-72)
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10122312633-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T110000
+DTEND;TZID=Europe/Brussels:20260927T130000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Campinia Dessel-Retie HSE A (54-61)
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10003736467-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T174500
+DTEND;TZID=Europe/Brussels:20261003T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Wuustwezel BBC HSE A (84-46)
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10474201347-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T180000
+DTEND;TZID=Europe/Brussels:20261003T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – BBC Putte HSE A (71-58)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10071391396-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – KBBC T&T Turnhout HSE C (67-43)
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10139634705-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Sobabee Bazel@Den Draver HSE B (75-72)
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10994895916-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Guco Lier HSE E (84-58)
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11783149819-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:Olicsa Antwerpen HSE B – Basket Stabroek HSE A (51-75)
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11110765131-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T150000
+DTEND;TZID=Europe/Brussels:20261004T170000
+SUMMARY:Basket Malle HSE A – BC Cobras Schoten-Brasschaat HSE A (90-69)
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10659887989-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Campinia Dessel-Retie HSE A (58-72)
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10658210703-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T193000
+DTEND;TZID=Europe/Brussels:20261010T213000
+SUMMARY:BBC Putte HSE A – Olicsa Antwerpen HSE B (62-73)
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11279674154-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T200000
+DTEND;TZID=Europe/Brussels:20261010T220000
+SUMMARY:Wuustwezel BBC HSE A – Mercurius BBC Hoboken-Berchem HSE C (62-32)
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11765239367-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T201500
+DTEND;TZID=Europe/Brussels:20261010T221500
+SUMMARY:Basket Stabroek HSE A – BBC Makeba Mariaburg Brasschaat HSE A (74-61)
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11295907320-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T111500
+DTEND;TZID=Europe/Brussels:20261011T131500
+SUMMARY:Guco Lier HSE E – Titans Basketball Bonheiden HSE B (87-84)
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10290088823-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Geranimo Bornem Basket HSE B (70-78)
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11599037295-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T170000
+DTEND;TZID=Europe/Brussels:20261011T190000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Basket Malle HSE A (59-66)
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11833482676-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T170000
+DTEND;TZID=Europe/Brussels:20261017T190000
+SUMMARY:Olicsa Antwerpen HSE B – Titans Basketball Bonheiden HSE B (99-103)
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10104402181-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T174500
+DTEND;TZID=Europe/Brussels:20261017T194500
+SUMMARY:Geranimo Bornem Basket HSE B – KBBC T&T Turnhout HSE C (63-82)
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10104946634-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T180000
+DTEND;TZID=Europe/Brussels:20261017T200000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Sobabee Bazel@Den Draver HSE B (60-67)
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14283603430-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T183000
+DTEND;TZID=Europe/Brussels:20261017T203000
+SUMMARY:Campinia Dessel-Retie HSE A – Guco Lier HSE E (58-55)
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11078342726-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T200000
+DTEND;TZID=Europe/Brussels:20261017T220000
+SUMMARY:Wuustwezel BBC HSE A – BC Cobras Schoten-Brasschaat HSE A (50-49)
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11011673535-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – BBC Putte HSE A (76-66)
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10976544179-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T150000
+DTEND;TZID=Europe/Brussels:20261018T170000
+SUMMARY:Basket Malle HSE A – Basket Stabroek HSE A (62-46)
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10575999894-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T160000
+DTEND;TZID=Europe/Brussels:20261024T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Wuustwezel BBC HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11632592533-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T173000
+DTEND;TZID=Europe/Brussels:20261024T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10692310394-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T180000
+DTEND;TZID=Europe/Brussels:20261024T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10792431655-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T200000
+DTEND;TZID=Europe/Brussels:20261024T220000
+SUMMARY:BBC Putte HSE A – Basket Malle HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11731684129-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T201500
+DTEND;TZID=Europe/Brussels:20261024T221500
+SUMMARY:Basket Stabroek HSE A – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10206200728-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T110000
+DTEND;TZID=Europe/Brussels:20261025T130000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11262352082-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T111500
+DTEND;TZID=Europe/Brussels:20261025T131500
+SUMMARY:Guco Lier HSE E – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10559222275-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T160000
+DTEND;TZID=Europe/Brussels:20261107T180000
+SUMMARY:KBBC T&T Turnhout HSE C – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11716480628-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T173000
+DTEND;TZID=Europe/Brussels:20261107T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Wuustwezel BBC HSE A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10558089442-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T180000
+DTEND;TZID=Europe/Brussels:20261107T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10674988322-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T193000
+DTEND;TZID=Europe/Brussels:20261107T213000
+SUMMARY:BBC Putte HSE A – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11547130320-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T201500
+DTEND;TZID=Europe/Brussels:20261107T221500
+SUMMARY:Basket Stabroek HSE A – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11732816962-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Olicsa Antwerpen HSE B – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11396573034-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T111500
+DTEND;TZID=Europe/Brussels:20261108T131500
+SUMMARY:Guco Lier HSE E – Basket Malle HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10188290276-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T174500
+DTEND;TZID=Europe/Brussels:20261114T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Guco Lier HSE E
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14265692978-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T193000
+DTEND;TZID=Europe/Brussels:20261114T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – BBC Putte HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11750035866-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11212563678-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T200000
+DTEND;TZID=Europe/Brussels:20261114T220000
+SUMMARY:Wuustwezel BBC HSE A – Basket Stabroek HSE A
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14250048192-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T203000
+DTEND;TZID=Europe/Brussels:20261114T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Titans Basketball Bonheiden HSE B
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11062006392-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T210000
+DTEND;TZID=Europe/Brussels:20261114T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11177875607-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T150000
+DTEND;TZID=Europe/Brussels:20261115T170000
+SUMMARY:Basket Malle HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10507756585-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10643110370-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T180000
+DTEND;TZID=Europe/Brussels:20261121T200000
+SUMMARY:KBBC T&T Turnhout HSE C – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10591100227-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T200000
+DTEND;TZID=Europe/Brussels:20261121T220000
+SUMMARY:BBC Putte HSE A – Campinia Dessel-Retie HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11631018415-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T201500
+DTEND;TZID=Europe/Brussels:20261121T221500
+SUMMARY:Basket Stabroek HSE A – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10927785440-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Basket Malle HSE A
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11648928867-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Olicsa Antwerpen HSE B – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11279129701-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T110000
+DTEND;TZID=Europe/Brussels:20261122T130000
+SUMMARY:Guco Lier HSE E – Wuustwezel BBC HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11615814914-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T173000
+DTEND;TZID=Europe/Brussels:20261128T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Basket Stabroek HSE A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14281926144-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T174500
+DTEND;TZID=Europe/Brussels:20261128T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14282470597-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T193000
+DTEND;TZID=Europe/Brussels:20261128T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Guco Lier HSE E
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11246118916-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T200000
+DTEND;TZID=Europe/Brussels:20261128T220000
+SUMMARY:Wuustwezel BBC HSE A – BBC Putte HSE A
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10156412324-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T203000
+DTEND;TZID=Europe/Brussels:20261128T223000
+SUMMARY:Campinia Dessel-Retie HSE A – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10071979776-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T130000
+DTEND;TZID=Europe/Brussels:20261129T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11026877036-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T150000
+DTEND;TZID=Europe/Brussels:20261129T170000
+SUMMARY:Basket Malle HSE A – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11194653226-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T153000
+DTEND;TZID=Europe/Brussels:20261206T173000
+SUMMARY:Basket Malle HSE A – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10676665608-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T160000
+DTEND;TZID=Europe/Brussels:20261212T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Basket Stabroek HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11515149200-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T173000
+DTEND;TZID=Europe/Brussels:20261212T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – BBC Putte HSE A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10020514086-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T174500
+DTEND;TZID=Europe/Brussels:20261212T194500
+SUMMARY:Geranimo Bornem Basket HSE B – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10054613777-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11296451773-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T200000
+DTEND;TZID=Europe/Brussels:20261212T220000
+SUMMARY:Wuustwezel BBC HSE A – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10256533585-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Guco Lier HSE E
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10641977537-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11127542750-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T200000
+DTEND;TZID=Europe/Brussels:20261219T220000
+SUMMARY:Basket Malle HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10825986893-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T200000
+DTEND;TZID=Europe/Brussels:20261219T220000
+SUMMARY:BBC Putte HSE A – Geranimo Bornem Basket HSE B
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11748461748-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T201500
+DTEND;TZID=Europe/Brussels:20261219T221500
+SUMMARY:Basket Stabroek HSE A – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10206745181-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T203000
+DTEND;TZID=Europe/Brussels:20261219T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Wuustwezel BBC HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11045228773-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11212019225-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T111500
+DTEND;TZID=Europe/Brussels:20261220T131500
+SUMMARY:Guco Lier HSE E – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10777331322-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T160000
+DTEND;TZID=Europe/Brussels:20270109T180000
+SUMMARY:KBBC T&T Turnhout HSE C – BBC Putte HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11565482057-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T173000
+DTEND;TZID=Europe/Brussels:20270109T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10054069324-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T174500
+DTEND;TZID=Europe/Brussels:20270109T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14215360121-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T193000
+DTEND;TZID=Europe/Brussels:20270109T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Basket Malle HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11061565107-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T200000
+DTEND;TZID=Europe/Brussels:20270109T220000
+SUMMARY:Wuustwezel BBC HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11597463177-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T201500
+DTEND;TZID=Europe/Brussels:20270109T221500
+SUMMARY:Basket Stabroek HSE A – Guco Lier HSE E
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10155867871-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10709088013-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T180000
+DTEND;TZID=Europe/Brussels:20270116T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14266825811-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10809209274-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:BBC Putte HSE A – Basket Stabroek HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11749594581-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:Olicsa Antwerpen HSE B – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11078784011-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Wuustwezel BBC HSE A
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11178463987-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T111500
+DTEND;TZID=Europe/Brussels:20270117T131500
+SUMMARY:Guco Lier HSE E – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10959766560-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:Basket Malle HSE A – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10743776084-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T160000
+DTEND;TZID=Europe/Brussels:20270123T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11666147771-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T173000
+DTEND;TZID=Europe/Brussels:20270123T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11229341297-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:Wuustwezel BBC HSE A – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10758876417-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T200000
+DTEND;TZID=Europe/Brussels:20270123T220000
+SUMMARY:BBC Putte HSE A – Titans Basketball Bonheiden HSE B
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11798794605-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T201500
+DTEND;TZID=Europe/Brussels:20270123T221500
+SUMMARY:Basket Stabroek HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11228796844-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T111500
+DTEND;TZID=Europe/Brussels:20270124T131500
+SUMMARY:Guco Lier HSE E – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10323644061-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Basket Malle HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10238623133-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T174500
+DTEND;TZID=Europe/Brussels:20270130T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10574867061-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T180000
+DTEND;TZID=Europe/Brussels:20270130T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Basket Stabroek HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11144320369-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T190000
+DTEND;TZID=Europe/Brussels:20270130T210000
+SUMMARY:Basket Malle HSE A – Wuustwezel BBC HSE A
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10173189943-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T203000
+DTEND;TZID=Europe/Brussels:20270130T223000
+SUMMARY:Campinia Dessel-Retie HSE A – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11145894487-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11716039343-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:Olicsa Antwerpen HSE B – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11346240177-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T111500
+DTEND;TZID=Europe/Brussels:20270131T131500
+SUMMARY:Guco Lier HSE E – BBC Putte HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10172645490-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270204T210000
+DTEND;TZID=Europe/Brussels:20270204T230000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Wuustwezel BBC HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10693443227-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T160000
+DTEND;TZID=Europe/Brussels:20270206T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11548704438-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T173000
+DTEND;TZID=Europe/Brussels:20270206T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10658755156-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T180000
+DTEND;TZID=Europe/Brussels:20270206T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Olicsa Antwerpen HSE B
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10691765941-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T200000
+DTEND;TZID=Europe/Brussels:20270206T220000
+SUMMARY:BBC Putte HSE A – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11664573653-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T201500
+DTEND;TZID=Europe/Brussels:20270206T221500
+SUMMARY:Basket Stabroek HSE A – Basket Malle HSE A
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11195241606-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T111500
+DTEND;TZID=Europe/Brussels:20270214T131500
+SUMMARY:Guco Lier HSE E – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10726998465-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T160000
+DTEND;TZID=Europe/Brussels:20270220T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Basket Malle HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10591644680-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T180000
+DTEND;TZID=Europe/Brussels:20270220T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11782016986-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T201500
+DTEND;TZID=Europe/Brussels:20270220T221500
+SUMMARY:Basket Stabroek HSE A – Wuustwezel BBC HSE A
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11632151248-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:Olicsa Antwerpen HSE B – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11363017796-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T111500
+DTEND;TZID=Europe/Brussels:20270221T131500
+SUMMARY:Guco Lier HSE E – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10742098798-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:BBC Putte HSE A – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10105535014-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11682925390-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T173000
+DTEND;TZID=Europe/Brussels:20270227T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10171512657-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T174500
+DTEND;TZID=Europe/Brussels:20270227T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Basket Stabroek HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14248915359-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T193000
+DTEND;TZID=Europe/Brussels:20270227T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11262896535-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T200000
+DTEND;TZID=Europe/Brussels:20270227T220000
+SUMMARY:Wuustwezel BBC HSE A – Guco Lier HSE E
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10005413753-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T203000
+DTEND;TZID=Europe/Brussels:20270227T223000
+SUMMARY:Campinia Dessel-Retie HSE A – BBC Putte HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10189423109-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T130000
+DTEND;TZID=Europe/Brussels:20270228T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11093987512-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270228T161500
+DTEND;TZID=Europe/Brussels:20270228T181500
+SUMMARY:Basket Malle HSE A – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10542444656-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T160000
+DTEND;TZID=Europe/Brussels:20270306T180000
+SUMMARY:KBBC T&T Turnhout HSE C – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10524534204-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T180000
+DTEND;TZID=Europe/Brussels:20270306T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Basket Malle HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10641433084-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T200000
+DTEND;TZID=Europe/Brussels:20270306T220000
+SUMMARY:BBC Putte HSE A – Wuustwezel BBC HSE A
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11714906510-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T201500
+DTEND;TZID=Europe/Brussels:20270306T221500
+SUMMARY:Basket Stabroek HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11766372200-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T210000
+DTEND;TZID=Europe/Brussels:20270306T230000
+SUMMARY:Olicsa Antwerpen HSE B – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11129116868-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T210000
+DTEND;TZID=Europe/Brussels:20270306T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11312684939-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T111500
+DTEND;TZID=Europe/Brussels:20270307T131500
+SUMMARY:Guco Lier HSE E – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10070846943-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T174500
+DTEND;TZID=Europe/Brussels:20270313T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10004280920-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T193000
+DTEND;TZID=Europe/Brussels:20270313T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11145453202-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T200000
+DTEND;TZID=Europe/Brussels:20270313T220000
+SUMMARY:Wuustwezel BBC HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10038968991-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T203000
+DTEND;TZID=Europe/Brussels:20270313T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Basket Stabroek HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11028451154-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11867037914-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:Olicsa Antwerpen HSE B – Guco Lier HSE E
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11077209893-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T161500
+DTEND;TZID=Europe/Brussels:20270314T181500
+SUMMARY:Basket Malle HSE A – BBC Putte HSE A
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10221845514-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T174500
+DTEND;TZID=Europe/Brussels:20270320T194500
+SUMMARY:Geranimo Bornem Basket HSE B – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14165027264-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T193000
+DTEND;TZID=Europe/Brussels:20270320T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Basket Stabroek HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11111897964-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T200000
+DTEND;TZID=Europe/Brussels:20270320T220000
+SUMMARY:Wuustwezel BBC HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11179449725-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T210000
+DTEND;TZID=Europe/Brussels:20270320T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10239755966-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T130000
+DTEND;TZID=Europe/Brussels:20270321T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – BBC Putte HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10189967562-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T150000
+DTEND;TZID=Europe/Brussels:20270321T170000
+SUMMARY:Campinia Dessel-Retie HSE A – Olicsa Antwerpen HSE B
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11060432274-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T161500
+DTEND;TZID=Europe/Brussels:20270321T181500
+SUMMARY:Basket Malle HSE A – Guco Lier HSE E
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10037291705-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T174500
+DTEND;TZID=Europe/Brussels:20270410T194500
+SUMMARY:Geranimo Bornem Basket HSE B – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10457423728-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T180000
+DTEND;TZID=Europe/Brussels:20270410T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Guco Lier HSE E
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11211430845-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:Basket Malle HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Sporthal Berckhoven\, Berckhovenstraat\, 2390 Westmalle
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10037836158-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T193000
+DTEND;TZID=Europe/Brussels:20270410T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – Wuustwezel BBC HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10106079467-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T203000
+DTEND;TZID=Europe/Brussels:20270410T223000
+SUMMARY:Campinia Dessel-Retie HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10978118297-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Basket Stabroek HSE A
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11883815533-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:Olicsa Antwerpen HSE B – BBC Putte HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10675532775-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T180000
+DTEND;TZID=Europe/Brussels:20270417T200000
+SUMMARY:Titans Basketball Bonheiden HSE B – Wuustwezel BBC HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11681351272-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T201500
+DTEND;TZID=Europe/Brussels:20270417T221500
+SUMMARY:Basket Stabroek HSE A – KBBC T&T Turnhout HSE C
+LOCATION:Sporthal Attenhoven\, Kerkstraat 87\, 2940 Hoevenen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10055746610-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T203000
+DTEND;TZID=Europe/Brussels:20270417T223000
+SUMMARY:Campinia Dessel-Retie HSE A – Basket Malle HSE A
+LOCATION:Sportpark Brasel\, Brasel\, 2480 Dessel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11850260295-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:Olicsa Antwerpen HSE B – Mercurius BBC Hoboken-Berchem HSE C
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10961340678-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T210000
+DTEND;TZID=Europe/Brussels:20270417T230000
+SUMMARY:BBC Makeba Mariaburg Brasschaat HSE A – Geranimo Bornem Basket HSE B
+LOCATION:Sporthal Mariaburg\, Annadreef 7\, 2930 Brasschaat
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11245574463-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T111500
+DTEND;TZID=Europe/Brussels:20270418T131500
+SUMMARY:Guco Lier HSE E – BC Cobras Schoten-Brasschaat HSE A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10574322608-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T170000
+DTEND;TZID=Europe/Brussels:20270418T190000
+SUMMARY:BBC Putte HSE A – Sobabee Bazel@Den Draver HSE B
+LOCATION:Gemeentelijke sporthal Klein Boom\, Mechelbaan 604\, 2580 Putte
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10760553703-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T160000
+DTEND;TZID=Europe/Brussels:20270424T180000
+SUMMARY:KBBC T&T Turnhout HSE C – Titans Basketball Bonheiden HSE B
+LOCATION:Sporthal St. Victor\, Kasteelplein 20\, 2300 Turnhout
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11531926819-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T173000
+DTEND;TZID=Europe/Brussels:20270424T193000
+SUMMARY:Sobabee Bazel@Den Draver HSE B – Guco Lier HSE E
+LOCATION:Sporthal Zwijndrecht\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10205067895-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T174500
+DTEND;TZID=Europe/Brussels:20270424T194500
+SUMMARY:Geranimo Bornem Basket HSE B – BBC Putte HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10021058539-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T193000
+DTEND;TZID=Europe/Brussels:20270424T213000
+SUMMARY:Mercurius BBC Hoboken-Berchem HSE C – BBC Makeba Mariaburg Brasschaat HSE A
+LOCATION:Sporthal Het Rooi\, Berchemstadionstraat 73\, 2600 Berchem (Ant)
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11128675583-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T200000
+DTEND;TZID=Europe/Brussels:20270424T220000
+SUMMARY:Wuustwezel BBC HSE A – Campinia Dessel-Retie HSE A
+LOCATION:Sporthal Wuustwezel\, Slijkstraat\, 2990 Wuustwezel
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10273311204-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:BC Cobras Schoten-Brasschaat HSE A – Basket Stabroek HSE A
+LOCATION:Sporthal De Zeurt\, Eksterdreef 6\, 2900 Schoten
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11799927438-comp-s12202813040@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T150000
+DTEND;TZID=Europe/Brussels:20270425T170000
+SUMMARY:Olicsa Antwerpen HSE B – Basket Malle HSE A
+LOCATION:Sporthal St-Ludgardis\, Begijnenstraat 49\, 2000 Antwerpen
+DESCRIPTION:2e Prov. Heren Antwerpen A 
+END:VEVENT
+END:VCALENDAR

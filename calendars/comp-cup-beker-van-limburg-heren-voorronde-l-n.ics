@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Limburg Heren Voorronde L & N
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13024507715-comp-cup-beker-van-limburg-heren-voorronde-l-n@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:Hades Kiewit BBC HSE A – KBBC Zolder vzw HSE A
+LOCATION:Kiewit\, Tulpinstraat 40\, 3500 Hasselt
+DESCRIPTION:Beker van Limburg Heren Voorronde L & N 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13007730096-comp-cup-beker-van-limburg-heren-voorronde-l-n@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270114T210000
+DTEND;TZID=Europe/Brussels:20270114T230000
+SUMMARY:KBBC Miners Beringen HSE A – BasKet Tongeren HSE B
+LOCATION:Spectrum College Campus Beringen\, Koolmijnlaan 80\, 3580 Beringen
+DESCRIPTION:Beker van Limburg Heren Voorronde L & N 
+END:VEVENT
+END:VCALENDAR

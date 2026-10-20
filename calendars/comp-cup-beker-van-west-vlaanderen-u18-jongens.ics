@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van West-Vlaanderen U18 Jongens
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13616330583-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:Basket Poperinge J18 A – Basket Sijsele J18 A
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13649885821-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T110000
+DTEND;TZID=Europe/Brussels:20261107T130000
+SUMMARY:KBBC Vk Iebac Ieper J18 A – Basket Blankenberge J18 B
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13599552964-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:BC Lamett Deerlijk-Zwevegem J18 B – Rapid Raptors Langemark J18 A
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13582775345-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T140000
+DTEND;TZID=Europe/Brussels:20261107T160000
+SUMMARY:Basket Desselgem J18 A – BBC Gullegem J18 A
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13532442488-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Basket Midwest BP Tielt J18 A – Basket SKT Ieper J18 B
+LOCATION:Stedelijke Sporthal Tielt\, Sportlaan 1\, 8700 Tielt
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13565997726-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:BBC Koksijde J18 A – KBGOB Finexa Basket@Sea J18 B
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14198829390-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T100000
+DTEND;TZID=Europe/Brussels:20261219T120000
+SUMMARY:House Of Talents Kortrijk Spurs J18 B – Wibac BBC Sint-Eloois-Winkel J18 A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14182051771-comp-cup-beker-van-west-vlaanderen-u18-jongens@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:Bobcat Wielsbeke J18 A – Holstra WINGS Wevelgem-Moorsele J18 B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Beker van West-Vlaanderen U18 Jongens 1/8 Finale
+END:VEVENT
+END:VCALENDAR

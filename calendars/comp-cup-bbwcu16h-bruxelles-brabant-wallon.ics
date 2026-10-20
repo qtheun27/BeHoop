@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:BBWCU16H
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-496377-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261014T190000
+DTEND;TZID=Europe/Brussels:20261014T210000
+SUMMARY:Royal Canter Schaerbeek B – CRBB The Runners (64-78)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496382-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261015T193000
+DTEND;TZID=Europe/Brussels:20261015T213000
+SUMMARY:ASA Saint-Hubert Boitsfort – Royal Waterloo Basket A (14-142)
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496383-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T130000
+DTEND;TZID=Europe/Brussels:20261114T150000
+SUMMARY:Royal Castors Braine B – Fresh Air A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496378-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T140000
+DTEND;TZID=Europe/Brussels:20261114T160000
+SUMMARY:Speedy MSG – BC École Européenne B
+LOCATION:Centre Sportif J. Moisse\, Rue des Hayeffes 27a\, 1435 Mont-saint-Guibert
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496380-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T131500
+DTEND;TZID=Europe/Brussels:20261115T151500
+SUMMARY:Anderlecht BB A – Royal UAA Etterbeek A
+LOCATION:Ecole P1 Anderlecht\, Rue Potaerdenberg 170\, 1070 Anderlecht
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496374-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T190000
+DTEND;TZID=Europe/Brussels:20261127T210000
+SUMMARY:RBC Auderghem A – Royal IV Brussels A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496375-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:BCD Wavre A – Ass.Sp.St.Augustin A
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496376-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T220000
+DTEND;TZID=Europe/Brussels:20261220T230000
+SUMMARY:Bxl360 A – Royal BC Wezembeek Oppem
+LOCATION:Complexe sportif du Ceria\, Sentier de la Drève\, 16\, 1070 Anderlecht
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496379-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T220000
+DTEND;TZID=Europe/Brussels:20261220T230000
+SUMMARY:Royal La Chenaie Uccle BC – R. Rebond Ottignies-LLN
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496381-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T220000
+DTEND;TZID=Europe/Brussels:20261220T230000
+SUMMARY:RBC Éclair B – Uccle Europe C
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496384-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Vainqueur BW205005 – Genappe Lothier
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496385-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Racing BCS Uccle A – Royal Linthout BC W.S. A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496387-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Royal Excelsior Brussels B – Vainqueur BW205001
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496388-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Vainqueur BW205008 – Vainqueur BW205002
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496389-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Vainqueur BW205007 – Royal Waterloo Basket A
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496390-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:B.C.U.Ganshoren – B.B.C Braine-Le-Château
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496391-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T220000
+DTEND;TZID=Europe/Brussels:20270124T230000
+SUMMARY:Vainqueur BW205003 – Vainqueur BW205006
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496392-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW205017 – Vainqueur BW205016
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496393-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW205018 – Vainqueur BW205011
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496394-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW205015 – Vainqueur BW205013
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496395-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T220000
+DTEND;TZID=Europe/Brussels:20270221T230000
+SUMMARY:Vainqueur BW205012 – Vainqueur BW205014
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496396-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW205021 – Vainqueur BW205019
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496397-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T220000
+DTEND;TZID=Europe/Brussels:20270314T230000
+SUMMARY:Vainqueur BW205020 – Vainqueur BW205022
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496398-comp-cup-bbwcu16h-bruxelles-brabant-wallon@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T220000
+DTEND;TZID=Europe/Brussels:20270411T230000
+SUMMARY:Vainqueur BW205024 – Vainqueur BW205023
+LOCATION:Hall des Sports de Neerstalle\, Rue Zwartebeek 23\, 1180 Uccle
+DESCRIPTION:CU16H
+END:VEVENT
+END:VCALENDAR

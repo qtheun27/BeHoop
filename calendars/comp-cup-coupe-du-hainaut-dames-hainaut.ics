@@ -1,0 +1,159 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe du Hainaut Dames
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-496065-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:RBBC Brainois A – JS Soignies A (44-62)
+LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090 Braine-le-Comte
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496064-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:BCJ Ressaix – TEF Kain B (25-95)
+LOCATION:Salle des Sports du Trieux\, Rue des Grands Bureaux\, 24\, 7134 Ressaix
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496069-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:BC Mons Capitale B – Soleil Levant Ellignies Ste Anne (74-52)
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021 Havré
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496068-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T200000
+DTEND;TZID=Europe/Brussels:20260926T220000
+SUMMARY:Tremplin Mouscron A – ABC B Péronnes A (33-47)
+LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700 Mouscron
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496067-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:CEP Fleurus B – Basketball Brunehaut (68-62)
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496070-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:B.B.C.Leuze – Fémina Docherie A (36-84)
+LOCATION:Leuzarena\, rue de Tournai 103\, 7900 Leuze-en-Hainaut
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496063-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:GGBC Colfontaine A – UBC Binche (68-34)
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496066-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T210000
+DTEND;TZID=Europe/Brussels:20261002T230000
+SUMMARY:REBC Templeuve A – BC Féminin Quaregnon A (52-70)
+LOCATION:Complexe sportif Brunehall\, Rue Wilbault Bouchart\, 1\, 7620 BLEHARIES
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496071-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:GGBC Colfontaine A – TEF Kain B
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496073-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T150000
+DTEND;TZID=Europe/Brussels:20261101T170000
+SUMMARY:CEP Fleurus B – ABC B Péronnes A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496074-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T150000
+DTEND;TZID=Europe/Brussels:20261101T170000
+SUMMARY:BC Mons Capitale B – Fémina Docherie A
+LOCATION:Salle Omnisports d'Havré\, Rue Irma Fievez 126\, 7021 Havré
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496072-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:JS Soignies A – BC Féminin Quaregnon A
+LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060 Soignies
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496075-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261228T180000
+DTEND;TZID=Europe/Brussels:20261228T200000
+SUMMARY:Vainqueur HA229009 – Vainqueur HA229010
+LOCATION:
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496076-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261228T180000
+DTEND;TZID=Europe/Brussels:20261228T200000
+SUMMARY:Vainqueur HA229011 – Vainqueur HA229012
+LOCATION:
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496078-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur HA229010 – Vainqueur HA229009
+LOCATION:
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496079-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270118T180000
+DTEND;TZID=Europe/Brussels:20270118T200000
+SUMMARY:Vainqueur HA229012 – Vainqueur HA229011
+LOCATION:
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496077-comp-cup-coupe-du-hainaut-dames-hainaut@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270315T180000
+DTEND;TZID=Europe/Brussels:20270315T200000
+SUMMARY:Vainqueur HA229013R – Vainqueur HA229014R
+LOCATION:
+DESCRIPTION:CH Dames - Phase finale
+END:VEVENT
+END:VCALENDAR

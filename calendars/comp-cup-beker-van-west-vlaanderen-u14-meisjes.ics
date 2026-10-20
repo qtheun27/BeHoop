@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van West-Vlaanderen U14 Meisjes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12297834256-comp-cup-beker-van-west-vlaanderen-u14-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:Basket SKT Ieper M14 B – Basket Desselgem M14 A
+LOCATION:Stedelijke Sporthal 1 Ieper\, Leopold III Laan 18\, 8900 Ieper
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12482388065-comp-cup-beker-van-west-vlaanderen-u14-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Bobcat Wielsbeke M14 A – KBGOB Finexa Basket@Sea M14 A
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12549498541-comp-cup-beker-van-west-vlaanderen-u14-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:G&V Breakpoint Basket Waregem M14 B – B.C. Blue Stars Brugge M14 A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12515943303-comp-cup-beker-van-west-vlaanderen-u14-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:BC Lamett Deerlijk-Zwevegem M14 A – Ford Unicars Avanti Brugge Dames M14 B
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11470806722-comp-cup-beker-van-west-vlaanderen-u14-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:Mibac Middelkerke M14 A – Kon BBC De Panne vzw M14 A
+LOCATION:Sporhal De Branding\, Populierenlaan\, 8430 Middelkerke
+DESCRIPTION:Beker van West-Vlaanderen U14 Meisjes 1/4 Finale
+END:VEVENT
+END:VCALENDAR

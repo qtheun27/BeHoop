@@ -4,6 +4,7 @@ import { writeFileSync, mkdirSync, rmSync, readFileSync, existsSync } from 'node
 import { join } from 'node:path';
 import { loadAll } from './allData';
 import { buildCompetitions } from './competitions';
+import { ics } from './vbl';
 import type { SlimGame } from './appData';
 
 const root = process.argv[2] ?? '.';
@@ -28,8 +29,22 @@ for (const c of all.clubs) {
   const list = [...(byClub.get(c.id) ?? [])].sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
   writeFileSync(join(out, 'clubs', `${c.id}.json`), JSON.stringify({ club: c, games: list }));
 }
+// Classement officiel tel que publié par la fédération. Une fédération qui ne tient pas de classement
+// (ex. U12 en Flandre : que des zéros alors que des matchs sont joués) → pas de tableau plutôt qu'un tableau faux.
+const official = (sid: number, list: SlimGame[]) => {
+  const rows = all.standings.get(sid) ?? [];
+  return rows.length && rows.every((r) => !r.played) && list.some((g) => g.hs !== null) ? [] : rows;
+};
 for (const [sid, list] of bySerie)
-  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: all.series.get(sid) ?? { id: sid }, standings: all.standings.get(sid) ?? [], games: list }));
+  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: all.series.get(sid) ?? { id: sid }, standings: official(sid, list), games: list }));
 const comps = buildCompetitions(all);
 writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
+// Calendrier de chaque compétition (tous ses matchs, depuis un mois) : calendars/comp-{id}.ics
+mkdirSync('calendars', { recursive: true });
+const since = new Date(Date.now() - 30 * 864e5).toISOString().slice(0, 10);
+for (const c of comps) {
+  const list = [...new Map(c.series.flatMap((sid) => bySerie.get(sid) ?? []).filter((g) => g.ty !== 'amical' && g.d >= since).map((g) => [g.id, g])).values()]
+    .sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
+  writeFileSync(join('calendars', `comp-${c.id}.ics`), ics(c.name, list, `comp-${c.id}`));
+}
 console.log(`app-data : ${comps.length} compétitions, ${all.clubs.length} clubs, ${bySerie.size} séries, ${all.games.length} matchs`);

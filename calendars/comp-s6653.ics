@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U8 Mixtes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-496461-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T103000
+DTEND;TZID=Europe/Brussels:20260920T123000
+SUMMARY:RE Pont-de-Loup A – Olympic Mont Sur Marchienne A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496462-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T103000
+DTEND;TZID=Europe/Brussels:20260920T123000
+SUMMARY:Spirou Basket A – BC Ransart Charleroi A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496463-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T103000
+DTEND;TZID=Europe/Brussels:20260920T123000
+SUMMARY:CEP Fleurus A – BC Ransart Charleroi A
+LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496464-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:RE Pont-de-Loup A – Olympic Mont Sur Marchienne A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496465-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:Spirou Basket A – BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496466-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:CEP Fleurus A – BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496467-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:RE Pont-de-Loup A – Olympic Mont Sur Marchienne A
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043 Ransart
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496468-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:Spirou Basket A – BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043 Ransart
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496469-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:CEP Fleurus A – BC Ransart Charleroi A
+LOCATION:Complexe Sportif de Ransart\, Rue Tantenne 20\, 6043 Ransart
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496470-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T093000
+DTEND;TZID=Europe/Brussels:20261114T113000
+SUMMARY:RE Pont-de-Loup A – Olympic Mont Sur Marchienne A
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496471-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T093000
+DTEND;TZID=Europe/Brussels:20261114T113000
+SUMMARY:Spirou Basket A – BC Ransart Charleroi A
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496472-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T093000
+DTEND;TZID=Europe/Brussels:20261114T113000
+SUMMARY:CEP Fleurus A – BC Ransart Charleroi A
+LOCATION:Sambrexpo\, rue JF Kennedy 150/1\, 6250 Aiseau-Presles
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496473-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:RE Pont-de-Loup A – Olympic Mont Sur Marchienne A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496474-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:Spirou Basket A – BC Ransart Charleroi A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496475-comp-s6653@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T130000
+DTEND;TZID=Europe/Brussels:20261219T150000
+SUMMARY:CEP Fleurus A – BC Ransart Charleroi A
+LOCATION:Hall Polyvalent Marcel Flandre\, Rue Napoléon Lejong 1\, 6032 Mont-sur-Marchienne
+DESCRIPTION:U8M A
+END:VEVENT
+END:VCALENDAR

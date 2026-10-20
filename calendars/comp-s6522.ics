@@ -1,0 +1,762 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U12 Mixtes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-483042-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T143000
+DTEND;TZID=Europe/Brussels:20260926T163000
+SUMMARY:R. Rebond Ottignies-LLN D – Ganshoren Dames Basket A (27-70)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483031-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T090000
+DTEND;TZID=Europe/Brussels:20260927T110000
+SUMMARY:RBC Auderghem A – ASA Saint-Hubert Boitsfort (40-36)
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483094-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T113000
+DTEND;TZID=Europe/Brussels:20260927T133000
+SUMMARY:B.B.C Braine-Le-Château A – Fresh Air B (27-54)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483073-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:Royal Excelsior Brussels C – BC École Européenne B (28-128)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482210-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T120000
+DTEND;TZID=Europe/Brussels:20261003T140000
+SUMMARY:Ganshoren Dames Basket A – ASA Saint-Hubert Boitsfort (155-0)
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483043-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T143000
+DTEND;TZID=Europe/Brussels:20261003T163000
+SUMMARY:R. Rebond Ottignies-LLN D – RBC Auderghem A (52-39)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483074-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:Royal Excelsior Brussels C – B.B.C Braine-Le-Château A (91-30)
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483084-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T154500
+DTEND;TZID=Europe/Brussels:20261004T174500
+SUMMARY:BC École Européenne B – Fresh Air B (57-43)
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483032-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T130000
+DTEND;TZID=Europe/Brussels:20261010T150000
+SUMMARY:RBC Auderghem A – Ganshoren Dames Basket A (3-129)
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483052-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – BC École Européenne B (26-90)
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483095-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T113000
+DTEND;TZID=Europe/Brussels:20261011T133000
+SUMMARY:B.B.C Braine-Le-Château A – R. Rebond Ottignies-LLN D (53-24)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483063-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T100000
+DTEND;TZID=Europe/Brussels:20261018T120000
+SUMMARY:Fresh Air B – Royal Excelsior Brussels C (33-59)
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483033-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:RBC Auderghem A – Royal Excelsior Brussels C
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483053-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – B.B.C Braine-Le-Château A
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483085-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:BC École Européenne B – R. Rebond Ottignies-LLN D
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482211-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T100000
+DTEND;TZID=Europe/Brussels:20261114T120000
+SUMMARY:Ganshoren Dames Basket A – BC École Européenne B
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483044-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T143000
+DTEND;TZID=Europe/Brussels:20261114T163000
+SUMMARY:R. Rebond Ottignies-LLN D – Fresh Air B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483075-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T130000
+DTEND;TZID=Europe/Brussels:20261115T150000
+SUMMARY:Royal Excelsior Brussels C – ASA Saint-Hubert Boitsfort
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483034-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T130000
+DTEND;TZID=Europe/Brussels:20261121T150000
+SUMMARY:RBC Auderghem A – B.B.C Braine-Le-Château A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483054-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – Royal Excelsior Brussels C
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483086-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T090000
+DTEND;TZID=Europe/Brussels:20261122T110000
+SUMMARY:BC École Européenne B – Ganshoren Dames Basket A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483088-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T111500
+DTEND;TZID=Europe/Brussels:20261129T131500
+SUMMARY:BC École Européenne B – Royal Excelsior Brussels C
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483064-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T120000
+DTEND;TZID=Europe/Brussels:20261129T140000
+SUMMARY:Fresh Air B – Ganshoren Dames Basket A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482212-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T100000
+DTEND;TZID=Europe/Brussels:20261205T120000
+SUMMARY:Ganshoren Dames Basket A – Fresh Air B
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483045-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T143000
+DTEND;TZID=Europe/Brussels:20261205T163000
+SUMMARY:R. Rebond Ottignies-LLN D – BC École Européenne B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483097-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T113000
+DTEND;TZID=Europe/Brussels:20261206T133000
+SUMMARY:B.B.C Braine-Le-Château A – ASA Saint-Hubert Boitsfort
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482214-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:Ganshoren Dames Basket A – RBC Auderghem A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483046-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T143000
+DTEND;TZID=Europe/Brussels:20261212T163000
+SUMMARY:R. Rebond Ottignies-LLN D – B.B.C Braine-Le-Château A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483087-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T131500
+DTEND;TZID=Europe/Brussels:20261213T151500
+SUMMARY:BC École Européenne B – ASA Saint-Hubert Boitsfort
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483096-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T143000
+DTEND;TZID=Europe/Brussels:20261219T163000
+SUMMARY:B.B.C Braine-Le-Château A – RBC Auderghem A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483077-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:Royal Excelsior Brussels C – Fresh Air B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483035-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T130000
+DTEND;TZID=Europe/Brussels:20270109T150000
+SUMMARY:RBC Auderghem A – Fresh Air B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483047-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T143000
+DTEND;TZID=Europe/Brussels:20270109T163000
+SUMMARY:R. Rebond Ottignies-LLN D – ASA Saint-Hubert Boitsfort
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483078-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T130000
+DTEND;TZID=Europe/Brussels:20270110T150000
+SUMMARY:Royal Excelsior Brussels C – Ganshoren Dames Basket A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483093-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T133000
+DTEND;TZID=Europe/Brussels:20270110T153000
+SUMMARY:BC École Européenne B – B.B.C Braine-Le-Château A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482216-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T110000
+DTEND;TZID=Europe/Brussels:20270116T130000
+SUMMARY:Ganshoren Dames Basket A – R. Rebond Ottignies-LLN D
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483055-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T170000
+DTEND;TZID=Europe/Brussels:20270116T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – RBC Auderghem A
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483066-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T120000
+DTEND;TZID=Europe/Brussels:20270117T140000
+SUMMARY:Fresh Air B – B.B.C Braine-Le-Château A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483098-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T113000
+DTEND;TZID=Europe/Brussels:20270124T133000
+SUMMARY:B.B.C Braine-Le-Château A – BC École Européenne B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483067-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T120000
+DTEND;TZID=Europe/Brussels:20270124T140000
+SUMMARY:Fresh Air B – ASA Saint-Hubert Boitsfort
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483076-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:Royal Excelsior Brussels C – RBC Auderghem A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483026-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T110000
+DTEND;TZID=Europe/Brussels:20270130T130000
+SUMMARY:Ganshoren Dames Basket A – B.B.C Braine-Le-Château A
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483048-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T143000
+DTEND;TZID=Europe/Brussels:20270130T163000
+SUMMARY:R. Rebond Ottignies-LLN D – Royal Excelsior Brussels C
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483089-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T090000
+DTEND;TZID=Europe/Brussels:20270131T110000
+SUMMARY:BC École Européenne B – RBC Auderghem A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483036-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T090000
+DTEND;TZID=Europe/Brussels:20270206T110000
+SUMMARY:RBC Auderghem A – B.B.C Braine-Le-Château A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483056-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – Royal Excelsior Brussels C
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483090-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T090000
+DTEND;TZID=Europe/Brussels:20270207T110000
+SUMMARY:BC École Européenne B – Ganshoren Dames Basket A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483068-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T120000
+DTEND;TZID=Europe/Brussels:20270207T140000
+SUMMARY:Fresh Air B – R. Rebond Ottignies-LLN D
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483037-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T130000
+DTEND;TZID=Europe/Brussels:20270213T150000
+SUMMARY:RBC Auderghem A – Ganshoren Dames Basket A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483057-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – BC École Européenne B
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483069-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T110000
+DTEND;TZID=Europe/Brussels:20270214T130000
+SUMMARY:Fresh Air B – Royal Excelsior Brussels C
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483099-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T113000
+DTEND;TZID=Europe/Brussels:20270214T133000
+SUMMARY:B.B.C Braine-Le-Château A – R. Rebond Ottignies-LLN D
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483049-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T143000
+DTEND;TZID=Europe/Brussels:20270220T163000
+SUMMARY:R. Rebond Ottignies-LLN D – Ganshoren Dames Basket A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483038-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T090000
+DTEND;TZID=Europe/Brussels:20270221T110000
+SUMMARY:RBC Auderghem A – ASA Saint-Hubert Boitsfort
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483100-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T113000
+DTEND;TZID=Europe/Brussels:20270221T133000
+SUMMARY:B.B.C Braine-Le-Château A – Fresh Air B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483079-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T130000
+DTEND;TZID=Europe/Brussels:20270307T150000
+SUMMARY:Royal Excelsior Brussels C – BC École Européenne B
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482262-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T100000
+DTEND;TZID=Europe/Brussels:20270313T120000
+SUMMARY:Ganshoren Dames Basket A – Royal Excelsior Brussels C
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483058-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T150000
+DTEND;TZID=Europe/Brussels:20270313T170000
+SUMMARY:ASA Saint-Hubert Boitsfort – R. Rebond Ottignies-LLN D
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483091-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T090000
+DTEND;TZID=Europe/Brussels:20270314T110000
+SUMMARY:BC École Européenne B – B.B.C Braine-Le-Château A
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483070-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T120000
+DTEND;TZID=Europe/Brussels:20270314T140000
+SUMMARY:Fresh Air B – RBC Auderghem A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483028-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T120000
+DTEND;TZID=Europe/Brussels:20270320T140000
+SUMMARY:Ganshoren Dames Basket A – Fresh Air B
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483050-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T143000
+DTEND;TZID=Europe/Brussels:20270320T163000
+SUMMARY:R. Rebond Ottignies-LLN D – BC École Européenne B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483101-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T113000
+DTEND;TZID=Europe/Brussels:20270321T133000
+SUMMARY:B.B.C Braine-Le-Château A – ASA Saint-Hubert Boitsfort
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483080-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T130000
+DTEND;TZID=Europe/Brussels:20270321T150000
+SUMMARY:Royal Excelsior Brussels C – RBC Auderghem A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483065-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T120000
+DTEND;TZID=Europe/Brussels:20270327T140000
+SUMMARY:Fresh Air B – R. Rebond Ottignies-LLN D
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483104-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270403T143000
+DTEND;TZID=Europe/Brussels:20270403T163000
+SUMMARY:B.B.C Braine-Le-Château A – Ganshoren Dames Basket A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483029-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T120000
+DTEND;TZID=Europe/Brussels:20270410T140000
+SUMMARY:Ganshoren Dames Basket A – ASA Saint-Hubert Boitsfort
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483051-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T143000
+DTEND;TZID=Europe/Brussels:20270410T163000
+SUMMARY:R. Rebond Ottignies-LLN D – RBC Auderghem A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483092-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T090000
+DTEND;TZID=Europe/Brussels:20270411T110000
+SUMMARY:BC École Européenne B – Fresh Air B
+LOCATION:Ecole Européenne Ixelles\, Boulevard du Triomphe 135\, 1050 Ixelles
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483081-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270411T130000
+DTEND;TZID=Europe/Brussels:20270411T150000
+SUMMARY:Royal Excelsior Brussels C – B.B.C Braine-Le-Château A
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483039-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:RBC Auderghem A – R. Rebond Ottignies-LLN D
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483059-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T150000
+DTEND;TZID=Europe/Brussels:20270417T170000
+SUMMARY:ASA Saint-Hubert Boitsfort – Ganshoren Dames Basket A
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483102-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T113000
+DTEND;TZID=Europe/Brussels:20270418T133000
+SUMMARY:B.B.C Braine-Le-Château A – Royal Excelsior Brussels C
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483071-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270418T120000
+DTEND;TZID=Europe/Brussels:20270418T140000
+SUMMARY:Fresh Air B – BC École Européenne B
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483040-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T130000
+DTEND;TZID=Europe/Brussels:20270424T150000
+SUMMARY:RBC Auderghem A – BC École Européenne B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483060-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T150000
+DTEND;TZID=Europe/Brussels:20270424T170000
+SUMMARY:ASA Saint-Hubert Boitsfort – Fresh Air B
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483103-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T113000
+DTEND;TZID=Europe/Brussels:20270425T133000
+SUMMARY:B.B.C Braine-Le-Château A – Ganshoren Dames Basket A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483082-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270425T130000
+DTEND;TZID=Europe/Brussels:20270425T150000
+SUMMARY:Royal Excelsior Brussels C – R. Rebond Ottignies-LLN D
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483041-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270515T130000
+DTEND;TZID=Europe/Brussels:20270515T150000
+SUMMARY:RBC Auderghem A – BC École Européenne B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483061-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270515T170000
+DTEND;TZID=Europe/Brussels:20270515T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – Fresh Air B
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483083-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270516T130000
+DTEND;TZID=Europe/Brussels:20270516T150000
+SUMMARY:Royal Excelsior Brussels C – R. Rebond Ottignies-LLN D
+LOCATION:Complexe sportif de Neder-Over-Heembeek\, Rue De Lombardzijde 120\, 1120 Neder-Over-Heembeek
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483062-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270522T170000
+DTEND;TZID=Europe/Brussels:20270522T190000
+SUMMARY:ASA Saint-Hubert Boitsfort – R. Rebond Ottignies-LLN D
+LOCATION:Collège Saint-Hubert\, Avenue Charle Albert 9\, 1170 Watermael-Boitsfort
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483030-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270523T100000
+DTEND;TZID=Europe/Brussels:20270523T120000
+SUMMARY:Ganshoren Dames Basket A – Royal Excelsior Brussels C
+LOCATION:Hall des sports R. Beauthier\, Rue Vanderveken 114\, 1083 Ganshoren
+DESCRIPTION:U12MXE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-483072-comp-s6522@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270523T120000
+DTEND;TZID=Europe/Brussels:20270523T140000
+SUMMARY:Fresh Air B – RBC Auderghem A
+LOCATION:Centre Omnisports de Jette\, Avenue du Comte de Jette 3\, 1090 Jette
+DESCRIPTION:U12MXE
+END:VEVENT
+END:VCALENDAR

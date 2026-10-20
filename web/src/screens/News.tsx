@@ -4,8 +4,9 @@ import { loadNews, readable, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
 import { t } from '../lib/i18n';
+import { Ico, type IconName } from '../ui/icons';
 
-const CATS: [string, string][] = [['tout', 'Tout'], ['belgique', '🇧🇪 Belgique'], ['regional', '📍 Régional'], ['international', '🌍 International'], ['nba', '🏀 NBA']];
+const CATS: [string, IconName | null, string][] = [['tout', null, 'Tout'], ['belgique', 'flag', 'Belgique'], ['regional', 'pin', 'Régional'], ['international', 'globe', 'International'], ['nba', 'ball', 'NBA']];
 const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
 
 /** Image de l'article ; si le média n'en fournit pas (ou bloque son affichage), visuel « demi-terrain » aux couleurs de la source. */
@@ -23,7 +24,7 @@ function NewsVisual({ n, ratio }: { n: News; ratio: string }) {
         </g>
       </svg>
       <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', textAlign: 'center', color: '#fff', padding: 12 }}>
-        <div><div style={{ fontSize: 40, lineHeight: 1, filter: 'drop-shadow(0 4px 10px rgba(0,0,0,.35))' }}>🏀</div>
+        <div><Ico n="ball" size={42} style={{ filter: 'drop-shadow(0 4px 10px rgba(0,0,0,.35))' }} />
           <div style={{ fontFamily: 'Anton', fontSize: 22, letterSpacing: '.04em', marginTop: 8, textShadow: '0 2px 8px rgba(0,0,0,.35)' }}>{n.source.toUpperCase()}</div></div>
       </div>
     </div>
@@ -56,7 +57,7 @@ export function NewsCarousel() {
   return (
     <section style={{ marginBottom: 18 }}>
       <div className="hstack" style={{ justifyContent: 'space-between', margin: '0 4px 8px' }}>
-        <div className="group-title" style={{ margin: 0 }}>{t('📰 À la une')}</div><a href="#/actus" style={{ fontWeight: 600, fontSize: 15 }}>{t('Toutes les actus ›')}</a>
+        <div className="group-title" style={{ margin: 0 }}><><Ico n="news" />{t('À la une')}</></div><a href="#/actus" style={{ fontWeight: 600, fontSize: 15 }}>{t('Toutes les actus ›')}</a>
       </div>
       <div className="stories" style={{ gap: 12, padding: '2px 2px 10px' }}>{list.map((n) => <NewsCard key={n.id} n={n} />)}</div>
     </section>
@@ -73,9 +74,9 @@ export function NewsPage() {
   const list = all ? inCat : inCat.filter(readable);
   return (
     <Screen title={t('Actus')}>
-      <div className="chips">{CATS.map(([k, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{t(l)}</button>)}</div>
+      <div className="chips">{CATS.map(([k, ic, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{ic && <Ico n={ic} />}{t(l)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="📰" title={t('Pas d\'actualité pour le moment')} /> : list.map((n) => <NewsCard key={n.id} n={n} wide />)}
+      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="news" title={t('Pas d\'actualité pour le moment')} /> : list.map((n) => <NewsCard key={n.id} n={n} wide />)}
       {other > 0 && <button className="btn ghost small" style={{ margin: '0 auto 12px', display: 'flex' }} onClick={() => setAll(!all)}>{all ? t('Masquer les articles dans d’autres langues') : t('Voir aussi {n} articles dans d’autres langues', { n: other })}</button>}
       <p className="muted center" style={{ fontSize: 12.5 }}>{t('Titres et liens vers les articles des médias cités. Mis à jour deux fois par jour.')}</p>
     </Screen>

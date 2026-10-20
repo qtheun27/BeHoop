@@ -17,6 +17,8 @@ const lits = (src: string) => [...src.matchAll(new RegExp(S, 'g'))].map((m) => u
 const LABEL_CONSTS = ['REPORT_REASONS', 'RELATION_FR', 'DOCS', 'CHAPTER_ORDER'];
 
 export function collectKeys(root = '.') {
+  // Noms d'icônes (ui/icons.tsx) : jamais des textes à traduire
+  const ICONS = new Set([...readFileSync(join(root, 'web/src/ui/icons.tsx'), 'utf8').matchAll(/^\s{2}(\w+): '/gm)].map((m) => m[1]));
   const keys = new Set<string>();
   const add = (x: string) => { if (/\p{L}/u.test(x)) keys.add(x); };
   for (const f of [...files(join(root, 'web/src')), join(root, 'shared/chapters.ts')]) {
@@ -30,6 +32,9 @@ export function collectKeys(root = '.') {
     for (const m of src.matchAll(new RegExp(String.raw`\b(?:label|title):\s*(${S})`, 'g'))) add(unq(m[1]));
     // Paires ['id', 'Libellé']
     for (const m of src.matchAll(new RegExp(String.raw`\[\s*'([a-z0-9_-]*)'\s*,\s*(${S})\s*\]`, 'g'))) add(unq(m[2]));
+    // Triplets d'onglets et de filtres : ['id', 'icône' | null, 'Libellé'] et ['id', 'Libellé', 'icône']
+    for (const m of src.matchAll(new RegExp(String.raw`\[\s*'([a-z0-9_-]*)'\s*,\s*('[a-zA-Z]+'|null)\s*,\s*(${S})\s*\]`, 'g'))) if (m[2] === 'null' || ICONS.has(unq(m[2]))) add(unq(m[3]));
+    for (const m of src.matchAll(new RegExp(String.raw`\[\s*'([a-z0-9_-]*)'\s*,\s*(${S})\s*,\s*'([a-zA-Z]+)'\s*\]`, 'g'))) if (ICONS.has(m[3]) && !ICONS.has(unq(m[2]))) add(unq(m[2]));
     // ['A', 'B'].map((l) => … t(l) …)
     for (const m of src.matchAll(new RegExp(String.raw`\[((?:\s*${S}\s*,?)+)\]\.map\(\((l|g)\b`, 'g'))) lits(m[1]).forEach(add);
     // Constantes de libellés : valeurs uniquement (pas les clés « 'a': »)

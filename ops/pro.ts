@@ -11,7 +11,7 @@ const BNXT_HEADERS = { 'X-Authorization': 'BWSyE7sgg9QAurh2JX9cpjzjGc652BWLuNUS'
 const ESPN = 'https://site.api.espn.com/apis/site/v2/sports/basketball';
 const UA = { 'User-Agent': 'BeHoop/1.0 (+https://behoop.be)' };
 const BELGIUM_FIBA = '106761';
-type Standing = { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number };
+import type { Standing } from './allData';
 export interface Pro { clubs: SlimClub[]; games: SlimGame[]; series: Record<number, { id: number; name: string; short: string }>; standings: Record<number, Standing[]>; attach: Record<number, string> }
 
 const id = (base: number, n: string | number) => base + Number(n);
@@ -45,7 +45,7 @@ async function bnxt(out: Pro) {
     const sid = id(20e9, ph.id);
     out.series[sid] = { id: sid, name: `${comp.competition.name} · ${ph.name}`, short: 'BNXT League' };
     const st = await get(`${BNXT}/standings/competition/${comp.competition.id}/phase/${ph.id}`, BNXT_HEADERS).catch(() => ({ data: [] }));
-    out.standings[sid] = (st.data ?? []).map((r: any) => ({ team: team(r.team), played: r.played, wins: r.win, losses: r.loss, pf: r.score, pa: r.against, pts: r.point }));
+    out.standings[sid] = (st.data ?? []).map((r: any) => ({ team: team(r.team), played: r.played, wins: r.win, losses: r.loss, pf: r.score, pa: r.against, pts: r.point, draws: r.even || undefined, rank: r.position })).sort((a: Standing, b: Standing) => a.rank! - b.rank!);
     for (const m of [9, 10, 11, 12, 1, 2, 3, 4, 5, 6]) {
       const r = await get(`${BNXT}/schedule/club/${comp.competition.season}?clubs%5B0%5D=1&clubs%5B1%5D=2&phase_id=${ph.id}&monthCount=1&month=${m}`, BNXT_HEADERS).catch(() => ({ data: [] }));
       for (const g of r.data ?? []) {
@@ -75,11 +75,17 @@ async function nba(out: Pro) {
   const teams = (await get(`${ESPN}/nba/teams`, {}, false)).sports[0].leagues[0].teams.map((x: any) => x.team);
   const tid = (t: any) => id(22e9, t.id);
   const conf = new Map<string, number>();
-  const st = await get('https://site.api.espn.com/apis/v2/sports/basketball/nba/standings', {}, false);
+  // Saison régulière seulement (sans seasontype, ESPN renvoie le classement des matchs de préparation en octobre)
+  const year = new Date().getMonth() >= 6 ? new Date().getFullYear() + 1 : new Date().getFullYear();
+  const st = await get(`https://site.api.espn.com/apis/v2/sports/basketball/nba/standings?season=${year}&seasontype=2`, {}, false);
+  if (st.children?.[0]?.standings?.seasonType !== 2) throw new Error('classement NBA : saison régulière introuvable');
   st.children.forEach((ch: any, i: number) => {
     const sid = id(22e9, 900 + i); out.series[sid] = { id: sid, name: `NBA · ${ch.name === 'Eastern Conference' ? 'Conférence Est' : 'Conférence Ouest'}`, short: 'NBA' };
     const v = (e: any, n: string) => Number(e.stats.find((s: any) => s.name === n)?.value ?? 0);
-    out.standings[sid] = ch.standings.entries.map((e: any) => { conf.set(e.team.id, sid); return { team: tid(e.team), played: v(e, 'wins') + v(e, 'losses'), wins: v(e, 'wins'), losses: v(e, 'losses'), pf: Math.round(v(e, 'avgPointsFor')), pa: Math.round(v(e, 'avgPointsAgainst')), pts: v(e, 'wins') }; });
+    // Ordre officiel NBA : tête de série (playoffSeed, départages compris), puis nom tant qu'aucun match n'est joué
+    const rows = ch.standings.entries.map((e: any) => { conf.set(e.team.id, sid); return { seed: v(e, 'playoffSeed'), name: e.team.displayName as string, team: tid(e.team), played: v(e, 'wins') + v(e, 'losses'), wins: v(e, 'wins'), losses: v(e, 'losses'), pf: v(e, 'pointsFor'), pa: v(e, 'pointsAgainst'), pts: v(e, 'wins') }; });
+    rows.sort((a: any, b: any) => a.seed - b.seed || a.name.localeCompare(b.name));
+    out.standings[sid] = rows.map(({ seed, name, ...r }: any, i: number) => ({ ...r, rank: i + 1 }));
   });
   for (const t of teams) {
     out.clubs.push({ id: tid(t), name: t.displayName, short: t.shortDisplayName ?? t.displayName, province: 'NBA', logo: t.logos?.[0]?.href ?? null, c1: hex(t.color), c2: hex(t.alternateColor), city: t.location ?? '', venue: null,

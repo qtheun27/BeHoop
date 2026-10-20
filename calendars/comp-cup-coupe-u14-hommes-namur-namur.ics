@@ -1,0 +1,204 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U14 Hommes Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-482332-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T090000
+DTEND;TZID=Europe/Brussels:20260926T110000
+SUMMARY:RBB Gembloux B – NBCLB B (38-70)
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030 Gembloux
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482330-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T110000
+DTEND;TZID=Europe/Brussels:20260926T130000
+SUMMARY:RBC Ciney B – Cerfontaine B.C. A (78-46)
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590 Ciney
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482331-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T110000
+DTEND;TZID=Europe/Brussels:20260926T130000
+SUMMARY:RBB Gembloux A – BC Fernelmont A (20-0)
+LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030 Gembloux
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485714-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T110000
+DTEND;TZID=Europe/Brussels:20260926T130000
+SUMMARY:R.B.C. Belgrade B – BC Marche B (88-39)
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001 Belgrade
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485717-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T110000
+DTEND;TZID=Europe/Brussels:20260926T130000
+SUMMARY:J.S.La Plante – NBCLB A (49-32)
+LOCATION:Centre Sportif de la Plante\, Chaussée de Dinant\, 220\, 5000 Namur
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485715-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:RBC Éghezée A – BC Fraire-Philippeville B (61-39)
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310 Eghezée
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485713-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:R.B.C. Belgrade A – BC Marche A (73-57)
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001 Belgrade
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482329-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:Andenne Basket B – BC Rochefort (27-69)
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485716-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T140000
+DTEND;TZID=Europe/Brussels:20260926T160000
+SUMMARY:RBC Éghezée B – Andenne Basket A (41-107)
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310 Eghezée
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482328-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T143000
+DTEND;TZID=Europe/Brussels:20260926T163000
+SUMMARY:Royal BC Maillen – BC Sombreffe (72-42)
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485711-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T150000
+DTEND;TZID=Europe/Brussels:20260926T170000
+SUMMARY:BC Malonne – Jeunesse Basket Hotton A (38-97)
+LOCATION:Centre Sportif Malonne\, Champ Ha 20\, 5020 Malonne
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482327-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T100000
+DTEND;TZID=Europe/Brussels:20260927T120000
+SUMMARY:AS Mazy-Spy – RBC Erpent A (46-94)
+LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190 Jemeppe-sur-Sambre
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482326-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T120000
+DTEND;TZID=Europe/Brussels:20260927T140000
+SUMMARY:Royal CS Natoye B – BC Miavoye GH (46-54)
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485712-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:RUS Mariembourg A – Profondeville Sharks A (39-53)
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660 Couvin
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485724-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:Profondeville Sharks A – R.B.C. Belgrade A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485723-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:NBCLB B – Jeunesse Basket Hotton A
+LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081 Emines
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485726-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:Andenne Basket A – J.S.La Plante
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485727-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:Royal Gallia BC Beez – RBC Ciney A
+LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000 Beez
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485722-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T143000
+DTEND;TZID=Europe/Brussels:20261031T163000
+SUMMARY:RBC Ciney B – RBB Gembloux A
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590 Ciney
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485725-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:R.B.C. Belgrade B – RBC Éghezée A
+LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001 Belgrade
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485721-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T163000
+DTEND;TZID=Europe/Brussels:20261031T183000
+SUMMARY:Royal BC Maillen – BC Rochefort
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CHU14
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485720-comp-cup-coupe-u14-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:BC Miavoye GH – RBC Erpent A
+LOCATION:CS et associatif de Miavoye\, Rue Sous Lieutenant Pierard 1\, 5520 Onhaye
+DESCRIPTION:CHU14
+END:VEVENT
+END:VCALENDAR

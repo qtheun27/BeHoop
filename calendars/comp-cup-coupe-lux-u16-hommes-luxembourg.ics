@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe Lux U16 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-481938-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T110000
+DTEND;TZID=Europe/Brussels:20261010T130000
+SUMMARY:Junior Arlonais A – RB Alliance Arlon B (126-21)
+LOCATION:Salle de l'ITELA\, Chemin de Weyler\, 2\, 6700 Arlon
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481937-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:BC Florenville – Lorrain Saint Mard (68-57)
+LOCATION:Centre Sportif Florenville\, Rue de Carignan 62\, 6820 Florenville
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481936-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T090000
+DTEND;TZID=Europe/Brussels:20261011T110000
+SUMMARY:Royal BC Saint-Hubert – BC Sarrasins Chantemelle (64-69)
+LOCATION:Hall des Sports Michaël Paquay\, Rue du Parc\, 6870 Saint-Hubert
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481941-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261207T180000
+DTEND;TZID=Europe/Brussels:20261207T200000
+SUMMARY:RBC Libramont B – BC Sarrasins Chantemelle
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481942-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T113000
+DTEND;TZID=Europe/Brussels:20261212T133000
+SUMMARY:BC Florenville – Junior Arlonais A
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481939-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:Nuts Bastogne – BC Habay A
+LOCATION:Salle de l'INDSé\, Rue des Remparts\, 6600 Bastogne
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481940-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T150000
+DTEND;TZID=Europe/Brussels:20261213T170000
+SUMMARY:Basket Club Foxes Léglise – BC Centre Gaume C
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860 Léglise
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481943-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Vainqueur LU225009 – Vainqueur LU225010
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481944-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Vainqueur LU225011 – Vainqueur LU225012
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-481945-comp-cup-coupe-lux-u16-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T000000
+DTEND;TZID=Europe/Brussels:20270321T020000
+SUMMARY:undefined – undefined
+LOCATION:
+DESCRIPTION:CU16H
+END:VEVENT
+END:VCALENDAR

@@ -7,6 +7,7 @@ import { Screen, Empty, Skeleton, ErrorBox, Sheet, useAsync } from '../ui/kit';
 import { store, haptic } from '../lib/util';
 import type { Chapter } from '../../../shared/chapters';
 import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 
 interface MatchVideo { title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number;
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string }; voteUntil?: { toMillis: () => number } }
@@ -17,11 +18,11 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).p
 export default function Watch({ id, t: part }: { id: string; t?: string }) {
   const s = useSession();
   const v = useAsync(async () => { await ensureMediaCookie(); const x = await D.getDoc(D.doc(D.db, 'matchVideos', id)); return x.exists() ? (x.data() as MatchVideo) : null; }, [id, s.user?.uid]);
-  if (!s.user) return <Screen title={t('Vidéo')} back="fil"><Empty ill="🔒" title={t('Connecte-toi pour regarder')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
-  if (v.error) return <Screen title={t('Vidéo')} back="fil"><ErrorBox msg={v.error === t('Accès refusé.') ? t('Cette vidéo est réservée aux membres de l’Équipe 🔒.') : v.error} retry={v.reload} /></Screen>;
+  if (!s.user) return <Screen title={t('Vidéo')} back="fil"><Empty ill="lock" title={t('Connecte-toi pour regarder')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
+  if (v.error) return <Screen title={t('Vidéo')} back="fil"><ErrorBox msg={v.error === t('Accès refusé.') ? t('Cette vidéo est réservée aux membres de l’Équipe.') : v.error} retry={v.reload} /></Screen>;
   if (v.loading) return <Screen title={t('Vidéo')} back="fil"><Skeleton h={220} n={2} /></Screen>;
   const mv = v.data;
-  if (!mv || !mv.hls) return <Screen title={t('Vidéo')} back="fil"><Empty ill="🎬" title={mv ? t('Vidéo en préparation') : t('Vidéo introuvable')} text={mv ? t('Elle apparaîtra ici dès que le montage sera terminé.') : undefined} /></Screen>;
+  if (!mv || !mv.hls) return <Screen title={t('Vidéo')} back="fil"><Empty ill="video" title={mv ? t('Vidéo en préparation') : t('Vidéo introuvable')} text={mv ? t('Elle apparaîtra ici dès que le montage sera terminé.') : undefined} /></Screen>;
   const momentId = part?.startsWith('m-') ? part.slice(2) : null;
   return (
     <Screen title={mv.title} back="fil">
@@ -76,12 +77,12 @@ function Player({ id, mv }: { id: string; mv: MatchVideo }) {
             {chapters.slice(1).map((c) => <div key={c.title} className="mark" style={{ left: `${(c.start / dur) * 100}%` }} title={c.title} />)}
           </div>
           <div className="btns">
-            <button onClick={toggle} aria-label={playing ? 'Pause' : 'Lecture'} style={{ fontSize: 20 }}>{playing ? '❚❚' : '▶'}</button>
+            <button onClick={toggle} aria-label={playing ? 'Pause' : 'Lecture'} ><Ico n={playing ? 'pause' : 'play'} size={22} /></button>
             <button onClick={() => seek(time - 10)} aria-label={t('Reculer de 10 s')}>↺10</button><button onClick={() => seek(time + 10)} aria-label={t('Avancer de 10 s')}>10↻</button>
             <span style={{ flex: 1, opacity: .85 }}>{fmt(time)} / {fmt(dur)}</span>
             <button onClick={() => { const n = rate === 1 ? 1.5 : rate === 1.5 ? 2 : 1; ref.current!.playbackRate = n; setRate(n); }} aria-label={t('Vitesse')}>{rate}×</button>
             {levels.length > 1 && <button onClick={() => { const n = level === -1 ? 0 : level === levels.length - 1 ? -1 : level + 1; hlsRef.current.currentLevel = n; setLevel(n); }} aria-label={t('Qualité')}>{level === -1 ? 'Auto' : `${levels[level].h}p`}</button>}
-            <button aria-label={t('Plein écran')} onClick={() => { const el = ref.current as any; if (el.webkitEnterFullscreen) el.webkitEnterFullscreen(); else box.current!.requestFullscreen?.(); }}>⛶</button>
+            <button aria-label={t('Plein écran')} onClick={() => { const el = ref.current as any; if (el.webkitEnterFullscreen) el.webkitEnterFullscreen(); else box.current!.requestFullscreen?.(); }}><Ico n="expand" size={22} /></button>
           </div>
         </div>
       </div>
@@ -90,7 +91,7 @@ function Player({ id, mv }: { id: string; mv: MatchVideo }) {
         <button key={c.title} className="row" onClick={() => { seek(c.start); ref.current!.play(); }}>
           <div className="grow" style={{ fontWeight: time >= c.start && time < c.end ? 700 : 400 }}>{t(c.title)}</div><span className="muted">{fmt(c.start)}</span></button>))}</div>
       <div className="hstack">
-        <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}>{t('⚡ Créer un Moment')}</button>
+        <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
         {!youth && mv.hls!.mp4Key && <a className="btn ghost" href={mediaUrl(mv.hls!.mp4Key)} download>{t('Télécharger (720p)')}</a>}
       </div>
       {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}
@@ -118,7 +119,7 @@ function ClipSheet({ id, time, dur, onClose }: { id: string; time: number; dur: 
 function MomentPlayer({ id, youth }: { id: string; youth: boolean }) {
   const m = useAsync(async () => { const x = await D.getDoc(D.doc(D.db, 'moments', id)); return x.exists() ? ({ id, ...x.data() } as Moment) : null; }, [id]);
   if (!m.data) return <Skeleton h={400} n={1} />;
-  if (m.data.status !== 'ready' || !m.data.r2Key) return <Empty ill="⚡" title={t('Moment en préparation')} />;
+  if (m.data.status !== 'ready' || !m.data.r2Key) return <Empty ill="bolt" title={t('Moment en préparation')} />;
   const url = mediaUrl(m.data.r2Key);
   return (
     <div className="center">
@@ -126,7 +127,7 @@ function MomentPlayer({ id, youth }: { id: string; youth: boolean }) {
       {!youth ? <button className="btn secondary mt" onClick={async () => {
         try { const blob = await (await fetch(url, { credentials: 'include' })).blob(); const f = new File([blob], 'moment-behoop.mp4', { type: 'video/mp4' });
           if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], text: t('Un Moment sur BeHoop 🏀') }); else await navigator.share?.({ url: location.href }); } catch { /* partage annulé */ } }}>{t('Partager (WhatsApp…)')}</button>
-        : <p className="muted" style={{ fontSize: 14 }}>{t('🔒 Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
+        : <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
     </div>
   );
 }
@@ -150,11 +151,11 @@ function Moments({ id, mv }: { id: string; mv: MatchVideo }) {
   };
   return (
     <>
-      <div className="group-title mt">{t('Moments')} {open ? `· ${t('vote pour l’Action du match')}` : top ? `· 🏆 ${t('Action du match')}` : ''}</div>
+      <div className="group-title mt">{t('Moments')} {open ? `· ${t('vote pour l’Action du match')}` : top ? <>· <Ico n="trophy" /> {t('Action du match')}</> : ''}</div>
       <div className="group">{list.data.moments.map((m, i) => (
         <div key={m.id} className="row">
-          <a className="grow" href={`#/video/${id}/m-${m.id}`} style={{ color: 'inherit' }}>{top?.[0] === m.id && !open ? '🏆 ' : ''}{t('Action')} {i + 1} · {fmt(m.start)}<div className="sub">{t('{n} vote(s)', { n: list.data!.count[m.id] ?? 0 })}</div></a>
-          {open && <button className={`btn small${list.data!.mine === m.id ? '' : ' secondary'}`} onClick={() => vote(m.id)}>{list.data!.mine === m.id ? t('Mon vote ✓') : t('Voter')}</button>}
+          <a className="grow" href={`#/video/${id}/m-${m.id}`} style={{ color: 'inherit' }}>{top?.[0] === m.id && !open && <Ico n="trophy" style={{ marginRight: 4, color: 'var(--accent)' }} />}{t('Action')} {i + 1} · {fmt(m.start)}<div className="sub">{t('{n} vote(s)', { n: list.data!.count[m.id] ?? 0 })}</div></a>
+          {open && <button className={`btn small${list.data!.mine === m.id ? '' : ' secondary'}`} onClick={() => vote(m.id)}>{list.data!.mine === m.id ? <><Ico n="check" />{t('Mon vote')}</> : t('Voter')}</button>}
         </div>))}</div>
       <p className="group-foot">{t('On vote pour une action, jamais pour un joueur.')}</p>
     </>

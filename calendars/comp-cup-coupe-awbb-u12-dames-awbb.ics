@@ -1,0 +1,87 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe AWBB U12 Dames
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-484932-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T090000
+DTEND;TZID=Europe/Brussels:20261018T110000
+SUMMARY:R. Rebond Ottignies-LLN – RBC Éclair B (52-49)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484926-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261026T180000
+DTEND;TZID=Europe/Brussels:20261026T200000
+SUMMARY:Vainqueur AW249003 – BC Belleflamme
+LOCATION:
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484930-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T090000
+DTEND;TZID=Europe/Brussels:20261031T110000
+SUMMARY:Basket Namur Capitale A – Royal CS Natoye
+LOCATION:Hall Octave Henry\, Rue de Gembloux\, 224\, 5002 Saint-Servais
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484925-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T100000
+DTEND;TZID=Europe/Brussels:20261031T120000
+SUMMARY:Royal Nivelles Basketball A – Royal Castors Braine A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484929-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:BC Mons Capitale – RBC Ciney
+LOCATION:Maison Provinciale des Sports\, rue Saint-Antoine 1A\, 7021 Mons (Havré)
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484927-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T120000
+DTEND;TZID=Europe/Brussels:20261031T140000
+SUMMARY:TEF Kain – GGBC Colfontaine
+LOCATION:Hall des Sports de Kain\, Rue du Vert Lion\, 40\, 7540 Kain
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484928-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:RBC Herve-Battice A – RE Pont-de-Loup
+LOCATION:Centre Sportif George Gramme\, Rue Forges-les Eaux 4\, 4651 Battice
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484931-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:La Villersoise C – RBC Libramont 1
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530 Villers-le-Bouillet
+DESCRIPTION:CA U12D
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-484935-comp-cup-coupe-awbb-u12-dames-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261123T180000
+DTEND;TZID=Europe/Brussels:20261123T200000
+SUMMARY:R. Rebond Ottignies-LLN – Vainqueur AW249023
+LOCATION:
+DESCRIPTION:CA U12D
+END:VEVENT
+END:VCALENDAR

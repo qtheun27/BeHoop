@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaanderen U16 Meisjes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13664089844-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261106T210000
+DTEND;TZID=Europe/Brussels:20261106T230000
+SUMMARY:Amon Jeugd Gentson M16 A – House Of Talents Kortrijk Spurs M16 A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13630534606-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T100000
+DTEND;TZID=Europe/Brussels:20261107T120000
+SUMMARY:Basket Houthalen M16 A – Basket Zonhoven M16 A
+LOCATION:Gemeentelijke Sporthal Lakerveld\, Guldensporenlaan 16\, 3530 Houthalen-Helchteren
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13613756987-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Kangoeroes Basket Mechelen M16 A – B.C. Gems Diepenbeek M16 A
+LOCATION:De Nekker\, Nekkerspoel Borcht 19\, 2800 Mechelen
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13680867463-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Basket Lummen M16 A – Ford Unicars Avanti Brugge Dames M16 A
+LOCATION:Sportcomplex Vijfsprong\, Sportweg 8\, 3560 Lummen
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13697645082-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:G&V Breakpoint Basket Waregem M16 A – Basket SKT Ieper M16 A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13513091273-comp-cup-beker-van-vlaanderen-u16-meisjes@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:Jumbo Elektrooghe Gembas Knesselare M16 A – Red Vic Wilrijk M16 A
+LOCATION:Sporthal Flabbaert\, Prinsengoeddreef 33\, 9910 Knesselare
+DESCRIPTION:Beker van Vlaanderen U16 Meisjes 1/8 Finale
+END:VEVENT
+END:VCALENDAR

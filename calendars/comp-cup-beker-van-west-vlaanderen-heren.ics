@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van West-Vlaanderen Heren
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-13939221495-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261022T210000
+DTEND;TZID=Europe/Brussels:20261022T230000
+SUMMARY:Red Sharks Koekelare HSE B – Mibac Middelkerke HSE A
+LOCATION:Gemeentelijke Sporthal Koekelare\, Belhuttebaan 40\, 8680 Koekelare
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11624307431-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261027T203000
+DTEND;TZID=Europe/Brussels:20261027T223000
+SUMMARY:BBC Koksijde HSE A – Avanti Brugge 2015 HSE C
+LOCATION:Gemeentelijke sporthal Koksijde\, Zeelaan 44\, 8670 Koksijde
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11456384146-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T204500
+DTEND;TZID=Europe/Brussels:20261030T224500
+SUMMARY:BC Delrue JP Oostende HSE A – Basket Desselgem HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11422828908-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:Wytewa Roeselare HSE A – Wibac BBC Sint-Eloois-Winkel HSE B
+LOCATION:Sporthal Schiervelde\, Diksmuidesesteenweg 400\, 8800 Roeselare
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11389273670-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:Koninklijke BBC Oostkamp HSE C – BBC Wervik HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11456531241-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T160000
+DTEND;TZID=Europe/Brussels:20261031T180000
+SUMMARY:KBBC Racing Brugge HSE C – BBC Groep Linden Oudenburg HSE A
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11372496051-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T170000
+DTEND;TZID=Europe/Brussels:20261031T190000
+SUMMARY:Joppo Basket Izegem HSE C – KBGOB Finexa Basket@Sea HSE C
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13855333400-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Rapid Raptors Langemark HSE C – Basket Poperinge HSE B
+LOCATION:Sportcentrum Langemark-Poelkapelle\, Boezingestraat 51A\, 8920 Langemark-Poelkapelle
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13888888638-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Koninklijke BBC Oostkamp HSE B – Wytewa Roeselare HSE B
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11607529812-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basket Desselgem HSE B – Koninklijke Basket Avelgem HSE B
+LOCATION:Leiestadion\, Pompoenstraat\, 8792 Desselgem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13871963924-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Bebita Eernegem HSE B – Basket Midwest BP Tielt HSE A (20-0)
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13922443876-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Basket Scaldis Otegem HSE A – Basket SKT Ieper HSE D
+LOCATION:Sport-Ontmoetingscentrum Otegem\, Scheldestraat 14\, 8553 Otegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13905666257-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE B – Basket SKT Ieper HSE C
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13838555781-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T181500
+DTEND;TZID=Europe/Brussels:20261031T201500
+SUMMARY:KBBC Racing Brugge HSE B – Joppo Basket Izegem HSE B
+LOCATION:KTA Brugge\, Rijselstraat 7\, 8200 Sint-Michiels
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11422976003-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T181500
+DTEND;TZID=Europe/Brussels:20261031T201500
+SUMMARY:KBGOB Finexa Basket@Sea HSE D – KBBC. Stella P. Wikings Kortrijk HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11523494622-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:Holstra WINGS Wevelgem-Moorsele HSE E – KBBC Vk Iebac Ieper HSE B
+LOCATION:Evenementenhal De Schelp\, Menenstraat 122\, 8560 Wevelgem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11473161765-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:BBC Gullegem HSE C – KBGOB Finexa Basket@Sea HSE E
+LOCATION:Gemeentelijke Sporthal Gullegem\, Peperstraat\, 8560 Gullegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11406051289-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:Kon BBC De Panne vzw HSE A – House Of Talents Kortrijk Spurs HSE D
+LOCATION:Sportzaal Den Oosthoek\, Sportlaan 2\, 8660 De Panne
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11355718432-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland HSE A – Rozenbeka Oostrozebeke HSE A
+LOCATION:Salle des Sports Ploegsteert\, rue de Messines 14\, 7782 Ploegsteert
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13955999114-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:A.C.J. Basket Brugge HSE A – Olympos Marke HSE A
+LOCATION:Sporthal Daverlo\, Dries 2\, 8310 Assebroek
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11439606527-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T201500
+DTEND;TZID=Europe/Brussels:20261031T221500
+SUMMARY:KBBC Vk Iebac Ieper HSE A – Wibac BBC Sint-Eloois-Winkel HSE A
+LOCATION:Zaal VK Iebac\, Crescendostraat 11\, 8900 Ieper
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11540272241-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Bebita Eernegem HSE A – G&V Breakpoint Basket Waregem HSE C
+LOCATION:Sportcentrum Eernegem\, Bruggestraat 104\, 8480 Eernegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11406198384-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:BC Lamett Deerlijk-Zwevegem HSE B – BBC Gullegem HSE A
+LOCATION:Gaverhal\, Vercruyse de Solarstraat 30\, 8540 Deerlijk
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13905519162-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Basket Blankenberge HSE A – Bobcat Wielsbeke HSE B
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13821778162-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:De West-Hoek Zwevezele HSE A – Red Sharks Koekelare HSE A
+LOCATION:Sporthal "De Zwaluw" Zwevezele\, Kasteelstraat\, 8750 Zwevezele
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13972776733-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T100000
+DTEND;TZID=Europe/Brussels:20261101T120000
+SUMMARY:House Of Talents Kortrijk Spurs HSE C – Rapid Raptors Langemark HSE A
+LOCATION:Sporthal Lange Munte\, Bad Godesberglaan 22\, 8500 Kortrijk
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13872111019-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Bobcat Wielsbeke HSE A – Basket Sijsele HSE B
+LOCATION:De Vlaschaard (Wielsbeke)\, Willem Bouvier Cartonstraat 44\, 8710 Sint-Baafs-Vijve
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11523641717-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Olympos Marke HSE B – Holstra WINGS Wevelgem-Moorsele HSE B
+LOCATION:Sporthalle Marke\, Gymnasiastraat\, 8510 Marke (Kortrijk)
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11473308860-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T140000
+DTEND;TZID=Europe/Brussels:20261101T160000
+SUMMARY:Basket Sijsele HSE C – Holstra WINGS Wevelgem-Moorsele HSE C
+LOCATION:Sportpark 't Veld\, Eikelberg 3\, 8340 Sijsele
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11506864098-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:Basket Poperinge HSE A – BC Lamett Deerlijk-Zwevegem HSE C
+LOCATION:Stedelijke Sporthal Poperinge\, Ouderdomseweg\, 8970 Poperinge
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13888741543-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:Zedelgem Lions HSE A – Rapid Raptors Langemark HSE B
+LOCATION:Sportcentrum "De Bosserij"\, Acaciastraat 31\, 8210 Veldegem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11439753622-comp-cup-beker-van-west-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:Koninklijke Basket Avelgem HSE A – BBC Gullegem HSE B
+LOCATION:Gemeentelijke Sporthal Ter Muncken\, Doorniksesteenweg 226\, 8580 Avelgem
+DESCRIPTION:Beker van West-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+END:VCALENDAR

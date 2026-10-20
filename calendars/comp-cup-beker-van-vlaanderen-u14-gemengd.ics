@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaanderen U14 Gemengd
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-12138788390-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:Partena Professional Okapi Aalst G14 A – BBC Falco Gent G14 A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12172343628-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Zuiderkempen Diamonds G14 A – Koninklijke Sint-Niklase Condors G14 A
+LOCATION:Sportpark Joris Verhaegen\, Industriepark 3\, 2235 hulshout
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12122010771-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T140000
+DTEND;TZID=Europe/Brussels:20261107T160000
+SUMMARY:Titans Basketball Bonheiden G14 A – Bazel Sobabee@Den Dulpop G14 A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12356897437-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:Guco Lier G14 A – BBC Croonen Lommel G14 A
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12105233152-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T153000
+DTEND;TZID=Europe/Brussels:20261107T173000
+SUMMARY:Joppo Basket Izegem G14 A – House Of Talents Kortrijk Spurs G14 A
+LOCATION:Sporthal Kachtem\, Hogestraat\, 8870 Kachtem
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12205898866-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:AB InBev Leuven Bears G14 A – Basket Willebroek G14 A
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12155566009-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:Avanti Brugge 2015 G14 A – Basket Lummen G14 A
+LOCATION:Stamina\, Daverlostraat 132\, 8310 Assebroek
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12189121247-comp-cup-beker-van-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261111T131500
+DTEND;TZID=Europe/Brussels:20261111T151500
+SUMMARY:BC Oostende G14 A – Bavi Vilvoorde G14 A
+LOCATION:COREtec Dôme\, Northlaan 13\, 8400 Oostende
+DESCRIPTION:Beker van Vlaanderen U14 Gemengd 1/8 Finale
+END:VEVENT
+END:VCALENDAR

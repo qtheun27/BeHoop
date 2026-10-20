@@ -1,0 +1,132 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial U18 Garçons
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-473687-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T090000
+DTEND;TZID=Europe/Brussels:20261003T110000
+SUMMARY:RUS Mariembourg A – Profondeville Sharks A (20-0)
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660 Couvin
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473677-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T133000
+DTEND;TZID=Europe/Brussels:20261003T153000
+SUMMARY:Jeunesse Basket Hotton – RBC Erpent B (56-47)
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990 Hotton
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473697-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T150000
+DTEND;TZID=Europe/Brussels:20261010T170000
+SUMMARY:Profondeville Sharks A – Jeunesse Basket Hotton (48-41)
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473683-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T160000
+DTEND;TZID=Europe/Brussels:20261010T180000
+SUMMARY:Andenne Basket B – RUS Mariembourg A (37-62)
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473698-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T150000
+DTEND;TZID=Europe/Brussels:20261107T170000
+SUMMARY:Profondeville Sharks A – RUS Mariembourg A
+LOCATION:Complexe sportif de la Hulle\, Avenue de Roquebrune 32\, 5170 Profondeville
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473678-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T133000
+DTEND;TZID=Europe/Brussels:20261114T153000
+SUMMARY:Jeunesse Basket Hotton – Profondeville Sharks A
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990 Hotton
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473688-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T150000
+DTEND;TZID=Europe/Brussels:20261114T170000
+SUMMARY:RUS Mariembourg A – Andenne Basket B
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660 Couvin
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473679-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T133000
+DTEND;TZID=Europe/Brussels:20261121T153000
+SUMMARY:Jeunesse Basket Hotton – RUS Mariembourg A
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990 Hotton
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473695-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T150000
+DTEND;TZID=Europe/Brussels:20261121T170000
+SUMMARY:RBC Erpent B – Andenne Basket B
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473694-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T130000
+DTEND;TZID=Europe/Brussels:20261129T150000
+SUMMARY:RBC Erpent B – Jeunesse Basket Hotton
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473685-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T160000
+DTEND;TZID=Europe/Brussels:20261205T180000
+SUMMARY:Andenne Basket B – Profondeville Sharks A
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473689-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T150000
+DTEND;TZID=Europe/Brussels:20261206T170000
+SUMMARY:RUS Mariembourg A – RBC Erpent B
+LOCATION: Couvidome Bernard Pignon\, Rue de la Foulerie 12\, 5660 Couvin
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473691-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T090000
+DTEND;TZID=Europe/Brussels:20261212T110000
+SUMMARY:RBC Erpent B – Profondeville Sharks A
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:PU18GD
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-473680-comp-s6385@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T133000
+DTEND;TZID=Europe/Brussels:20261212T153000
+SUMMARY:Jeunesse Basket Hotton – Andenne Basket B
+LOCATION:Centre des Sports d'Hotton\, Rue des Vergers 7\, 6990 Hotton
+DESCRIPTION:PU18GD
+END:VEVENT
+END:VCALENDAR

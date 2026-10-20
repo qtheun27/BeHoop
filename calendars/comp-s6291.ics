@@ -1,0 +1,528 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial 3 Dames
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-470349-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:RBC Auderghem – Royal Canter Schaerbeek C (45-19)
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470427-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Atlas Brussels BB Academy – Genappe Lothier (20-0)
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470413-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T193000
+DTEND;TZID=Europe/Brussels:20261003T213000
+SUMMARY:Genappe Lothier – RBC Éclair B (52-36)
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470361-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261009T210000
+DTEND;TZID=Europe/Brussels:20261009T230000
+SUMMARY:Royal Castors Braine – RBC Auderghem (43-71)
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470382-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T184500
+DTEND;TZID=Europe/Brussels:20261010T204500
+SUMMARY:CRBB The Runners B – Genappe Lothier (30-87)
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470401-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T170000
+DTEND;TZID=Europe/Brussels:20261018T190000
+SUMMARY:Royal Canter Schaerbeek C – Genappe Lothier (27-86)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470350-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:RBC Auderghem – CRBB The Runners B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470391-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:RBC Éclair B – Royal Castors Braine
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470362-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261106T210000
+DTEND;TZID=Europe/Brussels:20261106T230000
+SUMMARY:Royal Castors Braine – Royal Canter Schaerbeek C
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470383-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T184500
+DTEND;TZID=Europe/Brussels:20261107T204500
+SUMMARY:CRBB The Runners B – Atlas Brussels BB Academy
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470393-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:RBC Éclair B – RBC Auderghem
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470363-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261120T210000
+DTEND;TZID=Europe/Brussels:20261120T230000
+SUMMARY:Royal Castors Braine – Atlas Brussels BB Academy
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470415-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T193000
+DTEND;TZID=Europe/Brussels:20261121T213000
+SUMMARY:Genappe Lothier – RBC Auderghem
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470384-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:CRBB The Runners B – Royal Canter Schaerbeek C
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470425-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Atlas Brussels BB Academy – Royal Castors Braine
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470352-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:RBC Auderghem – RBC Éclair B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470426-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T170000
+DTEND;TZID=Europe/Brussels:20261205T190000
+SUMMARY:Atlas Brussels BB Academy – CRBB The Runners B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470405-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T170000
+DTEND;TZID=Europe/Brussels:20261206T190000
+SUMMARY:Royal Canter Schaerbeek C – Royal Castors Braine
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470416-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T210000
+DTEND;TZID=Europe/Brussels:20261211T230000
+SUMMARY:Genappe Lothier – CRBB The Runners B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470423-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T170000
+DTEND;TZID=Europe/Brussels:20261212T190000
+SUMMARY:Atlas Brussels BB Academy – RBC Auderghem
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470406-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T170000
+DTEND;TZID=Europe/Brussels:20261213T190000
+SUMMARY:Royal Canter Schaerbeek C – RBC Éclair B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470351-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:RBC Auderghem – Genappe Lothier
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470364-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270108T210000
+DTEND;TZID=Europe/Brussels:20270108T230000
+SUMMARY:Royal Castors Braine – RBC Éclair B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470407-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:Royal Canter Schaerbeek C – RBC Auderghem
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470417-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T193000
+DTEND;TZID=Europe/Brussels:20270116T213000
+SUMMARY:Genappe Lothier – Royal Canter Schaerbeek C
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470385-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:CRBB The Runners B – Royal Castors Braine
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470395-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:RBC Éclair B – Atlas Brussels BB Academy
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470428-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T170000
+DTEND;TZID=Europe/Brussels:20270123T190000
+SUMMARY:Atlas Brussels BB Academy – Royal Canter Schaerbeek C
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470386-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T183000
+DTEND;TZID=Europe/Brussels:20270123T203000
+SUMMARY:CRBB The Runners B – RBC Auderghem
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470396-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T210000
+DTEND;TZID=Europe/Brussels:20270123T230000
+SUMMARY:RBC Éclair B – Genappe Lothier
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470355-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T170000
+DTEND;TZID=Europe/Brussels:20270130T190000
+SUMMARY:RBC Auderghem – Atlas Brussels BB Academy
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470418-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T193000
+DTEND;TZID=Europe/Brussels:20270130T213000
+SUMMARY:Genappe Lothier – Royal Castors Braine
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470397-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T210000
+DTEND;TZID=Europe/Brussels:20270130T230000
+SUMMARY:RBC Éclair B – CRBB The Runners B
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470366-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T210000
+DTEND;TZID=Europe/Brussels:20270205T230000
+SUMMARY:Royal Castors Braine – Atlas Brussels BB Academy
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470387-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T190000
+DTEND;TZID=Europe/Brussels:20270206T210000
+SUMMARY:CRBB The Runners B – Royal Canter Schaerbeek C
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470419-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T193000
+DTEND;TZID=Europe/Brussels:20270206T213000
+SUMMARY:Genappe Lothier – RBC Auderghem
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470367-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270212T210000
+DTEND;TZID=Europe/Brussels:20270212T230000
+SUMMARY:Royal Castors Braine – RBC Auderghem
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470388-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:CRBB The Runners B – Genappe Lothier
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470399-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T210000
+DTEND;TZID=Europe/Brussels:20270213T230000
+SUMMARY:RBC Éclair B – Royal Canter Schaerbeek C
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470368-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270219T210000
+DTEND;TZID=Europe/Brussels:20270219T230000
+SUMMARY:Royal Castors Braine – CRBB The Runners B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470430-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:Atlas Brussels BB Academy – RBC Éclair B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470408-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T170000
+DTEND;TZID=Europe/Brussels:20270221T190000
+SUMMARY:Royal Canter Schaerbeek C – Genappe Lothier
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470353-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270227T170000
+DTEND;TZID=Europe/Brussels:20270227T190000
+SUMMARY:RBC Auderghem – Royal Castors Braine
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470403-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270307T170000
+DTEND;TZID=Europe/Brussels:20270307T190000
+SUMMARY:Royal Canter Schaerbeek C – Atlas Brussels BB Academy
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470356-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T170000
+DTEND;TZID=Europe/Brussels:20270313T190000
+SUMMARY:RBC Auderghem – RBC Éclair B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470431-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T170000
+DTEND;TZID=Europe/Brussels:20270320T190000
+SUMMARY:Atlas Brussels BB Academy – CRBB The Runners B
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470409-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T170000
+DTEND;TZID=Europe/Brussels:20270321T190000
+SUMMARY:Royal Canter Schaerbeek C – Royal Castors Braine
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470357-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T170000
+DTEND;TZID=Europe/Brussels:20270327T190000
+SUMMARY:RBC Auderghem – CRBB The Runners B
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470420-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T193000
+DTEND;TZID=Europe/Brussels:20270327T213000
+SUMMARY:Genappe Lothier – RBC Éclair B
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470410-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T170000
+DTEND;TZID=Europe/Brussels:20270328T190000
+SUMMARY:Royal Canter Schaerbeek C – Atlas Brussels BB Academy
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470404-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270404T170000
+DTEND;TZID=Europe/Brussels:20270404T190000
+SUMMARY:Royal Canter Schaerbeek C – CRBB The Runners B
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470358-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T170000
+DTEND;TZID=Europe/Brussels:20270410T190000
+SUMMARY:RBC Auderghem – Royal Canter Schaerbeek C
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470421-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T190000
+DTEND;TZID=Europe/Brussels:20270410T210000
+SUMMARY:Genappe Lothier – Atlas Brussels BB Academy
+LOCATION:Salle Polyvalente de l'Espace 2000\, Rue Louis Taburiaux 25\, 1472 Vieux-Genappe
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470400-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270410T210000
+DTEND;TZID=Europe/Brussels:20270410T230000
+SUMMARY:RBC Éclair B – Royal Castors Braine
+LOCATION:Salle Omnisports Neder-Over-Hembeek\, Rue de Lombarzyde\, 120\, 1020 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470369-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270416T210000
+DTEND;TZID=Europe/Brussels:20270416T230000
+SUMMARY:Royal Castors Braine – Genappe Lothier
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470432-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270417T170000
+DTEND;TZID=Europe/Brussels:20270417T190000
+SUMMARY:Atlas Brussels BB Academy – RBC Auderghem
+LOCATION:Salle Fontainas\, Rue des Six Jetons 20\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470390-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270424T204500
+DTEND;TZID=Europe/Brussels:20270424T224500
+SUMMARY:CRBB The Runners B – RBC Éclair B
+LOCATION:Lycée Intégral Roger Lallemand\, Rue de la Croix de Pierre 73\, 1060 Saint-Gilles
+DESCRIPTION:P3D A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-470422-comp-s6291@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270530T190000
+DTEND;TZID=Europe/Brussels:20270530T210000
+SUMMARY:Atlas Brussels BB Academy – RBC Éclair B
+LOCATION:Haute Ecole Francisco Ferrer/Buls - De Mot\, Place Rouppe 28\, 1000 Bruxelles
+DESCRIPTION:P3D A
+END:VEVENT
+END:VCALENDAR

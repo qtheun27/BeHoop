@@ -1,0 +1,240 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:U16 Meisjes Niveau 2 G
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-10554936355-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T100000
+DTEND;TZID=Europe/Brussels:20260920T120000
+SUMMARY:GSG Aarschot M16 A – Basket Groot Zemst M16 A (63-49)
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10218795595-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260920T151500
+DTEND;TZID=Europe/Brussels:20260920T171500
+SUMMARY:Clem Scherpenheuvel M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A (32-64)
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13993509607-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T120000
+DTEND;TZID=Europe/Brussels:20260926T140000
+SUMMARY:Titans Basketball Bonheiden M16 A – Clem Scherpenheuvel M16 A (123-28)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10873269831-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Basket Groot Zemst M16 A – Hageland United M16 A (46-52)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13457611537-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T120000
+DTEND;TZID=Europe/Brussels:20260927T140000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven M16 A – GSG Aarschot M16 A (77-40)
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13994642440-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T160000
+DTEND;TZID=Europe/Brussels:20261003T180000
+SUMMARY:Hageland United M16 A – Clem Scherpenheuvel M16 A (56-38)
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10588491593-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T100000
+DTEND;TZID=Europe/Brussels:20261004T120000
+SUMMARY:GSG Aarschot M16 A – Titans Basketball Bonheiden M16 A (61-73)
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13474389156-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T100000
+DTEND;TZID=Europe/Brussels:20261004T120000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven M16 A – Basket Groot Zemst M16 A (68-40)
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10822936974-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T170000
+DTEND;TZID=Europe/Brussels:20261010T190000
+SUMMARY:Basket Groot Zemst M16 A – Titans Basketball Bonheiden M16 A (32-94)
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13424056299-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T120000
+DTEND;TZID=Europe/Brussels:20261011T140000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven M16 A – Hageland United M16 A (64-31)
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10235573214-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T151500
+DTEND;TZID=Europe/Brussels:20261011T171500
+SUMMARY:Clem Scherpenheuvel M16 A – GSG Aarschot M16 A (42-44)
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10285906071-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T133000
+DTEND;TZID=Europe/Brussels:20261017T153000
+SUMMARY:Clem Scherpenheuvel M16 A – Basket Groot Zemst M16 A (56-64)
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13943176750-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T140000
+DTEND;TZID=Europe/Brussels:20261017T160000
+SUMMARY:Titans Basketball Bonheiden M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A (65-49)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10605269212-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T100000
+DTEND;TZID=Europe/Brussels:20261018T120000
+SUMMARY:GSG Aarschot M16 A – Hageland United M16 A (45-69)
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14011420059-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T160000
+DTEND;TZID=Europe/Brussels:20261024T180000
+SUMMARY:Hageland United M16 A – Titans Basketball Bonheiden M16 A
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10906825069-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T170000
+DTEND;TZID=Europe/Brussels:20261024T190000
+SUMMARY:Basket Groot Zemst M16 A – GSG Aarschot M16 A
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13524722013-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261025T120000
+DTEND;TZID=Europe/Brussels:20261025T140000
+SUMMARY:Stella Artois 0.0 Blue Tigers Leuven M16 A – Clem Scherpenheuvel M16 A
+LOCATION:Campus Redingenhof\, Remi Vandervaerenlaan\, 3000 Leuven
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14044975297-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T160000
+DTEND;TZID=Europe/Brussels:20261114T180000
+SUMMARY:Hageland United M16 A – Basket Groot Zemst M16 A
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10622046831-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T100000
+DTEND;TZID=Europe/Brussels:20261115T120000
+SUMMARY:GSG Aarschot M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10319461309-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T130000
+DTEND;TZID=Europe/Brussels:20261115T150000
+SUMMARY:Clem Scherpenheuvel M16 A – Titans Basketball Bonheiden M16 A
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13926399131-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T140000
+DTEND;TZID=Europe/Brussels:20261121T160000
+SUMMARY:Titans Basketball Bonheiden M16 A – GSG Aarschot M16 A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10202017976-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T154500
+DTEND;TZID=Europe/Brussels:20261121T174500
+SUMMARY:Clem Scherpenheuvel M16 A – Hageland United M16 A
+LOCATION:Stedelijke Sporthal Scherpenheuvel\, August Nihoulstraat 72\, 3270 Scherpenheuvel
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10856492212-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:Basket Groot Zemst M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A
+LOCATION:Den Turfput\, Brusselsesteenweg 3\, 1980 Zemst
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14010287226-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:Titans Basketball Bonheiden M16 A – Basket Groot Zemst M16 A
+LOCATION:Gemeentelijk Sporthal Keerbergen\, Putsebaan 103\, 3140 Keerbergen
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14112085773-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T160000
+DTEND;TZID=Europe/Brussels:20261128T180000
+SUMMARY:Hageland United M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A
+LOCATION:Sporthal Lubbeek\, Gellenberg 14\, 3210 Lubbeek
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10571713974-comp-s11768097612@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T100000
+DTEND;TZID=Europe/Brussels:20261129T120000
+SUMMARY:GSG Aarschot M16 A – Clem Scherpenheuvel M16 A
+LOCATION:Stedelijke Sporthal Demervallei\, Demervallei 8\, 3200 Aarschot
+DESCRIPTION:U16 Meisjes Niveau 2 G
+END:VEVENT
+END:VCALENDAR

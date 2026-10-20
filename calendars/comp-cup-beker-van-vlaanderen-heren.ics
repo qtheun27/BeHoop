@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Vlaanderen Heren
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-14169091050-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260929T203000
+DTEND;TZID=Europe/Brussels:20260929T223000
+SUMMARY:Geranimo Bornem Basket HSE A – Red Vic Wilrijk HSE A (86-58)
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14101980574-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260929T204500
+DTEND;TZID=Europe/Brussels:20260929T224500
+SUMMARY:Basket Blankenberge HSE A – BBC Falco Gent HSE B (81-70)
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14152313431-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260929T210000
+DTEND;TZID=Europe/Brussels:20260929T230000
+SUMMARY:Amon Jeugd Gentson HSE B – e5 Sgolba Aalter HSE A (64-78)
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14085202955-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261001T203000
+DTEND;TZID=Europe/Brussels:20261001T223000
+SUMMARY:Titans Basketball Bonheiden HSE A – Jumbo Elektrooghe Gembas Knesselare HSE A (90-75)
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14135535812-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261005T210000
+DTEND;TZID=Europe/Brussels:20261005T230000
+SUMMARY:Guco Lier HSE C – GSG Aarschot HSE A (92-73)
+LOCATION:Sporthal Stadspark\, Leuvensevest\, 2500 Lier
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14118758193-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261007T203000
+DTEND;TZID=Europe/Brussels:20261007T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – KBBC T&T Turnhout HSE A (80-63)
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Vlaanderen Heren Ronde 2
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10260349211-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:Oxaco BBC Boechout HSE A – BBC Croonen Lommel HSE A
+LOCATION:Sportpark Sneppenbos\, Vremdesesteenweg 224\, 2530 Boechout
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10092425926-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:Basket Blankenberge HSE A – Imprenta Kontich Wolves HSE A
+LOCATION:Sporthal Sportdoze\, Koning Albert I laan 114\, 8370 Blankenberge
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10293757354-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:Antwerp Giants HSE B – Guco Lier HSE B
+LOCATION:Heylen Vastgoed Basketcampus\, Gasthuishoevestraat 71\, 2170 Antwerpen
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10243424497-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:Hasselt BT HSE A – Phantoms Basket Boom HSE A
+LOCATION:Stedelijke sportschuur Kuringen\, Grote Baan 171\, 3511 Kuringen
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10193091640-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T200000
+DTEND;TZID=Europe/Brussels:20261031T220000
+SUMMARY:e5 Sgolba Aalter HSE A – Basket SKT Ieper HSE A
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10276979735-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T201500
+DTEND;TZID=Europe/Brussels:20261031T221500
+SUMMARY:Geranimo Bornem Basket HSE A – ABO LDP Donza HSE A
+LOCATION:Sporthal Breeven\, Barelstraat 111\, 2880 Bornem
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10243571592-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:G&V Breakpoint Basket Waregem HSE A – Koninklijke Sint-Niklase Condors HSE A
+LOCATION:De Treffer (Stedelijke Sporthal)\, Meersstraat\, 8790 Waregem
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10327459687-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:KBGOB Finexa Basket@Sea HSE A – Basket Sijsele HSE A
+LOCATION:De Koninklijke stallingen Stedelijk Sportcentrum\, Koninginnelaan\, 8400 Oostende
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10310534973-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Koninklijke BBC Oostkamp HSE A – BBC Falco Gent HSE A
+LOCATION:De Valkaart\, Albrecht Rodenbachstraat 42\, 8020 Oostkamp
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10293904449-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Titans Basketball Bonheiden HSE A – Gent-Oost Eagles HSE A
+LOCATION:Sporthal Berentrode\, Grote Doelstraat 1\, 2820 Bonheiden
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10344237306-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:BasKet Tongeren HSE A – Basket Willebroek HSE A
+LOCATION:Pibo\, Kruissteenweg 323\, 3700 Tongeren-Borgloon
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10260202116-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:Basics Melsele-Beveren HSE A – Amon Jeugd Gentson HSE A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10361014925-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:BBC Geel HSE A – Bavi Vilvoorde HSE A
+LOCATION:Axion\, Zwaarvoerdersspoor 1\, 2440 Geel
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10310682068-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T180000
+DTEND;TZID=Europe/Brussels:20261101T200000
+SUMMARY:AB InBev Leuven Bears HSE B – Guco Lier HSE A
+LOCATION:Stedelijke Sportzaal Wilsele Centrum\, Aarschotsesteenweg 163\, 3012 Wilsele
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10109203545-comp-cup-beker-van-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261104T203000
+DTEND;TZID=Europe/Brussels:20261104T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – BC Asse-Ternat HSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Vlaanderen Heren 1/16 Finale
+END:VEVENT
+END:VCALENDAR

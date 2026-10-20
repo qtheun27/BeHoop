@@ -1,0 +1,123 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U16 Hommes Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-485614-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T130000
+DTEND;TZID=Europe/Brussels:20260926T150000
+SUMMARY:RBC Loyers B – Royal BC Maillen (48-71)
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482276-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T131500
+DTEND;TZID=Europe/Brussels:20260926T151500
+SUMMARY:RBC Ciney A – RBC Ciney B (161-18)
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590 Ciney
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482271-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:RBC Éghezée – BC Fraire-Philippeville B (46-82)
+LOCATION:Hall Omnisports d'Eghezée\, Rue de la Gare 5\, 5310 Eghezée
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485616-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T160000
+DTEND;TZID=Europe/Brussels:20260926T180000
+SUMMARY:Andenne Basket A – BC Rochefort (68-27)
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-482284-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T120000
+DTEND;TZID=Europe/Brussels:20260927T140000
+SUMMARY:AS Mazy-Spy – RBC Loyers A (61-32)
+LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190 Jemeppe-sur-Sambre
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485625-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T121500
+DTEND;TZID=Europe/Brussels:20261031T141500
+SUMMARY:RBC Ciney A – RBB Gembloux A
+LOCATION:Salle Joseph Laloux\, Rue Saint-Quentin 10b\, 5590 Ciney
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485624-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T130000
+DTEND;TZID=Europe/Brussels:20261031T150000
+SUMMARY:BC Fraire-Philippeville B – BC Malonne
+LOCATION:Complexe sportif\, de la Gendarmerie 30B\, 5600 Philippeville
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485630-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T140000
+DTEND;TZID=Europe/Brussels:20261031T160000
+SUMMARY:BC Marche A – Royal Herbuchenne Dinant B
+LOCATION:Athénée Royal de Marche\, Rue Cornimont\, 6900 Marche-en-Famenne
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485628-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:Andenne Basket A – RUS Mariembourg A
+LOCATION:Andenne Arena\, Rue Docteur Mélin 14\, 5300 Andenne
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485631-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:BC Fernelmont A – Ramillies BC
+LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380 Noville-les-Bois
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485629-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T090000
+DTEND;TZID=Europe/Brussels:20261101T110000
+SUMMARY:RBC Erpent A – BC Marche B
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485627-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T110000
+DTEND;TZID=Europe/Brussels:20261101T130000
+SUMMARY:Royal BC Maillen – Royal Gallia BC Beez A
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CHU16
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-485626-comp-cup-coupe-u16-hommes-namur-namur@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T113000
+DTEND;TZID=Europe/Brussels:20261101T133000
+SUMMARY:AS Mazy-Spy – RBB Gembloux B
+LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190 Jemeppe-sur-Sambre
+DESCRIPTION:CHU16
+END:VEVENT
+END:VCALENDAR

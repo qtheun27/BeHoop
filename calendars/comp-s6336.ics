@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Régional U14 Dames Silver
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-458373-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T130000
+DTEND;TZID=Europe/Brussels:20261003T150000
+SUMMARY:Royal CS Natoye – La Villersoise (71-21)
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458383-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T103000
+DTEND;TZID=Europe/Brussels:20261011T123000
+SUMMARY:La Villersoise – RBC Auderghem (86-42)
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530 Villers-le-Bouillet
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458388-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T130000
+DTEND;TZID=Europe/Brussels:20261017T150000
+SUMMARY:Alliance Flémalle A – Royal CS Natoye (30-76)
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458380-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T130000
+DTEND;TZID=Europe/Brussels:20261107T150000
+SUMMARY:Royal BC.Prayon A – RBC Auderghem
+LOCATION:Hall Omnisports Communal Trooz\, Rue de L'Eglise\, 22\, 4870 Trooz
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458384-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T103000
+DTEND;TZID=Europe/Brussels:20261108T123000
+SUMMARY:La Villersoise – Royal CS Natoye
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530 Villers-le-Bouillet
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458364-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T090000
+DTEND;TZID=Europe/Brussels:20261115T110000
+SUMMARY:RBC Auderghem – La Villersoise
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458390-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T110000
+DTEND;TZID=Europe/Brussels:20261115T130000
+SUMMARY:Alliance Flémalle A – Royal BC.Prayon A
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458365-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T090000
+DTEND;TZID=Europe/Brussels:20261122T110000
+SUMMARY:RBC Auderghem – Royal CS Natoye
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458385-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T103000
+DTEND;TZID=Europe/Brussels:20261122T123000
+SUMMARY:La Villersoise – Alliance Flémalle A
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530 Villers-le-Bouillet
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458379-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T170000
+DTEND;TZID=Europe/Brussels:20261128T190000
+SUMMARY:Royal BC.Prayon A – Alliance Flémalle A
+LOCATION:Hall Omnisports Communal Trooz\, Rue de L'Eglise\, 22\, 4870 Trooz
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458363-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T090000
+DTEND;TZID=Europe/Brussels:20261129T110000
+SUMMARY:RBC Auderghem – Royal BC.Prayon A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458375-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T090000
+DTEND;TZID=Europe/Brussels:20261205T110000
+SUMMARY:Royal CS Natoye – Royal BC.Prayon A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458391-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T110000
+DTEND;TZID=Europe/Brussels:20261206T130000
+SUMMARY:Alliance Flémalle A – RBC Auderghem
+LOCATION:Complexe Sportif Louis Melin\, Rue du Passage d'Eau 4\, 4400 Flémalle
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458376-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T110000
+DTEND;TZID=Europe/Brussels:20261212T130000
+SUMMARY:Royal CS Natoye – Alliance Flémalle A
+LOCATION:Hall Omnisports de Natoye\, Rue du Château d'Eau\, 31 31\, 5360 Natoye
+DESCRIPTION:U14DS B
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-458386-comp-s6336@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T130000
+DTEND;TZID=Europe/Brussels:20261213T150000
+SUMMARY:La Villersoise – Royal BC.Prayon A
+LOCATION:Hall des Sports Emile Collignon\, rue du Centre\, 5\, 4530 Villers-le-Bouillet
+DESCRIPTION:U14DS B
+END:VEVENT
+END:VCALENDAR

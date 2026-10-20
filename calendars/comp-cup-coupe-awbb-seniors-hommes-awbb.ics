@@ -1,0 +1,213 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe AWBB Seniors Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-496081-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260924T200000
+DTEND;TZID=Europe/Brussels:20260924T220000
+SUMMARY:AS Mazy-Spy A – Royal CS Natoye A (78-61)
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 5032 Corroy-le-Chateau
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496094-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T200000
+DTEND;TZID=Europe/Brussels:20260925T220000
+SUMMARY:ESL United B – Floréal BCCA Neufchâteau B (94-91)
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496083-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T203000
+DTEND;TZID=Europe/Brussels:20260925T223000
+SUMMARY:Royal Canter Schaerbeek A – Mons Basketball B (87-58)
+LOCATION:Salle Omnisports Kinetix\, Boulevard Lambermont 236\, 1030 Schaerbeek
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496090-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T210000
+DTEND;TZID=Europe/Brussels:20260925T230000
+SUMMARY:Royal Spa Basket Club A – BC Verviers A (78-85)
+LOCATION:Complexe Sportif de Warfaaz\, Avenue Amédée Hesse 27\, 4900 Spa
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496088-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:GGBC Colfontaine A – JSB Maffle A (70-92)
+LOCATION:Complexe Sportif Achille Delattre \, Sentier de Liernes\, 100\, 7340 Colfontaine
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496093-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:CEP Fleurus B – BC JS Estaimpuis A (95-75)
+LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496087-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:RBC Loyers B – Royal Nivelles Basketball B (68-81)
+LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101 Loyers
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496084-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Royal Linthout BC W.S. B – BC Belleflamme A (72-80)
+LOCATION:Complexe Poseidon\, Avenue Des Vaillants\, 2\, 1200 Woluwe-Saint-Lambert
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496085-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:RBC Centre Gaume La Rulles A – Royal IV Brussels B (66-81)
+LOCATION: Salle des Sports\, Rue Maurice Grévisse\, 6724 Rulles
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496080-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:RB Tilff A – R.B.C. Belgrade B (67-57)
+LOCATION:Hall Omnisports Tilff\, Rue du Chera 9\, 4130 Tilff
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496095-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T210000
+DTEND;TZID=Europe/Brussels:20260926T230000
+SUMMARY:Ninane Chaudfontaine B – RPC Anderlecht (77-57)
+LOCATION:Hall Omnisports Vaux Sous Chèvremont\, rue de la Vesdre 14\, 4051 Vaux Sous Chèvremont
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496091-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T133000
+DTEND;TZID=Europe/Brussels:20260927T153000
+SUMMARY:Mailleux Comblain A – Olympic Mont Sur Marchienne A (96-75)
+LOCATION:Hall Omnisports\, Esplanade du Fair-Play\, 2\, 4920 Aywaille
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496086-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T140000
+DTEND;TZID=Europe/Brussels:20260927T160000
+SUMMARY:BC Fraire-Philippeville A – RBC Wanze A (68-74)
+LOCATION:Hall Omnisports de Laneffe\, Les Battis 17\, 5651 Walcourt
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496082-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T170000
+DTEND;TZID=Europe/Brussels:20260927T190000
+SUMMARY:Uccle Europe B – RBC Loyers A (77-72)
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496089-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T180000
+DTEND;TZID=Europe/Brussels:20260927T200000
+SUMMARY:BC Sprimont B – RBB Gembloux A (97-71)
+LOCATION:Hall Omnisports de Sprimont\, Rue Joseph Potier 15\, 4140 Sprimont
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496099-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261022T203000
+DTEND;TZID=Europe/Brussels:20261022T223000
+SUMMARY:RBC Wanze A – Royal Nivelles Basketball B
+LOCATION:Hall Omnisports Wanze\, Rue Géo Warzée 19\, 4520 Wanze
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496098-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T190000
+DTEND;TZID=Europe/Brussels:20261031T210000
+SUMMARY:BC Belleflamme A – Royal IV Brussels B
+LOCATION:Salle de l'IESE \, Rue Nicolas Spiroux 62\, 4030 Grivegnée
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496101-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T210000
+DTEND;TZID=Europe/Brussels:20261031T230000
+SUMMARY:BC Verviers A – Mailleux Comblain A
+LOCATION:Bulle de Gerardchamps\, Quai de la Vesdre\, 20\, 4800 Verviers
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496096-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T130000
+DTEND;TZID=Europe/Brussels:20261101T150000
+SUMMARY:RB Tilff A – AS Mazy-Spy A
+LOCATION:Hall Omnisports Tilff\, Rue du Chera 9\, 4130 Tilff
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496103-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T143000
+DTEND;TZID=Europe/Brussels:20261101T163000
+SUMMARY:ESL United B – Ninane Chaudfontaine B
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496100-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T150000
+DTEND;TZID=Europe/Brussels:20261101T170000
+SUMMARY:JSB Maffle A – BC Sprimont B
+LOCATION:Hall Omnisports Marcel Denis\, Place de Maffle \, 10\, 7810 Maffle
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496102-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T163000
+DTEND;TZID=Europe/Brussels:20261101T183000
+SUMMARY:ESL United A – CEP Fleurus B
+LOCATION:Collège Saint-Louis\, Rue Vilette 28\, 4020 Liège
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496097-comp-cup-coupe-awbb-seniors-hommes-awbb@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T170000
+DTEND;TZID=Europe/Brussels:20261101T190000
+SUMMARY:Uccle Europe B – Royal Canter Schaerbeek A
+LOCATION:HE2B Campus DeFré\, square de Fré\, 1180 Uccle
+DESCRIPTION:CA Hommes - Phase finale
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,150 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Oost-Vlaanderen U14 Gemengd
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-14093189320-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T110000
+DTEND;TZID=Europe/Brussels:20261031T130000
+SUMMARY:Erembodegem Silverbacks G14 A – BC Black Beez Erpe-Mere G14 A
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10133627309-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T090000
+DTEND;TZID=Europe/Brussels:20261107T110000
+SUMMARY:Koninklijke BBC Scheldejeugd Temse G14 A – Jumbo Elektrooghe Gembas Knesselare G14 B
+LOCATION:Sporthal Temsica\, Gasthuisstraat 78\, 9140 Temse
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14059634082-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T120000
+DTEND;TZID=Europe/Brussels:20261107T140000
+SUMMARY:KBBC Sparta Laarne G14 A – BBC Haantjes Certifisc Oudenaarde G14 B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13992523606-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T131500
+DTEND;TZID=Europe/Brussels:20261107T151500
+SUMMARY:BBC Assenede G14 A – BBC Lokeren G14 A
+LOCATION:Gemeentelijke Sporthal Assenede\, Kapelledreef 4\, 9960 Assenede
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10083294452-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T133000
+DTEND;TZID=Europe/Brussels:20261107T153000
+SUMMARY:Partena Professional Okapi Aalst G14 B – Gent-Oost Eagles G14 B
+LOCATION:TechniGO! campus De Voorstad\, Cesar Haeltermanstraat 71\, 9300 Aalst
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14042856463-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T133000
+DTEND;TZID=Europe/Brussels:20261107T153000
+SUMMARY:Koninklijke Sint-Niklase Condors G14 B – Bazel Sobabee@Den Dulpop G14 B
+LOCATION:Sporthal De Witte Molen\, Azalealaan 29\, 9100 Sint-Niklaas
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14076411701-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T143000
+DTEND;TZID=Europe/Brussels:20261107T163000
+SUMMARY:Royal Tigers Evergem G14 A – BBC Houtem Redwolves G14 B
+LOCATION:Gemeentelijke Sporthal Evergem\, Kapellestraat 75\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10066516833-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T153000
+DTEND;TZID=Europe/Brussels:20261107T173000
+SUMMARY:KBBC Bavi Gent G14 B – BBC Falco Gent G14 B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14009301225-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Basics Melsele-Beveren G14 B – KBBC Eksaarde G14 A
+LOCATION:'t wit zand\, Ledegancklaan 1\, 9120 Melsele
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10049739214-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T090000
+DTEND;TZID=Europe/Brussels:20261108T110000
+SUMMARY:ABO LDP Donza G14 B – BC Lede G14 A
+LOCATION:OCP\, Polderbos 1\, 9840 De Pinte
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13958968368-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:BBC Olympia Denderleeuw G14 B – B.B.C. Zele G14 A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14026078844-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:BBC Helios SanoRice Zottegem G14 B – KBBC Wezen-Vrienden Geraardsbergen G14 A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10100072071-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T110000
+DTEND;TZID=Europe/Brussels:20261108T130000
+SUMMARY:BBC Wildcats Gavere G14 A – CSS Outdoor Living Ninove G14 A
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10016183976-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T130000
+DTEND;TZID=Europe/Brussels:20261108T150000
+SUMMARY:e5 Sgolba Aalter G14 A – BBC Garage Wille Hansbeke G14 A
+LOCATION:Sportpark Aalter\, Lindestraat 17\, 9880 Aalter
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-14109966939-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:KBBC Wasocub Waasmunster vzw G14 A – Amon Jeugd Gentson G14 B
+LOCATION:De Meermin\, Van Roosenberglaan 6\, 9250 Waasmunster
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10116849690-comp-cup-beker-van-oost-vlaanderen-u14-gemengd@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T170000
+DTEND;TZID=Europe/Brussels:20261108T190000
+SUMMARY:BBC 2070 Zwijndrecht G14 A – Onderons Grembergen G14 A
+LOCATION:Den Draver\, Fortlaan 10\, 2070 Zwijndrecht
+DESCRIPTION:Beker van Oost-Vlaanderen U14 Gemengd 1/16 Finale 
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,195 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Beker van Oost-Vlaanderen Heren
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-11438719467-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261022T203000
+DTEND;TZID=Europe/Brussels:20261022T223000
+SUMMARY:Erembodegem Silverbacks HSE C – Panters Baasrode HSE B
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13519291318-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261027T203000
+DTEND;TZID=Europe/Brussels:20261027T223000
+SUMMARY:BC Lede HSE A – Amon Jeugd Gentson HSE C
+LOCATION:De Ommegang\, Ommeganglaan 1\, 9340 Lede
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11321276134-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261028T204500
+DTEND;TZID=Europe/Brussels:20261028T224500
+SUMMARY:BBC Falco Gent HSE D – e5 Sgolba Aalter HSE B
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11405164229-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:BBC Olympia Denderleeuw HSE B – BBC Garage Wille Hansbeke HSE A
+LOCATION:Lecompte\, Walleken 3\, 9470 Denderleeuw
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13569624175-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261029T203000
+DTEND;TZID=Europe/Brussels:20261029T223000
+SUMMARY:KBBC Bavi Gent HSE C – KBBC Sparta Laarne HSE B
+LOCATION:Sporthal Neptunus\, Botestraat 98\, 9032 Wondelgem
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13502513699-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T201500
+DTEND;TZID=Europe/Brussels:20261030T221500
+SUMMARY:Gent-Oost Eagles HSE D – Gent-Oost Eagles HSE C
+LOCATION:Eagles HQ\, Vogelstraat 26\, 9090 Melle
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11371608991-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:Partena Professional Okapi Aalst HSE B – Basics Melsele-Beveren HSE C
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13552846556-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:BBC Falco Gent HSE E – Koninklijke BBC Scheldejeugd Temse HSE A
+LOCATION:Sint Janscollege\, Heiveldstraat 127\, 9040 Sint-Amandsberg
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13586401794-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T203000
+DTEND;TZID=Europe/Brussels:20261030T223000
+SUMMARY:KBBC Sparta Laarne HSE C – BC Black Beez Erpe-Mere HSE B
+LOCATION:Gemeentelijke Sporthal Laarne\, Leeweg 25\, 9270 Laarne
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11338053753-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261030T210000
+DTEND;TZID=Europe/Brussels:20261030T230000
+SUMMARY:BBC Wildcats Gavere HSE A – ABO LDP Donza HSE C
+LOCATION:Scaldis Gavere\, Sportdreef 1\, 9890 Gavere
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13737694555-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:The Tower Aalst HSE A – BBC Lokeren HSE A
+LOCATION:Forum Aalst\, Albrechtlaan 115\, 9300 Aalst
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13603179413-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T150000
+DTEND;TZID=Europe/Brussels:20261031T170000
+SUMMARY:Royal Tigers Evergem HSE B – Jumbo Elektrooghe Gembas Knesselare HSE B
+LOCATION:Gemeentelijke Basisschool Evergem\, Reibroekstraat 2\, 9940 Evergem
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11421941848-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T180000
+DTEND;TZID=Europe/Brussels:20261031T200000
+SUMMARY:Amon Jeugd Gentson HSE D – KBBC Sparta Laarne HSE A
+LOCATION:Provinciale Sporthal Henleykaai\, Henleykaai 83\, 9000 Gent
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13653512270-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T181500
+DTEND;TZID=Europe/Brussels:20261031T201500
+SUMMARY:ABO LDP Donza HSE D – BBC Houtem Redwolves HSE B
+LOCATION:Sporthal Nazareth\, Drapstraat 64\, 9810 Nazareth
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13670289889-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T183000
+DTEND;TZID=Europe/Brussels:20261031T203000
+SUMMARY:KBBC Eksaarde HSE B – Royal Tigers Evergem HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11304498515-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:KBBC Eksaarde HSE A – BBC Helios SanoRice Zottegem HSE A
+LOCATION:Sporthal De Muylaert\, Muylaertstraat 17\, 9160 Eksaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13720916936-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:KBBC Wezen-Vrienden Geraardsbergen HSE A – BBC Olympia Denderleeuw HSE A
+LOCATION:De Veldmuis\, Felicien Cauwelstraat 31\, 9500 Geraardsbergen
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11287720896-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261031T203000
+DTEND;TZID=Europe/Brussels:20261031T223000
+SUMMARY:BBC Houtem Redwolves HSE A – KBBC Bavi Gent HSE B
+LOCATION:De Fabriek\, Fabrieksstraat 19\, 9520 Sint-Lievens-Houtem
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-11354831372-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261104T203000
+DTEND;TZID=Europe/Brussels:20261104T223000
+SUMMARY:BBC Helios SanoRice Zottegem HSE C – Basket Meetjesland HSE A
+LOCATION:Sporthal Bevegemse Vijvers\, Bevegemsevijvers 1\, 9620 Zottegem
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13771249793-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261105T203000
+DTEND;TZID=Europe/Brussels:20261105T223000
+SUMMARY:BBC Haantjes Certifisc Oudenaarde HSE B – KBBC Bavi Gent HSE A
+LOCATION:Rode Los\, Rodelos 1\, 9700 Oudenaarde
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13485736080-comp-cup-beker-van-oost-vlaanderen-heren@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261105T203000
+DTEND;TZID=Europe/Brussels:20261105T223000
+SUMMARY:Erembodegem Silverbacks HSE B – BBC Falco Gent HSE C
+LOCATION:Denderdal\, Kortestraat 14\, 9320 Erembodegem (Aalst)
+DESCRIPTION:Beker van Oost-Vlaanderen Heren 1/32 Finale
+END:VEVENT
+END:VCALENDAR

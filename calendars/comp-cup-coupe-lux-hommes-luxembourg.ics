@@ -1,0 +1,141 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe Lux Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-478732-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260923T210000
+DTEND;TZID=Europe/Brussels:20260923T230000
+SUMMARY:BC E St-Léger A – Nuts Bastogne (63-94)
+LOCATION:Complexe Sportif du Conchibois\, Rue du Stade\, 1\, 6747 Saint-Léger
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478738-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T200000
+DTEND;TZID=Europe/Brussels:20260925T220000
+SUMMARY:Basket Club Foxes Léglise – RBC Centre Gaume La Rulles B (0-20)
+LOCATION:Centre sportif de Léglise\, Rue du Haut Des Bruyères\, 26\, 6860 Léglise
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478735-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Junior Arlonais A – Bertrix Basket A (97-80)
+LOCATION:Salle de l'ITELA\, Chemin de Weyler\, 2\, 6700 Arlon
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478736-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T190000
+DTEND;TZID=Europe/Brussels:20260926T210000
+SUMMARY:BC Sarrasins Chantemelle – Royal BC Saint-Hubert B (64-66)
+LOCATION: Complexe Sportif de Chantemelle\, Rue de la Gravalle 50\, 6742 Chantemelle
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478733-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T201500
+DTEND;TZID=Europe/Brussels:20260926T221500
+SUMMARY:BC Centre Gaume Tintigny – Lorrain Saint Mard (85-48)
+LOCATION:Salle asbl Loisirs\, Rue du Tilleul\, 76\, 6730 Tintigny
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478739-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T150000
+DTEND;TZID=Europe/Brussels:20260927T170000
+SUMMARY:Rebond Musson A – Rus Centre Gaume Fratin A (50-71)
+LOCATION:Centre sportif et Culturel Baranzy\, Rue de France 31\, 6750 Musson
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478737-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T151500
+DTEND;TZID=Europe/Brussels:20260927T171500
+SUMMARY:BC Athus A – RB Alliance Arlon A (79-83)
+LOCATION:Centre sportif du Joli Bois\, 1\, rue de la Piscine\, 6791 Athus
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478734-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T160000
+DTEND;TZID=Europe/Brussels:20260927T180000
+SUMMARY:Floréal BCCA Neufchâteau C – RBC Libramont A (77-44)
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478743-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261214T180000
+DTEND;TZID=Europe/Brussels:20261214T200000
+SUMMARY:RBC Centre Gaume La Rulles B – Rus Centre Gaume Fratin A
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478740-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T180000
+DTEND;TZID=Europe/Brussels:20261219T200000
+SUMMARY:Nuts Bastogne – BC Centre Gaume Tintigny
+LOCATION:Centre Sportif Porte de Trèves\, Rue Gustave Delperdange 5\, 6600 Bastogne
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478742-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T130000
+DTEND;TZID=Europe/Brussels:20261220T150000
+SUMMARY:Royal BC Saint-Hubert B – RB Alliance Arlon A
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478741-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T160000
+DTEND;TZID=Europe/Brussels:20261220T180000
+SUMMARY:Floréal BCCA Neufchâteau C – Junior Arlonais A
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478744-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Vainqueur LU201025 – Vainqueur LU201026
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478745-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270208T180000
+DTEND;TZID=Europe/Brussels:20270208T200000
+SUMMARY:Vainqueur LU201027 – Vainqueur LU201028
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-478746-comp-cup-coupe-lux-hommes-luxembourg@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T000000
+DTEND;TZID=Europe/Brussels:20270321T020000
+SUMMARY:undefined – undefined
+LOCATION:
+DESCRIPTION:CMM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,1149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Provincial 3 Hommes
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-475048-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T190000
+DTEND;TZID=Europe/Brussels:20260925T210000
+SUMMARY:Argentine BBC – Racing BCS Uccle B (54-88)
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475026-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260925T204500
+DTEND;TZID=Europe/Brussels:20260925T224500
+SUMMARY:BC OLLNight – B.B.C Braine-Le-Château C (69-48)
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474938-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T170000
+DTEND;TZID=Europe/Brussels:20260926T190000
+SUMMARY:Royal Castors Braine – BCD Wavre A (82-68)
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474982-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T180000
+DTEND;TZID=Europe/Brussels:20260926T200000
+SUMMARY:Royal Nivelles Basketball D – RBC Auderghem B (56-51)
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475004-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260926T203000
+DTEND;TZID=Europe/Brussels:20260926T223000
+SUMMARY:Royal Jodoigne Basket – Genappe Lothier (0-20)
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474948-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260927T130000
+DTEND;TZID=Europe/Brussels:20260927T150000
+SUMMARY:R. Rebond Ottignies-LLN B – Rallye Uccle Basket Club A (64-69)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474960-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20260929T203000
+DTEND;TZID=Europe/Brussels:20260929T223000
+SUMMARY:BCD Wavre A – Argentine BBC (75-65)
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475037-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261002T210000
+DTEND;TZID=Europe/Brussels:20261002T230000
+SUMMARY:RBC Auderghem B – Racing BCS Uccle B (84-59)
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475015-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T203000
+DTEND;TZID=Europe/Brussels:20261003T223000
+SUMMARY:B.B.C Braine-Le-Château C – Royal Castors Braine (79-59)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474993-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261003T210000
+DTEND;TZID=Europe/Brussels:20261003T230000
+SUMMARY:Genappe Lothier – BCD Wavre A (89-53)
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474927-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T113000
+DTEND;TZID=Europe/Brussels:20261004T133000
+SUMMARY:Rallye Uccle Basket Club A – BC OLLNight (35-31)
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474949-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:R. Rebond Ottignies-LLN B – Royal Jodoigne Basket (102-53)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474983-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261004T130000
+DTEND;TZID=Europe/Brussels:20261004T150000
+SUMMARY:Royal Nivelles Basketball D – Argentine BBC (75-50)
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474961-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261006T203000
+DTEND;TZID=Europe/Brussels:20261006T223000
+SUMMARY:BCD Wavre A – B.B.C Braine-Le-Château C (54-64)
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475049-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261009T190000
+DTEND;TZID=Europe/Brussels:20261009T210000
+SUMMARY:Argentine BBC – RBC Auderghem B (52-53)
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475027-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261009T204500
+DTEND;TZID=Europe/Brussels:20261009T224500
+SUMMARY:BC OLLNight – R. Rebond Ottignies-LLN B (60-67)
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475005-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261010T190000
+DTEND;TZID=Europe/Brussels:20261010T210000
+SUMMARY:Royal Jodoigne Basket – Royal Nivelles Basketball D (49-89)
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474971-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261011T130000
+DTEND;TZID=Europe/Brussels:20261011T150000
+SUMMARY:Racing BCS Uccle B – Genappe Lothier (71-52)
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474959-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261013T203000
+DTEND;TZID=Europe/Brussels:20261013T223000
+SUMMARY:BCD Wavre A – Racing BCS Uccle B (55-82)
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474992-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261014T210000
+DTEND;TZID=Europe/Brussels:20261014T230000
+SUMMARY:Genappe Lothier – BC OLLNight (75-79)
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475021-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261017T210000
+DTEND;TZID=Europe/Brussels:20261017T230000
+SUMMARY:B.B.C Braine-Le-Château C – Argentine BBC (84-51)
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474926-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T113000
+DTEND;TZID=Europe/Brussels:20261018T133000
+SUMMARY:Rallye Uccle Basket Club A – Royal Nivelles Basketball D (47-62)
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474950-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261018T130000
+DTEND;TZID=Europe/Brussels:20261018T150000
+SUMMARY:R. Rebond Ottignies-LLN B – Royal Castors Braine (75-60)
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474970-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261021T193000
+DTEND;TZID=Europe/Brussels:20261021T213000
+SUMMARY:Racing BCS Uccle B – Royal Castors Braine
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475003-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T190000
+DTEND;TZID=Europe/Brussels:20261024T210000
+SUMMARY:Royal Jodoigne Basket – Rallye Uccle Basket Club A
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475042-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261024T210000
+DTEND;TZID=Europe/Brussels:20261024T230000
+SUMMARY:RBC Auderghem B – BCD Wavre A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475023-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261101T113000
+DTEND;TZID=Europe/Brussels:20261101T133000
+SUMMARY:B.B.C Braine-Le-Château C – BCD Wavre A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475050-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261106T190000
+DTEND;TZID=Europe/Brussels:20261106T210000
+SUMMARY:Argentine BBC – Royal Jodoigne Basket
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474940-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T170000
+DTEND;TZID=Europe/Brussels:20261107T190000
+SUMMARY:Royal Castors Braine – Royal Nivelles Basketball D
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475016-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T203000
+DTEND;TZID=Europe/Brussels:20261107T223000
+SUMMARY:B.B.C Braine-Le-Château C – R. Rebond Ottignies-LLN B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474994-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261107T210000
+DTEND;TZID=Europe/Brussels:20261107T230000
+SUMMARY:Genappe Lothier – RBC Auderghem B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474972-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261108T150000
+DTEND;TZID=Europe/Brussels:20261108T170000
+SUMMARY:Racing BCS Uccle B – Rallye Uccle Basket Club A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474939-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261112T183000
+DTEND;TZID=Europe/Brussels:20261112T203000
+SUMMARY:Royal Castors Braine – Rallye Uccle Basket Club A
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475038-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261113T190000
+DTEND;TZID=Europe/Brussels:20261113T210000
+SUMMARY:RBC Auderghem B – B.B.C Braine-Le-Château C
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475028-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261113T204500
+DTEND;TZID=Europe/Brussels:20261113T224500
+SUMMARY:BC OLLNight – Argentine BBC
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474984-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T180000
+DTEND;TZID=Europe/Brussels:20261114T200000
+SUMMARY:Royal Nivelles Basketball D – Genappe Lothier
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475006-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261114T190000
+DTEND;TZID=Europe/Brussels:20261114T210000
+SUMMARY:Royal Jodoigne Basket – Racing BCS Uccle B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474928-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261115T113000
+DTEND;TZID=Europe/Brussels:20261115T133000
+SUMMARY:Rallye Uccle Basket Club A – BCD Wavre A
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475039-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261120T210000
+DTEND;TZID=Europe/Brussels:20261120T230000
+SUMMARY:RBC Auderghem B – Royal Jodoigne Basket
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474941-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T170000
+DTEND;TZID=Europe/Brussels:20261121T190000
+SUMMARY:Royal Castors Braine – BC OLLNight
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475017-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T203000
+DTEND;TZID=Europe/Brussels:20261121T223000
+SUMMARY:B.B.C Braine-Le-Château C – Rallye Uccle Basket Club A
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474995-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261121T210000
+DTEND;TZID=Europe/Brussels:20261121T230000
+SUMMARY:Genappe Lothier – Argentine BBC
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474973-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261122T150000
+DTEND;TZID=Europe/Brussels:20261122T170000
+SUMMARY:Racing BCS Uccle B – R. Rebond Ottignies-LLN B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474963-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261124T203000
+DTEND;TZID=Europe/Brussels:20261124T223000
+SUMMARY:BCD Wavre A – Royal Nivelles Basketball D
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474985-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T204500
+DTEND;TZID=Europe/Brussels:20261127T224500
+SUMMARY:Royal Nivelles Basketball D – BCD Wavre A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475029-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261127T204500
+DTEND;TZID=Europe/Brussels:20261127T224500
+SUMMARY:BC OLLNight – Royal Castors Braine
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475007-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T190000
+DTEND;TZID=Europe/Brussels:20261128T210000
+SUMMARY:Royal Jodoigne Basket – RBC Auderghem B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474998-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261128T210000
+DTEND;TZID=Europe/Brussels:20261128T230000
+SUMMARY:Genappe Lothier – Royal Castors Braine
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474929-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T113000
+DTEND;TZID=Europe/Brussels:20261129T133000
+SUMMARY:Rallye Uccle Basket Club A – B.B.C Braine-Le-Château C
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474951-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261129T130000
+DTEND;TZID=Europe/Brussels:20261129T150000
+SUMMARY:R. Rebond Ottignies-LLN B – Racing BCS Uccle B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475008-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261201T203000
+DTEND;TZID=Europe/Brussels:20261201T223000
+SUMMARY:Royal Jodoigne Basket – BCD Wavre A
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475052-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261204T190000
+DTEND;TZID=Europe/Brussels:20261204T210000
+SUMMARY:Argentine BBC – Royal Castors Braine
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475030-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261204T204500
+DTEND;TZID=Europe/Brussels:20261204T224500
+SUMMARY:BC OLLNight – Racing BCS Uccle B
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474986-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261205T180000
+DTEND;TZID=Europe/Brussels:20261205T200000
+SUMMARY:Royal Nivelles Basketball D – B.B.C Braine-Le-Château C
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474930-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T113000
+DTEND;TZID=Europe/Brussels:20261206T133000
+SUMMARY:Rallye Uccle Basket Club A – RBC Auderghem B
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474952-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261206T190000
+DTEND;TZID=Europe/Brussels:20261206T210000
+SUMMARY:R. Rebond Ottignies-LLN B – Genappe Lothier
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474953-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261209T203000
+DTEND;TZID=Europe/Brussels:20261209T223000
+SUMMARY:R. Rebond Ottignies-LLN B – BCD Wavre A
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475040-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261211T190000
+DTEND;TZID=Europe/Brussels:20261211T210000
+SUMMARY:RBC Auderghem B – Royal Castors Braine
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474987-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T180000
+DTEND;TZID=Europe/Brussels:20261212T200000
+SUMMARY:Royal Nivelles Basketball D – Racing BCS Uccle B
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475009-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T190000
+DTEND;TZID=Europe/Brussels:20261212T210000
+SUMMARY:Royal Jodoigne Basket – BC OLLNight
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475018-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261212T203000
+DTEND;TZID=Europe/Brussels:20261212T223000
+SUMMARY:B.B.C Braine-Le-Château C – Genappe Lothier
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474931-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261213T113000
+DTEND;TZID=Europe/Brussels:20261213T133000
+SUMMARY:Rallye Uccle Basket Club A – Argentine BBC
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474964-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261215T203000
+DTEND;TZID=Europe/Brussels:20261215T223000
+SUMMARY:BCD Wavre A – RBC Auderghem B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475053-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261218T190000
+DTEND;TZID=Europe/Brussels:20261218T210000
+SUMMARY:Argentine BBC – R. Rebond Ottignies-LLN B
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475031-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261218T204500
+DTEND;TZID=Europe/Brussels:20261218T224500
+SUMMARY:BC OLLNight – Royal Nivelles Basketball D
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474942-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T170000
+DTEND;TZID=Europe/Brussels:20261219T190000
+SUMMARY:Royal Castors Braine – Royal Jodoigne Basket
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474996-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261219T210000
+DTEND;TZID=Europe/Brussels:20261219T230000
+SUMMARY:Genappe Lothier – Rallye Uccle Basket Club A
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474974-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20261220T150000
+DTEND;TZID=Europe/Brussels:20261220T170000
+SUMMARY:Racing BCS Uccle B – B.B.C Braine-Le-Château C
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475054-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270108T190000
+DTEND;TZID=Europe/Brussels:20270108T210000
+SUMMARY:Argentine BBC – BCD Wavre A
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475032-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270108T204500
+DTEND;TZID=Europe/Brussels:20270108T224500
+SUMMARY:BC OLLNight – Genappe Lothier
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474943-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T170000
+DTEND;TZID=Europe/Brussels:20270109T190000
+SUMMARY:Royal Castors Braine – Racing BCS Uccle B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474988-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T180000
+DTEND;TZID=Europe/Brussels:20270109T200000
+SUMMARY:Royal Nivelles Basketball D – Rallye Uccle Basket Club A
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475010-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270109T190000
+DTEND;TZID=Europe/Brussels:20270109T210000
+SUMMARY:Royal Jodoigne Basket – B.B.C Braine-Le-Château C
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474954-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270110T170000
+DTEND;TZID=Europe/Brussels:20270110T190000
+SUMMARY:R. Rebond Ottignies-LLN B – RBC Auderghem B
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474965-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270112T203000
+DTEND;TZID=Europe/Brussels:20270112T223000
+SUMMARY:BCD Wavre A – Royal Castors Braine
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475041-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270115T210000
+DTEND;TZID=Europe/Brussels:20270115T230000
+SUMMARY:RBC Auderghem B – Royal Nivelles Basketball D
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475019-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T203000
+DTEND;TZID=Europe/Brussels:20270116T223000
+SUMMARY:B.B.C Braine-Le-Château C – BC OLLNight
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474997-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270116T210000
+DTEND;TZID=Europe/Brussels:20270116T230000
+SUMMARY:Genappe Lothier – Royal Jodoigne Basket
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474932-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T113000
+DTEND;TZID=Europe/Brussels:20270117T133000
+SUMMARY:Rallye Uccle Basket Club A – R. Rebond Ottignies-LLN B
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474975-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270117T150000
+DTEND;TZID=Europe/Brussels:20270117T170000
+SUMMARY:Racing BCS Uccle B – Argentine BBC
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474933-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270121T203000
+DTEND;TZID=Europe/Brussels:20270121T223000
+SUMMARY:Rallye Uccle Basket Club A – Genappe Lothier
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474989-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270122T204500
+DTEND;TZID=Europe/Brussels:20270122T224500
+SUMMARY:Royal Nivelles Basketball D – BC OLLNight
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475011-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270123T190000
+DTEND;TZID=Europe/Brussels:20270123T210000
+SUMMARY:Royal Jodoigne Basket – Royal Castors Braine
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474955-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270124T130000
+DTEND;TZID=Europe/Brussels:20270124T150000
+SUMMARY:R. Rebond Ottignies-LLN B – Argentine BBC
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475051-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T200000
+DTEND;TZID=Europe/Brussels:20270129T220000
+SUMMARY:Argentine BBC – Genappe Lothier
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475043-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270129T210000
+DTEND;TZID=Europe/Brussels:20270129T230000
+SUMMARY:RBC Auderghem B – BC OLLNight
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474956-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270130T183000
+DTEND;TZID=Europe/Brussels:20270130T203000
+SUMMARY:R. Rebond Ottignies-LLN B – Royal Nivelles Basketball D
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474934-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T113000
+DTEND;TZID=Europe/Brussels:20270131T133000
+SUMMARY:Rallye Uccle Basket Club A – Royal Jodoigne Basket
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474976-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270131T150000
+DTEND;TZID=Europe/Brussels:20270131T170000
+SUMMARY:Racing BCS Uccle B – BCD Wavre A
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475055-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T190000
+DTEND;TZID=Europe/Brussels:20270205T210000
+SUMMARY:Argentine BBC – Rallye Uccle Basket Club A
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475033-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270205T204500
+DTEND;TZID=Europe/Brussels:20270205T224500
+SUMMARY:BC OLLNight – Royal Jodoigne Basket
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474944-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T170000
+DTEND;TZID=Europe/Brussels:20270206T190000
+SUMMARY:Royal Castors Braine – RBC Auderghem B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474999-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270206T210000
+DTEND;TZID=Europe/Brussels:20270206T230000
+SUMMARY:Genappe Lothier – B.B.C Braine-Le-Château C
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474977-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270207T150000
+DTEND;TZID=Europe/Brussels:20270207T170000
+SUMMARY:Racing BCS Uccle B – Royal Nivelles Basketball D
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474966-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270210T203000
+DTEND;TZID=Europe/Brussels:20270210T223000
+SUMMARY:BCD Wavre A – R. Rebond Ottignies-LLN B
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475034-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270212T204500
+DTEND;TZID=Europe/Brussels:20270212T224500
+SUMMARY:BC OLLNight – Rallye Uccle Basket Club A
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474945-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T170000
+DTEND;TZID=Europe/Brussels:20270213T190000
+SUMMARY:Royal Castors Braine – B.B.C Braine-Le-Château C
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475012-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270213T190000
+DTEND;TZID=Europe/Brussels:20270213T210000
+SUMMARY:Royal Jodoigne Basket – R. Rebond Ottignies-LLN B
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474978-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270214T130000
+DTEND;TZID=Europe/Brussels:20270214T150000
+SUMMARY:Racing BCS Uccle B – RBC Auderghem B
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474967-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270216T203000
+DTEND;TZID=Europe/Brussels:20270216T223000
+SUMMARY:BCD Wavre A – Genappe Lothier
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475056-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270217T200000
+DTEND;TZID=Europe/Brussels:20270217T220000
+SUMMARY:Argentine BBC – Royal Nivelles Basketball D
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475057-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270219T190000
+DTEND;TZID=Europe/Brussels:20270219T210000
+SUMMARY:Argentine BBC – BC OLLNight
+LOCATION:Centre Sportif Solvay\, Rue Général de Gaulle 55\, 1310 La Hulpe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474946-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T170000
+DTEND;TZID=Europe/Brussels:20270220T190000
+SUMMARY:Royal Castors Braine – R. Rebond Ottignies-LLN B
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475022-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T203000
+DTEND;TZID=Europe/Brussels:20270220T223000
+SUMMARY:B.B.C Braine-Le-Château C – RBC Auderghem B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475000-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270220T210000
+DTEND;TZID=Europe/Brussels:20270220T230000
+SUMMARY:Genappe Lothier – Royal Nivelles Basketball D
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474979-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270221T150000
+DTEND;TZID=Europe/Brussels:20270221T170000
+SUMMARY:Racing BCS Uccle B – Royal Jodoigne Basket
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475025-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270226T204500
+DTEND;TZID=Europe/Brussels:20270226T224500
+SUMMARY:BC OLLNight – RBC Auderghem B
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474968-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270302T203000
+DTEND;TZID=Europe/Brussels:20270302T223000
+SUMMARY:BCD Wavre A – Rallye Uccle Basket Club A
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474962-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T170000
+DTEND;TZID=Europe/Brussels:20270306T190000
+SUMMARY:BCD Wavre A – BC OLLNight
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475020-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270306T203000
+DTEND;TZID=Europe/Brussels:20270306T223000
+SUMMARY:B.B.C Braine-Le-Château C – Racing BCS Uccle B
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475044-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270312T210000
+DTEND;TZID=Europe/Brussels:20270312T230000
+SUMMARY:RBC Auderghem B – Argentine BBC
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475001-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270313T210000
+DTEND;TZID=Europe/Brussels:20270313T230000
+SUMMARY:Genappe Lothier – Racing BCS Uccle B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474935-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T113000
+DTEND;TZID=Europe/Brussels:20270314T133000
+SUMMARY:Rallye Uccle Basket Club A – Royal Castors Braine
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474990-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T124500
+DTEND;TZID=Europe/Brussels:20270314T144500
+SUMMARY:Royal Nivelles Basketball D – Royal Jodoigne Basket
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474957-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270314T130000
+DTEND;TZID=Europe/Brussels:20270314T150000
+SUMMARY:R. Rebond Ottignies-LLN B – BC OLLNight
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475045-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270319T190000
+DTEND;TZID=Europe/Brussels:20270319T210000
+SUMMARY:RBC Auderghem B – Genappe Lothier
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475035-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270319T204500
+DTEND;TZID=Europe/Brussels:20270319T224500
+SUMMARY:BC OLLNight – BCD Wavre A
+LOCATION:Complexe sportif du Blocry\, Place des Sports\, 1\, 1348 Ottignies-Louvain-La-Neuve
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474991-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T180000
+DTEND;TZID=Europe/Brussels:20270320T200000
+SUMMARY:Royal Nivelles Basketball D – Royal Castors Braine
+LOCATION:Salle Omnisports Parc De La Dodaine\, Avenue Jules Mathieu\, 1\, 1400 Nivelles
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474958-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T183000
+DTEND;TZID=Europe/Brussels:20270320T203000
+SUMMARY:R. Rebond Ottignies-LLN B – B.B.C Braine-Le-Château C
+LOCATION:Centre Sportif des Coquerées\, Rue des Coquerées 50a\, 1340 Ottignies
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475013-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270320T190000
+DTEND;TZID=Europe/Brussels:20270320T210000
+SUMMARY:Royal Jodoigne Basket – Argentine BBC
+LOCATION:Complexe Sportif de Jodoigne - Plaine de la Gadale\, Plaine de la Gadale\, 1370 Jodoigne
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474936-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270321T113000
+DTEND;TZID=Europe/Brussels:20270321T133000
+SUMMARY:Rallye Uccle Basket Club A – Racing BCS Uccle B
+LOCATION:Salle Omnisports du Globe\, Avenue Brugmann 524A\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474969-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270323T203000
+DTEND;TZID=Europe/Brussels:20270323T223000
+SUMMARY:BCD Wavre A – Royal Jodoigne Basket
+LOCATION:Centre Sportif Justin Peeters\, Avenue du Centre Sportif 22\, 1300 Wavre
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475046-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270326T210000
+DTEND;TZID=Europe/Brussels:20270326T230000
+SUMMARY:RBC Auderghem B – Rallye Uccle Basket Club A
+LOCATION:Centre Sportif d'Auderghem\, Chaussée de Wavre 1690\, 1160 Auderghem
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474947-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T170000
+DTEND;TZID=Europe/Brussels:20270327T190000
+SUMMARY:Royal Castors Braine – Argentine BBC
+LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475024-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270327T203000
+DTEND;TZID=Europe/Brussels:20270327T223000
+SUMMARY:B.B.C Braine-Le-Château C – Royal Nivelles Basketball D
+LOCATION:Ecole Fondamentale Braine-le-Château\, Rue de la Libération 25\, 1440 Braine-le-Chateau
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-474980-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T150000
+DTEND;TZID=Europe/Brussels:20270328T170000
+SUMMARY:Racing BCS Uccle B – BC OLLNight
+LOCATION:Salle Omnisports de Saint-Job\, Place de Saint-Job 20\, 1180 Uccle
+DESCRIPTION:P3H A
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-475002-comp-s6284@behoop.be
+DTSTAMP:20261020T095454Z
+DTSTART;TZID=Europe/Brussels:20270328T150000
+DTEND;TZID=Europe/Brussels:20270328T170000
+SUMMARY:Genappe Lothier – R. Rebond Ottignies-LLN B
+LOCATION:Salle Omnisports de Genappe\, Rue Couture Mathy 5\, 1470 Genappe
+DESCRIPTION:P3H A
+END:VEVENT
+END:VCALENDAR

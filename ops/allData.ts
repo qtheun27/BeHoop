@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { slimClub, slimGame, type SlimClub, type SlimGame } from './appData';
 
-export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number }
+export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number; /** Matchs nuls (jeunes en Flandre) */ draws?: number; /** Rang officiel (départages de la fédération compris) */ rank?: number }
 /** org / comp : province et compétition AWBB (ex. « Hainaut », « Champ. Provincial Jeunes Hainaut ») */
 export interface Serie { id: number; name: string; short: string; org?: string; comp?: string }
 export interface AllData { generated_at: string; season: string; clubs: SlimClub[]; games: SlimGame[]; series: Map<number, Serie>; standings: Map<number, Standing[]>; alias: Record<number, number> }
@@ -17,7 +17,7 @@ export function loadAll(root = '.'): AllData {
   const series = new Map<number, Serie>(d.series.map((s: any) => [s.id, { id: s.id, name: s.division_name ?? s.name, short: s.short_name, org: s.organization_name, comp: s.competition_name }]));
   const standings = new Map<number, Standing[]>();
   for (const [sid, rows] of Object.entries<any[]>(d.classements ?? {}))
-    standings.set(+sid, rows.map((r) => ({ team: r.team_id, played: r.played, wins: r.wins, losses: r.losses, pf: r.score_for, pa: r.score_against, pts: r.points })));
+    standings.set(+sid, rows.map((r) => ({ team: r.team_id, played: r.played, wins: r.wins, losses: r.losses, pf: r.score_for, pa: r.score_against, pts: r.points, draws: r.draws || undefined, rank: r.position ?? undefined })).sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999)));
   const vf = join(root, 'vbl.json');
   if (existsSync(vf)) {
     const v = JSON.parse(readFileSync(vf, 'utf8'));
