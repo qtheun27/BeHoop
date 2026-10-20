@@ -2,6 +2,15 @@
 
 ✅ **Mise en service terminée** (19/10/2026) : l'appli tourne en production sur **behoop.be/app/**.
 
+## 🔧 Une seule action (2 minutes) — index des commentaires, 20/10/2026
+Les commentaires fonctionnent déjà. Cet index sert seulement à **effacer les commentaires d'une personne qui supprime son compte** (RGPD).
+Sur ton ordinateur, dans le dossier BeHoop, lance :
+```
+npx firebase deploy --only firestore:indexes --project basket-awbb-club
+```
+(comme à l'étape 2 de la mise en service ; réponds « N » si on te propose de supprimer des index). C'est tout.
+ℹ️ Les **règles** Firestore, elles, se publient maintenant toutes seules à chaque modification (workflow « Règles et index Firestore — publication »).
+
 ## ✅ Appli en 3 langues (FR · NL · EN) — fait le 20/10/2026
 Le secret GitHub `CLOUDFLARE_API_TOKEN` est en place : le Worker se redéploie tout seul à chaque modification (workflow « Worker media.behoop.be — déploiement »).
 
