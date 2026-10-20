@@ -250,8 +250,19 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
   if (path === '/notify/carpool') {
-    const o = await fs.get<any>(`carpools/${Number(body.gameId)}/offers/${String(body.offerId).replace(/\W/g, '')}`);
-    if (o) await sendToUsers(fs, env, [o.driverUid], { title: N.carpool, body: N.carpoolReply(profile?.displayName), url: '/app/#/matchs' }, 'carpool', null);
+    // event : request / withdrawn (passager → conducteur), accepted / refused (conducteur → un passager), cancelled (conducteur → tous)
+    const gid = Number(body.gameId);
+    const o = await fs.get<any>(`carpools/${gid}/offers/${String(body.offerId).replace(/\W/g, '')}`);
+    const url = `/app/#/matchs?g=${gid}&car=1`, who = profile?.displayName, reqs: Record<string, any> = o?.requests ?? {};
+    const ev = String(body.event ?? 'request');
+    if (o && (ev === 'request' || ev === 'withdrawn') && reqs[user.uid] && o.driverUid !== user.uid)
+      await sendToUsers(fs, env, [o.driverUid], { title: N.carpool, body: ev === 'request' ? N.carpoolReply(who) : N.carpoolWithdrawn(who), url }, 'carpool', null);
+    else if (o && (ev === 'accepted' || ev === 'refused') && o.driverUid === user.uid && reqs[String(body.to)])
+      await sendToUsers(fs, env, [String(body.to)], { title: N.carpool, body: ev === 'accepted' ? N.carpoolAccepted(who) : N.carpoolRefused(who), url }, 'carpool', null);
+    else if (o && ev === 'cancelled' && o.driverUid === user.uid) {
+      const to = Object.entries(reqs).filter(([, r]) => r?.status !== 'refused').map(([u]) => u);
+      if (to.length) await sendToUsers(fs, env, to, { title: N.carpool, body: N.carpoolCancelled(who), url }, 'carpool', null);
+    }
     return json({ ok: true });
   }
 
@@ -272,6 +283,15 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       await fs.delete(m._path);
     }
     for (const th of threads) await fs.set(th, { comments: (await fs.query('comments', [], { parent: th }).catch(() => [])).length });
+    // Covoiturage : liste personnelle myCarpools/{uid} → mes annonces supprimées, mes demandes et mon téléphone retirés
+    for (const m of await fs.query('items', [], { parent: `myCarpools/${user.uid}` }).catch(() => [])) {
+      const id = m._path.split('/').pop()!.replace(/\W/g, ''), off = `carpools/${Number(m.game)}/offers/${id}`;
+      await fs.delete(`${off}/contacts/${user.uid}`).catch(() => {});
+      const o = await fs.get<any>(off);
+      if (o?.driverUid === user.uid) await fs.delete(off);
+      else if (o?.requests?.[user.uid]) { const { [user.uid]: _, ...rest } = o.requests; await fs.set(off, { requests: rest }); }
+      await fs.delete(m._path);
+    }
     await fs.delete(`legalAcceptances/${user.uid}`);
     await fs.delete(`profiles/${user.uid}`);
     return json({ ok: true });

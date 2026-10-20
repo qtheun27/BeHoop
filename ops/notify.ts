@@ -31,7 +31,7 @@ if (nowBxl.getHours() === 18 && nowBxl.getMinutes() < 30) {
     const offers = await db.collection(`carpools/${g.id}/offers`).get();
     for (const o of offers.docs) {
       const d = o.data(); const riders = Object.entries(d.requests ?? {}).filter(([, r]: any) => r.status === 'accepted').map(([u]) => u);
-      if (riders.length) n += await notifyUsers([d.driverUid, ...riders], { title: N.carpoolTomorrow, body: N.carpoolDetail(g.hn, g.an, d.time, d.from), url: `/app/#/matchs?g=${g.id}` }, 'carpool', null, `car_${o.id}`);
+      if (riders.length) n += await notifyUsers([d.driverUid, ...riders], { title: N.carpoolTomorrow, body: N.carpoolDetail(g.hn, g.an, d.time, d.from), url: `/app/#/matchs?g=${g.id}&car=1` }, 'carpool', null, `car_${o.id}`);
     }
   }
 }

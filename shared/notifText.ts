@@ -26,5 +26,9 @@ export const N = {
   welcomeTitle: { fr: 'Bienvenue dans l’Équipe 🔒', nl: 'Welkom in de Ploeg 🔒', en: 'Welcome to the Team 🔒' },
   welcomeBody: { fr: 'Ta demande est acceptée : tu vois maintenant les photos et vidéos de l’équipe.', nl: 'Je aanvraag is aanvaard: je ziet nu de foto’s en video’s van de ploeg.', en: 'Your request was accepted: you can now see the team’s photos and videos.' },
   carpool: { fr: 'Covoiturage', nl: 'Carpoolen', en: 'Carpool' },
+  carpoolAccepted: (name: string | undefined) => ({ fr: `${name ?? someone.fr} t’a accepté·e : son numéro est dans l’annonce.`, nl: `${name ?? someone.nl} heeft je geaccepteerd: het nummer staat in het zoekertje.`, en: `${name ?? someone.en} accepted you: their number is in the listing.` }),
+  carpoolRefused: (name: string | undefined) => ({ fr: `${name ?? someone.fr} n’a plus de place pour toi.`, nl: `${name ?? someone.nl} heeft geen plaats meer voor je.`, en: `${name ?? someone.en} has no room for you.` }),
+  carpoolCancelled: (name: string | undefined) => ({ fr: `${name ?? someone.fr} a supprimé son annonce de covoiturage.`, nl: `${name ?? someone.nl} heeft het carpoolzoekertje verwijderd.`, en: `${name ?? someone.en} removed their carpool listing.` }),
+  carpoolWithdrawn: (name: string | undefined) => ({ fr: `${name ?? someone.fr} a annulé sa demande.`, nl: `${name ?? someone.nl} heeft het verzoek geannuleerd.`, en: `${name ?? someone.en} cancelled their request.` }),
   carpoolReply: (name: string | undefined) => ({ fr: `${name ?? someone.fr} a répondu à ton annonce.`, nl: `${name ?? someone.nl} heeft op je zoekertje gereageerd.`, en: `${name ?? someone.en} replied to your listing.` }),
 };

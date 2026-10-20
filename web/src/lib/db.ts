@@ -2,7 +2,7 @@
 // (profiles = « users » du cahier des charges, teamInfo = « teams », pour ne pas entrer en collision avec l'Espace Club).
 import {
   collection, collectionGroup, doc, getDoc, getDocs, setDoc, updateDoc, deleteDoc, writeBatch, query, where, orderBy, limit,
-  startAfter, serverTimestamp, increment, onSnapshot, arrayUnion, Timestamp, type QueryDocumentSnapshot, type DocumentData,
+  startAfter, serverTimestamp, deleteField, increment, onSnapshot, arrayUnion, Timestamp, type QueryDocumentSnapshot, type DocumentData,
 } from 'firebase/firestore';
 import { db } from './firebase';
 import { uid as rid } from './util';
@@ -22,6 +22,7 @@ export interface Profile {
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
   /** Équipes (ou compétitions 'comp-…') dont le calendrier a déjà été ajouté au téléphone */ calendars?: (number | string)[];
   /** Langue de l'appli (notifications envoyées dans cette langue) */ lang?: 'fr' | 'nl' | 'en';
+  /** Téléphone (privé : profil lisible par soi seul) ; copié dans une annonce de covoiturage, montré après acceptation */ phone?: string;
 }
 /** Suivi d'un club, d'une équipe ou d'une compétition (compId : identifiant de competitions.json, refId vaut alors 0) */
 export interface Follow { id: string; type: 'club' | 'team' | 'comp'; refId: number; compId?: string; mutedTeams?: number[] }
@@ -249,4 +250,4 @@ export const banUser = (uid: string, banned: boolean) => setDoc(profileRef(uid),
 /* ---------- Temps réel ---------- */
 export const watchDoc = <T,>(path: string, cb: (d: T | null) => void) =>
   onSnapshot(doc(db, path), (s) => cb(s.exists() ? (s.data() as T) : null), () => cb(null));
-export { serverTimestamp, doc, db, setDoc, updateDoc, getDocs, query, collection, collectionGroup, where, orderBy, limit, onSnapshot, deleteDoc, getDoc, arrayUnion };
+export { deleteField, serverTimestamp, doc, db, setDoc, updateDoc, getDocs, query, collection, collectionGroup, where, orderBy, limit, onSnapshot, deleteDoc, getDoc, arrayUnion };

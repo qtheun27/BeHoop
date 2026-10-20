@@ -342,3 +342,10 @@ html { overflow-x: hidden; }
 :root[data-court="dark"] .court-bg { opacity: .7; }
 :root[data-court="light"] body::before, :root[data-court="dark"] body::before { background: var(--bg) !important; }
 :root[data-court="light"] body::after, :root[data-court="dark"] body::after { content: none !important; }
+/* Covoiturage */
+.car-offer { padding: 14px; }
+.car-ico { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+.car-ico .ico { width: 20px; height: 20px; }
+.car-pill { display: inline-flex; align-items: center; gap: 5px; background: color-mix(in srgb, #1f9d55 14%, var(--bg2)); color: #1f7a45; font-weight: 600; }
+:root[data-theme="dark"] .car-pill, :root[data-bg="nuit"] .car-pill { color: #5fd08f; }
+.car-meet { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }

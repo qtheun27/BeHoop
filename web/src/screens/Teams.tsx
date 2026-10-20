@@ -9,7 +9,8 @@ import { Screen, Empty, Skeleton, Disc, Sheet, useAsync } from '../ui/kit';
 import { CalendarButton } from '../ui/CalendarButton';
 import { PostCard } from './Feed';
 import { MembersList, RELATION_FR } from './Explore';
-import { CarpoolSheet, LiveScoreSheet, useLive } from './Live';
+import { LiveScoreSheet, useLive } from './Live';
+import { CarpoolSheet, CarpoolBadge } from './Carpool';
 import { frDate, mapsUrl, store } from '../lib/util';
 import { t, tn } from '../lib/i18n';
 import { Ico } from '../ui/icons';
@@ -70,7 +71,7 @@ function TeamSpace({ m }: { m: D.Membership }) {
 
       <div className="group-title">{t('Prochains matchs')}</div>
       {upcoming.length === 0 ? <div className="group"><div className="row muted">{t('Aucun match programmé.')}</div></div> : upcoming.map((g, i) => (
-        <NextGame key={g.id} g={g} teamId={team.id} big={i === 0} onCar={() => setSheet({ kind: 'car', g })} onLive={() => setSheet({ kind: 'live', g })} />))}
+        <NextGame key={g.id} g={g} teamId={team.id} youth={team.ag === 'jeunes' ? team.id : null} big={i === 0} onCar={() => setSheet({ kind: 'car', g })} onLive={() => setSheet({ kind: 'live', g })} />))}
       {last && <a className="row group" href={`#/equipe/${team.id}`} style={{ color: 'inherit' }}>
         <div className="grow"><div className="sub">{t('Dernier résultat')} · {frDate(last.d, { day: 'numeric', month: 'short' })}</div>
           <div style={{ fontWeight: 600 }}>{last.hn} {last.hs} – {last.as} {last.an}</div></div><span className="chev">›</span></a>}
@@ -110,7 +111,7 @@ function TeamSpace({ m }: { m: D.Membership }) {
   );
 }
 
-function NextGame({ g, teamId, big, onCar, onLive }: { g: Game; teamId: number; big: boolean; onCar: () => void; onLive: () => void }) {
+function NextGame({ g, teamId, youth, big, onCar, onLive }: { g: Game; teamId: number; youth: number | null; big: boolean; onCar: () => void; onLive: () => void }) {
   const today = new Date().toISOString().slice(0, 10);
   const live = useLive(g.d === today ? g.id : null);
   const home = g.h === teamId;
@@ -124,7 +125,8 @@ function NextGame({ g, teamId, big, onCar, onLive }: { g: Game; teamId: number; 
       {live?.status === 'live' && <div className="pill live" style={{ marginTop: 6 }}><Ico n="live" />{live.home} – {live.away} · Q{live.quarter}</div>}
       {big && g.v && <div className="muted" style={{ fontSize: 14, marginTop: 4 }}><Ico n="pin" /> {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack" style={{ flexWrap: 'wrap', gap: 8, marginTop: 10 }}>
-        <button className="btn small" onClick={onCar}><><Ico n="car" />{t('Covoiturage')}</></button>
+        {!home && <button className="btn small" onClick={onCar}><><Ico n="car" />{t('Covoiturage')}</></button>}
+        {!home && <CarpoolBadge g={g} youthTeam={youth} />}
         {big && g.v && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
         {big && <CalendarButton teamId={teamId} label={t('Calendrier')} compact />}
         {g.d === today && <button className="btn small secondary" onClick={onLive}>{t('Score en direct')}</button>}

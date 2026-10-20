@@ -9,8 +9,13 @@ import { CompLogo } from '../ui/CompLogo';
 import { CalendarButton } from '../ui/CalendarButton';
 import { CompGameRow } from './CompPage';
 import { SocialBar } from '../ui/Social';
+import { useState } from 'react';
+import { useSession } from '../lib/session';
+import { CarpoolSheet, CarpoolBadge, useCarpoolAccess } from './Carpool';
 
 export function MatchPage({ serie, id }: { serie: number; id: number }) {
+  const ses = useSession();
+  const [car, setCar] = useState(false);
   const d = useAsync(async () => {
     const [s, comps, idx] = await Promise.all([loadSerie(serie), loadComps().catch(() => []), teamIndex()]);
     return { s, comp: comps.find((c) => c.series.includes(serie) && c.id !== 'lions' && c.id !== 'cats') ?? comps.find((c) => c.series.includes(serie)) ?? null, idx, g: s.games.find((x) => x.id === id) ?? null };
@@ -20,6 +25,9 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
   const { s, comp, idx, g } = d.data;
   if (!g) return <Screen title={t('Match')} back="explorer"><Empty ill="ball" title={t('Match introuvable')} /></Screen>;
   const played = isPlayed(g);
+  // Covoiturage : proposé quand une équipe suivie joue ce match à l'extérieur
+  const awayTeam = ses.followedTeams.includes(g.a) && !ses.followedTeams.includes(g.h) ? idx.get(g.a) : undefined;
+  const youth = awayTeam?.team.ag === 'jeunes' ? g.a : null;
   const table = ranked(s.standings);
   const pos = (team: number) => table.find((r) => r.team === team);
   const h2h = s.games.filter((x) => x.id !== g.id && ((x.h === g.h && x.a === g.a) || (x.h === g.a && x.a === g.h)));
@@ -53,8 +61,16 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
       </section>
       {g.v && <a className="row card" style={{ color: 'inherit', marginBottom: 14 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">
         <Ico n="pin" size={22} style={{ color: 'var(--accent)' }} /><div className="grow"><b>{g.v}</b>{g.adr && <div className="sub">{g.adr}</div>}</div><span className="sub">{t('Itinéraire')} ›</span></a>}
-      {comp && !played && <div className="hstack" style={{ gap: 8, marginBottom: 14, flexWrap: 'wrap' }}><CalendarButton comp={comp.id} label={t('Calendrier de la compétition')} /></div>}
+      {!played && (comp || awayTeam) && <div className="hstack" style={{ gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
+        {awayTeam && <CarButton youth={youth} onOpen={() => setCar(true)} g={g} />}
+        {comp && <CalendarButton comp={comp.id} label={t('Calendrier de la compétition')} />}</div>}
+      {car && <CarpoolSheet g={g} youthTeam={youth} onClose={() => setCar(false)} />}
       {h2h.length > 0 && <><div className="group-title">{t('Confrontations cette saison')}</div><div className="group">{h2h.map((x: Game) => <CompGameRow key={x.id} g={x} />)}</div></>}
     </Screen>
   );
+}
+
+function CarButton({ g, youth, onOpen }: { g: Game; youth: number | null; onOpen: () => void }) {
+  if (!useCarpoolAccess(youth)) return null;
+  return <><button className="btn small" onClick={onOpen}><Ico n="car" />{t('Covoiturage')}</button><CarpoolBadge g={g} youthTeam={youth} /></>;
 }

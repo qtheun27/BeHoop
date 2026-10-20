@@ -413,6 +413,12 @@ service cloud.firestore {
         && existsAfter(/databases/$(database)/documents/threads/$(request.resource.data.thread)/comments/$(commentId));
     }
 
+    // Liste personnelle de mes covoiturages (annonces et demandes), pour tout effacer avec le compte : moi seul
+    match /myCarpools/{userId}/items/{offerId} {
+      allow read, delete: if signedIn() && uid() == userId;
+      allow create, update: if active() && uid() == userId && request.resource.data.keys().hasOnly(['game']) && request.resource.data.game is int;
+    }
+
     // ---------- Signalements ----------
     match /reports/{reportId} {
       // postId : la publication, ou « c~{fil}~{commentaire} » pour un commentaire
@@ -468,11 +474,11 @@ service cloud.firestore {
       allow read: if active() && carpoolAllowed(resource.data.teamIdPrivate);
       allow create: if active() && request.resource.data.driverUid == uid() && carpoolAllowed(request.resource.data.teamIdPrivate)
         && request.resource.data.requests.size() == 0 && request.resource.data.seats >= 0 && request.resource.data.seats <= 8;
-      allow update: if active() && carpoolAllowed(resource.data.teamIdPrivate) && onlyChanged(['requests', 'seats', 'from', 'time']) && (
-          resource.data.driverUid == uid()
-          // un passager n'ajoute/modifie que sa propre demande, en attente
-       || (request.resource.data.requests.diff(resource.data.requests).affectedKeys().hasOnly([uid()])
-           && request.resource.data.requests[uid()].status == 'pending' && onlyChanged(['requests'])));
+      allow update: if active() && carpoolAllowed(resource.data.teamIdPrivate) && onlyChanged(['requests', 'seats', 'from', 'time', 'meet']) && (
+          (resource.data.driverUid == uid() && request.resource.data.seats >= 0 && request.resource.data.seats <= 8)
+          // un passager ne touche qu'à sa propre demande : l'envoyer (en attente) ou l'annuler
+       || (request.resource.data.requests.diff(resource.data.requests).affectedKeys().hasOnly([uid()]) && onlyChanged(['requests'])
+           && (!(uid() in request.resource.data.requests) || request.resource.data.requests[uid()].status == 'pending')));
       allow delete: if signedIn() && resource.data.driverUid == uid();
 
       // Coordonnées : visibles par le propriétaire, le conducteur, et un passager accepté (après acceptation).

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import { loadClub, teamIndex, isPlayed, teamLabel, type Game } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
@@ -7,13 +7,14 @@ import { mapsUrl, frDate } from '../lib/util';
 import { qs } from '../lib/router';
 import * as D from '../lib/db';
 import { LiveScoreSheet, useLive } from './Live';
+import { CarpoolSheet, CarpoolBadge, useCarpoolAccess } from './Carpool';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
 
 export function Matches() {
   const s = useSession();
   const [tab, setTab] = useState<'next' | 'past'>('next');
-  const [sheet, setSheet] = useState<null | { kind: 'live'; g: Game }>(null);
+  const [sheet, setSheet] = useState<null | { kind: 'live' | 'car'; g: Game; youth?: number | null }>(null);
   const focus = Number(qs().get('g')) || null;
   const { data, error, reload } = useAsync(async () => {
     const idx = await teamIndex();
@@ -43,14 +44,15 @@ export function Matches() {
       {!data && !error ? <Skeleton h={110} /> : groups.length === 0 ? <Empty ill="calendar" title={t('Aucun match')} text={s.followedTeams.length ? t('Rien de prévu pour tes équipes.') : t('Suis des équipes pour voir leurs matchs.')} action={!s.followedTeams.length && <a className="btn" href="#/explorer">{t('Explorer')}</a>} /> :
         groups.map((gr) => (
           <section key={gr.t}><div className="group-title">{gr.t}</div>
-            {gr.l.map((g) => <MatchCard key={g.id} g={g} focus={g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g })} />)}</section>))}
+            {gr.l.map((g) => <MatchCard key={g.id} g={g} focus={g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g })} onCar={(youth) => setSheet({ kind: 'car', g, youth })} />)}</section>))}
+      {sheet?.kind === 'car' && <CarpoolSheet g={sheet.g} youthTeam={sheet.youth ?? null} onClose={() => setSheet(null)} />}
       {sheet?.kind === 'live' && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
     </Screen>
   );
 }
 
 
-function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<ReturnType<typeof teamIndex>>; vids: Map<number, string> }; focus: boolean; onLive: () => void }) {
+function MatchCard({ g, data, focus, onLive, onCar }: { g: Game; data: { idx: Awaited<ReturnType<typeof teamIndex>>; vids: Map<number, string> }; focus: boolean; onLive: () => void; onCar: (youth: number | null) => void }) {
   const s = useSession();
   const played = isPlayed(g);
   const today = new Date().toISOString().slice(0, 10);
@@ -58,6 +60,12 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
   const mineHome = s.followedTeams.includes(g.h);
   const te = data.idx.get(mineHome ? g.h : g.a);
   const vid = data.vids.get(g.id);
+  // Covoiturage : seulement pour les déplacements (mon équipe joue à l'extérieur)
+  const away = !mineHome && s.followedTeams.includes(g.a);
+  const youth = te && te.team.ag === 'jeunes' ? te.team.id : null;
+  const car = useCarpoolAccess(youth) && away && !played;
+  // Lien d'une notification (…?g=match&car=1) : ouvre directement le covoiturage
+  useEffect(() => { if (focus && car && qs().get('car')) onCar(youth); }, [focus, car]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="card" style={{ padding: 14, outline: focus ? '2px solid var(--accent)' : undefined }}>
       <div className="hstack" style={{ justifyContent: 'space-between' }}>
@@ -72,6 +80,8 @@ function MatchCard({ g, data, focus, onLive }: { g: Game; data: { idx: Awaited<R
       {!played && <div className="muted" style={{ fontSize: 14, marginTop: 6 }}><Ico n="pin" /> {g.v}{g.adr ? ` — ${g.adr}` : ''}</div>}
       <div className="hstack mt" style={{ flexWrap: 'wrap', gap: 8 }}>
         {!played && <a className="btn small secondary" href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">{t('Itinéraire')}</a>}
+        {car && <button className="btn small" onClick={() => onCar(youth)}><Ico n="car" />{t('Covoiturage')}</button>}
+        {car && <CarpoolBadge g={g} youthTeam={youth} />}
         {!played && <CalendarButton teamId={mineHome ? g.h : g.a} label={t('Ajouter au calendrier')} compact />}
         {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>{t('Score en direct')}</button>}
         {played && vid && <a className="btn small" href={`#/video/${vid}`}>{t('▶ Vidéo du match')}</a>}

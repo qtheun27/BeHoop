@@ -21,7 +21,7 @@ export function Profile() {
   const s = useSession();
   const clubs = useClubs();
   const comps = useAsync(loadComps, []).data ?? [];
-  const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme'>('');
+  const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme' | 'phone'>('');
   if (!s.user || !s.profile) {
     return <Screen title={t('Profil')}><Empty ill="user" title={t('Connecte-toi')} text={t('Suis tes clubs, rejoins l\'Équipe de ton enfant, publie tes photos et vidéos de match.')}
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter ou créer un compte')}</button>} />
@@ -61,6 +61,7 @@ export function Profile() {
 
       <div className="group">
         <button className="row" onClick={() => setSheet('posts')}><div className="grow">{t('Mes publications')}</div><span className="chev">›</span></button>
+        <button className="row" onClick={() => setSheet('phone')}><div className="grow">{t('Mon téléphone')}<div className="sub">{s.profile?.phone || t('Pour le covoiturage, jamais public')}</div></div><span className="chev">›</span></button>
         <button className="row" onClick={() => setSheet('notifs')}><div className="grow">{t('Notifications')}</div><span className="chev">›</span></button>
         <label className="row"><div className="grow">{t('Langue')}</div><LangSwitch /></label>
         <button className="row" onClick={() => setSheet('theme')}><div className="grow">{t('Mon thème')}</div><span className="chev">›</span></button>
@@ -74,6 +75,7 @@ export function Profile() {
       </div>
 
       {sheet === 'notifs' && <NotifSheet onClose={() => setSheet('')} />}
+      {sheet === 'phone' && <PhoneSheet onClose={() => setSheet('')} />}
       {sheet === 'posts' && <Sheet title={t('Mes publications')} onClose={() => setSheet('')}><MyPosts /></Sheet>}
       {sheet === 'requests' && <Sheet title={t('Demandes à valider')} onClose={() => setSheet('')}>{s.responsibleTeams.map((tid) => <div key={tid}><div className="group-title">{teamName(tid)}</div><TeamMembers teamId={tid} /></div>)}</Sheet>}
       {sheet === 'delete' && <DeleteSheet onClose={() => setSheet('')} />}
@@ -91,6 +93,23 @@ function MyPosts() {
   const s = useSession();
   const { data } = useAsync(() => D.myPosts(s.user!.uid), []);
   return data?.length ? <>{data.map((p) => <PostCard key={p.id} post={p} />)}</> : <Empty ill="edit" title={t('Aucune publication')} />;
+}
+
+/** Téléphone : privé (profil lisible par soi seul), utilisé pour le covoiturage et montré seulement aux personnes acceptées */
+function PhoneSheet({ onClose }: { onClose: () => void }) {
+  const s = useSession();
+  const [v, setV] = useState(s.profile?.phone ?? '');
+  const save = async () => {
+    const phone = v.trim();
+    try { await D.updateProfile(s.user!.uid, { phone }); s.setProfile({ ...s.profile!, phone }); s.toast(t('Enregistré')); onClose(); } catch { s.toast(t('Action impossible. Réessaie.')); }
+  };
+  return (
+    <Sheet title={t('Mon téléphone')} onClose={onClose}>
+      <input className="field" type="tel" autoComplete="tel" placeholder="0470 12 34 56" value={v} onChange={(e) => setV(e.target.value)} aria-label={t('Mon téléphone')} style={{ width: '100%' }} />
+      <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" /> {t('Jamais affiché sur ton profil. Il sert uniquement au covoiturage : il n’est montré qu’aux personnes que tu acceptes dans ta voiture, ou au conducteur qui t’accepte.')}</p>
+      <button className="btn" onClick={save}>{t('Enregistrer')}</button>
+    </Sheet>
+  );
 }
 
 function NotifSheet({ onClose }: { onClose: () => void }) {

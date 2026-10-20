@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { describe, it, beforeAll, afterAll, beforeEach, expect } from 'vitest';
 import { initializeTestEnvironment, assertFails, assertSucceeds, type RulesTestEnvironment } from '@firebase/rules-unit-testing';
-import { doc, getDoc, setDoc, updateDoc, getDocs, collection, collectionGroup, query, where, writeBatch, increment, deleteDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc, getDocs, collection, collectionGroup, query, where, writeBatch, increment, deleteDoc, serverTimestamp, deleteField } from 'firebase/firestore';
 
 let env: RulesTestEnvironment;
 const U12 = 51653, SEN = 50741;
@@ -201,5 +201,39 @@ describe('Fils de discussion (commentaires et réactions)', () => {
   it('signaler un commentaire', async () => {
     const id = 'c~game-9~c1';
     await assertSucceeds(setDoc(doc(as('alice'), 'reports', `${id}_alice`), { postId: id, reporterUid: 'alice', reason: 'Spam', status: 'open', createdAt: new Date() }));
+  });
+});
+
+describe('Covoiturage', () => {
+  const offer = (driver: string, team: number | null) => ({ kind: 'offer', driverUid: driver, driverName: driver, seats: 2, from: 'Mons', meet: '', time: '18:00', teamIdPrivate: team, requests: {}, gameDate: '2026-11-01', createdAt: new Date() });
+  const path = (db: ReturnType<typeof as>, id = 'o1') => doc(db, 'carpools', '7', 'offers', id);
+  it('jeunes : seuls les membres publient et lisent', async () => {
+    await assertFails(setDoc(path(as('bob')), offer('bob', U12)));
+    await assertSucceeds(setDoc(path(as('alice')), offer('alice', U12)));
+    await assertFails(getDoc(path(as('bob'))));
+  });
+  it('demander, annuler sa demande ; pas celle d’un autre ; le conducteur modifie et accepte', async () => {
+    await assertSucceeds(setDoc(path(as('alice')), offer('alice', null)));
+    await assertSucceeds(updateDoc(path(as('bob')), { 'requests.bob': { status: 'pending', name: 'bob' } }));
+    await assertFails(updateDoc(path(as('bob')), { 'requests.bob': { status: 'accepted', name: 'bob' } })); // s'accepter soi-même
+    await assertFails(updateDoc(path(as('carol')), { 'requests.bob': deleteField() }));
+    await assertSucceeds(updateDoc(path(as('alice')), { 'requests.bob.status': 'accepted', meet: 'Parking', seats: 3 }));
+    await assertFails(updateDoc(path(as('alice')), { seats: 20 }));
+    await assertSucceeds(updateDoc(path(as('bob')), { 'requests.bob': deleteField() }));
+  });
+  it('téléphone visible seulement après acceptation', async () => {
+    await assertSucceeds(setDoc(path(as('alice')), offer('alice', null)));
+    await assertSucceeds(setDoc(doc(as('alice'), 'carpools', '7', 'offers', 'o1', 'contacts', 'alice'), { phone: '0470', name: 'alice' }));
+    await assertSucceeds(updateDoc(path(as('bob')), { 'requests.bob': { status: 'pending', name: 'bob' } }));
+    const ph = (u: string) => getDoc(doc(as(u), 'carpools', '7', 'offers', 'o1', 'contacts', 'alice'));
+    await assertFails(ph('bob'));
+    await assertSucceeds(updateDoc(path(as('alice')), { 'requests.bob.status': 'accepted' }));
+    await assertSucceeds(ph('bob'));
+    await assertFails(ph('carol'));
+  });
+  it('liste personnelle myCarpools : moi seul', async () => {
+    await assertSucceeds(setDoc(doc(as('bob'), 'myCarpools', 'bob', 'items', 'o1'), { game: 7 }));
+    await assertFails(setDoc(doc(as('alice'), 'myCarpools', 'bob', 'items', 'o2'), { game: 7 }));
+    await assertFails(getDoc(doc(as('alice'), 'myCarpools', 'bob', 'items', 'o1')));
   });
 });
