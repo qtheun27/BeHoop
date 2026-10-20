@@ -73,7 +73,7 @@ export const SPAM = /live\s*-?\s*streams?|livestream|stream(?:ing)? (?:free|grat
 export const BLOCKED_SOURCES = /golden ?palace|casino|\bbet|bwin|unibet|napoleon|sofascore|365scores|universidad|starsporttv/i;
 /** Fiches générées automatiquement par les médias (scores bruts) : déjà dans BeHoop, en mieux */
 export const AUTO_RESULTS = /^r[ée]sultats et classements sportifs\b|^uitslagen en klassementen\b/i;
-export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'>) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting/i.test(n.url);
+export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'>) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting|\/live-stats\./i.test(n.url);
 
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }
 
@@ -131,8 +131,11 @@ async function resolveGoogle(url: string): Promise<string | null> {
 }
 
 /** Page HTML via curl : plusieurs médias refusent le fetch de Node mais acceptent curl (présent sur les runners GitHub). */
-function curl(url: string, accept = 'text/html'): Promise<{ html: string; url: string } | null> {
-  return new Promise((res) => execFile('curl', ['-sSL', '--compressed', '-m', '15', '-A', UA, '-H', `Accept: ${accept}`, '-w', '\n%{http_code} %{url_effective}', url],
+const BROWSER_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
+/** Certains sites (Cloudflare…) refusent l'identifiant du robot : second essai comme un navigateur */
+async function curl(url: string, accept = 'text/html') { return (await curl1(url, accept, UA)) ?? (await curl1(url, accept, BROWSER_UA)); }
+function curl1(url: string, accept: string, ua: string): Promise<{ html: string; url: string } | null> {
+  return new Promise((res) => execFile('curl', ['-sSL', '--compressed', '-m', '15', '-A', ua, '-H', `Accept: ${accept}`, '-H', 'Accept-Language: fr-BE,fr;q=0.9,nl;q=0.8,en;q=0.7', '-w', '\n%{http_code} %{url_effective}', url],
     { maxBuffer: 16 << 20 }, (err, out) => {
       const i = out?.lastIndexOf('\n') ?? -1;
       const [code, final] = i < 0 ? [] : out.slice(i + 1).split(' ');
