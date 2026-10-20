@@ -34,6 +34,18 @@ test('parent membre : carte de score, photos 🔒 et vidéo du match', async ({ 
   await expect(page.getByRole('button', { name: /Q2/ })).toBeVisible(); // chapitres cliquables
 });
 
+test('commentaires : un compte commente une actu, le compteur suit', async ({ page }) => {
+  await login(page, 'visiteur');
+  await page.goto('/app/#/actus');
+  const card = page.locator('article.card.news').first();
+  await card.getByRole('button', { name: 'Commentaires' }).click();
+  await page.getByLabel('Ton commentaire…').fill('Belle victoire !');
+  await page.getByRole('button', { name: 'Envoyer' }).click();
+  await expect(page.getByText('Belle victoire !')).toBeVisible();
+  await page.reload();
+  await expect(page.locator('article.card.news').first().getByRole('button', { name: 'Commentaires' })).toContainText('1');
+});
+
 test('visiteur non membre : ni photos 🔒 ni vidéo Jeunes', async ({ page }) => {
   await login(page, 'visiteur');
   await page.goto('/app/#/fil');

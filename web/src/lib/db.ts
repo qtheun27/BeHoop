@@ -177,6 +177,58 @@ export const hidePost = (id: string, reason: 'parent' | 'auteur' | 'responsable'
   updateDoc(doc(db, 'posts', id), { hidden: true, hiddenReason: reason, hiddenBy: by, hiddenAt: serverTimestamp() });
 export const unhidePost = (id: string) => updateDoc(doc(db, 'posts', id), { hidden: false, hiddenReason: null });
 
+/* ---------- Fils de discussion : commentaires et réactions (actus, matchs, publications) ----------
+ * threads/{clé} : « news-{id} », « game-{id} » ou « post-{id} » ; compteurs { reactions, comments }. */
+export type ThreadKey = `news-${string}` | `game-${number}` | `post-${string}`;
+export const newsThread = (id: string): ThreadKey => `news-${id.replace(/[^A-Za-z0-9_]/g, '_')}`;
+export interface Thread { reactions: Partial<Record<Emoji, number>>; comments: number }
+export interface Comment { id: string; authorUid: string; authorName: string; text: string; createdAt: number; hidden: boolean }
+const threadRef = (k: ThreadKey) => doc(db, 'threads', k);
+/** Un fil créé par un commentaire n'a pas encore de compteur de réactions (et inversement) */
+const toThread = (x?: DocumentData): Thread => ({ reactions: x?.reactions ?? {}, comments: x?.comments ?? 0 });
+export async function getThread(k: ThreadKey): Promise<Thread> {
+  const s = await getDoc(threadRef(k));
+  return toThread(s.exists() ? s.data() : undefined);
+}
+export const watchThread = (k: ThreadKey, cb: (t: Thread) => void) =>
+  onSnapshot(threadRef(k), (s) => cb(toThread(s.exists() ? s.data() : undefined)), () => {});
+export async function myThreadReaction(k: ThreadKey, uid: string) {
+  const s = await getDoc(doc(db, 'threads', k, 'reactions', uid));
+  return s.exists() ? (s.data().emoji as Emoji) : null;
+}
+/** Réaction : document reactions/{uid} + compteur, dans la même écriture (le fil est créé au premier geste). */
+export async function reactThread(k: ThreadKey, uid: string, next: Emoji | null, prev: Emoji | null) {
+  const b = writeBatch(db);
+  const r: Record<string, unknown> = {};
+  if (prev) r[prev] = increment(-1);
+  if (next) r[next] = increment(1);
+  b.set(threadRef(k), { reactions: r, comments: increment(0) }, { merge: true });
+  const mine = doc(db, 'threads', k, 'reactions', uid);
+  if (next) b.set(mine, { emoji: next }); else b.delete(mine);
+  await b.commit();
+}
+export async function listComments(k: ThreadKey): Promise<Comment[]> {
+  const s = await getDocs(query(collection(db, 'threads', k, 'comments'), orderBy('createdAt', 'asc'), limit(200)));
+  return s.docs.map((d) => { const x = d.data(); return { id: d.id, ...x, createdAt: (x.createdAt as Timestamp)?.toMillis?.() ?? Date.now() } as Comment; });
+}
+export async function addComment(k: ThreadKey, uid: string, authorName: string, text: string) {
+  const id = rid(20);
+  const b = writeBatch(db);
+  b.set(doc(db, 'threads', k, 'comments', id), { authorUid: uid, authorName: authorName.slice(0, 60), text, createdAt: serverTimestamp(), hidden: false });
+  b.set(threadRef(k), { comments: increment(1) }, { merge: true }); // pas de « reactions: {} » : la fusion viderait les compteurs
+  await b.commit();
+  return id;
+}
+export async function deleteComment(k: ThreadKey, id: string) {
+  const b = writeBatch(db);
+  b.delete(doc(db, 'threads', k, 'comments', id));
+  b.set(threadRef(k), { comments: increment(-1) }, { merge: true });
+  await b.commit();
+}
+export const hideComment = (k: ThreadKey, id: string, hidden = true) => updateDoc(doc(db, 'threads', k, 'comments', id), { hidden });
+/** Signalement d'un commentaire : même collection que les publications, clé « c~{fil}~{commentaire} » */
+export const commentReportId = (k: ThreadKey, id: string) => `c~${k}~${id}`;
+
 /* ---------- Signalements / modération ---------- */
 export const REPORT_REASONS = ['Contenu inapproprié', 'Moquerie envers un joueur', 'Photo d’enfant sans accord', 'Spam', 'Autre'];
 export const report = (postId: string, uid: string, reason: string) =>

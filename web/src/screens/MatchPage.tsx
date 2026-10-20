@@ -8,6 +8,7 @@ import { Ico } from '../ui/icons';
 import { CompLogo } from '../ui/CompLogo';
 import { CalendarButton } from '../ui/CalendarButton';
 import { CompGameRow } from './CompPage';
+import { SocialBar } from '../ui/Social';
 
 export function MatchPage({ serie, id }: { serie: number; id: number }) {
   const d = useAsync(async () => {
@@ -46,6 +47,9 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
           {side(g.a, g.an, g.as, played && g.as! > g.hs!)}
         </div>
         {played && <div className="sub" style={{ textAlign: 'center', marginTop: 10 }}>{frDate(g.d, { weekday: 'long', day: 'numeric', month: 'long', ...(g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? { year: 'numeric' } : {}) })}</div>}
+        <div style={{ margin: '12px -8px -10px' }}>
+          <SocialBar k={`game-${g.id}`} title={`${g.hn} – ${g.an}`} youth={[g.h, g.a].some((x) => { const e = idx.get(x); return !!e && e.team.ag !== 'seniors'; })} />
+        </div>
       </section>
       {g.v && <a className="row card" style={{ color: 'inherit', marginBottom: 14 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">
         <Ico n="pin" size={22} style={{ color: 'var(--accent)' }} /><div className="grow"><b>{g.v}</b>{g.adr && <div className="sub">{g.adr}</div>}</div><span className="sub">{t('Itinéraire')} ›</span></a>}

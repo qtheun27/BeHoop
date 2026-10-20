@@ -1,8 +1,8 @@
 // Tests des règles Firestore sur l'émulateur : npm run test:rules
 import { readFileSync } from 'node:fs';
-import { describe, it, beforeAll, afterAll, beforeEach } from 'vitest';
+import { describe, it, beforeAll, afterAll, beforeEach, expect } from 'vitest';
 import { initializeTestEnvironment, assertFails, assertSucceeds, type RulesTestEnvironment } from '@firebase/rules-unit-testing';
-import { doc, getDoc, setDoc, updateDoc, getDocs, collection, collectionGroup, query, where, writeBatch, increment, deleteDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, updateDoc, getDocs, collection, collectionGroup, query, where, writeBatch, increment, deleteDoc, serverTimestamp } from 'firebase/firestore';
 
 let env: RulesTestEnvironment;
 const U12 = 51653, SEN = 50741;
@@ -133,5 +133,62 @@ describe('Profils, signalements, score en direct', () => {
     await assertSucceeds(live('bob', 10));
     await assertFails(live('bob', -1));
     await assertFails(setDoc(doc(as('bob'), 'liveScores', '124'), { home: 1, away: 2, quarter: 1, updatedBy: 'alice', history: [] }));
+  });
+});
+
+describe('Fils de discussion (commentaires et réactions)', () => {
+  const comment = (who: string, text = 'Beau match !') => ({ authorUid: who, authorName: who, text, createdAt: serverTimestamp(), hidden: false });
+  const addComment = (db: ReturnType<typeof as>, key: string, id: string, who: string, text?: string) => {
+    const b = writeBatch(db);
+    b.set(doc(db, 'threads', key, 'comments', id), comment(who, text));
+    b.set(doc(db, 'threads', key), { comments: increment(1) }, { merge: true });
+    return b.commit();
+  };
+  const reactB = (db: ReturnType<typeof as>, key: string, who: string, emoji: string, n = 1) => {
+    const b = writeBatch(db);
+    b.set(doc(db, 'threads', key), { reactions: { [emoji]: increment(n) }, comments: increment(0) }, { merge: true });
+    b.set(doc(db, 'threads', key, 'reactions', who), { emoji });
+    return b.commit();
+  };
+  it('actus et matchs : tout le monde lit, un compte actif commente', async () => {
+    await assertSucceeds(addComment(as('bob'), 'game-123', 'c1', 'bob'));
+    await assertSucceeds(getDoc(doc(env.unauthenticatedContext().firestore(), 'threads', 'game-123', 'comments', 'c1')));
+    await assertFails(addComment(as('banned'), 'game-123', 'c2', 'banned'));
+    await assertFails(addComment(as('bob'), 'game-123', 'c3', 'alice')); // au nom d'un autre
+    await assertFails(addComment(as('bob'), 'game-123', 'c4', 'bob', 'x'.repeat(501)));
+    await assertFails(addComment(as('bob'), 'game-123', 'c5', 'bob', ''));
+    await assertFails(addComment(as('bob'), 'autre-123', 'c6', 'bob')); // clé inconnue
+  });
+  it('commentaires d’une publication 🔒 : membres seulement', async () => {
+    await assertSucceeds(addComment(as('alice'), 'post-private1', 'c1', 'alice'));
+    await assertFails(addComment(as('bob'), 'post-private1', 'c2', 'bob'));
+    await assertFails(getDoc(doc(as('bob'), 'threads', 'post-private1', 'comments', 'c1')));
+    await assertSucceeds(getDoc(doc(as('alice'), 'threads', 'post-private1', 'comments', 'c1')));
+  });
+  it('réactions : une par personne, compteur ±1, pas de gonflage', async () => {
+    await assertSucceeds(reactB(as('bob'), 'news-abc', 'bob', '🔥'));
+    await assertFails(reactB(as('alice'), 'news-abc', 'alice', '🔥', 5));
+    await assertFails(reactB(as('alice'), 'news-abc', 'alice', '💩'));
+    // compteur modifié sans document de réaction
+    await assertFails(setDoc(doc(as('carol'), 'threads', 'news-abc'), { reactions: { '🔥': increment(1) } }, { merge: true }));
+  });
+  it('commenter après une réaction (fil déjà créé)', async () => {
+    await assertSucceeds(reactB(as('bob'), 'news-xyz', 'bob', '🔥'));
+    await assertSucceeds(addComment(as('bob'), 'news-xyz', 'c1', 'bob'));
+    await assertSucceeds(addComment(as('alice'), 'news-xyz', 'c2', 'alice'));
+    let th: unknown;
+    await env.withSecurityRulesDisabled(async (c) => { th = (await getDoc(doc(c.firestore(), 'threads', 'news-xyz'))).data(); });
+    expect(th).toEqual({ reactions: { '🔥': 1 }, comments: 2 });
+  });
+  it('l’auteur supprime son commentaire, pas celui d’un autre ; l’admin masque', async () => {
+    await assertSucceeds(addComment(as('bob'), 'game-9', 'c1', 'bob'));
+    await assertFails(deleteDoc(doc(as('alice'), 'threads', 'game-9', 'comments', 'c1')));
+    await assertFails(updateDoc(doc(as('alice'), 'threads', 'game-9', 'comments', 'c1'), { hidden: true }));
+    await assertSucceeds(updateDoc(doc(as('x', ADMIN), 'threads', 'game-9', 'comments', 'c1'), { hidden: true }));
+    await assertSucceeds(deleteDoc(doc(as('bob'), 'threads', 'game-9', 'comments', 'c1')));
+  });
+  it('signaler un commentaire', async () => {
+    const id = 'c~game-9~c1';
+    await assertSucceeds(setDoc(doc(as('alice'), 'reports', `${id}_alice`), { postId: id, reporterUid: 'alice', reason: 'Spam', status: 'open', createdAt: new Date() }));
   });
 });

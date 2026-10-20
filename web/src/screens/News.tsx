@@ -5,6 +5,8 @@ import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
 import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
+import { SocialBar } from '../ui/Social';
+import * as D from '../lib/db';
 
 const CATS: [string, IconName | null, string][] = [['tout', null, 'Tout'], ['belgique', 'flag', 'Belgique'], ['regional', 'pin', 'Régional'], ['international', 'globe', 'International'], ['nba', 'ball', 'NBA']];
 const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
@@ -32,8 +34,18 @@ function NewsVisual({ n, ratio }: { n: News; ratio: string }) {
 }
 
 export function NewsCard({ n, wide }: { n: News; wide?: boolean }) {
+  // Grande carte : réactions et commentaires sous l'article (le lien ouvre l'article chez le média)
+  if (wide) return (
+    <article className="card news">
+      <NewsLink n={n} wide />
+      <SocialBar k={D.newsThread(n.id)} title={n.title} />
+    </article>
+  );
+  return <NewsLink n={n} />;
+}
+function NewsLink({ n, wide }: { n: News; wide?: boolean }) {
   return (
-    <a className="card news" href={n.url} target="_blank" rel="noopener" style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
+    <a className={wide ? '' : 'card news'} href={n.url} target="_blank" rel="noopener" style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
       <NewsVisual n={n} ratio={wide ? '16/8' : '16/9'} />
       <div style={{ padding: '10px 14px 14px' }}>
         <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>

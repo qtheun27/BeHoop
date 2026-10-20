@@ -47,7 +47,26 @@ function Reports() {
   if (!data.length) return <Empty ill="checkCircle" title={t('Aucun signalement ouvert')} />;
   return <>{data.map((r) => <Report key={r.id} r={r} done={reload} />)}</>;
 }
+/** Signalement d'un commentaire : postId = « c~{fil}~{commentaire} » */
+function CommentReport({ r, done }: { r: { id: string; postId: string; reason: string }; done: () => void }) {
+  const [, key, cid] = r.postId.split('~') as [string, D.ThreadKey, string];
+  const c = useAsync(async () => { const x = await D.getDoc(D.doc(D.db, 'threads', key, 'comments', cid)); return x.exists() ? (x.data() as D.Comment) : null; }, [r.postId]);
+  return (
+    <div className="group" style={{ padding: 12 }}>
+      <div className="hstack"><b style={{ flex: 1 }}>« {t(r.reason)} » · {t('Commentaire')}</b>
+        <button className="btn small danger" onClick={async () => { await D.hideComment(key, cid).catch(() => {}); await D.closeReport(r.id); done(); }}>{t('Masquer')}</button>
+        <button className="btn small secondary" onClick={async () => { await D.closeReport(r.id); done(); }}>{t('Ignorer')}</button></div>
+      {c.data === null && <div className="sub mt">{t('Commentaire supprimé')}</div>}
+      {c.data && <div className="mt"><div className="sub">{c.data.authorName} · {key}</div><div style={{ whiteSpace: 'pre-wrap' }}>{c.data.text}</div></div>}
+      {c.data?.authorUid && <button className="btn small danger mt" onClick={async () => { if (confirm(t('Bannir l’auteur ?'))) { await D.banUser(c.data!.authorUid, true); done(); } }}>{t('Bannir l\'auteur')}</button>}
+    </div>
+  );
+}
 function Report({ r, done }: { r: { id: string; postId: string; reason: string }; done: () => void }) {
+  if (r.postId.startsWith('c~')) return <CommentReport r={r} done={done} />;
+  return <PostReport r={r} done={done} />;
+}
+function PostReport({ r, done }: { r: { id: string; postId: string; reason: string }; done: () => void }) {
   const post = useAsync(() => D.getPost(r.postId), [r.postId]);
   return (
     <div className="group" style={{ padding: 12 }}>

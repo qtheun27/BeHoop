@@ -13,6 +13,7 @@ import { GameScoreCard } from './ClubHub';
 import { loadCompData, CompFollowButton } from './CompPage';
 import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
+import { CommentButton, useYouth } from '../ui/Social';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
 function Stories() {
@@ -112,12 +113,21 @@ export function PostCard({ post }: { post: D.Post }) {
         </a>)}
       <div className="card-actions">
         {D.EMOJIS.map((e) => <button key={e} className={`react${mine === e ? ' on' : ''}`} onClick={() => onReact(e)} aria-pressed={mine === e} aria-label={t('Réagir {e}', { e })}>{e}{p.reactions[e] ? <span>{p.reactions[e]}</span> : null}</button>)}
+        <PostComments p={p} />
         <span style={{ flex: 1 }} />
         {p.type === 'score' && <button className="icon-btn" aria-label={t('Partager')} onClick={() => shareScoreImage(pl as ScorePayload).catch(() => s.toast(t('Partage indisponible')))}>{Icons.share}</button>}
       </div>
       {menu && <PostMenu post={p} onClose={() => setMenu(false)} onChange={setP} />}
     </article>
   );
+}
+
+/** Commentaires d'une publication ; carte de score : la discussion du match (la même partout) */
+function PostComments({ p }: { p: D.Post }) {
+  const gameId = (p.type === 'score' || p.type === 'live') ? (p.payload as ScorePayload).gameId : undefined;
+  const youth = useYouth(gameId ? p.teamIds : []);
+  const title = gameId ? `${(p.payload as ScorePayload).home.name} – ${(p.payload as ScorePayload).away.name}` : p.authorName ?? 'BeHoop';
+  return <CommentButton k={gameId ? `game-${gameId}` : `post-${p.id}`} title={title} youth={youth} />;
 }
 
 function PostMenu({ post, onClose, onChange }: { post: D.Post; onClose: () => void; onChange: (p: D.Post) => void }) {

@@ -242,6 +242,12 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       await fs.delete(p._path);
     }
     for (const v of await fs.query('matchVideos', [['authorUid', 'EQUAL', user.uid]])) await fs.set(v._path, { status: 'deleted', authorUid: 'supprimé' });
+    // Commentaires (actus, matchs, publications) : effacés, puis compteur du fil recalculé
+    const threads = new Set<string>();
+    for (const c of await fs.query('comments', [['authorUid', 'EQUAL', user.uid]], { allDescendants: true }).catch(() => [])) {
+      await fs.delete(c._path); threads.add(c._path.split('/comments/')[0]);
+    }
+    for (const th of threads) await fs.set(th, { comments: (await fs.query('comments', [], { parent: th }).catch(() => [])).length });
     await fs.delete(`legalAcceptances/${user.uid}`);
     await fs.delete(`profiles/${user.uid}`);
     return json({ ok: true });

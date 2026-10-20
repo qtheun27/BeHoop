@@ -1,0 +1,35 @@
+name: Règles et index Firestore — publication
+
+# Publie firestore.rules et firestore.indexes.json en production dès qu'il change sur main, après les tests des règles sur l'émulateur.
+# Utilise le secret FIREBASE_SERVICE_ACCOUNT (compte de service Firebase). S'il n'a pas le droit de publier les règles,
+# l'étape le signale : publier alors firestore.rules à la main (console Firebase → Firestore → Règles).
+on:
+  push:
+    branches: [main]
+    paths: ['firestore.rules', 'firestore.indexes.json', '.github/workflows/rules.yml']
+  workflow_dispatch:
+
+concurrency: { group: rules-deploy, cancel-in-progress: false }
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21' }
+      - run: npm ci --no-audit --no-fund
+      - name: Tests des règles (émulateur)
+        run: npm run test:rules
+      - name: Publication
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$SA" ]; then echo "::notice::Secret FIREBASE_SERVICE_ACCOUNT absent : publier firestore.rules à la main."; exit 0; fi
+          printf '%s' "$SA" > "$RUNNER_TEMP/sa.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/sa.json"
+          PROJECT=$(node -e "console.log(JSON.parse(require('fs').readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS,'utf8')).project_id)")
+          npx firebase deploy --only firestore:rules,firestore:indexes --project "$PROJECT" --non-interactive

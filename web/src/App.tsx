@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, Component, type ReactNode } from 'react';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
 import { Icons, Skeleton } from './ui/kit';
@@ -57,7 +57,7 @@ export function App() {
   const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
-      <Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense>
+      <Guard key={location.hash}><Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense></Guard>
       <nav className="tabbar" aria-label={tr('Navigation principale')}>
         {TABS.map((t) => (
           <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
@@ -69,4 +69,16 @@ export function App() {
       {s.toastMsg && <div className="toast" role="status">{s.toastMsg}</div>}
     </>
   );
+}
+
+/** Une erreur dans un écran n'efface pas toute l'appli : message et bouton pour recharger (remis à zéro à chaque navigation) */
+class Guard extends Component<{ children: ReactNode }, { err: boolean }> {
+  state = { err: false };
+  static getDerivedStateFromError() { return { err: true }; }
+  componentDidCatch(e: unknown) { console.error(e); }
+  render() {
+    if (!this.state.err) return this.props.children;
+    return <main className="screen"><div className="err" role="alert" style={{ marginTop: 40 }}><span style={{ flex: 1 }}>{t('Cette page n’a pas pu s’afficher.')}</span>
+      <button className="btn small" onClick={() => location.reload()}>{t('Recharger')}</button></div></main>;
+  }
 }

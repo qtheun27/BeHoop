@@ -15,6 +15,7 @@ import { NewsCard } from './News';
 import { LiveBadge } from './Live';
 import { FollowButton, GameRow, JoinSheet, TeamAdmin, TeamGames, TeamStandings, TeamStats, LinkedClub, TeamList } from './Explore';
 import { Ico, type IconName } from '../ui/icons';
+import { SocialBar } from '../ui/Social';
 
 const KINDS: { id: string; label: string; ic?: IconName }[] = [
   { id: 'tout', label: 'Tout' }, { id: 'scores', label: 'Résultats' }, { id: 'medias', label: 'Photos & vidéos' }, { id: 'actus', label: 'Actus', ic: 'news' },
@@ -202,6 +203,8 @@ export function GameScoreCard({ g, idx, label }: { g: Game; idx: Map<number, { t
       <header className="card-head"><div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="ball" size={22} /></div>
         <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">BeHoop {label && <span className="muted" style={{ fontWeight: 400 }}>· {label}</span>}</div><div className="when">{frDate(g.d)}</div></div></header>
       <ScoreCard p={scoreFromGame(g, idx)} />
+      <SocialBar k={`game-${g.id}`} title={`${g.hn} – ${g.an}`} youth={[g.h, g.a].some((x) => { const e = idx.get(x); return !!e && e.team.ag !== 'seniors'; })}
+        right={<a className="icon-btn" href={`#/match/${g.s}/${g.id}`} aria-label={t('Fiche du match')}><Ico n="scoreboard" /></a>} />
     </article>
   );
 }

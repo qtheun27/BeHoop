@@ -51,6 +51,9 @@ const P = {
   help: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01',
   close: 'M6 6l12 12M18 6 6 18',
   plus: 'M12 5v14M5 12h14',
+  comment: 'M21 11.5a8.4 8.4 0 0 1-12.1 7.6L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5z',
+  more: 'M5 12h.01M12 12h.01M19 12h.01',
+  shield: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z',
 } as const;
 export type IconName = keyof typeof P | 'live';
 

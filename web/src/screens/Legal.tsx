@@ -18,12 +18,14 @@ const DOCS: Record<string, { title: string; body: [string, string][] }> = {
     ['Où', "Google Firebase (UE/États-Unis, clauses contractuelles types) et Cloudflare R2 (stockage des médias). Les rushes vidéo sont supprimés 48 h après le montage."],
     ['Durée', "Tant que ton compte existe. Les contenus d'un compte supprimé sont effacés sous 30 jours (sauvegardes comprises)."],
     ['Tes droits (RGPD)', "Accès, rectification, effacement (bouton « Supprimer mon compte » dans Profil), opposition, portabilité. Écris à q.theuninck@gmail.com. Tu peux aussi saisir l'Autorité de protection des données (autoriteprotectiondonnees.be)."],
+    ['Commentaires et réactions', "Tes commentaires sont visibles de tous, avec ton prénom et l'initiale de ton nom ; tes réactions sont comptées sans ton nom. Tu peux supprimer un commentaire à tout moment ; ils sont effacés avec ton compte."],
     ['Mineurs', "Les photos et vidéos de jeunes ne sont jamais publiques et ne sont pas téléchargeables. Un parent peut retirer immédiatement un contenu via « Je suis parent — retirer ce contenu »."],
   ] },
   charte: { title: 'Charte BeHoop', body: [
     ['Respect', "On parle de basket avec respect : joueurs, coachs, arbitres, parents et bénévoles."],
     ['Pas de moquerie', "Aucune moquerie, aucun commentaire sur le physique ou le niveau d'un joueur, surtout chez les jeunes."],
     ['Enfants', "Pas de publication d'enfants sans l'accord de leurs parents. Les médias Jeunes restent dans l'Équipe."],
+    ['Commentaires', "Sous les actus et les matchs, on commente le jeu, pas les personnes. Pas de commentaires sous les matchs de jeunes : seulement des encouragements (🏀 🔥 👏)."],
     ['Signaler', "Si quelque chose te dérange, utilise « Signaler » : on regarde chaque signalement."],
   ] },
 };

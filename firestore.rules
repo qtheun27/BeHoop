@@ -363,8 +363,52 @@ service cloud.firestore {
       }
     }
 
+    // ---------- Fils de discussion : commentaires et réactions (actus, matchs, publications) ----------
+    // threads/{clé} : « news-{id} », « game-{id} » (public) ou « post-{id} » (même visibilité que la publication).
+    function threadPublic(key) { return key.matches('(news|game)-[A-Za-z0-9_]+'); }
+    function threadPost(key) { return get(/databases/$(database)/documents/posts/$(key.replace('^post-', ''))).data; }
+    function canReadThread(key) { return threadPublic(key) || (key.matches('post-[A-Za-z0-9_-]+') && canRead(threadPost(key))); }
+    function counts(m) { return m.keys().hasOnly(['🏀', '🔥', '👏']); }
+    function step(a, b) { return a - b >= -1 && a - b <= 1; }
+    // Chaque compteur de réaction bouge d'au plus 1 (et reste positif)
+    function reactStep(after, before) {
+      return step(after.get('🏀', 0), before.get('🏀', 0)) && step(after.get('🔥', 0), before.get('🔥', 0)) && step(after.get('👏', 0), before.get('👏', 0))
+        && after.get('🏀', 0) >= 0 && after.get('🔥', 0) >= 0 && after.get('👏', 0) >= 0;
+    }
+    match /threads/{key} {
+      allow read: if canReadThread(key);
+      allow create: if active() && canReadThread(key) && request.resource.data.keys().hasOnly(['reactions', 'comments'])
+        && counts(request.resource.data.get('reactions', {})) && reactStep(request.resource.data.get('reactions', {}), {})
+        && request.resource.data.comments is int && request.resource.data.comments >= 0 && request.resource.data.comments <= 1;
+      // Compteurs : réaction (cohérente avec reactions/{moi}) ou commentaire (±1 à la fois)
+      allow update: if active() && canReadThread(key) && onlyChanged(['reactions', 'comments'])
+        && counts(request.resource.data.get('reactions', {})) && reactStep(request.resource.data.get('reactions', {}), resource.data.get('reactions', {}))
+        && request.resource.data.comments is int && request.resource.data.comments >= 0 && step(request.resource.data.comments, resource.data.get('comments', 0))
+        && (request.resource.data.get('reactions', {}) == resource.data.get('reactions', {})
+            || existsAfter(/databases/$(database)/documents/threads/$(key)/reactions/$(uid())) != exists(/databases/$(database)/documents/threads/$(key)/reactions/$(uid()))
+            || getAfter(/databases/$(database)/documents/threads/$(key)/reactions/$(uid())).data.emoji != get(/databases/$(database)/documents/threads/$(key)/reactions/$(uid())).data.emoji)
+        || isAdmin();
+      match /reactions/{userId} {
+        allow read: if signedIn() && uid() == userId;
+        allow create, update: if active() && uid() == userId && request.resource.data.keys().hasOnly(['emoji']) && request.resource.data.emoji in ['🏀', '🔥', '👏'] && canReadThread(key);
+        allow delete: if signedIn() && uid() == userId;
+      }
+      match /comments/{commentId} {
+        allow read: if canReadThread(key);
+        allow create: if active() && canReadThread(key) && request.resource.data.keys().hasOnly(['authorUid', 'authorName', 'text', 'createdAt', 'hidden'])
+          && request.resource.data.authorUid == uid() && request.resource.data.hidden == false
+          && request.resource.data.text is string && request.resource.data.text.size() >= 1 && request.resource.data.text.size() <= 500
+          && request.resource.data.authorName is string && request.resource.data.authorName.size() <= 60
+          && request.resource.data.createdAt == request.time;
+        // L'auteur ou l'admin masque ; seul l'admin réactive
+        allow update: if (signedIn() && resource.data.authorUid == uid() && onlyChanged(['hidden']) && request.resource.data.hidden == true) || isAdmin();
+        allow delete: if (signedIn() && resource.data.authorUid == uid()) || isAdmin();
+      }
+    }
+
     // ---------- Signalements ----------
     match /reports/{reportId} {
+      // postId : la publication, ou « c~{fil}~{commentaire} » pour un commentaire
       allow create: if active() && request.resource.data.reporterUid == uid() && request.resource.data.status == 'open'
         && reportId == request.resource.data.postId + '_' + uid();
       allow read, update, delete: if isAdmin();
