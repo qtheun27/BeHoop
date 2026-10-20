@@ -1,7 +1,7 @@
 import { lazy, Suspense, Component, type ReactNode } from 'react';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
-import { Icons, Skeleton, Logo, LangSwitch, Avatar, useWide } from './ui/kit';
+import { Icons, Logo, LangSwitch, Avatar, useWide, Loader } from './ui/kit';
 import { Ico } from './ui/icons';
 import { t } from './lib/i18n';
 import { AuthSheet, Onboarding } from './screens/Auth';
@@ -32,7 +32,7 @@ export function App() {
   const s = useSession();
   const wide = useWide();
   const [page, a, b] = useRoute();
-  if (!s.ready) return <main className="screen"><div style={{ height: 80 }} /><Skeleton n={4} /></main>;
+  if (!s.ready) return <Loader full />;
   if (s.user && s.profile && !s.profile.onboarded) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
 
@@ -59,7 +59,7 @@ export function App() {
   const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
-      <Guard key={location.hash}><Suspense fallback={<main className="screen"><Skeleton /></main>}>{el}</Suspense></Guard>
+      <Guard key={location.hash}><Suspense fallback={<main className="screen"><Loader /></main>}>{el}</Suspense></Guard>
       {wide && <SideNav tab={page === 'actus' ? 'actus' : tab} />}
       <nav className="tabbar" aria-label={tr('Navigation principale')}>
         {TABS.map((t) => (

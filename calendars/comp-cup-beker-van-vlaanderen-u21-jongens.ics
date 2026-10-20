@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaanderen U21 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-14223232455-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261106T210000
 DTEND;TZID=Europe/Brussels:20261106T230000
 SUMMARY:Antwerp Giants J21 A – Sobabee Bazel@Den Draver J21 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14139344360-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261107T100000
 DTEND;TZID=Europe/Brussels:20261107T120000
 SUMMARY:Oxaco BBC Boechout J21 A – Guco Lier J21 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14172899598-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:Partena Professional Okapi Aalst J21 A – Bavi Vilvoorde J21 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14206454836-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:Basics Melsele-Beveren J21 A – Phantoms Basket Boom J21 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14189677217-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261107T120000
 DTEND;TZID=Europe/Brussels:20261107T140000
 SUMMARY:House Of Talents Kortrijk Spurs J21 A – Basket Blankenberge J21 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14256787693-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:AB InBev Leuven Bears J21 A – Kangoeroes Basket Mechelen J21 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Vlaanderen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14156121979-comp-cup-beker-van-vlaanderen-u21-jongens@behoop.be
-DTSTAMP:20261020T104532Z
+DTSTAMP:20261020T142538Z
 DTSTART;TZID=Europe/Brussels:20261108T153000
 DTEND;TZID=Europe/Brussels:20261108T173000
 SUMMARY:G&V Breakpoint Basket Waregem J21 A – BBC Falco Gent J21 A

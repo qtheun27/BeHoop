@@ -658,4 +658,5 @@ export const EN: Record<string, string> = {
   "Tous mes matchs ›": "All my games ›",
   "Mes compétitions": "My competitions",
   "Compétitions à suivre": "Competitions to follow",
+  "Aux couleurs d’une compétition": "In a competition’s colours",
 };

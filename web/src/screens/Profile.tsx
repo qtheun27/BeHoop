@@ -11,7 +11,8 @@ import { useClubs, MembersList } from './Explore';
 import { PostCard } from './Feed';
 import { enableNotifications, needsInstallForPush, pushSupported } from '../lib/push';
 import { SHOW_CLUB_SPACE } from '../lib/config';
-import { ACCENTS, DEFAULT_THEME, clubColors, type ThemePrefs } from '../lib/theme';
+import { ACCENTS, DEFAULT_THEME, clubColors, COMP_THEME, type ThemePrefs } from '../lib/theme';
+import { CompLogo } from '../ui/CompLogo';
 import { Disc } from '../ui/kit';
 import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
@@ -153,6 +154,8 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
     s.setProfile({ ...p, theme: n.mode, ui: n });
     await D.updateProfile(s.user!.uid, { theme: n.mode, ui: n }).catch(() => s.toast(t('Thème non enregistré')));
   };
+  const compsAll = useAsync(loadComps, []);
+  const myComps = (compsAll.data ?? []).filter((c) => s.followedComps.includes(c.id) && COMP_THEME[c.id]);
   const myClubs = clubs.filter((c) => s.followedClubs.includes(c.id) || s.follows.some((f) => f.type === 'team' && c.teams.some((x) => x.id === f.refId)));
   const Seg = <K extends string>({ v, opts, on }: { v: K; opts: [K, string, IconName?][]; on: (k: K) => void }) => (
     <div className="seg">{opts.map(([k, l, ic]) => <button key={k} className={v === k ? 'on' : ''} onClick={() => on(k)}>{ic && <Ico n={ic} />}{t(l)}</button>)}</div>);
@@ -166,6 +169,15 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
         <div className="group">{myClubs.map((c) => { const k = clubColors(c); const on = th.accent === `club:${c.id}`; return (
           <button key={c.id} className="row" onClick={() => save({ accent: `club:${c.id}` })} aria-pressed={on}>
             <Disc src={c.logo} name={c.name} size={36} ring={k.accent} /><div className="grow ellipsis">{c.name}</div>
+            <span style={{ width: 44, height: 22, borderRadius: 11, background: k.grad }} aria-hidden />
+            <span style={{ width: 22, color: 'var(--accent)' }}>{on && <Ico n="check" size={20} />}</span>
+          </button>); })}</div>
+      </>}
+      {myComps.length > 0 && <>
+        <div className="group-title mt">{t('Aux couleurs d’une compétition')}</div>
+        <div className="group">{myComps.map((c) => { const k = clubColors(COMP_THEME[c.id]); const on = th.accent === `comp:${c.id}`; return (
+          <button key={c.id} className="row" onClick={() => save({ accent: `comp:${c.id}` })} aria-pressed={on}>
+            <CompLogo c={c} size={36} /><div className="grow ellipsis">{c.name}</div>
             <span style={{ width: 44, height: 22, borderRadius: 11, background: k.grad }} aria-hidden />
             <span style={{ width: 22, color: 'var(--accent)' }}>{on && <Ico n="check" size={20} />}</span>
           </button>); })}</div>

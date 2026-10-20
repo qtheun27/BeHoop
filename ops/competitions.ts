@@ -22,7 +22,7 @@ export interface Competition {
 export const COMP_LOGOS: Record<string, { logo: string; dark?: boolean }> = {
   bnxt: { logo: '/logos/comps/bnxt.webp' }, nba: { logo: '/logos/comps/nba.webp' }, wnba: { logo: '/logos/comps/wnba.webp' },
   lions: { logo: '/logos/comps/lions.webp' }, cats: { logo: '/logos/comps/cats.webp' },
-  euroleague: { logo: '/logos/comps/euroleague.svg' }, eurocup: { logo: '/logos/comps/eurocup.svg' },
+  euroleague: { logo: '/logos/comps/euroleague.webp' }, eurocup: { logo: '/logos/comps/eurocup.webp' },
   bcl: { logo: '/logos/comps/bcl.webp', dark: true }, fec: { logo: '/logos/comps/fec.webp' },
   elw: { logo: '/logos/comps/elw.webp' }, ecw: { logo: '/logos/comps/ecw.webp' },
   eurobasket: { logo: '/logos/comps/eurobasket.webp', dark: true }, 'eurobasket-w': { logo: '/logos/comps/eurobasket-w.webp', dark: true },

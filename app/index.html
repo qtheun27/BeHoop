@@ -14,15 +14,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <title>BeHoop</title>
-  <script type="module" crossorigin src="/app/assets/main-RnVvCLub.js"></script>
+  <script type="module" crossorigin src="/app/assets/main-BE6eWX-G.js"></script>
   <link rel="modulepreload" crossorigin href="/app/assets/jsx-runtime--YxyOcAB.js">
   <link rel="modulepreload" crossorigin href="/app/assets/index.esm-Yfqym80F.js">
-  <link rel="modulepreload" crossorigin href="/app/assets/api-BK47bKap.js">
-  <link rel="modulepreload" crossorigin href="/app/assets/kit-BWolDFSY.js">
+  <link rel="modulepreload" crossorigin href="/app/assets/api-BUfGNCBS.js">
+  <link rel="modulepreload" crossorigin href="/app/assets/kit-BgS2M9Sq.js">
   <link rel="stylesheet" crossorigin href="/app/assets/jsx-runtime-EL8MrI4c.css">
-  <link rel="stylesheet" crossorigin href="/app/assets/main-DChcI0lu.css">
+  <link rel="stylesheet" crossorigin href="/app/assets/main-C0XjbFhn.css">
 </head>
 <body>
-  <div id="root"></div>
+  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />) -->
+  <div id="root"><div class="bh-splash" role="status" aria-label="Chargement">
+    <div class="bh-ball"><picture><source srcset="/icons/emblem-dark.png" media="(prefers-color-scheme: dark)" /><img src="/icons/emblem-light.png" alt="" /></picture><i></i></div>
+    <div class="bh-wm"><span>Be</span><b>Hoop</b></div>
+  </div></div>
+  <style>.bh-splash{background:#f4f1ec;align-content:center;place-items:center;gap:14px;font-family:Sora,Avenir Next,sans-serif;display:grid;position:fixed;inset:0}@media (prefers-color-scheme:dark){.bh-splash{background:#070b14}.bh-wm span{color:#fff!important}}.bh-ball{width:84px;height:110px;position:relative}.bh-ball img{object-fit:contain;transform-origin:50% 100%;width:84px;height:84px;animation:1s cubic-bezier(.45,0,.55,1) infinite bhb;position:absolute;top:0;left:0}.bh-ball i{background:#0000002e;border-radius:50%;width:40px;height:8px;animation:1s cubic-bezier(.45,0,.55,1) infinite bhs;position:absolute;bottom:0;left:22px}.bh-wm{letter-spacing:-.035em;font-size:22px}.bh-wm span{color:#0d2a5c;font-weight:300}.bh-wm b{color:#f26a1b;font-weight:700}@keyframes bhb{0%,to{transform:translateY(-22px)}45%{transform:translateY(0)}52%{transform:translateY(2px)scale(1.08,.9)}60%{transform:translateY(-2px)scale(.97,1.03)}}@keyframes bhs{0%,to{opacity:.35;transform:scaleX(.55)}50%{opacity:.9;transform:scaleX(1)}}@media (prefers-reduced-motion:reduce){.bh-ball img,.bh-ball i{animation:none}}</style>
 </body>
 </html>

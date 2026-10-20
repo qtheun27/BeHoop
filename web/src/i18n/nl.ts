@@ -658,4 +658,5 @@ export const NL: Record<string, string> = {
   "Tous mes matchs ›": "Al mijn wedstrijden ›",
   "Mes compétitions": "Mijn competities",
   "Compétitions à suivre": "Competities om te volgen",
+  "Aux couleurs d’une compétition": "In de kleuren van een competitie",
 };

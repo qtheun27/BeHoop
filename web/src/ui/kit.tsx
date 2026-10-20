@@ -112,6 +112,13 @@ export function Tabs<K extends string>({ value, onChange, items }: { value: K; o
 export const Empty = ({ ill, title, text, action }: { ill: IconName; title: string; text?: string; action?: ReactNode }) => (
   <div className="empty"><div className="ill" aria-hidden><Ico n={ill} /></div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
 );
+/** Animation de chargement BeHoop : ballon qui rebondit (full : plein écran, à l'ouverture de l'appli) */
+export const Loader = ({ full }: { full?: boolean }) => (
+  <div className={`loader${full ? ' full' : ''}`} role="status" aria-label={t('Chargement')}>
+    <div className="lb"><img className="em-light" src="/icons/emblem-light.png" alt="" /><img className="em-dark" src="/icons/emblem-dark.png" alt="" /><i /></div>
+    {full ? <div className="wm-load"><span style={{ fontWeight: 300 }}>Be</span><i>Hoop</i></div> : <div className="dots"><span /><span /><span /></div>}
+  </div>
+);
 export const Skeleton = ({ h = 120, n = 3 }: { h?: number; n?: number }) => (
   <div className="stack" aria-busy="true" aria-label={t('Chargement')}>{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>
 );
