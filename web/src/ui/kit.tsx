@@ -3,6 +3,7 @@ import { initials } from '../lib/util';
 import { useSession } from '../lib/session';
 import { t, lang, setLang, LANGS, type Lang } from '../lib/i18n';
 import { Ico, type IconName } from './icons';
+import { HoopSvg } from './HoopLoader';
 
 /** Écran d'ordinateur (≥ 1100 px, même seuil que le CSS) : navigation latérale et colonne de droite n'existent que là */
 export function useWide() {
@@ -112,24 +113,28 @@ export function Tabs<K extends string>({ value, onChange, items }: { value: K; o
 export const Empty = ({ ill, title, text, action }: { ill: IconName; title: string; text?: string; action?: ReactNode }) => (
   <div className="empty"><div className="ill" aria-hidden><Ico n={ill} /></div><h3>{title}</h3>{text && <p>{text}</p>}{action && <div className="mt">{action}</div>}</div>
 );
-/** Animation de chargement BeHoop : ballon qui rebondit (full : plein écran, à l'ouverture de l'appli) */
+/** Animation de chargement BeHoop : tir qui rentre dans le panier (full : plein écran, à l'ouverture de l'appli) */
 export const Loader = ({ full }: { full?: boolean }) => (
   <div className={`loader${full ? ' full' : ''}`} role="status" aria-label={t('Chargement')}>
-    <div className="lb"><img className="em-light" src="/icons/emblem-light.png" alt="" /><img className="em-dark" src="/icons/emblem-dark.png" alt="" /><i /></div>
+    <HoopSvg size={full ? 110 : 84} />
     {full ? <div className="wm-load"><span style={{ fontWeight: 300 }}>Be</span><i>Hoop</i></div> : <div className="dots"><span /><span /><span /></div>}
   </div>
 );
-export const Skeleton = ({ h = 120, n = 3 }: { h?: number; n?: number }) => (
-  <div className="stack" aria-busy="true" aria-label={t('Chargement')}>{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>
-);
+/** Chargement : blocs gris d'abord ; si ça dure (> 0,7 s), l'animation BeHoop prend le relais */
+export function Skeleton({ h = 120, n = 3 }: { h?: number; n?: number }) {
+  const [long, setLong] = useState(false);
+  useEffect(() => { const id = setTimeout(() => setLong(true), 700); return () => clearTimeout(id); }, []);
+  if (long) return <Loader />;
+  return <div className="stack" aria-busy="true" aria-label={t('Chargement')}>{Array.from({ length: n }, (_, i) => <div key={i} className="skel" style={{ height: h }} />)}</div>;
+}
 export const ErrorBox = ({ msg, retry }: { msg: string; retry?: () => void }) => (
   <div className="err" role="alert"><span style={{ flex: 1 }}>{msg}</span>{retry && <button className="btn small" onClick={retry}>{t('Réessayer')}</button>}</div>
 );
 export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | null; name: string; size?: number; ring?: string }) {
   const [err, setErr] = useState(false);
   return (
-    <div className="disc" style={{ '--s': `${size}px`, '--ring': ring } as React.CSSProperties}>
-      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/') ? { width: '100%', height: '100%' } : undefined} /> : <span>{initials(name)}</span>}
+    <div className={`disc${size >= 48 ? ' big' : ''}`} style={{ '--s': `${size}px`, '--ring': ring } as React.CSSProperties}>
+      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/') ? { width: '86%', height: '86%' } : undefined} /> : <span>{initials(name)}</span>}
     </div>
   );
 }

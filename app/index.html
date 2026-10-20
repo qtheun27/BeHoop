@@ -14,20 +14,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <title>BeHoop</title>
-  <script type="module" crossorigin src="/app/assets/main-BE6eWX-G.js"></script>
+  <script type="module" crossorigin src="/app/assets/main-CGozNZQI.js"></script>
   <link rel="modulepreload" crossorigin href="/app/assets/jsx-runtime--YxyOcAB.js">
   <link rel="modulepreload" crossorigin href="/app/assets/index.esm-Yfqym80F.js">
   <link rel="modulepreload" crossorigin href="/app/assets/api-BUfGNCBS.js">
-  <link rel="modulepreload" crossorigin href="/app/assets/kit-BgS2M9Sq.js">
+  <link rel="modulepreload" crossorigin href="/app/assets/kit-Daf2wEjA.js">
   <link rel="stylesheet" crossorigin href="/app/assets/jsx-runtime-EL8MrI4c.css">
-  <link rel="stylesheet" crossorigin href="/app/assets/main-C0XjbFhn.css">
+  <link rel="stylesheet" crossorigin href="/app/assets/main-5uINVnQT.css">
 </head>
 <body>
-  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />) -->
+  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />, voir ui/HoopLoader.tsx) -->
   <div id="root"><div class="bh-splash" role="status" aria-label="Chargement">
-    <div class="bh-ball"><picture><source srcset="/icons/emblem-dark.png" media="(prefers-color-scheme: dark)" /><img src="/icons/emblem-light.png" alt="" /></picture><i></i></div>
+    <svg class="hoop-anim" width="110" height="121" viewBox="0 0 100 110" aria-hidden="true">
+    <defs>
+      <radialGradient id="hb-ball" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffb25b" /><stop offset=".55" stop-color="#f26a1b" /><stop offset="1" stop-color="#c2410c" /></radialGradient>
+    </defs>
+    <rect class="hb-board" x="24" y="30" width="52" height="34" rx="5" />
+    <rect class="hb-square" x="39" y="44" width="22" height="14" rx="2" />
+    <ellipse class="hb-rim-back" cx="50" cy="64" rx="19" ry="5" />
+    <g class="hb-ball"><g class="hb-spin">
+      <circle cx="50" cy="20" r="11" fill="url(#hb-ball)" />
+      <path d="M39 20h22M50 9v22M42.5 12.5c4 5 4 10 0 15M57.5 12.5c-4 5-4 10 0 15" fill="none" stroke="#7c2d12" stroke-width="1.3" stroke-linecap="round" opacity=".75" />
+    </g></g>
+    <g class="hb-net">
+      <path d="M31 64l5 26M38 65.5l3 25M46 66.5l1.5 25M54 66.5l-1.5 25M62 65.5l-3 25M69 64l-5 26M32.5 72h35M34.5 80h31M37 88h26" fill="none" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+    <path class="hb-rim" d="M31 64a19 5 0 0 0 38 0" fill="none" stroke-width="3.2" stroke-linecap="round" />
+  </svg>
     <div class="bh-wm"><span>Be</span><b>Hoop</b></div>
   </div></div>
-  <style>.bh-splash{background:#f4f1ec;align-content:center;place-items:center;gap:14px;font-family:Sora,Avenir Next,sans-serif;display:grid;position:fixed;inset:0}@media (prefers-color-scheme:dark){.bh-splash{background:#070b14}.bh-wm span{color:#fff!important}}.bh-ball{width:84px;height:110px;position:relative}.bh-ball img{object-fit:contain;transform-origin:50% 100%;width:84px;height:84px;animation:1s cubic-bezier(.45,0,.55,1) infinite bhb;position:absolute;top:0;left:0}.bh-ball i{background:#0000002e;border-radius:50%;width:40px;height:8px;animation:1s cubic-bezier(.45,0,.55,1) infinite bhs;position:absolute;bottom:0;left:22px}.bh-wm{letter-spacing:-.035em;font-size:22px}.bh-wm span{color:#0d2a5c;font-weight:300}.bh-wm b{color:#f26a1b;font-weight:700}@keyframes bhb{0%,to{transform:translateY(-22px)}45%{transform:translateY(0)}52%{transform:translateY(2px)scale(1.08,.9)}60%{transform:translateY(-2px)scale(.97,1.03)}}@keyframes bhs{0%,to{opacity:.35;transform:scaleX(.55)}50%{opacity:.9;transform:scaleX(1)}}@media (prefers-reduced-motion:reduce){.bh-ball img,.bh-ball i{animation:none}}</style>
+  <style>.bh-splash{background:#f4f1ec;align-content:center;place-items:center;gap:14px;font-family:Sora,Avenir Next,sans-serif;display:grid;position:fixed;inset:0}@media (prefers-color-scheme:dark){.bh-splash{background:#070b14}.bh-wm span{color:#fff!important}}.hoop-anim{overflow:visible}.hoop-anim .hb-board{fill:#ffffffb3;stroke:#8a93a6;stroke-width:2px}.hoop-anim .hb-square{fill:none;stroke:#f26a1b;stroke-width:1.8px}.hoop-anim .hb-rim-back{fill:none;stroke:#c2410c;stroke-width:2.4px}.hoop-anim .hb-rim{stroke:#f26a1b}.hoop-anim .hb-net path{stroke:#0d2a5c;opacity:.5}.hoop-anim .hb-ball{animation:1.6s cubic-bezier(.35,0,.65,1) infinite hb-shot}.hoop-anim .hb-spin{transform-box:fill-box;transform-origin:50%;animation:1.6s linear infinite hb-spin}.hoop-anim .hb-net{transform-box:fill-box;transform-origin:50% 0;animation:1.6s ease-out infinite hb-net}@keyframes hb-shot{0%{opacity:0;transform:translate(-46px,34px)}12%{opacity:1}48%{transform:translate(-8px,-14px)}72%{opacity:1;transform:translateY(44px)}88%,to{opacity:0;transform:translateY(70px)}}@keyframes hb-spin{to{transform:rotate(-540deg)}}@keyframes hb-net{0%,70%{transform:scale(1)}80%{transform:scale(.88,1.14)}90%{transform:scale(1.04,.97)}to{transform:scale(1)}}@media (prefers-reduced-motion:reduce){.hoop-anim *{animation:none!important}}@media (prefers-color-scheme:dark){.hoop-anim .hb-board{fill:#111827}.hoop-anim .hb-net path{stroke:#fff}}</style>
 </body>
 </html>

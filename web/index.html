@@ -16,21 +16,44 @@
   <title>BeHoop</title>
 </head>
 <body>
-  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />) -->
+  <!-- Écran d'ouverture : affiché tout de suite, remplacé par l'appli dès qu'elle démarre (même animation que <Loader full />, voir ui/HoopLoader.tsx) -->
   <div id="root"><div class="bh-splash" role="status" aria-label="Chargement">
-    <div class="bh-ball"><picture><source srcset="/icons/emblem-dark.png" media="(prefers-color-scheme: dark)" /><img src="/icons/emblem-light.png" alt="" /></picture><i></i></div>
+    <svg class="hoop-anim" width="110" height="121" viewBox="0 0 100 110" aria-hidden="true">
+    <defs>
+      <radialGradient id="hb-ball" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#ffb25b" /><stop offset=".55" stop-color="#f26a1b" /><stop offset="1" stop-color="#c2410c" /></radialGradient>
+    </defs>
+    <rect class="hb-board" x="24" y="30" width="52" height="34" rx="5" />
+    <rect class="hb-square" x="39" y="44" width="22" height="14" rx="2" />
+    <ellipse class="hb-rim-back" cx="50" cy="64" rx="19" ry="5" />
+    <g class="hb-ball"><g class="hb-spin">
+      <circle cx="50" cy="20" r="11" fill="url(#hb-ball)" />
+      <path d="M39 20h22M50 9v22M42.5 12.5c4 5 4 10 0 15M57.5 12.5c-4 5-4 10 0 15" fill="none" stroke="#7c2d12" stroke-width="1.3" stroke-linecap="round" opacity=".75" />
+    </g></g>
+    <g class="hb-net">
+      <path d="M31 64l5 26M38 65.5l3 25M46 66.5l1.5 25M54 66.5l-1.5 25M62 65.5l-3 25M69 64l-5 26M32.5 72h35M34.5 80h31M37 88h26" fill="none" stroke-width="1.6" stroke-linecap="round" />
+    </g>
+    <path class="hb-rim" d="M31 64a19 5 0 0 0 38 0" fill="none" stroke-width="3.2" stroke-linecap="round" />
+  </svg>
     <div class="bh-wm"><span>Be</span><b>Hoop</b></div>
   </div></div>
   <style>
     .bh-splash { position: fixed; inset: 0; display: grid; place-items: center; align-content: center; gap: 14px; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
     @media (prefers-color-scheme: dark) { .bh-splash { background: #070b14; } .bh-wm span { color: #fff !important; } }
-    .bh-ball { position: relative; width: 84px; height: 110px; }
-    .bh-ball img { position: absolute; left: 0; top: 0; width: 84px; height: 84px; object-fit: contain; animation: bhb 1s cubic-bezier(.45,0,.55,1) infinite; transform-origin: 50% 100%; }
-    .bh-ball i { position: absolute; left: 22px; bottom: 0; width: 40px; height: 8px; border-radius: 50%; background: rgba(0,0,0,.18); animation: bhs 1s cubic-bezier(.45,0,.55,1) infinite; }
-    .bh-wm { font-size: 22px; letter-spacing: -.035em; } .bh-wm span { font-weight: 300; color: #0d2a5c; } .bh-wm b { font-weight: 700; color: #f26a1b; }
-    @keyframes bhb { 0%, 100% { transform: translateY(-22px); } 45% { transform: translateY(0); } 52% { transform: translateY(2px) scale(1.08, .9); } 60% { transform: translateY(-2px) scale(.97, 1.03); } }
-    @keyframes bhs { 0%, 100% { transform: scaleX(.55); opacity: .35; } 50% { transform: scaleX(1); opacity: .9; } }
-    @media (prefers-reduced-motion: reduce) { .bh-ball img, .bh-ball i { animation: none; } }
+.hoop-anim { overflow: visible; }
+.hoop-anim .hb-board { fill: color-mix(in srgb, #fff 70%, transparent); stroke: #8a93a6; stroke-width: 2; }
+.hoop-anim .hb-square { fill: none; stroke: #f26a1b; stroke-width: 1.8; }
+.hoop-anim .hb-rim-back { fill: none; stroke: #c2410c; stroke-width: 2.4; }
+.hoop-anim .hb-rim { stroke: #f26a1b; }
+.hoop-anim .hb-net path { stroke: #0d2a5c; opacity: .5; }
+.hoop-anim .hb-ball { animation: hb-shot 1.6s cubic-bezier(.35,0,.65,1) infinite; }
+.hoop-anim .hb-spin { transform-box: fill-box; transform-origin: center; animation: hb-spin 1.6s linear infinite; }
+.hoop-anim .hb-net { transform-box: fill-box; transform-origin: 50% 0; animation: hb-net 1.6s ease-out infinite; }
+@keyframes hb-shot { 0% { transform: translate(-46px, 34px); opacity: 0; } 12% { opacity: 1; } 48% { transform: translate(-8px, -14px); }
+  72% { transform: translate(0, 44px); opacity: 1; } 88%, 100% { transform: translate(0, 70px); opacity: 0; } }
+@keyframes hb-spin { to { transform: rotate(-540deg); } }
+@keyframes hb-net { 0%, 70% { transform: scale(1, 1); } 80% { transform: scale(.88, 1.14); } 90% { transform: scale(1.04, .97); } 100% { transform: scale(1, 1); } }
+@media (prefers-reduced-motion: reduce) { .hoop-anim * { animation: none !important; } }
+    @media (prefers-color-scheme: dark) { .hoop-anim .hb-board { fill: #111827; } .hoop-anim .hb-net path { stroke: #fff; } }
   </style>
   <script type="module" src="/src/main.tsx"></script>
 </body>

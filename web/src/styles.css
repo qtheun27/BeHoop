@@ -130,8 +130,8 @@ textarea.field { min-height: 110px; resize: vertical; }
 .scorecard .sc { font-family: Anton, sans-serif; font-size: 52px; line-height: 1; display: flex; gap: 10px; align-items: center; }
 .scorecard .sc .lead { color: #f2c14e; }
 .scorecard .sc .d { opacity: .5; font-size: 30px; }
-.disc { width: var(--s, 56px); height: var(--s, 56px); border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 0 0 3px var(--ring, #fff); flex: none; overflow: hidden; }
-.disc img { width: 78%; height: 78%; object-fit: contain; }
+.disc { width: var(--s, 56px); height: var(--s, 56px); border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 0 0 3px var(--ring, #fff); flex: none; overflow: hidden; position: relative; }
+.disc img { width: 74%; height: 74%; object-fit: contain; }
 .disc span { font-family: Anton, sans-serif; color: #0a0c12; font-size: calc(var(--s, 56px) * .36); }
 
 /* Divers */
