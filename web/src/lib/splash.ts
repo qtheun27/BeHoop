@@ -13,9 +13,11 @@ export function hideSplash() {
   const cap = new Promise((r) => setTimeout(r, MAX_WAIT));
   // L'écran d'en dessous doit être prêt : sinon, au fondu, on voit apparaître plus bas l'animation de chargement de la page
   // (impression que le logo « descend »). On attend qu'aucun chargement ne soit affiché dans l'appli.
+  // Prêt = aucun chargement visible pendant 0,8 s d'affilée (une page peut afficher un chargement juste après un autre)
+  const busy = () => !!document.querySelector('#root .loader, #root .skel');
   const settled = () => new Promise<void>((r) => {
-    const t0 = Date.now();
-    const tick = () => (!document.querySelector('#root .loader, #root .skel') || Date.now() - t0 > 4000 ? r() : setTimeout(tick, 120));
+    const t0 = Date.now(); let calm = 0;
+    const tick = () => { calm = busy() ? 0 : calm + 1; if (calm >= 8 || Date.now() - t0 > 6000) r(); else setTimeout(tick, 100); };
     tick();
   });
   Promise.race([prefetch.then(settled), cap]).then(() => {
@@ -28,7 +30,7 @@ export function hideSplash() {
     let extra = 0;
     const fade = () => {
       // Encore un chargement visible dessous (page lente) : un tour de plus, deux au maximum
-      if (!reduce && extra < 2 && document.querySelector('#root .loader, #root .skel')) { extra++; setTimeout(fade, CYCLE); return; }
+      if (!reduce && extra < 2 && busy()) { extra++; setTimeout(fade, CYCLE); return; }
       el.querySelectorAll<SVGElement>('.cc-anim *').forEach((n) => { n.style.animationPlayState = 'paused'; });
       el.style.opacity = '0';
       setTimeout(() => el.remove(), 400);

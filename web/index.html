@@ -23,11 +23,9 @@
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
-      // Hauteur réelle de l'écran (aussi pour les plein-écrans comme le lecteur d'actus : leur bas tombe sur le bas de l'écran)
       function set() {
         var land = innerWidth > innerHeight, h = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
         document.documentElement.style.setProperty('--splash-y', Math.round(h / 2) + 'px');
-        document.documentElement.style.setProperty('--screen-h', h + 'px');
       }
       set(); addEventListener('orientationchange', function () { setTimeout(set, 300); });
     })();

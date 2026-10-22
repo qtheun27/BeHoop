@@ -37,12 +37,8 @@ function Reader() {
   const [dir, setDir] = useState<0 | 1 | -1>(0);
   const n = list[i];
   const go = (d: 1 | -1) => { const j = i + d; if (j < 0 || j >= list.length) return; haptic(); setDir(d); setI(j); state!.i = j; };
-  // Page derrière figée + clavier (Échap, ← →)
-  useEffect(() => {
-    const b = document.body, y = window.scrollY;
-    Object.assign(b.style, { position: 'fixed', top: `-${y}px`, left: '0', right: '0', overflow: 'hidden' });
-    return () => { Object.assign(b.style, { position: '', top: '', left: '', right: '', overflow: '' }); window.scrollTo(0, y); };
-  }, []);
+  // Clavier (Échap, ← →). Pas de blocage de la page derrière (position: fixed sur body) : sur l'appli iPhone installée,
+  // il raccourcit la hauteur utile et coupe la barre du bas. Le lecteur, opaque et plein écran, la cache de toute façon.
   useEffect(() => {
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') closeReader(); if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); };
     window.addEventListener('keydown', k); return () => window.removeEventListener('keydown', k);
