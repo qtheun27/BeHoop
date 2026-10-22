@@ -14,13 +14,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <title>BeHoop</title>
-  <script type="module" crossorigin src="/app/assets/main-D1D3_32X.js"></script>
+  <script type="module" crossorigin src="/app/assets/main-Bxq-lLi7.js"></script>
   <link rel="modulepreload" crossorigin href="/app/assets/jsx-runtime--YxyOcAB.js">
   <link rel="modulepreload" crossorigin href="/app/assets/index.esm-Yfqym80F.js">
   <link rel="modulepreload" crossorigin href="/app/assets/api-x05T8K8J.js">
   <link rel="modulepreload" crossorigin href="/app/assets/kit-DKUG32sq.js">
   <link rel="stylesheet" crossorigin href="/app/assets/jsx-runtime-EL8MrI4c.css">
-  <link rel="stylesheet" crossorigin href="/app/assets/main-DRsJZH29.css">
+  <link rel="stylesheet" crossorigin href="/app/assets/main-gaEWtM_s.css">
 </head>
 <body>
   <!-- Écran d'ouverture : affiché tout de suite, retiré par lib/splash.ts quand l'appli et ses données sont prêtes, à la fin d'un tour d'animation (même animation que <Loader full />, voir ui/HoopLoader.tsx, CenterSvg) -->
@@ -30,8 +30,13 @@
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
-      var land = innerWidth > innerHeight, h = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
-      document.documentElement.style.setProperty('--splash-y', Math.round(h / 2) + 'px');
+      // Hauteur réelle de l'écran (aussi pour les plein-écrans comme le lecteur d'actus : leur bas tombe sur le bas de l'écran)
+      function set() {
+        var land = innerWidth > innerHeight, h = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
+        document.documentElement.style.setProperty('--splash-y', Math.round(h / 2) + 'px');
+        document.documentElement.style.setProperty('--screen-h', h + 'px');
+      }
+      set(); addEventListener('orientationchange', function () { setTimeout(set, 300); });
     })();
   </script>
   <div class="bh-splash" id="bh-splash" role="status" aria-label="Chargement">

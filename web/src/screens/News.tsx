@@ -49,7 +49,7 @@ const initials = (s: string) => s.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).f
 function NewsLink({ n, wide, list }: { n: News; wide?: boolean; list?: News[] }) {
   const onClick = readerClick(list ?? [n], n);
   const img = useNewsImage(n);
-  const meta = <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>;
+  const meta = <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Math.min(Date.parse(n.date), Date.now()))}</span></div>;
   // Pas d'image : carte texte (pastille aux couleurs du média), jamais de grand visuel vide
   if (wide && !img.src) return (
     <a href={n.url} target="_blank" rel="noopener" onClick={onClick} className="news-text" style={{ color: 'inherit' }}>

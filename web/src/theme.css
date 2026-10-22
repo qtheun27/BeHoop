@@ -359,7 +359,7 @@ html { overflow-x: hidden; }
 /* Lecteur d'actus intégré (ui/NewsReader.tsx). Mobile : mêmes calculs que l'en-tête et la barre d'onglets de l'appli —
    barre du haut flottante sous l'heure (+22 px dans l'appli installée, hors de la zone floutée par iOS), barre du bas
    flottante à 10 px au-dessus de la zone sûre ; l'article s'affiche entre les deux. */
-.reader { position: fixed; inset: 0; z-index: 200; background: var(--bg); animation: reader-in .22s var(--ease, ease-out);
+.reader { position: fixed; inset: 0; height: var(--screen-h, auto); z-index: 200; background: var(--bg); animation: reader-in .22s var(--ease, ease-out);
   --r-top: calc(var(--safe-t) + 8px); --r-bar: 52px; --r-foot: 58px; }
 @media (display-mode: standalone) { .reader { --r-top: calc(var(--safe-t) + 22px); } }
 @keyframes reader-in { from { opacity: 0; } }
@@ -398,7 +398,7 @@ html { overflow-x: hidden; }
 .reader-side { display: none; }
 @media (min-width: 1100px) {
   /* Ordinateur : fenêtre centrée dans la zone de contenu (à droite du menu), flèches de part et d'autre */
-  .reader { display: grid; place-items: center; padding-left: var(--side-w); background: rgba(5, 8, 15, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); --r-top: 10px; }
+  .reader { height: auto; display: grid; place-items: center; padding-left: var(--side-w); background: rgba(5, 8, 15, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); --r-top: 10px; }
   .reader-panel { position: relative; inset: auto; width: min(920px, calc(100vw - var(--side-w) - 190px)); height: 92vh; border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
   .reader-panel::before { display: none; }
   .reader-foot { bottom: 10px; }

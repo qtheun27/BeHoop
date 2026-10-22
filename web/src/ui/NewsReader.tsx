@@ -60,7 +60,7 @@ function Reader() {
       <div className="reader-panel" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <header className="reader-bar">
           <button className="icon-btn" onClick={closeReader} aria-label={t('Fermer')}><Ico n="close" /></button>
-          <div className="reader-src"><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>
+          <div className="reader-src"><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Math.min(Date.parse(n.date), Date.now()))}</span></div>
           <span className="muted reader-count">{i + 1} / {list.length}</span>
           <a className="icon-btn" href={n.url} target="_blank" rel="noopener" aria-label={t('Ouvrir sur le site du média')} title={t('Ouvrir sur le site du média')}><Ico n="external" /></a>
         </header>
