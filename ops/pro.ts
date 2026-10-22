@@ -95,12 +95,30 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
   const season = league === 'wnba' ? (now.getMonth() >= 2 ? now.getFullYear() : now.getFullYear() - 1) : (now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1);
   const games = await bdlAll(`${league === 'nba' ? '' : '/wnba'}/v1/games?seasons[]=${season}`);
   if (!games.length) throw new Error(`${label} : aucun match pour la saison ${season}`);
-  const conf = (t: any) => (/^east/i.test(t?.conference ?? '') ? 'E' : /^west/i.test(t?.conference ?? '') ? 'W' : null);
-  // Matchs entre vraies équipes (pas d'All-Star : équipes sans conférence)
-  const real = games.filter((g) => conf(g.home_team) && conf(g.visitor_team));
-  // Reprise des identifiants et infos de la version précédente (couleurs, logo copié, salle)
+  // Reprise des identifiants et infos de la version précédente (couleurs, logo copié, salle, conférence)
   const mine = (x: number) => x >= base && x < base + 1e9;
   const oldClubs = new Map((prev?.clubs ?? []).filter((c) => mine(c.id)).map((c) => [nkey(c.name), c]));
+  const oldConf = new Map<number, 'E' | 'W'>();
+  for (const [sid, rows] of Object.entries(prev?.standings ?? {})) if (+sid === id(base, 900) || +sid === id(base, 901)) for (const r of rows) oldConf.set(r.team, +sid === id(base, 900) ? 'E' : 'W');
+  // Vraies équipes : au moins 10 matchs (les équipes All-Star n'en jouent qu'un ou deux)
+  const played = new Map<number, number>();
+  for (const g of games) for (const t of [g.home_team, g.visitor_team]) played.set(t.id, (played.get(t.id) ?? 0) + 1);
+  const isReal = (t: any) => (played.get(t.id) ?? 0) >= 10;
+  const real = games.filter((g) => isReal(g.home_team) && isReal(g.visitor_team));
+  // Conférence : donnée par l'API ; sinon (équipe nouvelle, ex. Toronto Tempo) celle de la version précédente,
+  // sinon celle de la majorité de ses adversaires (on joue surtout dans sa conférence)
+  const apiConf = (t: any) => (/^east/i.test(t?.conference ?? '') ? 'E' : /^west/i.test(t?.conference ?? '') ? 'W' : null);
+  const confOf = new Map<number, 'E' | 'W'>();
+  for (const g of real) for (const t of [g.home_team, g.visitor_team]) {
+    const c = apiConf(t) ?? oldConf.get(oldClubs.get(nkey(t.full_name))?.id ?? -1);
+    if (c) confOf.set(t.id, c);
+  }
+  for (const g of real) for (const [t, o] of [[g.home_team, g.visitor_team], [g.visitor_team, g.home_team]]) {
+    if (confOf.has(t.id)) continue;
+    const opp = real.filter((x) => x.home_team.id === t.id || x.visitor_team.id === t.id).map((x) => confOf.get(x.home_team.id === t.id ? x.visitor_team.id : x.home_team.id));
+    confOf.set(t.id, opp.filter((c) => c === 'E').length >= opp.filter((c) => c === 'W').length ? 'E' : 'W'); void o;
+  }
+  const conf = (t: any) => confOf.get(t.id) ?? null;
   const oldGames = new Map((prev?.games ?? []).filter((g) => mine(g.s)).map((g) => [`${g.d}|${nkey(g.hn)}|${nkey(g.an)}`, g]));
   const venueOf = new Map<number, { v: string; adr: string }>();
   for (const g of prev?.games ?? []) if (mine(g.s) && g.v) venueOf.set(g.h, { v: g.v, adr: g.adr });
@@ -153,9 +171,10 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
   // Classement : % de victoires, puis nombre de victoires ; même rang en cas d'égalité ; nom tant que rien n'est joué
   for (const [sid, c] of [[sE, 'E'], [sW, 'W']] as const) {
     const rows = [...rec.values()].filter((r: any) => r.conf === c);
-    const pct = (r: Standing) => (r.played ? r.wins / r.played : -1);
+    // Pas encore joué : 0,500 (entre les équipes à 1-0 et à 0-1, comme le classement officiel)
+    const pct = (r: Standing) => (r.played ? r.wins / r.played : 0.5);
     rows.sort((x, y) => pct(y) - pct(x) || y.wins - x.wins || names(x).localeCompare(names(y)));
-    rows.forEach((r, i) => { r.rank = i > 0 && r.played && pct(r) === pct(rows[i - 1]) && r.wins === rows[i - 1].wins ? rows[i - 1].rank : i + 1; delete (r as any).conf; });
+    rows.forEach((r, i) => { r.rank = i > 0 && pct(r) === pct(rows[i - 1]) && r.wins === rows[i - 1].wins ? rows[i - 1].rank : i + 1; delete (r as any).conf; });
     out.standings[sid] = rows;
   }
   function names(r: Standing) { return out.clubs.find((c) => c.id === r.team)?.name ?? ''; }
