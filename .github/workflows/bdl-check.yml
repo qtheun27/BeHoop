@@ -1,6 +1,9 @@
 # Vérification ponctuelle de balldontlie (lancée à la main) : compare leurs classements et matchs avec nos données officielles.
 name: Vérification balldontlie
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      only: { description: 'Une seule ligue (BNXT League, EuroLeague, EuroCup, Champions League, NBA, WNBA) ; vide = toutes', required: false, default: '' }
 permissions: { contents: read }
 jobs:
   check:
@@ -11,4 +14,4 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npx tsx ops/bdl-check.ts
-        env: { BALLDONTLIE_API_KEY: '${{ secrets.BALLDONTLIE_API_KEY }}' }
+        env: { BALLDONTLIE_API_KEY: '${{ secrets.BALLDONTLIE_API_KEY }}', ONLY: '${{ inputs.only }}' }

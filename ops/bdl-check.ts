@@ -52,7 +52,8 @@ function compare(label: string, theirs: { name: string; w: number; l: number; ra
 
 const SEASON = 2026;
 // 1. Classements (offre gratuite) : BNXT, EuroLeague, EuroCup, Champions League
-for (const [lg, base, label] of [['bnxt', 20e9, 'BNXT League'], ['euroleague', 24e9, 'EuroLeague'], ['eurocup', 25e9, 'EuroCup'], ['bcl', 27e9, 'Champions League']] as const) {
+const ONLY = process.env.ONLY ?? ''; // ex. ONLY=WNBA pour ne refaire qu'une ligue
+for (const [lg, base, label] of ([['bnxt', 20e9, 'BNXT League'], ['euroleague', 24e9, 'EuroLeague'], ['eurocup', 25e9, 'EuroCup'], ['bcl', 27e9, 'Champions League']] as const).filter((x) => !ONLY || x[2] === ONLY)) {
   const st = await all(`/${lg}/v1/standings?season=${SEASON}`);
   if ((st as any).error) { console.log(`\n=== ${label} : erreur ${(st as any).error} ${(st as any).text}`); continue; }
   console.log(`\n${label} : exemple brut`, JSON.stringify(st[0]).slice(0, 400));
@@ -61,7 +62,7 @@ for (const [lg, base, label] of [['bnxt', 20e9, 'BNXT League'], ['euroleague', 2
     rank: pick(x, 'position', 'rank', 'standing') })), ours(base));
 }
 // 2. NBA / WNBA : matchs (offre gratuite) → bilan victoires-défaites comparé au nôtre
-for (const [path, base, label] of [['/v1/games', 22e9, 'NBA'], ['/wnba/v1/games', 26e9, 'WNBA']] as const) {
+for (const [path, base, label] of ([['/v1/games', 22e9, 'NBA'], ['/wnba/v1/games', 26e9, 'WNBA']] as const).filter((x) => !ONLY || x[2] === ONLY)) {
   const season = label === 'WNBA' ? SEASON : SEASON;
   const g = await all(`${path}?seasons[]=${season}`, 20);
   if ((g as any).error) { console.log(`\n=== ${label} : erreur ${(g as any).error} ${(g as any).text}`); continue; }
@@ -70,7 +71,7 @@ for (const [path, base, label] of [['/v1/games', 22e9, 'NBA'], ['/wnba/v1/games'
   for (const x of g) {
     if (x.postseason) continue;
     const hs = x.home_team_score ?? x.home_score, vs = x.visitor_team_score ?? x.away_team_score ?? x.away_score;
-    const final = /final/i.test(String(x.status)) && hs != null && vs != null && hs + vs > 0;
+    const final = /final/i.test(String(x.status_state ?? x.status)) && hs != null && vs != null && hs + vs > 0;
     if (!final) continue;
     const h = x.home_team?.full_name ?? x.home_team?.name, a = (x.visitor_team ?? x.away_team)?.full_name ?? (x.visitor_team ?? x.away_team)?.name;
     for (const [n, win] of [[h, hs > vs], [a, vs > hs]] as const) { const r = rec.get(n) ?? { w: 0, l: 0 }; win ? r.w++ : r.l++; rec.set(n, r); }
