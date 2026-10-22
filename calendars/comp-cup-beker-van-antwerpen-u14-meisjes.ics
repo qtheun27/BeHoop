@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen U14 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-13687059822-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Mercurius BBC Hoboken-Berchem M14 B – Antwerp Giants M14 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13720615060-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Koninklijke Herentalse BBC M14 A – Phantoms Basket Boom M14 B
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13619949346-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Essense Esbac M14 A – Campinia Dessel-Retie M14 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13703837441-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:BBC Putte M14 A – Duffel K.B.B.C. M14 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13653504584-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BBC Schelle M14 A – Aartselaar BBC M14 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13670282203-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BC Cobras Schoten-Brasschaat M14 A – Titans Basketball Bonheiden M14 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13737392679-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261108T133000
 DTEND;TZID=Europe/Brussels:20261108T153000
 SUMMARY:Zuiderkempen Diamonds M14 A – Basket Willebroek M14 B
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Antwerpen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13770947917-comp-cup-beker-van-antwerpen-u14-meisjes@behoop.be
-DTSTAMP:20261022T101051Z
+DTSTAMP:20261022T110301Z
 DTSTART;TZID=Europe/Brussels:20261108T160000
 DTEND;TZID=Europe/Brussels:20261108T180000
 SUMMARY:Neteland Basket Ladies M14 A – BBC Geel M14 A
