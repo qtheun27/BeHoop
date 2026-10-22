@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van West-Vlaanderen Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-12957050029-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261029T204500
 DTEND;TZID=Europe/Brussels:20261029T224500
 SUMMARY:Basket Blankenberge DSE A – BC Oostende DSE A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12772496220-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261030T200000
 DTEND;TZID=Europe/Brussels:20261030T220000
 SUMMARY:Kon BBC De Panne vzw DSE B – BBC Gullegem DSE A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12789273839-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261030T210000
 DTEND;TZID=Europe/Brussels:20261030T230000
 SUMMARY:KBGOB Finexa Basket@Sea DSE B – House Of Talents Kortrijk Spurs DSE D (20-0)
@@ -31,8 +31,17 @@ LOCATION:Sportcentrum Zomerloos Gistel\, Sportstraat 1\, 8470 Gistel
 DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
+UID:bh-12705385744-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
+DTSTAMP:20261022T101051Z
+DTSTART;TZID=Europe/Brussels:20261031T000000
+DTEND;TZID=Europe/Brussels:20261031T020000
+SUMMARY:Ford Unicars Avanti Brugge Dames DSE B – B.C. Blue Stars Brugge DSE A
+LOCATION:De Varens\, Nieuwe Sint-Annadreef 27\, 8200 Sint Andries - Brugge
+DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
+END:VEVENT
+BEGIN:VEVENT
 UID:bh-12738940982-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
 SUMMARY:BBC Vanuxeem Ploegsteert Heuvelland DSE A – Bobcat Wielsbeke DSE A
@@ -41,7 +50,7 @@ DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12755718601-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T183000
 DTEND;TZID=Europe/Brussels:20261031T203000
 SUMMARY:Bobcat Wielsbeke DSE B – Basket Desselgem DSE A
@@ -50,7 +59,7 @@ DESCRIPTION:Beker van West-Vlaanderen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12722163363-comp-cup-beker-van-west-vlaanderen-dames@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261101T170000
 DTEND;TZID=Europe/Brussels:20261101T190000
 SUMMARY:Torhout Lions DSE A – Basket SKT Ieper DSE B
