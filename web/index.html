@@ -26,7 +26,12 @@
   </div>
   <div id="root"></div>
   <style>
-    .bh-splash { position: fixed; inset: 0; z-index: 1000; transition: opacity .35s ease; display: grid; place-items: center; align-content: center; gap: 14px; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
+    .bh-splash { position: fixed; inset: 0; z-index: 1000; transition: opacity .35s ease; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
+    /* Positions fixes (pas de centrage par la hauteur du contenu) : le chargement de la police ou des styles de l'appli
+       ne fait plus bouger l'animation. Même placement que <Loader full /> (theme.css). */
+    .bh-splash .cc-anim { position: absolute; left: 50%; top: 50%; margin: -95px 0 0 -75px; }
+    .bh-splash .bh-wm { position: absolute; left: 0; right: 0; top: 50%; margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
+    .bh-wm { font-size: 22px; letter-spacing: -.035em; } .bh-wm span { font-weight: 300; color: #0d2a5c; } .bh-wm b { font-weight: 700; color: #f26a1b; }
     @media (prefers-color-scheme: dark) { .bh-splash { background: #070b14; } .bh-wm span { color: #fff !important; } }
 /* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
 .cc-anim { overflow: visible; }

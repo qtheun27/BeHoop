@@ -309,7 +309,12 @@ html { overflow-x: hidden; }
 
 /* Chargement (Loader dans kit.tsx, animations dans ui/HoopLoader.tsx) */
 .loader { display: grid; place-items: center; gap: 14px; padding: 64px 0; }
-.loader.full { position: fixed; inset: 0; z-index: 100; padding: 0; background: var(--bg); align-content: center; }
+.loader.full { position: fixed; inset: 0; z-index: 100; padding: 0; background: var(--bg); display: block; }
+/* Même placement exact que l'écran d'ouverture de web/index.html (aucun saut au passage de l'un à l'autre) */
+.loader.full .cc-anim { position: absolute; left: 50%; top: 50%; margin: -95px 0 0 -75px; }
+.loader .wm-load { font-family: Sora, 'Avenir Next', sans-serif; font-size: 22px; letter-spacing: -.035em; color: var(--brand-be, #0d2a5c); }
+.loader .wm-load i { font-style: normal; font-weight: 700; color: #f26a1b; }
+.loader.full .wm-load { position: absolute; left: 0; right: 0; top: 50%; margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
 /* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
 .cc-anim { overflow: visible; }
 .cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
