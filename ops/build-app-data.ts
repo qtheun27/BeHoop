@@ -6,6 +6,8 @@ import { loadAll } from './allData';
 import { buildCompetitions } from './competitions';
 import { ics } from './vbl';
 import type { SlimGame } from './appData';
+import { pickRule } from '../web/src/lib/engine';
+import { family, pointsOf } from './standings-check';
 
 const root = process.argv[2] ?? '.';
 const out = join(root, 'app-data');
@@ -35,8 +37,20 @@ const official = (sid: number, list: SlimGame[]) => {
   const rows = all.standings.get(sid) ?? [];
   return rows.length && rows.every((r) => !r.played) && list.some((g) => g.hs !== null) ? [] : rows;
 };
-for (const [sid, list] of bySerie)
-  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: all.series.get(sid) ?? { id: sid }, standings: official(sid, list), games: list }));
+// Moteur de classement (web/src/lib/engine.ts) : règle qui reproduit exactement le classement officiel de la série
+// (serie.rule, ex. « be/reglement ») ; sans règle, l'appli n'affichera jamais de classement provisoire pour cette série.
+const ruleStats: Record<string, [number, number]> = {};
+for (const [sid, list] of bySerie) {
+  const standings = official(sid, list);
+  const fam = family(sid);
+  let rule: string | null = null;
+  if (standings.length && fam !== 'NBA' && fam !== 'WNBA' && list.some((g) => g.hs !== null)) {
+    rule = pickRule(standings, list, pointsOf(fam));
+    const st = (ruleStats[fam] ??= [0, 0]); st[1]++; if (rule) st[0]++;
+  }
+  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: { ...(all.series.get(sid) ?? { id: sid }), ...(rule ? { rule } : {}) }, standings, games: list }));
+}
+console.log('Moteur de classement (séries reproduites exactement) :', Object.entries(ruleStats).map(([f, [ok, n]]) => `${f} ${ok}/${n}`).join(', '));
 const comps = buildCompetitions(all);
 writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
 // Calendrier de chaque compétition (tous ses matchs, depuis un mois) : calendars/comp-{id}.ics
