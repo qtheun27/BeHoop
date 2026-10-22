@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Oost-Vlaanderen U14 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11803921682-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:BBC Haantjes Certifisc Oudenaarde M14 A – BBC Houtem Redwolves M14 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11753588825-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:KBBC Sparta Laarne M14 A – Amon Jeugd Gentson M14 B
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11787144063-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:Gent-Oost Eagles M14 A – Bazel Sobabee@Den Dulpop M14 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11871032158-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261108T123000
 DTEND;TZID=Europe/Brussels:20261108T143000
 SUMMARY:Partena Professional DBC Okapi Aalst M14 A – Jumbo Elektrooghe Gembas Knesselare M14 B
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11703255968-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BBC Wildcats Gavere M14 A – ABO LDP Donza M14 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U14 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12562132407-comp-cup-beker-van-oost-vlaanderen-u14-meisjes@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261220T150000
 DTEND;TZID=Europe/Brussels:20261220T170000
 SUMMARY:Koninklijke Sint-Niklase Condors M14 A – winnaar BOVM1408 07

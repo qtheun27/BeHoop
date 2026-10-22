@@ -5,7 +5,7 @@ X-WR-CALNAME:Coupe AWBB Seniors Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-496117-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:Castors D1 B – RBC Herve-Battice A
@@ -14,7 +14,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496118-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:Union Huy Basket B – Royal CS Natoye A
@@ -23,7 +23,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496113-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:Royal Union Bellaire A – RBC Alleur A
@@ -32,7 +32,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496112-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
 SUMMARY:Union Huy Basket A – RBC Ciney A
@@ -41,7 +41,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496115-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
 SUMMARY:RBC Herve-Battice B – Basket Namur Capitale B
@@ -50,7 +50,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496111-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261101T120000
 DTEND;TZID=Europe/Brussels:20261101T140000
 SUMMARY:RBC Centre Gaume La Rulles A – BC Boninne A
@@ -59,7 +59,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496114-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261101T130000
 DTEND;TZID=Europe/Brussels:20261101T150000
 SUMMARY:Royal Canter Schaerbeek A – RE Pont-de-Loup B
@@ -68,7 +68,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496116-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261022T083104Z
+DTSTAMP:20261022T101051Z
 DTSTART;TZID=Europe/Brussels:20261101T180000
 DTEND;TZID=Europe/Brussels:20261101T200000
 SUMMARY:RE Pont-de-Loup B – Liège Panthers B
