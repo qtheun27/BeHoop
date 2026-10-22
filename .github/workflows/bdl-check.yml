@@ -1,0 +1,14 @@
+# Vérification ponctuelle de balldontlie (lancée à la main) : compare leurs classements et matchs avec nos données officielles.
+name: Vérification balldontlie
+on: workflow_dispatch
+permissions: { contents: read }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx tsx ops/bdl-check.ts
+        env: { BALLDONTLIE_API_KEY: '${{ secrets.BALLDONTLIE_API_KEY }}' }
