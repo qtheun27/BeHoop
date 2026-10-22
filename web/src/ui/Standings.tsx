@@ -1,9 +1,11 @@
 // Tableau de classement unique (page équipe, page compétition) : ordre et rang officiels, voir ranked().
 // D = joués − victoires − nuls : les forfaits, que les fédérations comptent à part, sont des défaites.
 import { ranked, dataSource, type Standing } from '../lib/data';
-import { t } from '../lib/i18n';
+import { t, lang } from '../lib/i18n';
+import { Ico } from './icons';
 
-export function StandingsTable({ rows, names, me, pct: forcePct }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean }) {
+/** provisional : heure du dernier résultat rapide inclus (classement recalculé, en attente de l'officiel) */
+export function StandingsTable({ rows, names, me, pct: forcePct, provisional }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean; provisional?: number | null }) {
   const list = ranked(rows);
   // Ligues sans points au classement (NBA, WNBA, EuroLeague, EuroCup : points = victoires) → % de victoires
   const pct = forcePct ?? (list.length > 0 && list.some((r) => r.played) && list.every((r) => r.pts === r.wins));
@@ -11,6 +13,7 @@ export function StandingsTable({ rows, names, me, pct: forcePct }: { rows: Stand
   const col = (w: number, align: 'center' | 'right' = 'center') => ({ width: w, textAlign: align, flex: 'none' as const });
   return (
     <div className="group standings">
+      {provisional && <div className="prov-note"><Ico n="bolt" />{t('Provisoire · résultat de {h} inclus, en attente du classement officiel', { h: new Date(provisional).toLocaleTimeString(lang() === 'en' ? 'en-GB' : `${lang()}-BE`, { hour: '2-digit', minute: '2-digit' }) })}</div>}
       <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}>
         <span style={col(26, 'center')}>#</span><span className="grow">{t('Équipe')}</span>
         <span style={col(24)}>{t('J')}</span><span style={col(24)}>{t('V')}</span>{nuls && <span style={col(24)}>{t('N')}</span>}<span style={col(24)}>{t('D')}</span>

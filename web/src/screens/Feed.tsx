@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { newsForTeams } from '../lib/newsMatch';
 import { readerClick } from '../ui/NewsReader';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
@@ -172,16 +173,23 @@ export function Feed() {
   const mine = useAsync(async () => {
     const idx = await teamIndex();
     const comps = (await loadComps().catch(() => [])).filter((c) => s.followedComps.includes(c.id));
+    // Clubs suivis en entier → toutes leurs actus ; clubs dont je ne suis que des équipes → catégories de ces équipes
     const clubs = new Set<number>(s.followedClubs);
-    s.followedTeams.forEach((tid) => { const e = idx.get(tid); if (e) clubs.add(e.club.id); });
+    const partial = new Map<number, string[]>();
+    s.followedTeams.forEach((tid) => { const e = idx.get(tid); if (e && !clubs.has(e.club.id)) partial.set(e.club.id, [...(partial.get(e.club.id) ?? []), e.team.cat]); });
     const since = new Date(Date.now() - 10 * 864e5).toISOString().slice(0, 10);
     const data = await Promise.all(comps.map((c) => loadCompData(c).catch(() => null)));
     const games = [...new Map(data.flatMap((x) => x?.games ?? []).filter((g) => isPlayed(g) && g.d >= since).map((g) => [g.id, g])).values()];
-    return { idx, clubs, compClubs: new Set(comps.flatMap((c) => c.clubs)), comps: new Set(comps.map((c) => c.id)), games };
+    return { idx, clubs, partial, compClubs: new Set(comps.flatMap((c) => c.clubs)), comps: new Set(comps.map((c) => c.id)), games };
   }, [s.followedClubs.join(), s.followedTeams.join(), s.followedComps.join()]);
   const followsNothing = !s.follows.length && !s.memberships.length;
-  /** Une actu me concerne : elle cite un club ou une compétition que je suis */
-  const relevant = (n: News) => !!mine.data && (n.clubs?.some((c) => mine.data!.clubs.has(c) || mine.data!.compClubs.has(c)) || n.comps?.some((c) => mine.data!.comps.has(c)));
+  /** Une actu me concerne : elle cite un club ou une compétition que je suis ; pour un club dont je ne suis que certaines
+   *  équipes, seulement si elle est générale ou vise l'une d'elles (voir lib/newsMatch.ts) */
+  const relevant = (n: News) => {
+    const m = mine.data; if (!m) return false;
+    if (n.comps?.some((c) => m.comps.has(c))) return true;
+    return !!n.clubs?.some((c) => m.clubs.has(c) || m.compClubs.has(c) || (m.partial.has(c) && newsForTeams(`${n.title} ${n.excerpt}`, m.partial.get(c)!)));
+  };
 
   const load = useCallback(async (reset: boolean) => {
     if (!s.user || (!s.targets.length && !s.privateTeams.length)) { setPosts([]); return; }

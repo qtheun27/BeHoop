@@ -4,10 +4,10 @@
 //  • remplace le score en direct par le résultat officiel et envoie « Résultat final ».
 // Sans secret FIREBASE_SERVICE_ACCOUNT, le script ne fait rien (le site public n'est jamais bloqué).
 import { createHash } from 'node:crypto';
-import { admin, hasFirebase, notifyUsers, followers } from './lib/admin';
-import { isPlayed } from './appData';
+import { admin, hasFirebase } from './lib/admin';
+import { isPlayed, type SlimGame } from './appData';
 import { loadAll } from './allData';
-import { N } from '../shared/notifText';
+import { scoreSync } from './lib/scorePosts';
 
 if (!hasFirebase()) { console.log('ℹ️  Pas de compte de service Firebase : synchronisation sociale ignorée.'); process.exit(0); }
 const { db, FieldValue } = admin();
@@ -40,32 +40,9 @@ const today = new Date().toISOString().slice(0, 10);
 const proTeams = new Set<number>();
 clubs.forEach((c) => c.teams.forEach((t) => { if (t.id >= 20e9 || /National|BNXT|NBA/.test(t.cat)) proTeams.add(t.id); }));
 const sincePro = new Date(Date.now() - 60 * 864e5).toISOString().slice(0, 10);
-const recent = all.games.filter((g) => (proTeams.has(g.h) || proTeams.has(g.a)) && g.d >= sincePro && g.d <= today && isPlayed(g) && g.h && g.a).concat(all.games.filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a && !(proTeams.has(g.h) || proTeams.has(g.a))));
+const recent: SlimGame[] = all.games.filter((g) => (proTeams.has(g.h) || proTeams.has(g.a)) && g.d >= sincePro && g.d <= today && isPlayed(g) && g.h && g.a).concat(all.games.filter((g: any) => g.d >= since && g.d <= today && isPlayed(g) && g.h && g.a && !(proTeams.has(g.h) || proTeams.has(g.a))));
 let created = 0, updated = 0;
-const tc = new Map<number, number>(); teamClub.forEach((c, t) => tc.set(t, c.id));
-async function syncGame(g: (typeof recent)[number]): Promise<'created' | 'updated' | 'skip'> {
-  const ref = db.doc(`posts/score-${g.id}`);
-  const cur = await ref.get();
-  const hc = teamClub.get(g.h), ac = teamClub.get(g.a);
-  const payload = { gameId: g.id, date: g.d, time: g.t, competition: g.sn, official: true,
-    home: { id: g.h, name: hc?.short ?? g.hn, logo: hc?.logo ?? null, color: hc?.c1 ?? '#3d8fdb', score: g.hs },
-    away: { id: g.a, name: ac?.short ?? g.an, logo: ac?.logo ?? null, color: ac?.c1 ?? '#8a1e36', score: g.as } };
-  const old = cur.data()?.payload;
-  if (cur.exists && old?.home?.score === g.hs && old?.away?.score === g.as && old?.home?.name === payload.home.name && old?.away?.name === payload.away.name && old?.home?.logo === payload.home.logo && old?.away?.logo === payload.away.logo) return 'skip';
-  await ref.set({ type: 'score', authorUid: null, authorName: 'BeHoop', clubId: hc?.id ?? null, teamIds: [g.h, g.a],
-    targets: [`t:${g.h}`, `t:${g.a}`, ...(hc ? [`c:${hc.id}`] : []), ...(ac ? [`c:${ac.id}`] : [])],
-    visibility: 'public', teamIdPrivate: null, hidden: false, payload,
-    ...(cur.exists ? {} : { reactions: {}, createdAt: new Date(`${g.d}T${g.t || '20:00'}:00+02:00`) }) }, { merge: true });
-  // Le résultat officiel remplace le score en direct
-  const live = db.doc(`liveScores/${g.id}`);
-  if ((await live.get()).exists) { await live.update({ status: 'official', home: g.hs, away: g.as }); await db.doc(`posts/live-${g.id}`).delete().catch(() => {}); }
-  if (cur.exists) return 'updated';
-  // Pas de notification pour un résultat ancien (rattrapage) : seulement les matchs des dernières 36 h
-  if (Date.parse(`${g.d}T23:59:00`) < Date.now() - 36 * 3600e3) return 'created';
-  const uids = await followers([g.h, g.a], tc);
-  await notifyUsers(uids, { title: N.result(payload.home.name, g.hs!, g.as!, payload.away.name), body: g.sn, url: `/app/#/post/score-${g.id}` }, 'result', g.h, `result_${g.id}`).catch(() => 0);
-  return 'created';
-}
+const syncGame = scoreSync(db, teamClub);
 // 10 matchs traités en parallèle (rattrapage rapide même après une grosse journée)
 const queue = [...recent];
 await Promise.all(Array.from({ length: 10 }, async () => {

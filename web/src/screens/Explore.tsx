@@ -346,7 +346,7 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
     <>
       {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
       {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="standings" title={t('Classement pas encore publié')} /> : (
-        <StandingsTable rows={rows} names={names} me={team.id} />
+        <StandingsTable rows={rows} names={names} me={team.id} provisional={serie.data.provisional} />
       )}
     </>
   );

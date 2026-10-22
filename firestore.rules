@@ -491,6 +491,9 @@ service cloud.firestore {
       }
     }
 
+    // Résultats rapides (ops/live-results.ts) : publics en lecture, écrits par le serveur seulement.
+    match /results/{gameId} { allow read: if true; allow write: if false; }
+
     // Journal anti-spam des notifications : serveur uniquement.
     match /notifLog/{id} { allow read, write: if false; }
   }

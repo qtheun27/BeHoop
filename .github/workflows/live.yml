@@ -1,0 +1,22 @@
+# Résultats rapides : toutes les 15 min aux heures de match, on va chercher uniquement les scores des matchs qui viennent
+# de se terminer (ops/live-results.ts). Rien à chercher → le script s'arrête aussitôt. La mise à jour complète reste update.yml.
+name: Résultats rapides
+on:
+  schedule:
+    - cron: '*/15 8-23 * * *'
+    - cron: '*/15 0 * * *'
+  workflow_dispatch:
+permissions: { contents: read }
+concurrency: { group: live-results, cancel-in-progress: false }
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env: { TZ: Europe/Brussels }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx tsx ops/live-results.ts
+        env: { FIREBASE_SERVICE_ACCOUNT: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' }

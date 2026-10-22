@@ -7,7 +7,8 @@ export interface Team { id: number; name: string; cat: string; ag: AgeGroup }
 export interface Club { id: number; name: string; short: string; province: string; logo: string | null; c1: string; c2: string; city: string;
   venue?: { name: string; street: string; zip: string; city: string; lat?: number; lng?: number } | null; teams: Team[]; linked?: number }
 export interface Game { id: number; d: string; t: string; s: number; sn: string; h: number; a: number; hn: string; an: string;
-  hs: number | null; as: number | null; v: string; adr: string; lat?: number; lng?: number; ty: string }
+  hs: number | null; as: number | null; v: string; adr: string; lat?: number; lng?: number; ty: string;
+  /** Score arrivé par les résultats rapides (lib/live.ts), pas encore dans la mise à jour officielle */ live?: boolean }
 export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number; /** Matchs nuls (jeunes en Flandre) */ draws?: number; /** Rang officiel (départages de la fédération compris) */ rank?: number }
 
 export { ranked } from './standings';
@@ -25,8 +26,21 @@ function get<T>(path: string): Promise<T> {
 export interface Index { generated_at: string; season: string; clubs: Club[]; alias?: Record<string, number> }
 export const loadIndex = () => get<Index>('index.json');
 export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?? id;
-export const loadClub = async (id: number) => get<{ club: Club; games: Game[] }>(`clubs/${await clubAlias(id)}.json`);
-export const loadSerie = (id: number) => get<{ serie: { id: number; name: string; short: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
+/** Matchs d'un club ; scores des résultats rapides inclus (lib/live.ts) */
+export const loadClub = async (id: number) => {
+  const d = await get<{ club: Club; games: Game[] }>(`clubs/${await clubAlias(id)}.json`);
+  const { withLive } = await import('./live');
+  return { ...d, games: (await withLive(d.games)).games };
+};
+/** Série : classement officiel, ou provisoire (provisional = heure du dernier résultat) si des résultats rapides sont arrivés
+ *  et que le moteur reproduit exactement le classement officiel de cette série (serie.rule) */
+export const loadSerie = async (id: number) => {
+  const d = await get<{ serie: { id: number; name: string; short: string; rule?: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
+  const { withLive, provisional } = await import('./live');
+  const { games, latest } = await withLive(d.games);
+  const prov = latest ? provisional(d.standings, games, d.serie.rule) : null;
+  return { ...d, games, standings: prov ?? d.standings, provisional: prov ? latest : null };
+};
 
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */
 export type CompCat = 'national' | 'wallonie' | 'flandre' | 'europe' | 'monde' | 'nba';

@@ -23,7 +23,7 @@ export function catFr(categorie: string, naam: string): string {
   return letter ? `${fr} ${letter}` : fr;
 }
 const date = (s: string) => { const [d, m, y] = s.split('-'); return `${y}-${m}-${d}`; };
-const score = (u: string): [number, number] | null => { const m = /(\d+)\s*-\s*(\d+)/.exec(u ?? ''); return m ? [+m[1], +m[2]] : null; };
+export const score = (u: string): [number, number] | null => { const m = /(\d+)\s*-\s*(\d+)/.exec(u ?? ''); return m ? [+m[1], +m[2]] : null; };
 const color = (c?: string | null) => (c && /^#[0-9a-f]{6}$/i.test(c) && c.toLowerCase() !== '#ffffff' ? c : null);
 
 async function get<T>(path: string, tries = 3): Promise<T> {
@@ -109,7 +109,9 @@ export async function run(outFile = 'vbl.json', calDir = 'calendars') {
     standings[sid] = (standingsRaw[i]?.teams ?? []).map((t: any) => ({ team: vblId(t.guid), played: +t.wedAant || 0, wins: +t.wedWinst || 0, losses: +t.wedVerloren || 0, pf: +t.ptVoor || 0, pa: +t.ptTegen || 0, pts: +t.wedPunt || 0, draws: +t.wedGelijk || undefined, rank: +t.rangNr || undefined })).sort((a: any, b: any) => (a.rank ?? 999) - (b.rank ?? 999));
   });
   const all = [...games.values()].sort((a, b) => (a.d + a.t).localeCompare(b.d + b.t));
-  writeFileSync(outFile, JSON.stringify({ generated_at: new Date().toISOString(), source: 'Basketbal Vlaanderen', clubs, national, games: all, series, standings }));
+  // guids : identifiant d'équipe → GUID Basketbal Vlaanderen (pour les résultats rapides, ops/live-results.ts)
+  const guids = Object.fromEntries(teamGuids.map((t) => [t.id, t.guid]));
+  writeFileSync(outFile, JSON.stringify({ generated_at: new Date().toISOString(), source: 'Basketbal Vlaanderen', clubs, national, games: all, series, standings, guids }));
   mkdirSync(calDir, { recursive: true });
   for (const t of teamGuids) writeFileSync(`${calDir}/team-${t.id}.ics`, ics(t.name, all.filter((g) => g.h === t.id || g.a === t.id), t.id));
   console.log(`vbl.json : ${clubs.length} clubs flamands, ${national.length} clubs wallons en national, ${all.length} matchs, ${pouleGuids.length} classements`);

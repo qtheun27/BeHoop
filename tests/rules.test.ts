@@ -237,3 +237,11 @@ describe('Covoiturage', () => {
     await assertFails(getDoc(doc(as('alice'), 'myCarpools', 'bob', 'items', 'o1')));
   });
 });
+
+describe('Résultats rapides', () => {
+  it('lecture publique, aucune écriture depuis l’appli', async () => {
+    await env.withSecurityRulesDisabled((c) => setDoc(doc(c.firestore(), 'results', '1'), { hs: 70, as: 60, d: '2026-10-24', s: 6142 }));
+    await assertSucceeds(getDoc(doc(env.unauthenticatedContext().firestore(), 'results', '1')));
+    await assertFails(setDoc(doc(as('alice'), 'results', '2'), { hs: 1, as: 0 }));
+  });
+});

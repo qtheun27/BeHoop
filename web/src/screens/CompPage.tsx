@@ -100,7 +100,7 @@ export function CompPage({ id }: { id: string }) {
         : <Empty ill="calendar" title={t('Aucun match prévu')} />)}
       {tab === 'classement' && (!cur ? <Empty ill="standings" title={t('Pas de classement')} text={t('Cette compétition se joue par élimination directe ou le classement n’est pas encore publié.')} /> : <>
         {withTable.length > 1 && <div className="chips">{withTable.map((x) => <button key={x.serie.id} className={`chip${cur.serie.id === x.serie.id ? ' on' : ''}`} onClick={() => setSid(x.serie.id)}>{trName(x.serie.name.split(' · ').slice(1).join(' · ') || x.serie.short || x.serie.name)}</button>)}</div>}
-        <StandingsTable rows={cur.standings} names={names} />
+        <StandingsTable rows={cur.standings} names={names} provisional={cur.provisional} />
       </>)}
       {tab === 'actus' && (news.data ? (compNews.length ? compNews.slice(0, 30).map((n) => <NewsCard key={n.id} n={n} wide list={compNews.slice(0, 30)} />) : <Empty ill="news" title={t('Pas d’actualité pour cette compétition pour l’instant')} />) : <Skeleton h={200} n={2} />)}
       {tab === 'equipes' && <div className="group">{teams.map(([tid, name]) => { const e = idx.data?.get(tid); return (
