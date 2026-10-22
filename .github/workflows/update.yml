@@ -26,6 +26,8 @@ jobs:
 
       - name: Interroger l'API Basket Hainaut
         run: python scraper.py
+        # AWBB momentanément indisponible (ex. 403) : on garde ses données précédentes et le reste se met à jour
+        continue-on-error: true
 
       # --- BeHoop Social (ajouts) : ces étapes ne peuvent jamais bloquer la mise à jour du site ---
       - name: Installer Node (appli BeHoop)
