@@ -52,6 +52,26 @@ function compare(label: string, theirs: { name: string; w: number; l: number; ra
 
 const SEASON = 2026;
 // ONLY=DUMP : affiche un match complet (tous les champs) de chaque ligue, pour connaître le format
+// ONLY=PRO : essai à blanc du vrai code de mise à jour (ops/pro.ts) pour la NBA et la WNBA, comparé aux données actuelles
+if (process.env.ONLY === 'PRO') {
+  const { bdlLeague } = await import('./pro');
+  for (const [lg, base] of [['nba', 22e9], ['wnba', 26e9]] as const) {
+    const o: any = { clubs: [], games: [], series: {}, standings: {}, attach: {} };
+    await bdlLeague(o, pro, lg, base);
+    const mine = (x: number) => x >= base && x < base + 1e9;
+    const oldIds = new Set(pro.games.filter((g: any) => mine(g.s)).map((g: any) => g.id));
+    const oldClub = new Set(pro.clubs.filter((c: any) => mine(c.id)).map((c: any) => c.id));
+    console.log(`${lg}: clubs ${o.clubs.length} (repris ${o.clubs.filter((c: any) => oldClub.has(c.id)).length}), matchs ${o.games.length} (id repris ${o.games.filter((g: any) => oldIds.has(g.id)).length}), logos ${o.clubs.filter((c: any) => c.logo).length}, salles ${o.games.filter((g: any) => g.v).length}`);
+    for (const [sid, rows] of Object.entries<any[]>(o.standings)) {
+      const off = pro.standings[sid] ?? [];
+      const bad = rows.filter((r) => { const x = off.find((y: any) => y.team === r.team); return !x || x.wins !== r.wins || x.losses !== r.losses; });
+      const order = rows.map((r) => `${r.rank}.${names.get(r.team)?.split(' ').pop()} ${r.wins}-${r.losses}`).join(' | ');
+      console.log(`  ${o.series[sid].name}: ${bad.length} bilan(s) différent(s) de l'officiel ; ${order}`);
+      console.log(`  officiel : ${off.map((r: any) => `${r.rank}.${names.get(r.team)?.split(' ').pop()} ${r.wins}-${r.losses}`).join(' | ')}`);
+    }
+  }
+  process.exit(0);
+}
 if (process.env.ONLY === 'DUMP') {
   for (const p of ['/v1/games?seasons[]=2025&postseason=false&start_date=2025-12-16&end_date=2025-12-17', '/wnba/v1/games?seasons[]=2026&start_date=2026-07-01&end_date=2026-07-02', '/wnba/v1/teams', '/v1/teams'])
     console.log('\nDUMP', p, JSON.stringify(await get(p)).slice(0, 2500));

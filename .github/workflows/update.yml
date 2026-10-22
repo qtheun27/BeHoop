@@ -43,8 +43,9 @@ jobs:
         run: npx tsx ops/vbl.ts
         continue-on-error: true
 
-      - name: BNXT League, NBA et Belgian Lions
+      - name: BNXT League, NBA, WNBA, coupes d'Europe et sélections
         run: npx tsx ops/pro.ts
+        env: { BALLDONTLIE_API_KEY: '${{ secrets.BALLDONTLIE_API_KEY }}' }
         continue-on-error: true
 
       - name: Copie locale des logos de clubs

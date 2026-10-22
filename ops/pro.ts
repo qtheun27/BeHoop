@@ -1,6 +1,6 @@
 // Basket pro et international → pro.json au même format allégé que l'AWBB + calendriers .ics :
 //  • BNXT League (API du site officiel bnxtleague.com, lecture seule, 2×/jour) ;
-//  • NBA et WNBA (données publiques ESPN) ;
+//  • NBA et WNBA (API balldontlie, clé BALLDONTLIE_API_KEY) ;
 //  • compétitions FIBA (Champions League, Europe Cup, EuroLeague/EuroCup Women, Coupe du monde, EuroBasket), Lions et Cats ;
 //  • EuroLeague et EuroCup (API officielle d'Euroleague Basketball).
 // Lancé par update.yml (étape non bloquante). En cas d'échec d'une source, la précédente version est gardée.
@@ -10,7 +10,6 @@ import { ics } from './vbl';
 
 const BNXT = 'https://bnxt.sportpress.info/api/v1';
 const BNXT_HEADERS = { 'X-Authorization': 'BWSyE7sgg9QAurh2JX9cpjzjGc652BWLuNUS', 'X-Localization': 'fr', 'Content-Type': 'application/json' }; // clé publique du site officiel
-const ESPN = 'https://site.api.espn.com/apis/site/v2/sports/basketball';
 const UA = { 'User-Agent': 'BeHoop/1.0 (+https://behoop.be)' };
 const BELGIUM_FIBA = '106761';
 import type { Standing } from './allData';
@@ -28,7 +27,6 @@ const bxl = (iso: string) => {
   const p = Object.fromEntries(new Intl.DateTimeFormat('fr-BE', { timeZone: 'Europe/Brussels', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date(iso)).map((x) => [x.type, x.value]));
   return { d: `${p.year}-${p.month}-${p.day}`, t: `${p.hour === '24' ? '00' : p.hour}:${p.minute}` };
 };
-const hex = (c?: string) => (c && /^[0-9a-f]{6}$/i.test(c) ? `#${c}` : '#1a6fe0');
 
 async function bnxt(out: Pro) {
   const seasons = await get(`${BNXT}/phase/season/${new Date().getMonth() >= 6 ? new Date().getFullYear() + 1 : new Date().getFullYear()}`, BNXT_HEADERS);
@@ -63,54 +61,105 @@ async function bnxt(out: Pro) {
   console.log(`BNXT : ${seen.size} équipes`);
 }
 
-function espnGame(e: any, sid: number, sn: string, teamId: (t: any) => number): SlimGame {
-  const c = e.competitions[0];
-  const h = c.competitors.find((x: any) => x.homeAway === 'home'), a = c.competitors.find((x: any) => x.homeAway === 'away');
-  const done = c.status?.type?.completed;
-  const sc = (x: any) => (done ? Number(x.score?.value ?? x.score?.displayValue ?? x.score) : null);
-  const { d, t } = bxl(e.date);
-  return { id: id(21e9, e.id), d, t, s: sid, sn, h: teamId(h.team), a: teamId(a.team), hn: h.team.displayName, an: a.team.displayName, hs: sc(h), as: sc(a),
-    v: c.venue?.fullName ?? '', adr: [c.venue?.address?.city, c.venue?.address?.country].filter(Boolean).join(', '), ty: 'championnat' };
+/** NBA et WNBA : API balldontlie (conditions : usage autorisé dans une appli, gratuite ou non ; clé BALLDONTLIE_API_KEY).
+ *  Offre gratuite : matchs et scores, 5 requêtes/min. Le classement est calculé à partir des matchs de saison régulière
+ *  (bilans identiques à l'officiel, vérifié avec ops/bdl-check.ts) : ordre au % de victoires, même rang en cas d'égalité
+ *  (les départages officiels ne sont pas appliqués). Hors classement : playoffs, finale de la NBA Cup / Commissioner's Cup, All-Star.
+ *  Identifiants repris de la version précédente (abonnements, commentaires et vidéos restent liés). */
+const BDL = 'https://api.balldontlie.io';
+let bdlLast = 0;
+async function bdlGet(path: string): Promise<any> {
+  const key = process.env.BALLDONTLIE_API_KEY; if (!key) throw new Error('clé BALLDONTLIE_API_KEY absente');
+  for (let tries = 0; ; tries++) {
+    const wait = 13_000 - (Date.now() - bdlLast); if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+    bdlLast = Date.now();
+    const r = await fetch(`${BDL}${path}`, { headers: { Authorization: key } });
+    if (r.status === 429 && tries < 3) { bdlLast = Date.now() + 47_000; continue; }
+    if (!r.ok) throw new Error(`balldontlie ${r.status}`);
+    return r.json();
+  }
 }
+async function bdlAll(path: string) {
+  const out: any[] = []; let cursor: string | undefined;
+  for (let i = 0; i < 40; i++) {
+    const j = await bdlGet(`${path}${path.includes('?') ? '&' : '?'}per_page=100${cursor ? `&cursor=${cursor}` : ''}`);
+    out.push(...(j.data ?? [])); cursor = j.meta?.next_cursor; if (!cursor) break;
+  }
+  return out;
+}
+const nkey = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
-/** NBA et WNBA (ESPN) : une série par conférence, classement officiel de la saison régulière.
- *  La WNBA se joue sur une année civile (mai → octobre), la NBA d'octobre à juin. */
-async function nba(out: Pro, league: 'nba' | 'wnba' = 'nba', base = 22e9) {
+export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnba', base: number) {
   const label = league.toUpperCase();
-  const teams = (await get(`${ESPN}/${league}/teams`, {}, false)).sports[0].leagues[0].teams.map((x: any) => x.team);
-  const tid = (t: any) => id(base, t.id);
-  const conf = new Map<string, number>();
-  // Saison régulière seulement (sans seasontype, ESPN renvoie le classement des matchs de préparation en octobre)
-  const year = league === 'wnba' ? new Date().getFullYear() : new Date().getMonth() >= 6 ? new Date().getFullYear() + 1 : new Date().getFullYear();
-  const st = await get(`https://site.api.espn.com/apis/v2/sports/basketball/${league}/standings?season=${year}&seasontype=2`, {}, false);
-  if (st.children?.[0]?.standings?.seasonType !== 2) throw new Error(`classement ${label} : saison régulière introuvable`);
-  st.children.forEach((ch: any, i: number) => {
-    const sid = id(base, 900 + i); out.series[sid] = { id: sid, name: `${label} · ${/east/i.test(ch.name) ? 'Conférence Est' : 'Conférence Ouest'}`, short: label };
-    const v = (e: any, n: string) => Number(e.stats.find((s: any) => s.name === n)?.value ?? 0);
-    // Ordre officiel NBA : tête de série (playoffSeed, départages compris), puis nom tant qu'aucun match n'est joué
-    const rows = ch.standings.entries.map((e: any) => { conf.set(e.team.id, sid); return { seed: v(e, 'playoffSeed'), name: e.team.displayName as string, team: tid(e.team), played: v(e, 'wins') + v(e, 'losses'), wins: v(e, 'wins'), losses: v(e, 'losses'), pf: v(e, 'pointsFor'), pa: v(e, 'pointsAgainst'), pts: v(e, 'wins') }; });
-    rows.sort((a: any, b: any) => a.seed - b.seed || a.name.localeCompare(b.name));
-    out.standings[sid] = rows.map(({ seed, name, ...r }: any, i: number) => ({ ...r, rank: i + 1 }));
-  });
-  for (const t of teams) {
-    out.clubs.push({ id: tid(t), name: t.displayName, short: t.shortDisplayName ?? t.displayName, province: label, logo: t.logos?.[0]?.href ?? null, c1: hex(t.color), c2: hex(t.alternateColor), city: t.location ?? '', venue: null,
-      teams: [{ id: tid(t), name: t.displayName, cat: label, ag: 'seniors' }] });
-    // Saison régulière (2) et playoffs (3) séparément ; jamais les matchs de préparation (1), qui ne comptent pas
-    for (const type of [2, 3]) {
-      const sch = await get(`${ESPN}/${league}/teams/${t.id}/schedule?season=${year}&seasontype=${type}`, {}, false).catch(() => ({ events: [] }));
-      for (const e of sch.events ?? []) {
-        if ((e.seasonType?.type ?? type) !== type) continue;
-        // Match spécial hors classement (ex. finale de la Commissioner's Cup WNBA, In-Season Tournament NBA)
-        const special = type === 2 && e.competitions?.[0]?.type?.abbreviation && e.competitions[0].type.abbreviation !== 'STD';
-        const sid = type === 3 ? id(base, 950) : special ? id(base, 960) : conf.get(t.id) ?? id(base, 900);
-        if (type === 3) out.series[sid] ??= { id: sid, name: `${label} · Playoffs`, short: label };
-        if (special) out.series[sid] ??= { id: sid, name: `${label} · ${(e.competitions[0].notes?.[0]?.headline ?? 'Coupe').replace(new RegExp(`^${label}\\s*`), '')}`, short: label };
-        const g = espnGame(e, sid, label, tid); if (special) g.ty = 'coupe';
-        out.games.push(g);
-      }
+  const now = new Date();
+  const season = league === 'wnba' ? (now.getMonth() >= 2 ? now.getFullYear() : now.getFullYear() - 1) : (now.getMonth() >= 6 ? now.getFullYear() : now.getFullYear() - 1);
+  const games = await bdlAll(`${league === 'nba' ? '' : '/wnba'}/v1/games?seasons[]=${season}`);
+  if (!games.length) throw new Error(`${label} : aucun match pour la saison ${season}`);
+  const conf = (t: any) => (/^east/i.test(t?.conference ?? '') ? 'E' : /^west/i.test(t?.conference ?? '') ? 'W' : null);
+  // Matchs entre vraies équipes (pas d'All-Star : équipes sans conférence)
+  const real = games.filter((g) => conf(g.home_team) && conf(g.visitor_team));
+  // Reprise des identifiants et infos de la version précédente (couleurs, logo copié, salle)
+  const mine = (x: number) => x >= base && x < base + 1e9;
+  const oldClubs = new Map((prev?.clubs ?? []).filter((c) => mine(c.id)).map((c) => [nkey(c.name), c]));
+  const oldGames = new Map((prev?.games ?? []).filter((g) => mine(g.s)).map((g) => [`${g.d}|${nkey(g.hn)}|${nkey(g.an)}`, g]));
+  const venueOf = new Map<number, { v: string; adr: string }>();
+  for (const g of prev?.games ?? []) if (mine(g.s) && g.v) venueOf.set(g.h, { v: g.v, adr: g.adr });
+  const special = new Set<number>(); // finale de coupe, hors classement
+  for (const g of real) if (g.ist_stage === 'Championship') special.add(g.id);
+  for (const g of prev?.games ?? []) if (g.s === id(base, 960)) { const m = real.find((x) => bxl(x.datetime ?? x.date).d === g.d && x.home_team.full_name && nkey(x.home_team.full_name) === nkey(g.hn)); if (m) special.add(m.id); }
+  const final = (g: any) => /final/i.test(String(g.status_state ?? g.status)) && score(g, 'h') != null && score(g, 'a') != null;
+  const score = (g: any, side: 'h' | 'a') => (side === 'h' ? g.home_team_score ?? g.home_score : g.visitor_team_score ?? g.away_score) ?? null;
+  // WNBA : la finale de la Commissioner's Cup n'est pas marquée → c'est le match en trop des deux seules équipes
+  // qui ont un match de plus que toutes les autres, entre conférences différentes, en juin-juillet.
+  if (league === 'wnba') {
+    const n = new Map<number, number>();
+    for (const g of real) if (!g.postseason && final(g)) for (const t of [g.home_team.id, g.visitor_team.id]) n.set(t, (n.get(t) ?? 0) + 1);
+    const counts = [...n.values()]; const mode = counts.sort((a, b) => counts.filter((x) => x === b).length - counts.filter((x) => x === a).length)[0];
+    const extra = [...n].filter(([, c]) => c === mode + 1).map(([t]) => t);
+    if (extra.length === 2) {
+      const m = real.filter((g) => !g.postseason && final(g) && [g.home_team.id, g.visitor_team.id].every((t) => extra.includes(t)) && conf(g.home_team) !== conf(g.visitor_team) && /-0[67]-/.test(bxl(g.datetime ?? g.date).d));
+      if (m.length === 1) special.add(m[0].id);
     }
   }
-  console.log(`${label} : ${teams.length} équipes`);
+  const teams = new Map<number, any>();
+  for (const g of real) for (const t of [g.home_team, g.visitor_team]) teams.set(t.id, t);
+  const tid = new Map<number, number>();
+  for (const [bid, t] of teams) {
+    const old = oldClubs.get(nkey(t.full_name));
+    const cid = old?.id ?? id(base, 800000 + bid); tid.set(bid, cid);
+    const logo = existsSync(`logos/${cid}.webp`) ? `/logos/${cid}.webp` : null;
+    out.clubs.push({ id: cid, name: t.full_name, short: t.name, province: label, logo, c1: old?.c1 ?? '#1a6fe0', c2: old?.c2 ?? '#0a0c12', city: t.city ?? '', venue: null,
+      teams: [{ id: cid, name: t.full_name, cat: label, ag: 'seniors' }] });
+  }
+  const sE = id(base, 900), sW = id(base, 901), sPO = id(base, 950), sCup = id(base, 960);
+  out.series[sE] = { id: sE, name: `${label} · Conférence Est`, short: label };
+  out.series[sW] = { id: sW, name: `${label} · Conférence Ouest`, short: label };
+  const rec = new Map<number, Standing>();
+  for (const [bid, t] of teams) rec.set(tid.get(bid)!, { team: tid.get(bid)!, played: 0, wins: 0, losses: 0, pf: 0, pa: 0, pts: 0, rank: 0, conf: conf(t) } as Standing & { conf: string | null });
+  for (const g of real) {
+    const h = tid.get(g.home_team.id)!, a = tid.get(g.visitor_team.id)!;
+    const { d, t } = g.datetime ? bxl(g.datetime) : /T/.test(g.date) ? bxl(g.date) : { d: String(g.date).slice(0, 10), t: '' };
+    const sid = g.postseason ? sPO : special.has(g.id) ? sCup : conf(g.home_team) === 'E' ? sE : sW;
+    if (sid === sPO) out.series[sPO] ??= { id: sPO, name: `${label} · Playoffs`, short: label };
+    if (sid === sCup) out.series[sCup] ??= { id: sCup, name: league === 'nba' ? 'NBA · NBA Cup' : "WNBA · Commissioner's Cup Championship", short: label };
+    const done = final(g); const hs = done ? Number(score(g, 'h')) : null, as = done ? Number(score(g, 'a')) : null;
+    const old = oldGames.get(`${d}|${nkey(g.home_team.full_name)}|${nkey(g.visitor_team.full_name)}`);
+    const ven = old?.v ? { v: old.v, adr: old.adr } : venueOf.get(h) ?? { v: '', adr: '' };
+    out.games.push({ id: old?.id ?? id(21e9, (league === 'nba' ? 6e8 : 7e8) + g.id), d, t, s: sid, sn: label, h, a, hn: g.home_team.full_name, an: g.visitor_team.full_name, hs, as, ...ven, ty: sid === sCup ? 'coupe' : 'championnat' });
+    if (done && sid !== sPO && sid !== sCup) {
+      for (const [me, pf, pa] of [[h, hs!, as!], [a, as!, hs!]] as const) { const r = rec.get(me)!; r.played++; r.pf! += pf; r.pa! += pa; if (pf > pa) r.wins++; else r.losses++; r.pts = r.wins; }
+    }
+  }
+  // Classement : % de victoires, puis nombre de victoires ; même rang en cas d'égalité ; nom tant que rien n'est joué
+  for (const [sid, c] of [[sE, 'E'], [sW, 'W']] as const) {
+    const rows = [...rec.values()].filter((r: any) => r.conf === c);
+    const pct = (r: Standing) => (r.played ? r.wins / r.played : -1);
+    rows.sort((x, y) => pct(y) - pct(x) || y.wins - x.wins || names(x).localeCompare(names(y)));
+    rows.forEach((r, i) => { r.rank = i > 0 && r.played && pct(r) === pct(rows[i - 1]) && r.wins === rows[i - 1].wins ? rows[i - 1].rank : i + 1; delete (r as any).conf; });
+    out.standings[sid] = rows;
+  }
+  function names(r: Standing) { return out.clubs.find((c) => c.id === r.team)?.name ?? ''; }
+  console.log(`${label} (balldontlie) : ${teams.size} équipes, ${real.length} matchs, ${special.size} match(s) de coupe hors classement`);
 }
 
 /** EuroLeague (E) et EuroCup (U) : API officielle d'Euroleague Basketball (api-live.euroleague.net), lecture seule.
@@ -267,7 +316,7 @@ export async function run(outFile = 'pro.json', calDir = 'calendars') {
   const prev: Pro | null = existsSync(outFile) ? JSON.parse(readFileSync(outFile, 'utf8')) : null;
   const out: Pro = { clubs: [], games: [], series: {}, standings: {}, attach: {} };
   // Chaque source est indépendante : si l'une échoue, on reprend ses données de la version précédente
-  const sources: [string, (o: Pro) => Promise<void>, number][] = [['BNXT', bnxt, 20e9], ['NBA', (o) => nba(o), 22e9], ['Équipes nationales', nationalTeams, 23e9], ['WNBA', (o) => nba(o, 'wnba', 26e9), 26e9],
+  const sources: [string, (o: Pro) => Promise<void>, number][] = [['BNXT', bnxt, 20e9], ['NBA', (o) => bdlLeague(o, prev, 'nba', 22e9), 22e9], ['Équipes nationales', nationalTeams, 23e9], ['WNBA', (o) => bdlLeague(o, prev, 'wnba', 26e9), 26e9],
     ['EuroLeague', (o) => euroleague(o, 'E', 24e9, 'EuroLeague'), 24e9], ['EuroCup', (o) => euroleague(o, 'U', 25e9, 'EuroCup'), 25e9],
     ...FIBA_EVENTS.map((ev): [string, (o: Pro) => Promise<void>, number] => [ev.label, (o) => fibaEvent(o, ev), ev.base])];
   for (const [name, f, base] of sources) {
