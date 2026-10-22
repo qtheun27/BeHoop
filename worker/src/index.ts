@@ -30,6 +30,9 @@ function cors(req: Request, env: Env): Record<string, string> {
 export default {
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
+    // auth.behoop.be : pages de connexion Firebase (Google…) servies sous le domaine BeHoop plutôt que sous
+    // l'identifiant technique du projet (basket-awbb-club.firebaseapp.com), simple relais vers celui-ci.
+    if (url.hostname === 'auth.behoop.be') return authProxy(req, env, url);
     const h = cors(req, env);
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: h });
     let res: Response;
@@ -46,6 +49,16 @@ export default {
     return out;
   },
 };
+
+/* ---------------- Connexion (auth.behoop.be) ----------------
+ * Relais documenté par Firebase (« proxy auth requests to firebaseapp.com ») : seules les pages /__/auth/ et
+ * /__/firebase/ sont transmises, telles quelles, au domaine Firebase du projet. */
+async function authProxy(req: Request, env: Env, url: URL): Promise<Response> {
+  if (!url.pathname.startsWith('/__/auth/') && !url.pathname.startsWith('/__/firebase/')) return Response.redirect('https://behoop.be/app/', 302);
+  const target = new URL(url.pathname + url.search, `https://${env.FIREBASE_PROJECT_ID}.firebaseapp.com`);
+  const r = await fetch(target.toString(), { method: req.method, headers: req.headers, body: ['GET', 'HEAD'].includes(req.method) ? undefined : req.body, redirect: 'manual' });
+  return new Response(r.body, r);
+}
 
 /* ---------------- Médias ---------------- */
 async function serveMedia(req: Request, env: Env, ctx: ExecutionContext, key: string): Promise<Response> {
