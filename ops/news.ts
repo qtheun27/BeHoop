@@ -86,11 +86,12 @@ export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'> & { excerpt?: s
  *  illégal, CJUE VG Bild-Kunst, 2021) et l'appli montre un aperçu. null si on ne peut pas le vérifier (site qui refuse
  *  les robots) : l'appli essaie le cadre, et c'est le navigateur qui applique la règle du média. */
 export function frameAllowed(status: number, xfo: string | null, csp: string | null): boolean | null {
-  if (status < 200 || status >= 400) return null;
+  // L'interdiction compte même sur une page d'erreur (Mediahuis renvoie X-Frame-Options avec son refus des robots)
   if (xfo && /deny|sameorigin/i.test(xfo)) return false;
   const fa = /frame-ancestors([^;]*)/i.exec(csp ?? '')?.[1]?.trim();
-  if (fa == null || fa === '') return true;
-  return fa.split(/\s+/).some((x) => x === '*' || x === 'https:' || /behoop\.be/.test(x));
+  if (fa && !fa.split(/\s+/).some((x) => x === '*' || x === 'https:' || /behoop\.be/.test(x))) return false;
+  if (status < 200 || status >= 400) return null;
+  return true;
 }
 async function frameCheck(items: News[]) {
   const hosts = new Map<string, boolean | null>();
