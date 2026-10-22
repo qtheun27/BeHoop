@@ -25,8 +25,10 @@ function svg(k: CourtTheme, dark: boolean, wide: boolean) {
   const name = esc(k.name.toUpperCase());
   const base = (y: number) => wide ? `<text transform="translate(${y < H / 2 ? o / 2 + 2.5 : W - o / 2 - 2.5} ${H / 2}) rotate(-90)" text-anchor="middle" dominant-baseline="middle" font-family="Anton" font-size="7" letter-spacing="2.5" fill="${ink}">${name}</text>` : `<text x="${W / 2}" y="${y}" text-anchor="middle" font-family="Anton" font-size="7" letter-spacing="2.5" fill="${ink}">${name}</text>`;
   const side = (x: number, r: number) => `<text transform="translate(${x} ${H / 2}) rotate(${r})" text-anchor="middle" dominant-baseline="${wide ? 'middle' : 'auto'}" font-family="Anton" font-size="7.5" letter-spacing="3" fill="${ink}" opacity=".9">${name} · BEHOOP</text>`;
-  return `<defs><radialGradient id="cg"><stop offset=".55" stop-color="${k.c1}" stop-opacity=".55"/><stop offset="1" stop-color="${k.c1}" stop-opacity="0"/></radialGradient></defs>
-    <rect width="${W}" height="${H}" fill="${band}"/>${wood}
+  // Lames coupées au cadre du terrain (elles dépassaient sur les côtés, en haut et en bas)
+  return `<defs><radialGradient id="cg"><stop offset=".55" stop-color="${k.c1}" stop-opacity=".55"/><stop offset="1" stop-color="${k.c1}" stop-opacity="0"/></radialGradient>
+    <clipPath id="court-clip"><rect x="${o}" y="${o}" width="150" height="280"/></clipPath></defs>
+    <rect width="${W}" height="${H}" fill="${band}"/><g clip-path="url(#court-clip)">${wood}</g>
     ${dark ? '' : `<rect x="${o}" y="${o}" width="150" height="280" fill="#000" fill-opacity=".08"/>`}${half(false)}${half(true)}
     <rect x="${o}" y="${o}" width="150" height="280" fill="none" stroke="${L}" stroke-width="${lw}"/><path d="M${o} ${H / 2}h150" stroke="${L}" stroke-width="${lw}"/>
     ${dark ? `<circle cx="${W / 2}" cy="${H / 2}" r="42" fill="url(#cg)"/>` : ''}
