@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen U21 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-12938040843-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261025T160000
 DTEND;TZID=Europe/Brussels:20261025T180000
 SUMMARY:BBC Geel J21 A – Duffel K.B.B.C. J21 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12988373700-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Basket Stabroek J21 A – Essense Esbac J21 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12921263224-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:Phantoms Basket Boom J21 B – Basket Malle J21 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13021928938-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261107T144500
 DTEND;TZID=Europe/Brussels:20261107T164500
 SUMMARY:Willibies Antwerpen J21 A – BBC Berlaar J21 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12870930367-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:Guco Lier J21 B – Wuustwezel BBC J21 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12954818462-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261108T160000
 DTEND;TZID=Europe/Brussels:20261108T180000
 SUMMARY:Antwerp Giants J21 B – Kangoeroes Basket Mechelen J21 B
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen U21 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12971596081-comp-cup-beker-van-antwerpen-u21-jongens@behoop.be
-DTSTAMP:20261022T110301Z
+DTSTAMP:20261022T135123Z
 DTSTART;TZID=Europe/Brussels:20261108T160000
 DTEND;TZID=Europe/Brussels:20261108T180000
 SUMMARY:Zuiderkempen Diamonds J21 A – Olicsa Antwerpen J21 A
