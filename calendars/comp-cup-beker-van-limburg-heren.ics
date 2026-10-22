@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Limburg Heren
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11205319216-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261029T203000
 DTEND;TZID=Europe/Brussels:20261029T223000
 SUMMARY:BBC Optima Tessenderlo HSE A – Hades Kiewit BBC HSE C
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11373095406-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261030T210000
 DTEND;TZID=Europe/Brussels:20261030T230000
 SUMMARY:BBC Optima Tessenderlo HSE B – Koninklijke BBC Union Leopoldsburg HSE A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11440205882-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T133000
 DTEND;TZID=Europe/Brussels:20261031T153000
 SUMMARY:Cosmo Genk BBC HSE B – Hades Kiewit BBC HSE B
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11406650644-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:BBC As HSE A – BasKet Tongeren HSE C
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11440352977-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T174500
 DTEND;TZID=Europe/Brussels:20261031T194500
 SUMMARY:B.C. Gems Diepenbeek HSE B – Koninklijke BBC Union Leopoldsburg HSE B
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11389873025-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T181500
 DTEND;TZID=Europe/Brussels:20261031T201500
 SUMMARY:Basket Zonhoven HSE B – Basket Lummen HSE A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11356317787-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T194500
 DTEND;TZID=Europe/Brussels:20261031T214500
 SUMMARY:Nieuwerkerken HSE A – BC Maasmechelen HSE B
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11390020120-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T200000
 DTEND;TZID=Europe/Brussels:20261031T220000
 SUMMARY:Kon Sint-Truidense Basketbal (KSTBB) HSE B – Basket Peer HSE A
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11507463453-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T200000
 DTEND;TZID=Europe/Brussels:20261031T220000
 SUMMARY:Basket Lummen HSE B – B.C. Gems Diepenbeek HSE A
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11473908215-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T203000
 DTEND;TZID=Europe/Brussels:20261031T223000
 SUMMARY:Stevoort BBC HSE E – KBBC Miners Beringen HSE B
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11406797739-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261031T203000
 DTEND;TZID=Europe/Brussels:20261031T223000
 SUMMARY:Basket Zonhoven HSE A – BBC Croonen Lommel HSE D
@@ -104,7 +104,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11222096835-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261101T110000
 DTEND;TZID=Europe/Brussels:20261101T130000
 SUMMARY:Orly Hasselt HSE A – BBC Croonen Lommel HSE C
@@ -113,7 +113,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11423428263-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261101T154500
 DTEND;TZID=Europe/Brussels:20261101T174500
 SUMMARY:Stevoort BBC HSE C – Cosmo Genk BBC HSE A (20-0)
@@ -122,7 +122,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11456983501-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261101T180000
 DTEND;TZID=Europe/Brussels:20261101T200000
 SUMMARY:Stevoort BBC HSE D – KBBC Zolder vzw HSE B
@@ -131,7 +131,7 @@ DESCRIPTION:Beker van Limburg Heren 1/16 Finale Provinciaal
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11423575358-comp-cup-beker-van-limburg-heren@behoop.be
-DTSTAMP:20261021T210951Z
+DTSTAMP:20261022T083104Z
 DTSTART;TZID=Europe/Brussels:20261110T200000
 DTEND;TZID=Europe/Brussels:20261110T220000
 SUMMARY:BBC Pelt HSE A – Hasselt BT HSE B

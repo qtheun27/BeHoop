@@ -93,6 +93,7 @@ export function loadAll(root = '.'): AllData {
   for (const c of clubs) {
     const lid = (c as SlimClub & { logoId?: number }).logoId ?? c.id;
     delete (c as SlimClub & { logoId?: number }).logoId;
+    if (c.logo?.startsWith('/logos/')) continue; // déjà local (drapeaux des sélections, logos des compétitions)
     if (existsSync(join(root, 'logos', `${lid}.webp`))) c.logo = `/logos/${lid}.webp`;
     else if (c.logo?.includes('vbldataOrgLogo')) c.logo = null; // club flamand sans logo publié : initiales
   }

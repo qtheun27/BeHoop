@@ -1,7 +1,7 @@
 // Page compétition (#/competition/{id}) : comme une page équipe, pour toute une compétition —
 // actus, classement(s), résultats, calendrier et équipes, avec un bouton Suivre.
 import { useMemo, useState } from 'react';
-import { getComp, loadSerie, loadNews, teamIndex, isPlayed, readable, trName, type Competition, type Game} from '../lib/data';
+import { getComp, loadSerie, loadNews, teamIndex, isPlayed, readable, trName, dataSource, type Competition, type Game} from '../lib/data';
 import { useSession } from '../lib/session';
 import { t, tn } from '../lib/i18n';
 import { frDate, haptic } from '../lib/util';
@@ -107,6 +107,7 @@ export function CompPage({ id }: { id: string }) {
         <a key={tid} className="row" href={`#/equipe/${tid}`} style={{ color: 'inherit' }}>
           <Disc src={e?.club.logo} name={name} size={36} ring={e?.club.c1} /><div className="grow ellipsis">{name}<div className="sub">{e?.club.city}</div></div><span className="chev">›</span>
         </a>); })}</div>}
+      {tab !== 'classement' && c.clubs.length > 0 && <div className="source-note">{t('Source : {s}', { s: dataSource(c.clubs[0]) })}</div>}
     </Screen>
   );
 }

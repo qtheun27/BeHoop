@@ -273,7 +273,7 @@ function FeedAside() {
       {top.length > 0 && <section className="aside-card">
         <div className="group-title"><Ico n="news" />{t('À la une')}</div>
         {top.map((n) => <a key={n.id} className="aside-news" href={n.url} target="_blank" rel="noopener">
-          <span className="ph"><Ico n="ball" />{n.image && <img src={n.image} alt="" loading="lazy" onError={(e) => e.currentTarget.remove()} />}</span>
+          <span className="ph"><Ico n="ball" />{n.image && <img src={n.image} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(e) => e.currentTarget.remove()} />}</span>
           <span><b>{n.title}</b><small>{n.source}</small></span></a>)}
         <a className="aside-more" href="#/actus">{t('Toutes les actus ›')}</a>
       </section>}

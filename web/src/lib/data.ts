@@ -31,6 +31,15 @@ export const loadSerie = (id: number) => get<{ serie: { id: number; name: string
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */
 export type CompCat = 'national' | 'wallonie' | 'flandre' | 'europe' | 'monde' | 'nba';
 export interface Competition { id: string; name: string; sub: string; cat: CompCat; women: boolean; youth: boolean; series: number[]; clubs: number[]; teams: number; games: number; kw?: string[]; rank: number; logo?: string; dark?: boolean }
+/** Source officielle d'une donnée, d'après la plage de son identifiant (voir ops/ : AWBB < 1e10, VBL, puis bases 20e9…) */
+export function dataSource(id: number) {
+  if (id < 1e10) return 'AWBB';
+  if (id < 20e9) return 'Basketbal Vlaanderen';
+  if (id < 21e9) return 'BNXT League';
+  if ((id >= 22e9 && id < 23e9) || (id >= 26e9 && id < 27e9)) return 'ESPN';
+  if (id >= 24e9 && id < 26e9) return 'EuroLeague Basketball';
+  return 'FIBA';
+}
 /** Noms et sous-titres dans la langue de l'appli (voir trName) */
 export const loadComps = async () => (await get<Competition[]>('competitions.json')).map((c) => ({ ...c, name: trName(c.name), sub: trName(c.sub) }));
 export async function getComp(id: string) { return (await loadComps()).find((c) => c.id === id) ?? null; }

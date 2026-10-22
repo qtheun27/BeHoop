@@ -139,7 +139,7 @@ export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | n
   const [err, setErr] = useState(false);
   return (
     <div className={`disc${size >= 48 ? ' big' : ''}`} style={{ '--s': `${size}px`, '--ring': ring } as React.CSSProperties}>
-      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/') ? { width: '86%', height: '86%' } : undefined} /> : <span>{initials(name)}</span>}
+      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/flags/') ? { width: '100%', height: '100%', objectFit: 'cover' } : src.startsWith('/logos/') ? { width: '86%', height: '86%' } : undefined} /> : <span>{initials(name)}</span>}
     </div>
   );
 }

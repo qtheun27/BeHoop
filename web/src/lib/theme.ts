@@ -60,12 +60,11 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
   const comp = p.accent.startsWith('comp:') ? COMP_THEME[p.accent.slice(5)] : undefined;
   let ct: CourtTheme | null = null;
   if (comp) {
-    // Compétition : mêmes effets qu'un club (parquet teinté, logo dans le rond central)
+    // Compétition : mêmes couleurs qu'un club, mais son nom (pas son logo, marque protégée) au centre du parquet
     const k = clubColors(comp);
     r.dataset.accent = 'club';
     r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad);
-    r.style.setProperty('--club-logo', `url("${comp.logo}")`); if (comp.dark) r.dataset.logoDark = '1';
-    ct = { c1: comp.c1, c2: comp.c2, logo: comp.logo, logoDark: comp.dark, name: COMP_NAME[p.accent.slice(5)] ?? p.accent.slice(5) };
+    ct = { c1: comp.c1, c2: comp.c2, logo: null, name: COMP_NAME[p.accent.slice(5)] ?? p.accent.slice(5) };
   } else if (p.accent.startsWith('club:')) {
     const c = clubs.find((x) => x.id === Number(p.accent.slice(5)));
     r.dataset.accent = 'club';

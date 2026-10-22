@@ -349,3 +349,5 @@ html { overflow-x: hidden; }
 .car-pill { display: inline-flex; align-items: center; gap: 5px; background: color-mix(in srgb, #1f9d55 14%, var(--bg2)); color: #1f7a45; font-weight: 600; }
 :root[data-theme="dark"] .car-pill, :root[data-bg="nuit"] .car-pill { color: #5fd08f; }
 .car-meet { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.source-note { font-size: 12px; color: var(--text2); text-align: center; padding: 10px 8px 4px; }
+.group .source-note { border-top: 1px solid var(--sep); }

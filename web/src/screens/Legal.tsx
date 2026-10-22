@@ -4,11 +4,14 @@ import { t } from '../lib/i18n';
 // Brouillons — À RELIRE par Quentin (et idéalement un juriste) avant la mise en ligne publique.
 const DOCS: Record<string, { title: string; body: [string, string][] }> = {
   cgu: { title: "Conditions d'utilisation", body: [
-    ['Le service', "BeHoop (behoop.be) est un projet personnel et gratuit qui affiche les résultats du basket AWBB et permet de suivre des clubs, de publier des messages, photos et vidéos de match."],
+    ['Le service', "BeHoop (behoop.be) est un projet personnel, gratuit et sans publicité, qui affiche les résultats du basket belge et international et permet de suivre des clubs, de publier des messages, photos et vidéos de match."],
     ['Ton compte', "Il faut avoir 13 ans ou plus. Ton prénom et l'initiale de ton nom sont visibles des autres utilisateurs. Tu es responsable de ce que tu publies."],
     ['Ce que tu publies', "Tu dois avoir le droit de publier tes photos et vidéos. Les médias d'une équipe Jeunes ne sont visibles que par les membres validés de l'Équipe. Tu t'engages à retirer un contenu si un parent le demande."],
     ['Modération', "Tout contenu peut être signalé. BeHoop peut masquer un contenu ou suspendre un compte qui ne respecte pas la charte, sans préavis."],
-    ['Responsabilité', "Les données sportives proviennent de l'AWBB et peuvent contenir des erreurs. Le service est fourni « tel quel », sans garantie de disponibilité."],
+    ['Responsabilité', "Les données sportives sont reprises automatiquement de sources publiques et peuvent contenir des erreurs : en cas de doute, la source officielle fait foi. Le service est fourni « tel quel », sans garantie de disponibilité."],
+    ['Sources des données', "Résultats, calendriers et classements : AWBB (Wallonie-Bruxelles), Basketbal Vlaanderen, BNXT League, EuroLeague Basketball (EuroLeague, EuroCup), FIBA (sélections, Champions League, FIBA Europe Cup, compétitions féminines européennes), ESPN (NBA, WNBA). Actualités : titres et courts extraits des flux publics des médias, avec un lien vers l'article original. La source est indiquée sous chaque classement et calendrier."],
+    ['Marques et logos', "Les noms, logos et marques des clubs, ligues et compétitions appartiennent à leurs propriétaires. Ils servent uniquement à identifier les équipes et compétitions ; BeHoop n'est affilié à aucune fédération, ligue ou club et n'est soutenu par aucun d'eux. Drapeaux : flag-icons (licence MIT)."],
+    ['Demande de retrait', "Un titulaire de droits (fédération, club, média, photographe) peut demander le retrait d'un contenu, d'un logo ou d'une source en écrivant à q.theuninck@gmail.com : la demande est traitée rapidement."],
     ['Contact', 'q.theuninck@gmail.com'],
   ] },
   confidentialite: { title: 'Politique de confidentialité', body: [

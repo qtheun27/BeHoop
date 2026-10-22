@@ -1,6 +1,6 @@
 // Tableau de classement unique (page équipe, page compétition) : ordre et rang officiels, voir ranked().
 // D = joués − victoires − nuls : les forfaits, que les fédérations comptent à part, sont des défaites.
-import { ranked, type Standing } from '../lib/data';
+import { ranked, dataSource, type Standing } from '../lib/data';
 import { t } from '../lib/i18n';
 
 export function StandingsTable({ rows, names, me, pct: forcePct }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean }) {
@@ -23,6 +23,7 @@ export function StandingsTable({ rows, names, me, pct: forcePct }: { rows: Stand
           <span style={col(24)}>{r.played}</span><span style={col(24)}>{r.wins}</span>{nuls && <span style={col(24)}>{r.draws ?? 0}</span>}<span style={col(24)}>{r.played - r.wins - (r.draws ?? 0)}</span>
           <span style={{ ...col(34, 'right'), fontFamily: 'Anton' }}>{pct ? (r.played ? (r.wins / r.played).toFixed(3).replace(/^0/, '') : '–') : r.pts}</span>
         </a>); })}
+      {list.length > 0 && <div className="source-note">{t('Source : {s}', { s: dataSource(list[0].team) })}</div>}
     </div>
   );
 }

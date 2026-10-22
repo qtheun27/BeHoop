@@ -77,6 +77,7 @@ def one(club):
     """Logo officiel retéléchargé à chaque passage (suit les changements des clubs) ;
     logo de remplacement seulement si l'officiel est introuvable ; sinon la dernière bonne copie est gardée."""
     cid, url = club
+    if url and url.startswith('/'): return 'local'   # déjà servi par behoop.be (drapeaux des sélections…)
     dest = os.path.join(OUT, f'{cid}.webp')
     if url:
         try:

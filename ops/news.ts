@@ -70,10 +70,14 @@ export function cleanImg(u: string | null | undefined): string | null {
 }
 /** Spam (faux « streams » gratuits relayés par Google Actualités), paris et casinos : jamais dans BeHoop */
 export const SPAM = /live\s*-?\s*streams?|livestream|stream(?:ing)? (?:free|gratuit|online)|watch .{0,60}(?:free|online|live)|free online|how to watch|【|\+\+\[|TV!!|\b(?:betting|paris sportifs|odds)\b/i;
-export const BLOCKED_SOURCES = /golden ?palace|casino|\bbet|bwin|unibet|napoleon|sofascore|365scores|universidad|starsporttv/i;
+export const BLOCKED_SOURCES = /golden ?palace|casino|circus|\bbet|bwin|unibet|napoleon|winamax|betclic|ladbrokes|sofascore|365scores|universidad|starsporttv/i;
+/** Paris sportifs (interdits dans BeHoop : public jeune, légalité) : pronostics, cotes, codes promo, opérateurs.
+ *  « pari » seul n'est pas visé (« un dernier pari pour un titre ») : il faut un contexte de jeu d'argent. */
+export const BETTING = /\bpronos?(?:tics?)?\b|\bpronostiqu|\bparis? (?:joueurs?|sportifs?|du jour|combin|en direct)|\bnos paris\b|\bparier\b|\bcodes? (?:promo|bonus)|\bcotes? (?:boost|à \d)|à \d+[,.]\d{2} (?:pour|avec|chez)|\b(?:unibet|winamax|betclic|bwin|napoleon ?sports?|ladbrokes|betfirst|scooore|zebet|parions ?sport|draftkings|fanduel|betmgm|circus)\b|sportsbook|\b(?:mm)?bets?\b|\bbetting\b|\bodds\b|player props|\bparlay|moneyline|\bwedden|weddenschap|\bvoorspelling|\bgokken\b/i;
 /** Fiches générées automatiquement par les médias (scores bruts) : déjà dans BeHoop, en mieux */
 export const AUTO_RESULTS = /^r[ée]sultats et classements sportifs\b|^uitslagen en klassementen\b/i;
-export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'>) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting|\/live-stats\./i.test(n.url);
+export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'> & { excerpt?: string }) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BETTING.test(n.title) || BETTING.test(n.excerpt ?? '')
+  || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting|paris-sportifs|pronostic|\/paris\/|\/live-stats\./i.test(n.url);
 
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }
 

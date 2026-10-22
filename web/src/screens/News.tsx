@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { loadNews, readable, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
 import { ago } from '../lib/util';
-import { WORKER_URL } from '../lib/config';
 import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
 import { SocialBar } from '../ui/Social';
@@ -12,12 +11,11 @@ import * as D from '../lib/db';
 const CATS: [string, IconName | null, string][] = [['tout', null, 'Tout'], ['belgique', 'flag', 'Belgique'], ['regional', 'pin', 'Régional'], ['international', 'globe', 'International'], ['nba', 'ball', 'NBA']];
 const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
 
-/** Image de l'article : d'abord chez le média ; s'il en bloque l'affichage sur un autre site, par media.behoop.be
- *  (relais limité aux images des actus) ; sinon rien — la carte passe en version texte. */
+/** Image de l'article : affichée directement depuis le média (jamais copiée chez nous, sans référent pour éviter
+ *  les blocages) ; si elle ne s'affiche pas, la carte passe en version texte. */
 function useNewsImage(n: News) {
-  const [stage, setStage] = useState(0);
-  const src = !n.image || stage > 1 ? null : stage === 0 ? n.image : `${WORKER_URL}/img?u=${encodeURIComponent(n.image)}`;
-  return { src, fail: () => setStage((x) => x + 1) };
+  const [failed, setFailed] = useState(false);
+  return { src: n.image && !failed ? n.image : null, fail: () => setFailed(true) };
 }
 /** Visuel de repli (carrousel « À la une » seulement) : demi-terrain aux couleurs de la source */
 function CourtVisual({ n, ratio }: { n: News; ratio: string }) {

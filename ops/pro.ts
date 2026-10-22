@@ -183,6 +183,10 @@ async function fibaPage(url: string) {
     } catch (e) { if (i >= 2) throw e; await new Promise((r) => setTimeout(r, 3000 * (i + 1))); }
   }
 }
+/** Équipes nationales : drapeau du pays (logos/flags, dessins libres flag-icons, licence MIT) plutôt que le logo hébergé par la FIBA.
+ *  Code FIBA/CIO à 3 lettres → code ISO (ops/ioc-flags.json). */
+const FLAGS: Record<string, string> = JSON.parse(readFileSync(new URL('./ioc-flags.json', import.meta.url), 'utf8'));
+export const flagLogo = (code?: string) => (code && FLAGS[code] ? `/logos/flags/${FLAGS[code]}.svg` : null);
 export const fibaLogo = (organisationId: number) => `https://assets.fiba.basketball/image/upload/w_160,h_160,c_fit/f_png/.logoflag--light--organisation_${organisationId}.webp`;
 // Qualifications FIBA : au 2e tour, le classement officiel reprend les résultats du 1er tour contre les équipes encore présentes.
 const ROUND_FR: Record<string, string> = { 'Regular Season': 'Saison régulière', 'First Round': '1er tour', '1st Round': '1er tour', 'Second Round': '2e tour', '2nd Round': '2e tour',
@@ -205,7 +209,7 @@ async function fibaEvent(out: Pro, ev: FibaEvent) {
     const tid = id(ev.base, x.teamId);
     if (!seen.has(tid)) {
       const name = ev.national ? x.shortName ?? x.officialName : x.officialName;
-      const c: SlimClub = { id: tid, name, short: x.shortName ?? name, province: ev.label, logo: x.organisationId ? fibaLogo(x.organisationId) : null, c1: '#1a6fe0', c2: '#0a0c12', city: '', venue: null,
+      const c: SlimClub = { id: tid, name, short: x.shortName ?? name, province: ev.label, logo: ev.national ? flagLogo(x.code) : x.organisationId ? fibaLogo(x.organisationId) : null, c1: '#1a6fe0', c2: '#0a0c12', city: '', venue: null,
         teams: [{ id: tid, name, cat: ev.label, ag: 'seniors' }] };
       seen.set(tid, c); out.clubs.push(c); out.attach[tid] = x.officialName;
     }

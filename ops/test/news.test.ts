@@ -85,6 +85,14 @@ describe('spam et images', () => {
     expect(isSpam({ title: 'Brussels vs BC Oostende scores & predictions', source: 'Sofascore', url: 'https://www.sofascore.com/x' })).toBe(true);
     expect(isSpam({ title: 'Mons Basket-ball est sur la bonne voie !', source: 'Sudinfo', url: 'https://www.sudinfo.be/x' })).toBe(false);
     expect(isSpam({ title: 'Les Spurs vont reprendre sans Tobias Harris', source: 'BasketUSA', url: 'https://www.basketusa.com/x' })).toBe(false);
+    // Paris sportifs : retirés ; « pari » au sens figuré : gardé
+    const u = { source: 'BasketUSA', url: 'https://www.basketusa.com/x' };
+    for (const title of ['Pronostics NBA du 21 octobre : nos paris pour la soirée', 'Lakers – Warriors : paris joueurs, état des blessures et pronostic',
+      'Code promo Unibet BASKET110 : Detroit à 1,93 pour Pistons-Celtics', 'Comment parier sur le basket ?', 'MMBets: the Mavericks are interesting', 'Les pronos de la rédac'])
+      expect(isSpam({ title, ...u })).toBe(true);
+    expect(isSpam({ title: 'Antwerp Giants pakken tweede zege', source: 'Circus Daily', url: 'https://x.y' })).toBe(true);
+    expect(isSpam({ title: 'LeBron James aux Sixers, un dernier pari pour un nouveau titre', ...u })).toBe(false);
+    expect(isSpam({ title: 'Ryan Conwell, le dernier pari du Heat', ...u })).toBe(false);
   });
   it('liens d’image : entités décodées (même deux fois), https', () => {
     expect(cleanImg('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&amp;amp;smart=true&amp;width=1200')).toBe('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&smart=true&width=1200');
