@@ -7,7 +7,7 @@ let done = false;
 
 export function hideSplash() {
   const el = document.getElementById('bh-splash');
-  if (!el || done) return;
+  if (!el || done) { document.documentElement.classList.remove('booting'); return; }
   done = true;
   const prefetch = Promise.allSettled([loadIndex(), loadComps(), loadNews()]);
   const cap = new Promise((r) => setTimeout(r, MAX_WAIT));
@@ -32,6 +32,7 @@ export function hideSplash() {
       // Encore un chargement visible dessous (page lente) : un tour de plus, deux au maximum
       if (!reduce && extra < 2 && busy()) { extra++; setTimeout(fade, CYCLE); return; }
       el.querySelectorAll<SVGElement>('.cc-anim *').forEach((n) => { n.style.animationPlayState = 'paused'; });
+      document.documentElement.classList.remove('booting');
       el.style.opacity = '0';
       setTimeout(() => el.remove(), 400);
     };

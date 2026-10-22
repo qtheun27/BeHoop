@@ -20,6 +20,9 @@
   <!-- Appli installée (iPhone) : au démarrage, iOS recalcule la hauteur de la page (zones sûres) et un centrage à 50 %
        se déplace. On centre donc sur la hauteur réelle de l'écran, qui ne change pas (même valeur pour <Loader full />). -->
   <script>
+    // Tant que l'écran d'ouverture est là, l'appli reste invisible (elle se prépare dessous) : sur iPhone, ses éléments
+    // flous (barre d'onglets…) passaient parfois un instant par-dessus l'animation. Retiré par lib/splash.ts au fondu.
+    document.documentElement.classList.add('booting');
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
@@ -39,6 +42,7 @@
   </div>
   <div id="root"></div>
   <style>
+    .booting #root { visibility: hidden; }
     .bh-splash { position: fixed; inset: 0; z-index: 1000; transition: opacity .35s ease; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
     /* Positions fixes (pas de centrage par la hauteur du contenu) : le chargement de la police ou des styles de l'appli
        ne fait plus bouger l'animation. Même placement que <Loader full /> (theme.css). */
