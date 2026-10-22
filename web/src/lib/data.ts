@@ -92,7 +92,7 @@ export function trName(s: string) {
 export function normalize(s: string) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
 
 /* ---------- Actualités (titre, accroche, source et lien vers l'article original) ---------- */
-export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[]; comps?: string[];
+export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: 'belgique' | 'regional' | 'international' | 'nba'; clubs?: number[]; comps?: string[]; frame?: boolean;
   lang?: 'fr' | 'nl' | 'en' }
 /** Article écrit dans la langue de l'appli (chaque langue a ses propres sources, pas de traduction). */
 export const readable = (n: News) => !n.lang || n.lang === lang();

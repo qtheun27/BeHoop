@@ -98,7 +98,7 @@ export function Explore() {
             <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? trCat(c.teams[0].cat) : t('{n} équipes', { n: c.teams.length })].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
           </a>))}</div>
       )}
-      {foundNews.length > 0 && <><div className="group-title"><><Ico n="news" />{t('Actus')}</></div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide />)}</>}
+      {foundNews.length > 0 && <><div className="group-title"><><Ico n="news" />{t('Actus')}</></div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide list={foundNews} />)}</>}
       </>}
     </Screen>
   );

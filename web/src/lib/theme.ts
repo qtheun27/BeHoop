@@ -14,19 +14,8 @@ export const ACCENTS: { id: string; label: string; css: string }[] = [
   { id: 'nuit', label: 'Nuit & or', css: 'linear-gradient(135deg,#0a0c12 0%,#1c2233 55%,#f2c14e 100%)' },
 ];
 
-/** Thème aux couleurs d'une compétition suivie : couleurs officielles et logo (dark : logo blanc) */
-export const COMP_THEME: Record<string, { c1: string; c2: string; logo: string; dark?: boolean }> = {
-  bnxt: { c1: '#e8501d', c2: '#1d1d1b', logo: '/logos/comps/bnxt.webp' }, nba: { c1: '#1d428a', c2: '#c8102e', logo: '/logos/comps/nba.webp' },
-  wnba: { c1: '#ff6f20', c2: '#0c2340', logo: '/logos/comps/wnba.webp' }, euroleague: { c1: '#ff6c00', c2: '#0f2a4a', logo: '/logos/comps/euroleague.webp' },
-  eurocup: { c1: '#0068b3', c2: '#78be20', logo: '/logos/comps/eurocup.webp' }, bcl: { c1: '#0a1f44', c2: '#00b3e3', logo: '/logos/comps/bcl.webp', dark: true },
-  fec: { c1: '#0077c8', c2: '#00b2a9', logo: '/logos/comps/fec.webp' }, elw: { c1: '#3c3c3c', c2: '#b48a3c', logo: '/logos/comps/elw.webp' },
-  ecw: { c1: '#00427a', c2: '#e5194a', logo: '/logos/comps/ecw.webp' }, lions: { c1: '#c8102e', c2: '#f2c14e', logo: '/logos/comps/lions.webp' },
-  cats: { c1: '#111111', c2: '#f2c14e', logo: '/logos/comps/cats.webp' }, wcq: { c1: '#7b1e1e', c2: '#d4a636', logo: '/logos/comps/wc.webp', dark: true },
-  wwc: { c1: '#7b1e1e', c2: '#d4a636', logo: '/logos/comps/wwc.webp', dark: true }, 'eurobasket-w': { c1: '#0057b8', c2: '#ffd100', logo: '/logos/comps/eurobasket-w.webp', dark: true },
-  ebwq: { c1: '#0057b8', c2: '#ffd100', logo: '/logos/comps/eurobasket-w.webp', dark: true },
-};
 
-/** Terrain dessiné en fond (ui/CourtBg) : couleurs d'origine du club ou de la compétition, quand le fond « parquet » est choisi */
+/** Terrain dessiné en fond (ui/CourtBg) : couleurs d’origine du club, quand le fond « parquet » est choisi */
 export interface CourtTheme { c1: string; c2: string; logo?: string | null; logoDark?: boolean; name: string }
 let court: CourtTheme | null = null;
 const courtSubs = new Set<() => void>();
@@ -57,29 +46,20 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
   r.dataset.bg = p.bg; r.dataset.rt = p.rt ? '1' : '0'; r.dataset.rm = p.rm ? '1' : '0';
   ['--accent', '--accent-base', '--accent-2', '--accent-grad', '--club-logo'].forEach((k) => r.style.removeProperty(k));
   delete r.dataset.logoDark;
-  const comp = p.accent.startsWith('comp:') ? COMP_THEME[p.accent.slice(5)] : undefined;
   let ct: CourtTheme | null = null;
-  if (comp) {
-    // Compétition : mêmes couleurs qu'un club, mais son nom (pas son logo, marque protégée) au centre du parquet
-    const k = clubColors(comp);
-    r.dataset.accent = 'club';
-    r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad);
-    ct = { c1: comp.c1, c2: comp.c2, logo: null, name: COMP_NAME[p.accent.slice(5)] ?? p.accent.slice(5) };
-  } else if (p.accent.startsWith('club:')) {
+  if (p.accent.startsWith('club:')) {
     const c = clubs.find((x) => x.id === Number(p.accent.slice(5)));
     r.dataset.accent = 'club';
     const k = c ? { ...clubColors(c), logo: c.logo, c1: c.c1, c2: c.c2, name: c.short || c.name } : store.get<{ accent: string; second: string; grad: string; logo?: string | null; c1?: string; c2?: string; name?: string } | null>('behoop.themeClub', null);
     // --accent-base : la couleur du club ; theme.css en dérive --accent (éclaircie en mode sombre pour rester lisible)
     if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) r.style.setProperty('--club-logo', `url("${k.logo}")`); store.set('behoop.themeClub', k); }
     if (k?.c1) ct = { c1: k.c1, c2: k.c2 && hex(k.c2) ? k.c2 : k.second, logo: k.logo, name: courtName(k.name ?? '') };
-  } else r.dataset.accent = p.accent;
+  } else r.dataset.accent = p.accent.startsWith('comp:') ? DEFAULT_THEME.accent : p.accent; // ancien thème « compétition » (retiré) → couleur par défaut
   setCourt(p.bg === 'parquet' ? ct : null);
   const meta = document.querySelector('meta[name="theme-color"]:not([media])') ?? Object.assign(document.head.appendChild(document.createElement('meta')), { name: 'theme-color' });
   meta.setAttribute('content', getComputedStyle(r).getPropertyValue('--bg').trim() || '#f4f1ec');
   store.set('behoop.theme', p);
 }
-const COMP_NAME: Record<string, string> = { bnxt: 'BNXT League', nba: 'NBA', wnba: 'WNBA', euroleague: 'EuroLeague', eurocup: 'EuroCup', bcl: 'Champions League',
-  fec: 'FIBA Europe Cup', elw: 'EuroLeague Women', ecw: 'EuroCup Women', lions: 'Belgian Lions', cats: 'Belgian Cats', wcq: 'World Cup', wwc: 'World Cup', 'eurobasket-w': 'EuroBasket', ebwq: 'EuroBasket' };
 /** Nom du club sur le bord du terrain : sans les préfixes BC, BBC, Basket… */
 const courtName = (n: string) => n.replace(/^(r\.?\s*)?(k\.?\s*)?(b\.?b\.?c\.?|b\.?c\.?|basket(ball)?( club)?|royal)\s+/i, '').trim() || n;
 /** Application immédiate au démarrage (avant le chargement du profil). */

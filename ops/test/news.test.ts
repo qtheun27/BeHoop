@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger, isSpam, cleanImg } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger, isSpam, cleanImg, frameAllowed } from '../news';
 import { detectLang } from '../news-lang';
 describe('classement des actualités', () => {
   it.each([
@@ -102,5 +102,14 @@ describe('spam et images', () => {
   it('image de la page : JSON-LD et première grande image si pas d’og:image', () => {
     expect(pageImage('<script type="application/ld+json">{"image":{"@type":"ImageObject","url":"https://a.b/photo.jpg"}}</script>', 'https://a.b/')).toBe('https://a.b/photo.jpg');
     expect(pageImage('<article><img src="/logo.png"><img src="/uploads/2026/match.jpg"></article>', 'https://a.b/n/1')).toBe('https://a.b/uploads/2026/match.jpg');
+  });
+  it('lecteur intégré : on respecte toujours l’interdiction d’affichage dans un cadre', () => {
+    expect(frameAllowed(200, null, null)).toBe(true);
+    expect(frameAllowed(200, 'SAMEORIGIN', null)).toBe(false);
+    expect(frameAllowed(200, 'DENY', null)).toBe(false);
+    expect(frameAllowed(200, null, "default-src 'self'; frame-ancestors 'self' *.cbssports.com")).toBe(false);
+    expect(frameAllowed(200, null, "frame-ancestors *")).toBe(true);
+    expect(frameAllowed(200, null, "upgrade-insecure-requests")).toBe(true);
+    expect(frameAllowed(403, null, null)).toBe(false); // vérification impossible : on n'affiche pas
   });
 });

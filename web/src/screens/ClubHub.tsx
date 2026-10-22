@@ -228,7 +228,7 @@ function HubFeed({ posts, error, retry, games, teamIds, idx, news }: {
       out.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, key: `g${g.id}`, kind: 'scores', el: (
         <GameScoreCard key={`g${g.id}`} g={g} idx={idx} label={mine ? teamLabel(mine) : undefined} />) });
     }
-    for (const n of news) out.push({ t: Date.parse(n.date), key: `n${n.id}`, kind: 'actus', el: <NewsCard key={`n${n.id}`} n={n} wide /> });
+    for (const n of news) out.push({ t: Date.parse(n.date), key: `n${n.id}`, kind: 'actus', el: <NewsCard key={`n${n.id}`} n={n} wide list={news} /> });
     return out.sort((a, b) => b.t - a.t);
   }, [posts, games, teamIds.join(), idx, news]);
   const shown = items.filter((x) => kind === 'tout' || x.kind === kind);

@@ -686,4 +686,10 @@ export const NL: Record<string, string> = {
   "Les noms, logos et marques des clubs, ligues et compétitions appartiennent à leurs propriétaires. Ils servent uniquement à identifier les équipes et compétitions ; BeHoop n'est affilié à aucune fédération, ligue ou club et n'est soutenu par aucun d'eux. Drapeaux : flag-icons (licence MIT).": "Namen, logo's en merken van clubs, liga's en competities behoren toe aan hun eigenaars. Ze dienen enkel om ploegen en competities te herkennen; BeHoop is met geen enkele federatie, liga of club verbonden en wordt door geen van hen gesteund. Vlaggen: flag-icons (MIT-licentie).",
   "Demande de retrait": "Verzoek tot verwijdering",
   "Un titulaire de droits (fédération, club, média, photographe) peut demander le retrait d'un contenu, d'un logo ou d'une source en écrivant à q.theuninck@gmail.com : la demande est traitée rapidement.": "Een rechthebbende (federatie, club, medium, fotograaf) kan de verwijdering van inhoud, een logo of een bron vragen via q.theuninck@gmail.com: de aanvraag wordt snel behandeld.",
+  "Lecteur d’actus": "Nieuwslezer",
+  "Ouvrir sur le site du média": "Openen op de site van het medium",
+  "Actu précédente": "Vorig nieuws",
+  "Actu suivante": "Volgend nieuws",
+  "Lire l’article sur {s}": "Lees het artikel op {s}",
+  "Ce média n’autorise pas l’affichage de ses articles dans une autre appli : il s’ouvre sur son site. Glisse pour passer à l’actu suivante.": "Dit medium staat niet toe dat zijn artikels in een andere app worden getoond: het opent op zijn eigen site. Veeg om naar het volgende nieuws te gaan.",
 };

@@ -1,4 +1,4 @@
-// Fond « parquet » aux couleurs d'un club ou d'une compétition : le terrain entier, peint comme les parquets NBA.
+// Fond « parquet » aux couleurs d’un club : le terrain entier, peint comme les parquets NBA.
 // Mode clair : sol teinté à la couleur du club, bois visible (proposition B) ; mode sombre : sol nuit, lignes de couleur (C).
 // Terrain en portrait sur téléphone, couché sur un écran large. Dessiné en SVG (le logo est une <image>, impossible en fond CSS).
 import { useEffect, useMemo, useState } from 'react';
@@ -36,7 +36,7 @@ function svg(k: CourtTheme, dark: boolean, wide: boolean) {
       : centerName(k.name, k.c1, wide)}
     ${wide ? `${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, -90)}` : `${base(o - 2.6)}${base(H - 2.6)}${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, 90)}`}`;
 }
-/** Compétition (pas de logo : marque protégée) : son nom en lettres de terrain dans le rond, sur une ou deux lignes */
+/** Club sans logo : son nom en lettres de terrain dans le rond, sur une ou deux lignes */
 function centerName(name: string, fill: string, wide: boolean) {
   const words = esc(name.toUpperCase()).split(' ');
   const lines = words.length > 1 && name.length > 9 ? [words.slice(0, Math.ceil(words.length / 2)).join(' '), words.slice(Math.ceil(words.length / 2)).join(' ')] : [words.join(' ')];

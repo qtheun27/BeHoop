@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { readerClick } from '../ui/NewsReader';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
@@ -229,7 +230,7 @@ export function Feed() {
           // Les actus ne remontent pas plus loin que les publications chargées.
           const myNews = (news.data?.items ?? []).filter((n) => (!newsCat || n.cat === newsCat) && readable(n) && relevant(n));
           const allLink = <a className="btn ghost small" style={{ display: 'flex', margin: '0 auto 14px' }} href="#/actus">{t('Toute l’actu du basket ›')}</a>;
-          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="news" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
+          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide list={myNews} />) : <Empty ill="news" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
           const f = FILTERS.find((x) => x.id === filter)!;
           const shown = posts.filter((p) => f.ok(p));
           const oldest = shown.length ? shown[shown.length - 1].createdAt : 0;
@@ -238,7 +239,7 @@ export function Feed() {
             const known = new Set(posts.filter((p) => p.type === 'score' || p.type === 'live').map((p) => p.payload.gameId));
             for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
           }
-          if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide /> }));
+          if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide list={myNews} /> }));
           mix.sort((a, b) => b.t - a.t);
           if (mix.length) return <>{mix.slice(0, filter === 'tout' ? 80 : 60).map((x) => x.el)}{filter === 'tout' && allLink}</>;
           return filter === 'tout' ? <Empty ill="news" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
@@ -272,7 +273,7 @@ function FeedAside() {
     <>
       {top.length > 0 && <section className="aside-card">
         <div className="group-title"><Ico n="news" />{t('À la une')}</div>
-        {top.map((n) => <a key={n.id} className="aside-news" href={n.url} target="_blank" rel="noopener">
+        {top.map((n) => <a key={n.id} className="aside-news" href={n.url} target="_blank" rel="noopener" onClick={readerClick(top, n)}>
           <span className="ph"><Ico n="ball" />{n.image && <img src={n.image} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(e) => e.currentTarget.remove()} />}</span>
           <span><b>{n.title}</b><small>{n.source}</small></span></a>)}
         <a className="aside-more" href="#/actus">{t('Toutes les actus ›')}</a>

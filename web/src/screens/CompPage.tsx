@@ -102,7 +102,7 @@ export function CompPage({ id }: { id: string }) {
         {withTable.length > 1 && <div className="chips">{withTable.map((x) => <button key={x.serie.id} className={`chip${cur.serie.id === x.serie.id ? ' on' : ''}`} onClick={() => setSid(x.serie.id)}>{trName(x.serie.name.split(' · ').slice(1).join(' · ') || x.serie.short || x.serie.name)}</button>)}</div>}
         <StandingsTable rows={cur.standings} names={names} />
       </>)}
-      {tab === 'actus' && (news.data ? (compNews.length ? compNews.slice(0, 30).map((n) => <NewsCard key={n.id} n={n} wide />) : <Empty ill="news" title={t('Pas d’actualité pour cette compétition pour l’instant')} />) : <Skeleton h={200} n={2} />)}
+      {tab === 'actus' && (news.data ? (compNews.length ? compNews.slice(0, 30).map((n) => <NewsCard key={n.id} n={n} wide list={compNews.slice(0, 30)} />) : <Empty ill="news" title={t('Pas d’actualité pour cette compétition pour l’instant')} />) : <Skeleton h={200} n={2} />)}
       {tab === 'equipes' && <div className="group">{teams.map(([tid, name]) => { const e = idx.data?.get(tid); return (
         <a key={tid} className="row" href={`#/equipe/${tid}`} style={{ color: 'inherit' }}>
           <Disc src={e?.club.logo} name={name} size={36} ring={e?.club.c1} /><div className="grow ellipsis">{name}<div className="sub">{e?.club.city}</div></div><span className="chev">›</span>

@@ -1,4 +1,5 @@
 // Actualités basket : Belgique, International, NBA. Visibles sans compte ; on renvoie toujours vers l'article original.
+import { readerClick } from '../ui/NewsReader';
 import { useState } from 'react';
 import { loadNews, readable, type News } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
@@ -33,23 +34,25 @@ function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
   );
 }
 
-export function NewsCard({ n, wide }: { n: News; wide?: boolean }) {
+/** list : les actus affichées autour (le lecteur intégré permet de passer de l'une à l'autre) */
+export function NewsCard({ n, wide, list }: { n: News; wide?: boolean; list?: News[] }) {
   // Grande carte : réactions et commentaires sous l'article (le lien ouvre l'article chez le média)
   if (wide) return (
     <article className="card news">
-      <NewsLink n={n} wide />
+      <NewsLink n={n} wide list={list} />
       <SocialBar k={D.newsThread(n.id)} title={n.title} />
     </article>
   );
-  return <NewsLink n={n} />;
+  return <NewsLink n={n} list={list} />;
 }
 const initials = (s: string) => s.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
-function NewsLink({ n, wide }: { n: News; wide?: boolean }) {
+function NewsLink({ n, wide, list }: { n: News; wide?: boolean; list?: News[] }) {
+  const onClick = readerClick(list ?? [n], n);
   const img = useNewsImage(n);
   const meta = <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Date.parse(n.date))}</span></div>;
   // Pas d'image : carte texte (pastille aux couleurs du média), jamais de grand visuel vide
   if (wide && !img.src) return (
-    <a href={n.url} target="_blank" rel="noopener" className="news-text" style={{ color: 'inherit' }}>
+    <a href={n.url} target="_blank" rel="noopener" onClick={onClick} className="news-text" style={{ color: 'inherit' }}>
       <span className="news-badge" style={{ background: tint(n.source) }} aria-hidden>{initials(n.source) || <Ico n="news" />}</span>
       <span style={{ minWidth: 0 }}>{meta}
         <span style={{ display: '-webkit-box', fontWeight: 700, fontSize: 17, lineHeight: 1.25, marginTop: 6, WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</span>
@@ -57,7 +60,7 @@ function NewsLink({ n, wide }: { n: News; wide?: boolean }) {
     </a>
   );
   return (
-    <a className={wide ? '' : 'card news'} href={n.url} target="_blank" rel="noopener" style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
+    <a className={wide ? '' : 'card news'} href={n.url} target="_blank" rel="noopener" onClick={onClick} style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
       {img.src ? <img src={img.src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={img.fail} style={{ aspectRatio: wide ? '16/8' : '16/9', width: '100%', display: 'block', objectFit: 'cover', background: '#0a0c12' }} />
         : <CourtVisual n={n} ratio="16/9" />}
       <div style={{ padding: '10px 14px 14px' }}>
@@ -84,7 +87,7 @@ export function NewsCarousel() {
       <div className="hstack" style={{ justifyContent: 'space-between', margin: '0 4px 8px' }}>
         <div className="group-title" style={{ margin: 0 }}><><Ico n="news" />{t('À la une')}</></div><a href="#/actus" style={{ fontWeight: 600, fontSize: 15 }}>{t('Toutes les actus ›')}</a>
       </div>
-      <div className="stories" style={{ gap: 12, padding: '2px 2px 10px' }}>{list.map((n) => <NewsCard key={n.id} n={n} />)}</div>
+      <div className="stories" style={{ gap: 12, padding: '2px 2px 10px' }}>{list.map((n) => <NewsCard key={n.id} n={n} list={list} />)}</div>
     </section>
   );
 }
@@ -101,7 +104,7 @@ export function NewsPage() {
     <Screen title={t('Actus')}>
       <div className="chips">{CATS.map(([k, ic, l]) => <button key={k} className={`chip${cat === k ? ' on' : ''}`} onClick={() => setCat(k)} aria-pressed={cat === k}>{ic && <Ico n={ic} />}{t(l)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
-      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="news" title={t('Pas d\'actualité pour le moment')} /> : <div className="news-grid">{list.map((n) => <NewsCard key={n.id} n={n} wide />)}</div>}
+      {!data && !error ? <Skeleton h={240} n={3} /> : list.length === 0 ? <Empty ill="news" title={t('Pas d\'actualité pour le moment')} /> : <div className="news-grid">{list.map((n) => <NewsCard key={n.id} n={n} wide list={list} />)}</div>}
       {other > 0 && <button className="btn ghost small" style={{ margin: '0 auto 12px', display: 'flex' }} onClick={() => setAll(!all)}>{all ? t('Masquer les articles dans d’autres langues') : t('Voir aussi {n} articles dans d’autres langues', { n: other })}</button>}
       <p className="muted center" style={{ fontSize: 12.5 }}>{t('Titres et liens vers les articles des médias cités. Mis à jour deux fois par jour.')}</p>
     </Screen>

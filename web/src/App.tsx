@@ -1,4 +1,5 @@
 import { lazy, Suspense, Component, useEffect, type ReactNode } from 'react';
+import { NewsReader } from './ui/NewsReader';
 import { hideSplash } from './lib/splash';
 import { CourtBg } from './ui/CourtBg';
 import { useRoute } from './lib/router';
@@ -63,6 +64,7 @@ export function App() {
   return (
     <>
       <CourtBg />
+      <NewsReader />
       <Guard key={location.hash}><Suspense fallback={<main className="screen"><Loader /></main>}>{el}</Suspense></Guard>
       {wide && <SideNav tab={page === 'actus' ? 'actus' : tab} />}
       <nav className="tabbar" aria-label={tr('Navigation principale')}>

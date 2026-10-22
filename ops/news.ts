@@ -7,6 +7,8 @@ import { detectLang } from './news-lang';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
+  /** Le média autorise l'affichage de ses pages dans un autre site (lecteur intégré de l'appli) */
+  frame?: boolean;
   /** Compétitions citées (mots-clés de competitions.json : BNXT, NBA, Top Division…) */
   comps?: string[];
   /** Langue de l'article (voir news-lang.ts) */
@@ -78,6 +80,33 @@ export const BETTING = /\bpronos?(?:tics?)?\b|\bpronostiqu|\bparis? (?:joueurs?|
 export const AUTO_RESULTS = /^r[ée]sultats et classements sportifs\b|^uitslagen en klassementen\b/i;
 export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'> & { excerpt?: string }) => SPAM.test(n.title) || AUTO_RESULTS.test(n.title) || BETTING.test(n.title) || BETTING.test(n.excerpt ?? '')
   || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting|paris-sportifs|pronostic|\/paris\/|\/live-stats\./i.test(n.url);
+
+/** Le média accepte-t-il que ses articles s'affichent dans un cadre (iframe) sur un autre site ?
+ *  Non s'il l'interdit (X-Frame-Options, CSP frame-ancestors) ou si on ne peut pas le vérifier : on respecte toujours
+ *  sa protection (la contourner serait illégal, CJUE VG Bild-Kunst, 2021) ; sinon l'appli ouvre le lien sur son site. */
+export function frameAllowed(status: number, xfo: string | null, csp: string | null) {
+  if (status < 200 || status >= 400) return false;
+  if (xfo && /deny|sameorigin/i.test(xfo)) return false;
+  const fa = /frame-ancestors([^;]*)/i.exec(csp ?? '')?.[1]?.trim();
+  if (fa == null || fa === '') return true;
+  return fa.split(/\s+/).some((x) => x === '*' || x === 'https:' || /behoop\.be/.test(x));
+}
+async function frameCheck(items: News[]) {
+  const hosts = new Map<string, boolean>();
+  for (const n of items) {
+    const h = (() => { try { return new URL(n.url).host; } catch { return ''; } })();
+    if (!h || /news\.google\./.test(h)) { n.frame = false; continue; }
+    if (!hosts.has(h)) {
+      try {
+        const r = await fetch(n.url, { headers: { 'User-Agent': BROWSER_UA, Accept: 'text/html' }, redirect: 'follow', signal: AbortSignal.timeout(15_000) });
+        hosts.set(h, frameAllowed(r.status, r.headers.get('x-frame-options'), r.headers.get('content-security-policy')));
+        await r.body?.cancel();
+      } catch { hosts.set(h, false); }
+    }
+    if (hosts.get(h)) n.frame = true; else delete n.frame;
+  }
+  console.log('lecteur intégré :', [...hosts].filter(([, v]) => v).map(([h]) => h).join(', ') || 'aucun média');
+}
 
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }
 
@@ -311,6 +340,7 @@ export async function run(out = 'app-data/news.json') {
   items = [...new Set(seen.values())];
   for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
+  await frameCheck(items);
   // Au plus 300 articles par langue (les plus récents) : une langue très active n'écrase pas les autres
   const perLang: Record<string, number> = {};
   items = items.filter((n) => (perLang[n.lang!] = (perLang[n.lang!] ?? 0) + 1) <= 300);
