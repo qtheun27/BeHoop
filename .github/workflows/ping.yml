@@ -1,0 +1,13 @@
+# Diagnostic manuel : les sources de données répondent-elles depuis GitHub ? (codes HTTP seulement, rien n'est enregistré)
+name: Diagnostic des sources
+on: workflow_dispatch
+permissions: { contents: read }
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://www.awbb.be/ "https://www.awbb.be/wp-json/" https://gestion.awbb.be/ https://vblcb.wisseq.eu/VBLCB_WebService/data/OrgDetailByGuid?issguid=BVBL1001 https://bnxt.sportpress.info/api/v1/; do
+            a=$(curl -s -o /dev/null -w "%{http_code}" -m 20 -A "Mozilla/5.0 (compatible; AWBB-Suivi-Bot/6.0; +https://github.com/)" "$u")
+            echo "$a  $u"
+          done
