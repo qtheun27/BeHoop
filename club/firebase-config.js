@@ -5,7 +5,7 @@
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDHkNK2f2NwxfFfn39w2cr2lu35t4U5MUA",
-  authDomain: "basket-awbb-club.firebaseapp.com",
+  authDomain: "auth.behoop.be",
   projectId: "basket-awbb-club",
   storageBucket: "basket-awbb-club.firebasestorage.app",
   messagingSenderId: "699662188163",

@@ -1,7 +1,8 @@
 // Configuration publique (aucun secret ici : les vraies protections sont les règles Firestore et le Worker).
 export const firebaseConfig = {
   apiKey: 'AIzaSyDHkNK2f2NwxfFfn39w2cr2lu35t4U5MUA',
-  authDomain: 'basket-awbb-club.firebaseapp.com',
+  // Connexion servie sous behoop.be (relais du Worker vers le domaine Firebase du projet, voir worker/src/index.ts)
+  authDomain: 'auth.behoop.be',
   projectId: 'basket-awbb-club',
   storageBucket: 'basket-awbb-club.firebasestorage.app',
   messagingSenderId: '699662188163',
