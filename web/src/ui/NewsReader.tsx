@@ -1,6 +1,7 @@
 // Lecteur d'actus intégré : l'article s'ouvre dans BeHoop, on passe au suivant en glissant (mobile) ou avec les flèches
-// (ordinateur, clavier ← →). Si le média l'autorise (News.frame, vérifié par ops/news.ts), sa page s'affiche dans un cadre ;
-// sinon — on respecte toujours son interdiction — un aperçu soigné (image, titre, extrait) et un bouton vers son site.
+// (ordinateur, clavier ← →). Sa page s'affiche dans un cadre, sauf si le média l'interdit (News.frame === false, vérifié par
+// ops/news.ts) : on respecte toujours son interdiction et on montre un aperçu soigné (image, titre, extrait) + lien vers son site.
+// Média non vérifiable (frame absent, ex. Sudinfo qui refuse les robots) : on essaie le cadre, le navigateur applique sa règle.
 import { useEffect, useRef, useState } from 'react';
 import type { News } from '../lib/data';
 import { t } from '../lib/i18n';
@@ -64,7 +65,7 @@ function Reader() {
           <a className="icon-btn" href={n.url} target="_blank" rel="noopener" aria-label={t('Ouvrir sur le site du média')} title={t('Ouvrir sur le site du média')}><Ico n="external" /></a>
         </header>
         <div key={n.id} className={`reader-body slide-${dir}`}>
-          {n.frame ? <Framed n={n} /> : <Preview n={n} />}
+          {n.frame === false ? <Preview n={n} /> : <Framed n={n} unsure={n.frame !== true} />}
         </div>
         <footer className="reader-foot">
           <button className="icon-btn" disabled={i === 0} onClick={() => go(-1)} aria-label={t('Actu précédente')}><Ico n="chevLeft" /></button>
@@ -79,8 +80,9 @@ function Reader() {
   );
 }
 
-/** Page du média dans un cadre (il l'autorise) ; s'il ne s'affiche pas en 10 s, aperçu à la place */
-function Framed({ n }: { n: News }) {
+/** Page du média dans un cadre ; si elle ne s'affiche pas en 10 s, aperçu à la place.
+ *  unsure : autorisation non vérifiée → petit lien discret vers le site, au cas où le navigateur refuse l'affichage. */
+function Framed({ n, unsure }: { n: News; unsure: boolean }) {
   const [loaded, setLoaded] = useState(false);
   const [slow, setSlow] = useState(false);
   useEffect(() => { const id = setTimeout(() => setSlow(true), 10_000); return () => clearTimeout(id); }, []);
@@ -90,6 +92,7 @@ function Framed({ n }: { n: News }) {
       {!loaded && <div className="reader-loading"><BallSvg /></div>}
       <iframe src={n.url} title={n.title} referrerPolicy="no-referrer" onLoad={() => setLoaded(true)}
         sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms" />
+      {unsure && loaded && <a className="reader-hint" href={n.url} target="_blank" rel="noopener"><Ico n="external" />{t('Page vide ? Ouvrir sur {s}', { s: n.source })}</a>}
     </div>
   );
 }

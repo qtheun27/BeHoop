@@ -692,4 +692,5 @@ export const NL: Record<string, string> = {
   "Actu suivante": "Volgend nieuws",
   "Lire l’article sur {s}": "Lees het artikel op {s}",
   "Ce média n’autorise pas l’affichage de ses articles dans une autre appli : il s’ouvre sur son site. Glisse pour passer à l’actu suivante.": "Dit medium staat niet toe dat zijn artikels in een andere app worden getoond: het opent op zijn eigen site. Veeg om naar het volgende nieuws te gaan.",
+  "Page vide ? Ouvrir sur {s}": "Lege pagina? Openen op {s}",
 };

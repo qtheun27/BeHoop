@@ -692,4 +692,5 @@ export const EN: Record<string, string> = {
   "Actu suivante": "Next story",
   "Lire l’article sur {s}": "Read the article on {s}",
   "Ce média n’autorise pas l’affichage de ses articles dans une autre appli : il s’ouvre sur son site. Glisse pour passer à l’actu suivante.": "This outlet doesn't allow its articles to be shown in another app: it opens on its own site. Swipe to go to the next story.",
+  "Page vide ? Ouvrir sur {s}": "Blank page? Open on {s}",
 };

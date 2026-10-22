@@ -7,7 +7,7 @@ import { detectLang } from './news-lang';
 
 export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
-  /** Le média autorise l'affichage de ses pages dans un autre site (lecteur intégré de l'appli) */
+  /** Affichage de ses pages dans un autre site (lecteur intégré) : true autorisé, false interdit, absent inconnu (site qui bloque les robots) */
   frame?: boolean;
   /** Compétitions citées (mots-clés de competitions.json : BNXT, NBA, Top Division…) */
   comps?: string[];
@@ -82,17 +82,18 @@ export const isSpam = (n: Pick<News, 'title' | 'source' | 'url'> & { excerpt?: s
   || BLOCKED_SOURCES.test(n.source) || /goldenpalace|casino|betting|paris-sportifs|pronostic|\/paris\/|\/live-stats\./i.test(n.url);
 
 /** Le média accepte-t-il que ses articles s'affichent dans un cadre (iframe) sur un autre site ?
- *  Non s'il l'interdit (X-Frame-Options, CSP frame-ancestors) ou si on ne peut pas le vérifier : on respecte toujours
- *  sa protection (la contourner serait illégal, CJUE VG Bild-Kunst, 2021) ; sinon l'appli ouvre le lien sur son site. */
-export function frameAllowed(status: number, xfo: string | null, csp: string | null) {
-  if (status < 200 || status >= 400) return false;
+ *  false s'il l'interdit (X-Frame-Options, CSP frame-ancestors) : on respecte toujours sa protection (la contourner serait
+ *  illégal, CJUE VG Bild-Kunst, 2021) et l'appli montre un aperçu. null si on ne peut pas le vérifier (site qui refuse
+ *  les robots) : l'appli essaie le cadre, et c'est le navigateur qui applique la règle du média. */
+export function frameAllowed(status: number, xfo: string | null, csp: string | null): boolean | null {
+  if (status < 200 || status >= 400) return null;
   if (xfo && /deny|sameorigin/i.test(xfo)) return false;
   const fa = /frame-ancestors([^;]*)/i.exec(csp ?? '')?.[1]?.trim();
   if (fa == null || fa === '') return true;
   return fa.split(/\s+/).some((x) => x === '*' || x === 'https:' || /behoop\.be/.test(x));
 }
 async function frameCheck(items: News[]) {
-  const hosts = new Map<string, boolean>();
+  const hosts = new Map<string, boolean | null>();
   for (const n of items) {
     const h = (() => { try { return new URL(n.url).host; } catch { return ''; } })();
     if (!h || /news\.google\./.test(h)) { n.frame = false; continue; }
@@ -101,11 +102,12 @@ async function frameCheck(items: News[]) {
         const r = await fetch(n.url, { headers: { 'User-Agent': BROWSER_UA, Accept: 'text/html' }, redirect: 'follow', signal: AbortSignal.timeout(15_000) });
         hosts.set(h, frameAllowed(r.status, r.headers.get('x-frame-options'), r.headers.get('content-security-policy')));
         await r.body?.cancel();
-      } catch { hosts.set(h, false); }
+      } catch { hosts.set(h, null); }
     }
-    if (hosts.get(h)) n.frame = true; else delete n.frame;
+    const v = hosts.get(h); if (v == null) delete n.frame; else n.frame = v;
   }
-  console.log('lecteur intégré :', [...hosts].filter(([, v]) => v).map(([h]) => h).join(', ') || 'aucun média');
+  const list = (v: boolean | null) => [...hosts].filter(([, x]) => x === v).map(([h]) => h).join(', ') || '—';
+  console.log(`lecteur intégré — autorisé : ${list(true)}\n  interdit : ${list(false)}\n  inconnu (essai dans l'appli) : ${list(null)}`);
 }
 
 export function hashId(s: string) { let h = 0x811c9dc5; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); }

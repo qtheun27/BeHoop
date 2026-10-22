@@ -34,7 +34,7 @@ function svg(k: CourtTheme, dark: boolean, wide: boolean) {
     <circle cx="${W / 2}" cy="${H / 2}" r="22" fill="${k.logoDark ? '#0d1220' : '#fff'}" stroke="${dark ? k.c2 : k.c1}" stroke-width="1"/>
     ${k.logo ? `<image href="${esc(k.logo)}" x="${W / 2 - 17}" y="${H / 2 - 17}" width="34" height="34" preserveAspectRatio="xMidYMid meet"${wide ? ` transform="rotate(-90 ${W / 2} ${H / 2})"` : ''}/>`
       : centerName(k.name, k.c1, wide)}
-    ${wide ? `${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, -90)}` : `${base(o - 2.6)}${base(H - 2.6)}${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, 90)}`}`;
+    ${wide ? '' /* écran large : pas de nom en haut et en bas (il passerait derrière les titres des pages) */ : `${base(o - 2.6)}${base(H - 2.6)}${side(o / 2 + 2.5, -90)}${side(W - o / 2 - 2.5, 90)}`}`;
 }
 /** Club sans logo : son nom en lettres de terrain dans le rond, sur une ou deux lignes */
 function centerName(name: string, fill: string, wide: boolean) {

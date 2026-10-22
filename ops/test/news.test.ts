@@ -110,6 +110,6 @@ describe('spam et images', () => {
     expect(frameAllowed(200, null, "default-src 'self'; frame-ancestors 'self' *.cbssports.com")).toBe(false);
     expect(frameAllowed(200, null, "frame-ancestors *")).toBe(true);
     expect(frameAllowed(200, null, "upgrade-insecure-requests")).toBe(true);
-    expect(frameAllowed(403, null, null)).toBe(false); // vérification impossible : on n'affiche pas
+    expect(frameAllowed(403, null, null)).toBeNull(); // vérification impossible : l'appli essaie, le navigateur tranche
   });
 });
