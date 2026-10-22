@@ -51,6 +51,12 @@ function compare(label: string, theirs: { name: string; w: number; l: number; ra
 }
 
 const SEASON = 2026;
+// ONLY=DUMP : affiche un match complet (tous les champs) de chaque ligue, pour connaître le format
+if (process.env.ONLY === 'DUMP') {
+  for (const p of ['/v1/games?seasons[]=2025&postseason=false&start_date=2025-12-16&end_date=2025-12-17', '/wnba/v1/games?seasons[]=2026&start_date=2026-07-01&end_date=2026-07-02', '/wnba/v1/teams', '/v1/teams'])
+    console.log('\nDUMP', p, JSON.stringify(await get(p)).slice(0, 2500));
+  process.exit(0);
+}
 // 1. Classements (offre gratuite) : BNXT, EuroLeague, EuroCup, Champions League
 const ONLY = process.env.ONLY ?? ''; // ex. ONLY=WNBA pour ne refaire qu'une ligue
 for (const [lg, base, label] of ([['bnxt', 20e9, 'BNXT League'], ['euroleague', 24e9, 'EuroLeague'], ['eurocup', 25e9, 'EuroCup'], ['bcl', 27e9, 'Champions League']] as const).filter((x) => !ONLY || x[2] === ONLY)) {
