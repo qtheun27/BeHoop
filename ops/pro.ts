@@ -98,6 +98,8 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
   // Reprise des identifiants et infos de la version précédente (couleurs, logo copié, salle, conférence)
   const mine = (x: number) => x >= base && x < base + 1e9;
   const oldClubs = new Map((prev?.clubs ?? []).filter((c) => mine(c.id)).map((c) => [nkey(c.name), c]));
+  // Même équipe sous un autre nom (ex. « Tempo » / « Toronto Tempo ») : on compare aussi le surnom
+  const oldClub = (t: any) => oldClubs.get(nkey(t.full_name)) ?? [...oldClubs.values()].find((c) => nkey(c.name).split(' ').pop() === nkey(t.name ?? t.full_name).split(' ').pop());
   const oldConf = new Map<number, 'E' | 'W'>();
   for (const [sid, rows] of Object.entries(prev?.standings ?? {})) if (+sid === id(base, 900) || +sid === id(base, 901)) for (const r of rows) oldConf.set(r.team, +sid === id(base, 900) ? 'E' : 'W');
   // Vraies équipes : au moins 10 matchs (les équipes All-Star n'en jouent qu'un ou deux)
@@ -110,7 +112,7 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
   const apiConf = (t: any) => (/^east/i.test(t?.conference ?? '') ? 'E' : /^west/i.test(t?.conference ?? '') ? 'W' : null);
   const confOf = new Map<number, 'E' | 'W'>();
   for (const g of real) for (const t of [g.home_team, g.visitor_team]) {
-    const c = apiConf(t) ?? oldConf.get(oldClubs.get(nkey(t.full_name))?.id ?? -1);
+    const c = apiConf(t) ?? oldConf.get(oldClub(t)?.id ?? -1);
     if (c) confOf.set(t.id, c);
   }
   for (const g of real) for (const [t, o] of [[g.home_team, g.visitor_team], [g.visitor_team, g.home_team]]) {
@@ -143,12 +145,13 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
   for (const g of real) for (const t of [g.home_team, g.visitor_team]) teams.set(t.id, t);
   const tid = new Map<number, number>();
   for (const [bid, t] of teams) {
-    const old = oldClubs.get(nkey(t.full_name));
+    const old = oldClub(t);
     const cid = old?.id ?? id(base, 800000 + bid); tid.set(bid, cid);
     const logo = existsSync(`logos/${cid}.webp`) ? `/logos/${cid}.webp` : null;
-    out.clubs.push({ id: cid, name: t.full_name, short: t.name, province: label, logo, c1: old?.c1 ?? '#1a6fe0', c2: old?.c2 ?? '#0a0c12', city: t.city ?? '', venue: null,
+    out.clubs.push({ id: cid, name: old?.name ?? t.full_name, short: old?.short ?? t.name, province: label, logo, c1: old?.c1 ?? '#1a6fe0', c2: old?.c2 ?? '#0a0c12', city: t.city ?? '', venue: null,
       teams: [{ id: cid, name: t.full_name, cat: label, ag: 'seniors' }] });
   }
+  const clubName = new Map(out.clubs.filter((c) => mine(c.id)).map((c) => [c.id, c.name]));
   const sE = id(base, 900), sW = id(base, 901), sPO = id(base, 950), sCup = id(base, 960);
   out.series[sE] = { id: sE, name: `${label} · Conférence Est`, short: label };
   out.series[sW] = { id: sW, name: `${label} · Conférence Ouest`, short: label };
@@ -161,9 +164,10 @@ export async function bdlLeague(out: Pro, prev: Pro | null, league: 'nba' | 'wnb
     if (sid === sPO) out.series[sPO] ??= { id: sPO, name: `${label} · Playoffs`, short: label };
     if (sid === sCup) out.series[sCup] ??= { id: sCup, name: league === 'nba' ? 'NBA · NBA Cup' : "WNBA · Commissioner's Cup Championship", short: label };
     const done = final(g); const hs = done ? Number(score(g, 'h')) : null, as = done ? Number(score(g, 'a')) : null;
-    const old = oldGames.get(`${d}|${nkey(g.home_team.full_name)}|${nkey(g.visitor_team.full_name)}`);
+    const hn = clubName.get(h) ?? g.home_team.full_name, an = clubName.get(a) ?? g.visitor_team.full_name;
+    const old = oldGames.get(`${d}|${nkey(hn)}|${nkey(an)}`);
     const ven = old?.v ? { v: old.v, adr: old.adr } : venueOf.get(h) ?? { v: '', adr: '' };
-    out.games.push({ id: old?.id ?? id(21e9, (league === 'nba' ? 6e8 : 7e8) + g.id), d, t, s: sid, sn: label, h, a, hn: g.home_team.full_name, an: g.visitor_team.full_name, hs, as, ...ven, ty: sid === sCup ? 'coupe' : 'championnat' });
+    out.games.push({ id: old?.id ?? id(21e9, (league === 'nba' ? 6e8 : 7e8) + g.id), d, t, s: sid, sn: label, h, a, hn, an, hs, as, ...ven, ty: sid === sCup ? 'coupe' : 'championnat' });
     if (done && sid !== sPO && sid !== sCup) {
       for (const [me, pf, pa] of [[h, hs!, as!], [a, as!, hs!]] as const) { const r = rec.get(me)!; r.played++; r.pf! += pf; r.pa! += pa; if (pf > pa) r.wins++; else r.losses++; r.pts = r.wins; }
     }
