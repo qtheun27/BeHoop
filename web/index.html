@@ -17,6 +17,16 @@
 </head>
 <body>
   <!-- Écran d'ouverture : affiché tout de suite, retiré par lib/splash.ts quand l'appli et ses données sont prêtes, à la fin d'un tour d'animation (même animation que <Loader full />, voir ui/HoopLoader.tsx, CenterSvg) -->
+  <!-- Appli installée (iPhone) : au démarrage, iOS recalcule la hauteur de la page (zones sûres) et un centrage à 50 %
+       se déplace. On centre donc sur la hauteur réelle de l'écran, qui ne change pas (même valeur pour <Loader full />). -->
+  <script>
+    (function () {
+      var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
+      if (!sa || !screen.height) return;
+      var land = innerWidth > innerHeight, h = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
+      document.documentElement.style.setProperty('--splash-y', Math.round(h / 2) + 'px');
+    })();
+  </script>
   <div class="bh-splash" id="bh-splash" role="status" aria-label="Chargement">
     <svg class="cc-anim" width="150" height="150" viewBox="0 0 140 140" aria-hidden="true">
       <line class="cc-l" x1="0" y1="70" x2="140" y2="70" /><circle class="cc-o" cx="70" cy="70" r="48" /><circle class="cc-n" cx="70" cy="70" r="20" />
@@ -29,8 +39,8 @@
     .bh-splash { position: fixed; inset: 0; z-index: 1000; transition: opacity .35s ease; background: #f4f1ec; font-family: Sora, 'Avenir Next', sans-serif; }
     /* Positions fixes (pas de centrage par la hauteur du contenu) : le chargement de la police ou des styles de l'appli
        ne fait plus bouger l'animation. Même placement que <Loader full /> (theme.css). */
-    .bh-splash .cc-anim { position: absolute; left: 50%; top: 50%; margin: -95px 0 0 -75px; }
-    .bh-splash .bh-wm { position: absolute; left: 0; right: 0; top: 50%; margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
+    .bh-splash .cc-anim { position: absolute; left: 50%; top: var(--splash-y, 50%); margin: -95px 0 0 -75px; }
+    .bh-splash .bh-wm { position: absolute; left: 0; right: 0; top: var(--splash-y, 50%); margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
     .bh-wm { font-size: 22px; letter-spacing: -.035em; } .bh-wm span { font-weight: 300; color: #0d2a5c; } .bh-wm b { font-weight: 700; color: #f26a1b; }
     @media (prefers-color-scheme: dark) { .bh-splash { background: #070b14; } .bh-wm span { color: #fff !important; } }
 /* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */

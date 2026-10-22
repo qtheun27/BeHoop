@@ -693,4 +693,5 @@ export const EN: Record<string, string> = {
   "Lire l’article sur {s}": "Read the article on {s}",
   "Ce média n’autorise pas l’affichage de ses articles dans une autre appli : il s’ouvre sur son site. Glisse pour passer à l’actu suivante.": "This outlet doesn't allow its articles to be shown in another app: it opens on its own site. Swipe to go to the next story.",
   "Page vide ? Ouvrir sur {s}": "Blank page? Open on {s}",
+  "Ce média ne permet pas d’afficher ses articles dans BeHoop : l’article complet s’ouvre sur son site. Glisse pour passer à l’actu suivante.": "This outlet does not allow its articles to be shown in BeHoop: the full article opens on its website. Swipe to go to the next story.",
 };

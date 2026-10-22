@@ -1,7 +1,7 @@
 // Lecteur d'actus intégré : l'article s'ouvre dans BeHoop, on passe au suivant en glissant (mobile) ou avec les flèches
-// (ordinateur, clavier ← →). Sa page s'affiche dans un cadre, sauf si le média l'interdit (News.frame === false, vérifié par
-// ops/news.ts) : on respecte toujours son interdiction et on montre un aperçu soigné (image, titre, extrait) + lien vers son site.
-// Média non vérifiable (frame absent, ex. Sudinfo qui refuse les robots) : on essaie le cadre, le navigateur applique sa règle.
+// (ordinateur, clavier ← →). Sa page s'affiche dans un cadre seulement si le média l'autorise (News.frame === true, vérifié par
+// ops/news.ts) ; sinon (interdit, ou impossible à vérifier comme Sudinfo, qui finit en page blanche) : aperçu soigné
+// (image, titre, extrait) et bouton vers son site. On respecte toujours la protection du média.
 import { useEffect, useRef, useState } from 'react';
 import type { News } from '../lib/data';
 import { t } from '../lib/i18n';
@@ -65,7 +65,7 @@ function Reader() {
           <a className="icon-btn" href={n.url} target="_blank" rel="noopener" aria-label={t('Ouvrir sur le site du média')} title={t('Ouvrir sur le site du média')}><Ico n="external" /></a>
         </header>
         <div key={n.id} className={`reader-body slide-${dir}`}>
-          {n.frame === false ? <Preview n={n} /> : <Framed n={n} unsure={n.frame !== true} />}
+          {n.frame === true ? <Framed n={n} /> : <Preview n={n} />}
         </div>
         <footer className="reader-foot">
           <button className="icon-btn" disabled={i === 0} onClick={() => go(-1)} aria-label={t('Actu précédente')}><Ico n="chevLeft" /></button>
@@ -80,9 +80,8 @@ function Reader() {
   );
 }
 
-/** Page du média dans un cadre ; si elle ne s'affiche pas en 10 s, aperçu à la place.
- *  unsure : autorisation non vérifiée → petit lien discret vers le site, au cas où le navigateur refuse l'affichage. */
-function Framed({ n, unsure }: { n: News; unsure: boolean }) {
+/** Page du média dans un cadre (il l'autorise) ; si elle ne s'affiche pas en 10 s, aperçu à la place */
+function Framed({ n }: { n: News }) {
   const [loaded, setLoaded] = useState(false);
   const [slow, setSlow] = useState(false);
   useEffect(() => { const id = setTimeout(() => setSlow(true), 10_000); return () => clearTimeout(id); }, []);
@@ -92,7 +91,6 @@ function Framed({ n, unsure }: { n: News; unsure: boolean }) {
       {!loaded && <div className="reader-loading"><BallSvg /></div>}
       <iframe src={n.url} title={n.title} referrerPolicy="no-referrer" onLoad={() => setLoaded(true)}
         sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms" />
-      {unsure && loaded && <a className="reader-hint" href={n.url} target="_blank" rel="noopener"><Ico n="external" />{t('Page vide ? Ouvrir sur {s}', { s: n.source })}</a>}
     </div>
   );
 }
@@ -107,7 +105,7 @@ function Preview({ n }: { n: News }) {
         <h1>{n.title}</h1>
         {n.excerpt && <p>{n.excerpt}</p>}
         <a className="btn" href={n.url} target="_blank" rel="noopener"><Ico n="external" />{t('Lire l’article sur {s}', { s: n.source })}</a>
-        <p className="muted" style={{ fontSize: 12.5 }}>{t('Ce média n’autorise pas l’affichage de ses articles dans une autre appli : il s’ouvre sur son site. Glisse pour passer à l’actu suivante.')}</p>
+        <p className="muted" style={{ fontSize: 12.5 }}>{t('Ce média ne permet pas d’afficher ses articles dans BeHoop : l’article complet s’ouvre sur son site. Glisse pour passer à l’actu suivante.')}</p>
       </div>
     </article>
   );

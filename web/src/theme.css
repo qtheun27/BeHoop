@@ -311,10 +311,10 @@ html { overflow-x: hidden; }
 .loader { display: grid; place-items: center; gap: 14px; padding: 64px 0; }
 .loader.full { position: fixed; inset: 0; z-index: 100; padding: 0; background: var(--bg); display: block; }
 /* Même placement exact que l'écran d'ouverture de web/index.html (aucun saut au passage de l'un à l'autre) */
-.loader.full .cc-anim { position: absolute; left: 50%; top: 50%; margin: -95px 0 0 -75px; }
+.loader.full .cc-anim { position: absolute; left: 50%; top: var(--splash-y, 50%); margin: -95px 0 0 -75px; }
 .loader .wm-load { font-family: Sora, 'Avenir Next', sans-serif; font-size: 22px; letter-spacing: -.035em; color: var(--brand-be, #0d2a5c); }
 .loader .wm-load i { font-style: normal; font-weight: 700; color: #f26a1b; }
-.loader.full .wm-load { position: absolute; left: 0; right: 0; top: 50%; margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
+.loader.full .wm-load { position: absolute; left: 0; right: 0; top: var(--splash-y, 50%); margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
 /* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
 .cc-anim { overflow: visible; }
 .cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
@@ -356,43 +356,53 @@ html { overflow-x: hidden; }
 .car-meet { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 .source-note { font-size: 12px; color: var(--text2); text-align: center; padding: 10px 8px 4px; }
 .group .source-note { border-top: 1px solid var(--sep); }
-/* Lecteur d'actus intégré (ui/NewsReader.tsx). Mobile : plein écran, barres opaques, zones sûres de l'iPhone respectées. */
-.reader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; height: 100lvh; z-index: 200; background: rgba(5, 8, 15, .55); animation: reader-in .22s var(--ease, ease-out); }
+/* Lecteur d'actus intégré (ui/NewsReader.tsx). Mobile : mêmes calculs que l'en-tête et la barre d'onglets de l'appli —
+   barre du haut flottante sous l'heure (+22 px dans l'appli installée, hors de la zone floutée par iOS), barre du bas
+   flottante à 10 px au-dessus de la zone sûre ; l'article s'affiche entre les deux. */
+.reader { position: fixed; inset: 0; z-index: 200; background: var(--bg); animation: reader-in .22s var(--ease, ease-out);
+  --r-top: calc(var(--safe-t) + 8px); --r-bar: 52px; --r-foot: 58px; }
+@media (display-mode: standalone) { .reader { --r-top: calc(var(--safe-t) + 22px); } }
 @keyframes reader-in { from { opacity: 0; } }
-.reader-panel { position: absolute; inset: 0; background: var(--bg); display: flex; flex-direction: column; overflow: hidden; }
-.reader-bar, .reader-foot { flex: none; display: flex; align-items: center; gap: 6px; padding: 6px 8px; background: var(--bg); }
-.reader-bar { padding-top: calc(6px + env(safe-area-inset-top)); border-bottom: 1px solid var(--sep); }
-.reader-foot { border-top: 1px solid var(--sep); padding-bottom: max(6px, calc(env(safe-area-inset-bottom) - 14px)); }
-.reader-bar .icon-btn, .reader-foot .icon-btn { width: 40px; height: 40px; }
+.reader-panel { position: absolute; inset: 0; background: var(--bg); overflow: hidden; }
+/* Fondu sous l'heure / la batterie, comme .navbar::before */
+.reader-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(var(--r-top) + 8px); z-index: 2; pointer-events: none;
+  background: linear-gradient(var(--bg) 60%, color-mix(in srgb, var(--bg) 0%, transparent)); }
+.reader-bar, .reader-foot { position: absolute; left: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 0 8px; max-width: 720px; margin: 0 auto;
+  border-radius: 26px; border: 1px solid var(--glass-border); background: var(--glass); box-shadow: 0 12px 40px rgba(20,40,80,.16);
+  backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px); }
+.reader-bar { top: var(--r-top); height: var(--r-bar); }
+.reader-foot { bottom: calc(10px + var(--safe-b)); height: var(--r-foot); }
+.reader-bar .icon-btn, .reader-foot .icon-btn { width: 40px; height: 40px; flex: none; }
 .reader-src { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; font-size: 13px; white-space: nowrap; overflow: hidden; }
-.reader-count { font-size: 13px; font-variant-numeric: tabular-nums; }
+.reader-count { font-size: 13px; font-variant-numeric: tabular-nums; flex: none; }
 .reader-social { flex: 1; min-width: 0; overflow-x: auto; display: flex; justify-content: center; }
-.reader-social .card-actions { margin: 0; padding: 0; border: 0; gap: 6px; }
-.reader-social .card-actions > span { display: none; }
+.reader-social .card-actions { margin: 0; padding: 0; border: 0; gap: 6px; display: flex; align-items: center; }
+.reader-social .card-actions > span:empty { display: none; }
 .reader-foot .icon-btn:disabled, .reader-side:disabled { opacity: .25; }
-.reader-body { flex: 1; min-height: 0; position: relative; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+/* Zone de l'article : entre les deux barres */
+.reader-body { position: absolute; left: 0; right: 0; top: calc(var(--r-top) + var(--r-bar) + 8px); bottom: calc(10px + var(--safe-b) + var(--r-foot) + 8px);
+  overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
 .reader-body.slide-1 { animation: slide-from-right .25s var(--ease, ease-out); }
 .reader-body.slide--1 { animation: slide-from-left .25s var(--ease, ease-out); }
 @keyframes slide-from-right { from { transform: translateX(40px); opacity: 0; } }
 @keyframes slide-from-left { from { transform: translateX(-40px); opacity: 0; } }
-.reader-frame { position: absolute; inset: 0; background: #fff; }
+.reader-frame { position: absolute; inset: 0; background: #fff; border-radius: 18px; overflow: hidden; margin: 0 6px; }
 .reader-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 .reader-loading { position: absolute; inset: 0; display: grid; place-items: center; background: var(--bg); }
-.reader-hint { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 20px;
-  background: rgba(10, 12, 18, .82); color: #fff; font-size: 13px; font-weight: 600; white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-.reader-hint .ico { width: 15px; height: 15px; }
-.reader-preview { max-width: 720px; margin: 0 auto; padding-bottom: 24px; }
-.reader-preview img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #0a0c12; }
-.reader-text { padding: 18px 18px 0; }
+.reader-preview { max-width: 720px; margin: 0 auto; padding: 0 10px 16px; }
+.reader-preview img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: #0a0c12; border-radius: 18px; }
+.reader-text { padding: 16px 8px 0; }
 .reader-text h1 { font-size: 24px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -.01em; }
 .reader-text > p:first-of-type { font-size: 16.5px; line-height: 1.5; color: var(--text); opacity: .85; margin: 0 0 18px; }
 .reader-text .btn { width: 100%; justify-content: center; gap: 8px; }
 .reader-side { display: none; }
 @media (min-width: 1100px) {
   /* Ordinateur : fenêtre centrée dans la zone de contenu (à droite du menu), flèches de part et d'autre */
-  .reader { height: auto; display: grid; place-items: center; padding-left: var(--side-w); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .reader { display: grid; place-items: center; padding-left: var(--side-w); background: rgba(5, 8, 15, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); --r-top: 10px; }
   .reader-panel { position: relative; inset: auto; width: min(920px, calc(100vw - var(--side-w) - 190px)); height: 92vh; border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
-  .reader-bar { padding: 8px 12px; } .reader-foot { padding: 8px 12px; }
+  .reader-panel::before { display: none; }
+  .reader-foot { bottom: 10px; }
+  .reader-body { bottom: calc(10px + var(--r-foot) + 8px); }
   .reader-side { display: grid; place-items: center; position: fixed; top: 50%; width: 56px; height: 56px; margin-top: -28px; border-radius: 50%; border: 0; background: var(--bg2); color: var(--text); box-shadow: 0 8px 24px rgba(0,0,0,.3); cursor: pointer; }
   .reader-side .ico { width: 26px; height: 26px; }
   .reader-side.left { left: calc(50% + var(--side-w) / 2 - min(460px, (100vw - var(--side-w) - 190px) / 2) - 72px); }
