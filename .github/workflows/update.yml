@@ -25,8 +25,14 @@ jobs:
         run: pip install requests pillow
 
       - name: Interroger l'API Basket Hainaut
-        run: python scraper.py
-        # AWBB momentanément indisponible (ex. 403) : on garde ses données précédentes et le reste se met à jour
+        # Relance automatique : jusqu'à 3 essais espacés de 3 min (un refus passager de l'AWBB ne prive plus la mise à jour
+        # de ses données). Si ça échoue encore, on garde ses données précédentes et le reste se met à jour.
+        run: |
+          for i in 1 2 3; do
+            python scraper.py && exit 0
+            [ $i -lt 3 ] && echo "AWBB indisponible (essai $i/3), nouvel essai dans 3 min" && sleep 180
+          done
+          exit 1
         continue-on-error: true
 
       # --- BeHoop Social (ajouts) : ces étapes ne peuvent jamais bloquer la mise à jour du site ---
