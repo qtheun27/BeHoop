@@ -1037,4 +1037,11 @@ export const NL: Record<string, string> = {
   "Pas d’Espace Club": "Geen Clubruimte",
   "Bannir {n} ?": "{n} verbannen?",
   "pas de profil BeHoop": "geen BeHoop-profiel",
+  "Rechercher un club": "Club zoeken",
+  "Clubs avec un Espace Club actif": "Clubs met een actieve Clubruimte",
+  "Aucun admin": "Geen beheerder",
+  "Admins : {n}": "Beheerders: {n}",
+  "Inviter un admin du club (e-mail)": "Een clubbeheerder uitnodigen (e-mail)",
+  "Invitation créée. La personne se connecte sur BeHoop avec cette adresse.": "Uitnodiging aangemaakt. De persoon logt in op BeHoop met dit adres.",
+  "L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).": "De clubbeheerder nodigt daarna zelf zijn coaches, spelers en ouders uit (of deelt de QR-code van de ploegen).",
 };

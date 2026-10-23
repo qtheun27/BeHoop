@@ -1037,4 +1037,11 @@ export const EN: Record<string, string> = {
   "Pas d’Espace Club": "No Club Space",
   "Bannir {n} ?": "Ban {n}?",
   "pas de profil BeHoop": "no BeHoop profile",
+  "Rechercher un club": "Search a club",
+  "Clubs avec un Espace Club actif": "Clubs with an active Club Space",
+  "Aucun admin": "No admin",
+  "Admins : {n}": "Admins: {n}",
+  "Inviter un admin du club (e-mail)": "Invite a club admin (email)",
+  "Invitation créée. La personne se connecte sur BeHoop avec cette adresse.": "Invitation created. The person signs in to BeHoop with this address.",
+  "L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).": "The club admin then invites their own coaches, players and parents (or shares the team QR codes).",
 };

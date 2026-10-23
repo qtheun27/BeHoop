@@ -2,19 +2,20 @@
 import { useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { teamIndex, teamLabel } from '../lib/data';
+import { teamIndex, teamLabel, loadIndex } from '../lib/data';
+import { api } from '../lib/api';
 import { Screen, Empty, Skeleton, useAsync, Avatar } from '../ui/kit';
 import { PostCard } from './Feed';
 import { t } from '../lib/i18n';
 
 export default function Moderation() {
   const s = useSession();
-  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users'>('requests');
+  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs'>('requests');
   if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
     <Screen title={t('Modération')} back="profil">
-      <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
-      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}
+      <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <Clubs />}
     </Screen>
   );
 }
@@ -108,10 +109,12 @@ function Teams() {
 /** Tous les comptes BeHoop (profils) avec leur rôle éventuel dans l'Espace Club : recherche par nom */
 interface Account { uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string }[] }
 /** Liste fusionnée côté serveur (réservée au super admin) : comptes BeHoop et comptes Espace Club */
-const loadAccounts = async () => (await (await import('../lib/api')).api<Account[]>('/admin/accounts')).sort((a, b) => a.name.localeCompare(b.name));
+const loadAccounts = async () => (await api<Account[]>('/admin/accounts')).sort((a, b) => a.name.localeCompare(b.name));
 const ROLE_FR: Record<string, string> = { super_admin: 'Super admin', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
 function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; action: (a: Account) => React.ReactNode }) {
   const acc = useAsync(loadAccounts, []);
+  const idx = useAsync(loadIndex, []);
+  const cname = (c: { club_id: string; club_name?: string }) => idx.data?.clubs.find((x) => String(x.id) === String(c.club_id))?.name ?? (c.club_name || c.club_id || '');
   const [q, setQ] = useState('');
   if (acc.loading) return <Skeleton n={3} />;
   if (acc.error) return <Empty ill="alert" title={acc.error} />;
@@ -125,7 +128,7 @@ function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; actio
           <div key={a.uid} className="row" onClick={() => onPick(a)}>
             <Avatar name={a.name} src={a.avatar} />
             <div className="grow">{a.name}{a.banned && <b style={{ color: 'var(--red)' }}> · {t('banni')}</b>}
-              <div className="sub">{a.clubs?.length ? a.clubs.map((c) => `${t(ROLE_FR[c.role] ?? c.role)} · ${c.club_name || c.club_id}`).join(' / ') : t('Pas d’Espace Club')}{!a.profile ? ` · ${t('pas de profil BeHoop')}` : ''}{a.email ? ` · ${a.email}` : ''}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
+              <div className="sub">{a.clubs?.length ? a.clubs.map((c) => `${t(ROLE_FR[c.role] ?? c.role)}${cname(c) ? ` · ${cname(c)}` : ''}`).join(' / ') : t('Pas d’Espace Club')}{!a.profile ? ` · ${t('pas de profil BeHoop')}` : ''}{a.email ? ` · ${a.email}` : ''}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
             {action(a)}
           </div>
         ))}
@@ -139,4 +142,38 @@ function Users() {
   return <AccountPicker key={n} onPick={() => {}} action={(a) => (a.banned
     ? <button className="btn small secondary" onClick={async () => { await D.banUser(a.uid, false); s.toast(t('Compte rétabli')); setN(n + 1); }}>{t('Rétablir')}</button>
     : a.profile && a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
+}
+
+/** Espace Club des clubs : qui administre quel club ; inviter l'admin d'un club (super admin) */
+function Clubs() {
+  const s = useSession();
+  const idx = useAsync(loadIndex, []);
+  const acc = useAsync(loadAccounts, []);
+  const [q, setQ] = useState('');
+  const [sel, setSel] = useState<{ id: number; name: string } | null>(null);
+  const [email, setEmail] = useState('');
+  const admins = (id: number) => (acc.data ?? []).filter((a) => a.clubs?.some((c) => c.club_id === String(id) && c.role === 'club_admin'));
+  const active = new Set((acc.data ?? []).flatMap((a) => (a.clubs ?? []).map((c) => c.club_id)));
+  const list = (idx.data?.clubs ?? []).filter((c) => (q.length > 1 ? c.name.toLowerCase().includes(q.toLowerCase()) : active.has(String(c.id)))).slice(0, 30);
+  return (
+    <>
+      <div className="search"><input className="field" placeholder={t('Rechercher un club')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
+      {q.length < 2 && <p className="muted" style={{ fontSize: 13, margin: '0 4px 8px' }}>{t('Clubs avec un Espace Club actif')}</p>}
+      <div className="group">
+        {list.map((c) => <button key={c.id} className="row" onClick={() => setSel({ id: c.id, name: c.name })}><div className="grow">{c.name}
+          <div className="sub">{admins(c.id).map((a) => a.name).join(', ') || t('Aucun admin')}</div></div><span className="chev">›</span></button>)}
+      </div>
+      {sel && <div className="group" style={{ padding: 14 }}>
+        <b>{sel.name}</b>
+        <p className="muted" style={{ fontSize: 13 }}>{t('Admins : {n}', { n: admins(sel.id).map((a) => `${a.name}${a.email ? ` (${a.email})` : ''}`).join(', ') || '—' })}</p>
+        <label className="label">{t('Inviter un admin du club (e-mail)')}</label>
+        <div className="hstack"><input className="field" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@club.be" />
+          <button className="btn small" disabled={!email.includes('@')} onClick={async () => {
+            try { await api('/admin/invite-admin', { email, club_id: sel.id, club_name: sel.name }); s.toast(t('Invitation créée. La personne se connecte sur BeHoop avec cette adresse.')); setEmail(''); }
+            catch { s.toast(t('Accès refusé.')); }
+          }}>{t('Inviter')}</button></div>
+        <p className="muted" style={{ fontSize: 13 }}>{t('L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).')}</p>
+      </div>}
+    </>
+  );
 }

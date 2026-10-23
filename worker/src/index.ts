@@ -324,6 +324,15 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       out.set(id, o); }
     return json([...out.values()]);
   }
+  // Super admin : nommer l'admin d'un club (invitation club_admin), comme l'ancien écran « Console » de l'Espace Club
+  if (path === '/admin/invite-admin') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const email = String(body.email ?? '').trim().toLowerCase(), clubId = String(body.club_id ?? '').replace(/\D/g, '');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !clubId) return json({ ok: false }, 400);
+    await fs.set(`invitations/${email}`, { email, role: 'club_admin', club_id: clubId, club_name: String(body.club_name ?? '').slice(0, 80), team_id: null, status: 'pending', created_by: user.uid, created_at: new Date() } as any, false);
+    await fs.set(`clubs/${clubId}`, { name: String(body.club_name ?? '').slice(0, 80), active: true } as any);
+    return json({ ok: true });
+  }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {
     // Rejoindre l'Espace Club par le code (QR) d'une équipe, sans invitation par e-mail
