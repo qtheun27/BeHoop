@@ -334,6 +334,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     for (const u of us) { const id = u._path.split('/').pop(), o = out.get(id) ?? { uid: id, name: u.display_name ?? u.email ?? '?', profile: false };
       o.email = u.email ?? null; o.clubs = Object.keys(u.clubs ?? {}).length ? Object.entries(u.clubs).map(([c, m]: any) => ({ club_id: c, club_name: m.club_name, role: m.role })) : [{ club_id: u.club_id, club_name: u.club_name, role: u.role }];
       out.set(id, o); }
+    const sa = out.get(user.uid); if (sa) sa.superAdmin = true;
     return json([...out.values()]);
   }
   // Super admin : nommer l'admin d'un club (invitation club_admin), comme l'ancien écran « Console » de l'Espace Club
@@ -369,6 +370,37 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!uid || uid === user.uid) return json({ ok: false }, 400);
     await fs.delete(`users/${uid}`);
     return json({ ok: true });
+  }
+  // Super admin : rôle d'un compte dans un club (role null = retirer de ce club). Le club actif suit : premier club restant.
+  if (path === '/admin/set-role') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const uid = String(body.uid ?? '').replace(/[^\w-]/g, ''), clubId = String(body.club_id ?? '').replace(/\D/g, '');
+    const role = body.role == null ? null : String(body.role);
+    if (!uid || !clubId || (role && !['club_admin', 'coach', 'player', 'parent', 'super_admin'].includes(role))) return json({ ok: false }, 400);
+    const u = await fs.get<any>(`users/${uid}`);
+    const clubs: Record<string, any> = { ...(u?.clubs ?? {}) };
+    if (u?.club_id) clubs[u.club_id] = { ...clubs[u.club_id], role: u.role, club_name: u.club_name ?? '', team_ids: u.team_ids ?? [], children_player_ids: u.children_player_ids ?? [] };
+    if (role) clubs[clubId] = { ...clubs[clubId], role, club_name: String(body.club_name ?? clubs[clubId]?.club_name ?? '').slice(0, 80), team_ids: Array.isArray(body.team_ids) ? body.team_ids.map(String) : clubs[clubId]?.team_ids ?? [] };
+    else delete clubs[clubId];
+    const ids = Object.keys(clubs);
+    if (!ids.length) { await fs.delete(`users/${uid}`); return json({ ok: true }); }
+    const active = role ? clubId : u?.club_id && u.club_id !== clubId ? u.club_id : ids[0], cur = clubs[active];
+    await fs.set(`users/${uid}`, { role: cur.role, club_id: active, club_name: cur.club_name ?? '', team_ids: cur.team_ids ?? [], children_player_ids: cur.children_player_ids ?? [], clubs: clubs as any, club_ids: ids,
+      ...(u ? {} : { email: String(body.email ?? ''), display_name: String(body.name ?? ''), created_at: new Date() }) } as any, false);
+    // Coach : la fiche équipe garde la liste de ses coachs
+    for (const t of (role === 'coach' ? clubs[clubId].team_ids : []) as string[]) { const tm = await fs.get<any>(`teams/${t}`); await fs.set(`teams/${t}`, { club_id: clubId, coach_uids: [...new Set([...(tm?.coach_uids ?? []), uid])] } as any); }
+    return json({ ok: true });
+  }
+  // Super admin : supprimer complètement un compte (connexion, profil BeHoop, rôle Espace Club)
+  if (path === '/admin/delete-account') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const uid = String(body.uid ?? '').replace(/[^\w-]/g, '');
+    if (!uid || uid === user.uid) return json({ ok: false }, 400);
+    await fs.delete(`users/${uid}`).catch(() => {});
+    await fs.delete(`profiles/${uid}`).catch(() => {});
+    const r = await fetch(`https://identitytoolkit.googleapis.com/v1/projects/${env.FIREBASE_PROJECT_ID}/accounts:delete`, {
+      method: 'POST', headers: { Authorization: `Bearer ${await accessToken(env.FIREBASE_SERVICE_ACCOUNT)}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ localId: uid }) });
+    return json({ ok: true, auth: r.ok });
   }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {

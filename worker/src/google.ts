@@ -16,7 +16,7 @@ export async function accessToken(saJson: string): Promise<string> {
   const sa = JSON.parse(saJson) as { client_email: string; private_key: string };
   const key = await importPKCS8(sa.private_key, 'RS256');
   const now = Math.floor(Date.now() / 1000);
-  const assertion = await new SignJWT({ scope: 'https://www.googleapis.com/auth/datastore https://www.googleapis.com/auth/firebase.messaging' })
+  const assertion = await new SignJWT({ scope: 'https://www.googleapis.com/auth/datastore https://www.googleapis.com/auth/firebase.messaging https://www.googleapis.com/auth/identitytoolkit' })
     .setProtectedHeader({ alg: 'RS256', typ: 'JWT' }).setIssuer(sa.client_email).setAudience('https://oauth2.googleapis.com/token')
     .setIssuedAt(now).setExpirationTime(now + 3600).sign(key);
   const r = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
