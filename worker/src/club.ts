@@ -80,6 +80,42 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     await sync(user.uid);
   };
 
+  /** Ajouter, modifier (old_role → role) ou retirer (role null) un espace d'un compte */
+  const setRole = async (body: any) => {
+    // Ajouter, modifier (old_role → role) ou retirer (role null) un espace d'un compte
+    const uid = String(body.uid ?? '').replace(/[^\w-]/g, ''), club = String(body.club_id ?? '').replace(/\D/g, '');
+    const role = body.role == null ? null : String(body.role), old = body.old_role ? String(body.old_role) : null;
+    if (!uid || !club || (role && !ROLES.includes(role))) return false;
+    const u = await fs.get<any>(`users/${uid}`), sp = spacesOf(u);
+    const prev = old ? sp[key(club, old)] : undefined;
+    if (old) delete sp[key(club, old)];
+    if (prev?.role === 'coach') for (const t of prev.team_ids ?? []) if (role !== 'coach' || (Array.isArray(body.team_ids) && !body.team_ids.includes(t))) await teamCoach(club, t, uid, false);
+    let k: string | null = null;
+    if (role) {
+      k = key(club, role);
+      const base = sp[k] ?? (prev && prev.role === role ? prev : { club_id: club, role, team_ids: [], children_player_ids: role === 'parent' ? prev?.children_player_ids ?? [] : [] });
+      sp[k] = { ...base, club_id: club, role, club_name: String(body.club_name ?? base.club_name ?? '').slice(0, 80), ...(Array.isArray(body.team_ids) ? { team_ids: body.team_ids.map(String) } : {}) };
+      if (role === 'coach') for (const t of sp[k].team_ids ?? []) await teamCoach(club, t, uid, true);
+      if (role === 'player') {
+        // Joueur : sa fiche dans ce club (créée si besoin), avec son équipe
+        const card = (await fs.query('players', [['account_uid', 'EQUAL', uid]])).find((p: any) => String(p.club_id) === club);
+        const team = body.team_id === undefined ? undefined : body.team_id ? String(body.team_id) : null;
+        if (card) { if (team !== undefined) await fs.set(card._path, { team_id: team } as any); }
+        else await newPlayer(club, team ?? null, { account: uid, prenom: String(body.name ?? u?.display_name ?? '').split(' ')[0] || String(body.name ?? '') });
+      }
+    }
+    await save(uid, u, sp, k ?? (u ? key(String(u.club_id), u.role) : null), { email: String(body.email ?? ''), name: String(body.name ?? '') });
+    return true;
+  };
+
+  if (path === '/club/member') {
+    // Admin du club (ou super admin) : rôles des membres de SON club
+    const me = await fs.get<any>(`users/${user.uid}`), club = String(body.club_id ?? '').replace(/\D/g, '');
+    if (!isAdmin && !spacesOf(me)[key(club, 'club_admin')]) return json({ ok: false }, 403);
+    if (body.role === 'super_admin') return json({ ok: false }, 400);
+    return json({ ok: await setRole(body) });
+  }
+
   if (path === '/club/sync') return json({ ok: true, teams: await sync(user.uid) });
 
   if (path === '/club/switch') {
@@ -173,32 +209,7 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     return json([...out.values()]);
   }
 
-  if (path === '/admin/set-role') {
-    // Ajouter, modifier (old_role → role) ou retirer (role null) un espace d'un compte
-    const uid = String(body.uid ?? '').replace(/[^\w-]/g, ''), club = String(body.club_id ?? '').replace(/\D/g, '');
-    const role = body.role == null ? null : String(body.role), old = body.old_role ? String(body.old_role) : null;
-    if (!uid || !club || (role && !ROLES.includes(role))) return json({ ok: false }, 400);
-    const u = await fs.get<any>(`users/${uid}`), sp = spacesOf(u);
-    const prev = old ? sp[key(club, old)] : undefined;
-    if (old) delete sp[key(club, old)];
-    if (prev?.role === 'coach') for (const t of prev.team_ids ?? []) if (role !== 'coach' || (Array.isArray(body.team_ids) && !body.team_ids.includes(t))) await teamCoach(club, t, uid, false);
-    let k: string | null = null;
-    if (role) {
-      k = key(club, role);
-      const base = sp[k] ?? (prev && prev.role === role ? prev : { club_id: club, role, team_ids: [], children_player_ids: role === 'parent' ? prev?.children_player_ids ?? [] : [] });
-      sp[k] = { ...base, club_id: club, role, club_name: String(body.club_name ?? base.club_name ?? '').slice(0, 80), ...(Array.isArray(body.team_ids) ? { team_ids: body.team_ids.map(String) } : {}) };
-      if (role === 'coach') for (const t of sp[k].team_ids ?? []) await teamCoach(club, t, uid, true);
-      if (role === 'player') {
-        // Joueur : sa fiche dans ce club (créée si besoin), avec son équipe
-        const card = (await fs.query('players', [['account_uid', 'EQUAL', uid]])).find((p: any) => String(p.club_id) === club);
-        const team = body.team_id === undefined ? undefined : body.team_id ? String(body.team_id) : null;
-        if (card) { if (team !== undefined) await fs.set(card._path, { team_id: team } as any); }
-        else await newPlayer(club, team ?? null, { account: uid, prenom: String(body.name ?? u?.display_name ?? '').split(' ')[0] || String(body.name ?? '') });
-      }
-    }
-    await save(uid, u, sp, k ?? (u ? key(String(u.club_id), u.role) : null), { email: String(body.email ?? ''), name: String(body.name ?? '') });
-    return json({ ok: true });
-  }
+  if (path === '/admin/set-role') return json({ ok: await setRole(body) }, 200);
 
   if (path === '/admin/players') {
     // Fiches joueurs d'un club (pour relier parents et joueurs)

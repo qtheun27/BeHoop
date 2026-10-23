@@ -30,7 +30,11 @@ export function ClubProvider({ children }: { children: ReactNode }) {
   const load = useCallback(async () => {
     const u = s.user;
     if (!u) { set({ loading: false, me: null, inv: null, club: null, players: [], teamIds: [], clubName: (id) => id }); return; }
-    const me = await A.getMe(u.uid).catch(() => null);
+    const real = await A.getMe(u.uid).catch(() => null);
+    // Super admin qui gère un club depuis la console (Modération → Clubs) : il le voit comme son admin, sans rôle ajouté
+    let manage = ''; try { manage = sessionStorage.getItem('espace-gerer') ?? ''; } catch { /* */ }
+    const me: A.ClubUser | null = s.isAdmin && manage ? { ...(real ?? { uid: u.uid }), uid: u.uid, role: 'super_admin', club_id: manage, team_ids: [], children_player_ids: [],
+      spaces: A.spacesOf(real) } as A.ClubUser : real;
     // Invitation en attente (aussi pour un compte déjà dans un autre club : il pourra rejoindre ce club en plus)
     const pend = await A.pendingInvitation(u.email);
     const inv = pend && !A.spacesOf(me)[`${pend.club_id}~${pend.role}`] ? pend : null;
@@ -48,7 +52,7 @@ export function ClubProvider({ children }: { children: ReactNode }) {
     // Liens Espace Club → Équipes BeHoop (coach = responsable, joueur/parent = membre), une fois par session
     if (me) { const k = `club-sync-${u.uid}`; let done = false; try { done = !!sessionStorage.getItem(k); sessionStorage.setItem(k, '1'); } catch { /* */ }
       if (!done) api('/club/sync', {}).then(() => s.refresh()).catch(() => {}); }
-  }, [s.user]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [s.user, s.isAdmin]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { load(); }, [load]);
   const team = useCallback((id: string | null | undefined) => (id ? st.club?.teams.find((t) => String(t.id) === String(id)) : undefined), [st.club]);
   const v = useMemo(() => ({ ...st, reload: load, team }), [st, load, team]);

@@ -109,6 +109,8 @@ service cloud.firestore {
                     request.auth.uid == uid
                     || estSuperAdmin()
                     || estAdminDuClub(resource.data.get('club_id', ''))
+                    // Compte avec plusieurs espaces (rôles, clubs) : visible par l'admin de chacun de ses clubs
+                    || (monRole() == 'club_admin' && monClub() in resource.data.get('club_ids', []))
                     || (monRole() == 'coach' && resource.data.get('team_id', '') in monProfil().team_ids)
                   );
 

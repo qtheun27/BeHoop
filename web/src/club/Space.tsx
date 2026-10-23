@@ -86,7 +86,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
         <div className="col-main">
           <header className="work-bar">
             <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>
-            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.keys(A.spacesOf(k.me)).length > 1
+            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.keys(A.spacesOf(k.me)).length > 1 || k.me?.role === 'super_admin'
               ? <button className="ellipsis club-switch" onClick={() => setSw(true)}>{k.club.short || k.club.name} ▾</button>
               : <span className="ellipsis">{k.club.short || k.club.name}</span>)}</div>
             {s.user && <a className="top-av" href="#/espace/compte" aria-label={t('Mon compte club')}><Avatar name={k.me?.display_name ?? s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>}
@@ -325,13 +325,18 @@ function ClubSwitch({ onClose }: { onClose: () => void }) {
   const [busy, setBusy] = useState(false);
   const go = async (key: string) => {
     setBusy(true);
-    try { await api('/club/switch', { key }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); onClose(); location.hash = '/espace'; }
+    try { try { sessionStorage.removeItem('espace-gerer'); } catch { /* */ } await api('/club/switch', { key }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); onClose(); location.hash = '/espace'; }
     catch { s.toast(t('Impossible de changer de club.')); } finally { setBusy(false); }
   };
   return (
     <Sheet title={t('Mes espaces')} onClose={onClose}>
       <div className="group" style={{ margin: '0 16px 20px' }}>
-        {Object.entries(A.spacesOf(k.me)).map(([key, m]) => { const on = key === `${k.me?.club_id}~${k.me?.role}`; return (
+        {k.me?.role === 'super_admin' && (
+          <button className="row" onClick={() => { try { sessionStorage.removeItem('espace-gerer'); } catch { /* */ } k.reload(); onClose(); location.hash = '/espace'; }}>
+            <span className="grow"><span className="nm">{k.club?.name}</span><span className="sub">{t('Super admin')} · {t('Quitter la gestion de ce club')}</span></span><Ico n="close" />
+          </button>
+        )}
+        {Object.entries(A.spacesOf(k.me)).map(([key, m]) => { const on = k.me?.role !== 'super_admin' && key === `${k.me?.club_id}~${k.me?.role}`; return (
           <button key={key} className="row" disabled={busy || on} onClick={() => go(key)}>
             <span className="grow"><span className="nm">{k.clubName(m.club_id)}</span><span className="sub">{t(ROLE_LABEL[m.role])}</span></span>
             {on ? <Ico n="check" /> : <span className="chev">›</span>}

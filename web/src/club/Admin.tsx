@@ -112,15 +112,15 @@ function Members({ clubId }: { clubId: string }) {
         <Sheet title={edit.display_name || edit.email || ''} onClose={() => setEdit(null)}>
           <div className="form">
             <p className="hint">{t(ROLE_LABEL[edit.role])} · {edit.email}</p>
-            {edit.role === 'player' && <PlayerTeam clubId={clubId} uid={edit.id} name={edit.display_name || ''} onDone={() => { setEdit(null); us.reload(); }} />}
+            {edit.role === 'player' && <PlayerTeam clubId={clubId} uid={edit.uid} name={edit.display_name || ''} onDone={() => { setEdit(null); us.reload(); }} />}
             {edit.role === 'coach' && (
               <>
                 <h3 className="group-title">{t('Équipes coachées')}</h3>
                 <div className="chips wrap">{(k.club?.teams ?? []).map((tm) => { const id = String(tm.id); return <button key={id} className={`chip${sel.includes(id) ? ' on' : ''}`} onClick={() => setSel(sel.includes(id) ? sel.filter((x) => x !== id) : [...sel, id])}>{tm.cat}</button>; })}</div>
-                <button className="btn volt" onClick={async () => { try { await A.setCoachTeams(clubId, edit.id, edit.team_ids ?? [], sel); setEdit(null); us.reload(); } catch { s.toast(t('Accès refusé.')); } }}>{t('Enregistrer')}</button>
+                <button className="btn volt" onClick={async () => { try { await A.setMember({ uid: edit.uid, club_id: clubId, role: 'coach', old_role: 'coach', team_ids: sel }); setEdit(null); us.reload(); } catch { s.toast(t('Accès refusé.')); } }}>{t('Enregistrer')}</button>
               </>
             )}
-            {edit.uid !== s.user?.uid && <button className="btn danger mt" onClick={async () => { if (confirm(t('Retirer ce membre du club ? Son compte BeHoop reste actif.'))) { await A.removeMember(edit.id); setEdit(null); us.reload(); } }}>{t('Retirer du club')}</button>}
+            {(edit.uid !== s.user?.uid || edit.role !== 'club_admin') && <button className="btn danger mt" onClick={async () => { if (confirm(t('Retirer ce rôle ? Son compte BeHoop reste actif.'))) { await A.setMember({ uid: edit.uid, club_id: clubId, role: null, old_role: edit.role }); setEdit(null); us.reload(); } }}>{t('Retirer du club')}</button>}
           </div>
         </Sheet>
       )}

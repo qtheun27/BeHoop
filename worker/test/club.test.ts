@@ -91,6 +91,20 @@ describe('joueurs, équipes, parents', () => {
   });
 });
 
+describe('admin du club', () => {
+  it('gère les rôles de son club seulement ; un compte peut être admin et parent du même club', async () => {
+    await call('sa', '/admin/set-role', { uid: 'adm', club_id: '9', role: 'club_admin' }, true);
+    await call('sa', '/admin/set-role', { uid: 'adm', club_id: '9', role: 'parent' }, true);
+    expect(Object.keys(spacesOf(user('adm'))).sort()).toEqual(['9~club_admin', '9~parent']);
+    expect((await call('adm', '/club/member', { uid: 'c', club_id: '9', role: 'coach', team_ids: ['90'] })).data.ok).toBe(true);
+    expect(spacesOf(user('c'))['9~coach'].team_ids).toEqual(['90']);
+    expect((await call('adm', '/club/member', { uid: 'c', club_id: '8', role: 'coach' })).status).toBe(403);
+    expect((await call('adm', '/club/member', { uid: 'c', club_id: '9', role: 'super_admin' })).status).toBe(400);
+    await call('adm', '/club/member', { uid: 'adm', club_id: '9', role: null, old_role: 'parent' });
+    expect(Object.keys(spacesOf(user('adm')))).toEqual(['9~club_admin']);
+  });
+});
+
 describe('super admin seulement', () => {
   it('les outils /admin refusent les autres comptes', async () => {
     await expect(call('x', '/admin/set-role', { uid: 'y', club_id: '1', role: 'club_admin' })).rejects.toThrow('FORBIDDEN');

@@ -196,8 +196,9 @@ function Clubs() {
           }}>{t('Inviter')}</button></div>
         <p className="muted" style={{ fontSize: 13 }}>{t('L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).')}</p>
         <button className="btn small secondary mt" onClick={async () => {
-          try { await api('/admin/set-role', { uid: s.user!.uid, club_id: sel.id, club_name: sel.name, role: 'club_admin' }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } location.hash = '/espace'; }
-          catch { s.toast(t('Accès refusé.')); }
+          // Super admin : on entre dans l'Espace Club de ce club comme son admin, sans s'ajouter de rôle
+          try { sessionStorage.setItem('espace-gerer', String(sel.id)); } catch { /* */ }
+          location.hash = '/espace';
         }}>{t('Gérer ce club dans l’Espace Club')} ›</button>
       </div>}
     </>

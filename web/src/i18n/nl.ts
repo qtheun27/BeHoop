@@ -1095,4 +1095,6 @@ export const NL: Record<string, string> = {
   "Équipe BeHoop": "BeHoop-team",
   "Une question, un souci, une idée ? Écris-nous : la réponse arrive ici, avec une notification.": "Een vraag, een probleem, een idee? Schrijf ons: het antwoord komt hier, met een melding.",
   "Nouveau message": "Nieuw bericht",
+  "Quitter la gestion de ce club": "Beheer van deze club verlaten",
+  "Retirer ce rôle ? Son compte BeHoop reste actif.": "Deze rol verwijderen? Zijn BeHoop-account blijft actief.",
 };

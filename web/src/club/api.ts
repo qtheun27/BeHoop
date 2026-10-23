@@ -95,7 +95,16 @@ export const invitationsOf = (clubId: string) => list<Invitation & { id: string 
 export const invite = (inv: Omit<Invitation, 'status'>) =>
   setDoc(doc(db, 'invitations', inv.email.toLowerCase().trim()), clean({ ...inv, email: inv.email.toLowerCase().trim(), status: 'pending', created_at: serverTimestamp() }));
 export const cancelInvitation = (email: string) => deleteDoc(doc(db, 'invitations', email));
-export const usersOf = (clubId: string) => list<ClubUser & { id: string }>(query(collection(db, 'users'), where('club_id', '==', clubId))).then((l) => l.map((u) => ({ ...u, uid: u.id })));
+/** Membres d'un club : un élément par rôle (un compte peut être admin et parent du même club), tous clubs actifs confondus */
+export async function usersOf(clubId: string): Promise<(ClubUser & { id: string })[]> {
+  const [a, b] = await Promise.all([list<ClubUser & { id: string }>(query(collection(db, 'users'), where('club_id', '==', clubId))),
+    list<ClubUser & { id: string }>(query(collection(db, 'users'), where('club_ids', 'array-contains', clubId))).catch(() => [])]);
+  const byId = new Map([...a, ...b].map((u) => [u.id, u]));
+  return [...byId.values()].flatMap((u) => Object.values(spacesOf({ ...u, uid: u.id })).filter((x) => x.club_id === clubId)
+    .map((x) => ({ ...u, uid: u.id, id: `${u.id}~${x.role}`, role: x.role, club_id: clubId, team_ids: x.team_ids ?? [] })));
+}
+/** Rôle d'un membre de mon club (serveur : admin du club ou super admin) ; role null = retirer ce rôle */
+export const setMember = (m: { uid: string; club_id: string; role: Role | null; old_role?: Role; team_ids?: string[] }) => import('../lib/api').then(({ api }) => api('/club/member', m));
 /** Équipes d'un coach ; la fiche équipe garde la liste de ses coachs (coach_uids : notifications, auto-évaluation Hoop Camp) */
 export async function setCoachTeams(clubId: string, uid: string, before: string[], after: string[]) {
   await updateDoc(doc(db, 'users', uid), { team_ids: after });

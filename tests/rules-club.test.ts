@@ -127,3 +127,14 @@ describe('Super admin BeHoop', () => {
     await assertFails(updateDoc(doc(env.authenticatedContext('x', { email: 'q.theuninck@gmail.com', email_verified: false }).firestore(), 'teams', 't1'), { name: 'U14' }));
   });
 });
+
+describe('Compte avec plusieurs clubs', () => {
+  it('visible par l’admin de chacun de ses clubs, pas par un autre', async () => {
+    await env.withSecurityRulesDisabled(async (c) => {
+      await setDoc(doc(c.firestore(), 'users', 'multi'), { role: 'coach', club_id: 'c2', club_ids: ['c2', 'c1'], team_ids: [] });
+      await setDoc(doc(c.firestore(), 'users', 'admin9'), { role: 'club_admin', club_id: 'c9' });
+    });
+    await assertSucceeds(getDoc(doc(as('admin'), 'users', 'multi')));
+    await assertFails(getDoc(doc(as('admin9'), 'users', 'multi')));
+  });
+});
