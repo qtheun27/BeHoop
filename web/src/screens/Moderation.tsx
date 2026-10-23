@@ -106,20 +106,16 @@ function Teams() {
   );
 }
 /** Tous les comptes BeHoop (profils) avec leur rôle éventuel dans l'Espace Club : recherche par nom */
-interface Account { uid: string; name: string; avatar?: string; banned?: boolean; created?: number; club?: { role: string; club_name?: string; club_id: string } }
-async function loadAccounts(): Promise<Account[]> {
-  const [ps, us] = await Promise.all([D.getDocs(D.collection(D.db, 'profiles')), D.getDocs(D.collection(D.db, 'users')).catch(() => null)]);
-  const club = new Map((us?.docs ?? []).map((d) => [d.id, d.data() as Account['club']]));
-  return ps.docs.map((d) => { const x = d.data() as D.Profile; const c = x.createdAt as { toMillis?: () => number } | undefined;
-    return { uid: d.id, name: x.displayName ?? '?', avatar: x.avatarUrl, banned: x.banned, created: c?.toMillis?.(), club: club.get(d.id) }; })
-    .sort((a, b) => a.name.localeCompare(b.name));
-}
+interface Account { uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string }[] }
+/** Liste fusionnée côté serveur (réservée au super admin) : comptes BeHoop et comptes Espace Club */
+const loadAccounts = async () => (await (await import('../lib/api')).api<Account[]>('/admin/accounts')).sort((a, b) => a.name.localeCompare(b.name));
 const ROLE_FR: Record<string, string> = { super_admin: 'Super admin', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
 function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; action: (a: Account) => React.ReactNode }) {
   const acc = useAsync(loadAccounts, []);
   const [q, setQ] = useState('');
   if (acc.loading) return <Skeleton n={3} />;
-  const list = (acc.data ?? []).filter((a) => !q || a.name.toLowerCase().includes(q.toLowerCase()) || a.club?.club_name?.toLowerCase().includes(q.toLowerCase()));
+  if (acc.error) return <Empty ill="alert" title={acc.error} />;
+  const list = (acc.data ?? []).filter((a) => !q || a.name.toLowerCase().includes(q.toLowerCase()) || (a.clubs ?? []).some((c) => (c.club_name ?? '').toLowerCase().includes(q.toLowerCase())) || (a.email ?? '').toLowerCase().includes(q.toLowerCase()));
   return (
     <>
       <div className="search"><input className="field" placeholder={t('Rechercher un compte (nom ou club)')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
@@ -129,7 +125,7 @@ function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; actio
           <div key={a.uid} className="row" onClick={() => onPick(a)}>
             <Avatar name={a.name} src={a.avatar} />
             <div className="grow">{a.name}{a.banned && <b style={{ color: 'var(--red)' }}> · {t('banni')}</b>}
-              <div className="sub">{a.club ? `${t(ROLE_FR[a.club.role] ?? a.club.role)} · ${a.club.club_name ?? a.club.club_id}` : t('Pas d’Espace Club')}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
+              <div className="sub">{a.clubs?.length ? a.clubs.map((c) => `${t(ROLE_FR[c.role] ?? c.role)} · ${c.club_name || c.club_id}`).join(' / ') : t('Pas d’Espace Club')}{!a.profile ? ` · ${t('pas de profil BeHoop')}` : ''}{a.email ? ` · ${a.email}` : ''}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
             {action(a)}
           </div>
         ))}
@@ -142,5 +138,5 @@ function Users() {
   const [n, setN] = useState(0);
   return <AccountPicker key={n} onPick={() => {}} action={(a) => (a.banned
     ? <button className="btn small secondary" onClick={async () => { await D.banUser(a.uid, false); s.toast(t('Compte rétabli')); setN(n + 1); }}>{t('Rétablir')}</button>
-    : a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
+    : a.profile && a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
 }

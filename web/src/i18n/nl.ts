@@ -1036,4 +1036,5 @@ export const NL: Record<string, string> = {
   "banni": "verbannen",
   "Pas d’Espace Club": "Geen Clubruimte",
   "Bannir {n} ?": "{n} verbannen?",
+  "pas de profil BeHoop": "geen BeHoop-profiel",
 };

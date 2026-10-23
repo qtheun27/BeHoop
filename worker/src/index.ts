@@ -313,6 +313,17 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await clubSync(user.uid);
     return json({ ok: true });
   }
+  // Console de modération : tous les comptes, BeHoop (profiles) et Espace Club (users), réunis par compte
+  if (path === '/admin/accounts') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const [ps, us] = await Promise.all([fs.query('profiles', []), fs.query('users', [])]);
+    const out = new Map<string, any>();
+    for (const p of ps) { const id = p._path.split('/').pop(); out.set(id, { uid: id, name: p.displayName ?? '?', avatar: p.avatarUrl ?? null, banned: !!p.banned, created: p.createdAt ?? null, profile: true }); }
+    for (const u of us) { const id = u._path.split('/').pop(), o = out.get(id) ?? { uid: id, name: u.display_name ?? u.email ?? '?', profile: false };
+      o.email = u.email ?? null; o.clubs = Object.keys(u.clubs ?? {}).length ? Object.entries(u.clubs).map(([c, m]: any) => ({ club_id: c, club_name: m.club_name, role: m.role })) : [{ club_id: u.club_id, club_name: u.club_name, role: u.role }];
+      out.set(id, o); }
+    return json([...out.values()]);
+  }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {
     // Rejoindre l'Espace Club par le code (QR) d'une équipe, sans invitation par e-mail

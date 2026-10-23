@@ -1036,4 +1036,5 @@ export const EN: Record<string, string> = {
   "banni": "banned",
   "Pas d’Espace Club": "No Club Space",
   "Bannir {n} ?": "Ban {n}?",
+  "pas de profil BeHoop": "no BeHoop profile",
 };
