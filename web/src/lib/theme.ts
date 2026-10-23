@@ -45,14 +45,14 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
   if (p.mode === 'auto') r.removeAttribute('data-theme'); else r.dataset.theme = p.mode;
   r.dataset.bg = p.bg; r.dataset.rt = p.rt ? '1' : '0'; r.dataset.rm = p.rm ? '1' : '0';
   ['--accent', '--accent-base', '--accent-2', '--accent-grad', '--club-logo'].forEach((k) => r.style.removeProperty(k));
-  delete r.dataset.logoDark;
+  delete r.dataset.logoDark; delete r.dataset.logo;
   let ct: CourtTheme | null = null;
   if (p.accent.startsWith('club:')) {
     const c = clubs.find((x) => x.id === Number(p.accent.slice(5)));
     r.dataset.accent = 'club';
     const k = c ? { ...clubColors(c), logo: c.logo, c1: c.c1, c2: c.c2, name: c.short || c.name } : store.get<{ accent: string; second: string; grad: string; logo?: string | null; c1?: string; c2?: string; name?: string } | null>('behoop.themeClub', null);
     // --accent-base : la couleur du club ; theme.css en dérive --accent (éclaircie en mode sombre pour rester lisible)
-    if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) r.style.setProperty('--club-logo', `url("${k.logo}")`); store.set('behoop.themeClub', k); }
+    if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) { r.style.setProperty('--club-logo', `url("${k.logo}")`); r.dataset.logo = '1'; } store.set('behoop.themeClub', k); }
     if (k?.c1) ct = { c1: k.c1, c2: k.c2 && hex(k.c2) ? k.c2 : k.second, logo: k.logo, name: courtName(k.name ?? '') };
   } else r.dataset.accent = p.accent.startsWith('comp:') ? DEFAULT_THEME.accent : p.accent; // ancien thème « compétition » (retiré) → couleur par défaut
   setCourt(p.bg === 'parquet' ? ct : null);

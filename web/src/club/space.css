@@ -28,6 +28,8 @@
 
 /* Fond : tableau blanc quadrillé (clair) / tableau noir à la craie (sombre), terrain dessiné en bas, halo fluo */
 :root[data-space="work"] html, :root[data-space="work"] { background: var(--bg); }
+/* Pas de médaillon du club (thème BeHoop) en mode travail */
+:root[data-space="work"] body::after { content: none; }
 :root[data-space="work"] body::before {
   background:
     radial-gradient(60vw 36vh at 100% 0%, color-mix(in srgb, var(--volt) 28%, transparent), transparent 70%),

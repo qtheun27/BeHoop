@@ -33,6 +33,8 @@ export function ClubProvider({ children }: { children: ReactNode }) {
     const real = await A.getMe(u.uid).catch(() => null);
     // Super admin qui gère un club depuis la console (Modération → Clubs) : il le voit comme son admin, sans rôle ajouté
     let manage = ''; try { manage = sessionStorage.getItem('espace-gerer') ?? ''; } catch { /* */ }
+    // Le super admin a tout débloqué : même dans un espace joueur ou parent, il voit le club comme son admin
+    if (s.isAdmin && !manage && real?.club_id && !['coach', 'club_admin', 'super_admin'].includes(real.role)) manage = real.club_id;
     const me: A.ClubUser | null = s.isAdmin && manage ? { ...(real ?? { uid: u.uid }), uid: u.uid, role: 'super_admin', club_id: manage, team_ids: [], children_player_ids: [],
       spaces: A.spacesOf(real) } as A.ClubUser : real;
     // Invitation en attente (aussi pour un compte déjà dans un autre club : il pourra rejoindre ce club en plus)
