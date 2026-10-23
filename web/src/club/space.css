@@ -368,3 +368,4 @@
 .wiz-step h3.group-title:first-child { margin-top: 4px; }
 .wiz-sum { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 4px 12px; }
 .wiz-sum span { font-size: 12.5px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--fill); }
+.club-switch { font: inherit; font-weight: 600; color: var(--text); text-align: left; min-width: 0; }

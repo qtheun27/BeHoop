@@ -18,6 +18,7 @@ interface ClubCtx {
   /** Équipes qui me concernent (coach : les siennes ; joueur/parent : celles des joueurs ; admin : toutes) */
   teamIds: string[];
   team: (id: string | null | undefined) => Team | undefined;
+  clubName: (id: string) => string;
   reload: () => Promise<void>;
 }
 const Ctx = createContext<ClubCtx>(null as unknown as ClubCtx);
@@ -25,22 +26,25 @@ export const useClub = () => useContext(Ctx);
 
 export function ClubProvider({ children }: { children: ReactNode }) {
   const s = useSession();
-  const [st, set] = useState<Omit<ClubCtx, 'reload' | 'team'>>({ loading: true, me: null, inv: null, club: null, players: [], teamIds: [] });
+  const [st, set] = useState<Omit<ClubCtx, 'reload' | 'team'>>({ loading: true, me: null, inv: null, club: null, players: [], teamIds: [], clubName: (id) => id });
   const load = useCallback(async () => {
     const u = s.user;
-    if (!u) { set({ loading: false, me: null, inv: null, club: null, players: [], teamIds: [] }); return; }
+    if (!u) { set({ loading: false, me: null, inv: null, club: null, players: [], teamIds: [], clubName: (id) => id }); return; }
     const me = await A.getMe(u.uid).catch(() => null);
-    const inv = me ? null : await A.pendingInvitation(u.email);
+    // Invitation en attente (aussi pour un compte déjà dans un autre club : il pourra rejoindre ce club en plus)
+    const pend = await A.pendingInvitation(u.email);
+    const inv = pend && pend.club_id !== me?.club_id ? pend : null;
     const idx = await loadIndex().catch(() => null);
     const clubId = me?.club_id ?? inv?.club_id;
+    const clubs = idx?.clubs ?? [];
     const club = clubId ? idx?.clubs.find((c) => String(c.id) === String(clubId)) ?? null : null;
     let players: A.Player[] = [];
-    if (me?.role === 'player') { const p = await A.getPlayer(u.uid).catch(() => null); players = p ? [p] : []; }
-    if (me?.role === 'parent') players = await A.childrenOf(u.uid).catch(() => []);
+    if (me?.role === 'player') players = (await A.myPlayerCards(u.uid).catch(() => [])).filter((p) => p.club_id === me.club_id);
+    if (me?.role === 'parent') players = (await A.childrenOf(u.uid).catch(() => [])).filter((p) => p.club_id === me.club_id);
     const teamIds = me?.role === 'coach' ? me.team_ids ?? []
       : me?.role === 'club_admin' || me?.role === 'super_admin' ? (club?.teams ?? []).map((t) => String(t.id))
         : [...new Set(players.map((p) => p.team_id).filter((x): x is string => !!x))];
-    set({ loading: false, me, inv, club, players, teamIds });
+    set({ loading: false, me, inv, club, players, teamIds, clubName: (id: string) => clubs.find((c) => String(c.id) === id)?.name ?? me?.clubs?.[id]?.club_name ?? id });
     // Liens Espace Club → Équipes BeHoop (coach = responsable, joueur/parent = membre), une fois par session
     if (me) { const k = `club-sync-${u.uid}`; let done = false; try { done = !!sessionStorage.getItem(k); sessionStorage.setItem(k, '1'); } catch { /* */ }
       if (!done) api('/club/sync', {}).then(() => s.refresh()).catch(() => {}); }

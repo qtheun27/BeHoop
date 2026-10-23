@@ -270,11 +270,9 @@ service cloud.firestore {
 
     match /hoopcamp/{pid} {
       allow read: if hcProche(pid);
-      // Profil et programme : le joueur ou ses parents ; le coach peut seulement lui envoyer un programme
-      allow create: if request.resource.data.get('player_id', '') == pid
-                    && ((hcFait(pid) || hcEstParent(pid)) || (hcEstCoach(pid) && request.resource.data.keys().hasOnly(['player_id', 'program', 'updated'])));
-      allow update: if request.resource.data.get('player_id', '') == pid
-                    && ((hcFait(pid) || hcEstParent(pid)) || (hcEstCoach(pid) && onlyChanged(['program', 'updated'])));
+      // Profil et programme : le joueur, ses parents, ou le coach de son équipe (qui règle le camp de ses joueurs)
+      allow create, update: if request.resource.data.get('player_id', '') == pid
+                    && (hcFait(pid) || hcEstParent(pid) || hcEstCoach(pid));
       allow delete: if false;
 
       match /days/{date} {

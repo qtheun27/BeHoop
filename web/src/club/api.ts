@@ -11,7 +11,8 @@ import type { Program, TrainingProfile, Rating } from '../hoopcamp/types';
 import type { DayLog, RatingEntry } from '../hoopcamp/engine';
 
 export type Role = 'super_admin' | 'club_admin' | 'coach' | 'player' | 'parent';
-export interface ClubUser { uid: string; role: Role; club_id: string; club_name?: string; team_ids?: string[]; children_player_ids?: string[]; display_name?: string; email?: string }
+export interface ClubUser { uid: string; role: Role; club_id: string; club_name?: string;
+  /** Tous mes clubs (le club actif est dupliqué en haut du document) */ clubs?: Record<string, { role: Role; club_name?: string }>; team_ids?: string[]; children_player_ids?: string[]; display_name?: string; email?: string }
 export interface Player { id: string; club_id: string; team_id: string | null; account_uid: string; parent_uids: string[]; prenom: string; nom: string }
 export interface Invitation { email: string; role: Role; club_id: string; club_name?: string; team_id?: string | null; status: 'pending' | 'used'; created_at?: unknown }
 export interface Training { id: string; team_id: string; date: string; start_time?: string; end_time?: string; location?: string; notes?: string; created_by?: string }
@@ -57,6 +58,7 @@ export const renameMe = (uid: string, display_name: string) => updateDoc(doc(db,
 // ---------- Joueurs ----------
 export const playersOfTeam = (teamId: string) => list<Player>(query(collection(db, 'players'), where('team_id', '==', teamId)));
 export const playersOfClub = (clubId: string) => list<Player>(query(collection(db, 'players'), where('club_id', '==', clubId)));
+export const myPlayerCards = (uid: string) => list<Player>(query(collection(db, 'players'), where('account_uid', '==', uid)));
 export const childrenOf = (uid: string) => list<Player>(query(collection(db, 'players'), where('parent_uids', 'array-contains', uid)));
 export async function getPlayer(id: string): Promise<Player | null> { const s = await getDoc(doc(db, 'players', id)); return s.exists() ? ({ id, ...s.data() } as Player) : null; }
 export async function addChild(me: ClubUser, prenom: string, nom: string, teamId: string | null) {

@@ -102,11 +102,12 @@ export function HoopCampPage({ pid }: { pid: string }) {
   const canCheck = isSelf || (isParent && !p.account_uid);
   const canValidate = isParent || k.me?.role === 'coach';
   const team = k.team(p.team_id);
-  // Profil et programme : le joueur lui-même ou un parent lié (le coach envoie un programme depuis son équipe)
-  const canSetup = isSelf || isParent;
+  // Profil et programme : le joueur lui-même, un parent lié ou le coach de son équipe
+  const isCoach = k.me?.role === 'coach' && !!p.team_id && (k.me.team_ids ?? []).includes(p.team_id);
+  const canSetup = isSelf || isParent || isCoach;
   if ((!c.camp?.profile || !c.prog) && !canSetup) return <Empty ill="lock" title={t('{n} n’a pas encore commencé de Hoop Camp', { n: p.prenom })}
     text={k.me?.role === 'coach' ? t('Envoie-lui un programme depuis ton équipe : il le démarrera avec son profil.') : t('Le joueur ou son parent le démarre depuis son compte. Pour essayer, invite-toi comme parent avec une autre adresse ou utilise le QR code de l’équipe.')} />;
-  if (!c.camp?.profile || !c.prog || (edit && canSetup)) return <Setup p={p} camp={c.camp ?? null} defAge={ageOfTeam(team) ?? 'U14'} by={uid} from={isSelf ? 'player' : 'parent'} onDone={() => setEdit(false)} onCancel={c.camp?.profile ? () => setEdit(false) : undefined} />;
+  if (!c.camp?.profile || !c.prog || (edit && canSetup)) return <Setup p={p} camp={c.camp ?? null} defAge={ageOfTeam(team) ?? 'U14'} by={uid} from={isSelf ? 'player' : isParent ? 'parent' : 'coach'} onDone={() => setEdit(false)} onCancel={c.camp?.profile ? () => setEdit(false) : undefined} />;
   const { day, st } = c;
   const exists = !!c.exists;
   if (!day || !st) return <Skeleton n={3} />;
@@ -330,7 +331,7 @@ export function Library({ prof, onOpen }: { prof?: TrainingProfile; onOpen: (id:
 }
 
 // ---------- Profil d'entraînement + choix du programme ----------
-function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; camp: A.Camp | null; defAge: Age; by: string; from: 'player' | 'parent'; onDone: () => void; onCancel?: () => void }) {
+function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; camp: A.Camp | null; defAge: Age; by: string; from: 'player' | 'parent' | 'coach'; onDone: () => void; onCancel?: () => void }) {
   const s = useSession();
   const [f, setF] = useState<TrainingProfile>(camp?.profile ?? { age: defAge, level: 2, hand: 'droite', basket: 'aucun', space: 'moyen', surface: 'exterieur', equip: ['ballon', 'mur', 'plots'], minutes: 30, days: 4, goals: ['dribble'] });
   const [prog, setProg] = useState(camp?.program?.id ?? (AGES.indexOf(defAge) <= 1 ? 'petits' : 'camp-1'));

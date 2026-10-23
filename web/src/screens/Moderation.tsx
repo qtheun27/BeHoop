@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { teamIndex, teamLabel } from '../lib/data';
-import { Screen, Empty, Skeleton, useAsync } from '../ui/kit';
+import { Screen, Empty, Skeleton, useAsync, Avatar } from '../ui/kit';
 import { PostCard } from './Feed';
 import { t } from '../lib/i18n';
 
@@ -84,10 +84,10 @@ function Hidden() {
   return data.length ? <>{data.map((p) => <div key={p.id}><div className="muted" style={{ fontSize: 13 }}>{t('Motif')} : {p.hiddenReason}</div><PostCard post={p} /></div>)}</> : <Empty ill="eyeOff" title={t('Aucun contenu masqué')} />;
 }
 function Teams() {
+  const s = useSession();
   const [q, setQ] = useState('');
   const idx = useAsync(teamIndex, []);
   const [sel, setSel] = useState<number | null>(null);
-  const [uid, setUid] = useState('');
   const info = useAsync(() => (sel ? D.getTeamInfo(sel) : Promise.resolve(null)), [sel]);
   const list = idx.data ? [...idx.data.values()].filter((e) => q.length > 1 && `${e.club.name} ${e.team.name}`.toLowerCase().includes(q.toLowerCase())).slice(0, 20) : [];
   return (
@@ -99,23 +99,48 @@ function Teams() {
         <div className="hstack mt">{t('Classement')} :
           {(['jeunes', 'seniors'] as const).map((g) => <button key={g} className={`btn small${(info.data?.ageGroupOverride ?? info.data?.ageGroup ?? idx.data?.get(sel)?.team.ag) === g ? '' : ' secondary'}`}
             onClick={async () => { await D.setAgeGroupOverride(sel, g); info.reload(); }}>{g === 'jeunes' ? t('Jeunes') : t('Seniors')}</button>)}</div>
-        <label className="label">{t('Nommer un responsable (identifiant du compte)')}</label>
-        <div className="hstack"><input className="field" value={uid} onChange={(e) => setUid(e.target.value)} placeholder="uid Firebase" />
-          <button className="btn small" onClick={async () => { await D.setDoc(D.doc(D.db, 'teamMembers', String(sel), 'members', uid), { uid, teamId: sel, role: 'responsable', status: 'accepted', displayName: 'Responsable', createdAt: D.serverTimestamp() }); setUid(''); }}>{t('Nommer')}</button></div>
-        <p className="muted" style={{ fontSize: 13 }}>{t('Astuce : l\'uid apparaît dans la liste des demandes d\'accès (Profil → Demandes) ou dans la console Firebase.')}</p>
+        <label className="label">{t('Nommer un responsable')}</label>
+        <AccountPicker onPick={() => {}} action={(a) => <button className="btn small" onClick={async () => { await D.setDoc(D.doc(D.db, 'teamMembers', String(sel), 'members', a.uid), { uid: a.uid, teamId: sel, role: 'responsable', status: 'accepted', displayName: a.name, createdAt: D.serverTimestamp() }); s.toast(t('{n} est responsable', { n: a.name })); }}>{t('Nommer')}</button>} />
       </div>}
     </>
   );
 }
-function Users() {
-  const [uid, setUid] = useState('');
-  const s = useSession();
+/** Tous les comptes BeHoop (profils) avec leur rôle éventuel dans l'Espace Club : recherche par nom */
+interface Account { uid: string; name: string; avatar?: string; banned?: boolean; created?: number; club?: { role: string; club_name?: string; club_id: string } }
+async function loadAccounts(): Promise<Account[]> {
+  const [ps, us] = await Promise.all([D.getDocs(D.collection(D.db, 'profiles')), D.getDocs(D.collection(D.db, 'users')).catch(() => null)]);
+  const club = new Map((us?.docs ?? []).map((d) => [d.id, d.data() as Account['club']]));
+  return ps.docs.map((d) => { const x = d.data() as D.Profile; const c = x.createdAt as { toMillis?: () => number } | undefined;
+    return { uid: d.id, name: x.displayName ?? '?', avatar: x.avatarUrl, banned: x.banned, created: c?.toMillis?.(), club: club.get(d.id) }; })
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
+const ROLE_FR: Record<string, string> = { super_admin: 'Super admin', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
+function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; action: (a: Account) => React.ReactNode }) {
+  const acc = useAsync(loadAccounts, []);
+  const [q, setQ] = useState('');
+  if (acc.loading) return <Skeleton n={3} />;
+  const list = (acc.data ?? []).filter((a) => !q || a.name.toLowerCase().includes(q.toLowerCase()) || a.club?.club_name?.toLowerCase().includes(q.toLowerCase()));
   return (
-    <div className="group" style={{ padding: 14 }}>
-      <label className="label">{t('Identifiant du compte (uid)')}</label>
-      <input className="field" value={uid} onChange={(e) => setUid(e.target.value)} />
-      <div className="hstack mt"><button className="btn small danger" onClick={async () => { await D.banUser(uid, true); s.toast(t('Compte banni')); }}>{t('Bannir')}</button>
-        <button className="btn small secondary" onClick={async () => { await D.banUser(uid, false); s.toast(t('Compte rétabli')); }}>{t('Rétablir')}</button></div>
-    </div>
+    <>
+      <div className="search"><input className="field" placeholder={t('Rechercher un compte (nom ou club)')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
+      <p className="muted" style={{ fontSize: 13, margin: '0 4px 8px' }}>{t('{n} comptes', { n: list.length })}</p>
+      <div className="group">
+        {list.slice(0, 100).map((a) => (
+          <div key={a.uid} className="row" onClick={() => onPick(a)}>
+            <Avatar name={a.name} src={a.avatar} />
+            <div className="grow">{a.name}{a.banned && <b style={{ color: 'var(--red)' }}> · {t('banni')}</b>}
+              <div className="sub">{a.club ? `${t(ROLE_FR[a.club.role] ?? a.club.role)} · ${a.club.club_name ?? a.club.club_id}` : t('Pas d’Espace Club')}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
+            {action(a)}
+          </div>
+        ))}
+      </div>
+    </>
   );
+}
+function Users() {
+  const s = useSession();
+  const [n, setN] = useState(0);
+  return <AccountPicker key={n} onPick={() => {}} action={(a) => (a.banned
+    ? <button className="btn small secondary" onClick={async () => { await D.banUser(a.uid, false); s.toast(t('Compte rétabli')); setN(n + 1); }}>{t('Rétablir')}</button>
+    : a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
 }

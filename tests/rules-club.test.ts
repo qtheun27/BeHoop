@@ -91,9 +91,9 @@ describe('Hoop Camp', () => {
     await assertSucceeds(setDoc(day('solo', 'solo'), { date: '2026-10-27', items: [], checks: { a: 1 }, team_id: 't9', selfRatings: { a: { r: 'correct' } } }));
     await assertFails(updateDoc(day('solo', 'solo'), { ratings: { a: { r: 'maitrise' } } }));
   });
-  it('programme : le coach envoie, sans toucher au profil', async () => {
+  it('programme et profil : le joueur, ses parents ou son coach', async () => {
     await assertSucceeds(setDoc(doc(as('coach'), 'hoopcamp', 'enfant'), { player_id: 'enfant', program: { id: 'camp-1' } }));
-    await assertFails(setDoc(doc(as('coach'), 'hoopcamp', 'joueur'), { player_id: 'joueur', program: { id: 'camp-1' }, profile: { age: 'U14' } }));
+    await assertSucceeds(setDoc(doc(as('coach'), 'hoopcamp', 'joueur'), { player_id: 'joueur', program: { id: 'camp-1' }, profile: { age: 'U14' } }));
     await assertSucceeds(setDoc(doc(as('joueur'), 'hoopcamp', 'joueur'), { player_id: 'joueur', profile: { age: 'U14' }, program: { id: 'shooteur' } }));
     await assertFails(setDoc(doc(as('coach2'), 'hoopcamp', 'joueur'), { player_id: 'joueur', program: { id: 'camp-1' } }));
   });

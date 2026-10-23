@@ -264,8 +264,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!me) return [];
     const want = new Map<string, { role: 'responsable' | 'membre'; relation: string }>();
     if (me.role === 'coach') for (const t of me.team_ids ?? []) want.set(String(t), { role: 'responsable', relation: 'coach' });
-    const players = me.role === 'player' ? [await fs.get<any>(`players/${uid}`)].filter(Boolean)
-      : me.role === 'parent' ? await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', uid]]) : [];
+    const players = me.role === 'player' ? (await fs.query('players', [['account_uid', 'EQUAL', uid]])).filter((p: any) => p.club_id === me.club_id)
+      : me.role === 'parent' ? (await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', uid]])).filter((p: any) => p.club_id === me.club_id) : [];
     for (const p of players) if (p.team_id && !want.has(String(p.team_id))) want.set(String(p.team_id), { role: 'membre', relation: me.role === 'parent' ? 'parent' : 'joueur' });
     for (const [t, w] of want) {
       if (!/^\d+$/.test(t)) continue;
@@ -275,6 +275,44 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     }
     return [...want.keys()];
   };
+  // Plusieurs clubs : users/{uid} garde le club actif (rôle, club_id, team_ids, enfants) et la liste de ses clubs (clubs, club_ids).
+  // Changer de club = ranger le rôle actif dans clubs puis activer l'autre. Seul le worker écrit ces champs.
+  type Membership = { role: string; club_name?: string; team_ids?: string[]; children_player_ids?: string[] };
+  const activate = async (uid: string, me: any, clubId: string, m: Partial<Membership>) => {
+    const clubs: Record<string, Membership> = { ...(me?.clubs ?? {}) };
+    if (me?.club_id) clubs[me.club_id] = { role: me.role, club_name: me.club_name ?? '', team_ids: me.team_ids ?? [], children_player_ids: me.children_player_ids ?? [] };
+    clubs[clubId] = { ...{ role: 'player' }, ...clubs[clubId], ...m } as Membership;
+    const cur = clubs[clubId];
+    await fs.set(`users/${uid}`, { role: cur.role, club_id: clubId, club_name: cur.club_name ?? '', team_ids: cur.team_ids ?? [], children_player_ids: cur.children_player_ids ?? [],
+      clubs: clubs as any, club_ids: Object.keys(clubs), email: (user.email ?? '').toLowerCase(), display_name: me?.display_name ?? profile?.displayName ?? '', ...(me ? {} : { created_at: new Date() }) } as any);
+  };
+  if (path === '/club/switch') {
+    const me = await fs.get<any>(`users/${user.uid}`), id = String(body.clubId ?? '');
+    if (!me?.clubs?.[id]) return json({ ok: false }, 400);
+    await activate(user.uid, me, id, {});
+    await clubSync(user.uid);
+    return json({ ok: true });
+  }
+  if (path === '/club/claim') {
+    // Invitation e-mail pour un compte déjà membre d'un autre club
+    const email = (user.email ?? '').toLowerCase(), inv = await fs.get<any>(`invitations/${email}`), me = await fs.get<any>(`users/${user.uid}`);
+    if (!inv || inv.status !== 'pending' || !email) return json({ ok: false }, 400);
+    const asParent = inv.role === 'parent' || (inv.role === 'player' && !!body.asParent);
+    const role = asParent ? 'parent' : inv.role, prenom = String(body.child?.prenom ?? '').trim().slice(0, 40), nom = String(body.child?.nom ?? '').trim().slice(0, 40);
+    const prev = me?.clubs?.[inv.club_id] as Membership | undefined;
+    const kids = [...(prev?.children_player_ids ?? [])];
+    if (asParent && prenom) {
+      const id = crypto.randomUUID().replace(/-/g, '').slice(0, 20);
+      await fs.set(`players/${id}`, { club_id: inv.club_id, team_id: inv.team_id ?? null, account_uid: '', parent_uids: [user.uid], prenom, nom, created_at: new Date() } as any);
+      kids.push(id);
+    }
+    if (role === 'player') await fs.set(`players/${me && me.club_id !== inv.club_id ? `${user.uid}_${inv.club_id}` : user.uid}`, { club_id: inv.club_id, team_id: inv.team_id ?? null, account_uid: user.uid, parent_uids: [], prenom: me?.display_name ?? profile?.displayName ?? '', nom: '', created_at: new Date() } as any);
+    await activate(user.uid, me, inv.club_id, { role, club_name: inv.club_name ?? '', team_ids: role === 'coach' ? [...new Set([...(prev?.team_ids ?? []), ...(inv.team_id ? [inv.team_id] : [])])] : prev?.team_ids ?? [], children_player_ids: kids });
+    if (role === 'coach' && inv.team_id) { const tm = await fs.get<any>(`teams/${inv.team_id}`); await fs.set(`teams/${inv.team_id}`, { club_id: inv.club_id, coach_uids: [...new Set([...(tm?.coach_uids ?? []), user.uid])] } as any); }
+    await fs.set(`invitations/${email}`, { status: 'used' } as any);
+    await clubSync(user.uid);
+    return json({ ok: true });
+  }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {
     // Rejoindre l'Espace Club par le code (QR) d'une équipe, sans invitation par e-mail
@@ -284,15 +322,16 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const me = await fs.get<any>(`users/${user.uid}`);
     const asParent = !!body.asParent, prenom = String(body.child?.prenom ?? '').trim().slice(0, 40), nom = String(body.child?.nom ?? '').trim().slice(0, 40);
     const name = String(body.name ?? profile?.displayName ?? '').trim().slice(0, 60);
-    if (me && me.club_id !== c.club_id) return json({ ok: false, error: 'club' }, 400);
-    if (me && !(me.role === 'parent' && asParent)) return json({ ok: false, error: 'already' }, 400);
     if (asParent && !prenom) return json({ ok: false, error: 'child' }, 400);
-    if (!me) await fs.set(`users/${user.uid}`, { role: asParent ? 'parent' : 'player', club_id: c.club_id, club_name: c.club_name ?? '', email: (user.email ?? '').toLowerCase(), display_name: name, children_player_ids: [], created_at: new Date() } as any);
+    const prev: Membership | undefined = me?.club_id === c.club_id ? { role: me.role, team_ids: me.team_ids, children_player_ids: me.children_player_ids } : me?.clubs?.[c.club_id];
+    if (prev && !(prev.role === 'parent' && asParent)) return json({ ok: false, error: 'already' }, 400);
+    const kids = [...(prev?.children_player_ids ?? [])];
     if (asParent) {
       const id = crypto.randomUUID().replace(/-/g, '').slice(0, 20);
       await fs.set(`players/${id}`, { club_id: c.club_id, team_id: c.team_id, account_uid: '', parent_uids: [user.uid], prenom, nom, created_at: new Date() } as any);
-      await fs.set(`users/${user.uid}`, { children_player_ids: [...((me?.children_player_ids as string[]) ?? []), id] } as any);
-    } else await fs.set(`players/${user.uid}`, { club_id: c.club_id, team_id: c.team_id, account_uid: user.uid, parent_uids: [], prenom: name, nom: '', created_at: new Date() } as any);
+      kids.push(id);
+    } else await fs.set(`players/${me && me.club_id !== c.club_id ? `${user.uid}_${c.club_id}` : user.uid}`, { club_id: c.club_id, team_id: c.team_id, account_uid: user.uid, parent_uids: [], prenom: name, nom: '', created_at: new Date() } as any);
+    await activate(user.uid, me && { ...me, display_name: me.display_name || name }, c.club_id, { role: prev?.role ?? (asParent ? 'parent' : 'player'), club_name: c.club_name ?? '', children_player_ids: kids, team_ids: prev?.team_ids ?? [] });
     await clubSync(user.uid);
     return json({ ok: true });
   }
