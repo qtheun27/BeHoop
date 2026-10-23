@@ -119,3 +119,11 @@ describe('Code d’équipe (QR)', () => {
     await assertSucceeds(getDoc(doc(as('n1', 'x@y.be'), 'joinCodes', 'ABCD2345')));
   });
 });
+
+describe('Super admin BeHoop', () => {
+  it('le compte de modération gère tous les clubs', async () => {
+    const db = env.authenticatedContext('sa', { email: 'q.theuninck@gmail.com', email_verified: true }).firestore();
+    await assertSucceeds(updateDoc(doc(db, 'teams', 't1'), { name: 'U14' }));
+    await assertFails(updateDoc(doc(env.authenticatedContext('x', { email: 'q.theuninck@gmail.com', email_verified: false }).firestore(), 'teams', 't1'), { name: 'U14' }));
+  });
+});

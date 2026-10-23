@@ -152,6 +152,9 @@ function Clubs() {
   const [q, setQ] = useState('');
   const [sel, setSel] = useState<{ id: number; name: string } | null>(null);
   const [email, setEmail] = useState('');
+  const [old, setOld] = useState<{ id: string; name: string } | null>(null);
+  const known = new Set((idx.data?.clubs ?? []).map((c) => String(c.id)));
+  const unknown = idx.data ? [...new Map((acc.data ?? []).flatMap((a) => a.clubs ?? []).filter((c) => c.club_id && !known.has(String(c.club_id))).map((c) => [String(c.club_id), c.club_name ?? ''] as [string, string])).entries()] : [];
   const admins = (id: number) => (acc.data ?? []).filter((a) => a.clubs?.some((c) => c.club_id === String(id) && c.role === 'club_admin'));
   const active = new Set((acc.data ?? []).flatMap((a) => (a.clubs ?? []).map((c) => c.club_id)));
   const list = (idx.data?.clubs ?? []).filter((c) => (q.length > 1 ? c.name.toLowerCase().includes(q.toLowerCase()) : active.has(String(c.id)))).slice(0, 30);
@@ -163,7 +166,17 @@ function Clubs() {
         {list.map((c) => <button key={c.id} className="row" onClick={() => setSel({ id: c.id, name: c.name })}><div className="grow">{c.name}
           <div className="sub">{admins(c.id).map((a) => a.name).join(', ') || t('Aucun admin')}</div></div><span className="chev">›</span></button>)}
       </div>
-      {sel && <div className="group" style={{ padding: 14 }}>
+      {unknown.length > 0 && <>
+        <p className="muted" style={{ fontSize: 13, margin: '12px 4px 8px' }}>{t('Anciens clubs (identifiant inconnu) : à rattacher à leur club actuel')}</p>
+        <div className="group">{unknown.map(([id, nm]) => <button key={id} className="row" onClick={() => setOld({ id, name: nm })}><div className="grow">{nm || id}<div className="sub">{id} · {t('{n} comptes', { n: (acc.data ?? []).filter((a) => a.clubs?.some((c) => c.club_id === id)).length })}</div></div><span className="chev">›</span></button>)}</div>
+      </>}
+      {old && <div className="group" style={{ padding: 14 }}>
+        <b>{t('Rattacher « {n} »', { n: old.name || old.id })}</b>
+        <p className="muted" style={{ fontSize: 13 }}>{t('Cherche le club actuel ci-dessus, touche-le, puis confirme ici.')}</p>
+        {sel && <button className="btn small" onClick={async () => { if (!confirm(t('Déplacer tous les comptes et fiches vers {n} ?', { n: sel.name }))) return;
+          try { const r = await api<{ n: number }>('/admin/move-club', { from: old.id, to: sel.id, to_name: sel.name }); s.toast(t('{n} éléments déplacés', { n: r.n })); setOld(null); acc.reload(); } catch { s.toast(t('Accès refusé.')); } }}>{t('Rattacher à {n}', { n: sel.name })}</button>}
+      </div>}
+      {sel && !old && <div className="group" style={{ padding: 14 }}>
         <b>{sel.name}</b>
         <p className="muted" style={{ fontSize: 13 }}>{t('Admins : {n}', { n: admins(sel.id).map((a) => `${a.name}${a.email ? ` (${a.email})` : ''}`).join(', ') || '—' })}</p>
         <label className="label">{t('Inviter un admin du club (e-mail)')}</label>

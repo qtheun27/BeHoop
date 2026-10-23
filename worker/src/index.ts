@@ -260,8 +260,20 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   // ----- Espace Club ↔ BeHoop : un seul jeu de liens. Coach du club → responsable de l'Équipe BeHoop ;
   // joueur / parent → membre accepté des équipes de ses joueurs. Jamais de rétrogradation.
   const clubSync = async (uid: string) => {
-    const me = await fs.get<any>(`users/${uid}`);
+    let me = await fs.get<any>(`users/${uid}`);
     if (!me) return [];
+    // Club renommé / fusionné (alias de index.json, ex. Union Mons-Hainaut → Mons Basketball) : le compte et ses fiches suivent
+    const alias: Record<string, number> = (await fetch(`${env.SITE_URL}/app-data/index.json`).then((r) => r.json()).catch(() => ({})) as any).alias ?? {};
+    const to = (id: string) => (alias[id] ? String(alias[id]) : id);
+    const moved = to(String(me.club_id)) !== String(me.club_id) || Object.keys(me.clubs ?? {}).some((c) => to(c) !== c);
+    if (moved) {
+      const clubs = Object.fromEntries(Object.entries(me.clubs ?? {}).map(([c, m]) => [to(c), m]));
+      await fs.set(`users/${uid}`, { club_id: to(String(me.club_id)), ...(me.clubs ? { clubs: clubs as any, club_ids: Object.keys(clubs) } : {}) } as any);
+      const mine = [...await fs.query('players', [['account_uid', 'EQUAL', uid]]), ...await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', uid]])];
+      for (const p of mine) if (to(String(p.club_id)) !== String(p.club_id)) await fs.set(p._path, { club_id: to(String(p.club_id)) } as any);
+      for (const t of me.team_ids ?? []) { const tm = await fs.get<any>(`teams/${t}`); if (tm && to(String(tm.club_id)) !== String(tm.club_id)) await fs.set(`teams/${t}`, { club_id: to(String(tm.club_id)) } as any); }
+      me = await fs.get<any>(`users/${uid}`);
+    }
     const want = new Map<string, { role: 'responsable' | 'membre'; relation: string }>();
     if (me.role === 'coach') for (const t of me.team_ids ?? []) want.set(String(t), { role: 'responsable', relation: 'coach' });
     const players = me.role === 'player' ? (await fs.query('players', [['account_uid', 'EQUAL', uid]])).filter((p: any) => p.club_id === me.club_id)
@@ -332,6 +344,23 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await fs.set(`invitations/${email}`, { email, role: 'club_admin', club_id: clubId, club_name: String(body.club_name ?? '').slice(0, 80), team_id: null, status: 'pending', created_by: user.uid, created_at: new Date() } as any, false);
     await fs.set(`clubs/${clubId}`, { name: String(body.club_name ?? '').slice(0, 80), active: true } as any);
     return json({ ok: true });
+  }
+  // Super admin : rattacher tout un ancien club (identifiant périmé, club renommé) à son club actuel
+  if (path === '/admin/move-club') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const from = String(body.from ?? ''), to = String(body.to ?? '').replace(/\D/g, ''), name = String(body.to_name ?? '').slice(0, 80);
+    if (!from || !to || from === to) return json({ ok: false }, 400);
+    let n = 0;
+    for (const u of await fs.query('users', [])) {
+      const clubs = u.clubs ?? {}, inC = from in clubs;
+      if (String(u.club_id) !== from && !inC) continue;
+      const nc: Record<string, any> = Object.fromEntries(Object.entries(clubs).map(([c, m]: any) => (c === from ? [to, { ...m, club_name: name }] : [c, m])));
+      await fs.set(u._path, { ...(String(u.club_id) === from ? { club_id: to, club_name: name } : {}), ...(Object.keys(nc).length ? { clubs: nc as any, club_ids: Object.keys(nc) } : {}) } as any);
+      n++;
+    }
+    for (const col of ['players', 'teams', 'plays', 'invitations', 'hoopcamp_assign', 'joinCodes'])
+      for (const d of await fs.query(col, [['club_id', 'EQUAL', from]])) { await fs.set(d._path, { club_id: to, ...(col === 'invitations' || col === 'joinCodes' ? { club_name: name } : {}) } as any); n++; }
+    return json({ ok: true, n });
   }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {

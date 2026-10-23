@@ -1044,4 +1044,10 @@ export const EN: Record<string, string> = {
   "Inviter un admin du club (e-mail)": "Invite a club admin (email)",
   "Invitation créée. La personne se connecte sur BeHoop avec cette adresse.": "Invitation created. The person signs in to BeHoop with this address.",
   "L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).": "The club admin then invites their own coaches, players and parents (or shares the team QR codes).",
+  "Anciens clubs (identifiant inconnu) : à rattacher à leur club actuel": "Old clubs (unknown id): link them to their current club",
+  "Rattacher « {n} »": "Link “{n}”",
+  "Cherche le club actuel ci-dessus, touche-le, puis confirme ici.": "Search the current club above, tap it, then confirm here.",
+  "Déplacer tous les comptes et fiches vers {n} ?": "Move all accounts and profiles to {n}?",
+  "{n} éléments déplacés": "{n} items moved",
+  "Rattacher à {n}": "Link to {n}",
 };

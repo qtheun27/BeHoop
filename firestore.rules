@@ -42,8 +42,9 @@ service cloud.firestore {
       return monProfil().club_id;
     }
 
+    // Super admin : le compte super admin de BeHoop (même adresse que la console de modération), ou le rôle super_admin
     function estSuperAdmin() {
-      return connecte() && monRole() == 'super_admin';
+      return connecte() && ((request.auth.token.email == 'q.theuninck@gmail.com' && request.auth.token.email_verified == true) || monRole() == 'super_admin');
     }
 
     function estAdminDuClub(clubId) {

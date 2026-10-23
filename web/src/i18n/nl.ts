@@ -1044,4 +1044,10 @@ export const NL: Record<string, string> = {
   "Inviter un admin du club (e-mail)": "Een clubbeheerder uitnodigen (e-mail)",
   "Invitation créée. La personne se connecte sur BeHoop avec cette adresse.": "Uitnodiging aangemaakt. De persoon logt in op BeHoop met dit adres.",
   "L’admin du club invite ensuite lui-même ses coachs, joueurs et parents (ou partage le QR code des équipes).": "De clubbeheerder nodigt daarna zelf zijn coaches, spelers en ouders uit (of deelt de QR-code van de ploegen).",
+  "Anciens clubs (identifiant inconnu) : à rattacher à leur club actuel": "Oude clubs (onbekende id): koppel ze aan hun huidige club",
+  "Rattacher « {n} »": "« {n} » koppelen",
+  "Cherche le club actuel ci-dessus, touche-le, puis confirme ici.": "Zoek hierboven de huidige club, tik erop en bevestig hier.",
+  "Déplacer tous les comptes et fiches vers {n} ?": "Alle accounts en fiches naar {n} verplaatsen?",
+  "{n} éléments déplacés": "{n} elementen verplaatst",
+  "Rattacher à {n}": "Koppelen aan {n}",
 };
