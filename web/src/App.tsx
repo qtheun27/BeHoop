@@ -105,8 +105,9 @@ function SideNav({ tab }: { tab: string }) {
       <div className="side-items">
         {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
-      <a className="btn side-publish" href="#/publier"><Ico n="plus" />{tr('Publier')}</a>
-      {s.user && <a className="side-club" href="#/espace"><Ico n="bolt" /><span><b>{tr('Espace Club')}</b><small>{tr('Hoop Camp, entraînements, tactique')}</small></span></a>}
+      {/* Actions de la barre latérale : toutes en .side-cta (même taille, même forme) ; seule la couleur change */}
+      <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Publier')}</a>
+      {s.user && <a className="btn side-cta side-club" href="#/espace" title={tr('Hoop Camp, entraînements, tactique')}><Ico n="bolt" />{tr('Espace Club')}</a>}
       <div className="side-foot">
         {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
           : <button className="btn secondary" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>}

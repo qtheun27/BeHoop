@@ -99,7 +99,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
           <a className="brand" href="#/fil" aria-label={t('Revenir à BeHoop')}><Logo size={40} /></a>
           <div className="work-side-badge">{t('Espace Club')}</div>
           <div className="side-items">{tabs.map((x) => <a key={x.id} href={x.href} className={cur === x.id ? 'on' : ''}><Ico n={x.icon} /><span>{t(x.label)}</span></a>)}</div>
-          <a className="btn secondary side-publish" href="#/fil">‹ BeHoop</a>
+          <a className="btn secondary side-cta" href="#/fil"><Ico n="chevLeft" />BeHoop</a>
           <div className="side-foot"><LangSwitch seg /></div>
         </nav>
       )}
