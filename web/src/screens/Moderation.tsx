@@ -1,5 +1,5 @@
 // Console de modération (super admin) : signalements, contenus masqués, bannissement, responsables, Jeunes/Seniors.
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { teamIndex, teamLabel, loadIndex } from '../lib/data';
@@ -15,7 +15,7 @@ export default function Moderation() {
   return (
     <Screen title={t('Modération')} back="profil">
       <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
-      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <Clubs />}
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}
     </Screen>
   );
 }
@@ -107,7 +107,7 @@ function Teams() {
   );
 }
 /** Tous les comptes BeHoop (profils) avec leur rôle éventuel dans l'Espace Club : recherche par nom */
-interface Account { superAdmin?: boolean; uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string }[] }
+interface Account { superAdmin?: boolean; uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string; team_ids?: string[] }[] }
 /** Liste fusionnée côté serveur (réservée au super admin) : comptes BeHoop et comptes Espace Club */
 const loadAccounts = async () => (await api<Account[]>('/admin/accounts')).sort((a, b) => a.name.localeCompare(b.name));
 const ROLE_FR: Record<string, string> = { super_admin: 'Super admin', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
@@ -144,7 +144,9 @@ function Users() {
     try { await api('/admin/remove-club-user', { uid: a.uid }); s.toast(t('Retiré de l’Espace Club.')); setN(n + 1); } catch { s.toast(t('Accès refusé.')); }
   };
   const [open, setOpen] = useState<Account | null>(null);
-  if (open) return <AccountSheet a={open} onClose={(changed) => { setOpen(null); if (changed) setN(n + 1); }} />;
+  const [all, setAll] = useState<Account[]>([]);
+  useEffect(() => { loadAccounts().then(setAll).catch(() => {}); }, [n]);
+  if (open) return <AccountSheet a={open} all={all} onClose={(changed) => { setOpen(null); if (changed) setN(n + 1); }} />;
   return <AccountPicker key={n} onPick={setOpen} action={(a) => !a.profile ? (a.clubs?.length && a.uid !== s.user?.uid ? <button className="btn small danger" onClick={() => removeClub(a)}>{t('Retirer de l’Espace Club')}</button> : null) : (a.banned
     ? <button className="btn small secondary" onClick={async () => { await D.banUser(a.uid, false); s.toast(t('Compte rétabli')); setN(n + 1); }}>{t('Rétablir')}</button>
     : a.profile && a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
@@ -203,7 +205,7 @@ function Clubs() {
 
 const ROLES = ['club_admin', 'coach', 'parent', 'player'] as const;
 /** Fiche d'un compte (super admin) : ses clubs et rôles, équipes coachées, retirer d'un club, ajouter à un club, supprimer le compte */
-function AccountSheet({ a, onClose }: { a: Account; onClose: (changed: boolean) => void }) {
+function AccountSheet({ a, all, onClose }: { a: Account; all: Account[]; onClose: (changed: boolean) => void }) {
   const s = useSession();
   const idx = useAsync(loadIndex, []);
   const [busy, setBusy] = useState(false);
@@ -219,9 +221,9 @@ function AccountSheet({ a, onClose }: { a: Account; onClose: (changed: boolean) 
         <p className="muted" style={{ fontSize: 13 }}>{a.email ?? ''}{a.superAdmin ? ` · ${t('Super admin')}` : ''}{a.profile ? '' : ` · ${t('pas de profil BeHoop')}`}</p>
         <h3 className="group-title">{t('Espace Club')}</h3>
         {!a.clubs?.length && <p className="muted">{t('Pas d’Espace Club')}</p>}
-        {a.clubs?.map((c) => <RoleRow key={c.club_id} c={c} teams={club(c.club_id)?.teams ?? []} clubName={club(c.club_id)?.name ?? c.club_name ?? c.club_id} busy={busy}
-          onSave={(role, team_ids) => run('/admin/set-role', { uid: a.uid, club_id: c.club_id, club_name: club(c.club_id)?.name ?? c.club_name, role, team_ids }, t('Enregistré.'))}
-          onRemove={() => confirm(t('Retirer ce compte de ce club ?')) && run('/admin/set-role', { uid: a.uid, club_id: c.club_id, role: null }, t('Retiré du club.'))} />)}
+        {a.clubs?.map((c) => <RoleRow key={`${c.club_id}~${c.role}`} c={c} a={a} all={all} teams={club(c.club_id)?.teams ?? []} clubName={club(c.club_id)?.name ?? c.club_name ?? c.club_id} busy={busy}
+          onSave={(role, team_ids) => run('/admin/set-role', { uid: a.uid, club_id: c.club_id, club_name: club(c.club_id)?.name ?? c.club_name, role, old_role: c.role, team_ids }, t('Enregistré.'))}
+          onRemove={() => confirm(t('Retirer ce rôle ?')) && run('/admin/set-role', { uid: a.uid, club_id: c.club_id, role: null, old_role: c.role }, t('Retiré du club.'))} />)}
         <h3 className="group-title mt">{t('Ajouter à un club')}</h3>
         <input className="field" placeholder={t('Rechercher un club')} value={add.club ? add.club.name : add.q} onChange={(e) => setAdd({ ...add, q: e.target.value, club: null })} />
         {!add.club && add.q.length > 1 && <div className="group">{(idx.data?.clubs ?? []).filter((c) => c.name.toLowerCase().includes(add.q.toLowerCase())).slice(0, 8)
@@ -236,20 +238,79 @@ function AccountSheet({ a, onClose }: { a: Account; onClose: (changed: boolean) 
     </Sheet>
   );
 }
-function RoleRow({ c, teams, clubName, busy, onSave, onRemove }: { c: { club_id: string; role: string }; teams: { id: number; cat: string }[]; clubName: string; busy: boolean;
+function RoleRow({ c, a, all, teams, clubName, busy, onSave, onRemove }: { c: { club_id: string; role: string; team_ids?: string[] }; a: Account; all: Account[]; teams: { id: number; cat: string }[]; clubName: string; busy: boolean;
   onSave: (role: string, team_ids?: string[]) => void; onRemove: () => void }) {
   const [role, setRole] = useState(c.role);
-  const [sel, setSel] = useState<string[]>([]);
+  const [sel, setSel] = useState<string[]>(c.team_ids ?? []);
   return (
     <div className="group" style={{ padding: 12, marginBottom: 10 }}>
       <b>{clubName}</b>
       <div className="hstack mt">
         <select className="field" value={role} onChange={(e) => setRole(e.target.value)}>{[...ROLES, ...(c.role === 'super_admin' ? ['super_admin'] : [])].map((r) => <option key={r} value={r}>{t(ROLE_FR[r])}</option>)}</select>
-        <button className="btn small" disabled={busy} onClick={() => onSave(role, role === 'coach' && sel.length ? sel : undefined)}>{t('Enregistrer')}</button>
+        <button className="btn small" disabled={busy} onClick={() => onSave(role, role === 'coach' ? sel : undefined)}>{t('Enregistrer')}</button>
       </div>
-      {role === 'coach' && <><p className="muted" style={{ fontSize: 13 }}>{t('Équipes coachées (laisser vide pour ne rien changer)')}</p>
+      {role === 'coach' && <><p className="muted" style={{ fontSize: 13 }}>{t('Équipes coachées')}</p>
         <div className="chips" style={{ flexWrap: 'wrap' }}>{teams.map((tm) => { const id = String(tm.id); return <button key={id} className={`chip${sel.includes(id) ? ' on' : ''}`} onClick={() => setSel(sel.includes(id) ? sel.filter((x) => x !== id) : [...sel, id])}>{tm.cat}</button>; })}</div></>}
-      <button className="btn small danger mt" disabled={busy} onClick={onRemove}>{t('Retirer de ce club')}</button>
+      {(c.role === 'parent' || c.role === 'player') && <Links c={c} a={a} all={all} clubName={clubName} />}
+      <button className="btn small danger mt" disabled={busy} onClick={onRemove}>{t('Retirer ce rôle')}</button>
     </div>
+  );
+}
+
+interface PlayerCard { id: string; prenom: string; nom?: string; team_id?: string | null; account_uid?: string; parent_uids: string[] }
+/** Liens parent ↔ joueur (super admin) : enfants d'un parent, ou parents d'un joueur */
+function Links({ c, a, all, clubName }: { c: { club_id: string; role: string }; a: Account; all: Account[]; clubName: string }) {
+  const s = useSession();
+  const ps = useAsync(() => api<PlayerCard[]>('/admin/players', { club_id: c.club_id }), [c.club_id]);
+  const [q, setQ] = useState('');
+  if (ps.loading) return <Skeleton n={1} h={40} />;
+  const list = ps.data ?? [];
+  const link = async (player: string, parent: Account, on: boolean) => {
+    try { await api('/admin/link', { player_id: player, parent_uid: parent.uid, on, club_name: clubName, email: parent.email, name: parent.name }); s.toast(on ? t('Relié.') : t('Lien retiré.')); ps.reload(); }
+    catch { s.toast(t('Accès refusé.')); }
+  };
+  const pname = (p: PlayerCard) => `${p.prenom}${p.nom ? ` ${p.nom}` : ''}`;
+  if (c.role === 'parent') {
+    const kids = list.filter((p) => p.parent_uids.includes(a.uid));
+    const cand = list.filter((p) => !p.parent_uids.includes(a.uid) && q.length > 1 && pname(p).toLowerCase().includes(q.toLowerCase())).slice(0, 8);
+    return (
+      <div className="mt">
+        <p className="muted" style={{ fontSize: 13 }}>{t('Enfants')} : {kids.length ? '' : '—'}</p>
+        {kids.map((p) => <div key={p.id} className="hstack"><span style={{ flex: 1 }}>{pname(p)}</span><button className="btn small secondary" onClick={() => link(p.id, a, false)}>{t('Délier')}</button></div>)}
+        <input className="field mt" placeholder={t('Relier un joueur du club (prénom)')} value={q} onChange={(e) => setQ(e.target.value)} />
+        {cand.map((p) => <button key={p.id} className="row" onClick={() => link(p.id, a, true)}>{pname(p)}<span className="sub" style={{ marginLeft: 'auto' }}>{p.account_uid ? t('a son compte') : t('sans compte')}</span></button>)}
+      </div>
+    );
+  }
+  // Joueur avec compte : sa fiche dans ce club, et ses parents
+  const me = list.find((p) => p.account_uid === a.uid);
+  if (!me) return <p className="muted" style={{ fontSize: 13 }}>{t('Pas de fiche joueur dans ce club.')}</p>;
+  const parents = all.filter((x) => me.parent_uids.includes(x.uid));
+  const cand = all.filter((x) => x.uid !== a.uid && !me.parent_uids.includes(x.uid) && q.length > 1 && `${x.name} ${x.email ?? ''}`.toLowerCase().includes(q.toLowerCase())).slice(0, 8);
+  return (
+    <div className="mt">
+      <p className="muted" style={{ fontSize: 13 }}>{t('Parents')} : {parents.length ? '' : '—'}</p>
+      {parents.map((x) => <div key={x.uid} className="hstack"><span style={{ flex: 1 }}>{x.name}</span><button className="btn small secondary" onClick={() => link(me.id, x, false)}>{t('Délier')}</button></div>)}
+      <input className="field mt" placeholder={t('Relier un parent (nom ou e-mail)')} value={q} onChange={(e) => setQ(e.target.value)} />
+      {cand.map((x) => <button key={x.uid} className="row" onClick={() => link(me.id, x, true)}>{x.name}<span className="sub" style={{ marginLeft: 'auto' }}>{x.email ?? ''}</span></button>)}
+    </div>
+  );
+}
+
+/** Toutes les invitations (super admin) */
+function AllInvitations() {
+  const s = useSession();
+  const inv = useAsync(() => api<{ email: string; role: string; club_name?: string; status: string }[]>('/admin/invitations', {}), []);
+  if (inv.loading) return <Skeleton n={2} />;
+  return (
+    <>
+      <p className="muted" style={{ fontSize: 13, margin: '16px 4px 8px' }}>{t('Invitations')} · {(inv.data ?? []).length}</p>
+      <div className="group">
+        {(inv.data ?? []).map((i) => (
+          <div key={i.email} className="row"><div className="grow">{i.email}<div className="sub">{t(ROLE_FR[i.role] ?? i.role)}{i.club_name ? ` · ${i.club_name}` : ''} · {i.status === 'used' ? t('Utilisée') : t('En attente')}</div></div>
+            {i.status !== 'used' && <button className="btn small secondary" onClick={async () => { await api('/admin/invitations', { cancel: i.email }).catch(() => s.toast(t('Accès refusé.'))); inv.reload(); }}>{t('Annuler')}</button>}</div>
+        ))}
+      </div>
+    </>
   );
 }

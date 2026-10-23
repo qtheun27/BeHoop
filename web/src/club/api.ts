@@ -12,7 +12,16 @@ import type { DayLog, RatingEntry } from '../hoopcamp/engine';
 
 export type Role = 'super_admin' | 'club_admin' | 'coach' | 'player' | 'parent';
 export interface ClubUser { uid: string; role: Role; club_id: string; club_name?: string;
-  /** Tous mes clubs (le club actif est dupliqué en haut du document) */ clubs?: Record<string, { role: Role; club_name?: string }>; team_ids?: string[]; children_player_ids?: string[]; display_name?: string; email?: string }
+  /** Tous mes espaces, clé « club~rôle » (l'espace actif est aussi à plat en haut du document) */ spaces?: Record<string, Space>; clubs?: Record<string, { role: Role; club_name?: string }>; team_ids?: string[]; children_player_ids?: string[]; display_name?: string; email?: string }
+export interface Space { club_id: string; role: Role; club_name?: string; team_ids?: string[] }
+/** Tous les espaces d'un compte (anciens formats compris), comme worker/src/club.ts */
+export function spacesOf(u: ClubUser | null): Record<string, Space> {
+  const out: Record<string, Space> = {};
+  for (const [k, m] of Object.entries(u?.clubs ?? {})) { const c = k.split('~')[0]; out[`${c}~${m.role}`] = { ...m, club_id: c }; }
+  Object.assign(out, u?.spaces ?? {});
+  if (u?.club_id && u.role) out[`${u.club_id}~${u.role}`] = { club_id: u.club_id, role: u.role, club_name: u.club_name, team_ids: u.team_ids };
+  return out;
+}
 export interface Player { id: string; club_id: string; team_id: string | null; account_uid: string; parent_uids: string[]; prenom: string; nom: string }
 export interface Invitation { email: string; role: Role; club_id: string; club_name?: string; team_id?: string | null; status: 'pending' | 'used'; created_at?: unknown }
 export interface Training { id: string; team_id: string; date: string; start_time?: string; end_time?: string; location?: string; notes?: string; created_by?: string }

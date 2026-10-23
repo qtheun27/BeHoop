@@ -85,7 +85,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
         <div className="col-main">
           <header className="work-bar">
             <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>
-            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.keys(k.me?.clubs ?? {}).length > 1
+            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.keys(A.spacesOf(k.me)).length > 1
               ? <button className="ellipsis club-switch" onClick={() => setSw(true)}>{k.club.short || k.club.name} ▾</button>
               : <span className="ellipsis">{k.club.short || k.club.name}</span>)}</div>
             {s.user && <a className="top-av" href="#/espace/compte" aria-label={t('Mon compte club')}><Avatar name={k.me?.display_name ?? s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>}
@@ -322,20 +322,20 @@ function ClubSwitch({ onClose }: { onClose: () => void }) {
   const s = useSession();
   const k = useClub();
   const [busy, setBusy] = useState(false);
-  const go = async (id: string) => {
+  const go = async (key: string) => {
     setBusy(true);
-    try { await api('/club/switch', { clubId: id }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); onClose(); location.hash = '/espace'; }
+    try { await api('/club/switch', { key }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); onClose(); location.hash = '/espace'; }
     catch { s.toast(t('Impossible de changer de club.')); } finally { setBusy(false); }
   };
   return (
-    <Sheet title={t('Mes clubs')} onClose={onClose}>
+    <Sheet title={t('Mes espaces')} onClose={onClose}>
       <div className="group" style={{ margin: '0 16px 20px' }}>
-        {Object.entries(k.me?.clubs ?? {}).map(([id, m]) => (
-          <button key={id} className="row" disabled={busy || id === k.me?.club_id} onClick={() => go(id)}>
-            <span className="grow"><span className="nm">{k.clubName(id)}</span><span className="sub">{t(ROLE_LABEL[m.role])}</span></span>
-            {id === k.me?.club_id ? <Ico n="check" /> : <span className="chev">›</span>}
+        {Object.entries(A.spacesOf(k.me)).map(([key, m]) => { const on = key === `${k.me?.club_id}~${k.me?.role}`; return (
+          <button key={key} className="row" disabled={busy || on} onClick={() => go(key)}>
+            <span className="grow"><span className="nm">{k.clubName(m.club_id)}</span><span className="sub">{t(ROLE_LABEL[m.role])}</span></span>
+            {on ? <Ico n="check" /> : <span className="chev">›</span>}
           </button>
-        ))}
+        ); })}
       </div>
     </Sheet>
   );
@@ -358,7 +358,7 @@ function OtherClubInvite() {
     <div className="next-card" style={{ marginBottom: 14 }}>
       <small>✉️ {t('Invitation')}</small>
       <b>{k.clubName(inv.club_id) || inv.club_name} · {t(ROLE_LABEL[inv.role])}</b>
-      <span>{t('Tu peux faire partie de plusieurs clubs : tu passeras de l’un à l’autre en touchant le nom du club en haut.')}</span>
+      <span>{t('Tu peux avoir plusieurs rôles et plusieurs clubs : tu passes de l’un à l’autre en touchant le nom du club en haut.')}</span>
       <div className="hc-meta" style={{ marginTop: 8 }}>
         {inv.role === 'player' ? <>
           <button className="btn small volt" disabled={busy} onClick={() => claim(false)}>{t('Je suis le joueur')}</button>
@@ -382,8 +382,9 @@ function JoinCode({ code }: { code: string }) {
   const jc = c.data;
   if (!jc || jc.expires < Date.now()) return <Empty ill="alert" title={t('Code invalide ou expiré')} text={t('Demande un nouveau QR code à ton coach.')} />;
   const teamName = k.team(jc.team_id)?.cat;
-  const inClub = k.me && (k.me.club_id === jc.club_id ? k.me.role : k.me.clubs?.[jc.club_id]?.role);
-  if (inClub && inClub !== 'parent') return <Empty ill="checkCircle" title={t('Tu fais déjà partie du club')} action={<a className="btn volt" href="#/espace">{t('Espace Club')}</a>} />;
+  const mine = Object.values(A.spacesOf(k.me)).filter((x) => x.club_id === jc.club_id);
+  const inClub = mine.length > 0;
+  if (mine.some((x) => x.role === 'player') && mine.some((x) => x.role === 'parent')) return <Empty ill="checkCircle" title={t('Tu fais déjà partie du club')} action={<a className="btn volt" href="#/espace">{t('Espace Club')}</a>} />;
   const go = async () => {
     setBusy(true);
     try { await api('/club/join', { code, asParent, child, name: name.trim() }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); await s.refresh(); location.hash = '/espace'; }
@@ -459,7 +460,7 @@ function Account() {
       <h3 className="group-title mt">{t('Mes liens')}</h3>
       <div className="group">
         <div className="row"><span className="grow"><span className="nm">{t('Compte BeHoop')}</span><span className="sub">{s.user?.email} · {t('le même compte pour les deux espaces')}</span></span></div>
-        {Object.keys(me.clubs ?? {}).length > 1 && <div className="row"><span className="grow"><span className="nm">{t('Mes clubs')}</span><span className="sub">{Object.keys(me.clubs ?? {}).map((id) => k.clubName(id)).join(', ')}</span></span></div>}
+        {Object.keys(A.spacesOf(me)).length > 1 && <div className="row"><span className="grow"><span className="nm">{t('Mes espaces')}</span><span className="sub">{Object.values(A.spacesOf(me)).map((x) => `${k.clubName(x.club_id)} (${t(ROLE_LABEL[x.role]).toLowerCase()})`).join(', ')}</span></span></div>}
         {me.role === 'coach' && <div className="row"><span className="grow"><span className="nm">{t('Équipes coachées')}</span><span className="sub">{(me.team_ids ?? []).map((id) => k.team(id)?.cat ?? id).join(', ') || '—'}</span></span></div>}
         {(me.role === 'parent' || me.role === 'player') && k.players.map((p) => <a key={p.id} className="row" href={`#/espace/hoopcamp/${p.id}`}><span className="grow"><span className="nm">{playerName(p)}</span><span className="sub">{k.team(p.team_id)?.cat ?? t('sans équipe')}</span></span><span className="chev">›</span></a>)}
       </div>

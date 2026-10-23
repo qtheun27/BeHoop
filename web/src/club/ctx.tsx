@@ -33,7 +33,7 @@ export function ClubProvider({ children }: { children: ReactNode }) {
     const me = await A.getMe(u.uid).catch(() => null);
     // Invitation en attente (aussi pour un compte déjà dans un autre club : il pourra rejoindre ce club en plus)
     const pend = await A.pendingInvitation(u.email);
-    const inv = pend && pend.club_id !== me?.club_id ? pend : null;
+    const inv = pend && !A.spacesOf(me)[`${pend.club_id}~${pend.role}`] ? pend : null;
     const idx = await loadIndex().catch(() => null);
     const clubId = me?.club_id ?? inv?.club_id;
     const clubs = idx?.clubs ?? [];
@@ -44,7 +44,7 @@ export function ClubProvider({ children }: { children: ReactNode }) {
     const teamIds = me?.role === 'coach' ? me.team_ids ?? []
       : me?.role === 'club_admin' || me?.role === 'super_admin' ? (club?.teams ?? []).map((t) => String(t.id))
         : [...new Set(players.map((p) => p.team_id).filter((x): x is string => !!x))];
-    set({ loading: false, me, inv, club, players, teamIds, clubName: (id: string) => clubs.find((c) => String(c.id) === id)?.name ?? me?.clubs?.[id]?.club_name ?? id });
+    set({ loading: false, me, inv, club, players, teamIds, clubName: (id: string) => clubs.find((c) => String(c.id) === id)?.name ?? Object.values(A.spacesOf(me)).find((x) => x.club_id === id)?.club_name ?? id });
     // Liens Espace Club → Équipes BeHoop (coach = responsable, joueur/parent = membre), une fois par session
     if (me) { const k = `club-sync-${u.uid}`; let done = false; try { done = !!sessionStorage.getItem(k); sessionStorage.setItem(k, '1'); } catch { /* */ }
       if (!done) api('/club/sync', {}).then(() => s.refresh()).catch(() => {}); }
