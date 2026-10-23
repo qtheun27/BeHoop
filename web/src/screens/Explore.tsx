@@ -222,7 +222,6 @@ export function MembersList({ teamId, members, reload, me }: { teamId: number; m
       <div className="group-title">{t('Membres')} ({acc.length})</div>
       <div className="group">{acc.map((m) => (
         <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {t(RELATION_FR[m.relation])}</span>} {m.role === 'responsable' && <span className="pill">{t('Responsable')}</span>}</div>
-          {m.role !== 'responsable' && <button className="btn small secondary" onClick={() => act(() => D.setMember(teamId, m.uid, { role: 'responsable' }))}>{t('Nommer responsable')}</button>}
           {m.uid !== me && <button className="btn small danger" onClick={() => confirm(t('Retirer {name} ?', { name: m.displayName ?? '' })) && act(() => D.removeMember(teamId, m.uid))}>{t('Retirer')}</button>}</div>))}</div>
     </>
   );

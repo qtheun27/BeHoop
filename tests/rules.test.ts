@@ -104,6 +104,8 @@ describe('Équipes 🔒', () => {
   it('seul un responsable accepte', async () => {
     await assertFails(updateDoc(doc(as('alice'), 'teamMembers', String(U12), 'members', 'carol'), { status: 'accepted' }));
     await assertSucceeds(updateDoc(doc(as('resp'), 'teamMembers', String(U12), 'members', 'carol'), { status: 'accepted' }));
+    // Il ne nomme pas de responsable : ce statut vient du rôle de coach ou d'admin du club
+    await assertFails(updateDoc(doc(as('resp'), 'teamMembers', String(U12), 'members', 'carol'), { role: 'responsable' }));
   });
   it('un membre peut quitter, un responsable peut retirer', async () => {
     await assertSucceeds(deleteDoc(doc(as('alice'), 'teamMembers', String(U12), 'members', 'alice')));

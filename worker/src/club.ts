@@ -99,7 +99,7 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     if (role) {
       k = key(club, role);
       const base = sp[k] ?? (prev && prev.role === role ? prev : { club_id: club, role, team_ids: [], children_player_ids: role === 'parent' ? prev?.children_player_ids ?? [] : [] });
-      sp[k] = { ...base, club_id: club, role, club_name: String(body.club_name ?? base.club_name ?? '').slice(0, 80), ...(Array.isArray(body.team_ids) ? { team_ids: body.team_ids.map(String) } : {}) };
+      sp[k] = { ...base, club_id: club, role, club_name: String(body.club_name ?? base.club_name ?? '').slice(0, 80), ...(Array.isArray(body.team_ids) ? { team_ids: body.team_ids.map(String) } : body.add_team ? { team_ids: [...new Set([...(base.team_ids ?? []), String(body.add_team)])] } : {}) };
       if (role === 'coach') for (const t of sp[k].team_ids ?? []) await teamCoach(club, t, uid, true);
       if (role === 'player') {
         // Joueur : sa fiche dans ce club (créée si besoin), avec son équipe
@@ -182,7 +182,7 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
   }
 
   // ---------- Super admin ----------
-  if (!path.startsWith('/admin/') || !['/admin/accounts', '/admin/invite-admin', '/admin/move-club', '/admin/remove-club-user', '/admin/set-role', '/admin/delete-account', '/admin/players', '/admin/link', '/admin/invitations', '/admin/support'].includes(path)) return null;
+  if (!path.startsWith('/admin/') || !['/admin/accounts', '/admin/invite-admin', '/admin/move-club', '/admin/remove-club-user', '/admin/set-role', '/admin/delete-account', '/admin/players', '/admin/link', '/admin/invitations', '/admin/support', '/admin/clean-responsables'].includes(path)) return null;
   if (!isAdmin) throw new Error('FORBIDDEN');
 
   if (path === '/admin/accounts') {
@@ -261,6 +261,23 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     return json(l);
   }
 
+
+  if (path === '/admin/clean-responsables') {
+    // Unification des statuts : seuls les coachs de l'équipe et les admins du club restent responsables ; les autres redeviennent membres
+    const idx: any = await fetch(`${env.SITE_URL}/app-data/index.json`).then((r) => r.json()).catch(() => null);
+    const clubOf = (team: string) => String(idx?.clubs?.find((c: any) => c.teams?.some((t: any) => String(t.id) === team))?.id ?? '');
+    const users = new Map<string, Record<string, Space>>();
+    let n = 0;
+    for (const m of await fs.query('members', [['role', 'EQUAL', 'responsable']], { allDescendants: true })) {
+      const team = String(m.teamId), uid = String(m.uid);
+      if (uid === user.uid) continue;
+      if (!users.has(uid)) users.set(uid, spacesOf(await fs.get<any>(`users/${uid}`)));
+      const sp = Object.values(users.get(uid)!), club = clubOf(team);
+      const ok = sp.some((s) => (s.role === 'coach' && (s.team_ids ?? []).map(String).includes(team)) || (s.role === 'club_admin' && s.club_id === club) || s.role === 'super_admin');
+      if (!ok) { await fs.set(m._path, { role: 'membre' } as any); n++; }
+    }
+    return json({ ok: true, n });
+  }
 
   if (path === '/admin/invite-admin') {
     const email = String(body.email ?? '').trim().toLowerCase(), club = String(body.club_id ?? '').replace(/\D/g, '');

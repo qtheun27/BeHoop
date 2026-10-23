@@ -11,6 +11,8 @@ import { t } from '../lib/i18n';
 
 export default function Moderation() {
   const s = useSession();
+  useEffect(() => { if (!s.isAdmin) return; try { if (sessionStorage.getItem('clean-resp')) return; sessionStorage.setItem('clean-resp', '1'); } catch { /* */ }
+    api('/admin/clean-responsables', {}).catch(() => {}); }, [s.isAdmin]);
   const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support'>(() => (new URLSearchParams(location.hash.split('?')[1] ?? '').get('tab') === 'support' ? 'support' : 'requests'));
   if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
@@ -37,7 +39,6 @@ function Requests() {
           <div className="sub">{e ? `${e.club.short} · ${teamLabel(e.team)}` : `${t('Équipe')} ${m.teamId}`}</div>
           {m.message && <div className="sub">« {m.message} »</div>}</div>
         <button className="btn small" onClick={() => act(() => D.setMember(m.teamId, m.uid, { status: 'accepted' }))}>{t('Accepter')}</button>
-        <button className="btn small secondary" onClick={() => act(() => D.setMember(m.teamId, m.uid, { status: 'accepted', role: 'responsable' }))}>{t('Responsable')}</button>
         <button className="btn small danger" onClick={() => act(() => D.removeMember(m.teamId, m.uid))}>{t('Refuser')}</button>
       </div>); })}</div>
   );
@@ -101,8 +102,11 @@ function Teams() {
         <div className="hstack mt">{t('Classement')} :
           {(['jeunes', 'seniors'] as const).map((g) => <button key={g} className={`btn small${(info.data?.ageGroupOverride ?? info.data?.ageGroup ?? idx.data?.get(sel)?.team.ag) === g ? '' : ' secondary'}`}
             onClick={async () => { await D.setAgeGroupOverride(sel, g); info.reload(); }}>{g === 'jeunes' ? t('Jeunes') : t('Seniors')}</button>)}</div>
-        <label className="label">{t('Nommer un responsable')}</label>
-        <AccountPicker onPick={() => {}} action={(a) => <button className="btn small" onClick={async () => { await D.setDoc(D.doc(D.db, 'teamMembers', String(sel), 'members', a.uid), { uid: a.uid, teamId: sel, role: 'responsable', status: 'accepted', displayName: a.name, createdAt: D.serverTimestamp() }); s.toast(t('{n} est responsable', { n: a.name })); }}>{t('Nommer')}</button>} />
+        <label className="label">{t('Nommer le coach de l’équipe')}</label>
+        <AccountPicker onPick={() => {}} action={(a) => <button className="btn small" onClick={async () => { const e = idx.data?.get(sel); if (!e) return;
+          // Responsable d'équipe = coach de l'équipe (un seul système de rôles)
+          await api('/admin/set-role', { uid: a.uid, club_id: e.club.id, club_name: e.club.name, role: 'coach', add_team: String(sel), name: a.name, email: a.email });
+          await D.setDoc(D.doc(D.db, 'teamMembers', String(sel), 'members', a.uid), { uid: a.uid, teamId: sel, role: 'responsable', status: 'accepted', displayName: a.name, createdAt: D.serverTimestamp() }); s.toast(t('{n} est coach de l’équipe', { n: a.name })); }}>{t('Nommer coach')}</button>} />
       </div>}
     </>
   );

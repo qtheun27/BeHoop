@@ -370,7 +370,9 @@ service cloud.firestore {
                         && request.resource.data.get('message', '').size() <= 200)
                     || isAdmin();
       // Accepter / nommer responsable : responsable de l'équipe ou super admin.
-      allow update: if (isResponsible(int(teamId)) && onlyChanged(['status', 'role'])) || isAdmin();
+      // Accepter : responsable de l'équipe (coach, admin du club) ; il ne nomme plus de responsable : ce statut vient du rôle
+      // dans le club (coach de l'équipe, admin du club), posé par le serveur, ou du super admin.
+      allow update: if (isResponsible(int(teamId)) && onlyChanged(['status', 'role']) && request.resource.data.role == 'membre') || isAdmin();
       // Quitter (soi-même), retirer/refuser (responsable), super admin.
       allow delete: if signedIn() && (uid() == memberId || isResponsible(int(teamId)) || isAdmin());
     }
