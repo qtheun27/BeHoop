@@ -38,7 +38,8 @@ const clean = <T extends object>(o: T) => Object.fromEntries(Object.entries(o).f
 // ---------- Compte ----------
 export async function getMe(uid: string): Promise<ClubUser | null> {
   const s = await getDoc(doc(db, 'users', uid));
-  return s.exists() ? ({ uid, ...s.data() } as ClubUser) : null;
+  // Compte sans aucun rôle (tous ses espaces retirés) : comme pas de compte club
+  return s.exists() && s.data().role ? ({ uid, ...s.data() } as ClubUser) : null;
 }
 export async function pendingInvitation(email: string | null): Promise<Invitation | null> {
   if (!email) return null;
@@ -77,6 +78,9 @@ export async function addChild(me: ClubUser, prenom: string, nom: string, teamId
 }
 export const addPlayer = (clubId: string, teamId: string | null, prenom: string, nom: string) =>
   addDoc(collection(db, 'players'), { club_id: clubId, team_id: teamId, account_uid: '', parent_uids: [], prenom, nom, created_at: serverTimestamp() });
+/** Fiche joueur d'un compte joueur (créée par l'admin si elle manque) */
+export const addPlayerCard = (clubId: string, teamId: string | null, uid: string, prenom: string) =>
+  setDoc(doc(db, 'players', `${uid}_${clubId}`), { club_id: clubId, team_id: teamId, account_uid: uid, parent_uids: [], prenom, nom: '', created_at: serverTimestamp() });
 export const movePlayer = (id: string, teamId: string | null) => updateDoc(doc(db, 'players', id), { team_id: teamId });
 export const updatePlayer = (id: string, p: Partial<Pick<Player, 'prenom' | 'nom'>>) => updateDoc(doc(db, 'players', id), p);
 export const deletePlayer = (id: string) => deleteDoc(doc(db, 'players', id));

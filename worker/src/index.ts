@@ -259,7 +259,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   }
 
   // ----- Espace Club : espaces (club + rôle), liens avec les Équipes BeHoop, QR code, outils du super admin (worker/src/club.ts)
-  if (path.startsWith('/club/') || path.startsWith('/admin/')) { const r = await clubApi(path, { fs, env, user, profile, isAdmin, body, json }); if (r) return r; }
+  if (path.startsWith('/club/') || path.startsWith('/admin/') || path === '/support/send') { const r = await clubApi(path, { fs, env, user, profile, isAdmin, body, json }); if (r) return r; }
 
   if (path === '/notify/hoopcamp') {
     // assign : un coach envoie un programme (joueurs et parents prévenus) ; done : séance finie → parents et coach ;

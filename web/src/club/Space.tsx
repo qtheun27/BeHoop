@@ -6,6 +6,7 @@ import { t, tn, locale } from '../lib/i18n';
 import { loadClub, type Game } from '../lib/data';
 import { Skeleton, Empty, Avatar, Loader, useWide, Logo, LangSwitch, useAsync, Sheet } from '../ui/kit';
 import { api } from '../lib/api';
+import { HelpSheet } from '../ui/Help';
 import { Ico, type IconName } from '../ui/icons';
 import { addDays, today } from '../hoopcamp/engine';
 import * as A from './api';
@@ -450,6 +451,7 @@ function Account() {
   const k = useClub();
   const me = k.me!;
   const [name, setName] = useState(me.display_name ?? '');
+  const [help, setHelp] = useState(false);
   return (
     <>
       <section className="hc-hero small"><div className="hc-kick"><Ico n="user" />{t('Mon compte club')}</div><h2>{me.display_name ?? s.user?.email}</h2><p>{t(ROLE_LABEL[me.role])} · {k.club?.name ?? me.club_id}</p></section>
@@ -466,6 +468,8 @@ function Account() {
       </div>
       <p className="hint">{t('Données des jeunes : seuls le joueur, ses parents liés et le coach de son équipe voient son Hoop Camp.')}</p>
       <a className="btn secondary mt" href="#/profil">{t('Mon profil BeHoop')}</a>
+      <button className="btn secondary mt" onClick={() => setHelp(true)}>{t('Aide / Contact')}</button>
+      {help && <HelpSheet onClose={() => setHelp(false)} />}
     </>
   );
 }

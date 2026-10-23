@@ -26,12 +26,13 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
   /** Écrit les espaces d'un compte et active `active` (null : le premier restant ; aucun : plus de compte club) */
   const save = async (uid: string, u: any, spaces: Record<string, Space>, active: string | null, extra: Record<string, unknown> = {}) => {
     const keys = Object.keys(spaces);
-    if (!keys.length) { await fs.delete(`users/${uid}`); return; }
+    // Plus aucun espace : le compte reste (sans rôle), pour pouvoir lui en redonner un
+    if (!keys.length) { await fs.set(`users/${uid}`, { role: '', club_id: '', club_name: '', team_ids: [], children_player_ids: [], spaces: {}, club_ids: [], email: u?.email ?? extra.email ?? '', display_name: u?.display_name || extra.name || '' } as any, false); return; }
     const a = spaces[active && spaces[active] ? active : keys.includes(key(String(u?.club_id), u?.role)) ? key(String(u.club_id), u.role) : keys[0]];
     await fs.set(`users/${uid}`, {
       role: a.role, club_id: a.club_id, club_name: a.club_name ?? '', team_ids: a.team_ids ?? [], children_player_ids: a.children_player_ids ?? [],
       spaces: spaces as any, club_ids: [...new Set(keys.map((k) => spaces[k].club_id))],
-      email: u?.email ?? extra.email ?? '', display_name: u?.display_name ?? extra.name ?? '', ...(u ? {} : { created_at: new Date() }),
+      email: u?.email ?? extra.email ?? '', display_name: u?.display_name || extra.name || '', ...(u ? {} : { created_at: new Date() }),
     } as any, false);
   };
   const teamCoach = async (club: string, team: string, uid: string, on: boolean) => {
@@ -109,8 +110,17 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     return json({ ok: true });
   }
 
+  if (path === '/support/send') {
+    // Aide / contact : message enregistré pour le super admin (console de modération → Messages), réponse par e-mail
+    const subject = String(body.subject ?? '').trim().slice(0, 120), message = String(body.message ?? '').trim().slice(0, 3000);
+    if (!message) return json({ ok: false }, 400);
+    const id = `${Date.now()}-${user.uid.slice(0, 8)}`;
+    await fs.set(`support/${id}`, { uid: user.uid, email: user.email ?? '', name: profile?.displayName ?? '', subject, message, page: String(body.page ?? '').slice(0, 200), status: 'open', created_at: new Date() } as any, false);
+    return json({ ok: true });
+  }
+
   // ---------- Super admin ----------
-  if (!path.startsWith('/admin/') || !['/admin/accounts', '/admin/invite-admin', '/admin/move-club', '/admin/remove-club-user', '/admin/set-role', '/admin/delete-account', '/admin/players', '/admin/link', '/admin/invitations'].includes(path)) return null;
+  if (!path.startsWith('/admin/') || !['/admin/accounts', '/admin/invite-admin', '/admin/move-club', '/admin/remove-club-user', '/admin/set-role', '/admin/delete-account', '/admin/players', '/admin/link', '/admin/invitations', '/admin/support'].includes(path)) return null;
   if (!isAdmin) throw new Error('FORBIDDEN');
 
   if (path === '/admin/accounts') {
@@ -123,6 +133,21 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
       o.email = u.email ?? null; o.clubs = Object.values(spacesOf(u)).map((s) => ({ club_id: s.club_id, club_name: s.club_name, role: s.role, team_ids: s.team_ids ?? [] }));
       out.set(id, o);
     }
+    // Comptes de connexion (Firebase Auth) qui n'ont ni profil BeHoop ni espace club : visibles aussi
+    try {
+      const tok = await accessToken(env.FIREBASE_SERVICE_ACCOUNT);
+      let page = '';
+      for (let i = 0; i < 20; i++) {
+        const r = await fetch(`https://identitytoolkit.googleapis.com/v1/projects/${env.FIREBASE_PROJECT_ID}/accounts:batchGet?maxResults=1000${page ? `&nextPageToken=${page}` : ''}`, { headers: { Authorization: `Bearer ${tok}` } });
+        if (!r.ok) break;
+        const d: any = await r.json();
+        for (const a of d.users ?? []) { const o = out.get(a.localId); if (o) { o.email ??= a.email ?? null; continue; }
+          out.set(a.localId, { uid: a.localId, name: a.displayName ?? a.email ?? '?', email: a.email ?? null, profile: false, clubs: [], created: a.createdAt ? Number(a.createdAt) : null }); }
+        if (!d.nextPageToken) break; page = d.nextPageToken;
+      }
+    } catch { /* liste des connexions indisponible */ }
+    const cards = await fs.query('players', [['account_uid', 'NOT_EQUAL', '']]).catch(() => []);
+    for (const o of out.values()) for (const c of o.clubs ?? []) if (c.role === 'player') c.team_id = cards.find((p: any) => p.account_uid === o.uid && String(p.club_id) === String(c.club_id))?.team_id ?? null;
     const me = out.get(user.uid); if (me) me.superAdmin = true;
     return json([...out.values()]);
   }
@@ -142,6 +167,13 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
       const base = sp[k] ?? (prev && prev.role === role ? prev : { club_id: club, role, team_ids: [], children_player_ids: role === 'parent' ? prev?.children_player_ids ?? [] : [] });
       sp[k] = { ...base, club_id: club, role, club_name: String(body.club_name ?? base.club_name ?? '').slice(0, 80), ...(Array.isArray(body.team_ids) ? { team_ids: body.team_ids.map(String) } : {}) };
       if (role === 'coach') for (const t of sp[k].team_ids ?? []) await teamCoach(club, t, uid, true);
+      if (role === 'player') {
+        // Joueur : sa fiche dans ce club (créée si besoin), avec son équipe
+        const card = (await fs.query('players', [['account_uid', 'EQUAL', uid]])).find((p: any) => String(p.club_id) === club);
+        const team = body.team_id === undefined ? undefined : body.team_id ? String(body.team_id) : null;
+        if (card) { if (team !== undefined) await fs.set(card._path, { team_id: team } as any); }
+        else await newPlayer(club, team ?? null, { account: uid, prenom: String(body.name ?? u?.display_name ?? '').split(' ')[0] || String(body.name ?? '') });
+      }
     }
     await save(uid, u, sp, k ?? (u ? key(String(u.club_id), u.role) : null), { email: String(body.email ?? ''), name: String(body.name ?? '') });
     return json({ ok: true });
@@ -172,7 +204,12 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
 
   if (path === '/admin/invitations') {
     if (body.cancel) { await fs.delete(`invitations/${String(body.cancel).toLowerCase().replace(/[^\w@.+-]/g, '')}`); return json({ ok: true }); }
-    return json((await fs.query('invitations', [])).map((d: any) => ({ email: d._path.split('/').pop(), role: d.role, club_id: d.club_id, club_name: d.club_name, status: d.status, created_at: d.created_at ?? null })));
+    return json((await fs.query('invitations', [['status', 'EQUAL', 'pending']])).map((d: any) => ({ email: d._path.split('/').pop(), role: d.role, club_id: d.club_id, club_name: d.club_name, status: d.status, created_at: d.created_at ?? null })));
+  }
+
+  if (path === '/admin/support') {
+    if (body.close) { await fs.set(`support/${String(body.close).replace(/[^\w-]/g, '')}`, { status: 'closed' } as any); return json({ ok: true }); }
+    return json((await fs.query('support', [['status', 'EQUAL', 'open']])).map((d: any) => ({ id: d._path.split('/').pop(), ...d, _path: undefined })));
   }
 
   if (path === '/admin/invite-admin') {

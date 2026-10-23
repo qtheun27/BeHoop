@@ -10,12 +10,12 @@ import { t } from '../lib/i18n';
 
 export default function Moderation() {
   const s = useSession();
-  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs'>('requests');
+  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support'>('requests');
   if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
     <Screen title={t('Modération')} back="profil">
-      <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
-      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}
+      <div className="seg">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs'], ['support', 'Messages']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}{tab === 'support' && <Support />}
     </Screen>
   );
 }
@@ -107,7 +107,7 @@ function Teams() {
   );
 }
 /** Tous les comptes BeHoop (profils) avec leur rôle éventuel dans l'Espace Club : recherche par nom */
-interface Account { superAdmin?: boolean; uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string; team_ids?: string[] }[] }
+interface Account { superAdmin?: boolean; uid: string; name: string; avatar?: string; banned?: boolean; created?: string | number; profile: boolean; email?: string; clubs?: { role: string; club_name?: string; club_id: string; team_ids?: string[]; team_id?: string | null }[] }
 /** Liste fusionnée côté serveur (réservée au super admin) : comptes BeHoop et comptes Espace Club */
 const loadAccounts = async () => (await api<Account[]>('/admin/accounts')).sort((a, b) => a.name.localeCompare(b.name));
 const ROLE_FR: Record<string, string> = { super_admin: 'Super admin', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
@@ -209,7 +209,7 @@ function AccountSheet({ a, all, onClose }: { a: Account; all: Account[]; onClose
   const s = useSession();
   const idx = useAsync(loadIndex, []);
   const [busy, setBusy] = useState(false);
-  const [add, setAdd] = useState({ q: '', club: null as null | { id: number; name: string }, role: 'coach' as string });
+  const [add, setAdd] = useState({ q: '', club: null as null | { id: number; name: string }, role: 'coach' as string, team: '' });
   const club = (id: string) => idx.data?.clubs.find((c) => String(c.id) === String(id));
   const run = async (path: string, body: object, msg: string) => {
     setBusy(true);
@@ -222,7 +222,7 @@ function AccountSheet({ a, all, onClose }: { a: Account; all: Account[]; onClose
         <h3 className="group-title">{t('Espace Club')}</h3>
         {!a.clubs?.length && <p className="muted">{t('Pas d’Espace Club')}</p>}
         {a.clubs?.map((c) => <RoleRow key={`${c.club_id}~${c.role}`} c={c} a={a} all={all} teams={club(c.club_id)?.teams ?? []} clubName={club(c.club_id)?.name ?? c.club_name ?? c.club_id} busy={busy}
-          onSave={(role, team_ids) => run('/admin/set-role', { uid: a.uid, club_id: c.club_id, club_name: club(c.club_id)?.name ?? c.club_name, role, old_role: c.role, team_ids }, t('Enregistré.'))}
+          onSave={(role, team_ids, team_id) => run('/admin/set-role', { uid: a.uid, club_id: c.club_id, club_name: club(c.club_id)?.name ?? c.club_name, role, old_role: c.role, team_ids, team_id, name: a.name, email: a.email }, t('Enregistré.'))}
           onRemove={() => confirm(t('Retirer ce rôle ?')) && run('/admin/set-role', { uid: a.uid, club_id: c.club_id, role: null, old_role: c.role }, t('Retiré du club.'))} />)}
         <h3 className="group-title mt">{t('Ajouter à un club')}</h3>
         <input className="field" placeholder={t('Rechercher un club')} value={add.club ? add.club.name : add.q} onChange={(e) => setAdd({ ...add, q: e.target.value, club: null })} />
@@ -230,7 +230,10 @@ function AccountSheet({ a, all, onClose }: { a: Account; all: Account[]; onClose
           .map((c) => <button key={c.id} className="row" onClick={() => setAdd({ ...add, club: { id: c.id, name: c.name } })}>{c.name}</button>)}</div>}
         {add.club && <div className="hstack mt">
           <select className="field" value={add.role} onChange={(e) => setAdd({ ...add, role: e.target.value })}>{ROLES.map((r) => <option key={r} value={r}>{t(ROLE_FR[r])}</option>)}</select>
-          <button className="btn small" disabled={busy} onClick={() => run('/admin/set-role', { uid: a.uid, club_id: add.club!.id, club_name: add.club!.name, role: add.role, email: a.email, name: a.name }, t('Club ajouté.'))}>{t('Ajouter')}</button>
+          {(add.role === 'player' || add.role === 'coach') && <select className="field" value={add.team} onChange={(e) => setAdd({ ...add, team: e.target.value })} aria-label={t('Équipe')}>
+            <option value="">{t('Équipe (facultatif)')}</option>{(club(String(add.club.id))?.teams ?? []).map((tm) => <option key={tm.id} value={String(tm.id)}>{tm.cat}</option>)}</select>}
+          <button className="btn small" disabled={busy} onClick={() => run('/admin/set-role', { uid: a.uid, club_id: add.club!.id, club_name: add.club!.name, role: add.role, email: a.email, name: a.name,
+            ...(add.role === 'player' ? { team_id: add.team || null } : add.role === 'coach' && add.team ? { team_ids: [add.team] } : {}) }, t('Club ajouté.'))}>{t('Ajouter')}</button>
         </div>}
         {a.uid !== s.user?.uid && <button className="btn danger mt" style={{ width: '100%' }} disabled={busy}
           onClick={() => confirm(t('Supprimer définitivement le compte de {n} ? Il ne pourra plus se connecter.', { n: a.name })) && run('/admin/delete-account', { uid: a.uid }, t('Compte supprimé.'))}>{t('Supprimer le compte')}</button>}
@@ -238,19 +241,22 @@ function AccountSheet({ a, all, onClose }: { a: Account; all: Account[]; onClose
     </Sheet>
   );
 }
-function RoleRow({ c, a, all, teams, clubName, busy, onSave, onRemove }: { c: { club_id: string; role: string; team_ids?: string[] }; a: Account; all: Account[]; teams: { id: number; cat: string }[]; clubName: string; busy: boolean;
-  onSave: (role: string, team_ids?: string[]) => void; onRemove: () => void }) {
+function RoleRow({ c, a, all, teams, clubName, busy, onSave, onRemove }: { c: { club_id: string; role: string; team_ids?: string[]; team_id?: string | null }; a: Account; all: Account[]; teams: { id: number; cat: string }[]; clubName: string; busy: boolean;
+  onSave: (role: string, team_ids?: string[], team_id?: string | null) => void; onRemove: () => void }) {
   const [role, setRole] = useState(c.role);
   const [sel, setSel] = useState<string[]>(c.team_ids ?? []);
+  const [team, setTeam] = useState<string>(c.team_id ?? '');
   return (
     <div className="group" style={{ padding: 12, marginBottom: 10 }}>
       <b>{clubName}</b>
       <div className="hstack mt">
         <select className="field" value={role} onChange={(e) => setRole(e.target.value)}>{[...ROLES, ...(c.role === 'super_admin' ? ['super_admin'] : [])].map((r) => <option key={r} value={r}>{t(ROLE_FR[r])}</option>)}</select>
-        <button className="btn small" disabled={busy} onClick={() => onSave(role, role === 'coach' ? sel : undefined)}>{t('Enregistrer')}</button>
+        <button className="btn small" disabled={busy} onClick={() => onSave(role, role === 'coach' ? sel : undefined, role === 'player' ? team || null : undefined)}>{t('Enregistrer')}</button>
       </div>
       {role === 'coach' && <><p className="muted" style={{ fontSize: 13 }}>{t('Équipes coachées')}</p>
         <div className="chips" style={{ flexWrap: 'wrap' }}>{teams.map((tm) => { const id = String(tm.id); return <button key={id} className={`chip${sel.includes(id) ? ' on' : ''}`} onClick={() => setSel(sel.includes(id) ? sel.filter((x) => x !== id) : [...sel, id])}>{tm.cat}</button>; })}</div></>}
+      {role === 'player' && <select className="field mt" value={team} onChange={(e) => setTeam(e.target.value)} aria-label={t('Équipe')}>
+        <option value="">{t('Sans équipe')}</option>{teams.map((tm) => <option key={tm.id} value={String(tm.id)}>{tm.cat}</option>)}</select>}
       {(c.role === 'parent' || c.role === 'player') && <Links c={c} a={a} all={all} clubName={clubName} />}
       <button className="btn small danger mt" disabled={busy} onClick={onRemove}>{t('Retirer ce rôle')}</button>
     </div>
@@ -304,7 +310,7 @@ function AllInvitations() {
   if (inv.loading) return <Skeleton n={2} />;
   return (
     <>
-      <p className="muted" style={{ fontSize: 13, margin: '16px 4px 8px' }}>{t('Invitations')} · {(inv.data ?? []).length}</p>
+      <p className="muted" style={{ fontSize: 13, margin: '16px 4px 8px' }}>{t('Invitations en attente')} · {(inv.data ?? []).length}</p>
       <div className="group">
         {(inv.data ?? []).map((i) => (
           <div key={i.email} className="row"><div className="grow">{i.email}<div className="sub">{t(ROLE_FR[i.role] ?? i.role)}{i.club_name ? ` · ${i.club_name}` : ''} · {i.status === 'used' ? t('Utilisée') : t('En attente')}</div></div>
@@ -312,5 +318,27 @@ function AllInvitations() {
         ))}
       </div>
     </>
+  );
+}
+
+/** Messages « Aide / Contact » des utilisateurs : réponse par e-mail, puis classer */
+function Support() {
+  const m = useAsync(() => api<{ id: string; email: string; name: string; subject: string; message: string; page: string; created_at?: string }[]>('/admin/support', {}), []);
+  if (m.loading) return <Skeleton n={2} />;
+  if (!m.data?.length) return <Empty ill="mail" title={t('Aucun message')} />;
+  return (
+    <div className="stack">
+      {m.data.map((x) => (
+        <div key={x.id} className="group" style={{ padding: 14 }}>
+          <b>{x.subject || t('Sans sujet')}</b>
+          <p className="muted" style={{ fontSize: 13 }}>{x.name} · {x.email}{x.created_at ? ` · ${new Date(x.created_at).toLocaleString()}` : ''}{x.page ? ` · ${x.page}` : ''}</p>
+          <p style={{ whiteSpace: 'pre-wrap' }}>{x.message}</p>
+          <div className="hstack mt">
+            <a className="btn small" href={`mailto:${x.email}?subject=${encodeURIComponent(`Re: ${x.subject || 'BeHoop'}`)}&body=${encodeURIComponent(`\n\n> ${x.message.replace(/\n/g, '\n> ')}`)}`}>{t('Répondre par e-mail')}</a>
+            <button className="btn small secondary" onClick={async () => { await api('/admin/support', { close: x.id }); m.reload(); }}>{t('Traité')}</button>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

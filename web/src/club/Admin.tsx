@@ -99,7 +99,7 @@ function Members({ clubId }: { clubId: string }) {
             <div className="group">
               {l.map((u) => (
                 <button key={u.id} className="row" onClick={() => { setEdit(u); setSel(u.team_ids ?? []); }}>
-                  <span className="grow"><span className="nm">{u.display_name ?? u.email}</span>
+                  <span className="grow"><span className="nm">{u.display_name || u.email}</span>
                     <span className="sub">{u.email}{u.role === 'coach' ? ` · ${(u.team_ids ?? []).map((id) => k.team(id)?.cat ?? id).join(', ') || t('aucune équipe')}` : ''}</span></span>
                   <span className="chev">›</span>
                 </button>
@@ -109,9 +109,10 @@ function Members({ clubId }: { clubId: string }) {
         );
       })}
       {edit && (
-        <Sheet title={edit.display_name ?? edit.email ?? ''} onClose={() => setEdit(null)}>
+        <Sheet title={edit.display_name || edit.email || ''} onClose={() => setEdit(null)}>
           <div className="form">
             <p className="hint">{t(ROLE_LABEL[edit.role])} · {edit.email}</p>
+            {edit.role === 'player' && <PlayerTeam clubId={clubId} uid={edit.id} name={edit.display_name || ''} onDone={() => { setEdit(null); us.reload(); }} />}
             {edit.role === 'coach' && (
               <>
                 <h3 className="group-title">{t('Équipes coachées')}</h3>
@@ -173,6 +174,27 @@ function Players({ clubId }: { clubId: string }) {
           </div>
         </Sheet>
       )}
+    </>
+  );
+}
+
+/** Équipe d'un joueur qui a son compte : sa fiche joueur dans le club (créée si elle manque) */
+function PlayerTeam({ clubId, uid, name, onDone }: { clubId: string; uid: string; name: string; onDone: () => void }) {
+  const s = useSession();
+  const card = useAsync(() => A.myPlayerCards(uid).then((l) => l.find((p) => p.club_id === clubId) ?? null).catch(() => null), [uid]);
+  const [team, setTeam] = useState<string | null>(null);
+  if (card.loading) return <Skeleton n={1} h={44} />;
+  const cur = team ?? card.data?.team_id ?? '';
+  return (
+    <>
+      <label className="lbl">{t('Équipe')}<TeamSelect value={cur} onChange={setTeam} empty={t('Sans équipe')} /></label>
+      <button className="btn volt" onClick={async () => {
+        try {
+          if (card.data) await A.movePlayer(card.data.id, cur || null);
+          else await A.addPlayerCard(clubId, cur || null, uid, name.split(' ')[0] || name);
+          s.toast(t('Enregistré.')); onDone();
+        } catch { s.toast(t('Accès refusé.')); }
+      }}>{t('Enregistrer')}</button>
     </>
   );
 }
