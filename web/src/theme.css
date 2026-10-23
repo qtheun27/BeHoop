@@ -435,3 +435,10 @@ html { overflow-x: hidden; }
 .bubble small { display: block; margin-top: 4px; font-size: 11px; opacity: .7; }
 .chat-send { display: flex; gap: 8px; align-items: flex-end; }
 .chat-send .field { flex: 1; }
+/* Console de modération : 7 onglets, défilement horizontal sur téléphone plutôt que des libellés écrasés */
+.seg.mod-tabs { overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap; }
+.seg.mod-tabs::-webkit-scrollbar { display: none; }
+.seg.mod-tabs button { flex: 0 0 auto; padding: 0 14px; white-space: nowrap; }
+@media (min-width: 900px) { .seg.mod-tabs button { flex: 1 0 auto; } }
+/* Lignes de la console : le bouton d'action passe sous le texte quand la place manque */
+@media (max-width: 600px) { .group .row:has(> span > .btn) { flex-wrap: wrap; } .group .row > span:has(> .btn) { margin-left: auto; } .hstack:has(> .field) { flex-wrap: wrap; } }
