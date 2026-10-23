@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U12 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-13175438395-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261219T140000
 DTEND;TZID=Europe/Brussels:20261219T160000
 SUMMARY:Molenbeek Rebels Basketball M12 A – BBC Haacht M12 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13192216014-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261219T150000
 DTEND;TZID=Europe/Brussels:20261219T170000
 SUMMARY:BC Opwijk M12 A – Stella Artois 0.0 Blue Tigers Leuven M12 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U12 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13606881981-comp-cup-beker-van-vlaams-brabant-u12-meisjes@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20270206T170000
 DTEND;TZID=Europe/Brussels:20270206T190000
 SUMMARY:Hageland United M12 A – winnaar BVBM1204 01

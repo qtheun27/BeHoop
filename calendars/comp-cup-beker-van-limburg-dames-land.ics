@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Limburg Dames Land
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11860323226-comp-cup-beker-van-limburg-dames-land@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210922Z
 DTSTART;TZID=Europe/Brussels:20270102T201500
 DTEND;TZID=Europe/Brussels:20270102T221500
 SUMMARY:Basket Houthalen DSE A – BBC Croonen Lommel DSE A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11759657512-comp-cup-beker-van-limburg-dames-land@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210922Z
 DTSTART;TZID=Europe/Brussels:20270103T144500
 DTEND;TZID=Europe/Brussels:20270103T164500
 SUMMARY:Basket Lummen DSE A – Hasselt BT DSE A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11809990369-comp-cup-beker-van-limburg-dames-land@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210922Z
 DTSTART;TZID=Europe/Brussels:20270103T150000
 DTEND;TZID=Europe/Brussels:20270103T170000
 SUMMARY:Basket Zonhoven DSE A – Stevoort BBC DSE A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Limburg Dames Land 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11776435131-comp-cup-beker-van-limburg-dames-land@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210922Z
 DTSTART;TZID=Europe/Brussels:20270103T170000
 DTEND;TZID=Europe/Brussels:20270103T190000
 SUMMARY:Basket Houthalen DSE B – Basket Lummen DSE B

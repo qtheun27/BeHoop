@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Oost-Vlaanderen U12 Gemengd
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-12382793430-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261031T090000
 DTEND;TZID=Europe/Brussels:20261031T110000
 SUMMARY:Erembodegem Silverbacks G12 A – BC Black Beez Erpe-Mere G12 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12315535859-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T100000
 DTEND;TZID=Europe/Brussels:20261107T120000
 SUMMARY:BBC Houtem Redwolves G12 A – BBC Olympia Denderleeuw G12 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12332313478-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T113000
 DTEND;TZID=Europe/Brussels:20261107T133000
 SUMMARY:Koninklijke Sint-Niklase Condors G12 A – CSS Outdoor Living Ninove G12 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12298758240-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:KBBC Wezen-Vrienden Geraardsbergen G12 A – Partena Professional Okapi Aalst G12 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12433126287-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Onderons Grembergen G12 A – BBC Haantjes Certifisc Oudenaarde G12 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12517014382-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Gent-Oost Eagles G12 A – Jumbo Elektrooghe Gembas Knesselare G12 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12349091097-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Basics Melsele-Beveren G12 A – BC Lede G12 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12466681525-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T151500
 DTEND;TZID=Europe/Brussels:20261107T171500
 SUMMARY:BBC Assenede G12 A – BBC Wildcats Gavere G12 A
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12416348668-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T160000
 DTEND;TZID=Europe/Brussels:20261107T180000
 SUMMARY:KBBC Sparta Laarne G12 A – KBBC Wasocub Waasmunster vzw G12 A
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12399423954-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261107T163000
 DTEND;TZID=Europe/Brussels:20261107T183000
 SUMMARY:KBBC Eksaarde G12 A – BBC Falco Gent G12 A
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12382646335-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:Amon Jeugd Gentson G12 A – Blue Rocks Ronse-Kluisbergen G12 A
@@ -104,7 +104,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12449903906-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:Basket Meetjesland G12 A – e5 Sgolba Aalter G12 A
@@ -113,7 +113,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12365868716-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:ABO LDP Donza G12 A – BBC Lokeren G12 B
@@ -122,7 +122,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12349238192-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BBC 2070 Zwijndrecht G12 A – B.B.C. Zele G12 A
@@ -131,7 +131,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12533792001-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:Panters Baasrode G12 A – BBC Helios SanoRice Zottegem G12 A
@@ -140,7 +140,7 @@ DESCRIPTION:Beker van Oost-Vlaanderen U12 Gemengd 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12366015811-comp-cup-beker-van-oost-vlaanderen-u12-gemengd@behoop.be
-DTSTAMP:20261023T105333Z
+DTSTAMP:20261023T210923Z
 DTSTART;TZID=Europe/Brussels:20261108T170000
 DTEND;TZID=Europe/Brussels:20261108T190000
 SUMMARY:Royal Tigers Evergem G12 A – KBBC Bavi Gent G12 A
