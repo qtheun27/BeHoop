@@ -102,7 +102,11 @@ export function HoopCampPage({ pid }: { pid: string }) {
   const canCheck = isSelf || (isParent && !p.account_uid);
   const canValidate = isParent || k.me?.role === 'coach';
   const team = k.team(p.team_id);
-  if (!c.camp?.profile || !c.prog || edit) return <Setup p={p} camp={c.camp ?? null} defAge={ageOfTeam(team) ?? 'U14'} by={uid} from={isSelf ? 'player' : 'parent'} onDone={() => setEdit(false)} onCancel={c.camp?.profile ? () => setEdit(false) : undefined} />;
+  // Profil et programme : le joueur lui-même ou un parent lié (le coach envoie un programme depuis son équipe)
+  const canSetup = isSelf || isParent;
+  if ((!c.camp?.profile || !c.prog) && !canSetup) return <Empty ill="lock" title={t('{n} n’a pas encore commencé de Hoop Camp', { n: p.prenom })}
+    text={k.me?.role === 'coach' ? t('Envoie-lui un programme depuis ton équipe : il le démarrera avec son profil.') : t('Le joueur ou son parent le démarre depuis son compte. Pour essayer, invite-toi comme parent avec une autre adresse ou utilise le QR code de l’équipe.')} />;
+  if (!c.camp?.profile || !c.prog || (edit && canSetup)) return <Setup p={p} camp={c.camp ?? null} defAge={ageOfTeam(team) ?? 'U14'} by={uid} from={isSelf ? 'player' : 'parent'} onDone={() => setEdit(false)} onCancel={c.camp?.profile ? () => setEdit(false) : undefined} />;
   const { day, st } = c;
   const exists = !!c.exists;
   if (!day || !st) return <Skeleton n={3} />;
@@ -131,7 +135,7 @@ export function HoopCampPage({ pid }: { pid: string }) {
             <p>{c.ended ? t('Programme terminé : bravo ! Continue avec le même ou choisis-en un autre.') : c.prog.days ? t('Jour {n} sur {d}', { n: c.dayN!, d: c.prog.days }) : t('Jour {n}', { n: c.dayN! })}
               {c.camp.program?.from === 'coach' && <> · {t('envoyé par ton coach')}</>}</p>
           </div>
-          <button className="icon-btn" onClick={() => setEdit(true)} aria-label={t('Réglages')}><Ico n="edit" /></button>
+          {canSetup && <button className="icon-btn" onClick={() => setEdit(true)} aria-label={t('Réglages')}><Ico n="edit" /></button>}
         </div>
         <div className="hc-stats">
           <div><b>{Math.round(sec / 60)} min</b><span>{t('aujourd’hui')}</span></div>
@@ -331,6 +335,7 @@ function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; c
   const [f, setF] = useState<TrainingProfile>(camp?.profile ?? { age: defAge, level: 2, hand: 'droite', basket: 'aucun', space: 'moyen', surface: 'exterieur', equip: ['ballon', 'mur', 'plots'], minutes: 30, days: 4, goals: ['dribble'] });
   const [prog, setProg] = useState(camp?.program?.id ?? (AGES.indexOf(defAge) <= 1 ? 'petits' : 'camp-1'));
   const [busy, setBusy] = useState(false);
+  const [step, setStep] = useState(0);
   const up = <K extends keyof TrainingProfile>(k: K, v: TrainingProfile[K]) => setF({ ...f, [k]: v });
   const tog = <T,>(arr: T[], v: T) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
   const progs = PROGRAMS.filter((x) => (!x.minAge || AGES.indexOf(f.age) >= AGES.indexOf(x.minAge)) && (!x.maxAge || AGES.indexOf(f.age) <= AGES.indexOf(x.maxAge)));
@@ -341,7 +346,7 @@ function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; c
       const keep = camp?.program && camp.program.id === prog;
       await A.setCamp(p.id, { profile: f, program: keep ? camp!.program : { id: prog, name: findProgram(prog)?.name ?? prog, start: today(), end: null, from, by } });
       onDone();
-    } catch { s.toast(t('Impossible d’enregistrer. Réessaie.')); } finally { setBusy(false); }
+    } catch (e) { console.error(e); s.toast(t('Impossible d’enregistrer. Réessaie.')); } finally { setBusy(false); }
   };
   const opt = <T extends string | number>(v: T, cur: T, set: (x: T) => void, label: string) => <button key={String(v)} className={`chip${cur === v ? ' on' : ''}`} onClick={() => set(v)}>{t(label)}</button>;
   return (
@@ -349,14 +354,18 @@ function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; c
       <section className="hc-hero small">
         <div className="hc-kick"><Ico n="bolt" />Hoop Camp</div>
         <h2>{from === 'player' ? t('Ton profil d’entraînement') : t('Profil d’entraînement de {n}', { n: p.prenom })}</h2>
-        <p>{t('On te propose seulement des exercices faisables chez toi.')}</p>
+        <p>{[t('Qui es-tu ?'), t('Où t’entraînes-tu ?'), t('Combien de temps ?'), t('Choisis ton programme')][step]}</p>
       </section>
+      <div className="wiz-dots" aria-hidden>{[0, 1, 2, 3].map((n) => <i key={n} className={n <= step ? 'on' : ''} />)}</div>
+      {step === 0 && <div className="wiz-step">
       <h3 className="group-title">{t('Catégorie')}</h3>
       <div className="chips wrap">{AGES.map((a) => opt(a, f.age, (x) => up('age', x), a === 'U21' ? 'U21 / Seniors' : a))}</div>
       <h3 className="group-title">{t('Niveau')}</h3>
       <div className="chips wrap">{([[1, 'Débutant'], [2, 'Intermédiaire'], [3, 'Avancé']] as const).map(([v, l]) => opt(v, f.level, (x) => up('level', x as 1 | 2 | 3), l))}</div>
       <h3 className="group-title">{t('Main forte')}</h3>
       <div className="chips wrap">{opt('droite', f.hand, (x) => up('hand', x as 'droite'), 'Droitier')}{opt('gauche', f.hand, (x) => up('hand', x as 'gauche'), 'Gaucher')}</div>
+      </div>}
+      {step === 1 && <div className="wiz-step">
       <h3 className="group-title">{t('Panier')}</h3>
       <div className="chips wrap">{([['aucun', 'Pas de panier'], ['panier', 'Un panier'], ['terrain', 'Un terrain complet']] as const).map(([v, l]) => opt(v, f.basket, (x) => up('basket', x as TrainingProfile['basket']), l))}</div>
       {f.basket !== 'aucun' && <label className="toggle-line"><input type="checkbox" checked={!!f.adjustable} onChange={(e) => up('adjustable', e.target.checked)} /> {t('Hauteur réglable')}</label>}
@@ -366,6 +375,8 @@ function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; c
       <div className="chips wrap">{([['interieur', 'Intérieur'], ['exterieur', 'Extérieur dur'], ['herbe', 'Herbe']] as const).map(([v, l]) => opt(v, f.surface, (x) => up('surface', x as TrainingProfile['surface']), l))}</div>
       <h3 className="group-title">{t('Matériel')}</h3>
       <div className="chips wrap">{EQUIPMENT.map((q) => <button key={q} className={`chip${f.equip.includes(q) ? ' on' : ''}`} onClick={() => up('equip', tog(f.equip, q))}>{t(EQUIP_LABEL[q])}</button>)}</div>
+      </div>}
+      {step === 2 && <div className="wiz-step">
       <h3 className="group-title">{t('Temps par jour')}</h3>
       <div className="chips wrap">{([15, 30, 45, 60] as const).map((m) => opt(m, f.minutes, (x) => up('minutes', x as TrainingProfile['minutes']), `${m} min`))}</div>
       <h3 className="group-title">{t('Jours par semaine')}</h3>
@@ -373,15 +384,19 @@ function Setup({ p, camp, defAge, by, from, onDone, onCancel }: { p: A.Player; c
       <h3 className="group-title">{t('Ce que je veux travailler')}</h3>
       <div className="chips wrap">{GOALS.map((g) => <button key={g} className={`chip${f.goals.includes(g) ? ' on' : ''}`} onClick={() => up('goals', tog(f.goals, g))}>{t(GOAL_LABEL[g])}</button>)}</div>
 
+      </div>}
+      {step === 3 && <div className="wiz-step">
       <h3 className="group-title">{t('Programme')}</h3>
       {coachProg && <p className="hint">{t('Ton coach t’a envoyé « {p} ». Tu peux le garder ou en choisir un autre.', { p: coachProg.custom?.name ?? findProgram(coachProg.id)?.name ?? coachProg.name })}</p>}
       <div className="progs">
         {coachProg?.custom && <ProgCard pr={coachProg.custom} on={prog === coachProg.id} onPick={() => setProg(coachProg.id)} />}
         {progs.map((x) => <ProgCard key={x.id} pr={x} on={prog === x.id} onPick={() => setProg(x.id)} />)}
       </div>
+      </div>}
       <div className="setup-actions">
-        {onCancel && <button className="btn secondary" onClick={onCancel}>{t('Annuler')}</button>}
-        <button className="btn volt" disabled={busy || !f.equip.length} onClick={save}>{camp?.profile ? t('Enregistrer') : t('Lancer mon Hoop Camp')}</button>
+        {step > 0 ? <button className="btn secondary" onClick={() => setStep(step - 1)}>‹ {t('Retour')}</button> : onCancel && <button className="btn secondary" onClick={onCancel}>{t('Annuler')}</button>}
+        {step < 3 ? <button className="btn volt" disabled={step === 1 && !f.equip.length} onClick={() => { setStep(step + 1); window.scrollTo(0, 0); }}>{t('Suivant')} ›</button>
+          : <button className="btn volt" disabled={busy || !f.equip.length} onClick={save}>{camp?.profile ? t('Enregistrer') : t('Lancer mon Hoop Camp')}</button>}
       </div>
     </div>
   );

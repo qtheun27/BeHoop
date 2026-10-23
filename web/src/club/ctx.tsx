@@ -4,6 +4,7 @@ import { useSession } from '../lib/session';
 import { loadIndex, type Club, type Team } from '../lib/data';
 import { AGES, type Age } from '../hoopcamp/types';
 import * as A from './api';
+import { api } from '../lib/api';
 
 interface ClubCtx {
   loading: boolean;
@@ -40,7 +41,10 @@ export function ClubProvider({ children }: { children: ReactNode }) {
       : me?.role === 'club_admin' || me?.role === 'super_admin' ? (club?.teams ?? []).map((t) => String(t.id))
         : [...new Set(players.map((p) => p.team_id).filter((x): x is string => !!x))];
     set({ loading: false, me, inv, club, players, teamIds });
-  }, [s.user]);
+    // Liens Espace Club → Équipes BeHoop (coach = responsable, joueur/parent = membre), une fois par session
+    if (me) { const k = `club-sync-${u.uid}`; let done = false; try { done = !!sessionStorage.getItem(k); sessionStorage.setItem(k, '1'); } catch { /* */ }
+      if (!done) api('/club/sync', {}).then(() => s.refresh()).catch(() => {}); }
+  }, [s.user]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { load(); }, [load]);
   const team = useCallback((id: string | null | undefined) => (id ? st.club?.teams.find((t) => String(t.id) === String(id)) : undefined), [st.club]);
   const v = useMemo(() => ({ ...st, reload: load, team }), [st, load, team]);

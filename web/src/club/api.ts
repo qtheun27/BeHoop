@@ -153,3 +153,12 @@ export async function canSelfRate(p: Player) {
   const t = await getDoc(doc(db, 'teams', p.team_id)).catch(() => null);
   return !t?.exists() || !(t.data().coach_uids ?? []).length;
 }
+
+// ---------- Code d'équipe (QR) ----------
+export interface JoinCode { club_id: string; club_name?: string; team_id: string; created_by: string; expires: number }
+export async function createJoinCode(c: Omit<JoinCode, 'expires'>) {
+  const a = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', code = Array.from(crypto.getRandomValues(new Uint8Array(8)), (n) => a[n % a.length]).join('');
+  await setDoc(doc(db, 'joinCodes', code), { ...c, expires: Date.now() + 60 * 864e5, created_at: serverTimestamp() });
+  return code;
+}
+export async function getJoinCode(code: string) { const s = await getDoc(doc(db, 'joinCodes', code)).catch(() => null); return s?.exists() ? (s.data() as JoinCode) : null; }

@@ -5,6 +5,7 @@ import { useSession } from '../lib/session';
 import { t, tn, locale } from '../lib/i18n';
 import { loadClub, type Game } from '../lib/data';
 import { Skeleton, Empty, Avatar, Loader, useWide, Logo, LangSwitch, useAsync, Sheet } from '../ui/kit';
+import { api } from '../lib/api';
 import { Ico, type IconName } from '../ui/icons';
 import { addDays, today } from '../hoopcamp/engine';
 import * as A from './api';
@@ -63,6 +64,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
   let el: React.ReactNode;
   if (!s.user) el = <Empty ill="lock" title={t('Connecte-toi pour entrer dans l’Espace Club')} action={<button className="btn volt" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} />;
   else if (k.loading) el = <Loader />;
+  else if (sub === 'rejoindre' && arg) el = <JoinCode code={arg} />;
   else if (!k.me) el = <Join />;
   else switch (sub) {
     case 'hoopcamp': el = <HoopCampPage key={arg} pid={arg!} />; break;
@@ -81,8 +83,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
         <div className="col-main">
           <header className="work-bar">
             <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>
-            <div className="work-id"><span className="work-badge">{t('Espace Club')}</span>{k.club && <span className="ellipsis">{k.club.short || k.club.name}</span>}</div>
-            {!wide && <LangSwitch />}
+            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && <span className="ellipsis">{k.club.short || k.club.name}</span>}</div>
             {s.user && <a className="top-av" href="#/espace/compte" aria-label={t('Mon compte club')}><Avatar name={k.me?.display_name ?? s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>}
           </header>
           {el}
@@ -93,7 +94,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
           <a className="brand" href="#/fil" aria-label={t('Revenir à BeHoop')}><Logo size={40} /></a>
           <div className="work-side-badge">{t('Espace Club')}</div>
           <div className="side-items">{tabs.map((x) => <a key={x.id} href={x.href} className={cur === x.id ? 'on' : ''}><Ico n={x.icon} /><span>{t(x.label)}</span></a>)}</div>
-          <a className="btn secondary side-publish" href="#/fil">‹ {t('Espace loisir')}</a>
+          <a className="btn secondary side-publish" href="#/fil">‹ BeHoop</a>
           <div className="side-foot"><LangSwitch seg /></div>
         </nav>
       )}
@@ -306,6 +307,53 @@ function Join() {
           </>
         )}
         <button className="btn volt" disabled={busy || (inv.role === 'player' && asParent && !child.prenom.trim())} onClick={accept}>{t('Rejoindre l’Espace Club')}</button>
+      </div>
+    </>
+  );
+}
+
+// ---------- Rejoindre avec le code (QR) d'une équipe ----------
+function JoinCode({ code }: { code: string }) {
+  const s = useSession();
+  const k = useClub();
+  const c = useAsync(() => A.getJoinCode(code), [code]);
+  const [name, setName] = useState(k.me?.display_name ?? s.profile?.displayName ?? '');
+  const [asParent, setAsParent] = useState(k.me?.role === 'parent');
+  const [child, setChild] = useState({ prenom: '', nom: '' });
+  const [busy, setBusy] = useState(false);
+  if (c.loading) return <Skeleton n={2} />;
+  const jc = c.data;
+  if (!jc || jc.expires < Date.now()) return <Empty ill="alert" title={t('Code invalide ou expiré')} text={t('Demande un nouveau QR code à ton coach.')} />;
+  const teamName = k.team(jc.team_id)?.cat;
+  if (k.me && k.me.club_id !== jc.club_id) return <Empty ill="alert" title={t('Ce code est celui d’un autre club')} text={t('Un compte est lié à un seul club pour l’instant.')} />;
+  if (k.me && k.me.role !== 'parent') return <Empty ill="checkCircle" title={t('Tu fais déjà partie du club')} action={<a className="btn volt" href="#/espace">{t('Espace Club')}</a>} />;
+  const go = async () => {
+    setBusy(true);
+    try { await api('/club/join', { code, asParent, child, name: name.trim() }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); await s.refresh(); location.hash = '/espace'; }
+    catch { s.toast(t('Impossible de rejoindre. Réessaie.')); } finally { setBusy(false); }
+  };
+  return (
+    <>
+      <section className="hc-hero">
+        <div className="hc-kick">📲 {t('Rejoindre l’équipe')}</div>
+        <h2>{jc.club_name ?? t('Ton club')}{teamName ? ` · ${teamName}` : ''}</h2>
+        <p>{t('Ton compte BeHoop sera lié à l’équipe : Hoop Camp, entraînements, et l’Équipe privée (photos, vidéos, covoiturage).')}</p>
+      </section>
+      <div className="form" style={{ padding: 0 }}>
+        {!k.me && <label className="lbl">{t('Ton nom (visible par le club)')}<input className="field" value={name} onChange={(e) => setName(e.target.value)} /></label>}
+        {!k.me && (
+          <div className="seg work-seg">
+            <button className={!asParent ? 'on' : ''} onClick={() => setAsParent(false)}>{t('Je suis le joueur')}</button>
+            <button className={asParent ? 'on' : ''} onClick={() => setAsParent(true)}>{t('Je suis son parent')}</button>
+          </div>
+        )}
+        {asParent && (
+          <>
+            <input className="field" placeholder={t('Prénom de l’enfant')} value={child.prenom} onChange={(e) => setChild({ ...child, prenom: e.target.value })} />
+            <input className="field" placeholder={t('Nom (facultatif)')} value={child.nom} onChange={(e) => setChild({ ...child, nom: e.target.value })} />
+          </>
+        )}
+        <button className="btn volt" disabled={busy || (asParent && !child.prenom.trim()) || (!asParent && !name.trim())} onClick={go}>{t('Rejoindre')}</button>
       </div>
     </>
   );

@@ -257,6 +257,46 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
 
+  // ----- Espace Club ↔ BeHoop : un seul jeu de liens. Coach du club → responsable de l'Équipe BeHoop ;
+  // joueur / parent → membre accepté des équipes de ses joueurs. Jamais de rétrogradation.
+  const clubSync = async (uid: string) => {
+    const me = await fs.get<any>(`users/${uid}`);
+    if (!me) return [];
+    const want = new Map<string, { role: 'responsable' | 'membre'; relation: string }>();
+    if (me.role === 'coach') for (const t of me.team_ids ?? []) want.set(String(t), { role: 'responsable', relation: 'coach' });
+    const players = me.role === 'player' ? [await fs.get<any>(`players/${uid}`)].filter(Boolean)
+      : me.role === 'parent' ? await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', uid]]) : [];
+    for (const p of players) if (p.team_id && !want.has(String(p.team_id))) want.set(String(p.team_id), { role: 'membre', relation: me.role === 'parent' ? 'parent' : 'joueur' });
+    for (const [t, w] of want) {
+      if (!/^\d+$/.test(t)) continue;
+      const path = `teamMembers/${t}/members/${uid}`, cur = await fs.get<any>(path);
+      if (cur?.status === 'accepted' && (cur.role === 'responsable' || w.role === 'membre')) continue;
+      await fs.set(path, { uid, teamId: Number(t), role: w.role, status: 'accepted', relation: w.relation, displayName: profile?.displayName ?? me.display_name ?? '', ...(cur ? {} : { createdAt: new Date() }) } as any);
+    }
+    return [...want.keys()];
+  };
+  if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
+  if (path === '/club/join') {
+    // Rejoindre l'Espace Club par le code (QR) d'une équipe, sans invitation par e-mail
+    const code = String(body.code ?? '').replace(/\W/g, '');
+    const c = await fs.get<any>(`joinCodes/${code}`);
+    if (!c || (c.expires && c.expires < Date.now())) return json({ ok: false, error: 'code' }, 400);
+    const me = await fs.get<any>(`users/${user.uid}`);
+    const asParent = !!body.asParent, prenom = String(body.child?.prenom ?? '').trim().slice(0, 40), nom = String(body.child?.nom ?? '').trim().slice(0, 40);
+    const name = String(body.name ?? profile?.displayName ?? '').trim().slice(0, 60);
+    if (me && me.club_id !== c.club_id) return json({ ok: false, error: 'club' }, 400);
+    if (me && !(me.role === 'parent' && asParent)) return json({ ok: false, error: 'already' }, 400);
+    if (asParent && !prenom) return json({ ok: false, error: 'child' }, 400);
+    if (!me) await fs.set(`users/${user.uid}`, { role: asParent ? 'parent' : 'player', club_id: c.club_id, club_name: c.club_name ?? '', email: (user.email ?? '').toLowerCase(), display_name: name, children_player_ids: [], created_at: new Date() } as any);
+    if (asParent) {
+      const id = crypto.randomUUID().replace(/-/g, '').slice(0, 20);
+      await fs.set(`players/${id}`, { club_id: c.club_id, team_id: c.team_id, account_uid: '', parent_uids: [user.uid], prenom, nom, created_at: new Date() } as any);
+      await fs.set(`users/${user.uid}`, { children_player_ids: [...((me?.children_player_ids as string[]) ?? []), id] } as any);
+    } else await fs.set(`players/${user.uid}`, { club_id: c.club_id, team_id: c.team_id, account_uid: user.uid, parent_uids: [], prenom: name, nom: '', created_at: new Date() } as any);
+    await clubSync(user.uid);
+    return json({ ok: true });
+  }
+
   if (path === '/notify/hoopcamp') {
     // assign : un coach envoie un programme (joueurs et parents prévenus) ; done : séance finie → parents et coach ;
     // rated : séance validée → le joueur (ou le parent qui gère l'enfant). Vérifié côté serveur avec les liens de l'Espace Club.

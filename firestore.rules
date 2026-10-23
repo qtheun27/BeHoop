@@ -293,6 +293,16 @@ service cloud.firestore {
       }
     }
 
+    // Code d'équipe (QR) pour rejoindre l'Espace Club sans invitation e-mail : créé par le coach de l'équipe ou l'admin du club,
+    // utilisé par le worker (/club/join). Lisible par toute personne connectée qui a le code.
+    match /joinCodes/{code} {
+      allow get: if connecte();
+      allow list: if estSuperAdmin() || estDuClub(resource.data.get('club_id', ''));
+      allow create: if (estCoachDeLequipe(request.resource.data.get('team_id', '')) && request.resource.data.get('club_id', '') == monClub())
+                    || estAdminDuClub(request.resource.data.get('club_id', '')) || estSuperAdmin();
+      allow delete: if estCoachDeLequipe(resource.data.get('team_id', '')) || estAdminDuClub(resource.data.get('club_id', '')) || estSuperAdmin();
+    }
+
     // Programme envoyé par un coach à son équipe (ou à certains joueurs). Lisible par le club (pas de donnée personnelle,
     // sauf le classement d'équipe — prénoms et points — si le coach l'a activé).
     match /hoopcamp_assign/{id} {

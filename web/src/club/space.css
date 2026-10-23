@@ -353,3 +353,18 @@
 .board-tools .seg.mini { flex: 1 1 auto; }
 .board-tools .seg.mini button { white-space: nowrap; }
 .screen.work .row > a.grow { color: var(--text); }
+
+/* En-tête mobile compact : badge réduit à l'éclair, le nom du club garde la place */
+.work-badge { display: inline-flex; align-items: center; gap: 5px; }
+.work-badge svg, .work-badge .ico { width: 14px; height: 14px; }
+@media (max-width: 600px) { .work-badge { padding: 7px; } .work-badge .wb-txt { display: none; } .work-id { font-size: 16px; } }
+.qr-box { justify-items: center; }
+.qr { width: min(280px, 80vw); padding: 12px; border-radius: 20px; background: #fff; }
+.qr svg { display: block; width: 100%; height: auto; }
+/* Assistant du profil Hoop Camp */
+.wiz-dots { display: flex; gap: 6px; margin: 4px 4px 14px; }
+.wiz-dots i { flex: 1; height: 6px; border-radius: 3px; background: var(--fill); }
+.wiz-dots i.on { background: var(--accent); }
+.wiz-step h3.group-title:first-child { margin-top: 4px; }
+.wiz-sum { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 4px 12px; }
+.wiz-sum span { font-size: 12.5px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--fill); }

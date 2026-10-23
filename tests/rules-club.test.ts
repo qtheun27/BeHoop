@@ -111,3 +111,11 @@ describe('Invitation joueur acceptée par un parent', () => {
     await assertSucceeds(setDoc(doc(as('m1', 'maman@club.be'), 'users', 'm1'), { role: 'parent', club_id: 'c1' }));
   });
 });
+
+describe('Code d’équipe (QR)', () => {
+  it('créé par le coach de l’équipe, pas par un autre ; lisible avec le code', async () => {
+    await assertSucceeds(setDoc(doc(as('coach'), 'joinCodes', 'ABCD2345'), { club_id: 'c1', team_id: 't1', created_by: 'coach', expires: Date.now() + 1e9 }));
+    await assertFails(setDoc(doc(as('n1', 'x@y.be'), 'joinCodes', 'ZZZZ2345'), { club_id: 'c1', team_id: 't1', created_by: 'n1', expires: 0 }));
+    await assertSucceeds(getDoc(doc(as('n1', 'x@y.be'), 'joinCodes', 'ABCD2345')));
+  });
+});

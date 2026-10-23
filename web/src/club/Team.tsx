@@ -14,6 +14,7 @@ import * as A from './api';
 import { useClub, playerName } from './ctx';
 import { ProgCard } from './HoopCamp';
 import { pendingOf } from './Validate';
+import qrcode from 'qrcode-generator';
 
 const GOAL_FR: Record<Goal, string> = { main_faible: 'Main faible', dribble: 'Dribble', tir: 'Tir', finition: 'Finitions', passe: 'Passes', defense: 'Défense',
   physique: 'Physique', coordination: 'Coordination', jeu: 'Comprendre le jeu' };
@@ -65,6 +66,7 @@ function Roster({ teamId, players, reload, canEdit }: { teamId: string; players?
   const s = useSession();
   const k = useClub();
   const [add, setAdd] = useState(false);
+  const [qr, setQr] = useState(false);
   const [f, setF] = useState({ prenom: '', nom: '' });
   if (!players) return <Skeleton n={2} />;
   return (
@@ -78,8 +80,10 @@ function Roster({ teamId, players, reload, canEdit }: { teamId: string; players?
           </a>
         ))}
       </div>
+      {canEdit && <button className="btn volt mt" onClick={() => setQr(true)}><Ico n="userAdd" />{t('Inviter avec un QR code')}</button>}
       {canEdit && <button className="btn secondary mt" onClick={() => setAdd(true)}><Ico n="userAdd" />{t('Ajouter un joueur')}</button>}
-      <p className="hint">{t('Pour donner un compte à un joueur ou à un parent, l’admin du club envoie une invitation par e-mail.')}</p>
+      {qr && <QrSheet teamId={teamId} onClose={() => setQr(false)} />}
+      <p className="hint">{t('Le QR code permet aux joueurs et aux parents de rejoindre l’équipe eux-mêmes, sans invitation par e-mail.')}</p>
       {add && (
         <Sheet title={t('Ajouter un joueur')} onClose={() => setAdd(false)}>
           <div className="form">
@@ -260,6 +264,28 @@ function SendSheet({ teamId, players, onClose, onSent }: { teamId: string; playe
         <label className="toggle-line"><input type="checkbox" checked={ranking} onChange={(e) => setRanking(e.target.checked)} /> {t('Afficher un classement d’équipe (prénoms et points)')}</label>
         <button className="btn volt" disabled={busy || !players.length} onClick={go}>{t('Envoyer')}</button>
         {!players.length && <p className="hint">{t('Ajoute d’abord des joueurs à l’équipe.')}</p>}
+      </div>
+    </Sheet>
+  );
+}
+
+/** QR code d'équipe : scanné par un joueur ou un parent, il ouvre « Rejoindre » dans l'appli (valable 60 jours) */
+function QrSheet({ teamId, onClose }: { teamId: string; onClose: () => void }) {
+  const s = useSession();
+  const k = useClub();
+  const [code, setCode] = useState<string | null>(null);
+  useEffect(() => {
+    A.createJoinCode({ club_id: k.me!.club_id, club_name: k.club?.name, team_id: teamId, created_by: s.user!.uid }).then(setCode).catch(() => s.toast(t('Accès refusé.')));
+  }, [teamId]); // eslint-disable-line react-hooks/exhaustive-deps
+  const url = code ? `${location.origin}/app/#/espace/rejoindre/${code}` : '';
+  const svg = useMemo(() => { if (!url) return ''; const q = qrcode(0, 'M'); q.addData(url); q.make(); return q.createSvgTag({ cellSize: 6, margin: 2, scalable: true }); }, [url]);
+  return (
+    <Sheet title={t('QR code de l’équipe')} onClose={onClose}>
+      <div className="form qr-box">
+        {!code ? <Skeleton n={1} h={240} /> : <div className="qr" dangerouslySetInnerHTML={{ __html: svg }} />}
+        {code && <p className="mono" style={{ textAlign: 'center' }}>{code}</p>}
+        <p className="hint">{t('À montrer à l’entraînement ou à partager dans le groupe des parents. Chacun choisit « je suis le joueur » ou « je suis le parent ». Valable 60 jours.')}</p>
+        {code && <button className="btn secondary" onClick={() => (navigator.share ? navigator.share({ title: k.club?.name ?? 'BeHoop', url }).catch(() => {}) : navigator.clipboard.writeText(url).then(() => s.toast(t('Lien copié.'))))}>{t('Partager le lien')}</button>}
       </div>
     </Sheet>
   );
