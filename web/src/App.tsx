@@ -19,18 +19,20 @@ import { MyTeams } from './screens/Teams';
 import { ClubHub } from './screens/ClubHub';
 import { CompPage } from './screens/CompPage';
 import { MatchPage } from './screens/MatchPage';
+import { useClubRoles } from './club/roles';
 
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
 const Watch = lazy(() => import('./screens/Watch'));
 // Espace Club (espace « travail » : Hoop Camp, entraînements, Tactique) : chargé à la demande
 const Space = lazy(() => import('./club/Space'));
+const Camp = lazy(() => import('./club/Camp'));
 
 const tr = t;
 const TABS = [
-  { id: 'fil', label: 'Fil', icon: Icons.home }, { id: 'explorer', label: 'Rechercher', icon: Icons.search },
+  { id: 'fil', label: 'Tribune', icon: Icons.home }, { id: 'explorer', label: 'Arena', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
-  { id: 'matchs', label: 'Matchs', icon: Icons.cal }, { id: 'equipes', label: 'Équipes', icon: Icons.users },
+  { id: 'matchs', label: 'Saison', icon: Icons.cal }, { id: 'equipes', label: 'Vestiaire', icon: Icons.users },
 ];
 
 export function App() {
@@ -66,13 +68,14 @@ export function App() {
     case 'profil': el = <Profile />; break;
     case 'legal': el = <Legal doc={a} />; break;
     case 'moderation': el = <Moderation />; break;
+    case 'camp': el = <Camp sub={a} arg={b} />; break;
     case 'video': el = <Watch id={a} t={b} />; break;
     case 'post': el = <PostPage id={a} />; break;
     case 'actus': el = <NewsPage />; break;
     case 'equipes': el = <MyTeams id={a ? +a : undefined} />; break;
     default: el = <Feed />;
   }
-  const tab = page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
+  const tab = page === 'camp' ? 'equipes' : page === 'club' || page === 'equipe' || page === 'actus' || page === 'competition' || page === 'match' ? 'explorer' : page === 'montage' ? 'publier' : page;
   return (
     <>
       <CourtBg />
@@ -82,7 +85,7 @@ export function App() {
       <nav className="tabbar" aria-label={tr('Navigation principale')}>
         {TABS.map((t) => (
           <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
-            {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Publier')}</span>}
+            {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Shoot')}</span>}
           </a>
         ))}
       </nav>
@@ -95,9 +98,11 @@ export function App() {
 /** Ordinateur : navigation à gauche (la barre du bas est masquée), même destinations que sur téléphone, plus les actus */
 function SideNav({ tab }: { tab: string }) {
   const s = useSession();
+  // Espace Club : seulement pour les coachs et les admins (joueurs et parents ont tout dans le Vestiaire)
+  const roles = useClubRoles();
   const items: [string, React.ReactNode, string][] = [
-    ['fil', Icons.home, 'Fil'], ['explorer', Icons.search, 'Rechercher'], ['actus', <Ico n="news" />, 'Actus'],
-    ['matchs', Icons.cal, 'Matchs'], ['equipes', Icons.users, 'Équipes'],
+    ['fil', Icons.home, 'Tribune'], ['explorer', Icons.search, 'Arena'], ['actus', <Ico n="news" />, 'Actus'],
+    ['matchs', Icons.cal, 'Saison'], ['equipes', Icons.users, 'Vestiaire'],
   ];
   return (
     <nav className="sidenav" aria-label={tr('Navigation principale')}>
@@ -106,8 +111,8 @@ function SideNav({ tab }: { tab: string }) {
         {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
       {/* Actions de la barre latérale : toutes en .side-cta (même taille, même forme) ; seule la couleur change */}
-      <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Publier')}</a>
-      {s.user && <a className="btn side-cta side-club" href="#/espace" title={tr('Hoop Camp, entraînements, tactique')}><Ico n="bolt" />{tr('Espace Club')}</a>}
+      <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Shoot')}</a>
+      {roles?.manage && <a className="btn side-cta side-club" href="#/espace" title={tr('Hoop Camp, entraînements, tactique')}><Ico n="bolt" />{tr('Espace Club')}</a>}
       <div className="side-foot">
         {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
           : <button className="btn secondary" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>}

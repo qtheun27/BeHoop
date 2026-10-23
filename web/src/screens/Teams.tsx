@@ -1,6 +1,6 @@
 // Onglet « Équipes » : les équipes dont je fais partie (que je gère, de mon enfant, où je joue) — pas les équipes suivies.
 // Tout l'essentiel au même endroit : prochain match, covoiturage, fil de l'équipe (privé compris), galerie, vidéos, membres.
-import { useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { mediaUrl, ensureMediaCookie } from '../lib/api';
@@ -14,6 +14,9 @@ import { CarpoolSheet, CarpoolBadge } from './Carpool';
 import { frDate, mapsUrl, store } from '../lib/util';
 import { t, tn } from '../lib/i18n';
 import { Ico } from '../ui/icons';
+import { useClubRoles } from '../club/roles';
+// Hoop Camp (bibliothèque d'exercices) chargé seulement pour les joueurs et les parents
+const VestiaireCamp = lazy(() => import('../club/VestiaireCamp'));
 
 export function MyTeams({ id }: { id?: number }) {
   const s = useSession();
@@ -24,15 +27,15 @@ export function MyTeams({ id }: { id?: number }) {
   useEffect(() => { if (current) store.set('behoop.equipe', current.teamId); }, [current?.teamId]); // eslint-disable-line
 
   if (!s.user) return (
-    <Screen title={t('Équipes')}><Empty ill="users" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
+    <Screen title={t('Vestiaire')}><Empty ill="users" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>);
   if (!mine.length) return (
-    <Screen title={t('Équipes')}><SpaceEntry /><Empty ill="users" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
+    <Screen title={t('Vestiaire')}><VestiaireTop /><Favorites /><Empty ill="users" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
       action={<a className="btn" href="#/explorer">{t('Trouver mon équipe')}</a>} /></Screen>);
   const name = (tid: number) => { const e = idx.data?.get(tid); return e ? `${e.club.short} · ${teamLabel(e.team)}` : `${t('Équipe')} ${tid}`; };
   return (
-    <Screen title={t('Équipes')}>
-      <SpaceEntry />
+    <Screen title={t('Vestiaire')}>
+      <VestiaireTop />
       {mine.length > 1 && <div className="chips">{mine.map((m) => (
         <button key={m.teamId} className={`chip${current?.teamId === m.teamId ? ' on' : ''}`} onClick={() => setSel(m.teamId)}>{name(m.teamId)}</button>))}</div>}
       {current && (current.status === 'accepted' ? <TeamSpace key={current.teamId} m={current} /> : (
@@ -136,13 +139,42 @@ function NextGame({ g, teamId, youth, big, onCar, onLive }: { g: Game; teamId: n
   );
 }
 
+/** Haut du Vestiaire : Hoop Camp de mes joueurs (ma fiche, mes enfants) et, pour les coachs et admins, l'accès à l'Espace Club */
+function VestiaireTop() {
+  const roles = useClubRoles();
+  if (!roles) return null;
+  return (
+    <>
+      {roles.manage && <SpaceEntry />}
+      {roles.players.length > 0 && <Suspense fallback={null}><VestiaireCamp players={roles.players} /></Suspense>}
+    </>
+  );
+}
+/** Fan sans équipe : ses favoris (clubs et équipes suivis) */
+function Favorites() {
+  const s = useSession();
+  const idx = useAsync(teamIndex, []);
+  if (!s.followedClubs.length && !s.followedTeams.length) return null;
+  const clubs = [...new Map([...(idx.data?.values() ?? [])].map((e) => [e.club.id, e.club])).values()].filter((c) => s.followedClubs.includes(c.id));
+  return (
+    <section className="mt">
+      <h3 className="group-title">{t('Mes favoris')}</h3>
+      <div className="group">
+        {clubs.map((c) => <a key={c.id} className="row" href={`#/club/${c.id}`}><Disc src={c.logo} name={c.name} size={36} /><div className="grow">{c.name}</div><span className="chev">›</span></a>)}
+        {s.followedTeams.filter((id) => !clubs.some((c) => c.id === idx.data?.get(id)?.club.id)).slice(0, 20).map((id) => { const e = idx.data?.get(id); return e ? (
+          <a key={id} className="row" href={`#/equipe/${id}`}><Disc src={e.club.logo} name={e.club.name} size={36} /><div className="grow">{e.club.short} · {teamLabel(e.team)}</div><span className="chev">›</span></a>) : null; })}
+      </div>
+    </section>
+  );
+}
+
 /** Accès à l'Espace Club (l'espace « travail » : Hoop Camp, entraînements, Tactique) */
 function SpaceEntry() {
   return (
     <a className="space-entry" href="#/espace">
       <span className="se-court" aria-hidden />
-      <span className="grow"><span className="se-badge">{t('Espace Club')}</span><b>{t('Hoop Camp, entraînements, tactique')}</b>
-        <small>{t('Programmes à faire à la maison, validés par un parent ou le coach.')}</small></span>
+      <span className="grow"><span className="se-badge">{t('Espace Club')}</span><b>{t('Gérer mon club et mes équipes')}</b>
+        <small>{t('Effectif, séances, Hoop Camp, Playbook.')}</small></span>
       <span className="chev">›</span>
     </a>
   );

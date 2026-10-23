@@ -1,3 +1,6 @@
+/* Couleurs Hoop Camp disponibles partout (le Hoop Camp s'affiche aussi dans le Vestiaire, hors Espace Club) */
+:root { --volt: #c8f53c; --volt-ink: #1d2600; --ink: #0c1530; --r-revoir: #e8590c; --r-correct: #2f54ff; --r-maitrise: #2b9a3e;
+  --court-bg: #dfe6f5; --court-line: #fff; --court-hoop: #f26a1b; --court-wall: #c4cde0; }
 /* Espace Club : l'espace « travail ». Même appli (polices, cartes, barres flottantes) mais une autre ambiance :
    le tableau du coach (quadrillage, lignes de terrain à la craie) au lieu du parquet, bleu électrique + jaune fluo d'entraînement. */
 :root[data-space="work"] {

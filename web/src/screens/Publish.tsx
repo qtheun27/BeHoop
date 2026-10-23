@@ -14,9 +14,9 @@ import { Ico } from '../ui/icons';
 export function Publish() {
   const s = useSession();
   const [open, setOpen] = useState(() => new URLSearchParams(location.hash.split('?')[1] ?? '').get('photo') === '1');
-  if (!s.user) return <Screen title={t('Publier')}><Empty ill="plus" title={t('Publie pour ton équipe')} text={t('Photos, messages et vidéos de match montées automatiquement.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
+  if (!s.user) return <Screen title={t('Shoot')}><Empty ill="plus" title={t('Publie pour ton équipe')} text={t('Photos, messages et vidéos de match montées automatiquement.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   return (
-    <Screen title={t('Publier')}>
+    <Screen title={t('Shoot')}>
       <button className="card" style={{ width: '100%', textAlign: 'left', padding: 20 }} onClick={() => setOpen(true)}>
         <div className="ill-tile sm" aria-hidden><Ico n="camera" /></div><div style={{ fontWeight: 700, fontSize: 20, marginTop: 6 }}>{t('Photo / message')}</div>
         <div className="muted">{t('Partage un moment ou une info avec une équipe ou un club.')}</div></button>

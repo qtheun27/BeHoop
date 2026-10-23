@@ -49,6 +49,11 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     const sp = Object.values(spacesOf(u));
     const want = new Map<string, { role: 'responsable' | 'membre'; relation: string }>();
     for (const s of sp) if (s.role === 'coach') for (const t of s.team_ids ?? []) want.set(String(t), { role: 'responsable', relation: 'coach' });
+    // Admin du club : responsable de toutes les équipes du club (il accepte les demandes quand une équipe n'a pas de coach)
+    if (sp.some((s) => s.role === 'club_admin')) {
+      const idx: any = await fetch(`${env.SITE_URL}/app-data/index.json`).then((r) => r.json()).catch(() => null);
+      for (const s of sp) if (s.role === 'club_admin') for (const t of idx?.clubs?.find((c: any) => String(c.id) === s.club_id)?.teams ?? []) if (!want.has(String(t.id))) want.set(String(t.id), { role: 'responsable', relation: 'autre' });
+    }
     const add = (t: string | null, relation: string) => { if (t && !want.has(String(t))) want.set(String(t), { role: 'membre', relation }); };
     if (sp.some((s) => s.role === 'player')) for (const p of await fs.query('players', [['account_uid', 'EQUAL', uid]])) add(p.team_id, 'joueur');
     if (sp.some((s) => s.role === 'parent')) for (const p of await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', uid]])) add(p.team_id, 'parent');

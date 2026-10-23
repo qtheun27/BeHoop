@@ -45,12 +45,12 @@ function Enter() {
 
 interface Tab { id: string; href: string; icon: IconName; label: string }
 function tabsFor(k: ReturnType<typeof useClub>): Tab[] {
+  // Espace Club = mode gestion (coachs, admins) : Banc · Effectif · Séances · Playbook
   const r = k.me?.role;
-  const tabs: Tab[] = [{ id: 'home', href: '#/espace', icon: 'bolt', label: 'Accueil' }];
-  if (r === 'player' && k.players[0]) tabs.push({ id: 'hoopcamp', href: `#/espace/hoopcamp/${k.players[0].id}`, icon: 'star', label: 'Hoop Camp' });
-  if (r === 'coach' && k.teamIds.length) tabs.push({ id: 'equipe', href: `#/espace/equipe/${k.teamIds[0]}`, icon: 'users', label: 'Équipe' });
-  if (r === 'club_admin' || r === 'super_admin') tabs.push({ id: 'club', href: '#/espace/club', icon: 'club', label: 'Club' });
-  if (r) tabs.push({ id: 'calendrier', href: '#/espace/calendrier', icon: 'calendar', label: 'Agenda' }, { id: 'tactique', href: '#/espace/tactique', icon: 'edit', label: 'Tactique' });
+  const tabs: Tab[] = [{ id: 'home', href: '#/espace', icon: 'bolt', label: 'Banc' }];
+  if (r === 'coach' && k.teamIds.length) tabs.push({ id: 'equipe', href: `#/espace/equipe/${k.teamIds[0]}`, icon: 'users', label: 'Effectif' });
+  if (r === 'club_admin' || r === 'super_admin') tabs.push({ id: 'club', href: '#/espace/club', icon: 'users', label: 'Effectif' });
+  if (r) tabs.push({ id: 'calendrier', href: '#/espace/calendrier', icon: 'calendar', label: 'Séances' }, { id: 'tactique', href: '#/espace/tactique', icon: 'edit', label: 'Playbook' });
   return tabs;
 }
 
@@ -68,6 +68,8 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
   else if (k.loading) el = <Loader />;
   else if (sub === 'rejoindre' && arg) el = <JoinCode code={arg} />;
   else if (!k.me) el = <Join />;
+  // Joueurs et parents : tout est dans le Vestiaire ; l'Espace Club est réservé aux coachs et aux admins
+  else if (!MANAGE.has(k.me.role)) el = <NotManager />;
   else switch (sub) {
     case 'hoopcamp': el = <HoopCampPage key={arg} pid={arg!} />; break;
     case 'valider': el = <Validate pid={arg!} />; break;
@@ -86,7 +88,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
         <div className="col-main">
           <header className="work-bar">
             <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>
-            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.keys(A.spacesOf(k.me)).length > 1 || k.me?.role === 'super_admin'
+            <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.values(A.spacesOf(k.me)).filter((x) => MANAGE.has(x.role)).length > 1 || k.me?.role === 'super_admin'
               ? <button className="ellipsis club-switch" onClick={() => setSw(true)}>{k.club.short || k.club.name} ▾</button>
               : <span className="ellipsis">{k.club.short || k.club.name}</span>)}</div>
             {s.user && <a className="top-av" href="#/espace/compte" aria-label={t('Mon compte club')}><Avatar name={k.me?.display_name ?? s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>}
@@ -110,6 +112,21 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
       )}
     </>
   );
+}
+
+const MANAGE = new Set(['coach', 'club_admin', 'super_admin']);
+function NotManager() {
+  const k = useClub();
+  const s = useSession();
+  const mine = Object.entries(A.spacesOf(k.me)).filter(([, x]) => MANAGE.has(x.role));
+  const go = async (key: string) => { await api('/club/switch', { key }).catch(() => {}); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); };
+  if (mine.length) return (
+    <>
+      <section className="hc-hero small"><div className="hc-kick"><Ico n="bolt" />{t('Espace Club')}</div><h2>{t('Choisis le club à gérer')}</h2></section>
+      <div className="group">{mine.map(([key, x]) => <button key={key} className="row" onClick={() => go(key)}><span className="grow"><span className="nm">{k.clubName(x.club_id)}</span><span className="sub">{t(ROLE_LABEL[x.role])}</span></span><span className="chev">›</span></button>)}</div>
+    </>
+  );
+  return <Empty ill="users" title={t('L’Espace Club est réservé aux coachs et aux admins')} text={t('Ton Hoop Camp, tes entraînements et ton équipe sont dans le Vestiaire.')} action={<a className="btn volt" href="#/equipes">{t('Aller au Vestiaire')}</a>} />;
 }
 
 // ---------- Accueil selon le rôle ----------
@@ -287,7 +304,7 @@ function Join() {
   const role = inv.role === 'player' && asParent ? 'parent' : inv.role;
   const accept = async () => {
     setBusy(true);
-    try { await A.claimInvitation(s.user!, inv, name.trim() || s.user!.email!.split('@')[0], role === 'parent' && child.prenom.trim() ? { prenom: child.prenom.trim(), nom: child.nom.trim() } : undefined); await k.reload(); }
+    try { await A.claimInvitation(s.user!, inv, name.trim() || s.user!.email!.split('@')[0], role === 'parent' && child.prenom.trim() ? { prenom: child.prenom.trim(), nom: child.nom.trim() } : undefined); await k.reload(); if (role === 'player' || role === 'parent') location.hash = '/equipes'; }
     catch { s.toast(t('Impossible d’accepter l’invitation. Réessaie.')); } finally { setBusy(false); }
   };
   return (
@@ -336,7 +353,7 @@ function ClubSwitch({ onClose }: { onClose: () => void }) {
             <span className="grow"><span className="nm">{k.club?.name}</span><span className="sub">{t('Super admin')} · {t('Quitter la gestion de ce club')}</span></span><Ico n="close" />
           </button>
         )}
-        {Object.entries(A.spacesOf(k.me)).map(([key, m]) => { const on = k.me?.role !== 'super_admin' && key === `${k.me?.club_id}~${k.me?.role}`; return (
+        {Object.entries(A.spacesOf(k.me)).filter(([, m]) => MANAGE.has(m.role)).map(([key, m]) => { const on = k.me?.role !== 'super_admin' && key === `${k.me?.club_id}~${k.me?.role}`; return (
           <button key={key} className="row" disabled={busy || on} onClick={() => go(key)}>
             <span className="grow"><span className="nm">{k.clubName(m.club_id)}</span><span className="sub">{t(ROLE_LABEL[m.role])}</span></span>
             {on ? <Ico n="check" /> : <span className="chev">›</span>}
@@ -393,7 +410,7 @@ function JoinCode({ code }: { code: string }) {
   if (mine.some((x) => x.role === 'player') && mine.some((x) => x.role === 'parent')) return <Empty ill="checkCircle" title={t('Tu fais déjà partie du club')} action={<a className="btn volt" href="#/espace">{t('Espace Club')}</a>} />;
   const go = async () => {
     setBusy(true);
-    try { await api('/club/join', { code, asParent, child, name: name.trim() }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); await s.refresh(); location.hash = '/espace'; }
+    try { await api('/club/join', { code, asParent, child, name: name.trim() }); try { sessionStorage.removeItem(`club-sync-${s.user!.uid}`); } catch { /* */ } await k.reload(); await s.refresh(); location.hash = '/equipes'; }
     catch { s.toast(t('Impossible de rejoindre. Réessaie.')); } finally { setBusy(false); }
   };
   return (

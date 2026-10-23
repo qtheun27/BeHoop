@@ -78,7 +78,10 @@ test.describe('langues', () => {
 
 test('Espace Club : le joueur coche, le coach valide', async ({ page }) => {
   await login(page, 'joueur');
+  // Joueurs et parents : le Hoop Camp est dans le Vestiaire ; l'Espace Club est réservé aux coachs et admins
   await page.goto('/app/#/espace');
+  await expect(page.getByText('L’Espace Club est réservé aux coachs et aux admins')).toBeVisible();
+  await page.goto('/app/#/equipes');
   await expect(page.getByText('Hoop Camp du jour')).toBeVisible();
   await page.getByText('Camp Vacances 1 semaine').first().click();
   const first = page.getByRole('button', { name: 'Cocher' }).first();

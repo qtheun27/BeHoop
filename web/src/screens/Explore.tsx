@@ -72,7 +72,7 @@ export function Explore() {
   // La recherche porte aussi sur les actus (titres et accroches)
   const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
-    <Screen title={t('Rechercher')}>
+    <Screen title={t('Arena')}>
       {!s.user && <div className="banner"><Ico n="ball" size={30} style={{ color: 'var(--accent)' }} /><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
       <div className="search"><input className="field" type="search" placeholder={t('Club, compétition, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
       <div className="seg" role="tablist">
@@ -179,14 +179,17 @@ export function JoinSheet({ teamId, name, onClose }: { teamId: number; name: str
   const s = useSession();
   const [m, setM] = useState('');
   const [rel, setRel] = useState<D.Relation | null>(null);
+  const [child, setChild] = useState('');
   return (
     <Sheet title={t('Rejoindre l\'équipe')} onClose={onClose}>
       <p className="muted" style={{ marginTop: 0 }}>{t('Un responsable de l’équipe {name} validera ta demande.', { name })}</p>
       <div className="label">{t('Je suis…')}</div>
       <div className="seg">{RELATIONS.map(([k, l]) => <button key={k} className={rel === k ? 'on' : ''} onClick={() => setRel(k)}>{t(l)}</button>)}</div>
+      {rel === 'parent' && <><label className="label" htmlFor="jc">{t('Prénom de ton enfant')}</label>
+        <input id="jc" className="field" maxLength={40} value={child} onChange={(e) => setChild(e.target.value)} /></>}
       <label className="label" htmlFor="jm">{t('Message (optionnel)')}</label>
       <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? t('Je suis le papa / la maman de…') : t('Un mot pour le responsable…')} value={m} onChange={(e) => setM(e.target.value)} />
-      <button className="btn mt" disabled={!rel} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
+      <button className="btn mt" disabled={!rel || (rel === 'parent' && !child.trim())} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!, child); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
     </Sheet>
   );
 }

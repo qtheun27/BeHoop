@@ -29,6 +29,8 @@ const GOAL_LABEL: Record<Goal, string> = { main_faible: 'Main faible', dribble: 
 const HANDS = new Set<Family>(['maniement', 'dribble', 'tir_mecanique', 'tir', 'finition', 'passe']);
 
 /** Programme réel d'un joueur : personnalisé par le coach, sinon programme prêt à l'emploi */
+/** Hoop Camp ouvert depuis le Vestiaire (joueurs, parents : #/camp/…) ou depuis l'Espace Club (coachs : #/espace/…) */
+export const campBase = () => (location.hash.startsWith('#/espace') ? '#/espace' : '#/camp');
 export const programOf = (c: A.Camp | null): Program | null => c?.program ? c.program.custom ?? findProgram(c.program.id) ?? null : null;
 
 /** Tout ce qu'il faut pour le Hoop Camp d'un joueur : profil, programme, journées (temps réel, hors ligne), séance du jour */
@@ -55,7 +57,7 @@ export function useCamp(p: A.Player | undefined) {
 // ---------- Carte d'accueil ----------
 export function HoopCampCard({ p, viewer }: { p: A.Player; viewer: 'player' | 'parent' }) {
   const c = useCamp(p);
-  const href = `#/espace/hoopcamp/${p.id}`;
+  const href = `${campBase()}/hoopcamp/${p.id}`;
   if (c.loading) return <div className="hc-card skel" style={{ height: 150 }} />;
   if (!c.camp?.profile || !c.prog) return (
     <a className="hc-card hc-start" href={href}>
@@ -154,7 +156,7 @@ export function HoopCampPage({ pid }: { pid: string }) {
       {tab === 'jour' && (
         <>
           {!canCheck && <p className="hint">{isParent ? t('{n} coche ses exercices sur son téléphone ; toi, tu valides le soir.', { n: p.prenom }) : t('Le joueur coche ses exercices ; tu valides le soir.')}</p>}
-          {canValidate && st.pending > 0 && <a className="btn volt" href={`#/espace/valider/${p.id}`}>{tn(st.pending, '{n} exercice à valider', '{n} exercices à valider')} ›</a>}
+          {canValidate && st.pending > 0 && <a className="btn volt" href={`${campBase()}/valider/${p.id}`}>{tn(st.pending, '{n} exercice à valider', '{n} exercices à valider')} ›</a>}
           {phases.map((ph) => (
             <section key={ph} className="hc-phase">
               <h3 className="group-title">{t(PHASE_LABEL[ph])}</h3>

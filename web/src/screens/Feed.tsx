@@ -221,11 +221,11 @@ export function Feed() {
   }, [load]);
 
   if (!s.user) return (
-    <Screen title={t('Fil')} home hideTitle aside={<FeedAside />}><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
+    <Screen title={t('Tribune')} home hideTitle aside={<FeedAside />}><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
       action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/?site=1">{t('Voir le site public')}</a></>} /></Screen>
   );
   return (
-    <Screen title={t('Fil')} home hideTitle aside={<FeedAside />}>
+    <Screen title={t('Tribune')} home hideTitle aside={<FeedAside />}>
       <Stories />
       {filter === 'tout' && <NewsCarousel />}
       {followsNothing && <Suggestions />}

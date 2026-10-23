@@ -233,12 +233,39 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
   // Demande acceptée → le nouveau membre (appel par un responsable ou le super admin)
+  const grantFromJoin = async (uid: string, teamId: number, m: any) => {
+    const rel = String(m.relation ?? '');
+    if (!['joueur', 'parent', 'coach'].includes(rel)) return;
+    const idx: any = await fetch(`${env.SITE_URL}/app-data/index.json`).then((r) => r.json()).catch(() => null);
+    const club = idx?.clubs?.find((c: any) => c.teams?.some((t: any) => t.id === teamId));
+    if (!club) return;
+    const admin = (path2: string, b: any) => clubApi(path2, { fs, env, user, profile, isAdmin: true, body: b, json });
+    const base = { uid, club_id: String(club.id), club_name: club.name, name: m.displayName ?? '', email: '' };
+    if (rel === 'joueur') await admin('/admin/set-role', { ...base, role: 'player', team_id: String(teamId) });
+    if (rel === 'coach') {
+      const u = await fs.get<any>(`users/${uid}`), cur = (u?.spaces ?? {})[`${club.id}~coach`]?.team_ids ?? (u?.role === 'coach' && String(u.club_id) === String(club.id) ? u.team_ids ?? [] : []);
+      await admin('/admin/set-role', { ...base, role: 'coach', team_ids: [...new Set([...cur, String(teamId)])] });
+    }
+    if (rel === 'parent') {
+      const prenom = String(m.child ?? '').trim();
+      // Fiche de l'enfant : celle de l'équipe au même prénom, sinon nouvelle fiche
+      const cards = await fs.query('players', [['team_id', 'EQUAL', String(teamId)]]);
+      let card = prenom ? cards.find((p: any) => String(p.prenom ?? '').trim().toLowerCase() === prenom.toLowerCase()) : null;
+      if (!card && prenom) { const id = crypto.randomUUID().replace(/-/g, '').slice(0, 20); await fs.set(`players/${id}`, { club_id: String(club.id), team_id: String(teamId), account_uid: '', parent_uids: [], prenom, nom: '', created_at: new Date() } as any); card = { _path: `players/${id}` }; }
+      if (card) await admin('/admin/link', { player_id: card._path.split('/').pop(), parent_uid: uid, on: true, club_name: club.name, name: m.displayName ?? '' });
+      else await admin('/admin/set-role', { ...base, role: 'parent' });
+    }
+  };
   if (path === '/notify/join-accepted') {
     const teamId = Number(body.teamId), uid = String(body.uid).replace(/[^\w-]/g, '');
     const me = await fs.get<any>(`teamMembers/${teamId}/members/${user.uid}`);
     if (!isAdmin && !(me?.status === 'accepted' && me?.role === 'responsable')) throw new Error('FORBIDDEN');
     const m = await fs.get<any>(`teamMembers/${teamId}/members/${uid}`);
-    if (m?.status === 'accepted') await sendToUsers(fs, env, [uid], { title: N.welcomeTitle, body: N.welcomeBody, url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
+    if (m?.status === 'accepted') {
+      // Un seul système de rôles : la demande acceptée crée le rôle dans le club (joueur et sa fiche, parent relié à l'enfant, coach de l'équipe)
+      await grantFromJoin(uid, teamId, m).catch((e) => console.error('rôle club', e));
+      await sendToUsers(fs, env, [uid], { title: N.welcomeTitle, body: N.welcomeBody, url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
+    }
     return json({ ok: true });
   }
   if (path === '/notify/carpool') {
@@ -279,10 +306,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       const coaches = p.team_id ? (await fs.get<any>(`teams/${p.team_id}`))?.coach_uids ?? [] : [];
       const to = [...(p.parent_uids ?? []), ...coaches].filter((u: string) => u !== user.uid);
       const name = p.prenom || who;
-      if (to.length) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampDone(name, Math.max(1, Number(body.count) || 1)), url: `/app/#/espace/valider/${pid}` }, 'hoopcamp', null);
+      if (to.length) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampDone(name, Math.max(1, Number(body.count) || 1)), url: `/app/#/camp/valider/${pid}` }, 'hoopcamp', null);
     } else if (ev === 'rated' && ((p.parent_uids ?? []).includes(user.uid) || (me?.role === 'coach' && (me.team_ids ?? []).includes(p.team_id)))) {
       const to = p.account_uid ? [p.account_uid] : [];
-      if (to.length && to[0] !== user.uid) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampRated(who), url: `/app/#/espace/hoopcamp/${pid}` }, 'hoopcamp', null);
+      if (to.length && to[0] !== user.uid) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampRated(who), url: `/app/#/camp/hoopcamp/${pid}` }, 'hoopcamp', null);
     }
     return json({ ok: true });
   }
