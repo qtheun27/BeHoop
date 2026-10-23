@@ -1050,4 +1050,7 @@ export const NL: Record<string, string> = {
   "Déplacer tous les comptes et fiches vers {n} ?": "Alle accounts en fiches naar {n} verplaatsen?",
   "{n} éléments déplacés": "{n} elementen verplaatst",
   "Rattacher à {n}": "Koppelen aan {n}",
+  "Retirer {n} de l’Espace Club ? Son compte BeHoop reste actif.": "{n} uit de Clubruimte verwijderen? Zijn BeHoop-account blijft actief.",
+  "Retiré de l’Espace Club.": "Uit de Clubruimte verwijderd.",
+  "Retirer de l’Espace Club": "Uit Clubruimte verwijderen",
 };

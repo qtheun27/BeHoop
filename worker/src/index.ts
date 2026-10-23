@@ -362,6 +362,14 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       for (const d of await fs.query(col, [['club_id', 'EQUAL', from]])) { await fs.set(d._path, { club_id: to, ...(col === 'invitations' || col === 'joinCodes' ? { club_name: name } : {}) } as any); n++; }
     return json({ ok: true, n });
   }
+  // Super admin : retirer un compte de l'Espace Club (son rôle), sans toucher à son compte BeHoop
+  if (path === '/admin/remove-club-user') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    const uid = String(body.uid ?? '').replace(/[^\w-]/g, '');
+    if (!uid || uid === user.uid) return json({ ok: false }, 400);
+    await fs.delete(`users/${uid}`);
+    return json({ ok: true });
+  }
   if (path === '/club/sync') return json({ ok: true, teams: await clubSync(user.uid) });
   if (path === '/club/join') {
     // Rejoindre l'Espace Club par le code (QR) d'une équipe, sans invitation par e-mail

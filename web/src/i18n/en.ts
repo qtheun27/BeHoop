@@ -1050,4 +1050,7 @@ export const EN: Record<string, string> = {
   "Déplacer tous les comptes et fiches vers {n} ?": "Move all accounts and profiles to {n}?",
   "{n} éléments déplacés": "{n} items moved",
   "Rattacher à {n}": "Link to {n}",
+  "Retirer {n} de l’Espace Club ? Son compte BeHoop reste actif.": "Remove {n} from the Club Space? Their BeHoop account stays active.",
+  "Retiré de l’Espace Club.": "Removed from the Club Space.",
+  "Retirer de l’Espace Club": "Remove from Club Space",
 };

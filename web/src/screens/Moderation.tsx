@@ -139,7 +139,11 @@ function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; actio
 function Users() {
   const s = useSession();
   const [n, setN] = useState(0);
-  return <AccountPicker key={n} onPick={() => {}} action={(a) => (a.banned
+  const removeClub = async (a: Account) => {
+    if (!confirm(t('Retirer {n} de l’Espace Club ? Son compte BeHoop reste actif.', { n: a.name }))) return;
+    try { await api('/admin/remove-club-user', { uid: a.uid }); s.toast(t('Retiré de l’Espace Club.')); setN(n + 1); } catch { s.toast(t('Accès refusé.')); }
+  };
+  return <AccountPicker key={n} onPick={() => {}} action={(a) => !a.profile ? (a.clubs?.length && a.uid !== s.user?.uid ? <button className="btn small danger" onClick={() => removeClub(a)}>{t('Retirer de l’Espace Club')}</button> : null) : (a.banned
     ? <button className="btn small secondary" onClick={async () => { await D.banUser(a.uid, false); s.toast(t('Compte rétabli')); setN(n + 1); }}>{t('Rétablir')}</button>
     : a.profile && a.uid !== s.user?.uid && <button className="btn small danger" onClick={async () => { if (confirm(t('Bannir {n} ?', { n: a.name }))) { await D.banUser(a.uid, true); s.toast(t('Compte banni')); setN(n + 1); } }}>{t('Bannir')}</button>)} />;
 }
