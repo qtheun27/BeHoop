@@ -97,6 +97,7 @@ describe('spam et images', () => {
   it('liens d’image : entités décodées (même deux fois), https', () => {
     expect(cleanImg('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&amp;amp;smart=true&amp;width=1200')).toBe('https://www.dhnet.be/resizer/v2/A.jpg?auth=1&smart=true&width=1200');
     expect(cleanImg('//cdn.x/y.jpg')).toBe('https://cdn.x/y.jpg');
+    expect(cleanImg('https://secure.gravatar.com/avatar/fb02')).toBeNull();
     expect(cleanImg('javascript:alert(1)')).toBeNull();
   });
   it('image de la page : JSON-LD et première grande image si pas d’og:image', () => {

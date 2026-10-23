@@ -68,6 +68,8 @@ export function cleanImg(u: string | null | undefined): string | null {
   let s = u.trim(), prev = '';
   while (s !== prev) { prev = s; s = s.replace(/&amp;/g, '&').replace(/&#38;/g, '&').replace(/&quot;/g, '"'); }
   if (s.startsWith('//')) s = `https:${s}`;
+  // Photo de profil de l'auteur (Basketsession met l'avatar Gravatar du rédacteur en premier dans le flux) : pas une image d'article
+  if (/gravatar\.com|\/avatar[s]?\/|[-_]avatar\b/i.test(s)) return null;
   return /^https?:\/\//.test(s) ? s.replace(/^http:/, 'https:') : null;
 }
 /** Spam (faux « streams » gratuits relayés par Google Actualités), paris et casinos : jamais dans BeHoop */
@@ -129,7 +131,8 @@ export function parseFeed(xml: string, f: (typeof FEEDS)[number]): News[] {
     const url = unxml(tag(it, 'link')) || (/<link[^>]+href="([^"]+)"/.exec(it)?.[1] ?? '');
     const title = unxml(tag(it, 'title'));
     const excerpt = cut(unxml(tag(it, 'description')));
-    const image = cleanImg(/<media:(?:content|thumbnail)[^>]+url="([^"]+)"/i.exec(it)?.[1] ?? /<enclosure[^>]+url="([^"]+)"[^>]*type="image/i.exec(it)?.[1] ?? null);
+    // Première vraie image de l'article parmi toutes celles du flux (on saute l'avatar de l'auteur)
+    const image = [...it.matchAll(/<media:(?:content|thumbnail)[^>]+url="([^"]+)"/gi), ...it.matchAll(/<enclosure[^>]+url="([^"]+)"[^>]*type="image/gi)].map((m) => cleanImg(m[1])).find(Boolean) ?? null;
     const date = new Date(unxml(tag(it, 'pubDate')) || unxml(tag(it, 'dc:date')) || Date.now()).toISOString();
     const cats = [...it.matchAll(/<category[^>]*>([\s\S]*?)<\/category>/gi)].map((m) => unxml(m[1])).join(' ');
     // Google Actualités : « Titre - Média » → titre + vraie source ; pas d'accroche (le flux ne contient que des liens)
@@ -329,7 +332,7 @@ export async function run(out = 'app-data/news.json') {
     if (byId.has(n.id) || Date.parse(n.date) <= since || isSpam(n)) continue;
     // Déjà traité lors d'un passage précédent : on réutilise le vrai lien et l'image trouvés
     const old = known.get(n.id);
-    byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? old.image } : n);
+    byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? cleanImg(old.image) } : n);
   }
   let items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 700);
   await enrich(items);
