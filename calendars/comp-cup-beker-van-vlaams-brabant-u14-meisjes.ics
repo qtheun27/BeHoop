@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U14 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-10367866734-comp-cup-beker-van-vlaams-brabant-u14-meisjes@behoop.be
-DTSTAMP:20261022T211229Z
+DTSTAMP:20261023T105333Z
 DTSTART;TZID=Europe/Brussels:20261219T150000
 DTEND;TZID=Europe/Brussels:20261219T170000
 SUMMARY:Basket Groot Zemst M14 A – Clem Scherpenheuvel M14 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U14 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10418199591-comp-cup-beker-van-vlaams-brabant-u14-meisjes@behoop.be
-DTSTAMP:20261022T211229Z
+DTSTAMP:20261023T105333Z
 DTSTART;TZID=Europe/Brussels:20261219T150000
 DTEND;TZID=Europe/Brussels:20261219T170000
 SUMMARY:Hageland United M14 A – BC Asse-Ternat M14 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U14 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10451754829-comp-cup-beker-van-vlaams-brabant-u14-meisjes@behoop.be
-DTSTAMP:20261022T211229Z
+DTSTAMP:20261023T105333Z
 DTSTART;TZID=Europe/Brussels:20261220T130000
 DTEND;TZID=Europe/Brussels:20261220T150000
 SUMMARY:BC Machelen-Diegem M14 A – Stella Artois 0.0 Blue Tigers Leuven M14 A
