@@ -1087,4 +1087,12 @@ export const EN: Record<string, string> = {
   "Ton message": "Your message",
   "Message envoyé. Merci !": "Message sent. Thanks!",
   "Impossible d’envoyer. Réessaie.": "Couldn’t send. Try again.",
+  "Rouvrir": "Reopen",
+  "Afficher aussi les conversations traitées": "Also show resolved conversations",
+  "traité": "resolved",
+  "{n} nouvelle réponse": "{n} new reply",
+  "{n} nouvelles réponses": "{n} new replies",
+  "Équipe BeHoop": "BeHoop team",
+  "Une question, un souci, une idée ? Écris-nous : la réponse arrive ici, avec une notification.": "A question, a problem, an idea? Write to us: the reply arrives here, with a notification.",
+  "Nouveau message": "New message",
 };

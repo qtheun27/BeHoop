@@ -4,13 +4,14 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { teamIndex, teamLabel, loadIndex } from '../lib/data';
 import { api } from '../lib/api';
+import { Conversation, type SupportThread } from '../ui/Help';
 import { Screen, Empty, Skeleton, useAsync, Avatar, Sheet } from '../ui/kit';
 import { PostCard } from './Feed';
 import { t } from '../lib/i18n';
 
 export default function Moderation() {
   const s = useSession();
-  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support'>('requests');
+  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support'>(() => (new URLSearchParams(location.hash.split('?')[1] ?? '').get('tab') === 'support' ? 'support' : 'requests'));
   if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
     <Screen title={t('Modération')} back="profil">
@@ -321,24 +322,39 @@ function AllInvitations() {
   );
 }
 
-/** Messages « Aide / Contact » des utilisateurs : réponse par e-mail, puis classer */
+/** Messages « Aide / Contact » : conversations avec les utilisateurs, réponse dans l'appli (notification) */
 function Support() {
-  const m = useAsync(() => api<{ id: string; email: string; name: string; subject: string; message: string; page: string; created_at?: string }[]>('/admin/support', {}), []);
+  const [all, setAll] = useState(false);
+  const m = useAsync(() => api<SupportThread[]>('/admin/support', { all }), [all]);
+  const [open, setOpen] = useState<string | null>(null);
+  const th = m.data?.find((x) => x.id === open);
+  useEffect(() => { if (th?.unread_admin) api<SupportThread[]>('/admin/support', { read: th.id, all }).then(m.set).catch(() => {}); }, [th?.id]); // eslint-disable-line react-hooks/exhaustive-deps
   if (m.loading) return <Skeleton n={2} />;
-  if (!m.data?.length) return <Empty ill="mail" title={t('Aucun message')} />;
-  return (
-    <div className="stack">
-      {m.data.map((x) => (
-        <div key={x.id} className="group" style={{ padding: 14 }}>
-          <b>{x.subject || t('Sans sujet')}</b>
-          <p className="muted" style={{ fontSize: 13 }}>{x.name} · {x.email}{x.created_at ? ` · ${new Date(x.created_at).toLocaleString()}` : ''}{x.page ? ` · ${x.page}` : ''}</p>
-          <p style={{ whiteSpace: 'pre-wrap' }}>{x.message}</p>
-          <div className="hstack mt">
-            <a className="btn small" href={`mailto:${x.email}?subject=${encodeURIComponent(`Re: ${x.subject || 'BeHoop'}`)}&body=${encodeURIComponent(`\n\n> ${x.message.replace(/\n/g, '\n> ')}`)}`}>{t('Répondre par e-mail')}</a>
-            <button className="btn small secondary" onClick={async () => { await api('/admin/support', { close: x.id }); m.reload(); }}>{t('Traité')}</button>
-          </div>
-        </div>
-      ))}
+  if (th) return (
+    <div className="group" style={{ padding: 14 }}>
+      <button className="btn ghost small" onClick={() => setOpen(null)}>‹ {t('Messages')}</button>
+      <b style={{ display: 'block', marginTop: 6 }}>{th.subject || t('Sans sujet')}</b>
+      <p className="muted" style={{ fontSize: 13 }}>{th.name} · {th.email}{th.page ? ` · ${th.page}` : ''}</p>
+      <Conversation th={th} me="admin" onSend={async (text) => { await api('/admin/support', { reply: th.id, text }); m.set(await api<SupportThread[]>('/admin/support', { all })); }} />
+      <div className="hstack mt">
+        <a className="btn small secondary" href={`mailto:${th.email}?subject=${encodeURIComponent(`Re: ${th.subject || 'BeHoop'}`)}`}>{t('Répondre par e-mail')}</a>
+        <button className="btn small secondary" onClick={async () => { await api('/admin/support', { close: th.id, reopen: th.status === 'closed' }); setOpen(null); m.reload(); }}>{th.status === 'closed' ? t('Rouvrir') : t('Traité')}</button>
+      </div>
     </div>
+  );
+  return (
+    <>
+      <label className="hstack" style={{ margin: '0 4px 10px', fontSize: 14 }}><input type="checkbox" checked={all} onChange={(e) => setAll(e.target.checked)} /> {t('Afficher aussi les conversations traitées')}</label>
+      {!m.data?.length ? <Empty ill="mail" title={t('Aucun message')} /> : (
+        <div className="group">
+          {m.data.map((x) => (
+            <button key={x.id} className="row" onClick={() => setOpen(x.id)}>
+              <div className="grow">{x.unread_admin && <b style={{ color: 'var(--accent)' }}>● </b>}{x.subject || t('Sans sujet')}{x.status === 'closed' && <span className="muted"> · {t('traité')}</span>}
+                <div className="sub ellipsis">{x.name || x.email} · {x.messages[x.messages.length - 1]?.text}</div></div><span className="chev">›</span>
+            </button>
+          ))}
+        </div>
+      )}
+    </>
   );
 }

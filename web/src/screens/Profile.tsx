@@ -1,5 +1,5 @@
-import { HelpSheet } from '../ui/Help';
-import { useState } from 'react';
+import { HelpSheet, myThreads } from '../ui/Help';
+import { useEffect, useState } from 'react';
 import { deleteUser } from 'firebase/auth';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
@@ -13,13 +13,17 @@ import { PostCard } from './Feed';
 import { enableNotifications, needsInstallForPush, pushSupported } from '../lib/push';
 import { ACCENTS, DEFAULT_THEME, clubColors, type ThemePrefs } from '../lib/theme';
 import { Disc } from '../ui/kit';
-import { t } from '../lib/i18n';
+import { t, tn } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
 
 export function Profile() {
   const s = useSession();
   const clubs = useClubs();
   const comps = useAsync(loadComps, []).data ?? [];
+  // Réponses non lues de l'équipe BeHoop ; ?aide=1 (lien de la notification) ouvre directement la messagerie
+  const [unread, setUnread] = useState(0);
+  useEffect(() => { if (s.user) myThreads().then((l) => setUnread(l.filter((x) => x.unread_user).length)).catch(() => {}); }, [s.user]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (/[?&]aide=1/.test(location.hash)) setSheet('help'); }, []);
   const [sheet, setSheet] = useState<'' | 'notifs' | 'posts' | 'requests' | 'delete' | 'theme' | 'phone' | 'help'>('');
   if (!s.user || !s.profile) {
     return <Screen title={t('Profil')}><Empty ill="user" title={t('Connecte-toi')} text={t('Suis tes clubs, rejoins l\'Équipe de ton enfant, publie tes photos et vidéos de match.')}
@@ -65,7 +69,7 @@ export function Profile() {
         <label className="row"><div className="grow">{t('Langue')}</div><LangSwitch /></label>
         <button className="row" onClick={() => setSheet('theme')}><div className="grow">{t('Mon thème')}</div><span className="chev">›</span></button>
         <a className="row" href="#/espace" style={{ color: 'inherit' }}><div className="grow">{t('Espace Club')}<div className="sub">{t('Hoop Camp, entraînements, tactique')}</div></div><span className="chev">›</span></a>
-        <button className="row" onClick={() => setSheet('help')}><div className="grow">{t('Aide / Contact')}</div><span className="chev">›</span></button>
+        <button className="row" onClick={() => setSheet('help')}><div className="grow">{t('Aide / Contact')}{unread > 0 && <b style={{ color: 'var(--accent)' }}> · {tn(unread, '{n} nouvelle réponse', '{n} nouvelles réponses')}</b>}</div><span className="chev">›</span></button>
         {s.isAdmin && <a className="row" href="#/moderation" style={{ color: 'inherit' }}><div className="grow">{t('Console de modération')}</div><span className="chev">›</span></a>}
       </div>
       <LegalLinks />
@@ -76,7 +80,7 @@ export function Profile() {
 
       {sheet === 'notifs' && <NotifSheet onClose={() => setSheet('')} />}
       {sheet === 'phone' && <PhoneSheet onClose={() => setSheet('')} />}
-      {sheet === 'help' && <HelpSheet onClose={() => setSheet('')} />}
+      {sheet === 'help' && <HelpSheet onClose={() => { setSheet(''); setUnread(0); }} />}
       {sheet === 'posts' && <Sheet title={t('Mes publications')} onClose={() => setSheet('')}><MyPosts /></Sheet>}
       {sheet === 'requests' && <Sheet title={t('Demandes à valider')} onClose={() => setSheet('')}>{s.responsibleTeams.map((tid) => <div key={tid}><div className="group-title">{teamName(tid)}</div><TeamMembers teamId={tid} /></div>)}</Sheet>}
       {sheet === 'delete' && <DeleteSheet onClose={() => setSheet('')} />}

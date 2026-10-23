@@ -102,11 +102,31 @@ describe('super admin seulement', () => {
     await call('sa', '/admin/invitations', { cancel: 'a@x.be' }, true);
     expect(fs.docs.has('invitations/a@x.be')).toBe(false);
   });
-  it('messages Aide / Contact', async () => {
-    await call('u1', '/support/send', { subject: 'Souci', message: 'Je ne vois pas mon équipe' });
-    const l = (await call('sa', '/admin/support', {}, true)).data;
-    expect(l[0]).toMatchObject({ subject: 'Souci', email: 'u1@x.be', status: 'open' });
-    await call('sa', '/admin/support', { close: l[0].id }, true);
-    expect((await call('sa', '/admin/support', {}, true)).data).toEqual([]);
+  it('messagerie Aide / Contact : fil, réponse, notifications, non-lus', async () => {
+    const sent: string[][] = [];
+    const notify = async (uids: string[]) => { sent.push(uids); };
+    const run = async (uid: string, path: string, body: any, isAdmin = false) => {
+      const r = await clubApi(path, { fs: fs as any, env, user: { uid, email: `${uid}@x.be` } as any, profile: { displayName: uid }, isAdmin, body, json, notify });
+      return r!.json();
+    };
+    await run('sa', '/admin/support', {}, true); // le super admin s'enregistre pour les notifications
+    const { id } = await run('u1', '/support/send', { subject: 'Souci', message: 'Je ne vois pas mon équipe' });
+    expect(sent).toEqual([['sa']]);
+    let l = await run('sa', '/admin/support', {}, true);
+    expect(l[0]).toMatchObject({ id, subject: 'Souci', unread_admin: true, status: 'open' });
+    await run('sa', '/admin/support', { reply: id, text: 'Regarde dans Équipes' }, true);
+    expect(sent[1]).toEqual(['u1']);
+    let mine = await run('u1', '/support/mine', {});
+    expect(mine[0].messages.map((m: any) => m.from)).toEqual(['user', 'admin']);
+    expect(mine[0].unread_user).toBe(true);
+    await run('u1', '/support/mine', { read: id });
+    mine = await run('u1', '/support/mine', {});
+    expect(mine[0].unread_user).toBe(false);
+    await run('u1', '/support/send', { thread: id, message: 'Merci !' });
+    expect((await run('u2', '/support/send', { thread: id, message: 'intrus' }))).toMatchObject({ ok: false });
+    await run('sa', '/admin/support', { close: id }, true);
+    expect(await run('sa', '/admin/support', {}, true)).toEqual([]);
+    l = await run('sa', '/admin/support', { all: true }, true);
+    expect(l[0].messages).toHaveLength(3);
   });
 });

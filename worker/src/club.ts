@@ -18,7 +18,8 @@ export function spacesOf(u: any): Record<string, Space> {
   return out;
 }
 
-interface Ctx { fs: Firestore; env: { FIREBASE_SERVICE_ACCOUNT: string; FIREBASE_PROJECT_ID: string; SITE_URL: string }; user: FirebaseUser; profile: { displayName?: string } | null; isAdmin: boolean; body: any; json: (d: unknown, s?: number) => Response }
+interface Ctx { fs: Firestore; env: { FIREBASE_SERVICE_ACCOUNT: string; FIREBASE_PROJECT_ID: string; SITE_URL: string }; user: FirebaseUser; profile: { displayName?: string } | null; isAdmin: boolean; body: any; json: (d: unknown, s?: number) => Response;
+  /** Notification push (titre, texte, lien) ; type = préférence de notification */ notify?: (uids: string[], title: string, text: string, url: string) => Promise<void> }
 
 export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
   const { fs, env, user, profile, isAdmin, body, json } = c;
@@ -110,13 +111,33 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
     return json({ ok: true });
   }
 
+  // ---------- Aide / Contact : conversations avec le super admin (support/{fil}, messages dans le fil) ----------
+  const notify = c.notify ?? (async () => {});
+  const thread = (id: unknown) => `support/${String(id ?? '').replace(/[^\w-]/g, '')}`;
+  const adminUid = async () => (await fs.get<any>('config/superAdmin'))?.uid as string | undefined;
+  const view = (d: any) => ({ id: d._path ? d._path.split('/').pop() : d.id, uid: d.uid, email: d.email, name: d.name, subject: d.subject, status: d.status, page: d.page,
+    messages: d.messages ?? [], updated_at: d.updated_at, unread_admin: !!d.unread_admin, unread_user: !!d.unread_user });
+
   if (path === '/support/send') {
-    // Aide / contact : message enregistré pour le super admin (console de modération → Messages), réponse par e-mail
-    const subject = String(body.subject ?? '').trim().slice(0, 120), message = String(body.message ?? '').trim().slice(0, 3000);
-    if (!message) return json({ ok: false }, 400);
-    const id = `${Date.now()}-${user.uid.slice(0, 8)}`;
-    await fs.set(`support/${id}`, { uid: user.uid, email: user.email ?? '', name: profile?.displayName ?? '', subject, message, page: String(body.page ?? '').slice(0, 200), status: 'open', created_at: new Date() } as any, false);
-    return json({ ok: true });
+    // Nouveau fil (sujet + message) ou réponse dans un de mes fils
+    const text = String(body.message ?? '').trim().slice(0, 3000);
+    if (!text) return json({ ok: false }, 400);
+    const now = new Date().toISOString();
+    let id = body.thread ? String(body.thread).replace(/[^\w-]/g, '') : '';
+    const cur = id ? await fs.get<any>(`support/${id}`) : null;
+    if (id && cur?.uid !== user.uid) return json({ ok: false }, 403);
+    if (!id) id = `${Date.now()}-${user.uid.slice(0, 8)}`;
+    const msgs = [...(cur?.messages ?? []), { from: 'user', text, at: now }].slice(-200);
+    await fs.set(`support/${id}`, { uid: user.uid, email: user.email ?? '', name: profile?.displayName ?? '', subject: cur?.subject ?? String(body.subject ?? '').trim().slice(0, 120),
+      page: cur?.page ?? String(body.page ?? '').slice(0, 200), status: 'open', messages: msgs as any, updated_at: now, unread_admin: true, unread_user: false, ...(cur ? {} : { created_at: now }) } as any);
+    const a = await adminUid();
+    if (a && a !== user.uid) await notify([a], 'BeHoop · Aide / Contact', `${profile?.displayName ?? user.email ?? ''} : ${text.slice(0, 100)}`, '/app/#/moderation?tab=support').catch(() => {});
+    return json({ ok: true, id });
+  }
+  if (path === '/support/mine') {
+    const l = (await fs.query('support', [['uid', 'EQUAL', user.uid]])).map(view).sort((x, y) => String(y.updated_at).localeCompare(String(x.updated_at)));
+    if (body.read) await fs.set(thread(body.read), { unread_user: false } as any);
+    return json(l);
   }
 
   // ---------- Super admin ----------
@@ -208,9 +229,22 @@ export async function clubApi(path: string, c: Ctx): Promise<Response | null> {
   }
 
   if (path === '/admin/support') {
-    if (body.close) { await fs.set(`support/${String(body.close).replace(/[^\w-]/g, '')}`, { status: 'closed' } as any); return json({ ok: true }); }
-    return json((await fs.query('support', [['status', 'EQUAL', 'open']])).map((d: any) => ({ id: d._path.split('/').pop(), ...d, _path: undefined })));
+    // Le super admin reçoit les notifications des nouveaux messages
+    if ((await adminUid()) !== user.uid) await fs.set('config/superAdmin', { uid: user.uid } as any);
+    if (body.reply) {
+      const cur = await fs.get<any>(thread(body.reply)), text = String(body.text ?? '').trim().slice(0, 3000);
+      if (!cur || !text) return json({ ok: false }, 400);
+      const now = new Date().toISOString();
+      await fs.set(thread(body.reply), { messages: [...(cur.messages ?? []), { from: 'admin', text, at: now }].slice(-200) as any, updated_at: now, unread_user: true, unread_admin: false, status: 'open' } as any);
+      await notify([cur.uid], 'BeHoop · Aide / Contact', `${'Réponse'} : ${text.slice(0, 100)}`, '/app/#/profil?aide=1').catch(() => {});
+      return json({ ok: true });
+    }
+    if (body.close) { await fs.set(thread(body.close), { status: body.reopen ? 'open' : 'closed', unread_admin: false } as any); return json({ ok: true }); }
+    if (body.read) await fs.set(thread(body.read), { unread_admin: false } as any);
+    const l = (await fs.query('support', body.all ? [] : [['status', 'EQUAL', 'open']])).map(view).sort((x, y) => String(y.updated_at).localeCompare(String(x.updated_at)));
+    return json(l);
   }
+
 
   if (path === '/admin/invite-admin') {
     const email = String(body.email ?? '').trim().toLowerCase(), club = String(body.club_id ?? '').replace(/\D/g, '');

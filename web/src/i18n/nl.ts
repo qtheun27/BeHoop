@@ -1087,4 +1087,12 @@ export const NL: Record<string, string> = {
   "Ton message": "Je bericht",
   "Message envoyé. Merci !": "Bericht verstuurd. Bedankt!",
   "Impossible d’envoyer. Réessaie.": "Versturen mislukt. Probeer opnieuw.",
+  "Rouvrir": "Heropenen",
+  "Afficher aussi les conversations traitées": "Ook afgehandelde gesprekken tonen",
+  "traité": "afgehandeld",
+  "{n} nouvelle réponse": "{n} nieuw antwoord",
+  "{n} nouvelles réponses": "{n} nieuwe antwoorden",
+  "Équipe BeHoop": "BeHoop-team",
+  "Une question, un souci, une idée ? Écris-nous : la réponse arrive ici, avec une notification.": "Een vraag, een probleem, een idee? Schrijf ons: het antwoord komt hier, met een melding.",
+  "Nouveau message": "Nieuw bericht",
 };
