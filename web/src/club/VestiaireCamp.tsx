@@ -1,6 +1,6 @@
 // Vestiaire : le Hoop Camp de mes joueurs (ma fiche, mes enfants), avec les exercices à valider pour les parents
 import { useEffect, useState } from 'react';
-import { tn } from '../lib/i18n';
+import { t, tn } from '../lib/i18n';
 import { HoopCampCard } from './HoopCamp';
 import { pendingOf } from './Validate';
 import { watchDays, type Player } from './api';
@@ -8,7 +8,12 @@ import { addDays, today } from '../hoopcamp/engine';
 import './space.css';
 
 export default function VestiaireCamp({ players }: { players: Player[] }) {
-  return <>{players.map((p) => <CampBlock key={p.id} p={p} parent={!!p.parent_uids.length && !p.account_uid} />)}</>;
+  return (
+    <>
+      {players.map((p) => <CampBlock key={p.id} p={p} parent={!!p.parent_uids.length && !p.account_uid} />)}
+      <a className="next-game" href="#/camp/playbook"><span className="grow"><b>Playbook</b><small>{t('Les systèmes et exercices de ton coach, animés')}</small></span><span className="chev">›</span></a>
+    </>
+  );
 }
 function CampBlock({ p, parent }: { p: Player; parent: boolean }) {
   const [pending, setPending] = useState(0);

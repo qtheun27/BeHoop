@@ -8,7 +8,7 @@ import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName 
 import { sendToUsers, followersOfTeams } from './notify';
 import { settingsToStore } from '../../shared/types';
 import { N } from '../../shared/notifText';
-import { clubApi } from './club';
+import { clubApi, spacesOf } from './club';
 
 export interface Env {
   BUCKET: R2Bucket;
@@ -242,6 +242,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const admin = (path2: string, b: any) => clubApi(path2, { fs, env, user, profile, isAdmin: true, body: b, json });
     const base = { uid, club_id: String(club.id), club_name: club.name, name: m.displayName ?? '', email: '' };
     if (rel === 'joueur') await admin('/admin/set-role', { ...base, role: 'player', team_id: String(teamId) });
+    // Un coach n'est nommé que si c'est l'admin du club (ou le super admin) qui accepte
+    if (rel === 'coach' && !isAdmin && !spacesOf(await fs.get<any>(`users/${user.uid}`))[`${club.id}~club_admin`]) return;
     if (rel === 'coach') {
       const u = await fs.get<any>(`users/${uid}`), cur = (u?.spaces ?? {})[`${club.id}~coach`]?.team_ids ?? (u?.role === 'coach' && String(u.club_id) === String(club.id) ? u.team_ids ?? [] : []);
       await admin('/admin/set-role', { ...base, role: 'coach', team_ids: [...new Set([...cur, String(teamId)])] });

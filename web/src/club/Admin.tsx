@@ -54,6 +54,8 @@ function Invitations({ clubId }: { clubId: string }) {
   const pending = (inv.data ?? []).filter((i) => i.status === 'pending');
   return (
     <>
+      {/* Les membres entrent par la demande d'accès BeHoop ou le QR code d'équipe ; l'invitation e-mail reste pour le super admin */}
+      {!s.isAdmin ? <p className="hint">{t('Joueurs, parents et coachs rejoignent le club en demandant l’accès à leur équipe sur BeHoop, ou avec le QR code de l’équipe (Effectif). Tu acceptes les demandes ici et dans le Vestiaire.')}</p> : (
       <div className="form card-form">
         <input className="field" type="email" inputMode="email" placeholder={t('Adresse e-mail')} value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} />
         <select className="field" value={f.role} onChange={(e) => setF({ ...f, role: e.target.value as A.Role })}>
@@ -65,6 +67,7 @@ function Invitations({ clubId }: { clubId: string }) {
             : f.role === 'coach' ? t('Coach : il gère l’équipe choisie (tu pourras lui en ajouter d’autres dans Membres).') : t('Admin : gère tout le club, comme toi.')}</p>
         <button className="btn volt" disabled={!ok} onClick={send}><Ico n="mail" />{t('Inviter')}</button>
       </div>
+      )}
       <h3 className="group-title mt">{t('En attente')}</h3>
       {inv.loading ? <Skeleton n={2} /> : !pending.length ? <p className="hint">{t('Aucune invitation en attente.')}</p> : (
         <div className="group">

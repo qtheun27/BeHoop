@@ -1113,4 +1113,6 @@ export const NL: Record<string, string> = {
   "Mes favoris": "Mijn favorieten",
   "Gérer mon club et mes équipes": "Mijn club en ploegen beheren",
   "Effectif, séances, Hoop Camp, Playbook.": "Selectie, trainingen, Hoop Camp, Playbook.",
+  "Les systèmes et exercices de ton coach, animés": "De systemen en oefeningen van je coach, geanimeerd",
+  "Joueurs, parents et coachs rejoignent le club en demandant l’accès à leur équipe sur BeHoop, ou avec le QR code de l’équipe (Effectif). Tu acceptes les demandes ici et dans le Vestiaire.": "Spelers, ouders en coaches sluiten aan door toegang te vragen tot hun ploeg op BeHoop, of met de QR-code van de ploeg (Selectie). Je aanvaardt de aanvragen hier en in de Kleedkamer.",
 };

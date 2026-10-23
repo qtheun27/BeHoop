@@ -5,13 +5,14 @@ import { t } from '../lib/i18n';
 import { ClubProvider } from './ctx';
 import { HoopCampPage } from './HoopCamp';
 import { Validate } from './Validate';
+import { Tactique } from './Tactique';
 import './space.css';
 
 export default function Camp({ sub, arg }: { sub?: string; arg?: string }) {
   return (
     <ClubProvider>
-      <Screen title={sub === 'valider' ? t('Validation du soir') : 'Hoop Camp'} back="equipes">
-        {sub === 'valider' ? <Validate pid={arg!} /> : <HoopCampPage key={arg} pid={arg!} />}
+      <Screen title={sub === 'valider' ? t('Validation du soir') : sub === 'playbook' ? 'Playbook' : 'Hoop Camp'} back="equipes">
+        {sub === 'valider' ? <Validate pid={arg!} /> : sub === 'playbook' ? <Tactique /> : <HoopCampPage key={arg} pid={arg!} />}
       </Screen>
     </ClubProvider>
   );
