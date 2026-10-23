@@ -257,6 +257,32 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
 
+  if (path === '/notify/hoopcamp') {
+    // assign : un coach envoie un programme (joueurs et parents prévenus) ; done : séance finie → parents et coach ;
+    // rated : séance validée → le joueur (ou le parent qui gère l'enfant). Vérifié côté serveur avec les liens de l'Espace Club.
+    const ev = String(body.event ?? ''), me = await fs.get<any>(`users/${user.uid}`), who = profile?.displayName ?? me?.display_name;
+    if (ev === 'assign') {
+      const a = await fs.get<any>(`hoopcamp_assign/${String(body.assignId).replace(/\W/g, '')}`);
+      if (!a || me?.role !== 'coach' || !(me.team_ids ?? []).includes(a.team_id)) return json({ ok: false });
+      const players = (await fs.query('players', [['team_id', 'EQUAL', a.team_id]])).filter((p: any) => !a.player_ids?.length || a.player_ids.includes(p._path.split('/').pop()));
+      const to = players.flatMap((p: any) => [p.account_uid, ...(p.parent_uids ?? [])]).filter(Boolean);
+      if (to.length) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampAssign(who, String(a.title ?? a.program?.name ?? 'Hoop Camp').slice(0, 60)), url: '/app/#/espace' }, 'hoopcamp', null);
+      return json({ ok: true });
+    }
+    const pid = String(body.playerId).replace(/[^\w-]/g, ''), p = await fs.get<any>(`players/${pid}`);
+    if (!p) return json({ ok: false });
+    if (ev === 'done' && (p.account_uid === user.uid || (p.parent_uids ?? []).includes(user.uid))) {
+      const coaches = p.team_id ? (await fs.get<any>(`teams/${p.team_id}`))?.coach_uids ?? [] : [];
+      const to = [...(p.parent_uids ?? []), ...coaches].filter((u: string) => u !== user.uid);
+      const name = p.prenom || who;
+      if (to.length) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampDone(name, Math.max(1, Number(body.count) || 1)), url: `/app/#/espace/valider/${pid}` }, 'hoopcamp', null);
+    } else if (ev === 'rated' && ((p.parent_uids ?? []).includes(user.uid) || (me?.role === 'coach' && (me.team_ids ?? []).includes(p.team_id)))) {
+      const to = p.account_uid ? [p.account_uid] : [];
+      if (to.length && to[0] !== user.uid) await sendToUsers(fs, env, to, { title: N.hoopcamp, body: N.hoopcampRated(who), url: `/app/#/espace/hoopcamp/${pid}` }, 'hoopcamp', null);
+    }
+    return json({ ok: true });
+  }
+
   // ----- Suppression du compte et de ses données (RGPD)
   if (path === '/account' && req.method === 'DELETE') {
     for (const f of await fs.query('items', [], { parent: `follows/${user.uid}` }).catch(() => [])) await fs.delete(f._path);

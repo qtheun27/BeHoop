@@ -117,7 +117,9 @@ service cloud.firestore {
       allow create: if request.auth.uid == uid
                     && exists(/databases/$(database)/documents/invitations/$(monEmail()))
                     && get(/databases/$(database)/documents/invitations/$(monEmail())).data.status == 'pending'
-                    && request.resource.data.get('role', '') == get(/databases/$(database)/documents/invitations/$(monEmail())).data.role
+                    && (request.resource.data.get('role', '') == get(/databases/$(database)/documents/invitations/$(monEmail())).data.role
+                        // Invitation « joueur » acceptée par le parent qui gère le compte d'un enfant sans e-mail
+                        || (request.resource.data.get('role', '') == 'parent' && get(/databases/$(database)/documents/invitations/$(monEmail())).data.role == 'player'))
                     && request.resource.data.get('club_id', '') == get(/databases/$(database)/documents/invitations/$(monEmail())).data.club_id;
 
       allow update: if request.auth.uid == uid
@@ -243,6 +245,64 @@ service cloud.firestore {
                     || estCoachDeLequipe(resource.data.get('team_id', ''))
                     // Repli : l'auteur du schema peut toujours le gerer.
                     || resource.data.get('created_by', '') == request.auth.uid;
+    }
+
+    // --- Hoop Camp (programmes individuels, Espace Club) -------------------
+    // hoopcamp/{joueur} : profil d'entraînement + programme en cours ;
+    // hoopcamp/{joueur}/days/{AAAA-MM-JJ} : séance du jour, cases cochées, note, validations.
+    // Accès limité au joueur, à ses parents liés et au coach de SON équipe (données de mineurs).
+    // Le joueur coche et écrit ses notes ; seuls un parent lié ou le coach écrivent les validations (ratings).
+    // Auto-évaluation (selfRatings) uniquement pour un joueur sans parent ni coach lié.
+    function hcJoueur(pid) { return get(/databases/$(database)/documents/players/$(pid)).data; }
+    function hcEstLeJoueur(pid) { return connecte() && hcJoueur(pid).get('account_uid', '') == request.auth.uid; }
+    function hcEstParent(pid) { return connecte() && request.auth.uid in hcJoueur(pid).get('parent_uids', []); }
+    function hcEstCoach(pid) { return estCoachDeLequipe(hcJoueur(pid).get('team_id', '')); }
+    function hcProche(pid) { return hcEstLeJoueur(pid) || hcEstParent(pid) || hcEstCoach(pid); }
+    // Qui coche : le joueur, ou le parent d'un enfant sans compte (l'enfant utilise le téléphone du parent)
+    function hcFait(pid) { return hcEstLeJoueur(pid) || (hcEstParent(pid) && hcJoueur(pid).get('account_uid', '') == ''); }
+    function hcValide(pid) { return hcEstParent(pid) || hcEstCoach(pid); }
+    function hcSansCoach(teamId) {
+      return teamId == null || teamId == ''
+        || !exists(/databases/$(database)/documents/teams/$(teamId))
+        || get(/databases/$(database)/documents/teams/$(teamId)).data.get('coach_uids', []).size() == 0;
+    }
+    function hcAutoEval(pid) { return hcJoueur(pid).get('parent_uids', []).size() == 0 && hcSansCoach(hcJoueur(pid).get('team_id', '')); }
+
+    match /hoopcamp/{pid} {
+      allow read: if hcProche(pid);
+      // Profil et programme : le joueur ou ses parents ; le coach peut seulement lui envoyer un programme
+      allow create: if request.resource.data.get('player_id', '') == pid
+                    && ((hcFait(pid) || hcEstParent(pid)) || (hcEstCoach(pid) && request.resource.data.keys().hasOnly(['player_id', 'program', 'updated'])));
+      allow update: if request.resource.data.get('player_id', '') == pid
+                    && ((hcFait(pid) || hcEstParent(pid)) || (hcEstCoach(pid) && onlyChanged(['program', 'updated'])));
+      allow delete: if false;
+
+      match /days/{date} {
+        allow read: if hcProche(pid);
+        allow create: if hcFait(pid)
+                      && request.resource.data.get('date', '') == date
+                      && request.resource.data.keys().hasOnly(['date', 'program', 'items', 'checks', 'note', 'team_id', 'updated', 'selfRatings'])
+                      && (!('selfRatings' in request.resource.data) || hcAutoEval(pid))
+                      && request.resource.data.get('team_id', null) == hcJoueur(pid).get('team_id', null);
+        allow update: if (hcFait(pid)
+                          && request.resource.data.date == resource.data.date
+                          && onlyChanged(['program', 'items', 'checks', 'note', 'updated', 'selfRatings'])
+                          && (unchanged(['selfRatings']) || hcAutoEval(pid)))
+                      || (hcValide(pid) && onlyChanged(['ratings', 'updated']));
+        allow delete: if false;
+      }
+    }
+
+    // Programme envoyé par un coach à son équipe (ou à certains joueurs). Lisible par le club (pas de donnée personnelle,
+    // sauf le classement d'équipe — prénoms et points — si le coach l'a activé).
+    match /hoopcamp_assign/{id} {
+      allow read: if estSuperAdmin() || estDuClub(resource.data.get('club_id', ''));
+      allow create: if estSuperAdmin()
+                    || (estCoachDeLequipe(request.resource.data.get('team_id', '')) && request.resource.data.get('club_id', '') == monClub())
+                    || estAdminDuClub(request.resource.data.get('club_id', ''));
+      allow update, delete: if estSuperAdmin()
+                    || estCoachDeLequipe(resource.data.get('team_id', ''))
+                    || estAdminDuClub(resource.data.get('club_id', ''));
     }
 
     // =====================================================================

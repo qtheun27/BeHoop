@@ -10,7 +10,6 @@ import { Screen, Avatar, Empty, Sheet, useAsync, LangSwitch } from '../ui/kit';
 import { useClubs, MembersList } from './Explore';
 import { PostCard } from './Feed';
 import { enableNotifications, needsInstallForPush, pushSupported } from '../lib/push';
-import { SHOW_CLUB_SPACE } from '../lib/config';
 import { ACCENTS, DEFAULT_THEME, clubColors, type ThemePrefs } from '../lib/theme';
 import { Disc } from '../ui/kit';
 import { t } from '../lib/i18n';
@@ -64,7 +63,7 @@ export function Profile() {
         <button className="row" onClick={() => setSheet('notifs')}><div className="grow">{t('Notifications')}</div><span className="chev">›</span></button>
         <label className="row"><div className="grow">{t('Langue')}</div><LangSwitch /></label>
         <button className="row" onClick={() => setSheet('theme')}><div className="grow">{t('Mon thème')}</div><span className="chev">›</span></button>
-        {SHOW_CLUB_SPACE && <a className="row" href="/club/">{t('Espace Club')} <span className="chev">›</span></a>}
+        <a className="row" href="#/espace" style={{ color: 'inherit' }}><div className="grow">{t('Espace Club')}<div className="sub">{t('Hoop Camp, entraînements, tactique')}</div></div><span className="chev">›</span></a>
         {s.isAdmin && <a className="row" href="#/moderation" style={{ color: 'inherit' }}><div className="grow">{t('Console de modération')}</div><span className="chev">›</span></a>}
       </div>
       <LegalLinks />

@@ -33,6 +33,7 @@ export const NOTIF_TYPES: { key: string; label: string }[] = [
   { key: 'match2h', label: 'Match dans 2 h' }, { key: 'result', label: 'Résultat final' }, { key: 'newVideo', label: 'Nouvelle vidéo d’une équipe' },
   { key: 'videoReady', label: 'Ta vidéo est prête' }, { key: 'joinRequest', label: 'Demande d’accès à l’Équipe' },
   { key: 'joinAccepted', label: 'Ta demande est acceptée' }, { key: 'live', label: 'Score en direct' }, { key: 'carpool', label: 'Covoiturage' },
+  { key: 'hoopcamp', label: 'Hoop Camp' },
 ];
 export const defaultPrefs = () => Object.fromEntries(NOTIF_TYPES.map((n) => [n.key, true]));
 

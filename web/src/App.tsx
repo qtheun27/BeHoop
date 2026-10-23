@@ -23,6 +23,8 @@ import { MatchPage } from './screens/MatchPage';
 const Montage = lazy(() => import('./screens/Montage'));
 const Moderation = lazy(() => import('./screens/Moderation'));
 const Watch = lazy(() => import('./screens/Watch'));
+// Espace Club (espace « travail » : Hoop Camp, entraînements, Tactique) : chargé à la demande
+const Space = lazy(() => import('./club/Space'));
 
 const tr = t;
 const TABS = [
@@ -39,6 +41,16 @@ export function App() {
   if (!s.ready) return <Loader full />;
   if (s.user && s.profile && !s.profile.onboarded) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
+
+  // Espace Club : sa propre ambiance et sa propre navigation (pas de parquet, pas de barre du bas de l'espace loisir)
+  if (page === 'espace') return (
+    <>
+      <NewsReader />
+      <Guard key="espace"><Suspense fallback={<main className="screen"><Loader /></main>}><Space sub={a} arg={b} /></Suspense></Guard>
+      {s.authSheet !== undefined && <AuthSheet onClose={s.closeAuth} />}
+      {s.toastMsg && <div className="toast" role="status">{s.toastMsg}</div>}
+    </>
+  );
 
   let el;
   switch (page) {
@@ -94,6 +106,7 @@ function SideNav({ tab }: { tab: string }) {
         {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
       <a className="btn side-publish" href="#/publier"><Ico n="plus" />{tr('Publier')}</a>
+      {s.user && <a className="side-club" href="#/espace"><Ico n="bolt" /><span><b>{tr('Espace Club')}</b><small>{tr('Hoop Camp, entraînements, tactique')}</small></span></a>}
       <div className="side-foot">
         {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
           : <button className="btn secondary" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>}

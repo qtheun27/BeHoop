@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 import users from '../../ops/fixtures/demo-users.json' with { type: 'json' };
 
-async function login(page: Page, who: 'responsable' | 'parent' | 'visiteur') {
+async function login(page: Page, who: 'responsable' | 'parent' | 'visiteur' | 'joueur' | 'admin') {
   await page.goto('/app/#/profil');
   await page.getByRole('button', { name: 'Se connecter ou créer un compte' }).click();
   await page.getByRole('button', { name: 'Mot de passe' }).click();
@@ -74,4 +74,26 @@ test.describe('langues', () => {
     await page.reload();
     await expect(page.getByRole('button', { name: 'Create my account' })).toBeVisible(); // choix mémorisé
   });
+});
+
+test('Espace Club : le joueur coche, le coach valide', async ({ page }) => {
+  await login(page, 'joueur');
+  await page.goto('/app/#/espace');
+  await expect(page.getByText('Hoop Camp du jour')).toBeVisible();
+  await page.getByText('Camp Vacances 1 semaine').first().click();
+  const first = page.getByRole('button', { name: 'Cocher' }).first();
+  await first.click();
+  await expect(page.getByText('en attente de validation').first()).toBeVisible();
+  // Le joueur ne voit aucun bouton de validation
+  await expect(page.getByRole('button', { name: 'Maîtrisé' })).toHaveCount(0);
+});
+
+test('Espace Club : le coach voit l’assiduité et valide', async ({ page }) => {
+  await login(page, 'responsable');
+  await page.goto('/app/#/espace/equipe/51656');
+  await expect(page.getByText('Assiduité (4 dernières semaines)')).toBeVisible();
+  await page.getByRole('link', { name: 'À valider' }).first().click();
+  await expect(page.getByText('Validation du soir')).toBeVisible();
+  await page.getByRole('button', { name: 'Maîtrisé' }).first().click();
+  await expect(page.getByRole('button', { name: 'Maîtrisé', pressed: true }).first()).toBeVisible();
 });

@@ -27,11 +27,12 @@ export function MyTeams({ id }: { id?: number }) {
     <Screen title={t('Équipes')}><Empty ill="users" title={t('L\'espace de ton équipe')} text={t('Connecte-toi pour retrouver l\'équipe que tu gères, celle de ton enfant ou celle où tu joues : matchs, covoiturage, photos et vidéos.')}
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>);
   if (!mine.length) return (
-    <Screen title={t('Équipes')}><Empty ill="users" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
+    <Screen title={t('Équipes')}><SpaceEntry /><Empty ill="users" title={t('Tu ne fais encore partie d\'aucune équipe')} text={t('Ouvre la fiche de l\'équipe de ton enfant (ou celle que tu coaches) et touche « Rejoindre ». Un responsable validera ta demande.')}
       action={<a className="btn" href="#/explorer">{t('Trouver mon équipe')}</a>} /></Screen>);
   const name = (tid: number) => { const e = idx.data?.get(tid); return e ? `${e.club.short} · ${teamLabel(e.team)}` : `${t('Équipe')} ${tid}`; };
   return (
     <Screen title={t('Équipes')}>
+      <SpaceEntry />
       {mine.length > 1 && <div className="chips">{mine.map((m) => (
         <button key={m.teamId} className={`chip${current?.teamId === m.teamId ? ' on' : ''}`} onClick={() => setSel(m.teamId)}>{name(m.teamId)}</button>))}</div>}
       {current && (current.status === 'accepted' ? <TeamSpace key={current.teamId} m={current} /> : (
@@ -132,5 +133,17 @@ function NextGame({ g, teamId, youth, big, onCar, onLive }: { g: Game; teamId: n
         {g.d === today && <button className="btn small secondary" onClick={onLive}>{t('Score en direct')}</button>}
       </div>
     </div>
+  );
+}
+
+/** Accès à l'Espace Club (l'espace « travail » : Hoop Camp, entraînements, Tactique) */
+function SpaceEntry() {
+  return (
+    <a className="space-entry" href="#/espace">
+      <span className="se-court" aria-hidden />
+      <span className="grow"><span className="se-badge">{t('Espace Club')}</span><b>{t('Hoop Camp, entraînements, tactique')}</b>
+        <small>{t('Programmes à faire à la maison, validés par un parent ou le coach.')}</small></span>
+      <span className="chev">›</span>
+    </a>
   );
 }

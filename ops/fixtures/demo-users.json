@@ -1,6 +1,28 @@
 {
   "_note": "Comptes de TEST pour l'émulateur Firebase uniquement (jamais utilisés en production).",
-  "responsable": { "email": "responsable@demo.behoop.test", "password": "demo-behoop-1", "name": "Quentin T." },
-  "parent": { "email": "parent@demo.behoop.test", "password": "demo-behoop-2", "name": "Marie D." },
-  "visiteur": { "email": "visiteur@demo.behoop.test", "password": "demo-behoop-3", "name": "Paul V." }
+  "responsable": {
+    "email": "responsable@demo.behoop.test",
+    "password": "demo-behoop-1",
+    "name": "Quentin T."
+  },
+  "parent": {
+    "email": "parent@demo.behoop.test",
+    "password": "demo-behoop-2",
+    "name": "Marie D."
+  },
+  "visiteur": {
+    "email": "visiteur@demo.behoop.test",
+    "password": "demo-behoop-3",
+    "name": "Paul V."
+  },
+  "joueur": {
+    "email": "joueur@demo.behoop.test",
+    "password": "demo-behoop-4",
+    "name": "Noah B."
+  },
+  "admin": {
+    "email": "admin@demo.behoop.test",
+    "password": "demo-behoop-5",
+    "name": "Sophie L."
+  }
 }

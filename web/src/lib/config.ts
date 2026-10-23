@@ -15,5 +15,3 @@ export const VAPID_KEY: string = env.VITE_FCM_VAPID_KEY ?? '';
 export const DATA_BASE = '/app-data';
 export const SUPER_ADMIN_EMAIL = 'q.theuninck@gmail.com';
 export const CGU_VERSION = '2026-10';
-/** L'Espace Club reste masqué tant qu'il n'est pas prêt. */
-export const SHOW_CLUB_SPACE = false;

@@ -36,3 +36,78 @@ describe('Espace Club inchangé', () => {
     await assertSucceeds(getDoc(doc(as('admin'), 'users', 'coach')));
   });
 });
+
+describe('Hoop Camp', () => {
+  beforeEach(async () => {
+    await env.withSecurityRulesDisabled(async (c) => {
+      const db = c.firestore();
+      await setDoc(doc(db, 'users', 'joueur'), { role: 'player', club_id: 'c1' });
+      await setDoc(doc(db, 'users', 'parent'), { role: 'parent', club_id: 'c1', children_player_ids: ['enfant'] });
+      await setDoc(doc(db, 'users', 'coach2'), { role: 'coach', club_id: 'c1', team_ids: ['t2'] });
+      await setDoc(doc(db, 'users', 'solo'), { role: 'player', club_id: 'c1' });
+      await setDoc(doc(db, 'teams', 't1'), { club_id: 'c1', coach_uids: ['coach'] });
+      await setDoc(doc(db, 'teams', 't9'), { club_id: 'c1' });
+      // Joueur avec compte, un parent lié, équipe t1 (coach « coach »)
+      await setDoc(doc(db, 'players', 'joueur'), { club_id: 'c1', team_id: 't1', account_uid: 'joueur', parent_uids: ['parent'] });
+      // Enfant sans compte, géré par le parent
+      await setDoc(doc(db, 'players', 'enfant'), { club_id: 'c1', team_id: 't1', account_uid: '', parent_uids: ['parent'] });
+      // Joueur seul : ni parent ni coach (équipe sans coach)
+      await setDoc(doc(db, 'players', 'solo'), { club_id: 'c1', team_id: 't9', account_uid: 'solo', parent_uids: [] });
+      await setDoc(doc(db, 'hoopcamp', 'joueur', 'days', '2026-10-26'), { date: '2026-10-26', items: [], checks: { a: 1 }, team_id: 't1' });
+    });
+  });
+  const day = (u: string, pid: string, date = '2026-10-27') => doc(as(u), 'hoopcamp', pid, 'days', date);
+
+  it('le joueur coche et écrit sa note, mais ne se valide jamais', async () => {
+    await assertSucceeds(setDoc(day('joueur', 'joueur'), { date: '2026-10-27', items: [], checks: { a: 1 }, note: 'crossover ok', team_id: 't1' }));
+    await assertSucceeds(updateDoc(day('joueur', 'joueur', '2026-10-26'), { checks: { a: 1, b: 2 } }));
+    await assertFails(updateDoc(day('joueur', 'joueur', '2026-10-26'), { ratings: { a: { r: 'maitrise' } } }));
+    await assertFails(setDoc(day('joueur', 'joueur'), { date: '2026-10-27', items: [], team_id: 't1', ratings: { a: { r: 'maitrise' } } }));
+    // Auto-évaluation refusée : il a un parent et un coach
+    await assertFails(updateDoc(day('joueur', 'joueur', '2026-10-26'), { selfRatings: { a: { r: 'maitrise' } } }));
+  });
+  it('équipe recopiée telle quelle (pas de fuite vers un autre coach)', async () => {
+    await assertFails(setDoc(day('joueur', 'joueur'), { date: '2026-10-27', items: [], team_id: 't2' }));
+  });
+  it('parent lié et coach de l’équipe valident ; personne d’autre', async () => {
+    await assertSucceeds(updateDoc(day('parent', 'joueur', '2026-10-26'), { ratings: { a: { r: 'correct', by: 'parent' } } }));
+    await assertSucceeds(updateDoc(day('coach', 'joueur', '2026-10-26'), { ratings: { a: { r: 'maitrise', by: 'coach' } } }));
+    await assertFails(updateDoc(day('coach2', 'joueur', '2026-10-26'), { ratings: { a: { r: 'maitrise' } } }));
+    await assertFails(updateDoc(day('admin', 'joueur', '2026-10-26'), { ratings: { a: { r: 'maitrise' } } }));
+    // Le valideur ne touche pas aux cases cochées
+    await assertFails(updateDoc(day('coach', 'joueur', '2026-10-26'), { checks: {} }));
+  });
+  it('le coach ne lit que son équipe', async () => {
+    await assertSucceeds(getDoc(day('coach', 'joueur', '2026-10-26')));
+    await assertFails(getDoc(day('coach2', 'joueur', '2026-10-26')));
+    await assertFails(getDoc(day('solo', 'joueur', '2026-10-26')));
+    await assertFails(getDoc(day('admin', 'joueur', '2026-10-26')));
+  });
+  it('enfant sans compte : le parent coche et valide', async () => {
+    await assertSucceeds(setDoc(day('parent', 'enfant'), { date: '2026-10-27', items: [], checks: { a: 1 }, team_id: 't1' }));
+    await assertSucceeds(updateDoc(day('parent', 'enfant'), { ratings: { a: { r: 'correct' } } }));
+  });
+  it('auto-évaluation seulement sans parent ni coach', async () => {
+    await assertSucceeds(setDoc(day('solo', 'solo'), { date: '2026-10-27', items: [], checks: { a: 1 }, team_id: 't9', selfRatings: { a: { r: 'correct' } } }));
+    await assertFails(updateDoc(day('solo', 'solo'), { ratings: { a: { r: 'maitrise' } } }));
+  });
+  it('programme : le coach envoie, sans toucher au profil', async () => {
+    await assertSucceeds(setDoc(doc(as('coach'), 'hoopcamp', 'enfant'), { player_id: 'enfant', program: { id: 'camp-1' } }));
+    await assertFails(setDoc(doc(as('coach'), 'hoopcamp', 'joueur'), { player_id: 'joueur', program: { id: 'camp-1' }, profile: { age: 'U14' } }));
+    await assertSucceeds(setDoc(doc(as('joueur'), 'hoopcamp', 'joueur'), { player_id: 'joueur', profile: { age: 'U14' }, program: { id: 'shooteur' } }));
+    await assertFails(setDoc(doc(as('coach2'), 'hoopcamp', 'joueur'), { player_id: 'joueur', program: { id: 'camp-1' } }));
+  });
+  it('envoi d’équipe : le coach de l’équipe seulement, lisible par le club', async () => {
+    await assertSucceeds(setDoc(doc(as('coach'), 'hoopcamp_assign', 'a1'), { club_id: 'c1', team_id: 't1', program: { id: 'camp-1' } }));
+    await assertFails(setDoc(doc(as('coach2'), 'hoopcamp_assign', 'a2'), { club_id: 'c1', team_id: 't1', program: { id: 'camp-1' } }));
+    await assertSucceeds(getDoc(doc(as('joueur'), 'hoopcamp_assign', 'a1')));
+  });
+});
+
+describe('Invitation joueur acceptée par un parent', () => {
+  it('rôle parent permis, jamais coach ou admin', async () => {
+    await env.withSecurityRulesDisabled(async (c) => { await setDoc(doc(c.firestore(), 'invitations', 'maman@club.be'), { status: 'pending', role: 'player', club_id: 'c1', team_id: 't1' }); });
+    await assertFails(setDoc(doc(as('m1', 'maman@club.be'), 'users', 'm1'), { role: 'coach', club_id: 'c1' }));
+    await assertSucceeds(setDoc(doc(as('m1', 'maman@club.be'), 'users', 'm1'), { role: 'parent', club_id: 'c1' }));
+  });
+});

@@ -412,3 +412,17 @@ html { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) { .reader, .reader-body { animation: none !important; } }
 .prov-note { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--accent); padding: 8px 12px; border-bottom: 1px solid var(--sep); }
 .prov-note .ico { width: 15px; height: 15px; flex: none; }
+
+/* Accès à l'Espace Club depuis l'espace loisir : une porte vers l'autre ambiance (tableau du coach, jaune fluo) */
+.space-entry { position: relative; overflow: hidden; display: flex; align-items: center; gap: 12px; margin: 0 0 16px; padding: 16px; border-radius: var(--radius-lg); color: #fff;
+  background: radial-gradient(70% 120% at 100% 0%, rgba(200,245,60,.35), transparent 60%), linear-gradient(150deg, #0c1530, #1b2d7a 75%, #2f54ff 140%); box-shadow: 0 12px 30px rgba(12,21,48,.3); }
+.space-entry .grow { flex: 1; display: grid; gap: 3px; min-width: 0; position: relative; }
+.space-entry b { font-size: 17px; }
+.space-entry small { color: rgba(255,255,255,.75); font-size: 13.5px; }
+.space-entry .chev { color: #c8f53c; font-size: 22px; position: relative; }
+.se-badge { justify-self: start; font: 600 11px/1 Oswald, sans-serif; letter-spacing: .16em; text-transform: uppercase; padding: 5px 8px; border-radius: 999px; background: #c8f53c; color: #1d2600; }
+.se-court { position: absolute; right: -30px; bottom: -40px; width: 160px; height: 120px; border: 2px solid rgba(255,255,255,.12); border-radius: 50% 50% 0 0; }
+.side-club { margin: 10px 4px 0; display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 16px; color: #fff; background: linear-gradient(150deg, #0c1530, #1b2d7a); }
+.side-club > svg, .side-club > .ico { width: 22px; height: 22px; color: #c8f53c; flex: none; }
+.side-club span { display: grid; gap: 1px; min-width: 0; }
+.side-club small { color: rgba(255,255,255,.7); font-size: 11.5px; line-height: 1.25; }

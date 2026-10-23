@@ -1,5 +1,6 @@
 // Textes de l'appli à traduire (clé = texte français), relevés dans le code source :
 // - premier argument de t('…'), 2e et 3e de tn(n, '…', '…') ;
+// - web/src/hoopcamp (bibliothèque d'exercices et moteur) n'est pas parcouru : contenu en français, hors dictionnaires ;
 // - libellés passés à t() par variable : « label: '…' », paires ['id', 'Libellé'], listes et objets déclarés ci-dessous.
 // Sert au test de couverture (ops/test/i18n.test.ts) et à repérer les nouvelles clés (npx tsx ops/i18n-keys.ts).
 import { readFileSync, readdirSync, statSync } from 'node:fs';
@@ -7,14 +8,14 @@ import { join } from 'node:path';
 
 const files = (dir: string): string[] => readdirSync(dir).flatMap((f) => {
   const p = join(dir, f);
-  return statSync(p).isDirectory() ? (f === 'i18n' || f === 'planche' ? [] : files(p)) : /\.tsx?$/.test(f) ? [p] : [];
+  return statSync(p).isDirectory() ? (f === 'i18n' || f === 'planche' || f === 'hoopcamp' ? [] : files(p)) : /\.tsx?$/.test(f) ? [p] : [];
 });
 // Chaîne '…' ou "…" (avec échappements)
 const S = String.raw`(?:'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*")`;
 const unq = (lit: string) => lit.slice(1, -1).replace(/\\(.)/g, '$1');
 const lits = (src: string) => [...src.matchAll(new RegExp(S, 'g'))].map((m) => unq(m[0]));
 // Constantes dont toutes les valeurs texte sont des libellés affichés
-const LABEL_CONSTS = ['REPORT_REASONS', 'RELATION_FR', 'DOCS', 'CHAPTER_ORDER'];
+const LABEL_CONSTS = ['REPORT_REASONS', 'RELATION_FR', 'DOCS', 'CHAPTER_ORDER', 'ROLE_LABEL', 'FAMILY_LABEL', 'PHASE_LABEL', 'RATING_LABEL', 'EQUIP_LABEL', 'GOAL_LABEL', 'GOAL_FR'];
 
 export function collectKeys(root = '.') {
   // Noms d'icônes (ui/icons.tsx) : jamais des textes à traduire

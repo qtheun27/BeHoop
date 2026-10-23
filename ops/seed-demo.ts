@@ -17,7 +17,7 @@ const st = demoSettings('/docs/test');
 const GAME = 465476, AMLL = 51656, MONS = 50757, CLUB_AMLL = 1374, CLUB_MONS = 1312;
 
 const uid: Record<string, string> = {};
-for (const k of ['responsable', 'parent', 'visiteur']) {
+for (const k of ['responsable', 'parent', 'visiteur', 'joueur', 'admin']) {
   const u = users[k];
   const rec = await auth.getUserByEmail(u.email).catch(() => auth.createUser({ email: u.email, password: u.password, displayName: u.name, emailVerified: true }));
   uid[k] = rec.uid;
@@ -47,4 +47,25 @@ await db.doc('matchVideos/demo').set({ matchAwbbId: GAME, authorUid: uid.respons
 await db.doc('renderJobs/demo').set({ matchVideoId: 'demo', authorUid: uid.responsable, status: 'done', progress: 100, step: 'Vidéo prête' });
 await db.doc('posts/video-demo').set({ ...base, type: 'video', authorUid: uid.responsable, authorName: users.responsable.name, visibility: 'team', teamIdPrivate: AMLL,
   createdAt: new Date('2026-10-10T18:00:00+02:00'), payload: { matchVideoId: 'demo', title: st.title, duration: 60, posterKey: '/out/render/demo/hls/poster.jpg', score: '11 – 94' } });
+// Espace Club (BC AMLL) : coach = responsable, parent de Léo (sans compte), joueur avec compte (Noah), admin du club
+const T = String(AMLL), C = String(CLUB_AMLL);
+await db.doc(`users/${uid.responsable}`).set({ role: 'coach', club_id: C, team_ids: [T], display_name: users.responsable.name, email: users.responsable.email });
+await db.doc(`users/${uid.parent}`).set({ role: 'parent', club_id: C, children_player_ids: ['leo'], display_name: users.parent.name, email: users.parent.email });
+await db.doc(`users/${uid.joueur}`).set({ role: 'player', club_id: C, display_name: users.joueur.name, email: users.joueur.email });
+await db.doc(`users/${uid.admin}`).set({ role: 'club_admin', club_id: C, display_name: users.admin.name, email: users.admin.email });
+await db.doc(`teams/${T}`).set({ club_id: C, coach_uids: [uid.responsable] });
+await db.doc('players/leo').set({ club_id: C, team_id: T, account_uid: '', parent_uids: [uid.parent], prenom: 'Léo', nom: 'D.' });
+await db.doc(`players/${uid.joueur}`).set({ club_id: C, team_id: T, account_uid: uid.joueur, parent_uids: [], prenom: 'Noah', nom: 'B.' });
+await db.doc(`invitations/${users.visiteur.email}`).set({ email: users.visiteur.email, role: 'player', club_id: C, club_name: 'BC AMLL', team_id: T, status: 'pending' });
+const day0 = new Date(); const iso = (n: number) => new Date(day0.getTime() - n * 864e5).toISOString().slice(0, 10);
+await db.doc(`hoopcamp/${uid.joueur}`).set({ player_id: uid.joueur, profile: { age: 'U14', level: 2, hand: 'droite', basket: 'panier', space: 'moyen', surface: 'exterieur', equip: ['ballon', 'mur', 'plots'], minutes: 30, days: 5, goals: ['dribble', 'tir'] },
+  program: { id: 'camp-1', name: 'Camp Vacances 1 semaine', start: iso(2), end: null, from: 'player', by: uid.joueur } });
+// Deux jours d'entraînement : un validé par le coach, un en attente
+const it = (ex: string, phase: string) => ({ ex, phase, dose: { sets: 2, reps: 10, rest: 15 }, sec: 90, kind: 'new' });
+await db.doc(`hoopcamp/${uid.joueur}/days/${iso(2)}`).set({ date: iso(2), program: 'camp-1', team_id: T, items: [it('ech-montees-genoux', 'echauffement'), it('dri-pound-bas', 'technique'), it('tir-mikan-tir', 'technique'), it('ret-quadriceps', 'retour')],
+  checks: { 'ech-montees-genoux': 1, 'dri-pound-bas': 1, 'tir-mikan-tir': 1, 'ret-quadriceps': 1 }, note: 'Mon pound main gauche est encore trop haut.',
+  ratings: { 'dri-pound-bas': { r: 'correct', by: uid.responsable, name: users.responsable.name, msg: 'Plus bas !' }, 'tir-mikan-tir': { r: 'maitrise', by: uid.responsable, name: users.responsable.name } } });
+await db.doc(`hoopcamp/${uid.joueur}/days/${iso(1)}`).set({ date: iso(1), program: 'camp-1', team_id: T, items: [it('ech-talons-fesses', 'echauffement'), it('dri-crossover-sur-place', 'technique'), it('fin-mikan', 'technique'), it('ret-ischios', 'retour')],
+  checks: { 'ech-talons-fesses': 1, 'dri-crossover-sur-place': 1, 'fin-mikan': 1 } });
+await db.collection('trainings').doc('demo-tr').set({ team_id: T, date: iso(-2), start_time: '18:00', end_time: '19:30', location: 'Salle de Loncin', created_by: uid.responsable });
 console.log('✅ Démo chargée :', Object.entries(users).filter(([k]) => k !== '_note').map(([k, u]: any) => `${k} = ${u.email}`).join(' · '));
