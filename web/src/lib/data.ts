@@ -110,4 +110,6 @@ export interface News { id: string; title: string; excerpt: string; url: string;
   lang?: 'fr' | 'nl' | 'en' }
 /** Article écrit dans la langue de l'appli (chaque langue a ses propres sources, pas de traduction). */
 export const readable = (n: News) => !n.lang || n.lang === lang();
-export const loadNews = () => get<{ generated_at: string; items: News[] }>('news.json');
+/** Vidéo d'une chaîne YouTube officielle (ops/news.ts) */
+export interface Video { id: string; title: string; channel: string; date: string; cat: News['cat']; short: boolean }
+export const loadNews = () => get<{ generated_at: string; items: News[]; videos?: Video[] }>('news.json');

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Embed, parseEmbed } from '../ui/Embed';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { teamIndex, teamLabel } from '../lib/data';
@@ -35,6 +36,8 @@ function Composer({ onClose }: { onClose: () => void }) {
   const idx = useAsync(teamIndex, []);
   const [target, setTarget] = useState<{ kind: 'team' | 'club'; id: number } | null>(null);
   const [text, setText] = useState('');
+  const [link, setLink] = useState('');
+  const emb = link.trim() ? parseEmbed(link) : null;
   const [files, setFiles] = useState<File[]>([]);
   const [pledge, setPledge] = useState(false);
   const [busy, setBusy] = useState(''); const [err, setErr] = useState('');
@@ -67,13 +70,13 @@ function Composer({ onClose }: { onClose: () => void }) {
         type: files.length ? 'photo' : 'message', authorUid: s.user.uid, authorName: s.profile.displayName,
         clubId: e ? e.club.id : sel.id, teamIds: e ? [sel.id] : [], targets: e ? [`t:${sel.id}`, `c:${e.club.id}`] : [`c:${sel.id}`],
         visibility: youth ? 'team' : 'public', teamIdPrivate: youth ? sel.id : null,
-        payload: { text: text.trim(), photos, teamLabel: sel.label },
+        payload: { text: text.trim(), photos, teamLabel: sel.label, ...(emb ? { embed: link.trim() } : {}) },
       });
       haptic(20); s.toast(t('Publié !')); onClose(); location.hash = '/fil';
     } catch { setErr(t('La publication a échoué. Vérifie ta connexion et réessaie.')); } finally { setBusy(t('')); }
   };
   return (
-    <Sheet title={t('Nouvelle publication')} onClose={onClose} right={<button className="btn small" disabled={!sel || (!text.trim() && !files.length) || !!busy || blocked || (youth && !pledge) || (sel.kind === 'club' && files.length > 0)} onClick={publish}>{t('Publier')}</button>}>
+    <Sheet title={t('Nouvelle publication')} onClose={onClose} right={<button className="btn small" disabled={!sel || (!text.trim() && !files.length && !emb) || (!!link.trim() && !emb) || !!busy || blocked || (youth && !pledge) || (sel.kind === 'club' && files.length > 0)} onClick={publish}>{t('Publier')}</button>}>
       <label className="label" htmlFor="tg">{t('Pour')}</label>
       <select id="tg" className="field" value={target ? `${target.kind}:${target.id}` : ''} onChange={(e) => { const [k, v] = e.target.value.split(':'); setTarget(v ? { kind: k as 'team', id: +v } : null); }}>
         <option value="">{t('Choisir une équipe ou un club…')}</option>{options.map((o) => <option key={`${o.kind}:${o.id}`} value={`${o.kind}:${o.id}`}>{o.label}</option>)}</select>
@@ -81,6 +84,10 @@ function Composer({ onClose }: { onClose: () => void }) {
       <label className="label" htmlFor="tx">{t('Message')}</label>
       <textarea id="tx" className="field" maxLength={500} value={text} onChange={(e) => setText(e.target.value)} placeholder={t('Quel match !')} />
       <div className="muted" style={{ fontSize: 12, textAlign: 'right' }}>{text.length}/500</div>
+      <label className="label" htmlFor="lk">{t('Lien Instagram, TikTok ou YouTube (facultatif)')}</label>
+      <input id="lk" className="field" inputMode="url" value={link} onChange={(e) => setLink(e.target.value)} placeholder="https://www.instagram.com/reel/…" />
+      {link.trim() && !emb && <div className="err">{t('Lien non reconnu : colle le lien complet d’un post Instagram, d’une vidéo TikTok ou YouTube.')}</div>}
+      {emb && <div className="mt"><Embed e={emb} /></div>}
       <label className="btn secondary mt"><Ico n="image" />{t('Ajouter des photos')} ({files.length}/10)
         <input type="file" accept={ACCEPT.replace(/\.(mov|mp4|m4v),?|video\/\*,?/g, '')} multiple hidden onChange={(e) => setFiles([...files, ...Array.from(e.target.files ?? [])].slice(0, 10))} /></label>
       {files.length > 0 && <div className="grid3 mt">{files.map((f, i) => <button key={i} className="thumb" style={{ backgroundImage: `url(${URL.createObjectURL(f)})` }} onClick={() => setFiles(files.filter((_, j) => j !== i))} aria-label={t('Retirer la photo')}><span className="badge"><Ico n="close" /></span></button>)}</div>}

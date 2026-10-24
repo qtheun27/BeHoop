@@ -7,7 +7,8 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted, frDate } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
-import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Competition } from '../lib/data';
+import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Video, type Competition } from '../lib/data';
+import { Embed, parseEmbed, ytEmbed } from '../ui/Embed';
 import { CompLogo } from '../ui/CompLogo';
 import { clubColors } from '../lib/theme';
 import { NewsCard, NewsCarousel, topStories } from './News';
@@ -48,10 +49,22 @@ function Stories() {
 const FILTERS: { id: string; label: string; ic?: IconName; ok: (p: D.Post) => boolean }[] = [
   { id: 'tout', label: 'Tout', ok: () => true },
   { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
-  { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' },
+  { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' || !!p.payload?.embed },
   { id: 'actus', label: 'Actus', ic: 'news', ok: () => false },
 ];
 const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['regional', 'Régional'], ['international', 'International'], ['nba', 'NBA']];
+
+/** Vidéo d'une chaîne officielle (NBA, EuroLeague, BNXT, Belgian Cats…) */
+function VideoCard({ v }: { v: Video }) {
+  return (
+    <article className="card">
+      <header className="card-head"><div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="video" size={20} /></div>
+        <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">{v.channel}</div><div className="when">{ago(Date.parse(v.date))}</div></div></header>
+      <div className="card-body" style={{ paddingTop: 0 }}>{v.title}</div>
+      <Embed e={ytEmbed(v.id, v.short)} title={v.title} />
+    </article>
+  );
+}
 
 export interface ScorePayload { gameId: number; date: string; time?: string; competition: string;
   home: { id: number; name: string; logo?: string | null; color?: string; score: number }; away: { id: number; name: string; logo?: string | null; color?: string; score: number }; official?: boolean }
@@ -105,6 +118,7 @@ export function PostCard({ post }: { post: D.Post }) {
       {(p.type === 'score' || p.type === 'live') && <ScoreCard p={pl as ScorePayload} live={p.type === 'live'} />}
       {p.type === 'live' && pl.updatedByName && <div className="card-body muted" style={{ paddingTop: 8, fontSize: 14 }}>{t('Mis à jour par {name}', { name: pl.updatedByName })}</div>}
       {(p.type === 'message' || p.type === 'photo') && pl.text && <div className="card-body">{pl.text}</div>}
+      {pl.embed && (() => { const e = parseEmbed(pl.embed); return e ? <Embed e={e} /> : null; })()}
       {p.type === 'photo' && <div className="carousel">{(pl.photos as { key: string }[]).map((ph, i) => <img key={i} src={mediaUrl(ph.key)} alt="" loading="lazy" draggable={false} onContextMenu={isYouthMedia ? (e) => e.preventDefault() : undefined} />)}</div>}
       {(p.type === 'video' || p.type === 'moment') && (
         <a href={p.type === 'video' ? `#/video/${pl.matchVideoId}` : `#/video/${pl.matchVideoId}/m-${pl.momentId}`} style={{ display: 'block', position: 'relative', color: '#fff' }}>
@@ -248,6 +262,7 @@ export function Feed() {
             for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
           }
           if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide list={myNews} /> }));
+          if (filter === 'medias') for (const v of news.data?.videos ?? []) mix.push({ t: Date.parse(v.date), el: <VideoCard key={`v${v.id}`} v={v} /> });
           mix.sort((a, b) => b.t - a.t);
           if (mix.length) return <>{mix.slice(0, filter === 'tout' ? 80 : 60).map((x) => x.el)}{filter === 'tout' && allLink}</>;
           return filter === 'tout' ? <Empty ill="news" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}

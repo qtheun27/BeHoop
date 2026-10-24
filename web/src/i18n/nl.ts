@@ -1118,4 +1118,7 @@ export const NL: Record<string, string> = {
   "Nommer le coach de l’équipe": "Coach van de ploeg aanstellen",
   "{n} est coach de l’équipe": "{n} is coach van de ploeg",
   "Nommer coach": "Coach aanstellen",
+  "Lien Instagram, TikTok ou YouTube (facultatif)": "Instagram-, TikTok- of YouTube-link (optioneel)",
+  "Lien non reconnu : colle le lien complet d’un post Instagram, d’une vidéo TikTok ou YouTube.": "Link niet herkend: plak de volledige link van een Instagram-post, TikTok- of YouTube-video.",
+  "Lire la vidéo": "Video afspelen",
 };

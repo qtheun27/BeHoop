@@ -1118,4 +1118,7 @@ export const EN: Record<string, string> = {
   "Nommer le coach de l’équipe": "Appoint the team coach",
   "{n} est coach de l’équipe": "{n} is the team coach",
   "Nommer coach": "Appoint coach",
+  "Lien Instagram, TikTok ou YouTube (facultatif)": "Instagram, TikTok or YouTube link (optional)",
+  "Lien non reconnu : colle le lien complet d’un post Instagram, d’une vidéo TikTok ou YouTube.": "Link not recognised: paste the full link of an Instagram post, TikTok or YouTube video.",
+  "Lire la vidéo": "Play video",
 };

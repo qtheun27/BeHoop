@@ -29,6 +29,11 @@ const FEEDS: { source: string; url: string; cat: Cat | 'auto'; keep?: (link: str
   { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basketbal+${sites(['hln.be', 'nieuwsblad.be', 'hbvl.be', 'gva.be', 'standaard.be', 'kw.be'])}`, 'nl') },
   { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basketbal+${sites(['tvl.be', 'focus-wtv.be', 'robtv.be', 'atv.be', 'avs.be', 'tvoost.be', 'ringtv.be', 'bruzz.be', 'rtv.be', 'lokaalnieuws.online'])}`, 'nl') },
   // Flux directs (avec image) — Mediahuis bloque la lecture de ses pages par les robots, mais pas ses flux RSS
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+${sites(['lameuse.be', 'lanouvellegazette.be', 'laprovince.be', 'nordeclair.be', 'lacapitale.be', 'awbb.be', 'rtbf.be'])}`, 'fr') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+(R1+OR+R2+OR+P1+OR+P2+OR+P3+OR+AWBB+OR+%22R%C3%A9gionale%22+OR+%22Provinciale%22)+${sites(['sudinfo.be', 'lavenir.net', 'dhnet.be', 'lameuse.be', 'lanouvellegazette.be', 'laprovince.be', 'nordeclair.be', 'lacapitale.be', 'telemb.be', 'matele.be', 'canalzoom.be', 'notele.be', 'tvlux.be', 'rtc.be', 'antennecentre.tv', 'awbb.be'])}`, 'fr') },
+  // Équipes de jeunes (U12 à U21, écoles des jeunes) : la presse locale en parle aussi
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basket+(U12+OR+U14+OR+U16+OR+U18+OR+U21+OR+jeunes+OR+minimes+OR+cadets+OR+juniors+OR+%22%C3%A9cole+des+jeunes%22)+${sites(['sudinfo.be', 'lavenir.net', 'dhnet.be', 'lameuse.be', 'lanouvellegazette.be', 'laprovince.be', 'nordeclair.be', 'lacapitale.be', 'telemb.be', 'matele.be', 'canalzoom.be', 'notele.be', 'tvlux.be', 'rtc.be', 'antennecentre.tv', 'awbb.be'])}`, 'fr') },
+  { source: 'Google Actualités', google: true, cat: 'regional', max: 100, check: true, url: gq(`basketbal+(U12+OR+U14+OR+U16+OR+U18+OR+U21+OR+jeugd+OR+jeugdploeg+OR+jeugdwerking)+${sites(['hln.be', 'nieuwsblad.be', 'hbvl.be', 'gva.be', 'kw.be', 'tvl.be', 'focus-wtv.be', 'tvoost.be', 'ringtv.be', 'atv.be'])}`, 'nl') },
   { source: 'Nieuwsblad', url: 'https://www.nieuwsblad.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
   { source: 'HBVL', url: 'https://www.hbvl.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
   { source: 'GVA', url: 'https://www.gva.be/sport/zaalsporten/basketbal/rss', cat: 'regional', max: 50 },
@@ -307,6 +312,33 @@ export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit
   return !OTHER_SPORT.test(t) && clubHit(t);
 }
 
+// Vidéos des chaînes YouTube officielles (flux RSS publics, sans clé) : résumés, actions, shorts — pour « Photos & vidéos »
+export interface Video { id: string; title: string; channel: string; date: string; cat: Cat; short: boolean }
+const CHANNELS: { name: string; id: string; cat: Cat; keep?: RegExp }[] = [
+  { name: 'NBA', id: 'UCWJ2lWNubArHWmf3FIHbfcQ', cat: 'nba' },
+  { name: 'House of Highlights', id: 'UCqQo7ewe87aYAe7ub5UqXMw', cat: 'nba' },
+  { name: 'EuroLeague', id: 'UCGr3nR_XH9r6E5b09ZJAT9w', cat: 'international' },
+  { name: 'BNXT League', id: 'UC4QmIGx2Wa5_hiwlzK7HLTQ', cat: 'belgique' },
+  { name: 'Basketball Belgium', id: 'UCHkZCYfrR4LCY_d3M1igE5Q', cat: 'belgique' },
+  { name: 'TéléMB', id: 'UCLfAmmEOrv18FLu9QfT-dgA', cat: 'regional', keep: /basket/i },
+];
+export function parseYoutube(xml: string, c: (typeof CHANNELS)[number]): Video[] {
+  return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => {
+    const g = (re: RegExp) => unxml(re.exec(e)?.[1] ?? '');
+    return { id: g(/<yt:videoId>([^<]+)/), title: g(/<title>([^<]*)/), channel: c.name, date: g(/<published>([^<]+)/), cat: c.cat, short: /\/shorts\//.test(g(/<link rel="alternate" href="([^"]+)/)), desc: g(/<media:description>([^<]*)/) };
+  }).filter((v) => v.id && (!c.keep || c.keep.test(`${v.title} ${v.desc}`))).map(({ desc: _, ...v }) => v);
+}
+async function youtube(): Promise<Video[]> {
+  const out: Video[] = [];
+  for (const c of CHANNELS) {
+    try {
+      const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${c.id}`, { signal: AbortSignal.timeout(15_000) });
+      if (r.ok) out.push(...parseYoutube(await r.text(), c));
+    } catch { /* chaîne momentanément indisponible */ }
+  }
+  return out.filter((v) => Date.parse(v.date) > Date.now() - 21 * 864e5).sort((a, b) => b.date.localeCompare(a.date));
+}
+
 export async function run(out = 'app-data/news.json') {
   const prev: News[] = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')).items ?? [] : [];
   const all: News[] = [];
@@ -334,7 +366,9 @@ export async function run(out = 'app-data/news.json') {
     const old = known.get(n.id);
     byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? cleanImg(old.image) } : n);
   }
-  let items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 700);
+  const CAP: Record<Cat, number> = { regional: 400, belgique: 250, international: 120, nba: 120 };
+  const perCat: Record<string, number> = {};
+  let items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).filter((n) => (perCat[n.cat] = (perCat[n.cat] ?? 0) + 1) <= CAP[n.cat]);
   await enrich(items);
   // Un même article arrive par plusieurs chemins (flux direct, Google, Nieuwsblad = GVA = HBVL…) : un seul exemplaire, de préférence avec image
   const seen = new Map<string, News>();
@@ -343,19 +377,21 @@ export async function run(out = 'app-data/news.json') {
     const o = seen.get(k) ?? seen.get(n.url);
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
-  items = [...new Set(seen.values())];
+  items = [...new Set(seen.values())].filter((n) => n.cat !== 'regional' || !/score'n'co/i.test(n.source) && /(\.be|lavenir\.net|antennecentre\.tv|news\.google\.com)$/.test((() => { try { return new URL(n.url).hostname; } catch { return ''; } })()));
   for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
   await frameCheck(items);
-  // Au plus 300 articles par langue (les plus récents) : une langue très active n'écrase pas les autres
+  // NBA et international : au plus 60 articles par langue, pour qu'une langue très active n'écrase pas les autres
   const perLang: Record<string, number> = {};
-  items = items.filter((n) => (perLang[n.lang!] = (perLang[n.lang!] ?? 0) + 1) <= 300);
+  items = items.filter((n) => n.cat === 'belgique' || n.cat === 'regional' || (perLang[`${n.cat}/${n.lang}`] = (perLang[`${n.cat}/${n.lang}`] ?? 0) + 1) <= 60);
   // Clubs cités (pour le fil de chaque club)
   const compsFile = 'app-data/competitions.json';
   if (existsSync(compsFile)) { const tagC = compTagger(JSON.parse(readFileSync(compsFile, 'utf8'))); for (const n of items) { const c = tagC(`${n.title} ${n.excerpt}`); if (c.length) n.comps = c; else delete n.comps; } }
   if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
-  writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items }));
+  const videos = await youtube().catch((e) => { console.error('YouTube indisponible', (e as Error).message); return [] as Video[]; });
+  writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items, videos }));
+  console.log(`vidéos : ${videos.length}`);
   console.log(`news.json : ${items.length} articles (${['belgique', 'regional', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);
 }
 if (import.meta.url === `file://${process.argv[1]}`) run().catch((e) => { console.error(e); process.exit(1); });

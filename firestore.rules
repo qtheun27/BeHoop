@@ -392,6 +392,9 @@ service cloud.firestore {
         && d.type in ['photo', 'message']
         && d.get('payload', {}).get('text', '').size() <= 500
         && d.get('payload', {}).get('photos', []).size() <= 10
+        // Lien intégré : seulement Instagram, TikTok ou YouTube
+        && (!('embed' in d.get('payload', {})) || (d.payload.embed is string && d.payload.embed.size() <= 300
+              && d.payload.embed.matches('https://(www[.]|m[.])?(instagram[.]com|tiktok[.]com|youtube[.]com|youtu[.]be)/.*')))
         // Média d'une équipe Jeunes : visibilité équipe obligatoire et auteur membre accepté.
         && (!hasMedia || (team != null && (
               (isSeniors(team) && d.visibility == 'public' && d.teamIdPrivate == null)
