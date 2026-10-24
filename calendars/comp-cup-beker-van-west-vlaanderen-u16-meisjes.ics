@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van West-Vlaanderen U16 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-13761676588-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:B.C. Blue Stars Brugge M16 A – Bobcat Wielsbeke M16 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13744898969-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
 SUMMARY:BBC Koksijde M16 A – Basket Desselgem M16 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13862342302-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:Ford Unicars Avanti Brugge Dames M16 B – Kon BBC De Panne vzw M16 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13795231826-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:Mibac Middelkerke M16 A – Holstra WINGS Wevelgem-Moorsele M16 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13711343731-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261108T131500
 DTEND;TZID=Europe/Brussels:20261108T151500
 SUMMARY:G&V Breakpoint Basket Waregem M16 B – House Of Talents Kortrijk Spurs M16 B
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van West-Vlaanderen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10254975708-comp-cup-beker-van-west-vlaanderen-u16-meisjes@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261220T110000
 DTEND;TZID=Europe/Brussels:20261220T130000
 SUMMARY:Wytewa Roeselare M16 A – winnaar BWVM16VR 06

@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-10940549875-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:Kangoeroes Basket Mechelen DSE C – Aartselaar BBC DSE B
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10974252208-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T173000
 DTEND;TZID=Europe/Brussels:20261031T193000
 SUMMARY:Sobabee Bazel@Den Draver DSE A – Koninklijke Herentalse BBC DSE A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10990882732-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T173000
 DTEND;TZID=Europe/Brussels:20261031T193000
 SUMMARY:Phantoms Basket Boom DSE D – Aartselaar BBC DSE A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10923772256-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:Imprenta Kontich Wolves DSE A – Red Vic Wilrijk DSE C
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11041215589-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:Titans Basketball Bonheiden DSE B – Neteland Basket Ladies DSE B
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11192361255-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T200000
 DTEND;TZID=Europe/Brussels:20261031T220000
 SUMMARY:Mercurius BBC Hoboken-Berchem DSE A – KBBC T&T Turnhout DSE A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10957327494-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261031T200000
 DTEND;TZID=Europe/Brussels:20261031T220000
 SUMMARY:BBC Geel DSE A – Red Vic Wilrijk DSE B
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11007807446-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261101T110000
 DTEND;TZID=Europe/Brussels:20261101T130000
 SUMMARY:BC Cobras Schoten-Brasschaat DSE D – Antwerp Giants DSE C
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11091695541-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261101T150000
 DTEND;TZID=Europe/Brussels:20261101T170000
 SUMMARY:BBC Putte DSE A – Antwerp Giants DSE D
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11024437970-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261101T150000
 DTEND;TZID=Europe/Brussels:20261101T170000
 SUMMARY:Olicsa Antwerpen DSE A – Basket Malle DSE A
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11074917922-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261101T150000
 DTEND;TZID=Europe/Brussels:20261101T170000
 SUMMARY:Neteland Basket Ladies DSE C – Duffel K.B.B.C. DSE A
@@ -104,7 +104,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10991029827-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261101T151500
 DTEND;TZID=Europe/Brussels:20261101T171500
 SUMMARY:BBC Schelle DSE A – BC Cobras Schoten-Brasschaat DSE C
@@ -113,7 +113,7 @@ DESCRIPTION:Beker van Antwerpen Dames 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11589192328-comp-cup-beker-van-antwerpen-dames@behoop.be
-DTSTAMP:20261024T101354Z
+DTSTAMP:20261024T201440Z
 DTSTART;TZID=Europe/Brussels:20261206T140000
 DTEND;TZID=Europe/Brussels:20261206T160000
 SUMMARY:Fellows Legal Brokers Ekeren BBC DSE A – Basket Willebroek DSE C
