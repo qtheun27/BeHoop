@@ -70,7 +70,7 @@ export async function uploadFile(scope: string, file: File, meta: Record<string,
 }
 
 /** Petit fichier (photo compressée) : un seul PUT pré-signé. */
-export async function uploadSmall(kind: 'photo' | 'avatar' | 'logo', blob: Blob, meta: Record<string, unknown>): Promise<string> {
+export async function uploadSmall(kind: 'photo' | 'avatar' | 'logo' | 'clip', blob: Blob, meta: Record<string, unknown>): Promise<string> {
   const r = await api<{ key: string; url: string }>('/upload/single', { kind, type: blob.type || 'image/jpeg', size: blob.size, ...meta });
   await putWithRetry(r.url, blob);
   return r.key;

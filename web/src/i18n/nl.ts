@@ -1188,4 +1188,10 @@ export const NL: Record<string, string> = {
   "Ma vidéo": "Mijn video",
   "Changer ma vidéo": "Mijn video wijzigen",
   "Cette vidéo s’affichera ici pour toi seulement.": "Deze video verschijnt hier alleen voor jou.",
+  "Vidéo trop lourde (200 Mo maximum).": "Video te groot (maximaal 200 MB).",
+  "Envoi de la vidéo…": "Video wordt verzonden…",
+  "Vidéo enregistrée.": "Video opgeslagen.",
+  "L’envoi a échoué. Vérifie ta connexion et réessaie.": "Verzenden mislukt. Controleer je verbinding en probeer opnieuw.",
+  "Choisir dans ma galerie": "Uit mijn galerij kiezen",
+  "Ou colle un lien :": "Of plak een link:",
 };

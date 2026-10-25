@@ -159,5 +159,8 @@ describe('Préparation des séances', () => {
     await assertFails(setDoc(doc(as('coach'), 'exvideos', 'joueur_h-z'), { uid: 'joueur', ref: 'h-z', url: 'https://youtu.be/abc' }));
     await assertSucceeds(getDoc(doc(as('joueur'), 'exvideos', 'joueur_h-x')));
     await assertFails(getDoc(doc(as('coach'), 'exvideos', 'joueur_h-x')));
+    // sa propre vidéo de galerie, pas celle d'un autre
+    await assertSucceeds(setDoc(doc(as('joueur'), 'exvideos', 'joueur_h-c'), { uid: 'joueur', ref: 'h-c', url: 'clip:clips/joueur/abc123.mp4' }));
+    await assertFails(setDoc(doc(as('joueur'), 'exvideos', 'joueur_h-d'), { uid: 'joueur', ref: 'h-d', url: 'clip:clips/coach/abc123.mp4' }));
   });
 });

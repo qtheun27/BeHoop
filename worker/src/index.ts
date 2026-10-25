@@ -155,9 +155,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
   if (path === '/upload/single') {
-    if (body.size > 25_000_000) return fail('fichier trop gros');
+    if (body.size > (body.kind === 'clip' ? 200_000_000 : 25_000_000)) return fail('fichier trop gros');
     let key: string;
     if (body.kind === 'avatar') key = `avatars/${user.uid}-${crypto.randomUUID().slice(0, 6)}.jpg`;
+    else if (body.kind === 'clip') { const ext = /quicktime/.test(body.type) ? 'mov' : /webm/.test(body.type) ? 'webm' : 'mp4'; key = `clips/${user.uid}/${crypto.randomUUID().slice(0, 12)}.${ext}`; }
     else if (body.kind === 'logo') key = `logos/${Number(body.teamId) || 'x'}-${crypto.randomUUID().slice(0, 8)}.png`;
     else if (body.rush) { await ownVideo(body.matchVideoId); key = `rushes/${body.matchVideoId}/${crypto.randomUUID().slice(0, 8)}.jpg`; }
     else {

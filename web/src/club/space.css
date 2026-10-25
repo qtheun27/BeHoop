@@ -420,3 +420,4 @@
 .vid-help .embed { border-radius: 14px; max-width: 420px; }
 .vid-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .ex-tip ul { margin: 6px 0 0; padding-left: 18px; }
+.vid-help video.clip { display: block; width: 100%; max-width: 420px; max-height: 70vh; border-radius: 14px; background: #000; margin: 0 auto; }

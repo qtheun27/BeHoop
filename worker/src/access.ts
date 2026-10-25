@@ -38,6 +38,9 @@ export function readCookie(header: string | null, name = 'bh_media') {
 export function canAccess(key: string, c: MediaClaims | null): boolean {
   if (key.includes('..')) return false;
   if (key.startsWith('logos/') || key.startsWith('avatars/')) return true;
+  // Vidéos d'explication perso (galerie du téléphone) : lisibles par leur propriétaire seulement
+  const clip = /^clips\/([\w-]+)\//.exec(key);
+  if (clip) return !!c && c.uid === clip[1];
   const m = /^(photos|videos|moments)\/(public|team-(\d+))\//.exec(key);
   if (!m || !c) return false;
   if (m[2] === 'public') return true;
@@ -46,6 +49,6 @@ export function canAccess(key: string, c: MediaClaims | null): boolean {
 
 export function contentType(key: string, fallback = 'application/octet-stream') {
   const ext = key.split('.').pop()!.toLowerCase();
-  return ({ m3u8: 'application/vnd.apple.mpegurl', ts: 'video/mp2t', mp4: 'video/mp4', vtt: 'text/vtt', jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' } as Record<string, string>)[ext] ?? fallback;
+  return ({ m3u8: 'application/vnd.apple.mpegurl', ts: 'video/mp2t', mp4: 'video/mp4', mov: 'video/quicktime', webm: 'video/webm', m4v: 'video/mp4', vtt: 'text/vtt', jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' } as Record<string, string>)[ext] ?? fallback;
 }
 export const safeName = (n: string) => n.normalize('NFD').replace(/[^\w.-]+/g, '_').slice(-80);

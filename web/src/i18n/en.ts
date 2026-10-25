@@ -1188,4 +1188,10 @@ export const EN: Record<string, string> = {
   "Ma vidéo": "My video",
   "Changer ma vidéo": "Change my video",
   "Cette vidéo s’affichera ici pour toi seulement.": "This video will show here for you only.",
+  "Vidéo trop lourde (200 Mo maximum).": "Video too large (200 MB max).",
+  "Envoi de la vidéo…": "Uploading the video…",
+  "Vidéo enregistrée.": "Video saved.",
+  "L’envoi a échoué. Vérifie ta connexion et réessaie.": "Upload failed. Check your connection and try again.",
+  "Choisir dans ma galerie": "Choose from my gallery",
+  "Ou colle un lien :": "Or paste a link:",
 };

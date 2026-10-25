@@ -14,6 +14,10 @@ describe('accès médias', () => {
     expect(canAccess('videos/team-51653/abc/v1/master.m3u8', c)).toBe(true);
     expect(canAccess('videos/team-99/abc/v1/master.m3u8', c)).toBe(false); // non membre de l'Équipe 🔒
     expect(canAccess('videos/public/abc/v1/master.m3u8', c)).toBe(true);
+    // vidéo d'explication perso : seulement son propriétaire
+    expect(canAccess(`clips/${c.uid}/abc123.mp4`, c)).toBe(true);
+    expect(canAccess('clips/quelquunautre/abc123.mp4', c)).toBe(false);
+    expect(canAccess(`clips/${c.uid}/abc123.mp4`, null)).toBe(false);
     expect(canAccess('videos/public/abc/v1/master.m3u8', null)).toBe(false);
     expect(canAccess('logos/1.png', null)).toBe(true);
     expect(canAccess('rushes/abc/x.mov', c)).toBe(false);

@@ -242,7 +242,9 @@ service cloud.firestore {
       allow create, update: if connecte() && request.resource.data.get('uid', '') == request.auth.uid
                     && vidId.matches(request.auth.uid + '_.*')
                     && request.resource.data.get('url', '') is string && request.resource.data.url.size() <= 300
-                    && request.resource.data.url.matches('https://(www[.]|m[.])?(instagram[.]com|tiktok[.]com|youtube[.]com|youtu[.]be)/.*');
+                    && (request.resource.data.url.matches('https://(www[.]|m[.])?(instagram[.]com|tiktok[.]com|youtube[.]com|youtu[.]be)/.*')
+                        // ou sa propre vidéo envoyée depuis la galerie (dossier clips/{uid}/)
+                        || request.resource.data.url.matches('clip:clips/' + request.auth.uid + '/[A-Za-z0-9-]+[.](mp4|mov|webm)'));
     }
 
     match /plays/{playId} {
