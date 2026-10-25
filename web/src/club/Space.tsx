@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import { t, tn, locale } from '../lib/i18n';
-import { loadClub, type Game } from '../lib/data';
+import { loadClub, loadIndex, type Game } from '../lib/data';
 import { Skeleton, Empty, Avatar, Loader, useWide, Logo, LangSwitch, useAsync, Sheet } from '../ui/kit';
 import { api } from '../lib/api';
 import { HelpSheet } from '../ui/Help';
@@ -87,6 +87,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
   else if (k.loading) el = <Loader />;
   else if (sub === 'rejoindre' && arg) el = <JoinCode code={arg} />;
   else if (!k.me) el = <Join />;
+  else if (k.me.role === 'super_admin' && !k.me.club_id) el = <PickClub />;
   // Joueurs et parents : tout est dans le Vestiaire ; l'Espace Club est réservé aux coachs et aux admins
   else if (!MANAGE.has(k.me.role)) el = <NotManager />;
   else switch (sub) {
@@ -130,6 +131,22 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
           {tabs.map((x) => <a key={x.id} href={x.href} className={cur === x.id ? 'on' : ''} aria-current={cur === x.id ? 'page' : undefined}><Ico n={x.icon} /><span>{t(x.label)}</span></a>)}
         </nav>
       )}
+    </>
+  );
+}
+
+/** Super admin sans club actif : il choisit le club à gérer (aucun rôle n'est ajouté à son compte) */
+function PickClub() {
+  const k = useClub();
+  const [q, setQ] = useState('');
+  const idx = useAsync(() => loadIndex(), []);
+  const list = (idx.data?.clubs ?? []).filter((c) => q.trim().length > 1 && `${c.name} ${c.short ?? ''}`.toLowerCase().includes(q.trim().toLowerCase())).slice(0, 30);
+  const go = (id: number) => { try { sessionStorage.setItem('espace-gerer', String(id)); } catch { /* */ } k.reload(); };
+  return (
+    <>
+      <section className="hc-hero small"><div className="hc-kick"><Ico n="bolt" />{t('Super admin')}</div><h2>{t('Choisis le club à gérer')}</h2></section>
+      <input className="field" placeholder={t('Nom du club')} value={q} onChange={(e) => setQ(e.target.value)} autoFocus />
+      <div className="group mt">{list.map((c) => <button key={c.id} className="row" onClick={() => go(c.id)}><span className="grow"><span className="nm">{c.name}</span></span><span className="chev">›</span></button>)}</div>
     </>
   );
 }

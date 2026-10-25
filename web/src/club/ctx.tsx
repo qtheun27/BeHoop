@@ -35,7 +35,9 @@ export function ClubProvider({ children }: { children: ReactNode }) {
     let manage = ''; try { manage = sessionStorage.getItem('espace-gerer') ?? ''; } catch { /* */ }
     // Le super admin a tout débloqué : même dans un espace joueur ou parent, il voit le club comme son admin
     if (s.isAdmin && !manage && real?.club_id && !['coach', 'club_admin', 'super_admin'].includes(real.role)) manage = real.club_id;
-    const me: A.ClubUser | null = s.isAdmin && manage ? { ...(real ?? { uid: u.uid }), uid: u.uid, role: 'super_admin', club_id: manage, team_ids: [], children_player_ids: [],
+    // Super admin sans rôle actif (espace retiré) : il entre quand même ; club_id vide = il choisit le club à gérer
+    const me: A.ClubUser | null = s.isAdmin && !real && !manage ? { uid: u.uid, role: 'super_admin', club_id: '', team_ids: [], children_player_ids: [] } as unknown as A.ClubUser
+      : s.isAdmin && manage ? { ...(real ?? { uid: u.uid }), uid: u.uid, role: 'super_admin', club_id: manage, team_ids: [], children_player_ids: [],
       spaces: A.spacesOf(real) } as A.ClubUser : real;
     // Invitation en attente (aussi pour un compte déjà dans un autre club : il pourra rejoindre ce club en plus)
     const pend = await A.pendingInvitation(u.email);

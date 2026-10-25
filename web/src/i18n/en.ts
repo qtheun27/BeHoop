@@ -1194,4 +1194,5 @@ export const EN: Record<string, string> = {
   "L’envoi a échoué. Vérifie ta connexion et réessaie.": "Upload failed. Check your connection and try again.",
   "Choisir dans ma galerie": "Choose from my gallery",
   "Ou colle un lien :": "Or paste a link:",
+  "Nom du club": "Club name",
 };

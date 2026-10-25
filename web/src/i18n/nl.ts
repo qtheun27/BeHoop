@@ -1194,4 +1194,5 @@ export const NL: Record<string, string> = {
   "L’envoi a échoué. Vérifie ta connexion et réessaie.": "Verzenden mislukt. Controleer je verbinding en probeer opnieuw.",
   "Choisir dans ma galerie": "Uit mijn galerij kiezen",
   "Ou colle un lien :": "Of plak een link:",
+  "Nom du club": "Naam van de club",
 };
