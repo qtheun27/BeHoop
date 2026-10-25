@@ -8,7 +8,7 @@ import { DRILLS } from '../drills/library';
 import { TACTICS } from '../drills/tactics';
 import { THEMES, THEME_LABEL, CATS, CAT_LABEL, ageRange, ageLabel, fitsAge, type Age, type Drill, type Tactic, type Theme, type PlayCat } from '../drills/types';
 import { EXERCISES } from '../hoopcamp/library';
-import { Player } from './Court';
+import { Player, Cones } from './Court';
 import { FAMILY_LABEL } from './HoopCamp';
 import { useClub, ageOfTeam } from './ctx';
 import { VideoHelp } from './VideoHelp';
@@ -19,6 +19,7 @@ export function DrillSheet({ d, onClose, onAdd }: { d: Drill; onClose: () => voi
       <div className="ex-sheet">
         <div className="ex-tags"><span className="tag fam">{t(THEME_LABEL[d.theme])}</span><span className="tag">{ageRange(d.minAge, d.maxAge)}</span><span className="tag">{d.min} min</span><span className="tag">{d.players}</span></div>
         <p className="ex-goal">{d.goal}</p>
+        {d.demo && <Player key={d.id} steps={d.demo.frames} mode={d.demo.mode} decor={d.demo.cones ? <Cones list={d.demo.cones} /> : undefined} />}
         <VideoHelp refId={`d-${d.id}`} query={d.name} />
         <h4>{t('Mise en place')}</h4><p>{d.setup}{d.equip && d.equip !== 'aucun' ? ` · ${t('Matériel')} : ${d.equip}` : ''}</p>
         <h4>{t('Déroulement')}</h4><ol>{d.steps.map((x, i) => <li key={i}>{x}</li>)}</ol>

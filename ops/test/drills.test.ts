@@ -39,3 +39,16 @@ describe('bibliothèque de tactiques', () => {
     }
   });
 });
+
+describe('schémas des exercices collectifs', () => {
+  it('chaque schéma correspond à un exercice et reste sur le terrain', async () => {
+    const { DEMOS } = await import('../../web/src/drills/library/demos');
+    const ids = new Set(DRILLS.map((d) => d.id));
+    for (const [id, d] of Object.entries(DEMOS)) {
+      expect(ids.has(id), id).toBe(true);
+      const h = d.mode === 'full' ? 890 : 470;
+      const first = d.frames[0].tokens.map((k) => k.id).join();
+      for (const f of d.frames) { expect(f.tokens.map((k) => k.id).join(), id).toBe(first); for (const k of f.tokens) expect(k.x >= 0 && k.x <= 500 && k.y >= 0 && k.y <= h, `${id} ${k.id}`).toBe(true); }
+    }
+  });
+});

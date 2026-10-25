@@ -235,14 +235,14 @@ service cloud.firestore {
                     || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(resource.data.get('club_id', '')));
     }
 
-    // --- Vidéo d'explication épinglée par le club pour un exercice ou une tactique (id : {club}_{exercice}) ---
-    // Lecture : tout compte connecté (ce sont des liens publics YouTube / Instagram / TikTok).
+    // --- Vidéo d'explication épinglée par chaque utilisateur pour lui-même (id : {uid}_{exercice}) ---
     match /exvideos/{vidId} {
-      allow read: if connecte();
-      allow create, update: if (estSuperAdmin() || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(request.resource.data.get('club_id', ''))))
+      // Lecture par l'id (même si la vidéo n'existe pas encore) : seulement les siennes
+      allow read, delete: if connecte() && vidId.matches(request.auth.uid + '_.*');
+      allow create, update: if connecte() && request.resource.data.get('uid', '') == request.auth.uid
+                    && vidId.matches(request.auth.uid + '_.*')
                     && request.resource.data.get('url', '') is string && request.resource.data.url.size() <= 300
                     && request.resource.data.url.matches('https://(www[.]|m[.])?(instagram[.]com|tiktok[.]com|youtube[.]com|youtu[.]be)/.*');
-      allow delete: if estSuperAdmin() || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(resource.data.get('club_id', '')));
     }
 
     match /plays/{playId} {

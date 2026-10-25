@@ -134,11 +134,11 @@ export const updateTraining = (id: string, patch: Partial<Omit<Training, 'id'>>)
 export const clubDrills = (clubId: string) => list<ClubDrill>(query(collection(db, 'drills'), where('club_id', '==', clubId)));
 export const addClubDrill = (d: Omit<ClubDrill, 'id'>) => addDoc(collection(db, 'drills'), { ...d, created_at: serverTimestamp() });
 export const deleteClubDrill = (id: string) => deleteDoc(doc(db, 'drills', id));
-/** Vidéo d'explication choisie par le club pour un exercice ou une tactique (lien YouTube, Instagram, TikTok) */
-const vidId = (clubId: string, ref: string) => `${clubId}_${ref}`.replace(/[^\w-]/g, '_');
-export const pinnedVideo = async (clubId: string, ref: string) => ((await getDoc(doc(db, 'exvideos', vidId(clubId, ref)))).data()?.url as string | undefined) ?? null;
-export const pinVideo = (clubId: string, ref: string, url: string, by: string) =>
-  (url ? setDoc(doc(db, 'exvideos', vidId(clubId, ref)), { club_id: clubId, ref, url, by, at: serverTimestamp() }) : deleteDoc(doc(db, 'exvideos', vidId(clubId, ref))));
+/** Vidéo d'explication épinglée par CHAQUE utilisateur pour lui-même (lien YouTube, Instagram, TikTok) : personne d'autre ne la voit */
+const vidId = (uid: string, ref: string) => `${uid}_${ref}`.replace(/[^\w-]/g, '_');
+export const pinnedVideo = async (uid: string, ref: string) => ((await getDoc(doc(db, 'exvideos', vidId(uid, ref)))).data()?.url as string | undefined) ?? null;
+export const pinVideo = (uid: string, ref: string, url: string) =>
+  (url ? setDoc(doc(db, 'exvideos', vidId(uid, ref)), { uid, ref, url, at: serverTimestamp() }) : deleteDoc(doc(db, 'exvideos', vidId(uid, ref))));
 
 // ---------- Tactique ----------
 export const playsOf = (clubId: string) => list<Play>(query(collection(db, 'plays'), where('club_id', '==', clubId)));

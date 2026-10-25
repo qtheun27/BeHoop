@@ -1185,4 +1185,7 @@ export const NL: Record<string, string> = {
   "Remises en jeu": "Inworpen",
   "Défenses": "Verdedigingen",
   "Presses": "Pressings",
+  "Ma vidéo": "Mijn video",
+  "Changer ma vidéo": "Mijn video wijzigen",
+  "Cette vidéo s’affichera ici pour toi seulement.": "Deze video verschijnt hier alleen voor jou.",
 };

@@ -208,10 +208,14 @@
 /* Démo animée et terrain */
 .demo { border-radius: 20px; overflow: hidden; background: var(--court-bg); box-shadow: inset 0 0 0 1px var(--glass-border); }
 .court-svg { display: block; width: 100%; height: auto; touch-action: none; user-select: none; }
-.demo .court-svg { max-height: 46dvh; }
+/* Taille fixée par la largeur, jamais par la hauteur d'écran (elle varie sur iPhone avec la barre de Safari) : le terrain ne saute plus */
+.demo { width: 100%; max-width: 440px; margin-left: auto; margin-right: auto; }
+.demo.full { max-width: 300px; }
+.demo .court-svg { display: block; width: 100%; height: auto; max-height: none; }
 .demo-bar { display: flex; align-items: center; gap: 8px; padding: 4px 10px 8px; min-height: 44px; }
 .demo-bar .icon-btn { width: 36px; height: 36px; background: var(--bg2); }
-.demo-cap { flex: 1; font-weight: 600; font-size: 14.5px; }
+.demo-cap { flex: 1; font-weight: 600; font-size: 14.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.demo-bar { height: 60px; min-height: 0; box-sizing: border-box; }
 .demo-n { font: 600 13px Oswald, sans-serif; color: var(--text2); }
 .tk circle { stroke-width: 3; }
 .tk text { font: 700 15px Oswald, sans-serif; pointer-events: none; }
@@ -352,7 +356,7 @@
 .board-wrap { border-radius: 20px; overflow: hidden; box-shadow: var(--card-shadow); max-width: 560px; margin: 0 auto; }
 .board-wrap .court-svg { max-height: 70dvh; }
 .steps { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; margin: 10px 0 0; font-weight: 600; }
-.screen.work .demo { max-width: 560px; margin: 0 auto; }
+.screen.work .demo { margin: 0 auto; }
 .ex-tags .tag { width: auto; flex: none; display: inline-block; }
 .screen.work a.row, .screen.work a.row .nm { color: var(--text); }
 .board-tools .seg.mini { flex: 1 1 auto; }

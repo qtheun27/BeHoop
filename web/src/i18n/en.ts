@@ -1185,4 +1185,7 @@ export const EN: Record<string, string> = {
   "Remises en jeu": "Inbounds plays",
   "Défenses": "Defenses",
   "Presses": "Presses",
+  "Ma vidéo": "My video",
+  "Changer ma vidéo": "Change my video",
+  "Cette vidéo s’affichera ici pour toi seulement.": "This video will show here for you only.",
 };

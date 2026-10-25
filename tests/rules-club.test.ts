@@ -153,10 +153,11 @@ describe('Préparation des séances', () => {
     await assertSucceeds(getDoc(doc(as('admin'), 'drills', 'x1')));
     await assertFails(getDoc(doc(as('intrus'), 'drills', 'x1')));
   });
-  it('vidéo épinglée : coach du club, liens YouTube / Instagram / TikTok seulement', async () => {
-    await assertSucceeds(setDoc(doc(as('coach'), 'exvideos', 'c1_h-x'), { club_id: 'c1', ref: 'h-x', url: 'https://www.youtube.com/watch?v=abc', by: 'coach' }));
-    await assertFails(setDoc(doc(as('coach'), 'exvideos', 'c1_h-y'), { club_id: 'c1', ref: 'h-y', url: 'https://evil.example/x', by: 'coach' }));
-    await assertFails(setDoc(doc(as('coach'), 'exvideos', 'c2_h-x'), { club_id: 'c2', ref: 'h-x', url: 'https://youtu.be/abc', by: 'coach' }));
-    await assertSucceeds(getDoc(doc(as('joueur'), 'exvideos', 'c1_h-x')));
+  it('vidéo épinglée : chacun la sienne, liens YouTube / Instagram / TikTok seulement', async () => {
+    await assertSucceeds(setDoc(doc(as('joueur'), 'exvideos', 'joueur_h-x'), { uid: 'joueur', ref: 'h-x', url: 'https://www.youtube.com/watch?v=abc' }));
+    await assertFails(setDoc(doc(as('joueur'), 'exvideos', 'joueur_h-y'), { uid: 'joueur', ref: 'h-y', url: 'https://evil.example/x' }));
+    await assertFails(setDoc(doc(as('coach'), 'exvideos', 'joueur_h-z'), { uid: 'joueur', ref: 'h-z', url: 'https://youtu.be/abc' }));
+    await assertSucceeds(getDoc(doc(as('joueur'), 'exvideos', 'joueur_h-x')));
+    await assertFails(getDoc(doc(as('coach'), 'exvideos', 'joueur_h-x')));
   });
 });

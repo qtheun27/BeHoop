@@ -123,7 +123,7 @@ export function Player({ steps, mode = 'half', scene = 'panier', decor, auto = t
   }, [playing, steps]); // eslint-disable-line react-hooks/exhaustive-deps
   const cap = steps[i]?.t ?? steps.slice(0, i + 1).reverse().find((s) => s.t)?.t;
   return (
-    <div className="demo">
+    <div className={`demo ${mode}`}>
       <CourtSvg mode={mode} scene={scene}>
         {decor}
         {trails && steps.length > 1 && steps[0].tokens.filter((k) => k.type !== 'ball').map((k) => (
@@ -140,8 +140,18 @@ export function Player({ steps, mode = 'half', scene = 'panier', decor, auto = t
   );
 }
 
-/** Démo d'un exercice de la bibliothèque (absente : schéma de base selon le lieu) */
+/** Une démo vue de dessus n'aide que si le joueur se déplace (course, slalom, échelle) ;
+ *  pour un geste sur place (dribble, tir, montées de genoux), la vidéo l'explique mieux : pas de terrain. */
+export const demoUseful = (d?: Demo) => !!d && (!!d.ladder || d.frames.some((f) => Math.hypot(f.p[0] - d.frames[0].p[0], f.p[1] - d.frames[0].p[1]) >= 15));
+
+/** Démo animée d'un exercice Hoop Camp, seulement quand elle est utile */
 export function ExerciseDemo({ e }: { e: Exercise }) {
-  const d: Demo = e.demo ?? { scene: e.needs.basket ? 'panier' : e.needs.equip?.includes('mur') ? 'mur' : 'libre', frames: [{ p: [50, 55] }] };
+  const d = e.demo;
+  if (!d || !demoUseful(d)) return null;
   return <Player steps={demoSteps(d)} scene={d.scene} decor={<DemoDecor d={d} />} />;
+}
+
+/** Plots posés sur le terrain (repère du Playbook) */
+export function Cones({ list }: { list: [number, number][] }) {
+  return <g className="decor">{list.map(([x, y], i) => <path key={i} className="cone" d={`M ${x} ${y - 12} L ${x + 10} ${y + 8} L ${x - 10} ${y + 8} Z`} />)}</g>;
 }

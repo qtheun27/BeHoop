@@ -23,7 +23,10 @@ export interface Drill {
   /** Points clés du coach */
   points: string[];
   variants?: string[];
+  /** Schéma animé (seulement quand la vue de dessus aide : placements, passes, courses à plusieurs) */
+  demo?: DrillDemo;
 }
+export interface DrillDemo { mode: 'half' | 'full'; frames: Frame[]; cones?: [number, number][] }
 
 export const CATS = ['principes', 'attaque', 'zone', 'remise', 'defense', 'presse', 'transition', 'fin'] as const;
 export type PlayCat = (typeof CATS)[number];
