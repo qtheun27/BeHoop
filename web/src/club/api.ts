@@ -24,7 +24,13 @@ export function spacesOf(u: ClubUser | null): Record<string, Space> {
 }
 export interface Player { id: string; club_id: string; team_id: string | null; account_uid: string; parent_uids: string[]; prenom: string; nom: string }
 export interface Invitation { email: string; role: Role; club_id: string; club_name?: string; team_id?: string | null; status: 'pending' | 'used'; created_at?: unknown }
-export interface Training { id: string; team_id: string; date: string; start_time?: string; end_time?: string; location?: string; notes?: string; created_by?: string }
+/** Un bloc de la séance préparée : exercice de la bibliothèque (d:), du Hoop Camp (h:), du club (c:) ou libre ; durée choisie par le coach */
+export interface PlanItem { key: string; ref?: string; title: string; min: number; note?: string }
+export interface Training { id: string; team_id: string; date: string; start_time?: string; end_time?: string; location?: string; notes?: string; created_by?: string;
+  /** Objectif de la séance et déroulé préparé */
+  focus?: string; plan?: PlanItem[] }
+/** Exercice créé par un coach du club, réutilisable dans toutes ses séances */
+export interface ClubDrill { id: string; club_id: string; name: string; theme: string; min: number; desc: string; created_by: string }
 export interface Token { id: string; type: 'offense' | 'defense' | 'ball'; label: string; x: number; y: number }
 export interface Play { id: string; title: string; type: 'tactique' | 'exercice'; team_id?: string | null; notes?: string; courtMode: 'half' | 'full'; steps: { step: number; tokens: Token[] }[]; club_id: string; created_by?: string }
 export interface CampProgram { id: string; name: string; start: string; end?: string | null; from: 'coach' | 'player' | 'parent'; by: string; assign?: string; custom?: Program }
@@ -122,6 +128,17 @@ export async function trainingsOf(teamIds: string[], from: string): Promise<Trai
 }
 export const addTraining = (t: Omit<Training, 'id'>) => addDoc(collection(db, 'trainings'), clean({ ...t, created_at: serverTimestamp() }));
 export const deleteTraining = (id: string) => deleteDoc(doc(db, 'trainings', id));
+export const updateTraining = (id: string, patch: Partial<Omit<Training, 'id'>>) => updateDoc(doc(db, 'trainings', id), clean({ ...patch, updated_at: serverTimestamp() }) as DocumentData);
+
+// ---------- Exercices du club et vidéos épinglées ----------
+export const clubDrills = (clubId: string) => list<ClubDrill>(query(collection(db, 'drills'), where('club_id', '==', clubId)));
+export const addClubDrill = (d: Omit<ClubDrill, 'id'>) => addDoc(collection(db, 'drills'), { ...d, created_at: serverTimestamp() });
+export const deleteClubDrill = (id: string) => deleteDoc(doc(db, 'drills', id));
+/** Vidéo d'explication choisie par le club pour un exercice ou une tactique (lien YouTube, Instagram, TikTok) */
+const vidId = (clubId: string, ref: string) => `${clubId}_${ref}`.replace(/[^\w-]/g, '_');
+export const pinnedVideo = async (clubId: string, ref: string) => ((await getDoc(doc(db, 'exvideos', vidId(clubId, ref)))).data()?.url as string | undefined) ?? null;
+export const pinVideo = (clubId: string, ref: string, url: string, by: string) =>
+  (url ? setDoc(doc(db, 'exvideos', vidId(clubId, ref)), { club_id: clubId, ref, url, by, at: serverTimestamp() }) : deleteDoc(doc(db, 'exvideos', vidId(clubId, ref))));
 
 // ---------- Tactique ----------
 export const playsOf = (clubId: string) => list<Play>(query(collection(db, 'plays'), where('club_id', '==', clubId)));

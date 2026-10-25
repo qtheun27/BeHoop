@@ -223,6 +223,28 @@ service cloud.firestore {
     }
 
     // --- Tableaux tactiques (phases de jeu / exercices, par équipe) ------
+    // --- Exercices créés par les coachs du club (préparation des séances) ---
+    match /drills/{drillId} {
+      allow read: if estSuperAdmin() || estDuClub(resource.data.get('club_id', ''));
+      allow create: if estSuperAdmin()
+                    || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(request.resource.data.get('club_id', ''))
+                        && request.resource.data.get('created_by', '') == request.auth.uid
+                        && request.resource.data.get('name', '') is string && request.resource.data.name.size() <= 80
+                        && request.resource.data.get('desc', '') is string && request.resource.data.desc.size() <= 2000);
+      allow update, delete: if estSuperAdmin()
+                    || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(resource.data.get('club_id', '')));
+    }
+
+    // --- Vidéo d'explication épinglée par le club pour un exercice ou une tactique (id : {club}_{exercice}) ---
+    // Lecture : tout compte connecté (ce sont des liens publics YouTube / Instagram / TikTok).
+    match /exvideos/{vidId} {
+      allow read: if connecte();
+      allow create, update: if (estSuperAdmin() || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(request.resource.data.get('club_id', ''))))
+                    && request.resource.data.get('url', '') is string && request.resource.data.url.size() <= 300
+                    && request.resource.data.url.matches('https://(www[.]|m[.])?(instagram[.]com|tiktok[.]com|youtube[.]com|youtu[.]be)/.*');
+      allow delete: if estSuperAdmin() || ((monRole() == 'coach' || monRole() == 'club_admin') && estDuClub(resource.data.get('club_id', '')));
+    }
+
     match /plays/{playId} {
       // Lecture ouverte a l'equipe concernee : le joueur (ou son parent)
       // doit pouvoir consulter les phases de jeu et exercices du coach.

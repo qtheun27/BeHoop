@@ -13,7 +13,7 @@ import * as A from './api';
 import { ClubProvider, useClub, ROLE_LABEL, playerName } from './ctx';
 import { HoopCampCard, HoopCampPage } from './HoopCamp';
 import { Validate, pendingOf } from './Validate';
-import { TeamSpace, Trainings, NextGame, fmtDay } from './Team';
+import { TeamSpace, Trainings, fmtDay } from './Team';
 import { AdminSpace } from './Admin';
 import { Tactique } from './Tactique';
 import './space.css';
@@ -43,6 +43,24 @@ function Enter() {
   );
 }
 
+// Retour dans l'Espace Club : « ‹ » ramène à l'écran précédent de l'espace (jamais vers BeHoop par surprise).
+// On garde le chemin parcouru dans l'espace ; sur le Banc, « ‹ » sort vers BeHoop.
+const TRAIL = 'espace-trail';
+const readTrail = (): string[] => { try { return JSON.parse(sessionStorage.getItem(TRAIL) ?? '[]'); } catch { return []; } };
+const writeTrail = (l: string[]) => { try { sessionStorage.setItem(TRAIL, JSON.stringify(l)); } catch { /* */ } };
+function useTrail(h: string) {
+  useEffect(() => {
+    const l = readTrail(), i = l.lastIndexOf(h);
+    writeTrail(i >= 0 ? l.slice(0, i + 1) : [...l, h].slice(-30));
+  }, [h]);
+}
+function goBack() {
+  const l = readTrail(); l.pop();
+  const prev = l[l.length - 1] ?? '#/espace';
+  writeTrail(l.length ? l : []);
+  location.hash = prev.slice(1);
+}
+
 interface Tab { id: string; href: string; icon: IconName; label: string }
 function tabsFor(k: ReturnType<typeof useClub>): Tab[] {
   // Espace Club = mode gestion (coachs, admins) : Banc · Effectif · Séances · Playbook
@@ -63,6 +81,7 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
   useEffect(() => { document.title = `${t('Espace Club')} · BeHoop`; }, []);
   const tabs = tabsFor(k);
   const cur = !sub ? 'home' : sub === 'valider' ? 'home' : sub;
+  useTrail(`#/espace${sub ? `/${sub}` : ''}${arg ? `/${arg}` : ''}`);
   let el: React.ReactNode;
   if (!s.user) el = <Empty ill="lock" title={t('Connecte-toi pour entrer dans l’Espace Club')} action={<button className="btn volt" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} />;
   else if (k.loading) el = <Loader />;
@@ -87,7 +106,8 @@ function Shell({ sub, arg }: { sub?: string; arg?: string }) {
       <main className="screen work">
         <div className="col-main">
           <header className="work-bar">
-            <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>
+            {sub ? <button className="work-exit back" onClick={goBack} aria-label={t('Retour')}><span className="ex-arrow">‹</span></button>
+              : <a className="work-exit" href="#/fil" aria-label={t('Revenir à BeHoop')}><span className="ex-arrow">‹</span><Logo size={26} /></a>}
             <div className="work-id"><span className="work-badge" title={t('Espace Club')}><Ico n="bolt" /><span className="wb-txt">{t('Espace Club')}</span></span>{k.club && (Object.values(A.spacesOf(k.me)).filter((x) => MANAGE.has(x.role)).length > 1 || k.me?.role === 'super_admin'
               ? <button className="ellipsis club-switch" onClick={() => setSw(true)}>{k.club.short || k.club.name} ▾</button>
               : <span className="ellipsis">{k.club.short || k.club.name}</span>)}</div>
@@ -148,8 +168,6 @@ function Home() {
       {me.role === 'coach' && <CoachHome />}
       {(me.role === 'club_admin' || me.role === 'super_admin') && <AdminHome />}
       <div className="work-links">
-        <a href="#/espace/tactique"><Ico n="edit" /><span>{t('Tableau Tactique')}</span></a>
-        <a href="#/espace/calendrier"><Ico n="calendar" /><span>{t('Agenda du club')}</span></a>
         {k.club && <a href={`#/club/${k.club.id}`}><Ico n="club" /><span>{t('Le club sur BeHoop')}</span></a>}
       </div>
     </>
@@ -448,7 +466,7 @@ function Agenda() {
   const mine = useMemo(() => (games.data ?? []).filter((g) => (k.teamIds.includes(String(g.h)) || k.teamIds.includes(String(g.a))) && g.d >= today() && g.d <= addDays(today(), 30)), [games.data, k.teamIds]);
   return (
     <>
-      <section className="hc-hero small"><div className="hc-kick"><Ico n="calendar" />{t('Agenda')}</div><h2>{t('Entraînements et matchs')}</h2></section>
+      <section className="hc-hero small"><div className="hc-kick"><Ico n="calendar" />{t('Séances')}</div><h2>{t('Entraînements et matchs')}</h2></section>
       <h3 className="group-title">{t('Entraînements')}</h3>
       {k.teamIds.length ? <Trainings teamIds={k.teamIds} canEdit={canEdit} /> : <p className="hint">{t('Aucune équipe liée à ton compte.')}</p>}
       <h3 className="group-title mt">{t('Matchs (30 prochains jours)')}</h3>
@@ -462,7 +480,6 @@ function Agenda() {
           ))}
         </div>
       )}
-      {k.teamIds.length === 1 && <NextGame teamId={k.teamIds[0]} />}
     </>
   );
 }
@@ -490,6 +507,7 @@ function Account() {
       </div>
       <p className="hint">{t('Données des jeunes : seuls le joueur, ses parents liés et le coach de son équipe voient son Hoop Camp.')}</p>
       <a className="btn secondary mt" href="#/profil">{t('Mon profil BeHoop')}</a>
+      <a className="btn secondary mt" href="#/fil"><Ico n="chevLeft" />{t('Revenir à BeHoop')}</a>
       <button className="btn secondary mt" onClick={() => setHelp(true)}>{t('Aide / Contact')}</button>
       {help && <HelpSheet onClose={() => setHelp(false)} />}
     </>

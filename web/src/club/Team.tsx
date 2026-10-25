@@ -14,6 +14,7 @@ import * as A from './api';
 import { useClub, playerName } from './ctx';
 import { ProgCard } from './HoopCamp';
 import { pendingOf } from './Validate';
+import { TrainingSheet, planMin } from './Prep';
 import qrcode from 'qrcode-generator';
 
 const GOAL_FR: Record<Goal, string> = { main_faible: 'Main faible', dribble: 'Dribble', tir: 'Tir', finition: 'Finitions', passe: 'Passes', defense: 'Défense',
@@ -101,45 +102,31 @@ function Roster({ teamId, players, reload, canEdit }: { teamId: string; players?
 
 // ---------- Entraînements ----------
 export function Trainings({ teamIds, canEdit }: { teamIds: string[]; canEdit: boolean }) {
-  const s = useSession();
   const k = useClub();
   const tr = useAsync(() => A.trainingsOf(teamIds, today()), [teamIds.join()]);
-  const [add, setAdd] = useState(false);
-  const [f, setF] = useState({ team_id: teamIds[0] ?? '', date: today(), start_time: '18:00', end_time: '19:30', location: '', notes: '', weeks: 1 });
+  // Ouvrir un entraînement : le modifier et préparer son déroulé ; « new » : en créer un
+  const [open, setOpen] = useState<A.Training | 'new' | null>(null);
   return (
     <>
       {tr.loading ? <Skeleton n={2} /> : !tr.data?.length ? <Empty ill="calendar" title={t('Aucun entraînement prévu')} /> : (
         <div className="group">
-          {tr.data.map((x) => (
-            <div key={x.id} className="row">
-              <span className="date-chip"><b>{+x.date.slice(8)}</b><small>{new Date(`${x.date}T12:00`).toLocaleDateString(locale(), { month: 'short' })}</small></span>
-              <span className="grow"><span className="nm">{t('Entraînement')}{teamIds.length > 1 && k.team(x.team_id) ? ` · ${k.team(x.team_id)!.cat}` : ''}</span>
-                <span className="sub">{x.start_time}{x.end_time ? `–${x.end_time}` : ''}{x.location ? ` · ${x.location}` : ''}{x.notes ? ` · ${x.notes}` : ''}</span></span>
-              {canEdit && <button className="icon-btn" aria-label={t('Supprimer')} onClick={async () => { if (confirm(t('Supprimer cet entraînement ?'))) { await A.deleteTraining(x.id); tr.reload(); } }}><Ico n="close" /></button>}
-            </div>
-          ))}
+          {tr.data.map((x) => {
+            const n = x.plan?.length ?? 0;
+            const body = (
+              <>
+                <span className="date-chip"><b>{+x.date.slice(8)}</b><small>{new Date(`${x.date}T12:00`).toLocaleDateString(locale(), { month: 'short' })}</small></span>
+                <span className="grow"><span className="nm">{x.focus || t('Entraînement')}{teamIds.length > 1 && k.team(x.team_id) ? ` · ${k.team(x.team_id)!.cat}` : ''}</span>
+                  <span className="sub">{x.start_time}{x.end_time ? `–${x.end_time}` : ''}{x.location ? ` · ${x.location}` : ''}{x.notes ? ` · ${x.notes}` : ''}</span>
+                  {canEdit && <span className={`prep-pill${n ? ' ok' : ''}`}>{n ? `✓ ${tn(n, '{n} exercice', '{n} exercices')} · ${planMin(x.plan)} min` : t('À préparer')}</span>}</span>
+                {canEdit && <span className="chev">›</span>}
+              </>
+            );
+            return canEdit ? <button key={x.id} className="row" onClick={() => setOpen(x)}>{body}</button> : <div key={x.id} className="row">{body}</div>;
+          })}
         </div>
       )}
-      {canEdit && <button className="btn secondary mt" onClick={() => setAdd(true)}><Ico n="calendarAdd" />{t('Ajouter un entraînement')}</button>}
-      {add && (
-        <Sheet title={t('Nouvel entraînement')} onClose={() => setAdd(false)}>
-          <div className="form">
-            {teamIds.length > 1 && <select className="field" value={f.team_id} onChange={(e) => setF({ ...f, team_id: e.target.value })}>{teamIds.map((id) => <option key={id} value={id}>{k.team(id)?.cat ?? id} {k.team(id)?.name ?? ''}</option>)}</select>}
-            <label className="lbl">{t('Date')}<input className="field" type="date" value={f.date} onChange={(e) => setF({ ...f, date: e.target.value })} /></label>
-            <div className="two"><label className="lbl">{t('Début')}<input className="field" type="time" value={f.start_time} onChange={(e) => setF({ ...f, start_time: e.target.value })} /></label>
-              <label className="lbl">{t('Fin')}<input className="field" type="time" value={f.end_time} onChange={(e) => setF({ ...f, end_time: e.target.value })} /></label></div>
-            <input className="field" placeholder={t('Lieu (salle)')} value={f.location} onChange={(e) => setF({ ...f, location: e.target.value })} />
-            <input className="field" placeholder={t('Note (facultatif)')} value={f.notes} onChange={(e) => setF({ ...f, notes: e.target.value })} />
-            <label className="lbl">{t('Répéter chaque semaine')}<select className="field" value={f.weeks} onChange={(e) => setF({ ...f, weeks: +e.target.value })}>{[1, 2, 4, 8, 12].map((n) => <option key={n} value={n}>{n === 1 ? t('Non') : tn(n, '{n} semaine', '{n} semaines')}</option>)}</select></label>
-            <button className="btn volt" onClick={async () => {
-              try {
-                for (let w = 0; w < f.weeks; w++) await A.addTraining({ team_id: f.team_id, date: addDays(f.date, 7 * w), start_time: f.start_time, end_time: f.end_time, location: f.location || undefined, notes: f.notes || undefined, created_by: s.user!.uid });
-                setAdd(false); tr.reload();
-              } catch { s.toast(t('Accès refusé.')); }
-            }}>{t('Enregistrer')}</button>
-          </div>
-        </Sheet>
-      )}
+      {canEdit && <button className="btn secondary mt" onClick={() => setOpen('new')}><Ico n="calendarAdd" />{t('Ajouter un entraînement')}</button>}
+      {open && <TrainingSheet tr={open === 'new' ? undefined : open} teamIds={teamIds} onClose={() => setOpen(null)} onSaved={() => tr.reload()} />}
     </>
   );
 }

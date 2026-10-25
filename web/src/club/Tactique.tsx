@@ -1,5 +1,5 @@
 // Tableau Tactique : schémas du club (phases de jeu et exercices), étapes animées. Même format que l'ancien module (plays).
-// Le filtre « Exercices » montre aussi la bibliothèque Hoop Camp, réutilisable à l'entraînement collectif.
+// Bibliothèques : tactiques animées (drills/tactics) et exercices collectifs + individuels Hoop Camp (drills/library, hoopcamp/library).
 import { useRef, useState } from 'react';
 import { useSession } from '../lib/session';
 import { t, tn } from '../lib/i18n';
@@ -9,7 +9,11 @@ import { EXERCISES, BY_ID } from '../hoopcamp/library';
 import * as A from './api';
 import { useClub } from './ctx';
 import { CourtSvg, TokenG, Player, VIEW, type Mode, type Step } from './Court';
-import { ExerciseSheet, FAMILY_LABEL } from './HoopCamp';
+import { ExerciseSheet } from './HoopCamp';
+import { DrillList, DrillSheet, TacticList, TacticSheet, useTeamAge } from './Library';
+import { DRILLS, DRILL_BY_ID } from '../drills/library';
+import { TACTICS } from '../drills/tactics';
+import type { Tactic } from '../drills/types';
 
 const PLACES_O = [{ x: 250, y: 380 }, { x: 100, y: 300 }, { x: 400, y: 300 }, { x: 170, y: 160 }, { x: 330, y: 160 }];
 const PLACES_D = [{ x: 250, y: 330 }, { x: 130, y: 270 }, { x: 370, y: 270 }, { x: 190, y: 170 }, { x: 310, y: 170 }];
@@ -20,51 +24,63 @@ const roster = (o: number, d: number): A.Token[] => [
 ];
 
 export function Tactique() {
+  const s = useSession();
   const k = useClub();
   const plays = useAsync(() => (k.me ? A.playsOf(k.me.club_id) : Promise.resolve([])), [k.me?.club_id]);
+  // Trois rayons : mes schémas (dessinés par le club), la bibliothèque de tactiques animées, la bibliothèque d'exercices
+  const [tab, setTab] = useState<'mine' | 'tactiques' | 'exercices'>('mine');
   const [f, setF] = useState<'tous' | 'tactique' | 'exercice'>('tous');
   const [open, setOpen] = useState<A.Play | 'new' | null>(null);
-  const [ex, setEx] = useState<string | null>(null);
+  const [tac, setTac] = useState<Tactic | null>(null);
+  const [pick, setPick] = useState<string | null>(null);
   const editor = k.me?.role === 'coach' || k.me?.role === 'club_admin' || k.me?.role === 'super_admin';
+  const age = useTeamAge();
   if (open) return <Board play={open === 'new' ? null : open} editor={editor} onClose={(changed) => { setOpen(null); if (changed) plays.reload(); }} />;
   const mine = (plays.data ?? []).filter((p) => f === 'tous' || p.type === f)
     // Joueurs et parents : schémas du club pour leur(s) équipe(s) et schémas sans équipe
     .filter((p) => editor || !p.team_id || k.teamIds.includes(String(p.team_id)));
+  const copy = async (x: Tactic) => {
+    try {
+      const id = await A.savePlay({ title: x.name, type: 'tactique', team_id: null, notes: x.keys.join(' · '), courtMode: x.mode, steps: x.frames.map((fr, n) => ({ step: n + 1, tokens: fr.tokens })), club_id: k.me!.club_id, created_by: s.user!.uid });
+      setTac(null); await plays.reload(); s.toast(t('Copiée dans tes schémas.')); setTab('mine'); void id;
+    } catch { s.toast(t('Accès refusé.')); }
+  };
+  const ex = pick?.startsWith('h:') ? BY_ID.get(pick.slice(2)) : undefined;
+  const dr = pick?.startsWith('d:') ? DRILL_BY_ID.get(pick.slice(2)) : undefined;
   return (
     <>
       <section className="hc-hero small">
-        <div className="hc-kick"><Ico n="edit" />{t('Tableau Tactique')}</div>
-        <h2>{t('Schémas et exercices')}</h2>
-        <p>{editor ? t('Dessine tes systèmes étape par étape ; tes joueurs les revoient animés.') : t('Revois les systèmes de ton équipe, animés étape par étape.')}</p>
+        <div className="hc-kick"><Ico n="edit" />Playbook</div>
+        <h2>{t('Schémas, tactiques et exercices')}</h2>
+        <p>{editor ? t('Tes schémas, {n} tactiques animées et {m} exercices prêts à l’emploi.', { n: TACTICS.length, m: DRILLS.length + EXERCISES.length }) : t('Revois les systèmes de ton équipe, animés étape par étape.')}</p>
       </section>
-      <div className="chips">
-        {([['tous', 'Tous'], ['tactique', 'Tactique'], ['exercice', 'Exercices']] as const).map(([id, l]) => <button key={id} className={`chip${f === id ? ' on' : ''}`} onClick={() => setF(id)}>{t(l)}</button>)}
+      <div className="seg work-seg" role="tablist">
+        {([['mine', 'Mes schémas'], ['tactiques', 'Tactiques'], ['exercices', 'Exercices']] as const).map(([id, l]) => <button key={id} role="tab" aria-selected={tab === id} className={tab === id ? 'on' : ''} onClick={() => setTab(id)}>{t(l)}</button>)}
       </div>
-      {editor && <button className="btn volt" onClick={() => setOpen('new')}><Ico n="plus" />{t('Nouveau schéma')}</button>}
-      {plays.loading ? <Skeleton n={2} /> : !mine.length && f !== 'exercice' ? <Empty ill="edit" title={t('Aucun schéma pour l’instant')} /> : (
-        <div className="group mt">
-          {mine.map((p) => (
-            <button key={p.id} className="row" onClick={() => setOpen(p)}>
-              <span className="grow"><span className="nm">{p.title || t('Sans titre')}</span>
-                <span className="sub">{p.type === 'exercice' ? t('Exercice') : t('Tactique')} · {p.courtMode === 'full' ? t('Terrain complet') : t('Demi-terrain')} · {tn(p.steps?.length ?? 1, '{n} étape', '{n} étapes')}{p.team_id && k.team(p.team_id) ? ` · ${k.team(p.team_id)!.cat}` : ''}</span></span>
-              <span className="chev">›</span>
-            </button>
-          ))}
-        </div>
-      )}
-      {f === 'exercice' && (
+      {tab === 'mine' && (
         <>
-          <h3 className="group-title mt">{t('Bibliothèque Hoop Camp')} · {EXERCISES.length}</h3>
-          <div className="group">
-            {EXERCISES.map((e) => (
-              <button key={e.id} className="row" onClick={() => setEx(e.id)}>
-                <span className="grow"><span className="nm">{e.name}</span><span className="sub">{t(FAMILY_LABEL[e.family])} · {e.minAge}–{e.maxAge}</span></span><span className="chev">›</span>
-              </button>
-            ))}
+          <div className="chips">
+            {([['tous', 'Tous'], ['tactique', 'Tactique'], ['exercice', 'Exercices']] as const).map(([id, l]) => <button key={id} className={`chip${f === id ? ' on' : ''}`} onClick={() => setF(id)}>{t(l)}</button>)}
           </div>
+          {editor && <button className="btn volt" onClick={() => setOpen('new')}><Ico n="plus" />{t('Nouveau schéma')}</button>}
+          {plays.loading ? <Skeleton n={2} /> : !mine.length ? <Empty ill="edit" title={t('Aucun schéma pour l’instant')} text={editor ? t('Dessine le tien, ou copie une tactique de la bibliothèque pour l’adapter.') : undefined} /> : (
+            <div className="group mt">
+              {mine.map((p) => (
+                <button key={p.id} className="row" onClick={() => setOpen(p)}>
+                  <span className="grow"><span className="nm">{p.title || t('Sans titre')}</span>
+                    <span className="sub">{p.type === 'exercice' ? t('Exercice') : t('Tactique')} · {p.courtMode === 'full' ? t('Terrain complet') : t('Demi-terrain')} · {tn(p.steps?.length ?? 1, '{n} étape', '{n} étapes')}{p.team_id && k.team(p.team_id) ? ` · ${k.team(p.team_id)!.cat}` : ''}</span></span>
+                  <span className="chev">›</span>
+                </button>
+              ))}
+            </div>
+          )}
         </>
       )}
-      {ex && BY_ID.get(ex) && <ExerciseSheet e={BY_ID.get(ex)!} onClose={() => setEx(null)} onOpen={setEx} />}
+      {tab === 'tactiques' && <TacticList age={null} onOpen={setTac} />}
+      {tab === 'exercices' && <DrillList age={age} onPick={setPick} />}
+      {tac && <TacticSheet x={tac} onClose={() => setTac(null)} onCopy={editor ? () => copy(tac) : undefined} />}
+      {dr && <DrillSheet d={dr} onClose={() => setPick(null)} />}
+      {ex && <ExerciseSheet e={ex} onClose={() => setPick(null)} onOpen={(id) => setPick(`h:${id}`)} />}
     </>
   );
 }

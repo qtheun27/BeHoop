@@ -70,4 +70,6 @@ export function ageOfTeam(t?: Team): Age | null {
   return null;
 }
 export const ROLE_LABEL: Record<A.Role, string> = { super_admin: 'Administrateur BeHoop', club_admin: 'Admin du club', coach: 'Coach', player: 'Joueur', parent: 'Parent' };
+/** Nom d'équipe lisible : « P1H JS Stambruges A » plutôt que « P1H A P1H JS Stambruges A » */
+export const teamName = (tm?: Team) => (!tm ? '' : !tm.name || tm.name === tm.cat ? tm.cat : tm.name.includes(tm.cat) || tm.name.split(' ')[0] === tm.cat.split(' ')[0] ? tm.name : `${tm.cat} · ${tm.name}`);
 export const playerName = (p: A.Player) => `${p.prenom}${p.nom ? ` ${p.nom}` : ''}`.trim() || '—';

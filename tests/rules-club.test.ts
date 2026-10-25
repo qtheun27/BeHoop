@@ -138,3 +138,25 @@ describe('Compte avec plusieurs clubs', () => {
     await assertFails(getDoc(doc(as('admin9'), 'users', 'multi')));
   });
 });
+
+describe('Préparation des séances', () => {
+  it('le coach prépare la séance de son équipe (plan)', async () => {
+    await env.withSecurityRulesDisabled((c) => setDoc(doc(c.firestore(), 'trainings', 'tr1'), { team_id: 't1', date: '2026-11-03' }));
+    await assertSucceeds(updateDoc(doc(as('coach'), 'trainings', 'tr1'), { plan: [{ key: 'a', ref: 'd:fin-mikan', title: 'Mikan', min: 7 }], focus: 'Finitions' }));
+    await assertFails(updateDoc(doc(as('joueur'), 'trainings', 'tr1'), { plan: [] }));
+  });
+  it('exercices du club : créés par un coach du club, lus par le club seulement', async () => {
+    const d = { club_id: 'c1', name: 'Mon 3c3', theme: 'collectif', min: 12, desc: 'Règles…', created_by: 'coach' };
+    await assertSucceeds(setDoc(doc(as('coach'), 'drills', 'x1'), d));
+    await assertFails(setDoc(doc(as('coach'), 'drills', 'x2'), { ...d, club_id: 'c2' }));
+    await assertFails(setDoc(doc(as('intrus'), 'drills', 'x3'), { ...d, created_by: 'intrus' }));
+    await assertSucceeds(getDoc(doc(as('admin'), 'drills', 'x1')));
+    await assertFails(getDoc(doc(as('intrus'), 'drills', 'x1')));
+  });
+  it('vidéo épinglée : coach du club, liens YouTube / Instagram / TikTok seulement', async () => {
+    await assertSucceeds(setDoc(doc(as('coach'), 'exvideos', 'c1_h-x'), { club_id: 'c1', ref: 'h-x', url: 'https://www.youtube.com/watch?v=abc', by: 'coach' }));
+    await assertFails(setDoc(doc(as('coach'), 'exvideos', 'c1_h-y'), { club_id: 'c1', ref: 'h-y', url: 'https://evil.example/x', by: 'coach' }));
+    await assertFails(setDoc(doc(as('coach'), 'exvideos', 'c2_h-x'), { club_id: 'c2', ref: 'h-x', url: 'https://youtu.be/abc', by: 'coach' }));
+    await assertSucceeds(getDoc(doc(as('joueur'), 'exvideos', 'c1_h-x')));
+  });
+});

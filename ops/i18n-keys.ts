@@ -15,7 +15,7 @@ const S = String.raw`(?:'(?:[^'\\\n]|\\.)*'|"(?:[^"\\\n]|\\.)*")`;
 const unq = (lit: string) => lit.slice(1, -1).replace(/\\(.)/g, '$1');
 const lits = (src: string) => [...src.matchAll(new RegExp(S, 'g'))].map((m) => unq(m[0]));
 // Constantes dont toutes les valeurs texte sont des libellés affichés
-const LABEL_CONSTS = ['REPORT_REASONS', 'RELATION_FR', 'DOCS', 'CHAPTER_ORDER', 'ROLE_LABEL', 'FAMILY_LABEL', 'PHASE_LABEL', 'RATING_LABEL', 'EQUIP_LABEL', 'GOAL_LABEL', 'GOAL_FR'];
+const LABEL_CONSTS = ['REPORT_REASONS', 'RELATION_FR', 'DOCS', 'CHAPTER_ORDER', 'ROLE_LABEL', 'FAMILY_LABEL', 'PHASE_LABEL', 'RATING_LABEL', 'EQUIP_LABEL', 'GOAL_LABEL', 'GOAL_FR', 'THEME_LABEL', 'CAT_LABEL'];
 
 export function collectKeys(root = '.') {
   // Noms d'icônes (ui/icons.tsx) : jamais des textes à traduire

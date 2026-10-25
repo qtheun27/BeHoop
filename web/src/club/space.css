@@ -304,7 +304,7 @@
 .next-game .grow { display: grid; gap: 2px; min-width: 0; }
 .next-game small { color: var(--text2); }
 .next-game svg, .next-game .ico { width: 26px; height: 26px; color: var(--accent); }
-.work-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0; }
+.work-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px; margin: 18px 0; }
 .work-links a { display: grid; justify-items: center; gap: 6px; padding: 14px 6px; border-radius: 18px; background: var(--bg2); border: 1px solid var(--glass-border); color: var(--text); font-size: 13px; font-weight: 600; text-align: center; }
 .work-links svg, .work-links .ico { width: 26px; height: 26px; color: var(--accent); }
 .team-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-bottom: 14px; }
@@ -374,3 +374,45 @@
 .wiz-sum { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 4px 12px; }
 .wiz-sum span { font-size: 12.5px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--fill); }
 .club-switch { font: inherit; font-weight: 600; color: var(--text); text-align: left; min-width: 0; }
+
+/* La barre d'onglets flotte au-dessus du bas de l'écran : de la place pour le dernier bloc */
+@media (max-width: 1099px) { .screen.work { padding-bottom: calc(var(--tab-h) + var(--safe-b, 0px) + 56px); } }
+.screen.work .group + .btn.mt { margin-top: 0; }
+.work-exit.back { border: 0; background: transparent; padding: 4px 12px 4px 4px; }
+.work-exit.back .ex-arrow { font-size: 34px; }
+
+/* ---------- Préparation des séances (Prep.tsx) ---------- */
+.prep-card { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 14px; border-radius: 16px; border: 1.5px dashed color-mix(in srgb, var(--accent) 45%, transparent); background: color-mix(in srgb, var(--accent) 7%, var(--bg2)); color: var(--text); }
+.prep-card .ico, .prep-card svg { width: 24px; height: 24px; color: var(--accent); flex: none; }
+.prep-card .grow { display: grid; gap: 2px; min-width: 0; }
+.prep-card small { color: var(--text2); font-size: 13px; }
+.prep-pill { display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 8px; background: color-mix(in srgb, #f2a51b 18%, transparent); color: #b06d00; justify-self: start; }
+.prep-pill.ok { background: color-mix(in srgb, var(--volt, #c8f53a) 35%, transparent); color: var(--text); }
+.screen.work .row .grow { display: grid; min-width: 0; }
+.plan-total { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 4px 12px; padding: 12px 14px; border-radius: 14px; background: var(--bg2); }
+.plan-total b { font-size: 22px; }
+.plan-total .bar { height: 8px; border-radius: 4px; background: var(--fill); overflow: hidden; }
+.plan-total .bar i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
+.plan-total small { grid-column: 1 / -1; color: var(--text2); }
+.plan-total.over .bar i { background: #e5484d; }
+.plan-total.over small { color: #e5484d; font-weight: 600; }
+.plan-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.plan-list li { background: var(--bg2); border-radius: 14px; padding: 10px 10px 10px 12px; display: grid; gap: 8px; border: 1px solid var(--glass-border); }
+.pl-top { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.pl-time { flex: none; font-size: 12px; font-weight: 700; color: var(--accent); min-width: 30px; }
+.pl-name { flex: 1; min-width: 0; text-align: left; border: 0; background: none; padding: 0; font-weight: 600; font-size: 15px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pl-ctl { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.stepper { display: inline-flex; align-items: center; gap: 4px; }
+.stepper button { width: 36px; height: 36px; border-radius: 10px; border: 0; background: var(--fill); color: var(--text); font-size: 20px; font-weight: 600; }
+.stepper input { width: 52px; height: 36px; border: 0; border-radius: 10px; background: var(--fill); text-align: center; font-size: 16px; font-weight: 700; color: var(--text); -moz-appearance: textfield; }
+.stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.stepper small { color: var(--text2); margin-left: 2px; }
+.pl-move { display: inline-flex; gap: 4px; }
+.pl-move .icon-btn { font-size: 18px; }
+.field.small { padding: 9px 12px; font-size: 14px; }
+.linkrow { border: 0; background: none; padding: 0; text-align: left; color: var(--text); }
+/* Vidéo d'explication (VideoHelp.tsx) */
+.vid-help { margin: 12px 0; }
+.vid-help .embed { border-radius: 14px; max-width: 420px; }
+.vid-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.ex-tip ul { margin: 6px 0 0; padding-left: 18px; }

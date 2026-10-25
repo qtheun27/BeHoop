@@ -13,6 +13,7 @@ import { AGES, EQUIPMENT, GOALS, FAMILIES, type Age, type Equip, type Exercise, 
 import * as A from './api';
 import { useClub, ageOfTeam, playerName } from './ctx';
 import { ExerciseDemo } from './Court';
+import { VideoHelp } from './VideoHelp';
 import { Timer } from './Timer';
 
 export const FAMILY_LABEL: Record<Family, string> = {
@@ -251,6 +252,7 @@ export function ExerciseSheet({ e, prof, item, checked, canCheck, onCheck, onClo
         <div className="ex-tags"><span className="tag fam">{t(FAMILY_LABEL[e.family])}</span><span className="tag">{'★'.repeat(e.level)}</span>{e.game && <span className="tag">🎲 {t('jeu')}</span>}</div>
         <p className="ex-goal">{e.goal}</p>
         <ExerciseDemo e={e} />
+        <VideoHelp refId={`h-${e.id}`} query={e.name} />
         <div className="ex-dose"><b>{fmtDose(dose)}</b><span>{fmtDur(item?.sec ?? 0) !== '0 s' ? fmtDur(item!.sec) : ''}</span></div>
         {!e.untimed && <Timer dose={dose} hand={prof?.hand} hands={HANDS.has(e.family) || !!e.weakHand} onDone={() => { if (canCheck && !checked) onCheck?.(); }} />}
         <h4>{t('Mise en place')}</h4><p>{e.setup}</p>
