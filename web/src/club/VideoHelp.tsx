@@ -5,7 +5,7 @@ import { t } from '../lib/i18n';
 import { useAsync } from '../ui/kit';
 import { Ico } from '../ui/icons';
 import { Embed, parseEmbed } from '../ui/Embed';
-import { ensureMediaCookie, mediaUrl } from '../lib/api';
+import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
 import { uploadSmall } from '../lib/upload';
 import * as A from './api';
 
@@ -31,7 +31,14 @@ export function VideoHelp({ refId, query }: { refId: string; query: string }) {
   const e = !clip && url ? parseEmbed(url) : null;
   const emb = link.trim() ? parseEmbed(link) : null;
   const search = `https://www.youtube.com/results?search_query=${encodeURIComponent(`${query} basket`)}`;
-  const save = async (v: string) => { try { await A.pinVideo(uid, refId, v); setEdit(false); setLink(''); pinned.reload(); } catch { s.toast(t('Accès refusé.')); } };
+  const save = async (v: string) => {
+    try {
+      await A.pinVideo(uid, refId, v);
+      // L'ancienne vidéo de galerie (remplacée ou retirée) est supprimée du stockage
+      if (clip && v !== url) api('/clip/delete', { key: clip }).catch(() => {});
+      setEdit(false); setLink(''); pinned.reload();
+    } catch { s.toast(t('Accès refusé.')); }
+  };
   const upload = async (f?: File) => {
     if (!f) return;
     if (f.size > 200_000_000) { s.toast(t('Vidéo trop lourde (200 Mo maximum).')); return; }

@@ -154,6 +154,13 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await up.complete((body.parts as { partNumber: number; etag: string }[]).sort((a, b) => a.partNumber - b.partNumber));
     return json({ ok: true });
   }
+  // Vidéo perso remplacée ou retirée : on supprime le fichier (seulement dans son propre dossier clips/{uid}/)
+  if (path === '/clip/delete') {
+    const key = String(body.key ?? '');
+    if (!key.startsWith(`clips/${user.uid}/`) || key.includes('..')) return fail('Accès refusé', 403);
+    await env.BUCKET.delete(key);
+    return json({ ok: true });
+  }
   if (path === '/upload/single') {
     if (body.size > (body.kind === 'clip' ? 200_000_000 : 25_000_000)) return fail('fichier trop gros');
     let key: string;
