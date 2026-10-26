@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U19 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-10752625984-comp-cup-beker-van-vlaams-brabant-u19-meisjes@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261219T130000
 DTEND;TZID=Europe/Brussels:20261219T150000
 SUMMARY:Hageland United M19 A – Molenbeek Rebels Basketball M19 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U19 Meisjes 1/4 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10786181222-comp-cup-beker-van-vlaams-brabant-u19-meisjes@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261220T110000
 DTEND;TZID=Europe/Brussels:20261220T130000
 SUMMARY:BC Machelen-Diegem M19 A – BC Asse-Ternat M19 A

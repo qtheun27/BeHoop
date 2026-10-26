@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen U18 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-14113109277-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261031T100000
 DTEND;TZID=Europe/Brussels:20261031T120000
 SUMMARY:BBC Geel J18 A – Guco Lier J18 B
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11915491451-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
 SUMMARY:Koninklijke Herentalse BBC J18 A – Red Vic Wilrijk J18 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11999379546-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T100000
 DTEND;TZID=Europe/Brussels:20261107T120000
 SUMMARY:Fellows Legal Brokers Ekeren BBC J18 A – BC Cobras Schoten-Brasschaat J18 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14096331658-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:BBC Laakdal J18 A – Oxaco BBC Boechout J18 B
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11949046689-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T113000
 DTEND;TZID=Europe/Brussels:20261107T133000
 SUMMARY:Geranimo Bornem Basket J18 B – Antwerp Giants J18 B
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12016157165-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T113000
 DTEND;TZID=Europe/Brussels:20261107T133000
 SUMMARY:Rucon Gembo Borgerhout J18 B – BBC Putte J18 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14029221182-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T124500
 DTEND;TZID=Europe/Brussels:20261107T144500
 SUMMARY:Willibies Antwerpen J18 A – Basket Malle J18 B
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11982601927-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:Essense Esbac J18 A – BBC Schelle J18 A
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11965824308-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T133000
 DTEND;TZID=Europe/Brussels:20261107T153000
 SUMMARY:Campinia Dessel-Retie J18 B – Phantoms Basket Boom J18 B
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14045998801-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:BBC Lyra Nila Nijlen J18 A – Zuiderkempen Diamonds J18 B
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14079554039-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Mercurius BBC Hoboken-Berchem J18 B – Basket Stabroek J18 A
@@ -104,7 +104,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11932269070-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:BBC Makeba Mariaburg Brasschaat J18 A – Duffel K.B.B.C. J18 A
@@ -113,7 +113,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13928555468-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:Titans Basketball Bonheiden J18 B – Imprenta Kontich Wolves J18 B
@@ -122,7 +122,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14012443563-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261108T143000
 DTEND;TZID=Europe/Brussels:20261108T163000
 SUMMARY:Sobabee Bazel@Den Draver J18 C – Rupel Pirates BBC Niel J18 A
@@ -131,7 +131,7 @@ DESCRIPTION:Beker van Antwerpen U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13945333087-comp-cup-beker-van-antwerpen-u18-jongens@behoop.be
-DTSTAMP:20261026T120047Z
+DTSTAMP:20261026T221643Z
 DTSTART;TZID=Europe/Brussels:20261108T170000
 DTEND;TZID=Europe/Brussels:20261108T190000
 SUMMARY:Olicsa Antwerpen J18 A – BBC Berlaar J18 A
