@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U18 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11752744695-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
 SUMMARY:Hageland United J18 A – Boortmeerbeek & Berg Bulldogs J18 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11786299933-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261107T160000
 DTEND;TZID=Europe/Brussels:20261107T180000
 SUMMARY:L.S.V. Basket Landen J18 A – Merchtem Eagles J18 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11685634219-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
 SUMMARY:Toyota Wouters Diest J18 A – Dino Brussels J18 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11719189457-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:BC Machelen-Diegem J18 A – GSG Aarschot J18 B
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11735967076-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261108T113000
 DTEND;TZID=Europe/Brussels:20261108T133000
 SUMMARY:Dynamo Bertem J18 B – BC Grimbergen J18 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11702411838-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:De Rode Leeuwen J18 A – 2B|SAFE Tienen J18 B
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11769522314-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261108T123000
 DTEND;TZID=Europe/Brussels:20261108T143000
 SUMMARY:KYD Kortenberg Young Devils J18 A – Bct Overijse J18 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U18 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13326027547-comp-cup-beker-van-vlaams-brabant-u18-jongens@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261219T180000
 DTEND;TZID=Europe/Brussels:20261219T200000
 SUMMARY:Londerzeelse Dunkers J18 A – Bavi Vilvoorde J18 B

@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaanderen R-BAB Voorronde
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-12180458540-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261018T123000
 DTEND;TZID=Europe/Brussels:20261018T143000
 SUMMARY:AB Inbev Leuven Bears ROL B – BC Oostende ROL A (26-51)
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaanderen R-BAB Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11005731020-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261018T143000
 DTEND;TZID=Europe/Brussels:20261018T163000
 SUMMARY:Orly Hasselt ROL A – Hubo Limburg United ROL A (51-62)
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaanderen R-BAB Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10972175782-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261206T130000
 DTEND;TZID=Europe/Brussels:20261206T150000
 SUMMARY:Orly Hasselt ROL A – BC Oostende ROL A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaanderen R-BAB Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11090751948-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261206T130000
 DTEND;TZID=Europe/Brussels:20261206T150000
 SUMMARY:Hubo Limburg United ROL A – AB Inbev Leuven Bears ROL B
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaanderen R-BAB Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11141084805-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
 SUMMARY:Hubo Limburg United ROL A – BC Oostende ROL A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaanderen R-BAB Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12197236159-comp-cup-beker-van-vlaanderen-r-bab-voorronde@behoop.be
-DTSTAMP:20261025T202228Z
+DTSTAMP:20261026T120047Z
 DTSTART;TZID=Europe/Brussels:20261206T150000
 DTEND;TZID=Europe/Brussels:20261206T170000
 SUMMARY:AB Inbev Leuven Bears ROL B – Orly Hasselt ROL A
