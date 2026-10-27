@@ -4,89 +4,8 @@ PRODID:-//BeHoop//Basket//FR
 X-WR-CALNAME:Coupe du Hainaut U14 Hommes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
-UID:bh-479019-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T090000
-DTEND;TZID=Europe/Brussels:20260926T110000
-SUMMARY:BSGU – Spirou Basket A (5-162)
-LOCATION:Hall Omnisports de Saint-Ghislain\, Avenue de l'Enseignement\, 16\, 7330 Saint-Ghislain
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479007-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T093000
-DTEND;TZID=Europe/Brussels:20260926T113000
-SUMMARY:Royal Blaregnies BC – Fémina Docherie (70-58)
-LOCATION:Salle Omnisports E. Severyns\, Rue de Sars\, 5\, 7040 Blaregnies
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479015-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T110000
-DTEND;TZID=Europe/Brussels:20260926T130000
-SUMMARY:RBBC Brainois – BC Feluy-Obaix Seneffe (64-52)
-LOCATION:Salle Balad’Arena\, Rue des Postes 101\, 7090 Braine-le-Comte
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479012-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T120000
-DTEND;TZID=Europe/Brussels:20260926T140000
-SUMMARY:JS Luttre – JS Dottignies (20-0)
-LOCATION:Hall Omnisports de Luttre\, Avenue de la Gare 12\, 6238 Luttre
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479017-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T120000
-DTEND;TZID=Europe/Brussels:20260926T140000
-SUMMARY:JS Soignies A – UBC Binche (92-46)
-LOCATION:Salle JS Soignies\, Chemin Tour Lette\, 7060 Soignies
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479008-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T130000
-DTEND;TZID=Europe/Brussels:20260926T150000
-SUMMARY:Tremplin Mouscron – Basketball Brunehaut (45-122)
-LOCATION:Institut Le Tremplin\, Rue du Phenix\, 7700 Mouscron
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479014-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T130000
-DTEND;TZID=Europe/Brussels:20260926T150000
-SUMMARY:RBC Montagnard – B.C. L'9 Flénu-Frameries (57-47)
-LOCATION:Hall Omnisports de Montigny-le-Tilleul\, Rue du Bois Frion 107\, 6110 Montigny-le-Tilleul
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479020-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T140000
-DTEND;TZID=Europe/Brussels:20260926T160000
-SUMMARY:BC Ransart Charleroi – REBC Templeuve (110-26)
-LOCATION:Complexe Sportif COS I-II\, Charleroi
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
-UID:bh-479011-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
-DTSTART;TZID=Europe/Brussels:20260926T170000
-DTEND;TZID=Europe/Brussels:20260926T190000
-SUMMARY:CEP Fleurus – RBC Marcinelle (94-35)
-LOCATION:Complexe Sportif de Wanfercée-Baulet\, Rue J. Wauters 24\, 6224 Wanfercée-Baulet
-DESCRIPTION:Coupe Hainaut U14H
-END:VEVENT
-BEGIN:VEVENT
 UID:bh-479006-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T090000
 DTEND;TZID=Europe/Brussels:20260927T110000
 SUMMARY:JS Cuesmes – BC AMLL A (95-56)
@@ -95,7 +14,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479016-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T090000
 DTEND;TZID=Europe/Brussels:20260927T110000
 SUMMARY:Olympic Mont Sur Marchienne – Basket Entité Courcelles (68-22)
@@ -104,7 +23,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479010-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T093000
 DTEND;TZID=Europe/Brussels:20260927T113000
 SUMMARY:BCJ Ressaix A – Union BC Quaregnon A (71-98)
@@ -113,7 +32,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479013-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T100000
 DTEND;TZID=Europe/Brussels:20260927T120000
 SUMMARY:JS Stambruges – RCBE 2000 (110-55)
@@ -122,7 +41,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479018-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T110000
 DTEND;TZID=Europe/Brussels:20260927T130000
 SUMMARY:JS Fermoba Péruwelz – CB Royale-Fraternité A (61-49)
@@ -131,7 +50,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479005-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20260927T113000
 DTEND;TZID=Europe/Brussels:20260927T133000
 SUMMARY:Mons Basketball – Aste Kain A (52-81)
@@ -140,7 +59,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479009-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261017T111500
 DTEND;TZID=Europe/Brussels:20261017T131500
 SUMMARY:RE Pont-de-Loup A – BGBC Celles A (43-64)
@@ -149,7 +68,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479022-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261031T100000
 DTEND;TZID=Europe/Brussels:20261031T120000
 SUMMARY:Royal Blaregnies BC – Basketball Brunehaut
@@ -158,7 +77,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479024-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
 SUMMARY:CEP Fleurus – JS Luttre
@@ -167,7 +86,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479026-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
 SUMMARY:RBBC Brainois – Olympic Mont Sur Marchienne
@@ -176,7 +95,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479021-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
 SUMMARY:Aste Kain A – JS Cuesmes
@@ -185,7 +104,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479025-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261101T100000
 DTEND;TZID=Europe/Brussels:20261101T120000
 SUMMARY:JS Stambruges – RBC Montagnard
@@ -194,7 +113,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479027-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261101T130000
 DTEND;TZID=Europe/Brussels:20261101T150000
 SUMMARY:JS Soignies A – JS Fermoba Péruwelz
@@ -203,7 +122,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479028-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261101T130000
 DTEND;TZID=Europe/Brussels:20261101T150000
 SUMMARY:Spirou Basket A – BC Ransart Charleroi
@@ -212,7 +131,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479023-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261104T173000
 DTEND;TZID=Europe/Brussels:20261104T193000
 SUMMARY:BGBC Celles A – Union BC Quaregnon A
@@ -221,7 +140,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479029-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261123T180000
 DTEND;TZID=Europe/Brussels:20261123T200000
 SUMMARY:Vainqueur HA253049 – Vainqueur HA253050
@@ -230,7 +149,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479030-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261123T180000
 DTEND;TZID=Europe/Brussels:20261123T200000
 SUMMARY:Vainqueur HA253051 – Vainqueur HA253052
@@ -239,7 +158,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479031-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261123T180000
 DTEND;TZID=Europe/Brussels:20261123T200000
 SUMMARY:Vainqueur HA253053 – Vainqueur HA253054
@@ -248,7 +167,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479032-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20261123T180000
 DTEND;TZID=Europe/Brussels:20261123T200000
 SUMMARY:Vainqueur HA253055 – Vainqueur HA253056
@@ -257,7 +176,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479033-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20270118T180000
 DTEND;TZID=Europe/Brussels:20270118T200000
 SUMMARY:Vainqueur HA253057 – Vainqueur HA253058
@@ -266,7 +185,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479034-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20270118T180000
 DTEND;TZID=Europe/Brussels:20270118T200000
 SUMMARY:Vainqueur HA253059 – Vainqueur HA253060
@@ -275,7 +194,7 @@ DESCRIPTION:Coupe Hainaut U14H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-479035-comp-cup-coupe-du-hainaut-u14-hommes-hainaut@behoop.be
-DTSTAMP:20261026T221643Z
+DTSTAMP:20261027T112923Z
 DTSTART;TZID=Europe/Brussels:20270315T180000
 DTEND;TZID=Europe/Brussels:20270315T200000
 SUMMARY:Vainqueur HA253061 – Vainqueur HA253062
