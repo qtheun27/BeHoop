@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U16 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11707988599-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
 SUMMARY:Londerzeelse Dunkers M16 A – Basket Groot Zemst M16 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11640878123-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261107T111500
 DTEND;TZID=Europe/Brussels:20261107T131500
 SUMMARY:Clem Scherpenheuvel M16 A – Hageland United M16 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11741543837-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:Molenbeek Rebels Basketball M16 A – De Rode Leeuwen M16 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11489879552-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261108T100000
 DTEND;TZID=Europe/Brussels:20261108T120000
 SUMMARY:BC Asse-Ternat M16 A – Stella Artois 0.0 Blue Tigers Leuven M16 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11691210980-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BC Opwijk M16 A – Boortmeerbeek & Berg Bulldogs M16 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13776342957-comp-cup-beker-van-vlaams-brabant-u16-meisjes@behoop.be
-DTSTAMP:20261028T120252Z
+DTSTAMP:20261028T221425Z
 DTSTART;TZID=Europe/Brussels:20261220T090000
 DTEND;TZID=Europe/Brussels:20261220T110000
 SUMMARY:BC Machelen-Diegem M16 A – winnaar BVBM16VR 07
