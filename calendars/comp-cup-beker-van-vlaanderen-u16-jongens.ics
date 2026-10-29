@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaanderen U16 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-10549392518-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T120000
 DTEND;TZID=Europe/Brussels:20261107T140000
 SUMMARY:Koninklijke Sint-Niklase Condors J16 A – BBC Falco Gent J16 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10566170137-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T120000
 DTEND;TZID=Europe/Brussels:20261107T140000
 SUMMARY:KBGOB Finexa Basket@Sea J16 A – Bavi Vilvoorde J16 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10599725375-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Partena Professional Okapi Aalst J16 A – BC Oostende J16 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10515837280-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T100000
 DTEND;TZID=Europe/Brussels:20261108T120000
 SUMMARY:Hubo Limburg United J16 A – Antwerp Giants J16 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10616502994-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:BBC Croonen Lommel J16 A – AB InBev Leuven Bears J16 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10532614899-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:GSG Aarschot J16 A – Jumbo Elektrooghe Gembas Knesselare J16 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10717168708-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:Kangoeroes Basket Mechelen J16 A – Guco Lier J16 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Vlaanderen U16 Jongens 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10633280613-comp-cup-beker-van-vlaanderen-u16-jongens@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T143000
 DTEND;TZID=Europe/Brussels:20261108T163000
 SUMMARY:Bazel Sobabee@Den Dulpop J16 A – KBBC Miners Beringen J16 A

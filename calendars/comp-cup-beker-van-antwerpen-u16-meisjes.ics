@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen U16 Meisjes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-10778471086-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261018T160000
 DTEND;TZID=Europe/Brussels:20261018T180000
 SUMMARY:Fellows Legal Brokers Ekeren BBC M16 A – BBC Putte M16 A (20-0)
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10862359181-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T100000
 DTEND;TZID=Europe/Brussels:20261107T120000
 SUMMARY:Phantoms Basket Boom M16 B – BBC Schelle M16 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10761693467-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:Essense Esbac M16 A – Imprenta Kontich Wolves M16 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10795248705-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T110000
 DTEND;TZID=Europe/Brussels:20261107T130000
 SUMMARY:Basket Willebroek M16 A – Titans Basketball Bonheiden M16 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10845581562-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:Antwerp Giants M16 A – Duffel K.B.B.C. M16 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10744915848-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Kangoeroes Basket Mechelen M16 B – Mercurius BBC Hoboken-Berchem M16 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10677805372-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Koninklijke Herentalse BBC M16 A – Neteland Basket Ladies M16 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Antwerpen U16 Meisjes 1/8 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-10828803943-comp-cup-beker-van-antwerpen-u16-meisjes@behoop.be
-DTSTAMP:20261029T120932Z
+DTSTAMP:20261029T222506Z
 DTSTART;TZID=Europe/Brussels:20261108T150000
 DTEND;TZID=Europe/Brussels:20261108T170000
 SUMMARY:BC Cobras Schoten-Brasschaat M16 A – Telstar B.B.C. Mechelen M16 A
