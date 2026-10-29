@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U16 Jongens
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-14166768555-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
 SUMMARY:Bavi Vilvoorde J16 B – Dino Brussels J16 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14217101412-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
 SUMMARY:Clem Scherpenheuvel J16 A – De Rode Leeuwen J16 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14200323793-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261107T103000
 DTEND;TZID=Europe/Brussels:20261107T123000
 SUMMARY:BC Grimbergen J16 A – Hageland United J16 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12136926919-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:BC Opwijk J16 B – Tigers Halle J16 A (20-0)
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14149990936-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
 SUMMARY:AB InBev Leuven Bears J16 B – Thor Tervuren J16 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14049325222-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261107T170000
 DTEND;TZID=Europe/Brussels:20261107T190000
 SUMMARY:Boortmeerbeek & Berg Bulldogs J16 A – Basket Groot Zemst J16 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14250656650-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261108T093000
 DTEND;TZID=Europe/Brussels:20261108T113000
 SUMMARY:BBC Haacht J16 A – Basket Club Groot Dilbeek J16 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14267434269-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261108T113000
 DTEND;TZID=Europe/Brussels:20261108T133000
 SUMMARY:2B|SAFE Tienen J16 B – Merchtem Eagles J16 A
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-14066102841-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261108T130000
 DTEND;TZID=Europe/Brussels:20261108T150000
 SUMMARY:BC Machelen-Diegem J16 A – Dynamo Bertem J16 A
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12170482157-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261108T140000
 DTEND;TZID=Europe/Brussels:20261108T160000
 SUMMARY:Londerzeelse Dunkers J16 A – Toyota Wouters Diest J16 A
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Vlaams-Brabant U16 Jongens 1/16 Finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-12447918247-comp-cup-beker-van-vlaams-brabant-u16-jongens@behoop.be
-DTSTAMP:20261028T221425Z
+DTSTAMP:20261029T120932Z
 DTSTART;TZID=Europe/Brussels:20261220T100000
 DTEND;TZID=Europe/Brussels:20261220T120000
 SUMMARY:Jets Basket Zaventem J16 A – BC Asse-Ternat J16 B
