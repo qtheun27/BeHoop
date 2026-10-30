@@ -5,7 +5,7 @@ X-WR-CALNAME:Coupe de Liège Seniors Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-496697-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261021T203000
 DTEND;TZID=Europe/Brussels:20261021T223000
 SUMMARY:RBC Alleur C – Henri Chapelle B (80-34)
@@ -14,16 +14,16 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496699-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261030T201500
 DTEND;TZID=Europe/Brussels:20261030T221500
-SUMMARY:Royal Union Bellaire A – BC Hannut A
+SUMMARY:Royal Union Bellaire A – BC Hannut A (61-54)
 LOCATION:Salle Communale\, Rue de l'Hôtel Communal 6\, 4610 Bellaire
 DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496692-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:RBC Welkenraedt – Alliance Flémalle A
@@ -32,7 +32,7 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496698-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:RBC Dison Andrimont A – RBC Esneux B
@@ -41,7 +41,7 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496693-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
 SUMMARY:Lg. Atlas Ath. Jupille A – BC Sprimont A
@@ -50,7 +50,7 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496694-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
 SUMMARY:RBC Blégny A – RBC Visé B (20-0)
@@ -59,7 +59,7 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496696-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261101T180000
 DTEND;TZID=Europe/Brussels:20261101T200000
 SUMMARY:ABC Waremme A – La Villersoise A
@@ -68,7 +68,7 @@ DESCRIPTION:CProv Dames - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496695-comp-cup-coupe-de-liege-seniors-dames-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261104T210000
 DTEND;TZID=Europe/Brussels:20261104T230000
 SUMMARY:Henri Chapelle A – RBC Haneffe B

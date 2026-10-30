@@ -5,7 +5,7 @@ X-WR-CALNAME:Coupe de Liège Seniors Hommes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-496226-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261012T200000
 DTEND;TZID=Europe/Brussels:20261012T220000
 SUMMARY:RBC Blégny B – BC Sprimont C (20-0)
@@ -14,7 +14,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496438-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261019T203000
 DTEND;TZID=Europe/Brussels:20261019T223000
 SUMMARY:Royal Spa Basket Club C – Alliance Flémalle A (64-81)
@@ -23,7 +23,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496439-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261021T210000
 DTEND;TZID=Europe/Brussels:20261021T230000
 SUMMARY:Étoile Jupille B – ABC Waremme A (69-82)
@@ -32,7 +32,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496436-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261027T200000
 DTEND;TZID=Europe/Brussels:20261027T220000
 SUMMARY:Royal Ans BBC A – Royal BC Awans A (59-82)
@@ -41,7 +41,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496433-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261030T210000
 DTEND;TZID=Europe/Brussels:20261030T230000
 SUMMARY:R.B. Union Liège B – Theux BC B (20-0)
@@ -50,7 +50,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496431-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
 SUMMARY:Alliance Flémalle B – Henri Chapelle A
@@ -59,7 +59,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496426-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:RABC Ensival A – Harimalia A
@@ -68,7 +68,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496429-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
 SUMMARY:ESL United C – RBC Dison Andrimont A (20-0)
@@ -77,7 +77,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496434-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
 SUMMARY:BC Verviers B – R.B. Union Liège A
@@ -86,7 +86,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496432-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T210000
 DTEND;TZID=Europe/Brussels:20261031T230000
 SUMMARY:RBC Herve-Battice A – Stavelot RBC A
@@ -95,7 +95,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496440-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261031T210000
 DTEND;TZID=Europe/Brussels:20261031T230000
 SUMMARY:Union Huy Basket – Royal Union Bellaire A
@@ -104,7 +104,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496437-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261101T100000
 DTEND;TZID=Europe/Brussels:20261101T120000
 SUMMARY:Vaillante Jupille A – RBC 4A Aywaille-Hamoir A
@@ -113,7 +113,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496427-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261101T123000
 DTEND;TZID=Europe/Brussels:20261101T143000
 SUMMARY:ESL United D – RBC Wanze C
@@ -122,7 +122,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496428-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261101T140000
 DTEND;TZID=Europe/Brussels:20261101T160000
 SUMMARY:Ninane Chaudfontaine C – RB Tilff B
@@ -131,7 +131,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496435-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261101T170000
 DTEND;TZID=Europe/Brussels:20261101T190000
 SUMMARY:Theux BC A – BC Verviers D
@@ -140,7 +140,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496441-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261104T210000
 DTEND;TZID=Europe/Brussels:20261104T230000
 SUMMARY:Royale US Awans A – Étoile Jupille A
@@ -149,7 +149,7 @@ DESCRIPTION:CProv Hommes - phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496430-comp-cup-coupe-de-liege-seniors-hommes-liege@behoop.be
-DTSTAMP:20261030T120424Z
+DTSTAMP:20261030T215955Z
 DTSTART;TZID=Europe/Brussels:20261105T200000
 DTEND;TZID=Europe/Brussels:20261105T220000
 SUMMARY:RBC Visé A – RBC Blégny B
