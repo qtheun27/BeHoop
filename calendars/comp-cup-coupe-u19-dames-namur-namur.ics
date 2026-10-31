@@ -5,7 +5,7 @@ X-WR-CALNAME:Coupe U19 Dames Namur
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-485563-comp-cup-coupe-u19-dames-namur-namur@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T140000
 DTEND;TZID=Europe/Brussels:20261031T160000
 SUMMARY:Cerfontaine B.C. A – Royal BC Maillen A
@@ -14,19 +14,19 @@ DESCRIPTION:CDU19
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-485562-comp-cup-coupe-u19-dames-namur-namur@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T143000
 DTEND;TZID=Europe/Brussels:20261031T163000
-SUMMARY:Royal BC Maillen B – BC Marche
+SUMMARY:Royal BC Maillen B – BC Marche (41-72)
 LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
 DESCRIPTION:CDU19
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-485564-comp-cup-coupe-u19-dames-namur-namur@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
-SUMMARY:BC Fernelmont A – BC Boninne A
+SUMMARY:BC Fernelmont A – BC Boninne A (22-110)
 LOCATION:Hall Sportif de Fernelmont\, Rue de la Rénovation\, 8 \, 5380 Noville-les-Bois
 DESCRIPTION:CDU19
 END:VEVENT

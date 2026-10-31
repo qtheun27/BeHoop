@@ -5,16 +5,16 @@ X-WR-CALNAME:Coupe de Liège U16 Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-477458-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
-SUMMARY:Union Huy Basket – ABC Waremme
+SUMMARY:Union Huy Basket – ABC Waremme (63-42)
 LOCATION:Hall Omnisports de Huy\, Avenue de la Croix Rouge 4\, 4500 Huy
 DESCRIPTION:LGC U16F
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-477462-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
 SUMMARY:Cristal SGH – Royal BC Awans
@@ -23,7 +23,7 @@ DESCRIPTION:LGC U16F
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-477459-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T150000
 DTEND;TZID=Europe/Brussels:20261031T170000
 SUMMARY:RBC Visé – RBC Blégny
@@ -32,28 +32,28 @@ DESCRIPTION:LGC U16F
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-477457-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
-SUMMARY:Dragon Fly BC Malmedy – Royal Spa Basket Club A
+SUMMARY:Dragon Fly BC Malmedy – Royal Spa Basket Club A (69-44)
 LOCATION:Hall des Sports Malmedy\, Avenue du Pont de Warche\, 1\, 4960 Malmédy
 DESCRIPTION:LGC U16F
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-477460-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
-SUMMARY:Lg. Atlas Ath. Jupille A – Royal BC.Prayon A
+SUMMARY:Lg. Atlas Ath. Jupille A – Royal BC.Prayon A (59-38)
 LOCATION:Salle de l'Athenée Royal de Jupille\, Voie du Herdier\, 4020 Jupille
 DESCRIPTION:LGC U16F
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-477461-comp-cup-coupe-de-liege-u16-dames-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
-SUMMARY:RBC Herve-Battice A – Basket Club Verlaine
+SUMMARY:RBC Herve-Battice A – Basket Club Verlaine (50-35)
 LOCATION:Centre Sportif George Gramme\, Rue Forges-les Eaux 4\, 4651 Battice
 DESCRIPTION:LGC U16F
 END:VEVENT

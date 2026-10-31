@@ -5,52 +5,52 @@ X-WR-CALNAME:Coupe AWBB Seniors Dames
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-496117-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
-SUMMARY:Castors D1 B – RBC Herve-Battice A
+SUMMARY:Castors D1 B – RBC Herve-Battice A (71-67)
 LOCATION:Salle Omnisports Gaston Reiff\, Rue Ernest Laurent\,  215\, 1420 Braine-l'Alleud
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496118-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T170000
 DTEND;TZID=Europe/Brussels:20261031T190000
-SUMMARY:Union Huy Basket B – Royal CS Natoye A
+SUMMARY:Union Huy Basket B – Royal CS Natoye A (57-72)
 LOCATION:Hall Omnisports de Huy\, Avenue de la Croix Rouge 4\, 4500 Huy
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496113-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T180000
 DTEND;TZID=Europe/Brussels:20261031T200000
-SUMMARY:Royal Union Bellaire A – RBC Alleur A
+SUMMARY:Royal Union Bellaire A – RBC Alleur A (64-48)
 LOCATION:Salle Communale\, Rue de l'Hôtel Communal 6\, 4610 Bellaire
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496112-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
-SUMMARY:Union Huy Basket A – RBC Ciney A
+SUMMARY:Union Huy Basket A – RBC Ciney A (51-47)
 LOCATION:Hall Omnisports de Huy\, Avenue de la Croix Rouge 4\, 4500 Huy
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496115-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T190000
 DTEND;TZID=Europe/Brussels:20261031T210000
-SUMMARY:RBC Herve-Battice B – Basket Namur Capitale B
+SUMMARY:RBC Herve-Battice B – Basket Namur Capitale B (46-90)
 LOCATION:Centre Sportif George Gramme\, Rue Forges-les Eaux 4\, 4651 Battice
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496111-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261101T120000
 DTEND;TZID=Europe/Brussels:20261101T140000
 SUMMARY:RBC Centre Gaume La Rulles A – BC Boninne A
@@ -59,7 +59,7 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496114-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261101T130000
 DTEND;TZID=Europe/Brussels:20261101T150000
 SUMMARY:Royal Canter Schaerbeek A – RE Pont-de-Loup A
@@ -68,11 +68,47 @@ DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-496116-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261101T180000
 DTEND;TZID=Europe/Brussels:20261101T200000
 SUMMARY:RE Pont-de-Loup B – Liège Panthers B
 LOCATION:Salle Pierre de Coubertin\, Sentier de l'Epée 35\, 6040 Jumet
+DESCRIPTION:CA Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496119-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
+DTSTAMP:20261031T210039Z
+DTSTART;TZID=Europe/Brussels:20261123T180000
+DTEND;TZID=Europe/Brussels:20261123T200000
+SUMMARY:Vainqueur AW237001 – Union Huy Basket A
+LOCATION:
+DESCRIPTION:CA Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496120-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
+DTSTAMP:20261031T210039Z
+DTSTART;TZID=Europe/Brussels:20261123T180000
+DTEND;TZID=Europe/Brussels:20261123T200000
+SUMMARY:Royal Union Bellaire A – Vainqueur AW237004
+LOCATION:
+DESCRIPTION:CA Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496121-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
+DTSTAMP:20261031T210039Z
+DTSTART;TZID=Europe/Brussels:20261123T180000
+DTEND;TZID=Europe/Brussels:20261123T200000
+SUMMARY:Basket Namur Capitale B – Vainqueur AW237006
+LOCATION:
+DESCRIPTION:CA Dames - Phase finale
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-496122-comp-cup-coupe-awbb-seniors-dames-awbb@behoop.be
+DTSTAMP:20261031T210039Z
+DTSTART;TZID=Europe/Brussels:20261123T180000
+DTEND;TZID=Europe/Brussels:20261123T200000
+SUMMARY:Castors D1 B – Royal CS Natoye A
+LOCATION:
 DESCRIPTION:CA Dames - Phase finale
 END:VEVENT
 END:VCALENDAR

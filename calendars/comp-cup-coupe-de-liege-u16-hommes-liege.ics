@@ -5,16 +5,16 @@ X-WR-CALNAME:Coupe de Liège U16 Hommes
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-497017-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T090000
 DTEND;TZID=Europe/Brussels:20261031T110000
-SUMMARY:Cristal SGH B – La Villersoise B
+SUMMARY:Cristal SGH B – La Villersoise B (72-76)
 LOCATION:Site des 18 Bonniers\, Rue des 18 Bonniers\, 4460 Grâce-Hollogne
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497020-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T090000
 DTEND;TZID=Europe/Brussels:20261031T110000
 SUMMARY:Stavelot RBC – Henri Chapelle (53-99)
@@ -23,55 +23,55 @@ DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497022-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T110000
 DTEND;TZID=Europe/Brussels:20261031T130000
-SUMMARY:RBC Esneux A – Giants B.C.Braives A
+SUMMARY:RBC Esneux A – Giants B.C.Braives A (37-58)
 LOCATION:Alfarena\, Rue Simonis\, 5\, 4130 Esneux
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497024-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T110000
 DTEND;TZID=Europe/Brussels:20261031T130000
-SUMMARY:RBC Wanze A – Union Huy Basket A
+SUMMARY:RBC Wanze A – Union Huy Basket A (74-53)
 LOCATION:Hall Omnisports Wanze\, Rue Géo Warzée 19\, 4520 Wanze
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497018-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T130000
 DTEND;TZID=Europe/Brussels:20261031T150000
-SUMMARY:Royal BC Awans A – RBC Alleur
+SUMMARY:Royal BC Awans A – RBC Alleur (108-47)
 LOCATION:Hall des Sports Henri Germis\, Rue des Charrons 17\, 4431 Loncin
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497019-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T150000
 DTEND;TZID=Europe/Brussels:20261031T170000
-SUMMARY:Cristal SGH A – ABC Waremme
+SUMMARY:Cristal SGH A – ABC Waremme (99-66)
 LOCATION:Site des 18 Bonniers\, Rue des 18 Bonniers\, 4460 Grâce-Hollogne
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497023-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T160000
 DTEND;TZID=Europe/Brussels:20261031T180000
-SUMMARY:Royal Union Bellaire A – Cointe BC Liège A
+SUMMARY:Royal Union Bellaire A – Cointe BC Liège A (34-80)
 LOCATION:Salle Communale\, Rue de l'Hôtel Communal 6\, 4610 Bellaire
 DESCRIPTION:LGC U16H
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-497021-comp-cup-coupe-de-liege-u16-hommes-liege@behoop.be
-DTSTAMP:20261031T113851Z
+DTSTAMP:20261031T210039Z
 DTSTART;TZID=Europe/Brussels:20261031T163000
 DTEND;TZID=Europe/Brussels:20261031T183000
-SUMMARY:Marchin Basket – Royal Spa Basket Club B
+SUMMARY:Marchin Basket – Royal Spa Basket Club B (76-33)
 LOCATION:Centre Sportif Local de Marchin\, Place de Belle-Maison\, 4570 Marchin
 DESCRIPTION:LGC U16H
 END:VEVENT
