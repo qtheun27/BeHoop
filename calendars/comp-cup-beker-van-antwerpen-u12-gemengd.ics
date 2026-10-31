@@ -5,7 +5,7 @@ X-WR-CALNAME:Beker van Antwerpen U12 Gemengd
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-13428745144-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261101T093000
 DTEND;TZID=Europe/Brussels:20261101T113000
 SUMMARY:Basket Malle G12 A – BBC Makeba Mariaburg Brasschaat G12 A
@@ -14,7 +14,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13462300382-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
 SUMMARY:Duffel K.B.B.C. G12 A – Mercurius BBC Hoboken-Berchem G12 A
@@ -23,7 +23,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13496002715-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
 SUMMARY:Kangoeroes Basket Mechelen G12 A – Red Vic Wilrijk G12 A
@@ -32,7 +32,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13495855620-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T090000
 DTEND;TZID=Europe/Brussels:20261107T110000
 SUMMARY:KBBC Okido Arendonk G12 A – BBC Berlaar G12 A
@@ -41,7 +41,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13579890810-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T100000
 DTEND;TZID=Europe/Brussels:20261107T120000
 SUMMARY:BBC Schelle G12 A – Guco Lier G12 A
@@ -50,7 +50,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13479225096-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T120000
 DTEND;TZID=Europe/Brussels:20261107T140000
 SUMMARY:Rucon Gembo Borgerhout G12 A – Antwerp Giants G12 A
@@ -59,7 +59,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13445522763-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T120000
 DTEND;TZID=Europe/Brussels:20261107T140000
 SUMMARY:Nieuw Brabo Antwerpen G12 A – Oxaco BBC Boechout G12 A
@@ -68,7 +68,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13546335572-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T130000
 DTEND;TZID=Europe/Brussels:20261107T150000
 SUMMARY:BBC Laakdal G12 A – Essense Esbac G12 A
@@ -77,7 +77,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13445669858-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T140000
 DTEND;TZID=Europe/Brussels:20261107T160000
 SUMMARY:Phantoms Basket Boom G12 A – BBC Geel G12 A
@@ -86,7 +86,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13512780334-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Imprenta Kontich Wolves G12 A – Campinia Dessel-Retie G12 A
@@ -95,7 +95,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13563113191-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T150000
 DTEND;TZID=Europe/Brussels:20261107T170000
 SUMMARY:Olicsa Antwerpen G12 A – BBC Musketiers Wommelgem G12 A
@@ -104,7 +104,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13529410858-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261107T160000
 DTEND;TZID=Europe/Brussels:20261107T180000
 SUMMARY:Basket Willebroek G12 A – Hove Rabbits G12 A
@@ -113,7 +113,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13462447477-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261108T110000
 DTEND;TZID=Europe/Brussels:20261108T130000
 SUMMARY:Titans Basketball Bonheiden G12 A – Rupel Pirates BBC Niel G12 A
@@ -122,7 +122,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13546188477-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:Basket Stabroek G12 A – Koninklijke Herentalse BBC G12 A
@@ -131,7 +131,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13529557953-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261108T120000
 DTEND;TZID=Europe/Brussels:20261108T140000
 SUMMARY:Aartselaar BBC G12 A – Fellows Legal Brokers Ekeren BBC G12 A
@@ -140,7 +140,7 @@ DESCRIPTION:Beker van Antwerpen U12 Gemengd 1/16 finale
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-13512633239-comp-cup-beker-van-antwerpen-u12-gemengd@behoop.be
-DTSTAMP:20261030T215955Z
+DTSTAMP:20261031T113851Z
 DTSTART;TZID=Europe/Brussels:20261108T170000
 DTEND;TZID=Europe/Brussels:20261108T190000
 SUMMARY:BC Cobras Schoten-Brasschaat G12 A – Geranimo Bornem Basket G12 A
