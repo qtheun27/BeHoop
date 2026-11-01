@@ -40,6 +40,20 @@ export async function thumbData(file: File | Blob): Promise<string> {
   return await new Promise<string>((r) => { const fr = new FileReader(); fr.onload = () => r(String(fr.result)); fr.onerror = () => r(''); fr.readAsDataURL(small); });
 }
 
+/** « com.apple.quicktime.creationdate » (ex. 2026-10-31T14:05:12+0100) : vraie date d'enregistrement d'une vidéo d'iPhone.
+ *  La date du conteneur (mvhd) peut être celle de l'export au moment de la sélection. */
+async function appleCreationDate(file: File): Promise<number | null> {
+  const scan = async (start: number, len: number) => {
+    const txt = new TextDecoder('latin1').decode(await file.slice(start, start + len).arrayBuffer());
+    const i = txt.indexOf('com.apple.quicktime.creationdate');
+    if (i < 0) return null;
+    const m = /(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:[+-]\d{2}:?\d{2}|Z)?)/.exec(txt.slice(i, i + 4000));
+    const t = m ? Date.parse(m[1].replace(/([+-]\d{2})(\d{2})$/, '$1:$2')) : NaN;
+    return Number.isFinite(t) && t > 946684800000 ? t : null;
+  };
+  return (await scan(0, 1024 * 1024)) ?? (file.size > 1024 * 1024 ? await scan(Math.max(0, file.size - 4 * 1024 * 1024), 4 * 1024 * 1024) : null);
+}
+
 export interface Prepared { file: File; kind: 'video' | 'photo'; takenAt: number; duration?: number; width?: number; height?: number; thumb: string }
 
 export async function prepare(file: File): Promise<Prepared> {
@@ -58,7 +72,8 @@ export async function prepare(file: File): Promise<Prepared> {
       c.getContext('2d')!.drawImage(v, 0, 0, c.width, c.height); thumb = c.toDataURL('image/jpeg', .6);
     } catch { /* vignette facultative */ }
     URL.revokeObjectURL(url);
-    const takenAt = (await quicktimeDate(file).catch(() => null)) ?? file.lastModified;
+    // Date de prise de vue de l'iPhone (métadonnée Apple, gardée quand Photos prépare la vidéo), sinon date du conteneur
+    const takenAt = (await appleCreationDate(file).catch(() => null)) ?? (await quicktimeDate(file).catch(() => null)) ?? file.lastModified;
     return { file, kind: 'video', takenAt, duration: Number.isFinite(v.duration) ? v.duration : undefined, width: v.videoWidth, height: v.videoHeight, thumb };
   }
   const exif = await exifr.parse(file, ['DateTimeOriginal', 'CreateDate']).catch(() => null);

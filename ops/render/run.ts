@@ -210,7 +210,8 @@ async function remote(id: string) {
     for (let i = 0; i < files.length; i += 8) await Promise.all(files.slice(i, i + 8).map((f) => r2.upload(`${prefix}/${f.slice(res.hls.length + 1)}`, f, ct[extname(f)] ?? 'application/octet-stream', f.endsWith('.m3u8') ? 'public, max-age=60' : undefined)));
     // Photos conservées (2048 px) pour la galerie
     const vis = job.visibility === 'team' ? `team-${job.teamIdPrivate}` : 'public';
-    for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
+    // Les photos du marquoir servent au score et aux bornes des quarts : jamais dans la galerie
+    for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded && !x.scoreboardOfQuarter)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
     const [fh, fa] = job.settings.scores[3];
     const hls = { masterKey: `${prefix}/master.m3u8`, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
     await mvRef.update({ status: 'ready', version, hls, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });

@@ -47,6 +47,15 @@ describe('découpage par quart', () => {
     expect(mosaicPhotos(r, 1).map((x) => x.id)).toEqual(['b', 'a']);
   });
   it('liste vide', () => expect(assignQuarters([])).toEqual([]));
+  it('vidéos datées du jour de l’envoi (préparées par l’iPhone) : pas de décalage des photos, une vidéo par quart', () => {
+    const photos = [m('p1', 0), m('p2', 3), m('p3', 20), m('p4', 22), m('p5', 45), m('p6', 47), m('p7', 65), m('p8', 66)];
+    const later = Date.UTC(2026, 9, 11, 16, 0); // le lendemain, au moment de la sélection
+    const vids = [3, 1, 4, 2].map((n) => m(`IMG_10${n}.MOV`, 0, { kind: 'video', name: `IMG_10${n}.MOV`, duration: 780, takenAt: later + n * 1000 }));
+    const r = assignQuarters([...vids, ...photos]);
+    const q = Object.fromEntries(r.map((x) => [x.name, x.quarter]));
+    expect([q.p1, q.p2, q.p3, q.p4, q.p5, q.p6, q.p7, q.p8]).toEqual([1, 1, 2, 2, 3, 3, 4, 4]);
+    expect([q['IMG_101.MOV'], q['IMG_102.MOV'], q['IMG_103.MOV'], q['IMG_104.MOV']]).toEqual([1, 2, 3, 4]);
+  });
 });
 
 describe('chapitres', () => {

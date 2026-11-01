@@ -7,6 +7,23 @@ import type { MediaItem } from './types';
  * 3. sinon (ou pour compléter), on coupe aux plus grands écarts de temps entre médias consécutifs.
  */
 export function assignQuarters<T extends MediaItem>(items: T[]): T[] {
+  if (!items.length) return [];
+  // Dates aberrantes : une vidéo « préparée » par l'iPhone au moment de la sélection peut porter la date du jour au lieu
+  // de celle du match. À plus de 3 h de la médiane, un média ne sert pas au découpage (il créerait une fausse coupure
+  // et décalerait tout d'un quart) ; il est rangé à part : les longues vidéos (un quart entier) dans l'ordre de leur nom
+  // sur Q1, Q2…, les autres réparties dans l'ordre.
+  const times = items.map((m) => m.takenAt).sort((a, b) => a - b);
+  const med = times[Math.floor(times.length / 2)];
+  const odd = (m: T) => Math.abs(m.takenAt - med) > 3 * 3600e3;
+  const dated = byTime(items.filter((m) => !odd(m)));
+  const undated = items.filter(odd).sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+  const spread = (l: T[]) => l.map((m, i) => ({ ...m, quarter: (Math.min(4, Math.floor((i * 4) / l.length) + 1)) as 1 | 2 | 3 | 4, order: items.length + i }));
+  const long = undated.filter((m) => m.kind === 'video' && (m.duration ?? 0) >= 300);
+  return [...dated, ...(long.length <= 4 ? long.map((m, i) => ({ ...m, quarter: (i + 1) as 1 | 2 | 3 | 4, order: items.length + i })) : spread(long)),
+    ...spread(undated.filter((m) => !long.includes(m)))];
+}
+
+function byTime<T extends MediaItem>(items: T[]): T[] {
   const sorted = [...items].sort((a, b) => a.takenAt - b.takenAt);
   if (sorted.length === 0) return [];
   // bornes : index du dernier média de chaque quart 1..3
