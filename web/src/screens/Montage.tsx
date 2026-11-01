@@ -1,5 +1,5 @@
 // Montage de match : choisir le match → ajouter les médias → Vérifier (aperçu en direct des planches) → envoyer → suivre le rendu.
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
@@ -80,11 +80,12 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
       await slot(); keepAwake(true);
       try {
         // Vidéo : reprise des parties déjà envoyées, retrouvées par l'id d'origine du fichier (pas celui du fichier resélectionné)
+        MOVED.set(item.id, Date.now());
         if (item.kind === 'video') {
           // Montage recommencé : on reprend aussi l'envoi d'un essai précédent du même fichier (même taille exacte)
           const own = await savedState(item.r2Key);
           const prev = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(f.size);
-          const key = await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, prev?.id ?? item.r2Key);
+          const key = await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); MOVED.set(item.id, Date.now()); ping(); }, undefined, prev?.id ?? item.r2Key);
           store.set(doneKey(d.id), { ...DONE(d.id), [item.id]: key }); SERVER.set(item.id, { key, sent: f.size });
           return key;
         }
@@ -113,14 +114,20 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
   }
   return p;
 }
-const kick = (d: Draft) => d.media.filter((m) => !m.excluded).forEach((m) => uploadItem(d, m));
+const kick = (d: Draft) => d.media.filter((m) => !m.excluded).forEach((m) => {
+  if (UP.has(m.id) && FILES.get(m.id) && !SERVER.get(m.id)?.key && Date.now() - (MOVED.get(m.id) ?? Date.now()) > 300_000) { UP.delete(m.id); MOVED.delete(m.id); }
+  uploadItem(d, m);
+});
+/** Dernier mouvement par fichier (pour repérer un envoi figé) */
+const MOVED = new Map<string, number>();
 function useUploads() { const [, set] = useState(0); useEffect(() => { const f = () => set((x) => x + 1); listeners.add(f); return () => { listeners.delete(f); }; }, []); }
 /** Avancement de l'envoi en arrière-plan (étapes Médias et Vérifier) */
 function BgProgress({ draft }: { draft: Draft }) {
   useUploads();
   // Rafraîchit l'affichage même sans événement (pour signaler une attente du réseau)
   const [, tick] = useState(0);
-  useEffect(() => { const i = setInterval(() => tick((x) => x + 1), 5000); return () => clearInterval(i); }, []);
+  const ref = useRef(draft); ref.current = draft;
+  useEffect(() => { const i = setInterval(() => { tick((x) => x + 1); kick(ref.current); }, 10_000); return () => clearInterval(i); }, []);
   useEffect(() => { scanServer(draft); }, [draft.id, draft.media.length]); // eslint-disable-line react-hooks/exhaustive-deps
   const media = draft.media.filter((m) => !m.excluded);
   const size = (m: Item) => FILES.get(m.id)?.size ?? sizeOf(m);
@@ -264,6 +271,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
     setBusy(t('Lecture des médias {i}/{n}…', { i: 0, n: arr.length }));
     await Promise.all([worker(), worker(), worker()]);
     flush(); setBusy(t('')); haptic();
+    kick(draft);
   };
   if (draft.step === 1) return (
     <Screen title={t('Vidéos et photos')} back="publier">
