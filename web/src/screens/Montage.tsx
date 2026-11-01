@@ -178,6 +178,7 @@ const openDrafts = (): Draft[] => {
 function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
   const s = useSession();
   const drafts = useMemo(openDrafts, []);
+  const mine = useAsync(() => (s.user ? D.myVideos(s.user.uid).catch(() => []) : Promise.resolve([])), [s.user?.uid]);
   const resume = (d: Draft) => { history.replaceState(null, '', `#/montage/${d.id}`); onPick({ ...d, media: dedupe(d.media) }); };
   const [q, setQ] = useState('');
   const pre = Number(qs().get('g')) || null;
@@ -221,6 +222,13 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
   return (
     <Screen title={t('Quel match ?')} back="publier">
       <Steps n={0} />
+      {(mine.data ?? []).length > 0 && <>
+        <h3 className="group-title">{t('Mes vidéos')}</h3>
+        <div className="group">{mine.data!.slice(0, 8).map((v) => (
+          <a key={v.id} className="row" href={v.status === 'ready' ? `#/video/${v.id}` : `#/montage/${v.id}`}>
+            <span className="grow"><span className="nm ellipsis">{v.title}</span><span className="sub">{v.status === 'ready' ? t('Prête ▶') : v.status === 'error' ? t('Échec du montage') : t('Montage en cours…')}</span></span><span className="chev">›</span>
+          </a>))}</div>
+      </>}
       {drafts.length > 0 && <>
         <h3 className="group-title">{t('Reprendre un montage en cours')}</h3>
         <div className="group">{drafts.map((d) => (

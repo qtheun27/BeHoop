@@ -73,6 +73,12 @@ export const setMuted = (uid: string, clubId: number, muted: number[]) => update
 
 /* ---------- Équipes 🔒 ---------- */
 const membersCol = (teamId: number) => collection(db, 'teamMembers', String(teamId), 'members');
+/** Mes vidéos de match (en cours de montage ou prêtes), les plus récentes d'abord */
+export async function myVideos(uid: string): Promise<{ id: string; title: string; status: string; createdAt?: { toMillis: () => number } }[]> {
+  const s = await getDocs(query(collection(db, 'matchVideos'), where('authorUid', '==', uid)));
+  return s.docs.map((d) => ({ id: d.id, ...(d.data() as { title: string; status: string; createdAt?: { toMillis: () => number } }) }))
+    .filter((v) => v.status !== 'deleted').sort((a, b) => (b.createdAt?.toMillis?.() ?? 0) - (a.createdAt?.toMillis?.() ?? 0));
+}
 export async function myMemberships(uid: string): Promise<Membership[]> {
   const s = await getDocs(query(collectionGroup(db, 'members'), where('uid', '==', uid)));
   return s.docs.map((d) => d.data() as Membership);

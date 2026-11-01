@@ -1248,4 +1248,7 @@ export const NL: Record<string, string> = {
   "Score final officiel ajouté.": "Officiële eindscore toegevoegd.",
   "Vérifie avant de valider.": "Controleer voor je bevestigt.",
   "Aucun score lu automatiquement : saisis-les à partir des photos du marquoir.": "Geen score automatisch gelezen: vul ze in aan de hand van de scorebordfoto’s.",
+  "Mes vidéos": "Mijn video’s",
+  "Prête ▶": "Klaar ▶",
+  "Échec du montage": "Montage mislukt",
 };

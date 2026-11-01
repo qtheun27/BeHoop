@@ -1248,4 +1248,7 @@ export const EN: Record<string, string> = {
   "Score final officiel ajouté.": "Official final score added.",
   "Vérifie avant de valider.": "Check before confirming.",
   "Aucun score lu automatiquement : saisis-les à partir des photos du marquoir.": "No score read automatically: enter them from the scoreboard photos.",
+  "Mes vidéos": "My videos",
+  "Prête ▶": "Ready ▶",
+  "Échec du montage": "Montage failed",
 };
