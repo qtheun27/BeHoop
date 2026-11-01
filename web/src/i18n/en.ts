@@ -1241,4 +1241,11 @@ export const EN: Record<string, string> = {
   "Scores cumulés à la fin de chaque quart ({h} – {a}).": "Cumulative scores at the end of each quarter ({h} – {a}).",
   "La vidéo est refaite avec les mêmes vidéos et photos (cela peut prendre un moment). Tu reçois une notification quand elle est prête.": "The video is remade with the same videos and photos (this can take a while). You’ll get a notification when it’s ready.",
   "Corriger et refaire la vidéo": "Correct and remake the video",
+  "Aucun score ni photo du marquoir marquée : seul le résultat officiel pourra être ajouté (s’il est déjà publié). Continuer ?": "No score and no scoreboard photo marked: only the official result can be added (if already published). Continue?",
+  "Lecture des photos du marquoir…": "Reading the scoreboard photos…",
+  "Lu sur les photos du marquoir : {q}.": "Read from the scoreboard photos: {q}.",
+  "final": "final",
+  "Score final officiel ajouté.": "Official final score added.",
+  "Vérifie avant de valider.": "Check before confirming.",
+  "Aucun score lu automatiquement : saisis-les à partir des photos du marquoir.": "No score read automatically: enter them from the scoreboard photos.",
 };

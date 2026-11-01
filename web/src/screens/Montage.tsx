@@ -353,8 +353,10 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
   const go = async () => {
     const e = validateScores(st.scores); if (e) { setErr(e); return; }
     const [fh, fa] = st.scores[3];
-    if (!fh && !fa) { setErr(t('Indique le score du match (au moins le score final) : il apparaît dans la vidéo.')); return; }
-    if (st.scores.slice(0, 3).some(([h, a]) => !h && !a) && !confirm(t('Les scores de fin de quart ne sont pas tous remplis : la vidéo affichera 0–0 pour ces quarts. Continuer quand même ?'))) return;
+    // Scores vides : le serveur les lit sur les photos du marquoir marquées et ajoute le résultat officiel au lancement
+    const boards = media.filter((m) => m.scoreboardOfQuarter && !m.excluded).length;
+    if (!fh && !fa && !boards && !confirm(t('Aucun score ni photo du marquoir marquée : seul le résultat officiel pourra être ajouté (s’il est déjà publié). Continuer ?'))) return;
+    if (!boards && (fh || fa) && st.scores.slice(0, 3).some(([h, a]) => !h && !a) && !confirm(t('Les scores de fin de quart ne sont pas tous remplis : la vidéo affichera 0–0 pour ces quarts. Continuer quand même ?'))) return;
     if (!media.some((m) => m.kind === 'video' && !m.excluded)) { setErr(t('Ajoute au moins une vidéo.')); return; }
     if (draft.remember) for (const side of ['home', 'away'] as const) if (st[side].awbbTeamId)
       await D.setTeamOverride(st[side].awbbTeamId!, { displayName: st[side].name, ...(st[side].logo.startsWith('blob:') ? {} : { logoUrl: st[side].logo }), colors: [st[side].color] }).catch(() => {});

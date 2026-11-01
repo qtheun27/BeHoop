@@ -20,6 +20,16 @@ function ScoreSheet({ id, mv, onClose }: { id: string; mv: MatchVideo; onClose: 
   const st: MatchSettings = settingsFromStore(mv.settings!);
   const [sc, setSc] = useState(st.scores.map((x) => [...x] as [number, number]));
   const [err, setErr] = useState('');
+  // Proposition automatique : photos du marquoir lues et résultat officiel (seulement les scores encore vides)
+  const [auto, setAuto] = useState('');
+  useEffect(() => {
+    setAuto(t('Lecture des photos du marquoir…'));
+    api<{ scores: [number, number][]; read: number[]; official: boolean }>('/montage/autoscore', { matchVideoId: id }).then((r) => {
+      setSc((cur) => cur.map((x, i) => (!x[0] && !x[1] ? r.scores[i] : x)));
+      setAuto(r.read.length || r.official ? [r.read.length ? t('Lu sur les photos du marquoir : {q}.', { q: r.read.map((q) => (q === 4 ? t('final') : `Q${q}`)).join(', ') }) : '', r.official ? t('Score final officiel ajouté.') : ''].filter(Boolean).join(' ') + ' ' + t('Vérifie avant de valider.')
+        : t('Aucun score lu automatiquement : saisis-les à partir des photos du marquoir.'));
+    }).catch(() => setAuto(''));
+  }, [id]);
   const set = (i: number, side: number, v: number) => setSc(sc.map((x, j) => (j === i ? (side ? [x[0], Math.max(0, v)] : [Math.max(0, v), x[1]]) as [number, number] : x)));
   const go = async () => {
     const e = validateScores(sc as MatchSettings['scores']); if (e) { setErr(e); return; }
@@ -35,6 +45,7 @@ function ScoreSheet({ id, mv, onClose }: { id: string; mv: MatchVideo; onClose: 
             <b style={{ width: 60 }}>{t(l)}</b>
             {[0, 1].map((side) => <input key={side} className="field" style={{ width: 90, textAlign: 'center' }} inputMode="numeric" value={sc[i][side]} onChange={(e) => set(i, side, +e.target.value.replace(/\D/g, '') || 0)} aria-label={`${t(l)} ${side ? st.away.name : st.home.name}`} />)}
           </div>))}
+        {auto && <div className="banner"><Ico n="sparkles" /><div style={{ fontSize: 14 }}>{auto}</div></div>}
         {err && <div className="err">{err}</div>}
         <p className="hint">{t('La vidéo est refaite avec les mêmes vidéos et photos (cela peut prendre un moment). Tu reçois une notification quand elle est prête.')}</p>
         <button className="btn" onClick={go}>{t('Corriger et refaire la vidéo')}</button>

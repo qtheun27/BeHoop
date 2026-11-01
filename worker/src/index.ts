@@ -7,6 +7,7 @@ import { Firestore } from './firestore';
 import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName } from './access';
 import { sendToUsers, followersOfTeams } from './notify';
 import { settingsToStore } from '../../shared/types';
+import { validateScores } from '../../shared/scores';
 import { N } from '../../shared/notifText';
 import { clubApi, spacesOf } from './club';
 
@@ -87,6 +88,49 @@ async function serveMedia(req: Request, env: Env, ctx: ExecutionContext, key: st
   return withPrivate(resp);
 }
 function withPrivate(r: Response) { const o = new Response(r.body, r); o.headers.set('Cache-Control', 'private, max-age=3600'); return o; }
+
+/* ---------------- Score automatique ---------------- */
+/** Lit le score sur une photo de tableau d'affichage (API Claude vision) ; null si indisponible ou illisible */
+async function readScoreboard(env: Env, bytes: ArrayBuffer): Promise<{ home: number; away: number } | null> {
+  if (!env.ANTHROPIC_API_KEY || bytes.byteLength > 3_500_000) return null;
+  const u8 = new Uint8Array(bytes); let bin = '';
+  for (let i = 0; i < u8.length; i += 0x8000) bin += String.fromCharCode(...u8.subarray(i, i + 0x8000));
+  const r = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST', headers: { 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+    body: JSON.stringify({ model: 'claude-haiku-5-5', max_tokens: 50, messages: [{ role: 'user', content: [
+      { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: btoa(bin) } },
+      { type: 'text', text: 'Photo d’un tableau d’affichage de basket. Réponds uniquement en JSON {"home": <score équipe locale>, "away": <score visiteurs>}, ou null si illisible.' }] }] }),
+  });
+  if (!r.ok) return null;
+  const t = ((await r.json()) as any).content?.[0]?.text ?? 'null';
+  try { const j = JSON.parse(t.match(/\{[^}]*\}|null/)?.[0] ?? 'null'); return j && Number.isInteger(j.home) && Number.isInteger(j.away) ? j : null; } catch { return null; }
+}
+/** Scores cumulés complétés sans rien écraser : photos du marquoir marquées (fin de quart, score final), puis résultat officiel
+ *  pour le score final. Une valeur lue n'est gardée que si la suite reste cohérente (jamais de score qui redescend). */
+export async function autoScores(env: Env, v: any): Promise<{ scores: [number, number][]; read: number[]; official: boolean }> {
+  const scores = ((v.settings?.scores ?? []) as any[]).map((x) => (Array.isArray(x) ? [x[0], x[1]] : [x.home, x.away])) as [number, number][];
+  while (scores.length < 4) scores.push([0, 0]);
+  const empty = (q: number) => !scores[q - 1][0] && !scores[q - 1][1];
+  const read: number[] = [];
+  for (const m of (v.media ?? []) as any[]) {
+    const q = m.scoreboardOfQuarter;
+    if (m.kind !== 'photo' || m.excluded || !q || q < 1 || q > 4 || !empty(q) || !m.r2Key) continue;
+    const obj = await env.BUCKET.get(m.r2Key).catch(() => null);
+    const r = obj ? await readScoreboard(env, await obj.arrayBuffer()).catch(() => null) : null;
+    if (!r) continue;
+    const next = scores.map((x, i) => (i === q - 1 ? [r.home, r.away] : x)) as [number, number][];
+    if (!validateScores(next.filter((x, i) => i === q - 1 || x[0] || x[1]))) { scores[q - 1] = [r.home, r.away]; read.push(q); }
+  }
+  let official = false;
+  if (empty(4) && v.matchAwbbId && v.settings?.home?.awbbTeamId) {
+    const idx: any = await fetch(`${env.SITE_URL}/app-data/index.json`).then((r) => r.json()).catch(() => null);
+    const club = idx?.clubs?.find((c: any) => c.teams?.some((t: any) => t.id === v.settings.home.awbbTeamId));
+    const data: any = club ? await fetch(`${env.SITE_URL}/app-data/clubs/${club.id}.json`).then((r) => r.json()).catch(() => null) : null;
+    const g = data?.games?.find((x: any) => x.id === v.matchAwbbId);
+    if (g && g.hs != null && g.as != null) { scores[3] = [g.hs, g.as]; official = true; }
+  }
+  return { scores, read, official };
+}
 
 /* ---------------- API ---------------- */
 async function api(req: Request, env: Env, path: string): Promise<Response> {
@@ -189,10 +233,19 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (body.media) await fs.set(`matchVideos/${body.matchVideoId}`, { media: body.media, settings: settingsToStore(body.settings) as any, title: body.settings.title });
     // Correction du score après coup (depuis la page de la vidéo) : nouveaux réglages, mêmes médias
     else if (body.settings) await fs.set(`matchVideos/${body.matchVideoId}`, { settings: settingsToStore(body.settings) as any });
+    // Scores restés vides : lus sur les photos du marquoir et complétés par le résultat officiel
+    const cur = await fs.get<any>(`matchVideos/${body.matchVideoId}`);
+    const auto = await autoScores(env, cur).catch(() => null);
+    if (auto && (auto.read.length || auto.official)) await fs.set(`matchVideos/${body.matchVideoId}`, { settings: { ...cur.settings, scores: auto.scores.map(([home, away]) => ({ home, away })) } as any });
     await fs.set(`matchVideos/${body.matchVideoId}`, { status: 'queued' });
     await fs.set(`renderJobs/${body.matchVideoId}`, { matchVideoId: body.matchVideoId, authorUid: v.authorUid, status: 'queued', step: "En file d'attente…", progress: 0, error: null, startedAt: new Date(), finishedAt: null });
     await dispatch(env, 'render.yml', { matchVideoId: body.matchVideoId });
     return json({ ok: true });
+  }
+  // Scores proposés pour « Corriger le score » (photos du marquoir + résultat officiel)
+  if (path === '/montage/autoscore') {
+    const v = await ownVideo(String(body.matchVideoId ?? ''));
+    return json(await autoScores(env, v));
   }
   // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes
   if (path === '/mp4') {

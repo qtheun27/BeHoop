@@ -1241,4 +1241,11 @@ export const NL: Record<string, string> = {
   "Scores cumulés à la fin de chaque quart ({h} – {a}).": "Cumulatieve scores aan het einde van elk kwart ({h} – {a}).",
   "La vidéo est refaite avec les mêmes vidéos et photos (cela peut prendre un moment). Tu reçois une notification quand elle est prête.": "De video wordt opnieuw gemaakt met dezelfde video’s en foto’s (dat kan even duren). Je krijgt een melding zodra ze klaar is.",
   "Corriger et refaire la vidéo": "Corrigeren en video opnieuw maken",
+  "Aucun score ni photo du marquoir marquée : seul le résultat officiel pourra être ajouté (s’il est déjà publié). Continuer ?": "Geen score en geen scorebordfoto gemarkeerd: alleen de officiële uitslag kan worden toegevoegd (als die al gepubliceerd is). Doorgaan?",
+  "Lecture des photos du marquoir…": "Scorebordfoto’s worden gelezen…",
+  "Lu sur les photos du marquoir : {q}.": "Gelezen op de scorebordfoto’s: {q}.",
+  "final": "eindstand",
+  "Score final officiel ajouté.": "Officiële eindscore toegevoegd.",
+  "Vérifie avant de valider.": "Controleer voor je bevestigt.",
+  "Aucun score lu automatiquement : saisis-les à partir des photos du marquoir.": "Geen score automatisch gelezen: vul ze in aan de hand van de scorebordfoto’s.",
 };
