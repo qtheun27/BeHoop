@@ -55,6 +55,14 @@ function ScoreSheet({ id, mv, onClose }: { id: string; mv: MatchVideo; onClose: 
   );
 }
 
+/** Téléchargement : dans l'appli installée sur l'écran d'accueil, un lien externe s'ouvre dans le navigateur intégré,
+ *  qui ne sait pas télécharger (page blanche). Sur iPhone (iOS 17+), « x-safari-https:// » l'ouvre dans le vrai Safari. */
+const inSafari = (u: string) => {
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  const standalone = (navigator as unknown as { standalone?: boolean }).standalone || matchMedia('(display-mode: standalone)').matches;
+  return ios && standalone ? `x-safari-${u}` : u;
+};
+
 /** Lien à partager : l'équipe est dans le lien, pour qu'un non-membre puisse demander l'accès directement depuis la vidéo */
 const shareUrl = (id: string, team?: number) => `${location.origin}/app/#/video/${id}${team ? `?e=${team}` : ''}`;
 async function shareLink(title: string, url: string, toast: (m: string) => void) {
@@ -136,10 +144,10 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
       <div className="form">
         {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
         <div className="seg">{(['1080p', '720p'] as const).map((x) => <button key={x} className={q === x ? 'on' : ''} onClick={() => setQ(x)}>{x === '1080p' ? t('1080p · grand écran') : t('720p · plus léger')}</button>)}</div>
-        <p className="hint" style={{ margin: 0 }}>{t('1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers ». Reste en Wi-Fi.')}</p>
+        <p className="hint" style={{ margin: 0 }}>{t('1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers (Safari) » : Safari demande « Télécharger », le suivi est sous la flèche ↓. Reste en Wi-Fi.')}</p>
         {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
           : ok && dl ? <><SaveToPhotos key={dl} url={dl} name={`${mv.title.replace(/[^\w\- ]+/g, '').trim().slice(0, 50) || 'match'} ${q}.mp4`} />
-            <a className="btn secondary" href={dl} target="_blank" rel="noopener noreferrer"><Ico n="folder" />{t('Télécharger dans Fichiers')}</a></>
+            <a className="btn secondary" href={inSafari(dl)} target="_blank" rel="noopener noreferrer"><Ico n="folder" />{t('Télécharger dans Fichiers (Safari)')}</a></>
           : <button className="btn" disabled><Ico n="video" />{t('Enregistrer la vidéo')}</button>}
         <p className="hint" style={{ margin: 0 }}>{t('2. Sur YouTube, colle le titre et la description ci-dessous. Pour un club de jeunes, mets la vidéo plutôt en « Non répertoriée ».')}</p>
         <button className="btn secondary" onClick={() => copy(mv.title)}>{t('Copier le titre')}</button>
@@ -243,7 +251,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       <div className="hstack">
         <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
         <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
-        {!youth && pubDl.data && <a className="btn ghost" href={pubDl.data} target="_blank" rel="noopener noreferrer">{t('Télécharger la vidéo')}</a>}
+        {!youth && pubDl.data && <a className="btn ghost" href={inSafari(pubDl.data)} target="_blank" rel="noopener noreferrer">{t('Télécharger la vidéo')}</a>}
       </div>
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
       {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
