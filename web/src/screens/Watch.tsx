@@ -152,7 +152,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
 
 interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; r2Key?: string }
+interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
@@ -211,14 +211,14 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   const [yt, setYt] = useState(false);
   const [fix, setFix] = useState(false);
   // Vidéo publique : vrai lien de téléchargement (un lien de lecture ouvrirait le lecteur de l'iPhone, sans enregistrement)
-  const pubDl = useAsync(async () => (!youth && mv.hls?.mp4Key && s.user ? (await api<{ url: string }>('/download', { matchVideoId: id })).url : null), [id, s.user?.uid]);
-  // YouTube : l'auteur du montage, le super admin, ou un responsable (coach, admin du club) d'une des équipes
-  const canPublish = useAsync(async () => !!s.user && (mv.authorUid === s.user.uid || s.isAdmin
-    || (await D.myMemberships(s.user.uid)).some((m) => mv.teamIds.includes(m.teamId) && m.role === 'responsable' && m.status === 'accepted')), [s.user?.uid]);
+  const author = !!s.user && mv.authorUid === s.user.uid;
+  const pubDl = useAsync(async () => (author && !youth && mv.hls?.mp4Key ? (await api<{ url: string }>('/download', { matchVideoId: id })).url : null), [id, s.user?.uid]);
+  // YouTube et téléchargement : réservés à l'auteur du montage
+  const canPublish = { data: !!s.user && mv.authorUid === s.user.uid };
   return (
     <>
       <div ref={box} className={`player${idle ? ' idle' : ''}`} onClick={onTap}>
-        <video ref={ref} playsInline poster={mediaUrl(mv.hls!.posterKey)} controlsList={youth ? 'nodownload' : undefined} onContextMenu={(e) => youth && e.preventDefault()}
+        <video ref={ref} playsInline poster={mediaUrl(mv.hls!.posterKey)} controlsList={author ? undefined : 'nodownload'} onContextMenu={(e) => !author && e.preventDefault()}
           onTimeUpdate={(e) => { const c = e.currentTarget.currentTime; setTime(c); if (Math.round(c) % 5 === 0) store.set(posKey, c > dur - 10 ? 0 : c); }}
           onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); setIdle(false); }} />
         <div className="ctrl" onClick={(e) => e.stopPropagation()}>
@@ -272,15 +272,18 @@ function ClipSheet({ id, time, dur, onClose }: { id: string; time: number; dur: 
 }
 
 function MomentPlayer({ id, youth }: { id: string; youth: boolean }) {
+  const s = useSession();
   const m = useAsync(async () => { const x = await D.getDoc(D.doc(D.db, 'moments', id)); return x.exists() ? ({ id, ...x.data() } as Moment) : null; }, [id]);
   if (!m.data) return <Skeleton h={400} n={1} />;
   if (m.data.status !== 'ready' || !m.data.r2Key) return <Empty ill="bolt" title={t('Moment en préparation')} />;
   const url = mediaUrl(m.data.r2Key);
   return (
     <div className="center">
-      <video src={url} controls playsInline style={{ maxHeight: '70dvh', borderRadius: 16, background: '#000', maxWidth: '100%' }} controlsList={youth ? 'nodownload' : undefined} />
+      <video src={url} controls playsInline style={{ maxHeight: '70dvh', borderRadius: 16, background: '#000', maxWidth: '100%' }} controlsList={m.data.authorUid === s.user?.uid ? undefined : 'nodownload'} />
       {!youth ? <button className="btn secondary mt" onClick={async () => {
-        try { const blob = await (await fetch(url, { credentials: 'include' })).blob(); const f = new File([blob], 'moment-behoop.mp4', { type: 'video/mp4' });
+        // Le fichier lui-même : seulement pour l'auteur du Moment ; les autres partagent le lien
+        try { if (m.data!.authorUid !== s.user?.uid) { await navigator.share?.({ url: location.href, text: t('Un Moment sur BeHoop 🏀') }); return; }
+          const blob = await (await fetch(url, { credentials: 'include' })).blob(); const f = new File([blob], 'moment-behoop.mp4', { type: 'video/mp4' });
           if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], text: t('Un Moment sur BeHoop 🏀') }); else await navigator.share?.({ url: location.href }); } catch { /* partage annulé */ } }}>{t('Partager (WhatsApp…)')}</button>
         : <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
     </div>

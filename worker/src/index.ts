@@ -266,30 +266,28 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const v = await ownVideo(String(body.matchVideoId ?? ''));
     return json(await autoScores(env, v));
   }
-  // Lien de téléchargement du MP4 (1 h, en pièce jointe) : un lien de lecture ouvre le lecteur de l'iPhone, qui ne permet
-  // pas d'enregistrer. Vidéo publique : tout compte ; vidéo d'équipe Jeunes : auteur, super admin ou responsable de l'équipe.
+  // Lien de téléchargement du MP4 (en pièce jointe) : un lien de lecture ouvre le lecteur de l'iPhone, qui ne permet
+  // pas d'enregistrer. Réservé à l'auteur du montage.
   if (path === '/download') {
     const id = String(body.matchVideoId ?? '');
     const v = await fs.get<any>(`matchVideos/${id}`);
     const fileKey = body.quality === '720p' ? v?.hls?.mp4Key : v?.hls?.mp4Key1080 ?? (body.quality ? undefined : v?.hls?.mp4Key);
     if (!fileKey) return fail('Fichier pas encore prêt', 404);
-    let ok = v.visibility === 'public' || v.authorUid === user.uid || isAdmin;
-    for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
-    if (!ok) return fail('Accès refusé', 403);
+    // Téléchargement réservé à l'auteur du montage
+    if (v.authorUid !== user.uid) return fail('Accès refusé', 403);
     const name = `${String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 60) || 'match'}${fileKey.includes('1080p') ? ' 1080p' : ''}.mp4`;
     // Lien signé (3 h) servi par ce Worker en pièce jointe
     const exp = Math.floor(Date.now() / 1000) + 3 * 3600;
     const url = `${new URL(req.url).origin}/dl/${encodeURIComponent(fileKey)}?e=${exp}&s=${await signDl(fileKey, exp, env.MEDIA_COOKIE_SECRET)}&n=${encodeURIComponent(name)}`;
     return json({ url, name });
   }
-  // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes
+  // Fichier MP4 à la demande (publication YouTube) : auteur du montage seulement
   if (path === '/mp4') {
     const id = String(body.matchVideoId ?? '');
     const v = await fs.get<any>(`matchVideos/${id}`);
     if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);
-    let ok = v.authorUid === user.uid || isAdmin;
-    for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
-    if (!ok) return fail('Accès refusé', 403);
+    // Fichier téléchargeable : réservé à l'auteur du montage
+    if (v.authorUid !== user.uid) return fail('Accès refusé', 403);
     const q = body.quality === '720p' ? '720p' : '1080p';
     const key = q === '1080p' ? v.hls?.mp4Key1080 : v.hls?.mp4Key, st = q === '1080p' ? 'mp4Status1080' : 'mp4Status';
     if (key) return json({ ok: true, ready: true });

@@ -42,6 +42,8 @@ export function readCookie(header: string | null, name = 'bh_media') {
  */
 export function canAccess(key: string, c: MediaClaims | null): boolean {
   if (key.includes('..')) return false;
+  // Fichier téléchargeable du montage : jamais par cette voie, seulement par le lien signé remis à l'auteur (/dl/)
+  if (/^videos\/.+\/film_\d+p\.mp4$/.test(key)) return false;
   if (key.startsWith('logos/') || key.startsWith('avatars/')) return true;
   // Vidéos d'explication perso (galerie du téléphone) : lisibles par leur propriétaire seulement
   const clip = /^clips\/([\w-]+)\//.exec(key);
