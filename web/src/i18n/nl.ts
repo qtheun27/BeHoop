@@ -1269,4 +1269,10 @@ export const NL: Record<string, string> = {
   "1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers (Safari) » : Safari demande « Télécharger », le suivi est sous la flèche ↓. Reste en Wi-Fi.": "1. « Bewaren in Foto’s » downloadt de video en opent dan het deelmenu van de iPhone: kies « Bewaar video » of YouTube. Voor een lange video is 720p veiliger. Anders: « Downloaden naar Bestanden (Safari) »: Safari vraagt « Download », de voortgang zie je onder de pijl ↓. Blijf op wifi.",
   "Télécharger dans Fichiers (Safari)": "Downloaden naar Bestanden (Safari)",
   "Vidéo trop lourde ({g} Go) pour aller directement dans Photos : télécharge-la dans Fichiers, puis dans Fichiers touche-la › partager › « Enregistrer la vidéo ».": "Video te zwaar ({g} GB) om rechtstreeks in Foto’s te bewaren: download ze naar Bestanden, tik ze daar aan › delen › « Bewaar video ».",
+  "Affiches du match": "Wedstrijdaffiches",
+  "Touche une affiche pour l’enregistrer dans Photos ou la partager.": "Tik op een affiche om ze in Foto’s te bewaren of te delen.",
+  "Impossible d’enregistrer l’affiche.": "De affiche kon niet worden bewaard.",
+  "Fin du 1er quart": "Einde 1e kwart",
+  "Mi-temps": "Rust",
+  "Fin du 3e quart": "Einde 3e kwart",
 };

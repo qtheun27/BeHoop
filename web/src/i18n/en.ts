@@ -1269,4 +1269,10 @@ export const EN: Record<string, string> = {
   "1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers (Safari) » : Safari demande « Télécharger », le suivi est sous la flèche ↓. Reste en Wi-Fi.": "1. “Save to Photos” downloads the video, then opens the iPhone share sheet: choose “Save Video” or YouTube. For a long video, 720p is safer. Otherwise: “Download to Files (Safari)”: Safari asks “Download”, progress is under the ↓ arrow. Stay on Wi-Fi.",
   "Télécharger dans Fichiers (Safari)": "Download to Files (Safari)",
   "Vidéo trop lourde ({g} Go) pour aller directement dans Photos : télécharge-la dans Fichiers, puis dans Fichiers touche-la › partager › « Enregistrer la vidéo ».": "Video too large ({g} GB) to go straight to Photos: download it to Files, then in Files tap it › share › “Save Video”.",
+  "Affiches du match": "Match posters",
+  "Touche une affiche pour l’enregistrer dans Photos ou la partager.": "Tap a poster to save it to Photos or share it.",
+  "Impossible d’enregistrer l’affiche.": "Couldn’t save the poster.",
+  "Fin du 1er quart": "End of 1st quarter",
+  "Mi-temps": "Half-time",
+  "Fin du 3e quart": "End of 3rd quarter",
 };

@@ -126,6 +126,9 @@ export async function render(job: Job, work: string, hooks: Hooks) {
       planche[t] = join(work, 'clips', `planche_${t}.mp4`);
       await ff(framesToClipArgs(join(dir, '%04d.jpg'), planche[t], DUR[t]));
       if (t === 'fin') copyFileSync(join(dir, `${String(DUR.fin * 30 - 1).padStart(4, '0')}.jpg`), join(work, 'poster.jpg'));
+      // Affiche à télécharger : dernière image de la planche (animation terminée), en pleine définition
+      mkdirSync(join(work, 'affiches'), { recursive: true });
+      copyFileSync(join(dir, `${String(Math.round(DUR[t] * 30) - 1).padStart(4, '0')}.jpg`), join(work, 'affiches', `${t}.jpg`));
       rmSync(dir, { recursive: true, force: true });
     }
     // Vague : 0–9 couvre l'écran (fin du segment A), 9–17 révèle la suite (début du segment B)
@@ -172,10 +175,13 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   parts.forEach((p) => rmSync(p.path, { force: true }));
   const chapters = buildChapters(parts.map<Segment>((p) => ({ label: p.chapter, chapter: p.chapter, duration: p.duration })));
   const hls = join(work, 'hls');
+  const affichesDir = join(work, 'affiches');
   mkdirSync(join(hls, '1080p'), { recursive: true }); mkdirSync(join(hls, '720p'), { recursive: true });
   writeFileSync(join(hls, 'chapters.vtt'), chaptersToVtt(chapters));
   await P(88, 'Préparation de la lecture en streaming');
   await ff(hlsArgs(film, hls));
+  // Affiches mises en ligne avec la vidéo (même dossier, même accès)
+  if (existsSync(affichesDir)) { mkdirSync(join(hls, 'affiches'), { recursive: true }); for (const f of readdirSync(affichesDir)) copyFileSync(join(affichesDir, f), join(hls, 'affiches', f)); }
   await ff(['-y', '-i', join(work, 'poster.jpg'), '-vf', 'scale=1280:-2', '-q:v', '3', join(hls, 'poster.jpg')]);
   let mp4: string | undefined;
   { mp4 = join(hls, 'film_720p.mp4'); await ff(['-y', '-i', join(hls, '720p', 'index.m3u8'), '-c', 'copy', '-bsf:a', 'aac_adtstoasc', '-movflags', '+faststart', mp4]); }
@@ -213,7 +219,7 @@ async function remote(id: string) {
     // Les photos du marquoir servent au score et aux bornes des quarts : jamais dans la galerie
     for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded && !x.scoreboardOfQuarter)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
     const [fh, fa] = job.settings.scores[3];
-    const hls = { masterKey: `${prefix}/master.m3u8`, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
+    const hls = { masterKey: `${prefix}/master.m3u8`, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, affiches: ['pre', 'q1', 'q2', 'q3', 'fin'].filter((x) => existsSync(join(res.hls, 'affiches', `${x}.jpg`))).map((x) => `${prefix}/affiches/${x}.jpg`), ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
     await mvRef.update({ status: 'ready', version, hls, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });
     const teamIds: number[] = mv.teamIds.filter(Boolean);
     await db.doc(`posts/video-${id}`).set({

@@ -95,6 +95,32 @@ function AskAccess({ teamId }: { teamId: number }) {
  *  le 720p est plus sûr pour une longue vidéo. */
 /** Au-delà, iOS ferme l'appli faute de mémoire avant la fin (la vidéo doit tenir en entier dans l'appli pour le partage) */
 const PHOTOS_MAX = 350_000_000;
+/** Affiches du match (avant-match, fins de quart, score final) : images 1920 × 1080 à enregistrer ou partager */
+const AFF_LABEL: Record<string, string> = { pre: 'Avant-match', q1: 'Fin du 1er quart', q2: 'Mi-temps', q3: 'Fin du 3e quart', fin: 'Score final' };
+function Affiches({ keys, title }: { keys: string[]; title: string }) {
+  const s = useSession();
+  const save = async (k: string) => {
+    const kind = k.split('/').pop()!.replace('.jpg', '');
+    try {
+      await ensureMediaCookie();
+      const b = await (await fetch(mediaUrl(k), { credentials: 'include' })).blob();
+      const f = new File([b], `${title.replace(/[^\w\- ]+/g, '').trim().slice(0, 40) || 'match'} - ${t(AFF_LABEL[kind] ?? kind)}.jpg`, { type: 'image/jpeg' });
+      if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f] });
+      else { const a = document.createElement('a'); a.href = URL.createObjectURL(f); a.download = f.name; a.click(); }
+    } catch { /* partage annulé ou indisponible */ }
+  };
+  return (
+    <>
+      <div className="group-title mt">{t('Affiches du match')}</div>
+      <p className="hint" style={{ marginTop: 0 }}>{t('Touche une affiche pour l’enregistrer dans Photos ou la partager.')}</p>
+      <div className="grid-aff">{keys.map((k) => { const kind = k.split('/').pop()!.replace('.jpg', ''); return (
+        <button key={k} className="aff" onClick={() => save(k).catch(() => s.toast(t('Impossible d’enregistrer l’affiche.')))}>
+          <img src={mediaUrl(k)} alt={t(AFF_LABEL[kind] ?? kind)} loading="lazy" /><span>{t(AFF_LABEL[kind] ?? kind)}</span>
+        </button>); })}</div>
+    </>
+  );
+}
+
 function SaveToPhotos({ url, name }: { url: string; name: string }) {
   const s = useSession();
   const [st, setSt] = useState<{ pc?: number; file?: File; err?: string }>({});
@@ -163,7 +189,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
 }
 
 interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error';
-  hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string }; voteUntil?: { toMillis: () => number } }
+  hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
@@ -259,6 +285,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       </div>
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
       {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
+      {author && !!mv.hls!.affiches?.length && <Affiches keys={mv.hls!.affiches} title={mv.title} />}
       {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
       {yt && <YoutubeSheet id={id} mv={mv} team={team} onClose={() => setYt(false)} />}
       {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}
