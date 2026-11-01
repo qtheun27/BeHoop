@@ -187,6 +187,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   if (path === '/render') {
     const v = await ownVideo(body.matchVideoId);
     if (body.media) await fs.set(`matchVideos/${body.matchVideoId}`, { media: body.media, settings: settingsToStore(body.settings) as any, title: body.settings.title });
+    // Correction du score après coup (depuis la page de la vidéo) : nouveaux réglages, mêmes médias
+    else if (body.settings) await fs.set(`matchVideos/${body.matchVideoId}`, { settings: settingsToStore(body.settings) as any });
     await fs.set(`matchVideos/${body.matchVideoId}`, { status: 'queued' });
     await fs.set(`renderJobs/${body.matchVideoId}`, { matchVideoId: body.matchVideoId, authorUid: v.authorUid, status: 'queued', step: "En file d'attente…", progress: 0, error: null, startedAt: new Date(), finishedAt: null });
     await dispatch(env, 'render.yml', { matchVideoId: body.matchVideoId });

@@ -11,6 +11,37 @@ import { Ico } from '../ui/icons';
 import { qs } from '../lib/router';
 import { teamIndex, teamLabel } from '../lib/data';
 import { JoinSheet } from './Explore';
+import { settingsFromStore, type StoredSettings, type MatchSettings } from '../../../shared/types';
+import { validateScores } from '../../../shared/scores';
+
+/** Corriger le score d'une vidéo déjà montée : les planches sont refaites avec les mêmes médias (nouvelle version) */
+function ScoreSheet({ id, mv, onClose }: { id: string; mv: MatchVideo; onClose: () => void }) {
+  const s = useSession();
+  const st: MatchSettings = settingsFromStore(mv.settings!);
+  const [sc, setSc] = useState(st.scores.map((x) => [...x] as [number, number]));
+  const [err, setErr] = useState('');
+  const set = (i: number, side: number, v: number) => setSc(sc.map((x, j) => (j === i ? (side ? [x[0], Math.max(0, v)] : [Math.max(0, v), x[1]]) as [number, number] : x)));
+  const go = async () => {
+    const e = validateScores(sc as MatchSettings['scores']); if (e) { setErr(e); return; }
+    try { await api('/render', { matchVideoId: id, settings: { ...st, scores: sc } }); s.toast(t('Score corrigé : la vidéo est refaite.')); location.hash = `/montage/${id}`; }
+    catch { setErr(t('Impossible de relancer. Réessaie.')); }
+  };
+  return (
+    <Sheet title={t('Corriger le score')} onClose={onClose}>
+      <div className="form">
+        <p className="hint" style={{ margin: 0 }}>{t('Scores cumulés à la fin de chaque quart ({h} – {a}).', { h: st.home.name, a: st.away.name })}</p>
+        {['Fin Q1', 'Fin Q2', 'Fin Q3', 'Final'].map((l, i) => (
+          <div key={l} className="hstack" style={{ justifyContent: 'space-between' }}>
+            <b style={{ width: 60 }}>{t(l)}</b>
+            {[0, 1].map((side) => <input key={side} className="field" style={{ width: 90, textAlign: 'center' }} inputMode="numeric" value={sc[i][side]} onChange={(e) => set(i, side, +e.target.value.replace(/\D/g, '') || 0)} aria-label={`${t(l)} ${side ? st.away.name : st.home.name}`} />)}
+          </div>))}
+        {err && <div className="err">{err}</div>}
+        <p className="hint">{t('La vidéo est refaite avec les mêmes vidéos et photos (cela peut prendre un moment). Tu reçois une notification quand elle est prête.')}</p>
+        <button className="btn" onClick={go}>{t('Corriger et refaire la vidéo')}</button>
+      </div>
+    </Sheet>
+  );
+}
 
 /** Lien à partager : l'équipe est dans le lien, pour qu'un non-membre puisse demander l'accès directement depuis la vidéo */
 const shareUrl = (id: string, team?: number) => `${location.origin}/app/#/video/${id}${team ? `?e=${team}` : ''}`;
@@ -71,7 +102,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error';
+interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string }
 
@@ -130,6 +161,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   };
   const youth = mv.visibility === 'team';
   const [yt, setYt] = useState(false);
+  const [fix, setFix] = useState(false);
   // YouTube : l'auteur du montage, le super admin, ou un responsable (coach, admin du club) d'une des équipes
   const canPublish = useAsync(async () => !!s.user && (mv.authorUid === s.user.uid || s.isAdmin
     || (await D.myMemberships(s.user.uid)).some((m) => mv.teamIds.includes(m.teamId) && m.role === 'responsable' && m.status === 'accepted')), [s.user?.uid]);
@@ -163,6 +195,8 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
         <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
         {!youth && mv.hls!.mp4Key && <a className="btn ghost" href={mediaUrl(mv.hls!.mp4Key)} download>{t('Télécharger (720p)')}</a>}
       </div>
+      {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
+      {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
       {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
       {yt && <YoutubeSheet id={id} mv={mv} team={team} onClose={() => setYt(false)} />}
       {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}

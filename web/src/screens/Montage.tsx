@@ -330,6 +330,14 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
     try { url = mediaUrl(await uploadSmall('logo', sq, { teamId: st[side].awbbTeamId })); } catch { /* aperçu local */ }
     setSide(side, { logo: url, color: (await dominantColor(sq)) ?? st[side].color });
   };
+  // Résultat officiel arrivé depuis la création du montage : on préremplit le score final s'il est vide
+  useEffect(() => {
+    if (st.scores[3][0] || st.scores[3][1] || !st.home.awbbTeamId) return;
+    teamIndex().then((idx) => loadClub(idx.get(st.home.awbbTeamId!)!.club.id)).then((d) => {
+      const g = d.games.find((x) => x.id === draft.gameId);
+      if (g && g.hs != null && g.as != null) { const sc = st.scores.map((x) => [...x] as [number, number]); sc[3] = [g.hs, g.as]; setSt({ scores: sc }); s.toast(t('Score final officiel ajouté : {h} – {a}', { h: g.hs, a: g.as })); }
+    }).catch(() => {});
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const ocr = async (m: Item) => {
     const f = FILES.get(m.id); if (!f || !m.scoreboardOfQuarter) return;
     try {
@@ -339,10 +347,14 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
       if (r && confirm(t('Score lu : {h} – {a}. L’utiliser pour la fin du Q{q} ?', { h: r.home, a: r.away, q: m.scoreboardOfQuarter ?? '' }))) {
         const sc = st.scores.map((x) => [...x] as [number, number]); sc[m.scoreboardOfQuarter - 1] = [r.home, r.away]; setSt({ scores: sc });
       }
+      else if (!r) s.toast(t('Score non lu automatiquement : saisis-le dans « Scores cumulés ».'));
     } catch { s.toast(t('Lecture automatique indisponible : saisis le score.')); }
   };
   const go = async () => {
     const e = validateScores(st.scores); if (e) { setErr(e); return; }
+    const [fh, fa] = st.scores[3];
+    if (!fh && !fa) { setErr(t('Indique le score du match (au moins le score final) : il apparaît dans la vidéo.')); return; }
+    if (st.scores.slice(0, 3).some(([h, a]) => !h && !a) && !confirm(t('Les scores de fin de quart ne sont pas tous remplis : la vidéo affichera 0–0 pour ces quarts. Continuer quand même ?'))) return;
     if (!media.some((m) => m.kind === 'video' && !m.excluded)) { setErr(t('Ajoute au moins une vidéo.')); return; }
     if (draft.remember) for (const side of ['home', 'away'] as const) if (st[side].awbbTeamId)
       await D.setTeamOverride(st[side].awbbTeamId!, { displayName: st[side].name, ...(st[side].logo.startsWith('blob:') ? {} : { logoUrl: st[side].logo }), colors: [st[side].color] }).catch(() => {});
@@ -404,8 +416,8 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
           {sel.kind === 'photo' && <>
             <button className="row" onClick={() => { patch(sel.id, { offPlay: !sel.offPlay }); setSel(null); }}>{sel.offPlay ? t('Photo de jeu') : t('Hors jeu (banc, temps mort…)')}</button>
             <button className="row" onClick={() => { upd({ media: media.map((m) => (m.quarter === sel.quarter ? { ...m, featured: m.id === sel.id } : m)) }); setSel(null); }}><><Ico n="star" />{t('Photo vedette du quart')}</></button>
-            {([1, 2, 3] as const).map((n) => <button key={n} className="row" onClick={() => { upd({ media: assignQuarters(media.map((m) => (m.id === sel.id ? { ...m, scoreboardOfQuarter: sel.scoreboardOfQuarter === n ? null : n } : m))) }); setSel(null); }}>
-              <Ico n="scoreboard" style={{ marginRight: 6 }} />{t('Tableau « fin du quart {n} »', { n })} {sel.scoreboardOfQuarter === n && <Ico n="check" style={{ color: 'var(--accent)' }} />}</button>)}
+            {([1, 2, 3, 4] as const).map((n) => <button key={n} className="row" onClick={() => { const on = sel.scoreboardOfQuarter !== n; upd({ media: assignQuarters(media.map((m) => (m.id === sel.id ? { ...m, scoreboardOfQuarter: on ? n : null } : m))) }); setSel(null); if (on) ocr({ ...sel, scoreboardOfQuarter: n }); }}>
+              <Ico n="scoreboard" style={{ marginRight: 6 }} />{n === 4 ? t('Tableau du score final') : t('Tableau « fin du quart {n} »', { n })} {sel.scoreboardOfQuarter === n && <Ico n="check" style={{ color: 'var(--accent)' }} />}</button>)}
             {sel.scoreboardOfQuarter && <button className="row" onClick={() => { ocr(sel); setSel(null); }}><><Ico n="sparkles" />{t('Lire le score automatiquement')}</></button>}
           </>}
         </div>
