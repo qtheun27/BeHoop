@@ -1251,4 +1251,7 @@ export const EN: Record<string, string> = {
   "Mes vidéos": "My videos",
   "Prête ▶": "Ready ▶",
   "Échec du montage": "Montage failed",
+  "Lien de téléchargement indisponible. Réessaie.": "Download link unavailable. Try again.",
+  "1. Touche « Enregistrer la vidéo » puis « Télécharger ». Le fichier arrive dans l’app Fichiers › Téléchargements (il est gros : reste en Wi-Fi).": "1. Tap “Save the video”, then “Download”. The file goes to the Files app › Downloads (it’s large: stay on Wi-Fi).",
+  "2. Dans Fichiers, touche la vidéo › partager › YouTube (ou « Enregistrer la vidéo » pour l’avoir dans Photos). Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».": "2. In Files, tap the video › share › YouTube (or “Save Video” to have it in Photos). For a youth team, set it to “Unlisted”.",
 };

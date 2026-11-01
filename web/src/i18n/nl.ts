@@ -1251,4 +1251,7 @@ export const NL: Record<string, string> = {
   "Mes vidéos": "Mijn video’s",
   "Prête ▶": "Klaar ▶",
   "Échec du montage": "Montage mislukt",
+  "Lien de téléchargement indisponible. Réessaie.": "Downloadlink niet beschikbaar. Probeer opnieuw.",
+  "1. Touche « Enregistrer la vidéo » puis « Télécharger ». Le fichier arrive dans l’app Fichiers › Téléchargements (il est gros : reste en Wi-Fi).": "1. Tik op « Video bewaren » en dan op « Download ». Het bestand komt in de app Bestanden › Downloads (het is groot: blijf op wifi).",
+  "2. Dans Fichiers, touche la vidéo › partager › YouTube (ou « Enregistrer la vidéo » pour l’avoir dans Photos). Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».": "2. Tik in Bestanden op de video › delen › YouTube (of « Bewaar video » om ze in Foto’s te hebben). Voor een jeugdploeg zet je ze best op « Niet vermeld ».",
 };

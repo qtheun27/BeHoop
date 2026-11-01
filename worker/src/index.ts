@@ -247,6 +247,20 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const v = await ownVideo(String(body.matchVideoId ?? ''));
     return json(await autoScores(env, v));
   }
+  // Lien de téléchargement du MP4 (1 h, en pièce jointe) : un lien de lecture ouvre le lecteur de l'iPhone, qui ne permet
+  // pas d'enregistrer. Vidéo publique : tout compte ; vidéo d'équipe Jeunes : auteur, super admin ou responsable de l'équipe.
+  if (path === '/download') {
+    const id = String(body.matchVideoId ?? '');
+    const v = await fs.get<any>(`matchVideos/${id}`);
+    if (!v?.hls?.mp4Key) return fail('Fichier pas encore prêt', 404);
+    let ok = v.visibility === 'public' || v.authorUid === user.uid || isAdmin;
+    for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
+    if (!ok) return fail('Accès refusé', 403);
+    const name = `${String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 60) || 'match'}.mp4`;
+    const q = `response-content-disposition=${encodeURIComponent(`attachment; filename="${name}"`)}&response-content-type=video%2Fmp4`;
+    const url = (await s3.sign(new Request(`${r2url(v.hls.mp4Key)}?${q}&X-Amz-Expires=3600`, { method: 'GET' }), { aws: { signQuery: true } })).url;
+    return json({ url, name });
+  }
   // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes
   if (path === '/mp4') {
     const id = String(body.matchVideoId ?? '');

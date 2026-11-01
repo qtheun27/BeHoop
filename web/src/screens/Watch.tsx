@@ -94,17 +94,20 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   const busy = asked || mv.mp4Status === 'queued' || mv.mp4Status === 'running';
   const youth = mv.visibility === 'team';
   const [ok, setOk] = useState(!youth);
+  // Lien de téléchargement préparé à l'avance (le toucher doit ouvrir le lien directement, sinon iOS le bloque)
+  const [dl, setDl] = useState<string | null>(null);
+  useEffect(() => { if (mp4 && ok && !dl) api<{ url: string }>('/download', { matchVideoId: id }).then((r) => setDl(r.url)).catch(() => s.toast(t('Lien de téléchargement indisponible. Réessaie.'))); }, [mp4, ok]); // eslint-disable-line react-hooks/exhaustive-deps
   const desc = `${mv.title}\n${t('Vidéo du match réalisée avec BeHoop')} : ${shareUrl(id, team)}`;
   const copy = (x: string) => navigator.clipboard?.writeText(x).then(() => s.toast(t('Copié.'))).catch(() => {});
   return (
     <Sheet title={t('Publier sur YouTube')} onClose={onClose}>
       <div className="form">
         {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
-        <p className="hint" style={{ margin: 0 }}>{t('1. Enregistre la vidéo sur ton téléphone (dans Safari : partage › « Enregistrer dans Fichiers » ou « Enregistrer la vidéo »).')}</p>
+        <p className="hint" style={{ margin: 0 }}>{t('1. Touche « Enregistrer la vidéo » puis « Télécharger ». Le fichier arrive dans l’app Fichiers › Téléchargements (il est gros : reste en Wi-Fi).')}</p>
         {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
-          : ok ? <a className="btn" href={mediaUrl(mp4)} download={`${mv.title.replace(/[^\w\- ]+/g, '').slice(0, 60) || 'match'}.mp4`}><Ico n="video" />{t('Enregistrer la vidéo')}</a>
+          : ok && dl ? <a className="btn" href={dl} target="_blank" rel="noopener noreferrer"><Ico n="video" />{t('Enregistrer la vidéo')}</a>
           : <button className="btn" disabled><Ico n="video" />{t('Enregistrer la vidéo')}</button>}
-        <p className="hint" style={{ margin: 0 }}>{t('2. Ouvre l’app YouTube › « + » › « Vidéo », choisis-la. Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».')}</p>
+        <p className="hint" style={{ margin: 0 }}>{t('2. Dans Fichiers, touche la vidéo › partager › YouTube (ou « Enregistrer la vidéo » pour l’avoir dans Photos). Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».')}</p>
         <button className="btn secondary" onClick={() => copy(mv.title)}>{t('Copier le titre')}</button>
         <button className="btn secondary" onClick={() => copy(desc)}>{t('Copier la description')}</button>
         <a className="btn ghost" href="https://www.youtube.com/upload" target="_blank" rel="noopener noreferrer">{t('Ouvrir YouTube')}</a>
@@ -173,6 +176,8 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   const youth = mv.visibility === 'team';
   const [yt, setYt] = useState(false);
   const [fix, setFix] = useState(false);
+  // Vidéo publique : vrai lien de téléchargement (un lien de lecture ouvrirait le lecteur de l'iPhone, sans enregistrement)
+  const pubDl = useAsync(async () => (!youth && mv.hls?.mp4Key && s.user ? (await api<{ url: string }>('/download', { matchVideoId: id })).url : null), [id, s.user?.uid]);
   // YouTube : l'auteur du montage, le super admin, ou un responsable (coach, admin du club) d'une des équipes
   const canPublish = useAsync(async () => !!s.user && (mv.authorUid === s.user.uid || s.isAdmin
     || (await D.myMemberships(s.user.uid)).some((m) => mv.teamIds.includes(m.teamId) && m.role === 'responsable' && m.status === 'accepted')), [s.user?.uid]);
@@ -204,7 +209,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       <div className="hstack">
         <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
         <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
-        {!youth && mv.hls!.mp4Key && <a className="btn ghost" href={mediaUrl(mv.hls!.mp4Key)} download>{t('Télécharger (720p)')}</a>}
+        {!youth && pubDl.data && <a className="btn ghost" href={pubDl.data} target="_blank" rel="noopener noreferrer">{t('Télécharger (720p)')}</a>}
       </div>
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
       {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
