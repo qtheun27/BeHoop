@@ -21,6 +21,11 @@ export async function finishSaved(st: State): Promise<State> {
   const done = { ...st, done: true }; await save(done);
   return done;
 }
+/** Oublie tout envoi commencé pour un fichier de cette taille (pour le recommencer proprement) */
+export async function dropStates(size: number) {
+  const d = await dbp;
+  for (const s of (await d.getAll('uploads')) as State[]) if (s.size === size) await d.delete('uploads', s.id);
+}
 export async function savedState(id: string) { return (await dbp).get('uploads', id) as Promise<State | undefined>; }
 const save = async (s: State) => (await dbp).put('uploads', s);
 export async function clearScope(scope: string) { const d = await dbp; for (const k of await d.getAllKeys('uploads')) if (String(k).startsWith(scope + ':')) await d.delete('uploads', k); }
@@ -55,12 +60,13 @@ function putOnce(url: string, body: Blob, onBytes: (n: number) => void, signal?:
 }
 /** url : un lien signé, ou une fonction qui en donne un neuf à chaque essai (les liens expirent après 1 h :
  *  un bloc qui réessaie longtemps doit être re-signé, sinon il est refusé indéfiniment). */
-export async function putWithRetry(url: string | (() => Promise<string>), body: Blob, signal?: AbortSignal, onBytes: (n: number) => void = () => {}): Promise<string> {
+export async function putWithRetry(url: string | (() => Promise<string>), body: Blob, signal?: AbortSignal, onBytes: (n: number) => void = () => {}, max = Infinity): Promise<string> {
   for (let attempt = 0; ; attempt++) {
     try {
       return await putOnce(typeof url === 'string' ? url : await url(), body, onBytes, signal);
     } catch (e) {
-      if (signal?.aborted) throw e;
+      // Refus répétés (lien non signé, envoi rattaché à un ancien essai…) : on remonte l'erreur au lieu de boucler sans fin
+      if (signal?.aborted || attempt + 1 >= max) throw e;
       onBytes(0);
       // coupure réseau : on attend le retour du réseau puis on réessaie (backoff jusqu'à 30 s)
       if (!navigator.onLine) await new Promise((r) => window.addEventListener('online', r, { once: true }));
@@ -94,7 +100,7 @@ export async function uploadFile(scope: string, file: File, meta: Record<string,
         // 1er essai avec le lien signé du lot ; ensuite un lien neuf à chaque nouvel essai
         let first: string | undefined = urls[n];
         const url = async () => { if (first) { const u = first; first = undefined; return u; } return (await api<{ urls: Record<number, string> }>('/upload/sign', { key: st!.key, uploadId: st!.uploadId, parts: [n] })).urls[n]; };
-        st!.parts[n] = await putWithRetry(url, blob, signal, (b) => { flying.set(n, b); report(); });
+        st!.parts[n] = await putWithRetry(url, blob, signal, (b) => { flying.set(n, b); report(); }, 8);
         flying.delete(n);
         await save(st!);
         sent += blob.size; report();

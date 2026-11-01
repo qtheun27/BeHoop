@@ -6,7 +6,7 @@ import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
 import { prepare, compressImage, thumbData, ACCEPT, isVideo, type Prepared } from '../lib/media';
-import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, finishSaved, PART } from '../lib/upload';
+import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, finishSaved, dropStates, PART } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
@@ -50,6 +50,9 @@ const free = () => { active--; const next = waiting.shift(); if (next) next(); e
    Une vidéo entièrement envoyée n'a plus besoin d'être resélectionnée (sur iPhone, la « préparation » d'une longue
    vidéo par l'app Photos peut prendre plusieurs minutes). */
 const SERVER = new Map<string, { key?: string; sent: number }>();
+const FAILS = new Map<string, number>();
+/** Message d'état par fichier (blocage, nouvel essai), affiché sous la barre d'envoi */
+const NOTE = new Map<string, string>();
 async function scanServer(d: Draft) {
   const done = DONE(d.id);
   for (const m of d.media) {
@@ -94,7 +97,18 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
       } finally { free(); }
     })();
     // Échec : on oublie la tentative et on réessaie tout seul 15 s plus tard (reprise là où l'envoi s'était arrêté)
-    p.catch(() => { UP.delete(item.id); INIT.delete(d.id); ping(); setTimeout(() => { if (FILES.get(item.id) && !SERVER.get(item.id)?.key) uploadItem(d, item); }, 15_000); });
+    p.catch(async (e) => {
+      UP.delete(item.id); INIT.delete(d.id);
+      const n = (FAILS.get(item.id) ?? 0) + 1; FAILS.set(item.id, n);
+      // Deux échecs de suite : l'envoi commencé est inutilisable (refusé par le serveur) → on recommence ce fichier
+      // proprement dans ce montage, avec le fichier resélectionné
+      if (n >= 2 && item.kind === 'video') {
+        await dropStates(f.size).catch(() => {}); SERVER.delete(item.id); PROG.delete(item.id); FAILS.set(item.id, 0);
+        NOTE.set(item.id, t('{name} : l’envoi précédent était bloqué, il recommence depuis le début.', { name: item.name }));
+      } else NOTE.set(item.id, t('{name} : nouvel essai dans 15 s ({e}).', { name: item.name, e: String((e as Error)?.message ?? e).slice(0, 60) }));
+      ping();
+      setTimeout(() => { if (FILES.get(item.id) && !SERVER.get(item.id)?.key) uploadItem(d, item); }, 15_000);
+    });
     UP.set(item.id, p);
   }
   return p;
@@ -121,6 +135,7 @@ function BgProgress({ draft }: { draft: Draft }) {
   return (
     <div className="banner mt"><Ico n={pc >= 100 ? 'checkCircle' : 'device'} /><div style={{ flex: 1 }}>
       <b>{pc >= 100 ? t('Médias envoyés ✓') : t('Envoi en arrière-plan : {n} %', { n: pc })}</b>
+      {media.filter((m) => NOTE.get(m.id) && !isDone(m)).map((m) => <div key={m.id} className="muted" style={{ fontSize: 13 }}>⚠️ {NOTE.get(m.id)}</div>)}
       {need.length > 0 && <div style={{ fontSize: 14, margin: '4px 0' }}>{t('Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.', { v: need.filter((m) => m.kind === 'video').length, p: need.filter((m) => m.kind === 'photo').length })}</div>}
       {pc < 100 && need.length < left && <div className="muted" style={{ fontSize: 13 }}>{waitingNet ? t('Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.') : t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')} · {t('{n} fichier(s) restant(s)', { n: left })}</div>}
       <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${pc}%` }} /></div></div></div>

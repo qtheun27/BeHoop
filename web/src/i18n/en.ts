@@ -1206,4 +1206,6 @@ export const EN: Record<string, string> = {
   "{v} vidéo(s) · {p} photo(s)": "{v} video(s) · {p} photo(s)",
   "Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.": "To finish, tap “Add” and pick again only: {v} video(s) and {p} photo(s) (marked “pick again”). The rest is already uploaded.",
   "à resélectionner": "pick again",
+  "{name} : l’envoi précédent était bloqué, il recommence depuis le début.": "{name}: the previous upload was stuck, it is starting over.",
+  "{name} : nouvel essai dans 15 s ({e}).": "{name}: retrying in 15 s ({e}).",
 };

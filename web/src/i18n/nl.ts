@@ -1206,4 +1206,6 @@ export const NL: Record<string, string> = {
   "{v} vidéo(s) · {p} photo(s)": "{v} video(’s) · {p} foto(’s)",
   "Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.": "Om af te ronden: tik op « Toevoegen » en kies alleen opnieuw: {v} video(’s) en {p} foto(’s) (gemarkeerd « opnieuw kiezen »). De rest is al verzonden.",
   "à resélectionner": "opnieuw kiezen",
+  "{name} : l’envoi précédent était bloqué, il recommence depuis le début.": "{name}: de vorige verzending zat vast, ze begint opnieuw.",
+  "{name} : nouvel essai dans 15 s ({e}).": "{name}: nieuwe poging over 15 s ({e}).",
 };
