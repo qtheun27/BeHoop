@@ -192,6 +192,18 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await dispatch(env, 'render.yml', { matchVideoId: body.matchVideoId });
     return json({ ok: true });
   }
+  // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes
+  if (path === '/mp4') {
+    const id = String(body.matchVideoId ?? '');
+    const v = await fs.get<any>(`matchVideos/${id}`);
+    if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);
+    let ok = v.authorUid === user.uid || isAdmin;
+    for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
+    if (!ok) return fail('Accès refusé', 403);
+    if (v.hls?.mp4Key) return json({ ok: true, ready: true });
+    if (v.mp4Status !== 'queued' && v.mp4Status !== 'running') { await fs.set(`matchVideos/${id}`, { mp4Status: 'queued' }); await dispatch(env, 'mp4.yml', { matchVideoId: id }); }
+    return json({ ok: true, ready: false });
+  }
   if (path === '/moments') {
     const v = await fs.get<any>(`matchVideos/${body.matchVideoId}`);
     if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);

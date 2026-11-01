@@ -178,7 +178,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   await ff(hlsArgs(film, hls));
   await ff(['-y', '-i', join(work, 'poster.jpg'), '-vf', 'scale=1280:-2', '-q:v', '3', join(hls, 'poster.jpg')]);
   let mp4: string | undefined;
-  if (job.visibility === 'public') { mp4 = join(hls, 'film_720p.mp4'); await ff(['-y', '-i', join(hls, '720p', 'index.m3u8'), '-c', 'copy', '-bsf:a', 'aac_adtstoasc', '-movflags', '+faststart', mp4]); }
+  { mp4 = join(hls, 'film_720p.mp4'); await ff(['-y', '-i', join(hls, '720p', 'index.m3u8'), '-c', 'copy', '-bsf:a', 'aac_adtstoasc', '-movflags', '+faststart', mp4]); }
   const duration = await durationOf(film);
   rmSync(film, { force: true });
   return { hls, chapters, duration, mp4 };

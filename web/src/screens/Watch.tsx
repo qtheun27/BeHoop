@@ -8,8 +8,70 @@ import { store, haptic } from '../lib/util';
 import type { Chapter } from '../../../shared/chapters';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
+import { qs } from '../lib/router';
+import { teamIndex, teamLabel } from '../lib/data';
+import { JoinSheet } from './Explore';
 
-interface MatchVideo { title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number;
+/** Lien à partager : l'équipe est dans le lien, pour qu'un non-membre puisse demander l'accès directement depuis la vidéo */
+const shareUrl = (id: string, team?: number) => `${location.origin}/app/#/video/${id}${team ? `?e=${team}` : ''}`;
+async function shareLink(title: string, url: string, toast: (m: string) => void) {
+  try { if (navigator.share) { await navigator.share({ title, text: t('🏀 {t} — à voir sur BeHoop', { t: title }), url }); return; } } catch { return; /* partage annulé */ }
+  await navigator.clipboard?.writeText(url).then(() => toast(t('Lien copié.'))).catch(() => {});
+}
+
+/** Vidéo d'une Équipe Jeunes ouverte par un non-membre : demander l'accès sans quitter la vidéo */
+function AskAccess({ teamId }: { teamId: number }) {
+  const s = useSession();
+  const [open, setOpen] = useState(false);
+  const info = useAsync(async () => {
+    const [idx, mine] = await Promise.all([teamIndex(), D.myMemberships(s.user!.uid)]);
+    const e = idx.get(teamId);
+    return { name: e ? `${e.club.name} · ${teamLabel(e.team)}` : t('l’équipe'), pending: mine.some((m) => m.teamId === teamId && m.status === 'pending') };
+  }, [teamId, open]);
+  return (
+    <Screen title={t('Vidéo')} back="fil">
+      <Empty ill="lock" title={t('Vidéo réservée à l’équipe')} text={info.data?.pending
+        ? t('Ta demande pour {e} est envoyée. Dès que le coach l’accepte, tu reçois une notification et tu peux revenir sur ce lien.', { e: info.data.name })
+        : t('Pour protéger les jeunes, cette vidéo est visible par les membres de {e}. Demande l’accès : le coach accepte en un geste.', { e: info.data?.name ?? t('l’équipe') })}
+        action={!info.data?.pending && <button className="btn" onClick={() => setOpen(true)}>{t('Demander l’accès à l’équipe')}</button>} />
+      {open && <JoinSheet teamId={teamId} name={info.data?.name ?? ''} onClose={() => { setOpen(false); info.reload(); }} />}
+    </Screen>
+  );
+}
+
+/** Publier sur YouTube : enregistrer la vidéo, puis l'envoyer depuis l'app YouTube (titre et description prêts à coller) */
+function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVideo; team?: number; onClose: () => void }) {
+  const s = useSession();
+  // Suivi en direct : le fichier MP4 peut être préparé à la demande (quelques minutes, sur nos serveurs)
+  const [live, setLive] = useState<MatchVideo | null>(null);
+  useEffect(() => D.watchDoc<MatchVideo>(`matchVideos/${id}`, (x) => x && setLive(x)), [id]);
+  const mv = live ?? mv0;
+  const mp4 = mv.hls?.mp4Key;
+  const [asked, setAsked] = useState(false);
+  const prepare = async () => { setAsked(true); try { await api('/mp4', { matchVideoId: id }); } catch { setAsked(false); s.toast(t('Impossible de préparer le fichier. Réessaie.')); } };
+  const busy = asked || mv.mp4Status === 'queued' || mv.mp4Status === 'running';
+  const youth = mv.visibility === 'team';
+  const [ok, setOk] = useState(!youth);
+  const desc = `${mv.title}\n${t('Vidéo du match réalisée avec BeHoop')} : ${shareUrl(id, team)}`;
+  const copy = (x: string) => navigator.clipboard?.writeText(x).then(() => s.toast(t('Copié.'))).catch(() => {});
+  return (
+    <Sheet title={t('Publier sur YouTube')} onClose={onClose}>
+      <div className="form">
+        {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
+        <p className="hint" style={{ margin: 0 }}>{t('1. Enregistre la vidéo sur ton téléphone (dans Safari : partage › « Enregistrer dans Fichiers » ou « Enregistrer la vidéo »).')}</p>
+        {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
+          : ok ? <a className="btn" href={mediaUrl(mp4)} download={`${mv.title.replace(/[^\w\- ]+/g, '').slice(0, 60) || 'match'}.mp4`}><Ico n="video" />{t('Enregistrer la vidéo')}</a>
+          : <button className="btn" disabled><Ico n="video" />{t('Enregistrer la vidéo')}</button>}
+        <p className="hint" style={{ margin: 0 }}>{t('2. Ouvre l’app YouTube › « + » › « Vidéo », choisis-la. Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».')}</p>
+        <button className="btn secondary" onClick={() => copy(mv.title)}>{t('Copier le titre')}</button>
+        <button className="btn secondary" onClick={() => copy(desc)}>{t('Copier la description')}</button>
+        <a className="btn ghost" href="https://www.youtube.com/upload" target="_blank" rel="noopener noreferrer">{t('Ouvrir YouTube')}</a>
+      </div>
+    </Sheet>
+  );
+}
+
+interface MatchVideo { title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string }
 
@@ -18,7 +80,9 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).p
 export default function Watch({ id, t: part }: { id: string; t?: string }) {
   const s = useSession();
   const v = useAsync(async () => { await ensureMediaCookie(); const x = await D.getDoc(D.doc(D.db, 'matchVideos', id)); return x.exists() ? (x.data() as MatchVideo) : null; }, [id, s.user?.uid]);
-  if (!s.user) return <Screen title={t('Vidéo')} back="fil"><Empty ill="lock" title={t('Connecte-toi pour regarder')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
+  const team = Number(qs().get('e')) || undefined;
+  if (!s.user) return <Screen title={t('Vidéo')} back="fil"><Empty ill="video" title={t('Une vidéo de match t’attend')} text={t('Crée ton compte BeHoop gratuit en 30 secondes pour la regarder : tu reviens ici juste après.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte / me connecter')}</button>} /></Screen>;
+  if (v.error && team) return <AskAccess teamId={team} />;
   if (v.error) return <Screen title={t('Vidéo')} back="fil"><ErrorBox msg={v.error === t('Accès refusé.') ? t('Cette vidéo est réservée aux membres de l’Équipe.') : v.error} retry={v.reload} /></Screen>;
   if (v.loading) return <Screen title={t('Vidéo')} back="fil"><Skeleton h={220} n={2} /></Screen>;
   const mv = v.data;
@@ -26,13 +90,13 @@ export default function Watch({ id, t: part }: { id: string; t?: string }) {
   const momentId = part?.startsWith('m-') ? part.slice(2) : null;
   return (
     <Screen title={mv.title} back="fil">
-      {momentId ? <MomentPlayer id={momentId} youth={mv.visibility === 'team'} /> : <Player id={id} mv={mv} />}
+      {momentId ? <MomentPlayer id={momentId} youth={mv.visibility === 'team'} /> : <Player id={id} mv={mv} team={team ?? mv.teamIds.find(Boolean)} />}
       <Moments id={id} mv={mv} />
     </Screen>
   );
 }
 
-function Player({ id, mv }: { id: string; mv: MatchVideo }) {
+function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number }) {
   const s = useSession();
   const ref = useRef<HTMLVideoElement>(null);
   const box = useRef<HTMLDivElement>(null);
@@ -65,6 +129,10 @@ function Player({ id, mv }: { id: string; mv: MatchVideo }) {
     lastTap.current = now;
   };
   const youth = mv.visibility === 'team';
+  const [yt, setYt] = useState(false);
+  // YouTube : l'auteur du montage, le super admin, ou un responsable (coach, admin du club) d'une des équipes
+  const canPublish = useAsync(async () => !!s.user && (mv.authorUid === s.user.uid || s.isAdmin
+    || (await D.myMemberships(s.user.uid)).some((m) => mv.teamIds.includes(m.teamId) && m.role === 'responsable' && m.status === 'accepted')), [s.user?.uid]);
   return (
     <>
       <div ref={box} className={`player${idle ? ' idle' : ''}`} onClick={onTap}>
@@ -92,8 +160,11 @@ function Player({ id, mv }: { id: string; mv: MatchVideo }) {
           <div className="grow" style={{ fontWeight: time >= c.start && time < c.end ? 700 : 400 }}>{t(c.title)}</div><span className="muted">{fmt(c.start)}</span></button>))}</div>
       <div className="hstack">
         <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
+        <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
         {!youth && mv.hls!.mp4Key && <a className="btn ghost" href={mediaUrl(mv.hls!.mp4Key)} download>{t('Télécharger (720p)')}</a>}
       </div>
+      {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
+      {yt && <YoutubeSheet id={id} mv={mv} team={team} onClose={() => setYt(false)} />}
       {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}
     </>
   );
