@@ -1202,4 +1202,6 @@ export const EN: Record<string, string> = {
   "Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.": "To resume, tap “Add” and pick the same videos and photos again: what’s already uploaded won’t be sent again.",
   "Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.": "Slow or lost connection: the upload resumes by itself as soon as it’s back.",
   "{n} fichier(s) restant(s)": "{n} file(s) left",
+  "Reprendre un montage en cours": "Resume a montage in progress",
+  "{v} vidéo(s) · {p} photo(s)": "{v} video(s) · {p} photo(s)",
 };

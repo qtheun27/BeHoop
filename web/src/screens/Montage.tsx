@@ -6,7 +6,7 @@ import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
 import { prepare, compressImage, ACCEPT, isVideo, type Prepared } from '../lib/media';
-import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove } from '../lib/upload';
+import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
@@ -57,7 +57,12 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
       await slot(); keepAwake(true);
       try {
         // Vidéo : reprise des parties déjà envoyées, retrouvées par l'id d'origine du fichier (pas celui du fichier resélectionné)
-        if (item.kind === 'video') return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, item.r2Key);
+        if (item.kind === 'video') {
+          // Montage recommencé : on reprend aussi l'envoi d'un essai précédent du même fichier (même taille exacte)
+          const own = await savedState(item.r2Key);
+          const prev = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(f.size);
+          return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, prev?.id ?? item.r2Key);
+        }
         const already = DONE(d.id)[item.id];
         const k = already ?? await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: d.id, rush: true });
         if (!already) store.set(doneKey(d.id), { ...DONE(d.id), [item.id]: k });
@@ -115,8 +120,18 @@ const Steps = ({ n }: { n: number }) => (
 );
 
 /* ---------- 1. Choisir le match (tout est prérempli depuis data.json) ---------- */
+/** Montages commencés et pas encore envoyés (gardés sur ce téléphone) */
+const openDrafts = (): Draft[] => {
+  const out: Draft[] = [];
+  try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i)!; if (/^behoop\.montage\.[a-z0-9]+$/.test(k)) { const d = store.get<Draft | null>(k, null); if (d && d.step < 4 && d.media?.length) out.push(d); } } } catch { /* stockage indisponible */ }
+  // Un seul par match (le plus complet) : les essais recommencés du même match ne s'empilent pas
+  const seen = new Set<number>();
+  return out.sort((a, b) => b.media.length - a.media.length).filter((d) => !seen.has(d.gameId) && seen.add(d.gameId));
+};
 function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
   const s = useSession();
+  const drafts = useMemo(openDrafts, []);
+  const resume = (d: Draft) => { history.replaceState(null, '', `#/montage/${d.id}`); onPick({ ...d, media: dedupe(d.media) }); };
   const [q, setQ] = useState('');
   const pre = Number(qs().get('g')) || null;
   const today = new Date().toISOString().slice(0, 10);
@@ -132,6 +147,9 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
   const [clubGames, setClubGames] = useState<Game[] | null>(null);
   const results = useMemo(() => (q.length > 1 && data.data ? data.data.all.filter((c) => normalize(c.name).includes(normalize(q))).slice(0, 8) : []), [q, data.data]);
   const pick = async (g: Game) => {
+    // Ce match a déjà un montage en cours : on le reprend (réglages, médias et envoi déjà faits)
+    const open = drafts.find((d) => d.gameId === g.id);
+    if (open) { resume(open); return; }
     const idx = data.data!.idx;
     const hc = idx.get(g.h)?.club, ac = idx.get(g.a)?.club;
     const mineTeam = s.followedTeams.includes(g.h) ? g.h : s.followedTeams.includes(g.a) ? g.a : g.h;
@@ -156,6 +174,13 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
   return (
     <Screen title={t('Quel match ?')} back="publier">
       <Steps n={0} />
+      {drafts.length > 0 && <>
+        <h3 className="group-title">{t('Reprendre un montage en cours')}</h3>
+        <div className="group">{drafts.map((d) => (
+          <button key={d.id} className="row" onClick={() => resume(d)}>
+            <span className="grow"><span className="nm ellipsis">{d.settings.title}</span><span className="sub">{t('{v} vidéo(s) · {p} photo(s)', { v: d.media.filter((m) => m.kind === 'video').length, p: d.media.filter((m) => m.kind === 'photo').length })}</span></span><span className="chev">›</span>
+          </button>))}</div>
+      </>}
       <div className="search"><input className="field" placeholder={t('Chercher un autre club…')} value={q} onChange={(e) => { setQ(e.target.value); setClubGames(null); }} /></div>
       {results.length > 0 && !clubGames && <div className="group">{results.map((c) => <button key={c.id} className="row" onClick={async () => setClubGames((await loadClub(c.id)).games.filter((g) => g.d <= today).reverse().slice(0, 40))}><Disc src={c.logo} name={c.name} size={32} ring={c.c1} /><div className="grow">{c.name}</div></button>)}</div>}
       {clubGames && <div className="group">{clubGames.map((g) => <Row key={g.id} g={g} />)}</div>}

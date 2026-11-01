@@ -9,6 +9,11 @@ const PARALLEL = 3;
 interface State { id: string; key: string; uploadId: string; size: number; parts: Record<number, string>; done?: boolean }
 const dbp = openDB('behoop-uploads', 1, { upgrade: (d) => d.createObjectStore('uploads', { keyPath: 'id' }) });
 export const fileId = (scope: string, f: File) => `${scope}:${f.name}:${f.size}:${f.lastModified}`;
+/** Envoi déjà commencé pour un fichier de cette taille (même s'il appartenait à un autre montage) : le plus avancé */
+export async function stateForSize(size: number): Promise<State | undefined> {
+  const all = (await (await dbp).getAll('uploads')) as State[];
+  return all.filter((x) => x.size === size).sort((a, b) => Number(!!b.done) - Number(!!a.done) || Object.keys(b.parts).length - Object.keys(a.parts).length)[0];
+}
 export async function savedState(id: string) { return (await dbp).get('uploads', id) as Promise<State | undefined>; }
 const save = async (s: State) => (await dbp).put('uploads', s);
 export async function clearScope(scope: string) { const d = await dbp; for (const k of await d.getAllKeys('uploads')) if (String(k).startsWith(scope + ':')) await d.delete('uploads', k); }

@@ -1202,4 +1202,6 @@ export const NL: Record<string, string> = {
   "Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.": "Om verder te gaan: tik op « Toevoegen » en kies dezelfde video’s en foto’s opnieuw; wat al verzonden is, wordt niet opnieuw verzonden.",
   "Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.": "Trage of verbroken verbinding: het verzenden gaat vanzelf verder zodra ze terug is.",
   "{n} fichier(s) restant(s)": "{n} bestand(en) te gaan",
+  "Reprendre un montage en cours": "Een begonnen montage hervatten",
+  "{v} vidéo(s) · {p} photo(s)": "{v} video(’s) · {p} foto(’s)",
 };
