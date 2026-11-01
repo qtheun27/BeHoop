@@ -1195,4 +1195,8 @@ export const NL: Record<string, string> = {
   "Choisir dans ma galerie": "Uit mijn galerij kiezen",
   "Ou colle un lien :": "Of plak een link:",
   "Nom du club": "Naam van de club",
+  "Médias envoyés ✓": "Media verzonden ✓",
+  "Envoi en arrière-plan : {n} %": "Verzenden op de achtergrond: {n} %",
+  "Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).": "Ga gerust verder: houd BeHoop gewoon open (het scherm blijft aan).",
+  "Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.": "Duurt het kiezen lang? Dan haalt de iPhone de video’s op uit iCloud: blijf op dit scherm, het gaat niet op slaap.",
 };

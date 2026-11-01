@@ -23,6 +23,57 @@ const saveDraft = (d: Draft) => store.set(draftKey(d.id), { ...d, media: d.media
 /** Fichiers choisis pendant la session (non persistables : l'utilisateur les resélectionne après fermeture). */
 const FILES = new Map<string, File>();
 
+/* Envoi en arrière-plan : il démarre dès la sélection des médias, pendant que l'utilisateur vérifie le score et les équipes.
+   À l'étape « Envoi », il ne reste souvent plus rien à envoyer. Reprise après coupure : voir lib/upload (IndexedDB). */
+const UP = new Map<string, Promise<string>>();
+const PROG = new Map<string, number>();
+const INIT = new Map<string, Promise<unknown>>();
+const listeners = new Set<() => void>();
+const ping = () => listeners.forEach((f) => f());
+let active = 0;
+const waiting: (() => void)[] = [];
+const slot = async () => { if (active >= 2) await new Promise<void>((r) => waiting.push(r)); active++; };
+const free = () => { active--; const next = waiting.shift(); if (next) next(); else if (!active) keepAwake(false); };
+function uploadItem(d: Draft, item: Item): Promise<string> | null {
+  const f = FILES.get(item.id);
+  if (!f) return null;
+  let p = UP.get(item.id);
+  if (!p) {
+    p = (async () => {
+      if (!INIT.has(d.id)) INIT.set(d.id, api('/montage/init', { id: d.id, gameId: d.gameId, teamId: d.teamId, settings: d.settings }));
+      await INIT.get(d.id);
+      await slot(); keepAwake(true);
+      try {
+        if (item.kind === 'video') return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); });
+        const k = await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: d.id, rush: true });
+        PROG.set(item.id, f.size); ping();
+        return k;
+      } finally { free(); }
+    })();
+    // Échec : on oublie la tentative, un nouvel essai repartira de là où l'envoi s'était arrêté
+    p.catch(() => { UP.delete(item.id); INIT.delete(d.id); ping(); });
+    UP.set(item.id, p);
+  }
+  return p;
+}
+const kick = (d: Draft) => d.media.filter((m) => !m.excluded).forEach((m) => uploadItem(d, m));
+function useUploads() { const [, set] = useState(0); useEffect(() => { const f = () => set((x) => x + 1); listeners.add(f); return () => { listeners.delete(f); }; }, []); }
+/** Avancement de l'envoi en arrière-plan (étapes Médias et Vérifier) */
+function BgProgress({ draft }: { draft: Draft }) {
+  useUploads();
+  const media = draft.media.filter((m) => !m.excluded && FILES.get(m.id));
+  const total = media.reduce((a, m) => a + FILES.get(m.id)!.size, 0);
+  if (!total) return null;
+  const sent = media.reduce((a, m) => a + Math.min(PROG.get(m.id) ?? 0, FILES.get(m.id)!.size), 0);
+  const pc = Math.floor((sent / total) * 100);
+  return (
+    <div className="banner mt"><Ico n={pc >= 100 ? 'checkCircle' : 'device'} /><div style={{ flex: 1 }}>
+      <b>{pc >= 100 ? t('Médias envoyés ✓') : t('Envoi en arrière-plan : {n} %', { n: pc })}</b>
+      {pc < 100 && <div className="muted" style={{ fontSize: 13 }}>{t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')}</div>}
+      <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${pc}%` }} /></div></div></div>
+  );
+}
+
 export default function Montage({ id }: { id: string }) {
   const s = useSession();
   const [draft, setDraft] = useState<Draft | null>(() => (id && id !== 'new' ? store.get<Draft | null>(draftKey(id), null) : null));
@@ -93,28 +144,42 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
 }
 
 /* ---------- 2. Médias ---------- */
-function Wizard({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => void }) {
+function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<React.SetStateAction<Draft | null>> }) {
   const [busy, setBusy] = useState('');
   const upd = (p: Partial<Draft>) => setDraft({ ...draft, ...p });
+  useEffect(() => { kick(draft); }, [draft.media]); // eslint-disable-line react-hooks/exhaustive-deps
   const addFiles = async (list: FileList | null) => {
     if (!list?.length) return;
+    await keepAwake(true);
     const arr = Array.from(list); const out: Item[] = [];
-    for (const [i, f] of arr.entries()) {
-      setBusy(t('Lecture des médias {i}/{n}…', { i: i + 1, n: arr.length }));
-      const known = draft.media.find((m) => m.r2Key === fileId(draft.id, f));
-      if (known) { FILES.set(known.id, f); continue; } // fichier resélectionné : reprise
-      const p: Prepared = await prepare(f);
-      const id = rid(10); FILES.set(id, f);
-      out.push({ id, r2Key: fileId(draft.id, f), kind: p.kind, name: f.name, takenAt: p.takenAt, duration: p.duration, width: p.width, height: p.height, thumb: p.thumb });
-    }
-    setBusy(t('')); upd({ media: assignQuarters([...draft.media, ...out]) }); haptic();
+    let done = 0;
+    const flush = () => { const batch = out.splice(0); if (batch.length) setDraft((d) => (d ? { ...d, media: assignQuarters([...d.media, ...batch]) } : d)); };
+    const queue = [...arr];
+    const worker = async () => {
+      for (let f = queue.shift(); f; f = queue.shift()) {
+        const known = draft.media.find((m) => m.r2Key === fileId(draft.id, f!));
+        if (known) FILES.set(known.id, f); // fichier resélectionné : reprise
+        else {
+          const p: Prepared = await prepare(f);
+          const id = rid(10); FILES.set(id, f);
+          out.push({ id, r2Key: fileId(draft.id, f), kind: p.kind, name: f.name, takenAt: p.takenAt, duration: p.duration, width: p.width, height: p.height, thumb: p.thumb });
+        }
+        done++; setBusy(t('Lecture des médias {i}/{n}…', { i: done, n: arr.length }));
+        if (out.length >= 3) flush();
+      }
+    };
+    setBusy(t('Lecture des médias {i}/{n}…', { i: 0, n: arr.length }));
+    await Promise.all([worker(), worker(), worker()]);
+    flush(); setBusy(t('')); haptic();
   };
   if (draft.step === 1) return (
     <Screen title={t('Vidéos et photos')} back="publier">
       <Steps n={1} />
       <p className="muted">{t('Sélectionne toutes les vidéos et photos du match depuis ta galerie. BeHoop les classe par quart-temps grâce à l\'heure de prise de vue.')}</p>
       <label className="btn">{t('＋ Ajouter depuis la galerie')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
+      <p className="hint">{t('Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.')}</p>
       {busy && <p className="muted center">{busy}</p>}
+      <BgProgress draft={draft} />
       {draft.media.length > 0 && <>
         <p className="mt"><b>{draft.media.filter((m) => m.kind === 'video').length}</b> {t('vidéo(s)')} · <b>{draft.media.filter((m) => m.kind === 'photo').length}</b> {t('photo(s)')}</p>
         <div className="grid3">{draft.media.slice(0, 30).map((m) => <Thumb key={m.id} m={m} />)}</div>
@@ -185,6 +250,7 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
   return (
     <Screen title={t('Vérifier')} back="publier">
       <Steps n={2} />
+      <BgProgress draft={draft} />
       <PlanchePreview type={pl} st={preview} />
       <div className="chips mt">{(['pre', 'q1', 'q2', 'q3', 'fin', 'wipe'] as PlancheType[]).map((pt) => <button key={pt} className={`chip${pl === pt ? ' on' : ''}`} onClick={() => setPl(pt)}>{t(({ pre: 'Avant-match', q1: 'Fin Q1', q2: 'Fin Q2', q3: 'Fin Q3', fin: 'Fin de match', wipe: 'Transition' } as Record<string, string>)[pt])}</button>)}</div>
 
@@ -267,33 +333,28 @@ async function dominantColor(b: Blob): Promise<string | null> {
 
 /* ---------- 4. Envoi reprenable puis lancement du rendu ---------- */
 function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => void }) {
+  useUploads();
   const media = draft.media.filter((m) => !m.excluded);
   const missing = media.filter((m) => !FILES.get(m.id));
-  const [prog, setProg] = useState<Record<string, number>>({});
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
   const total = media.reduce((a, m) => a + (FILES.get(m.id)?.size ?? 0), 0);
+  const prog = Object.fromEntries(media.map((m) => [m.id, Math.min(PROG.get(m.id) ?? 0, FILES.get(m.id)?.size ?? 0)]));
   const sent = Object.values(prog).reduce((a, b) => a + b, 0);
   const start = async () => {
     setState('sending'); await keepAwake(true);
     try {
-      await api('/montage/init', { id: draft.id, gameId: draft.gameId, teamId: draft.teamId, settings: draft.settings });
       const keys: Record<string, string> = {};
-      const queue = [...media];
-      const runOne = async () => {
-        for (let m = queue.shift(); m; m = queue.shift()) {
-          const item = m, f = FILES.get(item.id)!;
-          if (item.kind === 'video') keys[item.id] = await uploadFile(draft.id, f, { matchVideoId: draft.id, kind: 'video' }, (n) => setProg((p) => ({ ...p, [item.id]: n })));
-          else { keys[item.id] = await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: draft.id, rush: true }); setProg((p) => ({ ...p, [item.id]: f.size })); }
-        }
-      };
-      await Promise.all([runOne(), runOne()]);
+      await Promise.all(media.map(async (m) => { keys[m.id] = await uploadItem(draft, m)!; }));
       const mediaOut = draft.media.map(({ thumb: _t, ...m }) => ({ ...m, r2Key: keys[m.id] ?? m.r2Key }));
       await api('/render', { matchVideoId: draft.id, media: mediaOut, settings: draft.settings });
       await keepAwake(false); await clearScope(draft.id);
+      media.forEach((m) => { UP.delete(m.id); PROG.delete(m.id); });
       store.set(draftKey(draft.id), null); haptic(30);
       setDraft({ ...draft, step: 4 });
     } catch { setState('error'); await keepAwake(false); }
   };
+  // Tout est déjà là (envoyé en arrière-plan) : on lance le montage directement
+  useEffect(() => { if (!missing.length && state === 'idle') start(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   if (draft.step === 4) return <RenderStatus id={draft.id} />;
   return (
     <Screen title={t('Envoi')} back="publier">
@@ -311,7 +372,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
           <div className="progress mt"><i style={{ width: `${total ? (sent / total) * 100 : 0}%` }} /></div>
           {state === 'sending' && <div className="banner mt"><Ico n="device" /><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
           {state === 'error' && <ErrorBox msg={t('L’envoi a été interrompu. Il reprendra là où il s’était arrêté.')} retry={start} />}
-          {state === 'idle' && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
+          {state === 'idle' && !missing.length && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
           <div className="group mt">{media.map((m) => { const f = FILES.get(m.id); const p = f ? (prog[m.id] ?? 0) / f.size : 0; return (
             <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}><Ico n={m.kind === 'video' ? 'video' : 'image'} /> {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>
               <span className="muted" style={{ fontSize: 13, width: 40, textAlign: 'right' }}>{Math.round(p * 100)}%</span></div>); })}</div>

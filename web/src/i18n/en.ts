@@ -1195,4 +1195,8 @@ export const EN: Record<string, string> = {
   "Choisir dans ma galerie": "Choose from my gallery",
   "Ou colle un lien :": "Or paste a link:",
   "Nom du club": "Club name",
+  "Médias envoyés ✓": "Media uploaded ✓",
+  "Envoi en arrière-plan : {n} %": "Uploading in the background: {n} %",
+  "Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).": "Carry on: just keep BeHoop open (the screen stays on).",
+  "Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.": "If picking takes a while, the iPhone is fetching the videos from iCloud: stay on this screen, it won’t go to sleep.",
 };

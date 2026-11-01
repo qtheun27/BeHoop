@@ -40,11 +40,14 @@ export async function prepare(file: File): Promise<Prepared> {
   if (isVideo(file)) {
     const url = URL.createObjectURL(file);
     const v = document.createElement('video'); v.muted = true; v.playsInline = true; v.preload = 'metadata'; v.src = url;
-    await new Promise((r) => { v.onloadedmetadata = r; v.onerror = r; setTimeout(r, 8000); });
+    await new Promise((r) => { v.onloadedmetadata = r; v.onerror = r; setTimeout(r, 5000); });
     let thumb = '';
     try {
-      v.currentTime = Math.min(1, (v.duration || 2) / 2);
-      await new Promise((r) => { v.onseeked = r; setTimeout(r, 4000); });
+      // Vignette seulement si la vidéo se décode (sinon on n'attend pas pour rien) ; attente courte
+      if (!v.error && v.videoWidth) {
+        v.currentTime = Math.min(1, (v.duration || 2) / 2);
+        await new Promise((r) => { v.onseeked = r; v.onerror = r; setTimeout(r, 1500); });
+      } else throw new Error('pas de décodage');
       const c = document.createElement('canvas'); c.width = 320; c.height = Math.round(320 * (v.videoHeight || 9) / (v.videoWidth || 16));
       c.getContext('2d')!.drawImage(v, 0, 0, c.width, c.height); thumb = c.toDataURL('image/jpeg', .6);
     } catch { /* vignette facultative */ }
