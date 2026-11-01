@@ -1275,4 +1275,8 @@ export const EN: Record<string, string> = {
   "Fin du 1er quart": "End of 1st quarter",
   "Mi-temps": "Half-time",
   "Fin du 3e quart": "End of 3rd quarter",
+  "La création des affiches a échoué. Réessaie.": "Creating the posters failed. Try again.",
+  "Impossible de créer les affiches. Réessaie.": "Couldn’t create the posters. Try again.",
+  "Création des affiches… (quelques minutes)": "Creating the posters… (a few minutes)",
+  "Créer les affiches du match": "Create the match posters",
 };

@@ -19,7 +19,7 @@ import { N } from '../../shared/notifText';
 const ROOT = resolve(import.meta.dirname, '../..');
 const FFMPEG = process.env.FFMPEG ?? (existsSync('/usr/bin/ffmpeg') ? '/usr/bin/ffmpeg' : (ffmpegStatic as unknown as string));
 const FFPROBE = process.env.FFPROBE ?? (existsSync('/usr/bin/ffprobe') ? '/usr/bin/ffprobe' : ffprobeStatic.path);
-const DUR: Record<PlancheType, number> = { pre: 6, q1: 5, q2: 5, q3: 5, fin: 8, wipe: 0.6 };
+export const DUR: Record<PlancheType, number> = { pre: 6, q1: 5, q2: 5, q3: 5, fin: 8, wipe: 0.6 };
 const WHOOSH = join(ROOT, 'render/assets/whoosh.m4a');
 
 export function run(bin: string, args: string[]): Promise<string> {
@@ -41,7 +41,7 @@ async function probe(file: string): Promise<ProbeInfo> {
 const durationOf = async (f: string) => (await probe(f)).duration;
 
 /** Petit serveur statique : /app (build), /docs (démo), /work (fichiers du rendu). */
-function serve(workDir: string): Promise<{ server: Server; base: string }> {
+export function serve(workDir: string): Promise<{ server: Server; base: string }> {
   const types: Record<string, string> = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.json': 'application/json', '.webp': 'image/webp' };
   const server = createServer((req, res) => {
     const u = decodeURIComponent((req.url ?? '/').split('?')[0]);
@@ -55,7 +55,7 @@ function serve(workDir: string): Promise<{ server: Server; base: string }> {
 }
 
 /** Capture image par image (30 i/s) d'une planche ; la page rend l'état exact à l'instant t. */
-async function captureFrames(page: Page, base: string, st: MatchSettings, type: PlancheType, dir: string, from = 0, to = Math.round(DUR[type] * 30)) {
+export async function captureFrames(page: Page, base: string, st: MatchSettings, type: PlancheType, dir: string, from = 0, to = Math.round(DUR[type] * 30)) {
   mkdirSync(dir, { recursive: true });
   await page.addInitScript((s) => { (window as any).__SETTINGS__ = s; }, st);
   await page.goto(`${base}/app/render/planche.html?type=${type}`);

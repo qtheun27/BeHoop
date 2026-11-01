@@ -1275,4 +1275,8 @@ export const NL: Record<string, string> = {
   "Fin du 1er quart": "Einde 1e kwart",
   "Mi-temps": "Rust",
   "Fin du 3e quart": "Einde 3e kwart",
+  "La création des affiches a échoué. Réessaie.": "Het maken van de affiches is mislukt. Probeer opnieuw.",
+  "Impossible de créer les affiches. Réessaie.": "De affiches konden niet worden gemaakt. Probeer opnieuw.",
+  "Création des affiches… (quelques minutes)": "Affiches worden gemaakt… (enkele minuten)",
+  "Créer les affiches du match": "Wedstrijdaffiches maken",
 };

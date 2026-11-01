@@ -95,6 +95,25 @@ function AskAccess({ teamId }: { teamId: number }) {
  *  le 720p est plus sûr pour une longue vidéo. */
 /** Au-delà, iOS ferme l'appli faute de mémoire avant la fin (la vidéo doit tenir en entier dans l'appli pour le partage) */
 const PHOTOS_MAX = 350_000_000;
+/** Affiches : affichées si elles existent ; sinon (vidéo montée avant leur arrivée), on les crée à la demande */
+function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
+  const s = useSession();
+  const [live, setLive] = useState<MatchVideo | null>(null);
+  useEffect(() => D.watchDoc<MatchVideo>(`matchVideos/${id}`, (x) => x && setLive(x)), [id]);
+  const mv = live ?? mv0;
+  const [asked, setAsked] = useState(false);
+  if (mv.hls?.affiches?.length) return <Affiches keys={mv.hls.affiches} title={mv.title} />;
+  const busy = asked || mv.affichesStatus === 'queued' || mv.affichesStatus === 'running';
+  return (
+    <>
+      <div className="group-title mt">{t('Affiches du match')}</div>
+      {mv.affichesStatus === 'error' && <div className="err">{t('La création des affiches a échoué. Réessaie.')}</div>}
+      <button className="btn secondary" disabled={busy} onClick={async () => { setAsked(true); try { await api('/affiches', { matchVideoId: id }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } }}>
+        <Ico n="image" />{busy ? t('Création des affiches… (quelques minutes)') : t('Créer les affiches du match')}</button>
+    </>
+  );
+}
+
 /** Affiches du match (avant-match, fins de quart, score final) : images 1920 × 1080 à enregistrer ou partager */
 const AFF_LABEL: Record<string, string> = { pre: 'Avant-match', q1: 'Fin du 1er quart', q2: 'Mi-temps', q3: 'Fin du 3e quart', fin: 'Score final' };
 function Affiches({ keys, title }: { keys: string[]; title: string }) {
@@ -188,7 +207,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error';
+interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 
@@ -285,7 +304,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       </div>
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
       {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
-      {author && !!mv.hls!.affiches?.length && <Affiches keys={mv.hls!.affiches} title={mv.title} />}
+      {author && <AffichesBlock id={id} mv={mv} />}
       {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
       {yt && <YoutubeSheet id={id} mv={mv} team={team} onClose={() => setYt(false)} />}
       {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}
