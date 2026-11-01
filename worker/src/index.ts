@@ -4,7 +4,7 @@
 import { AwsClient } from 'aws4fetch';
 import { verifyIdToken, accessToken, type FirebaseUser } from './google';
 import { Firestore } from './firestore';
-import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName } from './access';
+import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName, signDl, verifyDl } from './access';
 import { sendToUsers, followersOfTeams } from './notify';
 import { settingsToStore } from '../../shared/types';
 import { validateScores } from '../../shared/scores';
@@ -40,6 +40,7 @@ export default {
     let res: Response;
     try {
       if (url.pathname.startsWith('/m/')) res = await serveMedia(req, env, ctx, decodeURIComponent(url.pathname.slice(3)));
+      else if (url.pathname.startsWith('/dl/')) res = await serveDownload(req, env, url);
       else if (url.pathname.startsWith('/api/')) res = await api(req, env, url.pathname.slice(4));
       else res = fail('BeHoop media', 404);
     } catch (e) {
@@ -86,6 +87,24 @@ async function serveMedia(req: Request, env: Env, ctx: ExecutionContext, key: st
   const resp = new Response((obj as R2ObjectBody).body, { headers });
   if (obj.size < 50_000_000) ctx.waitUntil(caches.default.put(cacheKey, resp.clone()));
   return withPrivate(resp);
+}
+/** Téléchargement d'un MP4 par lien signé : servi en pièce jointe (l'iPhone propose « Télécharger » au lieu de le lire) */
+async function serveDownload(req: Request, env: Env, url: URL): Promise<Response> {
+  const key = decodeURIComponent(url.pathname.slice(4)), exp = Number(url.searchParams.get('e'));
+  if (!key.endsWith('.mp4') || !(await verifyDl(key, exp, url.searchParams.get('s') ?? '', env.MEDIA_COOKIE_SECRET))) return fail('Lien expiré', 403);
+  const range = req.headers.get('Range');
+  const obj = await env.BUCKET.get(key, range ? { range: req.headers } : {});
+  if (!obj) return fail('Introuvable', 404);
+  const name = (url.searchParams.get('n') ?? 'match.mp4').replace(/["\\\r\n]/g, '');
+  const headers = new Headers({ 'Content-Type': 'video/mp4', 'Content-Disposition': `attachment; filename="${name}"; filename*=UTF-8''${encodeURIComponent(name)}`,
+    'Accept-Ranges': 'bytes', 'Cache-Control': 'private, max-age=3600', ETag: obj.httpEtag });
+  if (range && 'range' in obj && obj.range) {
+    const r = obj.range as { offset: number; length: number };
+    headers.set('Content-Range', `bytes ${r.offset}-${r.offset + r.length - 1}/${obj.size}`); headers.set('Content-Length', String(r.length));
+    return new Response((obj as R2ObjectBody).body, { status: 206, headers });
+  }
+  headers.set('Content-Length', String(obj.size));
+  return new Response((obj as R2ObjectBody).body, { headers });
 }
 function withPrivate(r: Response) { const o = new Response(r.body, r); o.headers.set('Cache-Control', 'private, max-age=3600'); return o; }
 
@@ -258,8 +277,9 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
     if (!ok) return fail('Accès refusé', 403);
     const name = `${String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 60) || 'match'}${fileKey.includes('1080p') ? ' 1080p' : ''}.mp4`;
-    const q = `response-content-disposition=${encodeURIComponent(`attachment; filename="${name}"`)}&response-content-type=video%2Fmp4`;
-    const url = (await s3.sign(new Request(`${r2url(fileKey)}?${q}&X-Amz-Expires=3600`, { method: 'GET' }), { aws: { signQuery: true } })).url;
+    // Lien signé (3 h) servi par ce Worker en pièce jointe
+    const exp = Math.floor(Date.now() / 1000) + 3 * 3600;
+    const url = `${new URL(req.url).origin}/dl/${encodeURIComponent(fileKey)}?e=${exp}&s=${await signDl(fileKey, exp, env.MEDIA_COOKIE_SECRET)}&n=${encodeURIComponent(name)}`;
     return json({ url, name });
   }
   // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes

@@ -11,6 +11,7 @@ import { Ico } from '../ui/icons';
 import { qs } from '../lib/router';
 import { teamIndex, teamLabel } from '../lib/data';
 import { JoinSheet } from './Explore';
+import { keepAwake } from '../lib/upload';
 import { settingsFromStore, type StoredSettings, type MatchSettings } from '../../../shared/types';
 import { validateScores } from '../../../shared/scores';
 
@@ -81,6 +82,34 @@ function AskAccess({ teamId }: { teamId: number }) {
   );
 }
 
+/** Enregistrer dans Photos : une appli web ne peut pas écrire directement dans Photos ; on télécharge la vidéo dans
+ *  l'appli, puis le partage de l'iPhone propose « Enregistrer la vidéo » (Photos) ou YouTube. Fichier gardé en mémoire :
+ *  le 720p est plus sûr pour une longue vidéo. */
+function SaveToPhotos({ url, name }: { url: string; name: string }) {
+  const s = useSession();
+  const [st, setSt] = useState<{ pc?: number; file?: File; err?: string }>({});
+  const go = async () => {
+    setSt({ pc: 0 }); await keepAwake(true);
+    try {
+      const r = await fetch(url);
+      if (!r.ok || !r.body) throw new Error(String(r.status));
+      const total = Number(r.headers.get('Content-Length')) || 0;
+      const reader = r.body.getReader(); const parts: Uint8Array[] = []; let got = 0;
+      for (;;) { const { done, value } = await reader.read(); if (done) break; parts.push(value); got += value.length; if (total) setSt({ pc: Math.floor((got / total) * 100) }); }
+      setSt({ file: new File(parts as BlobPart[], name, { type: 'video/mp4' }) });
+    } catch { setSt({ err: t('Téléchargement interrompu (vidéo trop lourde pour la mémoire du téléphone ?). Essaie le 720p, ou « Télécharger dans Fichiers ».') }); }
+    finally { keepAwake(false); }
+  };
+  const share = async () => {
+    const f = st.file!;
+    if (!navigator.canShare?.({ files: [f] })) { s.toast(t('Ton téléphone ne permet pas ce partage : utilise « Télécharger dans Fichiers ».')); return; }
+    try { await navigator.share({ files: [f] }); } catch { /* partage annulé */ }
+  };
+  if (st.file) return <button className="btn" onClick={share}><Ico n="image" />{t('Enregistrer dans Photos / YouTube…')}</button>;
+  if (st.pc !== undefined) return <div><div className="progress"><i style={{ width: `${st.pc}%` }} /></div><p className="muted center" style={{ fontSize: 13 }}>{t('Téléchargement {n} % — garde l’appli ouverte', { n: st.pc })}</p></div>;
+  return <>{st.err && <div className="err">{st.err}</div>}<button className="btn" onClick={go}><Ico n="image" />{t('Enregistrer dans Photos')}</button></>;
+}
+
 /** Publier sur YouTube : enregistrer la vidéo, puis l'envoyer depuis l'app YouTube (titre et description prêts à coller) */
 function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVideo; team?: number; onClose: () => void }) {
   const s = useSession();
@@ -107,11 +136,12 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
       <div className="form">
         {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
         <div className="seg">{(['1080p', '720p'] as const).map((x) => <button key={x} className={q === x ? 'on' : ''} onClick={() => setQ(x)}>{x === '1080p' ? t('1080p · grand écran') : t('720p · plus léger')}</button>)}</div>
-        <p className="hint" style={{ margin: 0 }}>{t('1. Touche « Enregistrer la vidéo » puis « Télécharger ». Le fichier arrive dans l’app Fichiers › Téléchargements (il est gros : reste en Wi-Fi).')}</p>
+        <p className="hint" style={{ margin: 0 }}>{t('1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers ». Reste en Wi-Fi.')}</p>
         {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
-          : ok && dl ? <a className="btn" href={dl} target="_blank" rel="noopener noreferrer"><Ico n="video" />{t('Enregistrer la vidéo')}</a>
+          : ok && dl ? <><SaveToPhotos key={dl} url={dl} name={`${mv.title.replace(/[^\w\- ]+/g, '').trim().slice(0, 50) || 'match'} ${q}.mp4`} />
+            <a className="btn secondary" href={dl} target="_blank" rel="noopener noreferrer"><Ico n="folder" />{t('Télécharger dans Fichiers')}</a></>
           : <button className="btn" disabled><Ico n="video" />{t('Enregistrer la vidéo')}</button>}
-        <p className="hint" style={{ margin: 0 }}>{t('2. Dans Fichiers, touche la vidéo › partager › YouTube (ou « Enregistrer la vidéo » pour l’avoir dans Photos). Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».')}</p>
+        <p className="hint" style={{ margin: 0 }}>{t('2. Sur YouTube, colle le titre et la description ci-dessous. Pour un club de jeunes, mets la vidéo plutôt en « Non répertoriée ».')}</p>
         <button className="btn secondary" onClick={() => copy(mv.title)}>{t('Copier le titre')}</button>
         <button className="btn secondary" onClick={() => copy(desc)}>{t('Copier la description')}</button>
         <a className="btn ghost" href="https://www.youtube.com/upload" target="_blank" rel="noopener noreferrer">{t('Ouvrir YouTube')}</a>

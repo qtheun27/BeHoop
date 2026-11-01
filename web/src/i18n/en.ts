@@ -1258,4 +1258,12 @@ export const EN: Record<string, string> = {
   "720p · plus léger": "720p · lighter",
   "Télécharger la vidéo": "Download the video",
   "720p": "720p",
+  "Téléchargement interrompu (vidéo trop lourde pour la mémoire du téléphone ?). Essaie le 720p, ou « Télécharger dans Fichiers ».": "Download interrupted (video too heavy for the phone’s memory?). Try 720p, or “Download to Files”.",
+  "Ton téléphone ne permet pas ce partage : utilise « Télécharger dans Fichiers ».": "Your phone doesn’t allow this share: use “Download to Files”.",
+  "Enregistrer dans Photos / YouTube…": "Save to Photos / YouTube…",
+  "Téléchargement {n} % — garde l’appli ouverte": "Downloading {n} % — keep the app open",
+  "Enregistrer dans Photos": "Save to Photos",
+  "1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers ». Reste en Wi-Fi.": "1. “Save to Photos” downloads the video, then opens the iPhone share sheet: choose “Save Video” or YouTube. For a long video, 720p is safer. Otherwise: “Download to Files”. Stay on Wi-Fi.",
+  "Télécharger dans Fichiers": "Download to Files",
+  "2. Sur YouTube, colle le titre et la description ci-dessous. Pour un club de jeunes, mets la vidéo plutôt en « Non répertoriée ».": "2. On YouTube, paste the title and description below. For a youth team, set the video to “Unlisted”.",
 };

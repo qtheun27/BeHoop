@@ -9,6 +9,11 @@ async function hmac(secret: string, data: string) {
   return b64u(await crypto.subtle.sign('HMAC', k, enc.encode(data)));
 }
 /** Cookie signé (HMAC-SHA256) : « payload.signature », valable 6 h. */
+/** Lien de téléchargement signé (sans cookie : il s'ouvre aussi dans le navigateur intégré, hors de l'appli) */
+export const signDl = (key: string, exp: number, secret: string) => hmac(secret, `dl|${key}|${exp}`);
+export async function verifyDl(key: string, exp: number, sig: string, secret: string, now = Date.now()) {
+  return exp * 1000 > now && !!sig && (await signDl(key, exp, secret)) === sig;
+}
 export async function signCookie(c: MediaClaims, secret: string) {
   const p = b64u(enc.encode(JSON.stringify(c)));
   return `${p}.${await hmac(secret, p)}`;

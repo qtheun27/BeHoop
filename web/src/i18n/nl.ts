@@ -1258,4 +1258,12 @@ export const NL: Record<string, string> = {
   "720p · plus léger": "720p · lichter",
   "Télécharger la vidéo": "Video downloaden",
   "720p": "720p",
+  "Téléchargement interrompu (vidéo trop lourde pour la mémoire du téléphone ?). Essaie le 720p, ou « Télécharger dans Fichiers ».": "Download onderbroken (video te zwaar voor het geheugen van de telefoon?). Probeer 720p, of « Downloaden naar Bestanden ».",
+  "Ton téléphone ne permet pas ce partage : utilise « Télécharger dans Fichiers ».": "Je telefoon laat dit delen niet toe: gebruik « Downloaden naar Bestanden ».",
+  "Enregistrer dans Photos / YouTube…": "Bewaren in Foto’s / YouTube…",
+  "Téléchargement {n} % — garde l’appli ouverte": "Downloaden {n} % — houd de app open",
+  "Enregistrer dans Photos": "Bewaren in Foto’s",
+  "1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers ». Reste en Wi-Fi.": "1. « Bewaren in Foto’s » downloadt de video en opent dan het deelmenu van de iPhone: kies « Bewaar video » of YouTube. Voor een lange video is 720p veiliger. Anders: « Downloaden naar Bestanden ». Blijf op wifi.",
+  "Télécharger dans Fichiers": "Downloaden naar Bestanden",
+  "2. Sur YouTube, colle le titre et la description ci-dessous. Pour un club de jeunes, mets la vidéo plutôt en « Non répertoriée ».": "2. Plak op YouTube de titel en beschrijving hieronder. Voor een jeugdploeg zet je de video best op « Niet vermeld ».",
 };
