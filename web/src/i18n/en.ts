@@ -1199,4 +1199,7 @@ export const EN: Record<string, string> = {
   "Envoi en arrière-plan : {n} %": "Uploading in the background: {n} %",
   "Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).": "Carry on: just keep BeHoop open (the screen stays on).",
   "Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.": "If picking takes a while, the iPhone is fetching the videos from iCloud: stay on this screen, it won’t go to sleep.",
+  "Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.": "To resume, tap “Add” and pick the same videos and photos again: what’s already uploaded won’t be sent again.",
+  "Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.": "Slow or lost connection: the upload resumes by itself as soon as it’s back.",
+  "{n} fichier(s) restant(s)": "{n} file(s) left",
 };

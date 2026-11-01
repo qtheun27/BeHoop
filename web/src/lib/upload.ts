@@ -22,14 +22,32 @@ export async function keepAwake(on: boolean) {
 }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && wake) { wake = null; keepAwake(true); } });
 
-async function putWithRetry(url: string, body: Blob, signal?: AbortSignal): Promise<string> {
+/** Dernier mouvement d'un envoi (octets envoyés) : sert à l'interface pour dire « en attente du réseau » */
+export let lastMove = Date.now();
+const STALL = 45_000;
+/** Un PUT avec suivi des octets (XHR) : si plus rien ne bouge pendant 45 s (connexion figée sans erreur, fréquent en 4G
+ *  ou au passage Wi-Fi ↔ 4G sur iPhone), on coupe et on réessaie ; coupure réseau : on attend son retour. */
+function putOnce(url: string, body: Blob, onBytes: (n: number) => void, signal?: AbortSignal): Promise<string> {
+  return new Promise((res, rej) => {
+    const x = new XMLHttpRequest();
+    let watch = setTimeout(() => x.abort(), STALL);
+    const alive = () => { clearTimeout(watch); watch = setTimeout(() => x.abort(), STALL); lastMove = Date.now(); };
+    x.open('PUT', url);
+    x.upload.onprogress = (e) => { alive(); onBytes(e.loaded); };
+    x.onload = () => { clearTimeout(watch); if (x.status >= 200 && x.status < 300) res((x.getResponseHeader('ETag') ?? '').replaceAll('"', '')); else rej(new Error(`R2 ${x.status}`)); };
+    x.onerror = () => { clearTimeout(watch); rej(new Error('réseau')); };
+    x.onabort = () => { clearTimeout(watch); rej(new Error('bloqué')); };
+    signal?.addEventListener('abort', () => x.abort(), { once: true });
+    x.send(body);
+  });
+}
+export async function putWithRetry(url: string, body: Blob, signal?: AbortSignal, onBytes: (n: number) => void = () => {}): Promise<string> {
   for (let attempt = 0; ; attempt++) {
     try {
-      const r = await fetch(url, { method: 'PUT', body, signal });
-      if (!r.ok) throw new Error(`R2 ${r.status}`);
-      return (r.headers.get('ETag') ?? '').replaceAll('"', '');
+      return await putOnce(url, body, onBytes, signal);
     } catch (e) {
       if (signal?.aborted) throw e;
+      onBytes(0);
       // coupure réseau : on attend le retour du réseau puis on réessaie (backoff jusqu'à 30 s)
       if (!navigator.onLine) await new Promise((r) => window.addEventListener('online', r, { once: true }));
       await new Promise((r) => setTimeout(r, Math.min(30000, 1000 * 2 ** attempt)));
@@ -50,16 +68,20 @@ export async function uploadFile(scope: string, file: File, meta: Record<string,
   const total = Math.ceil(file.size / PART);
   const todo = Array.from({ length: total }, (_, i) => i + 1).filter((n) => !st!.parts[n]);
   let sent = (total - todo.length) * PART;
-  onProgress(Math.min(sent, file.size));
+  const flying = new Map<number, number>();
+  const report = () => onProgress(Math.min(file.size, sent + [...flying.values()].reduce((x, y) => x + y, 0)));
+  report();
   const worker = async () => {
     while (todo.length) {
       const batch = todo.splice(0, 4);
       const { urls } = await api<{ urls: Record<number, string> }>('/upload/sign', { key: st!.key, uploadId: st!.uploadId, parts: batch });
       for (const n of batch) {
         const blob = file.slice((n - 1) * PART, Math.min(n * PART, file.size));
-        st!.parts[n] = await putWithRetry(urls[n], blob, signal);
+        // Avancement en continu (octets de la partie en cours), pas seulement à la fin de chaque partie de 10 Mo
+        st!.parts[n] = await putWithRetry(urls[n], blob, signal, (b) => { flying.set(n, b); report(); });
+        flying.delete(n);
         await save(st!);
-        sent += blob.size; onProgress(Math.min(sent, file.size));
+        sent += blob.size; report();
       }
     }
   };

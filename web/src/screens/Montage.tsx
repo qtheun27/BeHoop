@@ -6,7 +6,7 @@ import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
 import { prepare, compressImage, ACCEPT, type Prepared } from '../lib/media';
-import { uploadFile, uploadSmall, keepAwake, fileId, clearScope } from '../lib/upload';
+import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
@@ -61,15 +61,23 @@ function useUploads() { const [, set] = useState(0); useEffect(() => { const f =
 /** Avancement de l'envoi en arrière-plan (étapes Médias et Vérifier) */
 function BgProgress({ draft }: { draft: Draft }) {
   useUploads();
+  // Rafraîchit l'affichage même sans événement (pour signaler une attente du réseau)
+  const [, tick] = useState(0);
+  useEffect(() => { const i = setInterval(() => tick((x) => x + 1), 5000); return () => clearInterval(i); }, []);
+  const lost = draft.media.filter((m) => !m.excluded && !FILES.get(m.id)).length;
   const media = draft.media.filter((m) => !m.excluded && FILES.get(m.id));
   const total = media.reduce((a, m) => a + FILES.get(m.id)!.size, 0);
+  // Appli rechargée : les fichiers sont à resélectionner (les parties déjà envoyées ne sont pas renvoyées)
+  if (lost && !total) return <div className="banner mt"><Ico n="folder" /><div>{t('Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.')}</div></div>;
   if (!total) return null;
+  const left = media.filter((m) => (PROG.get(m.id) ?? 0) < FILES.get(m.id)!.size).length;
+  const waitingNet = left > 0 && Date.now() - lastMove > 20_000;
   const sent = media.reduce((a, m) => a + Math.min(PROG.get(m.id) ?? 0, FILES.get(m.id)!.size), 0);
   const pc = Math.floor((sent / total) * 100);
   return (
     <div className="banner mt"><Ico n={pc >= 100 ? 'checkCircle' : 'device'} /><div style={{ flex: 1 }}>
       <b>{pc >= 100 ? t('Médias envoyés ✓') : t('Envoi en arrière-plan : {n} %', { n: pc })}</b>
-      {pc < 100 && <div className="muted" style={{ fontSize: 13 }}>{t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')}</div>}
+      {pc < 100 && <div className="muted" style={{ fontSize: 13 }}>{waitingNet ? t('Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.') : t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')} · {t('{n} fichier(s) restant(s)', { n: left })}</div>}
       <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${pc}%` }} /></div></div></div>
   );
 }

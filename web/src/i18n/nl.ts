@@ -1199,4 +1199,7 @@ export const NL: Record<string, string> = {
   "Envoi en arrière-plan : {n} %": "Verzenden op de achtergrond: {n} %",
   "Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).": "Ga gerust verder: houd BeHoop gewoon open (het scherm blijft aan).",
   "Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.": "Duurt het kiezen lang? Dan haalt de iPhone de video’s op uit iCloud: blijf op dit scherm, het gaat niet op slaap.",
+  "Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.": "Om verder te gaan: tik op « Toevoegen » en kies dezelfde video’s en foto’s opnieuw; wat al verzonden is, wordt niet opnieuw verzonden.",
+  "Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.": "Trage of verbroken verbinding: het verzenden gaat vanzelf verder zodra ze terug is.",
+  "{n} fichier(s) restant(s)": "{n} bestand(en) te gaan",
 };
