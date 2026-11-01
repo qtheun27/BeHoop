@@ -5,8 +5,8 @@ import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
-import { prepare, compressImage, ACCEPT, isVideo, type Prepared } from '../lib/media';
-import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize } from '../lib/upload';
+import { prepare, compressImage, thumbData, ACCEPT, isVideo, type Prepared } from '../lib/media';
+import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, PART } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
@@ -46,7 +46,26 @@ let active = 0;
 const waiting: (() => void)[] = [];
 const slot = async () => { if (active >= 2) await new Promise<void>((r) => waiting.push(r)); active++; };
 const free = () => { active--; const next = waiting.shift(); if (next) next(); else if (!active) keepAwake(false); };
+/* Ce que le serveur a déjà, connu sans resélectionner le fichier : clé finale (envoi terminé) ou octets déjà envoyés.
+   Une vidéo entièrement envoyée n'a plus besoin d'être resélectionnée (sur iPhone, la « préparation » d'une longue
+   vidéo par l'app Photos peut prendre plusieurs minutes). */
+const SERVER = new Map<string, { key?: string; sent: number }>();
+async function scanServer(d: Draft) {
+  const done = DONE(d.id);
+  for (const m of d.media) {
+    if (done[m.id]) { SERVER.set(m.id, { key: done[m.id], sent: sizeOf(m) }); continue; }
+    if (m.kind !== 'video' || Number.isNaN(sizeOf(m))) continue;
+    const own = await savedState(m.r2Key).catch(() => undefined);
+    const st = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(sizeOf(m)).catch(() => undefined);
+    if (st) SERVER.set(m.id, st.done ? { key: st.key, sent: st.size } : { sent: Math.min(st.size, Object.keys(st.parts).length * PART) });
+  }
+  ping();
+}
+const isDone = (m: Item) => !!SERVER.get(m.id)?.key;
+const needsFile = (m: Item) => !m.excluded && !isDone(m) && !FILES.get(m.id);
 function uploadItem(d: Draft, item: Item): Promise<string> | null {
+  const k0 = SERVER.get(item.id)?.key;
+  if (k0) return Promise.resolve(k0);
   const f = FILES.get(item.id);
   if (!f) return null;
   let p = UP.get(item.id);
@@ -61,11 +80,14 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
           // Montage recommencé : on reprend aussi l'envoi d'un essai précédent du même fichier (même taille exacte)
           const own = await savedState(item.r2Key);
           const prev = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(f.size);
-          return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, prev?.id ?? item.r2Key);
+          const key = await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, prev?.id ?? item.r2Key);
+          store.set(doneKey(d.id), { ...DONE(d.id), [item.id]: key }); SERVER.set(item.id, { key, sent: f.size });
+          return key;
         }
         const already = DONE(d.id)[item.id];
         const k = already ?? await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: d.id, rush: true });
         if (!already) store.set(doneKey(d.id), { ...DONE(d.id), [item.id]: k });
+        SERVER.set(item.id, { key: k, sent: f.size });
         PROG.set(item.id, f.size); ping();
         return k;
       } finally { free(); }
@@ -84,20 +106,22 @@ function BgProgress({ draft }: { draft: Draft }) {
   // Rafraîchit l'affichage même sans événement (pour signaler une attente du réseau)
   const [, tick] = useState(0);
   useEffect(() => { const i = setInterval(() => tick((x) => x + 1), 5000); return () => clearInterval(i); }, []);
-  const lost = draft.media.filter((m) => !m.excluded && !FILES.get(m.id)).length;
-  const media = draft.media.filter((m) => !m.excluded && FILES.get(m.id));
-  const total = media.reduce((a, m) => a + FILES.get(m.id)!.size, 0);
-  // Appli rechargée : les fichiers sont à resélectionner (les parties déjà envoyées ne sont pas renvoyées)
-  if (lost && !total) return <div className="banner mt"><Ico n="folder" /><div>{t('Pour reprendre l’envoi, touche « Ajouter » et resélectionne les mêmes vidéos et photos : ce qui est déjà envoyé ne sera pas renvoyé.')}</div></div>;
+  useEffect(() => { scanServer(draft); }, [draft.id, draft.media.length]); // eslint-disable-line react-hooks/exhaustive-deps
+  const media = draft.media.filter((m) => !m.excluded);
+  const size = (m: Item) => FILES.get(m.id)?.size ?? sizeOf(m);
+  const total = media.reduce((a, m) => a + (size(m) || 0), 0);
   if (!total) return null;
-  const left = media.filter((m) => (PROG.get(m.id) ?? 0) < FILES.get(m.id)!.size).length;
-  const waitingNet = left > 0 && Date.now() - lastMove > 20_000;
-  const sent = media.reduce((a, m) => a + Math.min(PROG.get(m.id) ?? 0, FILES.get(m.id)!.size), 0);
+  const sentOf = (m: Item) => (isDone(m) ? size(m) : Math.min(size(m), Math.max(PROG.get(m.id) ?? 0, SERVER.get(m.id)?.sent ?? 0)));
+  const sent = media.reduce((a, m) => a + (sentOf(m) || 0), 0);
+  const need = media.filter(needsFile);
+  const left = media.filter((m) => sentOf(m) < size(m)).length;
+  const waitingNet = left > need.length && Date.now() - lastMove > 20_000;
   const pc = Math.floor((sent / total) * 100);
   return (
     <div className="banner mt"><Ico n={pc >= 100 ? 'checkCircle' : 'device'} /><div style={{ flex: 1 }}>
       <b>{pc >= 100 ? t('Médias envoyés ✓') : t('Envoi en arrière-plan : {n} %', { n: pc })}</b>
-      {pc < 100 && <div className="muted" style={{ fontSize: 13 }}>{waitingNet ? t('Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.') : t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')} · {t('{n} fichier(s) restant(s)', { n: left })}</div>}
+      {need.length > 0 && <div style={{ fontSize: 14, margin: '4px 0' }}>{t('Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.', { v: need.filter((m) => m.kind === 'video').length, p: need.filter((m) => m.kind === 'photo').length })}</div>}
+      {pc < 100 && need.length < left && <div className="muted" style={{ fontSize: 13 }}>{waitingNet ? t('Connexion lente ou coupée : l’envoi reprend tout seul dès qu’elle revient.') : t('Continue tranquillement : garde juste BeHoop ouvert (l’écran reste allumé).')} · {t('{n} fichier(s) restant(s)', { n: left })}</div>}
       <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${pc}%` }} /></div></div></div>
   );
 }
@@ -208,7 +232,10 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
     const worker = async () => {
       for (let f = queue.shift(); f; f = queue.shift()) {
         const known = draft.media.find((m) => sameFile(m, f!)) ?? out.find((m) => sameFile(m, f!));
-        if (known) FILES.set(known.id, f); // fichier resélectionné : reprise
+        if (known) { // fichier resélectionné : reprise
+          FILES.set(known.id, f);
+          if (known.kind === 'photo' && !known.thumb?.startsWith('data:')) { const th = await thumbData(f).catch(() => ''); if (th) setDraft((d) => (d ? { ...d, media: d.media.map((x) => (x.id === known.id ? { ...x, thumb: th } : x)) } : d)); }
+        }
         else {
           const p: Prepared = await prepare(f);
           const id = rid(10); FILES.set(id, f);
@@ -241,8 +268,10 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
 }
 
 function Thumb({ m, onClick, sel }: { m: Item; onClick?: () => void; sel?: boolean }) {
+  useUploads();
   return (
     <button className={`thumb${m.excluded || m.offPlay ? ' off' : ''}${m.featured ? ' feat' : ''}`} onClick={onClick} style={{ backgroundImage: m.thumb ? `url(${m.thumb})` : undefined, outline: sel ? '3px solid var(--accent)' : undefined }} aria-label={m.name}>
+      {isDone(m) ? <span className="badge" style={{ left: 'auto', right: 6, top: 6, bottom: 'auto', background: '#1f9d55' }}>✓</span> : needsFile(m) && <span className="badge" style={{ left: 'auto', right: 6, top: 6, bottom: 'auto', background: '#c2410c' }}>{t('à resélectionner')}</span>}
       <span className="badge">{m.kind === 'video' ? <><Ico n="play" /> {m.duration ? Math.round(m.duration) + ' s' : ''}</> : m.scoreboardOfQuarter ? <><Ico n="scoreboard" /> Q{m.scoreboardOfQuarter}</> : <Ico n={m.featured ? 'star' : 'image'} />}</span>
     </button>
   );
@@ -385,10 +414,12 @@ async function dominantColor(b: Blob): Promise<string | null> {
 function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => void }) {
   useUploads();
   const media = draft.media.filter((m) => !m.excluded);
-  const missing = media.filter((m) => !FILES.get(m.id));
+  const missing = media.filter(needsFile);
+  useEffect(() => { scanServer(draft); }, [draft.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
-  const total = media.reduce((a, m) => a + (FILES.get(m.id)?.size ?? 0), 0);
-  const prog = Object.fromEntries(media.map((m) => [m.id, Math.min(PROG.get(m.id) ?? 0, FILES.get(m.id)?.size ?? 0)]));
+  const size = (m: Item) => FILES.get(m.id)?.size ?? (sizeOf(m) || 0);
+  const total = media.reduce((a, m) => a + size(m), 0);
+  const prog = Object.fromEntries(media.map((m) => [m.id, isDone(m) ? size(m) : Math.min(size(m), Math.max(PROG.get(m.id) ?? 0, SERVER.get(m.id)?.sent ?? 0))]));
   const sent = Object.values(prog).reduce((a, b) => a + b, 0);
   const start = async () => {
     setState('sending'); await keepAwake(true);
@@ -423,7 +454,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
           {state === 'sending' && <div className="banner mt"><Ico n="device" /><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
           {state === 'error' && <ErrorBox msg={t('L’envoi a été interrompu. Il reprendra là où il s’était arrêté.')} retry={start} />}
           {state === 'idle' && !missing.length && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
-          <div className="group mt">{media.map((m) => { const f = FILES.get(m.id); const p = f ? (prog[m.id] ?? 0) / f.size : 0; return (
+          <div className="group mt">{media.map((m) => { const p = size(m) ? (prog[m.id] ?? 0) / size(m) : 0; return (
             <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}><Ico n={m.kind === 'video' ? 'video' : 'image'} /> {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>
               <span className="muted" style={{ fontSize: 13, width: 40, textAlign: 'right' }}>{Math.round(p * 100)}%</span></div>); })}</div>
         </>

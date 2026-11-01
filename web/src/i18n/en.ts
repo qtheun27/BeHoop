@@ -1204,4 +1204,6 @@ export const EN: Record<string, string> = {
   "{n} fichier(s) restant(s)": "{n} file(s) left",
   "Reprendre un montage en cours": "Resume a montage in progress",
   "{v} vidéo(s) · {p} photo(s)": "{v} video(s) · {p} photo(s)",
+  "Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.": "To finish, tap “Add” and pick again only: {v} video(s) and {p} photo(s) (marked “pick again”). The rest is already uploaded.",
+  "à resélectionner": "pick again",
 };

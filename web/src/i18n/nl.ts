@@ -1204,4 +1204,6 @@ export const NL: Record<string, string> = {
   "{n} fichier(s) restant(s)": "{n} bestand(en) te gaan",
   "Reprendre un montage en cours": "Een begonnen montage hervatten",
   "{v} vidéo(s) · {p} photo(s)": "{v} video(’s) · {p} foto(’s)",
+  "Pour finir, touche « Ajouter » et resélectionne seulement : {v} vidéo(s) et {p} photo(s) (marquées « à resélectionner »). Le reste est déjà envoyé.": "Om af te ronden: tik op « Toevoegen » en kies alleen opnieuw: {v} video(’s) en {p} foto(’s) (gemarkeerd « opnieuw kiezen »). De rest is al verzonden.",
+  "à resélectionner": "opnieuw kiezen",
 };

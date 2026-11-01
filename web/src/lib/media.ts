@@ -34,6 +34,12 @@ async function quicktimeDate(file: File): Promise<number | null> {
   return (await scan(0, 512 * 1024)) ?? (file.size > 512 * 1024 ? await scan(Math.max(0, file.size - 4 * 1024 * 1024), 4 * 1024 * 1024) : null);
 }
 
+/** Petite vignette intégrée (≈10 Ko), conservée avec le brouillon du montage */
+export async function thumbData(file: File | Blob): Promise<string> {
+  const small = await compressImage(file, 240, .6);
+  return await new Promise<string>((r) => { const fr = new FileReader(); fr.onload = () => r(String(fr.result)); fr.onerror = () => r(''); fr.readAsDataURL(small); });
+}
+
 export interface Prepared { file: File; kind: 'video' | 'photo'; takenAt: number; duration?: number; width?: number; height?: number; thumb: string }
 
 export async function prepare(file: File): Promise<Prepared> {
@@ -59,7 +65,7 @@ export async function prepare(file: File): Promise<Prepared> {
   const takenAt = (exif?.DateTimeOriginal ?? exif?.CreateDate)?.getTime?.() ?? file.lastModified;
   let thumb = '', width, height;
   try {
-    const small = await compressImage(file, 320, .6); thumb = URL.createObjectURL(small);
+    thumb = await thumbData(file);
     const bmp = await createImageBitmap(file); width = bmp.width; height = bmp.height;
   } catch { /* HEIC */ }
   return { file, kind: 'photo', takenAt, width, height, thumb };
