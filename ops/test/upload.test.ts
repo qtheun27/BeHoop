@@ -24,11 +24,13 @@ describe('envoi : connexion figée', () => {
     vi.useFakeTimers();
     const { putWithRetry } = await import('../../web/src/lib/upload');
     const bytes: number[] = [];
-    const p = putWithRetry('https://r2/x', new Blob(['hello']), undefined, (b) => bytes.push(b));
+    let signed = 0;
+    const p = putWithRetry(async () => { signed++; return 'https://r2/x'; }, new Blob(['hello']), undefined, (b) => bytes.push(b));
     await vi.advanceTimersByTimeAsync(46_000); // figé → abandon
     await vi.advanceTimersByTimeAsync(2_000);  // attente avant nouvel essai, puis succès
     await expect(p).resolves.toBe('etag-ok');
     expect(n).toBe(2);
+    expect(signed).toBe(2); // un lien neuf pour le nouvel essai
     expect(bytes).toContain(5);
     vi.useRealTimers();
   });

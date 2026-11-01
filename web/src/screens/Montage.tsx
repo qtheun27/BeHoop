@@ -6,7 +6,7 @@ import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
 import { prepare, compressImage, thumbData, ACCEPT, isVideo, type Prepared } from '../lib/media';
-import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, PART } from '../lib/upload';
+import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, finishSaved, PART } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
@@ -56,7 +56,8 @@ async function scanServer(d: Draft) {
     if (done[m.id]) { SERVER.set(m.id, { key: done[m.id], sent: sizeOf(m) }); continue; }
     if (m.kind !== 'video' || Number.isNaN(sizeOf(m))) continue;
     const own = await savedState(m.r2Key).catch(() => undefined);
-    const st = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(sizeOf(m)).catch(() => undefined);
+    let st = own && (own.done || Object.keys(own.parts).length) ? own : await stateForSize(sizeOf(m)).catch(() => undefined);
+    if (st && !st.done) st = await finishSaved(st).catch(() => st);
     if (st) SERVER.set(m.id, st.done ? { key: st.key, sent: st.size } : { sent: Math.min(st.size, Object.keys(st.parts).length * PART) });
   }
   ping();
@@ -92,8 +93,8 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
         return k;
       } finally { free(); }
     })();
-    // Échec : on oublie la tentative, un nouvel essai repartira de là où l'envoi s'était arrêté
-    p.catch(() => { UP.delete(item.id); INIT.delete(d.id); ping(); });
+    // Échec : on oublie la tentative et on réessaie tout seul 15 s plus tard (reprise là où l'envoi s'était arrêté)
+    p.catch(() => { UP.delete(item.id); INIT.delete(d.id); ping(); setTimeout(() => { if (FILES.get(item.id) && !SERVER.get(item.id)?.key) uploadItem(d, item); }, 15_000); });
     UP.set(item.id, p);
   }
   return p;

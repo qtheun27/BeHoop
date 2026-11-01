@@ -151,7 +151,12 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const mv = /^rushes\/([a-z0-9]+)\//.exec(body.key)?.[1]; if (!mv) return fail('clé invalide');
     await ownVideo(mv);
     const up = env.BUCKET.resumeMultipartUpload(body.key, body.uploadId);
-    await up.complete((body.parts as { partNumber: number; etag: string }[]).sort((a, b) => a.partNumber - b.partNumber));
+    try { await up.complete((body.parts as { partNumber: number; etag: string }[]).sort((a, b) => a.partNumber - b.partNumber)); }
+    catch (e) {
+      // Déjà assemblé (la réponse s'était perdue sur le réseau) : le fichier existe, c'est terminé
+      if (await env.BUCKET.head(body.key)) return json({ ok: true });
+      throw e;
+    }
     return json({ ok: true });
   }
   // Vidéo perso remplacée ou retirée : on supprime le fichier (seulement dans son propre dossier clips/{uid}/)
