@@ -279,7 +279,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     // Lien signé (3 h) servi par ce Worker en pièce jointe
     const exp = Math.floor(Date.now() / 1000) + 3 * 3600;
     const url = `${new URL(req.url).origin}/dl/${encodeURIComponent(fileKey)}?e=${exp}&s=${await signDl(fileKey, exp, env.MEDIA_COOKIE_SECRET)}&n=${encodeURIComponent(name)}`;
-    return json({ url, name });
+    const size = (await env.BUCKET.head(fileKey))?.size ?? 0;
+    return json({ url, name, size });
   }
   // Fichier MP4 à la demande (publication YouTube) : auteur du montage seulement
   if (path === '/mp4') {

@@ -93,6 +93,8 @@ function AskAccess({ teamId }: { teamId: number }) {
 /** Enregistrer dans Photos : une appli web ne peut pas écrire directement dans Photos ; on télécharge la vidéo dans
  *  l'appli, puis le partage de l'iPhone propose « Enregistrer la vidéo » (Photos) ou YouTube. Fichier gardé en mémoire :
  *  le 720p est plus sûr pour une longue vidéo. */
+/** Au-delà, iOS ferme l'appli faute de mémoire avant la fin (la vidéo doit tenir en entier dans l'appli pour le partage) */
+const PHOTOS_MAX = 350_000_000;
 function SaveToPhotos({ url, name }: { url: string; name: string }) {
   const s = useSession();
   const [st, setSt] = useState<{ pc?: number; file?: File; err?: string }>({});
@@ -136,7 +138,8 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   const [ok, setOk] = useState(!youth);
   // Lien de téléchargement préparé à l'avance (le toucher doit ouvrir le lien directement, sinon iOS le bloque)
   const [dl, setDl] = useState<string | null>(null);
-  useEffect(() => { setDl(null); if (mp4 && ok) api<{ url: string }>('/download', { matchVideoId: id, quality: q }).then((r) => setDl(r.url)).catch(() => s.toast(t('Lien de téléchargement indisponible. Réessaie.'))); }, [mp4, ok, q]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [size, setSize] = useState(0);
+  useEffect(() => { setDl(null); if (mp4 && ok) api<{ url: string; size?: number }>('/download', { matchVideoId: id, quality: q }).then((r) => { setDl(r.url); setSize(r.size ?? 0); }).catch(() => s.toast(t('Lien de téléchargement indisponible. Réessaie.'))); }, [mp4, ok, q]); // eslint-disable-line react-hooks/exhaustive-deps
   const desc = `${mv.title}\n${t('Vidéo du match réalisée avec BeHoop')} : ${shareUrl(id, team)}`;
   const copy = (x: string) => navigator.clipboard?.writeText(x).then(() => s.toast(t('Copié.'))).catch(() => {});
   return (
@@ -146,7 +149,8 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
         <div className="seg">{(['1080p', '720p'] as const).map((x) => <button key={x} className={q === x ? 'on' : ''} onClick={() => setQ(x)}>{x === '1080p' ? t('1080p · grand écran') : t('720p · plus léger')}</button>)}</div>
         <p className="hint" style={{ margin: 0 }}>{t('1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers (Safari) » : Safari demande « Télécharger », le suivi est sous la flèche ↓. Reste en Wi-Fi.')}</p>
         {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
-          : ok && dl ? <><SaveToPhotos key={dl} url={dl} name={`${mv.title.replace(/[^\w\- ]+/g, '').trim().slice(0, 50) || 'match'} ${q}.mp4`} />
+          : ok && dl ? <>{size && size <= PHOTOS_MAX ? <SaveToPhotos key={dl} url={dl} name={`${mv.title.replace(/[^\w\- ]+/g, '').trim().slice(0, 50) || 'match'} ${q}.mp4`} />
+              : <p className="hint" style={{ margin: 0 }}>{t('Vidéo trop lourde ({g} Go) pour aller directement dans Photos : télécharge-la dans Fichiers, puis dans Fichiers touche-la › partager › « Enregistrer la vidéo ».', { g: (size / 1e9).toFixed(1) })}</p>}
             <a className="btn secondary" href={inSafari(dl)} target="_blank" rel="noopener noreferrer"><Ico n="folder" />{t('Télécharger dans Fichiers (Safari)')}</a></>
           : <button className="btn" disabled><Ico n="video" />{t('Enregistrer la vidéo')}</button>}
         <p className="hint" style={{ margin: 0 }}>{t('2. Sur YouTube, colle le titre et la description ci-dessous. Pour un club de jeunes, mets la vidéo plutôt en « Non répertoriée ».')}</p>
