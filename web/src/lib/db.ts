@@ -84,8 +84,8 @@ export async function myMemberships(uid: string): Promise<Membership[]> {
   return s.docs.map((d) => d.data() as Membership);
 }
 /** child : prénom de l'enfant (demande d'un parent) — à l'acceptation, le parent est relié à sa fiche joueur dans le club */
-export async function requestJoin(uid: string, teamId: number, displayName: string, message: string, relation: Relation, child = '') {
-  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', relation, message: message.slice(0, 200), displayName, ...(child.trim() ? { child: child.trim().slice(0, 40) } : {}), createdAt: serverTimestamp() });
+export async function requestJoin(uid: string, teamId: number, displayName: string, message: string, relation: Relation, child = '', video = '') {
+  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', relation, message: message.slice(0, 200), displayName, ...(child.trim() ? { child: child.trim().slice(0, 40) } : {}), ...(/^[a-z0-9]{8,32}$/.test(video) ? { video } : {}), createdAt: serverTimestamp() });
   notifyApi('/notify/join-request', { teamId }); // prévient les responsables
 }
 export async function teamMembersList(teamId: number): Promise<Membership[]> {

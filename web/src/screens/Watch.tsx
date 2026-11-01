@@ -4,7 +4,7 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, useAsync } from '../ui/kit';
-import { store, haptic } from '../lib/util';
+import { store, haptic, setReturnTo } from '../lib/util';
 import type { Chapter } from '../../../shared/chapters';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
@@ -85,7 +85,7 @@ function AskAccess({ teamId }: { teamId: number }) {
         ? t('Ta demande pour {e} est envoyée. Dès que le coach l’accepte, tu reçois une notification et tu peux revenir sur ce lien.', { e: info.data.name })
         : t('Pour protéger les jeunes, cette vidéo est visible par les membres de {e}. Demande l’accès : le coach accepte en un geste.', { e: info.data?.name ?? t('l’équipe') })}
         action={!info.data?.pending && <button className="btn" onClick={() => setOpen(true)}>{t('Demander l’accès à l’équipe')}</button>} />
-      {open && <JoinSheet teamId={teamId} name={info.data?.name ?? ''} onClose={() => { setOpen(false); info.reload(); }} />}
+      {open && <JoinSheet teamId={teamId} name={info.data?.name ?? ''} video={location.hash.replace(/^#\/video\//, '').split('?')[0]} onClose={() => { setOpen(false); info.reload(); }} />}
     </Screen>
   );
 }
@@ -168,7 +168,7 @@ export default function Watch({ id, t: part }: { id: string; t?: string }) {
   const s = useSession();
   const v = useAsync(async () => { await ensureMediaCookie(); const x = await D.getDoc(D.doc(D.db, 'matchVideos', id)); return x.exists() ? (x.data() as MatchVideo) : null; }, [id, s.user?.uid]);
   const team = Number(qs().get('e')) || undefined;
-  if (!s.user) return <Screen title={t('Vidéo')} back="fil"><Empty ill="video" title={t('Une vidéo de match t’attend')} text={t('Crée ton compte BeHoop gratuit en 30 secondes pour la regarder : tu reviens ici juste après.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte / me connecter')}</button>} /></Screen>;
+  if (!s.user) { setReturnTo(location.hash); return <Screen title={t('Vidéo')} back="fil"><Empty ill="video" title={t('Une vidéo de match t’attend')} text={t('Crée ton compte BeHoop gratuit en 30 secondes pour la regarder : tu reviens ici juste après.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte / me connecter')}</button>} /></Screen>; }
   if (v.error && team) return <AskAccess teamId={team} />;
   if (v.error) return <Screen title={t('Vidéo')} back="fil"><ErrorBox msg={v.error === t('Accès refusé.') ? t('Cette vidéo est réservée aux membres de l’Équipe.') : v.error} retry={v.reload} /></Screen>;
   if (v.loading) return <Screen title={t('Vidéo')} back="fil"><Skeleton h={220} n={2} /></Screen>;

@@ -1,4 +1,12 @@
 export const haptic = (ms = 10) => { try { navigator.vibrate?.(ms); } catch { /* iOS : pas de vibration */ } };
+/** Page à retrouver après connexion / inscription (lien de vidéo partagé) : gardée 1 jour */
+export const setReturnTo = (hash: string) => { try { localStorage.setItem('behoop.returnTo', JSON.stringify({ hash, at: Date.now() })); } catch { /* */ } };
+export function peekReturnTo(): string | null {
+  try { const v = JSON.parse(localStorage.getItem('behoop.returnTo') ?? 'null'); return v && Date.now() - v.at < 864e5 ? v.hash : null; } catch { return null; }
+}
+export function takeReturnTo(): string | null {
+  try { const v = JSON.parse(localStorage.getItem('behoop.returnTo') ?? 'null'); localStorage.removeItem('behoop.returnTo'); return v && Date.now() - v.at < 864e5 ? v.hash : null; } catch { return null; }
+}
 export const store = {
   get<T>(k: string, d: T): T { try { const v = localStorage.getItem(k); return v ? (JSON.parse(v) as T) : d; } catch { return d; } },
   set(k: string, v: unknown) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* stockage indisponible */ } },

@@ -9,7 +9,7 @@ import * as D from '../lib/db';
 import { loadIndex, loadComps, normalize, teamLabel, type Club, type Competition } from '../lib/data';
 import { CompLogo } from '../ui/CompLogo';
 import { Sheet, Disc, Skeleton } from '../ui/kit';
-import { haptic, shortName, store } from '../lib/util';
+import { haptic, shortName, store, takeReturnTo, peekReturnTo } from '../lib/util';
 import { enableNotifications } from '../lib/push';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
@@ -122,7 +122,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
 function afterLogin(then: (() => void) | null | undefined, close: () => void) {
   close();
   if (typeof then === 'function') then();
-  else if (/^#\/(profil)?$/.test(location.hash) || !location.hash) location.hash = '#/fil';
+  else { const back = takeReturnTo(); if (back) location.hash = back; else if (/^#\/(profil)?$/.test(location.hash) || !location.hash) location.hash = '#/fil'; }
 }
 
 /** Termine la connexion par lien magique au retour sur l'appli. */
@@ -131,7 +131,7 @@ export async function completeEmailLink() {
   let email = store.get('behoop.email', '');
   if (!email) email = prompt(t('Confirme ton adresse e-mail')) ?? '';
   if (email) await signInWithEmailLink(auth, email, location.href).catch(() => {});
-  history.replaceState(null, '', '/app/#/fil');
+  history.replaceState(null, '', `/app/${peekReturnTo() ?? '#/fil'}`);
 }
 completeEmailLink();
 
@@ -162,7 +162,7 @@ export function Onboarding() {
     }
     for (const c of pickedComps) await D.followComp(s.user.uid, c);
     await D.updateProfile(s.user.uid, { onboarded: true });
-    await s.refresh(); location.hash = '/fil';
+    await s.refresh(); location.hash = takeReturnTo() ?? '/fil';
   };
   return (
     <main className="screen no-tabs">

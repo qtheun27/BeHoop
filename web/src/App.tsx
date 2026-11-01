@@ -41,7 +41,8 @@ export function App() {
   const [page, a, b] = useRoute();
   useEffect(() => { if (s.ready) hideSplash(); }, [s.ready]);
   if (!s.ready) return <Loader full />;
-  if (s.user && s.profile && !s.profile.onboarded) return <Onboarding />;
+  // Arrivé par un lien de vidéo partagée : directement la vidéo ; le choix des clubs viendra à la prochaine ouverture
+  if (s.user && s.profile && !s.profile.onboarded && !/^#\/video\//.test(location.hash)) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
 
   // Espace Club : sa propre ambiance et sa propre navigation (pas de parquet, pas de barre du bas de l'espace loisir)

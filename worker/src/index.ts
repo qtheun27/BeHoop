@@ -381,7 +381,9 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (m?.status === 'accepted') {
       // Un seul système de rôles : la demande acceptée crée le rôle dans le club (joueur et sa fiche, parent relié à l'enfant, coach de l'équipe)
       await grantFromJoin(uid, teamId, m).catch((e) => console.error('rôle club', e));
-      await sendToUsers(fs, env, [uid], { title: N.welcomeTitle, body: N.welcomeBody, url: `/app/#/equipes/${teamId}` }, 'joinAccepted', null);
+      // Demande faite depuis une vidéo partagée : la notification ramène sur la vidéo
+      const back = /^[a-z0-9]{8,32}$/.test(String(m.video ?? '')) ? `/app/#/video/${m.video}` : `/app/#/equipes/${teamId}`;
+      await sendToUsers(fs, env, [uid], { title: N.welcomeTitle, body: N.welcomeBody, url: back }, 'joinAccepted', null);
     }
     return json({ ok: true });
   }

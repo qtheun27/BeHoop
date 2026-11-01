@@ -175,7 +175,7 @@ export function TeamPage({ id }: { id: number }) {
 }
 
 const RELATIONS: [D.Relation, string][] = [['parent', 'Parent'], ['joueur', 'Joueur'], ['coach', 'Coach'], ['autre', 'Autre']];
-export function JoinSheet({ teamId, name, onClose }: { teamId: number; name: string; onClose: () => void }) {
+export function JoinSheet({ teamId, name, video, onClose }: { teamId: number; name: string; video?: string; onClose: () => void }) {
   const s = useSession();
   const [m, setM] = useState('');
   const [rel, setRel] = useState<D.Relation | null>(null);
@@ -189,7 +189,7 @@ export function JoinSheet({ teamId, name, onClose }: { teamId: number; name: str
         <input id="jc" className="field" maxLength={40} value={child} onChange={(e) => setChild(e.target.value)} /></>}
       <label className="label" htmlFor="jm">{t('Message (optionnel)')}</label>
       <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? t('Je suis le papa / la maman de…') : t('Un mot pour le responsable…')} value={m} onChange={(e) => setM(e.target.value)} />
-      <button className="btn mt" disabled={!rel || (rel === 'parent' && !child.trim())} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!, child); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
+      <button className="btn mt" disabled={!rel || (rel === 'parent' && !child.trim())} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!, child, video); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
     </Sheet>
   );
 }
