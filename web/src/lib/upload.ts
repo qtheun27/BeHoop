@@ -56,8 +56,7 @@ export async function putWithRetry(url: string, body: Blob, signal?: AbortSignal
 }
 
 /** Envoie un fichier (multipart), en reprenant si possible. onProgress reçoit les octets envoyés. */
-export async function uploadFile(scope: string, file: File, meta: Record<string, unknown>, onProgress: (sent: number) => void, signal?: AbortSignal): Promise<string> {
-  const id = fileId(scope, file);
+export async function uploadFile(scope: string, file: File, meta: Record<string, unknown>, onProgress: (sent: number) => void, signal?: AbortSignal, id = fileId(scope, file)): Promise<string> {
   let st = await savedState(id);
   if (st?.done) { onProgress(file.size); return st.key; }
   if (!st) {

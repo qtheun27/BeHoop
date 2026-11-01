@@ -5,7 +5,7 @@ import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
-import { prepare, compressImage, ACCEPT, type Prepared } from '../lib/media';
+import { prepare, compressImage, ACCEPT, isVideo, type Prepared } from '../lib/media';
 import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
@@ -26,6 +26,18 @@ const FILES = new Map<string, File>();
 /* Envoi en arrière-plan : il démarre dès la sélection des médias, pendant que l'utilisateur vérifie le score et les équipes.
    À l'étape « Envoi », il ne reste souvent plus rien à envoyer. Reprise après coupure : voir lib/upload (IndexedDB). */
 const UP = new Map<string, Promise<string>>();
+/* Reconnaître un fichier resélectionné : sur iPhone, l'app Photos donne un nouveau nom et une nouvelle date à chaque
+   sélection ; seule la taille exacte (en octets) reste la même. L'id d'origine (r2Key avant envoi) contient cette taille. */
+const sizeOf = (m: Item) => Number(/:(\d+):\d+$/.exec(m.r2Key)?.[1] ?? NaN);
+const sameFile = (m: Item, f: File) => m.r2Key.endsWith(`:${f.size}:${f.lastModified}`) || (sizeOf(m) === f.size && m.kind === (isVideo(f) ? 'video' : 'photo'));
+/** Photos déjà envoyées (clé R2), gardées entre deux ouvertures de l'appli */
+const doneKey = (draftId: string) => `behoop.montage.done.${draftId}`;
+const DONE = (draftId: string) => store.get<Record<string, string>>(doneKey(draftId), {});
+/** Doublons (même fichier ajouté deux fois avant cette correction) : on garde le premier, qui porte l'envoi déjà fait */
+function dedupe(media: Item[]): Item[] {
+  const seen = new Map<string, Item>();
+  return media.filter((m) => { const k = `${m.kind}:${sizeOf(m)}`; const first = seen.get(k); if (!first || Number.isNaN(sizeOf(m))) { seen.set(k, m); return true; } if (!FILES.get(first.id) && FILES.get(m.id)) FILES.set(first.id, FILES.get(m.id)!); return false; });
+}
 const PROG = new Map<string, number>();
 const INIT = new Map<string, Promise<unknown>>();
 const listeners = new Set<() => void>();
@@ -44,8 +56,11 @@ function uploadItem(d: Draft, item: Item): Promise<string> | null {
       await INIT.get(d.id);
       await slot(); keepAwake(true);
       try {
-        if (item.kind === 'video') return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); });
-        const k = await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: d.id, rush: true });
+        // Vidéo : reprise des parties déjà envoyées, retrouvées par l'id d'origine du fichier (pas celui du fichier resélectionné)
+        if (item.kind === 'video') return await uploadFile(d.id, f, { matchVideoId: d.id, kind: 'video' }, (n) => { PROG.set(item.id, n); ping(); }, undefined, item.r2Key);
+        const already = DONE(d.id)[item.id];
+        const k = already ?? await uploadSmall('photo', await compressImage(f, 2048), { matchVideoId: d.id, rush: true });
+        if (!already) store.set(doneKey(d.id), { ...DONE(d.id), [item.id]: k });
         PROG.set(item.id, f.size); ping();
         return k;
       } finally { free(); }
@@ -84,7 +99,7 @@ function BgProgress({ draft }: { draft: Draft }) {
 
 export default function Montage({ id }: { id: string }) {
   const s = useSession();
-  const [draft, setDraft] = useState<Draft | null>(() => (id && id !== 'new' ? store.get<Draft | null>(draftKey(id), null) : null));
+  const [draft, setDraft] = useState<Draft | null>(() => { const d = id && id !== 'new' ? store.get<Draft | null>(draftKey(id), null) : null; return d ? { ...d, media: dedupe(d.media) } : null; });
   useEffect(() => { if (draft && draft.step < 4) saveDraft(draft); }, [draft]);
   if (!s.user) return <Screen title={t('Montage')} back="publier"><Empty ill="video" title={t('Connecte-toi pour créer une vidéo')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
   if (id && id !== 'new' && !draft) return <RenderStatus id={id} />;
@@ -155,6 +170,8 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
 function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<React.SetStateAction<Draft | null>> }) {
   const [busy, setBusy] = useState('');
   const upd = (p: Partial<Draft>) => setDraft({ ...draft, ...p });
+  // Montage commencé avec l'ancienne version : on retire les doublons (fichiers resélectionnés pris pour des nouveaux)
+  useEffect(() => { const m = dedupe(draft.media); if (m.length !== draft.media.length) setDraft((d) => (d ? { ...d, media: assignQuarters(dedupe(d.media)) } : d)); }, [draft.media.length]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { kick(draft); }, [draft.media]); // eslint-disable-line react-hooks/exhaustive-deps
   const addFiles = async (list: FileList | null) => {
     if (!list?.length) return;
@@ -165,7 +182,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
     const queue = [...arr];
     const worker = async () => {
       for (let f = queue.shift(); f; f = queue.shift()) {
-        const known = draft.media.find((m) => m.r2Key === fileId(draft.id, f!));
+        const known = draft.media.find((m) => sameFile(m, f!)) ?? out.find((m) => sameFile(m, f!));
         if (known) FILES.set(known.id, f); // fichier resélectionné : reprise
         else {
           const p: Prepared = await prepare(f);
@@ -357,7 +374,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
       await api('/render', { matchVideoId: draft.id, media: mediaOut, settings: draft.settings });
       await keepAwake(false); await clearScope(draft.id);
       media.forEach((m) => { UP.delete(m.id); PROG.delete(m.id); });
-      store.set(draftKey(draft.id), null); haptic(30);
+      store.set(draftKey(draft.id), null); store.set(doneKey(draft.id), null); haptic(30);
       setDraft({ ...draft, step: 4 });
     } catch { setState('error'); await keepAwake(false); }
   };
@@ -370,7 +387,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
       {missing.length > 0 ? (
         <div className="banner"><Ico n="folder" /><div style={{ flex: 1 }}>{t('L’appli a été fermée : resélectionne les {n} fichier(s) pour reprendre l’envoi là où il s’était arrêté.', { n: missing.length })}
           <label className="btn small mt">{t('Resélectionner')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => {
-            Array.from(e.target.files ?? []).forEach((f) => { const m = draft.media.find((x) => x.r2Key === fileId(draft.id, f)); if (m) FILES.set(m.id, f); });
+            Array.from(e.target.files ?? []).forEach((f) => { const m = draft.media.find((x) => sameFile(x, f)); if (m) FILES.set(m.id, f); });
             setDraft({ ...draft });
           }} /></label></div></div>
       ) : (
