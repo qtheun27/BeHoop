@@ -7,9 +7,13 @@ on:
       matchVideoId:
         description: 'Identifiant de la vidéo (matchVideos/{id})'
         required: true
+      quality:
+        description: '1080p ou 720p'
+        required: false
+        default: '1080p'
 
 concurrency:
-  group: mp4-${{ inputs.matchVideoId }}
+  group: mp4-${{ inputs.matchVideoId }}-${{ inputs.quality }}
   cancel-in-progress: false
 
 jobs:
@@ -30,7 +34,7 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Assemblage du MP4
-        run: npx tsx ops/render/mp4.ts "${{ inputs.matchVideoId }}"
+        run: npx tsx ops/render/mp4.ts "${{ inputs.matchVideoId }}" "${{ inputs.quality }}"
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}

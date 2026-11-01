@@ -252,13 +252,14 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   if (path === '/download') {
     const id = String(body.matchVideoId ?? '');
     const v = await fs.get<any>(`matchVideos/${id}`);
-    if (!v?.hls?.mp4Key) return fail('Fichier pas encore prêt', 404);
+    const fileKey = body.quality === '720p' ? v?.hls?.mp4Key : v?.hls?.mp4Key1080 ?? (body.quality ? undefined : v?.hls?.mp4Key);
+    if (!fileKey) return fail('Fichier pas encore prêt', 404);
     let ok = v.visibility === 'public' || v.authorUid === user.uid || isAdmin;
     for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
     if (!ok) return fail('Accès refusé', 403);
-    const name = `${String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 60) || 'match'}.mp4`;
+    const name = `${String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 60) || 'match'}${fileKey.includes('1080p') ? ' 1080p' : ''}.mp4`;
     const q = `response-content-disposition=${encodeURIComponent(`attachment; filename="${name}"`)}&response-content-type=video%2Fmp4`;
-    const url = (await s3.sign(new Request(`${r2url(v.hls.mp4Key)}?${q}&X-Amz-Expires=3600`, { method: 'GET' }), { aws: { signQuery: true } })).url;
+    const url = (await s3.sign(new Request(`${r2url(fileKey)}?${q}&X-Amz-Expires=3600`, { method: 'GET' }), { aws: { signQuery: true } })).url;
     return json({ url, name });
   }
   // Fichier MP4 720p à la demande (publication YouTube) : auteur du montage, super admin ou responsable (coach, admin) d'une des équipes
@@ -269,8 +270,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     let ok = v.authorUid === user.uid || isAdmin;
     for (const t of (v.teamIds ?? []) as number[]) if (!ok && t) { const m = await fs.get<any>(`teamMembers/${t}/members/${user.uid}`); ok = m?.role === 'responsable' && m?.status === 'accepted'; }
     if (!ok) return fail('Accès refusé', 403);
-    if (v.hls?.mp4Key) return json({ ok: true, ready: true });
-    if (v.mp4Status !== 'queued' && v.mp4Status !== 'running') { await fs.set(`matchVideos/${id}`, { mp4Status: 'queued' }); await dispatch(env, 'mp4.yml', { matchVideoId: id }); }
+    const q = body.quality === '720p' ? '720p' : '1080p';
+    const key = q === '1080p' ? v.hls?.mp4Key1080 : v.hls?.mp4Key, st = q === '1080p' ? 'mp4Status1080' : 'mp4Status';
+    if (key) return json({ ok: true, ready: true });
+    if (v[st] !== 'queued' && v[st] !== 'running') { await fs.set(`matchVideos/${id}`, { [st]: 'queued' }); await dispatch(env, 'mp4.yml', { matchVideoId: id, quality: q }); }
     return json({ ok: true, ready: false });
   }
   if (path === '/moments') {

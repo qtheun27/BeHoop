@@ -1254,4 +1254,8 @@ export const NL: Record<string, string> = {
   "Lien de téléchargement indisponible. Réessaie.": "Downloadlink niet beschikbaar. Probeer opnieuw.",
   "1. Touche « Enregistrer la vidéo » puis « Télécharger ». Le fichier arrive dans l’app Fichiers › Téléchargements (il est gros : reste en Wi-Fi).": "1. Tik op « Video bewaren » en dan op « Download ». Het bestand komt in de app Bestanden › Downloads (het is groot: blijf op wifi).",
   "2. Dans Fichiers, touche la vidéo › partager › YouTube (ou « Enregistrer la vidéo » pour l’avoir dans Photos). Pour un club de jeunes, mets-la plutôt en « Non répertoriée ».": "2. Tik in Bestanden op de video › delen › YouTube (of « Bewaar video » om ze in Foto’s te hebben). Voor een jeugdploeg zet je ze best op « Niet vermeld ».",
+  "1080p · grand écran": "1080p · groot scherm",
+  "720p · plus léger": "720p · lichter",
+  "Télécharger la vidéo": "Video downloaden",
+  "720p": "720p",
 };
