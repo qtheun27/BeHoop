@@ -2,8 +2,7 @@ name: Notifications et purge
 
 # Toutes les 30 min : « Match dans 2 h », rappel covoiturage (la veille à 18 h), purge des rushes après 48 h.
 on:
-  schedule:
-    - cron: '5,35 * * * *'
+  # Déclenché par l'horloge du Worker (worker/src/index.ts, scheduled) : plus fiable que la planification de GitHub
   workflow_dispatch:
 
 concurrency: { group: notify, cancel-in-progress: false }

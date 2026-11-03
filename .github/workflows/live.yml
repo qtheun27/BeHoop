@@ -2,9 +2,7 @@
 # de se terminer (ops/live-results.ts). Rien à chercher → le script s'arrête aussitôt. La mise à jour complète reste update.yml.
 name: Résultats rapides
 on:
-  schedule:
-    - cron: '*/15 8-23 * * *'
-    - cron: '*/15 0 * * *'
+  # Déclenché par l'horloge du Worker (worker/src/index.ts, scheduled) : plus fiable que la planification de GitHub
   workflow_dispatch:
 permissions: { contents: read }
 concurrency: { group: live-results, cancel-in-progress: false }

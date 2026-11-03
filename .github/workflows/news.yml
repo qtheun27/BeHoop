@@ -2,8 +2,7 @@ name: Actualités basket
 
 # Toutes les 2 heures : titres et liens des actus (Belgique, international, NBA) → app-data/news.json
 on:
-  schedule:
-    - cron: '20 */2 * * *'
+  # Déclenché par l'horloge du Worker (worker/src/index.ts, scheduled) : plus fiable que la planification de GitHub
   workflow_dispatch:
 
 concurrency: { group: news, cancel-in-progress: false }

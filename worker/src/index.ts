@@ -29,7 +29,23 @@ function cors(req: Request, env: Env): Record<string, string> {
     'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS', 'Access-Control-Expose-Headers': 'Content-Length, Content-Range', Vary: 'Origin' };
 }
 
+/** Horloge des mises à jour (toutes les 15 min, heure UTC) → workflows GitHub :
+ *  résultats rapides toutes les 15 min (8 h–1 h), notifications toutes les 30 min, actus toutes les 2 h,
+ *  mise à jour complète à 6 h et 18 h. */
+export function dueWorkflows(d: Date): string[] {
+  const h = d.getUTCHours(), m = Math.round(d.getUTCMinutes() / 15) * 15 % 60;
+  const out: string[] = [];
+  if (h >= 8 || h === 0) out.push('live.yml');
+  if (m === 0 || m === 30) out.push('notify.yml');
+  if (h % 2 === 0 && m === 15) out.push('news.yml');
+  if ((h === 6 || h === 18) && m === 0) out.push('update.yml');
+  return out;
+}
+
 export default {
+  async scheduled(ev: ScheduledController, env: Env, ctx: ExecutionContext) {
+    for (const w of dueWorkflows(new Date(ev.scheduledTime))) ctx.waitUntil(dispatch(env, w, {}).catch((e) => console.error('horloge', w, String(e))));
+  },
   async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(req.url);
     // auth.behoop.be : pages de connexion Firebase (Google…) servies sous le domaine BeHoop plutôt que sous

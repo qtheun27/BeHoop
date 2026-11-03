@@ -6,6 +6,11 @@ compatibility_flags = ["nodejs_compat"]
 
 routes = [{ pattern = "media.behoop.be", custom_domain = true }, { pattern = "auth.behoop.be", custom_domain = true }]
 
+# Horloge des mises à jour (voir scheduled() dans src/index.ts) : les tâches planifiées de GitHub sont souvent
+# retardées ou sautées ; Cloudflare déclenche à l'heure et lance les workflows GitHub correspondants.
+[triggers]
+crons = ["*/15 * * * *"]
+
 [[r2_buckets]]
 binding = "BUCKET"
 bucket_name = "behoop-media"
