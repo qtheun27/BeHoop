@@ -7,7 +7,7 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { clubColors } from '../lib/theme';
 import { frDate, mapsUrl } from '../lib/util';
-import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
+import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync, MoreList } from '../ui/kit';
 import { t, tn } from '../lib/i18n';
 import { CalendarButton } from '../ui/CalendarButton';
 import { PostCard, ScoreCard, type ScorePayload } from './Feed';
@@ -126,12 +126,12 @@ function ClubSection({ club, games, idx, news, onPick }: { club: Club; games: Ga
       <Tabs value={tab} onChange={setTab} items={[['fil', 'news', 'Fil du club'], ['matchs', 'calendar', 'Matchs'], ['equipes', 'users', 'Équipes']] as const} />
       {tab === 'fil' && <HubFeed posts={posts.data} error={posts.error} retry={posts.reload} games={games} teamIds={tids} idx={idx} news={news} />}
       {tab === 'matchs' && (() => {
-        const next = games.filter((g) => g.d >= today && !isPlayed(g)).slice(0, 12);
-        const recent = games.filter(isPlayed).slice(-12).reverse();
+        const next = games.filter((g) => g.d >= today && !isPlayed(g));
+        const recent = games.filter(isPlayed).reverse();
         return <>
           {club.linked && <LinkedClub id={club.linked} />}
-          {next.length > 0 && <><div className="group-title">{t('Prochains matchs')}</div><div className="group">{next.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
-          {recent.length > 0 && <><div className="group-title">{t('Derniers résultats')}</div><div className="group">{recent.map((g) => <GameRow key={g.id} g={g} teamIds={tids} />)}</div></>}
+          {next.length > 0 && <><div className="group-title">{t('Prochains matchs')}</div><MoreList items={next} step={12} render={(g) => <GameRow key={g.id} g={g} teamIds={tids} />} /></>}
+          {recent.length > 0 && <><div className="group-title">{t('Derniers résultats')}</div><MoreList items={recent} step={12} render={(g) => <GameRow key={g.id} g={g} teamIds={tids} />} /></>}
           {!next.length && !recent.length && <Empty ill="calendar" title={t('Aucun match pour l\'instant')} />}
         </>;
       })()}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSession } from '../lib/session';
 import { trainingsOf, type Training } from '../club/api';
 import { loadClub, teamIndex, isPlayed, teamLabel, type Game } from '../lib/data';
-import { Screen, Empty, Skeleton, ErrorBox, useAsync } from '../ui/kit';
+import { Screen, Empty, Skeleton, ErrorBox, useAsync, MoreList } from '../ui/kit';
 import { CalendarButton } from '../ui/CalendarButton';
 import { mapsUrl, frDate } from '../lib/util';
 import { qs } from '../lib/router';
@@ -35,11 +35,11 @@ export function Matches() {
   type Item = { d: string; k: string; g?: Game; tr?: Training };
   const groups = useMemo(() => {
     if (!data) return [] as { t: string; l: Item[] }[];
-    if (tab === 'past') return [{ t: t('Matchs passés'), l: data.games.filter((g) => g.d <= today && isPlayed(g)).reverse().slice(0, 40).map((g): Item => ({ d: g.d, k: `g${g.id}`, g })) }];
+    if (tab === 'past') return [{ t: t('Matchs passés'), l: data.games.filter((g) => g.d <= today && isPlayed(g)).reverse().map((g): Item => ({ d: g.d, k: `g${g.id}`, g })) }];
     const up: Item[] = [...data.games.filter((g) => g.d >= today && !isPlayed(g)).map((g) => ({ d: `${g.d} ${g.t}`, k: `g${g.id}`, g })),
       ...(trains.data ?? []).map((tr) => ({ d: `${tr.date} ${tr.start_time ?? ''}`, k: `t${tr.id}`, tr }))].sort((a, b) => a.d.localeCompare(b.d));
     const day = (x: Item) => x.d.slice(0, 10);
-    return [{ t: t('Aujourd’hui'), l: up.filter((x) => day(x) === today) }, { t: t('Cette semaine'), l: up.filter((x) => day(x) > today && day(x) <= weekEnd) }, { t: t('Plus tard'), l: up.filter((x) => day(x) > weekEnd).slice(0, 30) }].filter((x) => x.l.length);
+    return [{ t: t('Aujourd’hui'), l: up.filter((x) => day(x) === today) }, { t: t('Cette semaine'), l: up.filter((x) => day(x) > today && day(x) <= weekEnd) }, { t: t('Plus tard'), l: up.filter((x) => day(x) > weekEnd) }].filter((x) => x.l.length);
   }, [data, tab, today, weekEnd, trains.data]);
 
   if (!s.user) return <Screen title={t('Saison')}><Empty ill="calendar" title={t('Tes prochains matchs')} text={t('Connecte-toi et suis tes équipes pour voir leurs prochains matchs ici.')} action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter')}</button>} /></Screen>;
@@ -50,8 +50,8 @@ export function Matches() {
       {!data && !error ? <Skeleton h={110} /> : groups.length === 0 ? <Empty ill="calendar" title={t('Aucun match')} text={s.followedTeams.length ? t('Rien de prévu pour tes équipes.') : t('Suis des équipes pour voir leurs matchs.')} action={!s.followedTeams.length && <a className="btn" href="#/explorer">{t('Explorer')}</a>} /> :
         groups.map((gr) => (
           <section key={gr.t}><div className="group-title">{gr.t}</div>
-            {gr.l.map((x) => x.g ? <MatchCard key={x.k} g={x.g} focus={x.g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g: x.g! })} onCar={(youth) => setSheet({ kind: 'car', g: x.g!, youth })} />
-              : <TrainingCard key={x.k} tr={x.tr!} team={data!.idx.get(Number(x.tr!.team_id))} />)}</section>))}
+            <MoreList items={gr.l} step={30} className="" resetKey={tab} render={(x) => x.g ? <MatchCard key={x.k} g={x.g} focus={x.g.id === focus} data={data!} onLive={() => setSheet({ kind: 'live', g: x.g! })} onCar={(youth) => setSheet({ kind: 'car', g: x.g!, youth })} />
+              : <TrainingCard key={x.k} tr={x.tr!} team={data!.idx.get(Number(x.tr!.team_id))} />} /></section>))}
       {sheet?.kind === 'car' && <CarpoolSheet g={sheet.g} youthTeam={sheet.youth ?? null} onClose={() => setSheet(null)} />}
       {sheet?.kind === 'live' && <LiveScoreSheet g={sheet.g} home={sheet.g.hn} away={sheet.g.an} onClose={() => setSheet(null)} />}
     </Screen>

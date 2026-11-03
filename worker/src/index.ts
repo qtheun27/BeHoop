@@ -91,12 +91,13 @@ async function serveMedia(req: Request, env: Env, ctx: ExecutionContext, key: st
 /** Téléchargement d'un MP4 par lien signé : servi en pièce jointe (l'iPhone propose « Télécharger » au lieu de le lire) */
 async function serveDownload(req: Request, env: Env, url: URL): Promise<Response> {
   const key = decodeURIComponent(url.pathname.slice(4)), exp = Number(url.searchParams.get('e'));
-  if (!key.endsWith('.mp4') || !(await verifyDl(key, exp, url.searchParams.get('s') ?? '', env.MEDIA_COOKIE_SECRET))) return fail('Lien expiré', 403);
+  const img = /\/affiches\/.+\.jpg$/.test(key);
+  if (!(key.endsWith('.mp4') || img) || !(await verifyDl(key, exp, url.searchParams.get('s') ?? '', env.MEDIA_COOKIE_SECRET))) return fail('Lien expiré', 403);
   const range = req.headers.get('Range');
   const obj = await env.BUCKET.get(key, range ? { range: req.headers } : {});
   if (!obj) return fail('Introuvable', 404);
   const name = (url.searchParams.get('n') ?? 'match.mp4').replace(/["\\\r\n]/g, '');
-  const headers = new Headers({ 'Content-Type': 'video/mp4', 'Content-Disposition': `attachment; filename="${name}"; filename*=UTF-8''${encodeURIComponent(name)}`,
+  const headers = new Headers({ 'Content-Type': img ? 'image/jpeg' : 'video/mp4', 'Content-Disposition': `attachment; filename="${name}"; filename*=UTF-8''${encodeURIComponent(name)}`,
     'Accept-Ranges': 'bytes', 'Cache-Control': 'private, max-age=3600', ETag: obj.httpEtag });
   if (range && 'range' in obj && obj.range) {
     const r = obj.range as { offset: number; length: number };
@@ -271,6 +272,18 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   if (path === '/download') {
     const id = String(body.matchVideoId ?? '');
     const v = await fs.get<any>(`matchVideos/${id}`);
+    // Affiches : liens signés pour chacune (même règle : auteur seulement)
+    if (body.affiches) {
+      if (!v || v.authorUid !== user.uid) return fail('Accès refusé', 403);
+      const exp = Math.floor(Date.now() / 1000) + 3 * 3600;
+      const base = String(v.title ?? 'match').normalize('NFD').replace(/[^\w -]+/g, '').trim().slice(0, 50) || 'match';
+      const out: Record<string, string> = {};
+      for (const k of (v.hls?.affiches ?? []) as string[]) {
+        const name = `${base} - ${k.split('/').pop()!.replace('.jpg', '')}.jpg`;
+        out[k] = `${new URL(req.url).origin}/dl/${encodeURIComponent(k)}?e=${exp}&s=${await signDl(k, exp, env.MEDIA_COOKIE_SECRET)}&n=${encodeURIComponent(name)}`;
+      }
+      return json({ links: out });
+    }
     const fileKey = body.quality === '720p' ? v?.hls?.mp4Key : v?.hls?.mp4Key1080 ?? (body.quality ? undefined : v?.hls?.mp4Key);
     if (!fileKey) return fail('Fichier pas encore prêt', 404);
     // Téléchargement réservé à l'auteur du montage

@@ -101,7 +101,7 @@ function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
   const [asked, setAsked] = useState(false);
   const busy = asked || mv.affichesStatus === 'queued' || mv.affichesStatus === 'running';
   const make = async () => { setAsked(true); try { await api('/affiches', { matchVideoId: id }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } };
-  if (mv.hls?.affiches?.length) return <Affiches keys={mv.hls.affiches} title={mv.title} />;
+  if (mv.hls?.affiches?.length) return <Affiches id={id} keys={mv.hls.affiches} title={mv.title} />;
   return (
     <>
       <div className="group-title mt">{t('Affiches du match')}</div>
@@ -114,35 +114,31 @@ function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
 
 /** Affiches du match (avant-match, fins de quart, score final) : images 1920 × 1080 à enregistrer ou partager */
 const AFF_LABEL: Record<string, string> = { pre: 'Avant-match', q1: 'Fin du 1er quart', q2: 'Mi-temps', q3: 'Fin du 3e quart', fin: 'Score final' };
-function Affiches({ keys, title }: { keys: string[]; title: string }) {
+function Affiches({ id, keys, title }: { id: string; keys: string[]; title: string }) {
   const s = useSession();
-  const file = async (k: string) => {
-    const kind = k.split('/').pop()!.replace('.jpg', '');
-    await ensureMediaCookie();
-    const r = await fetch(mediaUrl(k), { credentials: 'include' });
-    if (!r.ok) throw new Error(String(r.status));
-    return new File([await r.blob()], `${title.replace(/[^\w\- ]+/g, '').trim().slice(0, 40) || 'match'} - ${t(AFF_LABEL[kind] ?? kind)}.jpg`, { type: 'image/jpeg' });
-  };
-  // Enregistrer : téléchargement de l'image (ordinateur : dossier Téléchargements ; iPhone : Fichiers)
-  const download = async (k: string) => {
-    try { const f = await file(k); const a = document.createElement('a'); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 5000); }
-    catch { s.toast(t('Impossible d’enregistrer l’affiche.')); }
-  };
-  // Partager : menu du téléphone (« Enregistrer l'image » pour Photos, WhatsApp…)
+  // Liens de téléchargement signés (serveur, 3 h) : un vrai téléchargement, sans dépendre des cookies du navigateur
+  const links = useAsync(() => api<{ links: Record<string, string> }>('/download', { matchVideoId: id, affiches: true }).then((r) => r.links), [id, keys.join()]);
+  const name = (k: string) => `${title.replace(/[^\w\- ]+/g, '').trim().slice(0, 40) || 'match'} - ${t(AFF_LABEL[k.split('/').pop()!.replace('.jpg', '')] ?? 'affiche')}.jpg`;
+  // Partager (téléphone) : menu de partage, avec « Enregistrer l'image » pour Photos
   const share = async (k: string) => {
-    try { const f = await file(k); if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f] }); else await download(k); }
-    catch (e) { if ((e as Error)?.name !== 'AbortError') s.toast(t('Impossible de partager l’affiche.')); }
+    try {
+      const r = await fetch(links.data![k]);
+      if (!r.ok) throw new Error(String(r.status));
+      const f = new File([await r.blob()], name(k), { type: 'image/jpeg' });
+      if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f] }); else location.href = inSafari(links.data![k]);
+    } catch (e) { if ((e as Error)?.name !== 'AbortError') s.toast(t('Impossible de partager l’affiche.')); }
   };
-  const canShare = typeof navigator.share === 'function' && /iPhone|iPad|Android/i.test(navigator.userAgent);
+  const phone = typeof navigator.share === 'function' && /iPhone|iPad|Android/i.test(navigator.userAgent);
   return (
     <>
       <div className="group-title mt">{t('Affiches du match')}</div>
+      {links.error && <ErrorBox msg={t('Impossible d’enregistrer l’affiche.')} retry={links.reload} />}
       <div className="grid-aff">{keys.map((k) => { const kind = k.split('/').pop()!.replace('.jpg', ''); return (
         <div key={k} className="aff">
           <img src={mediaUrl(k)} alt={t(AFF_LABEL[kind] ?? kind)} loading="lazy" /><span>{t(AFF_LABEL[kind] ?? kind)}</span>
           <div className="aff-btns">
-            <button className="btn small secondary" onClick={() => download(k)}>{t('Enregistrer')}</button>
-            {canShare && <button className="btn small secondary" onClick={() => share(k)}>{t('Partager')}</button>}
+            {phone ? <button className="btn small secondary" disabled={!links.data} onClick={() => share(k)}>{t('Enregistrer / partager')}</button>
+              : <a className={`btn small secondary${links.data ? '' : ' disabled'}`} href={links.data?.[k] ?? undefined} download={name(k)}>{t('Enregistrer')}</a>}
           </div>
         </div>); })}</div>
     </>

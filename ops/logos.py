@@ -32,10 +32,14 @@ def harmonize(im):
         if not (len(opaque) >= 3 and all(close(opaque[0], c) for c in opaque)): break
         bgc = opaque[0]
         if not all(ch > 225 for ch in bgc[:3]):
-            # Fond coloré (ex. carré jaune d'Oostende) : il fait partie de l'identité → disque de cette couleur, logo intact
+            # Fond coloré (ex. carré jaune d'Oostende) : il fait partie de l'identité → DISQUE de cette couleur (et non un carré,
+            # qui se voyait dans les ronds blancs de l'appli), logo entier à l'intérieur du cercle
             S = 256
-            im.thumbnail((int(S * 0.8), int(S * 0.8)))   # tient dans le rond
-            out = Image.new('RGBA', (S, S), (bgc[0], bgc[1], bgc[2], 255))
+            lw, lh = im.size
+            k2 = min(0.86 * S / ((lw * lw + lh * lh) ** 0.5), 0.70 * S / max(lw, lh))
+            im = im.resize((max(1, round(lw * k2)), max(1, round(lh * k2))), Image.LANCZOS)
+            out = Image.new('RGBA', (S, S), (0, 0, 0, 0))
+            ImageDraw.Draw(out).ellipse((0, 0, S - 1, S - 1), fill=(bgc[0], bgc[1], bgc[2], 255))
             out.paste(im, ((S - im.size[0]) // 2, (S - im.size[1]) // 2), im)
             return out
         seeds = [(x, 0) for x in range(0, w, max(1, w // 40))] + [(x, h - 1) for x in range(0, w, max(1, w // 40))] + \

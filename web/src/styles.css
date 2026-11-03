@@ -198,3 +198,4 @@ input.field::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .grid-aff .aff span { display: block; font-size: 13px; font-weight: 600; margin-top: 4px; }
 .grid-aff .aff-btns { display: flex; gap: 6px; margin-top: 6px; }
 .grid-aff .aff-btns .btn { flex: 1; }
+.more-btn { display: flex; margin: -12px auto 18px; }

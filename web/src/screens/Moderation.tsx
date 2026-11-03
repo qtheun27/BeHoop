@@ -5,7 +5,7 @@ import * as D from '../lib/db';
 import { teamIndex, teamLabel, loadIndex } from '../lib/data';
 import { api } from '../lib/api';
 import { Conversation, type SupportThread } from '../ui/Help';
-import { Screen, Empty, Skeleton, useAsync, Avatar, Sheet } from '../ui/kit';
+import { Screen, Empty, Skeleton, useAsync, Avatar, Sheet, MoreList } from '../ui/kit';
 import { PostCard } from './Feed';
 import { t } from '../lib/i18n';
 
@@ -128,16 +128,14 @@ function AccountPicker({ onPick, action }: { onPick: (a: Account) => void; actio
     <>
       <div className="search"><input className="field" placeholder={t('Rechercher un compte (nom ou club)')} value={q} onChange={(e) => setQ(e.target.value)} /></div>
       <p className="muted" style={{ fontSize: 13, margin: '0 4px 8px' }}>{t('{n} comptes', { n: list.length })}</p>
-      <div className="group">
-        {list.slice(0, 100).map((a) => (
+      <MoreList items={list} step={100} resetKey={q} render={(a) => (
           <div key={a.uid} className="row" style={{ cursor: 'pointer' }} onClick={() => onPick(a)}>
             <Avatar name={a.name} src={a.avatar} />
             <div className="grow">{a.name}{a.banned && <b style={{ color: 'var(--red)' }}> · {t('banni')}</b>}
               <div className="sub">{a.superAdmin ? `${t('Super admin')} · ` : ''}{a.clubs?.length ? a.clubs.map((c) => `${t(ROLE_FR[c.role] ?? c.role)}${cname(c) ? ` · ${cname(c)}` : ''}`).join(' / ') : t('Pas d’Espace Club')}{!a.profile ? ` · ${t('pas de profil BeHoop')}` : ''}{a.email ? ` · ${a.email}` : ''}{a.created ? ` · ${new Date(a.created).toLocaleDateString()}` : ''}</div></div>
             <span onClick={(e) => e.stopPropagation()}>{action(a)}</span>
           </div>
-        ))}
-      </div>
+        )} />
     </>
   );
 }

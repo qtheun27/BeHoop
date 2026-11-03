@@ -4,7 +4,7 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
 import { loadClub, loadIndex, teamIndex, isPlayed, normalize, type Game, type Club } from '../lib/data';
-import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync } from '../ui/kit';
+import { Screen, Empty, Skeleton, ErrorBox, Sheet, Disc, useAsync, MoreList } from '../ui/kit';
 import { prepare, compressImage, thumbData, ACCEPT, isVideo, type Prepared } from '../lib/media';
 import { uploadFile, uploadSmall, keepAwake, fileId, clearScope, lastMove, savedState, stateForSize, finishSaved, dropStates, PART } from '../lib/upload';
 import { PlanchePreview } from '../planche/Preview';
@@ -189,7 +189,7 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
     const games = (await Promise.all([...clubIds].map(loadClub))).flatMap((c) => c.games);
     const seen = new Set<number>();
     const mine = games.filter((g) => (s.followedTeams.includes(g.h) || s.followedTeams.includes(g.a) || g.id === pre) && g.d <= today && !seen.has(g.id) && seen.add(g.id))
-      .sort((a, b) => (b.d + b.t).localeCompare(a.d + a.t)).slice(0, 30);
+      .sort((a, b) => (b.d + b.t).localeCompare(a.d + a.t));
     return { mine, idx, all: (await loadIndex()).clubs };
   }, [s.followedTeams.join()]);
   const [clubGames, setClubGames] = useState<Game[] | null>(null);
@@ -240,7 +240,7 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
       {results.length > 0 && !clubGames && <div className="group">{results.map((c) => <button key={c.id} className="row" onClick={async () => setClubGames((await loadClub(c.id)).games.filter((g) => g.d <= today).reverse().slice(0, 40))}><Disc src={c.logo} name={c.name} size={32} ring={c.c1} /><div className="grow">{c.name}</div></button>)}</div>}
       {clubGames && <div className="group">{clubGames.map((g) => <Row key={g.id} g={g} />)}</div>}
       {data.error && <ErrorBox msg={data.error} retry={data.reload} />}
-      {!data.data ? <Skeleton h={56} n={6} /> : !clubGames && (data.data.mine.length ? <><div className="group-title">{t('Matchs récents de tes équipes')}</div><div className="group">{data.data.mine.map((g) => <Row key={g.id} g={g} />)}</div></>
+      {!data.data ? <Skeleton h={56} n={6} /> : !clubGames && (data.data.mine.length ? <><div className="group-title">{t('Matchs récents de tes équipes')}</div><MoreList items={data.data.mine} step={30} render={(g) => <Row key={g.id} g={g} />} /></>
         : <Empty ill="calendar" title={t('Aucun match récent')} text={t('Suis une équipe ou cherche un club ci-dessus.')} />)}
     </Screen>
   );
@@ -291,7 +291,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
       <BgProgress draft={draft} />
       {draft.media.length > 0 && <>
         <p className="mt"><b>{draft.media.filter((m) => m.kind === 'video').length}</b> {t('vidéo(s)')} · <b>{draft.media.filter((m) => m.kind === 'photo').length}</b> {t('photo(s)')}</p>
-        <div className="grid3">{draft.media.slice(0, 30).map((m) => <Thumb key={m.id} m={m} />)}</div>
+        <MoreList items={draft.media} step={30} className="grid3" render={(m) => <Thumb key={m.id} m={m} />} />
         <button className="btn mt" onClick={() => upd({ step: 2 })}>{t('Continuer')}</button>
       </>}
     </Screen>

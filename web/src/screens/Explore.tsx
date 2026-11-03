@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { loadIndex, loadClub, loadSerie, ranked, loadComps, normalize, teamLabel, trCat, type Competition, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
-import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync } from '../ui/kit';
+import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync, MoreList } from '../ui/kit';
 import { CalendarButton } from '../ui/CalendarButton';
 import { StandingsTable } from '../ui/Standings';
 import { CompLogo } from '../ui/CompLogo';
@@ -84,19 +84,18 @@ export function Explore() {
           <button className={`chip${women ? ' on' : ''}`} onClick={() => setWomen(!women)} aria-pressed={women}><><Ico n="women" />{t('Femmes')}</></button>
           <button className={`chip${youth ? ' on' : ''}`} onClick={() => setYouth(!youth)} aria-pressed={youth}><><Ico n="youth" />{t('Jeunes')}</></button></div>
         {!comps.data ? <Skeleton h={56} n={8} /> : compList.length === 0 ? <Empty ill="trophy" title={t('Aucune compétition trouvée')} /> : (
-          <div className="group">{compList.slice(0, 80).map((c) => <CompRow key={c.id} c={c} />)}</div>)}
-        {compList.length > 80 && <p className="muted center" style={{ fontSize: 13 }}>{t('Affine ta recherche pour voir les autres compétitions.')}</p>}
+          <MoreList items={compList} step={80} resetKey={`${cat}|${women}|${youth}|${n}`} render={(c) => <CompRow key={c.id} c={c} />} />)}
       </> : <>
       {n && compList.length > 0 && <><div className="group-title"><><Ico n="trophy" />{t('Compétitions')}</></div><div className="group">{compList.slice(0, 5).map((c) => <CompRow key={c.id} c={c} />)}</div></>}
       <div className="chips">{REGIONS.map((r) => <button key={r.id} className={`chip${reg === r.id ? ' on' : ''}`} onClick={() => setReg(r.id)}>{t(r.label)}</button>)}</div>
       {error && <ErrorBox msg={error} retry={reload} />}
       {n && <div className="group-title">{t('Clubs et équipes')}</div>}
       {!data && !error ? <Skeleton h={56} n={8} /> : list.length === 0 ? (n && foundNews.length ? null : <Empty ill="search" title={t('Aucun club trouvé')} text={t('Essaie un autre nom ou une ville.')} />) : (
-        <div className="group">{list.slice(0, n ? 30 : 120).map((c) => (
+        <MoreList items={list} step={n ? 30 : 120} resetKey={`${n}|${reg}`} render={(c) => (
           <a key={c.id} className="row" href={c.teams.length === 1 ? `#/equipe/${c.teams[0].id}` : `#/club/${c.id}`} style={{ color: 'inherit' }}>
             <Disc src={c.logo} name={c.name} size={40} ring={c.c1} />
             <div className="grow"><div className="ellipsis">{c.name}</div><div className="sub">{[c.city, c.teams.length === 1 ? trCat(c.teams[0].cat) : t('{n} équipes', { n: c.teams.length })].filter(Boolean).join(' · ')}</div></div><span className="chev">›</span>
-          </a>))}</div>
+          </a>)} />
       )}
       {foundNews.length > 0 && <><div className="group-title"><><Ico n="news" />{t('Actus')}</></div>{foundNews.map((x) => <NewsCard key={x.id} n={x} wide list={foundNews} />)}</>}
       </>}
@@ -320,11 +319,11 @@ export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics
         <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>{t('Joués')} ({past.length})</button>
       </div>
       {list.length === 0 ? <Empty ill="calendar" title={which === 'avenir' ? t('Aucun match prévu') : t('Aucun match joué')} /> : (
-        <div className="group">{list.slice(0, 40).map((g) => (
+        <MoreList items={list} step={40} resetKey={which} render={(g) => (
           <div key={g.id}>
             <GameRow g={g} teamIds={[team.id]} />
             {which === 'avenir' && g.v && <a className="row sub" style={{ paddingTop: 0, minHeight: 34 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener"><Ico n="pin" style={{ marginRight: 4 }} />{g.v} · {t('Itinéraire')} ›</a>}
-          </div>))}</div>
+          </div>)} />
       )}
     </>
   );

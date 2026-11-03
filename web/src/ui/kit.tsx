@@ -126,6 +126,18 @@ export const Loader = ({ full }: { full?: boolean }) => (
   </div>
 );
 /** Chargement : blocs gris d'abord ; si ça dure (> 0,7 s), l'animation BeHoop prend le relais */
+/** Liste longue affichée par tranches avec « Voir plus » : jamais de coupe silencieuse en bas d'une liste */
+export function MoreList<T>({ items, step = 60, render, className = 'group', resetKey }: { items: T[]; step?: number; render: (x: T, i: number) => ReactNode; className?: string; resetKey?: unknown }) {
+  const [n, setN] = useState(step);
+  useEffect(() => setN(step), [resetKey, step]);
+  return (
+    <>
+      <div className={className}>{items.slice(0, n).map(render)}</div>
+      {items.length > n && <button className="btn ghost small more-btn" onClick={() => setN(n + step)}>{t('Voir plus ({k} restants)', { k: items.length - n })}</button>}
+    </>
+  );
+}
+
 export function Skeleton({ h = 120, n = 3 }: { h?: number; n?: number }) {
   const [long, setLong] = useState(false);
   useEffect(() => { const id = setTimeout(() => setLong(true), 700); return () => clearTimeout(id); }, []);

@@ -161,7 +161,7 @@ function Favorites() {
       <h3 className="group-title">{t('Mes favoris')}</h3>
       <div className="group">
         {clubs.map((c) => <a key={c.id} className="row" href={`#/club/${c.id}`}><Disc src={c.logo} name={c.name} size={36} /><div className="grow">{c.name}</div><span className="chev">›</span></a>)}
-        {s.followedTeams.filter((id) => !clubs.some((c) => c.id === idx.data?.get(id)?.club.id)).slice(0, 20).map((id) => { const e = idx.data?.get(id); return e ? (
+        {s.followedTeams.filter((id) => !clubs.some((c) => c.id === idx.data?.get(id)?.club.id)).map((id) => { const e = idx.data?.get(id); return e ? (
           <a key={id} className="row" href={`#/equipe/${id}`}><Disc src={e.club.logo} name={e.club.name} size={36} /><div className="grow">{e.club.short} · {teamLabel(e.team)}</div><span className="chev">›</span></a>) : null; })}
       </div>
     </section>
