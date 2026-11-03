@@ -7,7 +7,8 @@ import { pathToFileURL } from 'node:url';
 import { spawn } from 'node:child_process';
 import { createServer, type Server } from 'node:http';
 import { createReadStream } from 'node:fs';
-import { chromium, type Page } from '@playwright/test';
+import { chromium, type Page, type Browser } from '@playwright/test';
+import { prepLogo } from './logos';
 import ffmpegStatic from 'ffmpeg-static';
 import ffprobeStatic from 'ffprobe-static';
 import { normalizeArgs, framesToClipArgs, photoClipArgs, segmentArgs, concatListArgs, hlsArgs, type ProbeInfo } from '../../shared/ffmpeg';
@@ -55,6 +56,17 @@ export function serve(workDir: string): Promise<{ server: Server; base: string }
 }
 
 /** Capture image par image (30 i/s) d'une planche ; la page rend l'état exact à l'instant t. */
+/** Affiches (dernière image de chaque planche, animation terminée) en 4K : 3840 × 2160 */
+export async function captureAffiches(browser: Browser, base: string, st: MatchSettings, outDir: string) {
+  mkdirSync(outDir, { recursive: true });
+  const page = await (await browser.newContext({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 2 })).newPage();
+  for (const t of ['pre', 'q1', 'q2', 'q3', 'fin'] as PlancheType[]) {
+    const last = Math.round(DUR[t] * 30), dir = join(outDir, `_${t}`);
+    await captureFrames(page, base, st, t, dir, last - 1, last);
+    copyFileSync(join(dir, '0000.jpg'), join(outDir, `${t}.jpg`)); rmSync(dir, { recursive: true, force: true });
+  }
+  await page.context().close();
+}
 export async function captureFrames(page: Page, base: string, st: MatchSettings, type: PlancheType, dir: string, from = 0, to = Math.round(DUR[type] * 30)) {
   mkdirSync(dir, { recursive: true });
   await page.addInitScript((s) => { (window as any).__SETTINGS__ = s; }, st);
@@ -110,7 +122,8 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   const allPlay = media.filter((m) => m.kind === 'photo' && !m.offPlay && !m.scoreboardOfQuarter).map((m) => url(m.local!));
   const q1 = await photosOf(1), q2 = await photosOf(2), q3 = await photosOf(3);
   const fin = allPlay.length >= 4 ? allPlay.filter((_, i, a) => i % Math.max(1, Math.floor(a.length / 8)) === 0).slice(0, 8) : [...q1, ...q2, ...q3].slice(0, 8);
-  const st: MatchSettings = { ...job.settings, photos: { pre: (media.find((m) => m.featured && m.quarter === 1)?.local ? url(media.find((m) => m.featured && m.quarter === 1)!.local!) : q1[0]), q1, q2, q3, fin } };
+  const logos = { home: await prepLogo(job.settings.home.logo, work, 'logo_home'), away: await prepLogo(job.settings.away.logo, work, 'logo_away') };
+  const st: MatchSettings = { ...job.settings, home: { ...job.settings.home, logo: logos.home }, away: { ...job.settings.away, logo: logos.away }, photos: { pre: (media.find((m) => m.featured && m.quarter === 1)?.local ? url(media.find((m) => m.featured && m.quarter === 1)!.local!) : q1[0]), q1, q2, q3, fin } };
 
   // 4. Planches animées + vague (Playwright, 30 i/s)
   await P(58, 'Création des planches animées');
@@ -126,11 +139,10 @@ export async function render(job: Job, work: string, hooks: Hooks) {
       planche[t] = join(work, 'clips', `planche_${t}.mp4`);
       await ff(framesToClipArgs(join(dir, '%04d.jpg'), planche[t], DUR[t]));
       if (t === 'fin') copyFileSync(join(dir, `${String(DUR.fin * 30 - 1).padStart(4, '0')}.jpg`), join(work, 'poster.jpg'));
-      // Affiche à télécharger : dernière image de la planche (animation terminée), en pleine définition
-      mkdirSync(join(work, 'affiches'), { recursive: true });
-      copyFileSync(join(dir, `${String(Math.round(DUR[t] * 30) - 1).padStart(4, '0')}.jpg`), join(work, 'affiches', `${t}.jpg`));
       rmSync(dir, { recursive: true, force: true });
     }
+    // Affiches à télécharger : dernière image de chaque planche, en 4K
+    await captureAffiches(browser, base, st, join(work, 'affiches'));
     // Vague : 0–9 couvre l'écran (fin du segment A), 9–17 révèle la suite (début du segment B)
     await captureFrames(page, base, st, 'wipe', join(work, 'wipe_in'), 0, 10);
     await captureFrames(page, base, st, 'wipe', join(work, 'wipe_out'), 9, 18);
@@ -220,7 +232,7 @@ async function remote(id: string) {
     for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded && !x.scoreboardOfQuarter)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
     const [fh, fa] = job.settings.scores[3];
     const hls = { masterKey: `${prefix}/master.m3u8`, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, affiches: ['pre', 'q1', 'q2', 'q3', 'fin'].filter((x) => existsSync(join(res.hls, 'affiches', `${x}.jpg`))).map((x) => `${prefix}/affiches/${x}.jpg`), ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
-    await mvRef.update({ status: 'ready', version, hls, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });
+    await mvRef.update({ status: 'ready', version, hls, affichesHd: true, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });
     const teamIds: number[] = mv.teamIds.filter(Boolean);
     await db.doc(`posts/video-${id}`).set({
       type: 'video', authorUid: mv.authorUid, authorName: mv.authorName ?? '', clubId: null, teamIds, targets: teamIds.map((t) => `t:${t}`),

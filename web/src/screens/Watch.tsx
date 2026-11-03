@@ -102,13 +102,21 @@ function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
   useEffect(() => D.watchDoc<MatchVideo>(`matchVideos/${id}`, (x) => x && setLive(x)), [id]);
   const mv = live ?? mv0;
   const [asked, setAsked] = useState(false);
-  if (mv.hls?.affiches?.length) return <Affiches keys={mv.hls.affiches} title={mv.title} />;
   const busy = asked || mv.affichesStatus === 'queued' || mv.affichesStatus === 'running';
+  const make = async (force: boolean) => { setAsked(true); try { await api('/affiches', { matchVideoId: id, force }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } };
+  // Affiches d'avant (1080p, avant le recentrage des logos) : on peut les refaire en 4K
+  if (mv.hls?.affiches?.length) return (
+    <>
+      <Affiches keys={mv.hls.affiches} title={mv.title} />
+      {!mv.affichesHd
+        ? <button className="btn ghost small" disabled={busy} onClick={() => make(true)}>{busy ? t('Création des affiches… (quelques minutes)') : t('Refaire les affiches en 4K (logos recentrés)')}</button> : null}
+    </>
+  );
   return (
     <>
       <div className="group-title mt">{t('Affiches du match')}</div>
       {mv.affichesStatus === 'error' && <div className="err">{t('La création des affiches a échoué. Réessaie.')}</div>}
-      <button className="btn secondary" disabled={busy} onClick={async () => { setAsked(true); try { await api('/affiches', { matchVideoId: id }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } }}>
+      <button className="btn secondary" disabled={busy} onClick={() => make(false)}>
         <Ico n="image" />{busy ? t('Création des affiches… (quelques minutes)') : t('Créer les affiches du match')}</button>
     </>
   );
@@ -207,7 +215,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
+interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error'; affichesHd?: boolean;
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 
