@@ -5,7 +5,6 @@ import { mkdirSync, rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { chromium } from '@playwright/test';
 import { serve, captureAffiches } from './run';
-import { prepLogo } from './logos';
 import { admin, R2 } from '../lib/admin';
 import { mosaicPhotos } from '../../shared/quarters';
 import { settingsFromStore, type MatchSettings, type MediaItem, type PlancheType } from '../../shared/types';
@@ -37,10 +36,8 @@ try {
   const q1 = of(1), q2 = of(2), q3 = of(3);
   const fin = play.length >= 4 ? play.filter((_, i, a) => i % Math.max(1, Math.floor(a.length / 8)) === 0).slice(0, 8) : [...q1, ...q2, ...q3].slice(0, 8);
   const featured = withPhoto.find((m) => m.featured && m.quarter === 1);
-  const base0 = settingsFromStore(mv.settings);
-  const home = await prepLogo(base0.home.logo, work, 'logo_home'), away = await prepLogo(base0.away.logo, work, 'logo_away');
-  const st: MatchSettings = { ...base0, home: { ...base0.home, logo: home }, away: { ...base0.away, logo: away }, photos: { pre: featured ? url(featured.local!) : q1[0], q1, q2, q3, fin } };
-    // Dernière image de chaque planche, en 4K
+  const st: MatchSettings = { ...settingsFromStore(mv.settings), photos: { pre: featured ? url(featured.local!) : q1[0], q1, q2, q3, fin } };
+    // Dernière image de chaque planche (1080p, comme la vidéo)
   const { server, base } = await serve(work);
   const browser = await chromium.launch();
   const keys: string[] = [];
@@ -53,7 +50,7 @@ try {
       keys.push(`${prefix}/affiches/${stamp}/${t}.jpg`);
     }
   } finally { await browser.close(); server.close(); }
-  await ref.update({ 'hls.affiches': keys, affichesStatus: 'ready', affichesHd: true });
+  await ref.update({ 'hls.affiches': keys, affichesStatus: 'ready' });
   rmSync(work, { recursive: true, force: true });
 } catch (e) {
   await ref.update({ affichesStatus: 'error' }).catch(() => {});

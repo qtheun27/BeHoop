@@ -55,12 +55,9 @@ def harmonize(im):
     if not box: return None
     im = im.crop(box); alpha = alpha.crop(box)
     w, h = im.size
-    # Centre optique : moitié centre du cadre, moitié centre de masse du logo
-    data = alpha.load(); sx = sy = n = 0
-    for y in range(0, h, 2):
-        for x in range(0, w, 2):
-            if data[x, y]: sx += x; sy += y; n += 1
-    cx = (w / 2 + (sx / n if n else w / 2)) / 2; cy = (h / 2 + (sy / n if n else h / 2)) / 2
+    # Centre du cadre du logo (centrage géométrique) : le centre de masse décalait les logos asymétriques
+    # (ex. Montagnard, dont la main à droite tirait tout le logo vers la droite)
+    cx, cy = w / 2, h / 2
     S = 256; scale = (0.93 * S) / ((w * w + h * h) ** 0.5)      # le logo tient dans le cercle
     scale = min(scale, 0.80 * S / max(w, h))                     # et ne paraît pas énorme quand il est rond
     im = im.resize((max(1, round(w * scale)), max(1, round(h * scale))), Image.LANCZOS)

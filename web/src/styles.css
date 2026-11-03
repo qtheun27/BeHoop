@@ -196,3 +196,5 @@ input.field::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .grid-aff .aff { border: 0; padding: 0; background: none; color: var(--text); text-align: left; }
 .grid-aff .aff img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #0a0c12; }
 .grid-aff .aff span { display: block; font-size: 13px; font-weight: 600; margin-top: 4px; }
+.grid-aff .aff-btns { display: flex; gap: 6px; margin-top: 6px; }
+.grid-aff .aff-btns .btn { flex: 1; }

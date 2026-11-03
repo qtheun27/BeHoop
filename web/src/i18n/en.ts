@@ -1280,4 +1280,5 @@ export const EN: Record<string, string> = {
   "Création des affiches… (quelques minutes)": "Creating the posters… (a few minutes)",
   "Créer les affiches du match": "Create the match posters",
   "Refaire les affiches en 4K (logos recentrés)": "Remake the posters in 4K (logos centred)",
+  "Impossible de partager l’affiche.": "Couldn’t share the poster.",
 };

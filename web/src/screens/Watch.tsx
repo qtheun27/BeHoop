@@ -90,9 +90,6 @@ function AskAccess({ teamId }: { teamId: number }) {
   );
 }
 
-/** Enregistrer dans Photos : une appli web ne peut pas écrire directement dans Photos ; on télécharge la vidéo dans
- *  l'appli, puis le partage de l'iPhone propose « Enregistrer la vidéo » (Photos) ou YouTube. Fichier gardé en mémoire :
- *  le 720p est plus sûr pour une longue vidéo. */
 /** Au-delà, iOS ferme l'appli faute de mémoire avant la fin (la vidéo doit tenir en entier dans l'appli pour le partage) */
 const PHOTOS_MAX = 350_000_000;
 /** Affiches : affichées si elles existent ; sinon (vidéo montée avant leur arrivée), on les crée à la demande */
@@ -103,20 +100,13 @@ function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
   const mv = live ?? mv0;
   const [asked, setAsked] = useState(false);
   const busy = asked || mv.affichesStatus === 'queued' || mv.affichesStatus === 'running';
-  const make = async (force: boolean) => { setAsked(true); try { await api('/affiches', { matchVideoId: id, force }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } };
-  // Affiches d'avant (1080p, avant le recentrage des logos) : on peut les refaire en 4K
-  if (mv.hls?.affiches?.length) return (
-    <>
-      <Affiches keys={mv.hls.affiches} title={mv.title} />
-      {!mv.affichesHd
-        ? <button className="btn ghost small" disabled={busy} onClick={() => make(true)}>{busy ? t('Création des affiches… (quelques minutes)') : t('Refaire les affiches en 4K (logos recentrés)')}</button> : null}
-    </>
-  );
+  const make = async () => { setAsked(true); try { await api('/affiches', { matchVideoId: id }); } catch { setAsked(false); s.toast(t('Impossible de créer les affiches. Réessaie.')); } };
+  if (mv.hls?.affiches?.length) return <Affiches keys={mv.hls.affiches} title={mv.title} />;
   return (
     <>
       <div className="group-title mt">{t('Affiches du match')}</div>
       {mv.affichesStatus === 'error' && <div className="err">{t('La création des affiches a échoué. Réessaie.')}</div>}
-      <button className="btn secondary" disabled={busy} onClick={() => make(false)}>
+      <button className="btn secondary" disabled={busy} onClick={make}>
         <Ico n="image" />{busy ? t('Création des affiches… (quelques minutes)') : t('Créer les affiches du match')}</button>
     </>
   );
@@ -126,28 +116,42 @@ function AffichesBlock({ id, mv: mv0 }: { id: string; mv: MatchVideo }) {
 const AFF_LABEL: Record<string, string> = { pre: 'Avant-match', q1: 'Fin du 1er quart', q2: 'Mi-temps', q3: 'Fin du 3e quart', fin: 'Score final' };
 function Affiches({ keys, title }: { keys: string[]; title: string }) {
   const s = useSession();
-  const save = async (k: string) => {
+  const file = async (k: string) => {
     const kind = k.split('/').pop()!.replace('.jpg', '');
-    try {
-      await ensureMediaCookie();
-      const b = await (await fetch(mediaUrl(k), { credentials: 'include' })).blob();
-      const f = new File([b], `${title.replace(/[^\w\- ]+/g, '').trim().slice(0, 40) || 'match'} - ${t(AFF_LABEL[kind] ?? kind)}.jpg`, { type: 'image/jpeg' });
-      if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f] });
-      else { const a = document.createElement('a'); a.href = URL.createObjectURL(f); a.download = f.name; a.click(); }
-    } catch { /* partage annulé ou indisponible */ }
+    await ensureMediaCookie();
+    const r = await fetch(mediaUrl(k), { credentials: 'include' });
+    if (!r.ok) throw new Error(String(r.status));
+    return new File([await r.blob()], `${title.replace(/[^\w\- ]+/g, '').trim().slice(0, 40) || 'match'} - ${t(AFF_LABEL[kind] ?? kind)}.jpg`, { type: 'image/jpeg' });
   };
+  // Enregistrer : téléchargement de l'image (ordinateur : dossier Téléchargements ; iPhone : Fichiers)
+  const download = async (k: string) => {
+    try { const f = await file(k); const a = document.createElement('a'); a.href = URL.createObjectURL(f); a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 5000); }
+    catch { s.toast(t('Impossible d’enregistrer l’affiche.')); }
+  };
+  // Partager : menu du téléphone (« Enregistrer l'image » pour Photos, WhatsApp…)
+  const share = async (k: string) => {
+    try { const f = await file(k); if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f] }); else await download(k); }
+    catch (e) { if ((e as Error)?.name !== 'AbortError') s.toast(t('Impossible de partager l’affiche.')); }
+  };
+  const canShare = typeof navigator.share === 'function' && /iPhone|iPad|Android/i.test(navigator.userAgent);
   return (
     <>
       <div className="group-title mt">{t('Affiches du match')}</div>
-      <p className="hint" style={{ marginTop: 0 }}>{t('Touche une affiche pour l’enregistrer dans Photos ou la partager.')}</p>
       <div className="grid-aff">{keys.map((k) => { const kind = k.split('/').pop()!.replace('.jpg', ''); return (
-        <button key={k} className="aff" onClick={() => save(k).catch(() => s.toast(t('Impossible d’enregistrer l’affiche.')))}>
+        <div key={k} className="aff">
           <img src={mediaUrl(k)} alt={t(AFF_LABEL[kind] ?? kind)} loading="lazy" /><span>{t(AFF_LABEL[kind] ?? kind)}</span>
-        </button>); })}</div>
+          <div className="aff-btns">
+            <button className="btn small secondary" onClick={() => download(k)}>{t('Enregistrer')}</button>
+            {canShare && <button className="btn small secondary" onClick={() => share(k)}>{t('Partager')}</button>}
+          </div>
+        </div>); })}</div>
     </>
   );
 }
 
+/** Enregistrer dans Photos : une appli web ne peut pas écrire directement dans Photos ; on télécharge la vidéo dans
+ *  l'appli, puis le partage de l'iPhone propose « Enregistrer la vidéo » (Photos) ou YouTube. Fichier gardé en mémoire :
+ *  le 720p est plus sûr pour une longue vidéo. */
 function SaveToPhotos({ url, name }: { url: string; name: string }) {
   const s = useSession();
   const [st, setSt] = useState<{ pc?: number; file?: File; err?: string }>({});
@@ -215,7 +219,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error'; affichesHd?: boolean;
+interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 

@@ -288,7 +288,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const v = await fs.get<any>(`matchVideos/${id}`);
     if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);
     if (v.authorUid !== user.uid) return fail('Accès refusé', 403);
-    if (v.hls?.affiches?.length && !body.force) return json({ ok: true, ready: true });
+    if (v.hls?.affiches?.length) return json({ ok: true, ready: true });
     if (v.affichesStatus !== 'queued' && v.affichesStatus !== 'running') { await fs.set(`matchVideos/${id}`, { affichesStatus: 'queued' }); await dispatch(env, 'affiches.yml', { matchVideoId: id }); }
     return json({ ok: true, ready: false });
   }

@@ -1280,4 +1280,5 @@ export const NL: Record<string, string> = {
   "Création des affiches… (quelques minutes)": "Affiches worden gemaakt… (enkele minuten)",
   "Créer les affiches du match": "Wedstrijdaffiches maken",
   "Refaire les affiches en 4K (logos recentrés)": "Affiches opnieuw maken in 4K (logo’s gecentreerd)",
+  "Impossible de partager l’affiche.": "De affiche kon niet worden gedeeld.",
 };
