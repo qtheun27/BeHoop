@@ -219,8 +219,8 @@ html.booting .lp *, html.booting .lp *::before, html.booting .lp *::after { anim
 .lp-ghost { display: inline-flex; align-items: center; height: 38px; padding: 0 16px; border-radius: 999px; font-weight: 600; font-size: 15px; color: #fff;
   background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); cursor: pointer; transition: background .2s; }
 .lp-ghost:hover { background: rgba(255,255,255,.18); }
-body.landing .lp-auth .btn.secondary, body.landing .lp-sheet-auth .btn.secondary { background: #fff; color: var(--text); box-shadow: inset 0 0 0 1px var(--sep); }
-:root[data-theme="dark"] body.landing .lp-auth .btn.secondary { background: rgba(255,255,255,.08); }
+/* Google : bouton blanc à texte foncé en clair comme en sombre (repère connu ; en sombre, le texte du thème est blanc) */
+body.landing .lp-auth .btn.secondary, body.landing .lp-sheet-auth .btn.secondary { background: #fff; color: #1f1f1f !important; box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
 body.landing .lp-auth .btn:disabled, body.landing .lp-sheet-auth .btn:disabled { opacity: 1; background: var(--fill); color: var(--text2); }
 .lp-cta .btn.secondary { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.22); }
 
