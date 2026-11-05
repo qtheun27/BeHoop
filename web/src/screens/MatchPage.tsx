@@ -1,6 +1,6 @@
 // Fiche d'un match (#/match/{série}/{match}) : neutre, sans « équipe à nous » — score ou heure, salle, compétition,
 // confrontations de la saison et place des deux équipes au classement officiel.
-import { loadSerie, loadComps, teamIndex, isPlayed, ranked, trName, type Game } from '../lib/data';
+import { loadSerie, loadComps, teamIndex, isPlayed, isDone, ranked, trName, type Game } from '../lib/data';
 import { t } from '../lib/i18n';
 import { frDate, mapsUrl } from '../lib/util';
 import { Screen, Disc, Skeleton, ErrorBox, Empty, useAsync } from '../ui/kit';
@@ -50,18 +50,18 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
         <div className="hstack" style={{ alignItems: 'flex-start', gap: 10 }}>
           {side(g.h, g.hn, g.hs, played && g.hs! > g.as!)}
           <div style={{ paddingTop: 22, textAlign: 'center', flex: 'none', width: 70 }}>
-            {played ? <span className="pill">{t('Score final')}</span> : <><div style={{ fontFamily: 'Anton', fontSize: 26 }}>{g.t || '–'}</div><div className="sub">{frDate(g.d, { weekday: 'short', day: 'numeric', month: 'short' })}</div></>}
+            {played ? <span className="pill">{t('Score final')}</span> : g.locked ? <span className="pill"><Ico n="lock" size={14} />{t('Score réservé aux membres connectés')}</span> : <><div style={{ fontFamily: 'Anton', fontSize: 26 }}>{g.t || '–'}</div><div className="sub">{frDate(g.d, { weekday: 'short', day: 'numeric', month: 'short' })}</div></>}
           </div>
           {side(g.a, g.an, g.as, played && g.as! > g.hs!)}
         </div>
-        {played && <div className="sub" style={{ textAlign: 'center', marginTop: 10 }}>{frDate(g.d, { weekday: 'long', day: 'numeric', month: 'long', ...(g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? { year: 'numeric' } : {}) })}</div>}
+        {isDone(g) && <div className="sub" style={{ textAlign: 'center', marginTop: 10 }}>{frDate(g.d, { weekday: 'long', day: 'numeric', month: 'long', ...(g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? { year: 'numeric' } : {}) })}</div>}
         <div style={{ margin: '12px -8px -10px' }}>
           <SocialBar k={`game-${g.id}`} title={`${g.hn} – ${g.an}`} youth={[g.h, g.a].some((x) => { const e = idx.get(x); return !!e && e.team.ag !== 'seniors'; })} />
         </div>
       </section>
       {g.v && <a className="row card" style={{ color: 'inherit', marginBottom: 14 }} href={mapsUrl(`${g.v} ${g.adr}`, g.lat, g.lng)} target="_blank" rel="noopener">
         <Ico n="pin" size={22} style={{ color: 'var(--accent)' }} /><div className="grow"><b>{g.v}</b>{g.adr && <div className="sub">{g.adr}</div>}</div><span className="sub">{t('Itinéraire')} ›</span></a>}
-      {!played && (comp || awayTeam) && <div className="hstack" style={{ gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
+      {!isDone(g) && (comp || awayTeam) && <div className="hstack" style={{ gap: 8, marginBottom: 14, flexWrap: 'wrap' }}>
         {awayTeam && <CarButton youth={youth} onOpen={() => setCar(true)} g={g} />}
         {comp && <CalendarButton comp={comp.id} label={t('Calendrier de la compétition')} />}</div>}
       {car && <CarpoolSheet g={g} youthTeam={youth} onClose={() => setCar(false)} />}

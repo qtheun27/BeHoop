@@ -86,6 +86,8 @@ export async function teamIndex() {
   return teamMap;
 }
 export const isPlayed = (g: Game) => g.hs !== null && g.as !== null && !(g.hs === 0 && g.as === 0);
+/** Match joué, score connu ou non (mini-basket vu sans compte : joué, score réservé) — pour ranger les matchs joués / à venir */
+export const isDone = (g: Game) => isPlayed(g) || !!g.locked;
 import { teamLabel as frTeamLabel } from '../../../shared/teamLabel';
 import { lang } from './i18n';
 // Libellés d'équipe (générés en français) : mots traduits selon la langue de l'appli

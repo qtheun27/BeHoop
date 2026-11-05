@@ -1,7 +1,7 @@
 // Page compétition (#/competition/{id}) : comme une page équipe, pour toute une compétition —
 // actus, classement(s), résultats, calendrier et équipes, avec un bouton Suivre.
 import { useMemo, useState } from 'react';
-import { getComp, loadSerie, loadNews, teamIndex, isPlayed, readable, trName, dataSource, type Competition, type Game} from '../lib/data';
+import { getComp, loadSerie, loadNews, teamIndex, isPlayed, isDone, readable, trName, dataSource, type Competition, type Game} from '../lib/data';
 import { useSession } from '../lib/session';
 import { t, tn } from '../lib/i18n';
 import { frDate, haptic } from '../lib/util';
@@ -36,14 +36,16 @@ export async function loadCompData(c: Competition) {
 /** Une ligne de match neutre (aucune équipe « à nous ») : le vainqueur en gras */
 export function CompGameRow({ g }: { g: Game }) {
   const played = isPlayed(g);
+  const done = isDone(g);
   return (
     <a className="row" href={`#/match/${g.s}/${g.id}`} style={{ color: 'inherit' }}>
-      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{played ? (g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? g.d.slice(0, 4) : '') : g.t}</div>
+      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{done ? (g.d.slice(0, 4) !== new Date().toISOString().slice(0, 4) ? g.d.slice(0, 4) : '') : g.t}</div>
       <div className="grow" style={{ minWidth: 0 }}>
         <div className="ellipsis" style={{ fontWeight: played && g.hs! > g.as! ? 700 : 400 }}>{g.hn}</div>
         <div className="ellipsis" style={{ fontWeight: played && g.as! > g.hs! ? 700 : 400 }}>{g.an}</div>
       </div>
-      {played ? <div style={{ textAlign: 'right', fontFamily: 'Anton', fontSize: 18, lineHeight: 1.25 }}><div>{g.hs}</div><div>{g.as}</div></div> : <span className="chev">›</span>}
+      {played ? <div style={{ textAlign: 'right', fontFamily: 'Anton', fontSize: 18, lineHeight: 1.25 }}><div>{g.hs}</div><div>{g.as}</div></div>
+        : g.locked ? <span className="muted" aria-label={t('Score réservé aux membres connectés')}><Ico n="lock" size={16} /></span> : <span className="chev">›</span>}
     </a>
   );
 }
@@ -70,8 +72,8 @@ export function CompPage({ id }: { id: string }) {
   if (comp.data === null) return <Screen title={t('Compétition')} back="explorer"><Empty ill="ball" title={t('Compétition introuvable')} /></Screen>;
   if (!c || !data.data) return <Screen title={t('Compétition')} back="explorer"><Skeleton h={160} n={1} /><Skeleton /></Screen>;
   const { series, games, names } = data.data;
-  const played = games.filter(isPlayed).reverse();
-  const upcoming = games.filter((g) => !isPlayed(g) && g.d >= today);
+  const played = games.filter(isDone).reverse();
+  const upcoming = games.filter((g) => !isDone(g) && g.d >= today);
   const withTable = series.filter((x) => x.standings.length);
   const cur = withTable.find((x) => x.serie.id === sid) ?? withTable[0];
   const teams = [...names.entries()].sort((a, b) => a[1].localeCompare(b[1], 'fr'));

@@ -1317,4 +1317,5 @@ export const EN: Record<string, string> = {
   "L’espace de ton équipe : les photos des jeunes restent entre membres.": "Your team’s space: youth photos stay among members.",
   "Pour les coachs : séances, exercices animés, tactiques et Hoop Camp.": "For coaches: sessions, animated drills, tactics and Hoop Camp.",
   "Entrer": "Enter",
+  "Score réservé aux membres connectés": "Score for signed-in members only",
 };

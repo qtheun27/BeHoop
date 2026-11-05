@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { loadIndex, loadClub, loadSerie, ranked, loadComps, normalize, teamLabel, trCat, type Competition, isPlayed, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
+import { loadIndex, loadClub, loadSerie, ranked, loadComps, normalize, teamLabel, trCat, type Competition, isPlayed, isDone, teamIndex, loadNews, type Game, type Club, type Team } from '../lib/data';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, Sheet, useAsync, MoreList } from '../ui/kit';
@@ -105,13 +105,15 @@ export function Explore() {
 
 export function GameRow({ g, teamIds }: { g: Game; teamIds: number[] }) {
   const played = isPlayed(g);
+  const done = isDone(g); // joué ; score réservé aux membres si mini-basket vu sans compte (g.locked)
   const home = teamIds.includes(g.h);
   const won = played && (home ? g.hs! > g.as! : g.as! > g.hs!);
   return (
     <a className="row" href={`#/matchs?g=${g.id}`} style={{ color: 'inherit' }}>
-      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{played ? '' : g.t}</div>
+      <div style={{ width: 56, fontSize: 13 }} className="muted">{frDate(g.d, { day: 'numeric', month: 'short' })}<br />{done ? '' : g.t}</div>
       <div className="grow"><div className="ellipsis" style={{ fontWeight: home ? 600 : 400 }}>{g.hn}</div><div className="ellipsis" style={{ fontWeight: home ? 400 : 600 }}>{g.an}</div></div>
-      {played ? <div style={{ textAlign: 'right', fontWeight: 700 }}><div>{g.hs}</div><div>{g.as}</div></div> : <span className="pill">{g.sn}</span>}
+      {played ? <div style={{ textAlign: 'right', fontWeight: 700 }}><div>{g.hs}</div><div>{g.as}</div></div>
+        : g.locked ? <span className="muted" title={t('Score réservé aux membres connectés')} aria-label={t('Score réservé aux membres connectés')}><Ico n="lock" size={16} /></span> : <span className="pill">{g.sn}</span>}
       {played && <span className="pill" style={{ background: won ? 'var(--green)' : 'var(--red)', color: '#fff' }}>{won ? t('V') : t('D')}</span>}
     </a>
   );
@@ -124,8 +126,8 @@ export function ClubPage({ id }: { id: number }) {
   const { club, games } = data;
   const tids = club.teams.map((t) => t.id);
   const today = new Date().toISOString().slice(0, 10);
-  const recent = games.filter((g) => isPlayed(g)).slice(-5).reverse();
-  const next = games.filter((g) => g.d >= today && !isPlayed(g)).slice(0, 5);
+  const recent = games.filter(isDone).slice(-5).reverse();
+  const next = games.filter((g) => g.d >= today && !isDone(g)).slice(0, 5);
   return (
     <Screen title={club.short} back="explorer" right={<FollowButton type="club" id={id} />}>
       <div className="hstack" style={{ marginBottom: 20 }}><Disc src={club.logo} name={club.name} size={72} ring={club.c1} />
@@ -315,8 +317,8 @@ export function MiniLocked() {
 export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: string }) {
   const [which, setWhich] = useState<'avenir' | 'joues'>('avenir');
   const today = new Date().toISOString().slice(0, 10);
-  const next = games.filter((g) => g.d >= today && !isPlayed(g));
-  const past = games.filter(isPlayed).slice().reverse();
+  const next = games.filter((g) => g.d >= today && !isDone(g));
+  const past = games.filter(isDone).slice().reverse();
   const list = which === 'avenir' ? next : past;
   return (
     <>
