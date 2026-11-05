@@ -246,7 +246,8 @@ function NewsTile({ n, list, big, first, i = 0 }: { n: News; list: News[]; big?:
   );
 }
 
-const POPULAR: [string, string][] = [['bnxt', 'BNXT League'], ['tdm1', 'Top Division Men 1'], ['tdw', 'Top Division Women'], ['lions', 'Belgian Lions'], ['cats', 'Belgian Cats']];
+// (objets et non paires : noms propres traduits par trName, pas des textes de l'interface)
+const POPULAR = [{ id: 'bnxt', name: 'BNXT League' }, { id: 'tdm1', name: 'Top Division Men 1' }, { id: 'tdw', name: 'Top Division Women' }, { id: 'lions', name: 'Belgian Lions' }, { id: 'cats', name: 'Belgian Cats' }];
 
 /** Recherche de club (fonction de l'ancien site public) : ses équipes, calendriers et classements, sans compte */
 function ClubSearch({ comps, dark }: { comps?: Landing['comps']; dark?: boolean }) {
@@ -257,7 +258,7 @@ function ClubSearch({ comps, dark }: { comps?: Landing['comps']; dark?: boolean 
   const qq = normalize(q.trim());
   const found = useMemo(() => (qq.length < 2 || !clubs ? [] : clubs.filter((c) => normalize(`${c.name} ${c.short} ${c.city}`).includes(qq)).slice(0, 6)), [qq, clubs]);
   // Compétitions mises en avant : noms connus d'avance (les puces sont là tout de suite, à leur taille) ; logos dès landing.json
-  const popular = POPULAR.map(([id, name]) => comps?.find((c) => c.id === id) ?? { id, name, cat: 'national' as const, women: false, youth: false });
+  const popular = POPULAR.map(({ id, name }) => comps?.find((c) => c.id === id) ?? { id, name, cat: 'national' as const, women: false, youth: false });
   return (
     <div className={`lp-search${dark ? ' dark' : ''}`}>
       <label className="lp-field"><Ico n="search" size={20} /><input value={q} onFocus={want} onChange={(e) => { want(); setQ(e.target.value); }} placeholder={t('Cherche ton club ou ta ville…')} aria-label={t('Chercher un club')} /></label>
