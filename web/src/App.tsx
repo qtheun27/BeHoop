@@ -7,6 +7,7 @@ import { useSession } from './lib/session';
 import { Icons, Logo, LangSwitch, Avatar, useWide, Loader } from './ui/kit';
 import { Ico } from './ui/icons';
 import { t } from './lib/i18n';
+import { setReturnTo, takeReturnTo } from './lib/util';
 import { AuthSheet, Onboarding } from './screens/Auth';
 import { Welcome } from './screens/Welcome';
 import { Explore, ClubPage, TeamPage } from './screens/Explore';
@@ -33,6 +34,8 @@ const tr = t;
 /** Sans compte : les onglets utiles (le reste se débloque en se connectant) */
 const ANON_TABS: [string, React.ReactNode, string][] = [['fil', Icons.home, 'Accueil'], ['explorer', Icons.search, 'Arena'], ['actus', <Ico n="news" />, 'Actus']];
 const LOCKED = ['Tribune', 'Saison', 'Vestiaire', 'Shoot'];
+/** Pages réservées aux comptes (onglets verrouillés et leurs sous-pages) */
+const MEMBERS_ONLY = new Set(['matchs', 'equipes', 'publier', 'montage', 'camp', 'espace', 'moderation']);
 const TABS = [
   { id: 'fil', label: 'Tribune', icon: Icons.home }, { id: 'explorer', label: 'Arena', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
@@ -44,13 +47,21 @@ export function App() {
   const wide = useWide();
   const [page, a, b] = useRoute();
   useEffect(() => { if (s.ready) hideSplash(); }, [s.ready]);
+  // Sans compte, une page réservée (lien direct) : retour à l'accueil, et on y reviendra après la connexion
+  useEffect(() => {
+    if (s.ready && !s.user && MEMBERS_ONLY.has(page)) { setReturnTo(location.hash); location.replace('#/fil'); }
+  }, [s.ready, s.user, page]);
+  // Connecté (profil prêt, accueil passé) et arrivé sur la Tribune : la page demandée avant la connexion, s'il y en a une
+  useEffect(() => {
+    if (s.user && s.profile?.onboarded && page === 'fil') { const back = takeReturnTo(); if (back && back !== location.hash) location.hash = back; }
+  }, [s.user, s.profile?.onboarded, page]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!s.ready) return <Loader full />;
   // Arrivé par un lien de vidéo partagée : directement la vidéo ; le choix des clubs viendra à la prochaine ouverture
   if (s.user && s.profile && !s.profile.onboarded && !/^#\/video\//.test(location.hash)) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
 
   // Écran de départ sans compte (behoop.be) : l'accueil, plein écran, avec la connexion sur place ; connecté : la Tribune
-  if (!s.user && (page === '' || page === 'fil')) return (
+  if (!s.user && (page === '' || page === 'fil' || MEMBERS_ONLY.has(page))) return (
     <>
       <NewsReader />
       <Welcome />
