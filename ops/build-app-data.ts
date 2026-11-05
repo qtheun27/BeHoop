@@ -59,7 +59,8 @@ for (const [sid, list] of bySerie) {
 console.log('Moteur de classement (séries reproduites exactement) :', Object.entries(ruleStats).map(([f, [ok, n]]) => `${f} ${ok}/${n}`).join(', '));
 const comps = buildCompetitions(all);
 writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
-// Page d'accueil behoop.be (web/src/screens/Welcome.tsx) : tout ce qu'elle affiche d'emblée dans un seul petit fichier
+// Page d'accueil behoop.be (web/src/screens/Welcome.tsx) : tout ce qu'elle affiche d'emblée dans un seul petit fichier.
+// Chiffres : basket belge seulement (séries belges, BNXT et équipes nationales comprises ; clubs et équipes belges)
 // (chiffres, compétitions mises en avant, derniers résultats du haut niveau belge), sans charger index/compétitions/séries.
 {
   const clubOf = new Map<number, (typeof all.clubs)[number]>();
@@ -75,7 +76,7 @@ writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
     .map((g) => ({ id: g.id, s: g.s, hs: g.hs, as: g.as, h: side(g.h, g.hn), a: side(g.a, g.an) }));
   const pick = ({ id, name, cat, women, youth, logo, dark }: (typeof comps)[number]) => ({ id, name, cat, women, youth, logo, dark });
   writeFileSync(join(out, 'landing.json'), JSON.stringify({
-    generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0), competitions: comps.length,
+    generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0), competitions: comps.filter((c) => ['flandre', 'wallonie', 'national'].includes(c.cat) || c.id === 'lions' || c.id === 'cats').length,
     comps: POP.map((id) => comps.find((c) => c.id === id)).filter(Boolean).map((c) => pick(c!)), ticker,
   }));
 }
