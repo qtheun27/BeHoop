@@ -148,6 +148,8 @@ export function Welcome() {
             : Array.from({ length: desk ? 4 : 2 }, (_, i) => <div key={i} className={`lp-news lp-ghost${desk && i === 0 ? ' big' : ''}`}><span className="ph" /><span className="tx"><i /><i /><i /></span></div>)}</div>
         </section>}
 
+        {L?.showcase && <Showcase sc={L.showcase} series={L.competitions ?? 0} desk={desk} />}
+
         {!desk && <section className="lp-sec">
           <div className="lp-h"><h2>{t('Trouve ton club')}</h2></div>
           <ClubSearch comps={L?.comps} />
@@ -241,6 +243,36 @@ function NewsTile({ n, list, big, first, i = 0 }: { n: News; list: News[]; big?:
 }
 
 // (objets et non paires : noms propres traduits par trName, pas des textes de l'interface)
+/** Vitrine : du championnat du coin aux plus grandes ligues (Belgique, Europe, monde), le basket féminin mis en avant.
+ *  Ordinateur : trois colonnes ; téléphone : une rangée qu'on fait glisser par horizon. Chaque logo ouvre la compétition. */
+function Showcase({ sc, series, desk }: { sc: NonNullable<Landing['showcase']>; series: number; desk: boolean }) {
+  const groups: [keyof typeof sc, IconName, string][] = [['be', 'flag', 'Belgique'], ['eu', 'europe', 'Europe'], ['world', 'globe', 'Monde']];
+  const women = Object.values(sc).flat().filter((c) => c.women);
+  const tile = (c: Landing['comps'][number]) => (
+    <a key={c.id} className="lp-sc-item" href={`#/competition/${c.id}`}>
+      <CompLogo c={c} size={desk ? 34 : 44} /><span>{trName(c.name)}</span>{c.women && desk && <i className="lp-sc-w">{t('Dames')}</i>}
+    </a>
+  );
+  return (
+    <section className="lp-sec">
+      <div className="lp-h"><h2>{t('Du terrain du coin aux plus grandes ligues')}</h2></div>
+      <div className={desk ? 'lp-sc-grid' : 'lp-sc-rows'}>
+        {groups.map(([k, ic, label]) => (
+          <div key={k} className="lp-sc-col">
+            <div className="lp-sc-head"><Ico n={ic} size={18} /><b>{t(label)}</b></div>
+            <div className="lp-sc-list">
+              {/* Belgique : d'abord tous les championnats, du plus petit club à la BNXT */}
+              {k === 'be' && <a className="lp-sc-item lp-sc-all" href="#/explorer?vue=comps"><span className="lp-sc-n">{series.toLocaleString('fr-BE')}</span><span>{t('séries en Belgique')}</span></a>}
+              {sc[k].map(tile)}
+            </div>
+          </div>
+        ))}
+      </div>
+      {women.length > 0 && <p className="lp-sc-women"><Ico n="women" size={18} /><span><b>{t('Le basket féminin a toute sa place')}</b> · {tn(women.length, '{n} compétition féminine suivie, des Cats à la WNBA.', '{n} compétitions féminines suivies, des Cats à la WNBA.')}</span></p>}
+    </section>
+  );
+}
+
 const POPULAR = [{ id: 'bnxt', name: 'BNXT League' }, { id: 'tdm1', name: 'Top Division Men 1' }, { id: 'tdw', name: 'Top Division Women' }, { id: 'lions', name: 'Belgian Lions' }, { id: 'cats', name: 'Belgian Cats' }];
 
 /** Recherche de club (fonction de l'ancien site public) : ses équipes, calendriers et classements, sans compte */

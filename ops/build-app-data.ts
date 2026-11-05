@@ -78,6 +78,12 @@ writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
   writeFileSync(join(out, 'landing.json'), JSON.stringify({
     generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0), competitions: comps.filter((c) => ['flandre', 'wallonie', 'national'].includes(c.cat) || c.id === 'lions' || c.id === 'cats').length,
     comps: POP.map((id) => comps.find((c) => c.id === id)).filter(Boolean).map((c) => pick(c!)), ticker,
+    // Vitrine « du terrain du coin aux plus grandes ligues » : compétitions phares par horizon
+    showcase: Object.fromEntries(Object.entries({
+      be: ['tdm1', 'tdw', 'beker-heren', 'beker-dames', 'bnxt'],
+      eu: ['euroleague', 'eurocup', 'bcl', 'fec', 'elw', 'ecw'],
+      world: ['nba', 'wnba', 'lions', 'cats', 'wcq', 'wwc'],
+    }).map(([k, ids]) => [k, ids.map((id) => comps.find((c) => c.id === id)).filter(Boolean).map((c) => pick(c!))])),
   }));
 }
 // Calendrier de chaque compétition (tous ses matchs, depuis un mois) : calendars/comp-{id}.ics

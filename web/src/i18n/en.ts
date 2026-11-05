@@ -1322,4 +1322,11 @@ export const EN: Record<string, string> = {
   "Gratuit · un compte pour tout": "Free · one account for everything",
   "compétitions": "competitions",
   "séries": "divisions",
+  "Dames": "Women",
+  "Du terrain du coin aux plus grandes ligues": "From the local court to the biggest leagues",
+  "séries AWBB et Basketbal Vlaanderen": "AWBB and Basketbal Vlaanderen divisions",
+  "Le basket féminin a toute sa place": "Women’s basketball gets its full place",
+  "séries en Belgique": "divisions in Belgium",
+  "{n} compétition féminine suivie, des Cats à la WNBA.": "{n} women’s competition followed, from the Cats to the WNBA.",
+  "{n} compétitions féminines suivies, des Cats à la WNBA.": "{n} women’s competitions followed, from the Cats to the WNBA.",
 };
