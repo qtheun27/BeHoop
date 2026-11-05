@@ -114,3 +114,13 @@ describe('stockage Firestore des réglages', () => {
     expect(settingsFromStore(s)).toEqual(st);
   });
 });
+
+import { isMini } from './mini';
+describe('isMini (mini-basket U6–U13)', () => {
+  it('reconnaît les noms AWBB, Flandre et abrégés', () => {
+    for (const n of ['U12 Mixte A', 'Provincial U10 - Série A', 'U12HM G', 'PU12HM', 'CDU12', 'Jongens U12', 'U7M B', 'Amicaux U8 / U6', 'Benjamins']) expect(isMini(n), n).toBe(true);
+  });
+  it('pas les U14 et plus, ni les seniors', () => {
+    for (const n of ['U14 Mixte A', 'PU16H', 'RU14H', 'U21', 'P1H', 'EuroBasket féminin 2027', 'Top Division Men 1', 'U19 Niveau 2']) expect(isMini(n), n).toBe(false);
+  });
+});

@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     outDir: resolve(repo, 'app'),
     emptyOutDir: true,
-    rollupOptions: { input: { main: resolve(__dirname, 'index.html'), planche: resolve(__dirname, 'render/planche.html') } },
+    rollupOptions: { input: { main: resolve(__dirname, 'index.html'), landing: resolve(__dirname, 'landing.html'), planche: resolve(__dirname, 'render/planche.html') } },
   },
   server: { port: 5173, host: true },
 });

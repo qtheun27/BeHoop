@@ -302,6 +302,16 @@ function TeamTabs({ team, club, games }: { team: Team; club: Club; games: Game[]
   );
 }
 
+/** Mini-basket vu sans compte : résultats et classement BeHoop réservés aux membres connectés */
+export function MiniLocked() {
+  const s = useSession();
+  return (
+    <div className="banner"><Ico n="lock" size={26} style={{ color: 'var(--accent)' }} />
+      <div className="grow" style={{ flex: 1 }}><b>{t('Mini-basket')}</b><div className="muted" style={{ fontSize: 14 }}>{t('La fédération ne publie pas ces résultats. Les scores encodés par les clubs et le classement BeHoop sont réservés aux membres connectés.')}</div></div>
+      <button className="btn small" onClick={() => s.requireAuth()}>{t('Se connecter')}</button></div>
+  );
+}
+
 export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics: string }) {
   const [which, setWhich] = useState<'avenir' | 'joues'>('avenir');
   const today = new Date().toISOString().slice(0, 10);
@@ -314,6 +324,7 @@ export function TeamGames({ team, games, ics }: { team: Team; games: Game[]; ics
         <CalendarButton teamId={team.id} primary />
         <button className="btn small secondary" onClick={() => { navigator.clipboard?.writeText(ics); }}>{t('Copier le lien')}</button>
       </div>
+      {games.some((g) => g.locked) && <MiniLocked />}
       <div className="chips">
         <button className={`chip${which === 'avenir' ? ' on' : ''}`} onClick={() => setWhich('avenir')}>{t('À venir')} ({next.length})</button>
         <button className={`chip${which === 'joues' ? ' on' : ''}`} onClick={() => setWhich('joues')}>{t('Joués')} ({past.length})</button>
@@ -346,7 +357,7 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
   return (
     <>
       {series.length > 1 && <div className="chips">{series.map(([id, n]) => <button key={id} className={`chip${sid === id ? ' on' : ''}`} onClick={() => setSid(id)}>{n}</button>)}</div>}
-      {!serie.data ? <Skeleton h={44} n={6} /> : rows.length === 0 ? <Empty ill="standings" title={t('Classement pas encore publié')} /> : (
+      {!serie.data ? <Skeleton h={44} n={6} /> : serie.data.locked ? <MiniLocked /> : rows.length === 0 ? <Empty ill="standings" title={t('Classement pas encore publié')} /> : (
         <StandingsTable rows={rows} names={names} me={team.id} provisional={serie.data.provisional} unofficial={serie.data.unofficial} />
       )}
     </>

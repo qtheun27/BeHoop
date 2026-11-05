@@ -8,6 +8,7 @@ import { frDate, haptic } from '../lib/util';
 import { Screen, Tabs, Disc, Skeleton, ErrorBox, Empty, useAsync, MoreList } from '../ui/kit';
 import { NewsCard } from './News';
 import { StandingsTable } from '../ui/Standings';
+import { MiniLocked } from './Explore';
 import { CompLogo } from '../ui/CompLogo';
 import { CalendarButton } from '../ui/CalendarButton';
 import { Ico } from '../ui/icons';
@@ -98,7 +99,8 @@ export function CompPage({ id }: { id: string }) {
         : <Empty ill="ball" title={t('Pas encore de résultat')} />)}
       {tab === 'calendrier' && (upcoming.length ? <MoreList items={upcoming} step={60} render={(g) => <CompGameRow key={g.id} g={g} />} />
         : <Empty ill="calendar" title={t('Aucun match prévu')} />)}
-      {tab === 'classement' && (!cur ? <Empty ill="standings" title={t('Pas de classement')} text={t('Cette compétition se joue par élimination directe ou le classement n’est pas encore publié.')} /> : <>
+      {(tab === 'classement' || tab === 'resultats') && games.some((g) => g.locked) && <MiniLocked />}
+      {tab === 'classement' && (!cur ? games.some((g) => g.locked) ? null : <Empty ill="standings" title={t('Pas de classement')} text={t('Cette compétition se joue par élimination directe ou le classement n’est pas encore publié.')} /> : <>
         {withTable.length > 1 && <div className="chips">{withTable.map((x) => <button key={x.serie.id} className={`chip${cur.serie.id === x.serie.id ? ' on' : ''}`} onClick={() => setSid(x.serie.id)}>{trName(x.serie.name.split(' · ').slice(1).join(' · ') || x.serie.short || x.serie.name)}</button>)}</div>}
         <StandingsTable rows={cur.standings} names={names} provisional={cur.provisional} unofficial={cur.unofficial} />
       </>)}

@@ -1,3 +1,5 @@
+import { isMini } from '../../../shared/mini';
+import { MiniLocked } from './Explore';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { newsForTeams } from '../lib/newsMatch';
 import { readerClick } from '../ui/NewsReader';
@@ -236,7 +238,7 @@ export function Feed() {
 
   if (!s.user) return (
     <Screen title={t('Tribune')} home hideTitle aside={<FeedAside />}><NewsCarousel /><Empty ill="ball" title={t('Ton fil basket')} text={t('Crée ton compte pour suivre tes clubs : résultats, photos, vidéos de match et scores en direct.')}
-      action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/?site=1">{t('Voir le site public')}</a></>} /></Screen>
+      action={<><button className="btn" onClick={() => s.requireAuth()}>{t('Créer mon compte')}</button><a className="btn ghost" href="/">{t('Accueil')}</a></>} /></Screen>
   );
   return (
     <Screen title={t('Tribune')} home hideTitle aside={<FeedAside />}>
@@ -335,5 +337,8 @@ function Suggestions() {
 
 export function PostPage({ id }: { id: string }) {
   const { data, error, loading } = useAsync(() => D.getPost(id), [id]);
-  return <Screen title={t('Publication')} back="fil">{loading ? <Skeleton /> : error ? <ErrorBox msg={error} /> : data ? <PostCard post={data} /> : <Empty ill="help" title={t('Publication introuvable')} />}</Screen>;
+  const s = useSession();
+  // Carte score de mini-basket ouverte sans compte : réservée aux membres connectés (shared/mini.ts)
+  const locked = !s.user && (data?.type === 'score' || data?.type === 'live') && isMini((data.payload as ScorePayload).competition);
+  return <Screen title={t('Publication')} back="fil">{loading ? <Skeleton /> : error ? <ErrorBox msg={error} /> : locked ? <MiniLocked /> : data ? <PostCard post={data} /> : <Empty ill="help" title={t('Publication introuvable')} />}</Screen>;
 }

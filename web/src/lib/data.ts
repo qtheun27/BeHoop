@@ -8,11 +8,17 @@ export interface Club { id: number; name: string; short: string; province: strin
   venue?: { name: string; street: string; zip: string; city: string; lat?: number; lng?: number } | null; teams: Team[]; linked?: number }
 export interface Game { id: number; d: string; t: string; s: number; sn: string; h: number; a: number; hn: string; an: string;
   hs: number | null; as: number | null; v: string; adr: string; lat?: number; lng?: number; ty: string;
-  /** Score arrivé par les résultats rapides (lib/live.ts), pas encore dans la mise à jour officielle */ live?: boolean }
+  /** Score arrivé par les résultats rapides (lib/live.ts), pas encore dans la mise à jour officielle */ live?: boolean;
+  /** Mini-basket vu sans compte : score retiré (réservé aux membres connectés) */ locked?: boolean }
 export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number; /** Matchs nuls (jeunes en Flandre) */ draws?: number; /** Rang officiel (départages de la fédération compris) */ rank?: number }
 
 export { ranked } from './standings';
 import { unofficial } from './standings';
+import { isMini } from '../../../shared/mini';
+import { auth } from './firebase';
+
+/** Visiteur sans compte : les scores du mini-basket sont retirés (calendrier seulement), voir shared/mini.ts */
+const guard = (games: Game[]) => (auth.currentUser ? games : games.map((g) => (isMini(g.sn) && g.hs !== null ? { ...g, hs: null, as: null, locked: true } : g)));
 
 const cache = new Map<string, Promise<unknown>>();
 function get<T>(path: string): Promise<T> {
@@ -31,18 +37,19 @@ export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?
 export const loadClub = async (id: number) => {
   const d = await get<{ club: Club; games: Game[] }>(`clubs/${await clubAlias(id)}.json`);
   const { withLive } = await import('./live');
-  return { ...d, games: (await withLive(d.games)).games };
+  return { ...d, games: guard((await withLive(d.games)).games) };
 };
 /** Série : classement officiel, ou provisoire (provisional = heure du dernier résultat) si des résultats rapides sont arrivés
  *  et que le moteur reproduit exactement le classement officiel de cette série (serie.rule) */
 export const loadSerie = async (id: number) => {
   const d = await get<{ serie: { id: number; name: string; short: string; rule?: string; unofficial?: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
   const { withLive, provisional } = await import('./live');
-  const { games, latest } = await withLive(d.games);
+  const live = await withLive(d.games);
+  const games = guard(live.games); const latest = games.some((g) => g.locked) ? null : live.latest;
   // Mini-basket : pas de classement officiel → classement BeHoop calculé à partir des scores encodés (résultats rapides compris)
   const own = !d.standings.length && d.serie.unofficial ? unofficial(games, d.serie.unofficial) : null;
   const prov = !own && latest ? provisional(d.standings, games, d.serie.rule) : null;
-  return { ...d, games, standings: own ?? prov ?? d.standings, provisional: prov ? latest : null, unofficial: !!own };
+  return { ...d, games, standings: own ?? prov ?? d.standings, provisional: prov ? latest : null, unofficial: !!own, locked: !own && !!d.serie.unofficial && games.some((g) => g.locked) };
 };
 
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */

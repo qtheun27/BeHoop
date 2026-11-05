@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   GoogleAuthProvider, signInWithPopup, signInWithRedirect, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink,
   signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail,
@@ -28,6 +28,18 @@ const msg = (e: any): string => {
 /** Feuille de connexion / inscription, déclenchée par une action (Suivre, Réagir, Publier). */
 export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finishOnly?: boolean }) {
   const s = useSession();
+  const profile = !!s.user && !s.profile;
+  return (
+    <Sheet title={profile ? t('Crée ton profil') : t('Connexion')} onClose={profile && finishOnly ? () => {} : onClose}>
+      <AuthForm onDone={() => afterLogin(s.authSheet, onClose)} />
+    </Sheet>
+  );
+}
+
+/** Connexion / inscription (Google, lien magique, mot de passe) puis profil : dans la feuille de l'appli et sur la page
+ *  d'accueil behoop.be (même formulaire). onDone : connecté avec un profil (absent : rien, l'appli prend le relais). */
+export function AuthForm({ onDone, intro = true }: { onDone?: () => void; intro?: boolean }) {
+  const s = useSession();
   const [mode, setMode] = useState<'lien' | 'mdp'>('lien');
   const [email, setEmail] = useState(store.get('behoop.email', ''));
   const [pwd, setPwd] = useState('');
@@ -40,8 +52,10 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
   const [age, setAge] = useState(false); const [cgu, setCgu] = useState(false);
 
   // Connexion réussie avec un profil existant : on ferme la feuille et on rejoue l'action demandée
+  const done = useRef(false);
+  const finished = () => { if (done.current) return; done.current = true; onDone?.(); };
   useEffect(() => {
-    if (s.user && s.profile && !finishOnly) afterLogin(s.authSheet, onClose);
+    if (s.user && s.profile) finished();
   }, [s.user, s.profile]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (s.user) { const n = s.user.displayName?.split(' ') ?? []; setFirst((f) => f || n[0] || ''); setLast((l) => l || n.slice(1).join(' ')); }
@@ -66,27 +80,27 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
     if (!s.user) return;
     const p = await D.createProfile(s.user.uid, shortName(`${first} ${last}`));
     s.setProfile(p); haptic();
-    afterLogin(s.authSheet, onClose);
+    finished();
   });
 
   if (s.user && !s.profile) {
     return (
-      <Sheet title={t('Crée ton profil')} onClose={finishOnly ? () => {} : onClose}>
+      <>
         <p className="muted">{t('Ton nom s’affiche ainsi :')} <b>{shortName(`${first || t('Prénom')} ${last || t('Nom')}`)}</b></p>
         <label className="label" htmlFor="fn">{t('Prénom')}</label><input id="fn" className="field" value={first} onChange={(e) => setFirst(e.target.value)} autoComplete="given-name" />
         <label className="label" htmlFor="ln">{t('Nom')}</label><input id="ln" className="field" value={last} onChange={(e) => setLast(e.target.value)} autoComplete="family-name" />
         <label className="check"><input type="checkbox" checked={age} onChange={(e) => setAge(e.target.checked)} />{t('J’ai 13 ans ou plus.')}</label>
         <label className="check"><input type="checkbox" checked={cgu} onChange={(e) => setCgu(e.target.checked)} />
-          <span>{t('J’accepte les')} <a href="#/legal/cgu" target="_blank">{t('conditions d’utilisation')}</a>, {t('la')} <a href="#/legal/confidentialite" target="_blank">{t('politique de confidentialité')}</a> {t('et la')} <a href="#/legal/charte" target="_blank">{t('charte')}</a>.</span></label>
+          <span>{t('J’accepte les')} <a href="/app/#/legal/cgu" target="_blank">{t('conditions d’utilisation')}</a>, {t('la')} <a href="/app/#/legal/confidentialite" target="_blank">{t('politique de confidentialité')}</a> {t('et la')} <a href="/app/#/legal/charte" target="_blank">{t('charte')}</a>.</span></label>
         {err && <div className="err">{err}</div>}
         <button className="btn mt" disabled={!first.trim() || !last.trim() || !age || !cgu || busy} onClick={finish}>{t('Continuer')}</button>
         <button className="btn ghost mt" onClick={() => s.logout()}>{t('Se déconnecter')}</button>
-      </Sheet>
+      </>
     );
   }
   return (
-    <Sheet title={t('Connexion')} onClose={onClose}>
-      <p className="center muted" style={{ marginTop: 0 }}>{t('Suis tes clubs, réagis aux résultats et publie les photos et vidéos de tes matchs.')}</p>
+    <>
+      {intro && <p className="center muted" style={{ marginTop: 0 }}>{t('Suis tes clubs, réagis aux résultats et publie les photos et vidéos de tes matchs.')}</p>}
       <button className="btn secondary" onClick={google} disabled={busy} style={{ color: 'var(--text)' }}>
         <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
         {t('Continuer avec Google')}
@@ -114,7 +128,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
           )}
         </>
       )}
-    </Sheet>
+    </>
   );
 }
 
