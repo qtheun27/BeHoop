@@ -1320,4 +1320,5 @@ export const EN: Record<string, string> = {
   "Score réservé aux membres connectés": "Score for signed-in members only",
   "Débloque toute l’appli": "Unlock the whole app",
   "Gratuit · un compte pour tout": "Free · one account for everything",
+  "compétitions": "competitions",
 };

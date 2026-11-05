@@ -75,7 +75,7 @@ writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
     .map((g) => ({ id: g.id, s: g.s, hs: g.hs, as: g.as, h: side(g.h, g.hn), a: side(g.a, g.an) }));
   const pick = ({ id, name, cat, women, youth, logo, dark }: (typeof comps)[number]) => ({ id, name, cat, women, youth, logo, dark });
   writeFileSync(join(out, 'landing.json'), JSON.stringify({
-    generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0),
+    generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0), competitions: comps.length,
     comps: POP.map((id) => comps.find((c) => c.id === id)).filter(Boolean).map((c) => pick(c!)), ticker,
   }));
 }

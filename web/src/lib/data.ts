@@ -34,7 +34,7 @@ export interface Index { generated_at: string; season: string; clubs: Club[]; al
 export const loadIndex = () => get<Index>('index.json');
 /** Page d'accueil behoop.be : chiffres, compétitions mises en avant et derniers résultats (ops/build-app-data.ts) */
 export interface TickerSide { n: string; l: string | null; c: string }
-export interface Landing { generated_at: string; clubs: number; teams: number; comps: Pick<Competition, 'id' | 'name' | 'cat' | 'women' | 'youth' | 'logo' | 'dark'>[];
+export interface Landing { generated_at: string; clubs: number; teams: number; competitions?: number; comps: Pick<Competition, 'id' | 'name' | 'cat' | 'women' | 'youth' | 'logo' | 'dark'>[];
   ticker: { id: number; s: number; hs: number; as: number; h: TickerSide; a: TickerSide }[] }
 export const loadLanding = () => get<Landing>('landing.json');
 export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?? id;

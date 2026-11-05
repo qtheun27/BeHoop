@@ -1320,4 +1320,5 @@ export const NL: Record<string, string> = {
   "Score réservé aux membres connectés": "Score voorbehouden aan aangemelde leden",
   "Débloque toute l’appli": "Ontgrendel de hele app",
   "Gratuit · un compte pour tout": "Gratis · één account voor alles",
+  "compétitions": "competities",
 };

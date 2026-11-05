@@ -126,7 +126,7 @@ export function Welcome() {
             <div className="lp-stats">
               <div><b><Count n={L?.clubs ?? 0} /></b><span>{t('clubs')}</span></div>
               <div><b><Count n={L?.teams ?? 0} /></b><span>{t('équipes')}</span></div>
-              <div><b>{t('3 langues')}</b><span>FR · NL · EN</span></div>
+              <div><b><Count n={L?.competitions ?? 0} /></b><span>{t('compétitions')}</span></div>
             </div>
             {desk ? <ClubSearch comps={L?.comps} dark />
               : <div className="lp-cta"><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href="#/explorer">{t('Explorer')}</a></div>}
