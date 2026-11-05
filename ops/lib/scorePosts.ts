@@ -21,9 +21,9 @@ export function scoreSync(db: Firestore, teamClub: Map<number, ClubLite>) {
       targets: [`t:${g.h}`, `t:${g.a}`, ...(hc ? [`c:${hc.id}`] : []), ...(ac ? [`c:${ac.id}`] : [])],
       visibility: 'public', teamIdPrivate: null, hidden: false, payload,
       ...(cur.exists ? {} : { reactions: {}, createdAt: new Date(`${g.d}T${g.t || '20:00'}:00+02:00`) }) }, { merge: true });
-    // Le résultat officiel remplace le score en direct
+    // Le résultat officiel remplace le score en direct (seulement pour un match récent : pas de lecture inutile au rattrapage)
     const live = db.doc(`liveScores/${g.id}`);
-    if ((await live.get()).exists) { await live.update({ status: 'official', home: g.hs, away: g.as }); await db.doc(`posts/live-${g.id}`).delete().catch(() => {}); }
+    if (Date.parse(`${g.d}T23:59:00`) >= Date.now() - 4 * 864e5 && (await live.get()).exists) { await live.update({ status: 'official', home: g.hs, away: g.as }); await db.doc(`posts/live-${g.id}`).delete().catch(() => {}); }
     if (cur.exists) return 'updated';
     // Pas de notification pour un résultat ancien (rattrapage) : seulement les matchs des dernières 36 h
     if (Date.parse(`${g.d}T23:59:00`) < Date.now() - 36 * 3600e3) return 'created';

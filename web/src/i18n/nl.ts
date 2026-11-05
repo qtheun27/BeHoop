@@ -1283,4 +1283,7 @@ export const NL: Record<string, string> = {
   "Impossible de partager l’affiche.": "De affiche kon niet worden gedeeld.",
   "Enregistrer / partager": "Bewaren / delen",
   "Voir plus ({k} restants)": "Meer tonen (nog {k})",
+  "{r}ᵉ au classement BeHoop": "{r}e in het BeHoop-klassement",
+  "Classement BeHoop, non officiel : la fédération ne publie pas de classement en mini-basket. Calculé à partir des scores encodés par les clubs.": "BeHoop-klassement, niet officieel: de federatie publiceert geen klassement in minibasket. Berekend op basis van de scores die de clubs invoeren.",
+  "Calcul BeHoop d’après les scores {s}": "Berekend door BeHoop op basis van de scores van {s}",
 };

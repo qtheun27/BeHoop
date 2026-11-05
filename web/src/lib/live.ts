@@ -42,3 +42,4 @@ export function provisional(official: Standing[], games: Game[], ruleName?: stri
   const rows = standings(teams, games, r, offsetsFrom(official as never, teams, before, r));
   return rows.map((x) => ({ team: x.team, played: x.played, wins: x.wins, losses: x.losses, pf: x.pf, pa: x.pa, pts: x.pts, draws: x.draws || undefined, rank: x.rank }));
 }
+

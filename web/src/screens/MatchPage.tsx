@@ -37,7 +37,7 @@ export function MatchPage({ serie, id }: { serie: number; id: number }) {
       <a href={`#/equipe/${team}`} style={{ color: 'inherit', textAlign: 'center', minWidth: 0, flex: 1 }}>
         <div style={{ display: 'grid', placeItems: 'center' }}><Disc src={e?.club.logo} name={name} size={64} ring={e?.club.c1} /></div>
         <div style={{ fontWeight: 700, marginTop: 8, lineHeight: 1.2, fontSize: 15 }}>{name}</div>
-        {p && <div className="sub" style={{ marginTop: 4, fontSize: 13 }}>{t('{r}ᵉ au classement', { r: p.rank })}</div>}
+        {p && <div className="sub" style={{ marginTop: 4, fontSize: 13 }}>{s.unofficial ? t('{r}ᵉ au classement BeHoop', { r: p.rank }) : t('{r}ᵉ au classement', { r: p.rank })}</div>}
         {played && <div style={{ fontFamily: 'Anton', fontSize: 44, lineHeight: 1.1, marginTop: 6, opacity: win ? 1 : .55 }}>{score}</div>}
       </a>
     );

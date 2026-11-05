@@ -39,6 +39,10 @@ const official = (sid: number, list: SlimGame[]) => {
 };
 // Moteur de classement (web/src/lib/engine.ts) : règle qui reproduit exactement le classement officiel de la série
 // (serie.rule, ex. « be/reglement ») ; sans règle, l'appli n'affichera jamais de classement provisoire pour cette série.
+// Mini-basket (U6–U13) : la fédération ne publie pas de classement, mais les clubs encodent des scores. L'appli calcule
+// alors un classement BeHoop (non officiel) à partir de ces scores : serie.unofficial = règle utilisée (voir loadSerie).
+const MINI = /\b(U\s?-?(6|7|8|9|10|11|12|13)|benjamins?|pupil(len)?|poussins?|mini)\b/i;
+const UNOFFICIAL = 'be/reglement';
 const ruleStats: Record<string, [number, number]> = {};
 for (const [sid, list] of bySerie) {
   const standings = official(sid, list);
@@ -48,7 +52,9 @@ for (const [sid, list] of bySerie) {
     rule = pickRule(standings, list, pointsOf(fam));
     const st = (ruleStats[fam] ??= [0, 0]); st[1]++; if (rule) st[0]++;
   }
-  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: { ...(all.series.get(sid) ?? { id: sid }), ...(rule ? { rule } : {}) }, standings, games: list }));
+  const name = all.series.get(sid)?.name ?? list[0]?.sn ?? '';
+  const unofficial = !standings.length && MINI.test(name) && list.every((g) => g.ty === 'championnat') && list.some((g) => g.hs !== null);
+  writeFileSync(join(out, 'series', `${sid}.json`), JSON.stringify({ serie: { ...(all.series.get(sid) ?? { id: sid }), ...(rule ? { rule } : {}), ...(unofficial ? { unofficial: UNOFFICIAL } : {}) }, standings, games: list }));
 }
 console.log('Moteur de classement (séries reproduites exactement) :', Object.entries(ruleStats).map(([f, [ok, n]]) => `${f} ${ok}/${n}`).join(', '));
 const comps = buildCompetitions(all);

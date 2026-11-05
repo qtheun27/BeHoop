@@ -12,6 +12,7 @@ export interface Game { id: number; d: string; t: string; s: number; sn: string;
 export interface Standing { team: number; played: number; wins: number; losses: number; pf: number; pa: number; pts: number; /** Matchs nuls (jeunes en Flandre) */ draws?: number; /** Rang officiel (départages de la fédération compris) */ rank?: number }
 
 export { ranked } from './standings';
+import { unofficial } from './standings';
 
 const cache = new Map<string, Promise<unknown>>();
 function get<T>(path: string): Promise<T> {
@@ -35,11 +36,13 @@ export const loadClub = async (id: number) => {
 /** Série : classement officiel, ou provisoire (provisional = heure du dernier résultat) si des résultats rapides sont arrivés
  *  et que le moteur reproduit exactement le classement officiel de cette série (serie.rule) */
 export const loadSerie = async (id: number) => {
-  const d = await get<{ serie: { id: number; name: string; short: string; rule?: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
+  const d = await get<{ serie: { id: number; name: string; short: string; rule?: string; unofficial?: string }; standings: Standing[]; games: Game[] }>(`series/${id}.json`);
   const { withLive, provisional } = await import('./live');
   const { games, latest } = await withLive(d.games);
-  const prov = latest ? provisional(d.standings, games, d.serie.rule) : null;
-  return { ...d, games, standings: prov ?? d.standings, provisional: prov ? latest : null };
+  // Mini-basket : pas de classement officiel → classement BeHoop calculé à partir des scores encodés (résultats rapides compris)
+  const own = !d.standings.length && d.serie.unofficial ? unofficial(games, d.serie.unofficial) : null;
+  const prov = !own && latest ? provisional(d.standings, games, d.serie.rule) : null;
+  return { ...d, games, standings: own ?? prov ?? d.standings, provisional: prov ? latest : null, unofficial: !!own };
 };
 
 /* ---------- Compétitions (competitions.json, voir ops/competitions.ts) ---------- */

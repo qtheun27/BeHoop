@@ -52,4 +52,25 @@ await Promise.all(Array.from({ length: 10 }, async () => {
   }
 }));
 console.log(`posts score : ${created} créés, ${updated} mis à jour (${recent.length} résultats récents)`);
+
+// 3. Rattrapage : cartes des matchs de la saison joués avant l'arrivée des cartes score, du plus ancien au plus récent,
+// par tranches (quotas gratuits Firestore : 20 000 écritures/jour ; la mise à jour tourne deux fois par jour).
+// Curseur dans meta/scoreBackfill ; une fois la saison couverte, plus rien à faire (sauf nouvelle saison).
+const BATCH = 4000;
+const seasonStart = `${String(all.season ?? '').slice(0, 4) || today.slice(0, 4)}-07-01`;
+const bf = (await db.doc('meta/scoreBackfill').get()).data();
+const from: string = bf?.season === all.season ? bf.next : seasonStart;
+const todo = all.games.filter((g: any) => g.d >= from && g.d < since && isPlayed(g) && g.h && g.a).sort((a: any, b: any) => a.d.localeCompare(b.d));
+if (todo.length) {
+  // On coupe à une fin de journée : le curseur reprend le lendemain du dernier jour entièrement traité
+  let part = todo.slice(0, BATCH);
+  if (todo.length > BATCH) { const last = part[part.length - 1].d; const cut = part.filter((g: any) => g.d < last); part = cut.length ? cut : part; }
+  let made = 0; const q = [...part];
+  await Promise.all(Array.from({ length: 10 }, async () => {
+    for (let g = q.shift(); g; g = q.shift()) { const r = await syncGame(g).catch((e) => { console.error('rattrapage', g!.id, e.message); return 'skip' as const; }); if (r !== 'skip') made++; }
+  }));
+  const next = part.length === todo.length ? since : new Date(Date.parse(part[part.length - 1].d) + 864e5).toISOString().slice(0, 10);
+  await db.doc('meta/scoreBackfill').set({ season: all.season, next, at: new Date() });
+  console.log(`rattrapage cartes score : ${made} écrites sur ${part.length} (${todo.length - part.length} restantes, reprise au ${next})`);
+}
 void FieldValue;

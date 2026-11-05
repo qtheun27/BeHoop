@@ -5,7 +5,7 @@ import { t, lang } from '../lib/i18n';
 import { Ico } from './icons';
 
 /** provisional : heure du dernier résultat rapide inclus (classement recalculé, en attente de l'officiel) */
-export function StandingsTable({ rows, names, me, pct: forcePct, provisional }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean; provisional?: number | null }) {
+export function StandingsTable({ rows, names, me, pct: forcePct, provisional, unofficial }: { rows: Standing[]; names: Map<number, string>; me?: number; pct?: boolean; provisional?: number | null; unofficial?: boolean }) {
   const list = ranked(rows);
   // Ligues sans points au classement (NBA, WNBA, EuroLeague, EuroCup : points = victoires) → % de victoires
   const pct = forcePct ?? (list.length > 0 && list.some((r) => r.played) && list.every((r) => r.pts === r.wins));
@@ -13,6 +13,7 @@ export function StandingsTable({ rows, names, me, pct: forcePct, provisional }: 
   const col = (w: number, align: 'center' | 'right' = 'center') => ({ width: w, textAlign: align, flex: 'none' as const });
   return (
     <div className="group standings">
+      {unofficial && <div className="prov-note"><Ico n="help" />{t('Classement BeHoop, non officiel : la fédération ne publie pas de classement en mini-basket. Calculé à partir des scores encodés par les clubs.')}</div>}
       {provisional && <div className="prov-note"><Ico n="bolt" />{t('Provisoire · résultat de {h} inclus, en attente du classement officiel', { h: new Date(provisional).toLocaleTimeString(lang() === 'en' ? 'en-GB' : `${lang()}-BE`, { hour: '2-digit', minute: '2-digit' }) })}</div>}
       <div className="row sub" style={{ minHeight: 30, fontWeight: 600 }}>
         <span style={col(26, 'center')}>#</span><span className="grow">{t('Équipe')}</span>
@@ -26,7 +27,7 @@ export function StandingsTable({ rows, names, me, pct: forcePct, provisional }: 
           <span style={col(24)}>{r.played}</span><span style={col(24)}>{r.wins}</span>{nuls && <span style={col(24)}>{r.draws ?? 0}</span>}<span style={col(24)}>{r.played - r.wins - (r.draws ?? 0)}</span>
           <span style={{ ...col(34, 'right'), fontFamily: 'Anton' }}>{pct ? (r.played ? (r.wins / r.played).toFixed(3).replace(/^0/, '') : '–') : r.pts}</span>
         </a>); })}
-      {list.length > 0 && <div className="source-note">{t('Source : {s}', { s: dataSource(list[0].team) })}</div>}
+      {list.length > 0 && <div className="source-note">{unofficial ? t('Calcul BeHoop d’après les scores {s}', { s: dataSource(list[0].team) }) : t('Source : {s}', { s: dataSource(list[0].team) })}</div>}
     </div>
   );
 }
