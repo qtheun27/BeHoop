@@ -16,7 +16,7 @@ export function useWide() {
 /** Logo BeHoop : emblème détouré (ballon, panier, filet bleu sur fond clair / blanc sur fond sombre) + lettrage sportif */
 export const Logo = ({ size = 38 }: { size?: number }) => (
   <span className="logo" style={{ '--lg': `${size}px` } as React.CSSProperties}>
-    <img className="em-light" src="/icons/emblem-light.png" alt="" /><img className="em-dark" src="/icons/emblem-dark.png" alt="" />
+    <img className="em-light" src="/icons/emblem-light-128.webp" alt="" /><img className="em-dark" src="/icons/emblem-dark-128.webp" alt="" />
     <span className="wm"><b>Be</b><i>Hoop</i></span>
   </span>
 );

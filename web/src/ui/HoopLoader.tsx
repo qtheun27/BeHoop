@@ -9,8 +9,8 @@ export const CenterSvg = ({ size = 150 }: { size?: number }) => (
     <circle className="cc-n" cx="70" cy="70" r="20" />
     <g className="cc-logo">
       <circle cx="70" cy="70" r="40" className="cc-disc" />
-      <image className="em-l" href="/icons/emblem-light.png" x="38" y="38" width="64" height="64" />
-      <image className="em-d" href="/icons/emblem-dark.png" x="38" y="38" width="64" height="64" />
+      <image className="em-l" href="/icons/emblem-light-128.webp" x="38" y="38" width="64" height="64" />
+      <image className="em-d" href="/icons/emblem-dark-128.webp" x="38" y="38" width="64" height="64" />
     </g>
   </svg>
 );
