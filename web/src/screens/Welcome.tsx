@@ -3,7 +3,7 @@
 // Deux mises en page pensées séparément :
 //  • ordinateur : écran partagé (accroche + recherche de club à gauche, connexion toujours visible à droite), grilles ;
 //  • téléphone : parcours vertical au pouce (accroche, actus et résultats qui glissent) ; la connexion s'ouvre en
-//    fenêtre (feuille de l'appli) depuis « Entrer », et une barre « Entrer » reste en bas une fois l'accroche passée.
+//    fenêtre (feuille de l'appli) depuis « Entrer » (en haut, et en fin de page).
 // Elle garde la fonction de l'ancien site public : chercher un club → ses équipes, calendriers et classements
 // (fiches publiques de l'appli).
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -66,20 +66,12 @@ export function Welcome() {
   const land = useAsync(loadLanding, []);
   const news = useAsync(loadNews, []);
   const authRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const [ctaSeen, setCtaSeen] = useState(true);
   const [sheet, setSheet] = useState(false);
   const closeSheet = useCallback(() => setSheet(false), []);
   const profileStep = !!s.user && !s.profile;
 
   // Styles propres à cet écran sur le document (fond, défilement) : retirés en le quittant
   useEffect(() => { document.body.classList.add('landing'); return () => document.body.classList.remove('landing'); }, []);
-  // Téléphone : la barre « Entrer » apparaît quand le bouton de l'accroche n'est plus à l'écran
-  useEffect(() => {
-    const el = ctaRef.current; if (!el || desk) return;
-    const o = new IntersectionObserver(([e]) => setCtaSeen(e.isIntersecting));
-    o.observe(el); return () => o.disconnect();
-  }, [desk]);
   // Connecté (Google…) sans profil : la fenêtre s'ouvre pour le créer
   useEffect(() => { if (!desk && profileStep) setSheet(true); }, [desk, profileStep]);
   // Écran d'ouverture : retiré quand la page et ses données sont prêtes (au bout d'un tour d'animation)
@@ -120,12 +112,12 @@ export function Welcome() {
         <a href="#/fil" aria-label={t('BeHoop, accueil')}><Logo size={desk ? 44 : 36} /></a>
         <div className="hstack" style={{ gap: 10 }}>
           <LangSwitch />
-          {desk && <button className="btn small" onClick={goAuth}>{t('Se connecter')}</button>}
+          {desk && <button className="lp-ghost" onClick={goAuth}>{t('Se connecter')}</button>}
         </div>
       </header>
 
       <section className="lp-hero">
-        <div className="lp-hero-deco" aria-hidden><Court /></div>
+        <div className="lp-hero-deco" aria-hidden><Court tall={!desk} /></div>
         <div className="lp-hero-in">
           <div className="lp-pitch">
             <div className="lp-kick">{t('Tout le basket belge · Gratuit')}</div>
@@ -137,7 +129,7 @@ export function Welcome() {
               <div><b>{t('3 langues')}</b><span>FR · NL · EN</span></div>
             </div>
             {desk ? <ClubSearch comps={L?.comps} dark />
-              : <div className="lp-cta" ref={ctaRef}><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href="#/explorer">{t('Explorer')}</a></div>}
+              : <div className="lp-cta"><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href="#/explorer">{t('Explorer')}</a></div>}
           </div>
           {desk && auth}
         </div>
@@ -186,7 +178,6 @@ export function Welcome() {
       </div>
 
       {authSheet}
-      {!desk && !ctaSeen && !sheet && !(s.user && s.profile) && <div className="lp-dock"><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button></div>}
     </div>
   );
 }
@@ -200,14 +191,15 @@ const FEATURES: [IconName, string, string][] = [
   ['club', 'Espace Club', 'Pour les coachs : séances, exercices animés, tactiques et Hoop Camp.'],
 ];
 
-/** Terrain dessiné en fond de l'accroche (lignes qui se tracent) */
-function Court() {
+/** Terrain dessiné en fond de l'accroche (lignes qui se tracent). pathLength 1 : chaque ligne est tracée en entier, quelle que soit sa longueur */
+function Court({ tall }: { tall?: boolean }) {
+  // tall : écran en hauteur (téléphone) → terrain dressé, entier comme sur ordinateur
   return (
-    <svg className="lp-court" viewBox="0 0 940 500" preserveAspectRatio="xMidYMid slice" aria-hidden>
-      <g fill="none" strokeWidth="3">
-        <rect x="20" y="20" width="900" height="460" rx="6" /><line x1="470" y1="20" x2="470" y2="480" /><circle cx="470" cy="250" r="60" />
-        <path d="M20 90 H150 A160 160 0 0 1 150 410 H20" /><path d="M920 90 H790 A160 160 0 0 0 790 410 H920" />
-        <rect x="20" y="180" width="190" height="140" /><rect x="730" y="180" width="190" height="140" />
+    <svg className="lp-court" viewBox={tall ? '0 0 500 940' : '0 0 940 500'} preserveAspectRatio={tall ? 'xMidYMid meet' : 'xMidYMid slice'} aria-hidden>
+      <g fill="none" strokeWidth="3" transform={tall ? 'translate(500 0) rotate(90)' : undefined}>
+        <rect x="20" y="20" width="900" height="460" rx="6" pathLength={1} /><line x1="470" y1="20" x2="470" y2="480" pathLength={1} /><circle cx="470" cy="250" r="60" pathLength={1} />
+        <path d="M20 90 H150 A160 160 0 0 1 150 410 H20" pathLength={1} /><path d="M920 90 H790 A160 160 0 0 0 790 410 H920" pathLength={1} />
+        <rect x="20" y="180" width="190" height="140" pathLength={1} /><rect x="730" y="180" width="190" height="140" pathLength={1} />
       </g>
     </svg>
   );
@@ -241,7 +233,7 @@ function NewsTile({ n, list, big, first, i = 0 }: { n: News; list: News[]; big?:
   return (
     <a className={`lp-news lp-in${big ? ' big' : ''}`} style={{ animationDelay: `${Math.min(i, 5) * 80}ms` }} href={n.url} target="_blank" rel="noopener" onClick={readerClick(list, n)}>
       {/* L'image apparaît en fondu une fois chargée, sur un fond qui pulse doucement en attendant */}
-      <span className={`ph${loaded ? ' ok' : ''}`}>{img && n.image ? <img src={n.image} alt="" loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" referrerPolicy="no-referrer" onLoad={() => setLoaded(true)} onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
+      <span className={`ph${loaded ? ' ok' : ''}`}>{img && n.image ? <img src={n.image} alt="" loading={first ? 'eager' : 'lazy'} {...{ fetchpriority: first ? 'high' : 'auto' }} decoding="async" referrerPolicy="no-referrer" onLoad={() => setLoaded(true)} onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
       <span className="tx"><small>{n.source}</small><b>{n.title}</b></span>
     </a>
   );

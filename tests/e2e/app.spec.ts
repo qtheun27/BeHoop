@@ -1,6 +1,11 @@
 import { test, expect, type Page } from '@playwright/test';
 import users from '../../ops/fixtures/demo-users.json' with { type: 'json' };
 
+/** Écran d'ouverture retiré (il masque l'appli pendant au moins un tour d'animation, jusqu'à 7 s) : ce que l'utilisateur attend */
+async function ready(page: Page) {
+  await expect(page.locator('#bh-splash')).toHaveCount(0, { timeout: 15_000 });
+}
+
 async function login(page: Page, who: 'responsable' | 'parent' | 'visiteur' | 'joueur' | 'admin') {
   await page.goto('/app/#/profil');
   await page.getByRole('button', { name: 'Se connecter ou créer un compte' }).click();
@@ -41,13 +46,20 @@ test('parent membre : carte de score, photos 🔒 et vidéo du match', async ({ 
 test('commentaires : un compte commente une actu, le compteur suit', async ({ page }) => {
   await login(page, 'visiteur');
   await page.goto('/app/#/actus');
-  const card = page.locator('article.card.news').first();
-  await card.getByRole('button', { name: 'Commentaires' }).click();
-  await page.getByLabel('Ton commentaire…').fill('Belle victoire !');
+  await ready(page);
+  const button = () => page.locator('article.card.news').first().getByRole('button', { name: 'Commentaires' });
+  // Compteur de départ (l'actu peut déjà avoir des commentaires), lu une fois chargé : il doit augmenter de 1
+  await expect(button()).toHaveAttribute('data-loaded', '1');
+  const before = Number((await button().innerText()).replace(/\D/g, '') || 0);
+  await button().click();
+  const text = `Belle victoire ! ${Date.now()}`;
+  await page.getByLabel('Ton commentaire…').fill(text);
   await page.getByRole('button', { name: 'Envoyer' }).click();
-  await expect(page.getByText('Belle victoire !')).toBeVisible();
+  await expect(page.getByText(text)).toBeVisible();
   await page.reload();
-  await expect(page.locator('article.card.news').first().getByRole('button', { name: 'Commentaires' })).toContainText('1');
+  await ready(page);
+  await expect(button()).toHaveAttribute('data-loaded', '1');
+  await expect(button()).toContainText(String(before + 1));
 });
 
 test('visiteur non membre : ni photos 🔒 ni vidéo Jeunes', async ({ page }) => {

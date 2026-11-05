@@ -1,6 +1,7 @@
 /* Thème BeHoop « façon Vibzz » : fonds doux, barres flottantes en verre, cartes très arrondies.
    Réglages par profil : data-accent, data-bg, data-rt (réduire la transparence), data-rm (réduire les animations). */
-:root {
+/* --side-w : largeur de la navigation à gauche (ordinateur), 0 ailleurs : rond, médaillon et terrain se centrent sur le contenu */
+:root { --side-w: 0px;
   /* Couleur par défaut « Ballon » : orange basket → or des planches */
   --accent: #f26a1b; --accent-2: #f2c14e; --accent-grad: linear-gradient(135deg, #f26a1b 0%, #f58a2a 50%, #f2c14e 100%);
   --night: #0a0c12; --gold: #f2c14e;
@@ -35,7 +36,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 /* Parquet : lames de bois + rond central (rempli aux couleurs du club) et ligne médiane */
 :root:not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
   background:
-    radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
+    radial-gradient(circle at calc(50% + var(--side-w) / 2) 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 30%, transparent) 130px 133px, transparent 134px),
     linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 20%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
     radial-gradient(70vw 50vh at 100% 0%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%),
     radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
@@ -44,13 +45,13 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
     linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), #f7efe3), color-mix(in srgb, var(--accent) var(--tint), #f1e2cb));
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]):not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
-  background: radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
+  background: radial-gradient(circle at calc(50% + var(--side-w) / 2) 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
     linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 26%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
     radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
     repeating-linear-gradient(90deg, rgba(255,170,90,.05) 0 2px, transparent 2px 58px),
     linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), #17110b), color-mix(in srgb, var(--accent) var(--tint), #0d0a07)); } }
 :root[data-theme="dark"]:not([data-bg="uni"]):not([data-bg="nuit"]) body::before {
-  background: radial-gradient(circle at 50% 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
+  background: radial-gradient(circle at calc(50% + var(--side-w) / 2) 42%, color-mix(in srgb, var(--accent-2) var(--tint-strong), transparent) 0 129px, color-mix(in srgb, var(--accent) 34%, transparent) 130px 133px, transparent 134px),
     linear-gradient(transparent calc(42% - 1.5px), color-mix(in srgb, var(--accent) 26%, transparent) calc(42% - 1.5px) calc(42% + 1.5px), transparent calc(42% + 1.5px)),
     radial-gradient(60vw 40vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
     repeating-linear-gradient(90deg, rgba(255,170,90,.05) 0 2px, transparent 2px 58px),
@@ -59,7 +60,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 :root[data-bg="nuit"] { --bg: #0a0c12; --text: #fff; --text2: rgba(235,235,245,.62); --bg2: rgba(22,26,36,.94); --glass: rgba(18,22,32,.78); --glass-border: rgba(255,255,255,.08); --sep: rgba(255,255,255,.12); --fill: rgba(255,255,255,.1); --bg3: #2a2f3c; color-scheme: dark; }
 :root[data-bg="nuit"] body::before {
   background: linear-gradient(115deg, transparent 0 62%, color-mix(in srgb, var(--accent) 55%, transparent) 62% 66%, transparent 66% 67.2%, color-mix(in srgb, var(--accent-2) 50%, transparent) 67.2% 68.4%, transparent 68.4%),
-    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) var(--tint), transparent) 0 179px, rgba(255,255,255,.06) 180px 183px, transparent 184px),
+    radial-gradient(circle at calc(50% + var(--side-w) / 2) 45%, color-mix(in srgb, var(--accent) var(--tint), transparent) 0 179px, rgba(255,255,255,.06) 180px 183px, transparent 184px),
     radial-gradient(80vw 60vh at 0% 100%, color-mix(in srgb, var(--accent) var(--tint-strong), transparent), transparent 70%),
     color-mix(in srgb, var(--accent) var(--tint), #0a0c12);
 }
@@ -303,7 +304,7 @@ html { overflow-x: hidden; }
 /* Thème d'un club ou d'une compétition : le rond central du parquet, peint comme sur un vrai terrain —
    anneau aux couleurs, ligne intérieure, disque clair et logo entier (contain : jamais rogné, même le logo NBA en hauteur).
    Même médaillon que .disc / .comp-logo, en grand. */
-:root[data-accent="club"][data-logo]:not([data-bg="uni"]) body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; left: 50%; top: 44%;
+:root[data-accent="club"][data-logo]:not([data-bg="uni"]) body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; left: calc(50% + var(--side-w) / 2); top: 44%;
   width: min(78vw, 360px); aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; box-sizing: border-box;
   border: 12px solid var(--accent-base, var(--accent)); padding: 10%;
   box-shadow: inset 0 0 0 7px var(--medal-bg, #fff), inset 0 0 0 10px var(--accent-2, var(--accent-base)), 0 0 0 6px color-mix(in srgb, var(--accent-base) 35%, transparent);
@@ -346,7 +347,7 @@ html { overflow-x: hidden; }
 
 
 /* Terrain dessiné (ui/CourtBg) : remplace le parquet générique et le médaillon quand un club ou une compétition est choisi */
-.court-bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.court-bg { position: fixed; inset: 0 0 0 var(--side-w); width: calc(100% - var(--side-w)); height: 100%; z-index: -1; pointer-events: none; }
 :root[data-court="light"] .court-bg { opacity: .42; }
 :root[data-court="dark"] .court-bg { opacity: .7; }
 :root[data-court="light"] body::before, :root[data-court="dark"] body::before { background: var(--bg) !important; }

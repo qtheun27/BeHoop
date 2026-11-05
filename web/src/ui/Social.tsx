@@ -38,9 +38,11 @@ export function SocialBar({ k, title, youth, right }: { k: D.ThreadKey; title: s
   const s = useSession();
   const [ref, seen] = useSeen<HTMLDivElement>();
   const [th, setTh] = useState<D.Thread>({ reactions: {}, comments: 0 });
+  // Compteurs chargés (data-loaded) : tant qu'ils ne le sont pas, « pas de nombre » ne veut pas dire zéro
+  const [loaded, setLoaded] = useState(false);
   const [mine, setMine] = useState<D.Emoji | null>(null);
   const [open, setOpen] = useState(false);
-  useEffect(() => { if (seen) D.getThread(k).then(setTh).catch(() => {}); }, [seen, k]);
+  useEffect(() => { if (seen) D.getThread(k).then((x) => { setTh(x); setLoaded(true); }).catch(() => {}); }, [seen, k]);
   useEffect(() => { if (seen && s.user) D.myThreadReaction(k, s.user.uid).then(setMine).catch(() => {}); }, [seen, k, s.user]);
   const onReact = async (e: D.Emoji) => {
     if (!s.requireAuth()) return;
@@ -55,7 +57,7 @@ export function SocialBar({ k, title, youth, right }: { k: D.ThreadKey; title: s
   return (
     <div className="card-actions" ref={ref}>
       {D.EMOJIS.map((e) => <button key={e} className={`react${mine === e ? ' on' : ''}`} onClick={() => onReact(e)} aria-pressed={mine === e} aria-label={t('Réagir {e}', { e })}>{e}{th.reactions[e] ? <span>{th.reactions[e]}</span> : null}</button>)}
-      {!youth && <button className="react" onClick={() => setOpen(true)} aria-label={t('Commentaires')}><Ico n="comment" />{th.comments > 0 && <span>{th.comments}</span>}</button>}
+      {!youth && <button className="react" onClick={() => setOpen(true)} aria-label={t('Commentaires')} data-loaded={loaded ? '1' : undefined}><Ico n="comment" />{th.comments > 0 && <span>{th.comments}</span>}</button>}
       <span style={{ flex: 1 }} />
       {right}
       {open && <CommentsSheet k={k} title={title} onClose={() => setOpen(false)} onCount={(n) => setTh((x) => ({ ...x, comments: n }))} />}
