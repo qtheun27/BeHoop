@@ -1,5 +1,5 @@
 /* Page d'accueil behoop.be (screens/Welcome.tsx) : mêmes couleurs, polices et composants que l'appli (theme.css). */
-body.landing { overflow-x: hidden; padding-left: 0 !important; }
+body.landing { padding-left: 0 !important; }
 body.landing .reader { padding-left: 0; }
 .lp { min-height: 100dvh; color: var(--text); }
 .lp-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
