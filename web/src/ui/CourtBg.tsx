@@ -65,9 +65,23 @@ export function CourtBg() {
   useEffect(() => { document.documentElement.dataset.court = k ? (dark ? 'dark' : 'light') : ''; }, [k, dark]);
   // En quittant (ex. retour à l'accueil, qui n'a pas de terrain) : on retire la marque, sinon elle masque le fond de l'écran suivant
   useEffect(() => () => { delete document.documentElement.dataset.court; }, []);
-  if (!k) return null;
+  // Sans thème de club, fond « terrain » : le terrain en traits fins (même dessin que le haut de l'accueil), complet et centré
+  if (!k) return document.documentElement.dataset.bg === 'parquet' ? <CourtLines tall={!wide} /> : null;
   return (
     <svg className="court-bg" viewBox={wide ? '0 0 300 170' : '0 0 170 300'} preserveAspectRatio="xMidYMid slice" aria-hidden
       dangerouslySetInnerHTML={{ __html: wide ? `<g transform="translate(300 0) rotate(90)">${inner}</g>` : inner }} />
+  );
+}
+
+/** Terrain en traits fins (fond par défaut) : en paysage sur un écran large, dressé sur un écran en hauteur ; jamais rogné */
+function CourtLines({ tall }: { tall: boolean }) {
+  return (
+    <svg className="court-lines" viewBox={tall ? '0 0 500 940' : '0 0 940 500'} preserveAspectRatio="xMidYMid meet" aria-hidden>
+      <g transform={tall ? 'translate(500 0) rotate(90)' : undefined}>
+        <rect x="20" y="20" width="900" height="460" rx="6" /><line x1="470" y1="20" x2="470" y2="480" /><circle cx="470" cy="250" r="60" />
+        <path d="M20 90 H150 A160 160 0 0 1 150 410 H20" /><path d="M920 90 H790 A160 160 0 0 0 790 410 H920" />
+        <rect x="20" y="180" width="190" height="140" /><rect x="730" y="180" width="190" height="140" />
+      </g>
+    </svg>
   );
 }

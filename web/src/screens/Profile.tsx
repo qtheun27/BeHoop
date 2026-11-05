@@ -198,7 +198,7 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
       <div className="group-title mt">{t('Mode')}</div>
       <Seg v={th.mode} opts={[['light', 'Clair', 'sun'], ['dark', 'Sombre', 'moon'], ['auto', 'Auto']]} on={(mode) => save({ mode })} />
       <div className="group-title">{t('Fond')}</div>
-      <Seg v={th.bg} opts={[['parquet', 'Parquet', 'ball'], ['nuit', 'Nuit de match'], ['uni', 'Uni']]} on={(bg) => save({ bg })} />
+      <Seg v={th.bg} opts={[['parquet', 'Terrain', 'ball'], ['nuit', 'Nuit de match'], ['uni', 'Uni']]} on={(bg) => save({ bg })} />
       <div className="group">
         <label className="row"><div className="grow">{t('Réduire la transparence')}<div className="sub">{t('Plus lisible et plus fluide sur les téléphones modestes')}</div></div>
           <input type="checkbox" className="switch" checked={th.rt} onChange={(e) => save({ rt: e.target.checked })} /></label>
