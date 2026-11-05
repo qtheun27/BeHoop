@@ -5,7 +5,9 @@ import * as D from './db';
 import { loadIndex, type Club } from './data';
 import { SUPER_ADMIN_EMAIL } from './config';
 import { t, lang, onLang } from './i18n';
-import { applyTheme, DEFAULT_THEME } from './theme';
+import { applyTheme, defaultTheme, DEFAULT_THEME } from './theme';
+import { db } from './firebase';
+import { terminate, clearIndexedDbPersistence } from 'firebase/firestore';
 
 interface Session {
   ready: boolean; user: User | null; profile: D.Profile | null; isAdmin: boolean;
@@ -61,9 +63,9 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     return onLang((l) => { D.updateProfile(user.uid, { lang: l }).catch(() => {}); });
   }, [user, profile?.lang, !!profile]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
-    if (!profile) return;
-    applyTheme({ ...DEFAULT_THEME, mode: profile.theme ?? 'auto', ...profile.ui }, clubs);
-  }, [profile, clubs]);
+    if (profile) applyTheme({ ...DEFAULT_THEME, mode: profile.theme ?? 'auto', ...profile.ui }, clubs);
+    else if (ready && !user) defaultTheme(); // sans compte : jamais le thème d'un compte
+  }, [profile, clubs, ready, user]);
 
   const toast = useCallback((m: string) => { setToast(m); setTimeout(() => setToast(''), 2600); }, []);
   const derived = useMemo(() => {
@@ -103,7 +105,14 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     refresh: () => load(user), setProfile, toggleFollow, toggleComp,
     requireAuth: (then) => { if (user && profile) return true; setAuthSheet(() => then ?? null); return false; },
     authSheet, closeAuth: () => setAuthSheet(undefined),
-    logout: async () => { await signOut(auth); }, toast, toastMsg,
+    // Déconnexion : rien du compte ne reste sur l'appareil (thème, équipe choisie, copie locale de la base avec ses données
+    // privées), puis l'appli repart propre sur l'accueil. (Les envois de montage en cours gardent leur reprise : sans contenu.)
+    logout: async () => {
+      await signOut(auth);
+      try { ['behoop.session', 'behoop.theme', 'behoop.themeClub', 'behoop.equipe', 'behoop.returnTo'].forEach((k) => localStorage.removeItem(k)); } catch { /* stockage indisponible */ }
+      await terminate(db).then(() => clearIndexedDbPersistence(db)).catch(() => {});
+      location.hash = '#/fil'; location.reload();
+    }, toast, toastMsg,
   };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

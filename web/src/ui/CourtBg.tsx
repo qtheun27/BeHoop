@@ -63,6 +63,8 @@ export function CourtBg() {
   }, []);
   const inner = useMemo(() => (k ? svg(k, dark, wide) : ''), [k, dark, wide]);
   useEffect(() => { document.documentElement.dataset.court = k ? (dark ? 'dark' : 'light') : ''; }, [k, dark]);
+  // En quittant (ex. retour à l'accueil, qui n'a pas de terrain) : on retire la marque, sinon elle masque le fond de l'écran suivant
+  useEffect(() => () => { delete document.documentElement.dataset.court; }, []);
   if (!k) return null;
   return (
     <svg className="court-bg" viewBox={wide ? '0 0 300 170' : '0 0 170 300'} preserveAspectRatio="xMidYMid slice" aria-hidden

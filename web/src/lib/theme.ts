@@ -40,7 +40,8 @@ export function clubColors(c: Pick<Club, 'c1' | 'c2'>) {
   return { accent, second, grad: `linear-gradient(135deg, ${accent} 0%, ${second} 100%)` };
 }
 
-export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
+/** persist : mémoriser sur l'appareil (démarrage sans flash). Jamais sans compte : le thème appartient au compte. */
+export function applyTheme(p: ThemePrefs, clubs: Club[] = [], persist = true) {
   const r = document.documentElement;
   if (p.mode === 'auto') r.removeAttribute('data-theme'); else r.dataset.theme = p.mode;
   r.dataset.bg = p.bg; r.dataset.rt = p.rt ? '1' : '0'; r.dataset.rm = p.rm ? '1' : '0';
@@ -52,15 +53,21 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = []) {
     r.dataset.accent = 'club';
     const k = c ? { ...clubColors(c), logo: c.logo, c1: c.c1, c2: c.c2, name: c.short || c.name } : store.get<{ accent: string; second: string; grad: string; logo?: string | null; c1?: string; c2?: string; name?: string } | null>('behoop.themeClub', null);
     // --accent-base : la couleur du club ; theme.css en dérive --accent (éclaircie en mode sombre pour rester lisible)
-    if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) { r.style.setProperty('--club-logo', `url("${k.logo}")`); r.dataset.logo = '1'; } store.set('behoop.themeClub', k); }
+    if (k) { r.style.setProperty('--accent-base', k.accent); r.style.setProperty('--accent-2', k.second); r.style.setProperty('--accent-grad', k.grad); if (k.logo) { r.style.setProperty('--club-logo', `url("${k.logo}")`); r.dataset.logo = '1'; } if (persist) store.set('behoop.themeClub', k); }
     if (k?.c1) ct = { c1: k.c1, c2: k.c2 && hex(k.c2) ? k.c2 : k.second, logo: k.logo, name: courtName(k.name ?? '') };
   } else r.dataset.accent = p.accent.startsWith('comp:') ? DEFAULT_THEME.accent : p.accent; // ancien thème « compétition » (retiré) → couleur par défaut
   setCourt(p.bg === 'parquet' ? ct : null);
   const meta = document.querySelector('meta[name="theme-color"]:not([media])') ?? Object.assign(document.head.appendChild(document.createElement('meta')), { name: 'theme-color' });
   meta.setAttribute('content', getComputedStyle(r).getPropertyValue('--bg').trim() || '#f4f1ec');
-  store.set('behoop.theme', p);
+  if (persist) store.set('behoop.theme', p);
 }
 /** Nom du club sur le bord du terrain : sans les préfixes BC, BBC, Basket… */
 const courtName = (n: string) => n.replace(/^(r\.?\s*)?(k\.?\s*)?(b\.?b\.?c\.?|b\.?c\.?|basket(ball)?( club)?|royal)\s+/i, '').trim() || n;
-/** Application immédiate au démarrage (avant le chargement du profil). */
-export const bootTheme = () => applyTheme({ ...DEFAULT_THEME, ...store.get<Partial<ThemePrefs>>('behoop.theme', {}) });
+/** Le thème est celui du compte : sans compte sur cet appareil (behoop.session, posé par lib/session), thème BeHoop par défaut. */
+const signedInHere = () => { try { return !!localStorage.getItem('behoop.session'); } catch { return false; } };
+/** Application immédiate au démarrage (avant le chargement du profil) : le thème mémorisé seulement si un compte est connecté ici. */
+export const bootTheme = () => (signedInHere()
+  ? applyTheme({ ...DEFAULT_THEME, ...store.get<Partial<ThemePrefs>>('behoop.theme', {}) })
+  : applyTheme(DEFAULT_THEME, [], false));
+/** Sans compte (déconnexion, ou visiteur) : thème BeHoop par défaut, sans rien mémoriser */
+export const defaultTheme = () => applyTheme(DEFAULT_THEME, [], false);
