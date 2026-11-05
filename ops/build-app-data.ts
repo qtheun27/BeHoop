@@ -59,6 +59,26 @@ for (const [sid, list] of bySerie) {
 console.log('Moteur de classement (séries reproduites exactement) :', Object.entries(ruleStats).map(([f, [ok, n]]) => `${f} ${ok}/${n}`).join(', '));
 const comps = buildCompetitions(all);
 writeFileSync(join(out, 'competitions.json'), JSON.stringify(comps));
+// Page d'accueil behoop.be (web/src/screens/Welcome.tsx) : tout ce qu'elle affiche d'emblée dans un seul petit fichier
+// (chiffres, compétitions mises en avant, derniers résultats du haut niveau belge), sans charger index/compétitions/séries.
+{
+  const clubOf = new Map<number, (typeof all.clubs)[number]>();
+  all.clubs.forEach((c) => c.teams.forEach((t) => clubOf.set(t.id, c)));
+  const be = all.clubs.filter((c) => c.id < 2e10);
+  const POP = ['bnxt', 'tdm1', 'tdw', 'lions', 'cats'];
+  const TICK = ['bnxt', 'tdm1', 'tdw', 'tdm2a', 'tdm2b', 'lions', 'cats'];
+  const since = new Date(Date.now() - 12 * 864e5).toISOString().slice(0, 10);
+  const side = (id: number, name: string) => { const c = clubOf.get(id); return { n: c?.short ?? name, l: c?.logo ?? null, c: c?.c1 ?? '#3d8fdb' }; };
+  const ticker = [...new Map(comps.filter((c) => TICK.includes(c.id)).flatMap((c) => c.series).flatMap((sid) => bySerie.get(sid) ?? [])
+    .filter((g) => g.hs !== null && g.as !== null && !(g.hs === 0 && g.as === 0) && g.d >= since && !isMini(g.sn)).map((g) => [g.id, g])).values()]
+    .sort((a, b) => b.d.localeCompare(a.d)).slice(0, 14)
+    .map((g) => ({ id: g.id, s: g.s, hs: g.hs, as: g.as, h: side(g.h, g.hn), a: side(g.a, g.an) }));
+  const pick = ({ id, name, cat, women, youth, logo, dark }: (typeof comps)[number]) => ({ id, name, cat, women, youth, logo, dark });
+  writeFileSync(join(out, 'landing.json'), JSON.stringify({
+    generated_at: all.generated_at, clubs: be.length, teams: be.reduce((n, c) => n + c.teams.length, 0),
+    comps: POP.map((id) => comps.find((c) => c.id === id)).filter(Boolean).map((c) => pick(c!)), ticker,
+  }));
+}
 // Calendrier de chaque compétition (tous ses matchs, depuis un mois) : calendars/comp-{id}.ics
 mkdirSync('calendars', { recursive: true });
 const since = new Date(Date.now() - 30 * 864e5).toISOString().slice(0, 10);

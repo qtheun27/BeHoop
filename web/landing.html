@@ -16,7 +16,8 @@
   <link rel="icon" href="/icons/favicon-32.png" />
   <!-- Données de la page, demandées tout de suite (en parallèle du code) -->
   <link rel="preload" href="/app-data/news.json" as="fetch" crossorigin="anonymous" />
-  <link rel="preload" href="/app-data/index.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="/icons/emblem-dark.png" as="image" />
+  <link rel="preload" href="/app-data/landing.json" as="fetch" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
@@ -25,6 +26,33 @@
   <script>try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.search)) location.replace('/app/#/fil'); } catch (e) {}</script>
 </head>
 <body class="landing">
+  <!-- Écran d'ouverture de l'appli (même animation, version nuit comme l'accroche) : retiré par lib/splash.ts quand la page
+       et ses données sont prêtes, à la fin d'un tour d'animation. L'accroche démarre ses animations ensuite. -->
+  <script>document.documentElement.classList.add('booting');</script>
+  <div class="bh-splash" id="bh-splash" role="status" aria-label="Chargement">
+    <svg class="cc-anim" width="150" height="150" viewBox="0 0 140 140" aria-hidden="true">
+      <line class="cc-l" x1="0" y1="70" x2="140" y2="70" /><circle class="cc-o" cx="70" cy="70" r="48" /><circle class="cc-n" cx="70" cy="70" r="20" />
+      <g class="cc-logo"><circle cx="70" cy="70" r="40" class="cc-disc" /><image href="/icons/emblem-dark.png" x="38" y="38" width="64" height="64" /></g>
+    </svg>
+    <div class="bh-wm"><span>Be</span><b>Hoop</b></div>
+  </div>
+  <style>
+    .booting #root { visibility: hidden; }
+    .bh-splash { position: fixed; inset: 0; z-index: 1000; transition: opacity .45s ease; font-family: Sora, 'Avenir Next', sans-serif;
+      background: radial-gradient(120% 90% at 85% 10%, rgba(242,106,27,.28), transparent 55%), linear-gradient(160deg, #0a0c12 0%, #121a2b 60%, #0a0c12 100%); }
+    .bh-splash .cc-anim { position: absolute; left: 50%; top: 50%; margin: -95px 0 0 -75px; overflow: visible; }
+    .bh-splash .bh-wm { position: absolute; left: 0; right: 0; top: 50%; margin-top: 69px; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; font-size: 22px; letter-spacing: -.035em; }
+    .bh-wm span { font-weight: 300; color: #fff; } .bh-wm b { font-weight: 700; color: #f26a1b; }
+    .cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
+    .cc-anim .cc-o { stroke: #f26a1b; stroke-width: 3; stroke-dasharray: 302; animation: cc-draw 2.8s cubic-bezier(.6,0,.2,1) infinite; --l: 302; }
+    .cc-anim .cc-n { stroke: #fff; stroke-width: 2; stroke-dasharray: 126; animation: cc-draw 2.8s .2s cubic-bezier(.6,0,.2,1) infinite; --l: 126; }
+    .cc-anim .cc-l { stroke: #fff; stroke-width: 2; stroke-dasharray: 140; animation: cc-draw 2.8s .1s cubic-bezier(.6,0,.2,1) infinite; --l: 140; }
+    .cc-anim .cc-disc { fill: #0a0c12; }
+    .cc-anim .cc-logo { transform-box: view-box; transform-origin: 70px 70px; animation: cc-pop 2.8s infinite; }
+    @keyframes cc-draw { 0% { stroke-dashoffset: var(--l); opacity: 1; } 38% { stroke-dashoffset: 0; opacity: 1; } 52%, 86% { stroke-dashoffset: 0; opacity: .35; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+    @keyframes cc-pop { 0%, 36% { transform: scale(0) rotate(-90deg); opacity: 0; } 50% { transform: scale(1.1) rotate(6deg); opacity: 1; } 58%, 86% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .cc-anim * { animation: none !important; } }
+  </style>
   <div id="root"></div>
   <script type="module" src="/src/landing.tsx"></script>
 </body>

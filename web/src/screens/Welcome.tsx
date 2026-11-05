@@ -7,7 +7,8 @@
 // (fiches publiques de l'appli). Déjà connecté : redirigé vers l'appli (script dans landing.html, puis ici).
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSession } from '../lib/session';
-import { loadIndex, loadNews, loadComps, loadSerie, teamIndex, isPlayed, normalize, readable, type Club, type Game, type News, type Competition } from '../lib/data';
+import { loadIndex, loadNews, loadLanding, normalize, readable, trName, type Club, type News, type Landing } from '../lib/data';
+import { hideSplash } from '../lib/splash';
 import { takeReturnTo } from '../lib/util';
 import { t, tn } from '../lib/i18n';
 import { Logo, LangSwitch, Disc, Sheet, useAsync } from '../ui/kit';
@@ -16,7 +17,6 @@ import { CompLogo } from '../ui/CompLogo';
 import { NewsReader, readerClick } from '../ui/NewsReader';
 import { AuthForm } from './Auth';
 import { topStories } from './News';
-import { isMini } from '../../../shared/mini';
 
 const APP = '/app/';
 const enterApp = () => { location.href = APP + (takeReturnTo() ?? '#/fil'); };
@@ -28,39 +28,41 @@ function useDesktop() {
   return w;
 }
 
-/** Compteur qui monte jusqu'à sa valeur (une fois, à l'affichage) */
+/** L'écran d'ouverture est-il parti ? (classe booting retirée par lib/splash.ts) */
+function useBooted() {
+  const el = document.documentElement;
+  const [ok, setOk] = useState(() => !el.classList.contains('booting'));
+  useEffect(() => {
+    if (ok) return;
+    const o = new MutationObserver(() => { if (!el.classList.contains('booting')) { setOk(true); o.disconnect(); } });
+    o.observe(el, { attributes: true, attributeFilter: ['class'] });
+    return () => o.disconnect();
+  }, [ok, el]);
+  return ok;
+}
+
+/** Compteur qui monte jusqu'à sa valeur, une fois l'écran d'ouverture parti (sinon on ne le verrait pas monter) */
 function Count({ n }: { n: number }) {
   const [v, setV] = useState(0);
+  const booted = useBooted();
   useEffect(() => {
-    if (!n) return;
+    if (!n || !booted) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setV(n); return; }
     const t0 = performance.now(); let raf = 0;
     const step = (now: number) => { const p = Math.min(1, (now - t0) / 1200); setV(Math.round(n * (1 - Math.pow(1 - p, 3)))); if (p < 1) raf = requestAnimationFrame(step); };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
-  }, [n]);
+  }, [n, booted]);
   return <>{v.toLocaleString('fr-BE')}</>;
-}
-
-/** Derniers résultats du basket belge de haut niveau (bandeau défilant) */
-const TICKER_COMPS = ['bnxt', 'tdm1', 'tdw', 'tdm2a', 'tdm2b', 'lions', 'cats'];
-async function loadTicker() {
-  const [comps, idx] = await Promise.all([loadComps(), teamIndex()]);
-  const series = comps.filter((c) => TICKER_COMPS.includes(c.id)).flatMap((c) => c.series);
-  const all = (await Promise.all(series.map((s) => loadSerie(s).catch(() => null)))).flatMap((x) => x?.games ?? []);
-  const since = new Date(Date.now() - 12 * 864e5).toISOString().slice(0, 10);
-  const games = [...new Map(all.filter((g) => isPlayed(g) && g.d >= since && !isMini(g.sn)).map((g) => [g.id, g])).values()]
-    .sort((a, b) => b.d.localeCompare(a.d)).slice(0, 14);
-  return games.map((g) => ({ g, h: idx.get(g.h)?.club, a: idx.get(g.a)?.club }));
 }
 
 export function Welcome() {
   const s = useSession();
   const desk = useDesktop();
-  const idx = useAsync(loadIndex, []);
+  // Tout ce qui s'affiche d'emblée tient dans landing.json (3 Ko) et news.json, préchargés par landing.html et chargés
+  // pendant l'écran d'ouverture ; la liste des clubs (recherche) n'est chargée qu'au premier usage de la recherche.
+  const land = useAsync(loadLanding, []);
   const news = useAsync(loadNews, []);
-  const comps = useAsync(loadComps, []);
-  const ticker = useAsync(loadTicker, []);
   const authRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const [ctaSeen, setCtaSeen] = useState(true);
@@ -78,9 +80,10 @@ export function Welcome() {
   }, [desk]);
   // Connecté (Google…) sans profil : la fenêtre s'ouvre pour le créer
   useEffect(() => { if (!desk && profileStep) setSheet(true); }, [desk, profileStep]);
+  // Écran d'ouverture : retiré quand la page et ses données sont prêtes (au bout d'un tour d'animation)
+  useEffect(() => { hideSplash(() => [loadLanding(), loadNews(), document.fonts?.ready ?? Promise.resolve()]); }, []);
 
-  const be = useMemo(() => (idx.data?.clubs ?? []).filter((c) => c.id < 2e10), [idx.data]);
-  const teams = useMemo(() => be.reduce((n, c) => n + c.teams.length, 0), [be]);
+  const L = land.data;
   const top = useMemo(() => {
     const l = topStories((news.data?.items ?? []).filter(readable), 16);
     // Le basket belge d'abord, puis le reste
@@ -128,11 +131,11 @@ export function Welcome() {
             <h1>{t('Du premier dribble au buzzer')}</h1>
             <p className="lp-sub">{t('Résultats, classements et calendriers de tous les clubs de Belgique, la vidéo de ton match montée automatiquement et la vie de ton équipe. Pour les joueurs, les parents et les coachs.')}</p>
             <div className="lp-stats">
-              <div><b><Count n={be.length} /></b><span>{t('clubs')}</span></div>
-              <div><b><Count n={teams} /></b><span>{t('équipes')}</span></div>
+              <div><b><Count n={L?.clubs ?? 0} /></b><span>{t('clubs')}</span></div>
+              <div><b><Count n={L?.teams ?? 0} /></b><span>{t('équipes')}</span></div>
               <div><b>{t('3 langues')}</b><span>FR · NL · EN</span></div>
             </div>
-            {desk ? <ClubSearch clubs={be} comps={comps.data ?? []} dark />
+            {desk ? <ClubSearch comps={L?.comps} dark />
               : <div className="lp-cta" ref={ctaRef}><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href={`${APP}#/explorer`}>{t('Explorer')}</a></div>}
           </div>
           {desk && auth}
@@ -140,17 +143,20 @@ export function Welcome() {
       </section>
 
 
-      {(ticker.data?.length ?? 0) > 0 && <Ticker items={ticker.data!} />}
+      {!(L && !L.ticker.length) && <Ticker items={L?.ticker} />}
 
       <div className="lp-wrap">
-        {top.length > 0 && <section className="lp-sec">
+        {!(news.data && !top.length) && <section className="lp-sec">
           <div className="lp-h"><h2>{t('À la une')}</h2><a href={`${APP}#/actus`}>{t('Toutes les actus ›')}</a></div>
-          <div className={desk ? 'lp-news-grid' : 'lp-news-row'}>{top.map((n, i) => <NewsTile key={n.id} n={n} list={top} big={desk && i === 0} first={i < (desk ? 4 : 2)} />)}</div>
+          {/* Place réservée (mêmes cartes, vides et animées) tant que les actus ne sont pas là : rien ne bouge à leur arrivée */}
+          <div className={desk ? 'lp-news-grid' : 'lp-news-row'}>{top.length
+            ? top.map((n, i) => <NewsTile key={n.id} n={n} list={top} big={desk && i === 0} first={i < (desk ? 4 : 2)} i={i} />)
+            : Array.from({ length: desk ? 4 : 2 }, (_, i) => <div key={i} className={`lp-news lp-ghost${desk && i === 0 ? ' big' : ''}`}><span className="ph" /><span className="tx"><i /><i /><i /></span></div>)}</div>
         </section>}
 
         {!desk && <section className="lp-sec">
           <div className="lp-h"><h2>{t('Trouve ton club')}</h2></div>
-          <ClubSearch clubs={be} comps={comps.data ?? []} />
+          <ClubSearch comps={L?.comps} />
         </section>}
 
         <section className="lp-sec">
@@ -174,7 +180,7 @@ export function Welcome() {
             <a href={`${APP}#/legal/confidentialite`}>{t('Confidentialité')}</a>
             <a href={`${APP}#/legal/charte`}>{t('Charte')}</a>
           </nav>
-          <p>{t('Données : AWBB, Basketbal Vlaanderen et ligues officielles.')}{idx.data?.generated_at && <> {t('Mise à jour : {d}', { d: new Date(idx.data.generated_at).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' }) })}</>}</p>
+          <p>{t('Données : AWBB, Basketbal Vlaanderen et ligues officielles.')}{L?.generated_at && <> {t('Mise à jour : {d}', { d: new Date(L.generated_at).toLocaleString(undefined, { dateStyle: 'short', timeStyle: 'short' }) })}</>}</p>
         </footer>
       </div>
 
@@ -206,47 +212,60 @@ function Court() {
   );
 }
 
-function Ticker({ items }: { items: { g: Game; h?: Club; a?: Club }[] }) {
-  const row = items.map(({ g, h, a }) => (
-    <a key={g.id} className="lp-tk" href={`${APP}#/match/${g.s}/${g.id}`}>
-      <Disc src={h?.logo} name={h?.short ?? g.hn} size={26} ring={h?.c1} /><span className="nm">{h?.short ?? g.hn}</span>
-      <b className={g.hs! > g.as! ? 'w' : ''}>{g.hs}</b><i>–</i><b className={g.as! > g.hs! ? 'w' : ''}>{g.as}</b>
-      <span className="nm">{a?.short ?? g.an}</span><Disc src={a?.logo} name={a?.short ?? g.an} size={26} ring={a?.c1} />
+/** Bandeau des derniers résultats : sa place est toujours réservée ; en attendant, des lignes se tracent comme le terrain,
+ *  puis les scores arrivent en cascade et défilent. */
+function Ticker({ items }: { items?: Landing['ticker'] }) {
+  const side = (x: Landing['ticker'][number]['h']) => <><Disc src={x.l} name={x.n} size={26} ring={x.c} /><span className="nm">{x.n}</span></>;
+  const row = (dup: boolean) => (items ?? []).map((g, i) => (
+    <a key={g.id} className="lp-tk" href={`${APP}#/match/${g.s}/${g.id}`} style={dup ? undefined : { animationDelay: `${Math.min(i, 8) * 70}ms` }} tabIndex={dup ? -1 : undefined}>
+      {side(g.h)}<b className={g.hs > g.as ? 'w' : ''}>{g.hs}</b><i>–</i><b className={g.as > g.hs ? 'w' : ''}>{g.as}</b>
+      <span className="nm">{g.a.n}</span><Disc src={g.a.l} name={g.a.n} size={26} ring={g.a.c} />
     </a>
   ));
   return (
-    <section className="lp-ticker" aria-label={t('Derniers résultats')}>
+    <section className={`lp-ticker${items ? ' in' : ''}`} aria-label={t('Derniers résultats')} aria-busy={!items}>
       <span className="lp-tk-lab" title={t('Résultats')}><Ico n="bolt" size={16} /><span className="lp-tk-word">{t('Résultats')}</span></span>
-      <div className="lp-tk-track"><div className="lp-tk-run">{row}<span aria-hidden className="lp-tk-dup">{row}</span></div></div>
+      <div className="lp-tk-track">
+        {items ? <div className="lp-tk-run">{row(false)}<span aria-hidden className="lp-tk-dup">{row(true)}</span></div>
+          : <div className="lp-tk-wait" aria-hidden>{Array.from({ length: 6 }, (_, i) => <span key={i} style={{ animationDelay: `${i * 120}ms` }} />)}</div>}
+      </div>
     </section>
   );
 }
 
 /** first : visible dès l'arrivée → image chargée tout de suite (pas en différé) */
-function NewsTile({ n, list, big, first }: { n: News; list: News[]; big?: boolean; first?: boolean }) {
+function NewsTile({ n, list, big, first, i = 0 }: { n: News; list: News[]; big?: boolean; first?: boolean; i?: number }) {
   const [img, setImg] = useState(!!n.image);
+  const [loaded, setLoaded] = useState(false);
   return (
-    <a className={`lp-news${big ? ' big' : ''}`} href={n.url} target="_blank" rel="noopener" onClick={readerClick(list, n)}>
-      <span className="ph">{img && n.image ? <img src={n.image} alt="" loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" referrerPolicy="no-referrer" onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
+    <a className={`lp-news lp-in${big ? ' big' : ''}`} style={{ animationDelay: `${Math.min(i, 5) * 80}ms` }} href={n.url} target="_blank" rel="noopener" onClick={readerClick(list, n)}>
+      {/* L'image apparaît en fondu une fois chargée, sur un fond qui pulse doucement en attendant */}
+      <span className={`ph${loaded ? ' ok' : ''}`}>{img && n.image ? <img src={n.image} alt="" loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" referrerPolicy="no-referrer" onLoad={() => setLoaded(true)} onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
       <span className="tx"><small>{n.source}</small><b>{n.title}</b></span>
     </a>
   );
 }
 
+const POPULAR: [string, string][] = [['bnxt', 'BNXT League'], ['tdm1', 'Top Division Men 1'], ['tdw', 'Top Division Women'], ['lions', 'Belgian Lions'], ['cats', 'Belgian Cats']];
+
 /** Recherche de club (fonction de l'ancien site public) : ses équipes, calendriers et classements, sans compte */
-function ClubSearch({ clubs, comps, dark }: { clubs: Club[]; comps: Competition[]; dark?: boolean }) {
+function ClubSearch({ comps, dark }: { comps?: Landing['comps']; dark?: boolean }) {
   const [q, setQ] = useState('');
+  // Liste des clubs chargée au premier usage de la recherche (pas au chargement de la page)
+  const [clubs, setClubs] = useState<Club[] | null>(null);
+  const want = () => { if (!clubs) loadIndex().then((i) => setClubs(i.clubs.filter((c) => c.id < 2e10))).catch(() => {}); };
   const qq = normalize(q.trim());
-  const found = useMemo(() => (qq.length < 2 ? [] : clubs.filter((c) => normalize(`${c.name} ${c.short} ${c.city}`).includes(qq)).slice(0, 6)), [qq, clubs]);
-  const popular = comps.filter((c) => ['bnxt', 'tdm1', 'tdw', 'lions', 'cats'].includes(c.id));
+  const found = useMemo(() => (qq.length < 2 || !clubs ? [] : clubs.filter((c) => normalize(`${c.name} ${c.short} ${c.city}`).includes(qq)).slice(0, 6)), [qq, clubs]);
+  // Compétitions mises en avant : noms connus d'avance (les puces sont là tout de suite, à leur taille) ; logos dès landing.json
+  const popular = POPULAR.map(([id, name]) => comps?.find((c) => c.id === id) ?? { id, name, cat: 'national' as const, women: false, youth: false });
   return (
     <div className={`lp-search${dark ? ' dark' : ''}`}>
-      <label className="lp-field"><Ico n="search" size={20} /><input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t('Cherche ton club ou ta ville…')} aria-label={t('Chercher un club')} /></label>
+      <label className="lp-field"><Ico n="search" size={20} /><input value={q} onFocus={want} onChange={(e) => { want(); setQ(e.target.value); }} placeholder={t('Cherche ton club ou ta ville…')} aria-label={t('Chercher un club')} /></label>
       {found.length > 0 && <div className="lp-results">{found.map((c) => (
         <a key={c.id} href={`${APP}#/club/${c.id}`}><Disc src={c.logo} name={c.short} size={36} ring={c.c1} /><span className="grow"><b>{c.name}</b><small>{c.city} · {tn(c.teams.length, '{n} équipe', '{n} équipes')}</small></span><Ico n="chevRight" size={18} /></a>
       ))}</div>}
-      {qq.length >= 2 && !found.length && <div className="lp-results"><span className="lp-none">{t('Aucun club trouvé.')}</span></div>}
-      {!qq && popular.length > 0 && <div className="lp-pop">{popular.map((c) => <a key={c.id} href={`${APP}#/competition/${c.id}`}><CompLogo c={c} size={22} />{c.name}</a>)}</div>}
+      {qq.length >= 2 && clubs && !found.length && <div className="lp-results"><span className="lp-none">{t('Aucun club trouvé.')}</span></div>}
+      {!qq && <div className="lp-pop">{popular.map((c) => <a key={c.id} href={`${APP}#/competition/${c.id}`}><CompLogo c={c} size={22} />{trName(c.name)}</a>)}</div>}
     </div>
   );
 }

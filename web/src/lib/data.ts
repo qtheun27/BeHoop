@@ -32,6 +32,11 @@ function get<T>(path: string): Promise<T> {
 /** alias : anciens identifiants de club fusionnés (ex. fiche nationale + fiche AWBB) → identifiant actuel */
 export interface Index { generated_at: string; season: string; clubs: Club[]; alias?: Record<string, number> }
 export const loadIndex = () => get<Index>('index.json');
+/** Page d'accueil behoop.be : chiffres, compétitions mises en avant et derniers résultats (ops/build-app-data.ts) */
+export interface TickerSide { n: string; l: string | null; c: string }
+export interface Landing { generated_at: string; clubs: number; teams: number; comps: Pick<Competition, 'id' | 'name' | 'cat' | 'women' | 'youth' | 'logo' | 'dark'>[];
+  ticker: { id: number; s: number; hs: number; as: number; h: TickerSide; a: TickerSide }[] }
+export const loadLanding = () => get<Landing>('landing.json');
 export const clubAlias = async (id: number) => (await loadIndex()).alias?.[id] ?? id;
 /** Matchs d'un club ; scores des résultats rapides inclus (lib/live.ts) */
 export const loadClub = async (id: number) => {

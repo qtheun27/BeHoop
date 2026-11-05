@@ -5,11 +5,12 @@ import { loadIndex, loadComps, loadNews } from './data';
 const CYCLE = 2800, LOGO_SHOWN = 2250, MAX_WAIT = 7000;
 let done = false;
 
-export function hideSplash() {
+/** prefetch : données à charger pendant l'animation (par défaut celles de l'appli ; la page d'accueil passe les siennes) */
+export function hideSplash(prefetch: () => Promise<unknown>[] = () => [loadIndex(), loadComps(), loadNews()]) {
   const el = document.getElementById('bh-splash');
   if (!el || done) { document.documentElement.classList.remove('booting'); return; }
   done = true;
-  const prefetch = Promise.allSettled([loadIndex(), loadComps(), loadNews()]);
+  const ready = Promise.allSettled(prefetch());
   const cap = new Promise((r) => setTimeout(r, MAX_WAIT));
   // L'écran d'en dessous doit être prêt : sinon, au fondu, on voit apparaître plus bas l'animation de chargement de la page
   // (impression que le logo « descend »). On attend qu'aucun chargement ne soit affiché dans l'appli.
@@ -20,7 +21,7 @@ export function hideSplash() {
     const tick = () => { calm = busy() ? 0 : calm + 1; if (calm >= 8 || Date.now() - t0 > 6000) r(); else setTimeout(tick, 100); };
     tick();
   });
-  Promise.race([prefetch.then(settled), cap]).then(() => {
+  Promise.race([ready.then(settled), cap]).then(() => {
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const anim = el.querySelector('.cc-logo')?.getAnimations?.()[0];
     const t = typeof anim?.currentTime === 'number' ? anim.currentTime : performance.now();
