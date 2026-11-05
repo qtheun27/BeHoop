@@ -144,6 +144,17 @@ body.landing .reader { padding-left: 0; }
 .lp-dock .btn { width: 100%; color: #0a0c12; font-weight: 800; box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 40%, transparent); }
 @keyframes lp-up { from { transform: translateY(100%); } to { transform: none; } }
 
+/* Téléphone : bandeau des résultats compact (l'éclair seul, noms plus courts) */
+.lp-mob .lp-tk-word { display: none; }
+.lp-mob .lp-tk-lab { padding: 0 12px; height: 46px; }
+.lp-mob .lp-tk { height: 46px; padding: 0 14px; gap: 6px; }
+.lp-mob .lp-tk .nm { max-width: 92px; font-size: 13px; }
+.lp-mob .lp-tk b { font-size: 18px; }
+
+/* Petits téléphones : libellé court dans l'accroche */
+.lp-short { display: none; }
+@media (max-width: 359px) { .lp-cta .lp-long { display: none; } .lp-cta .lp-short { display: inline; } }
+
 /* Ordinateur : écran partagé */
 .lp-desk .lp-hero { min-height: min(820px, 100vh); display: flex; align-items: center; }
 .lp-desk .lp-hero-in { width: 100%; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(360px, 420px); gap: 64px; align-items: center; padding: 120px 40px 70px; }

@@ -1316,4 +1316,5 @@ export const EN: Record<string, string> = {
   "Tous les clubs, compétitions et classements de Belgique, des provinciales à la BNXT.": "Every club, competition and standings in Belgium, from provincial leagues to the BNXT.",
   "L’espace de ton équipe : les photos des jeunes restent entre membres.": "Your team’s space: youth photos stay among members.",
   "Pour les coachs : séances, exercices animés, tactiques et Hoop Camp.": "For coaches: sessions, animated drills, tactics and Hoop Camp.",
+  "Entrer": "Enter",
 };

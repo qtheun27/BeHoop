@@ -133,7 +133,7 @@ export function Welcome() {
               <div><b>{t('3 langues')}</b><span>FR · NL · EN</span></div>
             </div>
             {desk ? <ClubSearch clubs={be} comps={comps.data ?? []} dark />
-              : <div className="lp-cta" ref={ctaRef}><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button><a className="btn secondary" href={`${APP}#/explorer`}>{t('Explorer')}</a></div>}
+              : <div className="lp-cta" ref={ctaRef}><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href={`${APP}#/explorer`}>{t('Explorer')}</a></div>}
           </div>
           {desk && auth}
         </div>
@@ -216,7 +216,7 @@ function Ticker({ items }: { items: { g: Game; h?: Club; a?: Club }[] }) {
   ));
   return (
     <section className="lp-ticker" aria-label={t('Derniers résultats')}>
-      <span className="lp-tk-lab"><Ico n="bolt" size={16} />{t('Résultats')}</span>
+      <span className="lp-tk-lab" title={t('Résultats')}><Ico n="bolt" size={16} /><span className="lp-tk-word">{t('Résultats')}</span></span>
       <div className="lp-tk-track"><div className="lp-tk-run">{row}<span aria-hidden className="lp-tk-dup">{row}</span></div></div>
     </section>
   );
