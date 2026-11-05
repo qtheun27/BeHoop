@@ -1,16 +1,16 @@
 // Page d'accueil behoop.be (web/landing.html) : vitrine de l'appli + connexion sur place (même formulaire que l'appli).
 // Deux mises en page pensées séparément :
 //  • ordinateur : écran partagé (accroche + recherche de club à gauche, connexion toujours visible à droite), grilles ;
-//  • téléphone : parcours vertical au pouce (accroche, connexion juste dessous, actus et résultats qui glissent),
-//    barre « Entrer » collée en bas tant que le formulaire n'est pas à l'écran.
+//  • téléphone : parcours vertical au pouce (accroche, actus et résultats qui glissent) ; la connexion s'ouvre en
+//    fenêtre (feuille de l'appli) depuis « Entrer », et une barre « Entrer » reste en bas une fois l'accroche passée.
 // Elle garde la fonction de l'ancien site public : chercher un club → ses équipes, calendriers et classements
 // (fiches publiques de l'appli). Déjà connecté : redirigé vers l'appli (script dans landing.html, puis ici).
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSession } from '../lib/session';
 import { loadIndex, loadNews, loadComps, loadSerie, teamIndex, isPlayed, normalize, readable, type Club, type Game, type News, type Competition } from '../lib/data';
 import { takeReturnTo } from '../lib/util';
 import { t, tn } from '../lib/i18n';
-import { Logo, LangSwitch, Disc, useAsync } from '../ui/kit';
+import { Logo, LangSwitch, Disc, Sheet, useAsync } from '../ui/kit';
 import { Ico, type IconName } from '../ui/icons';
 import { CompLogo } from '../ui/CompLogo';
 import { NewsReader, readerClick } from '../ui/NewsReader';
@@ -62,16 +62,22 @@ export function Welcome() {
   const comps = useAsync(loadComps, []);
   const ticker = useAsync(loadTicker, []);
   const authRef = useRef<HTMLDivElement>(null);
-  const [authSeen, setAuthSeen] = useState(false);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const [ctaSeen, setCtaSeen] = useState(true);
+  const [sheet, setSheet] = useState(false);
+  const closeSheet = useCallback(() => setSheet(false), []);
+  const profileStep = !!s.user && !s.profile;
 
   // Connecté avec un profil (ou il vient de se connecter ici) : dans l'appli
   useEffect(() => { if (s.ready && s.user && s.profile) enterApp(); }, [s.ready, s.user, s.profile]);
-  // Téléphone : la barre « Entrer » disparaît quand le formulaire est à l'écran
+  // Téléphone : la barre « Entrer » apparaît quand le bouton de l'accroche n'est plus à l'écran
   useEffect(() => {
-    const el = authRef.current; if (!el || desk) return;
-    const o = new IntersectionObserver(([e]) => setAuthSeen(e.isIntersecting), { threshold: .25 });
+    const el = ctaRef.current; if (!el || desk) return;
+    const o = new IntersectionObserver(([e]) => setCtaSeen(e.isIntersecting));
     o.observe(el); return () => o.disconnect();
-  }, [desk, s.ready]);
+  }, [desk]);
+  // Connecté (Google…) sans profil : la fenêtre s'ouvre pour le créer
+  useEffect(() => { if (!desk && profileStep) setSheet(true); }, [desk, profileStep]);
 
   const be = useMemo(() => (idx.data?.clubs ?? []).filter((c) => c.id < 2e10), [idx.data]);
   const teams = useMemo(() => be.reduce((n, c) => n + c.teams.length, 0), [be]);
@@ -80,7 +86,7 @@ export function Welcome() {
     // Le basket belge d'abord, puis le reste
     return [...l.filter((n) => n.cat === 'belgique'), ...l.filter((n) => n.cat !== 'belgique')].slice(0, desk ? 4 : 6);
   }, [news.data, desk]);
-  const goAuth = () => { authRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => authRef.current?.querySelector<HTMLInputElement>('input[type=email]')?.focus({ preventScroll: true }), 500); };
+  const goAuth = () => { if (!desk) { setSheet(true); return; } authRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => authRef.current?.querySelector<HTMLInputElement>('input[type=email]')?.focus({ preventScroll: true }), 500); };
 
   const auth = (
     <div className="lp-auth" ref={authRef} id="entrer">
@@ -91,6 +97,16 @@ export function Welcome() {
       {s.ready ? <AuthForm intro={false} onDone={enterApp} /> : <div className="lp-auth-wait" />}
       <a className="lp-visit" href={`${APP}#/explorer`}>{t('Visiter sans compte')} <Ico n="chevRight" size={16} /></a>
     </div>
+  );
+  // Téléphone : la même connexion, dans la fenêtre de l'appli (pas de bloc sur la page)
+  const authSheet = sheet && !desk && (
+    <Sheet title={profileStep ? t('Crée ton profil') : t('Entre sur le terrain')} onClose={closeSheet}>
+      <div className="lp-sheet-auth">
+        {!profileStep && <p className="center muted" style={{ marginTop: 0 }}>{t('Créer un compte ou se connecter : c’est au même endroit. Gratuit.')}</p>}
+        <AuthForm intro={false} onDone={enterApp} />
+        {!profileStep && <a className="lp-visit" href={`${APP}#/explorer`}>{t('Visiter sans compte')} <Ico n="chevRight" size={16} /></a>}
+      </div>
+    </Sheet>
   );
 
   return (
@@ -117,20 +133,19 @@ export function Welcome() {
               <div><b>{t('3 langues')}</b><span>FR · NL · EN</span></div>
             </div>
             {desk ? <ClubSearch clubs={be} comps={comps.data ?? []} dark />
-              : <div className="lp-cta"><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button><a className="btn secondary" href={`${APP}#/explorer`}>{t('Explorer')}</a></div>}
+              : <div className="lp-cta" ref={ctaRef}><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button><a className="btn secondary" href={`${APP}#/explorer`}>{t('Explorer')}</a></div>}
           </div>
           {desk && auth}
         </div>
       </section>
 
-      {!desk && <div className="lp-wrap">{auth}</div>}
 
       {(ticker.data?.length ?? 0) > 0 && <Ticker items={ticker.data!} />}
 
       <div className="lp-wrap">
         {top.length > 0 && <section className="lp-sec">
           <div className="lp-h"><h2>{t('À la une')}</h2><a href={`${APP}#/actus`}>{t('Toutes les actus ›')}</a></div>
-          <div className={desk ? 'lp-news-grid' : 'lp-news-row'}>{top.map((n, i) => <NewsTile key={n.id} n={n} list={top} big={desk && i === 0} />)}</div>
+          <div className={desk ? 'lp-news-grid' : 'lp-news-row'}>{top.map((n, i) => <NewsTile key={n.id} n={n} list={top} big={desk && i === 0} first={i < (desk ? 4 : 2)} />)}</div>
         </section>}
 
         {!desk && <section className="lp-sec">
@@ -163,7 +178,8 @@ export function Welcome() {
         </footer>
       </div>
 
-      {!desk && !authSeen && !(s.user && s.profile) && <div className="lp-dock"><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button></div>}
+      {authSheet}
+      {!desk && !ctaSeen && !sheet && !(s.user && s.profile) && <div className="lp-dock"><button className="btn" onClick={goAuth}>{t('Entrer sur le terrain')}</button></div>}
     </div>
   );
 }
@@ -206,11 +222,12 @@ function Ticker({ items }: { items: { g: Game; h?: Club; a?: Club }[] }) {
   );
 }
 
-function NewsTile({ n, list, big }: { n: News; list: News[]; big?: boolean }) {
+/** first : visible dès l'arrivée → image chargée tout de suite (pas en différé) */
+function NewsTile({ n, list, big, first }: { n: News; list: News[]; big?: boolean; first?: boolean }) {
   const [img, setImg] = useState(!!n.image);
   return (
     <a className={`lp-news${big ? ' big' : ''}`} href={n.url} target="_blank" rel="noopener" onClick={readerClick(list, n)}>
-      <span className="ph">{img && n.image ? <img src={n.image} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
+      <span className="ph">{img && n.image ? <img src={n.image} alt="" loading={first ? 'eager' : 'lazy'} fetchPriority={first ? 'high' : 'auto'} decoding="async" referrerPolicy="no-referrer" onError={() => setImg(false)} /> : <span className="fb">{n.source}</span>}</span>
       <span className="tx"><small>{n.source}</small><b>{n.title}</b></span>
     </a>
   );

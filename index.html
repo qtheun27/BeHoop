@@ -14,13 +14,16 @@
   <link rel="manifest" href="/app/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="icon" href="/icons/favicon-32.png" />
+  <!-- Données de la page, demandées tout de suite (en parallèle du code) -->
+  <link rel="preload" href="/app-data/news.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="/app-data/index.json" as="fetch" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <!-- Page d'accueil behoop.be (générée par le build de l'appli : web/landing.html → /index.html).
        Déjà connecté : directement dans l'appli. -->
   <script>try { if (localStorage.getItem('behoop.session') && !/[?&]site=1/.test(location.search)) location.replace('/app/#/fil'); } catch (e) {}</script>
-  <script type="module" crossorigin src="/app/assets/landing-DarM19w0.js"></script>
+  <script type="module" crossorigin src="/app/assets/landing-ChgwU5bG.js"></script>
   <link rel="modulepreload" crossorigin href="/app/assets/jsx-runtime-CHSTVNTY.js">
   <link rel="modulepreload" crossorigin href="/app/assets/index.esm-Yfqym80F.js">
   <link rel="modulepreload" crossorigin href="/app/assets/firebase-eumTKcTt.js">
@@ -29,7 +32,7 @@
   <link rel="modulepreload" crossorigin href="/app/assets/News-DKyf14Jo.js">
   <link rel="stylesheet" crossorigin href="/app/assets/jsx-runtime-EL8MrI4c.css">
   <link rel="stylesheet" crossorigin href="/app/assets/News-DUpVH-lQ.css">
-  <link rel="stylesheet" crossorigin href="/app/assets/landing-CiLA7yJg.css">
+  <link rel="stylesheet" crossorigin href="/app/assets/landing-CsbaKgde.css">
 </head>
 <body class="landing">
   <div id="root"></div>

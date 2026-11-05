@@ -1,5 +1,7 @@
 /* Page d'accueil behoop.be (screens/Welcome.tsx) : mêmes couleurs, polices et composants que l'appli (theme.css). */
-body.landing { padding-left: 0 !important; }
+/* body ne doit jamais devenir une zone de défilement à part : avec overscroll-behavior none (styles.css), la molette
+   ne passerait plus à la page (Chrome ordinateur). La page défile sur le document, comme un site normal. */
+body.landing { padding-left: 0 !important; overflow: visible; overscroll-behavior-y: auto; }
 body.landing .reader { padding-left: 0; }
 .lp { min-height: 100dvh; color: var(--text); }
 .lp-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
@@ -46,11 +48,10 @@ body.landing .reader { padding-left: 0; }
 .lp-auth-head p { color: var(--text2); margin: 4px 0 16px; font-size: 14.5px; }
 .lp-auth-wait { height: 240px; }
 .lp-visit { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 12px; font-weight: 600; font-size: 15px; }
-.lp-mob .lp-auth { margin-top: -18px; position: relative; z-index: 3; }
+.lp-sheet-auth .lp-visit { margin-bottom: 4px; }
 
 /* Bandeau des derniers résultats */
 .lp-ticker { display: flex; align-items: center; background: #0a0c12; color: #fff; border-top: 1px solid rgba(255,255,255,.08); overflow: hidden; }
-.lp-mob .lp-ticker { margin-top: 22px; }
 .lp-tk-lab { flex: none; display: flex; align-items: center; gap: 6px; padding: 0 14px; height: 54px; background: var(--accent-grad); color: #0a0c12;
   font-family: Oswald, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 13px; z-index: 1; }
 .lp-tk-track { overflow: hidden; flex: 1; mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
