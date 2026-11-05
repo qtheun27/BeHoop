@@ -1321,4 +1321,5 @@ export const NL: Record<string, string> = {
   "Débloque toute l’appli": "Ontgrendel de hele app",
   "Gratuit · un compte pour tout": "Gratis · één account voor alles",
   "compétitions": "competities",
+  "séries": "reeksen",
 };

@@ -124,9 +124,10 @@ export function Welcome() {
             <h1>{t('Du premier dribble au buzzer')}</h1>
             <p className="lp-sub">{t('Résultats, classements et calendriers de tous les clubs de Belgique, la vidéo de ton match montée automatiquement et la vie de ton équipe. Pour les joueurs, les parents et les coachs.')}</p>
             <div className="lp-stats">
+              {/* Du plus large au plus précis : séries (championnats et coupes, chaque niveau et province), clubs, équipes */}
+              <div><b><Count n={L?.competitions ?? 0} /></b><span>{t('séries')}</span></div>
               <div><b><Count n={L?.clubs ?? 0} /></b><span>{t('clubs')}</span></div>
               <div><b><Count n={L?.teams ?? 0} /></b><span>{t('équipes')}</span></div>
-              <div><b><Count n={L?.competitions ?? 0} /></b><span>{t('compétitions')}</span></div>
             </div>
             {desk ? <ClubSearch comps={L?.comps} dark />
               : <div className="lp-cta"><button className="btn" onClick={goAuth}><span className="lp-long">{t('Entrer sur le terrain')}</span><span className="lp-short">{t('Entrer')}</span></button><a className="btn secondary" href="#/explorer">{t('Explorer')}</a></div>}
