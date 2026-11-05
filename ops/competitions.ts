@@ -18,7 +18,7 @@ export interface Competition {
 }
 
 /** Logos officiels (sites des ligues et de la FIBA, Wikipédia) rangés dans logos/comps/.
- *  Séries régionales : logo de la fédération qui les organise (AWBB, Basketbal Vlaanderen). */
+ *  Séries régionales : logo de la fédération qui les organise (AWBB, Basketbal Vlaanderen ; Basketball Belgium pour le national). */
 export const COMP_LOGOS: Record<string, { logo: string; dark?: boolean }> = {
   bnxt: { logo: '/logos/comps/bnxt.webp' }, nba: { logo: '/logos/comps/nba.webp' }, wnba: { logo: '/logos/comps/wnba.webp' },
   lions: { logo: '/logos/comps/lions.webp' }, cats: { logo: '/logos/comps/cats.webp' },
@@ -28,6 +28,10 @@ export const COMP_LOGOS: Record<string, { logo: string; dark?: boolean }> = {
   eurobasket: { logo: '/logos/comps/eurobasket.webp', dark: true }, 'eurobasket-w': { logo: '/logos/comps/eurobasket-w.webp', dark: true },
   wc: { logo: '/logos/comps/wc.webp', dark: true }, wcq: { logo: '/logos/comps/wc.webp', dark: true }, ebwq: { logo: '/logos/comps/eurobasket-w.webp', dark: true }, wwc: { logo: '/logos/comps/wwc.webp', dark: true },
   wallonie: { logo: '/logos/comps/awbb.webp' }, flandre: { logo: '/logos/comps/vbl.webp' },
+  // Divisions nationales et Coupe de Belgique : pas de logo propre, celui de Basketball Belgium qui les organise (topdivisions.be)
+  tdm1: { logo: '/logos/comps/belgium.webp' }, tdm2a: { logo: '/logos/comps/belgium.webp' }, tdm2b: { logo: '/logos/comps/belgium.webp' },
+  tdw: { logo: '/logos/comps/belgium.webp' }, 'beker-heren': { logo: '/logos/comps/belgium.webp' }, 'beker-dames': { logo: '/logos/comps/belgium.webp' },
+  'cup-beker-van-belgie-voorronde': { logo: '/logos/comps/belgium.webp' },
 };
 
 const WOMEN = /\b(dames?|women|meisjes|filles|vrouwen|wnba|cats|ladies|w)\b|\b[PR]\d\s?D\b|U\d{2}\s?D\b|\bTDW|\bD\s*[A-Z]?$/i;
