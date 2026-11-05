@@ -30,6 +30,9 @@ const Space = lazy(() => import('./club/Space'));
 const Camp = lazy(() => import('./club/Camp'));
 
 const tr = t;
+/** Sans compte : les onglets utiles (le reste se débloque en se connectant) */
+const ANON_TABS: [string, React.ReactNode, string][] = [['fil', Icons.home, 'Accueil'], ['explorer', Icons.search, 'Arena'], ['actus', <Ico n="news" />, 'Actus']];
+const LOCKED = ['Tribune', 'Saison', 'Vestiaire', 'Shoot'];
 const TABS = [
   { id: 'fil', label: 'Tribune', icon: Icons.home }, { id: 'explorer', label: 'Arena', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
@@ -94,8 +97,13 @@ export function App() {
       <NewsReader />
       <Guard key={location.hash}><Suspense fallback={<main className="screen"><Loader /></main>}>{el}</Suspense></Guard>
       {wide && <SideNav tab={page === 'actus' ? 'actus' : tab} />}
-      <nav className="tabbar" aria-label={tr('Navigation principale')}>
-        {TABS.map((t) => (
+      <nav className={`tabbar${s.user ? '' : ' anon'}`} aria-label={tr('Navigation principale')}>
+        {/* Sans compte : seulement ce qui sert (accueil, Arena, actus) et la connexion mise en avant */}
+        {!s.user && <>
+          {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={(page === 'actus' ? 'actus' : tab) === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+          <button className="tab-login" onClick={() => s.requireAuth()}><Ico n="user" /><span>{tr('Connexion')}</span></button>
+        </>}
+        {s.user && TABS.map((t) => (
           <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
             {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Shoot')}</span>}
           </a>
@@ -116,6 +124,22 @@ function SideNav({ tab }: { tab: string }) {
     ['fil', Icons.home, 'Tribune'], ['explorer', Icons.search, 'Arena'], ['actus', <Ico n="news" />, 'Actus'],
     ['matchs', Icons.cal, 'Saison'], ['equipes', Icons.users, 'Vestiaire'],
   ];
+  if (!s.user) return (
+    <nav className="sidenav" aria-label={tr('Navigation principale')}>
+      <a className="brand" href="#/fil" aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
+      <div className="side-items">
+        {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+      </div>
+      {/* Le reste de l'appli, verrouillé : on montre ce qu'on gagne à se connecter */}
+      <div className="side-unlock">
+        <b>{tr('Débloque toute l’appli')}</b>
+        <ul>{LOCKED.map((l) => <li key={l}><Ico n="lock" size={15} />{tr(l)}</li>)}</ul>
+        <button className="btn" onClick={() => s.requireAuth()}>{tr('Se connecter')}</button>
+        <small>{tr('Gratuit · un compte pour tout')}</small>
+      </div>
+      <div className="side-foot"><LangSwitch seg /></div>
+    </nav>
+  );
   return (
     <nav className="sidenav" aria-label={tr('Navigation principale')}>
       <a className="brand" href="#/fil" aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>

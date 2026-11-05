@@ -1318,4 +1318,6 @@ export const NL: Record<string, string> = {
   "Pour les coachs : séances, exercices animés, tactiques et Hoop Camp.": "Voor coaches: trainingen, geanimeerde oefeningen, tactieken en Hoop Camp.",
   "Entrer": "Naar binnen",
   "Score réservé aux membres connectés": "Score voorbehouden aan aangemelde leden",
+  "Débloque toute l’appli": "Ontgrendel de hele app",
+  "Gratuit · un compte pour tout": "Gratis · één account voor alles",
 };

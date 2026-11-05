@@ -93,6 +93,10 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 .tabbar a { border-radius: 18px; height: 54px; margin: 0 2px; font-size: 11px; color: var(--text2); transition: background .25s, color .25s; }
 .tabbar a.on { color: var(--accent); background: color-mix(in srgb, var(--accent) 11%, transparent); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--accent) 45%, transparent); }
 .tabbar svg { width: 24px; height: 24px; }
+/* Sans compte : 4 onglets, dont la connexion mise en avant */
+.tabbar .tab-login { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 54px; margin: 0 2px; border: 0; border-radius: 18px;
+  font: inherit; font-size: 11px; font-weight: 700; color: #fff; background: var(--accent-grad); cursor: pointer; }
+.tabbar .tab-login svg { width: 22px; height: 22px; }
 .tabbar .plus { width: 62px; height: 62px; border-radius: 50%; background: var(--accent-grad); color: #fff; margin-top: -26px;
   box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 45%, transparent), 0 0 0 5px var(--bg); }
 .tabbar .plus svg { width: 26px; height: 26px; position: relative; z-index: 1; filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
@@ -251,6 +255,15 @@ html { overflow-x: hidden; }
   .side-cta svg, .side-cta .ico { width: 22px; height: 22px; flex: none; margin: 0; }
   .side-items + .side-cta { margin-top: 16px; }
   .side-foot { margin-top: auto; display: flex; flex-direction: column; gap: 10px; }
+  /* Sans compte : encart « débloque l'appli » (onglets verrouillés + connexion) */
+  .side-unlock { margin-top: 14px; padding: 16px; border-radius: 18px; display: flex; flex-direction: column; gap: 10px;
+    background: color-mix(in srgb, var(--accent) 7%, var(--bg2)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent); }
+  .side-unlock b { font-size: 15px; }
+  .side-unlock ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+  .side-unlock li { display: flex; align-items: center; gap: 8px; color: var(--text2); font-size: 14.5px; }
+  .side-unlock li svg { color: var(--accent); opacity: .8; }
+  .side-unlock .btn { min-height: 42px; width: 100%; }
+  .side-unlock small { color: var(--text2); font-size: 12.5px; text-align: center; }
   .side-me { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 14px; color: var(--text); font-weight: 600; min-width: 0; }
   .side-me:hover, .side-me.on { background: color-mix(in srgb, var(--text) 6%, transparent); }
   .lang-seg { display: flex; align-items: center; gap: 2px; padding: 3px 3px 3px 10px; border-radius: 12px; background: var(--fill); color: var(--text2); }

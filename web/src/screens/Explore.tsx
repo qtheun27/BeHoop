@@ -60,7 +60,6 @@ export function Explore() {
   const [view, setView] = useState<'clubs' | 'comps'>(() => (location.hash.includes('vue=comps') ? 'comps' : 'clubs'));
   const [cat, setCat] = useState<string>('');
   const [women, setWomen] = useState(false), [youth, setYouth] = useState(false);
-  const s = useSession();
   const n = normalize(q.trim());
   const compList = useMemo(() => (comps.data ?? []).filter((c) => (!cat || c.cat === cat) && (!women || c.women) && (youth ? c.youth : !n ? !c.youth : true)
     && (!n || normalize(`${c.name} ${c.sub}`).includes(n))), [comps.data, cat, women, youth, n]);
@@ -73,7 +72,6 @@ export function Explore() {
   const foundNews = useMemo(() => (n.length < 2 ? [] : (news.data?.items ?? []).filter((x) => normalize(`${x.title} ${x.excerpt} ${x.source}`).includes(n)).slice(0, 6)), [news.data, n]);
   return (
     <Screen title={t('Arena')}>
-      {!s.user && <div className="banner"><Ico n="ball" size={30} style={{ color: 'var(--accent)' }} /><div className="grow" style={{ flex: 1 }}><b>{t('Crée ton compte')}</b><div className="muted" style={{ fontSize: 14 }}>{t('pour suivre tes clubs et recevoir les résultats.')}</div></div><button className="btn small" onClick={() => s.requireAuth()}>{t('Créer')}</button></div>}
       <div className="search"><input className="field" type="search" placeholder={t('Club, compétition, ville ou actu…')} value={q} onChange={(e) => setQ(e.target.value)} aria-label={t('Rechercher')} /></div>
       <div className="seg" role="tablist">
         <button className={view === 'clubs' ? 'on' : ''} onClick={() => setView('clubs')} aria-pressed={view === 'clubs'}><><Ico n="club" />{t('Clubs')}</></button>

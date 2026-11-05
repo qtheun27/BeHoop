@@ -22,7 +22,7 @@ test('sans compte : Explorer fonctionne et invite à créer un compte', async ({
   await page.goto('/app/#/explorer');
   await page.getByLabel('Rechercher', { exact: true }).fill('AMLL');
   await expect(page.getByRole('link', { name: /BC AMLL/ })).toBeVisible();
-  await expect(page.getByText('Crée ton compte')).toBeVisible();
+  await expect(page.locator('.tab-login')).toBeVisible(); // sans compte : la connexion est dans la barre d’onglets
   // Écran de départ sans compte : l'accueil, avec la connexion sur place
   await page.goto('/app/#/fil');
   await expect(page.getByRole('heading', { name: 'Du premier dribble au buzzer' })).toBeVisible();
