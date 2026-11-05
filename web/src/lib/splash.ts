@@ -8,7 +8,8 @@ let done = false;
 /** prefetch : données à charger pendant l'animation (par défaut celles de l'appli ; la page d'accueil passe les siennes) */
 export function hideSplash(prefetch: () => Promise<unknown>[] = () => [loadIndex(), loadComps(), loadNews()]) {
   const el = document.getElementById('bh-splash');
-  if (!el || done) { document.documentElement.classList.remove('booting'); return; }
+  if (!el) { document.documentElement.classList.remove('booting'); return; }
+  if (done) return; // déjà en cours (un écran l'a demandé avec ses propres données, ex. l'accueil)
   done = true;
   const ready = Promise.allSettled(prefetch());
   const cap = new Promise((r) => setTimeout(r, MAX_WAIT));

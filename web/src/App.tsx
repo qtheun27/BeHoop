@@ -8,6 +8,7 @@ import { Icons, Logo, LangSwitch, Avatar, useWide, Loader } from './ui/kit';
 import { Ico } from './ui/icons';
 import { t } from './lib/i18n';
 import { AuthSheet, Onboarding } from './screens/Auth';
+import { Welcome } from './screens/Welcome';
 import { Explore, ClubPage, TeamPage } from './screens/Explore';
 import { Profile } from './screens/Profile';
 import { Legal } from './screens/Legal';
@@ -44,6 +45,16 @@ export function App() {
   // Arrivé par un lien de vidéo partagée : directement la vidéo ; le choix des clubs viendra à la prochaine ouverture
   if (s.user && s.profile && !s.profile.onboarded && !/^#\/video\//.test(location.hash)) return <Onboarding />;
   if (s.user && !s.profile && !s.authSheet) return <AuthSheet onClose={() => {}} finishOnly />;
+
+  // Écran de départ sans compte (behoop.be) : l'accueil, plein écran, avec la connexion sur place ; connecté : la Tribune
+  if (!s.user && (page === '' || page === 'fil')) return (
+    <>
+      <NewsReader />
+      <Welcome />
+      {s.authSheet !== undefined && <AuthSheet onClose={s.closeAuth} />}
+      {s.toastMsg && <div className="toast" role="status">{s.toastMsg}</div>}
+    </>
+  );
 
   // Espace Club : sa propre ambiance et sa propre navigation (pas de parquet, pas de barre du bas de l'espace loisir)
   if (page === 'espace') return (
@@ -107,7 +118,7 @@ function SideNav({ tab }: { tab: string }) {
   ];
   return (
     <nav className="sidenav" aria-label={tr('Navigation principale')}>
-      <a className="brand" href={s.user ? '#/fil' : '/'} aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
+      <a className="brand" href="#/fil" aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
       <div className="side-items">
         {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>

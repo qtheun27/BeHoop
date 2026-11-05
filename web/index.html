@@ -6,14 +6,22 @@
   <meta name="theme-color" content="#f4f1ec" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="description" content="BeHoop — suis tes clubs de basket, résultats, vidéos de match et plus." />
+  <meta name="description" content="BeHoop : résultats, classements et calendriers de tous les clubs de basket de Belgique, vidéos de match, actus. Gratuit." />
+  <meta property="og:title" content="BeHoop · Tout le basket belge" />
+  <meta property="og:description" content="Résultats, classements, calendriers, vidéos de match et actus de ton club. Gratuit." />
+  <meta property="og:image" content="https://behoop.be/icons/og-image.jpg" />
+  <meta property="og:url" content="https://behoop.be/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="manifest" href="/app/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="icon" href="/icons/favicon-32.png" />
+  <!-- Données de l'écran de départ, demandées tout de suite (en parallèle du code) : accueil sans compte et actus -->
+  <link rel="preload" href="/app-data/landing.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="/app-data/news.json" as="fetch" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@800;900&family=Sora:wght@300;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
-  <title>BeHoop</title>
+  <title>BeHoop · Tout le basket belge</title>
 </head>
 <body>
   <!-- Écran d'ouverture : affiché tout de suite, retiré par lib/splash.ts quand l'appli et ses données sont prêtes, à la fin d'un tour d'animation (même animation que <Loader full />, voir ui/HoopLoader.tsx, CenterSvg) -->
@@ -23,6 +31,8 @@
     // Tant que l'écran d'ouverture est là, l'appli reste invisible (elle se prépare dessous) : sur iPhone, ses éléments
     // flous (barre d'onglets…) passaient parfois un instant par-dessus l'animation. Retiré par lib/splash.ts au fondu.
     document.documentElement.classList.add('booting');
+    // Sans compte, sur l'écran de départ : l'accueil (nuit) suit l'ouverture → ouverture en version nuit, sans flash clair
+    try { if (!localStorage.getItem('behoop.session') && /^(#\/?(fil)?)?$/.test(location.hash)) document.documentElement.classList.add('splash-nuit'); } catch (e) {}
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
@@ -64,6 +74,12 @@
 @keyframes cc-pop { 0%, 36% { transform: scale(0) rotate(-90deg); opacity: 0; } 50% { transform: scale(1.1) rotate(6deg); opacity: 1; } 58%, 86% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
     @media (prefers-color-scheme: dark) { .cc-anim .cc-n, .cc-anim .cc-l { stroke: #fff; } .cc-anim .cc-disc { fill: #070b14; } .cc-anim .em-l { display: none; } .cc-anim .em-d { display: inline; } }
     @media (prefers-reduced-motion: reduce) { .cc-anim * { animation: none !important; } }
+    /* Version nuit (accueil sans compte) : fond de l'accroche, lignes blanches, logo pour fond sombre */
+    .splash-nuit .bh-splash { background: radial-gradient(120% 90% at 85% 10%, rgba(242,106,27,.28), transparent 55%), linear-gradient(160deg, #0a0c12 0%, #121a2b 60%, #0a0c12 100%); }
+    .splash-nuit .bh-wm span { color: #fff; }
+    .splash-nuit .cc-anim .cc-n, .splash-nuit .cc-anim .cc-l { stroke: #fff; }
+    .splash-nuit .cc-anim .cc-disc { fill: #0a0c12; }
+    .splash-nuit .cc-anim .em-l { display: none; } .splash-nuit .cc-anim .em-d { display: inline; }
   </style>
   <script type="module" src="/src/main.tsx"></script>
 </body>

@@ -56,12 +56,12 @@ export function Screen({ title, children, left, right, tabs = true, back, home, 
       <div className="navbar">
         <div className="bar">
           {back ? <button className="back" onClick={() => (history.length > 1 ? history.back() : (location.hash = back))} aria-label={t('Retour')}>‹ {t('Retour')}</button> : left}
-          {home || !back ? <a className="brand m-only" href={s.user ? '#/fil' : '/'} aria-label={t('BeHoop, accueil')}><Logo /></a> : <div className="small-title ellipsis">{title}</div>}
+          {home || !back ? <a className="brand m-only" href="#/fil" aria-label={t('BeHoop, accueil')}><Logo /></a> : <div className="small-title ellipsis">{title}</div>}
           {right}
           {!back && <LangSwitch />}
           {/* Profil (et la modération, dans Profil) : avatar en haut à droite ; le reste est dans la barre du bas. */}
           {!back && (s.user ? <a className="top-av m-only" href="#/profil" aria-label={t('Mon profil')}><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /></a>
-            : <a className="btn small secondary m-only" href="/" style={{ width: 'auto' }}>‹ {t('Accueil')}</a>)}
+            : <a className="btn small secondary m-only" href="#/fil" style={{ width: 'auto' }}>‹ {t('Accueil')}</a>)}
         </div>
       </div>
       {!hideTitle && <h1 className="large-title">{title}</h1>}

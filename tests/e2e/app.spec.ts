@@ -18,8 +18,10 @@ test('sans compte : Explorer fonctionne et invite à créer un compte', async ({
   await page.getByLabel('Rechercher', { exact: true }).fill('AMLL');
   await expect(page.getByRole('link', { name: /BC AMLL/ })).toBeVisible();
   await expect(page.getByText('Crée ton compte')).toBeVisible();
+  // Écran de départ sans compte : l'accueil, avec la connexion sur place
   await page.goto('/app/#/fil');
-  await expect(page.getByRole('button', { name: 'Créer mon compte' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Du premier dribble au buzzer' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Entre sur le terrain' }).or(page.getByRole('button', { name: /Entrer/ }).first())).toBeVisible();
 });
 
 test('parent membre : carte de score, photos 🔒 et vidéo du match', async ({ page }) => {
@@ -68,11 +70,11 @@ test.describe('langues', () => {
   test.use({ locale: 'nl-BE' });
   test('téléphone en néerlandais : appli en néerlandais, puis anglais depuis l’en-tête', async ({ page }) => {
     await page.goto('/app/#/fil');
-    await expect(page.getByRole('button', { name: 'Mijn account aanmaken' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Van de eerste dribbel tot de buzzer' })).toBeVisible();
     await page.getByLabel('Taal').selectOption('en');
-    await expect(page.getByRole('button', { name: 'Create my account' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'From the first dribble to the buzzer' })).toBeVisible();
     await page.reload();
-    await expect(page.getByRole('button', { name: 'Create my account' })).toBeVisible(); // choix mémorisé
+    await expect(page.getByRole('heading', { name: 'From the first dribble to the buzzer' })).toBeVisible(); // choix mémorisé
   });
 });
 

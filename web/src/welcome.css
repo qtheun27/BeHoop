@@ -1,8 +1,16 @@
-/* Page d'accueil behoop.be (screens/Welcome.tsx) : mêmes couleurs, polices et composants que l'appli (theme.css). */
+/* Accueil de l’appli sans compte (screens/Welcome.tsx) : mêmes couleurs, polices et composants que l’appli (theme.css). */
 /* body ne doit jamais devenir une zone de défilement à part : avec overscroll-behavior none (styles.css), la molette
    ne passerait plus à la page (Chrome ordinateur). La page défile sur le document, comme un site normal. */
 body.landing { padding-left: 0 !important; overflow: visible; overscroll-behavior-y: auto; }
 body.landing .reader { padding-left: 0; }
+/* Fond : le bois du parquet seulement. Le rond central, la ligne médiane et le médaillon du thème (theme.css) sont faits
+   pour l'appli, où ils restent derrière l'écran ; sur une page qu'on fait défiler, un rond figé au milieu n'a pas de sens.
+   (L'appli les retire aussi quand le terrain complet CourtBg est dessiné.) Tous thèmes, clair comme sombre. */
+body.landing::before { background:
+  repeating-linear-gradient(90deg, rgba(160,105,50,.09) 0 2px, transparent 2px 58px),
+  repeating-linear-gradient(90deg, rgba(190,130,70,.035) 0 29px, transparent 29px 58px),
+  linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), var(--bg)), var(--bg)) !important; }
+body.landing::after { content: none !important; }
 .lp { min-height: 100dvh; color: var(--text); }
 .lp-wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
 .lp-desk .lp-wrap { padding: 0 40px; }
