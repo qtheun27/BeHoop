@@ -208,11 +208,11 @@ function Court({ tall }: { tall?: boolean }) {
 /** Bandeau des derniers résultats : sa place est toujours réservée ; en attendant, des lignes se tracent comme le terrain,
  *  puis les scores arrivent en cascade et défilent. */
 function Ticker({ items }: { items?: Landing['ticker'] }) {
-  const side = (x: Landing['ticker'][number]['h']) => <><Disc src={x.l} name={x.n} size={26} ring={x.c} /><span className="nm">{x.n}</span></>;
+  const side = (x: Landing['ticker'][number]['h']) => <><Disc src={x.l} name={x.n} size={26} ring={x.c} eager /><span className="nm">{x.n}</span></>;
   const row = (dup: boolean) => (items ?? []).map((g, i) => (
     <a key={g.id} className="lp-tk" href={`#/match/${g.s}/${g.id}`} style={dup ? undefined : { animationDelay: `${Math.min(i, 8) * 70}ms` }} tabIndex={dup ? -1 : undefined}>
       {side(g.h)}<b className={g.hs > g.as ? 'w' : ''}>{g.hs}</b><i>–</i><b className={g.as > g.hs ? 'w' : ''}>{g.as}</b>
-      <span className="nm">{g.a.n}</span><Disc src={g.a.l} name={g.a.n} size={26} ring={g.a.c} />
+      <span className="nm">{g.a.n}</span><Disc src={g.a.l} name={g.a.n} size={26} ring={g.a.c} eager />
     </a>
   ));
   return (

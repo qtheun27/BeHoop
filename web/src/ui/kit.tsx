@@ -147,11 +147,15 @@ export function Skeleton({ h = 120, n = 3 }: { h?: number; n?: number }) {
 export const ErrorBox = ({ msg, retry }: { msg: string; retry?: () => void }) => (
   <div className="err" role="alert"><span style={{ flex: 1 }}>{msg}</span>{retry && <button className="btn small" onClick={retry}>{t('Réessayer')}</button>}</div>
 );
-export function Disc({ src, name, size = 56, ring = '#fff' }: { src?: string | null; name: string; size?: number; ring?: string }) {
-  const [err, setErr] = useState(false);
+/** Logo de club affiché petit (≤ 48 px, donc ≤ 96 px à l'écran Retina) : la version 96 px de logos/s/ (~3 Ko au lieu de ~10) */
+const smallLogo = (src: string, size: number) => (size <= 48 ? src.replace(/^\/logos\/(\d+)\.webp$/, '/logos/s/$1.webp') : src);
+/** eager : chargé tout de suite (bandeau qui défile : en différé, chaque logo n'arriverait qu'en entrant à l'écran) */
+export function Disc({ src, name, size = 56, ring = '#fff', eager }: { src?: string | null; name: string; size?: number; ring?: string; eager?: boolean }) {
+  const [err, setErr] = useState(0); // 1 : petite version absente → logo complet ; 2 : aucun logo → initiales
+  const url = src ? (err ? src : smallLogo(src, size)) : null;
   return (
     <div className={`disc${size >= 48 ? ' big' : ''}`} style={{ '--s': `${size}px`, '--ring': ring } as React.CSSProperties}>
-      {src && !err ? <img src={src} alt="" loading="lazy" onError={() => setErr(true)} style={src.startsWith('/logos/flags/') ? { width: '100%', height: '100%', objectFit: 'cover' } : src.startsWith('/logos/') ? { width: '86%', height: '86%' } : undefined} /> : <span>{initials(name)}</span>}
+      {url && err < 2 ? <img src={url} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setErr(url !== src ? 1 : 2)} style={url.startsWith('/logos/flags/') ? { width: '100%', height: '100%', objectFit: 'cover' } : url.startsWith('/logos/') ? { width: '86%', height: '86%' } : undefined} /> : <span>{initials(name)}</span>}
     </div>
   );
 }

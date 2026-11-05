@@ -69,10 +69,17 @@ def harmonize(im):
     out.paste(im, (round(S / 2 - cx * scale), round(S / 2 - cy * scale)), im)
     return out
 
+def small(full, dest):
+    """Petite version (96 px, ~3 Ko) pour les logos affichés petits (listes, bandeau des résultats) : logos/s/{id}.webp"""
+    d = os.path.join(os.path.dirname(dest), 's'); os.makedirs(d, exist_ok=True)
+    full.resize((96, 96), Image.LANCZOS).save(os.path.join(d, os.path.basename(dest)), 'WEBP', quality=90, method=6)
+
 def save(img_bytes, dest):
     im = Image.open(io.BytesIO(img_bytes))
     h = harmonize(im)
-    (h or im.convert('RGBA')).save(dest, 'WEBP', quality=88, method=6)
+    full = h or im.convert('RGBA')
+    full.save(dest, 'WEBP', quality=88, method=6)
+    small(full if full.size == (256, 256) else full.resize((256, 256), Image.LANCZOS), dest)
 
 def one(club):
     """Logo officiel retéléchargé à chaque passage (suit les changements des clubs) ;
