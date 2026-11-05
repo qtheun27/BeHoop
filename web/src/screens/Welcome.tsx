@@ -125,7 +125,7 @@ export function Welcome() {
       </header>
 
       <section className="lp-hero">
-        <Court />
+        <div className="lp-hero-deco" aria-hidden><Court /></div>
         <div className="lp-hero-in">
           <div className="lp-pitch">
             <div className="lp-kick">{t('Tout le basket belge · Gratuit')}</div>
@@ -256,18 +256,32 @@ function ClubSearch({ comps, dark }: { comps?: Landing['comps']; dark?: boolean 
   // Liste des clubs chargée au premier usage de la recherche (pas au chargement de la page)
   const [clubs, setClubs] = useState<Club[] | null>(null);
   const want = () => { if (!clubs) loadIndex().then((i) => setClubs(i.clubs.filter((c) => c.id < 2e10))).catch(() => {}); };
-  const qq = normalize(q.trim());
+  // Liste flottante (ordinateur) : fermée d'un clic ailleurs ou avec Échap, rouverte en revenant dans le champ
+  const [open, setOpen] = useState(true);
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const out = (e: PointerEvent) => { if (!box.current?.contains(e.target as Node)) setOpen(false); };
+    document.addEventListener('pointerdown', out); return () => document.removeEventListener('pointerdown', out);
+  }, []);
+  const qq = normalize(open ? q.trim() : '');
+  // Liste qui sortirait du bas de l'écran (écran peu haut) : la page défile juste assez pour la montrer en entier
+  useEffect(() => {
+    const l = box.current?.querySelector('.lp-results'); if (!l) return;
+    // sans jamais faire passer le champ de recherche sous le haut de l'écran
+    const over = Math.min(l.getBoundingClientRect().bottom + 16 - innerHeight, box.current!.getBoundingClientRect().top - 16);
+    if (over > 0) scrollBy({ top: over, behavior: 'smooth' });
+  });
   const found = useMemo(() => (qq.length < 2 || !clubs ? [] : clubs.filter((c) => normalize(`${c.name} ${c.short} ${c.city}`).includes(qq)).slice(0, 6)), [qq, clubs]);
   // Compétitions mises en avant : noms connus d'avance (les puces sont là tout de suite, à leur taille) ; logos dès landing.json
   const popular = POPULAR.map(({ id, name }) => comps?.find((c) => c.id === id) ?? { id, name, cat: 'national' as const, women: false, youth: false });
   return (
-    <div className={`lp-search${dark ? ' dark' : ''}`}>
-      <label className="lp-field"><Ico n="search" size={20} /><input value={q} onFocus={want} onChange={(e) => { want(); setQ(e.target.value); }} placeholder={t('Cherche ton club ou ta ville…')} aria-label={t('Chercher un club')} /></label>
+    <div className={`lp-search${dark ? ' dark' : ''}`} ref={box} onKeyDown={(e) => { if (e.key === 'Escape') setOpen(false); }}>
+      <label className="lp-field"><Ico n="search" size={20} /><input value={q} onFocus={() => { want(); setOpen(true); }} onChange={(e) => { want(); setOpen(true); setQ(e.target.value); }} placeholder={t('Cherche ton club ou ta ville…')} aria-label={t('Chercher un club')} /></label>
       {found.length > 0 && <div className="lp-results">{found.map((c) => (
         <a key={c.id} href={`#/club/${c.id}`}><Disc src={c.logo} name={c.short} size={36} ring={c.c1} /><span className="grow"><b>{c.name}</b><small>{c.city} · {tn(c.teams.length, '{n} équipe', '{n} équipes')}</small></span><Ico n="chevRight" size={18} /></a>
       ))}</div>}
       {qq.length >= 2 && clubs && !found.length && <div className="lp-results"><span className="lp-none">{t('Aucun club trouvé.')}</span></div>}
-      {!qq && <div className="lp-pop">{popular.map((c) => <a key={c.id} href={`#/competition/${c.id}`}><CompLogo c={c} size={22} />{trName(c.name)}</a>)}</div>}
+      {!q.trim() && <div className="lp-pop">{popular.map((c) => <a key={c.id} href={`#/competition/${c.id}`}><CompLogo c={c} size={22} />{trName(c.name)}</a>)}</div>}
     </div>
   );
 }
