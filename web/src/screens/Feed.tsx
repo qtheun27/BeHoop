@@ -16,7 +16,7 @@ import { clubColors } from '../lib/theme';
 import { NewsCard, NewsCarousel, topStories } from './News';
 import { GameScoreCard } from './ClubHub';
 import { loadCompData, CompFollowButton } from './CompPage';
-import { t } from '../lib/i18n';
+import { t, lang } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
 import { CommentButton, useYouth } from '../ui/Social';
 
@@ -58,12 +58,14 @@ const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'],
 
 /** Vidéo d'une chaîne officielle (NBA, EuroLeague, BNXT, Belgian Cats…) */
 function VideoCard({ v }: { v: Video }) {
+  const l = lang();
+  const title = (l === 'fr' || l === 'nl' ? v.titles?.[l] : undefined) ?? v.title;
   return (
     <article className="card">
       <header className="card-head"><div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="video" size={20} /></div>
         <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">{v.channel}</div><div className="when">{ago(Date.parse(v.date))}</div></div></header>
-      <div className="card-body" style={{ paddingTop: 0 }}>{v.title}</div>
-      <Embed e={ytEmbed(v.id, v.short)} title={v.title} />
+      <div className="card-body" style={{ paddingTop: 0 }}>{title}</div>
+      <Embed e={ytEmbed(v.id, v.short)} title={title} auto />
     </article>
   );
 }
@@ -120,7 +122,7 @@ export function PostCard({ post }: { post: D.Post }) {
       {(p.type === 'score' || p.type === 'live') && <ScoreCard p={pl as ScorePayload} live={p.type === 'live'} />}
       {p.type === 'live' && pl.updatedByName && <div className="card-body muted" style={{ paddingTop: 8, fontSize: 14 }}>{t('Mis à jour par {name}', { name: pl.updatedByName })}</div>}
       {(p.type === 'message' || p.type === 'photo') && pl.text && <div className="card-body">{pl.text}</div>}
-      {pl.embed && (() => { const e = parseEmbed(pl.embed); return e ? <Embed e={e} /> : null; })()}
+      {pl.embed && (() => { const e = parseEmbed(pl.embed); return e ? <Embed e={e} auto /> : null; })()}
       {p.type === 'photo' && <div className="carousel">{(pl.photos as { key: string }[]).map((ph, i) => <img key={i} src={mediaUrl(ph.key)} alt="" loading="lazy" draggable={false} onContextMenu={isYouthMedia ? (e) => e.preventDefault() : undefined} />)}</div>}
       {(p.type === 'video' || p.type === 'moment') && (
         <a href={p.type === 'video' ? `#/video/${pl.matchVideoId}` : `#/video/${pl.matchVideoId}/m-${pl.momentId}`} style={{ display: 'block', position: 'relative', color: '#fff' }}>

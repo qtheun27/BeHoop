@@ -312,35 +312,83 @@ export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit
   return !OTHER_SPORT.test(t) && clubHit(t);
 }
 
-// Vidéos des chaînes YouTube officielles (flux RSS publics, sans clé) : résumés, actions, shorts — pour « Photos & vidéos »
-export interface Video { id: string; title: string; channel: string; date: string; cat: Cat; short: boolean }
-const CHANNELS: { name: string; id: string; cat: Cat; keep?: RegExp }[] = [
-  { name: 'NBA', id: 'UCWJ2lWNubArHWmf3FIHbfcQ', cat: 'nba' },
-  { name: 'House of Highlights', id: 'UCqQo7ewe87aYAe7ub5UqXMw', cat: 'nba' },
-  { name: 'EuroLeague', id: 'UCGr3nR_XH9r6E5b09ZJAT9w', cat: 'international' },
-  { name: 'BNXT League', id: 'UC4QmIGx2Wa5_hiwlzK7HLTQ', cat: 'belgique' },
-  { name: 'Basketball Belgium', id: 'UCHkZCYfrR4LCY_d3M1igE5Q', cat: 'belgique' },
-  { name: 'TéléMB', id: 'UCLfAmmEOrv18FLu9QfT-dgA', cat: 'regional', keep: /basket/i },
+// Vidéos des chaînes YouTube officielles : résumés, actions, shorts — pour « Photos & vidéos ».
+// Source : flux RSS de la chaîne ; s'il est indisponible (YouTube le refuse parfois aux serveurs), la page « Vidéos » de la
+// chaîne. Une chaîne en panne garde ses vidéos du passage précédent (la section ne se vide jamais d'un coup).
+// Que du basket : chaînes de basket, ou filtre sur les chaînes multisports. Chaînes belges en français et néerlandais.
+// Titres anglais : la version française et néerlandaise que YouTube fournit (titles), quand la chaîne en propose une.
+export interface Video { id: string; title: string; channel: string; date: string; cat: Cat; short: boolean; titles?: { fr?: string; nl?: string } }
+type Channel = { name: string; id: string; cat: Cat; lang: 'fr' | 'nl' | 'en'; keep?: RegExp };
+const CHANNELS: Channel[] = [
+  { name: 'Basketball Belgium', id: 'UCHkZCYfrR4LCY_d3M1igE5Q', cat: 'belgique', lang: 'fr' },
+  { name: 'BNXT League', id: 'UC4QmIGx2Wa5_hiwlzK7HLTQ', cat: 'belgique', lang: 'en' },
+  { name: 'Basketbal Vlaanderen', id: 'UCx9g4A9fJ97hkj8-2cviMUQ', cat: 'belgique', lang: 'nl' },
+  { name: 'Spirou Basket', id: 'UCLoelGtxqCywSd9cPPdLxfg', cat: 'belgique', lang: 'fr' },
+  { name: 'Filou Oostende', id: 'UCvoQWlTPrrwOAePrWd7vKHA', cat: 'belgique', lang: 'nl' },
+  { name: 'Okapi Aalst', id: 'UCnvaL3qPl7sDItyLMoO33NA', cat: 'belgique', lang: 'nl', keep: /highlight|samenvatting|résumé|best of|top \d/i },
+  { name: 'TéléMB', id: 'UCLfAmmEOrv18FLu9QfT-dgA', cat: 'regional', lang: 'fr', keep: /basket/i },
+  { name: 'EuroLeague', id: 'UCGr3nR_XH9r6E5b09ZJAT9w', cat: 'international', lang: 'en' },
+  { name: 'NBA', id: 'UCWJ2lWNubArHWmf3FIHbfcQ', cat: 'nba', lang: 'en' },
 ];
-export function parseYoutube(xml: string, c: (typeof CHANNELS)[number]): Video[] {
+export function parseYoutube(xml: string, c: Channel): Video[] {
   return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => {
     const g = (re: RegExp) => unxml(re.exec(e)?.[1] ?? '');
     return { id: g(/<yt:videoId>([^<]+)/), title: g(/<title>([^<]*)/), channel: c.name, date: g(/<published>([^<]+)/), cat: c.cat, short: /\/shorts\//.test(g(/<link rel="alternate" href="([^"]+)/)), desc: g(/<media:description>([^<]*)/) };
   }).filter((v) => v.id && (!c.keep || c.keep.test(`${v.title} ${v.desc}`))).map(({ desc: _, ...v }) => v);
 }
-async function youtube(): Promise<Video[]> {
+/** « il y a 3 heures », « 3 hours ago », « 3 uur geleden » → âge en secondes */
+const AGE: [RegExp, number][] = [[/sec|seconde/, 1], [/min/, 60], [/hour|heure|\buur|\bh\b/, 3600], [/day|jour|dag|\bj\b/, 86400], [/week|semaine|sem/, 604800], [/month|mois|maand/, 2592000], [/year|\ban|jaar/, 31536000]];
+export function ageSeconds(label: string): number | null {
+  const m = /(\d+)\s*([a-zA-Zéû]+)/.exec(label.replace(/ /g, ' ')); if (!m) return null;
+  const u = AGE.find(([re]) => re.test(m[2].toLowerCase())); return u ? Number(m[1]) * u[1] : null;
+}
+/** Vidéos de la page « Vidéos » d'une chaîne (ytInitialData), titres dans la langue demandée */
+export function parseChannelPage(html: string, c: Channel, now = Date.now()): Video[] {
+  const j = /var ytInitialData = (\{[\s\S]*?\});<\/script>/.exec(html)?.[1]; if (!j) return [];
+  const out: Video[] = [];
+  const walk = (o: unknown): void => {
+    if (Array.isArray(o)) { o.forEach(walk); return; }
+    if (!o || typeof o !== 'object') return;
+    const lv = (o as Record<string, any>).lockupViewModel;
+    if (lv?.contentId && lv.metadata?.lockupMetadataViewModel) {
+      const md = lv.metadata.lockupMetadataViewModel;
+      const parts = (md.metadata?.contentMetadataViewModel?.metadataRows ?? []).flatMap((r: any) => r.metadataParts ?? []);
+      const age = parts.map((p: any) => ageSeconds(p.accessibilityLabel ?? p.text?.content ?? '')).find((x: number | null) => x != null) ?? null;
+      if (age != null) out.push({ id: lv.contentId, title: String(md.title?.content ?? ''), channel: c.name, date: new Date(now - age * 1000).toISOString(), cat: c.cat, short: false });
+    }
+    Object.values(o).forEach(walk);
+  };
+  try { walk(JSON.parse(j)); } catch { return []; }
+  return out.filter((v) => v.title && (!c.keep || c.keep.test(v.title)));
+}
+const page = async (c: Channel, hl: string) => (await curl(`https://www.youtube.com/channel/${c.id}/videos?hl=${hl}&persist_hl=1`))?.html ?? '';
+async function channelVideos(c: Channel): Promise<Video[]> {
+  try {
+    const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${c.id}`, { signal: AbortSignal.timeout(15_000) });
+    if (r.ok) { const v = parseYoutube(await r.text(), c); if (v.length) return v; }
+  } catch { /* flux indisponible : page de la chaîne */ }
+  return parseChannelPage(await page(c, c.lang), c);
+}
+export async function youtube(prev: Video[]): Promise<Video[]> {
   const out: Video[] = [];
   for (const c of CHANNELS) {
-    try {
-      const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${c.id}`, { signal: AbortSignal.timeout(15_000) });
-      if (r.ok) out.push(...parseYoutube(await r.text(), c));
-    } catch { /* chaîne momentanément indisponible */ }
+    let v = await channelVideos(c).catch(() => [] as Video[]);
+    if (!v.length) { v = prev.filter((x) => x.channel === c.name); console.log(`YouTube ${c.name} : indisponible, ${v.length} vidéo(s) gardée(s)`); }
+    else if (c.lang === 'en') {
+      // Titres traduits par YouTube (quand la chaîne les fournit) ; jamais un titre tronqué
+      for (const hl of ['fr', 'nl'] as const) {
+        const tr = new Map(parseChannelPage(await page(c, hl).catch(() => ''), { ...c, keep: undefined }).map((x) => [x.id, x.title]));
+        for (const x of v) { const t = tr.get(x.id); if (t && t !== x.title && !/(\.\.\.|…)$/.test(t)) x.titles = { ...x.titles, [hl]: t }; }
+      }
+    }
+    out.push(...v);
   }
   return out.filter((v) => Date.parse(v.date) > Date.now() - 21 * 864e5).sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export async function run(out = 'app-data/news.json') {
-  const prev: News[] = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')).items ?? [] : [];
+  const prevFile = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
+  const prev: News[] = prevFile.items ?? [];
   const all: News[] = [];
   const indexClubs = existsSync('app-data/index.json') ? JSON.parse(readFileSync('app-data/index.json', 'utf8')).clubs : [];
   const clubHit = clubMatcher(indexClubs);
@@ -378,6 +426,8 @@ export async function run(out = 'app-data/news.json') {
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
   items = [...new Set(seen.values())].filter((n) => n.cat !== 'regional' || !/score'n'co/i.test(n.source) && /(\.be|lavenir\.net|antennecentre\.tv|news\.google\.com)$/.test((() => { try { return new URL(n.url).hostname; } catch { return ''; } })()));
+  // Rubrique d'un autre sport dans l'adresse (ex. hbvl.be/sport/voetbal/…) ; lien Google jamais résolu et sans image
+  items = items.filter((n) => !/\/(sport\/)?(voetbal|football|foot|tennis|wielrennen|cyclisme|hockey|volley(bal)?|handbal|handball|golf|atletiek|athletisme|rugby|formule-1|f1|motorsport|boxe|boksen)\//i.test(n.url) && !(isGoogle(n.url) && !n.image));
   for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
   await frameCheck(items);
@@ -389,7 +439,7 @@ export async function run(out = 'app-data/news.json') {
   if (existsSync(compsFile)) { const tagC = compTagger(JSON.parse(readFileSync(compsFile, 'utf8'))); for (const n of items) { const c = tagC(`${n.title} ${n.excerpt}`); if (c.length) n.comps = c; else delete n.comps; } }
   if (indexClubs.length) { const tag = clubTagger(indexClubs); for (const n of items) { const c = tag(`${n.title} ${n.excerpt}`); if (c.length) n.clubs = c; else delete n.clubs; } }
   mkdirSync(out.replace(/\/[^/]+$/, ''), { recursive: true });
-  const videos = await youtube().catch((e) => { console.error('YouTube indisponible', (e as Error).message); return [] as Video[]; });
+  const videos = await youtube(prevFile.videos ?? []).catch((e) => { console.error('YouTube indisponible', (e as Error).message); return (prevFile.videos ?? []) as Video[]; });
   writeFileSync(out, JSON.stringify({ generated_at: new Date().toISOString(), items, videos }));
   console.log(`vidéos : ${videos.length}`);
   console.log(`news.json : ${items.length} articles (${['belgique', 'regional', 'international', 'nba'].map((c) => `${c} ${items.filter((i) => i.cat === c).length}`).join(', ')})`);
