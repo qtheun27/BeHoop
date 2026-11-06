@@ -28,3 +28,15 @@ describe('page de chaîne (quand le flux RSS est refusé)', () => {
     expect(ageSeconds('il y a 1\u00a0h')).toBe(3600); expect(ageSeconds('1 uur geleden')).toBe(3600); expect(ageSeconds('5 weeks ago')).toBe(5 * 604800); expect(ageSeconds('243 views')).toBeNull();
   });
 });
+
+import { isDead } from '../news';
+describe('liens morts (article retiré par le média)', () => {
+  it('404/410 ou renvoi vers l’accueil du site : mort ; 403 (robots refusés) ou autre page : vivant', () => {
+    expect(isDead('https://site.be/sport/a-123.html', { code: 404, final: 'https://site.be/sport/a-123.html' })).toBe(true);
+    expect(isDead('https://site.be/sport/a-123.html', { code: 200, final: 'https://www.site.be/' })).toBe(true);
+    expect(isDead('https://site.be/fr/news/a', { code: 200, final: 'https://site.be/fr' })).toBe(true);
+    expect(isDead('https://site.be/sport/a-123.html', { code: 403, final: 'https://site.be/sport/a-123.html' })).toBe(false);
+    expect(isDead('https://site.be/sport/a-123.html', { code: 200, final: 'https://site.be/sport/a-123-v2.html' })).toBe(false);
+    expect(isDead('https://site.be/sport/a', { code: 200, final: 'https://autre.com/' })).toBe(false);
+  });
+});

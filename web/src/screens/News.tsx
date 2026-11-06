@@ -22,11 +22,12 @@ function useNewsImage(n: News) {
 function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
   return (
     <div style={{ aspectRatio: ratio, width: '100%', display: 'block', position: 'relative', overflow: 'hidden', background: tint(n.source) }}>
-      <svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} aria-hidden>
-        <g fill="none" stroke="rgba(255,255,255,.22)" strokeWidth="2.5">
-          <rect x="-4" y="-4" width="328" height="168" /><line x1="160" y1="-4" x2="160" y2="164" /><circle cx="160" cy="80" r="34" />
-          <rect x="-4" y="48" width="70" height="64" /><circle cx="66" cy="80" r="22" /><path d="M-4 18 H40 A82 82 0 0 1 40 142 H-4" />
-          <rect x="254" y="48" width="70" height="64" /><circle cx="254" cy="80" r="22" /><path d="M324 18 H280 A82 82 0 0 0 280 142 H324" />
+      {/* Terrain réglementaire vu de haut (même dessin que l'accueil et le fond de l'appli), jamais déformé */}
+      <svg viewBox="0 0 940 500" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} aria-hidden>
+        <g fill="none" stroke="rgba(255,255,255,.24)" strokeWidth="4">
+          <rect x="20" y="20" width="900" height="460" rx="6" /><line x1="470" y1="20" x2="470" y2="480" /><circle cx="470" cy="250" r="60" />
+          <path d="M20 90 H150 A160 160 0 0 1 150 410 H20" /><path d="M920 90 H790 A160 160 0 0 0 790 410 H920" />
+          <rect x="20" y="180" width="190" height="140" /><rect x="730" y="180" width="190" height="140" />
         </g>
       </svg>
       <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', alignContent: 'center', gap: 6, color: '#fff', textAlign: 'center', padding: '0 16px' }}>

@@ -39,6 +39,22 @@ const autoOk = () => {
 let current: string | null = null;
 const subs = new Set<() => void>();
 const setCurrent = (id: string | null) => { current = id; subs.forEach((f) => f()); };
+/** Lecteurs automatiques à l'écran : quand le défilement s'arrête, c'est celui le plus proche du centre de l'écran qui joue
+ *  (pas le premier qui touche un bord : sous la barre du bas ou derrière l'en-tête, on ne le regarde pas). */
+const players = new Map<string, HTMLElement>();
+let idle = 0;
+function pick() {
+  const mid = innerHeight / 2; let best: string | null = null, bestD = Infinity;
+  for (const [k, el] of players) {
+    const r = el.getBoundingClientRect();
+    const seen = Math.max(0, Math.min(r.bottom, innerHeight) - Math.max(r.top, 0)) / Math.max(1, r.height);
+    if (seen < 0.6) continue;
+    const d = Math.abs((r.top + r.bottom) / 2 - mid);
+    if (d < bestD) { bestD = d; best = k; }
+  }
+  if (best !== current) setCurrent(best);
+}
+const onScroll = () => { clearTimeout(idle); idle = window.setTimeout(pick, 250); };
 const ytCmd = (f: HTMLIFrameElement | null, func: string) => f?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args: [] }), '*');
 
 export function Embed({ e, title, auto }: { e: EmbedInfo; title?: string; auto?: boolean }) {
@@ -54,14 +70,9 @@ export function Embed({ e, title, auto }: { e: EmbedInfo; title?: string; auto?:
   const canAuto = auto && e.kind === 'youtube';
   useEffect(() => {
     if (!canAuto || !box.current || !autoOk()) return;
-    let timer = 0;
-    const io = new IntersectionObserver(([x]) => {
-      clearTimeout(timer);
-      // Bien à l'écran un court instant (pas en passant vite) : elle démarre ; sinon elle s'arrête si c'était elle
-      if (x.intersectionRatio >= 0.6) timer = window.setTimeout(() => setCurrent(key), 350);
-      else if (current === key) setCurrent(null);
-    }, { threshold: [0, 0.3, 0.6, 0.9] });
-    io.observe(box.current);
+    if (!players.size) { addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); }
+    players.set(key, box.current);
+    onScroll(); // arrivée sur l'écran : la vidéo du centre démarre
     const f = () => {
       if (current === key) { open(true); ytCmd(frame.current, 'playVideo'); }
       // Quittée : lancée par le défilement → redevient une vignette (pas de lecteurs empilés) ; lancée au toucher → en pause
@@ -69,7 +80,10 @@ export function Embed({ e, title, auto }: { e: EmbedInfo; title?: string; auto?:
       else ytCmd(frame.current, 'pauseVideo');
     };
     subs.add(f);
-    return () => { clearTimeout(timer); io.disconnect(); subs.delete(f); if (current === key) current = null; };
+    return () => {
+      players.delete(key); subs.delete(f); if (current === key) current = null;
+      if (!players.size) { removeEventListener('scroll', onScroll); removeEventListener('resize', onScroll); }
+    };
   }, [canAuto, key]);
   const ratio = e.vertical ? '9/16' : '16/9';
   const src = canAuto ? `${e.src}&mute=${muted ? 1 : 0}&enablejsapi=1&origin=${encodeURIComponent(location.origin)}` : e.src;

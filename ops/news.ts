@@ -9,6 +9,8 @@ export type Cat = 'belgique' | 'regional' | 'international' | 'nba';
 export interface News { id: string; title: string; excerpt: string; url: string; source: string; image: string | null; date: string; cat: Cat; clubs?: number[];
   /** Affichage de ses pages dans un autre site (lecteur intégré) : true autorisé, false interdit, absent inconnu (site qui bloque les robots) */
   frame?: boolean;
+  /** Dernière vérification que l'article existe toujours (lien mort : article retiré) */
+  checked?: string;
   /** Compétitions citées (mots-clés de competitions.json : BNXT, NBA, Top Division…) */
   comps?: string[];
   /** Langue de l'article (voir news-lang.ts) */
@@ -361,18 +363,41 @@ export function parseChannelPage(html: string, c: Channel, now = Date.now()): Vi
   try { walk(JSON.parse(j)); } catch { return []; }
   return out.filter((v) => v.title && (!c.keep || c.keep.test(v.title)));
 }
-const page = async (c: Channel, hl: string) => (await curl(`https://www.youtube.com/channel/${c.id}/videos?hl=${hl}&persist_hl=1`))?.html ?? '';
-async function channelVideos(c: Channel): Promise<Video[]> {
+/** Shorts de l'onglet « Shorts » (sans date sur la page : voir youtube()) */
+export function parseShortsPage(html: string): { id: string; title: string }[] {
+  const j = /var ytInitialData = (\{[\s\S]*?\});<\/script>/.exec(html)?.[1]; if (!j) return [];
+  const out: { id: string; title: string }[] = [];
+  const walk = (o: unknown): void => {
+    if (Array.isArray(o)) { o.forEach(walk); return; }
+    if (!o || typeof o !== 'object') return;
+    const s = (o as Record<string, any>).shortsLockupViewModel;
+    const id = s?.onTap?.innertubeCommand?.reelWatchEndpoint?.videoId, title = s?.overlayMetadata?.primaryText?.content;
+    if (id && title) out.push({ id, title: String(title) });
+    Object.values(o).forEach(walk);
+  };
+  try { walk(JSON.parse(j)); } catch { return []; }
+  return out;
+}
+const page = async (c: Channel, hl: string, tab = 'videos') => (await curl(`https://www.youtube.com/channel/${c.id}/${tab}?hl=${hl}&persist_hl=1`))?.html ?? '';
+async function channelVideos(c: Channel, prev: Map<string, Video>): Promise<Video[]> {
   try {
     const r = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${c.id}`, { signal: AbortSignal.timeout(15_000) });
-    if (r.ok) { const v = parseYoutube(await r.text(), c); if (v.length) return v; }
-  } catch { /* flux indisponible : page de la chaîne */ }
-  return parseChannelPage(await page(c, c.lang), c);
+    if (r.ok) { const v = parseYoutube(await r.text(), c); if (v.length) return v; } // le flux contient aussi les shorts
+  } catch { /* flux indisponible : pages de la chaîne */ }
+  const videos = parseChannelPage(await page(c, c.lang), c);
+  // Shorts (format portrait) : l'onglet ne donne pas leur date → celle de leur première apparition ici (mise à jour toutes
+  // les 2 h, donc à 2 h près) ; jamais vus : échelonnés selon leur ordre sur la chaîne (du plus récent au plus ancien)
+  const now = Date.now();
+  // Seulement pour une chaîne active (une vidéo cette semaine) : sinon de vieux shorts passeraient pour des nouveautés
+  if (!videos.some((v) => Date.parse(v.date) > now - 7 * 864e5)) return videos;
+  const shorts = parseShortsPage(await page(c, c.lang, 'shorts').catch(() => '')).filter((x) => !c.keep || c.keep.test(x.title)).slice(0, 12)
+    .map((x, i): Video => ({ id: x.id, title: x.title, channel: c.name, cat: c.cat, short: true, date: prev.get(x.id)?.date ?? new Date(now - i * 2 * 3600e3).toISOString() }));
+  return [...videos, ...shorts];
 }
 export async function youtube(prev: Video[]): Promise<Video[]> {
   const out: Video[] = [];
   for (const c of CHANNELS) {
-    let v = await channelVideos(c).catch(() => [] as Video[]);
+    let v = await channelVideos(c, new Map(prev.map((x) => [x.id, x]))).catch(() => [] as Video[]);
     if (!v.length) { v = prev.filter((x) => x.channel === c.name); console.log(`YouTube ${c.name} : indisponible, ${v.length} vidéo(s) gardée(s)`); }
     else if (c.lang === 'en') {
       // Titres traduits par YouTube (quand la chaîne les fournit) ; jamais un titre tronqué
@@ -385,6 +410,35 @@ export async function youtube(prev: Video[]): Promise<Video[]> {
     out.push(...v);
   }
   return out.filter((v) => Date.parse(v.date) > Date.now() - 21 * 864e5).sort((a, b) => b.date.localeCompare(a.date));
+}
+
+/** Statut d'une page (après redirections) : code HTTP et adresse finale ; null si le site ne répond pas */
+function httpStatus(url: string): Promise<{ code: number; final: string } | null> {
+  return new Promise((res) => execFile('curl', ['-sSL', '-o', '/dev/null', '-m', '12', '-A', BROWSER_UA, '-w', '%{http_code} %{url_effective}', url], (err, out) => {
+    if (err && !out) return res(null);
+    const [code, final] = String(out).trim().split(' '); res({ code: Number(code), final: final ?? url });
+  }));
+}
+/** Article retiré par le média : page introuvable (404, 410), ou redirection vers l'accueil du site. Le lien d'une actu doit
+ *  toujours mener à l'article. Vérifié une fois par jour par article ; un site qui ne répond pas ou refuse les robots (403)
+ *  n'est pas un lien mort. */
+export function isDead(url: string, st: { code: number; final: string }) {
+  if (st.code === 404 || st.code === 410) return true;
+  try { const a = new URL(url), b = new URL(st.final); return a.pathname.length > 1 && (b.pathname === '/' || /^\/(fr|nl|en)\/?$/.test(b.pathname)) && a.hostname.replace(/^www\./, '') === b.hostname.replace(/^www\./, ''); } catch { return false; }
+}
+async function dropDead(items: News[]): Promise<News[]> {
+  const day = new Date().toISOString().slice(0, 10);
+  const todo = items.filter((n) => n.checked !== day && !isGoogle(n.url));
+  const dead = new Set<string>();
+  const q = [...todo];
+  await Promise.all(Array.from({ length: 12 }, async () => {
+    for (let n = q.shift(); n; n = q.shift()) {
+      const st = await httpStatus(n.url);
+      if (st && isDead(n.url, st)) dead.add(n.id); else if (st) n.checked = day;
+    }
+  }));
+  if (dead.size) console.log(`liens morts écartés : ${dead.size}`);
+  return items.filter((n) => !dead.has(n.id));
 }
 
 export async function run(out = 'app-data/news.json') {
@@ -413,7 +467,7 @@ export async function run(out = 'app-data/news.json') {
     if (byId.has(n.id) || Date.parse(n.date) <= since || isSpam(n)) continue;
     // Déjà traité lors d'un passage précédent : on réutilise le vrai lien et l'image trouvés
     const old = known.get(n.id);
-    byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? cleanImg(old.image) } : n);
+    byId.set(n.id, old ? { ...n, url: isGoogle(old.url) ? n.url : old.url, image: n.image ?? cleanImg(old.image), ...(old.checked ? { checked: old.checked } : {}) } : n);
   }
   const CAP: Record<Cat, number> = { regional: 400, belgique: 250, international: 120, nba: 120 };
   const perCat: Record<string, number> = {};
@@ -432,6 +486,7 @@ export async function run(out = 'app-data/news.json') {
   for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
   await frameCheck(items);
+  items = await dropDead(items);
   // NBA et international : au plus 60 articles par langue, pour qu'une langue très active n'écrase pas les autres
   const perLang: Record<string, number> = {};
   items = items.filter((n) => n.cat === 'belgique' || n.cat === 'regional' || (perLang[`${n.cat}/${n.lang}`] = (perLang[`${n.cat}/${n.lang}`] ?? 0) + 1) <= 60);
