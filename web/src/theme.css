@@ -493,10 +493,13 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 @media (min-width: 1100px) { .to-top { bottom: 28px; right: 28px; } }
 
 /* iOS 26/27, appli installée sur l'écran d'accueil : l'iPhone floute une grande bande en haut de l'écran (effet « verre »).
-   Une fine bande peinte, fixée tout en haut, suffit à l'en empêcher (astuce constatée sur iOS 27, pas documentée par
-   Apple : https://tips.ojapp.app/en/ios-27-pwa-top-blur-workaround-2/). Couleur du fond de l'appli ; noire dans Highlights. */
+   WebKit remplace ce flou par une couleur unie s'il trouve, tout en haut, un élément fixe large (≥ 90 % de l'écran), haut
+   de plus de 10 px, avec un fond visible, sans flou ni masque, et qui reçoit les touchers (« pointer-events: none » le
+   rend invisible à ce test). Pas documenté par Apple : https://tips.ojapp.app/en/ios-27-pwa-top-blur-workaround-2/
+   Couleur du haut de l'écran : fond de l'appli, nuit sur l'accueil public, noir dans Highlights. */
 .no-top-blur { display: none; }
 @media (display-mode: standalone) {
-  .no-top-blur { display: block; position: fixed; inset: 0 0 auto; height: 11px; z-index: 1000; pointer-events: none; background: var(--bg); }
+  .no-top-blur { display: block; position: fixed; inset: 0 0 auto; height: 12px; z-index: 1000; background: var(--bg); }
+  html:has(.lp-hero) .no-top-blur { background: #0a0c12; }
   html.reels-open .no-top-blur { background: #000; }
 }
