@@ -491,12 +491,3 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
   opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .25s, transform .25s; }
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 @media (min-width: 1100px) { .to-top { bottom: 28px; right: 28px; } }
-
-/* iOS 27, appli installée : un élément fixe placé hors de l'écran, isolé par WebKit dans son propre calque, empêche le
-   flou qu'iOS ajoute en haut de l'écran (astuce constatée par d'autres, pas documentée par Apple). Invisible, ne gêne ni
-   les touchers ni le défilement : le contenu reste en plein écran. */
-.ios27-blur-fix { display: none; }
-@media (display-mode: standalone) {
-  .ios27-blur-fix { display: block; position: fixed; top: 0; left: 0; width: 85%; height: 6px; pointer-events: none;
-    transform: translateX(110%); will-change: transform; z-index: 9999; }
-}
