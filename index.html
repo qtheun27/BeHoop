@@ -41,6 +41,8 @@
     document.documentElement.classList.add('booting');
     // Sans compte, sur l'écran de départ : l'accueil (nuit) suit l'ouverture → ouverture en version nuit, sans flash clair
     try { if (!localStorage.getItem('behoop.session') && /^(#\/?(fil)?)?$/.test(location.hash)) document.documentElement.classList.add('splash-nuit'); } catch (e) {}
+    // Zone de l'heure (iPhone) de la couleur de l'écran d'ouverture dès le lancement : nuit, ou sombre en mode sombre
+    try { var tc = document.querySelector('meta[name="theme-color"]'); if (tc && (document.documentElement.classList.contains('splash-nuit') || matchMedia('(prefers-color-scheme: dark)').matches)) tc.setAttribute('content', document.documentElement.classList.contains('splash-nuit') ? '#0a0c12' : '#070b14'); } catch (e) {}
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
