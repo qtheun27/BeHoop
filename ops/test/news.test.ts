@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger, isSpam, cleanImg, frameAllowed } from '../news';
+import { classify, pageImage, clubMatcher, isBasketNews, clubTagger, compTagger, isSpam, cleanImg, frameAllowed, sameStory } from '../news';
 import { detectLang } from '../news-lang';
 describe('classement des actualités', () => {
   it.each([
@@ -31,6 +31,10 @@ describe('actus régionales : uniquement le basket', () => {
     ['Okapi Aalst wint met 79-94 tegen Kangoeroes Mechelen', true],
     ['Noorderhart in Pelt investeert 26,7 miljoen euro', false],
     ['FOOT - P2B : Mesvin sort vainqueur du derby', false],
+    ['Jeremy Sperolini, l’entraîneur de Luttre en P2A qui boxe pour souffler : « évacuer la pression du basket »', false],
+    ['Bonne nouvelle pour Vincent Kompany et le Bayern Munich : le Ballon d’or Harry Kane prolongé', false],
+    ['"Ils se moquent de moi au basket" : comment réagir face au harcèlement ?', false],
+    ['Ligue des Champions de basket - Anvers tombe en Finlande', true],
   ])('%s → %s', (t, ok) => expect(isBasketNews(n(t), hit)).toBe(ok));
 });
 
@@ -113,5 +117,13 @@ describe('spam et images', () => {
     expect(frameAllowed(200, null, "upgrade-insecure-requests")).toBe(true);
     expect(frameAllowed(403, 'SAMEORIGIN', null)).toBe(false);
     expect(frameAllowed(403, null, null)).toBeNull(); // vérification impossible : l'appli essaie, le navigateur tranche
+  });
+});
+
+describe('actus en double', () => {
+  it('même média, titre retouché ou même photo', () => {
+    expect(sameStory({ title: 'BASKET - Thierry Wilquin écarté après 37 ans : « Ce club n’est plus vraiment le mien »' }, { title: 'BASKET - Thierry Wilquin : « Ce club n’est plus vraiment le mien »' })).toBe(true);
+    expect(sameStory({ title: 'Wilquin quitte Mons après 37 ans', image: 'https://x.be/a/still001.jpeg?itok=1' }, { title: 'Wilquin quitte Mons : « fin »', image: 'https://x.be/b/still001.jpeg?itok=2' })).toBe(true);
+    expect(sameStory({ title: 'Charleroi voudra enchaîner en D1 de basket' }, { title: 'Charleroi en déplacement à Bruxelles en D1 de basket' })).toBe(false);
   });
 });

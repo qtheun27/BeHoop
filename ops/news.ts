@@ -237,7 +237,11 @@ async function enrich(items: News[]) {
 
 // Recherches régionales : Google renvoie aussi le foot, le tennis… de ces médias. On garde ce qui parle de basket
 // ou cite un club de basket (nom propre à un seul club), sauf si l'article parle visiblement d'un autre sport.
-const OTHER_SPORT = /voetbal|football|\bfoot\b|tennis|handbal|handball|volley|wielren|cyclis|hockey|rugby|atletiek|athl[ée]tisme|doelpunt|penalty|rode kaart|carton rouge|croky cup|jupiler|\bgoal|keeper|gardien de but|veldrit|gravel|motocross|judo|zwemmen|natation/i;
+const OTHER_SPORT = /voetbal|football|\bfoot\b|tennis|handbal|handball|volley|wielren|cyclis|hockey|rugby|atletiek|athl[ée]tisme|doelpunt|penalty|rode kaart|carton rouge|croky cup|jupiler|\bgoal|keeper|gardien de but|veldrit|gravel|motocross|judo|zwemmen|natation|\bbox(e|eur|ing)\b|\bmma\b|ballon d.or|bayern|kompany|diables rouges|rode duivels|premier league|bundesliga/i;
+// Sujets qui ne parlent pas du jeu même si le mot « basket » y figure (conseils de société, émissions jeunesse…)
+const OFF_TOPIC = /harc[eè]lement|pesten\b/i;
+/** Le titre parle d'un autre sport ou d'un autre sujet (même avec « basket » dedans : l'entraîneur qui fait de la boxe) */
+export const offTopic = (title: string) => OTHER_SPORT.test(title) || OFF_TOPIC.test(title);
 const GENERIC = new Set('basket basketball basketbal basketbalclub ball bal club royal royale koninklijke kbbc rbc bbc union united sint saint academy dames heren blue black lions centre ville avenir racing sporting cercle etoile espoir jeunesse olympic team new asbl vzw les des the van den het'.split(' '));
 export function clubMatcher(clubs: { name: string; short: string }[]) {
   // Noms de club d'au moins deux mots (« limburg united », « okapi aalst »), avec ou sans les mots génériques :
@@ -308,8 +312,19 @@ export function compTagger(comps: { id: string; kw?: string[]; not?: string[] }[
   return (text: string) => { const t = normalize(text); return list.filter((c) => c.re.test(t) && !(c.not && c.not.test(t) && !c.re.test(t.replace(c.not, ' ')))).map((c) => c.id); };
 }
 
+/** Deux actus du même média racontent la même chose : l'un des titres reprend presque tous les mots de l'autre (ou la même photo et la moitié des mots) */
+export function sameStory(a: Pick<News, 'title' | 'image'>, b: Pick<News, 'title' | 'image'>) {
+  const img = (x?: string | null) => (x ? x.split('?')[0].replace(/^.*\//, '') : '');
+  const w = (t: string) => new Set(normalize(t).split(' ').filter((x) => x.length > 2));
+  const [x, y] = [w(a.title), w(b.title)]; const small = x.size <= y.size ? x : y, big = small === x ? y : x;
+  const share = small.size ? [...small].filter((k) => big.has(k)).length / small.size : 0;
+  // Une même photo d'archive peut illustrer deux sujets différents : avec la photo, il faut aussi des mots en commun
+  return (small.size >= 5 && share >= 0.85) || (!!img(a.image) && img(a.image) === img(b.image) && share >= 0.5);
+}
+
 export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit: (t: string) => boolean) {
   const t = `${n.title} ${n.excerpt}`;
+  if (offTopic(n.title)) return false;
   if (/basket/i.test(`${t} ${n.url}`)) return true;
   return !OTHER_SPORT.test(t) && clubHit(t);
 }
@@ -480,8 +495,12 @@ export async function run(out = 'app-data/news.json') {
     const o = seen.get(k) ?? seen.get(n.url);
     if (!o) { seen.set(k, n); seen.set(n.url, n); } else if (!o.image && n.image) o.image = n.image;
   }
-  items = [...new Set(seen.values())].filter((n) => n.cat !== 'regional' || !/score'n'co/i.test(n.source) && /(\.be|lavenir\.net|antennecentre\.tv|news\.google\.com)$/.test((() => { try { return new URL(n.url).hostname; } catch { return ''; } })()));
+  // Même article repris sous un titre légèrement changé par le même média (même image, ou presque les mêmes mots)
+  const kept: News[] = [];
+  for (const n of [...new Set(seen.values())]) if (!kept.some((o) => o.source === n.source && sameStory(o, n))) kept.push(n);
+  items = kept.filter((n) => n.cat !== 'regional' || !/score'n'co/i.test(n.source) && /(\.be|lavenir\.net|antennecentre\.tv|news\.google\.com)$/.test((() => { try { return new URL(n.url).hostname; } catch { return ''; } })()));
   // Rubrique d'un autre sport dans l'adresse (ex. hbvl.be/sport/voetbal/…) ; lien Google jamais résolu et sans image
+  items = items.filter((n) => (n.cat !== 'regional' && n.cat !== 'belgique') || !offTopic(n.title));
   items = items.filter((n) => !/\/(sport\/)?(voetbal|football|foot|tennis|wielrennen|cyclisme|hockey|volley(bal)?|handbal|handball|golf|atletiek|athletisme|rugby|formule-1|f1|motorsport|boxe|boksen)\//i.test(n.url) && !(isGoogle(n.url) && !n.image));
   for (const n of items) n.image = cleanImg(n.image);
   for (const n of items) n.lang = detectLang(`${n.title} ${n.excerpt}`, n.url);
