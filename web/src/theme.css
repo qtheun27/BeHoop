@@ -492,15 +492,11 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 @media (min-width: 1100px) { .to-top { bottom: 28px; right: 28px; } }
 
-/* iOS 26/27, appli installée sur l'écran d'accueil : l'iPhone floute une grande bande en haut de l'écran (effet « verre »).
-   WebKit remplace ce flou par une couleur unie s'il trouve, tout en haut, un élément fixe large (≥ 90 % de l'écran), haut
-   de plus de 10 px, avec un fond visible, sans flou ni masque, et qui reçoit les touchers (« pointer-events: none » le
-   rend invisible à ce test). Pas documenté par Apple : https://tips.ojapp.app/en/ios-27-pwa-top-blur-workaround-2/
-   Elle couvre toute la zone de l'heure et de la batterie : même si l'iPhone floute encore, il floute une couleur unie.
-   Couleur du haut de l'écran : fond de l'appli, nuit sur l'accueil public, noir dans Highlights. */
-.no-top-blur { display: none; }
-@media (display-mode: standalone) {
-  .no-top-blur { display: block; position: fixed; inset: 0 0 auto; height: max(12px, env(safe-area-inset-top)); z-index: 1000; background: var(--bg); }
-  html:has(.lp-hero) .no-top-blur { background: #0a0c12; }
-  html.reels-open .no-top-blur { background: #000; }
-}
+/* Sous l'heure et la batterie (iPhone, appli installée) : une bande fixe en verre, exactement de la hauteur de cette zone,
+   qui laisse passer le contenu flouté. Avec la barre d'état en mode « default » (index.html), l'iPhone n'ajoute plus son
+   grand flou (même réglage que l'appli Budget, constaté sans flou sur iOS 27). Hauteur nulle sans zone (navigateur,
+   ordinateur). Verre nuit sur l'accueil public, noir dans Highlights. */
+.no-top-blur { position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 1000; background: var(--glass);
+  -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%); }
+html:has(.lp-hero) .no-top-blur { background: rgba(10,12,18,.72); }
+html.reels-open .no-top-blur { background: #000; -webkit-backdrop-filter: none; backdrop-filter: none; }
