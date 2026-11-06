@@ -38,6 +38,8 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const [paused, setPaused] = useState(false);
   const [shown, setShown] = useState(false); // la vidéo courante joue → le lecteur apparaît par-dessus son image
   const frame = useRef<HTMLIFrameElement>(null);
+  const box = useRef<HTMLDivElement>(null);
+  const muted = useRef(true); // son coupé dans le lecteur (tel qu'il le dit) : on ne lui renvoie pas un ordre inutile
   const list = useRef<HTMLDivElement>(null);
   const ok = useRef(false); // lecteur prêt à recevoir des commandes
   const loaded = useRef(''); // vidéo dans le lecteur
@@ -55,16 +57,24 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
     Object.assign(b, { position: 'fixed', top: `-${y}px`, left: '0', right: '0', overflow: 'hidden' });
     // Appli installée sur iPhone : l'écran « fixe » s'arrête au-dessus de la barre d'accueil → on le prolonge jusqu'au
     // bord bas de l'écran (vidéo jusqu'en bas, comme en haut)
-    const tall = innerHeight > innerWidth ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
-    const gap = matchMedia('(display-mode: standalone)').matches ? tall - innerHeight : 0;
-    html.style.setProperty('--reels-gap', `${gap > 0 && gap < 80 ? gap : 0}px`);
+    // On mesure l'écran Highlights lui-même (la hauteur annoncée par la page peut être juste alors que l'écran fixe est
+    // plus court) et on comble l'écart avec le bas de l'écran du téléphone
+    const fit = () => {
+      const el = box.current; if (!el) return;
+      html.style.setProperty('--reels-gap', '0px');
+      const standalone = matchMedia('(display-mode: standalone)').matches || (navigator as { standalone?: boolean }).standalone;
+      const tall = innerHeight > innerWidth ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
+      const gap = standalone ? Math.round(tall - el.getBoundingClientRect().bottom) : 0;
+      html.style.setProperty('--reels-gap', `${gap > 0 && gap < 160 ? gap : 0}px`);
+    };
+    fit(); addEventListener('resize', fit);
     html.classList.add('reels-open');
     const meta = document.querySelector('meta[name="theme-color"]:not([media])'); const was = meta?.getAttribute('content');
     meta?.setAttribute('content', '#000000');
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); if (e.key === 'ArrowDown') go(1); if (e.key === 'ArrowUp') go(-1); };
     addEventListener('keydown', k);
     return () => {
-      removeEventListener('keydown', k); html.classList.remove('reels-open'); if (was) meta?.setAttribute('content', was);
+      removeEventListener('keydown', k); removeEventListener('resize', fit); html.classList.remove('reels-open'); if (was) meta?.setAttribute('content', was);
       Object.assign(b, { position: '', top: '', left: '', right: '', overflow: '' }); scrollTo(0, y);
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -86,7 +96,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
       if (r.subs) { c('loadModule', ['captions']); c('setOption', ['captions', 'track', { languageCode: r.subs }]); } else c('unloadModule', ['captions']);
     } else c('playVideo');
     if (soundRef.current) {
-      c('unMute');
+      if (muted.current) c('unMute');
       // L'iPhone a refusé le son (lecteur pas encore touché) : la vidéo reste arrêtée → on la relance sans le son et on
       // le demande. Une vidéo qui charge encore (3) n'est pas un refus : on revérifie un peu plus tard.
       const id = r.id; let n = 0;
@@ -96,7 +106,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
         c('mute'); c('playVideo'); setNeedTap(true);
       };
       setTimeout(check, 1200);
-    } else c('mute');
+    } else if (!muted.current) c('mute');
   };
   useEffect(() => { setPaused(false); play(); }, [cur]); // eslint-disable-line react-hooks/exhaustive-deps
   // Écoute du lecteur : il apparaît quand la nouvelle vidéo joue vraiment ; fin de vidéo → elle reprend (boucle)
@@ -105,6 +115,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
       if (e.source !== frame.current?.contentWindow) return;
       let d: YtMsg; try { d = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch { return; }
       const s = typeof d.info === 'number' ? (d.event === 'onStateChange' ? d.info : undefined) : d.info?.playerState;
+      if (typeof d.info === 'object' && typeof d.info?.muted === 'boolean') muted.current = d.info.muted;
       if (d.event === 'onReady' && !ok.current) { ok.current = true; play(); return; }
       if (typeof s !== 'number' || s === st.current) return;
       st.current = s;
@@ -135,7 +146,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
 
   // Directement sur la page (portail) : par-dessus tout l'écran, jamais limité par l'écran de la Tribune qui le contient
   return createPortal(
-    <div className="reels" role="dialog" aria-label={t('Highlights')}>
+    <div className="reels" ref={box} role="dialog" aria-label={t('Highlights')}>
       {/* En-tête flottant, comme celui de l'appli (verre sombre, posé sur la vidéo) */}
       <div className="reels-top"><div className="bar">
         <button className="reels-btn" onClick={onClose} aria-label={t('Fermer')}><Ico n="close" size={22} /></button>

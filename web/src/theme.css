@@ -229,8 +229,6 @@ html { overflow-x: hidden; }
   .large-title { font-size: 44px; margin-top: 18px; }
   /* Fil et actus : le carrousel « À la une » passe dans la colonne de droite */
   .has-aside .top-carousel { display: none; }
-  .news-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
-  .news-grid > .card { margin: 0; }
 
   .sidenav { display: flex; flex-direction: column; gap: 6px; position: fixed; left: 0; top: 0; bottom: 0; width: var(--side-w); z-index: 40; padding: 22px 16px 18px;
     background: var(--glass); border-right: 1px solid var(--glass-border); backdrop-filter: saturate(180%) blur(22px); -webkit-backdrop-filter: saturate(180%) blur(22px); }
@@ -490,6 +488,9 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .reels-top b { font-family: Anton, sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; }
 .reels-btn { width: 44px; height: 44px; border-radius: 50%; border: 0; display: grid; place-items: center; color: #fff;
   background: rgba(255,255,255,.12); cursor: pointer; }
+
+/* Tribune : deux façons de la vivre, Parquet (le fil) et Highlights (plein écran) */
+.tribune-seg button { display: flex; align-items: center; justify-content: center; gap: 7px; }
 
 /* Flèche « remonter » (Tribune) */
 .to-top { position: fixed; z-index: 30; right: 16px; bottom: calc(var(--tab-h) + 18px); width: 46px; height: 46px; border-radius: 50%; border: 0; display: grid; place-items: center;

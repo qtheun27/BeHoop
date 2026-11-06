@@ -10,15 +10,15 @@ import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
 import { ago, haptic, dotted, frDate } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
-import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Video, type Competition } from '../lib/data';
-import { Embed, parseEmbed, ytEmbed } from '../ui/Embed';
+import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Competition } from '../lib/data';
+import { Embed, parseEmbed } from '../ui/Embed';
 import { CompLogo } from '../ui/CompLogo';
 import { clubColors } from '../lib/theme';
 import { NewsCard, NewsCarousel, topStories } from './News';
 import { GameScoreCard } from './ClubHub';
 import { loadCompData, CompFollowButton } from './CompPage';
-import { t, lang } from '../lib/i18n';
-import { Ico, type IconName } from '../ui/icons';
+import { t } from '../lib/i18n';
+import { Ico } from '../ui/icons';
 import { CommentButton, useYouth } from '../ui/Social';
 
 /** Rangée façon « stories » : Créer + clubs/équipes suivis, cerclés à leurs couleurs, badge MATCH le jour J. */
@@ -48,28 +48,8 @@ function Stories() {
     </div>
   );
 }
-// Filtres du fil : une seule rangée ; « Actus » ouvre une petite sous-rangée Belgique / International / NBA.
-const FILTERS: { id: string; label: string; ic?: IconName; ok: (p: D.Post) => boolean }[] = [
-  { id: 'tout', label: 'Tout', ok: () => true },
-  { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
-  { id: 'medias', label: 'Highlights', ic: 'video', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' || !!p.payload?.embed },
-  { id: 'actus', label: 'Actus', ic: 'news', ok: () => false },
-];
-const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['regional', 'Régional'], ['international', 'International'], ['nba', 'NBA']];
-
-/** Vidéo d'une chaîne officielle (NBA, EuroLeague, BNXT, Belgian Cats…) */
-function VideoCard({ v }: { v: Video }) {
-  const l = lang();
-  const title = (l === 'fr' || l === 'nl' ? v.titles?.[l] : undefined) ?? v.title;
-  return (
-    <article className="card">
-      <header className="card-head"><div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="video" size={20} /></div>
-        <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">{v.channel}</div><div className="when">{ago(Date.parse(v.date))}</div></div></header>
-      <div className="card-body" style={{ paddingTop: 0 }}>{title}</div>
-      <Embed e={ytEmbed(v.id, v.short, v.lang && v.lang !== l ? l : undefined)} title={title} auto />
-    </article>
-  );
-}
+/** Ce qui va dans Highlights (plein écran façon TikTok) : photos, vidéos et vidéos partagées des publications */
+const isMedia = (p: D.Post) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' || !!p.payload?.embed;
 
 export interface ScorePayload { gameId: number; date: string; time?: string; competition: string;
   home: { id: number; name: string; logo?: string | null; color?: string; score: number }; away: { id: number; name: string; logo?: string | null; color?: string; score: number }; official?: boolean }
@@ -183,11 +163,10 @@ export function Feed() {
   const sentinel = useRef<HTMLDivElement>(null);
   const cursorDone = !!cur.current?.done;
   const [pull, setPull] = useState(0);
-  const [filter, setFilter] = useState('tout');
-  // Highlights : plein écran façon TikTok (ouvert depuis le filtre, le fil reste derrière sur « Tout »)
+  // Deux façons de vivre la Tribune : « Parquet », le fil (publications, résultats et actus de ce que je suis, mélangés
+  // par date, façon Facebook) et « Highlights », les vidéos en plein écran façon TikTok (le Parquet reste derrière)
   const [reels, setReels] = useState(false);
   useEffect(() => { if (reels) ensureMediaCookie(); }, [reels]);
-  const [newsCat, setNewsCat] = useState('');
   const news = useAsync(loadNews, []);
   const key = s.targets.join() + '|' + s.privateTeams.join();
   // Ce que je suis : clubs (directement ou via une équipe) et compétitions — sert à filtrer les actus et à ajouter
@@ -249,38 +228,34 @@ export function Feed() {
   return (
     <Screen title={t('Tribune')} home hideTitle aside={<FeedAside />}>
       <Stories />
-      {filter === 'tout' && <NewsCarousel />}
+      <NewsCarousel />
       {followsNothing && <Suggestions />}
-      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => (f.id === 'medias' ? setReels(true) : setFilter(f.id))} aria-pressed={filter === f.id}>{f.ic && <Ico n={f.ic} />}{t(f.label)}</button>)}</div>
-      {filter === 'actus' && <div className="seg" style={{ marginTop: -4 }}>{NEWS_CATS.map(([k, l]) => <button key={k} className={newsCat === k ? 'on' : ''} onClick={() => setNewsCat(k)}>{t(l)}</button>)}</div>}
+      <div className="seg tribune-seg" role="tablist">
+        <button role="tab" className="on" aria-selected onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}><Ico n="ball" />{t('Parquet')}</button>
+        <button role="tab" aria-selected={false} onClick={() => { haptic(); setReels(true); }}><Ico n="video" />{t('Highlights')}</button>
+      </div>
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
       {posts === null ? <Skeleton h={260} /> : (() => {
           // Ton fil = ce que tu suis : publications, résultats des compétitions suivies et actus qui les citent, mélangés par date.
           // Les actus ne remontent pas plus loin que les publications chargées.
-          const myNews = (news.data?.items ?? []).filter((n) => (!newsCat || n.cat === newsCat) && readable(n) && relevant(n));
+          const myNews = (news.data?.items ?? []).filter((n) => readable(n) && relevant(n));
           const allLink = <a className="btn ghost small" style={{ display: 'flex', margin: '0 auto 14px' }} href="#/actus">{t('Toute l’actu du basket ›')}</a>;
-          if (filter === 'actus') return <>{myNews.length ? myNews.map((n) => <NewsCard key={n.id} n={n} wide list={myNews} />) : <Empty ill="news" title={t('Pas d’actu sur ce que tu suis pour l’instant')} />}{allLink}</>;
-          const f = FILTERS.find((x) => x.id === filter)!;
-          const shown = posts.filter((p) => f.ok(p));
-          const oldest = shown.length ? shown[shown.length - 1].createdAt : 0;
-          const mix: { t: number; el: JSX.Element }[] = shown.map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
-          if (filter === 'tout' || filter === 'scores') {
-            const known = new Set(posts.filter((p) => p.type === 'score' || p.type === 'live').map((p) => p.payload.gameId));
-            for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
-          }
-          if (filter === 'tout') myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !shown.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide list={myNews} /> }));
-          if (filter === 'medias') for (const v of news.data?.videos ?? []) mix.push({ t: Date.parse(v.date), el: <VideoCard key={`v${v.id}`} v={v} /> });
+          const oldest = posts.length ? posts[posts.length - 1].createdAt : 0;
+          const mix: { t: number; el: JSX.Element }[] = posts.map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
+          const known = new Set(posts.filter((p) => p.type === 'score' || p.type === 'live').map((p) => p.payload.gameId));
+          for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
+          myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !posts.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide list={myNews} /> }));
           mix.sort((a, b) => b.t - a.t);
-          if (mix.length) return <>{mix.slice(0, filter === 'tout' ? 80 : 60).map((x) => x.el)}{filter === 'tout' && allLink}</>;
-          return filter === 'tout' ? <Empty ill="news" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
-            action={<a className="btn" href="#/explorer">{t('Trouver des clubs')}</a>} /> : <Empty ill="ball" title={t('Rien dans ce filtre')} text={t('Essaie « Tout ».')} />;
+          if (mix.length) return <>{mix.slice(0, 80).map((x) => x.el)}{allLink}</>;
+          return <Empty ill="news" title={t('Ton fil est vide')} text={t('Suis des clubs, des équipes ou des compétitions pour voir leurs résultats, publications et actus.')}
+            action={<a className="btn" href="#/explorer">{t('Trouver des clubs')}</a>} />;
         })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
       {reels && <Reels onClose={() => setReels(false)} items={[
         ...(news.data?.videos ?? []).map(reelOfVideo),
-        ...(posts ?? []).filter((p) => !p.hidden && FILTERS.find((f) => f.id === 'medias')!.ok(p)).flatMap((p): Reel[] => {
+        ...(posts ?? []).filter((p) => !p.hidden && isMedia(p)).flatMap((p): Reel[] => {
           const e = p.payload?.embed ? parseEmbed(p.payload.embed) : null;
           if (e?.kind === 'youtube') return [{ kind: 'yt', key: `p${p.id}`, id: e.id, short: e.vertical, title: p.payload.text ?? '', by: p.authorName ?? 'BeHoop', date: p.createdAt }];
           const ph = p.type === 'photo' ? (p.payload.photos as { key: string }[] | undefined)?.[0] : undefined;
