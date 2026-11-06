@@ -454,14 +454,17 @@ html { overflow-x: hidden; }
 .reels { position: fixed; inset: 0; z-index: 200; background: #000; color: #fff; }
 .reels-list { position: absolute; inset: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; }
 .reels-list::-webkit-scrollbar { display: none; }
-.reel { position: relative; height: 100dvh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; box-sizing: border-box;
+.reel { position: relative; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; box-sizing: border-box;
   /* Barre du haut, vidéo, titre : les uns sous les autres (rien ne recouvre les commandes du lecteur YouTube) */
   display: flex; flex-direction: column; padding: calc(env(safe-area-inset-top) + 64px) 0 calc(var(--safe-b, 0px) + 18px); }
-.reel-stage { flex: 1; min-height: 0; display: grid; place-items: center; }
-.reel-media { position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 100%; background: #000; }
-.reel-media.short { height: 100%; width: auto; aspect-ratio: 9 / 16; max-width: 100%; border-radius: 14px; overflow: hidden; }
+.reel-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; container-type: size; }
+/* Taille calculée sur la place disponible (cqw/cqh), pas sur aspect-ratio (Safari iPhone l'étire sur toute la hauteur) :
+   paysage = toute la largeur, hauteur 9/16 ; short = toute la hauteur, largeur 9/16 ; jamais plus grand que la scène */
+.reel-media { position: relative; flex: none; background: #000;
+  width: min(100cqw, 1100px, 100cqh * 16 / 9); height: min(100cqw * 9 / 16, 1100px * 9 / 16, 100cqh); }
+.reel-media.short { width: min(100cqw, 100cqh * 9 / 16); height: min(100cqh, 100cqw * 16 / 9); border-radius: 14px; overflow: hidden; }
 .reel-media iframe, .reel-media img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
-.reel-media.photo { aspect-ratio: auto; height: 100%; display: block; }
+.reel-media.photo { width: 100cqw; height: 100cqh; display: block; }
 .reel-media.photo img { object-fit: contain; }
 .reel-info { flex: none; padding: 12px 18px 0; font-size: 14px; }
 .reel-info span { opacity: .7; }
@@ -473,7 +476,7 @@ html { overflow-x: hidden; }
 .reels-btn { pointer-events: auto; width: 42px; height: 42px; border-radius: 50%; border: 0; display: grid; place-items: center; color: #fff;
   background: rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); cursor: pointer; }
 /* Ordinateur : la colonne vidéo au centre, comme un téléphone posé sur l'écran */
-@media (min-width: 900px) { .reel-media.short { height: 92%; } .reel-media:not(.short):not(.photo) { width: min(100%, 1100px); } }
+
 
 /* Flèche « remonter » (Tribune) */
 .to-top { position: fixed; z-index: 30; right: 16px; bottom: calc(var(--tab-h) + 18px); width: 46px; height: 46px; border-radius: 50%; border: 0; display: grid; place-items: center;

@@ -3,6 +3,7 @@
 // Son coupé au départ (règle des navigateurs) ; le bouton son vaut pour toutes les vidéos suivantes.
 // Vidéos des chaînes (news.json) et vidéos YouTube partagées dans les publications ; photos des équipes en plein écran.
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { t, lang } from '../lib/i18n';
 import { ago, haptic } from '../lib/util';
 import { Ico } from '../ui/icons';
@@ -52,7 +53,8 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const go = (d: number) => list.current?.scrollBy({ top: d * list.current.clientHeight, behavior: 'smooth' });
   const ready = (i: number) => { const f = frames.current.get(i); if (i === cur) { cmd(f, muted ? 'mute' : 'unMute'); cmd(f, 'playVideo'); } };
 
-  return (
+  // Directement sur la page (portail) : par-dessus tout l'écran, jamais limité par l'écran de la Tribune qui le contient
+  return createPortal(
     <div className="reels" role="dialog" aria-label={t('Highlights')}>
       <div className="reels-top">
         <button className="reels-btn" onClick={onClose} aria-label={t('Fermer')}><Ico n="close" size={22} /></button>
@@ -86,6 +88,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
         ))}
         {!items.length && <section className="reel"><p className="reel-empty">{t('Pas encore de vidéo ici.')}</p></section>}
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
