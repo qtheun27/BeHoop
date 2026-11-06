@@ -74,9 +74,8 @@
 :root[data-rm="1"] .work-enter { display: none; }
 
 /* ---------- Barre du haut ---------- */
-.work-bar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 8px; margin: 0 -2px 6px; padding: calc(var(--safe-t) + 8px) 8px 8px 8px;
+.work-bar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 8px; margin: 0 -2px 6px; padding: var(--hdr-t) 8px 8px 8px;
   background: none; }
-@media (display-mode: standalone) { .work-bar { padding-top: calc(var(--safe-t) + 22px); } }
 .work-bar::before { content: ""; position: absolute; inset: 0 -12px auto; height: calc(100% + 4px); z-index: -1; pointer-events: none;
   background: var(--glass); border-bottom: 1px solid var(--glass-border); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-radius: 0 0 22px 22px; }
 .work-exit { display: flex; align-items: center; gap: 2px; padding: 4px 8px 4px 4px; border-radius: 14px; color: var(--text); }
@@ -149,7 +148,7 @@
 .btn.small.volt { min-height: 36px; }
 
 /* ---------- Séance du jour ---------- */
-.work-seg { position: sticky; top: calc(var(--safe-t) + 74px); z-index: 10; background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 14px; padding: 3px; }
+.work-seg { position: sticky; top: calc(var(--hdr-t) + 66px); z-index: 10; background: var(--glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 14px; padding: 3px; }
 .work-seg button.on { background: var(--accent-grad); color: #fff; }
 .hc-phase { margin: 0 0 18px; }
 .hc-phase .group-title { display: flex; align-items: center; gap: 8px; margin: 0 4px 8px; }

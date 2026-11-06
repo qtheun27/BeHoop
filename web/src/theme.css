@@ -59,7 +59,7 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 :root[data-bg="uni"] body::before { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) var(--tint), transparent), color-mix(in srgb, var(--accent-2) var(--tint), transparent)); }
 /* ---------- Barre du haut flottante ---------- */
 .screen { padding: 0 14px calc(var(--tab-h) + 24px); }
-.navbar { position: sticky; top: 0; z-index: 30; margin: 0 -2px; padding: calc(var(--safe-t) + 8px) 0 10px; border: 0 !important; background: none !important; backdrop-filter: none !important; }
+.navbar { position: sticky; top: 0; z-index: 30; margin: 0 -2px; padding: var(--hdr-t) 0 10px; border: 0 !important; background: none !important; backdrop-filter: none !important; }
 .navbar .bar { flex: 1; display: flex; align-items: center; gap: 4px; min-height: 58px; padding: 6px 8px 6px 14px; border-radius: 22px;
   background: var(--glass); border: 1px solid var(--glass-border); box-shadow: var(--card-shadow);
   backdrop-filter: saturate(180%) blur(22px); -webkit-backdrop-filter: saturate(180%) blur(22px); }
@@ -365,7 +365,7 @@ html { overflow-x: hidden; }
    barre du haut flottante sous l'heure (+22 px dans l'appli installée, hors de la zone floutée par iOS), barre du bas
    flottante à 10 px au-dessus de la zone sûre ; l'article s'affiche entre les deux. */
 .reader { position: fixed; inset: 0; z-index: 200; overscroll-behavior: contain; background: var(--bg); animation: reader-in .22s var(--ease, ease-out);
-  --r-top: calc(var(--safe-t) + 8px); --r-bar: 52px; --r-foot: 58px; }
+  --r-top: var(--hdr-t); --r-bar: 52px; --r-foot: 58px; }
 @keyframes reader-in { from { opacity: 0; } }
 .reader-panel { position: absolute; inset: 0; background: var(--bg); overflow: hidden; }
 .reader-bar, .reader-foot { position: absolute; left: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 0 8px; max-width: 720px; margin: 0 auto;
@@ -474,7 +474,7 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .reel-info p { margin: 4px 0 0; font-size: 16px; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .reel-empty { position: absolute; inset: 0; display: grid; place-items: center; opacity: .7; margin: 0; }
 /* En-tête sous la barre d'état (zones de l'iPhone), en surimpression */
-.reels-top { position: absolute; z-index: 4; left: 0; right: 0; top: 0; padding: calc(env(safe-area-inset-top) + 8px) 12px 0; pointer-events: none; }
+.reels-top { position: absolute; z-index: 4; left: 0; right: 0; top: 0; padding: var(--hdr-t) 12px 0; pointer-events: none; }
 .reels-top .bar { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; padding: 6px 8px;
   border-radius: 22px; background: rgba(18,20,26,.5); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 10px 30px rgba(0,0,0,.25);
   backdrop-filter: saturate(160%) blur(22px); -webkit-backdrop-filter: saturate(160%) blur(22px); pointer-events: auto; }

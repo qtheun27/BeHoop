@@ -27,7 +27,7 @@ const cmd = (f: HTMLIFrameElement | null | undefined, func: string, args: unknow
   f?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
 
 /** État du lecteur YouTube (événements « onStateChange » / « infoDelivery » renvoyés par l'iframe) : 1 lecture, 2 pause */
-type YtMsg = { event?: string; info?: number | { playerState?: number; muted?: boolean; playlistIndex?: number; playlist?: string[] } };
+type YtMsg = { event?: string; info?: number | { playerState?: number; muted?: boolean} };
 
 export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }) {
   const [cur, setCur] = useState(0);
@@ -41,23 +41,19 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const muted = useRef(true); // son coupé dans le lecteur (tel qu'il le dit) : on ne lui renvoie pas un ordre inutile
   const list = useRef<HTMLDivElement>(null);
   const ok = useRef(false); // lecteur prêt à recevoir des commandes
-  const loaded = useRef(-1); // place dans la liste de lecture de la vidéo dans le lecteur
+  const loaded = useRef(''); // vidéo dans le lecteur
   const fresh = useRef(false); // vidéo qui vient d'être chargée : on attend qu'elle démarre vraiment avant de la montrer
   const st = useRef(-1);
   const curRef = useRef(0); curRef.current = cur;
   const soundRef = useRef(false); soundRef.current = sound;
   const first = items.find((r) => r.kind === 'yt') as Extract<Reel, { kind: 'yt' }> | undefined;
-  // Toutes les vidéos forment une liste de lecture dans le lecteur : passer à la suivante = avancer dans la liste (comme
-  // l'enchaînement automatique de YouTube), sans les boutons qu'il affiche quand on charge une nouvelle vidéo
-  const ids = items.flatMap((r) => (r.kind === 'yt' ? [r.id] : []));
-  // Adresse du lecteur fixée à l'ouverture : si le fil charge d'autres publications entre-temps, le lecteur n'est pas
-  // rechargé (il perdrait le son accordé)
-  // Liste de lecture telle que le lecteur la tient (YouTube en retire les vidéos qu'il ne peut pas lire : on suit la
-  // sienne, pas celle qu'on lui a donnée)
-  const list0 = useRef(ids);
-  const fromPlayer = useRef(false);
-  const [dead, setDead] = useState<string[]>([]); // vidéos que YouTube ne laisse pas lire ici → lien vers YouTube
-  const [src] = useState(() => first ? `${ytEmbed(first.id, first.short).src.replace('autoplay=1', 'autoplay=0')}&playlist=${ids.slice(1).join(',')}&mute=1&playsinline=1&enablejsapi=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&origin=${encodeURIComponent(location.origin)}` : '');
+  if (!loaded.current && first) loaded.current = first.id; // déjà dans le lecteur à son ouverture : rien à recharger
+  // Adresse du lecteur fixée à l'ouverture (le fil peut se recharger derrière : le lecteur ne doit pas être rechargé, il
+  // perdrait le son accordé). Sous-titres dans la langue de l'appli quand YouTube en propose, sans commande à chaque
+  // vidéo (chaque commande au lecteur peut lui faire afficher ses boutons)
+  const [src] = useState(() => first ? `${ytEmbed(first.id, first.short).src.replace('autoplay=1', 'autoplay=0')}&mute=1&playsinline=1&enablejsapi=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&origin=${encodeURIComponent(location.origin)}` : '');
+  const [dead, setDead] = useState<string[]>([]); // vidéos que YouTube refuse de lire hors de son site → lien vers YouTube
+  const deadRef = useRef(dead); deadRef.current = dead;
   const item = items[cur];
   const yt = item?.kind === 'yt' ? item : undefined;
   // Fond de l'appli en noir (rien de clair autour de l'écran, même sous les zones de l'iPhone), Échap pour fermer
@@ -86,20 +82,16 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const play = () => {
     const r = items[curRef.current]; if (!ok.current) return;
     if (r?.kind !== 'yt') { c('pauseVideo'); return; }
-    // Place de la vidéo dans la liste de lecture du lecteur. Absente : YouTube ne la laisse pas lire ici (la charger à
-    // part remplacerait la liste) → son image reste, avec un lien vers YouTube
-    const k = list0.current.indexOf(r.id);
-    if (k < 0) { c('pauseVideo'); loaded.current = -1; setShown(false); setDead((x) => (x.includes(r.id) ? x : [...x, r.id])); return; }
-    if (loaded.current !== k) {
-      loaded.current = k; fresh.current = true; setShown(false);
-      c('playVideoAt', [k]);
-      if (r.subs) { c('loadModule', ['captions']); c('setOption', ['captions', 'track', { languageCode: r.subs }]); } else c('unloadModule', ['captions']);
+    if (deadRef.current.includes(r.id)) { c('pauseVideo'); setShown(false); return; }
+    if (loaded.current !== r.id) {
+      loaded.current = r.id; fresh.current = true; setShown(false);
+      c('loadVideoById', [{ videoId: r.id, startSeconds: 0 }]);
     } else c('playVideo');
     if (soundRef.current) {
       if (muted.current) c('unMute');
       // L'iPhone a refusé le son (lecteur pas encore touché) : la vidéo reste arrêtée → on la relance sans le son et on
       // le demande. Une vidéo qui charge encore (3) n'est pas un refus : on revérifie un peu plus tard.
-      const id = k; let n = 0;
+      const id = r.id; let n = 0;
       const check = () => {
         if (loaded.current !== id || curRef.current !== items.indexOf(r) || st.current === 1) return;
         if (st.current === 3 && ++n < 4) { setTimeout(check, 800); return; }
@@ -116,16 +108,14 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
       let d: YtMsg; try { d = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch { return; }
       const s = typeof d.info === 'number' ? (d.event === 'onStateChange' ? d.info : undefined) : d.info?.playerState;
       if (typeof d.info === 'object' && typeof d.info?.muted === 'boolean') muted.current = d.info.muted;
-      if (typeof d.info === 'object' && Array.isArray(d.info?.playlist)) { list0.current = d.info.playlist; fromPlayer.current = true; }
+      // Vidéo dont l'auteur interdit la lecture hors de YouTube (erreurs 101 / 150) ou introuvable : lien vers YouTube
+      if (d.event === 'onError') { const id = loaded.current; if (id) { setDead((x) => (x.includes(id) ? x : [...x, id])); setShown(false); } return; }
       if (d.event === 'onReady' && !ok.current) { ok.current = true; play(); return; }
-      // YouTube enchaîne seul sur la vidéo suivante de la liste en fin de vidéo : on reste sur celle à l'écran (boucle)
-      const pi = typeof d.info === 'object' ? d.info?.playlistIndex : undefined;
-      if (typeof pi === 'number' && loaded.current >= 0 && pi !== loaded.current && !fresh.current) { c('playVideoAt', [loaded.current]); }
       if (typeof s !== 'number' || s === st.current) return;
       st.current = s;
       if (s !== 1) fresh.current = false; // l'état « lecture » d'avant le chargement ne compte pas
       if (s === 1 && !fresh.current) setShown(true);
-      if (s === 0 && loaded.current >= 0) c('playVideoAt', [loaded.current]);
+      if (s === 0) { c('seekTo', [0, true]); c('playVideo'); }
     };
     addEventListener('message', on); return () => removeEventListener('message', on);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -186,7 +176,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
             </div>
             {/* Couche de toucher par-dessus la vidéo (le glissement reste au fil) */}
             {r.kind === 'yt' && <button className="reel-tap" onClick={tap} aria-label={paused && i === cur ? t('Lire la vidéo') : t('Pause')}>
-              {r.kind === 'yt' && dead.includes(r.id) && <a className="reel-pill" href={`https://youtu.be/${r.id}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>▶ {t('Regarder sur YouTube')}</a>}
+              {i === cur && r.kind === 'yt' && dead.includes(r.id) && <a className="reel-pill" href={`https://youtu.be/${r.id}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>▶ {t('Regarder sur YouTube')}</a>}
               {i === cur && needTap && <span className="reel-pill">🔊 {t('Touche pour le son')}</span>}
               {i === cur && paused && !needTap && <span className="reel-play" aria-hidden>▶</span>}
             </button>}
