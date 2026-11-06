@@ -1336,4 +1336,6 @@ export const EN: Record<string, string> = {
   "Pas encore de vidéo ici.": "No videos here yet.",
   "Touche pour le son": "Tap for sound",
   "Regarder sur YouTube": "Watch on YouTube",
+  "Mesure d'audience": "Audience measurement",
+  "Pour savoir combien de personnes utilisent BeHoop et quelles pages sont consultées, nous utilisons Cloudflare Web Analytics : sans cookie, sans identifiant, sans suivi d'une personne d'une visite à l'autre. Seuls des chiffres globaux (visites, pages, pays, type d'appareil) sont conservés.": "To know how many people use BeHoop and which pages are viewed, we use Cloudflare Web Analytics: no cookies, no identifiers, no tracking of a person from one visit to the next. Only aggregate figures (visits, pages, country, device type) are kept.",
 };
