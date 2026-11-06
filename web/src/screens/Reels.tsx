@@ -14,7 +14,9 @@ import type { Video } from '../lib/data';
 
 export type Reel =
   | { kind: 'yt'; key: string; id: string; short: boolean; title: string; by: string; date: number; subs?: string }
-  | { kind: 'photo'; key: string; src: string; title: string; by: string; date: number; href: string };
+  | { kind: 'photo'; key: string; src: string; title: string; by: string; date: number; href: string }
+  // Moment d'un match (extrait vertical en MP4 sur nos serveurs) : notre propre lecteur, sans les boutons de YouTube
+  | { kind: 'clip'; key: string; src: string; poster?: string; title: string; by: string; date: number; href: string };
 
 /** Vidéo d'une chaîne → élément du fil plein écran (titre dans la langue de l'appli, sous-titres si autre langue) */
 export function reelOfVideo(v: Video): Reel {
@@ -38,6 +40,11 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const [paused, setPaused] = useState(false);
   const [shown, setShown] = useState(false); // la vidéo courante joue → le lecteur apparaît par-dessus son image
   const frame = useRef<HTMLIFrameElement>(null);
+  // Notre lecteur pour les Moments : un seul élément vidéo, déplacé d'un Moment à l'autre (comme pour YouTube, l'iPhone
+  // accorde le son à un lecteur : il le garde d'un Moment à l'autre)
+  const clipEl = useRef<HTMLVideoElement>(null);
+  const [clipOn, setClipOn] = useState(false);
+  const firstClip = items.find((r) => r.kind === 'clip');
   const muted = useRef(true); // son coupé dans le lecteur (tel qu'il le dit) : on ne lui renvoie pas un ordre inutile
   const list = useRef<HTMLDivElement>(null);
   const ok = useRef(false); // lecteur prêt à recevoir des commandes
@@ -56,6 +63,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const deadRef = useRef(dead); deadRef.current = dead;
   const item = items[cur];
   const yt = item?.kind === 'yt' ? item : undefined;
+  const clip = item?.kind === 'clip' ? item : undefined;
   // Fond de l'appli en noir (rien de clair autour de l'écran, même sous les zones de l'iPhone), Échap pour fermer
   useEffect(() => {
     // Pas de blocage de la page derrière (un « position: fixed » sur la page raccourcit l'écran de l'appli installée sur
@@ -80,7 +88,18 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const c = (func: string, args: unknown[] = []) => cmd(frame.current, func, args);
   /** Joue la vidéo courante dans le lecteur unique (chargée si besoin), avec le son si on l'a voulu */
   const play = () => {
-    const r = items[curRef.current]; if (!ok.current) return;
+    const r = items[curRef.current];
+    const v = clipEl.current;
+    if (r?.kind === 'clip' && v) {
+      if (ok.current) c('pauseVideo');
+      if (v.getAttribute('src') !== r.src) { setClipOn(false); v.src = r.src; }
+      v.muted = !soundRef.current;
+      // Son refusé (lecteur pas encore touché) : on relance sans le son et on demande un toucher
+      v.play().catch(() => { if (!v.muted) { v.muted = true; v.play().catch(() => {}); setNeedTap(true); } });
+      return;
+    }
+    v?.pause();
+    if (!ok.current) return;
     if (r?.kind !== 'yt') { c('pauseVideo'); return; }
     if (deadRef.current.includes(r.id)) { c('pauseVideo'); setShown(false); return; }
     if (loaded.current !== r.id) {
@@ -128,10 +147,18 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   };
   const toggleSound = () => {
     haptic(); const next = !sound; setSound(next); setNeedTap(false);
+    const v = clipEl.current;
+    if (clip && v) { v.muted = !next; v.play().catch(() => {}); return; }
     if (next) { c('unMute'); c('playVideo'); } else c('mute');
   };
   // Toucher la vidéo : le son si l'iPhone l'attendait, sinon pause / lecture
   const tap = () => {
+    const v = clipEl.current;
+    if (clip && v) {
+      if (needTap) { setNeedTap(false); setSound(true); v.muted = false; v.play().catch(() => {}); return; }
+      if (paused) { v.play().catch(() => {}); setPaused(false); } else { v.pause(); setPaused(true); }
+      return;
+    }
     if (needTap) { setNeedTap(false); setSound(true); c('unMute'); c('playVideo'); return; }
     if (paused) { c('playVideo'); setPaused(false); } else { c('pauseVideo'); setPaused(true); }
   };
@@ -160,22 +187,34 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
             </div>
           </div>
         )}
+        {firstClip && (
+          <div className={`reel-player${clip && clipOn ? ' on' : ''}`} style={{ top: `${cur * 100}%` }} aria-hidden={!clip}>
+            <div className="reel-stage">
+              <div className="reel-media short">
+                <video ref={clipEl} playsInline loop muted preload="auto" onPlaying={() => setClipOn(true)} />
+              </div>
+            </div>
+          </div>
+        )}
         {items.map((r, i) => (
           <section key={r.key} className="reel" data-i={i}>
             {/* Fond : l'image de la vidéo, floutée, sur tout l'écran (une vidéo en paysage reste entière au centre) */}
             {r.kind === 'yt' && <div className="reel-bg" style={{ backgroundImage: `url(https://i.ytimg.com/vi/${r.id}/hqdefault.jpg)` }} aria-hidden />}
+            {r.kind === 'clip' && r.poster && <div className="reel-bg" style={{ backgroundImage: `url(${r.poster})` }} aria-hidden />}
             <div className="reel-stage">
             {r.kind === 'yt' ? (
               // L'image de la vidéo, visible tant que le lecteur ne joue pas encore cette vidéo
               <div className={`reel-media${r.short ? ' short' : ''}`}>
                 <img src={`https://i.ytimg.com/vi/${r.id}/${r.short ? 'oar2' : 'hqdefault'}.jpg`} alt="" loading={Math.abs(i - cur) <= 2 ? 'eager' : 'lazy'} />
               </div>
+            ) : r.kind === 'clip' ? (
+              <div className="reel-media short">{r.poster && <img src={r.poster} alt="" loading={Math.abs(i - cur) <= 2 ? 'eager' : 'lazy'} />}</div>
             ) : (
               <a className="reel-media photo" href={r.href}><img src={r.src} alt="" loading="lazy" /></a>
             )}
             </div>
             {/* Couche de toucher par-dessus la vidéo (le glissement reste au fil) */}
-            {r.kind === 'yt' && <button className="reel-tap" onClick={tap} aria-label={paused && i === cur ? t('Lire la vidéo') : t('Pause')}>
+            {r.kind !== 'photo' && <button className="reel-tap" onClick={tap} aria-label={paused && i === cur ? t('Lire la vidéo') : t('Pause')}>
               {i === cur && r.kind === 'yt' && dead.includes(r.id) && <a className="reel-pill" href={`https://youtu.be/${r.id}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>▶ {t('Regarder sur YouTube')}</a>}
               {i === cur && needTap && <span className="reel-pill">🔊 {t('Touche pour le son')}</span>}
               {i === cur && paused && !needTap && <span className="reel-play" aria-hidden>▶</span>}

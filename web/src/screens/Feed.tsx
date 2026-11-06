@@ -258,6 +258,12 @@ export function Feed() {
         ...(posts ?? []).filter((p) => !p.hidden && isMedia(p)).flatMap((p): Reel[] => {
           const e = p.payload?.embed ? parseEmbed(p.payload.embed) : null;
           if (e?.kind === 'youtube') return [{ kind: 'yt', key: `p${p.id}`, id: e.id, short: e.vertical, title: p.payload.text ?? '', by: p.authorName ?? 'BeHoop', date: p.createdAt }];
+          // Moment : l'extrait vertical (MP4) du match, lu par notre lecteur ; poster = image du match
+          if (p.type === 'moment' && p.payload?.momentId) {
+            const vis = p.visibility === 'team' ? `team-${p.teamIdPrivate}` : 'public';
+            return [{ kind: 'clip', key: `p${p.id}`, src: mediaUrl(`moments/${vis}/${p.payload.matchVideoId}/${p.payload.momentId}.mp4`), poster: p.payload.posterKey ? mediaUrl(p.payload.posterKey) : undefined,
+              title: p.payload.title ?? '', by: p.authorName || 'BeHoop', date: p.createdAt, href: `#/video/${p.payload.matchVideoId}/m-${p.payload.momentId}` }];
+          }
           const ph = p.type === 'photo' ? (p.payload.photos as { key: string }[] | undefined)?.[0] : undefined;
           return ph ? [{ kind: 'photo', key: `p${p.id}`, src: mediaUrl(ph.key), title: p.payload.text ?? '', by: p.authorName ?? 'BeHoop', date: p.createdAt, href: `#/post/${p.id}` }] : [];
         }),
