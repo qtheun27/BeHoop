@@ -451,32 +451,40 @@ html { overflow-x: hidden; }
 @media (max-width: 600px) { .group .row:has(> span > .btn) { flex-wrap: wrap; } .group .row > span:has(> .btn) { margin-left: auto; } .hstack:has(> .field) { flex-wrap: wrap; } }
 
 /* ================= Highlights : vidéos plein écran façon TikTok (screens/Reels.tsx) ================= */
+/* Ouvert : toute la page passe en noir (rien de clair sous la barre d'état ni sous la barre d'accueil de l'iPhone) */
+html.reels-open, html.reels-open body { background: #000 !important; }
+html.reels-open body::before, html.reels-open body::after, html.reels-open .court-lines, html.reels-open .court-bg { display: none !important; }
 .reels { position: fixed; inset: 0; z-index: 200; background: #000; color: #fff; }
 .reels-list { position: absolute; inset: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; }
 .reels-list::-webkit-scrollbar { display: none; }
-.reel { position: relative; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; box-sizing: border-box;
-  /* Barre du haut, vidéo, titre : les uns sous les autres (rien ne recouvre les commandes du lecteur YouTube) */
-  display: flex; flex-direction: column; padding: calc(env(safe-area-inset-top) + 64px) 0 calc(var(--safe-b, 0px) + 18px); }
-.reel-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; container-type: size; }
-/* Taille calculée sur la place disponible (cqw/cqh), pas sur aspect-ratio (Safari iPhone l'étire sur toute la hauteur) :
-   paysage = toute la largeur, hauteur 9/16 ; short = toute la hauteur, largeur 9/16 ; jamais plus grand que la scène */
+.reel { position: relative; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }
+/* Fond : l'image de la vidéo floutée sur tout l'écran */
+.reel-bg { position: absolute; inset: -40px; background: center / cover no-repeat; filter: blur(28px) brightness(.45) saturate(1.2); }
+/* Vidéo sur tout l'écran : un short le remplit (bords rognés si besoin), une vidéo en paysage reste entière au centre */
+.reel-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; container-type: size; }
 .reel-media { position: relative; flex: none; background: #000;
   width: min(100cqw, 1100px, 100cqh * 16 / 9); height: min(100cqw * 9 / 16, 1100px * 9 / 16, 100cqh); }
-.reel-media.short { width: min(100cqw, 100cqh * 9 / 16); height: min(100cqh, 100cqw * 16 / 9); border-radius: 14px; overflow: hidden; }
+.reel-media.short { background: transparent; width: max(100cqw, 100cqh * 9 / 16); height: max(100cqh, 100cqw * 16 / 9); }
+@media (min-width: 900px) { .reel-media.short { width: min(100cqw, 100cqh * 9 / 16); height: 100cqh; } }
 .reel-media iframe, .reel-media img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
 .reel-media.photo { width: 100cqw; height: 100cqh; display: block; }
 .reel-media.photo img { object-fit: contain; }
-.reel-info { flex: none; padding: 12px 18px 0; font-size: 14px; }
-.reel-info span { opacity: .7; }
+/* Toucher : pause / lecture (et le son quand l'iPhone l'attend) ; le glissement reste au fil */
+.reel-tap { position: absolute; inset: 0; z-index: 1; border: 0; background: transparent; padding: 0; cursor: pointer; display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
+.reel-play { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; font-size: 30px; color: #fff; background: rgba(0,0,0,.45); backdrop-filter: blur(6px); }
+.reel-pill { padding: 10px 16px; border-radius: 999px; font-weight: 700; font-size: 15px; color: #fff; background: rgba(0,0,0,.6); backdrop-filter: blur(8px); }
+/* Titre en bas, au-dessus de la barre d'accueil */
+.reel-info { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; pointer-events: none; font-size: 14px;
+  padding: 70px 18px calc(env(safe-area-inset-bottom) + 22px); background: linear-gradient(transparent, rgba(0,0,0,.72)); }
+.reel-info span { opacity: .75; }
 .reel-info p { margin: 4px 0 0; font-size: 16px; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.reel-empty { opacity: .7; }
-.reels-top { position: absolute; z-index: 2; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: calc(env(safe-area-inset-top) + 10px) 14px 10px; background: #000; pointer-events: none; }
+.reel-empty { position: absolute; inset: 0; display: grid; place-items: center; opacity: .7; margin: 0; }
+/* En-tête sous la barre d'état (zones de l'iPhone), en surimpression */
+.reels-top { position: absolute; z-index: 3; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: calc(env(safe-area-inset-top) + 12px) 14px 26px; background: linear-gradient(rgba(0,0,0,.55), transparent); pointer-events: none; }
 .reels-top b { font-family: Anton, sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; }
 .reels-btn { pointer-events: auto; width: 42px; height: 42px; border-radius: 50%; border: 0; display: grid; place-items: center; color: #fff;
   background: rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); cursor: pointer; }
-/* Ordinateur : la colonne vidéo au centre, comme un téléphone posé sur l'écran */
-
 
 /* Flèche « remonter » (Tribune) */
 .to-top { position: fixed; z-index: 30; right: 16px; bottom: calc(var(--tab-h) + 18px); width: 46px; height: 46px; border-radius: 50%; border: 0; display: grid; place-items: center;

@@ -1334,4 +1334,5 @@ export const EN: Record<string, string> = {
   "Activer le son": "Turn sound on",
   "Couper le son": "Mute",
   "Pas encore de vidéo ici.": "No videos here yet.",
+  "Touche pour le son": "Tap for sound",
 };

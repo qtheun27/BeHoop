@@ -1334,4 +1334,5 @@ export const NL: Record<string, string> = {
   "Activer le son": "Geluid aan",
   "Couper le son": "Geluid uit",
   "Pas encore de vidéo ici.": "Nog geen video’s hier.",
+  "Touche pour le son": "Tik voor geluid",
 };
