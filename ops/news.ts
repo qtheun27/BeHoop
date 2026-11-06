@@ -76,7 +76,7 @@ export function cleanImg(u: string | null | undefined): string | null {
   while (s !== prev) { prev = s; s = s.replace(/&amp;/g, '&').replace(/&#38;/g, '&').replace(/&quot;/g, '"'); }
   if (s.startsWith('//')) s = `https:${s}`;
   // Photo de profil de l'auteur (Basketsession met l'avatar Gravatar du rédacteur en premier dans le flux) : pas une image d'article
-  if (/gravatar\.com|\/avatar[s]?\/|[-_]avatar\b/i.test(s)) return null;
+  if (/gravatar\.com|\/avatars?(\/|\.(png|jpe?g|webp|gif)\b)|[-_]avatar\b/i.test(s)) return null;
   return /^https?:\/\//.test(s) ? s.replace(/^http:/, 'https:') : null;
 }
 /** Spam (faux « streams » gratuits relayés par Google Actualités), paris et casinos : jamais dans BeHoop */
@@ -313,7 +313,7 @@ export function compTagger(comps: { id: string; kw?: string[]; not?: string[] }[
 }
 
 /** Deux actus du même média racontent la même chose : l'un des titres reprend presque tous les mots de l'autre (ou la même photo et la moitié des mots) */
-export function sameStory(a: Pick<News, 'title' | 'image'>, b: Pick<News, 'title' | 'image'>) {
+export function sameStory(a: { title: string; image?: string | null }, b: { title: string; image?: string | null }) {
   const img = (x?: string | null) => (x ? x.split('?')[0].replace(/^.*\//, '') : '');
   const w = (t: string) => new Set(normalize(t).split(' ').filter((x) => x.length > 2));
   const [x, y] = [w(a.title), w(b.title)]; const small = x.size <= y.size ? x : y, big = small === x ? y : x;
@@ -487,6 +487,7 @@ export async function run(out = 'app-data/news.json') {
   const CAP: Record<Cat, number> = { regional: 400, belgique: 250, international: 120, nba: 120 };
   const perCat: Record<string, number> = {};
   let items = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date)).filter((n) => (perCat[n.cat] = (perCat[n.cat] ?? 0) + 1) <= CAP[n.cat]);
+  for (const n of items) n.image = cleanImg(n.image); // avatar du rédacteur, etc. → retiré avant d'aller chercher la vraie photo
   await enrich(items);
   // Un même article arrive par plusieurs chemins (flux direct, Google, Nieuwsblad = GVA = HBVL…) : un seul exemplaire, de préférence avec image
   const seen = new Map<string, News>();

@@ -8,9 +8,9 @@ import { t } from '../lib/i18n';
 import { Ico, type IconName } from '../ui/icons';
 import { SocialBar } from '../ui/Social';
 import * as D from '../lib/db';
+import { courtTheme } from '../lib/theme';
 
 const CATS: [string, IconName | null, string][] = [['tout', null, 'Tout'], ['belgique', 'flag', 'Belgique'], ['regional', 'pin', 'Régional'], ['international', 'globe', 'International'], ['nba', 'ball', 'NBA']];
-const tint = (s: string) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return `linear-gradient(135deg, hsl(${h} 55% 32%), hsl(${(h + 40) % 360} 60% 22%))`; };
 
 /** Image de l'article : affichée directement depuis le média (jamais copiée chez nous, sans référent pour éviter
  *  les blocages) ; si elle ne s'affiche pas, la carte passe en version texte. */
@@ -20,19 +20,27 @@ function useNewsImage(n: News) {
 }
 /** Visuel de repli (article sans image, ex. médias flamands qui refusent les robots) : terrain aux couleurs du média et son nom */
 function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
+  // Même terrain que le fond de l'appli : parquet clair aux couleurs du club choisi (raquettes et rond central peints,
+  // lignes blanches), parquet nuit en mode sombre ; sans club, bois naturel et raquettes à la couleur de l'appli
+  const k = courtTheme();
+  const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
+  const floor = dark ? '#151a24' : k?.c1 ?? '#e2c38e', paint = dark ? 'rgba(255,255,255,.06)' : k?.c2 ?? 'color-mix(in srgb, var(--accent) 55%, #e2c38e)';
+  const line = dark ? (k?.c1 ?? 'rgba(255,255,255,.35)') : '#fff';
   return (
-    <div style={{ aspectRatio: ratio, width: '100%', display: 'block', position: 'relative', overflow: 'hidden', background: tint(n.source) }}>
-      {/* Terrain réglementaire vu de haut (même dessin que l'accueil et le fond de l'appli), jamais déformé */}
+    <div style={{ aspectRatio: ratio, width: '100%', display: 'block', position: 'relative', overflow: 'hidden', backgroundColor: floor,
+      backgroundImage: 'repeating-linear-gradient(90deg, rgba(0,0,0,.035) 0 1px, transparent 1px 26px), repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 13px, transparent 13px 26px)' }}>
+      {/* Terrain réglementaire vu de haut, jamais déformé */}
       <svg viewBox="0 0 940 500" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }} aria-hidden>
-        <g fill="none" stroke="rgba(255,255,255,.24)" strokeWidth="4">
+        <g style={{ fill: paint }} stroke="none"><rect x="20" y="180" width="190" height="140" /><rect x="730" y="180" width="190" height="140" /><circle cx="470" cy="250" r="60" /></g>
+        <g fill="none" stroke={line} strokeWidth="5">
           <rect x="20" y="20" width="900" height="460" rx="6" /><line x1="470" y1="20" x2="470" y2="480" /><circle cx="470" cy="250" r="60" />
           <path d="M20 90 H150 A160 160 0 0 1 150 410 H20" /><path d="M920 90 H790 A160 160 0 0 0 790 410 H920" />
           <rect x="20" y="180" width="190" height="140" /><rect x="730" y="180" width="190" height="140" />
         </g>
       </svg>
       <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', alignContent: 'center', gap: 6, color: '#fff', textAlign: 'center', padding: '0 16px' }}>
-        <Ico n="ball" size={26} />
-        <span style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(20px, 6vw, 30px)', lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: '.02em', textShadow: '0 2px 12px rgba(0,0,0,.25)' }}>{n.source}</span>
+        <Ico n="ball" size={26} style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,.35))' }} />
+        <span style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(20px, 6vw, 30px)', lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: '.02em', textShadow: '0 2px 12px rgba(0,0,0,.45)' }}>{n.source}</span>
       </div>
     </div>
   );

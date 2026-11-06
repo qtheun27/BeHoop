@@ -120,6 +120,10 @@ describe('spam et images', () => {
   });
 });
 
+describe('avatar du rédacteur', () => {
+  it('pas une photo d’article', () => expect(cleanImg('https://www.basketsession.com/statics/uploads/2024/04/avatar.png')).toBeNull());
+});
+
 describe('actus en double', () => {
   it('même média, titre retouché ou même photo', () => {
     expect(sameStory({ title: 'BASKET - Thierry Wilquin écarté après 37 ans : « Ce club n’est plus vraiment le mien »' }, { title: 'BASKET - Thierry Wilquin : « Ce club n’est plus vraiment le mien »' })).toBe(true);
