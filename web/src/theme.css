@@ -148,10 +148,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
 :root[data-rt="1"] .navbar .bar, :root[data-rt="1"] .tabbar { backdrop-filter: none; -webkit-backdrop-filter: none; }
 :root[data-rm="1"] *, :root[data-rm="1"] *::before { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 @media (min-width: 900px) { .navbar { padding-top: 14px; } }
-/* Appli installée (écran d'accueil iPhone) : barre un peu plus basse et fondu sous l'heure/la batterie */
-@media (display-mode: standalone) { .navbar { padding-top: calc(var(--safe-t) + 22px); } .navbar::before { height: calc(var(--safe-t) + 28px) !important; } }
-.navbar::before { content: ""; position: absolute; left: -10px; right: -10px; top: 0; height: calc(var(--safe-t) + 18px); z-index: -1; pointer-events: none;
-  background: linear-gradient(var(--bg) 55%, color-mix(in srgb, var(--bg) 0%, transparent)); }
+/* Pas de bande de fond sous l'heure / la batterie : le contenu continue jusqu'en haut de l'écran, la barre flotte
+   juste sous les zones de l'iPhone */
 
 /* ---------- Choix de la langue (en-tête) ---------- */
 .lang-switch { position: relative; display: inline-flex; }
@@ -368,12 +366,8 @@ html { overflow-x: hidden; }
    flottante à 10 px au-dessus de la zone sûre ; l'article s'affiche entre les deux. */
 .reader { position: fixed; inset: 0; z-index: 200; overscroll-behavior: contain; background: var(--bg); animation: reader-in .22s var(--ease, ease-out);
   --r-top: calc(var(--safe-t) + 8px); --r-bar: 52px; --r-foot: 58px; }
-@media (display-mode: standalone) { .reader { --r-top: calc(var(--safe-t) + 22px); } }
 @keyframes reader-in { from { opacity: 0; } }
 .reader-panel { position: absolute; inset: 0; background: var(--bg); overflow: hidden; }
-/* Fondu sous l'heure / la batterie, comme .navbar::before */
-.reader-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: calc(var(--r-top) + 8px); z-index: 2; pointer-events: none;
-  background: linear-gradient(var(--bg) 60%, color-mix(in srgb, var(--bg) 0%, transparent)); }
 .reader-bar, .reader-foot { position: absolute; left: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 0 8px; max-width: 720px; margin: 0 auto;
   border-radius: 26px; border: 1px solid var(--glass-border); background: var(--glass); box-shadow: 0 12px 40px rgba(20,40,80,.16);
   backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px); }
@@ -407,7 +401,6 @@ html { overflow-x: hidden; }
   /* Ordinateur : fenêtre centrée dans la zone de contenu (à droite du menu), flèches de part et d'autre */
   .reader { display: grid; place-items: center; padding-left: var(--side-w); background: rgba(5, 8, 15, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); --r-top: 10px; }
   .reader-panel { position: relative; inset: auto; width: min(920px, calc(100vw - var(--side-w) - 190px)); height: 92vh; border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
-  .reader-panel::before { display: none; }
   .reader-foot { bottom: 10px; }
   .reader-body { bottom: calc(10px + var(--r-foot) + 8px); }
   .reader-side { display: grid; place-items: center; position: fixed; top: 50%; width: 56px; height: 56px; margin-top: -28px; border-radius: 50%; border: 0; background: var(--bg2); color: var(--text); box-shadow: 0 8px 24px rgba(0,0,0,.3); cursor: pointer; }
@@ -452,7 +445,7 @@ html { overflow-x: hidden; }
 /* Ouvert : toute la page passe en noir (rien de clair sous la barre d'état ni sous la barre d'accueil de l'iPhone) */
 html.reels-open, html.reels-open body { background: #000 !important; }
 html.reels-open body::before, html.reels-open body::after, html.reels-open .court-lines, html.reels-open .court-bg { display: none !important; }
-.reels { position: fixed; inset: 0 0 calc(-1 * var(--reels-gap, 0px)) 0; z-index: 200; background: #000; color: #fff; }
+.reels { position: fixed; inset: 0; z-index: 200; background: #000; color: #fff; }
 .reels-list { position: absolute; isolation: isolate; inset: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; }
 .reels-list::-webkit-scrollbar { display: none; }
 .reel { position: relative; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }

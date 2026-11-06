@@ -1335,4 +1335,5 @@ export const EN: Record<string, string> = {
   "Couper le son": "Mute",
   "Pas encore de vidéo ici.": "No videos here yet.",
   "Touche pour le son": "Tap for sound",
+  "Regarder sur YouTube": "Watch on YouTube",
 };

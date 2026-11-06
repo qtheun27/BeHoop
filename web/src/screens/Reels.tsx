@@ -27,7 +27,7 @@ const cmd = (f: HTMLIFrameElement | null | undefined, func: string, args: unknow
   f?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
 
 /** État du lecteur YouTube (événements « onStateChange » / « infoDelivery » renvoyés par l'iframe) : 1 lecture, 2 pause */
-type YtMsg = { event?: string; info?: number | { playerState?: number; muted?: boolean } };
+type YtMsg = { event?: string; info?: number | { playerState?: number; muted?: boolean; playlistIndex?: number; playlist?: string[] } };
 
 export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }) {
   const [cur, setCur] = useState(0);
@@ -38,44 +38,40 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const [paused, setPaused] = useState(false);
   const [shown, setShown] = useState(false); // la vidéo courante joue → le lecteur apparaît par-dessus son image
   const frame = useRef<HTMLIFrameElement>(null);
-  const box = useRef<HTMLDivElement>(null);
   const muted = useRef(true); // son coupé dans le lecteur (tel qu'il le dit) : on ne lui renvoie pas un ordre inutile
   const list = useRef<HTMLDivElement>(null);
   const ok = useRef(false); // lecteur prêt à recevoir des commandes
-  const loaded = useRef(''); // vidéo dans le lecteur
+  const loaded = useRef(-1); // place dans la liste de lecture de la vidéo dans le lecteur
   const fresh = useRef(false); // vidéo qui vient d'être chargée : on attend qu'elle démarre vraiment avant de la montrer
   const st = useRef(-1);
-  const reveal = useRef(0); // première vidéo : pas de boutons YouTube → montrée tout de suite
   const curRef = useRef(0); curRef.current = cur;
   const soundRef = useRef(false); soundRef.current = sound;
   const first = items.find((r) => r.kind === 'yt') as Extract<Reel, { kind: 'yt' }> | undefined;
+  // Toutes les vidéos forment une liste de lecture dans le lecteur : passer à la suivante = avancer dans la liste (comme
+  // l'enchaînement automatique de YouTube), sans les boutons qu'il affiche quand on charge une nouvelle vidéo
+  const ids = items.flatMap((r) => (r.kind === 'yt' ? [r.id] : []));
+  // Adresse du lecteur fixée à l'ouverture : si le fil charge d'autres publications entre-temps, le lecteur n'est pas
+  // rechargé (il perdrait le son accordé)
+  // Liste de lecture telle que le lecteur la tient (YouTube en retire les vidéos qu'il ne peut pas lire : on suit la
+  // sienne, pas celle qu'on lui a donnée)
+  const list0 = useRef(ids);
+  const fromPlayer = useRef(false);
+  const [dead, setDead] = useState<string[]>([]); // vidéos que YouTube ne laisse pas lire ici → lien vers YouTube
+  const [src] = useState(() => first ? `${ytEmbed(first.id, first.short).src.replace('autoplay=1', 'autoplay=0')}&playlist=${ids.slice(1).join(',')}&mute=1&playsinline=1&enablejsapi=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&origin=${encodeURIComponent(location.origin)}` : '');
   const item = items[cur];
   const yt = item?.kind === 'yt' ? item : undefined;
-  // Page derrière figée et en noir (rien de clair autour de l'écran, même sous les zones de l'iPhone), Échap pour fermer
+  // Fond de l'appli en noir (rien de clair autour de l'écran, même sous les zones de l'iPhone), Échap pour fermer
   useEffect(() => {
-    const b = document.body.style, y = scrollY, html = document.documentElement;
-    Object.assign(b, { position: 'fixed', top: `-${y}px`, left: '0', right: '0', overflow: 'hidden' });
-    // Appli installée sur iPhone : l'écran « fixe » s'arrête au-dessus de la barre d'accueil → on le prolonge jusqu'au
-    // bord bas de l'écran (vidéo jusqu'en bas, comme en haut)
-    // On mesure l'écran Highlights lui-même (la hauteur annoncée par la page peut être juste alors que l'écran fixe est
-    // plus court) et on comble l'écart avec le bas de l'écran du téléphone
-    const fit = () => {
-      const el = box.current; if (!el) return;
-      html.style.setProperty('--reels-gap', '0px');
-      const standalone = matchMedia('(display-mode: standalone)').matches || (navigator as { standalone?: boolean }).standalone;
-      const tall = innerHeight > innerWidth ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
-      const gap = standalone ? Math.round(tall - el.getBoundingClientRect().bottom) : 0;
-      html.style.setProperty('--reels-gap', `${gap > 0 && gap < 160 ? gap : 0}px`);
-    };
-    fit(); addEventListener('resize', fit);
+    // Pas de blocage de la page derrière (un « position: fixed » sur la page raccourcit l'écran de l'appli installée sur
+    // iPhone → bande noire en bas) : Highlights la recouvre et garde son propre défilement
+    const html = document.documentElement;
     html.classList.add('reels-open');
     const meta = document.querySelector('meta[name="theme-color"]:not([media])'); const was = meta?.getAttribute('content');
     meta?.setAttribute('content', '#000000');
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); if (e.key === 'ArrowDown') go(1); if (e.key === 'ArrowUp') go(-1); };
     addEventListener('keydown', k);
     return () => {
-      removeEventListener('keydown', k); removeEventListener('resize', fit); html.classList.remove('reels-open'); if (was) meta?.setAttribute('content', was);
-      Object.assign(b, { position: '', top: '', left: '', right: '', overflow: '' }); scrollTo(0, y);
+      removeEventListener('keydown', k); html.classList.remove('reels-open'); if (was) meta?.setAttribute('content', was);
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   // L'élément calé à l'écran devient l'élément courant dès qu'il est majoritairement visible (pendant le glissement)
@@ -90,16 +86,20 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const play = () => {
     const r = items[curRef.current]; if (!ok.current) return;
     if (r?.kind !== 'yt') { c('pauseVideo'); return; }
-    if (loaded.current !== r.id) {
-      loaded.current = r.id; fresh.current = true; setShown(false);
-      c('loadVideoById', [{ videoId: r.id, startSeconds: 0 }]);
+    // Place de la vidéo dans la liste de lecture du lecteur. Absente : YouTube ne la laisse pas lire ici (la charger à
+    // part remplacerait la liste) → son image reste, avec un lien vers YouTube
+    const k = list0.current.indexOf(r.id);
+    if (k < 0) { c('pauseVideo'); loaded.current = -1; setShown(false); setDead((x) => (x.includes(r.id) ? x : [...x, r.id])); return; }
+    if (loaded.current !== k) {
+      loaded.current = k; fresh.current = true; setShown(false);
+      c('playVideoAt', [k]);
       if (r.subs) { c('loadModule', ['captions']); c('setOption', ['captions', 'track', { languageCode: r.subs }]); } else c('unloadModule', ['captions']);
     } else c('playVideo');
     if (soundRef.current) {
       if (muted.current) c('unMute');
       // L'iPhone a refusé le son (lecteur pas encore touché) : la vidéo reste arrêtée → on la relance sans le son et on
       // le demande. Une vidéo qui charge encore (3) n'est pas un refus : on revérifie un peu plus tard.
-      const id = r.id; let n = 0;
+      const id = k; let n = 0;
       const check = () => {
         if (loaded.current !== id || curRef.current !== items.indexOf(r) || st.current === 1) return;
         if (st.current === 3 && ++n < 4) { setTimeout(check, 800); return; }
@@ -116,14 +116,16 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
       let d: YtMsg; try { d = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch { return; }
       const s = typeof d.info === 'number' ? (d.event === 'onStateChange' ? d.info : undefined) : d.info?.playerState;
       if (typeof d.info === 'object' && typeof d.info?.muted === 'boolean') muted.current = d.info.muted;
+      if (typeof d.info === 'object' && Array.isArray(d.info?.playlist)) { list0.current = d.info.playlist; fromPlayer.current = true; }
       if (d.event === 'onReady' && !ok.current) { ok.current = true; play(); return; }
+      // YouTube enchaîne seul sur la vidéo suivante de la liste en fin de vidéo : on reste sur celle à l'écran (boucle)
+      const pi = typeof d.info === 'object' ? d.info?.playlistIndex : undefined;
+      if (typeof pi === 'number' && loaded.current >= 0 && pi !== loaded.current && !fresh.current) { c('playVideoAt', [loaded.current]); }
       if (typeof s !== 'number' || s === st.current) return;
       st.current = s;
       if (s !== 1) fresh.current = false; // l'état « lecture » d'avant le chargement ne compte pas
-      // Au changement de vidéo, YouTube affiche un instant ses boutons (pause, précédente, suivante) au milieu de
-      // l'image : la vidéo reste sous son image le temps qu'ils disparaissent
-      if (s === 1 && !fresh.current) { const id = loaded.current; setTimeout(() => { if (loaded.current === id && st.current === 1) setShown(true); }, reveal.current); reveal.current = 1200; }
-      if (s === 0) { c('seekTo', [0, true]); c('playVideo'); }
+      if (s === 1 && !fresh.current) setShown(true);
+      if (s === 0 && loaded.current >= 0) c('playVideoAt', [loaded.current]);
     };
     addEventListener('message', on); return () => removeEventListener('message', on);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
@@ -146,7 +148,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
 
   // Directement sur la page (portail) : par-dessus tout l'écran, jamais limité par l'écran de la Tribune qui le contient
   return createPortal(
-    <div className="reels" ref={box} role="dialog" aria-label={t('Highlights')}>
+    <div className="reels" role="dialog" aria-label={t('Highlights')}>
       {/* En-tête flottant, comme celui de l'appli (verre sombre, posé sur la vidéo) */}
       <div className="reels-top"><div className="bar">
         <button className="reels-btn" onClick={onClose} aria-label={t('Fermer')}><Ico n="close" size={22} /></button>
@@ -159,11 +161,11 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
         {/* Le lecteur unique, posé sur l'élément courant (il défile avec lui) ; sans les commandes YouTube (toucher =
             pause, bouton son en haut) */}
         {first && (
-          <div className={`reel-player${shown && yt ? ' on' : ''}`} style={{ top: `${cur * 100}%` }} aria-hidden={!yt}>
+          <div className={`reel-player${shown && yt && !dead.includes(yt.id) ? ' on' : ''}`} style={{ top: `${cur * 100}%` }} aria-hidden={!yt}>
             <div className="reel-stage">
               <div className={`reel-media${(yt ?? first).short ? ' short' : ''}`}>
                 <iframe ref={frame} onLoad={ready} title={(yt ?? first).title} tabIndex={-1} allow="autoplay; encrypted-media; picture-in-picture"
-                  src={`${ytEmbed(first.id, first.short).src.replace('autoplay=1', 'autoplay=0')}&mute=1&playsinline=1&enablejsapi=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&origin=${encodeURIComponent(location.origin)}`} />
+                  src={src} />
               </div>
             </div>
           </div>
@@ -184,6 +186,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
             </div>
             {/* Couche de toucher par-dessus la vidéo (le glissement reste au fil) */}
             {r.kind === 'yt' && <button className="reel-tap" onClick={tap} aria-label={paused && i === cur ? t('Lire la vidéo') : t('Pause')}>
+              {r.kind === 'yt' && dead.includes(r.id) && <a className="reel-pill" href={`https://youtu.be/${r.id}`} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>▶ {t('Regarder sur YouTube')}</a>}
               {i === cur && needTap && <span className="reel-pill">🔊 {t('Touche pour le son')}</span>}
               {i === cur && paused && !needTap && <span className="reel-play" aria-hidden>▶</span>}
             </button>}

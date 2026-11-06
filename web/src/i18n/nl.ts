@@ -1335,4 +1335,5 @@ export const NL: Record<string, string> = {
   "Couper le son": "Geluid uit",
   "Pas encore de vidéo ici.": "Nog geen video’s hier.",
   "Touche pour le son": "Tik voor geluid",
+  "Regarder sur YouTube": "Bekijken op YouTube",
 };
