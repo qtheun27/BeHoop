@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f4f1ec" />
+  <!-- Zone de l'heure (iPhone, appli installée) : couleur fixée une fois, jamais changée par l'appli — la changer en cours de
+       route fait revenir le grand flou d'iOS (constaté sur iOS 27 ; même réglage que l'appli Budget, sans flou) -->
+  <meta name="theme-color" content="#f4f1ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#070b14" media="(prefers-color-scheme: dark)" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="description" content="BeHoop : résultats, classements et calendriers de tous les clubs de basket de Belgique, vidéos de match, actus. Gratuit." />
@@ -33,8 +36,6 @@
     document.documentElement.classList.add('booting');
     // Sans compte, sur l'écran de départ : l'accueil (nuit) suit l'ouverture → ouverture en version nuit, sans flash clair
     try { if (!localStorage.getItem('behoop.session') && /^(#\/?(fil)?)?$/.test(location.hash)) document.documentElement.classList.add('splash-nuit'); } catch (e) {}
-    // Zone de l'heure (iPhone) de la couleur de l'écran d'ouverture dès le lancement : nuit, ou sombre en mode sombre
-    try { var tc = document.querySelector('meta[name="theme-color"]'); if (tc && (document.documentElement.classList.contains('splash-nuit') || matchMedia('(prefers-color-scheme: dark)').matches)) tc.setAttribute('content', document.documentElement.classList.contains('splash-nuit') ? '#0a0c12' : '#070b14'); } catch (e) {}
     (function () {
       var sa = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
       if (!sa || !screen.height) return;
