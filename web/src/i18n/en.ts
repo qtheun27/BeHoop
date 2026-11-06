@@ -1329,4 +1329,9 @@ export const EN: Record<string, string> = {
   "séries en Belgique": "divisions in Belgium",
   "{n} compétition féminine suivie, des Cats à la WNBA.": "{n} women’s competition followed, from the Cats to the WNBA.",
   "{n} compétitions féminines suivies, des Cats à la WNBA.": "{n} women’s competitions followed, from the Cats to the WNBA.",
+  "Remonter en haut": "Back to top",
+  "Highlights": "Highlights",
+  "Activer le son": "Turn sound on",
+  "Couper le son": "Mute",
+  "Pas encore de vidéo ici.": "No videos here yet.",
 };

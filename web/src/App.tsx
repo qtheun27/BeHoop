@@ -36,6 +36,11 @@ const ANON_TABS: [string, React.ReactNode, string][] = [['fil', Icons.home, 'Acc
 const LOCKED = ['Tribune', 'Saison', 'Vestiaire', 'Shoot'];
 /** Pages réservées aux comptes (onglets verrouillés et leurs sous-pages) */
 const MEMBERS_ONLY = new Set(['matchs', 'equipes', 'publier', 'montage', 'camp', 'espace', 'moderation']);
+/** Toucher l'onglet où l'on est déjà (à sa racine) : remonte en haut en douceur, comme dans les applis du téléphone */
+const toTopIfHere = (id: string) => (e: React.MouseEvent) => {
+  const here = (location.hash.replace(/^#\/?/, '') || 'fil').split(/[/?]/)[0];
+  if (here === id && location.hash.replace(/^#\/?/, '').split('/').length <= 1) { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }); }
+};
 const TABS = [
   { id: 'fil', label: 'Tribune', icon: Icons.home }, { id: 'explorer', label: 'Arena', icon: Icons.search },
   { id: 'publier', label: 'Publier', icon: <span className="plus">{Icons.plus}</span> },
@@ -111,11 +116,11 @@ export function App() {
       <nav className={`tabbar${s.user ? '' : ' anon'}`} aria-label={tr('Navigation principale')}>
         {/* Sans compte : seulement ce qui sert (accueil, Arena, actus) et la connexion mise en avant */}
         {!s.user && <>
-          {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={(page === 'actus' ? 'actus' : tab) === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+          {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} onClick={toTopIfHere(id)} className={(page === 'actus' ? 'actus' : tab) === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
           <button className="tab-login" onClick={() => s.requireAuth()}><Ico n="user" /><span>{tr('Connexion')}</span></button>
         </>}
         {s.user && TABS.map((t) => (
-          <a key={t.id} href={`#/${t.id}`} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
+          <a key={t.id} href={`#/${t.id}`} onClick={toTopIfHere(t.id)} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
             {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Shoot')}</span>}
           </a>
         ))}
@@ -139,7 +144,7 @@ function SideNav({ tab }: { tab: string }) {
     <nav className="sidenav" aria-label={tr('Navigation principale')}>
       <a className="brand" href="#/fil" aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
       <div className="side-items">
-        {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+        {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} onClick={toTopIfHere(id)} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
       {/* Le reste de l'appli, verrouillé : on montre ce qu'on gagne à se connecter */}
       <div className="side-unlock">
@@ -155,7 +160,7 @@ function SideNav({ tab }: { tab: string }) {
     <nav className="sidenav" aria-label={tr('Navigation principale')}>
       <a className="brand" href="#/fil" aria-label={tr('BeHoop, accueil')}><Logo size={40} /></a>
       <div className="side-items">
-        {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
+        {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} onClick={toTopIfHere(id)} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
       {/* Actions de la barre latérale : toutes en .side-cta (même taille, même forme) ; seule la couleur change */}
       <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Shoot')}</a>

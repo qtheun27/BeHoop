@@ -1329,4 +1329,9 @@ export const NL: Record<string, string> = {
   "séries en Belgique": "reeksen in België",
   "{n} compétition féminine suivie, des Cats à la WNBA.": "{n} vrouwencompetitie gevolgd, van de Cats tot de WNBA.",
   "{n} compétitions féminines suivies, des Cats à la WNBA.": "{n} vrouwencompetities gevolgd, van de Cats tot de WNBA.",
+  "Remonter en haut": "Naar boven",
+  "Highlights": "Highlights",
+  "Activer le son": "Geluid aan",
+  "Couper le son": "Geluid uit",
+  "Pas encore de vidéo ici.": "Nog geen video’s hier.",
 };

@@ -1,5 +1,6 @@
 import { isMini } from '../../../shared/mini';
 import { MiniLocked } from './Explore';
+import { Reels, reelOfVideo, type Reel } from './Reels';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { newsForTeams } from '../lib/newsMatch';
 import { readerClick } from '../ui/NewsReader';
@@ -51,7 +52,7 @@ function Stories() {
 const FILTERS: { id: string; label: string; ic?: IconName; ok: (p: D.Post) => boolean }[] = [
   { id: 'tout', label: 'Tout', ok: () => true },
   { id: 'scores', label: 'Résultats', ok: (p) => p.type === 'score' || p.type === 'live' },
-  { id: 'medias', label: 'Photos & vidéos', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' || !!p.payload?.embed },
+  { id: 'medias', label: 'Highlights', ic: 'video', ok: (p) => p.type === 'photo' || p.type === 'video' || p.type === 'moment' || !!p.payload?.embed },
   { id: 'actus', label: 'Actus', ic: 'news', ok: () => false },
 ];
 const NEWS_CATS: [string, string][] = [['', 'Toutes'], ['belgique', 'Belgique'], ['regional', 'Régional'], ['international', 'International'], ['nba', 'NBA']];
@@ -183,6 +184,9 @@ export function Feed() {
   const cursorDone = !!cur.current?.done;
   const [pull, setPull] = useState(0);
   const [filter, setFilter] = useState('tout');
+  // Highlights : plein écran façon TikTok (ouvert depuis le filtre, le fil reste derrière sur « Tout »)
+  const [reels, setReels] = useState(false);
+  useEffect(() => { if (reels) ensureMediaCookie(); }, [reels]);
   const [newsCat, setNewsCat] = useState('');
   const news = useAsync(loadNews, []);
   const key = s.targets.join() + '|' + s.privateTeams.join();
@@ -247,7 +251,7 @@ export function Feed() {
       <Stories />
       {filter === 'tout' && <NewsCarousel />}
       {followsNothing && <Suggestions />}
-      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => setFilter(f.id)} aria-pressed={filter === f.id}>{f.ic && <Ico n={f.ic} />}{t(f.label)}</button>)}</div>
+      <div className="chips" role="tablist">{FILTERS.map((f) => <button key={f.id} className={`chip${filter === f.id ? ' on' : ''}`} onClick={() => (f.id === 'medias' ? setReels(true) : setFilter(f.id))} aria-pressed={filter === f.id}>{f.ic && <Ico n={f.ic} />}{t(f.label)}</button>)}</div>
       {filter === 'actus' && <div className="seg" style={{ marginTop: -4 }}>{NEWS_CATS.map(([k, l]) => <button key={k} className={newsCat === k ? 'on' : ''} onClick={() => setNewsCat(k)}>{t(l)}</button>)}</div>}
       <div style={{ height: pull * .6, transition: pull ? 'none' : 'height .3s', display: 'grid', placeItems: 'center', overflow: 'hidden' }} aria-hidden>{pull > 70 ? '↻ Relâche' : pull > 10 ? '↓' : ''}</div>
       {err && <ErrorBox msg={err} retry={() => load(true)} />}
@@ -274,8 +278,25 @@ export function Feed() {
         })()}
       <div ref={sentinel} />
       {more && posts && <Skeleton h={200} n={1} />}
+      {reels && <Reels onClose={() => setReels(false)} items={[
+        ...(news.data?.videos ?? []).map(reelOfVideo),
+        ...(posts ?? []).filter((p) => !p.hidden && FILTERS.find((f) => f.id === 'medias')!.ok(p)).flatMap((p): Reel[] => {
+          const e = p.payload?.embed ? parseEmbed(p.payload.embed) : null;
+          if (e?.kind === 'youtube') return [{ kind: 'yt', key: `p${p.id}`, id: e.id, short: e.vertical, title: p.payload.text ?? '', by: p.authorName ?? 'BeHoop', date: p.createdAt }];
+          const ph = p.type === 'photo' ? (p.payload.photos as { key: string }[] | undefined)?.[0] : undefined;
+          return ph ? [{ kind: 'photo', key: `p${p.id}`, src: mediaUrl(ph.key), title: p.payload.text ?? '', by: p.authorName ?? 'BeHoop', date: p.createdAt, href: `#/post/${p.id}` }] : [];
+        }),
+      ].sort((a, b) => b.date - a.date)} />}
+      <BackToTop />
     </Screen>
   );
+}
+
+/** Flèche « remonter » : apparaît après un écran et demi de défilement, disparaît en haut */
+function BackToTop() {
+  const [show, setShow] = useState(false);
+  useEffect(() => { const f = () => setShow(scrollY > innerHeight * 1.5); f(); addEventListener('scroll', f, { passive: true }); return () => removeEventListener('scroll', f); }, []);
+  return <button className={`to-top${show ? ' on' : ''}`} onClick={() => { haptic(); scrollTo({ top: 0, behavior: 'smooth' }); }} aria-label={t('Remonter en haut')} tabIndex={show ? 0 : -1}><Ico n="chevLeft" size={22} style={{ transform: 'rotate(90deg)' }} /></button>;
 }
 
 /** Pour bien démarrer : les compétitions les plus suivies, à suivre d'un geste. */
