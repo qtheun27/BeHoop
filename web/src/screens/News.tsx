@@ -18,7 +18,7 @@ function useNewsImage(n: News) {
   const [failed, setFailed] = useState(false);
   return { src: n.image && !failed ? n.image : null, fail: () => setFailed(true) };
 }
-/** Visuel de repli (carrousel « À la une » seulement) : demi-terrain aux couleurs de la source */
+/** Visuel de repli (article sans image, ex. médias flamands qui refusent les robots) : terrain aux couleurs du média et son nom */
 function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
   return (
     <div style={{ aspectRatio: ratio, width: '100%', display: 'block', position: 'relative', overflow: 'hidden', background: tint(n.source) }}>
@@ -29,7 +29,10 @@ function CourtVisual({ n, ratio }: { n: News; ratio: string }) {
           <rect x="254" y="48" width="70" height="64" /><circle cx="254" cy="80" r="22" /><path d="M324 18 H280 A82 82 0 0 0 280 142 H324" />
         </g>
       </svg>
-      <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', color: '#fff' }}><Ico n="ball" size={38} /></div>
+      <div style={{ position: 'absolute', inset: 0, display: 'grid', placeItems: 'center', alignContent: 'center', gap: 6, color: '#fff', textAlign: 'center', padding: '0 16px' }}>
+        <Ico n="ball" size={26} />
+        <span style={{ fontFamily: 'Anton, sans-serif', fontSize: 'clamp(20px, 6vw, 30px)', lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: '.02em', textShadow: '0 2px 12px rgba(0,0,0,.25)' }}>{n.source}</span>
+      </div>
     </div>
   );
 }
@@ -45,24 +48,15 @@ export function NewsCard({ n, wide, list }: { n: News; wide?: boolean; list?: Ne
   );
   return <NewsLink n={n} list={list} />;
 }
-const initials = (s: string) => s.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
 function NewsLink({ n, wide, list }: { n: News; wide?: boolean; list?: News[] }) {
   const onClick = readerClick(list ?? [n], n);
   const img = useNewsImage(n);
   const meta = <div className="hstack" style={{ gap: 6, fontSize: 12.5 }}><span className="pill" style={{ fontWeight: 700 }}>{n.source}</span><span className="muted">{ago(Math.min(Date.parse(n.date), Date.now()))}</span></div>;
-  // Pas d'image : carte texte (pastille aux couleurs du média), jamais de grand visuel vide
-  if (wide && !img.src) return (
-    <a href={n.url} target="_blank" rel="noopener" onClick={onClick} className="news-text" style={{ color: 'inherit' }}>
-      <span className="news-badge" style={{ background: tint(n.source) }} aria-hidden>{initials(n.source) || <Ico n="news" />}</span>
-      <span style={{ minWidth: 0 }}>{meta}
-        <span style={{ display: '-webkit-box', fontWeight: 700, fontSize: 17, lineHeight: 1.25, marginTop: 6, WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</span>
-        {n.excerpt && <span className="muted" style={{ display: '-webkit-box', fontSize: 14.5, marginTop: 4, WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.excerpt}</span>}</span>
-    </a>
-  );
+  // Pas d'image : même carte que les autres, avec le visuel de repli (jamais de grand cadre vide)
   return (
     <a className={wide ? '' : 'card news'} href={n.url} target="_blank" rel="noopener" onClick={onClick} style={{ display: 'block', color: 'inherit', ...(wide ? {} : { width: 260, flex: 'none', marginBottom: 0 }) }}>
       {img.src ? <img src={img.src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={img.fail} style={{ aspectRatio: wide ? '16/8' : '16/9', width: '100%', display: 'block', objectFit: 'cover', background: '#0a0c12' }} />
-        : <CourtVisual n={n} ratio="16/9" />}
+        : <CourtVisual n={n} ratio={wide ? '16/8' : '16/9'} />}
       <div style={{ padding: '10px 14px 14px' }}>
         {meta}
         <div style={{ fontWeight: 700, fontSize: wide ? 18 : 15.5, lineHeight: 1.25, marginTop: 6, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{n.title}</div>

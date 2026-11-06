@@ -130,5 +130,6 @@ export interface News { id: string; title: string; excerpt: string; url: string;
 export const readable = (n: News) => !n.lang || n.lang === lang();
 /** Vidéo d'une chaîne YouTube officielle (ops/news.ts) */
 export interface Video { id: string; title: string; channel: string; date: string; cat: News['cat']; short: boolean;
-  /** Titre traduit par YouTube (chaînes en anglais), quand la chaîne le fournit */ titles?: { fr?: string; nl?: string } }
+  /** Titre traduit par YouTube (chaînes en anglais), quand la chaîne le fournit */ titles?: { fr?: string; nl?: string };
+  /** Langue de la chaîne */ lang?: 'fr' | 'nl' | 'en' }
 export const loadNews = () => get<{ generated_at: string; items: News[]; videos?: Video[] }>('news.json');

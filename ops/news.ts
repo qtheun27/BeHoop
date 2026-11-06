@@ -317,7 +317,7 @@ export function isBasketNews(n: Pick<News, 'title' | 'excerpt' | 'url'>, clubHit
 // chaîne. Une chaîne en panne garde ses vidéos du passage précédent (la section ne se vide jamais d'un coup).
 // Que du basket : chaînes de basket, ou filtre sur les chaînes multisports. Chaînes belges en français et néerlandais.
 // Titres anglais : la version française et néerlandaise que YouTube fournit (titles), quand la chaîne en propose une.
-export interface Video { id: string; title: string; channel: string; date: string; cat: Cat; short: boolean; titles?: { fr?: string; nl?: string } }
+export interface Video { id: string; title: string; channel: string; date: string; cat: Cat; short: boolean; titles?: { fr?: string; nl?: string }; lang?: 'fr' | 'nl' | 'en' }
 type Channel = { name: string; id: string; cat: Cat; lang: 'fr' | 'nl' | 'en'; keep?: RegExp };
 const CHANNELS: Channel[] = [
   { name: 'Basketball Belgium', id: 'UCHkZCYfrR4LCY_d3M1igE5Q', cat: 'belgique', lang: 'fr' },
@@ -381,6 +381,7 @@ export async function youtube(prev: Video[]): Promise<Video[]> {
         for (const x of v) { const t = tr.get(x.id); if (t && t !== x.title && !/(\.\.\.|…)$/.test(t)) x.titles = { ...x.titles, [hl]: t }; }
       }
     }
+    for (const x of v) x.lang = c.lang; // langue de la chaîne : sous-titres dans la langue de l'appli quand elle diffère
     out.push(...v);
   }
   return out.filter((v) => Date.parse(v.date) > Date.now() - 21 * 864e5).sort((a, b) => b.date.localeCompare(a.date));

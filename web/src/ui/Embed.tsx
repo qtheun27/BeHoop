@@ -22,8 +22,10 @@ export function parseEmbed(raw: string): EmbedInfo | null {
   if (tk) return { kind: 'tiktok', id: tk[1], src: `https://www.tiktok.com/embed/v2/${tk[1]}`, vertical: true };
   return null;
 }
-export const ytEmbed = (id: string, short = false): EmbedInfo => ({ kind: 'youtube', id, vertical: short,
-  src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0`, thumb: `https://i.ytimg.com/vi/${id}/${short ? 'oar2' : 'hqdefault'}.jpg` });
+/** subs : langue des sous-titres (vidéo dans une autre langue que l'appli) — piste dans cette langue si la vidéo en a une,
+ *  sinon YouTube montre les sous-titres disponibles ; interface du lecteur dans la même langue */
+export const ytEmbed = (id: string, short = false, subs?: string): EmbedInfo => ({ kind: 'youtube', id, vertical: short,
+  src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0${subs ? `&cc_load_policy=1&cc_lang_pref=${subs}&hl=${subs}` : ''}`, thumb: `https://i.ytimg.com/vi/${id}/${short ? 'oar2' : 'hqdefault'}.jpg` });
 
 const LABEL = { youtube: 'YouTube', instagram: 'Instagram', tiktok: 'TikTok' };
 

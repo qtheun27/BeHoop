@@ -65,7 +65,7 @@ function VideoCard({ v }: { v: Video }) {
       <header className="card-head"><div className="avatar" style={{ background: '#0a0c12', color: '#f26a1b' }}><Ico n="video" size={20} /></div>
         <div style={{ flex: 1, minWidth: 0 }}><div className="who ellipsis">{v.channel}</div><div className="when">{ago(Date.parse(v.date))}</div></div></header>
       <div className="card-body" style={{ paddingTop: 0 }}>{title}</div>
-      <Embed e={ytEmbed(v.id, v.short)} title={title} auto />
+      <Embed e={ytEmbed(v.id, v.short, v.lang && v.lang !== l ? l : undefined)} title={title} auto />
     </article>
   );
 }
