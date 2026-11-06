@@ -50,7 +50,9 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     if (p && !p.avatarUrl && u.photoURL) { p.avatarUrl = u.photoURL; D.updateProfile(u.uid, { avatarUrl: u.photoURL }).catch(() => {}); }
     setProfile(p); setFollows([...new Map(f.map((x) => [x.id, x])).values()]); setMemberships(m);
   }, []);
-  useEffect(() => onAuthStateChanged(auth, async (u) => { setUser(u); try { await load(u); } finally { setReady(true); } }), [load]);
+  // Connecté seulement une fois le profil chargé : sinon, pendant le chargement, « connecté sans profil » afficherait un
+  // instant la création de profil (case « 13 ans ou plus ») à quelqu'un qui en a déjà un
+  useEffect(() => onAuthStateChanged(auth, async (u) => { try { await load(u); } catch { /* profil illisible : on continue */ } finally { setUser(u); setReady(true); } }), [load]);
   useEffect(() => { loadIndex().then((i) => setClubs(i.clubs)).catch(() => {}); }, []);
   // Le site public (behoop.be) affiche « Ouvrir mon fil » quand on est connecté
   useEffect(() => {

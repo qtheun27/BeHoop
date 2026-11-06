@@ -57,7 +57,8 @@ export function applyTheme(p: ThemePrefs, clubs: Club[] = [], persist = true) {
     if (k?.c1) ct = { c1: k.c1, c2: k.c2 && hex(k.c2) ? k.c2 : k.second, logo: k.logo, name: courtName(k.name ?? '') };
   } else r.dataset.accent = p.accent.startsWith('comp:') ? DEFAULT_THEME.accent : p.accent; // ancien thème « compétition » (retiré) → couleur par défaut
   setCourt(p.bg === 'parquet' ? ct : null);
-  // Pas de changement de « theme-color » ici : le changer fait revenir le flou d'iOS en haut de l'écran (voir index.html)
+  const meta = document.querySelector('meta[name="theme-color"]:not([media])') ?? Object.assign(document.head.appendChild(document.createElement('meta')), { name: 'theme-color' });
+  meta.setAttribute('content', getComputedStyle(r).getPropertyValue('--bg').trim() || '#f4f1ec');
   if (persist) store.set('behoop.theme', p);
 }
 /** Nom du club sur le bord du terrain : sans les préfixes BC, BBC, Basket… */

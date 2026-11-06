@@ -62,10 +62,12 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
     // iPhone → bande noire en bas) : Highlights la recouvre et garde son propre défilement
     const html = document.documentElement;
     html.classList.add('reels-open');
+    const meta = document.querySelector('meta[name="theme-color"]:not([media])'); const was = meta?.getAttribute('content');
+    meta?.setAttribute('content', '#000000');
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); if (e.key === 'ArrowDown') go(1); if (e.key === 'ArrowUp') go(-1); };
     addEventListener('keydown', k);
     return () => {
-      removeEventListener('keydown', k); html.classList.remove('reels-open');
+      removeEventListener('keydown', k); html.classList.remove('reels-open'); if (was) meta?.setAttribute('content', was);
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   // L'élément calé à l'écran devient l'élément courant dès qu'il est majoritairement visible (pendant le glissement)

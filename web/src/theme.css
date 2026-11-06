@@ -491,15 +491,3 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
   opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .25s, transform .25s; }
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 @media (min-width: 1100px) { .to-top { bottom: 28px; right: 28px; } }
-
-/* Haut de l'écran (iPhone, appli installée). La barre d'état est en mode « default » (index.html) : l'iPhone la peint de la
-   couleur « theme-color », fixe (claire / sombre selon le mode du téléphone). Juste dessous, l'iPhone ajoute son grand flou tant qu'il ne trouve pas de fond uni tout en haut : cette
-   bande unie (fixe, > 10 px, toute la largeur, touchable) le lui donne. En dessous, notre petite couche de flou, peu haute. */
-.no-top-blur { --top: #f4f1ec; position: fixed; inset: 0 0 auto; height: max(12px, env(safe-area-inset-top, 0px)); z-index: 1000; background: var(--top); }
-@media (prefers-color-scheme: dark) { .no-top-blur { --top: #070b14; } } /* même couleur que la zone de l'heure (index.html) */
-.no-top-blur::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 14px; pointer-events: none;
-  background: linear-gradient(color-mix(in srgb, var(--top) 70%, transparent), transparent);
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  -webkit-mask-image: linear-gradient(#000, transparent); mask-image: linear-gradient(#000, transparent); }
-html.reels-open .no-top-blur { --top: #000; }
-@media not all and (display-mode: standalone) { .no-top-blur { display: none; } } /* seulement l'appli installée */
