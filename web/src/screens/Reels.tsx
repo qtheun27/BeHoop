@@ -43,6 +43,7 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   const loaded = useRef(''); // vidéo dans le lecteur
   const fresh = useRef(false); // vidéo qui vient d'être chargée : on attend qu'elle démarre vraiment avant de la montrer
   const st = useRef(-1);
+  const reveal = useRef(0); // première vidéo : pas de boutons YouTube → montrée tout de suite
   const curRef = useRef(0); curRef.current = cur;
   const soundRef = useRef(false); soundRef.current = sound;
   const first = items.find((r) => r.kind === 'yt') as Extract<Reel, { kind: 'yt' }> | undefined;
@@ -52,6 +53,11 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   useEffect(() => {
     const b = document.body.style, y = scrollY, html = document.documentElement;
     Object.assign(b, { position: 'fixed', top: `-${y}px`, left: '0', right: '0', overflow: 'hidden' });
+    // Appli installée sur iPhone : l'écran « fixe » s'arrête au-dessus de la barre d'accueil → on le prolonge jusqu'au
+    // bord bas de l'écran (vidéo jusqu'en bas, comme en haut)
+    const tall = innerHeight > innerWidth ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
+    const gap = matchMedia('(display-mode: standalone)').matches ? tall - innerHeight : 0;
+    html.style.setProperty('--reels-gap', `${gap > 0 && gap < 80 ? gap : 0}px`);
     html.classList.add('reels-open');
     const meta = document.querySelector('meta[name="theme-color"]:not([media])'); const was = meta?.getAttribute('content');
     meta?.setAttribute('content', '#000000');
@@ -103,7 +109,9 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
       if (typeof s !== 'number' || s === st.current) return;
       st.current = s;
       if (s !== 1) fresh.current = false; // l'état « lecture » d'avant le chargement ne compte pas
-      if (s === 1 && !fresh.current) setShown(true);
+      // Au changement de vidéo, YouTube affiche un instant ses boutons (pause, précédente, suivante) au milieu de
+      // l'image : la vidéo reste sous son image le temps qu'ils disparaissent
+      if (s === 1 && !fresh.current) { const id = loaded.current; setTimeout(() => { if (loaded.current === id && st.current === 1) setShown(true); }, reveal.current); reveal.current = 1200; }
       if (s === 0) { c('seekTo', [0, true]); c('playVideo'); }
     };
     addEventListener('message', on); return () => removeEventListener('message', on);
@@ -128,13 +136,14 @@ export function Reels({ items, onClose }: { items: Reel[]; onClose: () => void }
   // Directement sur la page (portail) : par-dessus tout l'écran, jamais limité par l'écran de la Tribune qui le contient
   return createPortal(
     <div className="reels" role="dialog" aria-label={t('Highlights')}>
-      <div className="reels-top">
+      {/* En-tête flottant, comme celui de l'appli (verre sombre, posé sur la vidéo) */}
+      <div className="reels-top"><div className="bar">
         <button className="reels-btn" onClick={onClose} aria-label={t('Fermer')}><Ico n="close" size={22} /></button>
         <b>{t('Highlights')}</b>
         <button className="reels-btn" onClick={toggleSound} aria-label={sound ? t('Couper le son') : t('Activer le son')}>
           <span aria-hidden style={{ fontSize: 18 }}>{sound ? '🔊' : '🔇'}</span>
         </button>
-      </div>
+      </div></div>
       <div className="reels-list" ref={list}>
         {/* Le lecteur unique, posé sur l'élément courant (il défile avec lui) ; sans les commandes YouTube (toucher =
             pause, bouton son en haut) */}

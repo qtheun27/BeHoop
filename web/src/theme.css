@@ -454,7 +454,7 @@ html { overflow-x: hidden; }
 /* Ouvert : toute la page passe en noir (rien de clair sous la barre d'état ni sous la barre d'accueil de l'iPhone) */
 html.reels-open, html.reels-open body { background: #000 !important; }
 html.reels-open body::before, html.reels-open body::after, html.reels-open .court-lines, html.reels-open .court-bg { display: none !important; }
-.reels { position: fixed; inset: 0; z-index: 200; background: #000; color: #fff; }
+.reels { position: fixed; inset: 0 0 calc(-1 * var(--reels-gap, 0px)) 0; z-index: 200; background: #000; color: #fff; }
 .reels-list { position: absolute; isolation: isolate; inset: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; scrollbar-width: none; }
 .reels-list::-webkit-scrollbar { display: none; }
 .reel { position: relative; height: 100%; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; }
@@ -483,11 +483,13 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .reel-info p { margin: 4px 0 0; font-size: 16px; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .reel-empty { position: absolute; inset: 0; display: grid; place-items: center; opacity: .7; margin: 0; }
 /* En-tête sous la barre d'état (zones de l'iPhone), en surimpression */
-.reels-top { position: absolute; z-index: 3; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: calc(env(safe-area-inset-top) + 26px) 14px 26px; background: linear-gradient(rgba(0,0,0,.55), transparent); pointer-events: none; }
+.reels-top { position: absolute; z-index: 4; left: 0; right: 0; top: 0; padding: calc(env(safe-area-inset-top) + 8px) 12px 0; pointer-events: none; }
+.reels-top .bar { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; padding: 6px 8px;
+  border-radius: 22px; background: rgba(18,20,26,.5); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  backdrop-filter: saturate(160%) blur(22px); -webkit-backdrop-filter: saturate(160%) blur(22px); pointer-events: auto; }
 .reels-top b { font-family: Anton, sans-serif; font-weight: 400; font-size: 22px; text-transform: uppercase; letter-spacing: .02em; }
-.reels-btn { pointer-events: auto; width: 42px; height: 42px; border-radius: 50%; border: 0; display: grid; place-items: center; color: #fff;
-  background: rgba(255,255,255,.14); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); cursor: pointer; }
+.reels-btn { width: 44px; height: 44px; border-radius: 50%; border: 0; display: grid; place-items: center; color: #fff;
+  background: rgba(255,255,255,.12); cursor: pointer; }
 
 /* Flèche « remonter » (Tribune) */
 .to-top { position: fixed; z-index: 30; right: 16px; bottom: calc(var(--tab-h) + 18px); width: 46px; height: 46px; border-radius: 50%; border: 0; display: grid; place-items: center;
