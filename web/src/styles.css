@@ -6,9 +6,9 @@
   --bar: rgba(249,249,249,.82); --shadow: 0 8px 30px rgba(0,0,0,.08);
   --radius: 16px; --radius-lg: 22px;
   --safe-b: env(safe-area-inset-bottom, 0px); --safe-t: env(safe-area-inset-top, 0px);
-  /* Haut des en-têtes flottants : juste sous l'heure et la batterie, dans le bas de la zone floutée par l'iPhone (comme
-     les applis natives) plutôt qu'en dessous ; 8 px sans zone (ordinateur, Android) */
-  --hdr-t: max(8px, calc(var(--safe-t) - 12px));
+  /* Haut des en-têtes flottants : juste sous la zone de l'heure et de la batterie. Plus haut, l'iPhone (iOS 26, appli
+     installée) floute l'en-tête lui-même et le colle à l'îlot dynamique ; 8 px sans zone (ordinateur, Android) */
+  --hdr-t: max(8px, calc(var(--safe-t) + 2px));
   --tab-h: calc(56px + var(--safe-b));
   --spring: cubic-bezier(.32,1.25,.5,1); --ease: cubic-bezier(.25,.1,.25,1);
   color-scheme: light dark;
