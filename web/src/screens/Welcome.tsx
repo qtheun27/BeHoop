@@ -71,7 +71,13 @@ export function Welcome() {
   const profileStep = !!s.user && !s.profile;
 
   // Styles propres à cet écran sur le document (fond, défilement) : retirés en le quittant
-  useEffect(() => { document.body.classList.add('landing'); return () => document.body.classList.remove('landing'); }, []);
+  // La zone de l'heure (barre d'état de l'iPhone) prend la couleur nuit du haut de cette page
+  useEffect(() => {
+    document.body.classList.add('landing');
+    const meta = document.querySelector('meta[name="theme-color"]:not([media])'); const was = meta?.getAttribute('content');
+    meta?.setAttribute('content', '#0a0c12');
+    return () => { document.body.classList.remove('landing'); if (was) meta?.setAttribute('content', was); };
+  }, []);
   // Connecté (Google…) sans profil : la fenêtre s'ouvre pour le créer
   useEffect(() => { if (!desk && profileStep) setSheet(true); }, [desk, profileStep]);
   // Écran d'ouverture : retiré quand la page et ses données sont prêtes (au bout d'un tour d'animation)
