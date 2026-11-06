@@ -496,10 +496,11 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
    WebKit remplace ce flou par une couleur unie s'il trouve, tout en haut, un élément fixe large (≥ 90 % de l'écran), haut
    de plus de 10 px, avec un fond visible, sans flou ni masque, et qui reçoit les touchers (« pointer-events: none » le
    rend invisible à ce test). Pas documenté par Apple : https://tips.ojapp.app/en/ios-27-pwa-top-blur-workaround-2/
+   Elle couvre toute la zone de l'heure et de la batterie : même si l'iPhone floute encore, il floute une couleur unie.
    Couleur du haut de l'écran : fond de l'appli, nuit sur l'accueil public, noir dans Highlights. */
 .no-top-blur { display: none; }
 @media (display-mode: standalone) {
-  .no-top-blur { display: block; position: fixed; inset: 0 0 auto; height: 12px; z-index: 1000; background: var(--bg); }
+  .no-top-blur { display: block; position: fixed; inset: 0 0 auto; height: max(12px, env(safe-area-inset-top)); z-index: 1000; background: var(--bg); }
   html:has(.lp-hero) .no-top-blur { background: #0a0c12; }
   html.reels-open .no-top-blur { background: #000; }
 }
