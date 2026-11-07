@@ -1,0 +1,69 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:Coupe U21 Hommes Namur
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-497428-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270118T110000
+DTEND;TZID=Europe/Brussels:20270118T130000
+SUMMARY:Royal BC Maillen – undefined
+LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330 Maillen
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497425-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270118T150000
+DTEND;TZID=Europe/Brussels:20270118T170000
+SUMMARY:BC Malonne – undefined
+LOCATION:Centre Sportif Malonne\, Champ Ha 20\, 5020 Malonne
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497426-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270118T150000
+DTEND;TZID=Europe/Brussels:20270118T170000
+SUMMARY:RBC Erpent A – RBC Loyers
+LOCATION:Salle du Collège N-D de la Paix\, Place Notre-Dame de la Paix\, 5\, 5101 Erpent
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497427-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270118T160000
+DTEND;TZID=Europe/Brussels:20270118T180000
+SUMMARY:AS Mazy-Spy – undefined
+LOCATION:Hall Omnisports de Corroy le Chateau\, rue Maison d'Orbais 25\, 5032 Corroy-le-Chateau
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497429-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:BC Malonne – Vainqueur NA203002
+LOCATION:
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497430-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270308T180000
+DTEND;TZID=Europe/Brussels:20270308T200000
+SUMMARY:Royal BC Maillen – AS Mazy-Spy
+LOCATION:
+DESCRIPTION:CHU21
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-497431-comp-cup-coupe-u21-hommes-namur-namur@behoop.be
+DTSTAMP:20261107T181731Z
+DTSTART;TZID=Europe/Brussels:20270405T180000
+DTEND;TZID=Europe/Brussels:20270405T200000
+SUMMARY:Vainqueur NA203005 – Vainqueur NA203006
+LOCATION:
+DESCRIPTION:CHU21
+END:VEVENT
+END:VCALENDAR
