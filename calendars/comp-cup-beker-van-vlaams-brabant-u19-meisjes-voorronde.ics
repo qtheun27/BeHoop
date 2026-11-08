@@ -5,19 +5,19 @@ X-WR-CALNAME:Beker van Vlaams-Brabant U19 Meisjes Voorronde
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
 UID:bh-11295598150-comp-cup-beker-van-vlaams-brabant-u19-meisjes-voorronde@behoop.be
-DTSTAMP:20261108T061833Z
+DTSTAMP:20261108T181734Z
 DTSTART;TZID=Europe/Brussels:20261108T100000
 DTEND;TZID=Europe/Brussels:20261108T120000
-SUMMARY:Jets Basket Zaventem M19 A – BC Grimbergen M19 A
+SUMMARY:Jets Basket Zaventem M19 A – BC Grimbergen M19 A (29-52)
 LOCATION:Gemeentelijk Sporthal Zaventem\, Steenokkerzeelstraat\, 1930 Zaventem
 DESCRIPTION:Beker van Vlaams-Brabant U19 Meisjes Voorronde
 END:VEVENT
 BEGIN:VEVENT
 UID:bh-11278820531-comp-cup-beker-van-vlaams-brabant-u19-meisjes-voorronde@behoop.be
-DTSTAMP:20261108T061833Z
+DTSTAMP:20261108T181734Z
 DTSTART;TZID=Europe/Brussels:20261108T103000
 DTEND;TZID=Europe/Brussels:20261108T123000
-SUMMARY:Dino Brussels M19 A – Londerzeelse Dunkers M19 A
+SUMMARY:Dino Brussels M19 A – Londerzeelse Dunkers M19 A (43-73)
 LOCATION:Sporthal Emanuel Hiel\, Freesiadreef 7\, 1030 Schaarbeek
 DESCRIPTION:Beker van Vlaams-Brabant U19 Meisjes Voorronde
 END:VEVENT
