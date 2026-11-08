@@ -69,8 +69,11 @@ export async function run() {
   const all = loadAll('.');
   let todo = pending(all.games);
   const { db } = admin();
-  // Déjà trouvés lors d'un passage précédent
-  const known = new Set((await db.collection('results').select().get()).docs.map((d) => +d.id));
+  // Déjà trouvés lors d'un passage précédent. Les résultats sont groupés par jour (resultsDay/{date}) : quelques lectures par
+  // passage, au lieu de relire chaque résultat (des milliers après un samedi de matchs, toutes les 15 min → quota dépassé)
+  const days = [...new Set(todo.map((g) => g.d))];
+  const known = new Set<number>();
+  for (const d of days) Object.keys((await db.doc(`resultsDay/${d}`).get()).data()?.r ?? {}).forEach((id) => known.add(+id));
   todo = todo.filter((g) => !known.has(g.id));
   console.log(`${todo.length} match(s) terminé(s) sans score (AWBB ${todo.filter((g) => g.s < 1e10).length}, Flandre ${todo.filter((g) => g.s >= 1e10).length})`);
   if (todo.length) {
@@ -82,15 +85,17 @@ export async function run() {
     let n = 0;
     for (const g of todo) {
       const sc = found.get(g.id); if (!sc) continue;
-      await db.doc(`results/${g.id}`).set({ hs: sc[0], as: sc[1], d: g.d, s: g.s, at: new Date() });
+      await db.doc(`resultsDay/${g.d}`).set({ r: { [g.id]: { hs: sc[0], as: sc[1], at: new Date() } } }, { merge: true });
       await sync({ ...g, hs: sc[0], as: sc[1] }).catch((e) => console.error('carte', g.id, e.message));
       n++;
     }
     console.log(`${n} résultat(s) publié(s)`);
   }
-  // Ménage : résultats de plus de 3 jours (la mise à jour complète les a repris depuis)
+  // Ménage : jours de plus de 3 jours (la mise à jour complète les a repris depuis) ; quelques documents seulement
   const old = new Date(Date.now() - 3 * 864e5).toISOString().slice(0, 10);
-  const stale = await db.collection('results').where('d', '<', old).get();
+  for (const d of (await db.collection('resultsDay').listDocuments())) if (d.id < old) await d.delete();
+  // Ancien format (un document par match) : on finit de le vider
+  const stale = await db.collection('results').limit(400).get();
   for (const d of stale.docs) await d.ref.delete();
 }
 if (import.meta.url === `file://${process.argv[1]}`) run().catch((e) => { console.error(e); process.exit(1); });

@@ -245,5 +245,8 @@ describe('Résultats rapides', () => {
     await env.withSecurityRulesDisabled((c) => setDoc(doc(c.firestore(), 'results', '1'), { hs: 70, as: 60, d: '2026-10-24', s: 6142 }));
     await assertSucceeds(getDoc(doc(env.unauthenticatedContext().firestore(), 'results', '1')));
     await assertFails(setDoc(doc(as('alice'), 'results', '2'), { hs: 1, as: 0 }));
+    await env.withSecurityRulesDisabled((c) => setDoc(doc(c.firestore(), 'resultsDay', '2026-10-24'), { r: { 1: { hs: 70, as: 60 } } }));
+    await assertSucceeds(getDoc(doc(env.unauthenticatedContext().firestore(), 'resultsDay', '2026-10-24')));
+    await assertFails(setDoc(doc(as('alice'), 'resultsDay', '2026-10-25'), { r: {} }));
   });
 });

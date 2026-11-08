@@ -1,6 +1,6 @@
 // Résultats rapides (écrits par ops/live-results.ts dans Firestore results/{match}) : appliqués aux matchs chargés
 // depuis app-data, et classement provisoire recalculé avec le moteur (engine.ts) en attendant la mise à jour officielle.
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from './firebase';
 import { standings, offsetsFrom, rule } from './engine';
 import type { Game, Standing } from './data';
@@ -10,10 +10,13 @@ let cache: { at: number; p: Promise<Map<number, Live>> } | null = null;
 /** Résultats rapides des 3 derniers jours (relus au plus toutes les 2 minutes) */
 export function liveResults() {
   if (!cache || Date.now() - cache.at > 120_000) {
-    const since = new Date(Date.now() - 3 * 864e5).toISOString().slice(0, 10);
-    cache = { at: Date.now(), p: getDocs(query(collection(db, 'results'), where('d', '>=', since)))
-      .then((s) => new Map(s.docs.map((d) => [+d.id, { hs: d.data().hs, as: d.data().as, at: d.data().at?.toMillis?.() ?? Date.now() }])))
-      .catch(() => new Map()) };
+    // Un document par jour (resultsDay/{date}) : 5 lectures, des 3 derniers jours à demain (dates belges ≠ dates UTC vers minuit)
+    const days = Array.from({ length: 5 }, (_, i) => new Date(Date.now() + (1 - i) * 864e5).toISOString().slice(0, 10));
+    cache = { at: Date.now(), p: Promise.all(days.map((d) => getDoc(doc(db, 'resultsDay', d)).catch(() => null)))
+      .then((snaps) => { const m = new Map<number, Live>();
+        for (const s of snaps) for (const [id, v] of Object.entries((s?.data()?.r ?? {}) as Record<string, { hs: number; as: number; at?: { toMillis?: () => number } }>))
+          m.set(+id, { hs: v.hs, as: v.as, at: v.at?.toMillis?.() ?? Date.now() });
+        return m; }) };
   }
   return cache.p;
 }
