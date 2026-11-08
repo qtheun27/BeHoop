@@ -1338,4 +1338,12 @@ export const EN: Record<string, string> = {
   "Regarder sur YouTube": "Watch on YouTube",
   "Mesure d'audience": "Audience measurement",
   "Pour savoir combien de personnes utilisent BeHoop et quelles pages sont consultées, nous utilisons Cloudflare Web Analytics : sans cookie, sans identifiant, sans suivi d'une personne d'une visite à l'autre. Seuls des chiffres globaux (visites, pages, pays, type d'appareil) sont conservés.": "To know how many people use BeHoop and which pages are viewed, we use Cloudflare Web Analytics: no cookies, no identifiers, no tracking of a person from one visit to the next. Only aggregate figures (visits, pages, country, device type) are kept.",
+  "Fais glisser le passage ou ses bords : la vidéo montre l'image exacte. Entre 15 et 30 secondes.": "Drag the clip or its edges: the video shows the exact frame. Between 15 and 30 seconds.",
+  "Aperçu": "Preview",
+  "Partir d'ici": "Start here",
+  "Début − 1 s": "Start − 1 s",
+  "Début + 1 s": "Start + 1 s",
+  "Fin − 1 s": "End − 1 s",
+  "Fin + 1 s": "End + 1 s",
+  "Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l'image exacte.": "Drag the clip or its edges (15 to 30 s): the video shows the exact frame.",
 };

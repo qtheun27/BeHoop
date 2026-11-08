@@ -491,3 +491,30 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
   opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .25s, transform .25s; }
 .to-top.on { opacity: 1; transform: none; pointer-events: auto; }
 @media (min-width: 1100px) { .to-top { bottom: 28px; right: 28px; } }
+
+/* Lecteur des vidéos de match : barre glissable (zone tactile haute, bouton, bulle du temps) */
+.player .bar { height: 30px; touch-action: none; }
+.player .bar .track, .player .bar .fillp, .player .bar .selp { transition: height .15s; }
+.player .bar.active .track, .player .bar.active .fillp { height: 7px; }
+.player .bar .selp { position: absolute; height: 4px; background: var(--accent); opacity: .9; border-radius: 2px; }
+.player .bar .knob { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: #fff; transform: translateX(-50%); box-shadow: 0 1px 6px rgba(0,0,0,.4); transition: width .15s, height .15s; }
+.player .bar.active .knob { width: 20px; height: 20px; }
+.player .bar .bubble { position: absolute; bottom: 30px; transform: translateX(-50%); padding: 4px 8px; border-radius: 8px; background: rgba(0,0,0,.8); font: 700 13px/1 system-ui; color: #fff; pointer-events: none; }
+/* Création d'un Moment (sous la vidéo) */
+.clip-ed { margin-top: 10px; padding: 12px 14px; border-radius: 20px; background: var(--bg2); box-shadow: var(--card-shadow); }
+.clip-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.clip-track { position: relative; height: 56px; margin: 4px 0 20px; border-radius: 12px; background: var(--fill); touch-action: none; user-select: none; -webkit-user-select: none; }
+.clip-tick { position: absolute; top: 0; bottom: 0; width: 1px; background: color-mix(in srgb, var(--text) 18%, transparent); }
+.clip-tick span { position: absolute; top: 100%; margin-top: 4px; transform: translateX(-50%); font-size: 11px; color: var(--text2); white-space: nowrap; }
+.clip-sel { position: absolute; top: 0; bottom: 0; border-radius: 12px; background: color-mix(in srgb, var(--accent) 28%, transparent); border: 3px solid var(--accent); box-sizing: border-box; cursor: grab; }
+.clip-h { position: absolute; top: -3px; bottom: -3px; width: 26px; cursor: ew-resize; }
+.clip-h::after { content: ""; position: absolute; top: 50%; left: 50%; width: 6px; height: 26px; border-radius: 3px; background: #fff; transform: translate(-50%, -50%); box-shadow: 0 1px 4px rgba(0,0,0,.35); }
+.clip-h.l { left: -16px; } .clip-h.r { right: -16px; }
+.clip-now { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--text); pointer-events: none; }
+.clip-fine { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.clip-fine > div { display: grid; justify-items: center; gap: 2px; font-size: 13px; }
+.clip-fine .hstack { gap: 2px; align-items: center; flex-wrap: nowrap; }
+.clip-fine button { white-space: nowrap; padding: 6px 5px; min-width: 0; } .clip-fine b { font-size: 16px; min-width: 54px; text-align: center; font-variant-numeric: tabular-nums; }
+/* Création d'un Moment : actions sur une ligne (aperçu, repartir d'ici, créer) */
+.clip-act { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+.clip-act .btn { min-height: 44px; padding: 0 8px; white-space: nowrap; }

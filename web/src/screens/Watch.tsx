@@ -266,6 +266,23 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   }, [mv.hls, posKey]);
   useEffect(() => { if (!playing || idle) return; const k = setTimeout(() => setIdle(true), 2500); return () => clearTimeout(k); }, [playing, idle]);
   const seek = (x: number) => { ref.current!.currentTime = Math.max(0, Math.min(dur, x)); setIdle(false); };
+  // Position montrée pendant un glissement sur la barre (la vidéo suit, en image clé pendant le geste, précise au lâcher)
+  const [drag, setDrag] = useState<number | null>(null);
+  const lastSeek = useRef(0);
+  const scrubTo = (x: number, final = false) => {
+    const v = ref.current!, tt = Math.max(0, Math.min(dur, x));
+    setDrag(final ? null : tt); setIdle(false);
+    const now = Date.now();
+    if (final) { v.currentTime = tt; setTime(tt); return; }
+    if (now - lastSeek.current < 90) return; // au plus ~11 recherches par seconde : fluide sans saturer le lecteur
+    lastSeek.current = now;
+    const fs = (v as HTMLVideoElement & { fastSeek?: (t: number) => void }).fastSeek;
+    if (fs) fs.call(v, tt); else v.currentTime = tt;
+  };
+  const barTime = (e: React.PointerEvent<HTMLDivElement>) => { const r = e.currentTarget.getBoundingClientRect(); return ((e.clientX - r.left) / r.width) * dur; };
+  // Mode Moment : le passage choisi [a, b] ; « preview » = lecture du passage en boucle
+  const [sel, setSel] = useState<[number, number] | null>(null);
+  const preview = useRef(false);
   const toggle = () => { const el = ref.current!; if (el.paused) el.play(); else el.pause(); };
   const onTap = (e: React.MouseEvent) => {
     const now = Date.now(); const r = box.current!.getBoundingClientRect();
@@ -284,12 +301,20 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
     <>
       <div ref={box} className={`player${idle ? ' idle' : ''}`} onClick={onTap}>
         <video ref={ref} playsInline poster={mediaUrl(mv.hls!.posterKey)} controlsList={author ? undefined : 'nodownload'} onContextMenu={(e) => !author && e.preventDefault()}
-          onTimeUpdate={(e) => { const c = e.currentTarget.currentTime; setTime(c); if (Math.round(c) % 5 === 0) store.set(posKey, c > dur - 10 ? 0 : c); }}
+          onTimeUpdate={(e) => { const c = e.currentTarget.currentTime; setTime(c); if (Math.round(c) % 5 === 0) store.set(posKey, c > dur - 10 ? 0 : c);
+            if (preview.current && sel && c >= sel[1]) e.currentTarget.currentTime = sel[0]; }}
           onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); setIdle(false); }} />
         <div className="ctrl" onClick={(e) => e.stopPropagation()}>
-          <div className="bar" onClick={(e) => { const r = e.currentTarget.getBoundingClientRect(); seek(((e.clientX - r.left) / r.width) * dur); }} role="slider" aria-label={t('Position')} aria-valuemin={0} aria-valuemax={dur} aria-valuenow={Math.round(time)}>
-            <div className="track" /><div className="fillp" style={{ width: `${(time / dur) * 100}%` }} />
+          <div className={`bar${drag != null ? ' active' : ''}`} role="slider" aria-label={t('Position')} aria-valuemin={0} aria-valuemax={dur} aria-valuenow={Math.round(time)} tabIndex={0}
+            onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); haptic(); scrubTo(barTime(e)); }}
+            onPointerMove={(e) => { if (drag != null) scrubTo(barTime(e)); }}
+            onPointerUp={(e) => { if (drag != null) scrubTo(barTime(e), true); }} onPointerCancel={() => drag != null && scrubTo(drag, true)}
+            onKeyDown={(e) => { if (e.key === 'ArrowLeft') seek(time - 5); if (e.key === 'ArrowRight') seek(time + 5); }}>
+            <div className="track" /><div className="fillp" style={{ width: `${((drag ?? time) / dur) * 100}%` }} />
             {chapters.slice(1).map((c) => <div key={c.title} className="mark" style={{ left: `${(c.start / dur) * 100}%` }} title={c.title} />)}
+            {sel && <div className="selp" style={{ left: `${(sel[0] / dur) * 100}%`, width: `${((sel[1] - sel[0]) / dur) * 100}%` }} />}
+            <div className="knob" style={{ left: `${((drag ?? time) / dur) * 100}%` }} />
+            {drag != null && <div className="bubble" style={{ left: `clamp(24px, ${(drag / dur) * 100}%, calc(100% - 24px))` }}>{fmt(drag)}</div>}
           </div>
           <div className="btns">
             <button onClick={toggle} aria-label={playing ? 'Pause' : 'Lecture'} ><Ico n={playing ? 'pause' : 'play'} size={22} /></button>
@@ -301,12 +326,17 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
           </div>
         </div>
       </div>
+      {clip && <ClipEditor id={id} video={ref} dur={dur} time={time} sel={sel} setSel={setSel} preview={preview} onClose={() => { preview.current = false; setSel(null); setClip(false); }} />}
+      {!clip && <>
       <div className="group-title mt">{t('Chapitres')}</div>
       <div className="group">{chapters.map((c) => (
         <button key={c.title} className="row" onClick={() => { seek(c.start); ref.current!.play(); }}>
           <div className="grow" style={{ fontWeight: time >= c.start && time < c.end ? 700 : 400 }}>{t(c.title)}</div><span className="muted">{fmt(c.start)}</span></button>))}</div>
       <div className="hstack">
-        <button className="btn secondary" onClick={() => s.requireAuth(() => setClip(true)) && setClip(true)}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
+        <button className="btn secondary" onClick={() => { const go = () => { ref.current?.pause(); setClip(true);
+          // La vidéo juste sous l'en-tête : vidéo et réglages du Moment tiennent ensemble à l'écran
+          const top = box.current!.getBoundingClientRect().top + scrollY - (document.querySelector('.navbar')?.getBoundingClientRect().height ?? 0) - 8;
+          scrollTo({ top: Math.max(0, top), behavior: 'smooth' }); }; if (s.requireAuth(go)) go(); }}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
         <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
         {!youth && pubDl.data && <a className="btn ghost" href={inSafari(pubDl.data)} target="_blank" rel="noopener noreferrer">{t('Télécharger la vidéo')}</a>}
       </div>
@@ -315,25 +345,85 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       {author && <AffichesBlock id={id} mv={mv} />}
       {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
       {yt && <YoutubeSheet id={id} mv={mv} team={team} onClose={() => setYt(false)} />}
-      {clip && <ClipSheet id={id} time={time} dur={dur} onClose={() => setClip(false)} />}
+      </>}
     </>
   );
 }
 
-/** Sélection d'un passage de 15 à 30 s (poignées début/fin) → rendu vertical 9:16. */
-function ClipSheet({ id, time, dur, onClose }: { id: string; time: number; dur: number; onClose: () => void }) {
+const fmtP = (s: number) => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
+const WIN = 90; // largeur de la frise zoomée (s)
+
+/** Création d'un Moment, sous la vidéo (qui reste visible) : frise zoomée de 90 s autour du passage, poignées début / fin
+ *  et passage entier à faire glisser (la vidéo montre l'image exacte pendant le geste), réglages fins ±1 s, aperçu en
+ *  boucle. Passage de 15 à 30 s, monté ensuite au format vertical avec le score. */
+function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { id: string; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
+  sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<boolean>; onClose: () => void }) {
   const s = useSession();
-  const [a, setA] = useState(Math.max(0, Math.round(time - 10))), [b, setB] = useState(Math.min(dur, Math.round(time + 10)));
-  const len = b - a, ok = len >= 15 && len <= 30;
-  const [busy, setBusy] = useState(false);
+  const around = (c: number): [number, number] => { const a = Math.max(0, Math.min(dur - 20, c - 10)); return [a, Math.min(dur, a + 20)]; };
+  const [a, b] = sel ?? around(time);
+  useEffect(() => { if (!sel) setSel(around(time)); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // Fenêtre de la frise : fixe pendant un geste, recentrée quand le passage en sort
+  const [win, setWin] = useState(() => Math.max(0, Math.min(dur - WIN, (a + b) / 2 - WIN / 2)));
+  useEffect(() => { if (a < win || b > win + WIN) setWin(Math.max(0, Math.min(dur - WIN, (a + b) / 2 - WIN / 2))); }, [a, b]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [busy, setBusy] = useState(false), [playing, setPlaying] = useState(false);
+  const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number } | null>(null);
+  const last = useRef(0);
+  const show = (tt: number, final = false) => {
+    const v = video.current; if (!v) return;
+    const now = Date.now(); if (!final && now - last.current < 80) return; last.current = now;
+    const fs = (v as HTMLVideoElement & { fastSeek?: (t: number) => void }).fastSeek;
+    if (fs && !final) fs.call(v, tt); else v.currentTime = tt;
+  };
+  const stop = () => { preview.current = false; setPlaying(false); video.current?.pause(); };
+  const put = (na: number, nb: number, kind: 'a' | 'b' | 'm', final = false) => {
+    const r = (x: number) => Math.round(x * 10) / 10;
+    na = r(Math.max(0, na)); nb = r(Math.min(dur, nb));
+    setSel([na, nb]); show(kind === 'b' ? nb : na, final);
+  };
+  const down = (kind: 'a' | 'b' | 'm') => (e: React.PointerEvent) => {
+    e.stopPropagation(); stop(); haptic();
+    const track = (e.currentTarget as HTMLElement).closest('.clip-track') as HTMLElement;
+    track.setPointerCapture(e.pointerId);
+    g.current = { kind, x0: e.clientX, a0: a, b0: b, w: track.getBoundingClientRect().width };
+  };
+  const move = (e: React.PointerEvent, final = false) => {
+    const d = g.current; if (!d) return;
+    const dt = ((e.clientX - d.x0) / d.w) * WIN;
+    if (d.kind === 'm') { const len = d.b0 - d.a0; const na = Math.max(0, Math.min(dur - len, d.a0 + dt)); put(na, na + len, 'm', final); }
+    else if (d.kind === 'a') put(Math.min(Math.max(d.a0 + dt, d.b0 - 30), d.b0 - 15), d.b0, 'a', final);
+    else put(d.a0, Math.max(Math.min(d.b0 + dt, d.a0 + 30), d.a0 + 15), 'b', final);
+    if (final) g.current = null;
+  };
+  const pct = (x: number) => `${((x - win) / WIN) * 100}%`;
+  const len = Math.round((b - a) * 10) / 10, ok = len >= 15 && len <= 30;
+  const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
+  const nudge = (which: 'a' | 'b', d: number) => { stop(); haptic();
+    if (which === 'a') put(Math.min(Math.max(a + d, b - 30), b - 15), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + 30), a + 15), 'b', true); };
   return (
-    <Sheet title={t('Nouveau Moment')} onClose={onClose}>
-      <p className="muted">{t('Choisis un passage de 15 à 30 secondes. Il sera monté au format vertical avec le score.')}</p>
-      <label className="label">{t('Début')} : {fmt(a)}</label><input type="range" min={0} max={dur} value={a} onChange={(e) => setA(Math.min(+e.target.value, b - 15))} style={{ width: '100%' }} />
-      <label className="label">{t('Fin')} : {fmt(b)}</label><input type="range" min={0} max={dur} value={b} onChange={(e) => setB(Math.max(+e.target.value, a + 15))} style={{ width: '100%' }} />
-      <p style={{ color: ok ? 'var(--text2)' : 'var(--red)' }}>{t('Durée')} : {len} s {ok ? '' : t('(entre 15 et 30 s)')}</p>
-      <button className="btn" disabled={!ok || busy} onClick={async () => { setBusy(true); try { await api('/moments', { matchVideoId: id, start: a, end: b }); s.toast(t('Moment en préparation…')); onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer le Moment')}</button>
-    </Sheet>
+    <div className="clip-ed">
+      <div className="clip-head"><b><Ico n="bolt" /> {t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span></b>
+        <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
+      <p className="muted" style={{ margin: '0 0 8px', fontSize: 13 }}>{t('Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l\'image exacte.')}</p>
+      <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
+        {ticks.map((x) => <div key={x} className="clip-tick" style={{ left: pct(x) }}><span>{fmt(x)}</span></div>)}
+        <div className="clip-sel" style={{ left: pct(a), width: `${((b - a) / WIN) * 100}%` }} onPointerDown={down('m')}>
+          <div className="clip-h l" onPointerDown={down('a')} aria-label={t('Début')} />
+          <div className="clip-h r" onPointerDown={down('b')} aria-label={t('Fin')} />
+        </div>
+        {time >= win && time <= win + WIN && <div className="clip-now" style={{ left: pct(time) }} />}
+      </div>
+      <div className="clip-fine">
+        <div><span className="muted">{t('Début')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('a', -1)} aria-label={t('Début − 1 s')}>−1 s</button><b>{fmtP(a)}</b><button className="btn ghost small" onClick={() => nudge('a', 1)} aria-label={t('Début + 1 s')}>+1 s</button></div></div>
+        <div><span className="muted">{t('Fin')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('b', -1)} aria-label={t('Fin − 1 s')}>−1 s</button><b>{fmtP(b)}</b><button className="btn ghost small" onClick={() => nudge('b', 1)} aria-label={t('Fin + 1 s')}>+1 s</button></div></div>
+      </div>
+      <div className="clip-act">
+        <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
+          <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
+        <button className="btn ghost" onClick={() => { stop(); const c = video.current?.currentTime ?? time; const [na, nb] = around(c); put(na, nb, 'm', true); }}>{t('Partir d\'ici')}</button>
+      <button className="btn" disabled={!ok || busy} onClick={async () => { stop(); setBusy(true);
+        try { await api('/moments', { matchVideoId: id, start: a, end: b }); s.toast(t('Moment en préparation…')); onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
+      </div>
+    </div>
   );
 }
 

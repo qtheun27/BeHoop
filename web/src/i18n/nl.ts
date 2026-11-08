@@ -1338,4 +1338,12 @@ export const NL: Record<string, string> = {
   "Regarder sur YouTube": "Bekijken op YouTube",
   "Mesure d'audience": "Bezoekersmeting",
   "Pour savoir combien de personnes utilisent BeHoop et quelles pages sont consultées, nous utilisons Cloudflare Web Analytics : sans cookie, sans identifiant, sans suivi d'une personne d'une visite à l'autre. Seuls des chiffres globaux (visites, pages, pays, type d'appareil) sont conservés.": "Om te weten hoeveel mensen BeHoop gebruiken en welke pagina's bekeken worden, gebruiken we Cloudflare Web Analytics: zonder cookies, zonder identificatie, zonder iemand van bezoek tot bezoek te volgen. Enkel globale cijfers (bezoeken, pagina's, land, type toestel) worden bewaard.",
+  "Fais glisser le passage ou ses bords : la vidéo montre l'image exacte. Entre 15 et 30 secondes.": "Versleep het fragment of de randen: de video toont het exacte beeld. Tussen 15 en 30 seconden.",
+  "Aperçu": "Voorbeeld",
+  "Partir d'ici": "Vanaf hier",
+  "Début − 1 s": "Begin − 1 s",
+  "Début + 1 s": "Begin + 1 s",
+  "Fin − 1 s": "Einde − 1 s",
+  "Fin + 1 s": "Einde + 1 s",
+  "Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l'image exacte.": "Versleep het fragment of de randen (15 tot 30 s): de video toont het exacte beeld.",
 };
