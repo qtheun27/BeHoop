@@ -21,7 +21,7 @@ jobs:
         with: { node-version: '22', cache: 'npm' }
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: '21' }
-      - run: npm ci --no-audit --no-fund
+      - run: npm ci --ignore-scripts --no-audit --no-fund  # sans téléchargements annexes (ffmpeg…) : une panne de GitHub ne bloque plus les tests
       - name: Tests des règles (émulateur)
         run: npm run test:rules
       - name: Publication
