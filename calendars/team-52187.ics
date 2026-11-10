@@ -3,16 +3,16 @@ VERSION:2.0
 PRODID:-//Suivi Basket Hainaut//FR
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:PU12HM New Basket Club La Bruyère asbl
+X-WR-CALNAME:PU12HM NBC La Bruyère
 X-WR-TIMEZONE:Europe/Brussels
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:match-485834@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20260829T150000
 DTEND;TZID=Europe/Brussels:20260829T170000
-SUMMARY:🏆 PU12HM New Basket Club La Bruyère asbl vs PU12HM BC Malonne A
+SUMMARY:🏆 PU12HM NBC La Bruyère vs PU12HM BC Malonne A
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -22,11 +22,10 @@ DESCRIPTION:Compétition : Coupe U12 Messieurs\nScore : 10 - 106
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476608@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20260912T150000
 DTEND;TZID=Europe/Brussels:20260912T170000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Royal Herbuc
- henne Dinant
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Royal Herbuchenne Dinant
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -37,11 +36,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B\nScor
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476564@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261003T160000
 DTEND;TZID=Europe/Brussels:20261003T180000
-SUMMARY:🏀 PU12HM Cerfontaine B.C. A vs PU12HM New Basket Club La Bruyèr
- e asbl
+SUMMARY:🏀 PU12HM Cerfontaine B.C. A vs PU12HM NBC La Bruyère
 LOCATION:Hall Omnisports du Fouery\, Rue du Fouery\, 4\, 5630\, Cerfontaine
 GEO:50.17246270000000000000;4.40727150000000000000
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports du Fouery,
@@ -52,11 +50,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B\nScor
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476654@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261031T153000
 DTEND;TZID=Europe/Brussels:20261031T173000
-SUMMARY:🏀 PU12HM RBB Gembloux A vs PU12HM New Basket Club La Bruyère as
- bl
+SUMMARY:🏀 PU12HM RBB Gembloux A vs PU12HM NBC La Bruyère
 LOCATION:Centre sportif de l'Orneau\, Chaussée de Namur 28\, 5030\, Gemblo
  ux
 GEO:50.56692125748399;4.700883457669757
@@ -68,11 +65,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B\nScor
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476610@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261114T130000
 DTEND;TZID=Europe/Brussels:20261114T150000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Royal Basket
-  Club Belgrade B
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Royal Basket Club Belgrade B
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -82,11 +78,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476643@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261121T150000
 DTEND;TZID=Europe/Brussels:20261121T170000
-SUMMARY:🏀 PU12HM Royal BC Loyers vs PU12HM New Basket Club La Bruyère a
- sbl
+SUMMARY:🏀 PU12HM Royal BC Loyers vs PU12HM NBC La Bruyère
 LOCATION:Hall Omnisports de Loyers\, Comognes de Loyers\, 42\, 5101\, Loyer
  s
 GEO:50.4549452;4.9569284
@@ -97,11 +92,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476611@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261205T170000
 DTEND;TZID=Europe/Brussels:20261205T190000
-SUMMARY:🏀 PU12HM BC Rochefort B vs PU12HM New Basket Club La Bruyère as
- bl
+SUMMARY:🏀 PU12HM BC Rochefort B vs PU12HM NBC La Bruyère
 LOCATION:Hall Omnisports de Jemelle\, Rue des Jardins\, 1\, 5580\, Jemelle
 GEO:50.16018250000000000000;5.24863090000000000000
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Omnisports de Jemelle
@@ -111,11 +105,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476612@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261212T130000
 DTEND;TZID=Europe/Brussels:20261212T150000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Royal BC Mai
- llen A
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Royal BC Maillen A
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -125,11 +118,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476557@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20261220T093000
 DTEND;TZID=Europe/Brussels:20261220T113000
-SUMMARY:🏀 PU12HM AS Mazy-Spy A vs PU12HM New Basket Club La Bruyère asb
- l
+SUMMARY:🏀 PU12HM AS Mazy-Spy A vs PU12HM NBC La Bruyère
 LOCATION:Hall Omnisports de Jemeppe-sur-Sambre\, rue Saint-Martin 25\, 5190
  \, Jemeppe-sur-Sambre
 GEO:50.46432876586914;4.657829284667969
@@ -141,11 +133,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476547@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270130T150000
 DTEND;TZID=Europe/Brussels:20270130T170000
-SUMMARY:🏀 PU12HM Royal Herbuchenne Dinant vs PU12HM New Basket Club La B
- ruyère asbl
+SUMMARY:🏀 PU12HM Royal Herbuchenne Dinant vs PU12HM NBC La Bruyère
 LOCATION:Institut Technique Herbuchenne\, Chemin d'Herbuchenne\, 1\, 5500\,
   Dinant
 GEO:50.26089270000000000000;4.92205640000000000000
@@ -157,11 +148,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476636@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270206T163000
 DTEND;TZID=Europe/Brussels:20270206T183000
-SUMMARY:🏀 PU12HM Royal BC Maillen A vs PU12HM New Basket Club La Bruyèr
- e asbl
+SUMMARY:🏀 PU12HM Royal BC Maillen A vs PU12HM NBC La Bruyère
 LOCATION:Centre Sportif de Maillen\, Rue de Crupet 45\, 5330\, Maillen
 GEO:50.37546330000000000000;4.96690610000000000000
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Centre Sportif de Maillen,
@@ -171,11 +161,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476614@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270214T110000
 DTEND;TZID=Europe/Brussels:20270214T130000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Cerfontaine 
- B.C. A
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Cerfontaine B.C. A
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -185,11 +174,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476594@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270220T150000
 DTEND;TZID=Europe/Brussels:20270220T170000
-SUMMARY:🏀 PU12HM Royal Basket Club Belgrade B vs PU12HM New Basket Club 
- La Bruyère asbl
+SUMMARY:🏀 PU12HM Royal Basket Club Belgrade B vs PU12HM NBC La Bruyère
 LOCATION:Complexe Sportif José Tyssaen\, Rue des Tautis 19\, 5001\, Belgra
  de
 GEO:50.47160270000000000000;4.82520410000000000000
@@ -200,11 +188,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476615@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270227T150000
 DTEND;TZID=Europe/Brussels:20270227T170000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Royal BC Loy
- ers
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Royal BC Loyers
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -214,11 +201,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476609@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270306T130000
 DTEND;TZID=Europe/Brussels:20270306T150000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM Royal Gallia
-  BC Beez B
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM Royal Gallia BC Beez B
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -228,11 +214,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476616@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270320T130000
 DTEND;TZID=Europe/Brussels:20270320T150000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM RBB Gembloux
-  A
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM RBB Gembloux A
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -242,11 +227,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476605@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270403T120000
 DTEND;TZID=Europe/Brussels:20270403T140000
-SUMMARY:🏀 PU12HM Royal Gallia BC Beez B vs PU12HM New Basket Club La Bru
- yère asbl
+SUMMARY:🏀 PU12HM Royal Gallia BC Beez B vs PU12HM NBC La Bruyère
 LOCATION:Complexe Sportif de Beez\, Avenue Reine Elisabeth 2\, 5000\, Beez
 GEO:50.46749650000000000000;4.92225170000000000000
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Complexe Sportif de Beez, 
@@ -256,11 +240,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476584@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270417T150000
 DTEND;TZID=Europe/Brussels:20270417T170000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM BC Rochefort
-  B
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM BC Rochefort B
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
@@ -270,11 +253,10 @@ DESCRIPTION:Compétition : Provincial U12 Garçons et Mixtes Série B
 END:VEVENT
 BEGIN:VEVENT
 UID:match-476617@basket-awbb
-DTSTAMP:20261110T060707Z
+DTSTAMP:20261110T180717Z
 DTSTART;TZID=Europe/Brussels:20270424T130000
 DTEND;TZID=Europe/Brussels:20270424T150000
-SUMMARY:🏀 PU12HM New Basket Club La Bruyère asbl vs PU12HM AS Mazy-Spy 
- A
+SUMMARY:🏀 PU12HM NBC La Bruyère vs PU12HM AS Mazy-Spy A
 LOCATION:Hall Sportif de La Bruyère\, rue de Rhisnes 3\, 5081\, Emines
 GEO:50.5117391;4.8444755
 X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-ADDRESS="Hall Sportif de La Bruyèr
