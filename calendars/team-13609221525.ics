@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BeHoop//Basket//FR
+X-WR-CALNAME:KYD Kortenberg Young Devils G08 A
+X-WR-TIMEZONE:Europe/Brussels
+BEGIN:VEVENT
+UID:bh-10246900276-13609221525@behoop.be
+DTSTAMP:20261117T060930Z
+DTSTART;TZID=Europe/Brussels:20261121T104000
+DTEND;TZID=Europe/Brussels:20261121T124000
+SUMMARY:KYD Kortenberg Young Devils G08 A – AB Inbev Leuven Bears G08 D
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:Vlaams-Brabant peanuts event 2026 02 ST GENES RODE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12644422507-13609221525@behoop.be
+DTSTAMP:20261117T060930Z
+DTSTART;TZID=Europe/Brussels:20261121T110000
+DTEND;TZID=Europe/Brussels:20261121T130000
+SUMMARY:AB Inbev Leuven Bears G08 E – KYD Kortenberg Young Devils G08 A
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:Vlaams-Brabant peanuts event 2026 02 ST GENES RODE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-13183027528-13609221525@behoop.be
+DTSTAMP:20261117T060930Z
+DTSTART;TZID=Europe/Brussels:20261121T113000
+DTEND;TZID=Europe/Brussels:20261121T133000
+SUMMARY:De Rode Leeuwen G08 D – KYD Kortenberg Young Devils G08 A
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:Vlaams-Brabant peanuts event 2026 02 ST GENES RODE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-12779776292-13609221525@behoop.be
+DTSTAMP:20261117T060930Z
+DTSTART;TZID=Europe/Brussels:20261121T120500
+DTEND;TZID=Europe/Brussels:20261121T140500
+SUMMARY:BC Machelen-Diegem G08 A – KYD Kortenberg Young Devils G08 A
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:Vlaams-Brabant peanuts event 2026 02 ST GENES RODE
+END:VEVENT
+BEGIN:VEVENT
+UID:bh-10112679324-13609221525@behoop.be
+DTSTAMP:20261117T060930Z
+DTSTART;TZID=Europe/Brussels:20261121T123500
+DTEND;TZID=Europe/Brussels:20261121T143500
+SUMMARY:KYD Kortenberg Young Devils G08 A – KYD Kortenberg Young Devils G08 B
+LOCATION:Sporthal Wauterbos\, Doornlarenhoofdstraat\, 1640 Sint-Genesius-Rode
+DESCRIPTION:Vlaams-Brabant peanuts event 2026 02 ST GENES RODE
+END:VEVENT
+END:VCALENDAR
