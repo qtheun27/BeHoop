@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T06:06:46.275562Z",
+  "generated_at": "2026-11-18T18:07:29.287640Z",
   "organization": {
     "metadata": [],
     "reference": "AW",
@@ -663,7 +663,7 @@
       "street2": "rue de Verdun 242",
       "zip": "1130",
       "city": "Haren",
-      "email": "secretaire@asharen.be",
+      "email": "delnoysandie@gmail.com",
       "venue": {
         "name": "Centre Sportif Haren",
         "street": "Rue du Hall des Sports 15",
@@ -22288,7 +22288,8 @@
         {
           "id": 53683,
           "name": "PU10HM BC Miavoye GH B",
-          "category": "PU10HM B"
+          "category": "PU10HM B",
+          "ics_url": "https://behoop.be/calendars/team-53683.ics"
         }
       ]
     },
@@ -79563,9 +79564,9 @@
     ],
     "6649": [
       {
-        "id": 2778251,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797511,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52335,
         "played": 2,
@@ -79608,9 +79609,9 @@
         "club_logo_img_url": "uploads/club1381/logo-femina.png"
       },
       {
-        "id": 2778252,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797512,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 50697,
         "played": 2,
@@ -79653,9 +79654,9 @@
         "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
       },
       {
-        "id": 2778253,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797513,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52636,
         "played": 2,
@@ -79698,9 +79699,9 @@
         "club_logo_img_url": "/uploads/club1437/club_ref_2360.png"
       },
       {
-        "id": 2778254,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797514,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52224,
         "played": 2,
@@ -79743,9 +79744,9 @@
         "club_logo_img_url": "uploads/club1331/abc-peronnes.jpg"
       },
       {
-        "id": 2778255,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797515,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52231,
         "played": 2,
@@ -79788,9 +79789,9 @@
         "club_logo_img_url": "/uploads/club1300/club_ref_958.png"
       },
       {
-        "id": 2778256,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797516,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 51464,
         "played": 2,
@@ -79833,9 +79834,9 @@
         "club_logo_img_url": "uploads/club263089/logo-cfb-fleuris-200x200.jpg"
       },
       {
-        "id": 2778257,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797517,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52034,
         "played": 2,
@@ -79878,9 +79879,9 @@
         "club_logo_img_url": "uploads/club1299/logo-js-soignies1.png"
       },
       {
-        "id": 2778258,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797518,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 50913,
         "played": 2,
@@ -79923,9 +79924,9 @@
         "club_logo_img_url": "/uploads/club1405/club_ref_1845.png"
       },
       {
-        "id": 2778259,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797519,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52415,
         "played": 1,
@@ -79968,9 +79969,9 @@
         "club_logo_img_url": "/uploads/club1505/club_ref_2690.png"
       },
       {
-        "id": 2778260,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797520,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52179,
         "played": 1,
@@ -80013,9 +80014,9 @@
         "club_logo_img_url": "uploads/club1273/rebc-templeuve.JPG"
       },
       {
-        "id": 2778261,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797521,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52069,
         "played": 1,
@@ -80058,9 +80059,9 @@
         "club_logo_img_url": "uploads/club1394/1752-bbc-brainois.jpg"
       },
       {
-        "id": 2778262,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797522,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 51845,
         "played": 1,
@@ -80103,9 +80104,9 @@
         "club_logo_img_url": "uploads/club1395/logo-soleil-levant.jpg"
       },
       {
-        "id": 2778263,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797523,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52088,
         "played": 1,
@@ -80148,9 +80149,9 @@
         "club_logo_img_url": "/uploads/club1406/club_ref_1846.png"
       },
       {
-        "id": 2778264,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797524,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 51194,
         "played": 1,
@@ -80193,9 +80194,9 @@
         "club_logo_img_url": "uploads/club1459/logoubc-2018-def.jpg"
       },
       {
-        "id": 2778265,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797525,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52242,
         "played": 1,
@@ -80238,9 +80239,9 @@
         "club_logo_img_url": "uploads/club1313/1047-bbc-leuze.png"
       },
       {
-        "id": 2778266,
-        "created_at": "2026-11-10 14:15:05",
-        "updated_at": "2026-11-10 14:15:05",
+        "id": 2797526,
+        "created_at": "2026-11-18 15:46:23",
+        "updated_at": "2026-11-18 15:46:23",
         "serie_id": 6649,
         "team_id": 52546,
         "played": 1,
@@ -82328,9 +82329,9 @@
     ],
     "6490": [
       {
-        "id": 2791888,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797461,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53314,
         "played": 3,
@@ -82373,9 +82374,9 @@
         "club_logo_img_url": "uploads/club1273/rebc-templeuve.JPG"
       },
       {
-        "id": 2791889,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797462,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 50976,
         "played": 2,
@@ -82418,9 +82419,9 @@
         "club_logo_img_url": "/uploads/club1234/club_ref_69.png"
       },
       {
-        "id": 2791890,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797463,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51092,
         "played": 2,
@@ -82463,9 +82464,9 @@
         "club_logo_img_url": "uploads2/0284-val-dieu-spirou.png"
       },
       {
-        "id": 2791891,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797464,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51278,
         "played": 2,
@@ -82508,9 +82509,9 @@
         "club_logo_img_url": "/uploads/club1390/club_ref_1724.png"
       },
       {
-        "id": 2791892,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797465,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52051,
         "played": 2,
@@ -82553,9 +82554,9 @@
         "club_logo_img_url": "uploads/club1299/logo-js-soignies1.png"
       },
       {
-        "id": 2791893,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797466,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52622,
         "played": 2,
@@ -82598,9 +82599,9 @@
         "club_logo_img_url": "uploads/club1451/image_2.jpeg"
       },
       {
-        "id": 2791894,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797467,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53071,
         "played": 2,
@@ -82643,9 +82644,9 @@
         "club_logo_img_url": "uploads/club263089/logo-cfb-fleuris-200x200.jpg"
       },
       {
-        "id": 2791895,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797468,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53209,
         "played": 2,
@@ -82688,9 +82689,9 @@
         "club_logo_img_url": "uploads/club1291/ecaussines.jpg"
       },
       {
-        "id": 2791896,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797469,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51108,
         "played": 2,
@@ -82733,9 +82734,9 @@
         "club_logo_img_url": "uploads/club1476/logo-bc-js-estaimpuis.jpg"
       },
       {
-        "id": 2791897,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797470,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51319,
         "played": 2,
@@ -82778,9 +82779,9 @@
         "club_logo_img_url": "/uploads/club1405/club_ref_1845.png"
       },
       {
-        "id": 2791898,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797471,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52074,
         "played": 2,
@@ -82823,9 +82824,9 @@
         "club_logo_img_url": "uploads/club1394/1752-bbc-brainois.jpg"
       },
       {
-        "id": 2791899,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797472,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52784,
         "played": 2,
@@ -82868,9 +82869,9 @@
         "club_logo_img_url": "uploads/club1433/bbc-tournai.png"
       },
       {
-        "id": 2791900,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797473,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52858,
         "played": 2,
@@ -82913,9 +82914,9 @@
         "club_logo_img_url": "/uploads/club1505/club_ref_2690.png"
       },
       {
-        "id": 2791901,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797474,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52997,
         "played": 2,
@@ -82958,9 +82959,9 @@
         "club_logo_img_url": "/uploads/club1406/club_ref_1846.png"
       },
       {
-        "id": 2791902,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797475,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53189,
         "played": 2,
@@ -83003,9 +83004,9 @@
         "club_logo_img_url": "uploads/club1444/bgbc-2428.JPG"
       },
       {
-        "id": 2791903,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797476,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53233,
         "played": 2,
@@ -83048,9 +83049,9 @@
         "club_logo_img_url": "uploads/club1303/rbc-montagnard.JPG"
       },
       {
-        "id": 2791904,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797477,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53480,
         "played": 2,
@@ -83093,9 +83094,9 @@
         "club_logo_img_url": "uploads2/0176-cb-royale-fraternite.png"
       },
       {
-        "id": 2791905,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797478,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 50723,
         "played": 1,
@@ -83138,9 +83139,9 @@
         "club_logo_img_url": "uploads/club1341/1325-rcbe-2000.jpg"
       },
       {
-        "id": 2791906,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797479,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 50975,
         "played": 1,
@@ -83183,9 +83184,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2791907,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797480,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51439,
         "played": 1,
@@ -83228,9 +83229,9 @@
         "club_logo_img_url": "uploads2/marcinele-logo-no-bg.png"
       },
       {
-        "id": 2791908,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797481,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51616,
         "played": 1,
@@ -83273,9 +83274,9 @@
         "club_logo_img_url": "uploads/club1374/1592-bc-amll.png"
       },
       {
-        "id": 2791909,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797482,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 51993,
         "played": 1,
@@ -83318,9 +83319,9 @@
         "club_logo_img_url": "/uploads/club1314/club_ref_1052.png"
       },
       {
-        "id": 2791910,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797483,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52341,
         "played": 1,
@@ -83363,9 +83364,9 @@
         "club_logo_img_url": "uploads/club1368/union-bc-quaregnon-1567.jpeg"
       },
       {
-        "id": 2791911,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797484,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52369,
         "played": 1,
@@ -83408,9 +83409,9 @@
         "club_logo_img_url": "uploads/club1315/logo-ransart-1054.png"
       },
       {
-        "id": 2791912,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797485,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52375,
         "played": 1,
@@ -83453,9 +83454,9 @@
         "club_logo_img_url": "uploads/club1379/rapido-tuin-lobbes.png"
       },
       {
-        "id": 2791913,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797486,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52519,
         "played": 1,
@@ -83498,9 +83499,9 @@
         "club_logo_img_url": "uploads2/2533-js-cuesmes_1.png"
       },
       {
-        "id": 2791914,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797487,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52549,
         "played": 1,
@@ -83543,9 +83544,9 @@
         "club_logo_img_url": "uploads/club1338/logo-couleurs.png"
       },
       {
-        "id": 2791915,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797488,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53027,
         "played": 1,
@@ -83588,9 +83589,9 @@
         "club_logo_img_url": "uploads/club1459/logoubc-2018-def.jpg"
       },
       {
-        "id": 2791916,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797489,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53107,
         "played": 1,
@@ -83633,9 +83634,9 @@
         "club_logo_img_url": "uploads2/2678-js-dottignies.jpg"
       },
       {
-        "id": 2791917,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797490,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53211,
         "played": 1,
@@ -83678,9 +83679,9 @@
         "club_logo_img_url": "uploads/club1286/0822-boussu-saint-ghislain-united.jpg"
       },
       {
-        "id": 2791918,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797491,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53243,
         "played": 1,
@@ -83723,9 +83724,9 @@
         "club_logo_img_url": "/uploads/club1243/club_ref_145.png"
       },
       {
-        "id": 2791919,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797492,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53331,
         "played": 1,
@@ -83768,9 +83769,9 @@
         "club_logo_img_url": "uploads/club1329/1208-js-stambruges.png"
       },
       {
-        "id": 2791920,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797493,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 53335,
         "played": 1,
@@ -83813,9 +83814,9 @@
         "club_logo_img_url": "/uploads/club1305/club_ref_981.png"
       },
       {
-        "id": 2791921,
-        "created_at": "2026-11-15 12:44:17",
-        "updated_at": "2026-11-15 12:44:17",
+        "id": 2797494,
+        "created_at": "2026-11-18 14:30:10",
+        "updated_at": "2026-11-18 14:30:10",
         "serie_id": 6490,
         "team_id": 52969,
         "played": 1,
@@ -88366,9 +88367,9 @@
     ],
     "6481": [
       {
-        "id": 2779814,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797380,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52003,
         "played": 1,
@@ -88411,9 +88412,9 @@
         "club_logo_img_url": "/uploads/club1314/club_ref_1052.png"
       },
       {
-        "id": 2779815,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797381,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52047,
         "played": 1,
@@ -88456,9 +88457,9 @@
         "club_logo_img_url": "uploads/club1299/logo-js-soignies1.png"
       },
       {
-        "id": 2779816,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797382,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52357,
         "played": 1,
@@ -88501,9 +88502,9 @@
         "club_logo_img_url": "uploads2/0284-val-dieu-spirou.png"
       },
       {
-        "id": 2779817,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797383,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52560,
         "played": 1,
@@ -88546,9 +88547,9 @@
         "club_logo_img_url": "uploads/club1338/logo-couleurs.png"
       },
       {
-        "id": 2779818,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797384,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52820,
         "played": 1,
@@ -88591,9 +88592,9 @@
         "club_logo_img_url": "uploads/club1331/abc-peronnes.jpg"
       },
       {
-        "id": 2779819,
-        "created_at": "2026-11-11 11:02:39",
-        "updated_at": "2026-11-11 11:02:39",
+        "id": 2797385,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52992,
         "played": 1,
@@ -88636,9 +88637,9 @@
         "club_logo_img_url": "/uploads/club1406/club_ref_1846.png"
       },
       {
-        "id": 2779820,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797386,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 53501,
         "played": 1,
@@ -88681,9 +88682,9 @@
         "club_logo_img_url": "uploads/club1273/rebc-templeuve.JPG"
       },
       {
-        "id": 2779821,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797387,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 53503,
         "played": 1,
@@ -88726,9 +88727,9 @@
         "club_logo_img_url": "/uploads/club1437/club_ref_2360.png"
       },
       {
-        "id": 2779822,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797388,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 50969,
         "played": 1,
@@ -88771,9 +88772,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2779823,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797389,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 51438,
         "played": 1,
@@ -88816,9 +88817,9 @@
         "club_logo_img_url": "uploads2/marcinele-logo-no-bg.png"
       },
       {
-        "id": 2779824,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797390,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 51672,
         "played": 1,
@@ -88861,9 +88862,9 @@
         "club_logo_img_url": "uploads/club1374/1592-bc-amll.png"
       },
       {
-        "id": 2779825,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797391,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 51740,
         "played": 1,
@@ -88906,9 +88907,9 @@
         "club_logo_img_url": "uploads/club1354/1408-carni-res.jpeg"
       },
       {
-        "id": 2779826,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797392,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52073,
         "played": 1,
@@ -88951,9 +88952,9 @@
         "club_logo_img_url": "uploads/club1394/1752-bbc-brainois.jpg"
       },
       {
-        "id": 2779827,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797393,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 53059,
         "played": 1,
@@ -88996,9 +88997,9 @@
         "club_logo_img_url": "uploads/club263089/logo-cfb-fleuris-200x200.jpg"
       },
       {
-        "id": 2779828,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797394,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 53481,
         "played": 1,
@@ -89041,9 +89042,9 @@
         "club_logo_img_url": "uploads2/0176-cb-royale-fraternite.png"
       },
       {
-        "id": 2779829,
-        "created_at": "2026-11-11 11:02:40",
-        "updated_at": "2026-11-11 11:02:40",
+        "id": 2797395,
+        "created_at": "2026-11-18 14:28:26",
+        "updated_at": "2026-11-18 14:28:26",
         "serie_id": 6481,
         "team_id": 52373,
         "played": 1,
@@ -89990,9 +89991,9 @@
     ],
     "6483": [
       {
-        "id": 2780869,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797432,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 50997,
         "played": 1,
@@ -90035,9 +90036,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2780870,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797433,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 51206,
         "played": 1,
@@ -90080,9 +90081,9 @@
         "club_logo_img_url": "/uploads/club1390/club_ref_1724.png"
       },
       {
-        "id": 2780871,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797434,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 51446,
         "played": 1,
@@ -90125,9 +90126,9 @@
         "club_logo_img_url": "uploads2/marcinele-logo-no-bg.png"
       },
       {
-        "id": 2780872,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797435,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52079,
         "played": 1,
@@ -90170,9 +90171,9 @@
         "club_logo_img_url": "uploads/club1394/1752-bbc-brainois.jpg"
       },
       {
-        "id": 2780873,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797436,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52691,
         "played": 1,
@@ -90215,9 +90216,9 @@
         "club_logo_img_url": "/uploads/club1300/club_ref_958.png"
       },
       {
-        "id": 2780874,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797437,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 53061,
         "played": 1,
@@ -90260,9 +90261,9 @@
         "club_logo_img_url": "uploads/club263089/logo-cfb-fleuris-200x200.jpg"
       },
       {
-        "id": 2780875,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797438,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 53477,
         "played": 1,
@@ -90305,9 +90306,9 @@
         "club_logo_img_url": "uploads2/0176-cb-royale-fraternite.png"
       },
       {
-        "id": 2780876,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797439,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 53510,
         "played": 1,
@@ -90350,9 +90351,9 @@
         "club_logo_img_url": "/uploads/club1437/club_ref_2360.png"
       },
       {
-        "id": 2780877,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797440,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 51315,
         "played": 1,
@@ -90395,9 +90396,9 @@
         "club_logo_img_url": "/uploads/club1405/club_ref_1845.png"
       },
       {
-        "id": 2780878,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797441,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 51670,
         "played": 1,
@@ -90440,9 +90441,9 @@
         "club_logo_img_url": "uploads/club1374/1592-bc-amll.png"
       },
       {
-        "id": 2780879,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797442,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52050,
         "played": 1,
@@ -90485,9 +90486,9 @@
         "club_logo_img_url": "uploads/club1299/logo-js-soignies1.png"
       },
       {
-        "id": 2780880,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797443,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52355,
         "played": 1,
@@ -90530,9 +90531,9 @@
         "club_logo_img_url": "uploads2/0284-val-dieu-spirou.png"
       },
       {
-        "id": 2780881,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797444,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 53099,
         "played": 1,
@@ -90575,9 +90576,9 @@
         "club_logo_img_url": "uploads2/2678-js-dottignies.jpg"
       },
       {
-        "id": 2780882,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797445,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 53317,
         "played": 1,
@@ -90620,9 +90621,9 @@
         "club_logo_img_url": "uploads/club1273/rebc-templeuve.JPG"
       },
       {
-        "id": 2780883,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797446,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52381,
         "played": 1,
@@ -90665,9 +90666,9 @@
         "club_logo_img_url": "uploads/club1379/rapido-tuin-lobbes.png"
       },
       {
-        "id": 2780884,
-        "created_at": "2026-11-12 06:19:36",
-        "updated_at": "2026-11-12 06:19:36",
+        "id": 2797447,
+        "created_at": "2026-11-18 14:29:26",
+        "updated_at": "2026-11-18 14:29:26",
         "serie_id": 6483,
         "team_id": 52994,
         "played": 1,
@@ -90712,9 +90713,9 @@
     ],
     "6484": [
       {
-        "id": 2783863,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797448,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 50695,
         "played": 1,
@@ -90757,9 +90758,9 @@
         "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
       },
       {
-        "id": 2783864,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797449,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 52250,
         "played": 1,
@@ -90802,9 +90803,9 @@
         "club_logo_img_url": "uploads/club1313/1047-bbc-leuze.png"
       },
       {
-        "id": 2783865,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797450,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 52558,
         "played": 1,
@@ -90847,9 +90848,9 @@
         "club_logo_img_url": "uploads/club1338/logo-couleurs.png"
       },
       {
-        "id": 2783866,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797451,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 52688,
         "played": 1,
@@ -90892,9 +90893,9 @@
         "club_logo_img_url": "/uploads/club1300/club_ref_958.png"
       },
       {
-        "id": 2783867,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797452,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 53098,
         "played": 1,
@@ -90937,9 +90938,9 @@
         "club_logo_img_url": "uploads2/2678-js-dottignies.jpg"
       },
       {
-        "id": 2783868,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797453,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 51113,
         "played": 1,
@@ -90982,9 +90983,9 @@
         "club_logo_img_url": "uploads/club1476/logo-bc-js-estaimpuis.jpg"
       },
       {
-        "id": 2783869,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797454,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 51323,
         "played": 1,
@@ -91027,9 +91028,9 @@
         "club_logo_img_url": "/uploads/club1405/club_ref_1845.png"
       },
       {
-        "id": 2783870,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797455,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 52082,
         "played": 1,
@@ -91072,9 +91073,9 @@
         "club_logo_img_url": "uploads/club1394/1752-bbc-brainois.jpg"
       },
       {
-        "id": 2783871,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797456,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 52818,
         "played": 1,
@@ -91117,9 +91118,9 @@
         "club_logo_img_url": "uploads/club1331/abc-peronnes.jpg"
       },
       {
-        "id": 2783872,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797457,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 53069,
         "played": 1,
@@ -91162,9 +91163,9 @@
         "club_logo_img_url": "uploads/club263089/logo-cfb-fleuris-200x200.jpg"
       },
       {
-        "id": 2783873,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797458,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 51009,
         "played": 0,
@@ -91207,9 +91208,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2783874,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797459,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 53008,
         "played": 0,
@@ -91252,9 +91253,9 @@
         "club_logo_img_url": "/uploads/club1406/club_ref_1846.png"
       },
       {
-        "id": 2783875,
-        "created_at": "2026-11-14 12:03:50",
-        "updated_at": "2026-11-14 12:03:50",
+        "id": 2797460,
+        "created_at": "2026-11-18 14:29:56",
+        "updated_at": "2026-11-18 14:29:56",
         "serie_id": 6484,
         "team_id": 53511,
         "played": 0,
@@ -110233,9 +110234,9 @@
     ],
     "6614": [
       {
-        "id": 2796543,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797527,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 51940,
         "played": 6,
@@ -110278,9 +110279,9 @@
         "club_logo_img_url": "uploads/club1393/3472-rbchb-logo-net.jpg"
       },
       {
-        "id": 2796544,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797528,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 50910,
         "played": 5,
@@ -110323,9 +110324,9 @@
         "club_logo_img_url": "/uploads/club1272/club_ref_493.png"
       },
       {
-        "id": 2796545,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797529,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53417,
         "played": 5,
@@ -110368,9 +110369,9 @@
         "club_logo_img_url": "uploads/club1227/rbc-esneux-2019.png"
       },
       {
-        "id": 2796546,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797530,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53086,
         "played": 4,
@@ -110413,9 +110414,9 @@
         "club_logo_img_url": "uploads/club1375/1595-les-miniers-rbc-blegny.jpeg"
       },
       {
-        "id": 2796547,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797531,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53384,
         "played": 4,
@@ -110458,9 +110459,9 @@
         "club_logo_img_url": "uploads/club1236/0078-rbc-prayon.jpg"
       },
       {
-        "id": 2796548,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797532,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53202,
         "played": 4,
@@ -110503,9 +110504,9 @@
         "club_logo_img_url": "uploads2/691-stavelot-rbc.jpg"
       },
       {
-        "id": 2796549,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797533,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53109,
         "played": 6,
@@ -110548,9 +110549,9 @@
         "club_logo_img_url": "uploads/club1352/rbc-aubel.jpg"
       },
       {
-        "id": 2796550,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797534,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53016,
         "played": 6,
@@ -110593,9 +110594,9 @@
         "club_logo_img_url": "uploads/club1340/bccointe.jpg"
       },
       {
-        "id": 2796551,
-        "created_at": "2026-11-16 17:56:03",
-        "updated_at": "2026-11-16 17:56:03",
+        "id": 2797535,
+        "created_at": "2026-11-18 17:55:35",
+        "updated_at": "2026-11-18 17:55:35",
         "serie_id": 6614,
         "team_id": 53052,
         "played": 4,
@@ -155589,9 +155590,9 @@
     ],
     "6217": [
       {
-        "id": 2795153,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797536,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51016,
         "played": 7,
@@ -155634,9 +155635,9 @@
         "club_logo_img_url": "uploads/club1393/3472-rbchb-logo-net.jpg"
       },
       {
-        "id": 2795154,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797537,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51287,
         "played": 8,
@@ -155679,9 +155680,9 @@
         "club_logo_img_url": "uploads2/0466-rcs-natoye.jpg"
       },
       {
-        "id": 2795155,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797538,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 50941,
         "played": 7,
@@ -155724,9 +155725,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2795156,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797539,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 50668,
         "played": 6,
@@ -155769,9 +155770,9 @@
         "club_logo_img_url": "uploads/club1340/bccointe.jpg"
       },
       {
-        "id": 2795157,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797540,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 50906,
         "played": 7,
@@ -155814,9 +155815,9 @@
         "club_logo_img_url": "uploads2/1603-floreal-bcca-neufchateau.jpeg"
       },
       {
-        "id": 2795158,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797541,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51233,
         "played": 6,
@@ -155859,9 +155860,9 @@
         "club_logo_img_url": "uploads/club1236/0078-rbc-prayon.jpg"
       },
       {
-        "id": 2795159,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797542,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51153,
         "played": 7,
@@ -155904,9 +155905,9 @@
         "club_logo_img_url": "uploads/club1454/logouhb-noir-copier.jpg"
       },
       {
-        "id": 2795160,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797543,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51188,
         "played": 7,
@@ -155949,9 +155950,9 @@
         "club_logo_img_url": "uploads/club240503/2699-cimede-li-ge-panthers.jpg"
       },
       {
-        "id": 2795161,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797544,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51251,
         "played": 6,
@@ -155994,9 +155995,9 @@
         "club_logo_img_url": "uploads/club1362/bc-alleur-16-01-20.jpg"
       },
       {
-        "id": 2795162,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797545,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51121,
         "played": 7,
@@ -156039,9 +156040,9 @@
         "club_logo_img_url": "uploads/club1229/0046-rbc-pepinster-eb.png"
       },
       {
-        "id": 2795163,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797546,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51215,
         "played": 7,
@@ -156084,9 +156085,9 @@
         "club_logo_img_url": "uploads/club1310/logo-rulles.jpg"
       },
       {
-        "id": 2795164,
-        "created_at": "2026-11-15 18:55:10",
-        "updated_at": "2026-11-15 18:55:10",
+        "id": 2797547,
+        "created_at": "2026-11-18 18:25:12",
+        "updated_at": "2026-11-18 18:25:12",
         "serie_id": 6217,
         "team_id": 51262,
         "played": 7,
@@ -189971,9 +189972,9 @@
     ],
     "6548": [
       {
-        "id": 2780241,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797396,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50577,
         "played": 1,
@@ -190016,9 +190017,9 @@
         "club_logo_img_url": "uploads/club1464/2555-bc-boninne.png"
       },
       {
-        "id": 2780242,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797397,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50604,
         "played": 2,
@@ -190061,9 +190062,9 @@
         "club_logo_img_url": "uploads/club1242/castors-braine.jpg"
       },
       {
-        "id": 2780243,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797398,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50605,
         "played": 2,
@@ -190106,9 +190107,9 @@
         "club_logo_img_url": "uploads/club1242/castors-braine.jpg"
       },
       {
-        "id": 2780244,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797399,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50685,
         "played": 1,
@@ -190151,9 +190152,9 @@
         "club_logo_img_url": "uploads/club1484/bc-colfontaine.jpg"
       },
       {
-        "id": 2780245,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797400,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50862,
         "played": 2,
@@ -190196,9 +190197,9 @@
         "club_logo_img_url": "uploads/club1415/basket-namur-capital-nouveau.png"
       },
       {
-        "id": 2780246,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797401,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50863,
         "played": 2,
@@ -190241,9 +190242,9 @@
         "club_logo_img_url": "uploads/club1415/basket-namur-capital-nouveau.png"
       },
       {
-        "id": 2780247,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797402,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50971,
         "played": 1,
@@ -190286,9 +190287,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2780248,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797403,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 50972,
         "played": 2,
@@ -190331,9 +190332,9 @@
         "club_logo_img_url": "uploads/club1246/0151-eclairs-pont-de-loup.jpg"
       },
       {
-        "id": 2780249,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797404,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51045,
         "played": 1,
@@ -190376,9 +190377,9 @@
         "club_logo_img_url": "uploads/club1316/bc-belleflamme.jpg"
       },
       {
-        "id": 2780250,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797405,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51067,
         "played": 2,
@@ -190421,9 +190422,9 @@
         "club_logo_img_url": "/uploads/club1323/club_ref_1130.png"
       },
       {
-        "id": 2780251,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797406,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51069,
         "played": 1,
@@ -190466,9 +190467,9 @@
         "club_logo_img_url": "/uploads/club1323/club_ref_1130.png"
       },
       {
-        "id": 2780252,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797407,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51118,
         "played": 2,
@@ -190511,9 +190512,9 @@
         "club_logo_img_url": "uploads/club1384/1655-rbc-libramont.jpg"
       },
       {
-        "id": 2780253,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797408,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51189,
         "played": 2,
@@ -190556,9 +190557,9 @@
         "club_logo_img_url": "uploads/club240503/2699-cimede-li-ge-panthers.jpg"
       },
       {
-        "id": 2780254,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797409,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51190,
         "played": 2,
@@ -190601,9 +190602,9 @@
         "club_logo_img_url": "uploads/club240503/2699-cimede-li-ge-panthers.jpg"
       },
       {
-        "id": 2780255,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797410,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51234,
         "played": 1,
@@ -190646,9 +190647,9 @@
         "club_logo_img_url": "uploads/club1236/0078-rbc-prayon.jpg"
       },
       {
-        "id": 2780256,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797411,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51312,
         "played": 2,
@@ -190691,9 +190692,9 @@
         "club_logo_img_url": "/uploads/club1405/club_ref_1845.png"
       },
       {
-        "id": 2780257,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797412,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51817,
         "played": 2,
@@ -190736,9 +190737,9 @@
         "club_logo_img_url": "uploads/club256022/logo-bca-bleu.jpg"
       },
       {
-        "id": 2780258,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797413,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 51825,
         "played": 3,
@@ -190781,9 +190782,9 @@
         "club_logo_img_url": "uploads/club256022/logo-bca-bleu.jpg"
       },
       {
-        "id": 2780259,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797414,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52104,
         "played": 1,
@@ -190826,9 +190827,9 @@
         "club_logo_img_url": "uploads/club1367/logo-alliance.jpg"
       },
       {
-        "id": 2780260,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797415,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52196,
         "played": 2,
@@ -190871,9 +190872,9 @@
         "club_logo_img_url": "uploads/club1229/0046-rbc-pepinster-eb.png"
       },
       {
-        "id": 2780261,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797416,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52220,
         "played": 1,
@@ -190916,9 +190917,9 @@
         "club_logo_img_url": "uploads2/1603-floreal-bcca-neufchateau.jpeg"
       },
       {
-        "id": 2780262,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797417,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52232,
         "played": 1,
@@ -190961,9 +190962,9 @@
         "club_logo_img_url": "uploads/club1313/1047-bbc-leuze.png"
       },
       {
-        "id": 2780263,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797418,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52247,
         "played": 1,
@@ -191006,9 +191007,9 @@
         "club_logo_img_url": "uploads/club1337/bcmalonne-1279.JPG"
       },
       {
-        "id": 2780264,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797419,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52248,
         "played": 1,
@@ -191051,9 +191052,9 @@
         "club_logo_img_url": "uploads/club1337/bcmalonne-1279.JPG"
       },
       {
-        "id": 2780265,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797420,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52325,
         "played": 1,
@@ -191096,9 +191097,9 @@
         "club_logo_img_url": "uploads/club1411/bc-marche.jpg"
       },
       {
-        "id": 2780266,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797421,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52401,
         "played": 2,
@@ -191141,9 +191142,9 @@
         "club_logo_img_url": "uploads2/0466-rcs-natoye.jpg"
       },
       {
-        "id": 2780267,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797422,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52402,
         "played": 1,
@@ -191186,9 +191187,9 @@
         "club_logo_img_url": "uploads2/0466-rcs-natoye.jpg"
       },
       {
-        "id": 2780268,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797423,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52490,
         "played": 1,
@@ -191231,9 +191232,9 @@
         "club_logo_img_url": "uploads/club1362/bc-alleur-16-01-20.jpg"
       },
       {
-        "id": 2780269,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797424,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52491,
         "played": 2,
@@ -191276,9 +191277,9 @@
         "club_logo_img_url": "uploads/club1389/1704-rebond-ottignies.png"
       },
       {
-        "id": 2780270,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797425,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52502,
         "played": 2,
@@ -191321,9 +191322,9 @@
         "club_logo_img_url": "uploads/club263122/tournai-wapiti-basketball.jpg"
       },
       {
-        "id": 2780271,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797426,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52528,
         "played": 1,
@@ -191366,9 +191367,9 @@
         "club_logo_img_url": "/uploads/club1456/club_ref_2519.png"
       },
       {
-        "id": 2780272,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797427,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52582,
         "played": 2,
@@ -191411,9 +191412,9 @@
         "club_logo_img_url": "/uploads/club1465/club_ref_2558.png"
       },
       {
-        "id": 2780273,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797428,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 52820,
         "played": 1,
@@ -191456,9 +191457,9 @@
         "club_logo_img_url": "uploads/club1331/abc-peronnes.jpg"
       },
       {
-        "id": 2780274,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797429,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 53481,
         "played": 2,
@@ -191501,9 +191502,9 @@
         "club_logo_img_url": "uploads2/0176-cb-royale-fraternite.png"
       },
       {
-        "id": 2780275,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797430,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 53501,
         "played": 1,
@@ -191546,9 +191547,9 @@
         "club_logo_img_url": "uploads/club1273/rebc-templeuve.JPG"
       },
       {
-        "id": 2780276,
-        "created_at": "2026-11-11 17:25:43",
-        "updated_at": "2026-11-11 17:25:43",
+        "id": 2797431,
+        "created_at": "2026-11-18 14:29:21",
+        "updated_at": "2026-11-18 14:29:21",
         "serie_id": 6548,
         "team_id": 53603,
         "played": 2,
@@ -233142,6 +233143,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 484837,
+      "date": "2026-11-21",
+      "time": "10:00:00",
+      "serie_id": 6524,
+      "serie_name": "U12MXG",
+      "serie_short_name": "U12MXG",
+      "home_team_id": 52967,
+      "away_team_id": 50714,
+      "home_team_name": "PU12HM Royal Jodoigne Basket",
+      "away_team_name": "PU12HM B55 Academy XL B",
+      "home_team_short_name": "Royal Jodoigne Basket",
+      "away_team_short_name": "B55 Academy XL B",
+      "game_status_id": 1,
+      "venue_name": "Complexe Sportif de Jodoigne - Plaine de la Gadale",
+      "venue_city": "Jodoigne",
+      "venue_street": "Plaine de la Gadale",
+      "venue_zip": "1370",
+      "venue_lat": "50.72826",
+      "venue_lng": "4.88050",
+      "match_type": "championnat"
+    },
+    {
       "id": 487280,
       "date": "2026-11-21",
       "time": "10:00:00",
@@ -233227,28 +233250,6 @@
       "venue_zip": "1420",
       "venue_lat": "50.67805750000000000000",
       "venue_lng": "4.38574010000000000000",
-      "match_type": "championnat"
-    },
-    {
-      "id": 484837,
-      "date": "2026-11-21",
-      "time": "10:30:00",
-      "serie_id": 6524,
-      "serie_name": "U12MXG",
-      "serie_short_name": "U12MXG",
-      "home_team_id": 52967,
-      "away_team_id": 50714,
-      "home_team_name": "PU12HM Royal Jodoigne Basket",
-      "away_team_name": "PU12HM B55 Academy XL B",
-      "home_team_short_name": "Royal Jodoigne Basket",
-      "away_team_short_name": "B55 Academy XL B",
-      "game_status_id": 1,
-      "venue_name": "Complexe Sportif de Jodoigne - Plaine de la Gadale",
-      "venue_city": "Jodoigne",
-      "venue_street": "Plaine de la Gadale",
-      "venue_zip": "1370",
-      "venue_lat": "50.72826",
-      "venue_lng": "4.88050",
       "match_type": "championnat"
     },
     {
@@ -233689,28 +233690,6 @@
       "venue_zip": "1200",
       "venue_lat": "50.84411930000000000000",
       "venue_lng": "4.42913450000000000000",
-      "match_type": "championnat"
-    },
-    {
-      "id": 470783,
-      "date": "2026-11-21",
-      "time": "12:30:00",
-      "serie_id": 6293,
-      "serie_name": "U21 Hommes A Elite",
-      "serie_short_name": "U21H A Elite",
-      "home_team_id": 53369,
-      "away_team_id": 50817,
-      "home_team_name": "PU21H Royal BC Wezembeek Oppem",
-      "away_team_name": "PU21H B55 Academy XL B",
-      "home_team_short_name": "Royal BC Wezembeek Oppem",
-      "away_team_short_name": "B55 Academy XL B",
-      "game_status_id": 1,
-      "venue_name": "Hall des Sports de Wezembeek-Oppem",
-      "venue_city": "Wezembeek-Oppem",
-      "venue_street": "Avenue Astrid, 85",
-      "venue_zip": "1970",
-      "venue_lat": "50.83394840000000000000",
-      "venue_lng": "4.49861170000000000000",
       "match_type": "championnat"
     },
     {
@@ -235982,28 +235961,6 @@
       "match_type": "championnat"
     },
     {
-      "id": 487182,
-      "date": "2026-11-22",
-      "time": "09:00:00",
-      "serie_id": 6539,
-      "serie_name": "U10MXE",
-      "serie_short_name": "U10MXE",
-      "home_team_id": 52868,
-      "away_team_id": 50759,
-      "home_team_name": "PU10HM Ass.Sp.St.Augustin A",
-      "away_team_name": "PU10HM Fresh Air B",
-      "home_team_short_name": "Ass.Sp.St.Augustin A",
-      "away_team_short_name": "Fresh Air B",
-      "game_status_id": 1,
-      "venue_name": "Petit Palais des Sports de Forest",
-      "venue_city": "Forest",
-      "venue_street": "Rue Rosendael 2",
-      "venue_zip": "1190",
-      "venue_lat": "50.80756410000000000000",
-      "venue_lng": "4.32685420000000000000",
-      "match_type": "championnat"
-    },
-    {
       "id": 487203,
       "date": "2026-11-22",
       "time": "09:00:00",
@@ -237016,6 +236973,28 @@
       "venue_lat": "50.79457810000000000000",
       "venue_lng": "4.36730120000000000000",
       "match_type": "coupe"
+    },
+    {
+      "id": 470783,
+      "date": "2026-11-24",
+      "time": "20:15:00",
+      "serie_id": 6293,
+      "serie_name": "U21 Hommes A Elite",
+      "serie_short_name": "U21H A Elite",
+      "home_team_id": 53369,
+      "away_team_id": 50817,
+      "home_team_name": "PU21H Royal BC Wezembeek Oppem",
+      "away_team_name": "PU21H B55 Academy XL B",
+      "home_team_short_name": "Royal BC Wezembeek Oppem",
+      "away_team_short_name": "B55 Academy XL B",
+      "game_status_id": 1,
+      "venue_name": "Hall des Sports de Wezembeek-Oppem",
+      "venue_city": "Wezembeek-Oppem",
+      "venue_street": "Avenue Astrid, 85",
+      "venue_zip": "1970",
+      "venue_lat": "50.83394840000000000000",
+      "venue_lng": "4.49861170000000000000",
+      "match_type": "championnat"
     },
     {
       "id": 474963,
@@ -260637,6 +260616,28 @@
       "venue_zip": "1340",
       "venue_lat": "50.66270690000000000000",
       "venue_lng": "4.55343860000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 487182,
+      "date": "2027-01-23",
+      "time": "12:30:00",
+      "serie_id": 6539,
+      "serie_name": "U10MXE",
+      "serie_short_name": "U10MXE",
+      "home_team_id": 52868,
+      "away_team_id": 50759,
+      "home_team_name": "PU10HM Ass.Sp.St.Augustin A",
+      "away_team_name": "PU10HM Fresh Air B",
+      "home_team_short_name": "Ass.Sp.St.Augustin A",
+      "away_team_short_name": "Fresh Air B",
+      "game_status_id": 1,
+      "venue_name": "Petit Palais des Sports de Forest",
+      "venue_city": "Forest",
+      "venue_street": "Rue Rosendael 2",
+      "venue_zip": "1190",
+      "venue_lat": "50.80756410000000000000",
+      "venue_lng": "4.32685420000000000000",
       "match_type": "championnat"
     },
     {
@@ -367640,52 +367641,26 @@
       "match_type": "championnat"
     },
     {
-      "id": 483478,
+      "id": 497581,
       "date": "2026-11-23",
-      "time": "18:00:00",
-      "serie_id": 6481,
-      "serie_name": "Coupe du Hainaut U19 Dames",
-      "serie_short_name": "Coupe Hainaut U19D",
-      "home_team_id": 52003,
-      "away_team_id": 53503,
-      "home_team_name": "PU19D Basket Entité Courcelles",
-      "away_team_name": "PU19D BC Féminin Quaregnon A",
-      "home_team_short_name": "Basket Entité Courcelles",
-      "away_team_short_name": "BC Féminin Quaregnon A",
+      "time": "19:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 52342,
+      "away_team_id": 51342,
+      "home_team_name": "PU16H Union BC Quaregnon A",
+      "away_team_name": "RU16H Boussu Saint-Ghislain United",
+      "home_team_short_name": "Union BC Quaregnon A",
+      "away_team_short_name": "BSGU",
       "game_status_id": 1,
-      "match_type": "coupe"
-    },
-    {
-      "id": 483523,
-      "date": "2026-11-23",
-      "time": "18:00:00",
-      "serie_id": 6483,
-      "serie_name": "Coupe du Hainaut U14 Dames",
-      "serie_short_name": "Coupe Hainaut U14D",
-      "home_team_id": 53510,
-      "away_team_id": 52691,
-      "home_team_name": "PU14D BC Féminin Quaregnon",
-      "away_team_name": "PU14D Tournai E.F. Kain",
-      "home_team_short_name": "BC Féminin Quaregnon",
-      "away_team_short_name": "TEF Kain",
-      "game_status_id": 1,
-      "match_type": "coupe"
-    },
-    {
-      "id": 483539,
-      "date": "2026-11-23",
-      "time": "18:00:00",
-      "serie_id": 6484,
-      "serie_name": "Coupe du Hainaut U12 Dames",
-      "serie_short_name": "Coupe Hainaut U12D",
-      "home_team_id": 53511,
-      "away_team_id": 51009,
-      "home_team_name": "PU12D BC Féminin Quaregnon",
-      "away_team_name": "PU12D Royal Eclairs Pont-De-Loup",
-      "home_team_short_name": "BC Féminin Quaregnon",
-      "away_team_short_name": "RE Pont-de-Loup",
-      "game_status_id": 1,
-      "match_type": "coupe"
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "amical"
     },
     {
       "id": 497576,
@@ -367749,6 +367724,25 @@
       "venue_lat": "0.00000000000000000000",
       "venue_lng": "0.00000000000000000000",
       "match_type": "championnat"
+    },
+    {
+      "id": 497595,
+      "date": "2026-11-25",
+      "time": "20:30:00",
+      "serie_id": 6485,
+      "serie_name": "Amicaux Seniors",
+      "serie_short_name": "Amicaux Seniors",
+      "home_team_id": 52636,
+      "home_team_name": "P1D BC Féminin Quaregnon A",
+      "home_team_short_name": "BC Féminin Quaregnon A",
+      "game_status_id": 1,
+      "venue_name": "Espace Léon Delvallée",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue Modeste Derbaix ",
+      "venue_zip": "7390",
+      "venue_lat": "50.44267240000000000000",
+      "venue_lng": "3.86193930000000000000",
+      "match_type": "amical"
     },
     {
       "id": 463895,
@@ -368059,6 +368053,28 @@
       "match_type": "coupe"
     },
     {
+      "id": 483478,
+      "date": "2026-11-28",
+      "time": "10:00:00",
+      "serie_id": 6481,
+      "serie_name": "Coupe du Hainaut U19 Dames",
+      "serie_short_name": "Coupe Hainaut U19D",
+      "home_team_id": 52003,
+      "away_team_id": 53503,
+      "home_team_name": "PU19D Basket Entité Courcelles",
+      "away_team_name": "PU19D BC Féminin Quaregnon A",
+      "home_team_short_name": "Basket Entité Courcelles",
+      "away_team_short_name": "BC Féminin Quaregnon A",
+      "game_status_id": 1,
+      "venue_name": "Hall Omnisports",
+      "venue_city": "Trazegnies",
+      "venue_street": "Avenue de l'Europe 1",
+      "venue_zip": "6183",
+      "venue_lat": "50.4643406",
+      "venue_lng": "4.3383702",
+      "match_type": "coupe"
+    },
+    {
       "id": 465172,
       "date": "2026-11-28",
       "time": "11:00:00",
@@ -368138,6 +368154,12 @@
       "home_team_short_name": "JS Soignies",
       "away_team_short_name": "Olympic Mont Sur Marchienne",
       "game_status_id": 1,
+      "venue_name": "Salle JS Soignies",
+      "venue_city": "Soignies",
+      "venue_street": "Chemin Tour Lette",
+      "venue_zip": "7060",
+      "venue_lat": "50.57199360000000000000",
+      "venue_lng": "4.08525270000000000000",
       "match_type": "coupe"
     },
     {
@@ -369769,6 +369791,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 483523,
+      "date": "2026-11-29",
+      "time": "13:00:00",
+      "serie_id": 6483,
+      "serie_name": "Coupe du Hainaut U14 Dames",
+      "serie_short_name": "Coupe Hainaut U14D",
+      "home_team_id": 53510,
+      "away_team_id": 52691,
+      "home_team_name": "PU14D BC Féminin Quaregnon",
+      "away_team_name": "PU14D Tournai E.F. Kain",
+      "home_team_short_name": "BC Féminin Quaregnon",
+      "away_team_short_name": "TEF Kain",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
+      "match_type": "coupe"
+    },
+    {
       "id": 483538,
       "date": "2026-11-29",
       "time": "13:00:00",
@@ -369789,6 +369833,28 @@
       "venue_lat": "50.63256000000000000000",
       "venue_lng": "3.38644340000000000000",
       "match_type": "coupe"
+    },
+    {
+      "id": 497584,
+      "date": "2026-11-29",
+      "time": "13:00:00",
+      "serie_id": 6486,
+      "serie_name": "Amicaux Jeunes",
+      "serie_short_name": "Amicaux Jeunes",
+      "home_team_id": 53171,
+      "away_team_id": 53232,
+      "home_team_name": "PU21H Royal Eclairs Pont-De-Loup",
+      "away_team_name": "PU21H RBC Montagnard",
+      "home_team_short_name": "RE Pont-de-Loup",
+      "away_team_short_name": "RBC Montagnard",
+      "game_status_id": 1,
+      "venue_name": "Complexe Sportif Hortent Moraux",
+      "venue_city": "Aiseau-Presles",
+      "venue_street": "rue Auguste Scohy 139",
+      "venue_zip": "6250",
+      "venue_lat": "50.412353515625",
+      "venue_lng": "4.5533342361450195",
+      "match_type": "amical"
     },
     {
       "id": 464248,
@@ -370030,6 +370096,28 @@
       "venue_zip": "7011",
       "venue_lat": "50.47500773554463",
       "venue_lng": "3.9073560818455673",
+      "match_type": "coupe"
+    },
+    {
+      "id": 483539,
+      "date": "2026-11-29",
+      "time": "15:00:00",
+      "serie_id": 6484,
+      "serie_name": "Coupe du Hainaut U12 Dames",
+      "serie_short_name": "Coupe Hainaut U12D",
+      "home_team_id": 53511,
+      "away_team_id": 51009,
+      "home_team_name": "PU12D BC Féminin Quaregnon",
+      "away_team_name": "PU12D Royal Eclairs Pont-De-Loup",
+      "home_team_short_name": "BC Féminin Quaregnon",
+      "away_team_short_name": "RE Pont-de-Loup",
+      "game_status_id": 1,
+      "venue_name": "Salle  Edgard Hismans",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue De l'Egalité 91",
+      "venue_zip": "7390",
+      "venue_lat": "50.44051090000000000000",
+      "venue_lng": "3.86126880000000000000",
       "match_type": "coupe"
     },
     {
@@ -386508,28 +386596,6 @@
       "match_type": "championnat"
     },
     {
-      "id": 496075,
-      "date": "2026-12-28",
-      "time": "18:00:00",
-      "serie_id": 6649,
-      "serie_name": "Coupe du Hainaut Dames - Phase finale",
-      "serie_short_name": "CH Dames - Phase finale",
-      "home_team_id": 50697,
-      "away_team_id": 52636,
-      "home_team_name": "P1D Groupe Gobert Basket Club Colfontaine A",
-      "away_team_name": "P1D BC Féminin Quaregnon A",
-      "home_team_short_name": "GGBC Colfontaine A",
-      "away_team_short_name": "BC Féminin Quaregnon A",
-      "game_status_id": 1,
-      "venue_name": "Complexe Sportif Achille Delattre ",
-      "venue_city": "Colfontaine",
-      "venue_street": "Sentier de Liernes, 100",
-      "venue_zip": "7340",
-      "venue_lat": "50.40433710000000000000",
-      "venue_lng": "3.85954860000000000000",
-      "match_type": "coupe"
-    },
-    {
       "id": 497452,
       "date": "2026-12-28",
       "time": "18:00:00",
@@ -390758,6 +390824,28 @@
       "venue_lat": "50.74170180000000000000",
       "venue_lng": "3.22561430000000000000",
       "match_type": "championnat"
+    },
+    {
+      "id": 496075,
+      "date": "2027-01-10",
+      "time": "11:00:00",
+      "serie_id": 6649,
+      "serie_name": "Coupe du Hainaut Dames - Phase finale",
+      "serie_short_name": "CH Dames - Phase finale",
+      "home_team_id": 50697,
+      "away_team_id": 52636,
+      "home_team_name": "P1D Groupe Gobert Basket Club Colfontaine A",
+      "away_team_name": "P1D BC Féminin Quaregnon A",
+      "home_team_short_name": "GGBC Colfontaine A",
+      "away_team_short_name": "BC Féminin Quaregnon A",
+      "game_status_id": 1,
+      "venue_name": "Complexe Sportif Achille Delattre ",
+      "venue_city": "Colfontaine",
+      "venue_street": "Sentier de Liernes, 100",
+      "venue_zip": "7340",
+      "venue_lat": "50.40433710000000000000",
+      "venue_lng": "3.85954860000000000000",
+      "match_type": "coupe"
     },
     {
       "id": 467120,
@@ -397392,28 +397480,6 @@
       "match_type": "coupe"
     },
     {
-      "id": 496078,
-      "date": "2027-01-18",
-      "time": "18:00:00",
-      "serie_id": 6649,
-      "serie_name": "Coupe du Hainaut Dames - Phase finale",
-      "serie_short_name": "CH Dames - Phase finale",
-      "home_team_id": 52636,
-      "away_team_id": 50697,
-      "home_team_name": "P1D BC Féminin Quaregnon A",
-      "away_team_name": "P1D Groupe Gobert Basket Club Colfontaine A",
-      "home_team_short_name": "BC Féminin Quaregnon A",
-      "away_team_short_name": "GGBC Colfontaine A",
-      "game_status_id": 1,
-      "venue_name": "Espace Léon Delvallée",
-      "venue_city": "Quaregnon",
-      "venue_street": "Rue Modeste Derbaix ",
-      "venue_zip": "7390",
-      "venue_lat": "50.44267240000000000000",
-      "venue_lng": "3.86193930000000000000",
-      "match_type": "coupe"
-    },
-    {
       "id": 496079,
       "date": "2027-01-22",
       "time": "20:00:00",
@@ -397433,6 +397499,28 @@
       "venue_zip": "6030",
       "venue_lat": "50.42674470000000000000",
       "venue_lng": "4.41490690000000000000",
+      "match_type": "coupe"
+    },
+    {
+      "id": 496078,
+      "date": "2027-01-22",
+      "time": "20:30:00",
+      "serie_id": 6649,
+      "serie_name": "Coupe du Hainaut Dames - Phase finale",
+      "serie_short_name": "CH Dames - Phase finale",
+      "home_team_id": 52636,
+      "away_team_id": 50697,
+      "home_team_name": "P1D BC Féminin Quaregnon A",
+      "away_team_name": "P1D Groupe Gobert Basket Club Colfontaine A",
+      "home_team_short_name": "BC Féminin Quaregnon A",
+      "away_team_short_name": "GGBC Colfontaine A",
+      "game_status_id": 1,
+      "venue_name": "Espace Léon Delvallée",
+      "venue_city": "Quaregnon",
+      "venue_street": "Rue Modeste Derbaix ",
+      "venue_zip": "7390",
+      "venue_lat": "50.44267240000000000000",
+      "venue_lng": "3.86193930000000000000",
       "match_type": "coupe"
     },
     {
@@ -523688,7 +523776,9 @@
       "away_team_name": "PU12HM BC Sprimont B",
       "home_team_short_name": "Harimalia A",
       "away_team_short_name": "BC Sprimont B",
-      "game_status_id": 1,
+      "home_score": 6,
+      "away_score": 118,
+      "game_status_id": 2,
       "venue_name": "Salle Foyer du Quartier",
       "venue_city": "Hermalle-Sous-Argenteau",
       "venue_street": " rue Vallée, 15",
@@ -533411,28 +533501,6 @@
       "venue_zip": "4780",
       "venue_lat": "50.28048700000000000000",
       "venue_lng": "6.12324250000000000000",
-      "match_type": "championnat"
-    },
-    {
-      "id": 490976,
-      "date": "2026-11-28",
-      "time": "13:00:00",
-      "serie_id": 6610,
-      "serie_name": "U19 Dames",
-      "serie_short_name": "U19D",
-      "home_team_id": 53300,
-      "away_team_id": 52981,
-      "home_team_name": "PU19D Amicale Basket Club Waremme A",
-      "away_team_name": "PU19D RBC Wanze",
-      "home_team_short_name": "ABC Waremme A",
-      "away_team_short_name": "RBC Wanze",
-      "game_status_id": 1,
-      "venue_name": "Pôle Ballon",
-      "venue_city": "Waremme",
-      "venue_street": "Chaussée Romaine 71",
-      "venue_zip": "4300",
-      "venue_lat": "50.68714720000000000000",
-      "venue_lng": "5.25651600000000000000",
       "match_type": "championnat"
     },
     {
@@ -549197,6 +549265,28 @@
       "venue_zip": "4910",
       "venue_lat": "50.53927240000000000000",
       "venue_lng": "5.80951240000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 490976,
+      "date": "2026-12-18",
+      "time": "19:00:00",
+      "serie_id": 6610,
+      "serie_name": "U19 Dames",
+      "serie_short_name": "U19D",
+      "home_team_id": 53300,
+      "away_team_id": 52981,
+      "home_team_name": "PU19D Amicale Basket Club Waremme A",
+      "away_team_name": "PU19D RBC Wanze",
+      "home_team_short_name": "ABC Waremme A",
+      "away_team_short_name": "RBC Wanze",
+      "game_status_id": 1,
+      "venue_name": "Pôle Ballon",
+      "venue_city": "Waremme",
+      "venue_street": "Chaussée Romaine 71",
+      "venue_zip": "4300",
+      "venue_lat": "50.68714720000000000000",
+      "venue_lng": "5.25651600000000000000",
       "match_type": "championnat"
     },
     {
@@ -710703,7 +710793,9 @@
       "away_team_name": "PU10HM Royal BC Éghezée A",
       "home_team_short_name": "BC Sombreffe A",
       "away_team_short_name": "RBC Éghezée A",
-      "game_status_id": 1,
+      "home_score": 18,
+      "away_score": 18,
+      "game_status_id": 2,
       "venue_name": "Complexe sportif de Sombreffe",
       "venue_city": "Sombreffe",
       "venue_street": "Allée du Château Chinon 6",
@@ -713207,7 +713299,9 @@
       "away_team_name": "PU10HM NBC La Bruyère C",
       "home_team_short_name": "BC Sombreffe C",
       "away_team_short_name": "NBCLB C",
-      "game_status_id": 1,
+      "home_score": 17,
+      "away_score": 19,
+      "game_status_id": 2,
       "venue_name": "Complexe sportif de Sombreffe",
       "venue_city": "Sombreffe",
       "venue_street": "Allée du Château Chinon 6",
@@ -717199,6 +717293,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 460421,
+      "date": "2026-11-28",
+      "time": "18:30:00",
+      "serie_id": 6145,
+      "serie_name": "Provincial 3 Messieurs Série A",
+      "serie_short_name": "P3MMA",
+      "home_team_id": 52436,
+      "away_team_id": 50811,
+      "home_team_name": "P3H Basket Club Sombreffe B",
+      "away_team_name": "P3H Royal Gallia BC Beez C",
+      "home_team_short_name": "BC Sombreffe B",
+      "away_team_short_name": "Royal Gallia BC Beez C",
+      "game_status_id": 1,
+      "venue_name": "Complexe sportif de Sombreffe",
+      "venue_city": "Sombreffe",
+      "venue_street": "Allée du Château Chinon 6",
+      "venue_zip": "5140",
+      "venue_lat": "50.52240700000000000000",
+      "venue_lng": "4.59722020000000000000",
+      "match_type": "championnat"
+    },
+    {
       "id": 468987,
       "date": "2026-11-28",
       "time": "19:00:00",
@@ -717328,28 +717444,6 @@
       "venue_zip": "5310",
       "venue_lat": "50.58672500000000000000",
       "venue_lng": "4.90386890000000000000",
-      "match_type": "championnat"
-    },
-    {
-      "id": 460421,
-      "date": "2026-11-28",
-      "time": "20:30:00",
-      "serie_id": 6145,
-      "serie_name": "Provincial 3 Messieurs Série A",
-      "serie_short_name": "P3MMA",
-      "home_team_id": 52436,
-      "away_team_id": 50811,
-      "home_team_name": "P3H Basket Club Sombreffe B",
-      "away_team_name": "P3H Royal Gallia BC Beez C",
-      "home_team_short_name": "BC Sombreffe B",
-      "away_team_short_name": "Royal Gallia BC Beez C",
-      "game_status_id": 1,
-      "venue_name": "Complexe sportif de Sombreffe",
-      "venue_city": "Sombreffe",
-      "venue_street": "Allée du Château Chinon 6",
-      "venue_zip": "5140",
-      "venue_lat": "50.52240700000000000000",
-      "venue_lng": "4.59722020000000000000",
       "match_type": "championnat"
     },
     {
@@ -719772,6 +719866,22 @@
       "venue_zip": "5002",
       "venue_lat": "50.47542860000000000000",
       "venue_lng": "4.84709930000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 497582,
+      "date": "2026-12-06",
+      "time": "09:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 53683,
+      "away_team_id": 51336,
+      "home_team_name": "PU10HM BC Miavoye GH B",
+      "away_team_name": "PU10HM AS Mazy-Spy",
+      "home_team_short_name": "BC Miavoye GH B",
+      "away_team_short_name": "AS Mazy-Spy",
+      "game_status_id": 1,
       "match_type": "championnat"
     },
     {
@@ -722889,6 +722999,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497583,
+      "date": "2026-12-13",
+      "time": "09:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 52484,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM Royal Herbuchenne Dinant",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "Royal Herbuchenne Dinant",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Institut Technique Herbuchenne",
+      "venue_city": "Dinant",
+      "venue_street": "Chemin d'Herbuchenne, 1",
+      "venue_zip": "5500",
+      "venue_lat": "50.26089270000000000000",
+      "venue_lng": "4.92205640000000000000",
+      "match_type": "championnat"
+    },
+    {
       "id": 461933,
       "date": "2026-12-13",
       "time": "10:00:00",
@@ -725793,6 +725925,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497585,
+      "date": "2026-12-20",
+      "time": "11:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 53683,
+      "away_team_id": 51575,
+      "home_team_name": "PU10HM BC Miavoye GH B",
+      "away_team_name": "PU10HM Cerfontaine B.C. A",
+      "home_team_short_name": "BC Miavoye GH B",
+      "away_team_short_name": "Cerfontaine B.C. A",
+      "game_status_id": 1,
+      "venue_name": "CS et associatif de Miavoye",
+      "venue_city": "Onhaye",
+      "venue_street": "Rue Sous Lieutenant Pierard 1",
+      "venue_zip": "5520",
+      "venue_lat": "50.22918701171875",
+      "venue_lng": "4.776714324951172",
+      "match_type": "championnat"
+    },
+    {
       "id": 461705,
       "date": "2026-12-20",
       "time": "11:30:00",
@@ -728103,6 +728257,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497586,
+      "date": "2027-01-10",
+      "time": "09:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 53683,
+      "away_team_id": 51908,
+      "home_team_name": "PU10HM BC Miavoye GH B",
+      "away_team_name": "PU10HM BC Rochefort A",
+      "home_team_short_name": "BC Miavoye GH B",
+      "away_team_short_name": "BC Rochefort A",
+      "game_status_id": 1,
+      "venue_name": "CS et associatif de Miavoye",
+      "venue_city": "Onhaye",
+      "venue_street": "Rue Sous Lieutenant Pierard 1",
+      "venue_zip": "5520",
+      "venue_lat": "50.22918701171875",
+      "venue_lng": "4.776714324951172",
+      "match_type": "championnat"
+    },
+    {
       "id": 476558,
       "date": "2027-01-10",
       "time": "09:30:00",
@@ -729552,6 +729728,28 @@
       "venue_zip": "5310",
       "venue_lat": "50.58672500000000000000",
       "venue_lng": "4.90386890000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 497587,
+      "date": "2027-01-16",
+      "time": "13:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 51350,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM RBC Ciney A",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "RBC Ciney A",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Hall Sportif de la Ville de Ciney",
+      "venue_city": "Ciney",
+      "venue_street": "Place Roi Baudouin 7",
+      "venue_zip": "5590",
+      "venue_lat": "50.29848430000000000000",
+      "venue_lng": "5.10042130000000000000",
       "match_type": "championnat"
     },
     {
@@ -733505,6 +733703,28 @@
       "venue_zip": "5600",
       "venue_lat": "50.19900400000000000000",
       "venue_lng": "4.55462700000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 497588,
+      "date": "2027-01-30",
+      "time": "09:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 50556,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM Royal BC Éghezée A",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "RBC Éghezée A",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Hall Omnisports d'Eghezée",
+      "venue_city": "Eghezée",
+      "venue_street": "Rue de la Gare 5",
+      "venue_zip": "5310",
+      "venue_lat": "50.58672500000000000000",
+      "venue_lng": "4.90386890000000000000",
       "match_type": "championnat"
     },
     {
@@ -737531,6 +737751,28 @@
       "venue_zip": "5020",
       "venue_lat": "50.42211390000000000000",
       "venue_lng": "4.79901920000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 497589,
+      "date": "2027-02-07",
+      "time": "09:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 53683,
+      "away_team_id": 52484,
+      "home_team_name": "PU10HM BC Miavoye GH B",
+      "away_team_name": "PU10HM Royal Herbuchenne Dinant",
+      "home_team_short_name": "BC Miavoye GH B",
+      "away_team_short_name": "Royal Herbuchenne Dinant",
+      "game_status_id": 1,
+      "venue_name": "CS et associatif de Miavoye",
+      "venue_city": "Onhaye",
+      "venue_street": "Rue Sous Lieutenant Pierard 1",
+      "venue_zip": "5520",
+      "venue_lat": "50.22918701171875",
+      "venue_lng": "4.776714324951172",
       "match_type": "championnat"
     },
     {
@@ -742814,6 +743056,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497590,
+      "date": "2027-02-21",
+      "time": "13:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 53683,
+      "away_team_id": 52007,
+      "home_team_name": "PU10HM BC Miavoye GH B",
+      "away_team_name": "PU10HM BC Malonne B",
+      "home_team_short_name": "BC Miavoye GH B",
+      "away_team_short_name": "BC Malonne B",
+      "game_status_id": 1,
+      "venue_name": "CS et associatif de Miavoye",
+      "venue_city": "Onhaye",
+      "venue_street": "Rue Sous Lieutenant Pierard 1",
+      "venue_zip": "5520",
+      "venue_lat": "50.22918701171875",
+      "venue_lng": "4.776714324951172",
+      "match_type": "championnat"
+    },
+    {
       "id": 460288,
       "date": "2027-02-21",
       "time": "13:30:00",
@@ -747820,6 +748084,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497591,
+      "date": "2027-03-20",
+      "time": "09:30:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 52457,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM Royal CS Natoye B",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "Royal CS Natoye B",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Hall Omnisports de Natoye",
+      "venue_city": "Natoye",
+      "venue_street": "Rue du Château d'Eau, 31 31",
+      "venue_zip": "5360",
+      "venue_lat": "50.33973020000000000000",
+      "venue_lng": "5.05367540000000000000",
+      "match_type": "championnat"
+    },
+    {
       "id": 476461,
       "date": "2027-03-20",
       "time": "10:00:00",
@@ -752528,6 +752814,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497592,
+      "date": "2027-04-04",
+      "time": "10:30:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 52447,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM Basket Club Sombreffe A",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "BC Sombreffe A",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Complexe sportif de Sombreffe",
+      "venue_city": "Sombreffe",
+      "venue_street": "Allée du Château Chinon 6",
+      "venue_zip": "5140",
+      "venue_lat": "50.52240700000000000000",
+      "venue_lng": "4.59722020000000000000",
+      "match_type": "championnat"
+    },
+    {
       "id": 461022,
       "date": "2027-04-04",
       "time": "11:00:00",
@@ -755416,6 +755724,28 @@
       "match_type": "championnat"
     },
     {
+      "id": 497593,
+      "date": "2027-04-18",
+      "time": "11:30:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 51336,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM AS Mazy-Spy",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "AS Mazy-Spy",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Hall Omnisports de Jemeppe-sur-Sambre",
+      "venue_city": "Jemeppe-sur-Sambre",
+      "venue_street": "rue Saint-Martin 25",
+      "venue_zip": "5190",
+      "venue_lat": "50.46432876586914",
+      "venue_lng": "4.657829284667969",
+      "match_type": "championnat"
+    },
+    {
       "id": 477219,
       "date": "2027-04-18",
       "time": "12:30:00",
@@ -756139,6 +756469,28 @@
       "venue_zip": "5310",
       "venue_lat": "50.58672500000000000000",
       "venue_lng": "4.90386890000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 497594,
+      "date": "2027-04-24",
+      "time": "10:00:00",
+      "serie_id": 6396,
+      "serie_name": "Provincial U10 - Série B",
+      "serie_short_name": "PU10B",
+      "home_team_id": 51575,
+      "away_team_id": 53683,
+      "home_team_name": "PU10HM Cerfontaine B.C. A",
+      "away_team_name": "PU10HM BC Miavoye GH B",
+      "home_team_short_name": "Cerfontaine B.C. A",
+      "away_team_short_name": "BC Miavoye GH B",
+      "game_status_id": 1,
+      "venue_name": "Hall Omnisports du Fouery",
+      "venue_city": "Cerfontaine",
+      "venue_street": "Rue du Fouery, 4",
+      "venue_zip": "5630",
+      "venue_lat": "50.17246270000000000000",
+      "venue_lng": "4.40727150000000000000",
       "match_type": "championnat"
     },
     {
@@ -802831,28 +803183,6 @@
       "match_type": "championnat"
     },
     {
-      "id": 456741,
-      "date": "2026-11-21",
-      "time": "12:00:00",
-      "serie_id": 6221,
-      "serie_name": "U21H Gold B",
-      "serie_short_name": "U21HG B",
-      "home_team_id": 51201,
-      "away_team_id": 51421,
-      "home_team_name": "RU21H Olympic Mont Sur Marchienne",
-      "away_team_name": "RU21H JSE Enghien",
-      "home_team_short_name": "Olympic Mont Sur Marchienne",
-      "away_team_short_name": "JSE Enghien",
-      "game_status_id": 1,
-      "venue_name": "Hall Polyvalent Marcel Flandre",
-      "venue_city": "Mont-sur-Marchienne",
-      "venue_street": "Rue Napoléon Lejong 1",
-      "venue_zip": "6032",
-      "venue_lat": "50.39350960000000000000",
-      "venue_lng": "4.41219240000000000000",
-      "match_type": "championnat"
-    },
-    {
       "id": 457793,
       "date": "2026-11-21",
       "time": "12:00:00",
@@ -806348,28 +806678,6 @@
       "match_type": "championnat"
     },
     {
-      "id": 485555,
-      "date": "2026-11-28",
-      "time": "09:00:00",
-      "serie_id": 6548,
-      "serie_name": "Coupe AWBB U19 Dames",
-      "serie_short_name": "CA U19D",
-      "home_team_id": 50604,
-      "away_team_id": 52401,
-      "home_team_name": "RU19D Royal Castors Braine A",
-      "away_team_name": "RU19D Royal CS Natoye A",
-      "home_team_short_name": "Royal Castors Braine A",
-      "away_team_short_name": "Royal CS Natoye A",
-      "game_status_id": 1,
-      "venue_name": "Salle Omnisports Gaston Reiff",
-      "venue_city": "Braine-l'Alleud",
-      "venue_street": "Rue Ernest Laurent,  215",
-      "venue_zip": "1420",
-      "venue_lat": "50.67805750000000000000",
-      "venue_lng": "4.38574010000000000000",
-      "match_type": "coupe"
-    },
-    {
       "id": 486458,
       "date": "2026-11-28",
       "time": "09:00:00",
@@ -806968,6 +807276,28 @@
       "match_type": "coupe"
     },
     {
+      "id": 485555,
+      "date": "2026-11-28",
+      "time": "13:00:00",
+      "serie_id": 6548,
+      "serie_name": "Coupe AWBB U19 Dames",
+      "serie_short_name": "CA U19D",
+      "home_team_id": 50604,
+      "away_team_id": 52401,
+      "home_team_name": "RU19D Royal Castors Braine A",
+      "away_team_name": "RU19D Royal CS Natoye A",
+      "home_team_short_name": "Royal Castors Braine A",
+      "away_team_short_name": "Royal CS Natoye A",
+      "game_status_id": 1,
+      "venue_name": "Salle Omnisports Gaston Reiff",
+      "venue_city": "Braine-l'Alleud",
+      "venue_street": "Rue Ernest Laurent,  215",
+      "venue_zip": "1420",
+      "venue_lat": "50.67805750000000000000",
+      "venue_lng": "4.38574010000000000000",
+      "match_type": "coupe"
+    },
+    {
       "id": 458247,
       "date": "2026-11-28",
       "time": "13:30:00",
@@ -807452,28 +807782,6 @@
       "match_type": "coupe"
     },
     {
-      "id": 457446,
-      "date": "2026-11-29",
-      "time": "10:45:00",
-      "serie_id": 6260,
-      "serie_name": "U14H Gold B",
-      "serie_short_name": "U14HG B",
-      "home_team_id": 50635,
-      "away_team_id": 50921,
-      "home_team_name": "RU14H Royal Murprotec Nivelles Basketball A",
-      "away_team_name": "RU14H Spirou Basket A",
-      "home_team_short_name": "Royal Nivelles Basketball A",
-      "away_team_short_name": "Spirou Basket A",
-      "game_status_id": 1,
-      "venue_name": "Salle Omnisports Parc De La Dodaine",
-      "venue_city": "Nivelles",
-      "venue_street": "Avenue Jules Mathieu, 1",
-      "venue_zip": "1400",
-      "venue_lat": "50.5922551",
-      "venue_lng": "4.3234004",
-      "match_type": "championnat"
-    },
-    {
       "id": 458223,
       "date": "2026-11-29",
       "time": "11:00:00",
@@ -807669,6 +807977,28 @@
       "venue_zip": "4860",
       "venue_lat": "50.58050389764641",
       "venue_lng": "5.81843142764528",
+      "match_type": "championnat"
+    },
+    {
+      "id": 456741,
+      "date": "2026-11-29",
+      "time": "13:00:00",
+      "serie_id": 6221,
+      "serie_name": "U21H Gold B",
+      "serie_short_name": "U21HG B",
+      "home_team_id": 51201,
+      "away_team_id": 51421,
+      "home_team_name": "RU21H Olympic Mont Sur Marchienne",
+      "away_team_name": "RU21H JSE Enghien",
+      "home_team_short_name": "Olympic Mont Sur Marchienne",
+      "away_team_short_name": "JSE Enghien",
+      "game_status_id": 1,
+      "venue_name": "Hall Polyvalent Marcel Flandre",
+      "venue_city": "Mont-sur-Marchienne",
+      "venue_street": "Rue Napoléon Lejong 1",
+      "venue_zip": "6032",
+      "venue_lat": "50.39350960000000000000",
+      "venue_lng": "4.41219240000000000000",
       "match_type": "championnat"
     },
     {
@@ -816331,6 +816661,28 @@
       "venue_zip": "5020",
       "venue_lat": "50.42211390000000000000",
       "venue_lng": "4.79901920000000000000",
+      "match_type": "championnat"
+    },
+    {
+      "id": 457446,
+      "date": "2026-12-19",
+      "time": "14:00:00",
+      "serie_id": 6260,
+      "serie_name": "U14H Gold B",
+      "serie_short_name": "U14HG B",
+      "home_team_id": 50635,
+      "away_team_id": 50921,
+      "home_team_name": "RU14H Royal Murprotec Nivelles Basketball A",
+      "away_team_name": "RU14H Spirou Basket A",
+      "home_team_short_name": "Royal Nivelles Basketball A",
+      "away_team_short_name": "Spirou Basket A",
+      "game_status_id": 1,
+      "venue_name": "Salle Omnisports Parc De La Dodaine",
+      "venue_city": "Nivelles",
+      "venue_street": "Avenue Jules Mathieu, 1",
+      "venue_zip": "1400",
+      "venue_lat": "50.5922551",
+      "venue_lng": "4.3234004",
       "match_type": "championnat"
     },
     {
