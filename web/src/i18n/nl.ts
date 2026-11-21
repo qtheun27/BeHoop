@@ -1346,4 +1346,7 @@ export const NL: Record<string, string> = {
   "Fin − 1 s": "Einde − 1 s",
   "Fin + 1 s": "Einde + 1 s",
   "Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l'image exacte.": "Versleep het fragment of de randen (15 tot 30 s): de video toont het exacte beeld.",
+  "L’iPhone prépare tes médias…": "De iPhone maakt je media klaar…",
+  "Ça peut prendre quelques minutes pour les longues vidéos. Garde l’écran allumé et reste sur BeHoop. Si rien n’arrive, touche à nouveau « Ajouter » : les médias déjà ajoutés ne seront pas en double.": "Dat kan enkele minuten duren voor lange video's. Laat het scherm aan en blijf in BeHoop. Komt er niets, tik dan opnieuw op « Toevoegen »: al toegevoegde media worden niet dubbel toegevoegd.",
+  "Astuce : pour beaucoup de vidéos, mets le verrouillage automatique de l’iPhone sur « Jamais » le temps de l’envoi (Réglages → Luminosité et affichage).": "Tip: zet bij veel video's de automatische vergrendeling van je iPhone op « Nooit » tijdens het versturen (Instellingen → Scherm en helderheid).",
 };

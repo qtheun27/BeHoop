@@ -247,13 +247,32 @@ function PickMatch({ onPick }: { onPick: (d: Draft) => void }) {
 }
 
 /* ---------- 2. Médias ---------- */
+/** Bouton d'ajout depuis la galerie. Sur iPhone, l'app Photos « prépare » les vidéos (téléchargement iCloud, conversion)
+ *  AVANT de les donner à BeHoop : si l'écran se met en veille pendant ce temps, l'iPhone annule sans rien dire. On garde
+ *  donc l'écran allumé dès le toucher sur « Ajouter » (pas seulement à l'arrivée des fichiers), et on explique quoi faire. */
+function PickMedia({ label, className, onFiles }: { label: string; className: string; onFiles: (l: FileList | File[] | null) => void }) {
+  const [picking, setPicking] = useState(false);
+  const input = useRef<HTMLInputElement>(null);
+  useEffect(() => { const el = input.current; const off = () => setPicking(false); el?.addEventListener('cancel', off); return () => el?.removeEventListener('cancel', off); }, []);
+  return (<>
+    <label className={className} onClick={() => { keepAwake(true); setPicking(true); }}>{label}
+      <input ref={input} type="file" accept={ACCEPT} multiple hidden onChange={(e) => {
+        const files = Array.from(e.target.files ?? []); e.target.value = ''; // même sélection possible au prochain essai
+        setPicking(false); if (files.length) onFiles(files);
+      }} /></label>
+    {picking ? <div className="banner mt"><Ico n="device" /><div style={{ flex: 1, fontSize: 14 }}>
+      <b>{t('L’iPhone prépare tes médias…')}</b><div className="muted">{t('Ça peut prendre quelques minutes pour les longues vidéos. Garde l’écran allumé et reste sur BeHoop. Si rien n’arrive, touche à nouveau « Ajouter » : les médias déjà ajoutés ne seront pas en double.')}</div></div></div>
+      : <p className="hint">{t('Astuce : pour beaucoup de vidéos, mets le verrouillage automatique de l’iPhone sur « Jamais » le temps de l’envoi (Réglages → Luminosité et affichage).')}</p>}
+  </>);
+}
+
 function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<React.SetStateAction<Draft | null>> }) {
   const [busy, setBusy] = useState('');
   const upd = (p: Partial<Draft>) => setDraft({ ...draft, ...p });
   // Montage commencé avec l'ancienne version : on retire les doublons (fichiers resélectionnés pris pour des nouveaux)
   useEffect(() => { const m = dedupe(draft.media); if (m.length !== draft.media.length) setDraft((d) => (d ? { ...d, media: assignQuarters(dedupe(d.media)) } : d)); }, [draft.media.length]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { kick(draft); }, [draft.media]); // eslint-disable-line react-hooks/exhaustive-deps
-  const addFiles = async (list: FileList | null) => {
+  const addFiles = async (list: FileList | File[] | null) => {
     if (!list?.length) return;
     await keepAwake(true);
     const arr = Array.from(list); const out: Item[] = [];
@@ -285,8 +304,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
     <Screen title={t('Vidéos et photos')} back="publier">
       <Steps n={1} />
       <p className="muted">{t('Sélectionne toutes les vidéos et photos du match depuis ta galerie. BeHoop les classe par quart-temps grâce à l\'heure de prise de vue.')}</p>
-      <label className="btn">{t('＋ Ajouter depuis la galerie')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
-      <p className="hint">{t('Si la sélection est longue, c’est l’iPhone qui récupère les vidéos depuis iCloud : reste sur cet écran, il ne se mettra pas en veille.')}</p>
+      <PickMedia label={t('＋ Ajouter depuis la galerie')} className="btn" onFiles={addFiles} />
       {busy && <p className="muted center">{busy}</p>}
       <BgProgress draft={draft} />
       {draft.media.length > 0 && <>
@@ -310,7 +328,7 @@ function Thumb({ m, onClick, sel }: { m: Item; onClick?: () => void; sel?: boole
 }
 
 /* ---------- 3. Vérifier ---------- */
-function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial<Draft>) => void; addFiles: (l: FileList | null) => void; busy: string }) {
+function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial<Draft>) => void; addFiles: (l: FileList | File[] | null) => void; busy: string }) {
   const s = useSession();
   const st = draft.settings, media = draft.media;
   const setSt = (p: Partial<MatchSettings>) => upd({ settings: { ...st, ...p } });
@@ -411,7 +429,7 @@ function Verify({ draft, upd, addFiles, busy }: { draft: Draft; upd: (p: Partial
       <div className="group-title">{t('Médias par quart-temps')}</div>
       <div className="seg">{([1, 2, 3, 4] as const).map((n) => <button key={n} className={q === n ? 'on' : ''} onClick={() => setQ(n)}>Q{n} ({media.filter((m) => m.quarter === n && !m.excluded).length})</button>)}</div>
       <div className="grid3">{items.map((m) => <Thumb key={m.id} m={m} sel={sel?.id === m.id} onClick={() => setSel(m)} />)}</div>
-      <label className="btn secondary mt">{t('＋ Ajouter des médias')}<input type="file" accept={ACCEPT} multiple hidden onChange={(e) => addFiles(e.target.files)} /></label>
+      <PickMedia label={t('＋ Ajouter des médias')} className="btn secondary mt" onFiles={addFiles} />
       <button className="btn ghost" onClick={() => upd({ media: assignQuarters(media) })}>{t('Reclasser automatiquement')}</button>
       {busy && <p className="muted center">{busy}</p>}
       {err && <div className="err mt">{err}</div>}

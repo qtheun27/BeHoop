@@ -1346,4 +1346,7 @@ export const EN: Record<string, string> = {
   "Fin − 1 s": "End − 1 s",
   "Fin + 1 s": "End + 1 s",
   "Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l'image exacte.": "Drag the clip or its edges (15 to 30 s): the video shows the exact frame.",
+  "L’iPhone prépare tes médias…": "Your iPhone is preparing your media…",
+  "Ça peut prendre quelques minutes pour les longues vidéos. Garde l’écran allumé et reste sur BeHoop. Si rien n’arrive, touche à nouveau « Ajouter » : les médias déjà ajoutés ne seront pas en double.": "This can take a few minutes for long videos. Keep the screen on and stay in BeHoop. If nothing arrives, tap « Add » again: media already added won't be duplicated.",
+  "Astuce : pour beaucoup de vidéos, mets le verrouillage automatique de l’iPhone sur « Jamais » le temps de l’envoi (Réglages → Luminosité et affichage).": "Tip: with many videos, set your iPhone's Auto-Lock to « Never » while uploading (Settings → Display & Brightness).",
 };
