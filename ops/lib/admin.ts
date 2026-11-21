@@ -6,6 +6,7 @@ import { AwsClient } from 'aws4fetch';
 import { createReadStream, createWriteStream, statSync } from 'node:fs';
 import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
+import { open } from 'node:fs/promises';
 import { pick, type Txt } from '../../shared/notifText';
 
 let configured = false;
@@ -22,6 +23,17 @@ export function admin() {
 }
 export const hasFirebase = () => !!(process.env.FIREBASE_SERVICE_ACCOUNT || process.env.FIRESTORE_EMULATOR_HOST);
 
+/** Jusqu'à 4 essais (attente 5, 10, 20 s) : coupures et connexions figées passagères */
+async function retry<T>(what: string, f: () => Promise<T>): Promise<T> {
+  for (let i = 0; ; i++) {
+    try { return await f(); } catch (e) {
+      if (i >= 3) throw e;
+      console.warn(`${what} : essai ${i + 1} raté (${(e as Error).message}), nouvel essai`);
+      await new Promise((r) => setTimeout(r, 5000 * 2 ** i));
+    }
+  }
+}
+
 export class R2 {
   private c: AwsClient; private base: string;
   constructor(env = process.env) {
@@ -30,15 +42,46 @@ export class R2 {
     this.base = `https://${env.R2_ACCOUNT_ID}${(env.R2_JURISDICTION ?? 'eu') ? '.' + (env.R2_JURISDICTION ?? 'eu') : ''}.r2.cloudflarestorage.com/${env.R2_BUCKET}`;
   }
   url(key: string) { return `${this.base}/${key.split('/').map(encodeURIComponent).join('/')}`; }
+  /** Téléchargement avec délai maximal et nouveaux essais : une connexion figée ne bloque plus toute la tâche */
   async download(key: string, to: string) {
-    const r = await this.c.fetch(this.url(key));
-    if (!r.ok || !r.body) throw new Error(`R2 GET ${key} → ${r.status}`);
-    await pipeline(Readable.fromWeb(r.body as any), createWriteStream(to));
+    await retry(`R2 GET ${key}`, async () => {
+      const r = await this.c.fetch(this.url(key), { signal: AbortSignal.timeout(180_000) });
+      if (!r.ok || !r.body) throw new Error(`R2 GET ${key} → ${r.status}`);
+      await pipeline(Readable.fromWeb(r.body as any), createWriteStream(to));
+    });
   }
+  /** Envoi : en une fois jusqu'à 64 Mo, au-delà en parties de 32 Mo (chacune avec délai et nouveaux essais) */
   async upload(key: string, from: string, type: string, cache = 'public, max-age=31536000, immutable') {
-    const r = await this.c.fetch(this.url(key), { method: 'PUT', body: createReadStream(from) as any, duplex: 'half',
-      headers: { 'Content-Type': type, 'Content-Length': String(statSync(from).size), 'Cache-Control': cache } } as RequestInit);
-    if (!r.ok) throw new Error(`R2 PUT ${key} → ${r.status} ${await r.text()}`);
+    const size = statSync(from).size;
+    if (size > 64 * 1024 * 1024) return this.uploadParts(key, from, size, type, cache);
+    await retry(`R2 PUT ${key}`, async () => {
+      const r = await this.c.fetch(this.url(key), { method: 'PUT', body: createReadStream(from) as any, duplex: 'half', signal: AbortSignal.timeout(600_000),
+        headers: { 'Content-Type': type, 'Content-Length': String(size), 'Cache-Control': cache } } as RequestInit);
+      if (!r.ok) throw new Error(`R2 PUT ${key} → ${r.status} ${await r.text()}`);
+    });
+  }
+  private async uploadParts(key: string, from: string, size: number, type: string, cache: string) {
+    const PART = 32 * 1024 * 1024;
+    const init = await this.c.fetch(`${this.url(key)}?uploads`, { method: 'POST', headers: { 'Content-Type': type, 'Cache-Control': cache } });
+    const uploadId = /<UploadId>([^<]+)<\/UploadId>/.exec(await init.text())?.[1];
+    if (!init.ok || !uploadId) throw new Error(`R2 multipart ${key} → ${init.status}`);
+    const n = Math.ceil(size / PART), etags: string[] = [];
+    const fh = await open(from, 'r');
+    try {
+      for (let i = 0; i < n; i++) {
+        const len = Math.min(PART, size - i * PART), buf = Buffer.alloc(len);
+        await fh.read(buf, 0, len, i * PART);
+        etags[i] = await retry(`R2 partie ${i + 1}/${n} ${key}`, async () => {
+          const r = await this.c.fetch(`${this.url(key)}?partNumber=${i + 1}&uploadId=${encodeURIComponent(uploadId)}`, { method: 'PUT', body: buf, signal: AbortSignal.timeout(300_000) });
+          if (!r.ok) throw new Error(`R2 partie ${i + 1} → ${r.status}`);
+          return r.headers.get('etag') ?? '';
+        });
+        if ((i + 1) % 10 === 0 || i + 1 === n) console.log(`  envoi ${key} : ${i + 1}/${n} parties`);
+      }
+    } finally { await fh.close(); }
+    const xml = `<CompleteMultipartUpload>${etags.map((e, i) => `<Part><PartNumber>${i + 1}</PartNumber><ETag>${e}</ETag></Part>`).join('')}</CompleteMultipartUpload>`;
+    const done = await this.c.fetch(`${this.url(key)}?uploadId=${encodeURIComponent(uploadId)}`, { method: 'POST', body: xml, headers: { 'Content-Type': 'application/xml' } });
+    if (!done.ok) throw new Error(`R2 fin multipart ${key} → ${done.status} ${await done.text()}`);
   }
   async list(prefix: string): Promise<{ key: string; lastModified: string }[]> {
     const out: { key: string; lastModified: string }[] = []; let token = '';

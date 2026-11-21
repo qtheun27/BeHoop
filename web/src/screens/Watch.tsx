@@ -186,7 +186,9 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   const status = q === '1080p' ? mv.mp4Status1080 : mv.mp4Status;
   const [asked, setAsked] = useState<string>('');
   const prepare = async () => { setAsked(q); try { await api('/mp4', { matchVideoId: id, quality: q }); } catch { setAsked(''); s.toast(t('Impossible de préparer le fichier. Réessaie.')); } };
-  const busy = asked === q || status === 'queued' || status === 'running';
+  // Préparation bloquée (plus de 70 min, tâche arrêtée en route) : on peut la redemander
+  const since = Number((q === '1080p' ? mv.mp4Status1080Since : mv.mp4StatusSince) ?? 0);
+  const busy = asked === q || ((status === 'queued' || status === 'running') && Date.now() - since < 70 * 60e3);
   const youth = mv.visibility === 'team';
   const [ok, setOk] = useState(!youth);
   // Lien de téléchargement préparé à l'avance (le toucher doit ouvrir le lien directement, sinon iOS le bloque)
@@ -215,7 +217,7 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
+interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 

@@ -331,7 +331,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const q = body.quality === '720p' ? '720p' : '1080p';
     const key = q === '1080p' ? v.hls?.mp4Key1080 : v.hls?.mp4Key, st = q === '1080p' ? 'mp4Status1080' : 'mp4Status';
     if (key) return json({ ok: true, ready: true });
-    if (v[st] !== 'queued' && v[st] !== 'running') { await fs.set(`matchVideos/${id}`, { [st]: 'queued' }); await dispatch(env, 'mp4.yml', { matchVideoId: id, quality: q }); }
+    // Déjà en cours : on n'en relance pas un second… sauf s'il est bloqué depuis plus de 70 min (tâche arrêtée en route :
+    // le statut serait resté « en cours » pour toujours). Pas d'heure de départ (ancienne demande) = bloqué.
+    const busy = (v[st] === 'queued' || v[st] === 'running') && Date.now() - Number(v[`${st}Since`] ?? 0) < 70 * 60e3;
+    if (!busy) { await fs.set(`matchVideos/${id}`, { [st]: 'queued', [`${st}Since`]: Date.now() }); await dispatch(env, 'mp4.yml', { matchVideoId: id, quality: q }); }
     return json({ ok: true, ready: false });
   }
   if (path === '/moments') {
