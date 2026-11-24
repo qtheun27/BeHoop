@@ -51,6 +51,14 @@ try {
   };
   await access(); // connexion valide avant de préparer quoi que ce soit
 
+  // Diagnostic (YT_CHECK=1) : état de la vidéo déjà envoyée, vu par YouTube
+  if (process.env.YT_CHECK === '1') {
+    if (!yt.videoId) throw new Error('aucune vidéo YouTube enregistrée');
+    const v = await gapi(`https://www.googleapis.com/youtube/v3/videos?part=status,processingDetails,fileDetails,suggestions&id=${yt.videoId}`);
+    console.log(JSON.stringify(v.items?.[0] ?? v, null, 2));
+    process.exit(0);
+  }
+
   // 1. Fichier MP4 1080p (préparé maintenant s'il n'existe pas encore)
   let key = mv.hls?.mp4Key1080 as string | undefined;
   if (!key) { await set({ status: 'preparing', progress: 0 }); console.log('préparation du fichier 1080p'); key = await buildMp4(id, '1080p', false); }

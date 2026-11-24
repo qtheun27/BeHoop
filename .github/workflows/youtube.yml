@@ -7,6 +7,10 @@ on:
       matchVideoId:
         description: 'Identifiant de la vidéo (matchVideos/{id})'
         required: true
+      check:
+        description: 'Diagnostic seulement (état de la vidéo sur YouTube)'
+        type: boolean
+        default: false
 
 concurrency:
   group: youtube-${{ inputs.matchVideoId }}
@@ -27,11 +31,13 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '22', cache: 'npm' }
       - name: FFmpeg
+        if: ${{ !inputs.check }}
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Envoi sur YouTube
         run: npx tsx ops/render/youtube.ts "${{ inputs.matchVideoId }}"
         env:
+          YT_CHECK: ${{ inputs.check && '1' || '' }}
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
