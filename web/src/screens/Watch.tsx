@@ -230,7 +230,10 @@ function YtPublish({ id, mv, youth, parentsOk, desc }: { id: string; mv: MatchVi
   const [privacy, setPrivacy] = useState<'public' | 'unlisted' | 'private'>(youth ? 'unlisted' : 'public');
   const [pl, setPl] = useState('none'), [plName, setPlName] = useState(set ? `${set.home.name} — ${season}` : `BeHoop — ${season}`);
   const [busy, setBusy] = useState(false);
-  const y = mv.youtube;
+  // Vidéo supprimée depuis YouTube : l'appli l'oublie (plus de lien mort, bouton « Publier sur YouTube » de retour)
+  const [gone, setGone] = useState(false);
+  const y = gone ? undefined : mv.youtube;
+  useEffect(() => { if (mv.youtube?.status === 'done' && mv.youtube.url) api<{ gone: boolean }>('/youtube/check', { matchVideoId: id }).then((r) => setGone(r.gone)).catch(() => {}); }, [id, mv.youtube?.url]); // eslint-disable-line react-hooks/exhaustive-deps
   const running = !!y && ['queued', 'preparing', 'uploading'].includes(y.status) && Date.now() - Number(y.at ?? 0) < 3 * 3600e3;
   useEffect(() => { const r = qs().get('yt'); if (r && r !== 'ok') s.toast(t('Connexion à YouTube non terminée ({r}).', { r })); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   if (!st.data?.available) return null;

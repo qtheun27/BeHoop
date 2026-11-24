@@ -366,6 +366,16 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     }
     return json({ playlists: out });
   }
+  // Vidéo publiée encore sur YouTube ? (oEmbed, sans quota : 400/404 = supprimée ; privée = 401/403, gardée)
+  if (path === '/youtube/check') {
+    const id = String(body.matchVideoId ?? '');
+    const v = await ownVideo(id), url = v.youtube?.status === 'done' ? String(v.youtube.url ?? '') : '';
+    if (!/^https:\/\/youtu\.be\/[\w-]{6,20}$/.test(url)) return json({ gone: false });
+    const r = await fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(url)}`);
+    if (r.status !== 404 && r.status !== 400) return json({ gone: false }); // vidéo inexistante : 400 ou 404 selon YouTube
+    await fs.set(`matchVideos/${id}`, { youtube: null });
+    return json({ gone: true });
+  }
   if (path === '/youtube/publish') {
     const id = String(body.matchVideoId ?? '');
     const v = await ownVideo(id);
