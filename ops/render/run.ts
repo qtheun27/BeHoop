@@ -32,11 +32,13 @@ export function run(bin: string, args: string[]): Promise<string> {
 }
 export const ff = (args: string[]) => run(FFMPEG, ['-hide_banner', '-loglevel', 'error', ...args]);
 
-async function probe(file: string): Promise<ProbeInfo> {
+export async function probe(file: string): Promise<ProbeInfo> {
   const j = JSON.parse(await run(FFPROBE, ['-v', 'error', '-print_format', 'json', '-show_streams', '-show_format', file]));
   const v = j.streams.find((s: any) => s.codec_type === 'video') ?? {};
   const rot = Number(v.tags?.rotate ?? v.side_data_list?.find((x: any) => x.rotation !== undefined)?.rotation ?? 0);
-  return { width: v.width ?? 1920, height: v.height ?? 1080, rotation: rot, hasAudio: j.streams.some((s: any) => s.codec_type === 'audio'), duration: Number(j.format?.duration ?? v.duration ?? 0) };
+  // HDR de l'iPhone : HLG (arib-std-b67) ou PQ (smpte2084)
+  const hdr = /arib-std-b67|smpte2084/.test(String(v.color_transfer ?? ''));
+  return { width: v.width ?? 1920, height: v.height ?? 1080, rotation: rot, hasAudio: j.streams.some((s: any) => s.codec_type === 'audio'), duration: Number(j.format?.duration ?? v.duration ?? 0), hdr };
 }
 const durationOf = async (f: string) => (await probe(f)).duration;
 
@@ -81,7 +83,15 @@ export interface Job {
   id: string; version: number; settings: MatchSettings; media: (MediaItem & { local?: string })[];
   visibility: 'public' | 'team'; teamIdPrivate: number | null;
 }
-export interface Hooks { progress: (p: number, step: string) => Promise<void>; fetchMedia: (m: MediaItem, to: string) => Promise<void> }
+export interface Hooks {
+  progress: (p: number, step: string) => Promise<void>; fetchMedia: (m: MediaItem, to: string) => Promise<void>;
+  /** Vidéo déjà préparée en parallèle (render.yml, tâches « norm ») : récupérée telle quelle ; false → on la prépare ici */
+  fetchNormalized?: (m: MediaItem, to: string) => Promise<boolean>;
+}
+/** Ordre des vidéos du montage (par quart, puis ordre choisi) */
+export const videoOrder = (media: MediaItem[]) => media.filter((m) => !m.excluded && m.kind === 'video').sort((a, b) => (a.quarter! - b.quarter!) || ((a.order ?? 0) - (b.order ?? 0)));
+/** Préparation d'une vidéo (1080p30, HDR → SDR, débruitage) */
+export async function normalizeFile(src: string, out: string) { await ff(normalizeArgs(src, out, await probe(src))); }
 
 /** Rendu complet ; renvoie le dossier HLS et les métadonnées. */
 export async function render(job: Job, work: string, hooks: Hooks) {
@@ -95,15 +105,17 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   for (const m of media.filter((x) => x.kind === 'photo')) { m.local = join(work, 'photos', `${m.id}.jpg`); await hooks.fetchMedia(m, m.local); }
 
   // 2. Vidéos : téléchargement → normalisation → suppression de l'original (disque du runner limité)
-  const videos = media.filter((m) => m.kind === 'video').sort((a, b) => (a.quarter! - b.quarter!) || ((a.order ?? 0) - (b.order ?? 0)));
+  const videos = videoOrder(media);
   const norm = new Map<string, { path: string; duration: number }>();
   for (const [i, m] of videos.entries()) {
     await P(5 + Math.round((i / Math.max(1, videos.length)) * 50), `Préparation des vidéos (${i + 1}/${videos.length})`);
-    const src = join(work, `src_${m.id}${extname(m.name) || '.mov'}`);
-    await hooks.fetchMedia(m, src);
     const out = join(work, 'clips', `norm_${m.id}.mp4`);
-    await ff(normalizeArgs(src, out, await probe(src)).map((a) => (a === 'veryfast' ? 'superfast' : a)));
-    rmSync(src, { force: true });
+    if (!(await hooks.fetchNormalized?.(m, out).catch(() => false))) {
+      const src = join(work, `src_${m.id}${extname(m.name) || '.mov'}`);
+      await hooks.fetchMedia(m, src);
+      await normalizeFile(src, out);
+      rmSync(src, { force: true });
+    }
     norm.set(m.id, { path: out, duration: await durationOf(out) });
   }
 
@@ -126,7 +138,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   // 4. Planches animées + vague (Playwright, 30 i/s)
   await P(58, 'Création des planches animées');
   const { server, base } = await serve(work);
-  const browser = await chromium.launch();
+  const browser = await chromium.launch(process.env.PW_CHROME ? { executablePath: process.env.PW_CHROME } : {});
   const ctx = await browser.newContext({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   const page = await ctx.newPage();
   const planche: Record<string, string> = {};
@@ -201,22 +213,29 @@ export async function render(job: Job, work: string, hooks: Hooks) {
 }
 
 /* ---------------- Mode GitHub Actions (Firestore + R2) ---------------- */
+/** Vidéo préparée par une tâche parallèle (render.yml, « norm »), en attente du montage */
+// v2 : version du traitement des vidéos (à augmenter s'il change : une vidéo préparée par un ancien traitement n'est pas reprise)
+export const normKey = (id: string, mediaId: string) => `render-tmp/${id}/v2_${mediaId}.mp4`;
 async function remote(id: string) {
   const { admin, R2, notifyUsers, followers } = await import('../lib/admin');
   const { db, FieldValue } = admin();
   const r2 = new R2();
   const ghRunUrl = process.env.GITHUB_RUN_ID ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}` : null;
   const jobRef = db.doc(`renderJobs/${id}`), mvRef = db.doc(`matchVideos/${id}`);
-  await jobRef.set({ status: 'running', progress: 1, step: 'Démarrage', ghRunUrl, startedAt: FieldValue.serverTimestamp() }, { merge: true });
+  // Les vidéos ont pu être préparées en parallèle juste avant (tâches « norm ») : l'avancement ne recule pas
+  const before = (await jobRef.get()).data();
+  const from = Math.max(1, Number(before?.status === 'running' ? before?.progress ?? 0 : 0));
+  await jobRef.set({ status: 'running', progress: from, step: from > 1 ? before?.step ?? 'Démarrage' : 'Démarrage', ghRunUrl, startedAt: FieldValue.serverTimestamp() }, { merge: true });
   try {
     const mv = (await mvRef.get()).data();
     if (!mv) throw new Error('Montage introuvable');
     const version = (mv.version ?? 0) + 1;
     const job: Job = { id, version, settings: settingsFromStore(mv.settings), media: mv.media, visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null };
-    let last = 0;
+    let last = from;
     const res = await render(job, join(ROOT, 'out', 'render', id), {
-      progress: async (p, step) => { if (p - last >= 2 || p < last) { last = p; await jobRef.update({ progress: p, step }); } },
+      progress: async (p, step) => { if (p - last >= 2) { last = p; await jobRef.update({ progress: p, step }); } },
       fetchMedia: (m, to) => r2.download(m.r2Key, to),
+      fetchNormalized: async (m, to) => { try { await r2.download(normKey(id, m.id), to); return true; } catch { return false; } },
     });
     await jobRef.update({ progress: 92, step: 'Mise en ligne' });
     const prefix = `videos/${job.visibility === 'team' ? `team-${job.teamIdPrivate}` : 'public'}/${id}/v${version}`;
@@ -238,6 +257,8 @@ async function remote(id: string) {
       payload: { matchVideoId: id, title: job.settings.title, duration: hls.duration, posterKey: hls.posterKey, score: `${fh} – ${fa}` },
     }, { merge: true });
     await jobRef.update({ status: 'done', progress: 100, step: 'Vidéo prête', finishedAt: FieldValue.serverTimestamp() });
+    // Vidéos préparées en parallèle : plus utiles une fois le montage en ligne
+    for (const k of await r2.list(`render-tmp/${id}/`).catch(() => [])) await r2.remove(k.key).catch(() => {});
     await notifyUsers([mv.authorUid], { title: N.videoReady, body: job.settings.title, url: `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
     // « Nouvelle vidéo de [équipe] » : membres de l'Équipe 🔒 (Jeunes) ou abonnés (Seniors)
     let to: string[] = [];

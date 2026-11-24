@@ -13,9 +13,42 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  render:
+  # 1. Préparation des vidéos en parallèle sur 4 machines (le plus long : 4K, HDR, débruitage) → R2 render-tmp/
+  norm:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data.json
+            !/calendars/
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - name: FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Préparation des vidéos (part ${{ matrix.shard }})
+        run: npx tsx ops/render/norm.ts "${{ inputs.matchVideoId }}" ${{ matrix.shard }} 4
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+  # 2. Montage : récupère les vidéos préparées (une vidéo manquante, tâche en échec, est préparée ici)
+  render:
+    needs: norm
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
         with:

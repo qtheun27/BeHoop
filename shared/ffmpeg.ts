@@ -1,23 +1,35 @@
 // Génération des commandes FFmpeg du pipeline de montage (testées unitairement).
-export interface ProbeInfo { width: number; height: number; rotation: number; hasAudio: boolean; duration: number }
+export interface ProbeInfo { width: number; height: number; rotation: number; hasAudio: boolean; duration: number; hdr?: boolean }
 
 const W = 1920, H = 1080;
 
-/** Normalise une vidéo en 1080p30 H.264/AAC ; vidéos verticales sur fond flou ; silence si pas d'audio. */
+/** Vidéo HDR de l'iPhone (HLG / PQ, BT.2020) → SDR BT.709 : sans cela, couleurs délavées et image terne */
+const TONEMAP = 'zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p';
+/** Débruitage léger (grain des salles peu éclairées), appliqué après réduction en 1080p */
+const DENOISE = 'hqdn3d=1.5:1.5:4:4';
+
+/** Normalise une vidéo en 1080p30 H.264/AAC ; vidéos verticales sur fond flou ; silence si pas d'audio.
+ *  4K et plus : réduction de qualité (lanczos) ; HDR converti en SDR ; débruitage léger. Fichier intermédiaire de haute
+ *  qualité (CRF 16) : la qualité finale se joue à l'encodage des segments. */
 export function normalizeArgs(input: string, output: string, p: ProbeInfo): string[] {
   const rotated = Math.abs(p.rotation) % 180 === 90;
   const w = rotated ? p.height : p.width, h = rotated ? p.width : p.height;
   const vertical = h > w;
+  // Grandes vidéos (4K, 8K…) : réduites d'abord à 1920 px sur le plus grand côté (lanczos, net) ; le reste du traitement
+  // (conversion HDR, débruitage) porte ainsi sur 4 fois moins de pixels → bien plus rapide, même rendu
+  const k = Math.min(1, W / Math.max(w, h)), tw = Math.round((w * k) / 2) * 2, th = Math.round((h * k) / 2) * 2;
+  const pre = (k < 1 ? `scale=${tw}:${th}:flags=lanczos,` : '') + (p.hdr ? `${TONEMAP},` : '');
+  const sc = 'flags=lanczos';
   const vf = vertical
-    ? `[0:v]split=2[bg][fg];[bg]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=30:2,eq=brightness=-0.12[b];` +
-      `[fg]scale=${W}:${H}:force_original_aspect_ratio=decrease[f];[b][f]overlay=(W-w)/2:(H-h)/2,fps=30,format=yuv420p,setsar=1[v]`
-    : `[0:v]scale=${W}:${H}:force_original_aspect_ratio=decrease,pad=${W}:${H}:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p,setsar=1[v]`;
+    ? `[0:v]${pre}split=2[bg][fg];[bg]scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H},boxblur=30:2,eq=brightness=-0.12[b];` +
+      `[fg]scale=${W}:${H}:force_original_aspect_ratio=decrease:${sc},${DENOISE}[f];[b][f]overlay=(W-w)/2:(H-h)/2,fps=30,format=yuv420p,setsar=1[v]`
+    : `[0:v]${pre}scale=${W}:${H}:force_original_aspect_ratio=decrease:${sc},${DENOISE},pad=${W}:${H}:(ow-iw)/2:(oh-ih)/2,fps=30,format=yuv420p,setsar=1[v]`;
   const args = ['-y', '-i', input];
   if (!p.hasAudio) args.push('-f', 'lavfi', '-i', 'anullsrc=channel_layout=stereo:sample_rate=48000');
   args.push('-filter_complex', vf, '-map', '[v]', '-map', p.hasAudio ? '0:a:0' : '1:a:0');
   if (!p.hasAudio) args.push('-shortest');
-  args.push('-c:v', 'libx264', '-preset', 'veryfast', '-crf', '21', '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2',
-    '-movflags', '+faststart', output);
+  args.push('-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',
+    '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart', output);
   return args;
 }
 
@@ -93,8 +105,9 @@ export function hlsArgs(input: string, outDir: string): string[] {
     '-var_stream_map', 'v:0,a:0,name:1080p v:1,a:1,name:720p', `${outDir}/%v/index.m3u8`];
 }
 
-/** Débit cible du 1080p (≈ 4,5 Mb/s) appliqué à l'encodage des segments. */
-export const ENC_1080 = ['-c:v', 'libx264', '-preset', 'veryfast', '-profile:v', 'high', '-b:v', '4500k', '-maxrate', '5000k', '-bufsize', '9000k',
+/** Encodage final du 1080p (segments) : qualité constante (CRF 20, préréglage « medium », bien plus fin que « veryfast »),
+ *  plafonnée à 8 Mb/s pour rester fluide en streaming (débit conseillé par YouTube pour du 1080p30). */
+export const ENC_1080 = ['-c:v', 'libx264', '-preset', 'medium', '-profile:v', 'high', '-crf', '20', '-maxrate', '8000k', '-bufsize', '16000k',
   '-g', '60', '-keyint_min', '60', '-sc_threshold', '0', '-pix_fmt', 'yuv420p', '-r', '30',
   '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2'];
 

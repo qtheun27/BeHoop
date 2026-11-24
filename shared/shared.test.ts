@@ -74,8 +74,19 @@ describe('chapitres', () => {
 describe('commandes FFmpeg', () => {
   it('normalisation standard', () => {
     const a = normalizeArgs('in.mov', 'out.mp4', { width: 1920, height: 1080, rotation: 0, hasAudio: true, duration: 10 });
-    expect(a.join(' ')).toContain('force_original_aspect_ratio=decrease,pad=1920:1080');
+    const j = a.join(' ');
+    expect(j).toContain('force_original_aspect_ratio=decrease:flags=lanczos,hqdn3d'); expect(j).toContain('pad=1920:1080');
     expect(a).toContain('libx264'); expect(a).toContain('0:a:0');
+    expect(j).not.toContain('tonemap'); expect(j).not.toContain('scale=1920:1080:flags'); // HD : pas de réduction préalable
+  });
+  it('4K HDR (iPhone) : réduite d’abord en 1080p, puis convertie en SDR', () => {
+    const j = normalizeArgs('in.mov', 'out.mp4', { width: 3840, height: 2160, rotation: 0, hasAudio: true, duration: 10, hdr: true }).join(' ');
+    expect(j).toContain('[0:v]scale=1920:1080:flags=lanczos,zscale=t=linear');
+    expect(j).toContain('tonemap=tonemap=hable'); expect(j).toContain('-color_primaries bt709');
+  });
+  it('4K verticale (Android, tournée) : réduite à 1920 px de haut', () => {
+    const j = normalizeArgs('in.mp4', 'out.mp4', { width: 3840, height: 2160, rotation: 90, hasAudio: true, duration: 10 }).join(' ');
+    expect(j).toContain('[0:v]scale=1080:1920:flags=lanczos,split=2'); expect(j).toContain('boxblur');
   });
   it('vidéo verticale (rotation) + sans audio', () => {
     const a = normalizeArgs('in.mov', 'out.mp4', { width: 1920, height: 1080, rotation: -90, hasAudio: false, duration: 10 }).join(' ');
@@ -99,7 +110,7 @@ describe('commandes FFmpeg', () => {
     expect(s).toContain('xfade=transition=fade:duration=0.25:offset=9.750');
     expect(s).toContain('PTS-STARTPTS+14.417/TB');
     expect(s).toContain('adelay=14417|14417');
-    expect(s).toContain('-g 60');
+    expect(s).toContain('-g 60'); expect(s).toContain('-preset medium'); expect(s).toContain('-maxrate 8000k');
   });
 });
 
