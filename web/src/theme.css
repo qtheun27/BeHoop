@@ -352,6 +352,10 @@ html { overflow-x: hidden; }
 :root[data-court="dark"] .court-bg { opacity: .7; }
 :root[data-court="light"] body::before, :root[data-court="dark"] body::before { background: var(--bg) !important; }
 :root[data-court="light"] body::after, :root[data-court="dark"] body::after { content: none !important; }
+/* Fond « terrain » aux couleurs du club : cartes et listes presque opaques, pour que le logo du rond central ne se voie
+   pas à travers (il gênait la lecture des formulaires et des listes) */
+:root[data-court="dark"] { --bg2: rgba(22,27,38,.985); --glass: rgba(24,30,44,.9); }
+:root[data-court="light"] { --bg2: rgba(255,255,255,.985); --glass: rgba(255,255,255,.88); }
 /* Covoiturage */
 .car-offer { padding: 14px; }
 .car-ico { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
