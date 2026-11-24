@@ -1,39 +1,6 @@
 import { Screen } from '../ui/kit';
 import { t } from '../lib/i18n';
-
-// Brouillons — À RELIRE par Quentin (et idéalement un juriste) avant la mise en ligne publique.
-const DOCS: Record<string, { title: string; body: [string, string][] }> = {
-  cgu: { title: "Conditions d'utilisation", body: [
-    ['Le service', "BeHoop (behoop.be) est un projet personnel, gratuit et sans publicité, qui affiche les résultats du basket belge et international et permet de suivre des clubs, de publier des messages, photos et vidéos de match."],
-    ['Ton compte', "Il faut avoir 13 ans ou plus. Ton prénom et l'initiale de ton nom sont visibles des autres utilisateurs. Tu es responsable de ce que tu publies."],
-    ['Ce que tu publies', "Tu dois avoir le droit de publier tes photos et vidéos. Les médias d'une équipe Jeunes ne sont visibles que par les membres validés de l'Équipe. Tu t'engages à retirer un contenu si un parent le demande."],
-    ['Modération', "Tout contenu peut être signalé. BeHoop peut masquer un contenu ou suspendre un compte qui ne respecte pas la charte, sans préavis."],
-    ['Responsabilité', "Les données sportives sont reprises automatiquement de sources publiques et peuvent contenir des erreurs : en cas de doute, la source officielle fait foi. Le service est fourni « tel quel », sans garantie de disponibilité."],
-    ['Sources des données', "Résultats, calendriers et classements : AWBB (Wallonie-Bruxelles), Basketbal Vlaanderen, BNXT League, EuroLeague Basketball (EuroLeague, EuroCup), FIBA (sélections, Champions League, FIBA Europe Cup, compétitions féminines européennes), ESPN (NBA, WNBA). Actualités : titres et courts extraits des flux publics des médias, avec un lien vers l'article original. La source est indiquée sous chaque classement et calendrier."],
-    ['Marques et logos', "Les noms, logos et marques des clubs, ligues et compétitions appartiennent à leurs propriétaires. Ils servent uniquement à identifier les équipes et compétitions ; BeHoop n'est affilié à aucune fédération, ligue ou club et n'est soutenu par aucun d'eux. Drapeaux : flag-icons (licence MIT)."],
-    ['Demande de retrait', "Un titulaire de droits (fédération, club, média, photographe) peut demander le retrait d'un contenu, d'un logo ou d'une source en écrivant à q.theuninck@gmail.com : la demande est traitée rapidement."],
-    ['Contact', 'q.theuninck@gmail.com'],
-  ] },
-  confidentialite: { title: 'Politique de confidentialité', body: [
-    ['Responsable du traitement', 'Quentin T. — q.theuninck@gmail.com.'],
-    ['Données collectées', "Adresse e-mail et identifiant de connexion (Firebase Auth), prénom et initiale du nom, clubs et équipes suivis, adhésions aux Équipes, publications, réactions, signalements, jetons de notification, photos et vidéos envoyées."],
-    ['Pourquoi', "Faire fonctionner ton compte, ton fil, les notifications et le montage vidéo. Aucune publicité, aucune revente, aucun profilage."],
-    ['Où', "Google Firebase (UE/États-Unis, clauses contractuelles types) et Cloudflare R2 (stockage des médias). Les rushes vidéo sont supprimés 48 h après le montage."],
-    ['YouTube', "Si tu connectes ta chaîne YouTube, BeHoop utilise les services API de YouTube pour publier tes vidéos de match sur ta chaîne et les ranger dans tes playlists, uniquement quand tu le demandes. BeHoop garde le nom et l'identifiant de ta chaîne et une autorisation d'accès (conservée sur nos serveurs, jamais dans l'appli). En utilisant cette fonction, tu acceptes les conditions d'utilisation de YouTube (youtube.com/t/terms) ; les règles de confidentialité de Google s'appliquent (policies.google.com/privacy). Tu peux déconnecter ta chaîne à tout moment dans ton profil (l'autorisation est alors effacée) ou retirer l'accès depuis ton compte Google (myaccount.google.com/permissions)."],
-    ['Mesure d\'audience', "Pour savoir combien de personnes utilisent BeHoop et quelles pages sont consultées, nous utilisons Cloudflare Web Analytics : sans cookie, sans identifiant, sans suivi d'une personne d'une visite à l'autre. Seuls des chiffres globaux (visites, pages, pays, type d'appareil) sont conservés."],
-    ['Durée', "Tant que ton compte existe. Les contenus d'un compte supprimé sont effacés sous 30 jours (sauvegardes comprises)."],
-    ['Tes droits (RGPD)', "Accès, rectification, effacement (bouton « Supprimer mon compte » dans Profil), opposition, portabilité. Écris à q.theuninck@gmail.com. Tu peux aussi saisir l'Autorité de protection des données (autoriteprotectiondonnees.be)."],
-    ['Commentaires et réactions', "Tes commentaires sont visibles de tous, avec ton prénom et l'initiale de ton nom ; tes réactions sont comptées sans ton nom. Tu peux supprimer un commentaire à tout moment ; ils sont effacés avec ton compte."],
-    ['Mineurs', "Les photos et vidéos de jeunes ne sont jamais publiques et ne sont pas téléchargeables. Un parent peut retirer immédiatement un contenu via « Je suis parent — retirer ce contenu »."],
-  ] },
-  charte: { title: 'Charte BeHoop', body: [
-    ['Respect', "On parle de basket avec respect : joueurs, coachs, arbitres, parents et bénévoles."],
-    ['Pas de moquerie', "Aucune moquerie, aucun commentaire sur le physique ou le niveau d'un joueur, surtout chez les jeunes."],
-    ['Enfants', "Pas de publication d'enfants sans l'accord de leurs parents. Les médias Jeunes restent dans l'Équipe."],
-    ['Commentaires', "Sous les actus et les matchs, on commente le jeu, pas les personnes. Pas de commentaires sous les matchs de jeunes : seulement des encouragements (🏀 🔥 👏)."],
-    ['Signaler', "Si quelque chose te dérange, utilise « Signaler » : on regarde chaque signalement."],
-  ] },
-};
+import { DOCS } from '../legalDocs';
 
 export function Legal({ doc }: { doc: string }) {
   const d = DOCS[doc] ?? DOCS.cgu;
