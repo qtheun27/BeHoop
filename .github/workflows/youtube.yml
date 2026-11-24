@@ -1,0 +1,39 @@
+name: Publication sur YouTube
+
+# Déclenché par le Worker (/youtube/publish) : envoi de la vidéo du match sur la chaîne YouTube de l'utilisateur.
+on:
+  workflow_dispatch:
+    inputs:
+      matchVideoId:
+        description: 'Identifiant de la vidéo (matchVideos/{id})'
+        required: true
+
+concurrency:
+  group: youtube-${{ inputs.matchVideoId }}
+  cancel-in-progress: false
+
+jobs:
+  youtube:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data.json
+            !/calendars/
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      - name: FFmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Envoi sur YouTube
+        run: npx tsx ops/render/youtube.ts "${{ inputs.matchVideoId }}"
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}

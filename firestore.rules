@@ -534,7 +534,7 @@ service cloud.firestore {
       allow create: if active() && request.resource.data.authorUid == uid() && request.resource.data.status == 'draft'
         && (request.resource.data.visibility == 'team' || isSeniors(request.resource.data.teamIds[0]));
       // L'auteur modifie ses réglages et médias ; statut/HLS réservés au pipeline (compte de service).
-      allow update: if (signedIn() && resource.data.authorUid == uid() && unchanged(['authorUid', 'hls', 'visibility', 'teamIdPrivate', 'version'])
+      allow update: if (signedIn() && resource.data.authorUid == uid() && unchanged(['authorUid', 'hls', 'visibility', 'teamIdPrivate', 'version', 'youtube'])
                         && request.resource.data.status in ['draft', 'uploading', 'queued', 'deleted'])
                     || isAdmin();
       allow delete: if (signedIn() && resource.data.authorUid == uid()) || isAdmin();

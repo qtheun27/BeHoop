@@ -10,6 +10,7 @@ import { settingsToStore } from '../../shared/types';
 import { validateScores } from '../../shared/scores';
 import { N } from '../../shared/notifText';
 import { clubApi, spacesOf } from './club';
+import { googleConfig, ytAccess, ytCallback, YT_SCOPE, YT_CALLBACK } from './youtube';
 
 export interface Env {
   BUCKET: R2Bucket;
@@ -58,6 +59,7 @@ export default {
       if (url.pathname.startsWith('/m/')) res = await serveMedia(req, env, ctx, decodeURIComponent(url.pathname.slice(3)));
       else if (url.pathname.startsWith('/dl/')) res = await serveDownload(req, env, url);
       else if (url.pathname.startsWith('/api/')) res = await api(req, env, url.pathname.slice(4));
+      else if (url.pathname === '/youtube/callback') res = await ytCallback(url, new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT)), env.SITE_URL || 'https://behoop.be');
       else res = fail('BeHoop media', 404);
     } catch (e) {
       const m = String((e as Error)?.message ?? e);
@@ -322,6 +324,64 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true, ready: false });
   }
   // Fichier MP4 à la demande (publication YouTube) : auteur du montage seulement
+  // ----- YouTube : identifiants Google (admin), connexion d'une chaîne, playlists, publication (envoi par le serveur)
+  if (path === '/admin/google') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    if (body.clientId || body.clientSecret) {
+      const clientId = String(body.clientId ?? '').trim(), clientSecret = String(body.clientSecret ?? '').trim();
+      if (!/^[\w.-]+\.apps\.googleusercontent\.com$/.test(clientId) || clientSecret.length < 10) return fail('Identifiants Google invalides');
+      await fs.set('config/google', { clientId, clientSecret, at: Date.now() }, false);
+    }
+    const c = await googleConfig(fs);
+    return json({ configured: !!c, clientId: c?.clientId ?? null });
+  }
+  if (path === '/youtube/status') {
+    const c = await googleConfig(fs), tk = await fs.get<any>(`ytTokens/${user.uid}`);
+    return json({ available: !!c, connected: !!tk?.refreshToken, channelTitle: tk?.channelTitle ?? null, channelThumb: tk?.channelThumb ?? null });
+  }
+  if (path === '/youtube/start') {
+    const c = await googleConfig(fs); if (!c) return fail('Publication YouTube pas encore disponible', 503);
+    const state = [...crypto.getRandomValues(new Uint8Array(20))].map((b) => b.toString(16).padStart(2, '0')).join('');
+    // Retour dans l'appli à l'écran d'où on vient (ex. la vidéo à publier)
+    const back = typeof body.back === 'string' && /^#\/[\w/?=&.-]{0,200}$/.test(body.back) ? body.back : '#/profil';
+    await fs.set(`ytStates/${state}`, { uid: user.uid, exp: Date.now() + 15 * 60e3, back }, false);
+    const q = new URLSearchParams({ client_id: c.clientId, redirect_uri: YT_CALLBACK, response_type: 'code', scope: YT_SCOPE, access_type: 'offline', prompt: 'consent', include_granted_scopes: 'true', state });
+    return json({ url: `https://accounts.google.com/o/oauth2/v2/auth?${q}` });
+  }
+  if (path === '/youtube/disconnect') {
+    const tk = await fs.get<any>(`ytTokens/${user.uid}`);
+    if (tk?.refreshToken) await fetch(`https://oauth2.googleapis.com/revoke?token=${encodeURIComponent(tk.refreshToken)}`, { method: 'POST' }).catch(() => {});
+    await fs.delete(`ytTokens/${user.uid}`);
+    return json({ ok: true });
+  }
+  if (path === '/youtube/playlists') {
+    const c = await googleConfig(fs), tk = await fs.get<any>(`ytTokens/${user.uid}`);
+    if (!c || !tk?.refreshToken) return fail('Chaîne YouTube non connectée', 409);
+    const at = await ytAccess(c, tk.refreshToken).catch((e) => { throw new Error(String(e.message) === 'YT_RECONNECT' ? 'FORBIDDEN' : e.message); });
+    const out: { id: string; title: string }[] = []; let page = '';
+    for (let i = 0; i < 4; i++) {
+      const j: any = await (await fetch(`https://www.googleapis.com/youtube/v3/playlists?part=snippet&mine=true&maxResults=50${page ? `&pageToken=${page}` : ''}`, { headers: { Authorization: `Bearer ${at}` } })).json();
+      for (const p of j.items ?? []) out.push({ id: p.id, title: p.snippet?.title ?? '' });
+      page = j.nextPageToken ?? ''; if (!page) break;
+    }
+    return json({ playlists: out });
+  }
+  if (path === '/youtube/publish') {
+    const id = String(body.matchVideoId ?? '');
+    const v = await ownVideo(id);
+    if (v.status !== 'ready') return fail('Vidéo indisponible', 404);
+    if (!(await fs.get<any>(`ytTokens/${user.uid}`))?.refreshToken) return fail('Chaîne YouTube non connectée', 409);
+    const privacy = ['public', 'unlisted', 'private'].includes(body.privacy) ? body.privacy : 'unlisted';
+    // Vidéo d'une équipe Jeunes : jamais « publique » sur YouTube depuis BeHoop, et accord des parents confirmé
+    if (v.visibility === 'team' && (privacy === 'public' || body.parentsOk !== true)) return fail('Équipe Jeunes : vidéo non répertoriée ou privée, avec l’accord des parents', 400);
+    const cur = v.youtube;
+    if (cur && ['queued', 'preparing', 'uploading'].includes(cur.status) && Date.now() - Number(cur.at ?? 0) < 3 * 3600e3) return json({ ok: true, already: true });
+    const title = String(body.title ?? v.title ?? '').slice(0, 100).trim() || 'Match';
+    await fs.set(`matchVideos/${id}`, { youtube: { status: 'queued', uid: user.uid, title, description: String(body.description ?? '').slice(0, 4900), privacy,
+      playlistId: typeof body.playlistId === 'string' ? body.playlistId : null, newPlaylist: typeof body.newPlaylist === 'string' ? body.newPlaylist.slice(0, 150) : null, progress: 0, at: Date.now() } });
+    await dispatch(env, 'youtube.yml', { matchVideoId: id });
+    return json({ ok: true });
+  }
   if (path === '/mp4') {
     const id = String(body.matchVideoId ?? '');
     const v = await fs.get<any>(`matchVideos/${id}`);
@@ -503,6 +563,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       await fs.delete(m._path);
     }
     await fs.delete(`legalAcceptances/${user.uid}`);
+    // Chaîne YouTube reliée : autorisation retirée chez Google et effacée
+    const yt = await fs.get<any>(`ytTokens/${user.uid}`).catch(() => null);
+    if (yt?.refreshToken) await fetch(`https://oauth2.googleapis.com/revoke?token=${encodeURIComponent(yt.refreshToken)}`, { method: 'POST' }).catch(() => {});
+    await fs.delete(`ytTokens/${user.uid}`).catch(() => {});
     await fs.delete(`profiles/${user.uid}`);
     return json({ ok: true });
   }

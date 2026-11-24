@@ -68,6 +68,7 @@ export function Profile() {
         <button className="row" onClick={() => setSheet('notifs')}><div className="grow">{t('Notifications')}</div><span className="chev">›</span></button>
         <label className="row"><div className="grow">{t('Langue')}</div><LangSwitch /></label>
         <button className="row" onClick={() => setSheet('theme')}><div className="grow">{t('Mon thème')}</div><span className="chev">›</span></button>
+        <YoutubeRow />
         <a className="row" href="#/espace" style={{ color: 'inherit' }}><div className="grow">{t('Espace Club')}<div className="sub">{t('Hoop Camp, entraînements, tactique')}</div></div><span className="chev">›</span></a>
         <button className="row" onClick={() => setSheet('help')}><div className="grow">{t('Aide / Contact')}{unread > 0 && <b style={{ color: 'var(--accent)' }}> · {tn(unread, '{n} nouvelle réponse', '{n} nouvelles réponses')}</b>}</div><span className="chev">›</span></button>
         {s.isAdmin && <a className="row" href="#/moderation" style={{ color: 'inherit' }}><div className="grow">{t('Console de modération')}</div><span className="chev">›</span></a>}
@@ -206,5 +207,24 @@ function ThemeSheet({ onClose }: { onClose: () => void }) {
           <input type="checkbox" className="switch" checked={th.rm} onChange={(e) => save({ rm: e.target.checked })} /></label>
       </div>
     </Sheet>
+  );
+}
+
+/** Chaîne YouTube reliée (publication des vidéos de match) : connecter / déconnecter */
+function YoutubeRow() {
+  const s = useSession();
+  const st = useAsync(() => api<{ available: boolean; connected: boolean; channelTitle: string | null }>('/youtube/status', {}), []);
+  useEffect(() => {
+    const r = new URLSearchParams(location.hash.split('?')[1] ?? '').get('yt'); if (!r) return;
+    s.toast(r === 'ok' ? t('Chaîne YouTube connectée.') : r === 'sanschaine' ? t('Ce compte Google n’a pas de chaîne YouTube.') : r === 'droits' ? t('Coche l’accès à YouTube sur l’écran de Google pour pouvoir publier.') : t('Connexion à YouTube non terminée.'));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  if (!st.data?.available) return null;
+  const d = st.data;
+  return (
+    <button className="row" onClick={async () => {
+      if (!d.connected) { try { location.href = (await api<{ url: string }>('/youtube/start', { back: '#/profil' })).url; } catch { s.toast(t('Connexion à YouTube indisponible pour le moment.')); } return; }
+      if (!confirm(t('Déconnecter la chaîne {c} ? BeHoop ne pourra plus y publier.', { c: d.channelTitle ?? '' }))) return;
+      await api('/youtube/disconnect', {}).catch(() => {}); st.reload(); s.toast(t('Chaîne YouTube déconnectée.'));
+    }}><div className="grow">{t('Chaîne YouTube')}<div className="sub">{d.connected ? t('{c} · touche pour déconnecter', { c: d.channelTitle ?? '' }) : t('Connecter pour publier tes vidéos de match')}</div></div><span className="chev">›</span></button>
   );
 }

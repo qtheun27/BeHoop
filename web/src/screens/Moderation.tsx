@@ -13,12 +13,12 @@ export default function Moderation() {
   const s = useSession();
   useEffect(() => { if (!s.isAdmin) return; try { if (sessionStorage.getItem('clean-resp')) return; sessionStorage.setItem('clean-resp', '1'); } catch { /* */ }
     api('/admin/clean-responsables', {}).catch(() => {}); }, [s.isAdmin]);
-  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support'>(() => (new URLSearchParams(location.hash.split('?')[1] ?? '').get('tab') === 'support' ? 'support' : 'requests'));
+  const [tab, setTab] = useState<'requests' | 'reports' | 'hidden' | 'teams' | 'users' | 'clubs' | 'support' | 'youtube'>(() => { const q = new URLSearchParams(location.hash.split('?')[1] ?? '').get('tab'); return q === 'support' || q === 'youtube' ? q : 'requests'; });
   if (!s.isAdmin) return <Screen title={t('Modération')} back="profil"><Empty ill="ban" title={t('Réservé au super admin')} /></Screen>;
   return (
     <Screen title={t('Modération')} back="profil">
-      <div className="seg mod-tabs">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs'], ['support', 'Messages']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
-      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}{tab === 'support' && <Support />}
+      <div className="seg mod-tabs">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs'], ['support', 'Messages'], ['youtube', 'YouTube']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}{tab === 'support' && <Support />}{tab === 'youtube' && <GoogleSetup />}
     </Screen>
   );
 }
@@ -359,5 +359,22 @@ function Support() {
         </div>
       )}
     </>
+  );
+}
+
+/** Identifiants du client OAuth Google (publication YouTube) : collés ici une fois, rangés côté serveur (jamais relisibles) */
+function GoogleSetup() {
+  const s = useSession();
+  const st = useAsync(() => api<{ configured: boolean; clientId: string | null }>('/admin/google', {}), []);
+  const [id, setId] = useState(''), [secret, setSecret] = useState(''), [busy, setBusy] = useState(false);
+  const save = async () => { setBusy(true); try { await api('/admin/google', { clientId: id.trim(), clientSecret: secret.trim() }); setId(''); setSecret(''); st.reload(); s.toast(t('Identifiants enregistrés.')); } catch { s.toast(t('Identifiants refusés : vérifie l’ID client et le code secret.')); } finally { setBusy(false); } };
+  return (
+    <div className="form">
+      <p className="muted">{t('Publication sur YouTube : colle ici l’ID client et le code secret créés dans Google Cloud (type « Application Web », URI de redirection https://media.behoop.be/youtube/callback). Ils sont rangés sur le serveur et ne s’affichent plus ensuite.')}</p>
+      {st.data && <p><b>{st.data.configured ? t('✓ Configuré') : t('Pas encore configuré')}</b>{st.data.clientId && <span className="muted" style={{ display: 'block', fontSize: 13, wordBreak: 'break-all' }}>{st.data.clientId}</span>}</p>}
+      <label className="label">{t('ID client')}</label><input className="field" value={id} onChange={(e) => setId(e.target.value)} placeholder="…apps.googleusercontent.com" autoComplete="off" />
+      <label className="label">{t('Code secret du client')}</label><input className="field" value={secret} onChange={(e) => setSecret(e.target.value)} type="password" autoComplete="off" />
+      <button className="btn" disabled={busy || !id.trim() || !secret.trim()} onClick={save}>{t('Enregistrer')}</button>
+    </div>
   );
 }

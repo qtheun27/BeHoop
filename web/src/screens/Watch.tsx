@@ -201,6 +201,8 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
     <Sheet title={t('Publier sur YouTube')} onClose={onClose}>
       <div className="form">
         {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
+        <YtPublish id={id} mv={mv} youth={youth} parentsOk={ok} desc={desc} />
+        <div className="group-title mt">{t('Ou à la main')}</div>
         <div className="seg">{(['1080p', '720p'] as const).map((x) => <button key={x} className={q === x ? 'on' : ''} onClick={() => setQ(x)}>{x === '1080p' ? t('1080p · grand écran') : t('720p · plus léger')}</button>)}</div>
         <p className="hint" style={{ margin: 0 }}>{t('1. « Enregistrer dans Photos » télécharge la vidéo puis ouvre le partage de l’iPhone : choisis « Enregistrer la vidéo » ou YouTube. Pour une longue vidéo, le 720p est plus sûr. Sinon : « Télécharger dans Fichiers (Safari) » : Safari demande « Télécharger », le suivi est sous la flèche ↓. Reste en Wi-Fi.')}</p>
         {!mp4 ? <button className="btn" disabled={busy || !ok} onClick={prepare}><Ico n="video" />{busy ? t('Préparation du fichier… (quelques minutes, tu peux fermer)') : t('Préparer le fichier vidéo')}</button>
@@ -217,7 +219,52 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
   );
 }
 
-interface MatchVideo { settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
+/** Publication directe sur la chaîne YouTube de l'utilisateur : envoyée par le serveur (rien ne passe par le téléphone) */
+function YtPublish({ id, mv, youth, parentsOk, desc }: { id: string; mv: MatchVideo; youth: boolean; parentsOk: boolean; desc: string }) {
+  const s = useSession();
+  const st = useAsync(() => api<{ available: boolean; connected: boolean; channelTitle: string | null }>('/youtube/status', {}), []);
+  const lists = useAsync(async () => (st.data?.connected ? (await api<{ playlists: { id: string; title: string }[] }>('/youtube/playlists', {})).playlists : []), [st.data?.connected]);
+  const set = mv.settings ? settingsFromStore(mv.settings) : null;
+  const season = (() => { const d = new Date(set?.date ?? Date.now()); const y = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1; return `${y}-${String(y + 1).slice(2)}`; })();
+  const [title, setTitle] = useState(mv.title), [text, setText] = useState(desc);
+  const [privacy, setPrivacy] = useState<'public' | 'unlisted' | 'private'>(youth ? 'unlisted' : 'public');
+  const [pl, setPl] = useState('none'), [plName, setPlName] = useState(set ? `${set.home.name} — ${season}` : `BeHoop — ${season}`);
+  const [busy, setBusy] = useState(false);
+  const y = mv.youtube;
+  const running = !!y && ['queued', 'preparing', 'uploading'].includes(y.status) && Date.now() - Number(y.at ?? 0) < 3 * 3600e3;
+  useEffect(() => { const r = qs().get('yt'); if (r && r !== 'ok') s.toast(t('Connexion à YouTube non terminée ({r}).', { r })); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  if (!st.data?.available) return null;
+  if (!st.data.connected) return (
+    <><p className="hint" style={{ margin: 0 }}>{t('Publie directement sur ta chaîne YouTube : BeHoop envoie la vidéo depuis ses serveurs, en 1080p, sans rien télécharger sur ton téléphone.')}</p>
+      <button className="btn" onClick={async () => { try { location.href = (await api<{ url: string }>('/youtube/start', { back: `#/video/${id}?pub=1` })).url; } catch { s.toast(t('Connexion à YouTube indisponible pour le moment.')); } }}><Ico n="video" />{t('Connecter ma chaîne YouTube')}</button></>
+  );
+  if (running) return (
+    <div className="banner"><Ico n="video" /><div style={{ flex: 1 }}><b>{y!.status === 'preparing' ? t('Préparation du fichier 1080p…') : y!.status === 'queued' ? t('Envoi vers YouTube en attente…') : t('Envoi vers YouTube : {n} %', { n: y!.progress ?? 0 })}</b>
+      <div className="muted" style={{ fontSize: 13 }}>{t('Tu peux fermer l’appli : tu recevras une notification quand la vidéo sera en ligne.')}</div>
+      <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${y!.progress ?? 0}%` }} /></div></div></div>
+  );
+  return (<>
+    {y?.status === 'done' && y.url && <div className="banner"><Ico n="checkCircle" /><div style={{ flex: 1 }}><b>{t('Publiée sur YouTube')}</b> · <a href={y.url} target="_blank" rel="noopener noreferrer">{t('Voir la vidéo')}</a></div></div>}
+    {y?.status === 'error' && <div className="banner"><Ico n="alert" /><div style={{ flex: 1, fontSize: 14 }}>{y.error ?? t('Envoi impossible.')}</div></div>}
+    <p className="muted" style={{ margin: 0, fontSize: 14 }}>{t('Chaîne : {c}', { c: st.data.channelTitle ?? '' })}</p>
+    <label className="label">{t('Titre')}</label><input className="field" value={title} maxLength={100} onChange={(e) => setTitle(e.target.value)} />
+    <label className="label">{t('Description')}</label><textarea className="field" rows={3} value={text} onChange={(e) => setText(e.target.value)} />
+    <label className="label">{t('Visibilité')}</label>
+    <div className="seg">{(['public', 'unlisted', 'private'] as const).filter((p) => !(youth && p === 'public')).map((p) => <button key={p} className={privacy === p ? 'on' : ''} onClick={() => setPrivacy(p)}>{p === 'public' ? t('Publique') : p === 'unlisted' ? t('Non répertoriée') : t('Privée')}</button>)}</div>
+    <label className="label">{t('Playlist')}</label>
+    <select className="field" value={pl} onChange={(e) => setPl(e.target.value)}>
+      <option value="none">{t('Aucune')}</option>
+      <option value="new">{t('Nouvelle playlist…')}</option>
+      {(lists.data ?? []).map((p) => <option key={p.id} value={p.id}>{p.title}</option>)}
+    </select>
+    {pl === 'new' && <input className="field" value={plName} maxLength={150} onChange={(e) => setPlName(e.target.value)} aria-label={t('Nom de la playlist')} />}
+    <button className="btn" disabled={busy || (youth && !parentsOk) || !title.trim()} onClick={async () => { setBusy(true);
+      try { await api('/youtube/publish', { matchVideoId: id, title, description: text, privacy, parentsOk, playlistId: pl !== 'none' && pl !== 'new' ? pl : undefined, newPlaylist: pl === 'new' ? plName : undefined }); s.toast(t('Envoi vers YouTube lancé.')); }
+      catch { s.toast(t('Impossible de lancer l’envoi. Réessaie.')); } finally { setBusy(false); } }}><Ico n="video" />{y?.status === 'done' ? t('Publier à nouveau') : t('Publier sur YouTube')}</button>
+  </>);
+}
+
+interface MatchVideo { youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
 
@@ -292,7 +339,8 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
     lastTap.current = now;
   };
   const youth = mv.visibility === 'team';
-  const [yt, setYt] = useState(false);
+  // Retour de Google après « Connecter ma chaîne » : on rouvre la publication
+  const [yt, setYt] = useState(() => !!qs().get('pub'));
   const [fix, setFix] = useState(false);
   // Vidéo publique : vrai lien de téléchargement (un lien de lecture ouvrirait le lecteur de l'iPhone, sans enregistrement)
   const author = !!s.user && mv.authorUid === s.user.uid;
