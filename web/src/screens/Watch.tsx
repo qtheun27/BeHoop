@@ -5,6 +5,7 @@ import { EditSheet } from '../ui/EditSheet';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
+import { WORKER_URL } from '../lib/config';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, useAsync } from '../ui/kit';
 import { store, haptic, setReturnTo } from '../lib/util';
 import type { Chapter } from '../../../shared/chapters';
@@ -66,7 +67,9 @@ const inSafari = (u: string) => {
 };
 
 /** Lien à partager : l'équipe est dans le lien, pour qu'un non-membre puisse demander l'accès directement depuis la vidéo */
-const shareUrl = (id: string, team?: number) => `${location.origin}/app/#/video/${id}${team ? `?e=${team}` : ''}`;
+// Lien de partage : page du serveur avec le titre et l'affiche (aperçu WhatsApp / Facebook), qui renvoie vers l'appli
+const shareUrl = (id: string, team?: number) => `${WORKER_URL}/s/v/${id}${team ? `?e=${team}` : ''}`;
+const momentShareUrl = (mid: string) => `${WORKER_URL}/s/m/${mid}`;
 async function shareLink(title: string, url: string, toast: (m: string) => void) {
   try { if (navigator.share) { await navigator.share({ title, text: t('🏀 {t} — à voir sur BeHoop', { t: title }), url }); return; } } catch { return; /* partage annulé */ }
   await navigator.clipboard?.writeText(url).then(() => toast(t('Lien copié.'))).catch(() => {});
@@ -642,12 +645,11 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
   return (
     <div className="center">
       <video src={url} controls playsInline style={{ maxHeight: '70dvh', borderRadius: 16, background: '#000', maxWidth: '100%' }} controlsList={m.data.authorUid === s.user?.uid ? undefined : 'nodownload'} />
-      {!youth ? <button className="btn secondary mt" onClick={async () => {
-        // Le fichier lui-même : seulement pour l'auteur du Moment ; les autres partagent le lien
-        try { if (m.data!.authorUid !== s.user?.uid) { await navigator.share?.({ url: location.href, text: t('Un Moment sur BeHoop 🏀') }); return; }
-          const blob = await (await fetch(url, { credentials: 'include' })).blob(); const f = new File([blob], 'moment-behoop.mp4', { type: 'video/mp4' });
-          if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], text: t('Un Moment sur BeHoop 🏀') }); else await navigator.share?.({ url: location.href }); } catch { /* partage annulé */ } }}>{t('Partager (WhatsApp…)')}</button>
-        : <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
+      <div className="hstack mt" style={{ gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <button className="btn secondary" onClick={() => shareLink(mo.title || mv.title, momentShareUrl(id), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
+      </div>
+      {canPublish && mo.r2Key && <div className="mt" style={{ maxWidth: 360, margin: '12px auto 0' }}><SaveToPhotos url={url} name={`${(mo.title || mv.title).replace(/[^\w\- ]+/g, '').trim().slice(0, 50) || 'moment'}.mp4`} /></div>}
+      {youth && <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : seuls les membres de l\'Équipe peuvent l\'ouvrir.')}</p>}
       {canPublish && <button className="btn secondary mt" onClick={() => setYt(true)}><Ico n="video" />{mo.youtube?.status === 'done' ? t('Publié sur YouTube (Short)') : t('Publier sur YouTube (Short)')}</button>}
       {canPublish && <div className="hstack mt" style={{ gap: 8, justifyContent: 'center' }}>
         <button className="btn ghost small" onClick={() => setEd(true)}>{t('Modifier')}</button>

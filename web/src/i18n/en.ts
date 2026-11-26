@@ -1444,4 +1444,5 @@ export const EN: Record<string, string> = {
   "Pas des boutons": "Button step",
   "Glisse le doigt sur la frise pour choisir l’instant, puis touche la vidéo là où est l’action : un point est posé. Le cadre glisse de point en point.": "Slide your finger along the timeline to pick the moment, then tap the video where the action is: a point is set. The frame glides from point to point.",
   "Point ici": "Point here",
+  "Moment d'une équipe Jeunes : seuls les membres de l'Équipe peuvent l'ouvrir.": "Youth team Moment: only Team members can open it.",
 };

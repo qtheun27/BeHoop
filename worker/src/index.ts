@@ -3,6 +3,7 @@
 //  /m/*    : diffusion des médias R2 avec contrôle d'accès par cookie signé (HMAC, 6 h) + cache Cloudflare
 import { AwsClient } from 'aws4fetch';
 import { verifyIdToken, accessToken, type FirebaseUser } from './google';
+import { sharePage, shareImage } from './share';
 import { Firestore } from './firestore';
 import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName, signDl, verifyDl } from './access';
 import { sendToUsers, followersOfTeams } from './notify';
@@ -59,6 +60,14 @@ export default {
       if (url.pathname.startsWith('/m/')) res = await serveMedia(req, env, ctx, decodeURIComponent(url.pathname.slice(3)));
       else if (url.pathname.startsWith('/dl/')) res = await serveDownload(req, env, url);
       else if (url.pathname.startsWith('/api/')) res = await api(req, env, url.pathname.slice(4));
+      else if (url.pathname.startsWith('/s/')) {
+        // Liens de partage : /s/v/{vidéo}, /s/m/{Moment}, affiches publiques /s/img/(v|m)/{id}.jpg
+        const fs = new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT));
+        const img = /^\/s\/img\/(v|m)\/([a-z0-9]+)\.jpg$/.exec(url.pathname), pg = /^\/s\/(v|m)\/([a-z0-9]+)$/.exec(url.pathname);
+        res = img ? await shareImage(fs, env.BUCKET, img[1] as 'v' | 'm', img[2])
+          : pg ? await sharePage(fs, env.SITE_URL || 'https://behoop.be', url.origin, pg[1] as 'v' | 'm', pg[2], url.searchParams.get('e'))
+          : Response.redirect((env.SITE_URL || 'https://behoop.be') + '/app/', 302);
+      }
       else if (url.pathname === '/youtube/callback') res = await ytCallback(url, new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT)), env.SITE_URL || 'https://behoop.be');
       else res = fail('BeHoop media', 404);
     } catch (e) {
