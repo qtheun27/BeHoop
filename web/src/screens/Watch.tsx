@@ -483,6 +483,43 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const addKey = () => { haptic(); const tt = Math.round(Math.min(b - a, Math.max(0, (video.current?.currentTime ?? time) - a)) * 10) / 10; setKeys((k) => [...k.filter((x) => Math.abs(x.t - tt) > 0.3), { t: tt, pos }].sort((x, y) => x.t - y.t)); };
   const ok = len >= CLIP_MIN && len <= CLIP_MAX && total <= MOMENT_TOTAL;
   const canAdd = ok && parts.length < MOMENT_PARTS - 1 && total + CLIP_MIN <= MOMENT_TOTAL;
+  // « Suivre l'action » : analyse du passage (≈ 4 images/s, en petit) → zone la plus animée de la largeur du cadre → points de cadrage
+  const [scan, setScan] = useState<number | null>(null);
+  const follow = async () => {
+    const v = video.current; if (!v || scan != null) return;
+    stop(); haptic(); setScan(0);
+    const W = 160, H = 90, cw = Math.round((W * CROP_W) / 100), step = 0.25;
+    const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+    const g = cv.getContext('2d', { willReadFrequently: true })!;
+    const seekTo = (tt: number) => new Promise<void>((res) => { let done = false; const on = () => { if (done) return; done = true; v.removeEventListener('seeked', on); res(); }; v.addEventListener('seeked', on); v.currentTime = tt; setTimeout(on, 2000); });
+    try {
+      let prev: Uint8ClampedArray | null = null; const raw: { t: number; c: number | null }[] = [];
+      for (let tt = a; tt <= b + 0.01; tt += step) {
+        await seekTo(Math.min(tt, b)); g.drawImage(v, 0, 0, W, H);
+        const d = g.getImageData(0, 0, W, H).data;
+        if (prev) {
+          const col = new Float32Array(W); let tot = 0;
+          for (let y = Math.floor(H * 0.18); y < H; y++) for (let x = 0; x < W; x++) {
+            if (y < H * 0.32 && x > W * 0.72) continue; // logo BeHoop incrusté (coin haut droit)
+            const i = (y * W + x) * 4, dv = Math.abs(d[i] - prev[i]) + Math.abs(d[i + 1] - prev[i + 1]) + Math.abs(d[i + 2] - prev[i + 2]);
+            if (dv > 60) { col[x]++; tot++; }
+          }
+          let best = -1, bx = 0, sum = 0;
+          for (let x = 0; x < W; x++) { sum += col[x]; if (x >= cw) sum -= col[x - cw]; if (x >= cw - 1 && sum > best) { best = sum; bx = x - cw + 1; } }
+          // caméra qui bouge (tout l'écran change) ou presque rien ne bouge : on garde la position précédente
+          raw.push({ t: Math.min(tt, b) - a, c: tot > W * H * 0.45 || best < 12 ? null : bx / (W - cw) });
+        }
+        prev = d; setScan(Math.round(((tt - a) / Math.max(0.1, b - a)) * 100));
+      }
+      let last = raw.find((r) => r.c != null)?.c ?? 0.5;
+      const filled = raw.map((r) => (last = r.c ?? last));
+      const sm = filled.map((_, i) => { const w = filled.slice(Math.max(0, i - 3), i + 4); return w.reduce((x, y) => x + y, 0) / w.length; });
+      const k: Key[] = [];
+      raw.forEach((r, i) => { const p = Math.round(sm[i] * 100) / 100; if (i === 0 || i === raw.length - 1 || (r.t - (k[k.length - 1]?.t ?? -9) >= 1 && Math.abs(p - k[k.length - 1].pos) >= 0.05)) k.push({ t: Math.round(r.t * 10) / 10, pos: p }); });
+      if (k.length) { setKeys(k); setPos(k[0].pos); s.toast(t('Cadrage calculé : vérifie avec l’aperçu, corrige si besoin.')); }
+    } catch { s.toast(t('Analyse impossible sur cet appareil : place les points à la main.')); }
+    finally { setScan(null); v.currentTime = a; }
+  };
   const add = () => { stop(); haptic(); setParts((p) => [...p, { a, b, keys: curKeys() }]); setKeys([]); const na = Math.min(dur - 10, b + 2); put(na, Math.min(dur, na + 10), 'm', true); };
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
   const nudge = (which: 'a' | 'b', d: number) => { stop(); haptic();
@@ -515,6 +552,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       {layout === 'full' && <label className="clip-pos"><span className="muted">{t('Cadrage')}</span>
         <input type="range" min={0} max={1} step={0.01} value={pos} onChange={(e) => setPos(Number(e.target.value))} aria-label={t('Cadrage')} /></label>}
       {layout === 'full' && <div className="clip-keys">
+        <button className="btn small" disabled={scan != null} onClick={follow}><Ico n="bolt" />{scan != null ? t('Analyse… {n} %', { n: scan }) : t('Suivre l’action')}</button>
         <button className="btn ghost small" onClick={addKey}><Ico n="plus" />{t('Point de cadrage ici')}</button>
         {keys.length > 0 && <><span className="muted">{t('{n} point(s) : le cadre glisse de l’un à l’autre', { n: keys.length })}</span><button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer')}</button></>}
       </div>}

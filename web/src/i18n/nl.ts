@@ -1420,4 +1420,8 @@ export const NL: Record<string, string> = {
   "Préparation": "Voorbereiding",
   "Téléchargement des images": "Beelden downloaden",
   "Assemblage": "Samenstellen",
+  "Cadrage calculé : vérifie avec l’aperçu, corrige si besoin.": "Kadrering berekend: controleer met het voorbeeld en pas aan indien nodig.",
+  "Analyse impossible sur cet appareil : place les points à la main.": "Analyse niet mogelijk op dit toestel: plaats de punten met de hand.",
+  "Analyse… {n} %": "Analyse… {n} %",
+  "Suivre l’action": "De actie volgen",
 };

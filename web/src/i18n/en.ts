@@ -1420,4 +1420,8 @@ export const EN: Record<string, string> = {
   "Préparation": "Preparing",
   "Téléchargement des images": "Downloading footage",
   "Assemblage": "Assembling",
+  "Cadrage calculé : vérifie avec l’aperçu, corrige si besoin.": "Framing calculated: check it with the preview and adjust if needed.",
+  "Analyse impossible sur cet appareil : place les points à la main.": "Analysis not possible on this device: place the points by hand.",
+  "Analyse… {n} %": "Analysing… {n} %",
+  "Suivre l’action": "Follow the action",
 };
