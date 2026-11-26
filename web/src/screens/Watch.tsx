@@ -363,7 +363,9 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   return (
     <>
       <div ref={box} className={`player${idle ? ' idle' : ''}`} onClick={onTap}>
-        <video ref={ref} playsInline poster={mediaUrl(mv.hls!.posterKey)} controlsList={author ? undefined : 'nodownload'} onContextMenu={(e) => !author && e.preventDefault()}
+        {/* use-credentials : sur iPhone (lecture HLS par Safari), la vidéo est demandée avec l'autorisation du serveur vidéo →
+            l'appli peut lire ses images (« Suivre l'action »). Le serveur répond déjà avec les en-têtes CORS + cookies. */}
+        <video ref={ref} playsInline crossOrigin="use-credentials" poster={mediaUrl(mv.hls!.posterKey)} controlsList={author ? undefined : 'nodownload'} onContextMenu={(e) => !author && e.preventDefault()}
           onTimeUpdate={(e) => { const c = e.currentTarget.currentTime; setTime(c); if (Math.round(c) % 5 === 0) store.set(posKey, c > dur - 10 ? 0 : c);
             if (preview.current && sel && c >= sel[1]) e.currentTarget.currentTime = sel[0]; }}
           onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); setIdle(false); }} />
