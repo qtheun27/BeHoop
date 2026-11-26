@@ -1399,4 +1399,5 @@ export const NL: Record<string, string> = {
   "Publié sur YouTube (Short)": "Gepubliceerd op YouTube (Short)",
   "Moment réalisé avec BeHoop": "Moment gemaakt met BeHoop",
   "Le Moment est vertical et court : YouTube le publie en Short.": "Het Moment is verticaal en kort: YouTube publiceert het als Short.",
+  "Volume": "Volume",
 };

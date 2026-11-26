@@ -273,6 +273,9 @@ interface MatchVideo { youtube?: { status: 'queued' | 'preparing' | 'uploading' 
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
 interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube'] }
 
+/** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
+const CAN_VOLUME = (() => { try { const v = document.createElement('video'); v.volume = 0.5; return v.volume === 0.5 && !/iPhone|iPad|iPod/.test(navigator.userAgent); } catch { return false; } })();
+
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
 export default function Watch({ id, t: part }: { id: string; t?: string }) {
@@ -302,6 +305,9 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   const lastTap = useRef(0);
   const [time, setTime] = useState(0), [playing, setPlaying] = useState(false), [idle, setIdle] = useState(false);
   const [levels, setLevels] = useState<{ h: number }[]>([]), [level, setLevel] = useState(-1), [rate, setRate] = useState(1);
+  // Son : coupé / volume (gardés d'une vidéo à l'autre). Sur iPhone le volume suit les boutons du téléphone : seul « couper » est proposé.
+  const [muted, setMuted] = useState(() => store.get('player-muted', false)), [vol, setVol] = useState(() => store.get('player-vol', 1));
+  useEffect(() => { const el = ref.current; if (!el) return; el.muted = muted; if (CAN_VOLUME) el.volume = vol; store.set('player-muted', muted); store.set('player-vol', vol); }, [muted, vol]);
   const [clip, setClip] = useState(false);
   const dur = mv.hls!.duration, chapters = mv.hls!.chapters ?? [];
   const posKey = `behoop.pos.${id}`;
@@ -374,6 +380,9 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
           <div className="btns">
             <button onClick={toggle} aria-label={playing ? 'Pause' : 'Lecture'} ><Ico n={playing ? 'pause' : 'play'} size={22} /></button>
             <button onClick={() => seek(time - 10)} aria-label={t('Reculer de 10 s')}>↺10</button><button onClick={() => seek(time + 10)} aria-label={t('Avancer de 10 s')}>10↻</button>
+            <button onClick={() => setMuted((m) => !m)} aria-label={muted ? t('Activer le son') : t('Couper le son')} aria-pressed={muted}><Ico n={muted || vol === 0 ? 'mute' : 'volume'} size={22} /></button>
+            {CAN_VOLUME && <input className="vol" type="range" min={0} max={1} step={0.05} value={muted ? 0 : vol} aria-label={t('Volume')}
+              onChange={(e) => { const v = Number(e.target.value); setVol(v); setMuted(v === 0); }} />}
             <span style={{ flex: 1, opacity: .85 }}>{fmt(time)} / {fmt(dur)}</span>
             <button onClick={() => { const n = rate === 1 ? 1.5 : rate === 1.5 ? 2 : 1; ref.current!.playbackRate = n; setRate(n); }} aria-label={t('Vitesse')}>{rate}×</button>
             {levels.length > 1 && <button onClick={() => { const n = level === -1 ? 0 : level === levels.length - 1 ? -1 : level + 1; hlsRef.current.currentLevel = n; setLevel(n); }} aria-label={t('Qualité')}>{level === -1 ? 'Auto' : `${levels[level].h}p`}</button>}

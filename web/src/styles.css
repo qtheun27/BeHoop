@@ -182,6 +182,8 @@ textarea.field { min-height: 110px; resize: vertical; }
 .player .bar .mark { position: absolute; width: 3px; height: 10px; background: #f2c14e; border-radius: 1px; transform: translateX(-1px); }
 .player .btns { display: flex; align-items: center; gap: 4px; font-size: 14px; }
 .player .btns button { color: #fff; min-width: 40px; min-height: 40px; }
+.player .btns .vol { width: 84px; accent-color: #f26a1b; cursor: pointer; }
+@media (max-width: 420px) { .player .btns .vol { width: 60px; } }
 .planche-frame { width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; background: #0a0c12; position: relative; }
 .planche-frame > div { transform-origin: 0 0; position: absolute; top: 0; left: 0; }
 @media (min-width: 900px) { .screen { padding-top: 24px; } }

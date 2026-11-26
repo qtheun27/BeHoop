@@ -1399,4 +1399,5 @@ export const EN: Record<string, string> = {
   "Publié sur YouTube (Short)": "Published on YouTube (Short)",
   "Moment réalisé avec BeHoop": "Moment made with BeHoop",
   "Le Moment est vertical et court : YouTube le publie en Short.": "The Moment is vertical and short: YouTube publishes it as a Short.",
+  "Volume": "Volume",
 };
