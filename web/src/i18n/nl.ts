@@ -1400,4 +1400,5 @@ export const NL: Record<string, string> = {
   "Moment réalisé avec BeHoop": "Moment gemaakt met BeHoop",
   "Le Moment est vertical et court : YouTube le publie en Short.": "Het Moment is verticaal en kort: YouTube publiceert het als Short.",
   "Volume": "Volume",
+  "Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l'image exacte.": "Sleep de fragment of de randen ervan (5 tot 30 s): de video toont het exacte beeld.",
 };

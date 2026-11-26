@@ -424,7 +424,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);
     if (v.visibility === 'team' && !(await memberTeams(user.uid)).includes(v.teamIdPrivate) && !isAdmin) throw new Error('FORBIDDEN');
     const start = Math.max(0, Number(body.start)), end = Number(body.end);
-    if (!(end - start >= 15 && end - start <= 30)) return fail('Durée entre 15 et 30 s');
+    if (!(end - start >= 5 && end - start <= 30)) return fail('Durée entre 5 et 30 s');
     const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
     await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start, end, status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() }, false);
     await dispatch(env, 'moment.yml', { momentId: id });

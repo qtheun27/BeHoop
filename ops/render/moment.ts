@@ -1,4 +1,4 @@
-// Rendu d'un Moment (V2) : passage de 15–30 s en vertical 9:16, fond flou, bandeau score + logos, logo BeHoop animé.
+// Rendu d'un Moment (V2) : passage de 5–30 s en vertical 9:16, fond flou, bandeau score + logos, logo BeHoop animé.
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { chromium } from '@playwright/test';

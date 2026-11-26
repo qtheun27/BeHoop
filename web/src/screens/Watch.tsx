@@ -419,7 +419,8 @@ const WIN = 90; // largeur de la frise zoomée (s)
 
 /** Création d'un Moment, sous la vidéo (qui reste visible) : frise zoomée de 90 s autour du passage, poignées début / fin
  *  et passage entier à faire glisser (la vidéo montre l'image exacte pendant le geste), réglages fins ±1 s, aperçu en
- *  boucle. Passage de 15 à 30 s, monté ensuite au format vertical avec le score. */
+ *  boucle. Passage de 5 à 30 s, monté ensuite au format vertical avec le score. */
+const CLIP_MIN = 5, CLIP_MAX = 30;
 function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { id: string; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
   sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<boolean>; onClose: () => void }) {
   const s = useSession();
@@ -454,20 +455,20 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
     const d = g.current; if (!d) return;
     const dt = ((e.clientX - d.x0) / d.w) * WIN;
     if (d.kind === 'm') { const len = d.b0 - d.a0; const na = Math.max(0, Math.min(dur - len, d.a0 + dt)); put(na, na + len, 'm', final); }
-    else if (d.kind === 'a') put(Math.min(Math.max(d.a0 + dt, d.b0 - 30), d.b0 - 15), d.b0, 'a', final);
-    else put(d.a0, Math.max(Math.min(d.b0 + dt, d.a0 + 30), d.a0 + 15), 'b', final);
+    else if (d.kind === 'a') put(Math.min(Math.max(d.a0 + dt, d.b0 - CLIP_MAX), d.b0 - CLIP_MIN), d.b0, 'a', final);
+    else put(d.a0, Math.max(Math.min(d.b0 + dt, d.a0 + CLIP_MAX), d.a0 + CLIP_MIN), 'b', final);
     if (final) g.current = null;
   };
   const pct = (x: number) => `${((x - win) / WIN) * 100}%`;
-  const len = Math.round((b - a) * 10) / 10, ok = len >= 15 && len <= 30;
+  const len = Math.round((b - a) * 10) / 10, ok = len >= CLIP_MIN && len <= CLIP_MAX;
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
   const nudge = (which: 'a' | 'b', d: number) => { stop(); haptic();
-    if (which === 'a') put(Math.min(Math.max(a + d, b - 30), b - 15), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + 30), a + 15), 'b', true); };
+    if (which === 'a') put(Math.min(Math.max(a + d, b - CLIP_MAX), b - CLIP_MIN), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + CLIP_MAX), a + CLIP_MIN), 'b', true); };
   return (
     <div className="clip-ed">
       <div className="clip-head"><b><Ico n="bolt" /> {t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span></b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
-      <p className="muted" style={{ margin: '0 0 8px', fontSize: 13 }}>{t('Fais glisser le passage ou ses bords (15 à 30 s) : la vidéo montre l\'image exacte.')}</p>
+      <p className="muted" style={{ margin: '0 0 8px', fontSize: 13 }}>{t('Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l\'image exacte.')}</p>
       <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
         {ticks.map((x) => <div key={x} className="clip-tick" style={{ left: pct(x) }}><span>{fmt(x)}</span></div>)}
         <div className="clip-sel" style={{ left: pct(a), width: `${((b - a) / WIN) * 100}%` }} onPointerDown={down('m')}>
