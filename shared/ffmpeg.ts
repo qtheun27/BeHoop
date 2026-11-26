@@ -166,7 +166,8 @@ export function momentClipArgs(input: string, start: number, end: number, layout
     ? `[0:v]scale=-2:1920:flags=lanczos,crop=1080:1920:(iw-1080)*${p.toFixed(3)}:0,setsar=1,fps=30,format=yuv420p[v]`
     : '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
       '[fg]scale=1080:-2:flags=lanczos[f];[b][f]overlay=0:(H-h)/2,setsar=1,fps=30,format=yuv420p[v]';
-  return ['-y', '-ss', String(start), '-to', String(end), '-i', input, '-filter_complex', v, '-map', '[v]', '-map', '0:a?',
+  // Début + durée (et non « -to ») : même résultat quelle que soit la version de FFmpeg
+  return ['-y', '-ss', String(start), '-i', input, '-t', (end - start).toFixed(3), '-filter_complex', v, '-map', '[v]', '-map', '0:a?',
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
 }
 

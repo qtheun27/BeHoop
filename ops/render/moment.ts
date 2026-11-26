@@ -66,7 +66,9 @@ try {
   for (const [i, c] of clips.entries()) {
     const f = join(work, `clip_${i}.mp4`);
     await ff(momentClipArgs(join(work, 'index.m3u8'), c.start, c.end, layout, pos, f));
-    parts.push({ path: f, duration: (await probe(f)).duration });
+    const d = (await probe(f)).duration;
+    if (!(d > 1)) throw new Error(`passage ${i + 1} vide (${c.start}–${c.end} s)`);
+    parts.push({ path: f, duration: d });
   }
   const out = join(work, 'moment.mp4');
   const whoosh = join(ROOT, 'render/assets/whoosh.m4a');
