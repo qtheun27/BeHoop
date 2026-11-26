@@ -65,7 +65,7 @@ export default {
         const fs = new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT));
         const img = /^\/s\/img\/(v|m)\/([a-z0-9]+)\.jpg$/.exec(url.pathname), pg = /^\/s\/(v|m)\/([a-z0-9]+)$/.exec(url.pathname);
         res = img ? await shareImage(fs, env.BUCKET, img[1] as 'v' | 'm', img[2])
-          : pg ? await sharePage(fs, env.SITE_URL || 'https://behoop.be', url.origin, pg[1] as 'v' | 'm', pg[2], url.searchParams.get('e'))
+          : pg ? await sharePage(fs, env.BUCKET, env.SITE_URL || 'https://behoop.be', url.origin, pg[1] as 'v' | 'm', pg[2], url.searchParams.get('e'))
           : Response.redirect((env.SITE_URL || 'https://behoop.be') + '/app/', 302);
       }
       else if (url.pathname === '/youtube/callback') res = await ytCallback(url, new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT)), env.SITE_URL || 'https://behoop.be');
@@ -261,6 +261,16 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     await dropMoment(mid, m);
     return json({ ok: true });
   }
+  // Publié dans le fil BeHoop, ou seulement accessible par sa page / ses liens / l'espace de l'équipe
+  if (path === '/feed-visibility') {
+    const show = body.show === true;
+    const mid = typeof body.momentId === 'string' ? body.momentId : null;
+    if (mid) await ownMoment(mid); else await ownVideo(String(body.matchVideoId ?? ''));
+    const doc = mid ? `moments/${mid}` : `matchVideos/${body.matchVideoId}`, pid = mid ? `moment-${mid}` : `video-${body.matchVideoId}`;
+    await fs.set(doc, { inFeed: show });
+    if (await fs.get(`posts/${pid}`).catch(() => null)) await fs.set(`posts/${pid}`, show ? { hidden: false, hiddenReason: null } : { hidden: true, hiddenReason: 'auteur', hiddenBy: user.uid } as any);
+    return json({ ok: true });
+  }
   if (path === '/video/rename') {
     const id = String(body.matchVideoId ?? ''); await ownVideo(id);
     const title = String(body.title ?? '').trim().slice(0, 100); if (!title) return fail('Titre vide');
@@ -339,6 +349,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   if (path === '/render') {
     const v = await ownVideo(body.matchVideoId);
     if (body.media) await fs.set(`matchVideos/${body.matchVideoId}`, { media: body.media, settings: settingsToStore(body.settings) as any, title: body.settings.title });
+    if (typeof body.inFeed === 'boolean') await fs.set(`matchVideos/${body.matchVideoId}`, { inFeed: body.inFeed });
     // Correction du score après coup (depuis la page de la vidéo) : nouveaux réglages, mêmes médias
     else if (body.settings) await fs.set(`matchVideos/${body.matchVideoId}`, { settings: settingsToStore(body.settings) as any });
     // Scores restés vides : lus sur les photos du marquoir et complétés par le résultat officiel
@@ -496,7 +507,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const pos = Math.min(1, Math.max(0, Number(body.pos ?? 0.5) || 0));
     const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
     await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start: clips[0].start, end: clips[0].end,
-      clips, layout, pos, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
+      clips, layout, pos, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
     await dispatch(env, 'moment.yml', { momentId: id });
     return json({ id });
   }

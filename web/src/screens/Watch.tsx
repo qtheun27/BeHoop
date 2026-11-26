@@ -274,9 +274,9 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
   </>);
 }
 
-interface MatchVideo { youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
+interface MatchVideo { inFeed?: boolean; youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string }
+interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string }
 
 /** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
 const CAN_VOLUME = (() => { try { const v = document.createElement('video'); v.volume = 0.5; return v.volume === 0.5 && !/iPhone|iPad|iPod/.test(navigator.userAgent); } catch { return false; } })();
@@ -416,6 +416,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
       {(mv.authorUid === s.user?.uid || s.isAdmin) && <div className="hstack mt" style={{ gap: 8 }}>
         <button className="btn ghost small" onClick={() => setRen(true)}>{t('Renommer')}</button>
+        <FeedToggle on={mv.inFeed !== false} body={{ matchVideoId: id }} />
         <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={async () => { if (!confirm(t('Supprimer la vidéo du match ? Ses Moments et ses fichiers seront supprimés définitivement.'))) return;
           try { await api(`/montage/${id}`, undefined, 'DELETE'); s.toast(t('Vidéo supprimée')); location.hash = '/fil'; } catch { s.toast(t('Action impossible. Réessaie.')); } }}>{t('Supprimer la vidéo')}</button></div>}
       {ren && <EditSheet title={t('Renommer')} fields={[{ key: 'title', label: t('Titre'), value: mv.title, max: 100, required: true }]} onClose={() => setRen(false)}
@@ -460,6 +461,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const [keys, setKeys] = useState<Key[]>([]); // points de cadrage du passage en cours (t depuis son début)
   const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
   const [mTitle, setMTitle] = useState(''), [mText, setMText] = useState('');
+  const [mFeed, setMFeed] = useState(true);
   const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number; lastX?: number } | null>(null);
   const last = useRef(0);
   const show = (tt: number, final = false) => {
@@ -564,7 +566,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const lineAt = (e: React.PointerEvent, final = false) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); const tt = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a); show(a + tt, final); };
   const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
-    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText });
+    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed });
       s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
     catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
   return (
@@ -619,6 +621,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       {tab === 'info' && <>
         <input className="field" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
         <textarea className="field mt" rows={3} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
+        <label className="check mt"><input type="checkbox" checked={mFeed} onChange={(e) => setMFeed(e.target.checked)} />{t('Publier dans le fil BeHoop')}</label>
       </>}
       <div className="clip-bar">
         <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
@@ -653,6 +656,7 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
       {canPublish && <button className="btn secondary mt" onClick={() => setYt(true)}><Ico n="video" />{mo.youtube?.status === 'done' ? t('Publié sur YouTube (Short)') : t('Publier sur YouTube (Short)')}</button>}
       {canPublish && <div className="hstack mt" style={{ gap: 8, justifyContent: 'center' }}>
         <button className="btn ghost small" onClick={() => setEd(true)}>{t('Modifier')}</button>
+        <FeedToggle on={mo.inFeed !== false} body={{ momentId: id }} />
         <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={async () => { if (!confirm(t('Supprimer ce Moment ?'))) return;
           try { await api('/moment/delete', { momentId: id }); s.toast(t('Moment supprimé')); location.hash = `/video/${vid}`; } catch { s.toast(t('Action impossible. Réessaie.')); } }}>{t('Supprimer')}</button></div>}
       {ed && <EditSheet title={t('Modifier le Moment')} onClose={() => setEd(false)}
@@ -680,6 +684,14 @@ function MomentProgress({ vid, mid, onGone }: { vid: string; mid: string; onGone
   return <div className="banner mt"><Ico n="bolt" /><div style={{ flex: 1 }}><b>{t('Moment en préparation : {n} %', { n: pc })}</b>
     <div className="muted" style={{ fontSize: 13 }}>{m.status === 'queued' ? t('En attente du serveur…') : t(m.step ?? 'Préparation')} · {t('tu peux fermer l’appli')}</div>
     <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${pc}%` }} /></div></div></div>;
+}
+
+/** Dans le fil BeHoop ou pas (modifiable à tout moment par l'auteur) */
+function FeedToggle({ on: on0, body }: { on: boolean; body: Record<string, string> }) {
+  const s = useSession(); const [on, setOn] = useState(on0), [busy, setBusy] = useState(false);
+  return <button className="btn ghost small" disabled={busy} onClick={async () => { setBusy(true);
+    try { await api('/feed-visibility', { ...body, show: !on }); setOn(!on); s.toast(!on ? t('Publié dans le fil BeHoop') : t('Retiré du fil (toujours accessible par sa page et ses liens)')); } catch { s.toast(t('Action impossible. Réessaie.')); } finally { setBusy(false); } }}>
+    {on ? t('Retirer du fil') : t('Publier dans le fil')}</button>;
 }
 
 /** Publication d'un Moment sur YouTube : vertical et court, il devient un Short */

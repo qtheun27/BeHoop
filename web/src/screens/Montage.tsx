@@ -481,6 +481,8 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
   const missing = media.filter(needsFile);
   useEffect(() => { scanServer(draft); }, [draft.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
+  // Publier la vidéo dans le fil BeHoop, ou la garder accessible seulement par sa page, ses liens et l'espace de l'équipe
+  const [inFeed, setInFeed] = useState(true);
   const size = (m: Item) => FILES.get(m.id)?.size ?? (sizeOf(m) || 0);
   const total = media.reduce((a, m) => a + size(m), 0);
   const prog = Object.fromEntries(media.map((m) => [m.id, isDone(m) ? size(m) : Math.min(size(m), Math.max(PROG.get(m.id) ?? 0, SERVER.get(m.id)?.sent ?? 0))]));
@@ -491,7 +493,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
       const keys: Record<string, string> = {};
       await Promise.all(media.map(async (m) => { keys[m.id] = await uploadItem(draft, m)!; }));
       const mediaOut = draft.media.map(({ thumb: _t, ...m }) => ({ ...m, r2Key: keys[m.id] ?? m.r2Key }));
-      await api('/render', { matchVideoId: draft.id, media: mediaOut, settings: draft.settings });
+      await api('/render', { matchVideoId: draft.id, media: mediaOut, settings: draft.settings, inFeed });
       await keepAwake(false); await clearScope(draft.id);
       media.forEach((m) => { UP.delete(m.id); PROG.delete(m.id); });
       store.set(draftKey(draft.id), null); store.set(doneKey(draft.id), null); haptic(30);
@@ -517,6 +519,7 @@ function SendStep({ draft, setDraft }: { draft: Draft; setDraft: (d: Draft) => v
           <div className="progress mt"><i style={{ width: `${total ? (sent / total) * 100 : 0}%` }} /></div>
           {state === 'sending' && <div className="banner mt"><Ico n="device" /><div>{t('Garde BeHoop ouvert pendant l\'envoi. En cas de coupure, l\'envoi reprend tout seul.')}</div></div>}
           {state === 'error' && <ErrorBox msg={t('L’envoi a été interrompu. Il reprendra là où il s’était arrêté.')} retry={start} />}
+          {state === 'idle' && !missing.length && <label className="check mt"><input type="checkbox" checked={inFeed} onChange={(e) => setInFeed(e.target.checked)} />{t('Publier dans le fil BeHoop (sinon : accessible seulement par sa page et ses liens)')}</label>}
           {state === 'idle' && !missing.length && <button className="btn mt" onClick={start}>{t('Envoyer et générer')}</button>}
           <div className="group mt">{media.map((m) => { const p = size(m) ? (prog[m.id] ?? 0) / size(m) : 0; return (
             <div key={m.id} className="row"><div className="grow"><div className="ellipsis" style={{ fontSize: 14 }}><Ico n={m.kind === 'video' ? 'video' : 'image'} /> {m.name}</div><div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${p * 100}%` }} /></div></div>

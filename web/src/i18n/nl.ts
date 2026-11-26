@@ -1445,4 +1445,10 @@ export const NL: Record<string, string> = {
   "Glisse le doigt sur la frise pour choisir l’instant, puis touche la vidéo là où est l’action : un point est posé. Le cadre glisse de point en point.": "Schuif met je vinger over de tijdlijn om het moment te kiezen en tik dan op de video waar de actie is: er wordt een punt geplaatst. Het kader schuift van punt naar punt.",
   "Point ici": "Punt hier",
   "Moment d'une équipe Jeunes : seuls les membres de l'Équipe peuvent l'ouvrir.": "Moment van een jeugdploeg: alleen leden van de Ploeg kunnen het openen.",
+  "Publier dans le fil BeHoop (sinon : accessible seulement par sa page et ses liens)": "Publiceren in de BeHoop-feed (anders alleen bereikbaar via de pagina en links)",
+  "Publier dans le fil BeHoop": "Publiceren in de BeHoop-feed",
+  "Publié dans le fil BeHoop": "Gepubliceerd in de BeHoop-feed",
+  "Retiré du fil (toujours accessible par sa page et ses liens)": "Uit de feed gehaald (nog bereikbaar via de pagina en links)",
+  "Retirer du fil": "Uit de feed halen",
+  "Publier dans le fil": "In de feed publiceren",
 };

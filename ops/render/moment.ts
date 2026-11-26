@@ -6,6 +6,7 @@ import { chromium } from '@playwright/test';
 import { ff, probe } from './run';
 import { waveFrames, WAVE_CUT } from './wave';
 import { bugTrack } from './bug';
+import { shareCard } from './shareCard';
 import { momentClipArgs, momentJoinArgs, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
@@ -57,7 +58,7 @@ try {
     <div class="s ${a > h ? 'g' : ''}">${a}</div>${logo(st.away.logo, st.away.color)}</body></html>`;
   writeFileSync(join(work, 'banner.html'), html);
   const b = await chromium.launch(process.env.PW_CHROME ? { executablePath: process.env.PW_CHROME } : {});
-  let bug: string | undefined, wave: string | undefined;
+  let bug: string | undefined, wave: string | undefined, card: string | undefined;
   try {
     const p = await b.newPage({ viewport: { width: 1080, height: 300 } });
     await p.goto('file://' + join(work, 'banner.html')); await p.waitForLoadState('networkidle');
@@ -67,6 +68,7 @@ try {
     const filmLogoVisible = !!mv.hls?.logo && (layout === 'fit' || pos > 0.85);
     if (!filmLogoVisible) bug = await bugTrack(b, work);
     if (clips.length > 1) wave = await waveFrames(b, work, [st.home.color, st.away.color]);
+    card = await shareCard(b, st, join(work, 'share.jpg'), m.title || 'Moment').catch(() => undefined);
   } finally { await b.close(); }
   // Chaque passage au format vertical, puis assemblage (une seule passe finale)
   const parts: { path: string; duration: number }[] = [];
@@ -94,10 +96,11 @@ try {
   await r2.upload(key, out, 'video/mp4');
   const posterKey = key.replace(/\.mp4$/, '.jpg');
   await r2.upload(posterKey, poster, 'image/jpeg');
+  if (card) await r2.upload(`share/m/${id}.jpg`, card, 'image/jpeg').catch(() => {});
   await ref.update({ status: 'ready', progress: 100, step: 'Prêt', r2Key: key, posterKey, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
   await db.doc(`posts/moment-${id}`).set({
     type: 'moment', authorUid: m.authorUid, authorName: m.authorName ?? '', clubId: null, teamIds: mv.teamIds, targets: mv.teamIds.filter(Boolean).map((x: number) => `t:${x}`),
-    visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: false, reactions: {}, createdAt: FieldValue.serverTimestamp(),
+    visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: m.inFeed === false, ...(m.inFeed === false ? { hiddenReason: 'auteur', hiddenBy: m.authorUid } : {}), reactions: {}, createdAt: FieldValue.serverTimestamp(),
     payload: { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` },
   });
   await notifyUsers([m.authorUid], { title: N.momentReady, body: m.title || st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);

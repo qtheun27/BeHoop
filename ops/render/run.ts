@@ -2,6 +2,7 @@
 //   distant : tsx ops/render/run.ts <matchVideoId>     (Firestore + R2)
 //   local   : tsx ops/render/run.ts --local <dossier>  (dossier contenant job.json + fichiers, sortie dans out/render/<id>)
 import { bugTrack } from './bug';
+import { shareCard } from './shareCard';
 import { mkdirSync, rmSync, existsSync, readFileSync, writeFileSync, statSync, readdirSync, copyFileSync } from 'node:fs';
 import { join, resolve, extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -143,7 +144,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   const ctx = await browser.newContext({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   const page = await ctx.newPage();
   const planche: Record<string, string> = {};
-  let bug: string | undefined;
+  let bug: string | undefined, card: string | undefined;
   try {
     for (const t of ['pre', 'q1', 'q2', 'q3', 'fin'] as PlancheType[]) {
       const dir = join(work, `frames_${t}`);
@@ -160,6 +161,8 @@ export async function render(job: Job, work: string, hooks: Hooks) {
     await captureFrames(page, base, st, 'wipe', join(work, 'wipe_out'), 9, 18);
     // Logo BeHoop animé du coin de l'image (séquences filmées uniquement ; les planches ont déjà le logo)
     bug = await bugTrack(browser, work);
+    // Affiche de partage sans photo (aperçu des liens WhatsApp / Facebook pour les équipes Jeunes)
+    card = await shareCard(browser, st, join(work, 'share.jpg')).catch(() => undefined);
   } finally { await browser.close(); server.close(); }
 
   // 5. Segments (une seule passe d'encodage chacun) : fondus vidéo↔vidéo + vague planche↔vidéo
@@ -214,7 +217,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   { mp4 = join(hls, 'film_720p.mp4'); await ff(['-y', '-i', join(hls, '720p', 'index.m3u8'), '-c', 'copy', '-bsf:a', 'aac_adtstoasc', '-movflags', '+faststart', mp4]); }
   const duration = await durationOf(film);
   rmSync(film, { force: true });
-  return { hls, chapters, duration, mp4 };
+  return { hls, chapters, duration, mp4, card };
 }
 
 /* ---------------- Mode GitHub Actions (Firestore + R2) ---------------- */
@@ -253,12 +256,14 @@ async function remote(id: string) {
     // Les photos du marquoir servent au score et aux bornes des quarts : jamais dans la galerie
     for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded && !x.scoreboardOfQuarter)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
     const [fh, fa] = job.settings.scores[3];
+    if (res.card) await r2.upload(`share/v/${id}.jpg`, res.card, 'image/jpeg').catch(() => {});
     const hls = { masterKey: `${prefix}/master.m3u8`, logo: true /* logo BeHoop incrusté (Moments : pas de second logo) */, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, affiches: ['pre', 'q1', 'q2', 'q3', 'fin'].filter((x) => existsSync(join(res.hls, 'affiches', `${x}.jpg`))).map((x) => `${prefix}/affiches/${x}.jpg`), ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
     await mvRef.update({ status: 'ready', version, hls, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });
     const teamIds: number[] = mv.teamIds.filter(Boolean);
     await db.doc(`posts/video-${id}`).set({
       type: 'video', authorUid: mv.authorUid, authorName: mv.authorName ?? '', clubId: null, teamIds, targets: teamIds.map((t) => `t:${t}`),
-      visibility: job.visibility, teamIdPrivate: job.teamIdPrivate, hidden: false, reactions: {}, createdAt: FieldValue.serverTimestamp(),
+      // Hors du fil BeHoop si l'auteur l'a choisi (publication masquée par l'auteur, réactivable depuis la page de la vidéo)
+      visibility: job.visibility, teamIdPrivate: job.teamIdPrivate, hidden: mv.inFeed === false, ...(mv.inFeed === false ? { hiddenReason: 'auteur', hiddenBy: mv.authorUid } : {}), reactions: {}, createdAt: FieldValue.serverTimestamp(),
       payload: { matchVideoId: id, title: job.settings.title, duration: hls.duration, posterKey: hls.posterKey, score: `${fh} – ${fa}` },
     }, { merge: true });
     await jobRef.update({ status: 'done', progress: 100, step: 'Vidéo prête', finishedAt: FieldValue.serverTimestamp() });
