@@ -30,13 +30,17 @@ try {
   const src1080 = mv.hls.masterKey.replace('master.m3u8', '1080p/index.m3u8');
   await r2.download(src1080, join(work, 'index.m3u8'));
   const list = readFileSync(join(work, 'index.m3u8'), 'utf8').split('\n');
-  let t = 0; const need: string[] = [];
+  // Segments de la vidéo avec leur heure de début ; chaque passage aura sa propre petite liste (seuls ses segments,
+  // téléchargés) : FFmpeg n'a plus à chercher dans la liste complète du match, où les autres segments manquent
+  const head = list.slice(0, list.findIndex((l) => l.startsWith('#EXTINF'))).filter((l) => l && !l.startsWith('#EXT-X-MEDIA-SEQUENCE') && !l.startsWith('#EXT-X-ENDLIST'));
+  const segs: { name: string; t: number; dur: number }[] = [];
+  let t = 0;
   for (let i = 0; i < list.length; i++) {
     const d = /#EXTINF:([\d.]+)/.exec(list[i]); if (!d) continue;
-    const seg = list[i + 1]; const dur = Number(d[1]);
-    if (clips.some((c) => t + dur >= c.start - 6 && t <= c.end + 6)) need.push(seg);
-    t += dur;
+    segs.push({ name: list[i + 1], t, dur: Number(d[1]) }); t += Number(d[1]);
   }
+  const segsOf = (c: { start: number; end: number }) => segs.filter((g) => g.t + g.dur > c.start - 1 && g.t < c.end + 1);
+  const need = [...new Set(clips.flatMap((c) => segsOf(c).map((g) => g.name)))];
   for (const s of need) await r2.download(src1080.replace('index.m3u8', s), join(work, s));
   // Bandeau du score 1080×300 rendu par Chromium. Logos des clubs : adresses du site (/logos/…) rendues absolues
   // (le bandeau est une page locale : une adresse relative ne trouverait pas l'image).
@@ -65,7 +69,10 @@ try {
   const parts: { path: string; duration: number }[] = [];
   for (const [i, c] of clips.entries()) {
     const f = join(work, `clip_${i}.mp4`);
-    await ff(momentClipArgs(join(work, 'index.m3u8'), c.start, c.end, layout, pos, f));
+    const own = segsOf(c); if (!own.length) throw new Error(`passage ${i + 1} hors de la vidéo`);
+    const pl = join(work, `clip_${i}.m3u8`);
+    writeFileSync(pl, [...head, ...own.flatMap((g) => [`#EXTINF:${g.dur.toFixed(6)},`, g.name]), '#EXT-X-ENDLIST', ''].join('\n'));
+    await ff(momentClipArgs(pl, c.start - own[0].t, c.end - own[0].t, layout, pos, f));
     const d = (await probe(f)).duration;
     if (!(d > 1)) throw new Error(`passage ${i + 1} vide (${c.start}–${c.end} s)`);
     parts.push({ path: f, duration: d });
