@@ -1,6 +1,7 @@
 // Pipeline de montage (GitHub Actions render.yml) — aussi utilisable en local : npm run render:local -- <dossier>
 //   distant : tsx ops/render/run.ts <matchVideoId>     (Firestore + R2)
 //   local   : tsx ops/render/run.ts --local <dossier>  (dossier contenant job.json + fichiers, sortie dans out/render/<id>)
+import { bugTrack } from './bug';
 import { mkdirSync, rmSync, existsSync, readFileSync, writeFileSync, statSync, readdirSync, copyFileSync } from 'node:fs';
 import { join, resolve, extname } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -142,6 +143,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
   const ctx = await browser.newContext({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
   const page = await ctx.newPage();
   const planche: Record<string, string> = {};
+  let bug: string | undefined;
   try {
     for (const t of ['pre', 'q1', 'q2', 'q3', 'fin'] as PlancheType[]) {
       const dir = join(work, `frames_${t}`);
@@ -156,6 +158,8 @@ export async function render(job: Job, work: string, hooks: Hooks) {
     // Vague : 0–9 couvre l'écran (fin du segment A), 9–17 révèle la suite (début du segment B)
     await captureFrames(page, base, st, 'wipe', join(work, 'wipe_in'), 0, 10);
     await captureFrames(page, base, st, 'wipe', join(work, 'wipe_out'), 9, 18);
+    // Logo BeHoop animé du coin de l'image (séquences filmées uniquement ; les planches ont déjà le logo)
+    bug = await bugTrack(browser, work);
   } finally { await browser.close(); server.close(); }
 
   // 5. Segments (une seule passe d'encodage chacun) : fondus vidéo↔vidéo + vague planche↔vidéo
@@ -183,6 +187,7 @@ export async function render(job: Job, work: string, hooks: Hooks) {
       head: i > 0 ? join(work, 'wipe_out', '%04d.png') : undefined,
       tail: i < kept.length - 1 ? join(work, 'wipe_in', '%04d.png') : undefined,
       whoosh: existsSync(WHOOSH) ? WHOOSH : undefined,
+      bug: s.kind === 'quarter' ? bug : undefined,
     });
     await ff(r.args);
     parts.push({ path: out, duration: await durationOf(out), chapter: s.chapter });
@@ -248,7 +253,7 @@ async function remote(id: string) {
     // Les photos du marquoir servent au score et aux bornes des quarts : jamais dans la galerie
     for (const m of job.media.filter((x) => x.kind === 'photo' && !x.excluded && !x.scoreboardOfQuarter)) await r2.copy(m.r2Key, `photos/${vis}/${id}/${m.id}.jpg`).catch(() => {});
     const [fh, fa] = job.settings.scores[3];
-    const hls = { masterKey: `${prefix}/master.m3u8`, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, affiches: ['pre', 'q1', 'q2', 'q3', 'fin'].filter((x) => existsSync(join(res.hls, 'affiches', `${x}.jpg`))).map((x) => `${prefix}/affiches/${x}.jpg`), ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
+    const hls = { masterKey: `${prefix}/master.m3u8`, logo: true /* logo BeHoop incrusté (Moments : pas de second logo) */, chapters: res.chapters, duration: Math.round(res.duration), posterKey: `${prefix}/poster.jpg`, affiches: ['pre', 'q1', 'q2', 'q3', 'fin'].filter((x) => existsSync(join(res.hls, 'affiches', `${x}.jpg`))).map((x) => `${prefix}/affiches/${x}.jpg`), ...(res.mp4 ? { mp4Key: `${prefix}/film_720p.mp4` } : {}) };
     await mvRef.update({ status: 'ready', version, hls, purgeAfter: new Date(Date.now() + 48 * 3600e3), voteUntil: new Date(Date.now() + 48 * 3600e3) });
     const teamIds: number[] = mv.teamIds.filter(Boolean);
     await db.doc(`posts/video-${id}`).set({

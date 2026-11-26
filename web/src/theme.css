@@ -323,25 +323,51 @@ html { overflow-x: hidden; }
 /* Ouverture : rond central qui se trace, puis logo sur disque clair (les lignes s'effacent derrière) */
 .cc-anim { overflow: visible; }
 .cc-anim .cc-l, .cc-anim .cc-o, .cc-anim .cc-n { fill: none; stroke-linecap: round; }
-.cc-anim .cc-o { stroke: #f26a1b; stroke-width: 3; stroke-dasharray: 302; animation: cc-draw 2.8s cubic-bezier(.6,0,.2,1) infinite; --l: 302; }
-.cc-anim .cc-n { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 126; animation: cc-draw 2.8s .2s cubic-bezier(.6,0,.2,1) infinite; --l: 126; }
-.cc-anim .cc-l { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 140; animation: cc-draw 2.8s .1s cubic-bezier(.6,0,.2,1) infinite; --l: 140; }
+.cc-anim .cc-o { stroke: #f26a1b; stroke-width: 3; stroke-dasharray: 302; animation: cc-draw 4.2s cubic-bezier(.6,0,.2,1) infinite; --l: 302; }
+.cc-anim .cc-n { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 126; animation: cc-draw 4.2s .2s cubic-bezier(.6,0,.2,1) infinite; --l: 126; }
+.cc-anim .cc-l { stroke: var(--brand-be, #0d2a5c); stroke-width: 2; stroke-dasharray: 140; animation: cc-draw 4.2s .1s cubic-bezier(.6,0,.2,1) infinite; --l: 140; }
 .cc-anim .cc-disc { fill: var(--bg, #f4f1ec); }
-.cc-anim .cc-logo { transform-box: view-box; transform-origin: 70px 70px; animation: cc-pop 2.8s infinite; }
-.cc-anim .em-d, .ball-anim .em-d { display: none; }
-@keyframes cc-draw { 0% { stroke-dashoffset: var(--l); opacity: 1; } 38% { stroke-dashoffset: 0; opacity: 1; } 52%, 86% { stroke-dashoffset: 0; opacity: .35; } 100% { stroke-dashoffset: 0; opacity: 0; } }
-@keyframes cc-pop { 0%, 36% { transform: scale(0) rotate(-90deg); opacity: 0; } 50% { transform: scale(1.1) rotate(6deg); opacity: 1; } 58%, 86% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
-:root[data-theme="dark"] .cc-anim .em-l, :root[data-bg="nuit"] .cc-anim .em-l { display: none; }
-:root[data-theme="dark"] .cc-anim .em-d, :root[data-bg="nuit"] .cc-anim .em-d { display: inline; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cc-anim .em-l { display: none; } :root:not([data-theme="light"]) .cc-anim .em-d { display: inline; } }
+.cc-anim .cc-logo { transform-box: view-box; transform-origin: 70px 70px; animation: cc-pop 4.2s infinite; }
+@keyframes cc-draw { 0% { stroke-dashoffset: var(--l); opacity: 1; } 25% { stroke-dashoffset: 0; opacity: 1; } 35%, 90% { stroke-dashoffset: 0; opacity: .35; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes cc-pop { 0%, 22% { transform: scale(0) rotate(-90deg); opacity: 0; } 32% { transform: scale(1.1) rotate(6deg); opacity: 1; } 38%, 92% { transform: scale(1) rotate(0); opacity: 1; } 100% { transform: scale(.92); opacity: 0; } }
+/* Logo animé (shared/emblem-anim.svg) : le ballon tourne, puis plonge dans l'arceau (swish), comme dans les vidéos */
+.bh-anim { color: var(--brand-be, #0d2a5c); overflow: visible; }
+.cc-anim .bh-ball { animation: bh-cc-ball 4.2s infinite; } .cc-anim .bh-net { animation: bh-cc-net 4.2s infinite; }
+.ball-anim .bh-ball { animation: bh-sm-ball 2.8s infinite; } .ball-anim .bh-net { animation: bh-sm-net 2.8s infinite; }
+@keyframes bh-cc-ball {
+  0%, 40.48% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.45,.05,.25,1); }
+  58.33%, 65.48% { transform: rotate(-360deg); opacity: 1; animation-timing-function: cubic-bezier(.2,.7,.4,1); }
+  70.24% { transform: translateY(-30px) rotate(-390deg); opacity: 1; animation-timing-function: cubic-bezier(.55,0,.9,.45); }
+  75.00% { transform: translateY(55px) rotate(-300deg) scale(.95); opacity: 1; animation-timing-function: linear; }
+  77.38% { transform: translateY(105px) rotate(-280deg) scale(.92); opacity: 0; }
+  79.05% { transform: translateY(-70px) rotate(-380deg) scale(.9); opacity: 0; animation-timing-function: cubic-bezier(.3,.6,.4,1); }
+  88.10% { transform: translateY(4px) rotate(-360deg); opacity: 1; animation-timing-function: ease-out; }
+  90.95%, 100% { transform: rotate(-360deg); opacity: 1; }
+}
+@keyframes bh-cc-net {
+  0%, 73.81% { transform: none; animation-timing-function: ease-out; }
+  78.10% { transform: scaleY(1.22); animation-timing-function: ease-in-out; }
+  82.86% { transform: scaleY(.96); }
+  86.90%, 100% { transform: none; }
+}
+@keyframes bh-sm-ball {
+  0%, 5.36% { transform: none; opacity: 1; animation-timing-function: cubic-bezier(.45,.05,.25,1); }
+  35.71%, 50.00% { transform: rotate(-360deg); opacity: 1; animation-timing-function: cubic-bezier(.2,.7,.4,1); }
+  57.14% { transform: translateY(-30px) rotate(-390deg); opacity: 1; animation-timing-function: cubic-bezier(.55,0,.9,.45); }
+  65.00% { transform: translateY(55px) rotate(-300deg) scale(.95); opacity: 1; animation-timing-function: linear; }
+  68.57% { transform: translateY(105px) rotate(-280deg) scale(.92); opacity: 0; }
+  71.43% { transform: translateY(-70px) rotate(-380deg) scale(.9); opacity: 0; animation-timing-function: cubic-bezier(.3,.6,.4,1); }
+  85.71% { transform: translateY(4px) rotate(-360deg); opacity: 1; animation-timing-function: ease-out; }
+  90.00%, 100% { transform: rotate(-360deg); opacity: 1; }
+}
+@keyframes bh-sm-net {
+  0%, 63.21% { transform: none; animation-timing-function: ease-out; }
+  69.64% { transform: scaleY(1.22); animation-timing-function: ease-in-out; }
+  76.79% { transform: scaleY(.96); }
+  82.86%, 100% { transform: none; }
+}
+
 /* Autres chargements : le ballon se dessine puis tourne */
-.ball-anim .ba-b, .ball-anim .ba-s { fill: none; stroke: var(--accent, #f26a1b); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 252; animation: ba-draw 2.4s cubic-bezier(.6,0,.2,1) infinite; }
-.ball-anim .ba-s { animation-delay: .2s; }
-.ball-anim .ba-f { fill: var(--accent, #f26a1b); animation: ba-fill 2.4s infinite; }
-.ball-anim g { transform-box: view-box; transform-origin: 70px 70px; animation: ba-spin 2.4s cubic-bezier(.5,0,.3,1) infinite; }
-@keyframes ba-draw { 0% { stroke-dashoffset: 252; opacity: 1; } 45%, 85% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
-@keyframes ba-fill { 0%, 40% { opacity: 0; } 60%, 85% { opacity: .18; } 100% { opacity: 0; } }
-@keyframes ba-spin { 0%, 45% { transform: rotate(0); } 75%, 100% { transform: rotate(180deg); } }
 @media (prefers-reduced-motion: reduce) { .cc-anim *, .ball-anim * { animation: none !important; } }
 :root[data-rm="1"] .cc-anim *, :root[data-rm="1"] .ball-anim * { animation: none !important; }
 

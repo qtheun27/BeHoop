@@ -1,8 +1,9 @@
-// Rendu d'un Moment (V2) : passage de 15–30 s en vertical 9:16, fond flou, bandeau score + logos, logo BeHoop discret.
+// Rendu d'un Moment (V2) : passage de 15–30 s en vertical 9:16, fond flou, bandeau score + logos, logo BeHoop animé.
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { chromium } from '@playwright/test';
 import { ff } from './run';
+import { bugTrack } from './bug';
 import { momentArgs } from '../../shared/ffmpeg';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
@@ -34,15 +35,18 @@ try {
   const st = settingsFromStore(mv.settings); const [h, a] = st.scores[3];
   const html = `<html><head><style>body{margin:0;width:1080px;height:300px;background:linear-gradient(#0a0c12f0,#0a0c1200);font-family:Oswald,Arial;color:#fff;display:flex;align-items:center;justify-content:center;gap:28px}
     .l{width:110px;height:110px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}.l img{width:78%;height:78%;object-fit:contain}
-    .s{font-family:Anton,Impact;font-size:96px}.g{color:#f2c14e}.b{position:absolute;right:28px;top:20px;font-size:22px;letter-spacing:.3em;opacity:.6}</style></head>
+    .s{font-family:Anton,Impact;font-size:96px}.g{color:#f2c14e}</style></head>
     <body><div class="l" style="box-shadow:0 0 0 5px ${st.home.color}"><img src="${st.home.logo}"></div><div class="s ${h > a ? 'g' : ''}">${h}</div><div class="s" style="opacity:.5">–</div>
-    <div class="s ${a > h ? 'g' : ''}">${a}</div><div class="l" style="box-shadow:0 0 0 5px ${st.away.color}"><img src="${st.away.logo}"></div><div class="b">BEHOOP</div></body></html>`;
+    <div class="s ${a > h ? 'g' : ''}">${a}</div><div class="l" style="box-shadow:0 0 0 5px ${st.away.color}"><img src="${st.away.logo}"></div></body></html>`;
   writeFileSync(join(work, 'banner.html'), html);
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1080, height: 300 } });
   await p.goto('file://' + join(work, 'banner.html')); await p.waitForLoadState('networkidle');
-  await p.screenshot({ path: join(work, 'banner.png'), omitBackground: true }); await b.close();
+  await p.screenshot({ path: join(work, 'banner.png'), omitBackground: true });
+  // Logo BeHoop animé (même animation que les vidéos de match), joué une fois au début du Moment —
+  // sauf si la vidéo du match a déjà le logo incrusté (montages récents) : pas de second logo à l'écran
+  const bug = mv.hls?.logo ? (await b.close(), undefined) : await bugTrack(b, work).finally(() => b.close());
   const out = join(work, 'moment.mp4');
-  await ff(momentArgs(join(work, 'index.m3u8'), m.start, m.end, join(work, 'banner.png'), out).map((x) => x));
+  await ff(momentArgs(join(work, 'index.m3u8'), m.start, m.end, join(work, 'banner.png'), out, bug));
   const vis = mv.visibility === 'team' ? `team-${mv.teamIdPrivate}` : 'public';
   const key = `moments/${vis}/${m.matchVideoId}/${id}.mp4`;
   await r2.upload(key, out, 'video/mp4');

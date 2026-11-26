@@ -3,7 +3,7 @@ import { classifyCategory, ageGroupOf } from './ageGroup';
 import { quarterScores, validateScores, resultLabel } from './scores';
 import { assignQuarters, mosaicPhotos } from './quarters';
 import { buildChapters, chaptersToVtt, parseVtt } from './chapters';
-import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs } from './ffmpeg';
+import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs, momentArgs } from './ffmpeg';
 import type { MediaItem } from './types';
 
 describe('Jeunes / Seniors', () => {
@@ -111,6 +111,21 @@ describe('commandes FFmpeg', () => {
     expect(s).toContain('PTS-STARTPTS+14.417/TB');
     expect(s).toContain('adelay=14417|14417');
     expect(s).toContain('-g 60'); expect(s).toContain('-preset medium'); expect(s).toContain('-maxrate 8000k');
+  });
+  it('logo BeHoop : piste en boucle, posée sous les vagues, absente sans option', () => {
+    const { args } = segmentArgs([{ path: 'a', duration: 10 }], 'o', { head: 'h/%03d.png', tail: 't/%03d.png', bug: 'bug.mov' });
+    const s = args.join(' ');
+    expect(s).toContain('-stream_loop -1 -i bug.mov');
+    expect(s).toContain('[3:v]setpts=PTS-STARTPTS+0.8/TB[bug]');
+    // le logo est superposé avant la vague d'entrée (la vague le recouvre)
+    expect(s.indexOf('overlay=W-w-36:20:shortest=1')).toBeLessThan(s.indexOf('[1:v]overlay=0:0'));
+    expect(segmentArgs([{ path: 'a', duration: 10 }], 'o').args.join(' ')).not.toContain('stream_loop');
+  });
+  it('Moment : logo animé en bas à droite', () => {
+    const s = momentArgs('in.m3u8', 10, 30, 'b.png', 'o.mp4', 'bug.mov').join(' ');
+    expect(s).toContain('-stream_loop -1 -i bug.mov');
+    expect(s).toContain('[bb][bug]overlay=W-w-24:H-h-150:shortest=1,format=yuv420p[v]');
+    expect(momentArgs('in.m3u8', 10, 30, 'b.png', 'o.mp4').join(' ')).toContain('[bf][1:v]overlay=0:0,format=yuv420p[v]');
   });
 });
 

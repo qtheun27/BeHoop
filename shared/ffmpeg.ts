@@ -111,7 +111,10 @@ export const ENC_1080 = ['-c:v', 'libx264', '-preset', 'medium', '-profile:v', '
   '-g', '60', '-keyint_min', '60', '-sc_threshold', '0', '-pix_fmt', 'yuv420p', '-r', '30',
   '-c:a', 'aac', '-b:a', '128k', '-ar', '48000', '-ac', '2'];
 
-export interface SegmentOpts { fade?: number; head?: string; tail?: string; whoosh?: string; wipeHalf?: number }
+export interface SegmentOpts { fade?: number; head?: string; tail?: string; whoosh?: string; wipeHalf?: number; bug?: string }
+/** Logo BeHoop (piste transparente d'une minute, en boucle) : coin haut droit, animation 0,8 s après le début de la séquence. */
+export const BUG_DELAY = 0.8;
+const BUG_POS = 'W-w-36:20';
 /**
  * Encode un segment du film en une seule passe : fondus enchaînés vidéo↔vidéo (0,25 s) + fondu audio,
  * moitié « sortie » de la vague au début (head) et moitié « entrée » à la fin (tail), whoosh sur la vague.
@@ -126,6 +129,7 @@ export function segmentArgs(inputs: { path: string; duration: number }[], output
   const hi = o.head ? (args.push('-framerate', '30', '-i', o.head), k++) : -1;
   const ti = o.tail ? (args.push('-framerate', '30', '-i', o.tail), k++) : -1;
   const wi = o.whoosh && o.tail ? (args.push('-i', o.whoosh), k++) : -1;
+  const bi = o.bug ? (args.push('-stream_loop', '-1', '-i', o.bug), k++) : -1;
   const f: string[] = [];
   let v = '[0:v]', a = '[0:a]', off = 0;
   for (let i = 1; i < n; i++) {
@@ -134,6 +138,8 @@ export function segmentArgs(inputs: { path: string; duration: number }[], output
     v = `[x${i}]`; a = `[y${i}]`;
   }
   const T = inputs.reduce((s, i) => s + i.duration, 0) - fade * (n - 1);
+  // Logo sous les vagues de transition (posé avant elles)
+  if (bi >= 0) { f.push(`[${bi}:v]setpts=PTS-STARTPTS+${BUG_DELAY}/TB[bug]`, `${v}[bug]overlay=${BUG_POS}:shortest=1[vl]`); v = '[vl]'; }
   if (hi >= 0) { f.push(`${v}[${hi}:v]overlay=0:0:eof_action=pass[vh]`); v = '[vh]'; }
   if (ti >= 0) { f.push(`[${ti}:v]setpts=PTS-STARTPTS+${(T - half).toFixed(3)}/TB[tw]`, `${v}[tw]overlay=0:0:eof_action=pass[vt]`); v = '[vt]'; }
   f.push(`${v}format=yuv420p,setsar=1[v]`);
@@ -152,9 +158,11 @@ export function posterArgs(input: string, output: string, at = 3): string[] {
 }
 
 /** Moment vertical 9:16 : fond flou, vidéo centrée, bandeau (PNG) en haut. */
-export function momentArgs(input: string, start: number, end: number, banner: string, output: string): string[] {
-  return ['-y', '-ss', String(start), '-to', String(end), '-i', input, '-i', banner,
+export function momentArgs(input: string, start: number, end: number, banner: string, output: string, bug?: string): string[] {
+  // Logo BeHoop animé en bas à droite (sous la vidéo, sur le fond flou)
+  const logo = bug ? `[bb];[2:v]setpts=PTS-STARTPTS+0.6/TB[bug];[bb][bug]overlay=W-w-24:H-h-150:shortest=1` : '';
+  return ['-y', '-ss', String(start), '-to', String(end), '-i', input, '-i', banner, ...(bug ? ['-stream_loop', '-1', '-i', bug] : []),
     '-filter_complex', '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
-      '[fg]scale=1080:-2[f];[b][f]overlay=0:(H-h)/2[bf];[bf][1:v]overlay=0:0,format=yuv420p[v]',
+      `[fg]scale=1080:-2[f];[b][f]overlay=0:(H-h)/2[bf];[bf][1:v]overlay=0:0${logo},format=yuv420p[v]`,
     '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', output];
 }
