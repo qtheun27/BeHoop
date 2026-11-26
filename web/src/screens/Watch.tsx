@@ -1,6 +1,7 @@
 // Lecteur vidéo de match (HLS) façon Apple + Moments (V2) + vote « Action du match ».
 import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { EditSheet } from '../ui/EditSheet';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
@@ -355,6 +356,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   // Retour de Google après « Connecter ma chaîne » : on rouvre la publication
   const [yt, setYt] = useState(() => !!qs().get('pub'));
   const [fix, setFix] = useState(false);
+  const [ren, setRen] = useState(false);
   // Vidéo publique : vrai lien de téléchargement (un lien de lecture ouvrirait le lecteur de l'iPhone, sans enregistrement)
   const author = !!s.user && mv.authorUid === s.user.uid;
   const pubDl = useAsync(async () => (author && !youth && mv.hls?.mp4Key ? (await api<{ url: string }>('/download', { matchVideoId: id })).url : null), [id, s.user?.uid]);
@@ -409,6 +411,12 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
         {!youth && pubDl.data && <a className="btn ghost" href={inSafari(pubDl.data)} target="_blank" rel="noopener noreferrer">{t('Télécharger la vidéo')}</a>}
       </div>
       {mv.settings && (mv.authorUid === s.user?.uid || s.isAdmin) && <button className="btn ghost mt" onClick={() => setFix(true)}><Ico n="scoreboard" />{t('Corriger le score')}</button>}
+      {(mv.authorUid === s.user?.uid || s.isAdmin) && <div className="hstack mt" style={{ gap: 8 }}>
+        <button className="btn ghost small" onClick={() => setRen(true)}>{t('Renommer')}</button>
+        <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={async () => { if (!confirm(t('Supprimer la vidéo du match ? Ses Moments et ses fichiers seront supprimés définitivement.'))) return;
+          try { await api(`/montage/${id}`, undefined, 'DELETE'); s.toast(t('Vidéo supprimée')); location.hash = '/fil'; } catch { s.toast(t('Action impossible. Réessaie.')); } }}>{t('Supprimer la vidéo')}</button></div>}
+      {ren && <EditSheet title={t('Renommer')} fields={[{ key: 'title', label: t('Titre'), value: mv.title, max: 100, required: true }]} onClose={() => setRen(false)}
+        onSave={async (x) => { try { await api('/video/rename', { matchVideoId: id, title: x.title }); s.toast(t('Modifié')); location.reload(); } catch { s.toast(t('Action impossible. Réessaie.')); } }} />}
       {fix && <ScoreSheet id={id} mv={mv} onClose={() => setFix(false)} />}
       {author && <AffichesBlock id={id} mv={mv} />}
       {canPublish.data && <button className="btn ghost mt" onClick={() => setYt(true)}><Ico n="video" />{t('Publier sur YouTube')}</button>}
@@ -579,6 +587,7 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
   const [live, setLive] = useState<Moment | null>(null);
   useEffect(() => D.watchDoc<Omit<Moment, 'id'>>(`moments/${id}`, (x) => x && setLive({ id, ...x } as Moment)), [id]);
   const [yt, setYt] = useState(qs().get('pub') === '1');
+  const [ed, setEd] = useState(false);
   if (!m.data) return <Skeleton h={400} n={1} />;
   const mo = live ?? m.data;
   const canPublish = mo.authorUid === s.user?.uid || mv.authorUid === s.user?.uid || s.isAdmin;
@@ -594,6 +603,13 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
           if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], text: t('Un Moment sur BeHoop 🏀') }); else await navigator.share?.({ url: location.href }); } catch { /* partage annulé */ } }}>{t('Partager (WhatsApp…)')}</button>
         : <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
       {canPublish && <button className="btn secondary mt" onClick={() => setYt(true)}><Ico n="video" />{mo.youtube?.status === 'done' ? t('Publié sur YouTube (Short)') : t('Publier sur YouTube (Short)')}</button>}
+      {canPublish && <div className="hstack mt" style={{ gap: 8, justifyContent: 'center' }}>
+        <button className="btn ghost small" onClick={() => setEd(true)}>{t('Modifier')}</button>
+        <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={async () => { if (!confirm(t('Supprimer ce Moment ?'))) return;
+          try { await api('/moment/delete', { momentId: id }); s.toast(t('Moment supprimé')); location.hash = `/video/${vid}`; } catch { s.toast(t('Action impossible. Réessaie.')); } }}>{t('Supprimer')}</button></div>}
+      {ed && <EditSheet title={t('Modifier le Moment')} onClose={() => setEd(false)}
+        fields={[{ key: 'title', label: t('Titre'), value: mo.title ?? '', max: 80 }, { key: 'text', label: t('Description'), value: mo.text ?? '', max: 500, multiline: true }]}
+        onSave={async (x) => { try { await api('/moment/update', { momentId: id, ...x }); s.toast(t('Modifié')); } catch { s.toast(t('Action impossible. Réessaie.')); } }} />}
       {yt && canPublish && <MomentYtSheet vid={vid} mv={mv} moment={mo} youth={youth} onClose={() => setYt(false)} />}
     </div>
   );

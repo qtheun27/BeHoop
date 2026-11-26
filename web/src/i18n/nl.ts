@@ -1426,4 +1426,13 @@ export const NL: Record<string, string> = {
   "Suivre l’action": "De actie volgen",
   "Titre (facultatif) — ex. : le panier de la victoire": "Titel (optioneel) — bv.: de winnende korf",
   "Description (facultatif)": "Beschrijving (optioneel)",
+  "Modifié": "Gewijzigd",
+  "Texte": "Tekst",
+  "Supprimer la vidéo du match ? Ses Moments et ses fichiers seront supprimés définitivement.": "De matchvideo verwijderen? De Moments en bestanden worden definitief verwijderd.",
+  "Vidéo supprimée": "Video verwijderd",
+  "Supprimer ce Moment ?": "Dit Moment verwijderen?",
+  "Moment supprimé": "Moment verwijderd",
+  "Renommer": "Hernoemen",
+  "Supprimer la vidéo": "Video verwijderen",
+  "Modifier le Moment": "Moment bewerken",
 };

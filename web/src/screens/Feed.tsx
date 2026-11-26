@@ -8,6 +8,7 @@ import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl, ensureMediaCookie } from '../lib/api';
 import { Screen, Empty, Skeleton, ErrorBox, Avatar, Disc, Sheet, Icons, useAsync } from '../ui/kit';
+import { EditSheet } from '../ui/EditSheet';
 import { ago, haptic, dotted, frDate } from '../lib/util';
 import { shareScoreImage } from '../lib/shareImage';
 import { loadClub, isPlayed, teamIndex, teamLabel, loadNews, loadComps, readable, type Club, type News, type Competition } from '../lib/data';
@@ -138,6 +139,29 @@ function PostMenu({ post, onClose, onChange }: { post: D.Post; onClose: () => vo
   const isResp = post.teamIds.some((t) => s.responsibleTeams.includes(t));
   const youthMedia = post.visibility === 'team';
   const act = async (f: () => Promise<unknown>, m: string) => { try { await f(); s.toast(m); onClose(); } catch { s.toast(t('Action impossible. Réessaie.')); } };
+  // Gérer ses contenus : modifier le texte / le titre, supprimer (vidéo de match et Moment : fichiers compris)
+  const [edit, setEdit] = useState(false);
+  const pl = post.payload ?? {};
+  const kind = post.type === 'video' ? 'video' : post.type === 'moment' ? 'moment' : post.type === 'message' || post.type === 'photo' ? 'text' : null;
+  if (edit && kind) {
+    const save = async (v: Record<string, string>) => {
+      try {
+        if (kind === 'video') await api('/video/rename', { matchVideoId: pl.matchVideoId, title: v.title });
+        else if (kind === 'moment') await api('/moment/update', { momentId: pl.momentId, title: v.title, text: v.text });
+        else await api('/post/edit', { postId: post.id, text: v.text });
+        onChange({ ...post, payload: { ...pl, ...v } }); s.toast(t('Modifié'));
+      } catch { s.toast(t('Action impossible. Réessaie.')); }
+    };
+    const fields = kind === 'video' ? [{ key: 'title', label: t('Titre'), value: pl.title ?? '', max: 100, required: true }]
+      : kind === 'moment' ? [{ key: 'title', label: t('Titre'), value: pl.title ?? '', max: 80 }, { key: 'text', label: t('Description'), value: pl.text ?? '', max: 500, multiline: true }]
+      : [{ key: 'text', label: t('Texte'), value: pl.text ?? '', max: 2000, multiline: true }];
+    return <EditSheet title={t('Modifier')} fields={fields} onSave={save} onClose={onClose} />;
+  }
+  const remove = () => {
+    if (kind === 'video') { if (confirm(t('Supprimer la vidéo du match ? Ses Moments et ses fichiers seront supprimés définitivement.'))) act(() => api(`/montage/${pl.matchVideoId}`, undefined, 'DELETE'), t('Vidéo supprimée')); }
+    else if (kind === 'moment') { if (confirm(t('Supprimer ce Moment ?'))) act(() => api('/moment/delete', { momentId: pl.momentId }), t('Moment supprimé')); }
+    else if (confirm(t('Supprimer cette publication ?'))) act(() => D.deletePost(post.id), t('Publication supprimée'));
+  };
   return (
     <Sheet title={reporting ? t('Signaler') : t('Options')} onClose={onClose}>
       {reporting ? <div className="group">{D.REPORT_REASONS.map((r) => <button key={r} className="row" onClick={() => act(() => D.report(post.id, s.user!.uid, r), t('Merci, on va regarder.'))}>{t(r)}</button>)}</div> : (
@@ -146,7 +170,8 @@ function PostMenu({ post, onClose, onChange }: { post: D.Post; onClose: () => vo
             act(async () => { await D.hidePost(post.id, 'parent', s.user!.uid); onChange({ ...post, hidden: true }); api('/notify/parent-removal', { postId: post.id }).catch(() => {}); }, t('Contenu retiré.'))}>{t('Je suis parent — retirer ce contenu')}</button>}
           {(isAuthor || isResp || s.isAdmin) && !post.hidden && <button className="row" onClick={() => act(async () => { await D.hidePost(post.id, isAuthor ? 'auteur' : isResp ? 'responsable' : 'admin', s.user!.uid); onChange({ ...post, hidden: true }); }, t('Contenu masqué'))}>{t('Masquer')}</button>}
           {s.isAdmin && post.hidden && <button className="row" onClick={() => act(async () => { await D.unhidePost(post.id); onChange({ ...post, hidden: false }); }, t('Contenu réactivé'))}>{t('Réactiver')}</button>}
-          {isAuthor && <button className="row" style={{ color: 'var(--red)' }} onClick={() => confirm(t('Supprimer cette publication ?')) && act(() => D.deletePost(post.id), t('Publication supprimée'))}>{t('Supprimer')}</button>}
+          {isAuthor && kind && <button className="row" onClick={() => setEdit(true)}>{kind === 'video' ? t('Renommer') : t('Modifier')}</button>}
+          {isAuthor && <button className="row" style={{ color: 'var(--red)' }} onClick={remove}>{t('Supprimer')}</button>}
           <button className="row" onClick={() => s.requireAuth() && setReporting(true)}>{t('Signaler…')}</button>
           <button className="row" onClick={() => { navigator.clipboard?.writeText(`${location.origin}/app/#/post/${post.id}`); s.toast(t('Lien copié')); onClose(); }}>{t('Copier le lien')}</button>
         </div>)}

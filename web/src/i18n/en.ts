@@ -1426,4 +1426,13 @@ export const EN: Record<string, string> = {
   "Suivre l’action": "Follow the action",
   "Titre (facultatif) — ex. : le panier de la victoire": "Title (optional) — e.g.: the winning basket",
   "Description (facultatif)": "Description (optional)",
+  "Modifié": "Updated",
+  "Texte": "Text",
+  "Supprimer la vidéo du match ? Ses Moments et ses fichiers seront supprimés définitivement.": "Delete the match video? Its Moments and files will be permanently deleted.",
+  "Vidéo supprimée": "Video deleted",
+  "Supprimer ce Moment ?": "Delete this Moment?",
+  "Moment supprimé": "Moment deleted",
+  "Renommer": "Rename",
+  "Supprimer la vidéo": "Delete video",
+  "Modifier le Moment": "Edit Moment",
 };

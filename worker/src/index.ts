@@ -220,10 +220,57 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const v = await ownVideo(id);
     return json({ ok: true, visibility: v.visibility });
   }
+  // ----- Gestion de ses contenus : Moments, vidéos de match, publications
+  const dropMoment = async (mid: string, m: any) => {
+    const dir = `moments/${m.visibility === 'team' ? `team-${m.teamIdPrivate}` : 'public'}/${m.matchVideoId}/${mid}`;
+    await env.BUCKET.delete([`${dir}.mp4`, `${dir}.jpg`]).catch(() => {});
+    await fs.delete(`posts/moment-${mid}`).catch(() => {});
+    await fs.delete(`moments/${mid}`);
+  };
+  /** Moment modifiable par son auteur, l'auteur du match ou l'administrateur */
+  const ownMoment = async (mid: string) => {
+    if (!/^[a-f0-9]{16}$/.test(mid)) throw new Error('FORBIDDEN');
+    const m = await fs.get<any>(`moments/${mid}`); if (!m) throw new Error('NOT_READY');
+    const v = await fs.get<any>(`matchVideos/${m.matchVideoId}`);
+    if (m.authorUid !== user.uid && v?.authorUid !== user.uid && !isAdmin) throw new Error('FORBIDDEN');
+    return m;
+  };
+  const patchPost = async (pid: string, changes: Record<string, unknown>) => {
+    const p = await fs.get<any>(`posts/${pid}`).catch(() => null);
+    if (p) await fs.set(`posts/${pid}`, { payload: { ...(p.payload ?? {}), ...changes } as any, editedAt: new Date() } as any);
+  };
+  if (path === '/moment/update') {
+    const mid = String(body.momentId ?? ''); const m = await ownMoment(mid);
+    const title = String(body.title ?? '').trim().slice(0, 80), text = String(body.text ?? '').trim().slice(0, 500);
+    await fs.set(`moments/${mid}`, { title, text });
+    const v = await fs.get<any>(`matchVideos/${m.matchVideoId}`);
+    await patchPost(`moment-${mid}`, { title: title || v?.title || 'Moment', text: text || null });
+    return json({ ok: true });
+  }
+  if (path === '/moment/delete') {
+    const mid = String(body.momentId ?? ''); const m = await ownMoment(mid);
+    await dropMoment(mid, m);
+    return json({ ok: true });
+  }
+  if (path === '/video/rename') {
+    const id = String(body.matchVideoId ?? ''); await ownVideo(id);
+    const title = String(body.title ?? '').trim().slice(0, 100); if (!title) return fail('Titre vide');
+    await fs.set(`matchVideos/${id}`, { title });
+    await patchPost(`video-${id}`, { title });
+    return json({ ok: true });
+  }
+  if (path === '/post/edit') {
+    const pid = String(body.postId ?? ''); const p = await fs.get<any>(`posts/${pid}`);
+    if (!p || p.authorUid !== user.uid || !['message', 'photo'].includes(p.type)) throw new Error('FORBIDDEN');
+    await patchPost(pid, { text: String(body.text ?? '').trim().slice(0, 2000) });
+    return json({ ok: true });
+  }
   if (path.startsWith('/montage/') && req.method === 'DELETE') {
     const id = path.split('/')[2]; const v = await ownVideo(id);
-    await fs.set(`matchVideos/${id}`, { status: 'deleted' });
-    await fs.delete(`posts/video-${id}`);
+    await fs.set(`matchVideos/${id}`, { status: 'deleted', hls: null });
+    await fs.delete(`posts/video-${id}`).catch(() => {});
+    // Ses Moments partent avec elle (fichiers, publications)
+    for (const m of await fs.query('moments', [['matchVideoId', 'EQUAL', id]]).catch(() => [] as any[])) await dropMoment(String(m._path).split('/').pop()!, m);
     const prefix = `videos/${v.visibility === 'team' ? `team-${v.teamIdPrivate}` : 'public'}/${id}/`;
     for (let c: string | undefined; ;) { const l = await env.BUCKET.list({ prefix, cursor: c }); if (l.objects.length) await env.BUCKET.delete(l.objects.map((o) => o.key)); if (!l.truncated) break; c = l.cursor; }
     return json({ ok: true });
