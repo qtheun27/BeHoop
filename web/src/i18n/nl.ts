@@ -1451,4 +1451,7 @@ export const NL: Record<string, string> = {
   "Retiré du fil (toujours accessible par sa page et ses liens)": "Uit de feed gehaald (nog bereikbaar via de pagina en links)",
   "Retirer du fil": "Uit de feed halen",
   "Publier dans le fil": "In de feed publiceren",
+  "Joueur suivi : vérifie avec l’aperçu, corrige si besoin.": "Speler gevolgd: controleer met het voorbeeld en pas aan indien nodig.",
+  "Touche le joueur sur la vidéo…": "Tik op de speler in de video…",
+  "Suivre un joueur": "Een speler volgen",
 };

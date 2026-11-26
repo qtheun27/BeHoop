@@ -543,6 +543,71 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
     } catch { s.toast(t('Analyse impossible sur cet appareil : place les points à la main.')); }
     finally { setScan(null); v.currentTime = a; }
   };
+  // « Suivre un joueur » : on touche un joueur ; son apparence (couleurs du maillot + silhouette) est retrouvée image par image,
+  // près de sa dernière position (mouvement continu), en avant puis en arrière depuis l'instant choisi → points de cadrage
+  const [pick, setPick] = useState(false);
+  useEffect(() => { document.documentElement.classList.toggle('crop-pick', pick); }, [pick]);
+  const track = async (px: number, py: number) => {
+    const v = video.current; if (!v || scan != null) return;
+    setPick(false); stop(); haptic(); setScan(0);
+    const W = 320, H = 180, bw = 18, bh = 40, R = 26, RY = 12, step = 0.2;
+    const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+    const g = cv.getContext('2d', { willReadFrequently: true })!;
+    const seekTo = (tt: number) => new Promise<void>((res) => { let done = false; const on = () => { if (done) return; done = true; v.removeEventListener('seeked', on); res(); }; v.addEventListener('seeked', on); v.currentTime = tt; setTimeout(on, 2000); });
+    const grab = async (tt: number) => { await seekTo(tt); g.drawImage(v, 0, 0, W, H); return g.getImageData(0, 0, W, H).data; };
+    // signature d'une zone : histogramme teinte/saturation (couleurs) + patch en niveaux de gris (silhouette)
+    const sig = (d: Uint8ClampedArray, cx: number, cy: number) => {
+      const hist = new Float32Array(52), gray = new Float32Array(bw * bh); let k = 0;
+      for (let y = 0; y < bh; y++) for (let x = 0; x < bw; x++) {
+        const X = Math.min(W - 1, Math.max(0, Math.round(cx - bw / 2 + x))), Y = Math.min(H - 1, Math.max(0, Math.round(cy - bh / 2 + y))), i = (Y * W + X) * 4;
+        const r = d[i], gg = d[i + 1], b2 = d[i + 2], mx = Math.max(r, gg, b2), mn = Math.min(r, gg, b2), sat = mx ? (mx - mn) / mx : 0;
+        gray[k++] = 0.3 * r + 0.59 * gg + 0.11 * b2;
+        if (sat < 0.2) hist[48 + Math.min(3, Math.floor(mx / 64))]++;
+        else { const hh = mx === r ? ((gg - b2) / (mx - mn) + 6) % 6 : mx === gg ? (b2 - r) / (mx - mn) + 2 : (r - gg) / (mx - mn) + 4; hist[Math.min(11, Math.floor(hh * 2)) * 4 + Math.min(3, Math.floor(sat * 4))]++; }
+      }
+      let sum = 0; for (const h of hist) sum += h; for (let i = 0; i < hist.length; i++) hist[i] /= sum || 1;
+      let m = 0; for (const q of gray) m += q; m /= gray.length; let sd = 0; for (let i = 0; i < gray.length; i++) { gray[i] -= m; sd += gray[i] * gray[i]; } sd = Math.sqrt(sd) || 1;
+      for (let i = 0; i < gray.length; i++) gray[i] /= sd;
+      return { hist, gray };
+    };
+    const sim = (a: ReturnType<typeof sig>, b2: ReturnType<typeof sig>) => { let bc = 0, nc = 0; for (let i = 0; i < a.hist.length; i++) bc += Math.sqrt(a.hist[i] * b2.hist[i]); for (let i = 0; i < a.gray.length; i++) nc += a.gray[i] * b2.gray[i]; return 0.65 * bc + 0.35 * Math.max(0, nc); };
+    try {
+      const t0 = Math.min(b, Math.max(a, video.current?.currentTime ?? a));
+      let ref = sig(await grab(t0), px * W, py * H);
+      const out = new Map<number, number>([[Math.round((t0 - a) * 10) / 10, px * W]]);
+      const times = [...Array(Math.ceil((b - t0) / step)).keys()].map((i) => t0 + (i + 1) * step).filter((x) => x <= b + 0.01)
+        .concat([...Array(Math.ceil((t0 - a) / step)).keys()].map((i) => t0 - (i + 1) * step).filter((x) => x >= a - 0.01));
+      const total = times.length; let done = 0;
+      for (const dir of [1, -1]) {
+        let cx = px * W, cy = py * H, vx = 0, lost = 0, tmpl = ref;
+        for (const tt of times.filter((x) => (x - t0) * dir > 0)) {
+          const d = await grab(Math.min(b, Math.max(a, tt)));
+          let best = -1, bx = cx, by = cy;
+          for (let dy = -RY; dy <= RY; dy += 3) for (let dx = -R; dx <= R; dx += 2) {
+            const x = cx + vx + dx, y = cy + dy; if (x < bw / 2 || x > W - bw / 2) continue;
+            const sc = sim(tmpl, sig(d, x, y)) - 0.004 * Math.hypot(dx, dy);
+            if (sc > best) { best = sc; bx = x; by = y; }
+          }
+          if (best > 0.45) { vx = 0.6 * vx + 0.4 * (bx - cx); cx = bx; cy = by; lost = 0;
+            const now = sig(d, cx, cy); for (let i = 0; i < tmpl.hist.length; i++) tmpl.hist[i] = 0.85 * tmpl.hist[i] + 0.15 * now.hist[i]; }
+          else { lost++; cx = Math.min(W - bw / 2, Math.max(bw / 2, cx + vx)); vx *= 0.7; } // joueur caché : on garde sa trajectoire
+          out.set(Math.round((tt - a) * 10) / 10, cx);
+          setScan(Math.round((++done / total) * 100));
+        }
+        ref = sig(await grab(t0), px * W, py * H);
+      }
+      const cwp = (W * CROP_W) / 100;
+      const pts = [...out.entries()].sort((p, q) => p[0] - q[0]).map(([tt, x]) => ({ t: tt, pos: Math.min(1, Math.max(0, (x - cwp / 2) / (W - cwp))) }));
+      const sm = pts.map((_, i) => { const w = pts.slice(Math.max(0, i - 3), i + 4); return w.reduce((x, y) => x + y.pos, 0) / w.length; });
+      const P = pts.map((p, i) => ({ t: p.t, pos: Math.round(sm[i] * 100) / 100 }));
+      const keep = new Set([0, P.length - 1]);
+      const rdp = (i0: number, i1: number) => { let m = -1, mi = -1; for (let i = i0 + 1; i < i1; i++) { const f = (P[i].t - P[i0].t) / Math.max(0.01, P[i1].t - P[i0].t), dd = Math.abs(P[i].pos - (P[i0].pos + f * (P[i1].pos - P[i0].pos))); if (dd > m) { m = dd; mi = i; } } if (m > 0.06) { keep.add(mi); rdp(i0, mi); rdp(mi, i1); } };
+      if (P.length > 2) rdp(0, P.length - 1);
+      const k = P.filter((_, i) => keep.has(i)).filter((p, i, arr) => i === 0 || i === arr.length - 1 || p.t - arr[i - 1].t >= 1);
+      if (k.length) { setKeys(k); setPos(k[0].pos); s.toast(t('Joueur suivi : vérifie avec l’aperçu, corrige si besoin.')); }
+    } catch { s.toast(t('Analyse impossible sur cet appareil : place les points à la main.')); }
+    finally { setScan(null); if (video.current) video.current.currentTime = a; }
+  };
   const add = () => { stop(); haptic(); setParts((p) => [...p, { a, b, keys: curKeys() }]); setKeys([]); const na = Math.min(dur - 10, b + 2); put(na, Math.min(dur, na + 10), 'm', true); };
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
   const [stepS, setStepS] = useState(1);
@@ -551,14 +616,16 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   // Édition au doigt (mobile) : vidéo fixe en haut, onglets courts, barre d'actions fixe en bas, cadre à glisser sur la vidéo
   const [tab, setTab] = useState<'pass' | 'crop' | 'info'>('pass');
   const [selKey, setSelKey] = useState<number | null>(null);
-  useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit', 'crop-edit'); }, []);
+  useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit', 'crop-edit', 'crop-pick'); }, []);
   const cropping = tab === 'crop' && layout === 'full';
   useEffect(() => { document.documentElement.classList.toggle('crop-edit', cropping); }, [cropping]);
   const nowT = () => Math.round(Math.min(b - a, Math.max(0, (video.current?.currentTime ?? time) - a)) * 10) / 10;
   const upsert = (p: number) => { const tt = nowT(); setKeys((k) => { const near = k.find((x) => Math.abs(x.t - tt) < 0.4); return [...k.filter((x) => x !== near), { t: near?.t ?? tt, pos: p }].sort((x, y) => x.t - y.t); }); setSelKey(null); };
   const drag = useRef<{ w: number; l: number; fw: number; x0: number; moved?: boolean } | null>(null);
   const frameAt = (x: number, d: { w: number; l: number; fw: number }) => { const p = Math.round(Math.min(1, Math.max(0, (x - d.l - d.fw / 2) / (d.w - d.fw))) * 100) / 100; setPos(p); upsert(p); };
-  const frameDown = (e: React.PointerEvent) => { e.stopPropagation(); e.preventDefault(); stop(); haptic(); const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); const d = { w: r.width, l: r.left, fw: (r.width * CROP_W) / 100, x0: e.clientX }; drag.current = d; frameAt(e.clientX, d); };
+  const frameDown = (e: React.PointerEvent) => { e.stopPropagation(); e.preventDefault();
+    if (pick) { const r0 = (e.currentTarget as HTMLElement).getBoundingClientRect(); track((e.clientX - r0.left) / r0.width, (e.clientY - r0.top) / r0.height); return; }
+    stop(); haptic(); const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); const d = { w: r.width, l: r.left, fw: (r.width * CROP_W) / 100, x0: e.clientX }; drag.current = d; frameAt(e.clientX, d); };
   const frameMove = (e: React.PointerEvent) => { const d = drag.current; if (!d) return; e.stopPropagation(); if (!d.moved && Math.abs(e.clientX - d.x0) < 4) return; d.moved = true; frameAt(e.clientX, d); };
   const frameUp = (e: React.PointerEvent) => { e.stopPropagation(); drag.current = null; };
   const seekIn = (tt: number) => { stop(); const v = video.current; if (v) v.currentTime = a + tt; };
@@ -612,6 +679,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
           </div>
           <div className="hstack" style={{ gap: 8, flexWrap: 'wrap' }}>
             <button className="btn ghost small" onClick={() => { haptic(); upsert(shown); }}><Ico n="plus" />{t('Point ici')}</button>
+            <button className={`btn small${pick ? ' secondary' : ''}`} disabled={scan != null} onClick={() => { stop(); setPick((p) => !p); }}><Ico n="user" />{pick ? t('Touche le joueur sur la vidéo…') : t('Suivre un joueur')}</button>
             <button className="btn small" disabled={scan != null} onClick={follow}><Ico n="bolt" />{scan != null ? t('Analyse… {n} %', { n: scan }) : t('Suivre l’action')}</button>
             {selKey != null && <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={() => { setKeys((k) => k.filter((x) => x.t !== selKey)); setSelKey(null); }}>{t('Supprimer ce point')}</button>}
             {keys.length > 0 && selKey == null && <button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer les points')}</button>}

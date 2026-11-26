@@ -1451,4 +1451,7 @@ export const EN: Record<string, string> = {
   "Retiré du fil (toujours accessible par sa page et ses liens)": "Removed from the feed (still reachable through its page and links)",
   "Retirer du fil": "Remove from feed",
   "Publier dans le fil": "Publish in feed",
+  "Joueur suivi : vérifie avec l’aperçu, corrige si besoin.": "Player tracked: check it with the preview and adjust if needed.",
+  "Touche le joueur sur la vidéo…": "Tap the player on the video…",
+  "Suivre un joueur": "Follow a player",
 };
