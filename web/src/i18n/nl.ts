@@ -1442,4 +1442,6 @@ export const NL: Record<string, string> = {
   "Supprimer ce point": "Dit punt verwijderen",
   "Effacer les points": "Punten wissen",
   "Pas des boutons": "Stap van de knoppen",
+  "Glisse le doigt sur la frise pour choisir l’instant, puis touche la vidéo là où est l’action : un point est posé. Le cadre glisse de point en point.": "Schuif met je vinger over de tijdlijn om het moment te kiezen en tik dan op de video waar de actie is: er wordt een punt geplaatst. Het kader schuift van punt naar punt.",
+  "Point ici": "Punt hier",
 };

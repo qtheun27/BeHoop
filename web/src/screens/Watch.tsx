@@ -531,9 +531,9 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       // Simplification (Ramer–Douglas–Peucker) : seuls les points qui changent vraiment la trajectoire du cadre
       const pts = raw.map((r, i) => ({ t: Math.round(r.t * 10) / 10, pos: Math.round(sm[i] * 100) / 100 }));
       const keep = new Set([0, pts.length - 1]);
-      const rdp = (i0: number, i1: number) => { let m = -1, mi = -1; for (let i = i0 + 1; i < i1; i++) { const f = (pts[i].t - pts[i0].t) / Math.max(0.01, pts[i1].t - pts[i0].t), d = Math.abs(pts[i].pos - (pts[i0].pos + f * (pts[i1].pos - pts[i0].pos))); if (d > m) { m = d; mi = i; } } if (m > 0.06) { keep.add(mi); rdp(i0, mi); rdp(mi, i1); } };
+      const rdp = (i0: number, i1: number) => { let m = -1, mi = -1; for (let i = i0 + 1; i < i1; i++) { const f = (pts[i].t - pts[i0].t) / Math.max(0.01, pts[i1].t - pts[i0].t), d = Math.abs(pts[i].pos - (pts[i0].pos + f * (pts[i1].pos - pts[i0].pos))); if (d > m) { m = d; mi = i; } } if (m > 0.1) { keep.add(mi); rdp(i0, mi); rdp(mi, i1); } };
       if (pts.length > 2) rdp(0, pts.length - 1);
-      const k: Key[] = pts.filter((_, i) => keep.has(i));
+      const k: Key[] = pts.filter((_, i) => keep.has(i)).filter((p, i, arr) => i === 0 || i === arr.length - 1 || p.t - arr[i - 1].t >= 1.5);
       if (k.length) { setKeys(k); setPos(k[0].pos); s.toast(t('Cadrage calculé : vérifie avec l’aperçu, corrige si besoin.')); }
     } catch { s.toast(t('Analyse impossible sur cet appareil : place les points à la main.')); }
     finally { setScan(null); v.currentTime = a; }
@@ -546,15 +546,20 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   // Édition au doigt (mobile) : vidéo fixe en haut, onglets courts, barre d'actions fixe en bas, cadre à glisser sur la vidéo
   const [tab, setTab] = useState<'pass' | 'crop' | 'info'>('pass');
   const [selKey, setSelKey] = useState<number | null>(null);
-  useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit'); }, []);
+  useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit', 'crop-edit'); }, []);
+  const cropping = tab === 'crop' && layout === 'full';
+  useEffect(() => { document.documentElement.classList.toggle('crop-edit', cropping); }, [cropping]);
   const nowT = () => Math.round(Math.min(b - a, Math.max(0, (video.current?.currentTime ?? time) - a)) * 10) / 10;
   const upsert = (p: number) => { const tt = nowT(); setKeys((k) => { const near = k.find((x) => Math.abs(x.t - tt) < 0.4); return [...k.filter((x) => x !== near), { t: near?.t ?? tt, pos: p }].sort((x, y) => x.t - y.t); }); setSelKey(null); };
   const drag = useRef<{ w: number; l: number; fw: number; x0: number; moved?: boolean } | null>(null);
-  const frameDown = (e: React.PointerEvent) => { e.stopPropagation(); stop(); haptic(); const r = (e.currentTarget.parentElement as HTMLElement).getBoundingClientRect(); (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); drag.current = { w: r.width, l: r.left, fw: (r.width * CROP_W) / 100, x0: e.clientX }; };
-  const frameMove = (e: React.PointerEvent) => { const d = drag.current; if (!d) return; e.stopPropagation(); if (!d.moved && Math.abs(e.clientX - d.x0) < 6) return; d.moved = true; const p = Math.min(1, Math.max(0, (e.clientX - d.l - d.fw / 2) / (d.w - d.fw))); setPos(p); upsert(p); };
+  const frameAt = (x: number, d: { w: number; l: number; fw: number }) => { const p = Math.round(Math.min(1, Math.max(0, (x - d.l - d.fw / 2) / (d.w - d.fw))) * 100) / 100; setPos(p); upsert(p); };
+  const frameDown = (e: React.PointerEvent) => { e.stopPropagation(); e.preventDefault(); stop(); haptic(); const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); const d = { w: r.width, l: r.left, fw: (r.width * CROP_W) / 100, x0: e.clientX }; drag.current = d; frameAt(e.clientX, d); };
+  const frameMove = (e: React.PointerEvent) => { const d = drag.current; if (!d) return; e.stopPropagation(); if (!d.moved && Math.abs(e.clientX - d.x0) < 4) return; d.moved = true; frameAt(e.clientX, d); };
   const frameUp = (e: React.PointerEvent) => { e.stopPropagation(); drag.current = null; };
   const seekIn = (tt: number) => { stop(); const v = video.current; if (v) v.currentTime = a + tt; };
-  const lineTap = (e: React.PointerEvent) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); seekIn(Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a)); setSelKey(null); };
+  const scrub = useRef(false);
+  const lineAt = (e: React.PointerEvent, final = false) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); const tt = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a); show(a + tt, final); };
+  const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
     try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText });
       s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
@@ -562,7 +567,8 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   return (
     <div className="clip-ed">
       {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${shown * (100 - CROP_W)}%` }} />
-        <b style={{ width: `${CROP_W}%` }} onPointerDown={frameDown} onPointerMove={frameMove} onPointerUp={frameUp} onPointerCancel={frameUp} onClick={(e) => e.stopPropagation()} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
+        <b style={{ width: `${CROP_W}%` }} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
+      {video.current?.parentElement && cropping && createPortal(<div className="crop-touch" onPointerDown={frameDown} onPointerMove={frameMove} onPointerUp={frameUp} onPointerCancel={frameUp} onClick={(e) => e.stopPropagation()} />, video.current.parentElement)}
       <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
         {parts.length > 0 && <span className="muted" style={{ fontWeight: 400 }}> · {total.toFixed(0)}/{MOMENT_TOTAL} s</span>}</b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
@@ -593,13 +599,14 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       {tab === 'crop' && <>
         <div className="seg"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Portrait')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Paysage')}</button></div>
         {layout === 'full' && <>
-          <p className="hint" style={{ margin: '8px 0 0' }}>{t('Fais glisser le cadre blanc sur la vidéo : un point de cadrage est posé à cet instant. Le cadre glisse de point en point.')}</p>
-          <div className="key-line" onPointerDown={lineTap}>
+          <p className="hint" style={{ margin: '8px 0 0' }}>{t('Glisse le doigt sur la frise pour choisir l’instant, puis touche la vidéo là où est l’action : un point est posé. Le cadre glisse de point en point.')}</p>
+          <div className="key-line" onPointerDown={lineTap} onPointerMove={(e) => scrub.current && lineAt(e)} onPointerUp={() => { scrub.current = false; }} onPointerCancel={() => { scrub.current = false; }}>
             <div className="ph" style={{ left: `${Math.min(100, Math.max(0, ((time - a) / Math.max(0.1, b - a)) * 100))}%` }} />
             {keys.map((k) => <button key={k.t} className={`kd${selKey === k.t ? ' on' : ''}`} style={{ left: `${(k.t / Math.max(0.1, b - a)) * 100}%` }} aria-label={t('Point de cadrage')}
               onPointerDown={(e) => { e.stopPropagation(); haptic(); seekIn(k.t); setSelKey(k.t); setPos(k.pos); }} />)}
           </div>
           <div className="hstack" style={{ gap: 8, flexWrap: 'wrap' }}>
+            <button className="btn ghost small" onClick={() => { haptic(); upsert(shown); }}><Ico n="plus" />{t('Point ici')}</button>
             <button className="btn small" disabled={scan != null} onClick={follow}><Ico n="bolt" />{scan != null ? t('Analyse… {n} %', { n: scan }) : t('Suivre l’action')}</button>
             {selKey != null && <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={() => { setKeys((k) => k.filter((x) => x.t !== selKey)); setSelKey(null); }}>{t('Supprimer ce point')}</button>}
             {keys.length > 0 && selKey == null && <button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer les points')}</button>}
