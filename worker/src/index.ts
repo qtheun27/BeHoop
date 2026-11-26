@@ -63,7 +63,7 @@ export default {
       else res = fail('BeHoop media', 404);
     } catch (e) {
       const m = String((e as Error)?.message ?? e);
-      res = m.startsWith('AUTH') ? fail('Non connecté', 401) : m.startsWith('FORBIDDEN') ? fail('Accès refusé', 403) : (console.error(m), fail('Erreur serveur', 500));
+      res = m.startsWith('AUTH') ? fail('Non connecté', 401) : m.startsWith('FORBIDDEN') ? fail('Accès refusé', 403) : m.startsWith('NOT_READY') ? fail('Vidéo indisponible', 404) : (console.error(m), fail('Erreur serveur', 500));
     }
     const out = new Response(res.body, res);
     Object.entries(h).forEach(([k, v]) => out.headers.set(k, v));
@@ -186,6 +186,20 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     (await s3.sign(new Request(`${r2url(key)}?${query}${query ? '&' : ''}X-Amz-Expires=3600`, { method: 'PUT', headers: type ? { 'Content-Type': type } : {} }), { aws: { signQuery: true } })).url;
   const memberTeams = async (uid: string) => (await fs.query('members', [['uid', 'EQUAL', uid], ['status', 'EQUAL', 'accepted']], { allDescendants: true })).map((m) => Number(m.teamId));
   const isYouth = async (teamId: number) => { const t = await fs.get<{ ageGroup: string; ageGroupOverride?: string }>(`teamInfo/${teamId}`); return (t?.ageGroupOverride ?? t?.ageGroup) !== 'seniors'; };
+  /** Publication YouTube : vidéo du match (auteur) ou Moment (son auteur ou celui du match) → envoyé en Short */
+  const ytTarget = async (b: any) => {
+    const mid = typeof b.momentId === 'string' && /^[a-f0-9]{16}$/.test(b.momentId) ? b.momentId : null;
+    if (!mid) {
+      const id = String(b.matchVideoId ?? ''); const v = await ownVideo(id);
+      if (v.status !== 'ready') throw new Error('NOT_READY');
+      return { path: `matchVideos/${id}`, matchVideoId: id, momentId: null as string | null, cur: v.youtube, youth: v.visibility === 'team', title: v.title as string };
+    }
+    const m = await fs.get<any>(`moments/${mid}`);
+    if (!m || m.status !== 'ready' || !m.r2Key) throw new Error('NOT_READY');
+    const v = await fs.get<any>(`matchVideos/${m.matchVideoId}`);
+    if (m.authorUid !== user.uid && v?.authorUid !== user.uid && !isAdmin) throw new Error('FORBIDDEN');
+    return { path: `moments/${mid}`, matchVideoId: String(m.matchVideoId), momentId: mid, cur: m.youtube, youth: m.visibility === 'team', title: `${v?.title ?? 'Match'} — Moment` };
+  };
   const ownVideo = async (id: string) => { const v = await fs.get<any>(`matchVideos/${id}`); if (!v || (v.authorUid !== user.uid && !isAdmin)) throw new Error('FORBIDDEN'); return v; };
 
   // Cookie de lecture des médias (6 h) : liste des Équipes 🔒 dont l'utilisateur est membre accepté
@@ -368,28 +382,26 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   }
   // Vidéo publiée encore sur YouTube ? (oEmbed, sans quota : 400/404 = supprimée ; privée = 401/403, gardée)
   if (path === '/youtube/check') {
-    const id = String(body.matchVideoId ?? '');
-    const v = await ownVideo(id), url = v.youtube?.status === 'done' ? String(v.youtube.url ?? '') : '';
+    const t = await ytTarget(body);
+    const url = t.cur?.status === 'done' ? String(t.cur.url ?? '') : '';
     if (!/^https:\/\/youtu\.be\/[\w-]{6,20}$/.test(url)) return json({ gone: false });
     const r = await fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(url)}`);
     if (r.status !== 404 && r.status !== 400) return json({ gone: false }); // vidéo inexistante : 400 ou 404 selon YouTube
-    await fs.set(`matchVideos/${id}`, { youtube: null });
+    await fs.set(t.path, { youtube: null });
     return json({ gone: true });
   }
   if (path === '/youtube/publish') {
-    const id = String(body.matchVideoId ?? '');
-    const v = await ownVideo(id);
-    if (v.status !== 'ready') return fail('Vidéo indisponible', 404);
+    const t = await ytTarget(body);
     if (!(await fs.get<any>(`ytTokens/${user.uid}`))?.refreshToken) return fail('Chaîne YouTube non connectée', 409);
     const privacy = ['public', 'unlisted', 'private'].includes(body.privacy) ? body.privacy : 'unlisted';
     // Vidéo d'une équipe Jeunes : jamais « publique » sur YouTube depuis BeHoop, et accord des parents confirmé
-    if (v.visibility === 'team' && (privacy === 'public' || body.parentsOk !== true)) return fail('Équipe Jeunes : vidéo non répertoriée ou privée, avec l’accord des parents', 400);
-    const cur = v.youtube;
+    if (t.youth && (privacy === 'public' || body.parentsOk !== true)) return fail('Équipe Jeunes : vidéo non répertoriée ou privée, avec l’accord des parents', 400);
+    const cur = t.cur;
     if (cur && ['queued', 'preparing', 'uploading'].includes(cur.status) && Date.now() - Number(cur.at ?? 0) < 3 * 3600e3) return json({ ok: true, already: true });
-    const title = String(body.title ?? v.title ?? '').slice(0, 100).trim() || 'Match';
-    await fs.set(`matchVideos/${id}`, { youtube: { status: 'queued', uid: user.uid, title, description: String(body.description ?? '').slice(0, 4900), privacy,
+    const title = String(body.title ?? t.title ?? '').slice(0, 100).trim() || 'Match';
+    await fs.set(t.path, { youtube: { status: 'queued', uid: user.uid, title, description: String(body.description ?? '').slice(0, 4900), privacy,
       playlistId: typeof body.playlistId === 'string' ? body.playlistId : null, newPlaylist: typeof body.newPlaylist === 'string' ? body.newPlaylist.slice(0, 150) : null, progress: 0, at: Date.now() } });
-    await dispatch(env, 'youtube.yml', { matchVideoId: id });
+    await dispatch(env, 'youtube.yml', { matchVideoId: t.matchVideoId, momentId: t.momentId ?? '' });
     return json({ ok: true });
   }
   if (path === '/mp4') {

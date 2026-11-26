@@ -7,13 +7,17 @@ on:
       matchVideoId:
         description: 'Identifiant de la vidéo (matchVideos/{id})'
         required: true
+      momentId:
+        description: 'Moment à publier en Short (moments/{id}) ; vide = la vidéo du match'
+        required: false
+        default: ''
       check:
         description: 'Diagnostic seulement (état de la vidéo sur YouTube)'
         type: boolean
         default: false
 
 concurrency:
-  group: youtube-${{ inputs.matchVideoId }}
+  group: youtube-${{ inputs.matchVideoId }}-${{ inputs.momentId }}
   cancel-in-progress: false
 
 jobs:
@@ -35,7 +39,7 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Envoi sur YouTube
-        run: npx tsx ops/render/youtube.ts "${{ inputs.matchVideoId }}"
+        run: npx tsx ops/render/youtube.ts "${{ inputs.matchVideoId }}" "${{ inputs.momentId }}"
         env:
           YT_CHECK: ${{ inputs.check && '1' || '' }}
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}

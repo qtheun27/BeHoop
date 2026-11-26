@@ -12,7 +12,10 @@ if (!id || !/^[a-z0-9]{8,32}$/.test(id)) throw new Error('identifiant de vidéo 
 const ROOT = resolve(import.meta.dirname, '../..');
 const { db } = admin();
 const r2 = new R2();
-const ref = db.doc(`matchVideos/${id}`);
+// Moment (2e argument) : envoyé en Short (vertical, < 60 s : YouTube le classe tout seul en Short)
+const momentId = /^[a-f0-9]{16}$/.test(process.argv[3] ?? '') ? process.argv[3] : null;
+const mvRef = db.doc(`matchVideos/${id}`);
+const ref = momentId ? db.doc(`moments/${momentId}`) : mvRef;
 const CHUNK = 32 * 1024 * 1024; // multiple de 256 Ko (exigé par Google)
 const set = (p: Record<string, unknown>) => ref.update(Object.fromEntries(Object.entries(p).map(([k, v]) => [`youtube.${k}`, v])));
 
@@ -28,8 +31,9 @@ function explain(e: unknown): string {
 
 let tmp = '';
 try {
-  const mv = (await ref.get()).data()!;
-  const yt = mv.youtube; if (!yt) throw new Error('aucune publication demandée');
+  const mv = (await mvRef.get()).data()!;
+  const moment = momentId ? (await ref.get()).data()! : null;
+  const yt = (moment ?? mv).youtube; if (!yt) throw new Error('aucune publication demandée');
   const cfg = (await db.doc('config/google').get()).data();
   const tk = (await db.doc(`ytTokens/${yt.uid}`).get()).data();
   if (!cfg?.clientId || !cfg?.clientSecret) throw new Error('identifiants Google absents');
@@ -59,10 +63,10 @@ try {
     process.exit(0);
   }
 
-  // 1. Fichier MP4 1080p (préparé maintenant s'il n'existe pas encore)
-  let key = mv.hls?.mp4Key1080 as string | undefined;
+  // 1. Fichier : le Moment (MP4 vertical déjà prêt) ou le MP4 1080p du match (préparé maintenant s'il n'existe pas encore)
+  let key = (moment ? moment.r2Key : mv.hls?.mp4Key1080) as string | undefined;
   if (!key) { await set({ status: 'preparing', progress: 0 }); console.log('préparation du fichier 1080p'); key = await buildMp4(id, '1080p', false); }
-  const work = join(ROOT, 'out', 'youtube', id); rmSync(work, { recursive: true, force: true }); mkdirSync(work, { recursive: true });
+  const work = join(ROOT, 'out', 'youtube', momentId ?? id); rmSync(work, { recursive: true, force: true }); mkdirSync(work, { recursive: true });
   tmp = work;
   const file = join(work, 'film.mp4');
   await r2.download(key, file);
@@ -115,7 +119,8 @@ try {
   // 4. Playlist et vignette (affiche de fin de match) : facultatives, une erreur ici n'annule pas la publication
   if (playlistId) await gapi('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet', { method: 'POST',
     body: JSON.stringify({ snippet: { playlistId, resourceId: { kind: 'youtube#video', videoId: video.id } } }) }).catch((e) => console.warn('playlist :', e.message));
-  const thumbKey = (mv.hls?.affiches as string[] | undefined)?.find((k) => k.endsWith('/fin.jpg')) ?? mv.hls?.posterKey;
+  // (Short : pas de vignette personnalisée, YouTube choisit une image du Moment)
+  const thumbKey = moment ? undefined : (mv.hls?.affiches as string[] | undefined)?.find((k) => k.endsWith('/fin.jpg')) ?? mv.hls?.posterKey;
   if (thumbKey) {
     const th = join(work, 'thumb.jpg');
     await r2.download(thumbKey, th).then(async () => {
@@ -125,7 +130,7 @@ try {
     }).catch(() => {});
   }
   await set({ status: 'done', progress: 100, videoId: video.id, url: `https://youtu.be/${video.id}`, playlistId, doneAt: Date.now(), error: null });
-  await notifyUsers([yt.uid], { title: { fr: '▶️ Vidéo publiée sur YouTube', nl: '▶️ Video gepubliceerd op YouTube', en: '▶️ Video published on YouTube' }, body: yt.title, url: `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
+  await notifyUsers([yt.uid], { title: { fr: '▶️ Vidéo publiée sur YouTube', nl: '▶️ Video gepubliceerd op YouTube', en: '▶️ Video published on YouTube' }, body: yt.title, url: momentId ? `/app/#/video/${id}/m-${momentId}` : `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {
   console.error(e);
   await set({ status: 'error', error: explain(e) }).catch(() => {});

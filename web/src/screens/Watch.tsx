@@ -220,26 +220,28 @@ function YoutubeSheet({ id, mv: mv0, team, onClose }: { id: string; mv: MatchVid
 }
 
 /** Publication directe sur la chaîne YouTube de l'utilisateur : envoyée par le serveur (rien ne passe par le téléphone) */
-function YtPublish({ id, mv, youth, parentsOk, desc }: { id: string; mv: MatchVideo; youth: boolean; parentsOk: boolean; desc: string }) {
+function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv: MatchVideo; youth: boolean; parentsOk: boolean; desc: string; moment?: Moment }) {
   const s = useSession();
   const st = useAsync(() => api<{ available: boolean; connected: boolean; channelTitle: string | null }>('/youtube/status', {}), []);
   const lists = useAsync(async () => (st.data?.connected ? (await api<{ playlists: { id: string; title: string }[] }>('/youtube/playlists', {})).playlists : []), [st.data?.connected]);
   const set = mv.settings ? settingsFromStore(mv.settings) : null;
   const season = (() => { const d = new Date(set?.date ?? Date.now()); const y = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1; return `${y}-${String(y + 1).slice(2)}`; })();
-  const [title, setTitle] = useState(mv.title), [text, setText] = useState(desc);
+  const [title, setTitle] = useState(moment ? `${mv.title} — Moment` : mv.title), [text, setText] = useState(desc);
+  const target = moment ? { matchVideoId: id, momentId: moment.id } : { matchVideoId: id };
   const [privacy, setPrivacy] = useState<'public' | 'unlisted' | 'private'>(youth ? 'unlisted' : 'public');
   const [pl, setPl] = useState('none'), [plName, setPlName] = useState(set ? `${set.home.name} — ${season}` : `BeHoop — ${season}`);
   const [busy, setBusy] = useState(false);
   // Vidéo supprimée depuis YouTube : l'appli l'oublie (plus de lien mort, bouton « Publier sur YouTube » de retour)
   const [gone, setGone] = useState(false);
-  const y = gone ? undefined : mv.youtube;
-  useEffect(() => { if (mv.youtube?.status === 'done' && mv.youtube.url) api<{ gone: boolean }>('/youtube/check', { matchVideoId: id }).then((r) => setGone(r.gone)).catch(() => {}); }, [id, mv.youtube?.url]); // eslint-disable-line react-hooks/exhaustive-deps
+  const y0 = moment ? moment.youtube : mv.youtube;
+  const y = gone ? undefined : y0;
+  useEffect(() => { if (y0?.status === 'done' && y0.url) api<{ gone: boolean }>('/youtube/check', target).then((r) => setGone(r.gone)).catch(() => {}); }, [id, moment?.id, y0?.url]); // eslint-disable-line react-hooks/exhaustive-deps
   const running = !!y && ['queued', 'preparing', 'uploading'].includes(y.status) && Date.now() - Number(y.at ?? 0) < 3 * 3600e3;
   useEffect(() => { const r = qs().get('yt'); if (r && r !== 'ok') s.toast(t('Connexion à YouTube non terminée ({r}).', { r })); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   if (!st.data?.available) return null;
   if (!st.data.connected) return (
     <><p className="hint" style={{ margin: 0 }}>{t('Publie directement sur ta chaîne YouTube : BeHoop envoie la vidéo depuis ses serveurs, en 1080p, sans rien télécharger sur ton téléphone.')}</p>
-      <button className="btn" onClick={async () => { try { location.href = (await api<{ url: string }>('/youtube/start', { back: `#/video/${id}?pub=1` })).url; } catch { s.toast(t('Connexion à YouTube indisponible pour le moment.')); } }}><Ico n="video" />{t('Connecter ma chaîne YouTube')}</button></>
+      <button className="btn" onClick={async () => { try { location.href = (await api<{ url: string }>('/youtube/start', { back: moment ? `#/video/${id}/m-${moment.id}?pub=1` : `#/video/${id}?pub=1` })).url; } catch { s.toast(t('Connexion à YouTube indisponible pour le moment.')); } }}><Ico n="video" />{t('Connecter ma chaîne YouTube')}</button></>
   );
   if (running) return (
     <div className="banner"><Ico n="video" /><div style={{ flex: 1 }}><b>{y!.status === 'preparing' ? t('Préparation du fichier 1080p…') : y!.status === 'queued' ? t('Envoi vers YouTube en attente…') : t('Envoi vers YouTube : {n} %', { n: y!.progress ?? 0 })}</b>
@@ -262,14 +264,14 @@ function YtPublish({ id, mv, youth, parentsOk, desc }: { id: string; mv: MatchVi
     </select>
     {pl === 'new' && <input className="field" value={plName} maxLength={150} onChange={(e) => setPlName(e.target.value)} aria-label={t('Nom de la playlist')} />}
     <button className="btn" disabled={busy || (youth && !parentsOk) || !title.trim()} onClick={async () => { setBusy(true);
-      try { await api('/youtube/publish', { matchVideoId: id, title, description: text, privacy, parentsOk, playlistId: pl !== 'none' && pl !== 'new' ? pl : undefined, newPlaylist: pl === 'new' ? plName : undefined }); s.toast(t('Envoi vers YouTube lancé.')); }
+      try { await api('/youtube/publish', { ...target, title, description: text, privacy, parentsOk, playlistId: pl !== 'none' && pl !== 'new' ? pl : undefined, newPlaylist: pl === 'new' ? plName : undefined }); s.toast(t('Envoi vers YouTube lancé.')); }
       catch { s.toast(t('Impossible de lancer l’envoi. Réessaie.')); } finally { setBusy(false); } }}><Ico n="video" />{y?.status === 'done' ? t('Publier à nouveau') : t('Publier sur YouTube')}</button>
   </>);
 }
 
 interface MatchVideo { youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string }
+interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube'] }
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
@@ -286,7 +288,7 @@ export default function Watch({ id, t: part }: { id: string; t?: string }) {
   const momentId = part?.startsWith('m-') ? part.slice(2) : null;
   return (
     <Screen title={mv.title} back="fil">
-      {momentId ? <MomentPlayer id={momentId} youth={mv.visibility === 'team'} /> : <Player id={id} mv={mv} team={team ?? mv.teamIds.find(Boolean)} />}
+      {momentId ? <MomentPlayer id={momentId} vid={id} mv={mv} youth={mv.visibility === 'team'} /> : <Player id={id} mv={mv} team={team ?? mv.teamIds.find(Boolean)} />}
       <Moments id={id} mv={mv} />
     </Screen>
   );
@@ -480,10 +482,16 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   );
 }
 
-function MomentPlayer({ id, youth }: { id: string; youth: boolean }) {
+function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: MatchVideo; youth: boolean }) {
   const s = useSession();
   const m = useAsync(async () => { const x = await D.getDoc(D.doc(D.db, 'moments', id)); return x.exists() ? ({ id, ...x.data() } as Moment) : null; }, [id]);
+  // Suivi en direct de la publication YouTube (Short)
+  const [live, setLive] = useState<Moment | null>(null);
+  useEffect(() => D.watchDoc<Omit<Moment, 'id'>>(`moments/${id}`, (x) => x && setLive({ id, ...x } as Moment)), [id]);
+  const [yt, setYt] = useState(qs().get('pub') === '1');
   if (!m.data) return <Skeleton h={400} n={1} />;
+  const mo = live ?? m.data;
+  const canPublish = mo.authorUid === s.user?.uid || mv.authorUid === s.user?.uid || s.isAdmin;
   if (m.data.status !== 'ready' || !m.data.r2Key) return <Empty ill="bolt" title={t('Moment en préparation')} />;
   const url = mediaUrl(m.data.r2Key);
   return (
@@ -495,7 +503,24 @@ function MomentPlayer({ id, youth }: { id: string; youth: boolean }) {
           const blob = await (await fetch(url, { credentials: 'include' })).blob(); const f = new File([blob], 'moment-behoop.mp4', { type: 'video/mp4' });
           if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], text: t('Un Moment sur BeHoop 🏀') }); else await navigator.share?.({ url: location.href }); } catch { /* partage annulé */ } }}>{t('Partager (WhatsApp…)')}</button>
         : <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : partage limité à l\'Équipe.')}</p>}
+      {canPublish && <button className="btn secondary mt" onClick={() => setYt(true)}><Ico n="video" />{mo.youtube?.status === 'done' ? t('Publié sur YouTube (Short)') : t('Publier sur YouTube (Short)')}</button>}
+      {yt && canPublish && <MomentYtSheet vid={vid} mv={mv} moment={mo} youth={youth} onClose={() => setYt(false)} />}
     </div>
+  );
+}
+
+/** Publication d'un Moment sur YouTube : vertical et court, il devient un Short */
+function MomentYtSheet({ vid, mv, moment, youth, onClose }: { vid: string; mv: MatchVideo; moment: Moment; youth: boolean; onClose: () => void }) {
+  const [ok, setOk] = useState(!youth);
+  const desc = `${mv.title}\n${t('Moment réalisé avec BeHoop')} : ${location.origin}/app/#/video/${vid}/m-${moment.id}\n#Shorts`;
+  return (
+    <Sheet title={t('Publier sur YouTube (Short)')} onClose={onClose}>
+      <div className="form">
+        <p className="hint" style={{ margin: 0 }}>{t('Le Moment est vertical et court : YouTube le publie en Short.')}</p>
+        {youth && <label className="check"><input type="checkbox" checked={ok} onChange={(e) => setOk(e.target.checked)} />{t('J’ai l’accord des parents des joueurs filmés pour publier cette vidéo sur YouTube.')}</label>}
+        <YtPublish id={vid} mv={mv} youth={youth} parentsOk={ok} desc={desc} moment={moment} />
+      </div>
+    </Sheet>
   );
 }
 
