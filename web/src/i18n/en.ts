@@ -1435,4 +1435,11 @@ export const EN: Record<string, string> = {
   "Renommer": "Rename",
   "Supprimer la vidéo": "Delete video",
   "Modifier le Moment": "Edit Moment",
+  "Passage": "Clip",
+  "Ajouter un passage": "Add a clip",
+  "Fais glisser le cadre blanc sur la vidéo : un point de cadrage est posé à cet instant. Le cadre glisse de point en point.": "Drag the white frame on the video: a framing point is set at that moment. The frame glides from point to point.",
+  "Point de cadrage": "Framing point",
+  "Supprimer ce point": "Delete this point",
+  "Effacer les points": "Clear points",
+  "Pas des boutons": "Button step",
 };

@@ -1435,4 +1435,11 @@ export const NL: Record<string, string> = {
   "Renommer": "Hernoemen",
   "Supprimer la vidéo": "Video verwijderen",
   "Modifier le Moment": "Moment bewerken",
+  "Passage": "Fragment",
+  "Ajouter un passage": "Fragment toevoegen",
+  "Fais glisser le cadre blanc sur la vidéo : un point de cadrage est posé à cet instant. Le cadre glisse de point en point.": "Sleep het witte kader over de video: er wordt op dat moment een kaderpunt geplaatst. Het kader schuift van punt naar punt.",
+  "Point de cadrage": "Kaderpunt",
+  "Supprimer ce point": "Dit punt verwijderen",
+  "Effacer les points": "Punten wissen",
+  "Pas des boutons": "Stap van de knoppen",
 };

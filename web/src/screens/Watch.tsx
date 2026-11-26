@@ -457,7 +457,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const [keys, setKeys] = useState<Key[]>([]); // points de cadrage du passage en cours (t depuis son début)
   const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
   const [mTitle, setMTitle] = useState(''), [mText, setMText] = useState('');
-  const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number } | null>(null);
+  const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number; lastX?: number } | null>(null);
   const last = useRef(0);
   const show = (tt: number, final = false) => {
     const v = video.current; if (!v) return;
@@ -479,7 +479,11 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   };
   const move = (e: React.PointerEvent, final = false) => {
     const d = g.current; if (!d) return;
-    const dt = ((e.clientX - d.x0) / d.w) * WIN;
+    // Tactile : zone morte de 6 px (un toucher ne déplace rien) et, au relâchement, la dernière position voulue
+    // (le doigt glisse en se levant : on ignore ce dernier mouvement)
+    if (!final) { if (d.lastX == null && Math.abs(e.clientX - d.x0) < 6) return; d.lastX = e.clientX; }
+    else if (d.lastX == null) { g.current = null; return; }
+    const dt = (((final ? d.lastX! : e.clientX) - d.x0) / d.w) * WIN;
     if (d.kind === 'm') { const len = d.b0 - d.a0; const na = Math.max(0, Math.min(dur - len, d.a0 + dt)); put(na, na + len, 'm', final); }
     else if (d.kind === 'a') put(Math.min(Math.max(d.a0 + dt, d.b0 - CLIP_MAX), d.b0 - CLIP_MIN), d.b0, 'a', final);
     else put(d.a0, Math.max(Math.min(d.b0 + dt, d.a0 + CLIP_MAX), d.a0 + CLIP_MIN), 'b', final);
@@ -491,7 +495,6 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const curKeys = (): Key[] => (keys.length ? keys : [{ t: 0, pos }]);
   // Cadre affiché : suit les points de cadrage pendant la lecture (même glissement doux qu'au montage)
   const shown = keys.length && time >= a && time <= b ? keyPos(keys, time - a) : pos;
-  const addKey = () => { haptic(); const tt = Math.round(Math.min(b - a, Math.max(0, (video.current?.currentTime ?? time) - a)) * 10) / 10; setKeys((k) => [...k.filter((x) => Math.abs(x.t - tt) > 0.3), { t: tt, pos }].sort((x, y) => x.t - y.t)); };
   const ok = len >= CLIP_MIN && len <= CLIP_MAX && total <= MOMENT_TOTAL;
   const canAdd = ok && parts.length < MOMENT_PARTS - 1 && total + CLIP_MIN <= MOMENT_TOTAL;
   // « Suivre l'action » : analyse du passage (≈ 4 images/s, en petit) → zone la plus animée de la largeur du cadre → points de cadrage
@@ -524,57 +527,93 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       }
       let last = raw.find((r) => r.c != null)?.c ?? 0.5;
       const filled = raw.map((r) => (last = r.c ?? last));
-      const sm = filled.map((_, i) => { const w = filled.slice(Math.max(0, i - 3), i + 4); return w.reduce((x, y) => x + y, 0) / w.length; });
-      const k: Key[] = [];
-      raw.forEach((r, i) => { const p = Math.round(sm[i] * 100) / 100; if (i === 0 || i === raw.length - 1 || (r.t - (k[k.length - 1]?.t ?? -9) >= 1 && Math.abs(p - k[k.length - 1].pos) >= 0.05)) k.push({ t: Math.round(r.t * 10) / 10, pos: p }); });
+      const sm = filled.map((_, i) => { const w = filled.slice(Math.max(0, i - 5), i + 6); return w.reduce((x, y) => x + y, 0) / w.length; });
+      // Simplification (Ramer–Douglas–Peucker) : seuls les points qui changent vraiment la trajectoire du cadre
+      const pts = raw.map((r, i) => ({ t: Math.round(r.t * 10) / 10, pos: Math.round(sm[i] * 100) / 100 }));
+      const keep = new Set([0, pts.length - 1]);
+      const rdp = (i0: number, i1: number) => { let m = -1, mi = -1; for (let i = i0 + 1; i < i1; i++) { const f = (pts[i].t - pts[i0].t) / Math.max(0.01, pts[i1].t - pts[i0].t), d = Math.abs(pts[i].pos - (pts[i0].pos + f * (pts[i1].pos - pts[i0].pos))); if (d > m) { m = d; mi = i; } } if (m > 0.06) { keep.add(mi); rdp(i0, mi); rdp(mi, i1); } };
+      if (pts.length > 2) rdp(0, pts.length - 1);
+      const k: Key[] = pts.filter((_, i) => keep.has(i));
       if (k.length) { setKeys(k); setPos(k[0].pos); s.toast(t('Cadrage calculé : vérifie avec l’aperçu, corrige si besoin.')); }
     } catch { s.toast(t('Analyse impossible sur cet appareil : place les points à la main.')); }
     finally { setScan(null); v.currentTime = a; }
   };
   const add = () => { stop(); haptic(); setParts((p) => [...p, { a, b, keys: curKeys() }]); setKeys([]); const na = Math.min(dur - 10, b + 2); put(na, Math.min(dur, na + 10), 'm', true); };
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
-  const nudge = (which: 'a' | 'b', d: number) => { stop(); haptic();
+  const [stepS, setStepS] = useState(1);
+  const nudge = (which: 'a' | 'b', d0: number) => { const d = d0 * stepS; stop(); haptic();
     if (which === 'a') put(Math.min(Math.max(a + d, b - CLIP_MAX), b - CLIP_MIN), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + CLIP_MAX), a + CLIP_MIN), 'b', true); };
+  // Édition au doigt (mobile) : vidéo fixe en haut, onglets courts, barre d'actions fixe en bas, cadre à glisser sur la vidéo
+  const [tab, setTab] = useState<'pass' | 'crop' | 'info'>('pass');
+  const [selKey, setSelKey] = useState<number | null>(null);
+  useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit'); }, []);
+  const nowT = () => Math.round(Math.min(b - a, Math.max(0, (video.current?.currentTime ?? time) - a)) * 10) / 10;
+  const upsert = (p: number) => { const tt = nowT(); setKeys((k) => { const near = k.find((x) => Math.abs(x.t - tt) < 0.4); return [...k.filter((x) => x !== near), { t: near?.t ?? tt, pos: p }].sort((x, y) => x.t - y.t); }); setSelKey(null); };
+  const drag = useRef<{ w: number; l: number; fw: number; x0: number; moved?: boolean } | null>(null);
+  const frameDown = (e: React.PointerEvent) => { e.stopPropagation(); stop(); haptic(); const r = (e.currentTarget.parentElement as HTMLElement).getBoundingClientRect(); (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); drag.current = { w: r.width, l: r.left, fw: (r.width * CROP_W) / 100, x0: e.clientX }; };
+  const frameMove = (e: React.PointerEvent) => { const d = drag.current; if (!d) return; e.stopPropagation(); if (!d.moved && Math.abs(e.clientX - d.x0) < 6) return; d.moved = true; const p = Math.min(1, Math.max(0, (e.clientX - d.l - d.fw / 2) / (d.w - d.fw))); setPos(p); upsert(p); };
+  const frameUp = (e: React.PointerEvent) => { e.stopPropagation(); drag.current = null; };
+  const seekIn = (tt: number) => { stop(); const v = video.current; if (v) v.currentTime = a + tt; };
+  const lineTap = (e: React.PointerEvent) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); seekIn(Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a)); setSelKey(null); };
+  const create = async () => { stop(); setBusy(true);
+    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText });
+      s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
+    catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
   return (
     <div className="clip-ed">
-      {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${shown * (100 - CROP_W)}%` }} /><b style={{ width: `${CROP_W}%` }} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
+      {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${shown * (100 - CROP_W)}%` }} />
+        <b style={{ width: `${CROP_W}%` }} onPointerDown={frameDown} onPointerMove={frameMove} onPointerUp={frameUp} onPointerCancel={frameUp} onClick={(e) => e.stopPropagation()} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
       <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
         {parts.length > 0 && <span className="muted" style={{ fontWeight: 400 }}> · {total.toFixed(0)}/{MOMENT_TOTAL} s</span>}</b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
-      <p className="muted" style={{ margin: '0 0 8px', fontSize: 13 }}>{t('Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l\'image exacte.')}</p>
-      <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
-        {ticks.map((x) => <div key={x} className="clip-tick" style={{ left: pct(x) }}><span>{fmt(x)}</span></div>)}
-        <div className="clip-sel" style={{ left: pct(a), width: `${((b - a) / WIN) * 100}%` }} onPointerDown={down('m')}>
-          <div className="clip-h l" onPointerDown={down('a')} aria-label={t('Début')} />
-          <div className="clip-h r" onPointerDown={down('b')} aria-label={t('Fin')} />
+      <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
+      {tab === 'pass' && <>
+        <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
+          {ticks.map((x) => <div key={x} className="clip-tick" style={{ left: pct(x) }}><span>{fmt(x)}</span></div>)}
+          <div className="clip-sel" style={{ left: pct(a), width: `${((b - a) / WIN) * 100}%` }} onPointerDown={down('m')}>
+            <div className="clip-h l" onPointerDown={down('a')} aria-label={t('Début')} />
+            <div className="clip-h r" onPointerDown={down('b')} aria-label={t('Fin')} />
+          </div>
+          {time >= win && time <= win + WIN && <div className="clip-now" style={{ left: pct(time) }} />}
         </div>
-        {time >= win && time <= win + WIN && <div className="clip-now" style={{ left: pct(time) }} />}
-        {layout === 'full' && keys.map((k) => <div key={k.t} className="clip-key" style={{ left: pct(a + k.t) }} />)}
-      </div>
-      <div className="clip-fine">
-        <div><span className="muted">{t('Début')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('a', -1)} aria-label={t('Début − 1 s')}>−1 s</button><b>{fmtP(a)}</b><button className="btn ghost small" onClick={() => nudge('a', 1)} aria-label={t('Début + 1 s')}>+1 s</button></div></div>
-        <div><span className="muted">{t('Fin')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('b', -1)} aria-label={t('Fin − 1 s')}>−1 s</button><b>{fmtP(b)}</b><button className="btn ghost small" onClick={() => nudge('b', 1)} aria-label={t('Fin + 1 s')}>+1 s</button></div></div>
-      </div>
-      {parts.length > 0 && <div className="clip-parts">{parts.map(({ a: p0, b: p1, keys: pk }, i) => (
-        <div key={i} className="clip-part"><span>{t('Passage {n}', { n: i + 1 })} · {fmtP(p0)} → {fmtP(p1)} · {(p1 - p0).toFixed(1)} s{pk.length > 1 ? ` · ${pk.length} ${t('points de cadrage')}` : ''}</span>
-          <button className="btn ghost small" aria-label={t('Retirer')} onClick={() => setParts((p) => p.filter((_, k) => k !== i))}>✕</button></div>))}</div>}
-      <button className="btn ghost clip-add" disabled={!canAdd} onClick={add}><Ico n="plus" />{t('Ajouter un autre passage')}</button>
-      <div className="seg mt"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Portrait')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Paysage')}</button></div>
-      {layout === 'full' && <label className="clip-pos"><span className="muted">{t('Cadrage')}</span>
-        <input type="range" min={0} max={1} step={0.01} value={pos} onChange={(e) => setPos(Number(e.target.value))} aria-label={t('Cadrage')} /></label>}
-      {layout === 'full' && <div className="clip-keys">
-        <button className="btn small" disabled={scan != null} onClick={follow}><Ico n="bolt" />{scan != null ? t('Analyse… {n} %', { n: scan }) : t('Suivre l’action')}</button>
-        <button className="btn ghost small" onClick={addKey}><Ico n="plus" />{t('Point de cadrage ici')}</button>
-        {keys.length > 0 && <><span className="muted">{t('{n} point(s) : le cadre glisse de l’un à l’autre', { n: keys.length })}</span><button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer')}</button></>}
-      </div>}
-      <input className="field mt" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
-      <textarea className="field mt" rows={2} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
-      <div className="clip-act">
+        <div className="clip-fine">
+          <div><span className="muted">{t('Début')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('a', -1)} aria-label={t('Début − 1 s')}>−{stepS === 1 ? '1' : '0,1'}</button><b>{fmtP(a)}</b><button className="btn ghost small" onClick={() => nudge('a', 1)} aria-label={t('Début + 1 s')}>+{stepS === 1 ? '1' : '0,1'}</button></div></div>
+          <div><span className="muted">{t('Fin')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('b', -1)} aria-label={t('Fin − 1 s')}>−{stepS === 1 ? '1' : '0,1'}</button><b>{fmtP(b)}</b><button className="btn ghost small" onClick={() => nudge('b', 1)} aria-label={t('Fin + 1 s')}>+{stepS === 1 ? '1' : '0,1'}</button></div></div>
+        </div>
+        <div className="hstack" style={{ justifyContent: 'center', gap: 6, marginTop: 6, fontSize: 13 }}><span className="muted">{t('Pas des boutons')}</span>
+          <div className="seg" style={{ width: 150 }}><button className={stepS === 1 ? 'on' : ''} onClick={() => setStepS(1)}>1 s</button><button className={stepS !== 1 ? 'on' : ''} onClick={() => setStepS(0.1)}>0,1 s</button></div></div>
+        <div className="hstack" style={{ gap: 8, marginTop: 8 }}>
+          <button className="btn ghost small" style={{ flex: 1 }} onClick={() => { stop(); const c = video.current?.currentTime ?? time; const [na, nb] = around(c); put(na, nb, 'm', true); }}>{t('Partir d\'ici')}</button>
+          <button className="btn ghost small" style={{ flex: 1 }} disabled={!canAdd} onClick={add}><Ico n="plus" />{t('Ajouter un passage')}</button>
+        </div>
+        {parts.length > 0 && <div className="clip-parts">{parts.map(({ a: p0, b: p1, keys: pk }, i) => (
+          <div key={i} className="clip-part"><span>{t('Passage {n}', { n: i + 1 })} · {fmtP(p0)} → {fmtP(p1)} · {(p1 - p0).toFixed(1)} s{pk.length > 1 ? ` · ${pk.length} ${t('points de cadrage')}` : ''}</span>
+            <button className="btn ghost small" aria-label={t('Retirer')} onClick={() => setParts((p) => p.filter((_, k) => k !== i))}>✕</button></div>))}</div>}
+      </>}
+      {tab === 'crop' && <>
+        <div className="seg"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Portrait')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Paysage')}</button></div>
+        {layout === 'full' && <>
+          <p className="hint" style={{ margin: '8px 0 0' }}>{t('Fais glisser le cadre blanc sur la vidéo : un point de cadrage est posé à cet instant. Le cadre glisse de point en point.')}</p>
+          <div className="key-line" onPointerDown={lineTap}>
+            <div className="ph" style={{ left: `${Math.min(100, Math.max(0, ((time - a) / Math.max(0.1, b - a)) * 100))}%` }} />
+            {keys.map((k) => <button key={k.t} className={`kd${selKey === k.t ? ' on' : ''}`} style={{ left: `${(k.t / Math.max(0.1, b - a)) * 100}%` }} aria-label={t('Point de cadrage')}
+              onPointerDown={(e) => { e.stopPropagation(); haptic(); seekIn(k.t); setSelKey(k.t); setPos(k.pos); }} />)}
+          </div>
+          <div className="hstack" style={{ gap: 8, flexWrap: 'wrap' }}>
+            <button className="btn small" disabled={scan != null} onClick={follow}><Ico n="bolt" />{scan != null ? t('Analyse… {n} %', { n: scan }) : t('Suivre l’action')}</button>
+            {selKey != null && <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={() => { setKeys((k) => k.filter((x) => x.t !== selKey)); setSelKey(null); }}>{t('Supprimer ce point')}</button>}
+            {keys.length > 0 && selKey == null && <button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer les points')}</button>}
+          </div>
+        </>}
+      </>}
+      {tab === 'info' && <>
+        <input className="field" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
+        <textarea className="field mt" rows={3} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
+      </>}
+      <div className="clip-bar">
         <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
-        <button className="btn ghost" onClick={() => { stop(); const c = video.current?.currentTime ?? time; const [na, nb] = around(c); put(na, nb, 'm', true); }}>{t('Partir d\'ici')}</button>
-      <button className="btn" disabled={!ok || busy} onClick={async () => { stop(); setBusy(true);
-        try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText }); s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
+        <button className="btn" disabled={!ok || busy} onClick={create}>{t('Créer')}{parts.length ? ` (${parts.length + 1})` : ''}</button>
       </div>
     </div>
   );
