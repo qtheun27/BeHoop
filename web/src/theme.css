@@ -550,6 +550,8 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .clip-parts { display: grid; gap: 6px; margin-top: 10px; }
 .clip-part { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; background: var(--fill); border-radius: 10px; padding: 4px 4px 4px 12px; font-variant-numeric: tabular-nums; }
 .clip-add { width: 100%; margin-top: 8px; }
+.clip-keys { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; font-size: 13px; }
+.clip-key { position: absolute; bottom: 4px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #fff; border: 2px solid var(--accent, #f26a1b); pointer-events: none; z-index: 3; }
 .clip-pos { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 14px; } .clip-pos input { flex: 1; accent-color: var(--accent, #f26a1b); }
 /* Cadre du Moment en plein écran, dessiné sur la vidéo : ce qui sera coupé est assombri */
 .crop-mask { position: absolute; inset: 0; z-index: 1; pointer-events: none; display: flex; }

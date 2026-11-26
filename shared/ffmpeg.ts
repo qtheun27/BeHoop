@@ -160,10 +160,24 @@ export function posterArgs(input: string, output: string, at = 3): string[] {
 /** Cadrage d'un Moment : « full » = recadré plein écran (pos : 0 gauche → 1 droite), « fit » = image entière sur fond flou */
 export type MomentLayout = 'full' | 'fit';
 /** Un passage d'un Moment, mis au format vertical 1080×1920 (encodage intermédiaire de haute qualité). */
-export function momentClipArgs(input: string, start: number, end: number, layout: MomentLayout, pos: number, output: string): string[] {
-  const p = Math.min(1, Math.max(0, pos));
+/** Point de cadrage : à t secondes du début du passage, cadre à la position pos (0 gauche → 1 droite) */
+export interface CropKey { t: number; pos: number }
+/** Position du cadre au fil du temps (expression FFmpeg) : glissement doux (smoothstep) d'un point de cadrage au suivant */
+export function cropPosExpr(keys: CropKey[]): string {
+  const k = [...keys].filter((x) => Number.isFinite(x.t) && Number.isFinite(x.pos)).sort((a, b) => a.t - b.t).map((x) => ({ t: Math.max(0, x.t), pos: Math.min(1, Math.max(0, x.pos)) }));
+  if (!k.length) return '0.500';
+  let e = k[k.length - 1].pos.toFixed(3);
+  for (let i = k.length - 2; i >= 0; i--) {
+    const a = k[i], b = k[i + 1], d = Math.max(0.05, b.t - a.t);
+    const s = `((t-${a.t.toFixed(2)})/${d.toFixed(2)})`;
+    e = `if(lt(t\\,${b.t.toFixed(2)})\\,${a.pos.toFixed(3)}+(${(b.pos - a.pos).toFixed(3)})*${s}*${s}*(3-2*${s})\\,${e})`;
+  }
+  return `if(lt(t\\,${k[0].t.toFixed(2)})\\,${k[0].pos.toFixed(3)}\\,${e})`;
+}
+export function momentClipArgs(input: string, start: number, end: number, layout: MomentLayout, pos: number | CropKey[], output: string): string[] {
+  const keys = typeof pos === 'number' ? [{ t: 0, pos }] : pos;
   const v = layout === 'full'
-    ? `[0:v]scale=-2:1920:flags=lanczos,crop=1080:1920:(iw-1080)*${p.toFixed(3)}:0,setsar=1,fps=30,format=yuv420p[v]`
+    ? `[0:v]scale=-2:1920:flags=lanczos,setpts=PTS-STARTPTS,crop=1080:1920:(iw-1080)*(${cropPosExpr(keys)}):0,setsar=1,fps=30,format=yuv420p[v]`
     : '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
       '[fg]scale=1080:-2:flags=lanczos[f];[b][f]overlay=0:(H-h)/2,setsar=1,fps=30,format=yuv420p[v]';
   // Début + durée (et non « -to ») : même résultat quelle que soit la version de FFmpeg

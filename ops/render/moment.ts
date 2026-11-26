@@ -6,7 +6,7 @@ import { chromium } from '@playwright/test';
 import { ff, probe } from './run';
 import { waveFrames, WAVE_CUT } from './wave';
 import { bugTrack } from './bug';
-import { momentClipArgs, momentJoinArgs, type MomentLayout } from '../../shared/ffmpeg';
+import { momentClipArgs, momentJoinArgs, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
 import { N } from '../../shared/notifText';
@@ -21,9 +21,11 @@ try {
   const m = (await ref.get()).data()!;
   const mv = (await db.doc(`matchVideos/${m.matchVideoId}`).get()).data()!;
   const work = join(ROOT, 'out', 'moment', id); rmSync(work, { recursive: true, force: true }); mkdirSync(work, { recursive: true });
-  await ref.update({ status: 'running' });
+  // Avancement suivi en direct dans l'appli (comme pour les vidéos de match)
+  const step = (progress: number, label: string) => ref.update({ progress, step: label }).catch(() => {});
+  await ref.update({ status: 'running', progress: 5, step: 'Préparation' });
   // Passages (plusieurs possibles, enchaînés par une vague) ; anciens Moments : un seul passage, image entière
-  const clips: { start: number; end: number }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
+  const clips: { start: number; end: number; keys?: CropKey[] }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
   const layout: MomentLayout = m.layout === 'full' ? 'full' : 'fit';
   const pos = typeof m.pos === 'number' ? m.pos : 0.5;
   // Source : variante 1080p HLS (seuls les segments utiles sont téléchargés)
@@ -41,6 +43,7 @@ try {
   }
   const segsOf = (c: { start: number; end: number }) => segs.filter((g) => g.t + g.dur > c.start - 1 && g.t < c.end + 1);
   const need = [...new Set(clips.flatMap((c) => segsOf(c).map((g) => g.name)))];
+  await step(10, 'Téléchargement des images');
   for (const s of need) await r2.download(src1080.replace('index.m3u8', s), join(work, s));
   // Bandeau du score 1080×300 rendu par Chromium. Logos des clubs : adresses du site (/logos/…) rendues absolues
   // (le bandeau est une page locale : une adresse relative ne trouverait pas l'image).
@@ -72,11 +75,13 @@ try {
     const own = segsOf(c); if (!own.length) throw new Error(`passage ${i + 1} hors de la vidéo`);
     const pl = join(work, `clip_${i}.m3u8`);
     writeFileSync(pl, [...head, ...own.flatMap((g) => [`#EXTINF:${g.dur.toFixed(6)},`, g.name]), '#EXT-X-ENDLIST', ''].join('\n'));
-    await ff(momentClipArgs(pl, c.start - own[0].t, c.end - own[0].t, layout, pos, f));
+    await ff(momentClipArgs(pl, c.start - own[0].t, c.end - own[0].t, layout, c.keys?.length ? c.keys : pos, f));
+    await step(30 + Math.round(((i + 1) / clips.length) * 50), `Passage ${i + 1}/${clips.length}`);
     const d = (await probe(f)).duration;
     if (!(d > 1)) throw new Error(`passage ${i + 1} vide (${c.start}–${c.end} s)`);
     parts.push({ path: f, duration: d });
   }
+  await step(85, 'Assemblage');
   const out = join(work, 'moment.mp4');
   const whoosh = join(ROOT, 'render/assets/whoosh.m4a');
   const joined = momentJoinArgs({ clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined });
@@ -84,7 +89,7 @@ try {
   const vis = mv.visibility === 'team' ? `team-${mv.teamIdPrivate}` : 'public';
   const key = `moments/${vis}/${m.matchVideoId}/${id}.mp4`;
   await r2.upload(key, out, 'video/mp4');
-  await ref.update({ status: 'ready', r2Key: key, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
+  await ref.update({ status: 'ready', progress: 100, step: 'Prêt', r2Key: key, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
   await db.doc(`posts/moment-${id}`).set({
     type: 'moment', authorUid: m.authorUid, authorName: m.authorName ?? '', clubId: null, teamIds: mv.teamIds, targets: mv.teamIds.filter(Boolean).map((x: number) => `t:${x}`),
     visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: false, reactions: {}, createdAt: FieldValue.serverTimestamp(),

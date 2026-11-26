@@ -425,7 +425,12 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (v.visibility === 'team' && !(await memberTeams(user.uid)).includes(v.teamIdPrivate) && !isAdmin) throw new Error('FORBIDDEN');
     // 1 à 6 passages de 5 à 30 s, 60 s au total (format Short) ; cadrage plein écran (position 0–1) ou image entière
     const raw: any[] = Array.isArray(body.clips) && body.clips.length ? body.clips : [{ start: body.start, end: body.end }];
-    const clips = raw.slice(0, 7).map((c) => ({ start: Math.round(Math.max(0, Number(c?.start)) * 10) / 10, end: Math.round(Number(c?.end) * 10) / 10 }));
+    const clips = raw.slice(0, 7).map((c) => {
+      const start = Math.round(Math.max(0, Number(c?.start)) * 10) / 10, end = Math.round(Number(c?.end) * 10) / 10;
+      // Points de cadrage du passage (t depuis son début, position 0–1) : le cadre glisse de l'un à l'autre
+      const keys = (Array.isArray(c?.keys) ? c.keys : []).slice(0, 30).map((k: any) => ({ t: Math.round(Math.min(end - start, Math.max(0, Number(k?.t) || 0)) * 10) / 10, pos: Math.round(Math.min(1, Math.max(0, Number(k?.pos) || 0)) * 1000) / 1000 }));
+      return keys.length ? { start, end, keys } : { start, end };
+    });
     const max = Number(v.hls?.duration ?? 1e9) + 1;
     if (clips.length > 6) return fail('6 passages au maximum');
     if (clips.some((c) => !(c.end - c.start >= 5 && c.end - c.start <= 30) || c.end > max)) return fail('Chaque passage : entre 5 et 30 s');

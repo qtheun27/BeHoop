@@ -123,7 +123,10 @@ describe('commandes FFmpeg', () => {
   });
   it('Moment : passage plein écran recadré (position choisie) ou image entière sur fond flou', () => {
     const full = momentClipArgs('in.m3u8', 10, 18, 'full', 0.25, 'c.mp4').join(' ');
-    expect(full).toContain('scale=-2:1920:flags=lanczos,crop=1080:1920:(iw-1080)*0.250:0');
+    expect(full).toContain('crop=1080:1920:(iw-1080)*(if(lt(t\\,0.00)\\,0.250\\,0.250)):0');
+    // points de cadrage : glissement doux de 0,2 à 0,8 entre 0 et 3 s
+    const moving = momentClipArgs('in.m3u8', 10, 18, 'full', [{ t: 0, pos: 0.2 }, { t: 3, pos: 0.8 }], 'c.mp4').join(' ');
+    expect(moving).toContain('if(lt(t\\,3.00)\\,0.200+(0.600)*((t-0.00)/3.00)');
     expect(momentClipArgs('in.m3u8', 10, 18, 'fit', 0.5, 'c.mp4').join(' ')).toContain('boxblur=40:2');
   });
   it('Moment : passages enchaînés, vague sur chaque coupure, logo sous le bandeau, whoosh', () => {
