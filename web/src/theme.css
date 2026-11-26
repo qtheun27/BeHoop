@@ -547,4 +547,11 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .clip-fine button { white-space: nowrap; padding: 6px 5px; min-width: 0; } .clip-fine b { font-size: 16px; min-width: 54px; text-align: center; font-variant-numeric: tabular-nums; }
 /* Création d'un Moment : actions sur une ligne (aperçu, repartir d'ici, créer) */
 .clip-act { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+.clip-parts { display: grid; gap: 6px; margin-top: 10px; }
+.clip-part { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; background: var(--fill); border-radius: 10px; padding: 4px 4px 4px 12px; font-variant-numeric: tabular-nums; }
+.clip-add { width: 100%; margin-top: 8px; }
+.clip-pos { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 14px; } .clip-pos input { flex: 1; accent-color: var(--accent, #f26a1b); }
+/* Cadre du Moment en plein écran, dessiné sur la vidéo : ce qui sera coupé est assombri */
+.crop-mask { position: absolute; inset: 0; z-index: 1; pointer-events: none; display: flex; }
+.crop-mask i { display: block; background: rgba(0,0,0,.55); } .crop-mask b { display: block; border: 2px solid #fff; border-radius: 4px; flex: none; }
 .clip-act .btn { min-height: 44px; padding: 0 8px; white-space: nowrap; }

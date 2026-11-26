@@ -423,10 +423,19 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const v = await fs.get<any>(`matchVideos/${body.matchVideoId}`);
     if (!v || v.status !== 'ready') return fail('Vidéo indisponible', 404);
     if (v.visibility === 'team' && !(await memberTeams(user.uid)).includes(v.teamIdPrivate) && !isAdmin) throw new Error('FORBIDDEN');
-    const start = Math.max(0, Number(body.start)), end = Number(body.end);
-    if (!(end - start >= 5 && end - start <= 30)) return fail('Durée entre 5 et 30 s');
+    // 1 à 6 passages de 5 à 30 s, 60 s au total (format Short) ; cadrage plein écran (position 0–1) ou image entière
+    const raw: any[] = Array.isArray(body.clips) && body.clips.length ? body.clips : [{ start: body.start, end: body.end }];
+    const clips = raw.slice(0, 7).map((c) => ({ start: Math.round(Math.max(0, Number(c?.start)) * 10) / 10, end: Math.round(Number(c?.end) * 10) / 10 }));
+    const max = Number(v.hls?.duration ?? 1e9) + 1;
+    if (clips.length > 6) return fail('6 passages au maximum');
+    if (clips.some((c) => !(c.end - c.start >= 5 && c.end - c.start <= 30) || c.end > max)) return fail('Chaque passage : entre 5 et 30 s');
+    const total = clips.reduce((a, c) => a + c.end - c.start, 0);
+    if (total > 60.5) return fail('60 secondes au maximum au total');
+    const layout = body.layout === 'fit' ? 'fit' : 'full';
+    const pos = Math.min(1, Math.max(0, Number(body.pos ?? 0.5) || 0));
     const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
-    await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start, end, status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() }, false);
+    await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start: clips[0].start, end: clips[0].end,
+      clips, layout, pos, duration: Math.round(total * 10) / 10, status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
     await dispatch(env, 'moment.yml', { momentId: id });
     return json({ id });
   }

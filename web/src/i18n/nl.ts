@@ -1401,4 +1401,8 @@ export const NL: Record<string, string> = {
   "Le Moment est vertical et court : YouTube le publie en Short.": "Het Moment is verticaal en kort: YouTube publiceert het als Short.",
   "Volume": "Volume",
   "Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l'image exacte.": "Sleep de fragment of de randen ervan (5 tot 30 s): de video toont het exacte beeld.",
+  "Passage {n}": "Fragment {n}",
+  "Ajouter un autre passage": "Nog een fragment toevoegen",
+  "Image entière": "Volledig beeld",
+  "Cadrage": "Kadrering",
 };

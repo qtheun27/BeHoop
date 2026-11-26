@@ -157,12 +157,49 @@ export function posterArgs(input: string, output: string, at = 3): string[] {
   return ['-y', '-ss', String(at), '-i', input, '-frames:v', '1', '-q:v', '3', output];
 }
 
-/** Moment vertical 9:16 : fond flou, vidéo centrée, bandeau (PNG) en haut. */
-export function momentArgs(input: string, start: number, end: number, banner: string, output: string, bug?: string): string[] {
-  // Logo BeHoop animé en bas à droite (sous la vidéo, sur le fond flou)
-  const logo = bug ? `[bb];[2:v]setpts=PTS-STARTPTS+0.6/TB[bug];[bb][bug]overlay=W-w-24:H-h-150:shortest=1` : '';
-  return ['-y', '-ss', String(start), '-to', String(end), '-i', input, '-i', banner, ...(bug ? ['-stream_loop', '-1', '-i', bug] : []),
-    '-filter_complex', '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
-      `[fg]scale=1080:-2[f];[b][f]overlay=0:(H-h)/2[bf];[bf][1:v]overlay=0:0${logo},format=yuv420p[v]`,
-    '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', output];
+/** Cadrage d'un Moment : « full » = recadré plein écran (pos : 0 gauche → 1 droite), « fit » = image entière sur fond flou */
+export type MomentLayout = 'full' | 'fit';
+/** Un passage d'un Moment, mis au format vertical 1080×1920 (encodage intermédiaire de haute qualité). */
+export function momentClipArgs(input: string, start: number, end: number, layout: MomentLayout, pos: number, output: string): string[] {
+  const p = Math.min(1, Math.max(0, pos));
+  const v = layout === 'full'
+    ? `[0:v]scale=-2:1920:flags=lanczos,crop=1080:1920:(iw-1080)*${p.toFixed(3)}:0,setsar=1,fps=30,format=yuv420p[v]`
+    : '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
+      '[fg]scale=1080:-2:flags=lanczos[f];[b][f]overlay=0:(H-h)/2,setsar=1,fps=30,format=yuv420p[v]';
+  return ['-y', '-ss', String(start), '-to', String(end), '-i', input, '-filter_complex', v, '-map', '[v]', '-map', '0:a?',
+    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
+}
+
+export interface MomentJoin { clips: { path: string; duration: number }[]; banner: string; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string }
+/**
+ * Assemblage d'un Moment : passages bout à bout, vague par-dessus chaque coupure (elle couvre l'écran à l'instant de la
+ * coupure), bandeau du score en haut, logo BeHoop animé juste sous le bandeau (hors des commandes des lecteurs, YouTube Shorts compris).
+ */
+export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: number } {
+  const n = o.clips.length, args = ['-y'];
+  o.clips.forEach((c) => args.push('-i', c.path));
+  let k = n;
+  const bi = (args.push('-i', o.banner), k++);
+  const gi = o.bug ? (args.push('-stream_loop', '-1', '-i', o.bug), k++) : -1;
+  const cuts: number[] = []; let acc = 0;
+  for (let i = 0; i < n - 1; i++) { acc += o.clips[i].duration; cuts.push(acc); }
+  const T = acc + o.clips[n - 1].duration;
+  const wi = o.wave ? cuts.map(() => (args.push('-framerate', '30', '-i', o.wave!), k++)) : [];
+  const hi = o.whoosh && cuts.length ? (args.push('-i', o.whoosh), k++) : -1;
+  const f: string[] = [];
+  f.push(`${o.clips.map((_, i) => `[${i}:v][${i}:a]`).join('')}concat=n=${n}:v=1:a=1[v0][a0]`);
+  let v = '[v0]';
+  wi.forEach((w, i) => { f.push(`[${w}:v]setpts=PTS-STARTPTS+${(cuts[i] - (o.waveCut ?? 0.35)).toFixed(3)}/TB[w${i}]`, `${v}[w${i}]overlay=0:0:eof_action=pass[vw${i}]`); v = `[vw${i}]`; });
+  f.push(`${v}[${bi}:v]overlay=0:0[vb]`); v = '[vb]';
+  if (gi >= 0) { f.push(`[${gi}:v]setpts=PTS-STARTPTS+0.6/TB[bug]`, `${v}[bug]overlay=W-w-24:300:shortest=1[vl]`); v = '[vl]'; }
+  f.push(`${v}format=yuv420p[v]`);
+  if (hi >= 0) {
+    f.push(`[${hi}:a]asplit=${cuts.length}${cuts.map((_, i) => `[h${i}]`).join('')}`);
+    cuts.forEach((c, i) => { const ms = Math.max(0, Math.round((c - 0.3) * 1000)); f.push(`[h${i}]adelay=${ms}|${ms},volume=0.6[hd${i}]`); });
+    f.push(`[a0]${cuts.map((_, i) => `[hd${i}]`).join('')}amix=inputs=${cuts.length + 1}:duration=first:normalize=0[a]`);
+  } else f[0] = f[0].replace('[a0]', '[a]');
+  args.push('-filter_complex', f.join(';'), '-map', '[v]', '-map', '[a]', '-t', T.toFixed(3),
+    '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-maxrate', '8000k', '-bufsize', '16000k', '-pix_fmt', 'yuv420p', '-r', '30',
+    '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', o.output);
+  return { args, duration: T };
 }

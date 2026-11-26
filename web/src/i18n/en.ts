@@ -1401,4 +1401,8 @@ export const EN: Record<string, string> = {
   "Le Moment est vertical et court : YouTube le publie en Short.": "The Moment is vertical and short: YouTube publishes it as a Short.",
   "Volume": "Volume",
   "Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l'image exacte.": "Drag the clip or its edges (5 to 30 s): the video shows the exact frame.",
+  "Passage {n}": "Clip {n}",
+  "Ajouter un autre passage": "Add another clip",
+  "Image entière": "Whole picture",
+  "Cadrage": "Framing",
 };

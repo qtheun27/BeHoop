@@ -1,5 +1,6 @@
 // Lecteur vidéo de match (HLS) façon Apple + Moments (V2) + vote « Action du match ».
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
@@ -420,7 +421,9 @@ const WIN = 90; // largeur de la frise zoomée (s)
 /** Création d'un Moment, sous la vidéo (qui reste visible) : frise zoomée de 90 s autour du passage, poignées début / fin
  *  et passage entier à faire glisser (la vidéo montre l'image exacte pendant le geste), réglages fins ±1 s, aperçu en
  *  boucle. Passage de 5 à 30 s, monté ensuite au format vertical avec le score. */
-const CLIP_MIN = 5, CLIP_MAX = 30;
+const CLIP_MIN = 5, CLIP_MAX = 30, MOMENT_TOTAL = 60, MOMENT_PARTS = 6;
+/** Largeur du cadre vertical (9:16 recadré dans une image 16:9) : 1080 / (1920 × 16/9) */
+const CROP_W = (1080 / ((1920 * 16) / 9)) * 100;
 function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { id: string; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
   sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<boolean>; onClose: () => void }) {
   const s = useSession();
@@ -431,6 +434,9 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const [win, setWin] = useState(() => Math.max(0, Math.min(dur - WIN, (a + b) / 2 - WIN / 2)));
   useEffect(() => { if (a < win || b > win + WIN) setWin(Math.max(0, Math.min(dur - WIN, (a + b) / 2 - WIN / 2))); }, [a, b]); // eslint-disable-line react-hooks/exhaustive-deps
   const [busy, setBusy] = useState(false), [playing, setPlaying] = useState(false);
+  // Plusieurs passages enchaînés (vague au montage), 60 s au total ; cadrage plein écran (position) ou image entière
+  const [parts, setParts] = useState<[number, number][]>([]);
+  const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
   const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number } | null>(null);
   const last = useRef(0);
   const show = (tt: number, final = false) => {
@@ -460,13 +466,19 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
     if (final) g.current = null;
   };
   const pct = (x: number) => `${((x - win) / WIN) * 100}%`;
-  const len = Math.round((b - a) * 10) / 10, ok = len >= CLIP_MIN && len <= CLIP_MAX;
+  const len = Math.round((b - a) * 10) / 10;
+  const total = Math.round((parts.reduce((x, [p0, p1]) => x + p1 - p0, 0) + len) * 10) / 10;
+  const ok = len >= CLIP_MIN && len <= CLIP_MAX && total <= MOMENT_TOTAL;
+  const canAdd = ok && parts.length < MOMENT_PARTS - 1 && total + CLIP_MIN <= MOMENT_TOTAL;
+  const add = () => { stop(); haptic(); setParts((p) => [...p, [a, b]]); const na = Math.min(dur - 10, b + 2); put(na, Math.min(dur, na + 10), 'm', true); };
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 10) * 10 + i * 10).filter((x) => x <= win + WIN);
   const nudge = (which: 'a' | 'b', d: number) => { stop(); haptic();
     if (which === 'a') put(Math.min(Math.max(a + d, b - CLIP_MAX), b - CLIP_MIN), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + CLIP_MAX), a + CLIP_MIN), 'b', true); };
   return (
     <div className="clip-ed">
-      <div className="clip-head"><b><Ico n="bolt" /> {t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span></b>
+      {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${pos * (100 - CROP_W)}%` }} /><b style={{ width: `${CROP_W}%` }} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
+      <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
+        {parts.length > 0 && <span className="muted" style={{ fontWeight: 400 }}> · {total.toFixed(0)}/{MOMENT_TOTAL} s</span>}</b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
       <p className="muted" style={{ margin: '0 0 8px', fontSize: 13 }}>{t('Fais glisser le passage ou ses bords (5 à 30 s) : la vidéo montre l\'image exacte.')}</p>
       <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
@@ -481,12 +493,19 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
         <div><span className="muted">{t('Début')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('a', -1)} aria-label={t('Début − 1 s')}>−1 s</button><b>{fmtP(a)}</b><button className="btn ghost small" onClick={() => nudge('a', 1)} aria-label={t('Début + 1 s')}>+1 s</button></div></div>
         <div><span className="muted">{t('Fin')}</span><div className="hstack"><button className="btn ghost small" onClick={() => nudge('b', -1)} aria-label={t('Fin − 1 s')}>−1 s</button><b>{fmtP(b)}</b><button className="btn ghost small" onClick={() => nudge('b', 1)} aria-label={t('Fin + 1 s')}>+1 s</button></div></div>
       </div>
+      {parts.length > 0 && <div className="clip-parts">{parts.map(([p0, p1], i) => (
+        <div key={i} className="clip-part"><span>{t('Passage {n}', { n: i + 1 })} · {fmtP(p0)} → {fmtP(p1)} · {(p1 - p0).toFixed(1)} s</span>
+          <button className="btn ghost small" aria-label={t('Retirer')} onClick={() => setParts((p) => p.filter((_, k) => k !== i))}>✕</button></div>))}</div>}
+      <button className="btn ghost clip-add" disabled={!canAdd} onClick={add}><Ico n="plus" />{t('Ajouter un autre passage')}</button>
+      <div className="seg mt"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Plein écran')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Image entière')}</button></div>
+      {layout === 'full' && <label className="clip-pos"><span className="muted">{t('Cadrage')}</span>
+        <input type="range" min={0} max={1} step={0.01} value={pos} onChange={(e) => setPos(Number(e.target.value))} aria-label={t('Cadrage')} /></label>}
       <div className="clip-act">
         <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
         <button className="btn ghost" onClick={() => { stop(); const c = video.current?.currentTime ?? time; const [na, nb] = around(c); put(na, nb, 'm', true); }}>{t('Partir d\'ici')}</button>
       <button className="btn" disabled={!ok || busy} onClick={async () => { stop(); setBusy(true);
-        try { await api('/moments', { matchVideoId: id, start: a, end: b }); s.toast(t('Moment en préparation…')); onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
+        try { await api('/moments', { matchVideoId: id, clips: [...parts, [a, b]].map(([start, end]) => ({ start, end })), layout, pos }); s.toast(t('Moment en préparation…')); onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
       </div>
     </div>
   );

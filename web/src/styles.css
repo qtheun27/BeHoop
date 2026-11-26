@@ -174,7 +174,7 @@ textarea.field { min-height: 110px; resize: vertical; }
 .hstack { display: flex; gap: 10px; align-items: center; }
 .player { position: relative; background: #000; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16/9; }
 .player video { width: 100%; height: 100%; display: block; }
-.player .ctrl { position: absolute; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; display: flex; flex-direction: column; gap: 8px; transition: opacity .25s; }
+.player .ctrl { position: absolute; z-index: 2; inset: auto 0 0 0; padding: 30px 12px 10px; background: linear-gradient(transparent, rgba(0,0,0,.75)); color: #fff; display: flex; flex-direction: column; gap: 8px; transition: opacity .25s; }
 .player.idle .ctrl { opacity: 0; }
 .player .bar { position: relative; height: 22px; display: flex; align-items: center; cursor: pointer; }
 .player .bar .track { position: absolute; left: 0; right: 0; height: 4px; border-radius: 2px; background: rgba(255,255,255,.3); }

@@ -3,7 +3,7 @@ import { classifyCategory, ageGroupOf } from './ageGroup';
 import { quarterScores, validateScores, resultLabel } from './scores';
 import { assignQuarters, mosaicPhotos } from './quarters';
 import { buildChapters, chaptersToVtt, parseVtt } from './chapters';
-import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs, momentArgs } from './ffmpeg';
+import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs, momentClipArgs, momentJoinArgs } from './ffmpeg';
 import type { MediaItem } from './types';
 
 describe('Jeunes / Seniors', () => {
@@ -121,11 +121,21 @@ describe('commandes FFmpeg', () => {
     expect(s.indexOf('overlay=W-w-36:20:shortest=1')).toBeLessThan(s.indexOf('[1:v]overlay=0:0'));
     expect(segmentArgs([{ path: 'a', duration: 10 }], 'o').args.join(' ')).not.toContain('stream_loop');
   });
-  it('Moment : logo animé en bas à droite', () => {
-    const s = momentArgs('in.m3u8', 10, 30, 'b.png', 'o.mp4', 'bug.mov').join(' ');
-    expect(s).toContain('-stream_loop -1 -i bug.mov');
-    expect(s).toContain('[bb][bug]overlay=W-w-24:H-h-150:shortest=1,format=yuv420p[v]');
-    expect(momentArgs('in.m3u8', 10, 30, 'b.png', 'o.mp4').join(' ')).toContain('[bf][1:v]overlay=0:0,format=yuv420p[v]');
+  it('Moment : passage plein écran recadré (position choisie) ou image entière sur fond flou', () => {
+    const full = momentClipArgs('in.m3u8', 10, 18, 'full', 0.25, 'c.mp4').join(' ');
+    expect(full).toContain('scale=-2:1920:flags=lanczos,crop=1080:1920:(iw-1080)*0.250:0');
+    expect(momentClipArgs('in.m3u8', 10, 18, 'fit', 0.5, 'c.mp4').join(' ')).toContain('boxblur=40:2');
+  });
+  it('Moment : passages enchaînés, vague sur chaque coupure, logo sous le bandeau, whoosh', () => {
+    const { args, duration } = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }, { path: 'b', duration: 6 }, { path: 'c', duration: 10 }], banner: 'b.png', output: 'o.mp4', bug: 'bug.mov', wave: 'w/%04d.png', waveCut: 0.35, whoosh: 'wh.m4a' });
+    const s = args.join(' ');
+    expect(duration).toBe(24);
+    expect(s).toContain('[0:v][0:a][1:v][1:a][2:v][2:a]concat=n=3:v=1:a=1[v0][a0]');
+    expect(s).toContain('PTS-STARTPTS+7.650/TB[w0]'); expect(s).toContain('PTS-STARTPTS+13.650/TB[w1]');
+    expect(s).toContain('overlay=W-w-24:300:shortest=1');
+    expect(s).toContain('adelay=7700|7700'); expect(s).toContain('amix=inputs=3');
+    const one = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }], banner: 'b.png', output: 'o.mp4' }).args.join(' ');
+    expect(one).toContain('concat=n=1:v=1:a=1[v0][a]'); expect(one).not.toContain('amix');
   });
 });
 
