@@ -1405,4 +1405,6 @@ export const EN: Record<string, string> = {
   "Ajouter un autre passage": "Add another clip",
   "Image entière": "Whole picture",
   "Cadrage": "Framing",
+  "Portrait": "Portrait",
+  "Paysage": "Landscape",
 };

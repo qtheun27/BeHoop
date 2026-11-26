@@ -497,7 +497,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
         <div key={i} className="clip-part"><span>{t('Passage {n}', { n: i + 1 })} · {fmtP(p0)} → {fmtP(p1)} · {(p1 - p0).toFixed(1)} s</span>
           <button className="btn ghost small" aria-label={t('Retirer')} onClick={() => setParts((p) => p.filter((_, k) => k !== i))}>✕</button></div>))}</div>}
       <button className="btn ghost clip-add" disabled={!canAdd} onClick={add}><Ico n="plus" />{t('Ajouter un autre passage')}</button>
-      <div className="seg mt"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Plein écran')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Image entière')}</button></div>
+      <div className="seg mt"><button className={layout === 'full' ? 'on' : ''} onClick={() => setLayout('full')}>{t('Portrait')}</button><button className={layout !== 'full' ? 'on' : ''} onClick={() => setLayout('fit')}>{t('Paysage')}</button></div>
       {layout === 'full' && <label className="clip-pos"><span className="muted">{t('Cadrage')}</span>
         <input type="range" min={0} max={1} step={0.01} value={pos} onChange={(e) => setPos(Number(e.target.value))} aria-label={t('Cadrage')} /></label>}
       <div className="clip-act">

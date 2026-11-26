@@ -1405,4 +1405,6 @@ export const NL: Record<string, string> = {
   "Ajouter un autre passage": "Nog een fragment toevoegen",
   "Image entière": "Volledig beeld",
   "Cadrage": "Kadrering",
+  "Portrait": "Staand",
+  "Paysage": "Liggend",
 };
