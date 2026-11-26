@@ -227,7 +227,7 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
   const lists = useAsync(async () => (st.data?.connected ? (await api<{ playlists: { id: string; title: string }[] }>('/youtube/playlists', {})).playlists : []), [st.data?.connected]);
   const set = mv.settings ? settingsFromStore(mv.settings) : null;
   const season = (() => { const d = new Date(set?.date ?? Date.now()); const y = d.getMonth() >= 6 ? d.getFullYear() : d.getFullYear() - 1; return `${y}-${String(y + 1).slice(2)}`; })();
-  const [title, setTitle] = useState(moment ? `${mv.title} — Moment` : mv.title), [text, setText] = useState(desc);
+  const [title, setTitle] = useState(moment ? moment.title || `${mv.title} — Moment` : mv.title), [text, setText] = useState(moment?.text ? `${moment.text}\n\n${desc}` : desc);
   const target = moment ? { matchVideoId: id, momentId: moment.id } : { matchVideoId: id };
   const [privacy, setPrivacy] = useState<'public' | 'unlisted' | 'private'>(youth ? 'unlisted' : 'public');
   const [pl, setPl] = useState('none'), [plName, setPlName] = useState(set ? `${set.home.name} — ${season}` : `BeHoop — ${season}`);
@@ -272,7 +272,7 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
 
 interface MatchVideo { youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube'] }
+interface Moment { id: string; start: number; end: number; status: string; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string }
 
 /** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
 const CAN_VOLUME = (() => { try { const v = document.createElement('video'); v.volume = 0.5; return v.volume === 0.5 && !/iPhone|iPad|iPod/.test(navigator.userAgent); } catch { return false; } })();
@@ -448,6 +448,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const [parts, setParts] = useState<{ a: number; b: number; keys: Key[] }[]>([]);
   const [keys, setKeys] = useState<Key[]>([]); // points de cadrage du passage en cours (t depuis son début)
   const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
+  const [mTitle, setMTitle] = useState(''), [mText, setMText] = useState('');
   const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number } | null>(null);
   const last = useRef(0);
   const show = (tt: number, final = false) => {
@@ -558,12 +559,14 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
         <button className="btn ghost small" onClick={addKey}><Ico n="plus" />{t('Point de cadrage ici')}</button>
         {keys.length > 0 && <><span className="muted">{t('{n} point(s) : le cadre glisse de l’un à l’autre', { n: keys.length })}</span><button className="btn ghost small" onClick={() => setKeys([])}>{t('Effacer')}</button></>}
       </div>}
+      <input className="field mt" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
+      <textarea className="field mt" rows={2} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
       <div className="clip-act">
         <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
         <button className="btn ghost" onClick={() => { stop(); const c = video.current?.currentTime ?? time; const [na, nb] = around(c); put(na, nb, 'm', true); }}>{t('Partir d\'ici')}</button>
       <button className="btn" disabled={!ok || busy} onClick={async () => { stop(); setBusy(true);
-        try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos }); s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
+        try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText }); s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); } catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } }}>{t('Créer')}</button>
       </div>
     </div>
   );

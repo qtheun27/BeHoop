@@ -102,7 +102,7 @@ export function PostCard({ post }: { post: D.Post }) {
       </header>
       {(p.type === 'score' || p.type === 'live') && <ScoreCard p={pl as ScorePayload} live={p.type === 'live'} />}
       {p.type === 'live' && pl.updatedByName && <div className="card-body muted" style={{ paddingTop: 8, fontSize: 14 }}>{t('Mis à jour par {name}', { name: pl.updatedByName })}</div>}
-      {(p.type === 'message' || p.type === 'photo') && pl.text && <div className="card-body">{pl.text}</div>}
+      {(p.type === 'message' || p.type === 'photo' || p.type === 'moment') && pl.text && <div className="card-body">{pl.text}</div>}
       {pl.embed && (() => { const e = parseEmbed(pl.embed); return e ? <Embed e={e} auto /> : null; })()}
       {p.type === 'photo' && <div className="carousel">{(pl.photos as { key: string }[]).map((ph, i) => <img key={i} src={mediaUrl(ph.key)} alt="" loading="lazy" draggable={false} onContextMenu={isYouthMedia ? (e) => e.preventDefault() : undefined} />)}</div>}
       {(p.type === 'video' || p.type === 'moment') && (

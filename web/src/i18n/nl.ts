@@ -1424,4 +1424,6 @@ export const NL: Record<string, string> = {
   "Analyse impossible sur cet appareil : place les points à la main.": "Analyse niet mogelijk op dit toestel: plaats de punten met de hand.",
   "Analyse… {n} %": "Analyse… {n} %",
   "Suivre l’action": "De actie volgen",
+  "Titre (facultatif) — ex. : le panier de la victoire": "Titel (optioneel) — bv.: de winnende korf",
+  "Description (facultatif)": "Beschrijving (optioneel)",
 };

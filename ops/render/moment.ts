@@ -86,16 +86,21 @@ try {
   const whoosh = join(ROOT, 'render/assets/whoosh.m4a');
   const joined = momentJoinArgs({ clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined });
   await ff(joined.args);
+  // Affiche du Moment : une image de son premier passage (et non l'affiche du match, recadrée au mauvais endroit)
+  const poster = join(work, 'poster.jpg');
+  await ff(['-y', '-ss', String(Math.min(2.5, parts[0].duration / 2)), '-i', out, '-frames:v', '1', '-vf', 'scale=720:-2', '-q:v', '3', poster]);
   const vis = mv.visibility === 'team' ? `team-${mv.teamIdPrivate}` : 'public';
   const key = `moments/${vis}/${m.matchVideoId}/${id}.mp4`;
   await r2.upload(key, out, 'video/mp4');
-  await ref.update({ status: 'ready', progress: 100, step: 'Prêt', r2Key: key, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
+  const posterKey = key.replace(/\.mp4$/, '.jpg');
+  await r2.upload(posterKey, poster, 'image/jpeg');
+  await ref.update({ status: 'ready', progress: 100, step: 'Prêt', r2Key: key, posterKey, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
   await db.doc(`posts/moment-${id}`).set({
     type: 'moment', authorUid: m.authorUid, authorName: m.authorName ?? '', clubId: null, teamIds: mv.teamIds, targets: mv.teamIds.filter(Boolean).map((x: number) => `t:${x}`),
     visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: false, reactions: {}, createdAt: FieldValue.serverTimestamp(),
-    payload: { matchVideoId: m.matchVideoId, momentId: id, title: st.title, duration: Math.round(joined.duration), posterKey: mv.hls.posterKey, score: `${h} – ${a}` },
+    payload: { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` },
   });
-  await notifyUsers([m.authorUid], { title: N.momentReady, body: st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
+  await notifyUsers([m.authorUid], { title: N.momentReady, body: m.title || st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {
   console.error(e); await ref.update({ status: 'error', error: String((e as Error).message).slice(0, 300) }); process.exitCode = 1;
 }

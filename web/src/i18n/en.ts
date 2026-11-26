@@ -1424,4 +1424,6 @@ export const EN: Record<string, string> = {
   "Analyse impossible sur cet appareil : place les points à la main.": "Analysis not possible on this device: place the points by hand.",
   "Analyse… {n} %": "Analysing… {n} %",
   "Suivre l’action": "Follow the action",
+  "Titre (facultatif) — ex. : le panier de la victoire": "Title (optional) — e.g.: the winning basket",
+  "Description (facultatif)": "Description (optional)",
 };

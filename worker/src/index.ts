@@ -440,7 +440,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const pos = Math.min(1, Math.max(0, Number(body.pos ?? 0.5) || 0));
     const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
     await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start: clips[0].start, end: clips[0].end,
-      clips, layout, pos, duration: Math.round(total * 10) / 10, status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
+      clips, layout, pos, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
     await dispatch(env, 'moment.yml', { momentId: id });
     return json({ id });
   }
