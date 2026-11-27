@@ -4,7 +4,7 @@
 export const LEGAL_UPDATED = '27/11/2026';
 export const DOCS: Record<string, { title: string; body: [string, string][] }> = {
   cgu: { title: "Conditions d'utilisation", body: [
-    ['Éditeur', "BeHoop (behoop.be) est édité par Quentin Theuninck, indépendant (Arch-In-Tech), Belgique. Contact : q.theuninck@gmail.com."],
+    ['Éditeur', "BeHoop (behoop.be) est édité par Quentin Theuninck, indépendant (Arch In Tech), numéro d'entreprise BE 0597.760.718, rue de Basècles 13, 7321 Bernissart, Belgique. Contact : q.theuninck@gmail.com · +32 479 35 64 48."],
     ['Le service', "BeHoop est un espace gratuit, sans publicité, pour suivre et vivre le basket : résultats, calendriers et classements, fil de tes clubs, équipes privées, covoiturage, Espace Club (séances, exercices, Hoop Camp), vidéos de match montées automatiquement et Moments. Si des services payants pour les clubs sont proposés un jour, ils seront annoncés à l'avance et resteront facultatifs : les fonctions gratuites décrites ici restent gratuites."],
     ['Ton compte', "Il faut avoir 13 ans ou plus pour créer un compte. Un enfant plus jeune ne peut apparaître dans BeHoop que par l'intermédiaire de son parent ou de son club (prénom et nom dans l'équipe, Hoop Camp), sous leur responsabilité. Ton prénom et l'initiale de ton nom sont visibles des autres utilisateurs. Garde ton accès pour toi : tu es responsable de ce qui est fait avec ton compte."],
     ['Ce que tu publies', "Tu dois avoir le droit de publier tes textes, photos et vidéos. Pour toute image d'un mineur, tu confirmes avoir l'accord de ses parents ; les médias d'une équipe Jeunes ne sont visibles que par les membres validés de l'équipe. Tu retires un contenu dès qu'un parent le demande. Tu restes propriétaire de tes contenus et tu autorises BeHoop à les héberger, les monter (vidéos, Moments, affiches) et les afficher aux personnes autorisées, uniquement pour faire fonctionner le service, jusqu'à leur suppression."],
@@ -19,7 +19,7 @@ export const DOCS: Record<string, { title: string; body: [string, string][] }> =
     ['Contact', 'q.theuninck@gmail.com'],
   ] },
   confidentialite: { title: 'Politique de confidentialité', body: [
-    ['Responsable du traitement', "Quentin Theuninck, indépendant (Arch-In-Tech), Belgique — q.theuninck@gmail.com. C'est à cette adresse que tu exerces tes droits ou poses tes questions sur tes données."],
+    ['Responsable du traitement', "Quentin Theuninck, indépendant (Arch In Tech), numéro d'entreprise BE 0597.760.718, rue de Basècles 13, 7321 Bernissart, Belgique — q.theuninck@gmail.com. C'est à cette adresse e-mail que tu exerces tes droits ou poses tes questions sur tes données."],
     ['En bref', "BeHoop ne fait ni publicité, ni revente de données, ni profilage. Les données servent uniquement à faire fonctionner l'appli. Les contenus des équipes de jeunes restent privés à l'équipe."],
     ['Ton compte', "Adresse e-mail, identifiant de connexion, prénom et initiale du nom, langue, préférences de notification et jetons de notification de tes appareils. Avec « Continuer avec Google », BeHoop reçoit aussi ton nom et ta photo de profil. Base légale : l'exécution du service que tu demandes (contrat)."],
     ['Ton activité', "Clubs et équipes suivis, adhésions aux équipes, publications, commentaires, réactions, signalements, votes pour l'action du match. Base légale : contrat ; pour les signalements et la sécurité, l'intérêt légitime de protéger les utilisateurs."],
