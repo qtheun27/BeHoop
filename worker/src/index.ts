@@ -11,6 +11,7 @@ import { settingsToStore } from '../../shared/types';
 import { validateScores } from '../../shared/scores';
 import { N } from '../../shared/notifText';
 import { clubApi, spacesOf } from './club';
+import { jamendo, MUSIC_MOODS } from './music';
 import { googleConfig, ytAccess, ytCallback, YT_SCOPE, YT_CALLBACK } from './youtube';
 
 export interface Env {
@@ -416,6 +417,32 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     const c = await googleConfig(fs);
     return json({ configured: !!c, clientId: c?.clientId ?? null });
   }
+  // ----- Bande son des Moments : catalogue de musique libre (Jamendo), mis à jour tout seul (morceaux populaires de la semaine)
+  if (path === '/admin/jamendo') {
+    if (!isAdmin) throw new Error('FORBIDDEN');
+    if (body.clientId) {
+      const clientId = String(body.clientId).trim();
+      if (!/^[a-z0-9]{6,40}$/i.test(clientId)) return fail('Client ID invalide');
+      const r = await jamendo(clientId, { limit: '1' });
+      if (!r.ok) return fail(r.error);
+      await fs.set('config/jamendo', { clientId, at: Date.now() }, false);
+    }
+    const c = await fs.get<any>('config/jamendo');
+    return json({ configured: !!c?.clientId });
+  }
+  if (path === '/music') {
+    const c = await fs.get<any>('config/jamendo');
+    if (!c?.clientId) return json({ available: false, tracks: [] });
+    const mood = MUSIC_MOODS[String(body.mood)] ? String(body.mood) : 'energie';
+    const key = new Request(`https://media.behoop.be/__music/${mood}`);
+    const hit = await caches.default.match(key);
+    if (hit) return json({ available: true, tracks: await hit.json() });
+    const r = await jamendo(c.clientId, { fuzzytags: MUSIC_MOODS[mood], order: 'popularity_week', limit: '60', durationbetween: '30_420' });
+    if (!r.ok) return json({ available: true, tracks: [], error: true });
+    const tracks = r.tracks.slice(0, 40);
+    await caches.default.put(key, new Response(JSON.stringify(tracks), { headers: { 'Cache-Control': 'public, max-age=21600' } })).catch(() => {});
+    return json({ available: true, tracks });
+  }
   if (path === '/youtube/status') {
     const c = await googleConfig(fs), tk = await fs.get<any>(`ytTokens/${user.uid}`);
     return json({ available: !!c, connected: !!tk?.refreshToken, channelTitle: tk?.channelTitle ?? null, channelThumb: tk?.channelThumb ?? null });
@@ -505,9 +532,18 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (total > 60.5) return fail('60 secondes au maximum au total');
     const layout = body.layout === 'fit' ? 'fit' : 'full';
     const pos = Math.min(1, Math.max(0, Number(body.pos ?? 0.5) || 0));
+    // Bande son (facultative) : le morceau est relu chez Jamendo (licence vérifiée), jamais repris tel quel de l'appli
+    let music: any = null;
+    if (body.music?.id) {
+      const c = await fs.get<any>('config/jamendo');
+      const r = c?.clientId ? await jamendo(c.clientId, { id: String(body.music.id).replace(/\D/g, '').slice(0, 12) }) : null;
+      const tr = r?.ok ? r.tracks[0] : null;
+      if (!tr) return fail('Morceau indisponible, choisis-en un autre');
+      music = { ...tr, start: Math.round(Math.min(Math.max(0, tr.duration - total), Math.max(0, Number(body.music.start) || 0)) * 10) / 10 };
+    }
     const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
     await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start: clips[0].start, end: clips[0].end,
-      clips, layout, pos, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
+      clips, layout, pos, music, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
     await dispatch(env, 'moment.yml', { momentId: id });
     return json({ id });
   }

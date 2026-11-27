@@ -34,6 +34,9 @@ try {
   const mv = (await mvRef.get()).data()!;
   const moment = momentId ? (await ref.get()).data()! : null;
   const yt = (moment ?? mv).youtube; if (!yt) throw new Error('aucune publication demandée');
+  // Bande son libre de droits : l'auteur est cité dans la description (exigé par les licences CC BY / BY-SA)
+  const mu = moment?.music;
+  const description = [yt.description ?? '', mu ? `♪ Musique : ${mu.title} — ${mu.artist} (${mu.license}) ${mu.url}` : ''].filter(Boolean).join('\n\n').slice(0, 5000);
   const cfg = (await db.doc('config/google').get()).data();
   const tk = (await db.doc(`ytTokens/${yt.uid}`).get()).data();
   if (!cfg?.clientId || !cfg?.clientSecret) throw new Error('identifiants Google absents');
@@ -85,7 +88,7 @@ try {
   await set({ status: 'uploading', progress: 0 });
   const init = await fetch('https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status', { method: 'POST',
     headers: { Authorization: `Bearer ${await access()}`, 'Content-Type': 'application/json; charset=UTF-8', 'X-Upload-Content-Length': String(size), 'X-Upload-Content-Type': 'video/mp4' },
-    body: JSON.stringify({ snippet: { title: yt.title, description: yt.description ?? '', categoryId: '17' /* Sports */ },
+    body: JSON.stringify({ snippet: { title: yt.title, description, categoryId: '17' /* Sports */ },
       status: { privacyStatus: yt.privacy, selfDeclaredMadeForKids: false, embeddable: true } }) });
   if (!init.ok) { const j: any = await init.json().catch(() => ({})); throw new Error(`${j.error?.errors?.[0]?.reason ?? ''} ${j.error?.message ?? init.status}`.trim()); }
   const session = init.headers.get('location')!;

@@ -18,7 +18,7 @@ export default function Moderation() {
   return (
     <Screen title={t('Modération')} back="profil">
       <div className="seg mod-tabs">{([['requests', 'Demandes'], ['reports', 'Signalements'], ['hidden', 'Masqués'], ['teams', 'Équipes'], ['users', 'Comptes'], ['clubs', 'Clubs'], ['support', 'Messages'], ['youtube', 'YouTube']] as const).map(([k, l]) => <button key={k} className={tab === k ? 'on' : ''} onClick={() => setTab(k)}>{t(l)}</button>)}</div>
-      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}{tab === 'support' && <Support />}{tab === 'youtube' && <GoogleSetup />}
+      {tab === 'requests' && <Requests />}{tab === 'reports' && <Reports />}{tab === 'hidden' && <Hidden />}{tab === 'teams' && <Teams />}{tab === 'users' && <Users />}{tab === 'clubs' && <><Clubs /><AllInvitations /></>}{tab === 'support' && <Support />}{tab === 'youtube' && <><GoogleSetup /><MusicSetup /></>}
     </Screen>
   );
 }
@@ -359,6 +359,23 @@ function Support() {
         </div>
       )}
     </>
+  );
+}
+
+/** Catalogue de musique des Moments : Client ID de l'application Jamendo (devportal.jamendo.com), vérifié avant d'être rangé */
+function MusicSetup() {
+  const s = useSession();
+  const st = useAsync(() => api<{ configured: boolean }>('/admin/jamendo', {}), []);
+  const [id, setId] = useState(''), [busy, setBusy] = useState(false);
+  const save = async () => { setBusy(true); try { await api('/admin/jamendo', { clientId: id.trim() }); setId(''); st.reload(); s.toast(t('Catalogue de musique activé.')); } catch (e) { s.toast(String((e as Error).message || t('Client ID refusé'))); } finally { setBusy(false); } };
+  return (
+    <div className="form mt">
+      <h3 style={{ margin: '0 0 4px' }}>{t('Musique des Moments')}</h3>
+      <p className="muted">{t('Catalogue de musique libre de droits (Jamendo) : crée une application gratuite sur devportal.jamendo.com puis colle ici son Client ID.')}</p>
+      {st.data && <p><b>{st.data.configured ? t('✓ Configuré') : t('Pas encore configuré')}</b></p>}
+      <label className="label">{t('Client ID Jamendo')}</label><input className="field" value={id} onChange={(e) => setId(e.target.value)} autoComplete="off" />
+      <button className="btn" disabled={busy || !id.trim()} onClick={save}>{t('Enregistrer')}</button>
+    </div>
   );
 }
 

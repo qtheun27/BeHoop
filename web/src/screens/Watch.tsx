@@ -277,7 +277,7 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
 
 interface MatchVideo { inFeed?: boolean; youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string }
+interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string; music?: { title: string; artist: string; license: string; url: string } }
 
 /** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
 const CAN_VOLUME = (() => { try { const v = document.createElement('video'); v.volume = 0.5; return v.volume === 0.5 && !/iPhone|iPad|iPod/.test(navigator.userAgent); } catch { return false; } })();
@@ -463,6 +463,10 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
   const [mTitle, setMTitle] = useState(''), [mText, setMText] = useState('');
   const [mFeed, setMFeed] = useState(true);
+  // Bande son du catalogue : elle remplace le son du match ; un seul lecteur audio (écoute du catalogue + aperçu)
+  const [music, setMusic] = useState<{ tr: Track; start: number } | null>(null);
+  const aud = useRef<HTMLAudioElement | null>(null), muted = useRef(false);
+  const audio = () => (aud.current ??= new Audio());
   const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number; lastX?: number } | null>(null);
   const last = useRef(0);
   const show = (tt: number, final = false) => {
@@ -471,7 +475,9 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
     const fs = (v as HTMLVideoElement & { fastSeek?: (t: number) => void }).fastSeek;
     if (fs && !final) fs.call(v, tt); else v.currentTime = tt;
   };
-  const stop = () => { preview.current = false; setPlaying(false); video.current?.pause(); };
+  const stop = () => { preview.current = false; setPlaying(false); video.current?.pause(); aud.current?.pause();
+    if (muted.current && video.current) { video.current.muted = false; muted.current = false; } };
+  useEffect(() => () => { aud.current?.pause(); }, []);
   const put = (na: number, nb: number, kind: 'a' | 'b' | 'm', final = false) => {
     const r = (x: number) => Math.round(x * 10) / 10;
     na = r(Math.max(0, na)); nb = r(Math.min(dur, nb));
@@ -615,7 +621,11 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const nudge = (which: 'a' | 'b', d0: number) => { const d = d0 * stepS; stop(); haptic();
     if (which === 'a') put(Math.min(Math.max(a + d, b - CLIP_MAX), b - CLIP_MIN), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + CLIP_MAX), a + CLIP_MIN), 'b', true); };
   // Édition au doigt (mobile) : vidéo fixe en haut, onglets courts, barre d'actions fixe en bas, cadre à glisser sur la vidéo
-  const [tab, setTab] = useState<'pass' | 'crop' | 'info'>('pass');
+  const [tab, setTab] = useState<'pass' | 'crop' | 'sound' | 'info'>('pass');
+  // Aperçu avec musique : le morceau suit la vidéo (décalé des passages déjà ajoutés), recalé s'il dérive
+  const prevLen = parts.reduce((x, p) => x + p.b - p.a, 0);
+  useEffect(() => { const el = aud.current; if (!playing || !music || !el) return;
+    const want = music.start + prevLen + Math.max(0, time - a); if (Math.abs(el.currentTime - want) > 0.35) el.currentTime = want; }, [time]); // eslint-disable-line react-hooks/exhaustive-deps
   const [selKey, setSelKey] = useState<number | null>(null);
   useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit', 'crop-edit', 'crop-pick'); }, []);
   const cropping = tab === 'crop' && layout === 'full';
@@ -634,7 +644,8 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const lineAt = (e: React.PointerEvent, final = false) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); const tt = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a); show(a + tt, final); };
   const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
-    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed });
+    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed,
+      music: music ? { id: music.tr.id, start: music.start } : undefined });
       s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
     catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
   return (
@@ -645,7 +656,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
       <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
         {parts.length > 0 && <span className="muted" style={{ fontWeight: 400 }}> · {total.toFixed(0)}/{MOMENT_TOTAL} s</span>}</b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
-      <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
+      <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'sound' ? 'on' : ''} onClick={() => setTab('sound')}>{t('Son')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
       {tab === 'pass' && <>
         <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
           {ticks.map((x) => <div key={x} className="clip-tick" style={{ left: pct(x) }}><span>{fmt(x)}</span></div>)}
@@ -687,18 +698,60 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
           </div>
         </>}
       </>}
+      {tab === 'sound' && <MusicTab music={music} setMusic={setMusic} audio={audio} total={total} stopPreview={stop} />}
       {tab === 'info' && <>
         <input className="field" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
         <textarea className="field mt" rows={3} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
         <label className="check mt"><input type="checkbox" checked={mFeed} onChange={(e) => setMFeed(e.target.checked)} />{t('Publier dans le fil BeHoop')}</label>
       </>}
       <div className="clip-bar">
-        <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true); v.play().catch(() => setPlaying(false)); }}>
+        <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; v.currentTime = a; preview.current = true; setPlaying(true);
+          if (music) { const el = audio(); v.muted = true; muted.current = true; if (el.src !== music.tr.audio) el.src = music.tr.audio; el.currentTime = music.start + prevLen; el.play().catch(() => {}); }
+          v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
         <button className="btn" disabled={!ok || busy} onClick={create}>{t('Créer')}{parts.length ? ` (${parts.length + 1})` : ''}</button>
       </div>
     </div>
   );
+}
+
+interface Track { id: string; title: string; artist: string; duration: number; audio: string; image: string | null; license: string; url: string }
+const MOODS: [string, string][] = [['energie', 'Énergique'], ['hiphop', 'Hip-hop'], ['electro', 'Électro'], ['rock', 'Rock'], ['epique', 'Épique'], ['chill', 'Chill']];
+/** Onglet « Son » : catalogue de musique libre (mis à jour tout seul chaque semaine), écoute, point de départ dans le morceau */
+function MusicTab({ music, setMusic, audio, total, stopPreview }: { music: { tr: Track; start: number } | null; setMusic: (m: { tr: Track; start: number } | null) => void;
+  audio: () => HTMLAudioElement; total: number; stopPreview: () => void }) {
+  const s = useSession();
+  const [mood, setMood] = useState('energie');
+  const list = useAsync(() => api<{ available: boolean; tracks: Track[]; error?: boolean }>('/music', { mood }), [mood]);
+  const [on, setOn] = useState<string | null>(null);
+  const listen = (tr: Track, from = 0) => { stopPreview(); const el = audio();
+    if (on === tr.id && from === 0) { el.pause(); setOn(null); return; }
+    if (el.src !== tr.audio) el.src = tr.audio; el.currentTime = from; el.onended = () => setOn(null); el.play().then(() => setOn(tr.id)).catch(() => setOn(null)); };
+  useEffect(() => () => { audio().pause(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const max = music ? Math.max(0, Math.floor(music.tr.duration - total)) : 0;
+  return <>
+    {music ? <div className="mus-sel">
+      <div className="grow"><b>♪ {music.tr.title}</b><div className="sub">{music.tr.artist} · {t('remplace le son du match')}</div></div>
+      <button className="btn ghost small" aria-label={t('Retirer la musique')} onClick={() => { audio().pause(); setOn(null); setMusic(null); }}>✕</button>
+    </div> : <p className="hint" style={{ margin: '4px 0 8px' }}>{t('Son du match. Choisis une musique libre de droits pour la remplacer (l’artiste est cité automatiquement).')}</p>}
+    {music && max > 0 && <div className="mus-start">
+      <span className="muted">{t('Départ dans le morceau')} <b>{fmt(music.start)}</b></span>
+      <input type="range" min={0} max={max} step={1} value={Math.min(max, music.start)} aria-label={t('Départ dans le morceau')}
+        onChange={(e) => setMusic({ ...music, start: Number(e.target.value) })} onPointerUp={() => listen(music.tr, music.start)} />
+    </div>}
+    <div className="mus-moods">{MOODS.map(([k, label]) => <button key={k} className={`chip${mood === k ? ' on' : ''}`} onClick={() => setMood(k)}>{t(label)}</button>)}</div>
+    {list.loading ? <Skeleton h={56} n={4} /> : !list.data?.available ? <p className="hint">{s.isAdmin ? t('Catalogue à activer : Modération › YouTube › Musique (Client ID Jamendo).') : t('Catalogue de musique bientôt disponible.')}</p>
+      : !list.data.tracks.length ? <p className="hint">{t('Aucun morceau pour le moment, réessaie plus tard.')}</p>
+      : <div className="mus-list">{list.data.tracks.map((tr) => (
+        <div key={tr.id} className={`mus-row${music?.tr.id === tr.id ? ' on' : ''}`}>
+          <button className="mus-play" aria-label={on === tr.id ? t('Pause') : t('Écouter')} onClick={() => { haptic(); listen(tr); }}
+            style={tr.image ? { backgroundImage: `url(${tr.image})` } : undefined}><Ico n={on === tr.id ? 'pause' : 'play'} /></button>
+          <div className="grow ellipsis"><b>{tr.title}</b><div className="sub ellipsis">{tr.artist} · {fmt(tr.duration)}</div></div>
+          <button className={`btn small${music?.tr.id === tr.id ? '' : ' ghost'}`} disabled={tr.duration < total} onClick={() => { haptic(); setMusic({ tr, start: 0 }); }}>
+            {music?.tr.id === tr.id ? '✓' : t('Choisir')}</button>
+        </div>))}</div>}
+    <p className="hint" style={{ fontSize: 12 }}>{t('Musique libre de droits (Creative Commons) via Jamendo.')}</p>
+  </>;
 }
 
 function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: MatchVideo; youth: boolean }) {
@@ -717,6 +770,7 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
   return (
     <div className="center">
       <video src={url} controls playsInline style={{ maxHeight: '70dvh', borderRadius: 16, background: '#000', maxWidth: '100%' }} controlsList={m.data.authorUid === s.user?.uid ? undefined : 'nodownload'} />
+      {mo.music && <p className="muted" style={{ fontSize: 12, margin: '8px 0 0' }}>♪ {t('Musique')} : <a href={mo.music.url} target="_blank" rel="noreferrer">{mo.music.title} — {mo.music.artist}</a> ({mo.music.license})</p>}
       <div className="hstack mt" style={{ gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
         <button className="btn secondary" onClick={() => shareLink(mo.title || mv.title, momentShareUrl(id), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
       </div>

@@ -138,7 +138,13 @@ describe('commandes FFmpeg', () => {
     expect(s).toContain('overlay=W-w-24:300:shortest=1');
     expect(s).toContain('adelay=7700|7700'); expect(s).toContain('amix=inputs=3');
     const one = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }], banner: 'b.png', output: 'o.mp4' }).args.join(' ');
-    expect(one).toContain('concat=n=1:v=1:a=1[v0][a]'); expect(one).not.toContain('amix');
+    expect(one).toContain('concat=n=1:v=1:a=1[v0][a0]'); expect(one).toContain('[a0]anull[a]'); expect(one).not.toContain('amix');
+  });
+  it('bande son : remplace le son du match', () => {
+    const s = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }, { path: 'b', duration: 6 }], banner: 'b.png', output: 'o.mp4', whoosh: 'wh.m4a', music: { path: 'm.mp3', start: 12 } }).args.join(' ');
+    expect(s).toContain('-ss 12.00 -i m.mp3');
+    expect(s).toContain('[0:v][1:v]concat=n=2:v=1:a=0[v0]'); expect(s).not.toContain('[0:a]');
+    expect(s).toContain('[4:a]atrim=0:14.000'); expect(s).toContain('afade=t=out:st=12.500:d=1.5');
   });
 });
 

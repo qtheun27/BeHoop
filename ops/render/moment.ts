@@ -86,7 +86,15 @@ try {
   await step(85, 'Assemblage');
   const out = join(work, 'moment.mp4');
   const whoosh = join(ROOT, 'render/assets/whoosh.m4a');
-  const joined = momentJoinArgs({ clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined });
+  // Bande son du catalogue (facultative) : elle remplace le son du match
+  let music: { path: string; start: number } | undefined;
+  if (m.music?.audio) {
+    const r = await fetch(m.music.audio);
+    if (!r.ok) throw new Error(`bande son introuvable (${r.status})`);
+    const mp = join(work, 'music.mp3'); writeFileSync(mp, Buffer.from(await r.arrayBuffer()));
+    music = { path: mp, start: Number(m.music.start) || 0 };
+  }
+  const joined = momentJoinArgs({ clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined, music });
   await ff(joined.args);
   // Affiche du Moment : une image de son premier passage (et non l'affiche du match, recadrée au mauvais endroit)
   const poster = join(work, 'poster.jpg');
@@ -101,7 +109,7 @@ try {
   await db.doc(`posts/moment-${id}`).set({
     type: 'moment', authorUid: m.authorUid, authorName: m.authorName ?? '', clubId: null, teamIds: mv.teamIds, targets: mv.teamIds.filter(Boolean).map((x: number) => `t:${x}`),
     visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: m.inFeed === false, ...(m.inFeed === false ? { hiddenReason: 'auteur', hiddenBy: m.authorUid } : {}), reactions: {}, createdAt: FieldValue.serverTimestamp(),
-    payload: { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` },
+    payload: { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), ...(m.music ? { music: { title: m.music.title, artist: m.music.artist, license: m.music.license, url: m.music.url } } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` },
   });
   await notifyUsers([m.authorUid], { title: N.momentReady, body: m.title || st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {

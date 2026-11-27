@@ -185,7 +185,9 @@ export function momentClipArgs(input: string, start: number, end: number, layout
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
 }
 
-export interface MomentJoin { clips: { path: string; duration: number }[]; banner: string; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string }
+export interface MomentJoin { clips: { path: string; duration: number }[]; banner: string; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string;
+  /** Bande son du catalogue : elle REMPLACE le son du match (pas de mélange), à partir de `start` s dans le morceau */
+  music?: { path: string; start: number } }
 /**
  * Assemblage d'un Moment : passages bout à bout, vague par-dessus chaque coupure (elle couvre l'écran à l'instant de la
  * coupure), bandeau du score en haut, logo BeHoop animé juste sous le bandeau (hors des commandes des lecteurs, YouTube Shorts compris).
@@ -201,8 +203,13 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
   const T = acc + o.clips[n - 1].duration;
   const wi = o.wave ? cuts.map(() => (args.push('-framerate', '30', '-i', o.wave!), k++)) : [];
   const hi = o.whoosh && cuts.length ? (args.push('-i', o.whoosh), k++) : -1;
+  const mi = o.music ? (args.push('-ss', Math.max(0, o.music.start).toFixed(2), '-i', o.music.path), k++) : -1;
   const f: string[] = [];
-  f.push(`${o.clips.map((_, i) => `[${i}:v][${i}:a]`).join('')}concat=n=${n}:v=1:a=1[v0][a0]`);
+  if (mi >= 0) {
+    // Son du match retiré : seule la musique (fondu d'entrée très court, fondu de sortie sur la dernière seconde et demie)
+    f.push(`${o.clips.map((_, i) => `[${i}:v]`).join('')}concat=n=${n}:v=1:a=0[v0]`);
+    f.push(`[${mi}:a]atrim=0:${T.toFixed(3)},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,afade=t=in:d=0.15,afade=t=out:st=${Math.max(0, T - 1.5).toFixed(3)}:d=1.5,apad[a0]`);
+  } else f.push(`${o.clips.map((_, i) => `[${i}:v][${i}:a]`).join('')}concat=n=${n}:v=1:a=1[v0][a0]`);
   let v = '[v0]';
   wi.forEach((w, i) => { f.push(`[${w}:v]setpts=PTS-STARTPTS+${(cuts[i] - (o.waveCut ?? 0.35)).toFixed(3)}/TB[w${i}]`, `${v}[w${i}]overlay=0:0:eof_action=pass[vw${i}]`); v = `[vw${i}]`; });
   f.push(`${v}[${bi}:v]overlay=0:0[vb]`); v = '[vb]';
@@ -212,7 +219,7 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
     f.push(`[${hi}:a]asplit=${cuts.length}${cuts.map((_, i) => `[h${i}]`).join('')}`);
     cuts.forEach((c, i) => { const ms = Math.max(0, Math.round((c - 0.3) * 1000)); f.push(`[h${i}]adelay=${ms}|${ms},volume=0.6[hd${i}]`); });
     f.push(`[a0]${cuts.map((_, i) => `[hd${i}]`).join('')}amix=inputs=${cuts.length + 1}:duration=first:normalize=0[a]`);
-  } else f[0] = f[0].replace('[a0]', '[a]');
+  } else f.push('[a0]anull[a]');
   args.push('-filter_complex', f.join(';'), '-map', '[v]', '-map', '[a]', '-t', T.toFixed(3),
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-maxrate', '8000k', '-bufsize', '16000k', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', o.output);
