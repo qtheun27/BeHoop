@@ -159,7 +159,8 @@ function SaveToPhotos({ url, name }: { url: string; name: string }) {
   const go = async () => {
     setSt({ pc: 0 }); await keepAwake(true);
     try {
-      const r = await fetch(url);
+      // Fichier protégé (Moment, /m/…) : envoyé avec l'identification (cookie) ; lien signé (match) : sans
+      const r = await fetch(url, url.includes('/m/') ? { credentials: 'include' } : undefined);
       if (!r.ok || !r.body) throw new Error(String(r.status));
       const total = Number(r.headers.get('Content-Length')) || 0;
       const reader = r.body.getReader(); const parts: Uint8Array[] = []; let got = 0;
