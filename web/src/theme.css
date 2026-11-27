@@ -588,3 +588,34 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .mus-start{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;font-size:13px}
 .mus-start input{width:100%}
 .mo-thumb{flex:none;width:40px;height:56px;object-fit:cover;border-radius:8px;margin-right:10px;background:#1c2233}
+/* Éditeur de Moment — frise du montage (un bloc par passage, largeur = durée sur 60 s) */
+.clip-strip{display:flex;gap:4px;height:46px;margin:8px 0 4px;padding:4px;border-radius:14px;background:var(--fill)}
+.clip-blk{flex:1 1 0;min-width:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;border-radius:10px;padding:0 4px;
+  background:color-mix(in srgb,var(--accent) 16%,var(--bg2));color:var(--text);font-variant-numeric:tabular-nums;line-height:1.1;overflow:hidden;border:2px solid transparent}
+.clip-blk b{font-size:14px}.clip-blk span{font-size:11px;color:var(--text2);white-space:nowrap}
+.clip-blk.on{background:var(--accent);color:#fff;border-color:var(--accent)}.clip-blk.on span{color:rgba(255,255,255,.85)}
+.clip-blk.play{box-shadow:0 0 0 2px var(--text)}
+.clip-blk.bad{border-color:var(--red)}
+.clip-blk.add{flex:0 0 40px;min-width:40px;background:transparent;border:2px dashed color-mix(in srgb,var(--accent) 60%,transparent);color:var(--accent)}
+.clip-rest{flex-basis:0;min-width:0}
+.clip-cur{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px;font-size:14px;font-variant-numeric:tabular-nums}
+.clip-cur .btn{padding:4px 10px;min-height:32px}
+/* Ordinateur : la barre d'actions reste dans la colonne de l'éditeur (alignée), collée en bas de l'écran */
+@media (min-width: 900px) {
+  .clip-ed{padding-bottom:14px}
+  .clip-bar{position:sticky;left:auto;right:auto;bottom:16px;margin:14px 0 0;max-width:none}
+}
+/* Frise du passage : poignées À L'EXTÉRIEUR du bloc (tout l'intérieur sert à le déplacer), graduations toutes les 5 s */
+.clip-track{margin-left:30px;margin-right:30px}
+.clip-h{width:30px}
+.clip-h.l{left:-30px}.clip-h.r{right:-30px}
+.clip-h::after{width:8px;height:30px;border-radius:4px;background:var(--accent,#f26a1b);box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.clip-h.l::after{left:auto;right:-2px;transform:translateY(-50%)}.clip-h.r::after{left:-2px;transform:translateY(-50%)}
+.clip-tick.minor{background:color-mix(in srgb,var(--text) 9%,transparent)}
+.clip-cur > span:first-child{white-space:nowrap}
+/* Ordinateur : vidéo moins haute pendant l'édition → vidéo et réglages visibles ensemble */
+@media (min-width: 900px) { :root.moment-edit .player{max-width:calc(46vh * 16 / 9);margin-left:auto;margin-right:auto} }
+.clip-head > b{white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media (max-width: 420px){ .clip-head > b{font-size:15px} }
+.mus-row .grow,.mus-sel .grow{flex:1;min-width:0}
+@media (min-width: 900px) { :root.moment-edit .player{max-width:calc(40vh * 16 / 9)} }
