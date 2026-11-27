@@ -233,9 +233,20 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   // ----- Gestion de ses contenus : Moments, vidéos de match, publications
   const dropMoment = async (mid: string, m: any) => {
     const dir = `moments/${m.visibility === 'team' ? `team-${m.teamIdPrivate}` : 'public'}/${m.matchVideoId}/${mid}`;
-    await env.BUCKET.delete([`${dir}.mp4`, `${dir}.jpg`]).catch(() => {});
+    // Tous ses fichiers : version d'origine, versions modifiées (r2Key / posterKey / anciennes), carte de partage
+    const keys = [`${dir}.mp4`, `${dir}.jpg`, m.r2Key, m.posterKey, ...(Array.isArray(m.prevKeys) ? m.prevKeys : []), `share/m/${mid}.jpg`].filter((k) => typeof k === 'string' && k);
+    await env.BUCKET.delete([...new Set(keys)] as string[]).catch(() => {});
     await fs.delete(`posts/moment-${mid}`).catch(() => {});
     await fs.delete(`moments/${mid}`);
+  };
+  /** Vidéo de match supprimée : fiche marquée supprimée, publication, Moments, fichiers et carte de partage effacés */
+  const dropVideo = async (id: string, v: any) => {
+    await fs.set(`matchVideos/${id}`, { status: 'deleted', hls: null, highlights: null });
+    await fs.delete(`posts/video-${id}`).catch(() => {});
+    for (const m of await fs.query('moments', [['matchVideoId', 'EQUAL', id]]).catch(() => [] as any[])) await dropMoment(String(m._path).split('/').pop()!, m);
+    const prefix = `videos/${v.visibility === 'team' ? `team-${v.teamIdPrivate}` : 'public'}/${id}/`;
+    for (let c: string | undefined; ;) { const l = await env.BUCKET.list({ prefix, cursor: c }); if (l.objects.length) await env.BUCKET.delete(l.objects.map((o) => o.key)); if (!l.truncated) break; c = l.cursor; }
+    await env.BUCKET.delete(`share/v/${id}.jpg`).catch(() => {});
   };
   /** Moment modifiable par son auteur, l'auteur du match ou l'administrateur */
   const ownMoment = async (mid: string) => {
@@ -287,12 +298,7 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   }
   if (path.startsWith('/montage/') && req.method === 'DELETE') {
     const id = path.split('/')[2]; const v = await ownVideo(id);
-    await fs.set(`matchVideos/${id}`, { status: 'deleted', hls: null });
-    await fs.delete(`posts/video-${id}`).catch(() => {});
-    // Ses Moments partent avec elle (fichiers, publications)
-    for (const m of await fs.query('moments', [['matchVideoId', 'EQUAL', id]]).catch(() => [] as any[])) await dropMoment(String(m._path).split('/').pop()!, m);
-    const prefix = `videos/${v.visibility === 'team' ? `team-${v.teamIdPrivate}` : 'public'}/${id}/`;
-    for (let c: string | undefined; ;) { const l = await env.BUCKET.list({ prefix, cursor: c }); if (l.objects.length) await env.BUCKET.delete(l.objects.map((o) => o.key)); if (!l.truncated) break; c = l.cursor; }
+    await dropVideo(id, v);
     return json({ ok: true });
   }
 
@@ -699,7 +705,21 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       for (const ph of p.payload?.photos ?? []) await env.BUCKET.delete(ph.key).catch(() => {});
       await fs.delete(p._path);
     }
-    for (const v of await fs.query('matchVideos', [['authorUid', 'EQUAL', user.uid]])) await fs.set(v._path, { status: 'deleted', authorUid: 'supprimé' });
+    // Vidéos de match et Moments publiés : fichiers effacés
+    for (const v of await fs.query('matchVideos', [['authorUid', 'EQUAL', user.uid]])) { await dropVideo(String(v._path).split('/').pop()!, v); await fs.set(v._path, { authorUid: 'supprimé', authorName: '' }); }
+    for (const m of await fs.query('moments', [['authorUid', 'EQUAL', user.uid]]).catch(() => [] as any[])) await dropMoment(String(m._path).split('/').pop()!, m);
+    // Espace Club : sa fiche joueur et son Hoop Camp ; ses enfants sans autre parent ni compte (fiche + Hoop Camp) ;
+    // sinon il est seulement retiré des parents de la fiche. Son rôle dans le club est effacé.
+    const dropCamp = async (pid: string) => {
+      for (const d of await fs.query('days', [], { parent: `hoopcamp/${pid}` }).catch(() => [] as any[])) await fs.delete(d._path);
+      await fs.delete(`hoopcamp/${pid}`).catch(() => {});
+    };
+    for (const p of await fs.query('players', [['account_uid', 'EQUAL', user.uid]]).catch(() => [] as any[])) { const pid = String(p._path).split('/').pop()!; await dropCamp(pid); await fs.delete(p._path); }
+    for (const p of await fs.query('players', [['parent_uids', 'ARRAY_CONTAINS', user.uid]]).catch(() => [] as any[])) {
+      const pid = String(p._path).split('/').pop()!, others = (p.parent_uids ?? []).filter((u: string) => u !== user.uid);
+      if (!others.length && !p.account_uid) { await dropCamp(pid); await fs.delete(p._path); } else await fs.set(p._path, { parent_uids: others });
+    }
+    await fs.delete(`users/${user.uid}`).catch(() => {});
     // Commentaires (actus, matchs, publications) : liste personnelle myComments/{uid}, effacés puis compteur du fil recalculé
     const threads = new Set<string>();
     for (const m of await fs.query('items', [], { parent: `myComments/${user.uid}` }).catch(() => [])) {
