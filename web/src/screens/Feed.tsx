@@ -267,7 +267,8 @@ export function Feed() {
           const myNews = (news.data?.items ?? []).filter((n) => readable(n) && relevant(n));
           const allLink = <a className="btn ghost small" style={{ display: 'flex', margin: '0 auto 14px' }} href="#/actus">{t('Toute l’actu du basket ›')}</a>;
           const oldest = posts.length ? posts[posts.length - 1].createdAt : 0;
-          const mix: { t: number; el: JSX.Element }[] = posts.map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
+          // Les Moments vont dans « Highlights » (et sur la page du match), pas dans le Parquet
+          const mix: { t: number; el: JSX.Element }[] = posts.filter((p) => p.type !== 'moment').map((p) => ({ t: p.createdAt, el: <PostCard key={p.id} post={p} /> }));
           const known = new Set(posts.filter((p) => p.type === 'score' || p.type === 'live').map((p) => p.payload.gameId));
           for (const g of mine.data?.games ?? []) if (!known.has(g.id)) mix.push({ t: Date.parse(`${g.d}T${g.t || '20:00'}`) + 2 * 3600e3, el: <GameScoreCard key={`g${g.id}`} g={g} idx={mine.data!.idx} label={g.sn} /> });
           myNews.filter((n) => Date.parse(n.date) >= oldest || cursorDone || !posts.length).forEach((n) => mix.push({ t: Date.parse(n.date), el: <NewsCard key={`n${n.id}`} n={n} wide list={myNews} /> }));
