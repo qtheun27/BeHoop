@@ -657,3 +657,7 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 }
 .score-row{padding:6px 8px 6px 12px}.score-row .sc{width:56px;margin:0;text-align:center;padding:6px 4px;font-variant-numeric:tabular-nums;font-weight:700}
 .score-head{display:grid;grid-template-columns:56px 56px;gap:22px;justify-content:end;padding:0 8px;font-size:11px;color:var(--text2);text-align:center}.score-head span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Moments forts : petits points orange sur la barre de lecture ; bouton de proposition dans l'éditeur */
+.player .bar .mark.hl{width:7px;height:7px;border-radius:50%;background:#f26a1b;box-shadow:0 0 0 2px rgba(0,0,0,.35);transform:translate(-3px,1px)}
+.hl-prop{width:100%;margin:0 0 8px;justify-content:center}
+.hl-prop .muted{font-weight:400}

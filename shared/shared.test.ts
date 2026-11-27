@@ -192,3 +192,21 @@ describe('score au début du quart', () => {
   it('quart', () => { expect(quarterAt(ch, 3)).toBe(0); expect(quarterAt(ch, 20)).toBe(2); expect(quarterAt(ch, 55)).toBe(5); });
   it('score', () => { expect(scoreAtQuarterStart(sc, 1)).toEqual([0, 0]); expect(scoreAtQuarterStart(sc, 3)).toEqual([20, 25]); expect(scoreAtQuarterStart(sc, 5)).toEqual([50, 44]); });
 });
+
+import { findHighlights, proposeMoment } from './highlights';
+describe('moments forts', () => {
+  const ch = [{ title: 'Avant-match', start: 0, end: 20 }, { title: 'Q1', start: 20, end: 620 }, { title: 'Q2', start: 620, end: 1220 }, { title: 'Fin', start: 1220, end: 1240 }];
+  const peaks = [150, 400, 700, 1000];
+  const n = 1240 * 4;
+  const db = Array.from({ length: n }, (_, i) => -30 + Math.sin(i / 7) * 1.5 + Math.sin(i * 1.7) + peaks.reduce((s, p) => s + 14 * Math.exp(-(((i * 0.25 - p) / 1.2) ** 2)), 0));
+  const mo = Array.from({ length: n }, (_, i) => 5 + Math.sin(i * 0.9));
+  it('retrouve les cris de la salle, hors coupures et limites de quarts', () => {
+    const h = findHighlights(db, mo, ch, [1000]);
+    expect(h.map((x) => Math.round(x.t)).sort((a, b) => a - b)).toEqual([150, 400, 700]);
+    for (const x of h) { expect(x.b - x.a).toBeGreaterThanOrEqual(5); expect(x.a).toBeLessThan(x.t); }
+  });
+  it('proposition : sans chevauchement, dans l’ordre, ≤ 60 s', () => {
+    const p = proposeMoment([{ t: 50, a: 43, b: 52, s: 1 }, { t: 51, a: 44, b: 53, s: 0.9 }, { t: 10, a: 3, b: 12, s: 0.5 }], 4, 60);
+    expect(p).toEqual([{ a: 3, b: 12 }, { a: 43, b: 52 }]);
+  });
+});

@@ -1511,4 +1511,8 @@ export const EN: Record<string, string> = {
   "Carte de fin (score final, logos, behoop.be)": "End card (final score, logos, behoop.be)",
   "Au moment": "At the time",
   "Aucun": "None",
+  "Moment fort": "Highlight",
+  "Moment proposé : {n} passages. Retouche-les si besoin.": "Moment suggested: {n} clips. Adjust them if needed.",
+  "Proposer un Moment": "Suggest a Moment",
+  "{n} moments forts": "{n} highlights",
 };

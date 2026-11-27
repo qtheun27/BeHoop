@@ -9,6 +9,7 @@ import { WORKER_URL } from '../lib/config';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, useAsync } from '../ui/kit';
 import { store, haptic, setReturnTo } from '../lib/util';
 import { quarterAt, scoreAtQuarterStart, type Chapter } from '../../../shared/chapters';
+import { proposeMoment, type Highlight } from '../../../shared/highlights';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
 import { qs } from '../lib/router';
@@ -276,7 +277,8 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
 }
 
 interface MatchVideo { inFeed?: boolean; youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
-  hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
+  hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number };
+  highlights?: Highlight[]; highlightsAt?: number }
 interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string; duration?: number; clips?: { start: number; end: number }[]; music?: { title: string; artist: string; license: string; url: string } }
 
 /** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
@@ -389,6 +391,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
             onKeyDown={(e) => { if (e.key === 'ArrowLeft') seek(time - 5); if (e.key === 'ArrowRight') seek(time + 5); }}>
             <div className="track" /><div className="fillp" style={{ width: `${((drag ?? time) / dur) * 100}%` }} />
             {chapters.slice(1).map((c) => <div key={c.title} className="mark" style={{ left: `${(c.start / dur) * 100}%` }} title={c.title} />)}
+            {(mv.highlights ?? []).map((h) => <div key={h.t} className="mark hl" style={{ left: `${(h.t / dur) * 100}%` }} title={t('Moment fort')} />)}
             {sel && <div className="selp" style={{ left: `${(sel[0] / dur) * 100}%`, width: `${((sel[1] - sel[0]) / dur) * 100}%` }} />}
             <div className="knob" style={{ left: `${((drag ?? time) / dur) * 100}%` }} />
             {drag != null && <div className="bubble" style={{ left: `clamp(24px, ${(drag / dur) * 100}%, calc(100% - 24px))` }}>{fmt(drag)}</div>}
@@ -756,6 +759,10 @@ function ClipEditor({ id, mv, init, video, dur, time, sel, setSel, preview, onCl
       </div>
       <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'fx' ? 'on' : ''} onClick={() => setTab('fx')}>{t('Effets')}</button><button className={tab === 'sound' ? 'on' : ''} onClick={() => setTab('sound')}>{t('Son')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
       {tab === 'pass' && <>
+        {!init && (mv.highlights?.length ?? 0) > 0 && <button className="btn secondary small hl-prop" onClick={() => {
+          const prop = proposeMoment(mv.highlights!, 4, MOMENT_TOTAL); if (!prop.length) return; stop(); haptic();
+          load(prop.map((p) => ({ a: p.a, b: p.b, keys: [] })), 0); s.toast(t('Moment proposé : {n} passages. Retouche-les si besoin.', { n: prop.length })); }}>
+          ✨ {t('Proposer un Moment')} <span className="muted">· {t('{n} moments forts', { n: mv.highlights!.length })}</span></button>}
         <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
           {ticks.map((x) => <div key={x} className={`clip-tick${x % 10 ? ' minor' : ''}`} style={{ left: pct(x) }}>{x % 10 === 0 && <span>{fmt(x)}</span>}</div>)}
           <div className="clip-sel" style={{ left: pct(a), width: `${((b - a) / WIN) * 100}%` }} onPointerDown={down('m')}>
