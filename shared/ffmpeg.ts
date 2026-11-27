@@ -205,7 +205,11 @@ export function joinPairArgs(a: string, b: string, output: string): string[] {
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
 }
 
-export interface MomentJoin { clips: { path: string; duration: number }[]; banner: string; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string;
+export interface MomentJoin { clips: { path: string; duration: number }[];
+  /** Bandeau du score : une image pour tout le Moment, ou une par plage de temps (score au moment du passage) ; aucun si absent */
+  banner?: string; banners?: { path: string; from: number; to: number }[];
+  /** Le logo animé s'arrête à cet instant (carte de fin) */
+  bugUntil?: number; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string;
   /** Bande son du catalogue : elle REMPLACE le son du match (pas de mélange), à partir de `start` s dans le morceau */
   music?: { path: string; start: number };
   /** Textes animés (séquences PNG transparentes) posés à `at` s du Moment, coin haut gauche en (x, y) */
@@ -218,7 +222,8 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
   const n = o.clips.length, args = ['-y'];
   o.clips.forEach((c) => args.push('-i', c.path));
   let k = n;
-  const bi = (args.push('-i', o.banner), k++);
+  const bl = o.banners ?? (o.banner ? [{ path: o.banner, from: 0, to: 1e6 }] : []);
+  const bi = bl.map((x) => (args.push('-i', x.path), k++));
   const gi = o.bug ? (args.push('-stream_loop', '-1', '-i', o.bug), k++) : -1;
   const cuts: number[] = []; let acc = 0;
   for (let i = 0; i < n - 1; i++) { acc += o.clips[i].duration; cuts.push(acc); }
@@ -237,8 +242,9 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
   // Textes sous la vague (la vague couvre tout aux coupures) et sous le bandeau
   oi.forEach((w, i) => { const x = o.overlays![i]; f.push(`[${w}:v]setpts=PTS-STARTPTS+${x.at.toFixed(3)}/TB[t${i}]`, `${v}[t${i}]overlay=${x.x}:${x.y}:eof_action=pass[vt${i}]`); v = `[vt${i}]`; });
   wi.forEach((w, i) => { f.push(`[${w}:v]setpts=PTS-STARTPTS+${(cuts[i] - (o.waveCut ?? 0.35)).toFixed(3)}/TB[w${i}]`, `${v}[w${i}]overlay=0:0:eof_action=pass[vw${i}]`); v = `[vw${i}]`; });
-  f.push(`${v}[${bi}:v]overlay=0:0[vb]`); v = '[vb]';
-  if (gi >= 0) { f.push(`[${gi}:v]setpts=PTS-STARTPTS+0.6/TB[bug]`, `${v}[bug]overlay=W-w-24:300:shortest=1[vl]`); v = '[vl]'; }
+  bi.forEach((w, i) => { const x = bl[i]; const en = x.from <= 0 && x.to >= 1e5 ? '' : `:enable='between(t,${x.from.toFixed(3)},${x.to.toFixed(3)})'`;
+    f.push(`${v}[${w}:v]overlay=0:0${en}[vb${i}]`); v = `[vb${i}]`; });
+  if (gi >= 0) { f.push(`[${gi}:v]setpts=PTS-STARTPTS+0.6/TB[bug]`, `${v}[bug]overlay=W-w-24:300:shortest=1${o.bugUntil != null ? `:enable='lt(t,${o.bugUntil.toFixed(3)})'` : ''}[vl]`); v = '[vl]'; }
   f.push(`${v}format=yuv420p[v]`);
   if (hi >= 0) {
     f.push(`[${hi}:a]asplit=${cuts.length}${cuts.map((_, i) => `[h${i}]`).join('')}`);
@@ -249,4 +255,12 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
     '-c:v', 'libx264', '-preset', 'medium', '-crf', '20', '-maxrate', '8000k', '-bufsize', '16000k', '-pix_fmt', 'yuv420p', '-r', '30',
     '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', o.output);
   return { args, duration: T };
+}
+
+/** Carte de fin (image fixe) → courte vidéo avec léger zoom et fondu d'entrée, son muet (la musique continue par-dessus) */
+export const END_LEN = 2.5;
+export function endCardArgs(png: string, output: string): string[] {
+  return ['-y', '-loop', '1', '-framerate', '30', '-i', png, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', String(END_LEN),
+    '-filter_complex', `[0:v]scale=1080:1920,setsar=1,zoompan=z='1+0.0007*on':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30,fade=t=in:st=0:d=0.3,format=yuv420p[v]`,
+    '-map', '[v]', '-map', '1:a', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-shortest', output];
 }

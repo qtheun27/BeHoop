@@ -6,8 +6,8 @@ import { chromium } from '@playwright/test';
 import { ff, probe } from './run';
 import { waveFrames, WAVE_CUT } from './wave';
 import { bugTrack } from './bug';
-import { shareCard } from './shareCard';
-import { momentClipArgs, momentJoinArgs, joinPairArgs, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
+import { shareCard, endCard } from './shareCard';
+import { momentClipArgs, momentJoinArgs, joinPairArgs, endCardArgs, END_LEN, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
 import { textFrames, TEXT_Y, type TextKind } from './textFx';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
@@ -28,7 +28,7 @@ try {
   await ref.update({ status: 'running', progress: 5, step: 'Préparation' });
   // Passages (plusieurs possibles, enchaînés par une vague) ; anciens Moments : un seul passage, image entière
   type FxText = { t: number; w: string; k: TextKind; y?: string };
-  const clips: { start: number; end: number; keys?: CropKey[]; texts?: FxText[]; replay?: number; zoom?: number | null }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
+  const clips: { start: number; end: number; keys?: CropKey[]; texts?: FxText[]; replay?: number; zoom?: number | null; score?: [number, number]; q?: number }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
   const layout: MomentLayout = m.layout === 'full' ? 'full' : 'fit';
   const pos = typeof m.pos === 'number' ? m.pos : 0.5;
   // Source : variante 1080p HLS (seuls les segments utiles sont téléchargés)
@@ -53,24 +53,36 @@ try {
   const st = settingsFromStore(mv.settings); const [h, a] = st.scores[3];
   const abs = (u: string) => (/^\/[^/]/.test(u ?? '') ? `${SITE}${u}` : u ?? '');
   const logo = (u: string, c: string) => `<div class="l" style="box-shadow:0 0 0 5px ${c}">${u ? `<img src="${abs(u)}">` : ''}</div>`;
-  const html = `<html><head><style>body{margin:0;width:1080px;height:300px;background:linear-gradient(#0a0c12f0,#0a0c1200);font-family:Oswald,Arial;color:#fff;display:flex;align-items:center;justify-content:center;gap:28px}
+  // Bandeau : score final (par défaut), score au moment de chaque passage (avec le quart), ou aucun
+  const scoreMode: 'final' | 'live' | 'none' = m.scoreMode === 'live' || m.scoreMode === 'none' ? m.scoreMode : 'final';
+  const bannerHtml = (sh: number, sa: number, label = '') => `<html><head><style>body{margin:0;width:1080px;height:300px;background:linear-gradient(#0a0c12f0,#0a0c1200);font-family:Oswald,Arial;color:#fff;display:flex;align-items:center;justify-content:center;gap:28px;position:relative}
     .l{width:110px;height:110px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}.l img{width:78%;height:78%;object-fit:contain}
-    .s{font-family:Anton,Impact;font-size:96px}.g{color:#f2c14e}</style></head>
-    <body>${logo(st.home.logo, st.home.color)}<div class="s ${h > a ? 'g' : ''}">${h}</div><div class="s" style="opacity:.5">–</div>
-    <div class="s ${a > h ? 'g' : ''}">${a}</div>${logo(st.away.logo, st.away.color)}</body></html>`;
-  writeFileSync(join(work, 'banner.html'), html);
+    .s{font-family:Anton,Impact;font-size:96px}.g{color:#f2c14e}.q{position:absolute;left:0;right:0;top:250px;text-align:center;font:700 30px Oswald,Arial;letter-spacing:.25em;color:#f2c14e}</style></head>
+    <body>${logo(st.home.logo, st.home.color)}<div class="s ${sh > sa ? 'g' : ''}">${sh}</div><div class="s" style="opacity:.5">–</div>
+    <div class="s ${sa > sh ? 'g' : ''}">${sa}</div>${logo(st.away.logo, st.away.color)}${label ? `<div class="q">${label}</div>` : ''}</body></html>`;
+  const qLabel = (q: number) => (q >= 1 && q <= 4 ? `Q${q}` : '');
+  const bannerSpecs: { key: string; html: string }[] = scoreMode === 'none' ? []
+    : scoreMode === 'final' ? [{ key: 'banner', html: bannerHtml(h, a) }]
+    : clips.map((c, i) => ({ key: `banner_${i}`, html: bannerHtml(c.score?.[0] ?? h, c.score?.[1] ?? a, qLabel(c.q ?? 0)) }));
+  const withEnd = m.endCard !== false;
   const b = await chromium.launch(process.env.PW_CHROME ? { executablePath: process.env.PW_CHROME } : {});
   let bug: string | undefined, wave: string | undefined, card: string | undefined;
   const fxFrames = new Map<string, string>();
+  let endPng: string | undefined;
   try {
     const p = await b.newPage({ viewport: { width: 1080, height: 300 } });
-    await p.goto('file://' + join(work, 'banner.html')); await p.waitForLoadState('networkidle');
-    await p.screenshot({ path: join(work, 'banner.png'), omitBackground: true });
+    for (const x of bannerSpecs) {
+      writeFileSync(join(work, `${x.key}.html`), x.html);
+      await p.goto('file://' + join(work, `${x.key}.html`)); await p.waitForLoadState('networkidle');
+      await p.screenshot({ path: join(work, `${x.key}.png`), omitBackground: true });
+    }
+    await p.close();
+    if (withEnd) endPng = await endCard(b, st, join(work, 'end.png'), m.title || st.title).catch((e) => { console.error('carte de fin', e); return undefined; });
     // Logo BeHoop animé sous le bandeau — sauf si le logo incrusté dans la vidéo du match reste visible
     // (image entière, ou cadrage poussé tout à droite, là où il se trouve) : jamais deux logos à l'écran
     const filmLogoVisible = !!mv.hls?.logo && (layout === 'fit' || pos > 0.85);
     if (!filmLogoVisible) bug = await bugTrack(b, work);
-    if (clips.length > 1) wave = await waveFrames(b, work, [st.home.color, st.away.color]);
+    if (clips.length > 1 || withEnd) wave = await waveFrames(b, work, [st.home.color, st.away.color]);
     card = await shareCard(b, st, join(work, 'share.jpg'), m.title || 'Moment').catch(() => undefined);
     // Textes animés (une séquence par mot différent) et étiquette « REPLAY » des ralentis
     for (const x of clips.flatMap((c) => c.texts ?? [])) {
@@ -114,6 +126,14 @@ try {
     const mp = join(work, 'music.mp3'); writeFileSync(mp, Buffer.from(await r.arrayBuffer()));
     music = { path: mp, start: Number(m.music.start) || 0 };
   }
+  // Carte de fin (2,5 s) après le dernier passage, précédée de la vague
+  const nClips = parts.length;
+  if (endPng) { const ev = join(work, 'end.mp4'); await ff(endCardArgs(endPng, ev)); parts.push({ path: ev, duration: END_LEN }); }
+  const endAt = parts.slice(0, nClips).reduce((x, p) => x + p.duration, 0);
+  // Bandeaux du score : sur les passages seulement (pas sur la carte de fin)
+  const starts = parts.map((_, i) => parts.slice(0, i).reduce((x, p) => x + p.duration, 0));
+  const banners = scoreMode === 'none' ? [] : scoreMode === 'final' ? [{ path: join(work, 'banner.png'), from: 0, to: endPng ? endAt : 1e6 }]
+    : clips.map((_, i) => ({ path: join(work, `banner_${i}.png`), from: i === 0 ? 0 : starts[i], to: i === nClips - 1 ? (endPng ? endAt : 1e6) : starts[i + 1] }));
   // Textes et étiquettes REPLAY placés sur la ligne de temps finale du Moment
   const overlays: { frames: string; at: number; x: number; y: number }[] = [];
   let at0 = 0;
@@ -122,7 +142,7 @@ try {
     const tg = c.replay ? fxFrames.get(`tag:${c.replay}`) : undefined; if (tg) overlays.push({ frames: tg, at: at0 + mainLen[i], x: 40, y: 320 });
     at0 += parts[i].duration;
   }
-  const joined = momentJoinArgs({ overlays, clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined, music });
+  const joined = momentJoinArgs({ overlays, clips: parts, banners, bugUntil: endPng ? endAt : undefined, output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined, music });
   await ff(joined.args);
   // Affiche du Moment : une image de son premier passage (et non l'affiche du match, recadrée au mauvais endroit)
   const poster = join(work, 'poster.jpg');

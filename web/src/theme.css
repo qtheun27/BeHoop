@@ -655,3 +655,5 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
   :root.moment-edit .player{max-width:none;margin:0;grid-column:1;grid-row:1}
   :root.moment-edit .clip-ed{grid-column:2;grid-row:1;margin-top:0}
 }
+.score-row{padding:6px 8px 6px 12px}.score-row .sc{width:56px;margin:0;text-align:center;padding:6px 4px;font-variant-numeric:tabular-nums;font-weight:700}
+.score-head{display:grid;grid-template-columns:56px 56px;gap:22px;justify-content:end;padding:0 8px;font-size:11px;color:var(--text2);text-align:center}.score-head span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

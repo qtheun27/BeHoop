@@ -529,7 +529,10 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
         w: String(x?.w ?? '').replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, x?.k === 'free' ? 60 : 24), k: x?.k === 'free' ? 'free' : 'hit', y: ['top', 'mid', 'low'].includes(x?.y) ? x.y : 'mid' })).filter((x: any) => x.w);
       const replay = [2, 3].includes(Number(c?.replay)) ? Number(c.replay) : 0;
       const zoom = Number.isFinite(Number(c?.zoom)) && c?.zoom !== null && c?.zoom !== undefined ? Math.round(Math.min(len, Math.max(0, Number(c.zoom))) * 10) / 10 : null;
-      return { start, end, ...(keys.length ? { keys } : {}), ...(texts.length ? { texts } : {}), ...(replay ? { replay } : {}), ...(zoom != null ? { zoom } : {}) };
+      // Score affiché pendant ce passage (mode « au moment du passage ») et quart
+      const sc = Array.isArray(c?.score) && c.score.length === 2 && c.score.every((n: any) => Number.isInteger(Number(n)) && Number(n) >= 0 && Number(n) <= 300) ? [Number(c.score[0]), Number(c.score[1])] : null;
+      const q = [1, 2, 3, 4].includes(Number(c?.q)) ? Number(c.q) : 0;
+      return { start, end, ...(keys.length ? { keys } : {}), ...(texts.length ? { texts } : {}), ...(replay ? { replay } : {}), ...(zoom != null ? { zoom } : {}), ...(sc ? { score: sc } : {}), ...(q ? { q } : {}) };
     });
     const max = Number(v.hls?.duration ?? 1e9) + 1;
     if (clips.length > 6) return fail('6 passages au maximum');
@@ -552,7 +555,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     if (edit && edit.matchVideoId !== body.matchVideoId) return fail('Moment d’une autre vidéo');
     if (edit && ['queued', 'running'].includes(edit.status)) return fail('Ce Moment est déjà en préparation, patiente un instant');
     const id = edit ? String(body.momentId) : crypto.randomUUID().replace(/-/g, '').slice(0, 16);
-    const fields = { start: clips[0].start, end: clips[0].end, clips, layout, pos, music, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10,
+    const scoreMode = ['final', 'live', 'none'].includes(body.scoreMode) ? body.scoreMode : 'final';
+    const fields = { start: clips[0].start, end: clips[0].end, clips, layout, pos, music, scoreMode, endCard: body.endCard !== false, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10,
       title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', progress: 0, step: 'En attente' };
     if (edit) await fs.set(`moments/${id}`, { ...fields, rev: Number(edit.rev ?? 0) + 1, prevKeys: [edit.r2Key, edit.posterKey].filter(Boolean) } as any);
     else await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', ...fields, visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);

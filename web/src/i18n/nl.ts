@@ -1503,4 +1503,12 @@ export const NL: Record<string, string> = {
   "Haut": "Boven",
   "Milieu": "Midden",
   "Bas": "Onder",
+  "Score affiché": "Getoonde score",
+  "Bandeau en haut de la vidéo": "Balk bovenaan de video",
+  "Score proposé : celui du début du quart. Corrige-le si besoin.": "Voorgestelde score: die van het begin van het kwart. Pas aan indien nodig.",
+  "Équipe à domicile": "Thuisploeg",
+  "Équipe visiteuse": "Bezoekende ploeg",
+  "Carte de fin (score final, logos, behoop.be)": "Eindkaart (eindscore, logo's, behoop.be)",
+  "Au moment": "Op dat moment",
+  "Aucun": "Geen",
 };

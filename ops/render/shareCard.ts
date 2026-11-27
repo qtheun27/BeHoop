@@ -33,3 +33,30 @@ html,body{margin:0;width:1200px;height:630px;overflow:hidden;color:#fff;font-fam
   finally { await p.close(); }
   return out;
 }
+
+/** Carte de fin d'un Moment (vertical 1080×1920) : score final, logos, titre, emblème BeHoop et behoop.be */
+export async function endCard(browser: Browser, st: MatchSettings, out: string, title: string): Promise<string> {
+  const em = readFileSync(join(ROOT, 'icons/emblem.svg'), 'utf8').replace('<svg ', '<svg style="height:210px;width:auto;color:#fff" ');
+  const [h, a] = st.scores[3] ?? [0, 0];
+  const side = (t: MatchSettings['home'], score: number, win: boolean) => `<div class="t"><div class="l" style="box-shadow:0 0 0 8px ${esc(t.color)}">${t.logo ? `<img src="${esc(abs(t.logo))}">` : ''}</div>
+    <div class="n">${esc(t.name)}</div><div class="s${win ? ' win' : ''}">${score}</div></div>`;
+  const html = `<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;700&family=Oswald:wght@700&family=Anton&display=block" rel="stylesheet"><style>
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;color:#fff;font-family:Sora,sans-serif;background:radial-gradient(90% 50% at 85% 8%,rgba(242,106,27,.42),transparent 60%),radial-gradient(90% 50% at 0% 100%,rgba(61,143,219,.32),transparent 60%),linear-gradient(170deg,#0a0c12 0%,#121a2b 55%,#0a0c12 100%)}
+.k{position:absolute;left:0;right:0;top:300px;text-align:center;font:700 44px Oswald;letter-spacing:.3em;text-transform:uppercase;color:#f2c14e}
+.ti{position:absolute;left:80px;right:80px;top:380px;text-align:center;font:700 62px Oswald;text-transform:uppercase;line-height:1.1;max-height:140px;overflow:hidden}
+.m{position:absolute;left:0;right:0;top:600px;display:flex;justify-content:center;align-items:flex-start;gap:40px}
+.t{width:420px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.l{width:230px;height:230px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}.l img{width:78%;height:78%;object-fit:contain}
+.n{font:700 40px Oswald;text-transform:uppercase;line-height:1.1;height:88px;display:flex;align-items:center;overflow:hidden}
+.s{font:200px Anton;line-height:1;opacity:.92}.s.win{color:#f2c14e}.vs{font:90px Anton;opacity:.4;margin-top:390px}
+.b{position:absolute;left:0;right:0;bottom:250px;display:flex;flex-direction:column;align-items:center;gap:26px}
+.w{font-size:96px;letter-spacing:-.035em}.w b{font-weight:300}.w i{font-style:normal;font-weight:700;background:linear-gradient(120deg,#f26a1b 10%,#f5a623 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.u{font:700 40px Oswald;letter-spacing:.12em;opacity:.8}
+</style></head><body><div class="k">Score final</div><div class="ti">${esc(title)}</div>
+<div class="m">${side(st.home, h, h > a)}<div class="vs">–</div>${side(st.away, a, a > h)}</div>
+<div class="b">${em}<div class="w"><b>Be</b><i>Hoop</i></div><div class="u">BEHOOP.BE</div></div></body></html>`;
+  const p = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
+  try { await p.setContent(html, { waitUntil: 'networkidle' }); await p.evaluate(() => document.fonts.ready); await p.screenshot({ path: out, type: 'png' }); }
+  finally { await p.close(); }
+  return out;
+}

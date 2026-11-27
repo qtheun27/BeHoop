@@ -34,3 +34,16 @@ export function parseVtt(vtt: string): Chapter[] {
   for (const x of vtt.matchAll(re)) out.push({ start: sec(x[1], x[2], x[3], x[4]), end: sec(x[5], x[6], x[7], x[8]), title: x[9].trim() });
   return out;
 }
+
+/** Quart joué à l'instant t de la vidéo du match : 1–4, 0 avant le match, 5 après */
+export function quarterAt(ch: Chapter[], t: number): number {
+  const c = ch.find((x) => t >= x.start && t < x.end) ?? (t >= (ch.at(-1)?.end ?? 0) ? ch.at(-1) : ch[0]);
+  const m = /^Q(\d)$/.exec(c?.title ?? '');
+  return m ? Number(m[1]) : c?.title === 'Fin' ? 5 : 0;
+}
+/** Score (cumulé) au début du quart q, à partir des scores de fin de quart */
+export function scoreAtQuarterStart(scores: [number, number][], q: number): [number, number] {
+  if (q <= 1) return [0, 0];
+  if (q >= 5) return scores[3] ?? [0, 0];
+  return scores[q - 2] ?? [0, 0];
+}

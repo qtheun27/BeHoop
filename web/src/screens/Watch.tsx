@@ -8,7 +8,7 @@ import { api, ensureMediaCookie, mediaUrl } from '../lib/api';
 import { WORKER_URL } from '../lib/config';
 import { Screen, Empty, Skeleton, ErrorBox, Sheet, useAsync } from '../ui/kit';
 import { store, haptic, setReturnTo } from '../lib/util';
-import type { Chapter } from '../../../shared/chapters';
+import { quarterAt, scoreAtQuarterStart, type Chapter } from '../../../shared/chapters';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
 import { qs } from '../lib/router';
@@ -320,7 +320,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   const [init, setInit] = useState<MomentInit | null>(null);
   useEffect(() => { const mid = qs().get('edit'); if (!mid || !/^[a-f0-9]{16}$/.test(mid)) return;
     D.getDoc(D.doc(D.db, 'moments', mid)).then((x) => { if (!x.exists()) return; const m = { id: mid, ...x.data() } as Moment & MomentInit;
-      setInit({ id: mid, clips: m.clips?.length ? m.clips : [{ start: m.start, end: m.end }], layout: m.layout, pos: m.pos, music: m.music, title: m.title, text: m.text, inFeed: m.inFeed });
+      setInit({ id: mid, scoreMode: m.scoreMode, endCard: m.endCard, clips: m.clips?.length ? m.clips : [{ start: m.start, end: m.end }], layout: m.layout, pos: m.pos, music: m.music, title: m.title, text: m.text, inFeed: m.inFeed });
       setSel([...(m.clips?.length ? [m.clips[m.clips.length - 1].start, m.clips[m.clips.length - 1].end] : [m.start, m.end])] as [number, number]); setClip(true); }).catch(() => {}); }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const dur = mv.hls!.duration, chapters = mv.hls!.chapters ?? [];
   const posKey = `behoop.pos.${id}`;
@@ -406,7 +406,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
           </div>
         </div>
       </div>
-      {clip && (!init || dur > 0) && <ClipEditor key={init?.id ?? 'new'} id={id} init={init} video={ref} dur={dur} time={time} sel={sel} setSel={setSel} preview={preview} onClose={() => { preview.current = null; setSel(null); setClip(false);
+      {clip && (!init || dur > 0) && <ClipEditor key={init?.id ?? 'new'} id={id} mv={mv} init={init} video={ref} dur={dur} time={time} sel={sel} setSel={setSel} preview={preview} onClose={() => { preview.current = null; setSel(null); setClip(false);
         if (init) { setInit(null); location.hash = `/video/${id}`; } }} />}
       {!clip && <>
       <div className="group-title mt">{t('Chapitres')}</div>
@@ -455,7 +455,7 @@ function keyPos(k: Key[], t: number): number {
 /** Largeur du cadre vertical (9:16 recadré dans une image 16:9) : 1080 / (1920 × 16/9) */
 const CROP_W = (1080 / ((1920 * 16) / 9)) * 100;
 type FxText = { t: number; w: string; k: 'hit' | 'free'; y: 'top' | 'mid' | 'low' };
-type Clip = { a: number; b: number; keys: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null };
+type Clip = { a: number; b: number; keys: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null; score?: [number, number] };
 /** Durée d'un passage dans le Moment (un replay au ralenti dure 2× son extrait) */
 const clipDur = (p: Clip) => p.b - p.a + (p.replay ? 2 * p.replay : 0);
 /** Aperçu du montage : extraits [début, fin, vitesse, n° du passage] dans l'ordre, et celui en cours de lecture */
@@ -465,8 +465,8 @@ const zoomAt = (at: number, t: number) => { const s = (x: number) => x * x * (3 
   if (t < a) return 1; if (t < at) return 1 + 0.3 * s((t - a) / Math.max(0.01, at - a)); if (t < at + 1) return 1.3; if (t < at + 1.6) return 1 + 0.3 * (1 - s((t - at - 1) / 0.6)); return 1; };
 const TEXT_LEN = { hit: 1.6, free: 2.6 } as const;
 const WORDS = ['SWISH !', 'AND ONE', '3 POINTS', 'DUNK !', 'CONTRE !', 'BUZZER BEATER', 'CROSSOVER', 'ALLEY-OOP', 'CLUTCH', 'ON FIRE', 'STEAL !', 'GAME WINNER', 'QUELLE PASSE !', 'BOOM !', 'MVP'];
-interface MomentInit { id: string; clips: { start: number; end: number; keys?: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null }[]; layout?: 'full' | 'fit'; pos?: number; music?: Track & { start: number }; title?: string; text?: string; inFeed?: boolean }
-function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose }: { id: string; init?: MomentInit | null; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
+interface MomentInit { id: string; scoreMode?: 'final' | 'live' | 'none'; endCard?: boolean; clips: { start: number; end: number; keys?: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null; score?: [number, number] }[]; layout?: 'full' | 'fit'; pos?: number; music?: Track & { start: number }; title?: string; text?: string; inFeed?: boolean }
+function ClipEditor({ id, mv, init, video, dur, time, sel, setSel, preview, onClose }: { id: string; mv: MatchVideo; init?: MomentInit | null; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
   sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<PreviewSeq | null>; onClose: () => void }) {
   const s = useSession();
   const around = (c: number): [number, number] => { const a = Math.max(0, Math.min(dur - 20, c - 10)); return [a, Math.min(dur, a + 20)]; };
@@ -481,12 +481,19 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const [busy, setBusy] = useState(false), [playing, setPlaying] = useState(false);
   // Plusieurs passages enchaînés (vague au montage), 60 s au total ; cadrage plein écran (position) ou image entière
   // Tous les passages du Moment, dans l'ordre du montage ; « cur » = celui en cours d'édition (ses valeurs vivantes : sel + keys)
-  const [parts, setParts] = useState<Clip[]>(() => (init?.clips.length ? init.clips.map((c) => ({ a: c.start, b: c.end, keys: c.keys ?? [], texts: c.texts ?? [], replay: c.replay ?? 0, zoom: c.zoom ?? null })) : [{ a: 0, b: 0, keys: [] }]));
+  const [parts, setParts] = useState<Clip[]>(() => (init?.clips.length ? init.clips.map((c) => ({ a: c.start, b: c.end, keys: c.keys ?? [], texts: c.texts ?? [], replay: c.replay ?? 0, zoom: c.zoom ?? null, score: c.score })) : [{ a: 0, b: 0, keys: [] }]));
   const [cur, setCur] = useState(() => (init?.clips.length ? init.clips.length - 1 : 0));
   const [keys, setKeys] = useState<Key[]>(() => init?.clips.at(-1)?.keys ?? []); // points de cadrage du passage en cours (t depuis son début)
   const [layout, setLayout] = useState<'full' | 'fit'>(init?.layout === 'fit' ? 'fit' : 'full'), [pos, setPos] = useState(init?.pos ?? 0.5);
   const [mTitle, setMTitle] = useState(init?.title ?? ''), [mText, setMText] = useState(init?.text ?? '');
   const [mFeed, setMFeed] = useState(init?.inFeed !== false);
+  // Bandeau du score (final, au moment de chaque passage, ou aucun) et carte de fin
+  const [scoreMode, setScoreMode] = useState<'final' | 'live' | 'none'>(init?.scoreMode ?? 'final');
+  const [endCard, setEndCard] = useState(init?.endCard !== false);
+  const stg = mv.settings ? settingsFromStore(mv.settings) : null;
+  const chs = mv.hls?.chapters ?? [];
+  const qOf = (p: Clip) => quarterAt(chs, p.a);
+  const scoreOf = (p: Clip): [number, number] => p.score ?? (stg ? scoreAtQuarterStart(stg.scores, qOf(p)) : [0, 0]);
   // Bande son du catalogue : elle remplace le son du match ; un seul lecteur audio (écoute du catalogue + aperçu)
   const [music, setMusic] = useState<{ tr: Track; start: number } | null>(() => (init?.music?.id ? { tr: init.music, start: init.music.start ?? 0 } : null));
   const aud = useRef<HTMLAudioElement | null>(null), muted = useRef(false);
@@ -707,7 +714,8 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
     try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: all.map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? (p.keys.length ? p.keys : [{ t: 0, pos }]) : undefined,
-        texts: p.texts?.length ? p.texts : undefined, replay: p.replay || undefined, zoom: p.zoom ?? undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed,
+        texts: p.texts?.length ? p.texts : undefined, replay: p.replay || undefined, zoom: p.zoom ?? undefined,
+        ...(scoreMode === 'live' ? { score: scoreOf(p), q: qOf(p) } : {}) })), scoreMode, endCard, layout, pos, title: mTitle, text: mText, inFeed: mFeed,
       music: music ? { id: music.tr.id, start: music.start } : undefined, momentId: init?.id });
       s.toast(init ? t('Moment modifié : nouvelle version en préparation…') : t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
     catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
@@ -815,6 +823,19 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
         <input className="field" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
         <textarea className="field mt" rows={3} value={mText} maxLength={500} onChange={(e) => setMText(e.target.value)} placeholder={t('Description (facultatif)')} aria-label={t('Description')} />
         <label className="check mt"><input type="checkbox" checked={mFeed} onChange={(e) => setMFeed(e.target.checked)} />{t('Publier dans le fil BeHoop')}</label>
+        <div className="fx-sec mt"><b>{t('Score affiché')}</b><span className="muted">{t('Bandeau en haut de la vidéo')}</span></div>
+        <div className="seg">{([['final', 'Score final'], ['live', 'Au moment'], ['none', 'Aucun']] as const).map(([k, l]) => <button key={k} className={scoreMode === k ? 'on' : ''} onClick={() => setScoreMode(k)}>{t(l)}</button>)}</div>
+        {scoreMode === 'live' && <>
+          <p className="muted" style={{ margin: '6px 0', fontSize: 12 }}>{t('Score proposé : celui du début du quart. Corrige-le si besoin.')}</p>
+          {stg && <div className="score-head"><span>{stg.home.name}</span><span>{stg.away.name}</span></div>}
+          <div className="clip-parts">{all.map((p, i) => { const [sh, sa] = scoreOf(p), q = qOf(p);
+            const put2 = (k: 0 | 1, v: string) => { const n = Math.max(0, Math.min(300, Math.round(Number(v) || 0))); const sc: [number, number] = k === 0 ? [n, sa] : [sh, n];
+              if (i === cur) setFx({ score: sc }); else setParts((ps) => ps.map((x, j) => (j === i ? { ...x, score: sc } : x))); };
+            return <div key={i} className="clip-part score-row"><span>{t('Passage')} {i + 1}{q >= 1 && q <= 4 ? ` · Q${q}` : ''}</span>
+              <span className="hstack" style={{ gap: 6 }}><input className="field sc" inputMode="numeric" value={sh} aria-label={stg?.home.name ?? t('Équipe à domicile')} onChange={(e) => put2(0, e.target.value)} />
+                <b>–</b><input className="field sc" inputMode="numeric" value={sa} aria-label={stg?.away.name ?? t('Équipe visiteuse')} onChange={(e) => put2(1, e.target.value)} /></span></div>; })}</div>
+        </>}
+        <label className="check mt"><input type="checkbox" checked={endCard} onChange={(e) => setEndCard(e.target.checked)} />{t('Carte de fin (score final, logos, behoop.be)')}</label>
       </>}
       <div className="clip-bar">
         <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; const list = seq(), start = Math.max(0, list.findIndex((e) => e[3] === cur)); // aperçu du montage complet, depuis le passage en cours

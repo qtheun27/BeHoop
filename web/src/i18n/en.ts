@@ -1503,4 +1503,12 @@ export const EN: Record<string, string> = {
   "Haut": "Top",
   "Milieu": "Middle",
   "Bas": "Bottom",
+  "Score affiché": "Score shown",
+  "Bandeau en haut de la vidéo": "Banner at the top of the video",
+  "Score proposé : celui du début du quart. Corrige-le si besoin.": "Suggested score: the one at the start of the quarter. Correct it if needed.",
+  "Équipe à domicile": "Home team",
+  "Équipe visiteuse": "Away team",
+  "Carte de fin (score final, logos, behoop.be)": "End card (final score, logos, behoop.be)",
+  "Au moment": "At the time",
+  "Aucun": "None",
 };

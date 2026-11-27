@@ -3,7 +3,8 @@ import { classifyCategory, ageGroupOf } from './ageGroup';
 import { quarterScores, validateScores, resultLabel } from './scores';
 import { assignQuarters, mosaicPhotos } from './quarters';
 import { buildChapters, chaptersToVtt, parseVtt } from './chapters';
-import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs, momentClipArgs, momentJoinArgs } from './ffmpeg';
+import { normalizeArgs, hlsArgs, xfadeChainArgs, wipeJoinArgs, segmentArgs, momentClipArgs, momentJoinArgs, endCardArgs } from './ffmpeg';
+import { quarterAt, scoreAtQuarterStart } from './chapters';
 import type { MediaItem } from './types';
 
 describe('Jeunes / Seniors', () => {
@@ -148,6 +149,13 @@ describe('commandes FFmpeg', () => {
     const j = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }], banner: 'b.png', output: 'o.mp4', overlays: [{ frames: 't/%04d.png', at: 2.5, x: 0, y: 680 }] }).args.join(' ');
     expect(j).toContain('-framerate 30 -i t/%04d.png'); expect(j).toContain('PTS-STARTPTS+2.500/TB[t0]'); expect(j).toContain('overlay=0:680:eof_action=pass');
   });
+  it('score par passage et carte de fin', () => {
+    const j = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }, { path: 'b', duration: 6 }, { path: 'end', duration: 2.5 }], output: 'o.mp4', bug: 'bug.mov', bugUntil: 14,
+      banners: [{ path: 'b0.png', from: 0, to: 8 }, { path: 'b1.png', from: 8, to: 14 }] }).args.join(' ');
+    expect(j).toContain("overlay=0:0:enable='between(t,0.000,8.000)'"); expect(j).toContain("overlay=0:0:enable='between(t,8.000,14.000)'");
+    expect(j).toContain("shortest=1:enable='lt(t,14.000)'");
+    expect(endCardArgs('e.png', 'e.mp4').join(' ')).toContain('-t 2.5');
+  });
   it('bande son : remplace le son du match', () => {
     const s = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }, { path: 'b', duration: 6 }], banner: 'b.png', output: 'o.mp4', whoosh: 'wh.m4a', music: { path: 'm.mp3', start: 12 } }).args.join(' ');
     expect(s).toContain('-ss 12.00 -i m.mp3');
@@ -176,4 +184,11 @@ describe('isMini (mini-basket U6–U13)', () => {
   it('pas les U14 et plus, ni les seniors', () => {
     for (const n of ['U14 Mixte A', 'PU16H', 'RU14H', 'U21', 'P1H', 'EuroBasket féminin 2027', 'Top Division Men 1', 'U19 Niveau 2']) expect(isMini(n), n).toBe(false);
   });
+});
+
+describe('score au début du quart', () => {
+  const ch = [{ title: 'Avant-match', start: 0, end: 6 }, { title: 'Q1', start: 6, end: 18 }, { title: 'Q2', start: 18, end: 30 }, { title: 'Q3', start: 30, end: 42 }, { title: 'Q4', start: 42, end: 54 }, { title: 'Fin', start: 54, end: 60 }];
+  const sc: [number, number][] = [[10, 12], [20, 25], [33, 30], [50, 44]];
+  it('quart', () => { expect(quarterAt(ch, 3)).toBe(0); expect(quarterAt(ch, 20)).toBe(2); expect(quarterAt(ch, 55)).toBe(5); });
+  it('score', () => { expect(scoreAtQuarterStart(sc, 1)).toEqual([0, 0]); expect(scoreAtQuarterStart(sc, 3)).toEqual([20, 25]); expect(scoreAtQuarterStart(sc, 5)).toEqual([50, 44]); });
 });
