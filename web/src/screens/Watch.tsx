@@ -640,6 +640,21 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const add = () => { stop(); haptic(); const room = Math.min(10, MOMENT_TOTAL - total);
     const na = Math.max(0, Math.min(dur - room, b + 2)); const list = [...all.slice(0, cur + 1), { a: na, b: Math.min(dur, na + room), keys: [] }, ...all.slice(cur + 1)]; load(list, cur + 1); };
   const moveClip = (d: -1 | 1) => { const j = cur + d; if (j < 0 || j >= all.length) return; stop(); haptic(); const list = [...all]; [list[cur], list[j]] = [list[j], list[cur]]; setParts(list); setCur(j); };
+  // Glisser un bloc de la frise vers la gauche ou la droite : l'ordre change en direct (un simple toucher le sélectionne)
+  const dragB = useRef<{ i: number; x0: number; moved: boolean } | null>(null), noClick = useRef(false);
+  const [dragI, setDragI] = useState<number | null>(null);
+  const blkDown = (i: number) => (e: React.PointerEvent<HTMLButtonElement>) => { if (all.length < 2) return; dragB.current = { i, x0: e.clientX, moved: false }; e.currentTarget.setPointerCapture(e.pointerId); };
+  const blkMove = (e: React.PointerEvent<HTMLButtonElement>) => {
+    const d = dragB.current; if (!d) return;
+    if (!d.moved) { if (Math.abs(e.clientX - d.x0) < 8) return; d.moved = true; stop(); haptic(); setDragI(d.i); }
+    const blks = [...(e.currentTarget.parentElement?.querySelectorAll<HTMLElement>('.clip-blk:not(.add)') ?? [])];
+    let j = blks.findIndex((el) => { const r = el.getBoundingClientRect(); return e.clientX >= r.left && e.clientX <= r.right; });
+    if (j < 0) j = e.clientX < (blks[0]?.getBoundingClientRect().left ?? 0) ? 0 : blks.length - 1;
+    if (j === d.i) return;
+    const list = [...all], curClip = all[cur]; const [c] = list.splice(d.i, 1); list.splice(j, 0, c);
+    setParts(list); setCur(list.indexOf(curClip)); d.i = j; setDragI(j); haptic();
+  };
+  const blkUp = () => { if (dragB.current?.moved) noClick.current = true; dragB.current = null; setDragI(null); };
   const removeClip = () => { if (all.length < 2) return; stop(); haptic(); const list = all.filter((_, k) => k !== cur); load(list, Math.min(cur, list.length - 1)); };
   const ticks = Array.from({ length: 10 }, (_, i) => Math.ceil(win / 5) * 5 + i * 5).filter((x) => x <= win + WIN);
   const [stepS, setStepS] = useState(1);
@@ -683,12 +698,14 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
       {/* Frise du montage : un bloc par passage (largeur = durée, sur 60 s) ; on touche un bloc pour le modifier */}
       <div className="clip-strip" role="tablist" aria-label={t('Passages du Moment')}>
         {all.map((p, i) => (
-          <button key={i} role="tab" aria-selected={i === cur} className={`clip-blk${i === cur ? ' on' : ''}${pi === i ? ' play' : ''}${okLen(p) ? '' : ' bad'}`}
-            style={{ flexGrow: Math.max(0.1, p.b - p.a) }} onClick={() => pickClip(i)}>
+          <button key={i} role="tab" aria-selected={i === cur} className={`clip-blk${i === cur ? ' on' : ''}${dragI === i ? ' drag' : ''}${pi === i ? ' play' : ''}${okLen(p) ? '' : ' bad'}`}
+            style={{ flexGrow: Math.max(0.1, p.b - p.a) }} onPointerDown={blkDown(i)} onPointerMove={blkMove} onPointerUp={blkUp} onPointerCancel={blkUp}
+            onClick={() => { if (noClick.current) { noClick.current = false; return; } pickClip(i); }}>
             <b>{i + 1}</b><span>{(p.b - p.a).toFixed(1)} s</span></button>))}
         {canAdd && <button className="clip-blk add" onClick={add} aria-label={t('Ajouter un passage')}><Ico n="plus" /></button>}
         <i className="clip-rest" style={{ flexGrow: Math.max(0, MOMENT_TOTAL - total - (canAdd ? 5 : 0)) }} />
       </div>
+      {all.length > 1 && <p className="clip-hint">{t('Touche pour modifier · glisse pour changer l’ordre')}</p>}
       <div className="clip-cur">
         <span>{t('Passage')} {cur + 1}/{all.length} · <b style={{ color: okLen(all[cur]) ? undefined : 'var(--red)' }}>{len.toFixed(1)} s</b></span>
         {all.length > 1 && <span className="hstack" style={{ gap: 2 }}>

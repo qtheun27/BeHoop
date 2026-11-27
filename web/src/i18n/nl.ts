@@ -1486,4 +1486,5 @@ export const NL: Record<string, string> = {
   "Placer plus tôt dans le Moment": "Eerder in het Moment plaatsen",
   "Placer plus tard dans le Moment": "Later in het Moment plaatsen",
   "Voir le Short": "Short bekijken",
+  "Touche pour modifier · glisse pour changer l’ordre": "Tik om aan te passen · sleep om de volgorde te wijzigen",
 };

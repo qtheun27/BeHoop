@@ -1486,4 +1486,5 @@ export const EN: Record<string, string> = {
   "Placer plus tôt dans le Moment": "Move earlier in the Moment",
   "Placer plus tard dans le Moment": "Move later in the Moment",
   "Voir le Short": "View the Short",
+  "Touche pour modifier · glisse pour changer l’ordre": "Tap to edit · drag to reorder",
 };
