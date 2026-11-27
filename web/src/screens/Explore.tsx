@@ -160,7 +160,7 @@ export function TeamPage({ id }: { id: number }) {
         <div className="banner"><Ico n={team.ag === 'jeunes' ? 'lock' : 'users'} size={28} style={{ color: 'var(--accent)' }} /><div style={{ flex: 1 }}><b>{t('Tu fais partie de cette équipe ?')}</b>
           <div className="muted" style={{ fontSize: 14 }}>{accepted ? (member!.role === 'responsable' ? t('Tu es responsable : retrouve-la dans l’onglet Équipes.') : t('Tu es membre : retrouve-la dans l’onglet Équipes.')) : member ? t('Demande envoyée, en attente de validation.')
             : team.ag === 'jeunes' ? t('Parent, joueur ou coach : rejoins-la pour ses photos, vidéos et le covoiturage.') : t('Joueur ou coach : rejoins-la pour son espace (covoiturage, membres, vidéos).')}</div></div>
-          {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>{t('Rejoindre')}</button>}
+          {!member && !s.isChild && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>{t('Rejoindre')}</button>}
           {accepted && <button className="btn small secondary" onClick={async () => { if (confirm(t('Quitter l’Équipe ?'))) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>{t('Quitter')}</button>}
         </div>)}
       {accepted && member!.relation === 'parent' && <ImageConsentRow teamId={id} member={member!} onChange={() => s.refresh()} />}
@@ -238,7 +238,7 @@ export function NoImageNotice({ teamId }: { teamId: number }) {
   return <div className="err mt" role="note"><b>{t('Sans accord d’image : ne les montre pas')}</b> — {no.map((m) => m.child || m.displayName).join(', ')}</div>;
 }
 
-export const RELATION_FR: Record<string, string> = { parent: 'Parent', joueur: 'Joueur', coach: 'Coach', autre: 'Autre' };
+export const RELATION_FR: Record<string, string> = { parent: 'Parent', joueur: 'Joueur', coach: 'Coach', autre: 'Autre', enfant: 'Enfant (accès parent)' };
 export function MembersList({ teamId, members, reload, me }: { teamId: number; members: D.Membership[]; reload: () => void; me: string }) {
   const act = async (f: () => Promise<unknown>) => { await f(); reload(); };
   const pending = members.filter((m) => m.status === 'pending'), acc = members.filter((m) => m.status === 'accepted');

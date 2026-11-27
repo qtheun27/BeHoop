@@ -2,7 +2,8 @@
 //  /api/*  : API authentifiée par jeton Firebase (envoi R2 pré-signé, montage, Moments, notifications, compte)
 //  /m/*    : diffusion des médias R2 avec contrôle d'accès par cookie signé (HMAC, 6 h) + cache Cloudflare
 import { AwsClient } from 'aws4fetch';
-import { verifyIdToken, accessToken, type FirebaseUser } from './google';
+import { verifyIdToken, accessToken, customToken, deleteAuthUser, type FirebaseUser } from './google';
+import { kidCode, KID_CODE_TTL, kidRoutes } from './kids';
 import { sharePage, shareImage } from './share';
 import { Firestore } from './firestore';
 import { signCookie, verifyCookie, readCookie, canAccess, contentType, safeName, signDl, verifyDl } from './access';
@@ -60,6 +61,7 @@ export default {
     try {
       if (url.pathname.startsWith('/m/')) res = await serveMedia(req, env, ctx, decodeURIComponent(url.pathname.slice(3)));
       else if (url.pathname.startsWith('/dl/')) res = await serveDownload(req, env, url);
+      else if (url.pathname === '/api/child/login' && req.method === 'POST') res = await childLogin(req, env);
       else if (url.pathname.startsWith('/api/')) res = await api(req, env, url.pathname.slice(4));
       else if (url.pathname.startsWith('/s/')) {
         // Liens de partage : /s/v/{vidéo}, /s/m/{Moment}, affiches publiques /s/img/(v|m)/{id}.jpg
@@ -189,6 +191,8 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   const isAdmin = user.email === 'q.theuninck@gmail.com' && user.email_verified === true;
   const profile = await fs.get<{ banned?: boolean; displayName?: string }>(`profiles/${user.uid}`);
   if (profile?.banned) throw new Error('FORBIDDEN');
+  // Accès enfant : seulement la lecture de ses médias (cookie) ; aucune publication, aucun envoi, aucune action
+  if (user.child && path !== '/media-cookie') throw new Error('FORBIDDEN');
   const body: any = req.method === 'POST' ? await req.json().catch(() => ({})) : {};
   const s3 = new AwsClient({ accessKeyId: env.R2_ACCESS_KEY_ID, secretAccessKey: env.R2_SECRET_ACCESS_KEY, service: 's3', region: 'auto' });
   const r2url = (key: string) => `https://${env.R2_ACCOUNT_ID}${env.R2_JURISDICTION ? '.' + env.R2_JURISDICTION : ''}.r2.cloudflarestorage.com/${env.R2_BUCKET}/${key.split('/').map(encodeURIComponent).join('/')}`;
@@ -697,8 +701,13 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
 
+  // ----- Accès enfants (créés et gérés par le parent)
+  if (path.startsWith('/child/')) return kidRoutes(path, body, { fs, env, user, profile, customToken, deleteAuthUser, json, fail });
+
   // ----- Suppression du compte et de ses données (RGPD)
   if (path === '/account' && req.method === 'DELETE') {
+    // Les accès de ses enfants disparaissent avec le compte du parent
+    await kidRoutes('/child/revoke-all', {}, { fs, env, user, profile, customToken, deleteAuthUser, json, fail }).catch(() => {});
     for (const f of await fs.query('items', [], { parent: `follows/${user.uid}` }).catch(() => [])) await fs.delete(f._path);
     for (const m of await fs.query('members', [['uid', 'EQUAL', user.uid]], { allDescendants: true })) await fs.delete(m._path);
     for (const p of await fs.query('posts', [['authorUid', 'EQUAL', user.uid]])) {
@@ -746,6 +755,20 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
     return json({ ok: true });
   }
   return fail('Route inconnue', 404);
+}
+
+/** Connexion d'un accès enfant avec le code à usage unique donné par son parent (sans compte connecté) */
+async function childLogin(req: Request, env: Env): Promise<Response> {
+  const fs = new Firestore(env.FIREBASE_PROJECT_ID, () => accessToken(env.FIREBASE_SERVICE_ACCOUNT));
+  const body: any = await req.json().catch(() => ({}));
+  const code = kidCode(String(body.code ?? ''));
+  if (!code) return fail('Code invalide', 400);
+  const c = await fs.get<any>(`kidCodes/${code}`);
+  if (!c || Number(c.exp) < Date.now()) { if (c) await fs.delete(`kidCodes/${code}`).catch(() => {}); return fail('Code invalide ou expiré', 400); }
+  await fs.delete(`kidCodes/${code}`); // usage unique
+  const k = await fs.get<any>(`kids/${c.kidUid}`);
+  if (!k || k.parentUid !== c.parentUid) return fail('Accès supprimé', 400);
+  return json({ token: await customToken(env.FIREBASE_SERVICE_ACCOUNT, c.kidUid, { child: true, parent: k.parentUid }), name: k.name, ttl: KID_CODE_TTL });
 }
 
 async function dispatch(env: Env, workflow: string, inputs: Record<string, string>) {

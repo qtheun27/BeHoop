@@ -18,6 +18,7 @@ export interface Post {
 }
 export interface Profile {
   displayName: string; avatarUrl?: string; createdAt?: unknown; ageConfirmed: boolean; onboarded?: boolean;
+  /** Accès enfant (créé par un parent, connexion par code) : lecture seule de ses équipes */ child?: boolean; parentUid?: string;
   notifPrefs: Record<string, boolean>; fcmTokens?: string[]; banned?: boolean; theme?: 'auto' | 'light' | 'dark';
   /** Préférences d'affichage (Mon thème) */ ui?: Partial<import('./theme').ThemePrefs>;
   /** Équipes (ou compétitions 'comp-…') dont le calendrier a déjà été ajouté au téléphone */ calendars?: (number | string)[];

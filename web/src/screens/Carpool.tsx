@@ -33,7 +33,7 @@ function minus(time: string, m: number) {
 /** Peut-on voir le covoiturage de ce match ? Jeunes : seulement les membres de l'Équipe */
 export function useCarpoolAccess(youthTeam: number | null) {
   const s = useSession();
-  return !!s.user && (!youthTeam || s.privateTeams.includes(youthTeam));
+  return !!s.user && !s.isChild && (!youthTeam || s.privateTeams.includes(youthTeam));
 }
 
 /** Résumé pour les cartes de match : places libres et personnes qui cherchent */

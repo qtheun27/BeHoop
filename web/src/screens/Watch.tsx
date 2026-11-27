@@ -417,10 +417,10 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
         <button key={c.title} className="row" onClick={() => { seek(c.start); ref.current!.play(); }}>
           <div className="grow" style={{ fontWeight: time >= c.start && time < c.end ? 700 : 400 }}>{t(c.title)}</div><span className="muted">{fmt(c.start)}</span></button>))}</div>
       <div className="hstack">
-        <button className="btn secondary" onClick={() => { const go = () => { ref.current?.pause(); setClip(true);
+        {!s.isChild && <button className="btn secondary" onClick={() => { const go = () => { ref.current?.pause(); setClip(true);
           // La vidéo juste sous l'en-tête : vidéo et réglages du Moment tiennent ensemble à l'écran
           const top = box.current!.getBoundingClientRect().top + scrollY - (document.querySelector('.navbar')?.getBoundingClientRect().height ?? 0) - 8;
-          scrollTo({ top: Math.max(0, top), behavior: 'smooth' }); }; if (s.requireAuth(go)) go(); }}><><Ico n="bolt" />{t('Créer un Moment')}</></button>
+          scrollTo({ top: Math.max(0, top), behavior: 'smooth' }); }; if (s.requireAuth(go)) go(); }}><><Ico n="bolt" />{t('Créer un Moment')}</></button>}
         <button className="btn secondary" onClick={() => shareLink(mv.title, shareUrl(id, youth ? team : undefined), s.toast)}><Ico n="external" />{t('Partager le lien')}</button>
         {!youth && pubDl.data && <a className="btn ghost" href={inSafari(pubDl.data)} target="_blank" rel="noopener noreferrer">{t('Télécharger la vidéo')}</a>}
       </div>

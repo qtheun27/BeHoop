@@ -4,7 +4,7 @@ import { hideSplash } from './lib/splash';
 import { CourtBg } from './ui/CourtBg';
 import { useRoute } from './lib/router';
 import { useSession } from './lib/session';
-import { Icons, Logo, LangSwitch, Avatar, useWide, Loader } from './ui/kit';
+import { Icons, Logo, LangSwitch, Avatar, useWide, Loader, Screen } from './ui/kit';
 import { Ico } from './ui/icons';
 import { t } from './lib/i18n';
 import { setReturnTo, takeReturnTo } from './lib/util';
@@ -93,8 +93,8 @@ export function App() {
     case 'equipe': el = s.user ? <ClubHub teamId={+a} /> : <TeamPage id={+a} />; break;
     case 'competition': el = <CompPage id={a} />; break;
     case 'match': el = <MatchPage serie={+a} id={+b} />; break;
-    case 'publier': el = <Publish />; break;
-    case 'montage': el = <Montage id={a} />; break;
+    case 'publier': el = s.isChild ? <ChildOnly /> : <Publish />; break;
+    case 'montage': el = s.isChild ? <ChildOnly /> : <Montage id={a} />; break;
     case 'matchs': el = <Matches />; break;
     case 'profil': el = <Profile />; break;
     case 'legal': el = <Legal doc={a} />; break;
@@ -119,7 +119,7 @@ export function App() {
           {ANON_TABS.map(([id, ic, l]) => <a key={id} href={`#/${id}`} onClick={toTopIfHere(id)} className={(page === 'actus' ? 'actus' : tab) === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
           <button className="tab-login" onClick={() => s.requireAuth()}><Ico n="user" /><span>{tr('Connexion')}</span></button>
         </>}
-        {s.user && TABS.map((t) => (
+        {s.user && TABS.filter((t) => !(s.isChild && t.id === 'publier')).map((t) => (
           <a key={t.id} href={`#/${t.id}`} onClick={toTopIfHere(t.id)} className={tab === t.id ? 'on' : ''} aria-current={tab === t.id ? 'page' : undefined}>
             {t.icon}{t.id !== 'publier' && <span>{tr(t.label)}</span>}{t.id === 'publier' && <span className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden' }}>{tr('Shoot')}</span>}
           </a>
@@ -163,7 +163,7 @@ function SideNav({ tab }: { tab: string }) {
         {items.map(([id, ic, l]) => <a key={id} href={`#/${id}`} onClick={toTopIfHere(id)} className={tab === id ? 'on' : ''}>{ic}<span>{tr(l)}</span></a>)}
       </div>
       {/* Actions de la barre latérale : toutes en .side-cta (même taille, même forme) ; seule la couleur change */}
-      <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Shoot')}</a>
+      {!s.isChild && <a className="btn side-cta" href="#/publier"><Ico n="plus" />{tr('Shoot')}</a>}
       {roles?.manage && <a className="btn side-cta side-club" href="#/espace" title={tr('Hoop Camp, entraînements, tactique')}><Ico n="bolt" />{tr('Espace Club')}</a>}
       <div className="side-foot">
         {s.user ? <a className={`side-me${tab === 'profil' ? ' on' : ''}`} href="#/profil"><Avatar name={s.profile?.displayName ?? '?'} src={s.profile?.avatarUrl} /><span className="ellipsis">{s.profile?.displayName ?? tr('Mon profil')}</span></a>
@@ -172,6 +172,11 @@ function SideNav({ tab }: { tab: string }) {
       </div>
     </nav>
   );
+}
+
+/** Accès enfant : publier et monter des vidéos sont réservés aux adultes */
+function ChildOnly() {
+  return <Screen title={tr('BeHoop')}><p className="center muted" style={{ marginTop: 40 }}>{tr('Cette partie est réservée aux parents et aux coachs.')}</p></Screen>;
 }
 
 /** Une erreur dans un écran n'efface pas toute l'appli : message et bouton pour recharger (remis à zéro à chaque navigation) */

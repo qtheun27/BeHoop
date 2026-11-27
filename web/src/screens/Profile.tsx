@@ -1,6 +1,7 @@
 import { HelpSheet, myThreads } from '../ui/Help';
 import { useEffect, useState } from 'react';
 import { deleteUser } from 'firebase/auth';
+import { KidsSection, ChildProfile } from './Kids';
 import { useSession } from '../lib/session';
 import * as D from '../lib/db';
 import { api, mediaUrl } from '../lib/api';
@@ -30,6 +31,7 @@ export function Profile() {
       action={<button className="btn" onClick={() => s.requireAuth()}>{t('Se connecter ou créer un compte')}</button>} />
       <LegalLinks /></Screen>;
   }
+  if (s.isChild) return <ChildProfile />;
   const teamName = (id: number) => { for (const c of clubs) { const tm = c.teams.find((x) => x.id === id); if (tm) return `${c.short} · ${teamLabel(tm)}`; } return `${t('Équipe')} ${id}`; };
   const clubName = (id: number) => clubs.find((c) => c.id === id)?.name ?? `Club ${id}`;
   const p = s.profile;
@@ -61,6 +63,7 @@ export function Profile() {
             <span className="pill">{m.status === 'pending' ? t('En attente') : m.role === 'responsable' ? t('Responsable') : t('Membre')}</span></a>)}
         {s.responsibleTeams.length > 0 && <button className="row" onClick={() => setSheet('requests')}><div className="grow">{t('Demandes à valider')}</div><span className="chev">›</span></button>}
       </div>
+      <KidsSection />
 
       <div className="group">
         <button className="row" onClick={() => setSheet('posts')}><div className="grow">{t('Mes publications')}</div><span className="chev">›</span></button>

@@ -166,7 +166,7 @@ function PostMenu({ post, onClose, onChange }: { post: D.Post; onClose: () => vo
     <Sheet title={reporting ? t('Signaler') : t('Options')} onClose={onClose}>
       {reporting ? <div className="group">{D.REPORT_REASONS.map((r) => <button key={r} className="row" onClick={() => act(() => D.report(post.id, s.user!.uid, r), t('Merci, on va regarder.'))}>{t(r)}</button>)}</div> : (
         <div className="group">
-          {youthMedia && !post.hidden && <button className="row" style={{ color: 'var(--red)' }} onClick={() => s.requireAuth() && confirm(t('Ce contenu sera masqué immédiatement pour tout le monde. Continuer ?')) &&
+          {youthMedia && !post.hidden && !s.isChild && <button className="row" style={{ color: 'var(--red)' }} onClick={() => s.requireAuth() && confirm(t('Ce contenu sera masqué immédiatement pour tout le monde. Continuer ?')) &&
             act(async () => { await D.hidePost(post.id, 'parent', s.user!.uid); onChange({ ...post, hidden: true }); api('/notify/parent-removal', { postId: post.id }).catch(() => {}); }, t('Contenu retiré.'))}>{t('Je suis parent — retirer ce contenu')}</button>}
           {(isAuthor || isResp || s.isAdmin) && !post.hidden && <button className="row" onClick={() => act(async () => { await D.hidePost(post.id, isAuthor ? 'auteur' : isResp ? 'responsable' : 'admin', s.user!.uid); onChange({ ...post, hidden: true }); }, t('Contenu masqué'))}>{t('Masquer')}</button>}
           {s.isAdmin && post.hidden && <button className="row" onClick={() => act(async () => { await D.unhidePost(post.id); onChange({ ...post, hidden: false }); }, t('Contenu réactivé'))}>{t('Réactiver')}</button>}

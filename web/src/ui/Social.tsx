@@ -34,8 +34,9 @@ export function useYouth(teamIds: number[]) {
 }
 
 /** Réactions + bouton commentaires sous une actu ou un match */
-export function SocialBar({ k, title, youth, right }: { k: D.ThreadKey; title: string; youth?: boolean; right?: React.ReactNode }) {
+export function SocialBar({ k, title, youth: y, right }: { k: D.ThreadKey; title: string; youth?: boolean; right?: React.ReactNode }) {
   const s = useSession();
+  const youth = y || s.isChild; // accès enfant : réactions seulement, jamais de commentaires
   const [ref, seen] = useSeen<HTMLDivElement>();
   const [th, setTh] = useState<D.Thread>({ reactions: {}, comments: 0 });
   // Compteurs chargés (data-loaded) : tant qu'ils ne le sont pas, « pas de nombre » ne veut pas dire zéro
@@ -66,7 +67,9 @@ export function SocialBar({ k, title, youth, right }: { k: D.ThreadKey; title: s
 }
 
 /** Bouton commentaires seul (publications : leurs réactions restent sur la publication) */
-export function CommentButton({ k, title, youth }: { k: D.ThreadKey; title: string; youth?: boolean }) {
+export function CommentButton({ k, title, youth: y }: { k: D.ThreadKey; title: string; youth?: boolean }) {
+  const kid = useSession().isChild;
+  const youth = y || kid;
   const [ref, seen] = useSeen<HTMLButtonElement>();
   const [n, setN] = useState(0);
   const [open, setOpen] = useState(false);

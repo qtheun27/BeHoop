@@ -250,3 +250,40 @@ describe('Résultats rapides', () => {
     await assertFails(setDoc(doc(as('alice'), 'resultsDay', '2026-10-25'), { r: {} }));
   });
 });
+
+describe('Accès enfant (créé par un parent)', () => {
+  const KID = { child: true, parent: 'alice' };
+  beforeEach(async () => {
+    await env.withSecurityRulesDisabled(async (c) => {
+      const db = c.firestore();
+      await setDoc(doc(db, 'profiles', 'kid1'), { displayName: 'Léo', ageConfirmed: true, child: true, parentUid: 'alice' });
+      await setDoc(doc(db, 'teamMembers', String(U12), 'members', 'kid1'), { uid: 'kid1', teamId: U12, role: 'membre', status: 'accepted', relation: 'enfant', child: true });
+    });
+  });
+  const comment = { authorUid: 'kid1', authorName: 'Léo', text: 'Bravo', createdAt: serverTimestamp(), hidden: false };
+  it('lit les publications de son équipe et réagit (🏀 🔥 👏)', async () => {
+    const db = as('kid1', KID);
+    await assertSucceeds(getDoc(doc(db, 'posts', 'private1')));
+    const b = writeBatch(db);
+    b.set(doc(db, 'threads', 'post-private1'), { reactions: { '🔥': increment(1) }, comments: increment(0) }, { merge: true });
+    b.set(doc(db, 'threads', 'post-private1', 'reactions', 'kid1'), { emoji: '🔥' });
+    await assertSucceeds(b.commit());
+  });
+  it('ne publie pas, ne commente pas, ne fait pas de covoiturage, ne rejoint aucune équipe', async () => {
+    const db = as('kid1', KID);
+    await assertFails(setDoc(doc(db, 'posts', 'k1'), photoPost('kid1', U12, 'team')));
+    await assertFails(setDoc(doc(db, 'threads', 'game-1', 'comments', 'k1'), comment));
+    await assertFails(setDoc(doc(db, 'carpools', '7', 'offers', 'k1'), { kind: 'offer', driverUid: 'kid1', driverName: 'Léo', seats: 2, from: 'x', meet: '', time: '18:00', teamIdPrivate: U12, requests: {}, gameId: 7 }));
+    await assertFails(setDoc(doc(db, 'teamMembers', String(SEN), 'members', 'kid1'), { uid: 'kid1', teamId: SEN, role: 'membre', status: 'pending' }));
+    await assertFails(setDoc(doc(db, 'liveScores', '7'), { home: 1, away: 0, updatedBy: 'kid1' }));
+  });
+  it('ne change ni son prénom ni son statut d’enfant', async () => {
+    const db = as('kid1', KID);
+    await assertFails(updateDoc(doc(db, 'profiles', 'kid1'), { displayName: 'Autre' }));
+    await assertFails(updateDoc(doc(db, 'profiles', 'kid1'), { child: false }));
+    await assertSucceeds(updateDoc(doc(db, 'profiles', 'kid1'), { lang: 'nl' }));
+  });
+  it('un adulte garde tous ses droits', async () => {
+    await assertSucceeds(setDoc(doc(as('alice'), 'posts', 'a1'), photoPost('alice', U12, 'team')));
+  });
+});

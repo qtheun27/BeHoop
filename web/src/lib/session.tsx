@@ -11,6 +11,7 @@ import { terminate, clearIndexedDbPersistence } from 'firebase/firestore';
 
 interface Session {
   ready: boolean; user: User | null; profile: D.Profile | null; isAdmin: boolean;
+  /** Accès enfant : pas de publication, de commentaire, de covoiturage ni d'adhésion */ isChild: boolean;
   follows: D.Follow[]; memberships: D.Membership[];
   /** Équipes suivies (directement ou via un club, moins les équipes désactivées) */
   followedTeams: number[]; followedClubs: number[]; followedComps: string[]; targets: string[];
@@ -102,7 +103,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   }, [user, follows, toast]);
 
   const value: Session = {
-    ready, user, profile, isAdmin: !!user?.email && user.email === SUPER_ADMIN_EMAIL && user.emailVerified,
+    ready, user, profile, isAdmin: !!user?.email && user.email === SUPER_ADMIN_EMAIL && user.emailVerified, isChild: !!profile?.child,
     follows, memberships, ...derived,
     refresh: () => load(user), setProfile, toggleFollow, toggleComp,
     requireAuth: (then) => { if (user && profile) return true; setAuthSheet(() => then ?? null); return false; },

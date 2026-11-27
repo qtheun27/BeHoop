@@ -349,6 +349,10 @@ service cloud.firestore {
     function isAdmin() { return signedIn() && request.auth.token.email == 'q.theuninck@gmail.com' && request.auth.token.email_verified == true; }
     function profile() { return get(/databases/$(database)/documents/profiles/$(uid())); }
     function active() { return signedIn() && exists(/databases/$(database)/documents/profiles/$(uid())) && profile().data.get('banned', false) != true; }
+    // Accès enfant (créé par un parent, connexion par code) : il lit son équipe et réagit (🏀 🔥 👏), il ne publie, ne commente,
+    // ne fait pas de covoiturage et ne rejoint aucune équipe. Marqué dans son jeton par le serveur (« child »).
+    function isChild() { return signedIn() && request.auth.token.get('child', false) == true; }
+    function adult() { return active() && !isChild(); }
     function memberDoc(teamId) { return /databases/$(database)/documents/teamMembers/$(string(teamId))/members/$(uid()); }
     function isMember(teamId) { return signedIn() && exists(memberDoc(teamId)) && get(memberDoc(teamId)).data.status == 'accepted'; }
     function isResponsible(teamId) { return isMember(teamId) && get(memberDoc(teamId)).data.role == 'responsable'; }
@@ -366,7 +370,7 @@ service cloud.firestore {
       allow create: if signedIn() && uid() == userId && request.resource.data.ageConfirmed == true
         && request.resource.data.displayName is string && request.resource.data.displayName.size() <= 40
         && request.resource.data.get('banned', false) == false;
-      allow update: if (signedIn() && uid() == userId && unchanged(['banned'])) || isAdmin();
+      allow update: if (signedIn() && uid() == userId && unchanged(['banned']) && (!isChild() || unchanged(['displayName', 'child', 'parentUid']))) || isAdmin();
       allow delete: if signedIn() && uid() == userId;
     }
     match /legalAcceptances/{userId} {
@@ -382,14 +386,14 @@ service cloud.firestore {
     match /teamInfo/{teamId} {
       allow read: if true;
       // Personnalisation (nom/logo/couleurs) par un membre ; correction Jeunes/Seniors par le super admin.
-      allow write: if isAdmin() || (active() && isMember(int(teamId)) && request.resource.data.diff(resource == null ? {} : resource.data).affectedKeys().hasOnly(['override']));
+      allow write: if isAdmin() || (adult() && isMember(int(teamId)) && request.resource.data.diff(resource == null ? {} : resource.data).affectedKeys().hasOnly(['override']));
     }
 
     // ---------- Équipes 🔒 ----------
     match /teamMembers/{teamId}/members/{memberId} {
       allow read: if signedIn() && (uid() == memberId || isMember(int(teamId)) || isAdmin());
       // Demande d'accès : uniquement pour soi, en attente, rôle membre.
-      allow create: if (active() && uid() == memberId && request.resource.data.status == 'pending' && request.resource.data.role == 'membre'
+      allow create: if (adult() && uid() == memberId && request.resource.data.status == 'pending' && request.resource.data.role == 'membre'
                         && request.resource.data.uid == memberId && request.resource.data.teamId == int(teamId)
                         && request.resource.data.get('message', '').size() <= 200)
                     || isAdmin();
@@ -415,7 +419,7 @@ service cloud.firestore {
     function validNewPost(d, postId) {
       let hasMedia = d.type == 'photo';
       let team = d.teamIds.size() == 1 ? d.teamIds[0] : null;
-      return active() && d.authorUid == uid() && d.hidden == false && d.reactions.size() == 0
+      return adult() && d.authorUid == uid() && d.hidden == false && d.reactions.size() == 0
         && d.type in ['photo', 'message']
         && d.get('payload', {}).get('text', '').size() <= 500
         && d.get('payload', {}).get('photos', []).size() <= 10
@@ -429,7 +433,7 @@ service cloud.firestore {
         && (hasMedia || (d.visibility == 'public' && d.teamIdPrivate == null));
     }
     function validLivePost(d, postId) {
-      return active() && postId.matches('live-[0-9]+') && d.type == 'live' && d.visibility == 'public' && d.teamIdPrivate == null && d.authorUid == uid();
+      return adult() && postId.matches('live-[0-9]+') && d.type == 'live' && d.visibility == 'public' && d.teamIdPrivate == null && d.authorUid == uid();
     }
     // Réaction : seul le compteur change, d'au plus ±1 par emoji, en cohérence avec le document reactions/{uid}.
     function validReactionUpdate(postId) {
@@ -449,7 +453,7 @@ service cloud.firestore {
           // Réactions
        || (active() && canRead(resource.data) && validReactionUpdate(postId))
           // « Je suis parent — retirer ce contenu » : masquage immédiat par tout lecteur d'un média Jeunes
-       || (active() && resource.data.visibility == 'team' && canRead(resource.data) && onlyChanged(['hidden', 'hiddenReason', 'hiddenBy', 'hiddenAt'])
+       || (adult() && resource.data.visibility == 'team' && canRead(resource.data) && onlyChanged(['hidden', 'hiddenReason', 'hiddenBy', 'hiddenAt'])
            && request.resource.data.hidden == true && request.resource.data.hiddenReason == 'parent' && request.resource.data.hiddenBy == uid())
           // Masquage par l'auteur ou un responsable de l'équipe
        || (active() && onlyChanged(['hidden', 'hiddenReason', 'hiddenBy', 'hiddenAt']) && request.resource.data.hidden == true
@@ -498,7 +502,7 @@ service cloud.firestore {
       }
       match /comments/{commentId} {
         allow read: if canReadThread(key);
-        allow create: if active() && canReadThread(key) && request.resource.data.keys().hasOnly(['authorUid', 'authorName', 'text', 'createdAt', 'hidden'])
+        allow create: if adult() && canReadThread(key) && request.resource.data.keys().hasOnly(['authorUid', 'authorName', 'text', 'createdAt', 'hidden'])
           && request.resource.data.authorUid == uid() && request.resource.data.hidden == false
           && request.resource.data.text is string && request.resource.data.text.size() >= 1 && request.resource.data.text.size() <= 500
           && request.resource.data.authorName is string && request.resource.data.authorName.size() <= 60
@@ -512,14 +516,14 @@ service cloud.firestore {
     // Liste personnelle de mes commentaires (pour les effacer avec le compte) : moi seul
     match /myComments/{userId}/items/{commentId} {
       allow read, delete: if signedIn() && uid() == userId;
-      allow create: if active() && uid() == userId && request.resource.data.keys().hasOnly(['thread']) && request.resource.data.thread is string
+      allow create: if adult() && uid() == userId && request.resource.data.keys().hasOnly(['thread']) && request.resource.data.thread is string
         && existsAfter(/databases/$(database)/documents/threads/$(request.resource.data.thread)/comments/$(commentId));
     }
 
     // Liste personnelle de mes covoiturages (annonces et demandes), pour tout effacer avec le compte : moi seul
     match /myCarpools/{userId}/items/{offerId} {
       allow read, delete: if signedIn() && uid() == userId;
-      allow create, update: if active() && uid() == userId && request.resource.data.keys().hasOnly(['game']) && request.resource.data.game is int;
+      allow create, update: if adult() && uid() == userId && request.resource.data.keys().hasOnly(['game']) && request.resource.data.game is int;
     }
 
     // ---------- Signalements ----------
@@ -534,7 +538,7 @@ service cloud.firestore {
     function canReadVideo(d) { return d.authorUid == uid() || d.visibility == 'public' || isAdmin() || (d.get('teamIdPrivate', null) != null && isMember(d.teamIdPrivate)); }
     match /matchVideos/{id} {
       allow read: if signedIn() && canReadVideo(resource.data);
-      allow create: if active() && request.resource.data.authorUid == uid() && request.resource.data.status == 'draft'
+      allow create: if adult() && request.resource.data.authorUid == uid() && request.resource.data.status == 'draft'
         && (request.resource.data.visibility == 'team' || isSeniors(request.resource.data.teamIds[0]));
       // L'auteur modifie ses réglages et médias ; statut/HLS réservés au pipeline (compte de service).
       allow update: if (signedIn() && resource.data.authorUid == uid() && unchanged(['authorUid', 'hls', 'visibility', 'teamIdPrivate', 'version', 'youtube'])
@@ -549,7 +553,7 @@ service cloud.firestore {
     // ---------- V2 : score en direct ----------
     match /liveScores/{gameId} {
       allow read: if true;
-      allow create, update: if active() && request.resource.data.updatedBy == uid()
+      allow create, update: if adult() && request.resource.data.updatedBy == uid()
         && request.resource.data.home is int && request.resource.data.away is int
         && request.resource.data.home >= 0 && request.resource.data.away >= 0 && request.resource.data.home < 250 && request.resource.data.away < 250
         && request.resource.data.quarter in [1, 2, 3, 4] && request.resource.data.history.size() <= 200
@@ -574,10 +578,10 @@ service cloud.firestore {
     // ---------- V2 : covoiturage ----------
     function carpoolAllowed(teamIdPrivate) { return teamIdPrivate == null || isMember(teamIdPrivate); }
     match /carpools/{gameId}/offers/{offerId} {
-      allow read: if active() && carpoolAllowed(resource.data.teamIdPrivate);
-      allow create: if active() && request.resource.data.driverUid == uid() && carpoolAllowed(request.resource.data.teamIdPrivate)
+      allow read: if adult() && carpoolAllowed(resource.data.teamIdPrivate);
+      allow create: if adult() && request.resource.data.driverUid == uid() && carpoolAllowed(request.resource.data.teamIdPrivate)
         && request.resource.data.requests.size() == 0 && request.resource.data.seats >= 0 && request.resource.data.seats <= 8;
-      allow update: if active() && carpoolAllowed(resource.data.teamIdPrivate) && onlyChanged(['requests', 'seats', 'from', 'time', 'meet']) && (
+      allow update: if adult() && carpoolAllowed(resource.data.teamIdPrivate) && onlyChanged(['requests', 'seats', 'from', 'time', 'meet']) && (
           (resource.data.driverUid == uid() && request.resource.data.seats >= 0 && request.resource.data.seats <= 8)
           // un passager ne touche qu'à sa propre demande : l'envoyer (en attente) ou l'annuler
        || (request.resource.data.requests.diff(resource.data.requests).affectedKeys().hasOnly([uid()]) && onlyChanged(['requests'])
@@ -587,7 +591,7 @@ service cloud.firestore {
       // Coordonnées : visibles par le propriétaire, le conducteur, et un passager accepté (après acceptation).
       match /contacts/{userId} {
         function offer() { return get(/databases/$(database)/documents/carpools/$(gameId)/offers/$(offerId)).data; }
-        allow write: if active() && uid() == userId;
+        allow write: if adult() && uid() == userId;
         allow read: if signedIn() && (uid() == userId
           || (offer().driverUid == uid() && offer().requests.get(userId, {}).get('status', '') == 'accepted')
           || (userId == offer().driverUid && offer().requests.get(uid(), {}).get('status', '') == 'accepted'));

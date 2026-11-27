@@ -13,6 +13,7 @@ import { haptic, shortName, store, takeReturnTo, peekReturnTo } from '../lib/uti
 import { enableNotifications } from '../lib/push';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
+import { KidCodeLogin } from './Kids';
 
 const msg = (e: any): string => {
   const c = String(e?.code ?? '');
@@ -41,6 +42,7 @@ export function AuthSheet({ onClose, finishOnly }: { onClose: () => void; finish
 export function AuthForm({ onDone, intro = true }: { onDone?: () => void; intro?: boolean }) {
   const s = useSession();
   const [mode, setMode] = useState<'lien' | 'mdp'>('lien');
+  const [kid, setKid] = useState(false);
   const [email, setEmail] = useState(store.get('behoop.email', ''));
   const [pwd, setPwd] = useState('');
   const [creating, setCreating] = useState(false);
@@ -98,6 +100,10 @@ export function AuthForm({ onDone, intro = true }: { onDone?: () => void; intro?
       </>
     );
   }
+  if (kid) return (<>
+    <KidCodeLogin onDone={onDone} />
+    <button className="btn ghost small mt" style={{ width: '100%' }} onClick={() => setKid(false)}>{t('Retour à la connexion')}</button>
+  </>);
   return (
     <>
       {intro && <p className="center muted" style={{ marginTop: 0 }}>{t('Suis tes clubs, réagis aux résultats et publie les photos et vidéos de tes matchs.')}</p>}
@@ -128,6 +134,7 @@ export function AuthForm({ onDone, intro = true }: { onDone?: () => void; intro?
           )}
         </>
       )}
+      <button className="btn ghost small mt kid-link" onClick={() => setKid(true)}><Ico n="lock" />{t('J’ai un code enfant')}</button>
     </>
   );
 }

@@ -661,3 +661,10 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .player .bar .mark.hl{width:7px;height:7px;border-radius:50%;background:#f26a1b;box-shadow:0 0 0 2px rgba(0,0,0,.35);transform:translate(-3px,1px)}
 .hl-prop{width:100%;margin:0 0 8px;justify-content:center}
 .hl-prop .muted{font-weight:400}
+/* Accès enfant : code de connexion */
+.kid-code{font-family:Anton,Impact,sans-serif;font-size:56px;letter-spacing:.12em;text-align:center;margin:10px 0 4px;color:var(--accent);font-variant-numeric:tabular-nums}
+.kid-code.off{opacity:.3;text-decoration:line-through}
+.kid-steps{margin:0 0 4px;padding-left:20px;font-size:15px;line-height:1.5}
+.kid-input{text-align:center;font-size:28px;letter-spacing:.2em;font-weight:700;text-transform:uppercase}
+.kid-link{width:100%;justify-content:center;margin-top:18px}
+.kid-row{flex-wrap:wrap;gap:6px}.kid-row .grow{flex:1 0 100%}

@@ -174,7 +174,7 @@ function TeamSection({ club, team, games, idx }: { club: Club; team: Team; games
         <div className="banner"><Ico n={team.ag === 'jeunes' ? 'lock' : 'users'} size={26} style={{ color: 'var(--accent)' }} />
           <div style={{ flex: 1, fontSize: 14 }}><b>{t('Tu fais partie de cette équipe ?')}</b><div className="muted">{member ? t('Demande envoyée, en attente de validation.')
             : team.ag === 'jeunes' ? t('Parent, joueur ou coach : photos, vidéos et covoiturage.') : t('Joueur ou coach : covoiturage, membres, vidéos.')}</div></div>
-          {!member && <button className="btn small" onClick={() => setJoin(true)}>{t('Rejoindre')}</button>}
+          {!member && !s.isChild && <button className="btn small" onClick={() => setJoin(true)}>{t('Rejoindre')}</button>}
         </div>)}
       {accepted && <a className="row group" href={`#/equipes/${team.id}`} style={{ color: 'inherit', marginBottom: 16 }}>
         <Ico n={team.ag === 'jeunes' ? 'lock' : 'users'} size={24} style={{ color: 'var(--accent)' }} /><div className="grow"><b>{t('Espace de l\'équipe')}</b><div className="sub">{t('Covoiturage, galerie, membres')}</div></div><span className="chev">›</span></a>}

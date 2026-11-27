@@ -90,7 +90,7 @@ function MatchCard({ g, data, focus, onLive, onCar }: { g: Game; data: { idx: Aw
         {car && <button className="btn small" onClick={() => onCar(youth)}><Ico n="car" />{t('Covoiturage')}</button>}
         {car && <CarpoolBadge g={g} youthTeam={youth} />}
         {!played && <CalendarButton teamId={mineHome ? g.h : g.a} label={t('Ajouter au calendrier')} compact />}
-        {!played && g.d === today && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>{t('Score en direct')}</button>}
+        {!played && g.d === today && !s.isChild && <button className="btn small" onClick={() => s.requireAuth(onLive) && onLive()}>{t('Score en direct')}</button>}
         {played && vid && <a className="btn small" href={`#/video/${vid}`}>{t('▶ Vidéo du match')}</a>}
         {played && <a className="btn small secondary" href={`#/montage/new?g=${g.id}`}>{t('Créer la vidéo')}</a>}
       </div>
