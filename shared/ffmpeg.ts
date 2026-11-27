@@ -174,20 +174,42 @@ export function cropPosExpr(keys: CropKey[]): string {
   }
   return `if(lt(t\\,${k[0].t.toFixed(2)})\\,${k[0].pos.toFixed(3)}\\,${e})`;
 }
-export function momentClipArgs(input: string, start: number, end: number, layout: MomentLayout, pos: number | CropKey[], output: string): string[] {
+/** Zoom progressif sur l'action (facteur à l'instant t du passage) : monte en 0,5 s jusqu'à ×1,3 à `at`, tient 1 s, redescend en 0,6 s */
+export function zoomExpr(at: number): string {
+  const a = Math.max(0, at - 0.5), b = at, c = at + 1, d = at + 1.6, Z = 0.3;
+  const ease = (x: string) => `(${x})*(${x})*(3-2*(${x}))`;
+  return `if(lt(it,${a.toFixed(2)}),1,if(lt(it,${b.toFixed(2)}),1+${Z}*${ease(`(it-${a.toFixed(2)})/${(b - a || 0.01).toFixed(2)}`)},if(lt(it,${c.toFixed(2)}),${1 + Z},if(lt(it,${d.toFixed(2)}),1+${Z}*(1-${ease(`(it-${c.toFixed(2)})/${(d - c).toFixed(2)}`)}),1))))`;
+}
+export interface ClipFx { zoomAt?: number | null; slow?: number }
+/**
+ * Un passage au format vertical. zoomAt : zoom sur l'action à cet instant du passage ; slow : vitesse (0,5 = ralenti, son ralenti aussi).
+ */
+export function momentClipArgs(input: string, start: number, end: number, layout: MomentLayout, pos: number | CropKey[], output: string, fx: ClipFx = {}): string[] {
   const keys = typeof pos === 'number' ? [{ t: 0, pos }] : pos;
+  const slow = fx.slow && fx.slow < 1 ? fx.slow : 1;
+  // Ralenti : le cadrage suit le temps du passage (avant ralenti), puis les images sont étirées
+  const sl = slow < 1 ? `,setpts=${(1 / slow).toFixed(3)}*PTS` : '';
+  const zoom = fx.zoomAt != null && slow === 1 ? `,zoompan=z='${zoomExpr(fx.zoomAt)}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30` : '';
   const v = layout === 'full'
-    ? `[0:v]scale=-2:1920:flags=lanczos,setpts=PTS-STARTPTS,crop=1080:1920:(iw-1080)*(${cropPosExpr(keys)}):0,setsar=1,fps=30,format=yuv420p[v]`
-    : '[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
-      '[fg]scale=1080:-2:flags=lanczos[f];[b][f]overlay=0:(H-h)/2,setsar=1,fps=30,format=yuv420p[v]';
+    ? `[0:v]scale=-2:1920:flags=lanczos,setpts=PTS-STARTPTS,crop=1080:1920:(iw-1080)*(${cropPosExpr(keys)}):0${sl},setsar=1,fps=30${zoom},format=yuv420p[v]`
+    : '[0:v]setpts=PTS-STARTPTS,split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=40:2,eq=brightness=-0.15[b];' +
+      `[fg]scale=1080:-2:flags=lanczos[f];[b][f]overlay=0:(H-h)/2${sl},setsar=1,fps=30${zoom},format=yuv420p[v]`;
+  const a = slow < 1 ? ['-filter:a', `atempo=${slow}`] : [];
   // Début + durée (et non « -to ») : même résultat quelle que soit la version de FFmpeg
-  return ['-y', '-ss', String(start), '-i', input, '-t', (end - start).toFixed(3), '-filter_complex', v, '-map', '[v]', '-map', '0:a?',
+  return ['-y', '-ss', String(start), '-i', input, '-t', ((end - start) / slow).toFixed(3), '-filter_complex', v, '-map', '[v]', '-map', '0:a?', ...a,
+    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
+}
+/** Passage + son replay au ralenti, bout à bout (même format : réencodage rapide sans perte visible) */
+export function joinPairArgs(a: string, b: string, output: string): string[] {
+  return ['-y', '-i', a, '-i', b, '-filter_complex', '[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]', '-map', '[v]', '-map', '[a]',
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '16', '-g', '30', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', output];
 }
 
 export interface MomentJoin { clips: { path: string; duration: number }[]; banner: string; output: string; bug?: string; wave?: string; waveCut?: number; whoosh?: string;
   /** Bande son du catalogue : elle REMPLACE le son du match (pas de mélange), à partir de `start` s dans le morceau */
-  music?: { path: string; start: number } }
+  music?: { path: string; start: number };
+  /** Textes animés (séquences PNG transparentes) posés à `at` s du Moment, coin haut gauche en (x, y) */
+  overlays?: { frames: string; at: number; x: number; y: number }[] }
 /**
  * Assemblage d'un Moment : passages bout à bout, vague par-dessus chaque coupure (elle couvre l'écran à l'instant de la
  * coupure), bandeau du score en haut, logo BeHoop animé juste sous le bandeau (hors des commandes des lecteurs, YouTube Shorts compris).
@@ -204,6 +226,7 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
   const wi = o.wave ? cuts.map(() => (args.push('-framerate', '30', '-i', o.wave!), k++)) : [];
   const hi = o.whoosh && cuts.length ? (args.push('-i', o.whoosh), k++) : -1;
   const mi = o.music ? (args.push('-ss', Math.max(0, o.music.start).toFixed(2), '-i', o.music.path), k++) : -1;
+  const oi = (o.overlays ?? []).map((x) => (args.push('-framerate', '30', '-i', x.frames), k++));
   const f: string[] = [];
   if (mi >= 0) {
     // Son du match retiré : seule la musique (fondu d'entrée très court, fondu de sortie sur la dernière seconde et demie)
@@ -211,6 +234,8 @@ export function momentJoinArgs(o: MomentJoin): { args: string[]; duration: numbe
     f.push(`[${mi}:a]atrim=0:${T.toFixed(3)},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,afade=t=in:d=0.15,afade=t=out:st=${Math.max(0, T - 1.5).toFixed(3)}:d=1.5,apad[a0]`);
   } else f.push(`${o.clips.map((_, i) => `[${i}:v][${i}:a]`).join('')}concat=n=${n}:v=1:a=1[v0][a0]`);
   let v = '[v0]';
+  // Textes sous la vague (la vague couvre tout aux coupures) et sous le bandeau
+  oi.forEach((w, i) => { const x = o.overlays![i]; f.push(`[${w}:v]setpts=PTS-STARTPTS+${x.at.toFixed(3)}/TB[t${i}]`, `${v}[t${i}]overlay=${x.x}:${x.y}:eof_action=pass[vt${i}]`); v = `[vt${i}]`; });
   wi.forEach((w, i) => { f.push(`[${w}:v]setpts=PTS-STARTPTS+${(cuts[i] - (o.waveCut ?? 0.35)).toFixed(3)}/TB[w${i}]`, `${v}[w${i}]overlay=0:0:eof_action=pass[vw${i}]`); v = `[vw${i}]`; });
   f.push(`${v}[${bi}:v]overlay=0:0[vb]`); v = '[vb]';
   if (gi >= 0) { f.push(`[${gi}:v]setpts=PTS-STARTPTS+0.6/TB[bug]`, `${v}[bug]overlay=W-w-24:300:shortest=1[vl]`); v = '[vl]'; }

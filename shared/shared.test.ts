@@ -140,6 +140,14 @@ describe('commandes FFmpeg', () => {
     const one = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }], banner: 'b.png', output: 'o.mp4' }).args.join(' ');
     expect(one).toContain('concat=n=1:v=1:a=1[v0][a0]'); expect(one).toContain('[a0]anull[a]'); expect(one).not.toContain('amix');
   });
+  it('effets : zoom, ralenti, textes', () => {
+    const z = momentClipArgs('in.m3u8', 10, 20, 'full', 0.5, 'o.mp4', { zoomAt: 4 }).join(' ');
+    expect(z).toContain('zoompan=z='); expect(z).toContain('-t 10.000');
+    const r = momentClipArgs('in.m3u8', 17, 20, 'full', 0.5, 'r.mp4', { slow: 0.5 }).join(' ');
+    expect(r).toContain('setpts=2.000*PTS'); expect(r).toContain('atempo=0.5'); expect(r).toContain('-t 6.000'); expect(r).not.toContain('zoompan');
+    const j = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }], banner: 'b.png', output: 'o.mp4', overlays: [{ frames: 't/%04d.png', at: 2.5, x: 0, y: 680 }] }).args.join(' ');
+    expect(j).toContain('-framerate 30 -i t/%04d.png'); expect(j).toContain('PTS-STARTPTS+2.500/TB[t0]'); expect(j).toContain('overlay=0:680:eof_action=pass');
+  });
   it('bande son : remplace le son du match', () => {
     const s = momentJoinArgs({ clips: [{ path: 'a', duration: 8 }, { path: 'b', duration: 6 }], banner: 'b.png', output: 'o.mp4', whoosh: 'wh.m4a', music: { path: 'm.mp3', start: 12 } }).args.join(' ');
     expect(s).toContain('-ss 12.00 -i m.mp3');

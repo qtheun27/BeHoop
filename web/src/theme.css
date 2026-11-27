@@ -623,3 +623,35 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .clip-blk{transition:transform .12s ease,box-shadow .12s ease}
 .clip-blk.drag{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,.28);z-index:2;cursor:grabbing}
 .clip-hint{margin:0 0 2px;font-size:12px;color:var(--text2);text-align:center}
+/* Éditeur de Moment — onglet Effets */
+.fx-sec{display:flex;flex-direction:column;gap:2px;margin:4px 0 6px;font-size:14px}.fx-sec .muted{font-size:12px}
+.fx-pos{margin:4px 0 8px}
+.fx-words{display:flex;flex-wrap:wrap;gap:6px}
+.fx-word{font-family:Anton,Impact,sans-serif;font-size:15px;letter-spacing:.02em;padding:7px 12px;border-radius:10px;background:#0a0c12;color:#fff;border:2px solid #f26a1b;transform:skewX(-6deg)}
+.fx-word:active{background:#f26a1b}.fx-word:disabled{opacity:.4}
+.fx-item{all:unset;cursor:pointer;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.key-line .kd.txt{font:700 13px/24px Anton,Impact,sans-serif;color:#f26a1b}
+.mt{margin-top:12px}
+/* Aperçu des effets sur la vidéo (même rendu qu'au montage, en plus petit) */
+.fx-live{position:absolute;top:0;bottom:0;pointer-events:none;z-index:4;container-type:inline-size;overflow:hidden}
+.fx-t{position:absolute;left:0;right:0;display:flex;justify-content:center}
+.fx-t.top{top:17%}.fx-t.mid{top:35%}.fx-t.low{top:56%}
+.fx-t.hit span{font-family:Anton,Impact,sans-serif;font-size:14cqw;line-height:1.15;padding:0 6cqw;text-transform:uppercase;white-space:nowrap;color:#fff;
+  background:linear-gradient(90deg,transparent,rgba(10,12,18,.82) 15%,rgba(10,12,18,.82) 85%,transparent);border-block:.8cqw solid #f26a1b;transform:skewX(-9deg);
+  text-shadow:.6cqw .8cqw 0 #0a0c12;animation:fx-hit 1.6s both}
+.fx-t.hit span{background-clip:padding-box}
+.fx-t.free span{font-family:Oswald,sans-serif;font-weight:700;font-size:6.5cqw;color:#fff;background:linear-gradient(120deg,#f26a1b,#f5a623);padding:2cqw 4cqw;border-radius:2.4cqw;max-width:84cqw;text-align:center;transform:skewX(-6deg);animation:fx-free 2.6s both}
+@keyframes fx-hit{0%{opacity:0;transform:skewX(-9deg) scale(2.6) rotate(-4deg)}10%{opacity:1;transform:skewX(-9deg) scale(.9) rotate(1deg)}16%{transform:skewX(-9deg) scale(1.04)}22%{transform:skewX(-9deg) translate(-1cqw,.4cqw)}26%{transform:skewX(-9deg) translate(.8cqw,-.4cqw)}30%,78%{opacity:1;transform:skewX(-9deg)}100%{opacity:0;transform:skewX(-9deg) scale(1.25) translateX(4cqw)}}
+@keyframes fx-free{0%{opacity:0;transform:skewX(-6deg) translateX(-80cqw)}11%{opacity:1;transform:skewX(-6deg) translateX(2cqw)}15%,86%{opacity:1;transform:skewX(-6deg)}100%{opacity:0;transform:skewX(-6deg) translateX(80cqw)}}
+.fx-tag{position:absolute;left:4cqw;top:17%;font-family:Anton,Impact,sans-serif;font-size:6cqw;color:#fff;background:#0a0c12d9;border:.4cqw solid #f26a1b;border-radius:1.6cqw;padding:.4cqw 2.4cqw;display:flex;align-items:center;gap:1.4cqw}
+.fx-tag i{width:2cqw;height:2cqw;border-radius:50%;background:#e8363d;animation:fx-blink .8s infinite}
+@keyframes fx-blink{50%{opacity:.15}}
+.player video{transition:transform .08s linear}
+.clip-ed .btn.small{white-space:nowrap}
+/* Grand écran : vidéo à gauche (fixe), éditeur à droite — tout visible ensemble, rien ne passe dessous */
+@media (min-width: 1100px) {
+  :root.moment-edit *:has(> .clip-ed){display:grid;grid-template-columns:minmax(0,1.25fr) minmax(380px,1fr);gap:22px;align-items:start}
+  :root.moment-edit *:has(> .clip-ed) > :not(.player):not(.clip-ed){display:none}
+  :root.moment-edit .player{max-width:none;margin:0;grid-column:1;grid-row:1}
+  :root.moment-edit .clip-ed{grid-column:2;grid-row:1;margin-top:0}
+}

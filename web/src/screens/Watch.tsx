@@ -379,7 +379,7 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
             l'appli peut lire ses images (« Suivre l'action »). Le serveur répond déjà avec les en-têtes CORS + cookies. */}
         <video ref={ref} playsInline crossOrigin="use-credentials" poster={mediaUrl(mv.hls!.posterKey)} controlsList={author ? undefined : 'nodownload'} onContextMenu={(e) => !author && e.preventDefault()}
           onTimeUpdate={(e) => { const c = e.currentTarget.currentTime; setTime(c); if (Math.round(c) % 5 === 0) store.set(posKey, c > dur - 10 ? 0 : c);
-            const p = preview.current; if (p && c >= p.list[p.i][1]) { p.i = (p.i + 1) % p.list.length; e.currentTarget.currentTime = p.list[p.i][0]; } }}
+            const p = preview.current; if (p && c >= p.list[p.i][1]) { p.i = (p.i + 1) % p.list.length; e.currentTarget.currentTime = p.list[p.i][0]; e.currentTarget.playbackRate = p.list[p.i][2]; } }}
           onPlay={() => setPlaying(true)} onPause={() => { setPlaying(false); setIdle(false); }} />
         <div className="ctrl" onClick={(e) => e.stopPropagation()}>
           <div className={`bar${drag != null ? ' active' : ''}`} role="slider" aria-label={t('Position')} aria-valuemin={0} aria-valuemax={dur} aria-valuenow={Math.round(time)} tabIndex={0}
@@ -454,10 +454,18 @@ function keyPos(k: Key[], t: number): number {
 }
 /** Largeur du cadre vertical (9:16 recadré dans une image 16:9) : 1080 / (1920 × 16/9) */
 const CROP_W = (1080 / ((1920 * 16) / 9)) * 100;
-type Clip = { a: number; b: number; keys: Key[] };
-/** Aperçu du montage : passages [début, fin] dans l'ordre, et celui en cours de lecture */
-interface PreviewSeq { list: [number, number][]; i: number }
-interface MomentInit { id: string; clips: { start: number; end: number; keys?: Key[] }[]; layout?: 'full' | 'fit'; pos?: number; music?: Track & { start: number }; title?: string; text?: string; inFeed?: boolean }
+type FxText = { t: number; w: string; k: 'hit' | 'free'; y: 'top' | 'mid' | 'low' };
+type Clip = { a: number; b: number; keys: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null };
+/** Durée d'un passage dans le Moment (un replay au ralenti dure 2× son extrait) */
+const clipDur = (p: Clip) => p.b - p.a + (p.replay ? 2 * p.replay : 0);
+/** Aperçu du montage : extraits [début, fin, vitesse, n° du passage] dans l'ordre, et celui en cours de lecture */
+interface PreviewSeq { list: [number, number, number, number][]; i: number }
+/** Zoom sur l'action (même courbe qu'au montage) : facteur à l'instant t du passage */
+const zoomAt = (at: number, t: number) => { const s = (x: number) => x * x * (3 - 2 * x), a = Math.max(0, at - 0.5);
+  if (t < a) return 1; if (t < at) return 1 + 0.3 * s((t - a) / Math.max(0.01, at - a)); if (t < at + 1) return 1.3; if (t < at + 1.6) return 1 + 0.3 * (1 - s((t - at - 1) / 0.6)); return 1; };
+const TEXT_LEN = { hit: 1.6, free: 2.6 } as const;
+const WORDS = ['SWISH !', 'AND ONE', '3 POINTS', 'DUNK !', 'CONTRE !', 'BUZZER BEATER', 'CROSSOVER', 'ALLEY-OOP', 'CLUTCH', 'ON FIRE', 'STEAL !', 'GAME WINNER', 'QUELLE PASSE !', 'BOOM !', 'MVP'];
+interface MomentInit { id: string; clips: { start: number; end: number; keys?: Key[]; texts?: FxText[]; replay?: number; zoom?: number | null }[]; layout?: 'full' | 'fit'; pos?: number; music?: Track & { start: number }; title?: string; text?: string; inFeed?: boolean }
 function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose }: { id: string; init?: MomentInit | null; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
   sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<PreviewSeq | null>; onClose: () => void }) {
   const s = useSession();
@@ -473,7 +481,7 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const [busy, setBusy] = useState(false), [playing, setPlaying] = useState(false);
   // Plusieurs passages enchaînés (vague au montage), 60 s au total ; cadrage plein écran (position) ou image entière
   // Tous les passages du Moment, dans l'ordre du montage ; « cur » = celui en cours d'édition (ses valeurs vivantes : sel + keys)
-  const [parts, setParts] = useState<Clip[]>(() => (init?.clips.length ? init.clips.map((c) => ({ a: c.start, b: c.end, keys: c.keys ?? [] })) : [{ a: 0, b: 0, keys: [] }]));
+  const [parts, setParts] = useState<Clip[]>(() => (init?.clips.length ? init.clips.map((c) => ({ a: c.start, b: c.end, keys: c.keys ?? [], texts: c.texts ?? [], replay: c.replay ?? 0, zoom: c.zoom ?? null })) : [{ a: 0, b: 0, keys: [] }]));
   const [cur, setCur] = useState(() => (init?.clips.length ? init.clips.length - 1 : 0));
   const [keys, setKeys] = useState<Key[]>(() => init?.clips.at(-1)?.keys ?? []); // points de cadrage du passage en cours (t depuis son début)
   const [layout, setLayout] = useState<'full' | 'fit'>(init?.layout === 'fit' ? 'fit' : 'full'), [pos, setPos] = useState(init?.pos ?? 0.5);
@@ -491,7 +499,7 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
     const fs = (v as HTMLVideoElement & { fastSeek?: (t: number) => void }).fastSeek;
     if (fs && !final) fs.call(v, tt); else v.currentTime = tt;
   };
-  const stop = () => { preview.current = null; setPlaying(false); video.current?.pause(); aud.current?.pause();
+  const stop = () => { preview.current = null; setPlaying(false); video.current?.pause(); aud.current?.pause(); if (video.current) video.current.playbackRate = 1;
     if (muted.current && video.current) { video.current.muted = false; muted.current = false; } };
   useEffect(() => () => { aud.current?.pause(); }, []);
   const put = (na: number, nb: number, kind: 'a' | 'b' | 'm', final = false) => {
@@ -519,10 +527,14 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   };
   const pct = (x: number) => `${((x - win) / WIN) * 100}%`;
   const len = Math.round((b - a) * 10) / 10;
-  const all: Clip[] = parts.map((p, i) => (i === cur ? { a, b, keys } : p));
-  const total = Math.round(all.reduce((x, p) => x + p.b - p.a, 0) * 10) / 10;
+  const all: Clip[] = parts.map((p, i) => (i === cur ? { ...p, a, b, keys } : p));
+  const total = Math.round(all.reduce((x, p) => x + clipDur(p), 0) * 10) / 10;
+  // Effets du passage en cours (textes, replay, zoom) : rangés dans la liste des passages
+  const fx = all[cur] ?? { a, b, keys };
+  const setFx = (f: Partial<Clip>) => setParts((ps) => ps.map((p, i) => (i === cur ? { ...p, ...f } : p)));
   // Cadre affiché : suit les points de cadrage pendant la lecture (même glissement doux qu'au montage)
-  const pi = playing && preview.current ? preview.current.i : null;
+  const pe = playing && preview.current ? preview.current.list[preview.current.i] : null;
+  const pi = pe ? pe[3] : null;
   const pc = pi != null ? all[pi] ?? all[cur] : all[cur];
   const shown = pc.keys.length && time >= pc.a && time <= pc.b ? keyPos(pc.keys, time - pc.a) : pos;
   const okLen = (p: Clip) => p.b - p.a >= CLIP_MIN - 0.05 && p.b - p.a <= CLIP_MAX + 0.05;
@@ -661,11 +673,21 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const nudge = (which: 'a' | 'b', d0: number) => { const d = d0 * stepS; stop(); haptic();
     if (which === 'a') put(Math.min(Math.max(a + d, b - CLIP_MAX), b - CLIP_MIN), b, 'a', true); else put(a, Math.max(Math.min(b + d, a + CLIP_MAX), a + CLIP_MIN), 'b', true); };
   // Édition au doigt (mobile) : vidéo fixe en haut, onglets courts, barre d'actions fixe en bas, cadre à glisser sur la vidéo
-  const [tab, setTab] = useState<'pass' | 'crop' | 'sound' | 'info'>('pass');
+  const [tab, setTab] = useState<'pass' | 'crop' | 'fx' | 'sound' | 'info'>('pass');
+  const [txtY, setTxtY] = useState<FxText['y']>('mid'), [freeTxt, setFreeTxt] = useState('');
+  const addText = (w: string, k: FxText['k']) => { const tt = nowT(); haptic(); setFx({ texts: [...(fx.texts ?? []).filter((x) => Math.abs(x.t - tt) > 0.2), { t: tt, w, k, y: txtY }].sort((x, y) => x.t - y.t).slice(0, 8) }); };
   // Aperçu avec musique : le morceau suit la vidéo (décalé des passages déjà ajoutés), recalé s'il dérive
-  const before = (i: number) => all.slice(0, i).reduce((x, p) => x + p.b - p.a, 0);
+  // Aperçu : chaque passage, puis son replay au ralenti s'il en a un
+  const seq = (): PreviewSeq['list'] => all.flatMap((p, i) => [[p.a, p.b, 1, i], ...(p.replay ? [[Math.max(p.a, p.b - p.replay), p.b, 0.5, i]] : [])] as PreviewSeq['list']);
+  const before = (j: number, list = preview.current?.list ?? seq()) => list.slice(0, j).reduce((x, e) => x + (e[1] - e[0]) / e[2], 0);
   useEffect(() => { const el = aud.current, p = preview.current; if (!playing || !music || !el || !p) return;
-    const want = music.start + before(p.i) + Math.max(0, time - p.list[p.i][0]); if (Math.abs(el.currentTime - want) > 0.35) el.currentTime = want; }, [time]); // eslint-disable-line react-hooks/exhaustive-deps
+    const e = p.list[p.i], want = music.start + before(p.i) + Math.max(0, time - e[0]) / e[2]; if (Math.abs(el.currentTime - want) > 0.35) el.currentTime = want; }, [time]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Zoom sur l'action visible pendant la lecture (même effet qu'au montage)
+  useEffect(() => { const v = video.current; if (!v) return; const c = pe ? all[pe[3]] : fx;
+    const z = c.zoom != null && (!pe || pe[2] === 1) && time >= c.a && time <= c.b ? zoomAt(c.zoom, time - c.a) : 1;
+    const ox = layout === 'full' ? (shown * (100 - CROP_W) + CROP_W / 2) : 50;
+    v.style.transformOrigin = `${ox}% 50%`; v.style.transform = z > 1.001 ? `scale(${z.toFixed(3)})` : ''; }, [time, playing]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => () => { const v = video.current; if (v) v.style.transform = ''; }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [selKey, setSelKey] = useState<number | null>(null);
   useEffect(() => { document.documentElement.classList.add('moment-edit'); return () => document.documentElement.classList.remove('moment-edit', 'crop-edit', 'crop-pick'); }, []);
   const cropping = tab === 'crop' && layout === 'full';
@@ -684,7 +706,8 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
   const lineAt = (e: React.PointerEvent, final = false) => { const r = (e.currentTarget as HTMLElement).getBoundingClientRect(); const tt = Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)) * (b - a); show(a + tt, final); };
   const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
-    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: all.map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? (p.keys.length ? p.keys : [{ t: 0, pos }]) : undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed,
+    try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: all.map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? (p.keys.length ? p.keys : [{ t: 0, pos }]) : undefined,
+        texts: p.texts?.length ? p.texts : undefined, replay: p.replay || undefined, zoom: p.zoom ?? undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed,
       music: music ? { id: music.tr.id, start: music.start } : undefined, momentId: init?.id });
       s.toast(init ? t('Moment modifié : nouvelle version en préparation…') : t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
     catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
@@ -692,6 +715,16 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
     <div className="clip-ed">
       {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${shown * (100 - CROP_W)}%` }} />
         <b style={{ width: `${CROP_W}%` }} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
+      {video.current?.parentElement && (() => {
+        // Aperçu des effets sur la vidéo : texte en cours (même durée qu'au montage) et étiquette REPLAY pendant le ralenti
+        const c = pe ? all[pe[3]] : fx, rel = time - c.a;
+        const tx = (!pe || pe[2] === 1) ? (c.texts ?? []).find((x) => rel >= x.t && rel < x.t + TEXT_LEN[x.k]) : undefined;
+        const frame = layout === 'full' ? { left: `${shown * (100 - CROP_W)}%`, width: `${CROP_W}%` } : { left: '0%', width: '100%' };
+        return createPortal(<div className="fx-live" style={frame} aria-hidden>
+          {tx && <div key={`${tx.t}${tx.w}`} className={`fx-t ${tx.k} ${tx.y}`}><span>{tx.w}</span></div>}
+          {pe && pe[2] < 1 && <div className="fx-tag"><i />REPLAY</div>}
+        </div>, video.current!.parentElement!);
+      })()}
       {video.current?.parentElement && cropping && createPortal(<div className="crop-touch" onPointerDown={frameDown} onPointerMove={frameMove} onPointerUp={frameUp} onPointerCancel={frameUp} onClick={(e) => e.stopPropagation()} />, video.current.parentElement)}
       <div className="clip-head"><b><Ico n="bolt" /> {init ? t('Modifier le Moment') : t('Nouveau Moment')} · <span style={{ color: total <= MOMENT_TOTAL ? 'var(--accent)' : 'var(--red)' }}>{total.toFixed(1)}/{MOMENT_TOTAL} s</span></b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
@@ -713,7 +746,7 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
           <button className="btn ghost small" disabled={cur === all.length - 1} onClick={() => moveClip(1)} aria-label={t('Placer plus tard dans le Moment')}>▶</button>
           <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={removeClip}>{t('Supprimer')}</button></span>}
       </div>
-      <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'sound' ? 'on' : ''} onClick={() => setTab('sound')}>{t('Son')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
+      <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'fx' ? 'on' : ''} onClick={() => setTab('fx')}>{t('Effets')}</button><button className={tab === 'sound' ? 'on' : ''} onClick={() => setTab('sound')}>{t('Son')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
       {tab === 'pass' && <>
         <div className="clip-track" onPointerMove={(e) => move(e)} onPointerUp={(e) => move(e, true)} onPointerCancel={(e) => move(e, true)}>
           {ticks.map((x) => <div key={x} className={`clip-tick${x % 10 ? ' minor' : ''}`} style={{ left: pct(x) }}>{x % 10 === 0 && <span>{fmt(x)}</span>}</div>)}
@@ -751,6 +784,32 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
           </div>
         </>}
       </>}
+      {tab === 'fx' && <>
+        <div className="fx-sec"><b>{t('Textes')}</b><span className="muted">{t('Place la vidéo à l’instant voulu puis touche un mot')}</span></div>
+        <div className="key-line" onPointerDown={lineTap} onPointerMove={(e) => scrub.current && lineAt(e)} onPointerUp={() => { scrub.current = false; }} onPointerCancel={() => { scrub.current = false; }}>
+          <div className="ph" style={{ left: `${Math.min(100, Math.max(0, ((time - a) / Math.max(0.1, b - a)) * 100))}%` }} />
+          {(fx.texts ?? []).map((x) => <button key={x.t} className="kd txt" style={{ left: `${(x.t / Math.max(0.1, b - a)) * 100}%` }} aria-label={x.w}
+            onPointerDown={(e) => { e.stopPropagation(); haptic(); seekIn(x.t); }}>T</button>)}
+        </div>
+        <div className="seg fx-pos">{([['top', 'Haut'], ['mid', 'Milieu'], ['low', 'Bas']] as const).map(([k, l]) => <button key={k} className={txtY === k ? 'on' : ''} onClick={() => setTxtY(k)}>{t(l)}</button>)}</div>
+        <div className="fx-words">{WORDS.map((w) => <button key={w} className="fx-word" disabled={(fx.texts?.length ?? 0) >= 8} onClick={() => addText(w, 'hit')}>{w}</button>)}</div>
+        <div className="hstack" style={{ gap: 8, marginTop: 8 }}>
+          <input className="field" style={{ flex: 1, margin: 0 }} value={freeTxt} maxLength={60} onChange={(e) => setFreeTxt(e.target.value)} placeholder={t('Texte libre — ex. : quelle passe de Hugo !')} aria-label={t('Texte libre')} />
+          <button className="btn small" disabled={!freeTxt.trim() || (fx.texts?.length ?? 0) >= 8} onClick={() => { addText(freeTxt.trim(), 'free'); setFreeTxt(''); }}>{t('Ajouter')}</button>
+        </div>
+        {(fx.texts?.length ?? 0) > 0 && <div className="clip-parts">{fx.texts!.map((x) => (
+          <div key={x.t} className="clip-part"><button className="grow fx-item" onClick={() => seekIn(x.t)}>{fmtP(x.t)} · <b>{x.w}</b> · {t(x.y === 'top' ? 'Haut' : x.y === 'low' ? 'Bas' : 'Milieu')}</button>
+            <button className="btn ghost small" aria-label={t('Retirer')} onClick={() => setFx({ texts: fx.texts!.filter((y) => y !== x) })}>✕</button></div>))}</div>}
+        <div className="fx-sec mt"><b>{t('Replay au ralenti')}</b><span className="muted">{t('Les dernières secondes du passage rejouées au ralenti')}</span></div>
+        <div className="seg">{[0, 2, 3].map((n) => <button key={n} className={(fx.replay ?? 0) === n ? 'on' : ''} disabled={n > 0 && total - clipDur(fx) + clipDur({ ...fx, replay: n }) > MOMENT_TOTAL}
+          onClick={() => { haptic(); setFx({ replay: n }); }}>{n ? t('{n} s', { n }) : t('Non')}</button>)}</div>
+        <div className="fx-sec mt"><b>{t('Zoom sur l’action')}</b><span className="muted">{fx.zoom != null ? t('Zoom à {t}', { t: fmtP(fx.zoom) }) : t('Place la vidéo sur le tir puis touche « Zoomer ici »')}</span></div>
+        <div className="hstack" style={{ gap: 8 }}>
+          <button className="btn small" onClick={() => { haptic(); setFx({ zoom: nowT() }); }}><Ico n="plus" />{t('Zoomer ici')}</button>
+          {fx.zoom != null && <><button className="btn ghost small" onClick={() => seekIn(Math.max(0, fx.zoom! - 1))}>{t('Voir')}</button>
+            <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={() => setFx({ zoom: null })}>{t('Retirer le zoom')}</button></>}
+        </div>
+      </>}
       {tab === 'sound' && <MusicTab music={music} setMusic={setMusic} audio={audio} total={total} stopPreview={stop} />}
       {tab === 'info' && <>
         <input className="field" value={mTitle} maxLength={80} onChange={(e) => setMTitle(e.target.value)} placeholder={t('Titre (facultatif) — ex. : le panier de la victoire')} aria-label={t('Titre')} />
@@ -758,9 +817,9 @@ function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose 
         <label className="check mt"><input type="checkbox" checked={mFeed} onChange={(e) => setMFeed(e.target.checked)} />{t('Publier dans le fil BeHoop')}</label>
       </>}
       <div className="clip-bar">
-        <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; const start = all.length > 1 && cur > 0 ? cur : 0; // aperçu du montage complet, depuis le passage en cours
-          preview.current = { list: all.map((p) => [p.a, p.b]), i: start }; v.currentTime = all[start].a; setPlaying(true);
-          if (music) { const el = audio(); v.muted = true; muted.current = true; if (el.src !== music.tr.audio) el.src = music.tr.audio; el.currentTime = music.start + before(start); el.play().catch(() => {}); }
+        <button className="btn secondary" onClick={() => { haptic(); if (playing) { stop(); return; } const v = video.current!; const list = seq(), start = Math.max(0, list.findIndex((e) => e[3] === cur)); // aperçu du montage complet, depuis le passage en cours
+          preview.current = { list, i: start }; v.currentTime = list[start][0]; v.playbackRate = 1; setPlaying(true);
+          if (music) { const el = audio(); v.muted = true; muted.current = true; if (el.src !== music.tr.audio) el.src = music.tr.audio; el.currentTime = music.start + before(start, list); el.play().catch(() => {}); }
           v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
         <button className="btn" disabled={!ok || busy} onClick={create}>{init ? t('Enregistrer') : t('Créer')}{all.length > 1 ? ` (${all.length})` : ''}</button>

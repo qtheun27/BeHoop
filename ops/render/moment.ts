@@ -7,7 +7,8 @@ import { ff, probe } from './run';
 import { waveFrames, WAVE_CUT } from './wave';
 import { bugTrack } from './bug';
 import { shareCard } from './shareCard';
-import { momentClipArgs, momentJoinArgs, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
+import { momentClipArgs, momentJoinArgs, joinPairArgs, type MomentLayout, type CropKey } from '../../shared/ffmpeg';
+import { textFrames, TEXT_Y, type TextKind } from './textFx';
 import { admin, R2, notifyUsers } from '../lib/admin';
 import { settingsFromStore } from '../../shared/types';
 import { N } from '../../shared/notifText';
@@ -26,7 +27,8 @@ try {
   const step = (progress: number, label: string) => ref.update({ progress, step: label }).catch(() => {});
   await ref.update({ status: 'running', progress: 5, step: 'Préparation' });
   // Passages (plusieurs possibles, enchaînés par une vague) ; anciens Moments : un seul passage, image entière
-  const clips: { start: number; end: number; keys?: CropKey[] }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
+  type FxText = { t: number; w: string; k: TextKind; y?: string };
+  const clips: { start: number; end: number; keys?: CropKey[]; texts?: FxText[]; replay?: number; zoom?: number | null }[] = Array.isArray(m.clips) && m.clips.length ? m.clips : [{ start: m.start, end: m.end }];
   const layout: MomentLayout = m.layout === 'full' ? 'full' : 'fit';
   const pos = typeof m.pos === 'number' ? m.pos : 0.5;
   // Source : variante 1080p HLS (seuls les segments utiles sont téléchargés)
@@ -59,6 +61,7 @@ try {
   writeFileSync(join(work, 'banner.html'), html);
   const b = await chromium.launch(process.env.PW_CHROME ? { executablePath: process.env.PW_CHROME } : {});
   let bug: string | undefined, wave: string | undefined, card: string | undefined;
+  const fxFrames = new Map<string, string>();
   try {
     const p = await b.newPage({ viewport: { width: 1080, height: 300 } });
     await p.goto('file://' + join(work, 'banner.html')); await p.waitForLoadState('networkidle');
@@ -69,15 +72,32 @@ try {
     if (!filmLogoVisible) bug = await bugTrack(b, work);
     if (clips.length > 1) wave = await waveFrames(b, work, [st.home.color, st.away.color]);
     card = await shareCard(b, st, join(work, 'share.jpg'), m.title || 'Moment').catch(() => undefined);
+    // Textes animés (une séquence par mot différent) et étiquette « REPLAY » des ralentis
+    for (const x of clips.flatMap((c) => c.texts ?? [])) {
+      const id = `${x.k}:${x.w}`; if (fxFrames.has(id)) continue;
+      fxFrames.set(id, await textFrames(b, join(work, `txt_${fxFrames.size}`), x.w, x.k === 'free' ? 'free' : 'hit'));
+    }
+    for (const n of new Set(clips.map((c) => c.replay ?? 0).filter((n) => n > 0))) fxFrames.set(`tag:${n}`, await textFrames(b, join(work, `tag_${n}`), 'REPLAY', 'tag', n * 2));
   } finally { await b.close(); }
   // Chaque passage au format vertical, puis assemblage (une seule passe finale)
-  const parts: { path: string; duration: number }[] = [];
+  const parts: { path: string; duration: number }[] = [], mainLen: number[] = [];
   for (const [i, c] of clips.entries()) {
     const f = join(work, `clip_${i}.mp4`);
     const own = segsOf(c); if (!own.length) throw new Error(`passage ${i + 1} hors de la vidéo`);
     const pl = join(work, `clip_${i}.m3u8`);
     writeFileSync(pl, [...head, ...own.flatMap((g) => [`#EXTINF:${g.dur.toFixed(6)},`, g.name]), '#EXT-X-ENDLIST', ''].join('\n'));
-    await ff(momentClipArgs(pl, c.start - own[0].t, c.end - own[0].t, layout, c.keys?.length ? c.keys : pos, f));
+    const s0 = c.start - own[0].t, e0 = c.end - own[0].t, keys = c.keys?.length ? c.keys : pos;
+    const zoomAt = typeof c.zoom === 'number' && c.zoom >= 0 && c.zoom <= c.end - c.start ? c.zoom : null;
+    if (c.replay && c.replay > 0) {
+      // Replay au ralenti des dernières secondes, juste après le passage (cadrage décalé d'autant)
+      const n = Math.min(c.replay, c.end - c.start), off = c.end - c.start - n;
+      const rk = typeof keys === 'number' ? keys : (() => { const ks = keys.map((k) => ({ t: k.t - off, pos: k.pos })); const before = ks.filter((k) => k.t <= 0).at(-1); return [...(before ? [{ t: 0, pos: before.pos }] : []), ...ks.filter((k) => k.t > 0)]; })();
+      const fm = join(work, `clip_${i}_a.mp4`), fr = join(work, `clip_${i}_r.mp4`);
+      await ff(momentClipArgs(pl, s0, e0, layout, keys, fm, { zoomAt }));
+      await ff(momentClipArgs(pl, e0 - n, e0, layout, typeof rk === 'number' || rk.length ? rk : pos, fr, { slow: 0.5 }));
+      await ff(joinPairArgs(fm, fr, f));
+      mainLen.push((await probe(fm)).duration);
+    } else { await ff(momentClipArgs(pl, s0, e0, layout, keys, f, { zoomAt })); mainLen.push(c.end - c.start); }
     await step(30 + Math.round(((i + 1) / clips.length) * 50), `Passage ${i + 1}/${clips.length}`);
     const d = (await probe(f)).duration;
     if (!(d > 1)) throw new Error(`passage ${i + 1} vide (${c.start}–${c.end} s)`);
@@ -94,7 +114,15 @@ try {
     const mp = join(work, 'music.mp3'); writeFileSync(mp, Buffer.from(await r.arrayBuffer()));
     music = { path: mp, start: Number(m.music.start) || 0 };
   }
-  const joined = momentJoinArgs({ clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined, music });
+  // Textes et étiquettes REPLAY placés sur la ligne de temps finale du Moment
+  const overlays: { frames: string; at: number; x: number; y: number }[] = [];
+  let at0 = 0;
+  for (const [i, c] of clips.entries()) {
+    for (const x of c.texts ?? []) { const fr = fxFrames.get(`${x.k}:${x.w}`); if (fr) overlays.push({ frames: fr, at: at0 + Math.min(Math.max(0, x.t), Math.max(0, mainLen[i] - 0.3)), x: 0, y: TEXT_Y[x.y ?? 'mid'] ?? TEXT_Y.mid }); }
+    const tg = c.replay ? fxFrames.get(`tag:${c.replay}`) : undefined; if (tg) overlays.push({ frames: tg, at: at0 + mainLen[i], x: 40, y: 320 });
+    at0 += parts[i].duration;
+  }
+  const joined = momentJoinArgs({ overlays, clips: parts, banner: join(work, 'banner.png'), output: out, bug, wave, waveCut: WAVE_CUT, whoosh: existsSync(whoosh) ? whoosh : undefined, music });
   await ff(joined.args);
   // Affiche du Moment : une image de son premier passage (et non l'affiche du match, recadrée au mauvais endroit)
   const poster = join(work, 'poster.jpg');

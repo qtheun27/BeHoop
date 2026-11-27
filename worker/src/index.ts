@@ -523,12 +523,18 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       const start = Math.round(Math.max(0, Number(c?.start)) * 10) / 10, end = Math.round(Number(c?.end) * 10) / 10;
       // Points de cadrage du passage (t depuis son début, position 0–1) : le cadre glisse de l'un à l'autre
       const keys = (Array.isArray(c?.keys) ? c.keys : []).slice(0, 30).map((k: any) => ({ t: Math.round(Math.min(end - start, Math.max(0, Number(k?.t) || 0)) * 10) / 10, pos: Math.round(Math.min(1, Math.max(0, Number(k?.pos) || 0)) * 1000) / 1000 }));
-      return keys.length ? { start, end, keys } : { start, end };
+      // Effets : textes animés (mot basket ou texte libre, à l'instant t du passage), replay au ralenti (2 ou 3 s), zoom sur l'action
+      const len = end - start;
+      const texts = (Array.isArray(c?.texts) ? c.texts : []).slice(0, 8).map((x: any) => ({ t: Math.round(Math.min(Math.max(0, len - 0.3), Math.max(0, Number(x?.t) || 0)) * 10) / 10,
+        w: String(x?.w ?? '').replace(/[\u0000-\u001f<>]/g, '').trim().slice(0, x?.k === 'free' ? 60 : 24), k: x?.k === 'free' ? 'free' : 'hit', y: ['top', 'mid', 'low'].includes(x?.y) ? x.y : 'mid' })).filter((x: any) => x.w);
+      const replay = [2, 3].includes(Number(c?.replay)) ? Number(c.replay) : 0;
+      const zoom = Number.isFinite(Number(c?.zoom)) && c?.zoom !== null && c?.zoom !== undefined ? Math.round(Math.min(len, Math.max(0, Number(c.zoom))) * 10) / 10 : null;
+      return { start, end, ...(keys.length ? { keys } : {}), ...(texts.length ? { texts } : {}), ...(replay ? { replay } : {}), ...(zoom != null ? { zoom } : {}) };
     });
     const max = Number(v.hls?.duration ?? 1e9) + 1;
     if (clips.length > 6) return fail('6 passages au maximum');
     if (clips.some((c) => !(c.end - c.start >= 5 && c.end - c.start <= 30) || c.end > max)) return fail('Chaque passage : entre 5 et 30 s');
-    const total = clips.reduce((a, c) => a + c.end - c.start, 0);
+    const total = clips.reduce((a, c: any) => a + c.end - c.start + (c.replay ? 2 * c.replay : 0), 0); // un replay au ralenti dure 2× son extrait
     if (total > 60.5) return fail('60 secondes au maximum au total');
     const layout = body.layout === 'fit' ? 'fit' : 'full';
     const pos = Math.min(1, Math.max(0, Number(body.pos ?? 0.5) || 0));
