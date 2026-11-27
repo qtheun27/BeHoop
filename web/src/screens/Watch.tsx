@@ -255,7 +255,7 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
       <div className="progress" style={{ marginTop: 6 }}><i style={{ width: `${y!.progress ?? 0}%` }} /></div></div></div>
   );
   return (<>
-    {y?.status === 'done' && y.url && <div className="banner"><Ico n="checkCircle" /><div style={{ flex: 1 }}><b>{t('Publiée sur YouTube')}</b> · <a href={y.url} target="_blank" rel="noopener noreferrer">{t('Voir la vidéo')}</a></div></div>}
+    {y?.status === 'done' && y.url && <div className="banner"><Ico n="checkCircle" /><div style={{ flex: 1 }}><b>{t('Publiée sur YouTube')}</b> · <a href={moment && /^[\w-]{11}$/.test(String((y as { videoId?: string }).videoId ?? '')) ? `https://youtube.com/shorts/${(y as { videoId?: string }).videoId}` : y.url} target="_blank" rel="noopener noreferrer">{moment ? t('Voir le Short') : t('Voir la vidéo')}</a></div></div>}
     {y?.status === 'error' && <div className="banner"><Ico n="alert" /><div style={{ flex: 1, fontSize: 14 }}>{y.error ?? t('Envoi impossible.')}</div></div>}
     <p className="muted" style={{ margin: 0, fontSize: 14 }}>{t('Chaîne : {c}', { c: st.data.channelTitle ?? '' })}</p>
     <label className="label">{t('Titre')}</label><input className="field" value={title} maxLength={100} onChange={(e) => setTitle(e.target.value)} />

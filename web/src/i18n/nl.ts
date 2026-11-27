@@ -1485,4 +1485,5 @@ export const NL: Record<string, string> = {
   "Passage {n} sur {m}": "Fragment {n} van {m}",
   "Placer plus tôt dans le Moment": "Eerder in het Moment plaatsen",
   "Placer plus tard dans le Moment": "Later in het Moment plaatsen",
+  "Voir le Short": "Short bekijken",
 };

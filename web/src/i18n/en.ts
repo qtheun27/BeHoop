@@ -1485,4 +1485,5 @@ export const EN: Record<string, string> = {
   "Passage {n} sur {m}": "Clip {n} of {m}",
   "Placer plus tôt dans le Moment": "Move earlier in the Moment",
   "Placer plus tard dans le Moment": "Move later in the Moment",
+  "Voir le Short": "View the Short",
 };

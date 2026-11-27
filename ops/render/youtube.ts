@@ -132,7 +132,7 @@ try {
       if (!r.ok) console.warn('vignette :', r.status, (await r.text()).slice(0, 200)); // chaîne non vérifiée : vignette refusée par YouTube
     }).catch(() => {});
   }
-  await set({ status: 'done', progress: 100, videoId: video.id, url: `https://youtu.be/${video.id}`, playlistId, doneAt: Date.now(), error: null });
+  await set({ status: 'done', progress: 100, videoId: video.id, url: momentId ? `https://youtube.com/shorts/${video.id}` : `https://youtu.be/${video.id}`, playlistId, doneAt: Date.now(), error: null });
   await notifyUsers([yt.uid], { title: { fr: '▶️ Vidéo publiée sur YouTube', nl: '▶️ Video gepubliceerd op YouTube', en: '▶️ Video published on YouTube' }, body: yt.title, url: momentId ? `/app/#/video/${id}/m-${momentId}` : `/app/#/video/${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {
   console.error(e);
