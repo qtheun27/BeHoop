@@ -277,7 +277,7 @@ function YtPublish({ id, mv, youth, parentsOk, desc, moment }: { id: string; mv:
 
 interface MatchVideo { inFeed?: boolean; youtube?: { status: 'queued' | 'preparing' | 'uploading' | 'done' | 'error'; progress?: number; url?: string; error?: string; at?: number }; settings?: StoredSettings; title: string; status: string; visibility: 'public' | 'team'; teamIds: number[]; authorUid: string; version: number; mp4Status?: 'queued' | 'running' | 'ready' | 'error'; mp4Status1080?: 'queued' | 'running' | 'ready' | 'error'; mp4StatusSince?: number; mp4Status1080Since?: number; affichesStatus?: 'queued' | 'running' | 'ready' | 'error';
   hls?: { masterKey: string; chapters: Chapter[]; duration: number; posterKey: string; mp4Key?: string; mp4Key1080?: string; affiches?: string[] }; voteUntil?: { toMillis: () => number } }
-interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string; music?: { title: string; artist: string; license: string; url: string } }
+interface Moment { id: string; start: number; end: number; status: string; inFeed?: boolean; r2Key?: string; authorUid?: string; youtube?: MatchVideo['youtube']; title?: string; text?: string; posterKey?: string; duration?: number; clips?: { start: number; end: number }[]; music?: { title: string; artist: string; license: string; url: string } }
 
 /** Le volume est-il réglable par la page ? (non sur iPhone/iPad : il suit les boutons du téléphone) */
 const CAN_VOLUME = (() => { try { const v = document.createElement('video'); v.volume = 0.5; return v.volume === 0.5 && !/iPhone|iPad|iPod/.test(navigator.userAgent); } catch { return false; } })();
@@ -316,6 +316,12 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
   const [muted, setMuted] = useState(() => store.get('player-muted', false)), [vol, setVol] = useState(() => store.get('player-vol', 1));
   useEffect(() => { const el = ref.current; if (!el) return; el.muted = muted; if (CAN_VOLUME) el.volume = vol; store.set('player-muted', muted); store.set('player-vol', vol); }, [muted, vol]);
   const [clip, setClip] = useState(false);
+  // « Modifier la vidéo » d'un Moment : l'éditeur s'ouvre avec ses passages, son cadrage et sa musique
+  const [init, setInit] = useState<MomentInit | null>(null);
+  useEffect(() => { const mid = qs().get('edit'); if (!mid || !/^[a-f0-9]{16}$/.test(mid)) return;
+    D.getDoc(D.doc(D.db, 'moments', mid)).then((x) => { if (!x.exists()) return; const m = { id: mid, ...x.data() } as Moment & MomentInit;
+      setInit({ id: mid, clips: m.clips?.length ? m.clips : [{ start: m.start, end: m.end }], layout: m.layout, pos: m.pos, music: m.music, title: m.title, text: m.text, inFeed: m.inFeed });
+      setSel([...(m.clips?.length ? [m.clips[m.clips.length - 1].start, m.clips[m.clips.length - 1].end] : [m.start, m.end])] as [number, number]); setClip(true); }).catch(() => {}); }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const dur = mv.hls!.duration, chapters = mv.hls!.chapters ?? [];
   const posKey = `behoop.pos.${id}`;
   useEffect(() => {
@@ -400,7 +406,8 @@ function Player({ id, mv, team }: { id: string; mv: MatchVideo; team?: number })
           </div>
         </div>
       </div>
-      {clip && <ClipEditor id={id} video={ref} dur={dur} time={time} sel={sel} setSel={setSel} preview={preview} onClose={() => { preview.current = false; setSel(null); setClip(false); }} />}
+      {clip && (!init || dur > 0) && <ClipEditor key={init?.id ?? 'new'} id={id} init={init} video={ref} dur={dur} time={time} sel={sel} setSel={setSel} preview={preview} onClose={() => { preview.current = false; setSel(null); setClip(false);
+        if (init) { setInit(null); location.hash = `/video/${id}`; } }} />}
       {!clip && <>
       <div className="group-title mt">{t('Chapitres')}</div>
       <div className="group">{chapters.map((c) => (
@@ -447,7 +454,8 @@ function keyPos(k: Key[], t: number): number {
 }
 /** Largeur du cadre vertical (9:16 recadré dans une image 16:9) : 1080 / (1920 × 16/9) */
 const CROP_W = (1080 / ((1920 * 16) / 9)) * 100;
-function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { id: string; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
+interface MomentInit { id: string; clips: { start: number; end: number; keys?: Key[] }[]; layout?: 'full' | 'fit'; pos?: number; music?: Track & { start: number }; title?: string; text?: string; inFeed?: boolean }
+function ClipEditor({ id, init, video, dur, time, sel, setSel, preview, onClose }: { id: string; init?: MomentInit | null; video: React.RefObject<HTMLVideoElement>; dur: number; time: number;
   sel: [number, number] | null; setSel: (x: [number, number]) => void; preview: React.MutableRefObject<boolean>; onClose: () => void }) {
   const s = useSession();
   const around = (c: number): [number, number] => { const a = Math.max(0, Math.min(dur - 20, c - 10)); return [a, Math.min(dur, a + 20)]; };
@@ -458,13 +466,13 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   useEffect(() => { if (a < win || b > win + WIN) setWin(Math.max(0, Math.min(dur - WIN, (a + b) / 2 - WIN / 2))); }, [a, b]); // eslint-disable-line react-hooks/exhaustive-deps
   const [busy, setBusy] = useState(false), [playing, setPlaying] = useState(false);
   // Plusieurs passages enchaînés (vague au montage), 60 s au total ; cadrage plein écran (position) ou image entière
-  const [parts, setParts] = useState<{ a: number; b: number; keys: Key[] }[]>([]);
-  const [keys, setKeys] = useState<Key[]>([]); // points de cadrage du passage en cours (t depuis son début)
-  const [layout, setLayout] = useState<'full' | 'fit'>('full'), [pos, setPos] = useState(0.5);
-  const [mTitle, setMTitle] = useState(''), [mText, setMText] = useState('');
-  const [mFeed, setMFeed] = useState(true);
+  const [parts, setParts] = useState<{ a: number; b: number; keys: Key[] }[]>(() => (init?.clips ?? []).slice(0, -1).map((c) => ({ a: c.start, b: c.end, keys: c.keys ?? [] })));
+  const [keys, setKeys] = useState<Key[]>(() => init?.clips.at(-1)?.keys ?? []); // points de cadrage du passage en cours (t depuis son début)
+  const [layout, setLayout] = useState<'full' | 'fit'>(init?.layout === 'fit' ? 'fit' : 'full'), [pos, setPos] = useState(init?.pos ?? 0.5);
+  const [mTitle, setMTitle] = useState(init?.title ?? ''), [mText, setMText] = useState(init?.text ?? '');
+  const [mFeed, setMFeed] = useState(init?.inFeed !== false);
   // Bande son du catalogue : elle remplace le son du match ; un seul lecteur audio (écoute du catalogue + aperçu)
-  const [music, setMusic] = useState<{ tr: Track; start: number } | null>(null);
+  const [music, setMusic] = useState<{ tr: Track; start: number } | null>(() => (init?.music?.id ? { tr: init.music, start: init.music.start ?? 0 } : null));
   const aud = useRef<HTMLAudioElement | null>(null), muted = useRef(false);
   const audio = () => (aud.current ??= new Audio());
   const g = useRef<{ kind: 'a' | 'b' | 'm'; x0: number; a0: number; b0: number; w: number; lastX?: number } | null>(null);
@@ -645,15 +653,15 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
   const lineTap = (e: React.PointerEvent) => { stop(); scrub.current = true; (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); lineAt(e, true); setSelKey(null); };
   const create = async () => { stop(); setBusy(true);
     try { const r = await api<{ id: string }>('/moments', { matchVideoId: id, clips: [...parts, { a, b, keys: curKeys() }].map((p) => ({ start: p.a, end: p.b, keys: layout === 'full' ? p.keys : undefined })), layout, pos, title: mTitle, text: mText, inFeed: mFeed,
-      music: music ? { id: music.tr.id, start: music.start } : undefined });
-      s.toast(t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
+      music: music ? { id: music.tr.id, start: music.start } : undefined, momentId: init?.id });
+      s.toast(init ? t('Moment modifié : nouvelle version en préparation…') : t('Moment en préparation…')); if (r?.id) { store.set(`mpend-${id}`, [...store.get<string[]>(`mpend-${id}`, []), r.id]); dispatchEvent(new Event('bh-moment')); } onClose(); }
     catch { s.toast(t('Impossible de créer le Moment')); } finally { setBusy(false); } };
   return (
     <div className="clip-ed">
       {video.current?.parentElement && layout === 'full' && createPortal(<div className="crop-mask" aria-hidden><i style={{ width: `${shown * (100 - CROP_W)}%` }} />
         <b style={{ width: `${CROP_W}%` }} /><i style={{ flex: 1 }} /></div>, video.current.parentElement)}
       {video.current?.parentElement && cropping && createPortal(<div className="crop-touch" onPointerDown={frameDown} onPointerMove={frameMove} onPointerUp={frameUp} onPointerCancel={frameUp} onClick={(e) => e.stopPropagation()} />, video.current.parentElement)}
-      <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
+      <div className="clip-head"><b><Ico n="bolt" /> {parts.length ? t('Passage {n}', { n: parts.length + 1 }) : init ? t('Modifier le Moment') : t('Nouveau Moment')} · <span style={{ color: ok ? 'var(--accent)' : 'var(--red)' }}>{len.toFixed(1)} s</span>
         {parts.length > 0 && <span className="muted" style={{ fontWeight: 400 }}> · {total.toFixed(0)}/{MOMENT_TOTAL} s</span>}</b>
         <button className="btn ghost small" onClick={() => { stop(); onClose(); }}>{t('Annuler')}</button></div>
       <div className="seg clip-tabs"><button className={tab === 'pass' ? 'on' : ''} onClick={() => setTab('pass')}>{t('Passage')}</button><button className={tab === 'crop' ? 'on' : ''} onClick={() => setTab('crop')}>{t('Cadrage')}</button><button className={tab === 'sound' ? 'on' : ''} onClick={() => setTab('sound')}>{t('Son')}</button><button className={tab === 'info' ? 'on' : ''} onClick={() => setTab('info')}>{t('Infos')}</button></div>
@@ -709,7 +717,7 @@ function ClipEditor({ id, video, dur, time, sel, setSel, preview, onClose }: { i
           if (music) { const el = audio(); v.muted = true; muted.current = true; if (el.src !== music.tr.audio) el.src = music.tr.audio; el.currentTime = music.start + prevLen; el.play().catch(() => {}); }
           v.play().catch(() => setPlaying(false)); }}>
           <Ico n={playing ? 'pause' : 'play'} />{playing ? t('Pause') : t('Aperçu')}</button>
-        <button className="btn" disabled={!ok || busy} onClick={create}>{t('Créer')}{parts.length ? ` (${parts.length + 1})` : ''}</button>
+        <button className="btn" disabled={!ok || busy} onClick={create}>{init ? t('Enregistrer') : t('Créer')}{parts.length ? ` (${parts.length + 1})` : ''}</button>
       </div>
     </div>
   );
@@ -778,7 +786,8 @@ function MomentPlayer({ id, vid, mv, youth }: { id: string; vid: string; mv: Mat
       {youth && <p className="muted" style={{ fontSize: 14 }}><Ico n="lock" style={{ marginRight: 4 }} />{t('Moment d\'une équipe Jeunes : seuls les membres de l\'Équipe peuvent l\'ouvrir.')}</p>}
       {canPublish && <button className="btn secondary mt" onClick={() => setYt(true)}><Ico n="video" />{mo.youtube?.status === 'done' ? t('Publié sur YouTube (Short)') : t('Publier sur YouTube (Short)')}</button>}
       {canPublish && <div className="hstack mt" style={{ gap: 8, justifyContent: 'center' }}>
-        <button className="btn ghost small" onClick={() => setEd(true)}>{t('Modifier')}</button>
+        <button className="btn ghost small" onClick={() => { location.hash = `/video/${vid}?edit=${id}`; }}>{t('Modifier la vidéo')}</button>
+        <button className="btn ghost small" onClick={() => setEd(true)}>{t('Renommer')}</button>
         <FeedToggle on={mo.inFeed !== false} body={{ momentId: id }} />
         <button className="btn ghost small" style={{ color: 'var(--red)' }} onClick={async () => { if (!confirm(t('Supprimer ce Moment ?'))) return;
           try { await api('/moment/delete', { momentId: id }); s.toast(t('Moment supprimé')); location.hash = `/video/${vid}`; } catch { s.toast(t('Action impossible. Réessaie.')); } }}>{t('Supprimer')}</button></div>}
@@ -854,7 +863,9 @@ function Moments({ id, mv }: { id: string; mv: MatchVideo }) {
       <div className="group-title mt">{t('Moments')} {open ? `· ${t('vote pour l’Action du match')}` : top ? <>· <Ico n="trophy" /> {t('Action du match')}</> : ''}</div>
       <div className="group">{list.data.moments.map((m, i) => (
         <div key={m.id} className="row">
-          <a className="grow" href={`#/video/${id}/m-${m.id}`} style={{ color: 'inherit' }}>{top?.[0] === m.id && !open && <Ico n="trophy" style={{ marginRight: 4, color: 'var(--accent)' }} />}{t('Action')} {i + 1} · {fmt(m.start)}<div className="sub">{t('{n} vote(s)', { n: list.data!.count[m.id] ?? 0 })}</div></a>
+          {m.posterKey && <img className="mo-thumb" src={mediaUrl(m.posterKey)} alt="" loading="lazy" />}
+          <a className="grow" href={`#/video/${id}/m-${m.id}`} style={{ color: 'inherit' }}>{top?.[0] === m.id && !open && <Ico n="trophy" style={{ marginRight: 4, color: 'var(--accent)' }} />}{m.title || t('Moment {n}', { n: i + 1 })}
+            <div className="sub">{(m.clips?.length ?? 1) > 1 ? `${t('{n} passages', { n: m.clips!.length })} · ` : ''}{Math.round(m.duration ?? m.end - m.start)} s · {t('{n} vote(s)', { n: list.data!.count[m.id] ?? 0 })}</div></a>
           {open && <button className={`btn small${list.data!.mine === m.id ? '' : ' secondary'}`} onClick={() => vote(m.id)}>{list.data!.mine === m.id ? <><Ico n="check" />{t('Mon vote')}</> : t('Voter')}</button>}
         </div>))}</div>
       <p className="group-foot">{t('On vote pour une action, jamais pour un joueur.')}</p>

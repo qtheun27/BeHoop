@@ -541,9 +541,15 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
       if (!tr) return fail('Morceau indisponible, choisis-en un autre');
       music = { ...tr, start: Math.round(Math.min(Math.max(0, tr.duration - total), Math.max(0, Number(body.music.start) || 0)) * 10) / 10 };
     }
-    const id = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
-    await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', start: clips[0].start, end: clips[0].end,
-      clips, layout, pos, music, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10, title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
+    // Modification d'un Moment existant (auteur) : même identifiant, nouvelle version de la vidéo (rev → nouveau fichier, pas d'ancien en cache)
+    const edit = typeof body.momentId === 'string' && /^[a-f0-9]{16}$/.test(body.momentId) ? await ownMoment(body.momentId) : null;
+    if (edit && edit.matchVideoId !== body.matchVideoId) return fail('Moment d’une autre vidéo');
+    if (edit && ['queued', 'running'].includes(edit.status)) return fail('Ce Moment est déjà en préparation, patiente un instant');
+    const id = edit ? String(body.momentId) : crypto.randomUUID().replace(/-/g, '').slice(0, 16);
+    const fields = { start: clips[0].start, end: clips[0].end, clips, layout, pos, music, inFeed: body.inFeed !== false, duration: Math.round(total * 10) / 10,
+      title: String(body.title ?? '').trim().slice(0, 80), text: String(body.text ?? '').trim().slice(0, 500), status: 'queued', progress: 0, step: 'En attente' };
+    if (edit) await fs.set(`moments/${id}`, { ...fields, rev: Number(edit.rev ?? 0) + 1, prevKeys: [edit.r2Key, edit.posterKey].filter(Boolean) } as any);
+    else await fs.set(`moments/${id}`, { matchVideoId: body.matchVideoId, authorUid: user.uid, authorName: profile?.displayName ?? '', ...fields, visibility: v.visibility, teamIdPrivate: v.teamIdPrivate ?? null, createdAt: new Date() } as any, false);
     await dispatch(env, 'moment.yml', { momentId: id });
     return json({ id });
   }

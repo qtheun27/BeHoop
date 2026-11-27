@@ -100,18 +100,29 @@ try {
   const poster = join(work, 'poster.jpg');
   await ff(['-y', '-ss', String(Math.min(2.5, parts[0].duration / 2)), '-i', out, '-frames:v', '1', '-vf', 'scale=720:-2', '-q:v', '3', poster]);
   const vis = mv.visibility === 'team' ? `team-${mv.teamIdPrivate}` : 'public';
-  const key = `moments/${vis}/${m.matchVideoId}/${id}.mp4`;
+  const key = `moments/${vis}/${m.matchVideoId}/${id}${m.rev ? `-${m.rev}` : ''}.mp4`; // nouvelle version → nouveau fichier (pas d'ancienne copie en cache)
   await r2.upload(key, out, 'video/mp4');
   const posterKey = key.replace(/\.mp4$/, '.jpg');
   await r2.upload(posterKey, poster, 'image/jpeg');
   if (card) await r2.upload(`share/m/${id}.jpg`, card, 'image/jpeg').catch(() => {});
   await ref.update({ status: 'ready', progress: 100, step: 'Prêt', r2Key: key, posterKey, duration: Math.round(joined.duration * 10) / 10, readyAt: FieldValue.serverTimestamp() });
-  await db.doc(`posts/moment-${id}`).set({
+  // Ancienne version (Moment modifié) : fichiers supprimés une fois la nouvelle en ligne
+  for (const k of (Array.isArray(m.prevKeys) ? m.prevKeys : []) as string[]) if (k && k !== key && k !== posterKey) await r2.remove(k).catch(() => {});
+  if (m.prevKeys) await ref.update({ prevKeys: FieldValue.delete() });
+  const payload = { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), ...(m.music ? { music: { title: m.music.title, artist: m.music.artist, license: m.music.license, url: m.music.url } } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` };
+  // Moment modifié : la publication existante garde ses réactions, sa date et sa visibilité ; seul son contenu change
+  const post = db.doc(`posts/moment-${id}`);
+  const old = m.rev ? (await post.get()).data() : undefined;
+  if (old) await post.update({ payload, ...(!old.hidden || old.hiddenReason === 'auteur' ? { hidden: m.inFeed === false, hiddenReason: m.inFeed === false ? 'auteur' : null } : {}) }); // masquage par la modération conservé
+  else await post.set({
     type: 'moment', authorUid: m.authorUid, authorName: m.authorName ?? '', clubId: null, teamIds: mv.teamIds, targets: mv.teamIds.filter(Boolean).map((x: number) => `t:${x}`),
     visibility: mv.visibility, teamIdPrivate: mv.teamIdPrivate ?? null, hidden: m.inFeed === false, ...(m.inFeed === false ? { hiddenReason: 'auteur', hiddenBy: m.authorUid } : {}), reactions: {}, createdAt: FieldValue.serverTimestamp(),
-    payload: { matchVideoId: m.matchVideoId, momentId: id, title: m.title || st.title, ...(m.text ? { text: m.text } : {}), ...(m.music ? { music: { title: m.music.title, artist: m.music.artist, license: m.music.license, url: m.music.url } } : {}), duration: Math.round(joined.duration), posterKey, score: `${h} – ${a}` },
+    payload,
   });
   await notifyUsers([m.authorUid], { title: N.momentReady, body: m.title || st.title, url: `/app/#/video/${m.matchVideoId}/m-${id}` }, 'videoReady', null).catch(() => 0);
 } catch (e) {
-  console.error(e); await ref.update({ status: 'error', error: String((e as Error).message).slice(0, 300) }); process.exitCode = 1;
+  console.error(e);
+  // Moment modifié : en cas d'échec, l'ancienne version (toujours en ligne) reste visible
+  const cur = (await ref.get().catch(() => null))?.data();
+  await ref.update(cur?.rev && cur?.r2Key ? { status: 'ready', prevKeys: FieldValue.delete(), error: String((e as Error).message).slice(0, 300) } : { status: 'error', error: String((e as Error).message).slice(0, 300) }); process.exitCode = 1;
 }

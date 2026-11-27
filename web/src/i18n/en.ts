@@ -1477,4 +1477,8 @@ export const EN: Record<string, string> = {
   "Rock": "Rock",
   "Épique": "Epic",
   "Chill": "Chill",
+  "Moment modifié : nouvelle version en préparation…": "Moment updated: new version being prepared…",
+  "Modifier la vidéo": "Edit video",
+  "Moment {n}": "Moment {n}",
+  "{n} passages": "{n} clips",
 };

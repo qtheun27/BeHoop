@@ -587,3 +587,4 @@ html.reels-open body::before, html.reels-open body::after, html.reels-open .cour
 .mus-sel{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:14px;background:color-mix(in srgb,var(--accent) 14%,transparent);margin-bottom:8px}
 .mus-start{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;font-size:13px}
 .mus-start input{width:100%}
+.mo-thumb{flex:none;width:40px;height:56px;object-fit:cover;border-radius:8px;margin-right:10px;background:#1c2233}

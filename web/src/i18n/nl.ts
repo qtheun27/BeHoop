@@ -1477,4 +1477,8 @@ export const NL: Record<string, string> = {
   "Rock": "Rock",
   "Épique": "Episch",
   "Chill": "Chill",
+  "Moment modifié : nouvelle version en préparation…": "Moment aangepast: nieuwe versie wordt voorbereid…",
+  "Modifier la vidéo": "Video aanpassen",
+  "Moment {n}": "Moment {n}",
+  "{n} passages": "{n} fragmenten",
 };
