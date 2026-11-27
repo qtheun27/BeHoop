@@ -221,7 +221,7 @@ export function ImageConsentRow({ teamId, member, onChange }: { teamId: number; 
   const [ok, setOk] = useState<boolean | undefined>(member.imageConsent);
   const put = async (v: boolean) => { try { await D.setImageConsent(teamId, member.uid, v); setOk(v); onChange?.(); s.toast(v ? t('Accord enregistré') : t('Refus enregistré : l’équipe en est informée.')); } catch { s.toast(t('Action impossible. Réessaie.')); } };
   return (
-    <div className="group" style={{ marginBottom: 22 }}><div className="row"><div className="grow">
+    <div className="group" style={{ marginBottom: 22 }}><div className="row kid-row"><div className="grow">
       <div><Ico n="lock" style={{ marginRight: 6 }} />{t('Photos et vidéos de {name}', { name: member.child || t('mon enfant') })}</div>
       <div className="sub">{ok === true ? t('Tu as accepté qu’il ou elle apparaisse (membres de l’équipe uniquement).') : ok === false ? t('Tu as refusé : l’équipe sait qu’il ou elle ne doit pas apparaître.') : t('Tu n’as pas encore répondu.')}</div></div>
       <button className={`btn small${ok === true ? '' : ' secondary'}`} onClick={() => put(true)}>{t('J’accepte')}</button>
@@ -378,12 +378,15 @@ export function TeamStandings({ team, games }: { team: Team; games: Game[] }) {
     .filter((x) => !x!.standings.length || x!.standings.some((r) => r.team === team.id)) as Awaited<ReturnType<typeof loadSerie>>[], [ids.join()]);
   const series = (all.data ?? []).map((x) => [x.serie.id, x.serie.short || x.serie.name] as [number, string]);
   const [pick, setSid] = useState<number | null>(null);
+  const idxAll = useAsync(() => teamIndex(), []);
   const sid = pick ?? series[0]?.[0] ?? null;
   const serie = { data: all.data?.find((x) => x.serie.id === sid) ?? null };
   if (all.loading) return <Skeleton h={44} n={6} />;
   if (!series.length) return <Empty ill="standings" title={t('Pas de classement')} text={t('Cette équipe ne joue que des matchs amicaux pour l\'instant.')} />;
   const names = new Map<number, string>();
   serie.data?.games.forEach((g) => { names.set(g.h, g.hn); names.set(g.a, g.an); });
+  // Équipe sans match encore joué dans la série : son nom vient de l'index des clubs (sinon « Équipe 12345 »)
+  (serie.data?.standings ?? []).forEach((r) => { if (!names.has(r.team)) { const e = idxAll.data?.get(r.team); if (e) names.set(r.team, e.club.name); } });
   const rows = serie.data?.standings ?? [];
   return (
     <>
