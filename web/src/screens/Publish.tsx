@@ -8,7 +8,7 @@ import { compressImage, ACCEPT } from '../lib/media';
 import { uploadSmall } from '../lib/upload';
 import { USE_EMULATOR } from '../lib/config';
 import { haptic } from '../lib/util';
-import { useClubs } from './Explore';
+import { useClubs, NoImageNotice } from './Explore';
 import { t } from '../lib/i18n';
 import { Ico } from '../ui/icons';
 
@@ -94,6 +94,7 @@ function Composer({ onClose }: { onClose: () => void }) {
       {sel?.kind === 'club' && files.length > 0 && <div className="err mt">{t('Les photos doivent être liées à une équipe (pas à un club entier).')}</div>}
       {youth && <>
         <div className="banner mt"><Ico n="lock" /><div style={{ fontSize: 14 }}>{t('Équipe Jeunes : ces photos ne seront visibles que par les membres de l\'Équipe.')}</div></div>
+        {sel?.kind === 'team' && <NoImageNotice teamId={sel.id} />}
         {blocked ? <div className="err">{t('Tu dois être membre de l\'Équipe pour publier des photos de jeunes. Demande à la rejoindre depuis sa page.')}</div>
           : <label className="check"><input type="checkbox" checked={pledge} onChange={(e) => setPledge(e.target.checked)} />{t('Je publie pour les membres de l’équipe et je retirerai ce contenu si un parent le demande.')}</label>}
       </>}

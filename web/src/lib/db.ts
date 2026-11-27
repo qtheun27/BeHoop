@@ -27,7 +27,9 @@ export interface Profile {
 /** Suivi d'un club, d'une équipe ou d'une compétition (compId : identifiant de competitions.json, refId vaut alors 0) */
 export interface Follow { id: string; type: 'club' | 'team' | 'comp'; refId: number; compId?: string; mutedTeams?: number[] }
 export type Relation = 'parent' | 'joueur' | 'coach' | 'autre';
-export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; relation?: Relation; message?: string; displayName?: string; createdAt?: unknown }
+export interface Membership { teamId: number; uid: string; role: 'membre' | 'responsable'; status: 'pending' | 'accepted'; relation?: Relation; message?: string; displayName?: string; child?: string;
+  /** Parent : accord pour que son enfant apparaisse sur les photos et vidéos de l'équipe (modifiable à tout moment) */
+  imageConsent?: boolean; imageConsentAt?: unknown; createdAt?: unknown }
 
 export const NOTIF_TYPES: { key: string; label: string }[] = [
   { key: 'match2h', label: 'Match dans 2 h' }, { key: 'result', label: 'Résultat final' }, { key: 'newVideo', label: 'Nouvelle vidéo d’une équipe' },
@@ -84,10 +86,13 @@ export async function myMemberships(uid: string): Promise<Membership[]> {
   return s.docs.map((d) => d.data() as Membership);
 }
 /** child : prénom de l'enfant (demande d'un parent) — à l'acceptation, le parent est relié à sa fiche joueur dans le club */
-export async function requestJoin(uid: string, teamId: number, displayName: string, message: string, relation: Relation, child = '', video = '') {
-  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', relation, message: message.slice(0, 200), displayName, ...(child.trim() ? { child: child.trim().slice(0, 40) } : {}), ...(/^[a-z0-9]{8,32}$/.test(video) ? { video } : {}), createdAt: serverTimestamp() });
+export async function requestJoin(uid: string, teamId: number, displayName: string, message: string, relation: Relation, child = '', video = '', imageConsent?: boolean) {
+  await setDoc(doc(membersCol(teamId), uid), { uid, teamId, role: 'membre', status: 'pending', relation, message: message.slice(0, 200), displayName, ...(child.trim() ? { child: child.trim().slice(0, 40) } : {}),
+    ...(typeof imageConsent === 'boolean' ? { imageConsent, imageConsentAt: serverTimestamp() } : {}), ...(/^[a-z0-9]{8,32}$/.test(video) ? { video } : {}), createdAt: serverTimestamp() });
   notifyApi('/notify/join-request', { teamId }); // prévient les responsables
 }
+/** Le parent change son accord d'image (photos et vidéos de l'équipe) */
+export const setImageConsent = (teamId: number, uid: string, ok: boolean) => updateDoc(doc(membersCol(teamId), uid), { imageConsent: ok, imageConsentAt: serverTimestamp() });
 export async function teamMembersList(teamId: number): Promise<Membership[]> {
   const s = await getDocs(membersCol(teamId));
   return s.docs.map((d) => d.data() as Membership);

@@ -27,7 +27,7 @@ for (const k of ['responsable', 'parent', 'visiteur', 'joueur', 'admin']) {
 for (const [t, c, n, cat] of [[AMLL, CLUB_AMLL, 'PU14H BC AMLL A', 'PU14H A'], [MONS, CLUB_MONS, 'PU14H Union Mons-Hainaut', 'PU14H']] as const)
   await db.doc(`teamInfo/${t}`).set({ awbbId: t, clubId: c, name: n, category: cat, ageGroup: 'jeunes' });
 await db.doc(`teamMembers/${AMLL}/members/${uid.responsable}`).set({ uid: uid.responsable, teamId: AMLL, role: 'responsable', status: 'accepted', displayName: users.responsable.name, createdAt: new Date() });
-await db.doc(`teamMembers/${AMLL}/members/${uid.parent}`).set({ uid: uid.parent, teamId: AMLL, role: 'membre', status: 'accepted', displayName: users.parent.name, message: 'Je suis la maman de Léo', createdAt: new Date() });
+await db.doc(`teamMembers/${AMLL}/members/${uid.parent}`).set({ uid: uid.parent, teamId: AMLL, role: 'membre', status: 'accepted', relation: 'parent', child: 'Léo', displayName: users.parent.name, message: 'Je suis la maman de Léo', createdAt: new Date() });
 
 const base = { clubId: CLUB_AMLL, teamIds: [AMLL, MONS], targets: [`t:${AMLL}`, `t:${MONS}`, `c:${CLUB_AMLL}`, `c:${CLUB_MONS}`], hidden: false, reactions: {} };
 await db.doc(`posts/score-${GAME}`).set({ ...base, type: 'score', authorUid: null, authorName: 'BeHoop', visibility: 'public', teamIdPrivate: null, createdAt: new Date('2026-10-10T15:00:00+02:00'),

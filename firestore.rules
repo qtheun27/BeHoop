@@ -396,7 +396,10 @@ service cloud.firestore {
       // Accepter / nommer responsable : responsable de l'équipe ou super admin.
       // Accepter : responsable de l'équipe (coach, admin du club) ; il ne nomme plus de responsable : ce statut vient du rôle
       // dans le club (coach de l'équipe, admin du club), posé par le serveur, ou du super admin.
-      allow update: if (isResponsible(int(teamId)) && onlyChanged(['status', 'role']) && request.resource.data.role == 'membre') || isAdmin();
+      allow update: if (isResponsible(int(teamId)) && onlyChanged(['status', 'role']) && request.resource.data.role == 'membre')
+                    // Le parent modifie lui-même son accord d'image
+                    || (signedIn() && uid() == memberId && onlyChanged(['imageConsent', 'imageConsentAt']) && request.resource.data.imageConsent is bool)
+                    || isAdmin();
       // Quitter (soi-même), retirer/refuser (responsable), super admin.
       allow delete: if signedIn() && (uid() == memberId || isResponsible(int(teamId)) || isAdmin());
     }

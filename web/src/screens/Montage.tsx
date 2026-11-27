@@ -11,6 +11,7 @@ import { PlanchePreview } from '../planche/Preview';
 import { assignQuarters, mosaicPhotos } from '../../../shared/quarters';
 import { validateScores } from '../../../shared/scores';
 import type { MatchSettings, MediaItem, PlancheType } from '../../../shared/types';
+import { NoImageNotice } from './Explore';
 import { qs } from '../lib/router';
 import { store, haptic, dotted, uid as rid } from '../lib/util';
 import { t } from '../lib/i18n';
@@ -304,6 +305,7 @@ function Wizard({ draft, setDraft }: { draft: Draft; setDraft: React.Dispatch<Re
     <Screen title={t('Vidéos et photos')} back="publier">
       <Steps n={1} />
       <p className="muted">{t('Sélectionne toutes les vidéos et photos du match depuis ta galerie. BeHoop les classe par quart-temps grâce à l\'heure de prise de vue.')}</p>
+      {draft.youth && <NoImageNotice teamId={draft.teamId} />}
       <PickMedia label={t('＋ Ajouter depuis la galerie')} className="btn" onFiles={addFiles} />
       {busy && <p className="muted center">{busy}</p>}
       <BgProgress draft={draft} />

@@ -163,6 +163,7 @@ export function TeamPage({ id }: { id: number }) {
           {!member && <button className="btn small" onClick={() => s.requireAuth(() => setJoin(true)) && setJoin(true)}>{t('Rejoindre')}</button>}
           {accepted && <button className="btn small secondary" onClick={async () => { if (confirm(t('Quitter l’Équipe ?'))) { await D.removeMember(id, s.user!.uid); await s.refresh(); } }}>{t('Quitter')}</button>}
         </div>)}
+      {accepted && member!.relation === 'parent' && <ImageConsentRow teamId={id} member={member!} onChange={() => s.refresh()} />}
       {accepted && member!.role === 'responsable' && <TeamAdmin teamId={id} />}
       <TeamTabs team={team} club={club} games={games} />
       <div className="group-title">{t('Publications')}</div>
@@ -179,16 +180,22 @@ export function JoinSheet({ teamId, name, video, onClose }: { teamId: number; na
   const [m, setM] = useState('');
   const [rel, setRel] = useState<D.Relation | null>(null);
   const [child, setChild] = useState('');
+  const [img, setImg] = useState<boolean | null>(null);
   return (
     <Sheet title={t('Rejoindre l\'équipe')} onClose={onClose}>
       <p className="muted" style={{ marginTop: 0 }}>{t('Un responsable de l’équipe {name} validera ta demande.', { name })}</p>
       <div className="label">{t('Je suis…')}</div>
       <div className="seg">{RELATIONS.map(([k, l]) => <button key={k} className={rel === k ? 'on' : ''} onClick={() => setRel(k)}>{t(l)}</button>)}</div>
       {rel === 'parent' && <><label className="label" htmlFor="jc">{t('Prénom de ton enfant')}</label>
-        <input id="jc" className="field" maxLength={40} value={child} onChange={(e) => setChild(e.target.value)} /></>}
+        <input id="jc" className="field" maxLength={40} value={child} onChange={(e) => setChild(e.target.value)} />
+        {/* Accord d'image (droit à l'image de l'enfant) : réponse obligatoire, modifiable ensuite sur la page de l'équipe */}
+        <div className="label">{t('Photos et vidéos de l’équipe')}</div>
+        <label className="check"><input type="radio" name="img" checked={img === true} onChange={() => setImg(true)} />{t('J’accepte que mon enfant apparaisse sur les photos et vidéos de l’équipe, visibles uniquement par ses membres.')}</label>
+        <label className="check"><input type="radio" name="img" checked={img === false} onChange={() => setImg(false)} />{t('Je refuse : mon enfant ne doit pas apparaître sur les photos et vidéos.')}</label>
+        <p className="muted" style={{ fontSize: 12, margin: '2px 0 0' }}>{t('Tu peux changer d’avis à tout moment sur la page de l’équipe.')}</p></>}
       <label className="label" htmlFor="jm">{t('Message (optionnel)')}</label>
       <textarea id="jm" className="field" maxLength={200} placeholder={rel === 'parent' ? t('Je suis le papa / la maman de…') : t('Un mot pour le responsable…')} value={m} onChange={(e) => setM(e.target.value)} />
-      <button className="btn mt" disabled={!rel || (rel === 'parent' && !child.trim())} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!, child, video); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
+      <button className="btn mt" disabled={!rel || (rel === 'parent' && (!child.trim() || img === null))} onClick={async () => { await D.requestJoin(s.user!.uid, teamId, s.profile!.displayName, m, rel!, child, video, rel === 'parent' ? img! : undefined); await s.refresh(); s.toast(t('Demande envoyée')); onClose(); }}>{t('Envoyer la demande')}</button>
     </Sheet>
   );
 }
@@ -208,6 +215,29 @@ export function TeamAdmin({ teamId }: { teamId: number }) {
   );
 }
 
+/** Parent : son accord d'image pour l'équipe, modifiable à tout moment */
+export function ImageConsentRow({ teamId, member, onChange }: { teamId: number; member: D.Membership; onChange?: () => void }) {
+  const s = useSession();
+  const [ok, setOk] = useState<boolean | undefined>(member.imageConsent);
+  const put = async (v: boolean) => { try { await D.setImageConsent(teamId, member.uid, v); setOk(v); onChange?.(); s.toast(v ? t('Accord enregistré') : t('Refus enregistré : l’équipe en est informée.')); } catch { s.toast(t('Action impossible. Réessaie.')); } };
+  return (
+    <div className="group" style={{ marginBottom: 22 }}><div className="row"><div className="grow">
+      <div><Ico n="lock" style={{ marginRight: 6 }} />{t('Photos et vidéos de {name}', { name: member.child || t('mon enfant') })}</div>
+      <div className="sub">{ok === true ? t('Tu as accepté qu’il ou elle apparaisse (membres de l’équipe uniquement).') : ok === false ? t('Tu as refusé : l’équipe sait qu’il ou elle ne doit pas apparaître.') : t('Tu n’as pas encore répondu.')}</div></div>
+      <button className={`btn small${ok === true ? '' : ' secondary'}`} onClick={() => put(true)}>{t('J’accepte')}</button>
+      <button className={`btn small${ok === false ? ' danger' : ' secondary'}`} onClick={() => put(false)}>{t('Je refuse')}</button></div></div>
+  );
+}
+
+/** Avant de publier des photos ou vidéos d'une équipe Jeunes : les enfants dont le parent a refusé l'accord d'image */
+export function NoImageNotice({ teamId }: { teamId: number }) {
+  const s = useSession();
+  const { data } = useAsync(async () => (s.user ? (await D.teamMembersList(teamId).catch(() => [] as D.Membership[])) : []), [teamId, s.user?.uid]);
+  const no = (data ?? []).filter((m) => m.status === 'accepted' && m.relation === 'parent' && m.imageConsent === false);
+  if (!no.length) return null;
+  return <div className="err mt" role="note"><b>{t('Sans accord d’image : ne les montre pas')}</b> — {no.map((m) => m.child || m.displayName).join(', ')}</div>;
+}
+
 export const RELATION_FR: Record<string, string> = { parent: 'Parent', joueur: 'Joueur', coach: 'Coach', autre: 'Autre' };
 export function MembersList({ teamId, members, reload, me }: { teamId: number; members: D.Membership[]; reload: () => void; me: string }) {
   const act = async (f: () => Promise<unknown>) => { await f(); reload(); };
@@ -220,7 +250,8 @@ export function MembersList({ teamId, members, reload, me }: { teamId: number; m
           <button className="btn small danger" onClick={() => act(() => D.removeMember(teamId, m.uid))}>{t('Refuser')}</button></div>))}</div></>}
       <div className="group-title">{t('Membres')} ({acc.length})</div>
       <div className="group">{acc.map((m) => (
-        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {t(RELATION_FR[m.relation])}</span>} {m.role === 'responsable' && <span className="pill">{t('Responsable')}</span>}</div>
+        <div key={m.uid} className="row"><div className="grow">{m.displayName} {m.relation && <span className="muted">· {t(RELATION_FR[m.relation])}</span>} {m.role === 'responsable' && <span className="pill">{t('Responsable')}</span>}
+          {m.relation === 'parent' && <div className="sub">{m.child ? `${m.child} · ` : ''}{m.imageConsent === true ? t('accord d’image ✓') : m.imageConsent === false ? <b style={{ color: 'var(--red)' }}>{t('pas d’image')}</b> : t('accord d’image non donné')}</div>}</div>
           {m.uid !== me && <button className="btn small danger" onClick={() => confirm(t('Retirer {name} ?', { name: m.displayName ?? '' })) && act(() => D.removeMember(teamId, m.uid))}>{t('Retirer')}</button>}</div>))}</div>
     </>
   );
