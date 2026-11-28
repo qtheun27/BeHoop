@@ -66,10 +66,16 @@ export async function prepare(file: File): Promise<Prepared> {
       // Vignette seulement si la vidéo se décode (sinon on n'attend pas pour rien) ; attente courte
       if (!v.error && v.videoWidth) {
         v.currentTime = Math.min(1, (v.duration || 2) / 2);
-        await new Promise((r) => { v.onseeked = r; v.onerror = r; setTimeout(r, 1500); });
+        // Vidéos 4K : le décodage de l'image peut prendre plusieurs secondes (sinon vignette noire)
+        await new Promise((r) => { v.onseeked = r; v.onerror = r; setTimeout(r, 5000); });
       } else throw new Error('pas de décodage');
       const c = document.createElement('canvas'); c.width = 320; c.height = Math.round(320 * (v.videoHeight || 9) / (v.videoWidth || 16));
-      c.getContext('2d')!.drawImage(v, 0, 0, c.width, c.height); thumb = c.toDataURL('image/jpeg', .6);
+      const g = c.getContext('2d', { willReadFrequently: true })!;
+      const dark = () => { const d = g.getImageData(0, 0, c.width, c.height).data; let sum = 0; for (let i = 0; i < d.length; i += 64) sum += d[i] + d[i + 1] + d[i + 2]; return sum / (d.length / 64) / 3 < 6; };
+      g.drawImage(v, 0, 0, c.width, c.height);
+      // Image encore noire (pas décodée à temps) : un second essai un peu plus loin, sinon pas de vignette plutôt qu'un carré noir
+      if (dark()) { v.currentTime = Math.min(3, (v.duration || 6) / 2); await new Promise((r) => { v.onseeked = r; setTimeout(r, 5000); }); g.drawImage(v, 0, 0, c.width, c.height); }
+      if (!dark()) thumb = c.toDataURL('image/jpeg', .6);
     } catch { /* vignette facultative */ }
     URL.revokeObjectURL(url);
     // Date de prise de vue de l'iPhone (métadonnée Apple, gardée quand Photos prépare la vidéo), sinon date du conteneur
