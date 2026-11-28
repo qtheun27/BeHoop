@@ -219,7 +219,11 @@ async function api(req: Request, env: Env, path: string): Promise<Response> {
   // Cookie de lecture des médias (6 h) : liste des Équipes 🔒 dont l'utilisateur est membre accepté
   if (path === '/media-cookie') {
     const exp = Math.floor(Date.now() / 1000) + COOKIE_TTL;
-    const v = await signCookie({ uid: user.uid, teams: await memberTeams(user.uid), exp }, env.MEDIA_COOKIE_SECRET);
+    // + les Équipes 🔒 de ses propres vidéos de match et Moments (l'auteur voit toujours ce qu'il a créé)
+    const own = user.child ? [] : (await Promise.all(['matchVideos', 'moments'].map((c) => fs.query(c, [['authorUid', 'EQUAL', user.uid]]).catch(() => []))))
+      .flat().filter((d: any) => d.visibility === 'team').map((d: any) => Number(d.teamIdPrivate)).filter((n) => Number.isInteger(n) && n > 0);
+    const teams = [...new Set([...(await memberTeams(user.uid)), ...own])];
+    const v = await signCookie({ uid: user.uid, teams, exp }, env.MEDIA_COOKIE_SECRET);
     return json({ exp }, 200, { 'Set-Cookie': `bh_media=${v}; Path=/; Max-Age=${COOKIE_TTL}; HttpOnly; Secure; SameSite=None` });
   }
 
