@@ -28,6 +28,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const work = join(resolve(import.meta.dirname, '../..'), 'out', 'norm', id); mkdirSync(work, { recursive: true });
   const jobRef = db.doc(`renderJobs/${id}`);
   console.log(`tâche ${k + 1}/${n} : ${mine.length} vidéo(s) sur ${all.length}`);
+  // Dès le départ : l'appli affiche la préparation (sinon « En file d'attente · 0 % » jusqu'à la fin de la première vidéo, longue en 4K)
+  const cur = (await jobRef.get()).data();
+  if (!cur || cur.status === 'queued' || !(Number(cur.progress) > 5)) await jobRef.set({ status: 'running', progress: Math.max(5, Number(cur?.progress) || 0), step: `Préparation des vidéos (0/${all.length})` }, { merge: true });
   for (const m of mine) {
     const t0 = Date.now();
     const src = join(work, `src_${m.id}${extname(m.name) || '.mov'}`), out = join(work, `norm_${m.id}.mp4`);
